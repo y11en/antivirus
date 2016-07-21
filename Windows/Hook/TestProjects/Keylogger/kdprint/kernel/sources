@@ -1,0 +1,9 @@
+TARGETNAME = kdprkrnl
+TARGETPATH = obj
+TARGETTYPE = DRIVER_LIBRARY
+DRIVERTYPE = FS
+
+MSC_WARNING_LEVEL = /W3 /WX
+
+SOURCES =	kdprint.c 	\
+		kdworkqueue.c	\

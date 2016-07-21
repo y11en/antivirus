@@ -1,0 +1,19 @@
+// $AVZ1511
+//$ Блокировка панели управления
+// Функция поиска проблемы                                                                          
+function Check : dword;
+begin
+ Result := 0;
+ // Блокировка ControlPanel
+ if RegKeyIntParamRead('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'NoControlPanel') > 0 then begin
+   Result := 3;
+   exit;
+  end;
+end;
+
+// Функция исправления проблемы                                                                          
+function Fix : dword;
+begin
+ RegKeyParamDel('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'NoControlPanel');
+ Result := 0;
+end;

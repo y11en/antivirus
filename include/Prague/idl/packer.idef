@@ -1,0 +1,42 @@
+forward interface Packer;
+typedef Packer* hPACKER;
+
+
+
+[
+  mnemonic(IID_PACKER)
+  id(63002)
+  c_type_name(hPACKER)
+  comment_ex("Интерфейс Extractor предназначен для упаковки входного потока (объект типа hIO). Cодержит всего одну функцию:
+    tERROR Packer_Pack( hi_Packer _this, hOBJECT* result, hOBJECT hInputIO );
+    Возвращаемое значение - объект с интерфейсом hIO с запакованными данными. Входной параметр - объект с интерфейсом hIO с данными, предназначенными для упаковки. Все дополнительные свойства являются частными свойствами конкретной реализации.")
+]
+interface Packer { // Packer interface
+
+  // ------------------------------------
+
+    [
+      id(130)
+      comment_ex("Interface version")
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      id(131)
+      comment_ex("Interface comment")
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Упаковывает входной поток (задан входным параметром hInputIO) в выходной поток (возвращаемое значение result).")
+    ]
+    method tERROR Pack( // Упаковать входной поток байт
+      hOBJECT* result,
+      hOBJECT hInputIO // Входной поток для запаковки
+    );
+
+}
+

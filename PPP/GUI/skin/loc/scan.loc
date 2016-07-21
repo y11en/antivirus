@@ -1,0 +1,205 @@
+;------- Scan Object Display Name --------------
+
+[Global]
+
+;Object Types
+#ObjectFile        = 0x00000000
+#ObjectLogSector   = 0x00002001
+#ObjectPhysSector  = 0x00002002
+#ObjectMemory      = 0x00003001
+#ObjectMail        = 0x00006000
+#ObjectMailMessage = 0x00006001
+#ObjectMailBody    = 0x00006002
+#ObjectMailAttach  = 0x00006003
+#ObjectRunProcess  = 0x00005001
+#ObjectRunModule   = 0x00005002
+#ObjectStartup     = 0x00010001
+#ObjectPhoneNumber = 0x00010004
+
+;Scan Actions
+#SCAN_ACTION_REPORT    = 0x0
+#SCAN_ACTION_ASKUSER   = 0x1
+#SCAN_ACTION_DETECT    = 0x2
+#SCAN_ACTION_POSTPONE  = 0x3
+#SCAN_ACTION_DISINFECT = 0x4
+#SCAN_ACTION_ASKDETECT = 0x5
+
+;Action Types
+#ACTION_UNKNOWN          =0x0000
+#ACTION_DISINFECT        =0x0001
+#ACTION_QUARANTINE       =0x0002
+#ACTION_DELETE           =0x0004
+#ACTION_TERMINATE        =0x0008
+#ACTION_ALLOW            =0x0010
+#ACTION_DENY             =0x0020
+#ACTION_ROLLBACK         =0x0040
+#ACTION_REPARE           =0x0080
+#ACTION_OK               =0x0100
+#ACTION_REPORTONLY       =0x0200
+#ACTION_CANCEL           =0x0400
+#ACTION_DELETE_ARCHIVE   =0x0800
+#ACTION_TRYAGAIN         =0x1000
+#ACTION_BACKUP           =0x2000
+#ACTION_RENAME           =0x4000
+
+; enDetectType
+#DETYPE_UNKNOWN          = 0
+#DETYPE_VIRWARE          = 1
+#DETYPE_TROJWARE         = 2
+#DETYPE_MALWARE          = 3
+#DETYPE_ADWARE           = 4
+#DETYPE_PORNWARE         = 5
+#DETYPE_RISKWARE         = 6
+#DETYPE_XFILES           = 20
+#DETYPE_SOFTWARE         = 21
+#DETYPE_UNDETECT         = 30
+#DETYPE_ATTACK           = 50
+#DETYPE_REGISTRY         = 51
+#DETYPE_SUSPICACTION     = 52
+#DETYPE_VULNERABILITY    = 60
+#DETYPE_PHISHING         = 70
+
+; enDetectStatus
+#DSTATUS_UNKNOWN         = 0
+#DSTATUS_SURE            = 1
+#DSTATUS_PARTIAL         = 2
+#DSTATUS_HEURISTIC       = 3
+#DSTATUS_PROBABLY        = 4
+
+;Object status
+#OBJSTATUS_UNKNOWN                    = 0
+#OBJSTATUS_OK                         = 1
+#OBJSTATUS_INFECTED                   = 2
+#OBJSTATUS_SUSPICION                  = 4
+#OBJSTATUS_ARCHIVE                    = 5
+#OBJSTATUS_PACKED                     = 6
+#OBJSTATUS_ENCRYPTED                  = 7
+#OBJSTATUS_CORRUPTED                  = 8
+#OBJSTATUS_BACKUPPED                  = 13
+#OBJSTATUS_PASSWORD_PROTECTED         = 19
+#OBJSTATUS_CANTCHANGEATTR	          = 20
+#OBJSTATUS_NOTPROCESSED               = 17
+#OBJSTATUS_ADDEDBYUSER                = 29
+#OBJSTATUS_NOTDISINFECTED             = 10
+#OBJSTATUS_NOTQUARANTINED             = 16
+#OBJSTATUS_NOTBACKUPPED               = 14
+#OBJSTATUS_CANTBEDELETED              = 12
+#OBJSTATUS_PROCESSING_ERROR           = 18
+#OBJSTATUS_DELETE_ON_REBOOT_FAILED	  = 24
+#OBJSTATUS_DISINFECT_ON_REBOOT_FAILED = 26
+#OBJSTATUS_CURED	                  = 28
+#OBJSTATUS_DISINFECTED                = 9
+#OBJSTATUS_DELETED                    = 11
+#OBJSTATUS_QUARANTINED                = 15
+#OBJSTATUS_OVERWRITED	              = 27
+#OBJSTATUS_ADDEDTOEXCLUDE             = 30
+#OBJSTATUS_DELETED_ON_REBOOT          = 23
+#OBJSTATUS_DISINFECTED_ON_REBOOT      = 25
+#OBJSTATUS_QUARANTINED_ON_REBOOT      = 31
+#OBJSTATUS_RESTORED                   = 32
+#OBJSTATUS_DENIED                     = 33
+#OBJSTATUS_ALLOWED                    = 34
+#OBJSTATUS_RENAMED                    = 35
+#OBJSTATUS_FALSEALARM                 = 36
+#OBJSTATUS_RENAME_FAILED              = 37
+
+; enDetectDanger
+#DETDANGER_HIGH          = 1
+#DETDANGER_MEDIUM        = 2
+#DETDANGER_LOW           = 4
+#DETDANGER_INFORMATIONAL = 8
+
+; enOkReason
+#OKREASON_NONE                =0x01
+#OKREASON_ISFDB               =0x02
+#OKREASON_ISTREAMS            =0x03
+
+; enDetectReason
+#DTREASON_NONE                =0x01
+#DTREASON_BYHASH              =0x02
+#DTREASON_INFORMATION         =0x03
+
+; enNotCuredReason
+#NCREASON_NONE                =0x01
+#NCREASON_NONCURABLE          =0x02
+#NCREASON_LOCKED              =0x03
+#NCREASON_REPONLY             =0x04
+#NCREASON_NORIGHTS            =0x05
+#NCREASON_CANCELLED           =0x06
+#NCREASON_WRITEPROTECT        =0x07
+#NCREASON_TASKSTOPPED         =0x08
+#NCREASON_POSTPONED           =0x09
+#NCREASON_NONOVERWRITABLE     =0x0A
+#NCREASON_COPYFAILED          =0x0C
+#NCREASON_WRITEERROR          =0x0D
+#NCREASON_OUTOFSPACE          =0x0E
+#NCREASON_READERROR           =0x0F
+#NCREASON_DEVICENOTREADY      =0x10
+#NCREASON_OBJECTNOTFOUND      =0x11
+#NCREASON_WRITENOTSUPPORTED   =0x12
+
+; enNotProcessedReason
+#NPREASON_SIZE                =0x01
+#NPREASON_TYPE                =0x02
+#NPREASON_MASKS               =0x03
+#NPREASON_TIME                =0x04
+#NPREASON_NORIGHTS            =0x05
+#NPREASON_NOTFOUND            =0x06
+#NPREASON_SKIPPED             =0x07
+#NPREASON_BUDDY               =0x08
+#NPREASON_LOCKED              =0x09
+
+; scan object types
+#OBJECT_TYPE_MY_COMPUTER          = 0x0
+#OBJECT_TYPE_DRIVE                = 0x1
+#OBJECT_TYPE_FOLDER               = 0x2
+#OBJECT_TYPE_FILE                 = 0x3
+#OBJECT_TYPE_MEMORY               = 0x4
+#OBJECT_TYPE_STARTUP              = 0x5
+#OBJECT_TYPE_MAIL                 = 0x6
+#OBJECT_TYPE_ALL_DRIVES           = 0x7
+#OBJECT_TYPE_ALL_REMOVABLE_DRIVES = 0x8
+#OBJECT_TYPE_ALL_FIXED_DRIVES     = 0x9
+#OBJECT_TYPE_ALL_NETWORK_DRIVES   = 0xa
+#OBJECT_TYPE_BOOT_SECTORS         = 0xb
+#OBJECT_TYPE_MASKED               = 0xc
+#OBJECT_TYPE_QUARANTINE           = 0xd
+#OBJECT_TYPE_SYSTEM_RESTORE       = 0xe
+
+; enPackerType
+#DETPACKER_SUSPICIOUS    = 0x1
+#DETPACKER_MULTIPACKED   = 0x2
+#DETPACKER_UNKNOWN       = 0x4
+#DETPACKER_GREY          = 0x8
+
+; enApplyToAll
+#APPLYTOALL_FALSE       = 0x0
+#APPLYTOALL_TRUE        = 0x1
+#APPLYTOALL_NONE        = 0x2
+#APPLYTOALL_SESSION     = 0x4
+#APPLYTOALL_USE_SESSION = 0x8
+
+[ScanObjectIcon]
+#OBJECT_TYPE_MEMORY               = "memory"
+#OBJECT_TYPE_STARTUP              = "startupobj"
+#OBJECT_TYPE_MAIL                 = "mail"
+#OBJECT_TYPE_ALL_DRIVES           = "disk"
+#OBJECT_TYPE_ALL_REMOVABLE_DRIVES = "floppy"
+#OBJECT_TYPE_ALL_FIXED_DRIVES     = "disk"
+#OBJECT_TYPE_ALL_NETWORK_DRIVES   = "network"
+#OBJECT_TYPE_BOOT_SECTORS         = "bootsect"
+#OBJECT_TYPE_QUARANTINE           = "quarantine"
+#OBJECT_TYPE_SYSTEM_RESTORE       = "startupobj"
+default=getIconAsync(ObjectType == #OBJECT_TYPE_MY_COMPUTER ? "%mycomputer%" : ScanObjects, "unkobj")
+
+[DecisionReasonIcon]
+#NCREASON_REPONLY      =
+#NCREASON_CANCELLED    =
+#NCREASON_POSTPONED    ="warning"
+default                ="error"
+
+[Description.NotProcessed.Icon]
+#NPREASON_TIME         =
+#NPREASON_NOTFOUND     =
+#NPREASON_SKIPPED      ="warning"
+default                ="info"

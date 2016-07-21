@@ -1,0 +1,54 @@
+// IDServer.idl : IDL source for IDServer.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (IDServer.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	typedef [uuid(183EB460-06EF-11D4-96B1-00D0B71DDDF6),
+			helpstring("Prague ID categories enum"), v1_enum]
+	enum {
+		[helpstring("pic_Interface")] pic_Interface = 0,
+		[helpstring("pic_Plugin")] pic_Plugin,
+		[helpstring("pic_Vendor")] pic_Vendor,
+	} PgIDCategories;
+
+	[
+		object,
+		uuid(60FE9D11-06EA-11D4-96B1-00D0B71DDDF6),
+	
+		helpstring("IPragueIDServer Interface"),
+		pointer_default(unique)
+	]
+	interface IPragueIDServer : IUnknown
+	{
+		[helpstring("method GetID")] HRESULT GetID([in] PgIDCategories eCategory, [out] DWORD *pdwID);
+		[helpstring("method ReleaseID")] HRESULT ReleaseID([in] PgIDCategories eCategory, [in] DWORD dwID);
+		[helpstring("method SetIDInUse")] HRESULT SetIDInUse([in] PgIDCategories eCategory, [in] DWORD dwID);
+		[helpstring("method CheckIDInUse")] HRESULT CheckIDInUse([in] PgIDCategories eCategory, [in] DWORD dwID);
+		[helpstring("method GetErrorString")] HRESULT GetErrorString([in] HRESULT hErr, [out,string] BYTE **pErrString);
+		[helpstring("method GetVendorMnemonicID")] HRESULT GetVendorMnemonicID([in] DWORD dwSize, [in,out,size_is(dwSize)] BYTE *pMnemonicID);
+		[helpstring("method GetVendorName")] HRESULT GetVendorName([in] DWORD dwSize, [in,out,size_is(dwSize)] BYTE *pVendorName);
+		[helpstring("method ForceRegistryUse")] HRESULT ForceRegistryUse([in] DWORD dwSet);
+	};
+
+[
+	uuid(60FE9D01-06EA-11D4-96B1-00D0B71DDDF6),
+	version(1.0),
+	helpstring("IDServer 1.0 Type Library")
+]
+library IDSERVERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(60FE9D12-06EA-11D4-96B1-00D0B71DDDF6),
+		helpstring("PragueIDServer Class")
+	]
+	coclass PragueIDServer
+	{
+		[default] interface IPragueIDServer;
+	};
+};

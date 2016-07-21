@@ -1,0 +1,4 @@
+// ***** Trojan-Spy.Win32.Agent.cl *****
+begin
+ AddEvAlarmByCLSID('84695FD5-A8A8-11D8-978E-005022E14DE2', AScriptName, '');
+end.

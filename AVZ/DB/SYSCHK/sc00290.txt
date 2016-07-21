@@ -1,0 +1,11 @@
+// ***** AdvWare.WebSearch *****
+var
+ S : string;
+begin
+ S := 'toolbar.dll';
+ AddEvAlarmByCLSID('339BB23F-A864-48C0-A59F-29EA915965EC', AScriptName, S);
+ AddEvAlarmByCLSID('8952A998-1E7E-4716-B23D-3DBE03910972', AScriptName, S);
+ AddEvAlarmByCLSID('F1616B86-9288-489D-B71A-0CCF2F1A89DA', AScriptName, S);
+ AddEvAlarmByCLSID('FF76A5DA-6158-4439-99FF-EDC1B3FE100C', AScriptName, S);
+ AddEvAlarmByCLSID('69357D4E-BF4D-4651-91E9-52ECD45A0128', AScriptName, 'common.dll');
+end.

@@ -1,0 +1,6 @@
+// ***** Dialer.XDialer *****
+begin
+ AddEvAlarmByCLSID('8DCE908E-9E35-11D3-9431-009099104002',AScriptName,'');
+ AddEvAlarmByCLSID('9E7138EE-4E7B-11D5-94EF-006008A4ED7F',AScriptName,'');
+ AddEvAlarmByCLSID('69A4F9FF-E915-11D5-A9F1-009099104002',AScriptName,'');
+end.

@@ -1,0 +1,130 @@
+;;;
+;;; 
+;;;
+;;;
+;;; 
+;;;
+
+[Version]
+Signature   = "$Windows NT$"
+Class       = "ActivityMonitor"                         ;This is determined by the work this filter driver does
+ClassGuid   = {b86dff51-a31e-4bac-b3cf-e8cfe75c9fc2}
+Provider    = %KasperskyLab%
+DriverVer   = 02/18/2007,1.0.0.1
+CatalogFile = regflt.cat
+DriverPackageType=FileSystemFilter
+
+[Manufacturer]
+%KLName%=regfltModelSection,ntamd64
+
+[regfltModelSection]
+%regfltName%=DefaultInstall,regflt
+
+[regfltModelSection.ntamd64]
+%regfltName%=DefaultInstall,regflt
+
+[DestinationDirs]
+DefaultDestDir = 12
+regflt.DriverFiles = 12                        ;%windir%\system32\drivers
+
+[SourceDisksNames]
+1 = %Disk1%
+
+[SourceDisksFiles]
+regflt.sys = 1
+
+;;
+;; Default install sections
+;;
+
+[DefaultInstall]
+OptionDesc          = %regfltServiceDesc%
+CopyFiles           = regflt.DriverFiles
+
+[DefaultInstall.ntamd64]
+OptionDesc          = %regfltServiceDesc%
+CopyFiles           = regflt.DriverFiles
+
+[DefaultInstall.Services]
+AddService          = %regfltServiceName%,,regflt.Service
+
+[DefaultInstall.ntamd64.Services]
+AddService          = %regfltServiceName%,,regflt.Service
+
+;;
+;; Default uninstall sections
+;;
+
+[DefaultUninstall]
+DelFiles   = regflt.DriverFiles
+DelReg     = regflt.DelRegistry
+
+[DefaultUninstall.ntamd64]
+DelFiles   = regflt.DriverFiles
+DelReg     = regflt.DelRegistry
+
+[DefaultUninstall.Services]
+DelService = regflt
+
+[DefaultUninstall.ntamd64.Services]
+DelService = regflt
+
+;
+; Services Section
+;
+
+[regflt.Service]
+DisplayName      = %regfltServiceName%
+Description      = %regfltServiceDesc%
+ServiceBinary    = %12%\regflt.sys                 ;%windir%\system32\drivers\regflt.sys
+Dependencies     = %FltmgrServiceName%          ;FltMgr
+ServiceType      = 2                            ;SERVICE_FILE_SYSTEM_DRIVER
+StartType        = 1                            ;SERVICE_SYSTEM_START
+ErrorControl     = 1                            ;SERVICE_ERROR_NORMAL
+LoadOrderGroup   = "FSFilter Activity Monitor"
+AddReg           = regflt.AddRegistry
+
+;
+; Registry Modifications
+;
+
+[regflt.AddRegistry]
+HKR,%RegInstancesSubkeyName%,%RegDefaultInstanceValueName%,0x00000000,%DefaultInstance%
+HKR,%RegInstancesSubkeyName%"\"%Instance1.Name%,%RegAltitudeValueName%,0x00000000,%Instance1.Altitude%
+HKR,%RegInstancesSubkeyName%"\"%Instance1.Name%,%RegFlagsValueName%,0x00010001,%Instance1.Flags%
+
+[regflt.DelRegistry]
+;HKR,%RegInstancesSubkeyName%,%RegDefaultInstanceValueName%
+;HKR,%RegInstancesSubkeyName%"\"%Instance1.Name%,%RegAltitudeValueName%
+;HKR,%RegInstancesSubkeyName%"\"%Instance1.Name%,%RegFlagsValueName%
+
+;
+; Copy Files
+;
+
+[regflt.DriverFiles]
+regflt.sys
+
+;;
+;; String Section
+;;
+
+[Strings]
+KasperskyLab       = "Kaspersky Lab"
+regfltServiceDesc    = "regflt Minifilter"
+regfltServiceName    = "regflt"
+regfltDebugLevel     = "DebugLevel"
+FltmgrServiceName                   = "FltMgr"
+RegInstancesSubkeyName              = "Instances"
+RegDefaultInstanceValueName         = "DefaultInstance"
+RegAltitudeValueName                = "Altitude"
+RegFlagsValueName                   = "Flags"
+Disk1                               = "regflt Source"
+KLName             = "KL"
+regfltName           = "regflt"
+
+;Instances specific information.
+DefaultInstance      = "regflt"
+Instance1.Name       = "regflt"
+Instance1.Altitude   = "320400"
+Instance1.Flags      = 0x0

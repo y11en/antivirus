@@ -1,0 +1,1 @@
+\\avp.ru\global\symbols\addsym_dev.cmd  %1 %2 %3 %4 %5 %6 %7

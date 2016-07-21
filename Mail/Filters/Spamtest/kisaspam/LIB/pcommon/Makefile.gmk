@@ -1,0 +1,7 @@
+TARGET=LIB
+OUTPUT=../pcommon$(_LIB)
+SOURCE=Dos2Uni.cpp Lat12Uni.cpp Win2Uni.cpp koi8_ctype.c     \
+       Iso2Uni.cpp Lat12Uni_cyr.cpp convert.cpp strptime.c   \
+       Koi2Uni.cpp Mac2Uni.cpp getopt.c
+
+include $(ProjectRoot_Directory)/gnu-maker/common_ex.gmk

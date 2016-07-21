@@ -1,0 +1,17 @@
+[explicit_handle]
+interface rpc_taskmanager
+{
+
+}
+
+[explicit_handle]
+interface rpc_tmclient
+{
+
+}
+
+[explicit_handle]
+interface rpc_tmhost
+{
+
+}

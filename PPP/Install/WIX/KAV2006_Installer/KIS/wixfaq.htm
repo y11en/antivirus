@@ -1,0 +1,362 @@
+﻿<HTML>
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <TITLE>WiX FAQ</TITLE>
+    <meta name="description" content="За основу документа был взят WiX FAQ от Люка Стивенса (Luke Stevens). При переводе акцент был сделан НЕ на точности передачи авторского стиля, а на смысле. Ряд вопросов пришлось обновить и дополнить. Кроме того, был добавлен новый раздел «Локализация».">
+    <meta name="keywords" content="WiX">
+    <META name="robots" content="noindex,follow">
+    <LINK rel="stylesheet" href="/css/articlep.css" type="text/css">
+  </HEAD>
+  <BODY marginwidth="20" marginheight="20">
+    <H1>WiX FAQ</H1>
+    <H5>
+      <SPAN class="title">Автор: </SPAN>
+      <SPAN class="value">
+        <a target="_blank" href="mailto:anfortas.geo@yahoo.com">Luke Stevens</a>
+      </SPAN>
+      <br>
+      <SPAN class="title">Перевод: </SPAN>
+      <SPAN class="value">
+        <a target="_blank" href="http://rsdn.ru/Users/Profile.aspx?uid=10885">Никита А. Зимин</a>
+        <BR>
+        <a target="_blank" href="http://www.c-gator.ru">«Деловые программы»</a>
+      </SPAN>
+      <br>
+      <SPAN class="title">Источник: </SPAN>
+      <SPAN class="value">
+        <a target="_blank" href="http://gauss.dynalias.net/wix/wixfaq.htm">Wix FAQ</a>
+      </SPAN>
+    </H5>
+    <H6>
+      <SPAN class="title">Опубликовано: </SPAN>
+      <SPAN class="value">04.10.2006</SPAN>
+      <BR>
+      <SPAN class="title">Версия текста: </SPAN>
+      <SPAN class="value">1.0</SPAN>
+    </H6>
+    <DIV style="margin-left:2em">
+      <A href="#E2">
+        <B></B>
+      </A>
+      <BR>
+      <DIV style="margin-left:2em">
+      </DIV>
+      <A href="#EGB">
+        <B>Общие вопросы</B>
+      </A>
+      <BR>
+      <DIV style="margin-left:2em">
+        <A href="#EJB">Что такое WiX?</A>
+        <BR>
+        <A href="#E3C">Где еще можно найти информацию по WiX?</A>
+        <BR>
+        <A href="#EVF">Почему бы вместо WiX не использовать … ?</A>
+        <BR>
+        <A href="#ETH">Откуда можно скачать последнюю версию WiX?</A>
+        <BR>
+        <A href="#EHAAC">Можно мне поучаствовать в разработке?</A>
+        <BR>
+      </DIV>
+      <A href="#EWAAC">
+        <B>HOWTO</B>
+      </A>
+      <BR>
+      <DIV style="margin-left:2em">
+        <A href="#EZAAC">Как установить WiX?</A>
+        <BR>
+        <A href="#EYBAC">Как работать с проектом WiX непосредственно в Visual Studio?</A>
+        <BR>
+        <A href="#EHCAC">Есть ли простой способ нарисовать интерфейс (UI) установщика?</A>
+        <BR>
+        <A href="#EJDAC">Как мне получить новое значение GUID?</A>
+        <BR>
+        <A href="#E1DAC">Как изменить иконку продукта, которая видна в списке «Установка и удаление программ»?</A>
+        <BR>
+        <A href="#EHEAC">Как автоматически добавить в установщик все файлы из заданной папки?</A>
+        <BR>
+        <A href="#EBFAC">Как зарегистрировать COM DLL?</A>
+        <BR>
+        <A href="#ETHAC">Как установить .NET-сборку в GAC?</A>
+        <BR>
+        <A href="#EUIAC">Как проверить, установлены ли необходимые системные компоненты (prerequisites)?</A>
+        <BR>
+        <A href="#E4JAC">До установки .MSI-пакета нужно автоматически установить &lt;системный компонент …&gt;. Как это сделать?</A>
+        <BR>
+        <A href="#ERKAC">Когда следует изменять код продукта, код пакета итд.?</A>
+        <BR>
+        <A href="#EULAC">Как я могу расширить функциональность WiX?</A>
+        <BR>
+      </DIV>
+      <A href="#EAMAC">
+        <B>Локализация</B>
+      </A>
+      <BR>
+      <DIV style="margin-left:2em">
+        <A href="#EDMAC">Как получить .MSI-пакет на русском языке?</A>
+        <BR>
+        <A href="#EXMAC">Русское имя продукта отображается как ??????</A>
+        <BR>
+      </DIV>
+      <A href="#EIOAC">
+        <B>Разрешение проблем</B>
+      </A>
+      <BR>
+      <DIV style="margin-left:2em">
+        <A href="#ELOAC">Как отлаживать процесс установки?</A>
+        <BR>
+        <A href="#EBPAC">Почему я получаю ошибку 0xc0000135 при попытке запуска WiX?</A>
+        <BR>
+        <A href="#EQPAC">Почему WiX не запускается с сетевого диска?</A>
+        <BR>
+        <A href="#EAAAE">Почему при деинсталляции ничего не удаляется?</A>
+        <BR>
+        <A href="#EIAAE">Почему сбрасываются значения свойств, заданные в ходе установки?</A>
+        <BR>
+        <A href="#EOAAE">Почему мое действие (custom action) выполняется в ходе деинсталляции?</A>
+        <BR>
+        <A href="#EZAAE">Почему мой сервис не запустился?</A>
+        <BR>
+      </DIV>
+    </DIV>
+    <SCRIPT LANGUAGE="javascript">
+			function ToggleCode(id)
+			{
+				el=document.getElementById(id);
+				img=document.getElementById("img"+id);
+				if(el.style.display=="none")
+				{
+					img.src="/images/ls2.gif";
+					el.style.display="";
+				}
+				else
+				{
+					img.src="/images/ls1.gif";
+					el.style.display="none";
+				}
+				return false;
+			}
+		</SCRIPT>
+    <H2><A name="E2"></A></H2>
+    <P>За основу документа был взят <A href="http://gauss.dynalias.net/wix/wixfaq.htm" class="link-ext" target="_blank">WiX FAQ</A> от Люка Стивенса (<I>Luke Stevens</I>). При переводе акцент был сделан НЕ на точности передачи авторского стиля, а на смысле. Ряд вопросов пришлось обновить и дополнить. Кроме того, был добавлен новый раздел «Локализация».</P>
+<H2>Общие вопросы<A name="EGB"></A></H2>
+<H3>Что такое WiX?<A name="EJB"></A></H3>
+<P><B>Windows Installer XML</B> (<B>WiX</B>) — это набор инструментов с открытым исходным кодом, позволяющих собирать из XML-описаний пакеты формата <B>Windows Installer</B>.</P>
+<P>WiX - первый продуктом компании Microsoft, который стал развиваться на площадке <A href="http://sourceforge.net/" class="link-ext" target="_blank">SourceForge</A> и распространяться под открытой лицензией CPL (двумя другими позже стали <A href="http://sourceforge.net/projects/wtl/" class="link-ext" target="_blank">Windows Template Library</A> и <A href="http://www.flexwiki.com/default.aspx" class="link-ext" target="_blank">FlexWiki</A>).</P>
+<P>В состав WiX входит ряд консольных утилит:</P>
+<UL style="LIST-STYLE:square"><LI><B>candle</B> — препроцессор/компилятор</LI>
+<LI><B>light</B> — компоновщик</LI>
+<LI><B>lit</B> — управление библиотеками</LI>
+<LI><B>dark</B> — декомпилятор</LI>
+<LI><B>tallow</B> — утилита для автогенерации кода</LI>
+</UL>
+
+<H3>Где еще можно найти информацию по WiX?<A name="E3C"></A></H3>
+<UL style="LIST-STYLE:square"><LI><A href="http://www.tramontana.co.hu/wix/" class="link-ext" target="_blank">WiX Tutorial</A> от Gabor DEAK JAHN — отличное введение в WiX, с наглядными <A href="http://www.tramontana.co.hu/wix/samples.zip" class="link-file">примерами</A></LI>
+<LI>Документация в составе дистрибутива WiX — см. doc/WiX.chm</LI>
+<LI>Список рассылки <A href="http://lists.sourceforge.net/lists/listinfo/wix-users" class="link-ext" target="_blank">wix-users</A> на SourceForge.net.</LI>
+<LI>Информация по Windows Installer в Platform SDK — см. <A href="http://msdn.microsoft.com/library/en-us/msi/setup/windows_installer_start_page.asp" class="link-ext" target="_blank">раздел по Windows Installer в MSDN</A></LI>
+<LI>Блоги разработчиков: <A href="http://blogs.msdn.com/robmen/" class="link-ext" target="_blank">Роб Меншинг</A> (<I>Rob Mensching</I>), и <A href="http://installing.blogspot.com/" class="link-ext" target="_blank">Дерек Цицероне</A> (<I>Derek Cicerone</I>, к сожалению, он недавно покинул проект)</LI>
+<LI><A href="http://msdn.microsoft.com/library/en-us/dnwingen/html/wixsetup.asp" class="link-ext" target="_blank">Using the WiX Toolset to Integrate Setup into Your Development Process</A> — статья в MSDN об использовании WiX и Votive</LI>
+<LI><A href="http://gauss.dynalias.net/wix/wixfaq.htm" class="link-ext" target="_blank">WiX FAQ</A> — сборник вопросов/ответов (последнее время сайт не отвечает, используйте <A href="http://66.102.9.104/search?q=cache:o2RzOON15KUJ:gauss.dynalias.net/wix/wixfaq.htm+WiX+FAQ&amp;hl=ru&amp;gl=ru&amp;ct=clnk&amp;cd=1" class="link-ext" target="_blank">кеш Google</A>)</LI>
+<LI><A href="http://www.citforum.ru/internet/xml/wix/" class="link-ext" target="_blank">Windows Installer XML: создание файлов инсталляции</A> — статья на CITForum</LI>
+<LI><A href="http://www.installsite.org/" class="link-ext" target="_blank">www.installsite.org</A> — сайт для разработчиков инсталляторов, в том числе и для Windows Installer. Есть несколько интересных CA. Несколько статей на русском: <A href="http://www.installsite.ru/" class="link-ext" target="_blank">www.installsite.ru</A>.</LI>
+<LI><A href="http://wix.sourceforge.net/" class="link-ext" target="_blank">wix.sourceforge.net</A> — сайт проекта WiX, содержит основные ссылки и документацию</LI>
+<LI><A href="http://groups.google.com/group/Wixg" class="link-ext" target="_blank">groups.google.com/group/Wixg</A> — группа обсуждения на Google Groups</LI>
+</UL>
+
+<H3>Почему бы вместо WiX не использовать … ?<A name="EVF"></A></H3>
+<UL style="LIST-STYLE:square"><LI><B>Свой скрипт или программу установки?</B> Развернув свой проект, вы, вероятно, создадите нечто с набором функциональности, являющимся подмножеством того, что <A href="http://msdn.microsoft.com/library/en-us/msi/setup/overview_of_windows_installer.asp" class="link-ext" target="_blank">Windows Installer</A> <I>уже</I> может делать за вас, и <I>намного</I> более надежно. Определение процесса установки в терминах данных, используемых Windows Installer, позволит операционной системе и другим инструментам более разумно управлять этим процессом, например, определить, что общие компоненты корректно установлены и обновлены, или представить ваш продукт в списке «Установка и удаление программ». Использование WiX позволит вам получить все преимущества, которые может предложить Windows Installer.</LI>
+<LI><B>Утилиту <A href="http://blogs.msdn.com/astebner/archive/2004/07/12/180792.aspx" class="link-ext" target="_blank">Orca</A> или <A href="http://msdn.microsoft.com/library/en-us/msi/setup/automation_interface_reference.asp" class="link-ext" target="_blank">API</A>?</B> Такой подход позволит вам напрямую редактировать MSI-пакет, формат которого предназначен для работы Windows Installer, а отнюдь не для разработчиков. С помощью инструментов WiX <I>намного</I> проще писать инсталляторы, пакеты установки можно генерировать в автоматическом режиме. Кроме того, WiX значительно расширяет базовые возможности Windows Installer, например, добавляется возможность создать и настроить веб-сайт в IIS или базу данных в SQL Server.</LI>
+<LI><B>Visual Studio Installer?</B> В Visual Studio уже имеется встроенный тип проекта для создания MSI-пакетов, но он полезен лишь для простейших случаев. В частности, он допускает лишь одну «feature», очень ограничен в настройке интерфейса и не поддерживает обновления. Кроме того, он сильно опирается на программирование процесса установки через классы инсталляции .NET (.NET installer classes). Если интеграция с Visual Studio для вас так важна — используйте <B><A href="http://sourceforge.net/forum/forum.php?forum_id=445363" class="link-ext" target="_blank">Votive</A></B>.</LI>
+<LI><B><A href="http://www.installshield.com/" class="link-ext" target="_blank">InstallShield</A> / <A href="http://www.wise.com/" class="link-ext" target="_blank">Wise</A> / итп.?</B> Существует ряд коммерческих продуктов, упрощающих создание пакетов установки в формате Windows Installer. Они особенно полезны, если вы только начинаете разбираться с процессом установки и вам нужен дружественный интерфейс, который будет направлять вас. Но большинство опытных разработчиков программ установки приходит к тому, что лучше использовать инструмент, работающий в модели данных Windows Installer, используя все его возможности. И, кроме того, WiX имеет открытый исходный код и бесплатен!</LI>
+<LI><B>XCOPY?</B> Если вы можете распространять вашу программу простым копированием файлов — так и делайте (сам WiX распространяется именно так). Но для большинства продуктов — особенно таких, которые устанавливают сервер или каким-то образом интегрируются с другими продуктами или самой Windows — <I>процесс установки это не просто копирование</I> («<I>setup isn’t just XCOPY</I>» — первоначальное название блога Роба Меншинга).</LI>
+</UL>
+
+<H3>Откуда можно скачать последнюю версию WiX?<A name="ETH"></A></H3>
+<P>Релизы WiX размещены на SourceForge: <A href="http://wix.sourceforge.net/downloadv2.html" class="link-ext" target="_blank">WiX 2.0 + Votive2</A>, <A href="http://wix.sourceforge.net/downloadv3.html" class="link-ext" target="_blank">WiX 3.0 + Votive 3</A>. Кроме того, разработчики WiX придерживаются практики <A href="http://wix.sourceforge.net/releases" class="link-ext" target="_blank">еженедельных релизов</A>.</P>
+
+<H3>Можно мне поучаствовать в разработке?<A name="EHAAC"></A></H3>
+<P>ДА! Вам нужно лишь подписать <A href="http://blogs.msdn.com/robmen/archive/2004/04/14/112970.aspx" class="link-ext" target="_blank">соглашение</A>, после чего вы можете вносить улучшения и отсылать правки на <A href="mailto:wix-devs@sourceforge.net">wix-devs@sourceforge.net</A>.</P>
+
+<H2>HOWTO<A name="EWAAC"></A></H2>
+<H3>Как установить WiX?<A name="EZAAC"></A></H3>
+<P>Прежде всего, установите <A href="http://www.microsoft.com/downloads/details.aspx?FamilyId=262D25E3-F589-4842-8157-034D1E7CF3A3&amp;displaylang=en" class="link-ext" target="_blank">.NET Framework 1.1</A> и <A href="http://www.microsoft.com/downloads/details.aspx?familyid=a8f5654f-088e-40b2-bbdb-a83353618b38" class="link-ext" target="_blank">SP1</A> для него. Инструменты WiX работают под .NET, а без SP1 вы можете столкнуться со случайными ошибками при парсинге больших XML-файлов. .NET Framework требуется только для работы утилит WiX; готовый установочный пакет не требует присутстувия .NET на целевой машине.</P>
+<P>При установке, WiX не требует особых настроек — достаточно развернуть .zip-архив в какую-либо папку.</P>
+<P>Для того, чтобы при редактировании .wix-файлов в Visual Studio работал IntelliSense, нужно поместить XML-схемы WiX (wix.xsd, wixloc.xsd) в соответствующую папку:</P>
+<UL style="LIST-STYLE:square"><LI>для <B>Visual Studio 2005</B>: %ProgramFiles%\Microsoft Visual Studio 8\xml\Schemas</LI>
+<LI>для <B>Visual Studio .NET 2003</B>: %ProgramFiles%\Microsoft Visual Studio .NET 2003\Common7\Packages\schemas\xml</LI>
+</UL>
+
+<H3>Как работать с проектом WiX непосредственно в Visual Studio?<A name="EYBAC"></A></H3>
+<P>Именно для этого и был разработан <A href="http://sourceforge.net/forum/forum.php?forum_id=445363" class="link-ext" target="_blank">Votive</A>.</P>
+<P><B>Votive</B> — это расширение (Add-In) для Visual Studio. Он позволяет создавать «WiX-проекты», которые можно включать в solution и которые действуют точно так же, как и любые другие типы проектов. Все инструменты WiX включены в состав Votive, поэтому для работы с ним не требуется устанавливать WiX отдельно — это может понадобиться уже только для автоматической сборки установщика.</P>
+
+<H3>Есть ли простой способ нарисовать интерфейс (UI) установщика?<A name="EHCAC"></A></H3>
+<P>Существует ряд проектов, предоставляющих возможность WYSIWYG-редактирования экранов установщика:</P>
+<UL style="LIST-STYLE:square"><LI><A href="http://zelenkov.com/twix/download/" class="link-ext" target="_blank">WiXTrim</A> Олега Зеленкова (см. также <A href="http://www.gotdotnet.com/Community/UserSamples/Details.aspx?SampleGuid=424F1B93-78BF-47EE-9EAB-B0F72A18A231" class="link-ext" target="_blank">GotDotNet User Sample: WixTrim - WiX Designer</A>)</LI>
+<LI><A href="http://wixedit.sourceforge.net/" class="link-ext" target="_blank">WixEdit</A></LI>
+<LI><A href="http://wixtool.org/" class="link-ext" target="_blank">WiXTool</A></LI>
+<LI>SharpDevelop 2.1 — см. <A href="http://community.sharpdevelop.net/blogs/mattward/archive/2006/09/17/WixIntegration.aspx" class="link-ext" target="_blank">здесь</A></LI>
+</UL>
+
+<H3>Как мне получить новое значение GUID?<A name="EJDAC"></A></H3>
+<P>Значения GUID используются WiX в качестве идентификаторов различных объектов, таких как продукт (Product) или компонент (Component), и WiX предполагает, что вы сами выберете нужные значения и укажите их в XML-файле. Для генерации значений вы можете использовать утилиты, такие как uuidgen или guidgen (из VS — команда Tools | Create GUID), но убедитесь, что используется верхний регистр символов и значение не окружено фигурными скобками.</P>
+<P>При работе в Visual Studio можно использовать простой <A href="http://weblogs.asp.net/palermo4/archive/2004/08/18/216930.aspx" class="link-ext" target="_blank">макрос</A>, на который можно назначить комбинацию клавиш, либо использовать <A href="http://www.thecodeproject.com/macro/GUIDGenNET.asp" class="link-ext" target="_blank">GUIDGen.NET</A>.</P>
+
+<H3>Как изменить иконку продукта, которая видна в списке «Установка и удаление программ»?<A name="E1DAC"></A></H3>
+<P>Укажите в свойстве <A href="http://msdn.microsoft.com/library/en-us/msi/setup/arpproducticon.asp" class="link-ext" target="_blank">ARPPRODUCTICON</A> идентификатор нужной иконки. Например:</P>
+<TABLE class="code" width="98%"><TR><TD><PRE>
+&lt;Property Id="ARPPRODUCTICON" Value="MyProduct.ico" /&gt; 
+&lt;Icon Id="MyProduct.ico" src="C:\MyProduct.ico" /&gt;
+</PRE></TD></TR></TABLE>
+
+<H3>Как автоматически добавить в установщик все файлы из заданной папки?<A name="EHEAC"></A></H3>
+<P>По идее, такой возможности нет.</P>
+<P>Разработчик должен принять обдуманное и неизменное решение о том, какие в точности файлы должны быть включены в какой компонент. Если GUID или содержание компонента изменились, то <A href="http://msdn.microsoft.com/library/en-us/msi/setup/what_happens_if_the_component_rules_are_broken.asp" class="link-ext" target="_blank">нарушаются</A> <A href="http://blogs.msdn.com/robmen/archive/2003/10/18/56497.aspx" class="link-ext" target="_blank">правила компонентов</A>, и Windows Installer уже не сможет корректно координировать разделение общих компонентов между несколькими продуктами. Автоматическое добавление всех файлов заданной директории в какой-либо компонент в ходе каждой сборки сделает невозможным сохранение неизменного содержания компонента при изменении содержимого директории.</P>
+<P>Утилита tallow позволяет просканировать директорию и сгенерировать компоненты для всех найденных файлов, но полученный в результате исходный код предполагается использовать только в качестве начального варианта для последующей ручной доводки, но не в качестве входа для процесса автоматической сборки — все что подходит для автоматической сборки должно передаваться в candle, но никак не в tallow.</P>
+<P>Существует инструмент <A href="http://www.infozoom.de/download/Mallow.zip" class="link-ext" target="_blank">mallow</A>, позволяющий автоматически собирать список файлов в директории и поддиректориях, и генерирующий также компоненты и тэги Directory, что позволяет подключать полученный файл так, что все поддерево директорий и файлы будут включены в пакет установки и установлены в виде такого же поддерева в заданную папку.</P>
+
+<H3>Как зарегистрировать COM DLL?<A name="EBFAC"></A></H3>
+<P>Рекомендуемый способ состоит в том, чтобы собрать всю регистрационную информацию и включить ее в компонент (тэг Component) для этой DLL в виде тэгов TypeLib, Class, Interface, ProgID итд., и, как последнее средство — тэг Registry. В качестве начального материала вы можете использовать результат работы утилиты tallow (либо <A href="http://www.geekswithblogs.net/rikoe/archive/2004/12/28/18643.aspx" class="link-ext" target="_blank">улучшенной tallow</A>, либо <A href="http://gauss.dynalias.net/blog/WiXAndTypeLibraries.aspx" class="link-ext" target="_blank">wixtlib</A> для библиотек типов). Например:</P>
+<TABLE class="code" width="98%"><TR><TD><PRE>
+&lt;Component Id=<SPAN class="STRING">"SomeFile"</SPAN> Guid=<SPAN class="STRING">"..."</SPAN> DiskId=<SPAN class="STRING">"1"</SPAN>&gt;
+    &lt;File Id=<SPAN class="STRING">"SomeFile.dll"</SPAN> Name=<SPAN class="STRING">"SomeFile.dll"</SPAN> KeyPath=<SPAN class="STRING">"yes"</SPAN> /&gt;
+    &lt;TypeLib Id=<SPAN class="STRING">"..."</SPAN> Advertise=<SPAN class="STRING">"yes"</SPAN> MajorVersion=<SPAN class="STRING">"1"</SPAN> MinorVersion=<SPAN class="STRING">"0"</SPAN> 
+        Language=<SPAN class="STRING">"0"</SPAN> Description=<SPAN class="STRING">"SomeFile 1.0 Type Library"</SPAN> Cost=<SPAN class="STRING">"50000"</SPAN>&gt;
+        &lt;Class Id=<SPAN class="STRING">"..."</SPAN> Advertise=<SPAN class="STRING">"yes"</SPAN> Description=<SPAN class="STRING">"SomeClass Class"</SPAN> 
+            Context=<SPAN class="STRING">"InprocServer32"</SPAN> ThreadingModel=<SPAN class="STRING">"both"</SPAN>&gt;
+            &lt;ProgId Id=<SPAN class="STRING">"SomeFile.SomeClass.1"</SPAN> Description=<SPAN class="STRING">"SomeClass Class"</SPAN>&gt;
+                &lt;ProgId Id=<SPAN class="STRING">"SomeFile.SomeClass"</SPAN> Description=<SPAN class="STRING">"SomeClass Class"</SPAN> /&gt;
+            &lt;/ProgId&gt;
+        &lt;/Class&gt;
+    &lt;/TypeLib&gt;
+&lt;/Component&gt;
+</PRE></TD></TR></TABLE>
+<P>Если для DLL требуется само-регистрация, укажите в тэге File атрибут SelfRegCost:</P>
+<TABLE class="code" width="98%"><TR><TD><PRE>
+&lt;File Id=<SPAN class="STRING">"SomeFile.dll"</SPAN> Name=<SPAN class="STRING">"SomeFile.dll"</SPAN> KeyPath=<SPAN class="STRING">"yes"</SPAN> SelfRegCost=<SPAN class="STRING">"50000"</SPAN> /&gt;
+</PRE></TD></TR></TABLE>
+<P>Но имейте в виду, что использование саморегистрации <A href="http://msdn.microsoft.com/library/en-us/msi/setup/selfreg_table.asp" class="link-ext" target="_blank">крайне неодобряется</A>, поскольку она подрывает возможность Windows Installer управлять установкой регистрационной информации.</P>
+
+<H3>Как установить .NET-сборку в GAC?<A name="ETHAC"></A></H3>
+<P>Установите для тэга File атрибуты Assembly и AssemblyManifest, но не указывайте атрибут AssemblyApplication. Например:</P>
+<TABLE class="code" width="98%"><TR><TD><PRE>
+&lt;Component Id=<SPAN class="STRING">"SomeFile"</SPAN> Guid=<SPAN class="STRING">"..."</SPAN> DiskId=<SPAN class="STRING">"1"</SPAN>&gt;
+    &lt;File Id=<SPAN class="STRING">"SomeFile.dll"</SPAN> Name=<SPAN class="STRING">"SomeFile.dll"</SPAN> KeyPath=<SPAN class="STRING">"yes"</SPAN> 
+        src=<SPAN class="STRING">"C:\SomeFile.dll"</SPAN> Checksum=<SPAN class="STRING">"yes"</SPAN> 
+        Assembly=<SPAN class="STRING">".net"</SPAN> AssemblyManifest=<SPAN class="STRING">"SomeFile.dll"</SPAN> /&gt;
+&lt;/Component&gt;
+</PRE></TD></TR></TABLE>
+<P>Такая сборка не будет устанавливаться до фазы «commit», поэтому до этого ее невозможно будет использовать в custom actions.</P>
+<P>Если вы передумаете и решите не включать сборку в GAC, установите атрибут AssemblyApplication в то же значение что и атрибут AssemblyManifest.</P>
+
+<H3>Как проверить, установлены ли необходимые системные компоненты (prerequisites)?<A name="EUIAC"></A></H3>
+<P>Основная идея состоит в том чтобы проверять свойство, которое устанавливается по-разному в зависимости от наличия компонента и его версии. Вы можете создать условие запуска установки, поместив тэг Condition внутри Product, например:</P>
+<TABLE class="code" width="98%"><TR><TD><PRE>
+&lt;Condition Message=<SPAN class="STRING">"Для установки требуется Windows XP или выше."</SPAN>&gt;
+  &lt;![CDATA[VersionNT &gt;= 501]]&gt;
+&lt;/Condition&gt;
+</PRE></TD></TR></TABLE>
+<P>Для проверки версии ОС вы можете использовать предопределенные свойства — такие как <A href="http://msdn.microsoft.com/library/en-us/msi/setup/operating_system_property_values.asp" class="link-ext" target="_blank">VersionNT</A> или Version9X, для проверки версии .NET Framework — <A href="http://msdn.microsoft.com/library/en-us/msi/setup/msinetassemblysupport.asp" class="link-ext" target="_blank">MsiNetAssemblySupport</A>.</P>
+<P>Для поиска компонента, установленного из MSI, можно использовать поиск по GUID тэгом ComponentSearch. Для компонента Windows, такого как IIS, может понадобиться поиск по реестру, например:</P>
+<TABLE class="code" width="98%"><TR><TD><PRE>
+&lt;Property Id=<SPAN class="STRING">"W3SVCMAJORVERSION"</SPAN>&gt;
+    &lt;RegistrySearch Id=<SPAN class="STRING">"W3SVCMAJORVERSION"</SPAN> Type=<SPAN class="STRING">"registry"</SPAN> Root=<SPAN class="STRING">"HKLM"</SPAN> 
+        Key=<SPAN class="STRING">"System\CurrentControlSet\Services\W3SVC\Parameters"</SPAN> 
+        Name=<SPAN class="STRING">"MajorVersion"</SPAN> /&gt;
+&lt;/Property&gt;
+</PRE></TD></TR></TABLE>
+<P>— этот код под Windows Server 2003 установит свойство W3SVCMAJORVERSION в значение «#6», если сервис «IIS web publishing» установлен, либо в пустое значение, если не установлен.</P>
+
+<H3>До установки .MSI-пакета нужно автоматически установить &lt;системный компонент …&gt;. Как это сделать?<A name="E4JAC"></A></H3>
+<P>Проблема установки и обновления системных компонентов (prerequisites), таких как .NET Framework, MDAC, MSDE и др., решается использованием программы-bootstrapper, задача которой — установить и обновить все нужные компоненты, после чего запустить на выполнение ваш .MSI-пакет.</P>
+<P>Существует несколько таких программ:</P>
+<UL style="LIST-STYLE:square"><LI><A href="http://www.devage.com/dotNetInstaller/dotNetInstaller.html" class="link-ext" target="_blank">dotNetInstaller</A></LI>
+<LI><A href="http://www.microsoft.com/downloads/details.aspx?familyid=2A5E4EBC-651C-40AA-9525-1810AF47C317&amp;displaylang=en" class="link-ext" target="_blank">Microsoft MCI SDK</A></LI>
+</UL>
+
+<H3>Когда следует изменять код продукта, код пакета итд.?<A name="ERKAC"></A></H3>
+<P>Есть три важных GUID, которые определяют ваш установочный пакет, и которые особенно важны для <A href="http://msdn.microsoft.com/library/en-us/msi/setup/patching_and_upgrades.asp" class="link-ext" target="_blank">обновлений</A> продукта:</P>
+<UL style="LIST-STYLE:square"><LI><B>код пакета</B> (<B>Package Code</B>) обычно должен быт своим для каждого .msi-файла</LI>
+<LI><B>код продукта</B> (<B>Product Code</B>) идентифицирует группу пакетов, из которых только один может быть установлен в каждый момент времени. Например, два пакета могут иметь один и тот же код продукта, если они являются локализациями на разные языки. Если вы хотите позволить пользователям обновляться с одной версии на другую без обязательной деинсталляции (т.н. <A href="http://msdn.microsoft.com/library/en-us/msi/setup/major_upgrades.asp" class="link-ext" target="_blank">major upgrade</A>), то каждая версия должна иметь собственный код продукта, поэтому обычно новый выпуск с новым номером версии служит основанием для изменения кода продукта.</LI>
+<LI><B>код обновления</B> (<B>Upgrade Code</B>) идентифицирует группу пакетов, все из которых могут быть обновлены до одного нового продукта. Обычно, код обновления совпадает для всех версий, которые не могут быть установлены одновременно (side-by-side), тем самым позволяя более старым версиям определять наличие более новых и отказываться от установки при этом, а также новым версиям определять наличие более старых и автоматически обновлять их.</LI>
+</UL>
+
+<H3>Как я могу расширить функциональность WiX?<A name="EULAC"></A></H3>
+<P>Хотя функциональность Windows Installer можно расширять только с помощью действий (custom actions, CA), функциональность WiX по созданию установочных пакетов можно увеличить за счет расширений. WiX может использовать расширения в виде внешних DLL, определяющих дополнения к схеме, заполняющих пользовательские таблицы итп. Читайте об этом <A href="http://gauss.dynalias.net/blog/ExtendingWiX.aspx" class="link-ext" target="_blank">здесь</A>.</P>
+
+<H2>Локализация<A name="EAMAC"></A></H2>
+<H3>Как получить .MSI-пакет на русском языке?<A name="EDMAC"></A></H3>
+<P>Под руководством Gabor DEAK JAHN существует т.н. <A href="http://www.tramontana.co.hu/wix/loc/" class="link-ext" target="_blank">WiX Localization Project</A>, объединяющий усилия по написанию файлов локализации (.wxl-файлов) для всех основных языков. В дистрибутив последних версий WiX входит 4 языковых файла (для en-US, de-DE, es-ES и nl-NL), хотя еще 9 языковых файлов (в т.ч. и ru-RU) числятся в списке как завершенные.</P>
+<P>За основу локализации берется файл WixUI_en-us.wxl, основная часть сообщений относится к Windows Installer, их перевод основывается на файле Intl.zip из MSI SDK. Перевод остальных сообщений выполняется непосредственно с англоязычного файла.</P>
+<P>«Неофициальный» файл локализации WixUI_ru-ru.wxl можно взять <A href="http://rsdn.ru/File/10885/WixUI_ru-ru.2.0.4221.wxl" class="link-ext" target="_blank">здесь</A>.</P>
+
+<H3>Русское имя продукта отображается как ??????<A name="EXMAC"></A></H3>
+<P>Во-первых, проверьте что кодировка файла совпадает с кодировкой, объявленной в начале этого файла, например:</P>
+<TABLE class="code" width="98%"><TR><TD><PRE>
+&lt;?xml version=<SPAN class="STRING">"1.0"</SPAN> encoding=<SPAN class="STRING">"windows-1251"</SPAN> ?&gt;
+</PRE></TD></TR></TABLE>
+<P>Затем, проверьте что корректно проставлены атрибуты Codepage и Language тэга Product, а также атрибут SummaryCodepage тэга Package, например:</P>
+<TABLE class="code" width="98%"><TR><TD><PRE>
+&lt;?xml version=<SPAN class="STRING">"1.0"</SPAN> encoding=<SPAN class="STRING">"windows-1251"</SPAN> ?&gt;
+&lt;Wix xmlns=<SPAN class="STRING">"http://schemas.microsoft.com/wix/2003/01/wi"</SPAN>&gt;
+  &lt;Product Id=<SPAN class="STRING">"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"</SPAN>
+      Name=<SPAN class="STRING">"Мой продукт"</SPAN>
+      Version=<SPAN class="STRING">"x.x.x.x"</SPAN>
+      Manufacturer=<SPAN class="STRING">"Моя компания"</SPAN>
+      Language=<SPAN class="STRING">"1049"</SPAN>
+      Codepage=<SPAN class="STRING">"1251"</SPAN>&gt;
+
+    &lt;Package Id=<SPAN class="STRING">"????????-????-????-????-????????????"</SPAN>
+        Description=<SPAN class="STRING">"Описание пакета"</SPAN>
+        Comments=<SPAN class="STRING">"Комментарий к пакету"</SPAN>
+        Compressed=<SPAN class="STRING">"yes"</SPAN>
+        InstallerVersion=<SPAN class="STRING">"200"</SPAN>
+        SummaryCodepage=<SPAN class="STRING">"1251"</SPAN>/&gt;
+</PRE></TD></TR></TABLE>
+
+<H2>Разрешение проблем<A name="EIOAC"></A></H2>
+<H3>Как отлаживать процесс установки?<A name="ELOAC"></A></H3>
+<P>Стоит начать с анализа лога установки, который можно получить, запустив установку командой:</P>
+<TABLE class="code" width="98%"><TR><TD><PRE>
+msiexec /i <U>MyInstaller.msi</U> /l*v <U>MyInstaller.log</U>
+</PRE></TD></TR></TABLE>
+<P>Для деинсталляции используем:</P>
+<TABLE class="code" width="98%"><TR><TD><PRE>
+msiexec /x <U>MyInstaller.msi</U> /l*v <U>MyInstaller.log</U>
+</PRE></TD></TR></TABLE>
+
+<H3>Почему я получаю ошибку 0xc0000135 при попытке запуска WiX?<A name="EBPAC"></A></H3>
+<P>Если при запуске вы получаете сообщение вида:</P>
+<TABLE class="code" width="98%"><TR><TD><PRE>
+The application failed to initialize properly (0xc0000135).
+</PRE></TD></TR></TABLE>
+<P>то обычно это означает, что вы не установили <A href="http://msdn.microsoft.com/netframework/downloads/framework1_1/" class="link-ext" target="_blank">.NET Framework 1.1</A>, который требуется для работы WiX.</P>
+
+<H3>Почему WiX не запускается с сетевого диска?<A name="EQPAC"></A></H3>
+<P>По умолчанию, политика безопасности .NET Framework предотвращает попытки запуска кода, загруженного с потенциально небезопасных источников. Вы можете изменить эту политику с помощью утилиты <A href="http://msdn.microsoft.com/library/en-us/cptools/html/cpgrfcodeaccesssecuritypolicyutilitycaspolexe.asp" class="link-ext" target="_blank">CasPol</A>:</P>
+<TABLE class="code" width="98%"><TR><TD><PRE>
+%WINDIR%\Microsoft.NET\Framework\v1.1.4322\CasPol -q -ag All_Code -strong -file "C:\Program Files\WiX\wix.dll" -noname -noversion FullTrust -name "WiX_Strong_Name" -levelfinal on
+</PRE></TD></TR></TABLE>
+<P>где C:\Program Files\WiX заменяется на путь к любой копии wix.dll.</P>
+
+<H3>Почему при деинсталляции ничего не удаляется?<A name="EAAAE"></A></H3>
+<P>Вероятно, вы забыли назначить GUID-ы компонентам. Если для компонента не указан GUID, то Windows Installer установит его, но не будет отслеживать его или деинсталлировать его.</P>
+<P>Если дело не в этом, то скорее всего проблема в том, что вы деинсталлируете не то же самое что было установлено, поскольку вы опираетесь на имя базы данных или виртуального каталога или что-то еще, что определено в свойстве, но это свойство изменилось, потому что…</P>
+
+<H3>Почему сбрасываются значения свойств, заданные в ходе установки?<A name="EIAAE"></A></H3>
+<P>Windows Installer не сохраняет значения свойств между сессиями. Если в ходе установки интерфейс запрашивает у пользователя значение свойства, и оно требуется вам на этапе поддержки или деинсталляции, то только от вас зависит, сохраняете вы его где-либо или нет. Обычно, значение свойства просто сохраняется в каком-либо ключе реестра, а в последующих сессиях значение свойства восстанавливается с использованием поиска по реестру.</P>
+
+<H3>Почему мое действие (custom action) выполняется в ходе деинсталляции?<A name="EOAAE"></A></H3>
+<P>По умолчанию, запланированное действие (scheduled custom action) выполняется всякий раз при запуске пакета, вне зависимости от того, происходит ли установка, деинсталляция, модификация, восстановление, что бы то ни было. Если вы хотите, чтобы действие выполнялось только в одном из этих случаев, используйте <A href="http://msdn.microsoft.com/library/en-us/msi/setup/conditional_statement_syntax.asp" class="link-ext" target="_blank">условие</A>, такое как «NOT Installed» или «&amp;MyFeature &gt; 2».</P>
+
+<H3>Почему мой сервис не запустился?<A name="EZAAE"></A></H3>
+<P>Есть множество возможных причин. Если права пользователя достаточны, то наиболее вероятная проблема состоит в том что путь к исполняемому файлу задан неверно, что может случиться, если вы забыли задать KeyPath для компонента, содержащего сервис.</P>
+<P></P>
+
+<DIV align="right"><FONT style="font-family:arial;font-size:9pt;color:#8088a0"><I><HR color="#8088a0" width="100%" size="1">
+                Любой из материалов, опубликованных на этом сервере, не может быть воспроизведен в какой бы
+                то ни было форме и какими бы то ни было средствами без письменного разрешения владельцев авторских
+                прав. 
+             </I></FONT></DIV></BODY>
+</HTML>

@@ -1,0 +1,315 @@
+//PZwQueryInformationProcess ZwQueryInformationProcess = NULL;
+ 
+
+NTSTATUS GetProcessImageName(PUNICODE_STRING ProcessImageName)
+{
+    NTSTATUS status;
+    ULONG returnedLength;
+    ULONG bufferLength;
+    PVOID buffer;
+    PUNICODE_STRING imageName;
+ /*   
+    if (NULL == ZwQueryInformationProcess) {
+
+        UNICODE_STRING routineName;
+
+        RtlInitUnicodeString(&routineName, L"ZwQueryInformationProcess");
+
+        ZwQueryInformationProcess = 
+			(PZwQueryInformationProcess) MmGetSystemRoutineAddress(&routineName);
+
+        if (NULL == ZwQueryInformationProcess) {
+            DbgPrint("Cannot resolve ZwQueryInformationProcess\n");
+        }
+    }
+	*/
+    //
+    // Step one - get the size we need
+    //
+    status = NtQueryInformationProcess( NtCurrentProcess(), 
+                                        ProcessImageFileName,
+                                        NULL, // buffer
+                                        0, // buffer size             
+										&returnedLength);
+	
+    if (STATUS_INFO_LENGTH_MISMATCH != status) {
+
+        return status;
+
+    }
+
+    //
+    // Is the passed-in buffer going to be big enough for us?  
+    // This function returns a single contguous buffer model...
+    //
+    bufferLength = returnedLength - sizeof(UNICODE_STRING);
+    
+    if (ProcessImageName->MaximumLength < bufferLength) {
+
+        ProcessImageName->Length = (USHORT) bufferLength;
+
+        return STATUS_BUFFER_OVERFLOW;
+        
+    }
+
+    //
+    // If we get here, the buffer IS going to be big enough for us, so 
+    // let's allocate some storage.
+    //
+    buffer = ExAllocatePoolWithTag(PagedPool, returnedLength, 'ipgD');
+
+    if (NULL == buffer) {
+
+        return STATUS_INSUFFICIENT_RESOURCES;
+        
+    }
+
+    //
+    // Now lets go get the data
+    //
+    status = NtQueryInformationProcess( NtCurrentProcess(), 
+                                        ProcessImageFileName,
+                                        buffer,
+                                        returnedLength,
+                                        &returnedLength);
+
+    if (NT_SUCCESS(status)) {
+        //
+        // Ah, we got what we needed
+        //
+        imageName = (PUNICODE_STRING) buffer;
+
+        RtlCopyUnicodeString(ProcessImageName, imageName);
+        
+    }
+
+    //
+    // free our buffer
+    //
+    ExFreePool(buffer);
+
+    //
+    // And tell the caller what happened.
+    //    
+    return status;
+    
+}
+*****************************************************************
+Описание
+Существуют некоторые задачи, которые в режиме пользователя могут быть решены вызовом единственной функции, которая, впрочем, не может быть вызвана из режима ядра. В итоге, порой приходится вручную писать функции, которые в принципе уже существуют с поправкой на режим ядра. В данном примере рассматривается реализация функций GetModuleFileNameEx и NtReadVirtualMemory (начинка ReadProcessMemory) для режима ядра. 
+
+Структуры
+typedef struct _KAPC_STATE {
+  LIST_ENTRY ApcListHead[2];
+  PVOID Process;
+  BOOLEAN KernelApcInProgress;
+  BOOLEAN KernelApcPending;
+  BOOLEAN UserApcPending;
+} KAPC_STATE, *PKAPC_STATE;
+
+
+extern NTKERNELAPI VOID KeStackAttachProcess(IN PVOID Process, OUT PKAPC_STATE ApcState);
+extern NTKERNELAPI VOID KeUnstackDetachProcess(IN OUT PKAPC_STATE ApcState);
+
+
+Процедуры
+
+NTSTATUS MyNtReadVirtualMemory(HANDLE ProcessHandle, PVOID BaseAddress, PVOID Buffer, ULONG BufferLength, PULONG ReturnLength)
+{
+  PVOID ProcObj=NULL;
+  KAPC_STATE ApcState;
+
+  ObReferenceObjectByHandle(ProcessHandle, 0x10, PsProcessType, KernelMode, &ProcObj, NULL);
+  KeStackAttachProcess(ProcObj, &ApcState);
+  RtlCopyMemory(Buffer, BaseAddress, BufferLength);
+  KeUnstackDetachProcess(&ApcState);
+  ObfDereferenceObject(ProcObj);
+  return 0;
+}
+
+
+int GetModuleFileNameEx(HANDLE hProcess, HANDLE hModule, PULONG dName, PULONG dNameSize)
+{
+  int rc;
+  PPROCESS_BASIC_INFORMATION pbi=NULL;
+  PPEB peb=NULL;
+  PPEB_LDR_DATA ldrdata=NULL;
+  PLDR_DATA_TABLE_ENTRY ldrentry=NULL;
+  
+  // если мы смотрим чужой процесс, то нам недостаточно поставить указатель на буфер. Нам нужно выделить сам буфер, а пользователь не передал нам адрес переменной, которая получит конечный размер... 
+  if ((dNameSize==0)&&(hProcess!=NtCurrentProcess())) return 0;
+
+  __try
+  {
+    pbi=ExAllocatePoolWithTag(PagedPool, sizeof(PROCESS_BASIC_INFORMATION), 654);
+    rc=ZwQueryInformationProcess(hProcess, ProcessBasicInformation, pbi, sizeof(PROCESS_BASIC_INFORMATION), NULL);
+    if (rc==STATUS_SUCCESS)
+    {
+      if (hProcess==NtCurrentProcess())
+      {
+        ldrentry=pbi->PebBaseAddress->Ldr->InLoadOrderModuleList.Flink;
+        while(1)
+        {
+          if ((ldrentry->DllBase==hModule)|(hModule==0)) break;//hModule=0 - имя *.exe файла
+          if (ldrentry->InLoadOrderModuleList.Flink==NULL) 
+          {
+            ExFreePool(pbi);
+            return 0;
+          }
+          ldrentry=ldrentry->InLoadOrderModuleList.Flink;
+        };
+      *dName=ldrentry->FullDllName.Buffer;
+      } else 
+      {
+        SIZE_T j;
+        PVOID UserPool; //На самом деле это ни какой не UserPool!
+        
+        UserPool=ExAllocatePoolWithTag(PagedPool, 4096, 1424);
+        
+        rc=MyNtReadVirtualMemory(hProcess, pbi->PebBaseAddress, UserPool, sizeof(PEB), &j);
+        peb=UserPool;
+        
+        rc=MyNtReadVirtualMemory(hProcess, peb->Ldr, UserPool, sizeof(PEB_LDR_DATA), NULL);
+        ldrdata=UserPool;
+        
+        rc=MyNtReadVirtualMemory(hProcess, ldrdata->InLoadOrderModuleList.Flink, UserPool, sizeof(LDR_DATA_TABLE_ENTRY), NULL);
+        ldrentry=UserPool;
+        
+        
+        while(1){
+          if ((ldrentry->DllBase==hModule)|(hModule==0)) break;
+          if (ldrentry->InLoadOrderModuleList.Flink==NULL) {
+              ExFreePool(UserPool);
+              ExFreePool(pbi);
+              return 0;
+          };
+          MyNtReadVirtualMemory(hProcess, ldrentry->InLoadOrderModuleList.Flink, ldrentry, sizeof(LDR_DATA_TABLE_ENTRY), NULL);
+        };
+        
+        if (dNameSizeFullDllName.Length) return 0;
+        *dNameSize=ldrentry->FullDllName.Length;
+        *dName=ExAllocatePoolWithTag(PagedPool, *dNameSize+2, 654);
+        MyNtReadVirtualMemory(hProcess, ldrentry->FullDllName.Buffer, *dName, *dNameSize+2, NULL);
+        DbgPrint("Result = %S", *dName);
+        //ATTENTION!!! YOU *SHOULD* CALL ExFreePool(*dName)!!!
+        
+        ExFreePool(UserPool);
+      }
+    }
+    ExFreePool(pbi);
+    return 1;
+  } __except(EXCEPTION_EXECUTE_HANDLER)
+{
+  DbgPrint("Access Violation in GetModuleFileNameEx!");
+}
+  return 0;
+}
+
+// далее идут процедуры данные Point'ом (не совсем то, что нам нужно, но полезно)
+void* KMapUserAddressToKernel(IN void* pUserModeAddress, IN ULONG ulSize, OUT PMDL* ppMdl)
+{ 
+  PMDL pUserModeMdl = NULL; 
+  void* pMappedKernelAddr = NULL;
+
+  if (ppMdl == NULL) return NULL; 
+
+  __try 
+  { 
+    pUserModeMdl = IoAllocateMdl(pUserModeAddress, ulSize, FALSE, FALSE, NULL); 
+    if (pUserModeMdl != NULL) 
+    { 
+      MmProbeAndLockPages(pUserModeMdl, KernelMode, IoModifyAccess); 
+      pMappedKernelAddr = MmMapLockedPages(pUserModeMdl, KernelMode); 
+      if (pMappedKernelAddr != NULL) 
+      { 
+        pMappedKernelAddr = (PVOID) (((ULONG)PAGE_ALIGN(pMappedKernelAddr))+MmGetMdlByteOffset(pUserModeMdl)); 
+        *ppMdl = pUserModeMdl; 
+      } 
+      else 
+      { 
+        KUnmapMappedKernelAddress(pUserModeMdl); 
+      } 
+    } 
+  } 
+  __except(EXCEPTION_EXECUTE_HANDLER) 
+  { 
+    if (pUserModeMdl != NULL) IoFreeMdl(pUserModeMdl); 
+    pMappedKernelAddr = NULL; 
+  } 
+
+return pMappedKernelAddr; 
+} 
+
+
+void KUnmapMappedKernelAddress(IN PMDL pMdl) 
+{ 
+if (pMdl == NULL) return; 
+
+MmUnlockPages(pMdl); 
+IoFreeMdl(pMdl); 
+}
+
+http://maxcomputing.narod.ru/_gmfnex.html
+------------------------------------------------------
+VOID ProcessNotifyProc(IN HANDLE ParentId, IN HANDLE ProcessId, IN BOOLEAN Create) 
+{ 
+   WCHAR wstr[MAX_PATH]; 
+   NTSTATUS ret; 
+   CLIENT_ID clientId; 
+   OBJECT_ATTRIBUTES oa; 
+   HANDLE hProcess; 
+
+   if(!Create) 
+      return; 
+   InitializeObjectAttributes(&oa, NULL, 0, NULL, NULL); 
+   clientId.UniqueProcess = ProcessId; 
+   clientId.UniqueThread = NULL; 
+    
+   ret = ZwOpenProcess(&hProcess, PROCESS_ALL_ACCESS, &oa, &clientId); 
+   if(!NT_SUCCESS(ret)) 
+      return; 
+   do { 
+      PEB mypeb; 
+      PROCESS_BASIC_INFORMATION basicInfo; 
+      RTL_USER_PROCESS_PARAMETERS procParams; 
+      ULONG cbRet; 
+      PVOID pstr; 
+      PWCHAR pwstr,lastseen; 
+
+      PPROCESS_HOOKING_PARAMS pphp; 
+
+      if(!NT_SUCCESS(ret = ZwQueryInformationProcess( 
+         hProcess, 
+         ProcessBasicInformation, 
+         &basicInfo, 
+         sizeof(basicInfo), 
+         &cbRet))) 
+         break; 
+      if(!NT_SUCCESS(ret = ZwReadVirtualMemory( 
+         hProcess, 
+         basicInfo.PebBaseAddress, 
+         &mypeb, 
+         sizeof(mypeb), 
+         &cbRet))) 
+         break; 
+      if(!NT_SUCCESS(ret = ZwReadVirtualMemory( 
+         hProcess, 
+         mypeb.ProcessParameters, 
+         &procParams, 
+         sizeof(procParams), 
+         &cbRet))) 
+         break; 
+      if(procParams.ImagePathName.Length / sizeof(WCHAR) >= MAX_PATH) //overflow 
+         break; 
+      if((ULONG)procParams.ImagePathName.Buffer < 0x10000) 
+         pstr = (PCHAR)mypeb.ProcessParameters + (ULONG)procParams.ImagePathName.Buffer; 
+      else 
+         pstr = procParams.ImagePathName.Buffer; 
+      if(!NT_SUCCESS(ret = ZwReadVirtualMemory( 
+         hProcess, 
+         pstr, 
+         &wstr, 
+         procParams.ImagePathName.Length, 
+         &cbRet))) 
+         break; 
+      wstr[procParams.ImagePathName.Length / sizeof(WCHAR)] = 0; 

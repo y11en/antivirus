@@ -1,0 +1,208 @@
+forward interface SignatureStorage;
+typedef SignatureStorage* hSIGNATURESTORAGE;
+
+forward interface SignatureSearcher;
+typedef SignatureSearcher* hSIGNATURESEARCHER;
+
+forward interface SignatureEnumerator;
+typedef SignatureEnumerator* hSIGNATUREENUMERATOR;
+
+
+
+
+[
+  version(1)
+  mnemonic(IID_SIGNATURESTORAGE)
+  id(58002)
+  c_type_name(hSIGNATURESTORAGE)
+  comment_ex("Предоставляет интерфейс для хранения сигнатур.  Используется связанными интерфейсами SignatureSearcher и SignatureEnumerator.")
+]
+interface SignatureStorage { // Хранилище сигнатур.
+
+  // ------------------------------------
+
+    [
+      comment_ex("Каждой сигнатуре назначается идентификатор, по которому сигнатура будет идентифицироваться при поиске.")
+    ]
+    typedef tDWORD tSIGNATURE_ID; // Идентификатор сигнатуры.
+
+
+  // ------------------------------------
+    const tDWORD TIMEOUT_INFINITE = 0xFFFFFFFF; // Бесконечный таймаут.
+
+
+  // ------------------------------------
+    error errSIGNATURE_ALREADY_EXIST; // Сигнатура уже присутствует.
+    error errSIGNATURE_NOT_FOUND; // Сигнатура не найдена.
+
+
+  // ------------------------------------
+    [ id(4096) ]  prop tDWORD pgMAX_SIGNATURE_ID;
+    [ id(4097) ]  prop tDWORD pgMIN_SIGNATURE_ID;
+    [ id(4098) ]  prop tDWORD pgHASH_LEVEL;
+    [ id(4099) ]  prop tDWORD pgFORMAT;
+
+
+  // ------------------------------------
+    method tERROR Save( // Сохраняет данные из хранилища в предоставленное последовательное IO.
+      tVOID* result,
+      hSEQ_IO hOutputSeqIO // IO для сохранения данных
+    );
+    method tERROR Load( // Загружает данные из последовательного IO в хранилище.
+      tVOID* result,
+      hOBJECT hInput // Объект для загрузки данных
+    );
+
+    [
+      comment_ex("После вызова этого метода хранилище не содержит данных и может быть использовано заново.")
+    ]
+    method tERROR Clear( // Удаляет все данные из хранилища.
+      tVOID* result
+    );
+    method tERROR AddSignature( // Добавляет сигнатуру в хранилище.
+      tSIGNATURE_ID* result,
+      const tBYTE* pSignature, // Указатель на массив байт, являющийся сигнатурой.
+      tDWORD dwSize, // Размер сигнатуры в байтах.
+      tSIGNATURE_ID SignatureID // Идентификатор сигнатуры в хранилище.
+    );
+    method tERROR IsSignature( // Проверяет наличие сигнатуры в хранилище.
+      tSIGNATURE_ID* result,
+      const tBYTE* pSignature, // Указатель на массив байт сигнатуры.
+      tDWORD dwSize // Размер сигнатуры в байтах.
+    );
+    method tERROR DeleteSignature( // Удаляет сигнатуру из хранилища.
+      tVOID* result,
+      const tBYTE* pSignature, // Указатель на массив байт сигнатуры.
+      tDWORD dwSize // Размер сигнатуры в байтах.
+    );
+
+    [
+      comment_ex("SignatureSearcher может быть использован для поиска сигнатур имеющихся в хранилище.")
+    ]
+    method tERROR GetSearcher( // Возвращает экземпляр SignatureSearcher готовый для работы с этим хранилищем.
+      hSIGNATURESEARCHER* result
+    );
+
+    [
+      comment_ex("Подлежит реализации при многопоточной работе с хранилищем.")
+    ]
+    method tERROR Lock( // Блокирует хранилище для эксклюзивного доступа.
+      tVOID* result,
+      tDWORD dwTimeout // Таймаут, в миллисекундах.
+    );
+
+    [
+      comment_ex("Подлежит реализации при многопоточной работе с хранилищем.")
+    ]
+    method tERROR Unlock( // Снимает эксклюзивный доступ с хранилища.
+      tVOID* result
+    );
+    method tERROR SaveEx(
+      hSEQ_IO hOutputSeqIO, // IO для сохранения данных
+      tDWORD dwFormat
+    );
+
+}
+
+
+[
+  version(1)
+  mnemonic(IID_SIGNATURESEARCHER)
+  id(58003)
+  c_type_name(hSIGNATURESEARCHER)
+  comment_ex("Предназначен для поиска сигнатур в данных. Использует хранилище сигнатур SignatureStorage. При нахождении сигнатуры посылается сообщение класса pmc_SIGNATURE_SEARCHER с идентификатором сообщения равным идентификатору найденной сигнатуры. ")
+]
+interface SignatureSearcher { // Интерфейс поиска сигнатур.
+
+  // ------------------------------------
+
+    [
+      comment_ex("Каждой сигнатуре назначается идентификатор, по которому сигнатура будет идентифицироваться при поиске.")
+    ]
+    typedef tDWORD tSIGNATURE_ID; // Идентификатор сигнатуры.
+
+
+  // ------------------------------------
+    [ warning(true) ]  error warnStopped; // Возвращенный из функции поиска этот код сигнализирует, что поиск остановлен по внешнему запросу до того как был достигнут конец области поиска.
+
+
+  // ------------------------------------
+    [ id(4100) ]  prop tQWORD pgSignatureStartPositionInObject;
+    [ id(4097) ]  prop tINT pgSignatureStartPositionInBuffer; // Позиция найденной сигнатуры в текущем буфере поиска.
+    [ id(4098) ]  prop tDWORD pgSignatureLength; // Длина найденной сигнатуры в байтах.
+    [ id(4099) ]  prop tDWORD pgSignatureID; // Идентификатор найденной сигнатуры.
+
+
+  // ------------------------------------
+    method tERROR Find( // Осуществляет поиск сигнатур в буфере данных.
+      tVOID* result,
+      const tBYTE* pBuffer, // Указатель на буфер данных в которых будет производиться поиск.
+      tDWORD dwSize // Размер буфера данных в байтах.
+    );
+    method tERROR FindInRange( // Осуществляет поиск сигнатур в указанных границах буфера данных.
+      tVOID* result,
+      const tBYTE* pBuffer, // Указатель на буфер данных в которых будет производиться поиск.
+      tDWORD dwSize, // Размер буфера данных в байтах.
+      tDWORD dwStartPos, // Начальная позиция поиска.
+      tDWORD dwEndPos // Конечная позиция поиска.
+    );
+
+    [
+      comment_ex("При последовательных вызовах, метод Find сохраняет состояние на момент окончания поиска, что дает возможность трактовать каждый следующий буффер как продолжение предыдущего. Чтобы начать поиск в буфере не связанным с предыдущим состояние поиска должно быть сброшено.")
+    ]
+    method tERROR Reset(); // Подготавливает SignatureSearcher для нового поиска.
+
+
+  // ------------------------------------
+
+    [
+      id(58000)
+      comment_ex("При нахождении сигнатуры SignatureSearcher посылает сообщение этого класса, идентификатор сообщения равен идентификатору найденной сигнатуры.")
+    ]
+    message_cls pmc_SIGNATURE_SEARCHER {} // Класс сообщений, используемый для нотификации о найденных сигнатурах.
+
+}
+
+
+[
+  version(1)
+  mnemonic(IID_SIGNATUREENUMERATOR)
+  id(58005)
+  c_type_name(hSIGNATUREENUMERATOR)
+]
+interface SignatureEnumerator { // Signature storage enumerator interface
+
+  // ------------------------------------
+
+    [
+      comment_ex("Each signature has ID that are setting when signature adding. ")
+    ]
+    typedef tDWORD tSIGNATURE_ID; // Signature ID
+
+
+  // ------------------------------------
+    method tERROR GetFirstSignature(
+      tBYTE* pSignature, // Buffer allocated by caller for signature
+      tDWORD dwBufferSize, // Size of allocated buffer
+      tDWORD* pdwSignatureSize, // Size of returned signature
+      SignatureStorage.tSIGNATURE_ID* pSignatureID // ID of returned signature
+    );
+    method tERROR GetNextSignature(
+      tBYTE* pSignature, // Buffer allocated by caller for signature
+      tDWORD dwBufferSize, // Size of allocated buffer
+      tDWORD* pdwSignatureSize, // Size of returned signature
+      SignatureStorage.tSIGNATURE_ID* pSignatureID // ID of returned signature
+    );
+    method tERROR GetSignaturesCount(
+      tDWORD* pdwCount // Recives count of signatures in storage
+    );
+    method tERROR GetSignature(
+      tDWORD dwIndex, // Index of signature
+      tBYTE* pSignature, // Buffer allocated by caller for signature
+      tDWORD dwBufferSize, // Size of allocated buffer
+      tDWORD* pdwSignatureSize, // Size of returned signature
+      SignatureStorage.tSIGNATURE_ID* pSignatureID // ID of returned signature
+    );
+
+}
+

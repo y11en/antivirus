@@ -1,0 +1,145 @@
+CC = @CC@
+CXX = @CXX@
+AR = @AR@
+RANLIB = @RANLIB@
+INSTALL = @INSTALL@
+CFLAGS = @CFLAGS@ $(UnixCFlags)
+CXXFLAGS = @CXXFLAGS@ $(UnixCXXFlags)
+LDFLAGS = @LDFLAGS@ $(UnixLDFlags)
+DEFS = @DEFS@ $(addprefix -D, $(Defines) $(UnixDefines))
+override Include = $(addprefix -I, @abs_top_srcdir@/include @abs_top_builddir@/unix @includedir@ $(Includes)) 
+LIBS= @LIBS@ -L@libdir@ -L@prefix@ $(addprefix -l, $(Libraries)) $(UnixLibraries)
+prefix = @prefix@
+exec_prefix =@exec_prefix@
+libdir = @libdir@
+includedir = @includedir@
+
+Objects = $(patsubst %.cpp, %.o, $(filter %.cpp, $(Sources)))
+
+ifndef LibPrefix
+    LibPrefix=lib
+endif
+
+ifndef Linker
+    ifeq ($(strip $(Objects)),)
+	Linker=$(CC)
+    else
+	Linker=$(CXX)
+    endif
+endif
+
+Objects += $(patsubst %.c, %.o, $(filter %.c, $(Sources)))
+
+.PHONY: all install prebuild postbuild $(Deps)
+
+.DEFAULT: all
+
+all: $(Deps) prebuild $(Targets) postbuild install
+
+$(Deps):
+	$(MAKE) -C $@
+
+mkdirs:
+	@$(INSTALL) -d $(prefix)
+	@$(INSTALL) -d $(includedir)
+	@$(INSTALL) -d $(libdir)
+
+install_includes: $(addprefix $(includedir)/, $(InstallIncludes))
+	@echo "***** Installing includes"
+	
+$(addprefix $(includedir)/, %): $(addprefix $(srcdir)/, %)
+	$(INSTALL) -d $(dir $@)
+	$(INSTALL) -m 0644 $< $@
+
+$(addprefix $(includedir)/, %): $(addprefix $(srcdir)/include/, %)
+	$(INSTALL) -d $(dir $@)
+	$(INSTALL) -m 0644 $< $@
+
+$(addprefix $(includedir)/, %): $(addprefix $(srcdir)/Include/, %)
+	$(INSTALL) -d $(dir $@)
+	$(INSTALL) -m 0644 $< $@
+
+$(addprefix $(includedir)/@PACKAGE_NAME@/, %): $(addprefix $(srcdir)/, %)
+	$(INSTALL) -d $(dir $@)
+	$(INSTALL) -m 0644 $< $@
+
+$(addprefix $(includedir)/@PACKAGE_NAME@/, %): $(addprefix $(srcdir)/include/, %)
+	$(INSTALL) -d $(dir $@)
+	$(INSTALL) -m 0644 $< $@
+
+$(addprefix $(includedir)/@PACKAGE_NAME@/, %): $(addprefix $(srcdir)/Include/, %)
+	$(INSTALL) -d $(dir $@)
+	$(INSTALL) -m 0644 $< $@
+
+install: mkdirs install_includes $(Targets)
+	@if test ! -z "$(Library)"; then \
+	    echo "***** Installing library"; \
+	    $(INSTALL) $(LibPrefix)$(Library) $(prefix); \
+	fi
+	@if test ! -z "$(Archive)"; then \
+	    echo "***** Installing archive"; \
+	    $(INSTALL) -m 0644 $(LibPrefix)$(Archive) $(libdir); \
+	    $(RANLIB) $(libdir)/$(LibPrefix)$(Archive); \
+	fi
+	@if test ! -z "$(Plugin)"; then \
+	    echo "***** Installing plugin"; \
+	    $(INSTALL) $(Plugin) $(prefix); \
+	fi
+	@if test ! -z "$(Application)"; then \
+	    echo "***** Installing application"; \
+	    $(INSTALL) $(Application) $(prefix); \
+	fi	
+	@if test ! -z "$(Link)"; then \
+	    echo "***** Installing link"; \
+	    $(INSTALL) $(Link) $(prefix); \
+	fi	
+
+clean:
+	for dir in $(subdirs); do \
+	$(MAKE) -C $$dir $@ || exit 1; \
+	done
+	-rm -f $(Objects) $(Targets) $(patsubst %, $(LibPrefix)%, $(Targets)) *.d *.bb *.bbg *.da $(addprefix $(prefix)/, $(Targets) $(patsubst %, $(LibPrefix)%, $(Targets))) $(CleanFiles)
+
+distclean: clean
+	rm Makefile
+
+$(Library): $(LibPrefix)$(Library)
+
+$(addprefix $(LibPrefix), $(Library)): $(Objects)
+	@echo "***** Making $@"
+	$(Linker) @SharedFlag@ -o $@ $(Objects) $(LIBS) $(LDFLAGS) 
+
+$(Archive): $(LibPrefix)$(Archive)
+
+$(addprefix $(LibPrefix), $(Archive)): $(Objects)
+	@echo "***** Making $@"
+	$(AR) cr $@ $(Objects) 
+
+	
+$(Plugin): $(Objects) $(Metafile)
+	@echo "***** Making $@"
+	$(Linker) @SharedFlag@ @VersionScript@ -o $@ $(Objects) $(LDFLAGS) $(LIBS) 
+	cat $(Metafile) >> $@
+
+$(Application): $(Objects)
+	@echo "***** Making $@"
+	$(Linker) -o $@ $(Objects) $(LIBS) $(LDFLAGS)
+
+$(Link): $(Application)
+	@echo "***** Making $@"
+	cp @abs_top_builddir@/unix/runScript $@ 
+	sed -e 's,%NAME%,$(Application),g' @abs_top_builddir@/unix/runScript > $@
+
+%.atem: %.meta
+	@echo "***** Converting $< to $@"
+	$(prefix)/meta2atem $< $@
+
+%.o: %.c
+	@echo "***** Compiling $<"
+	$(CC) $(CFLAGS) -MMD $(DEFS) $(Include)  -c -o $@ $<
+
+%.o: %.cpp
+	@echo "***** Compiling $<"
+	$(CXX) $(CXXFLAGS) -MMD $(DEFS) $(Include)  -c -o $@ $<
+	
+include $(wildcard *.d)

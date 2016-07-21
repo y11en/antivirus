@@ -1,0 +1,8 @@
+// ***** Trojan.StartPage *****
+begin
+ AddEvAlarmByCLSID('3050F404-98B5-11CF-BB82-00AA00BDCE0B','Trojan.StartPage.se','ppc.dll');
+ AddEvAlarmByCLSID('3BA765C2-08DB-4FE2-9279-311CA10D582A','Trojan.Startpage.ck','');
+ AddEvAlarmByCLSID('8333C319-0669-4893-A418-F56D9249FCA6','Trojan.StartPage.ny','DailyToolbar.dll');
+ AddEvAlarmByCLSID('63B95211-7D77-11D2-9F80-00104B107C96','Trojan.Startpage.fa','xmlmimefilter.DLL');
+ AddEvAlarmByCLSID('433E9093-B258-44d9-B0DC-0DEA8640CC05', AScriptName, 'halflemon.exe');
+end.

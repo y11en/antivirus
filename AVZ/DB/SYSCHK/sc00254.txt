@@ -1,0 +1,4 @@
+// ***** AdvWare.ClearSearch *****
+begin
+ AddEvAlarmByCLSID('046D6EA4-15E3-4b27-8010-45BD78A9219E', AScriptName, 'inetkw.dll');
+end.

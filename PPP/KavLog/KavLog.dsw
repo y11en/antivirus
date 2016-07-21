@@ -1,0 +1,52 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "KavLog"=.\KavLog.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/PPP/KavLog", BSRTCAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name zip32
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "zip32"=..\zip32\windll\visualc\lib\zip32.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    zip32
+    ..\zip32\windll\visualc\lib
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

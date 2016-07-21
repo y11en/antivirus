@@ -1,0 +1,15 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@ @srcdir@/../metadata
+
+Name = metautils.@ARCHIVE_EXT@
+Archive = $(Name)
+Targets = $(Archive)
+
+Sources = \
+	metautils.cpp \
+	md5c.c \
+	metadata.cpp
+
+include @abs_top_builddir@/@OS@/Rules

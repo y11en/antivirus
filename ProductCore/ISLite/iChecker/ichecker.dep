@@ -1,0 +1,113 @@
+# Microsoft Developer Studio Generated Dependency File, included by ichecker.mak
+
+..\HASH_API\MD5\hash_md5.c : \
+	"..\..\include\iface\i_heap.h"\
+	"..\..\include\iface\i_iface.h"\
+	"..\..\include\iface\i_ifenum.h"\
+	"..\..\include\iface\i_impex.h"\
+	"..\..\include\iface\i_methodinfo.h"\
+	"..\..\include\iface\i_plugin.h"\
+	"..\..\include\IFace\i_receiv.h"\
+	"..\..\include\iface\i_tracer.h"\
+	"..\..\include\pr_compl.h"\
+	"..\..\include\pr_err.h"\
+	"..\..\include\pr_iid.h"\
+	"..\..\include\pr_int.h"\
+	"..\..\include\pr_msg.h"\
+	"..\..\include\pr_obj.h"\
+	"..\..\include\pr_pid.h"\
+	"..\..\include\pr_prop.h"\
+	"..\..\include\pr_reg.h"\
+	"..\..\include\pr_sys.h"\
+	"..\..\include\pr_types.h"\
+	"..\..\include\pr_vid.h"\
+	"..\..\include\pr_vtbl.h"\
+	"..\..\INCLUDE\PRAGUE.H"\
+	"..\HASH_API\hash.h"\
+	"..\HASH_API\MD5\hash_md5.h"\
+	"..\HASH_API\MD5\md5.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+.\ifilesec.c : \
+	"..\..\..\CommonFiles\hook\MemManag.h"\
+	"..\..\include\iface\i_csect.h"\
+	"..\..\include\iface\i_heap.h"\
+	"..\..\include\iface\i_iface.h"\
+	"..\..\include\iface\i_ifenum.h"\
+	"..\..\include\iface\i_ifilesecurestatus.h"\
+	"..\..\include\iface\i_impex.h"\
+	"..\..\include\iface\i_io.h"\
+	"..\..\include\iface\i_methodinfo.h"\
+	"..\..\Include\IFace\i_objptr.h"\
+	"..\..\INCLUDE\IFACE\i_os.h"\
+	"..\..\include\iface\i_plugin.h"\
+	"..\..\include\IFace\i_receiv.h"\
+	"..\..\include\iface\i_root.h"\
+	"..\..\include\iface\i_seqio.h"\
+	"..\..\include\iface\i_sfdb.h"\
+	"..\..\include\iface\i_string.h"\
+	"..\..\include\iface\i_tracer.h"\
+	"..\..\include\pr_compl.h"\
+	"..\..\include\pr_err.h"\
+	"..\..\include\pr_iid.h"\
+	"..\..\include\pr_int.h"\
+	"..\..\include\pr_msg.h"\
+	"..\..\include\pr_obj.h"\
+	"..\..\Include\pr_oid.h"\
+	"..\..\include\pr_pid.h"\
+	"..\..\include\pr_prop.h"\
+	"..\..\include\pr_reg.h"\
+	"..\..\include\pr_sys.h"\
+	"..\..\include\pr_types.h"\
+	"..\..\include\pr_vid.h"\
+	"..\..\include\pr_vtbl.h"\
+	"..\..\INCLUDE\PRAGUE.H"\
+	"..\..\MemModScan\objptr.h"\
+	"..\..\MemModScan\os.h"\
+	"..\..\MemModScan\plugin_memmodscan.h"\
+	"..\HASH_API\hash.h"\
+	"..\HASH_API\MD5\hash_md5.h"\
+	"..\SFDB\sfdb.h"\
+	".\ENTR_ELF.H"\
+	".\ifilesec.h"\
+	".\NEWEXE.H"\
+	".\PEHDR.H"\
+	".\plugin_ifilesec.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+..\HASH_API\MD5\md5.cpp : \
+	"..\HASH_API\MD5\md5.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+.\plugin_ifilesec.c : \
+	"..\..\include\iface\i_heap.h"\
+	"..\..\include\iface\i_iface.h"\
+	"..\..\include\iface\i_ifenum.h"\
+	"..\..\include\iface\i_ifilesecurestatus.h"\
+	"..\..\include\iface\i_impex.h"\
+	"..\..\include\iface\i_io.h"\
+	"..\..\include\iface\i_methodinfo.h"\
+	"..\..\include\iface\i_plugin.h"\
+	"..\..\include\IFace\i_receiv.h"\
+	"..\..\include\iface\i_root.h"\
+	"..\..\include\iface\i_tracer.h"\
+	"..\..\include\pr_compl.h"\
+	"..\..\include\pr_err.h"\
+	"..\..\include\pr_iid.h"\
+	"..\..\include\pr_int.h"\
+	"..\..\include\pr_msg.h"\
+	"..\..\include\pr_obj.h"\
+	"..\..\include\pr_pid.h"\
+	"..\..\include\pr_prop.h"\
+	"..\..\include\pr_reg.h"\
+	"..\..\include\pr_sys.h"\
+	"..\..\include\pr_types.h"\
+	"..\..\include\pr_vid.h"\
+	"..\..\include\pr_vtbl.h"\
+	"..\..\INCLUDE\PRAGUE.H"\
+	".\ifilesec.h"\
+	".\plugin_ifilesec.h"\
+	

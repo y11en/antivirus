@@ -1,0 +1,75 @@
+#import "tm.idef"
+
+forward interface Task;
+typedef Task* hTASK;
+
+forward interface TaskEx;
+typedef TaskEx* hTASKEX;
+
+
+
+
+[
+  version(1)
+  mnemonic(IID_TASK)
+  id(23)
+  c_type_name(hTASK)
+]
+interface Task {
+
+  // ------------------------------------
+    typedef tDWORD tActionId;
+    typedef tDWORD tSerializableId;
+
+
+  // ------------------------------------
+    error errTASK_CANNOT_UPDATE_SETTINGS_ON_RUNTIME;
+    error errTASK_STATE_UNKNOWN;
+    error errTASK_CANNOT_UPDATE_SETTINGS_ON_STOPPED;
+    error errTASK_DISABLED;
+
+
+  // ------------------------------------
+    [ id(4098) ]  prop hOBJECT pgTASK_TM; // task manager object
+    [ id(4099) ]  prop tDWORD pgTASK_STATE;
+    [ id(4100) ]  prop tDWORD pgTASK_SESSION_ID;
+    [ id(4101) ]  prop tDWORD pgTASK_ID;
+    [ id(4102) ]  prop hOBJECT pgTASK_PERSISTENT_STORAGE;
+    [ id(4103) ]  prop tDWORD pgTASK_PARENT_ID;
+
+
+  // ------------------------------------
+    method tERROR SetSettings( const cSerializable* settings );
+    method tERROR GetSettings( cSerializable* settings );
+    method tERROR AskAction( tActionId actionId, cSerializable* actionInfo );
+    method tERROR SetState( TaskManager.tTaskRequestState state );
+    method tERROR GetStatistics( cSerializable* statistics );
+
+
+  // ------------------------------------
+    [ id(4096) ]  message_cls pmc_TASK_STATE_CHANGED {}
+    [ id(4097) ]  message_cls pmc_TASK_REPORT {}
+    [ id(4098) ]  message_cls pmc_TASK_SETTINGS_CHANGED {}
+    [ id(4099) ]  message_cls pmc_TASK_OS_REBOOT_REQUEST {}
+
+}
+
+
+[
+  version(1)
+  mnemonic(IID_TASKEX)
+  id(42)
+  c_type_name(hTASKEX)
+]
+interface TaskEx : Task {
+
+  // ------------------------------------
+    method tERROR GetService( // returns service object mantained by task
+      hOBJECT* service, // service object returned
+      TaskManager.tServiceId serviceId,
+      hOBJECT client
+    );
+    method tERROR ReleaseService( hOBJECT service, hOBJECT client );
+
+}
+

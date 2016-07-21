@@ -1,0 +1,6 @@
+# try inject code of load library to explorer process and create remote thread with pointer to this injected code
+
+CT_IN_EXPLORER_WITH_CODEINJ NOT_TO_CLEAR
+
+#etalon_verdict 100 ProcessInvader
+

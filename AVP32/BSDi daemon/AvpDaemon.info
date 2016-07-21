@@ -1,0 +1,40 @@
+Command Line Options
+====================
+
+   Available command line options are the following:
+
+`-dk'
+     Kill a running gpm. This can be used by busmouse users to kill gpm
+     before running X (unless they use -R or the single-open limitation
+     is removed from the kernel).
+
+`-dv'
+     Print version information and exit.
+
+`-dh'
+     Print a summary of command line options.
+
+`-dd FILENAME'
+     Choose the directory for AvpDaemon control files. It defaults to `/var/run'.
+
+`-dm'
+     Enable multiple mode. The daemon will read two different mouse
+     devices.  Any subsequent option will refer to the second device,
+     while any preceding option will be used for the first device. This
+     option automatically forces the "repeater" (-R) option on.
+
+`-dq'
+     Quit after changing AvpDaemon behaviour. This is intended to allow
+     users to change the AvpDaemon parameters (as ...)
+     without restarting the server. Since this needs root permissions,
+     the system administrators can use the `set-uid' bits to
+     enable/disable such capability. Changing parameters is
+     nonetheless only allowed from one of the virtual consoles. Options
+     are transferred only for the first AvpDaemon.
+
+//`-i INTERVAL'
+//     Set INTERVAL to be used as an upper time limit for multiple
+//     clicks. If the interval between button-up and button-down events
+//     is less than LIMIT, the press is considered a double or triple
+//     click. Time is in milliseconds.
+

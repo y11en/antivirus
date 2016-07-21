@@ -1,0 +1,4 @@
+// ***** TrojanDownloader.Win32.Tooncom.p *****
+begin
+ AddEvAlarmByCLSID('1E1B2879-88FF-11D2-8D96-D7ACAC95951F','TrojanDownloader.Win32.Tooncom.p','');
+end.

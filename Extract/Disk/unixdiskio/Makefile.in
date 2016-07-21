@@ -1,0 +1,21 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@
+
+Name = unixdiskio
+Plugin = $(Name).@PLUGIN_EXT@
+Metafile = @srcdir@/$(Name).@METAFILE_EXT@
+Targets = $(Plugin)
+
+Sources = \
+	io.c \
+	objptr.c \
+	plugin_unixdiskio.c \
+	diskio.cpp
+
+# unix section
+
+VersionScript = @abs_top_srcdir@/unix/prague_plugin.ver
+
+include @abs_top_builddir@/@OS@/Rules

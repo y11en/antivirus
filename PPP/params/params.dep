@@ -1,0 +1,30 @@
+# Microsoft Developer Studio Generated Dependency File, included by params.mak
+
+.\plugin_params.cpp : \
+	"..\..\prague\Include\iface\i_heap.h"\
+	"..\..\prague\Include\iface\i_iface.h"\
+	"..\..\prague\Include\iface\i_ifenum.h"\
+	"..\..\prague\Include\iface\i_impex.h"\
+	"..\..\prague\Include\iface\i_methodinfo.h"\
+	"..\..\prague\Include\iface\i_plugin.h"\
+	"..\..\prague\Include\iface\i_receiv.h"\
+	"..\..\prague\Include\iface\i_root.h"\
+	"..\..\prague\Include\iface\i_serializer.h"\
+	"..\..\prague\Include\iface\i_tracer.h"\
+	"..\..\prague\Include\pr_compl.h"\
+	"..\..\prague\Include\pr_err.h"\
+	"..\..\prague\Include\pr_iid.h"\
+	"..\..\prague\Include\pr_int.h"\
+	"..\..\prague\Include\pr_msg.h"\
+	"..\..\prague\Include\pr_obj.h"\
+	"..\..\prague\Include\pr_pid.h"\
+	"..\..\prague\Include\pr_prop.h"\
+	"..\..\prague\Include\pr_reg.h"\
+	"..\..\prague\Include\pr_serializable.h"\
+	"..\..\prague\Include\pr_sys.h"\
+	"..\..\prague\Include\pr_types.h"\
+	"..\..\prague\Include\pr_vid.h"\
+	"..\..\prague\Include\pr_vtbl.h"\
+	"..\..\prague\Include\prague.h"\
+	"..\include\iface\i_reg.h"\
+	

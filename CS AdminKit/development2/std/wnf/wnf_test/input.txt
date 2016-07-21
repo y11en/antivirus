@@ -1,0 +1,14 @@
+/*!
+ * (C) 2002 Kaspersky Lab 
+ * 
+ * \file	input.txt
+ * \author	Andrew Kazachkov
+ * \date	17.10.2002 16:38:29
+ */
+
+LogFile "$tests.log";
+TraceFile "$test.txt" level 5;
+
+//Run	Test "*", Test "*", Test "*"
+Run	Test "*"
+	From "O:\ak\CS AdminKit\DEVELOPMENT2\BIN\DLLD\wnf_test.dll";

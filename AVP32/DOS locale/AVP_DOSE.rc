@@ -1,0 +1,64 @@
+#include "avp_dos.h"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Localisation BINARY
+//
+
+//
+IDR_LOCBINARY RCDATA DISCARDABLE
+BEGIN
+    0x0000
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_NOTHING_FILES_L     "Nothing to scan.\nYou should select Files and/or Sectors in *.prf file."
+    IDS_NOTHING_LOCATION_L  "Nothing to scan.\nYou should select at least one directory to scan."
+    IDS_REPORT_BANNER_L     "   AVPDOS32 Start  %02d-%02d-%02d %02d:%02d:%02d\r\n\r\n\r\n"
+    IDS_DISINFECT_D_L       "dis&Infect"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_LAST_UPDATE_L       "Last update: %02d.%02d.%04d, %d records."
+    IDS_EXPIR_ALARM_L       "Your AVP license will be expiried\nat %d/%d/%d"
+    IDS_EXPIRIED_L          "Your AVP license was expiried\nat %d/%d/%d"
+    IDS_PRESS_KEY_L         "Press any key\n"
+    IDS_FOLDER_CREATE       "Folder for infected (suspicious) files doesn't exist.\nCreate folder?"
+    IDS_FOLDER_NOT_CREATE_L "Folder for infected (suspicious) files was not created."
+    IDS_FOLDER_COPY_L       "Copy infected (suspicious) files into current directory?"
+    IDS_FOLDER_NOT_COPY_L   "Infected (suspicious) files will not copy"
+    IDS_DISK_NOT_FOUND_L    "Disk for infected (suspicious) files doesn't exist."
+    ID_VIEW_LOG             "Log file..."
+    ID_MENU_FILE            "&File"
+    ID_MENU_VIEWLOG         "&View log"
+    ID_MENU_SCAN            "&Scan"
+    ID_MENU_SETTINGS        "S&ettings"
+    ID_SETTINGS_LOCATION_L  "&Location"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    ID_SETTINGS_OBJECTS_L   "O&bjects"
+    ID_SETTINGS_ACTIONS_L   "&Actions"
+    ID_SETTINGS_OPTIONS_L   "&Options"
+    ID_SETTINGS_NEXT_L      "&Next page"
+    ID_SETTINGS_PREV_L      "P&revious page"
+    ID_MENU_HELP            "&Help"
+    ID_EXCLIDE_FILES        "Exclude files"
+    ID_PROFILE_NAME         "&Profile name"
+    ID_LOC_FILE_NAME        "&Log file name"
+    ID_OPEN_FILE            "&Open"
+    ID_SAVE_FILE            "&Save"
+    ID_ADD_DIRECTORY        "Add folder"
+    ID_DIRECTORY_NAME       "Directory &name"
+    ID_DIRECTORY_TREE       "Directory &tree"
+    ID_REVERT               "&Revert"
+    ID_CANCEL               "Cancel"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_STARTSCAN           "Start Scanner"
+END

@@ -1,0 +1,6 @@
+PROJECTS+= \
+	Property \
+	Serialize \
+	SWManager \
+	klsys/virtualmemory/test
+	

@@ -1,0 +1,157 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "AVP Engine"=".\AVP Engine\AVP Engine.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/AVP Engine", UREAAAAA
+    .\avp engine
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Avp_io VxD
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Avp_io32
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name AVPFPI
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name BaseWork
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Avp_ioNT
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name fpirun
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "AVPFPI"=.\AVPFPI\AVPFPI.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/AVPFPI", YDGBAAAA
+    .\avpfpi
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name BaseWork
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Avp_io VxD"=".\AVP_IO\Avp_io VxD.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/Avp_IO", ZHDAAAAA
+    .\avp_io
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Avp_io32"=.\AVP_IO\Avp_io32.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/Avp_IO", ZHDAAAAA
+    .\avp_io
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Avp_io VxD
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Avp_ioNT"=.\AVP_IO\Avp_iont.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/Avp_IO", ZHDAAAAA
+    .\avp_io
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "BaseWork"=.\BaseWork\BaseWork.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/BaseWork", RDDAAAAA
+    .\basework
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "fpirun"=.\fpirun\fpirun.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/fpirun", SXLBAAAA
+    .\fpirun
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Avp32", QDDAAAAA
+    .
+    end source code control
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

@@ -1,0 +1,31 @@
+PROJECTS+= \
+	Core/metadata/metadata \
+	Core/metadata/metainfo \
+	Core/metadata/meta2atem \
+	Core/metadata/metatool \
+	Core/Kernel \
+	Core/Loader \
+	Core/remote/unix/rpc \
+	Core/remote/unix \
+	Core/remote/unix/rpc_proxies \
+	Core/remote/unix/rpc_stubs \
+	Hash/MD5 \
+	Util \
+	nfio/unix \
+	SeqIO \
+	Timer \
+	thpoolimp \
+	IniFile \
+	filemap \
+	buffer \
+	RegistryMapper \
+	vmarea \
+	propertiesmap \
+	TempFile \
+	dtreg \
+	tests/interlocked_test \
+	tests/vmarea_test \
+	tests/nfio_test \
+	tests/string_test \
+	tests/propertiesmap_test \
+	tests/timer_test

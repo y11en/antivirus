@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<UpdaterSettingsSection>
+
+<sites_list>
+<site2 url="ftp://tl-srv-wxp" 	diff_url="diffs"	weight="1000000" region="*"> </site2>
+<site2 url="ftp://tl-srv-w2k" 	diff_url="diffs"	weight="2"	region="*"> </site2>
+<site2 url="ftp://tl-srv-w03" 	diff_url="diffs"	weight="1"	region="*"> </site2>
+</sites_list>
+
+</UpdaterSettingsSection>
+
+;:104MyINjKAskgcwW/yJgHeGDQg4rEpsxLjaVKX0J5O52q1N22XGntByyBIzZFN/DOCdpS1PrSrPAgAzWubRRqYOy%%
+; 0XLSznpdI71fB300e7Uwj1vMRzu52o2lQrlODa5Bi8xfxpQxho3SpXH2oy­­

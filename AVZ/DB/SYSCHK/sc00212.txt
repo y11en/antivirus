@@ -1,0 +1,4 @@
+// ***** AdvWare.Toolbar.Midadle *****
+begin
+ AddEvAlarmByCLSID('E8EAEB34-F7B5-4C55-87FF-720FAF53D841','AdvWare.Toolbar.Midadle.b','clicks.dll');
+end.

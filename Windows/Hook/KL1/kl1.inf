@@ -1,0 +1,70 @@
+[Version] 
+Signature = "$Windows NT$" 
+Class 	  = System
+Provider  = %KL%
+CatalogFile=kl1.cat
+DriverVer= 11/02/2006,6.1.13.0			;mm/dd/yy
+
+[Manufacturer]
+%KLName%=KL1ModelSection,ntamd64
+
+[KL1ModelSection]
+%KL1Name%=DefaultInstall,KL1
+
+[KL1ModelSection.ntamd64]
+%KL1Name%=DefaultInstall,KL1
+
+[SourceDisksNames]
+1 = %Floppy_Description%,,,
+
+[SourceDisksFiles]
+kl1.sys = 1
+
+[DefaultInstall]
+CopyFiles = Copy.Sys
+
+[DefaultInstall.ntamd64]
+CopyFiles = Copy.Sys
+
+[DefaultInstall.Services]
+AddService=kl1,,kl1.install
+
+[DefaultInstall.ntamd64.Services]
+AddService=kl1,,kl1.install
+
+[DefaultUninstall]
+DelFiles   = Copy.sys
+
+[DefaultUninstall.ntamd64]
+DelFiles   = Copy.sys
+
+[DefaultUninstall.Services]
+DelService = kl1
+
+[DefaultUninstall.ntamd64.Services]
+DelService = kl1
+
+[kl1.install]
+DisplayName = %kl1%
+ServiceType = 1;
+StartType   = 1;
+Errorcontrol= 1;
+ServiceBinary = %12%\kl1.sys
+LoadOrderGroup   = "PNP_TDI"
+
+;
+; Registry Modifications
+;
+
+[Copy.Sys]
+kl1.sys
+
+[DestinationDirs]
+Copy.sys = 12
+
+[Strings] 
+KL = "Kaspersky Lab"
+KLName = "KL"
+KL1Name = "KL1"
+kl1 = "kl1"
+Floppy_Description = "Kaspersky Lab Installation Disk"

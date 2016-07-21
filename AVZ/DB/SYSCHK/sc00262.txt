@@ -1,0 +1,4 @@
+// ***** AdvWare.SaveNow *****
+begin
+ AddEvAlarmByCLSID('763BD795-24AE-44d7-82D8-F9A1EE799729', AScriptName, 'localsplnet.dll');
+end.

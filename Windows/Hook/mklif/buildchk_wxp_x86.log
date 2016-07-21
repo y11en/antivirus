@@ -1,0 +1,128 @@
+BUILD: Examining c:\projects\windows\hook\mklif directory for files to compile.
+skipping post pass 0 command
+warnings in directory c:\projects\windows\hook\mklif
+debug.c and ..\debug.c exist
+warnings in directory c:\projects\windows\hook\mklif
+osspec.c and ..\osspec.c exist
+warnings in directory c:\projects\windows\hook\mklif
+client.c and ..\client.c exist
+warnings in directory c:\projects\windows\hook\mklif
+evqueue.c and ..\evqueue.c exist
+warnings in directory c:\projects\windows\hook\mklif
+filter.c and ..\filter.c exist
+warnings in directory c:\projects\windows\hook\mklif
+klsecur.c and ..\klsecur.c exist
+warnings in directory c:\projects\windows\hook\mklif
+invthread.c and ..\invthread.c exist
+warnings in directory c:\projects\windows\hook\mklif
+hook.c and ..\hook.cpp exist
+warnings in directory c:\projects\windows\hook\mklif
+md5.c and ..\md5.c exist
+Compiling and Linking c:\projects\windows\hook\mklif *************
+'nmake.exe /nologo BUILDMSG=Stop. -i BUILD_PASS=PASS2 LINKONLY=1 NOPASS0=1 MAKEDIR_RELATIVE_TO_BASEDIR='
+c:\projects\windows\hook\mklif: TARGETPATH is ..\..\..\out\mklif\chk
+BUILDMSG: _NT_TARGET_VERSION SET TO WINXP
+ rc -l 409 -DSXS_PROCESSOR_ARCHITECTURE="""x86"""  -DSXS_TARGET="""klif.sys"""   -DSYSTEM_COMPATIBLE_ASSEMBLY_NAME="""Microsoft.Windows.SystemCompatible"""  -DLSYSTEM_COMPATIBLE_ASSEMBLY_NAME=L"""Microsoft.Windows.SystemCompatible"""   -DSXS_ASSEMBLY_VERSION=""""""  /r /fo c:\projects\windows\hook\mklif\objchk_wxp_x86\i386\klif.res /D_X86_=1 /Di386=1  /DSTD_CALL /DCONDITION_HANDLING=1   /DNT_INST=0 /DWIN32=100 /D_NT1X_=100 /DWINNT=1 /D_WIN32_WINNT=0x0501 /DWINVER=0x0501 /D_WIN32_IE=0x0603    /DWIN32_LEAN_AND_MEAN=1  /DDEVL=1 /DDBG=1 /D__BUILDMACHINE__=WinDDK /DFPO=0   /D_DLL=1 /DNDEBUG  /DMSC_NOOPT /DNTDDI_VERSION=0x05010200 /DRUN_WPP   /I..\..\..\CommonFiles /Ic:\projects\windows\hook\mklif\objchk_wxp_x86\i386 /IC:\WinDDK\6001.17120\inc\api /IC:\WinDDK\6001.17120\inc\api /IC:\WinDDK\6001.17120\inc\ddk /IC:\WinDDK\6001.17120\inc\ddk /IC:\WinDDK\6001.17120\inc\crt .\klif.rc
+Microsoft (R) Windows (R) Resource Compiler Version 6.0.5724.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+ cl.exe @c:\projects\windows\hook\mklif\objchk_wxp_x86\i386\cl.rsp
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.278 for 80x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+cl /Fo"c:\projects\windows\hook\mklif\objchk_wxp_x86\i386/"
+ /FC
+ /Ii386
+ /I.
+ /I..\..\..\CommonFiles
+ /Ic:\projects\windows\hook\mklif\objchk_wxp_x86\i386
+ /IC:\WinDDK\6001.17120\inc\api
+ /IC:\WinDDK\6001.17120\inc\api
+ /IC:\WinDDK\6001.17120\inc\ddk
+ /IC:\WinDDK\6001.17120\inc\ddk
+ /IC:\WinDDK\6001.17120\inc\crt
+ /D_X86_=1
+ /Di386=1
+ /DSTD_CALL
+ /DCONDITION_HANDLING=1
+ /DNT_INST=0
+ /DWIN32=100
+ /D_NT1X_=100
+ /DWINNT=1
+ /D_WIN32_WINNT=0x0501
+ /DWINVER=0x0501
+ /D_WIN32_IE=0x0603
+ /DWIN32_LEAN_AND_MEAN=1
+ /DDEVL=1
+ /DDBG=1
+ /D__BUILDMACHINE__=WinDDK
+ /DFPO=0
+ /D_DLL=1
+ /DNDEBUG
+ /DMSC_NOOPT
+ /DNTDDI_VERSION=0x05010200
+ /DRUN_WPP
+ /c
+ /Zc:wchar_t-
+ /Zl
+ /Zp8
+ /Gy
+ /Gm-
+ -cbstring
+ /W3
+ /Gz
+ /hotpatch
+ /EHs-c-
+ /GR-
+ /GF
+ /GS
+ /Z7
+ /Od
+ /Oi
+ /Oy-
+ /Z7
+ /DKMDF_MAJOR_VERSION=01
+ /DKMDF_MINOR_VERSION=007
+ /FIC:\WinDDK\6001.17120\inc\api\warning.h
+ .\init.c .\operations.c .\debug.c .\osspec.c .\client.c .\evqueue.c .\filter.c .\klsecur.c .\invthread.c .\runproc.c .\hook.c .\prepfltd.c .\sysio.c .\extreq.c .\lldio.c .\cdwork.c .\regops.c .\comm.c .\regflt.c .\specfunc.c .\ichdrv.c .\fidbox.c .\oidb.c .\resolve.c .\md5.c .\apprul.c .\klfltdev.c .\virt.c .\gencache.c .\hkchecklock.c 
+init.c
+----------------------- ALLOC_PRAGMA defined
+--- debug driver ---
+----------------------- TODO: fix process id
+operations.c
+debug.c
+----------------------- Debug detected - DbgBreakPoint, HOOKKdPrint are enabled
+osspec.c
+client.c
+evqueue.c
+filter.c
+klsecur.c
+invthread.c
+runproc.c
+hook.c
+prepfltd.c
+sysio.c
+extreq.c
+lldio.c
+cdwork.c
+regops.c
+comm.c
+regflt.c
+----------------------- REG_LOAD_KEY_INFORMATION not defined - using handmade struct
+----------------------- REG_CALLBACK_CONTEXT_CLEANUP_INFORMATION not defined - using handmade struct
+specfunc.c
+Generating Code...
+Compiling...
+ichdrv.c
+fidbox.c
+oidb.c
+resolve.c
+----------------------- PECP_LIST not defined
+----------------------- PPREFETCH_OPEN_ECP_CONTEXT not defined
+----------------------- GUID_ECP_PREFETCH_OPEN not defined
+md5.c
+apprul.c
+klfltdev.c
+virt.c
+gencache.c
+hkchecklock.c
+Generating Code...
+ link.exe /out:..\..\..\out\mklif\chk\i386\klif.sys /machine:ix86 @c:\projects\windows\hook\mklif\objchk_wxp_x86\i386\lnk.rsp

@@ -1,0 +1,4 @@
+// ***** Email-Worm.Win32.Mintal *****
+begin
+ AddEvAlarmByCLSID('00000003-0001-0003-0003-000000000007', AScriptName, 'insthwm.dll');
+end.

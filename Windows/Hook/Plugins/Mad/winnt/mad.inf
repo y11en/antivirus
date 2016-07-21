@@ -1,0 +1,25 @@
+[Version] 
+Signature = "$CHICAGO$" 
+
+[DefaultInstall]
+CopyFiles = Copy.Sys
+
+[DefaultInstall.Services]
+AddService=mad,,mad.install
+
+[mad.install]
+DisplayName = %mad%
+ServiceType = 1;
+StartType   = 3;
+Errorcontrol= 1;
+ServiceBinary = %12%\mad.sys
+
+[Copy.Sys]
+mad.sys
+
+[DestinationDirs]
+Copy.sys = 12
+
+[Strings] 
+KL = "Kaspersky Lab"
+mad = "mad"

@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?script_quarantinefile.htm"; }
+else { parent.quicksync('a15.14.4'); }
+//-->
+</script>
+   <title>function QuarantineFile</title>
+   <meta name="keywords" content="QuarantineFile,&#1082;&#1072;&#1088;&#1072;&#1085;&#1090;&#1080;&#1085;">
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+
+
+<body bgcolor="#FFFFFF">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">function QuarantineFile</span></p>
+
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="t_about.htm">Наверх</a>&nbsp;
+     <a href="script_createinfectedarchiv.htm">Предыдущая</a>&nbsp;
+     <a href="script_clearquarantine.htm">Последующая</a>
+     </font><B>|</B>
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=717989"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=717989;t=109;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=18 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=717989"><img
+src="http://top.list.ru/counter?js=na;id=717989;t=109"
+border=0 height=18 width=88
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+    </td>
+  </tr>
+</table>
+<br>
+
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">function</span><span style="font-size: 12pt; font-family: 'Courier New';"> QuarantineFile(AFileName, AMsg : </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">string</span><span style="font-size: 12pt; font-family: 'Courier New';">):boolean;</span></p>
+<p>&nbsp;</p>
+<p>Копирование указанного файла с именем <span style="font-size: 12pt; font-family: 'Courier New';">AFileName</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span>в карантин. При помещение в карантин в описание файла вносится текст</p>
+<p>из параметра AMsg. Если файл уже есть в карантине или он опознан по базе безопасных, то копирование в карантин блокируется.</p>
+<p>Если файл найден и успешно скопирован в карантин, то функция возвращает true. </p>
+<p>Если файл не найден или помещение в карантин блокировано по причине наличия файла в базе безопасных, то возвращается False.</p>
+<p>&nbsp;</p>
+<p>В имени файла допустимы <a href="script_filenamemacros.htm">макросы</a>, в частности:</p>
+<p>%WinDir% - полный путь в папке Windows</p>
+<p>%System32% - полный путь к папке System (в Win9x) или System32 (в NT/W2K/XP ...)</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold; text-decoration: underline;">На заметку:</span></p>
+<p>Если функции QuarantineFile не указано полное имя файла, то делается попытка поиска файла, в ходе которого кроме штатного поиска перебираются типовые варианты местоположения файла, в частности проверяются варианты "имя файла + пути к системным папкам". Это делается для того, чтобы повысить вероятность карантина нужных файлов для исследования</p>
+<p>&nbsp;</p>
+<p><span style="text-decoration: underline;">Пример:</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">QuarantineFile(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'%System32%\vbsys2.dll'</span><span style="font-size: 12pt; font-family: 'Courier New';">,&nbsp; </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'</span><span style="font-size: 12pt; font-family: 'Courier New';">Подозрительное имя, возможно Trojan.Agent</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">QuarantineFile(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'%WinDir%\vbsys2.dll'</span><span style="font-size: 12pt; font-family: 'Courier New';">,&nbsp; </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'</span><span style="font-size: 12pt; font-family: 'Courier New';">Подозрительное имя, возможно Trojan.Agent</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p>&nbsp;</p>
+<p>В имени файла допускаются маски, содержащие "*" и "?", например:</p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">QuarantineFile(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'%System32%\vbsys*.dll'</span><span style="font-size: 12pt; font-family: 'Courier New';">,&nbsp; </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'</span><span style="font-size: 12pt; font-family: 'Courier New';">Подозрительное имя, возможно Trojan.Agent</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p>&nbsp;</p>
+<p>При указании маски производится поиск подходящих файлов, и все найденные файлы добавляются в карантин.</p>
+<p>В случае необходимости папка&nbsp; Quarantine может быть перемещена в любой каталог с помощью ключа командной строки<span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold; color: #000000;"> </span><a href="t_commandlinespec.htm">QuarantineBaseFolder</a>. В этом случае настройка папки карантина должна производиться до операций с карантином. </p>
+<p>&nbsp;</p>
+<p>Пример:</p>
+<p>&nbsp;</p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #000000;">begin</span><span class="f_CodeExample" style="color: #000000;">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #000080;">//&nbsp;Настройка&nbsp;местоположения&nbsp;папки&nbsp;карантина</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;SetupAVZ(</span><span class="f_CodeExample" style="color: #000080;">'QuarantineBaseFolder=c:\avz4\'</span><span class="f_CodeExample" style="color: #000000;">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #000080;">//&nbsp;Карантин&nbsp;файла</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;QuarantineFile(</span><span class="f_CodeExample" style="color: #000080;">'%System32%\vbsys2.dll'</span><span class="f_CodeExample" style="color: #000000;">,&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #000080;">'Подозрительное&nbsp;имя,&nbsp;возможно&nbsp;Trojan.Agent'</span><span class="f_CodeExample" style="color: #000000;">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #000000;">end</span><span class="f_CodeExample" style="color: #000000;">.</span></p>
+
+
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=717989;js='+js+a+';rand='+Math.random()+
+'" height=1 width=1/>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=717989"
+height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+
+</body>
+</html>

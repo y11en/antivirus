@@ -1,0 +1,4 @@
+# can not reproduce this case
+# for future purpose 
+
+# CP_SELF_FROM_SF NOT_TO_CLEAR

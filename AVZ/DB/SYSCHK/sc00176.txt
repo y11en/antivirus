@@ -1,0 +1,4 @@
+// ***** Pornware.DailyToolbar *****
+begin
+ AddEvAlarmByCLSID('58F9B276-E1CC-458E-8159-21CBC021874B','Pornware.DailyToolbar, AdvWare.Mature.a, Trojan.StartPage.ny','DailyToolbar.dll');
+end.

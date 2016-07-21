@@ -1,0 +1,9 @@
+; avpgui.def : Declares the module parameters.
+
+LIBRARY      "avpgui.ppl"
+
+EXPORTS
+	DllCanUnloadNow     PRIVATE
+	DllGetClassObject   PRIVATE
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer	PRIVATE

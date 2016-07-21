@@ -1,0 +1,4 @@
+// ***** AdvWare.MetaDirect.MetaSearch *****
+begin
+ AddEvAlarmByCLSID('B54BFA47-D897-49CA-9657-05EC9F80A32B',AScriptName,'');
+end.

@@ -1,0 +1,254 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "kisaspam"=".\kisaspam.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name askernel
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libgsg2
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libjpeg
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libmimeparser
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libsigs
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name md5a
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name pcommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name regex
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ungif
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name librules
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libosr
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libpng
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name zLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "libgsg2"="..\smtp-filter\libgsg2\libgsg2_kis.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "libjpeg"="..\gnu\jpeg\libjpeg_kis.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "libmimeparser"="..\MIMEParser\libmimeparser_kis.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "libosr"="..\smtp-filter\libosr\libosr_kis.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "libpng"="..\gnu\libpng\libpng_kis.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name zLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "librules"="..\client-filter\librules\librules_kis.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "libsigs"="..\smtp-filter\libsigs\libsigs_kis.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "md5a"="..\gnu\md5a\md5a_kis.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "pcommon"="..\lib\pcommon\pcommon_kis.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "regex"="..\gnu\regex\regex_kis.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "testing"=".\testing\testing.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libgsg2
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libjpeg
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libmimeparser
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name librules
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libsigs
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name md5a
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name pcommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name regex
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ungif
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ungif"="..\smtp-filter\ungif\ungif_kis.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "zLib"="..\gnu\zlib\zLib_kis.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

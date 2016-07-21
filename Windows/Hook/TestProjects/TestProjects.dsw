@@ -1,0 +1,225 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "ChangeDebugMask"=.\ChangeDebugMask\ChangeDebugMask.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/TestProjects/ChangeDebugMask", OUNBAAAA
+    .\changedebugmask
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "CheckFSLib"=.\CheckFSLib\CheckFSLib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/TestProjects/CheckFSLib", FEHBAAAA
+    .\checkfslib
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Create_Audit"=.\Create_Audit\Create_Audit.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/TestProjects/Create_Audit", UOTBAAAA
+    .\create_audit
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "DisableProtection"=.\DisableProtection\DisableProtection.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/TestProjects/DisableProtection", UULIAAAA
+    .\disableprotection
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "EventsGauge"=.\EventsGauge\EventsGauge.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/TestProjects/EventsGauge", ERLCAAAA
+    .\eventsgauge
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "FSSyncCheck"=.\FSSyncCheck\FSSyncCheck.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/TestProjects/FSSyncCheck", YRSDAAAA
+    .\fssynccheck
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "LLDiskIOTest"=.\LLDiskIOTest\LLDiskIOTest.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/TestProjects/LLDiskIOTest", XALCAAAA
+    .\lldiskiotest
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "MBRLog"=.\MBRLog\MBRLog.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/TestProjects/MBRLog", VTOGAAAA
+    .\mbrlog
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "MSDevPass"=.\MSDevPass\MSDevPass.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/TestProjects/MSDevPass", FJQBAAAA
+    .\msdevpass
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "MultiThreadSwitch"=.\MultiThreadSwitch\MultiThreadSwitch.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/TestProjects/MultiThreadSwitch", CYMBAAAA
+    .\multithreadswitch
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "ProProtTest"=.\ProProtTest\ProProtTest.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/TestProjects/ProProtTest", VQCEAAAA
+    .\proprottest
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "StreamRemover"=.\StreamRemover\StreamRemover.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/TestProjects/StreamRemover", FPIEAAAA
+    .\streamremover
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "klmount"=.\klmount\klmount.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/TestProjects/klmount", TLMIAAAA
+    .\klmount
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

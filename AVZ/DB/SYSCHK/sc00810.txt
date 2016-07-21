@@ -1,0 +1,9 @@
+// ***** Проверка префикса WWW *****
+var
+ S : string;
+begin
+ S := Trim(RegKeyStrParamRead('HKEY_LOCAL_MACHINE', 'SOFTWARE\Microsoft\Windows\CurrentVersion\URL\Prefixes', 'www'));
+ if S <> '' then
+  if not((S = 'http://') or (S = 'http:\\')) then
+   AddToLog('$AVZ0520: "'+S+'"');
+end.

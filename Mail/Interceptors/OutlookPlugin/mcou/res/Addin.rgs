@@ -1,0 +1,53 @@
+HKCR
+{
+	OutlookAsPlg.Addin.1 = s 'Addin Class'
+	{
+		CLSID = s '{AA9F1045-4A07-433f-9B79-F8303066259D}'
+	}
+	OutlookAsPlg.Addin = s 'Addin Class'
+	{
+		CLSID = s '{AA9F1045-4A07-433f-9B79-F8303066259D}'
+		CurVer = s 'OutlookAsPlg.Addin.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {AA9F1045-4A07-433f-9B79-F8303066259D} = s 'Addin Class'
+		{
+			ProgID = s 'OutlookAsPlg.Addin.1'
+			VersionIndependentProgID = s 'OutlookAsPlg.Addin'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{08B4C065-94FB-46be-8B98-1A5939631CB5}'
+		}
+	}
+}
+
+HKLM
+{
+  	Software
+	{
+		Microsoft
+		{
+			Office
+			{
+				Outlook
+				{
+					Addins
+					{
+						'OutlookAsPlg.Addin'
+						{
+							val FriendlyName = s 'Kaspersky Outlook Addin'
+							val Description = s 'ATLCOM Outlook Addin'
+							val LoadBehavior = d '00000003'
+							val CommandLineSafe = d '00000001' 
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

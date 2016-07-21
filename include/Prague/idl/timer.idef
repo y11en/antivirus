@@ -1,0 +1,24 @@
+forward interface Timer;
+typedef Timer* hTIMER;
+
+
+
+[
+  version(1)
+  mnemonic(IID_TIMER)
+  id(58016)
+  c_type_name(hTIMER)
+]
+interface Timer {
+
+  // ------------------------------------
+    [ id(4096) ]  prop tDWORD pgFREQUENCY; // Timer period in milliseconds
+    [ id(4097) ]  prop tDWORD pgTIMER_ID;
+    [ id(4098) ]  prop tBOOL pgENABLED;
+
+
+  // ------------------------------------
+    [ id(2642681002) ]  message_cls pmc_TIMER {}
+
+}
+

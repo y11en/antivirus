@@ -1,0 +1,4 @@
+// ***** TrojanDownloader.Stozila *****
+begin
+ AddEvAlarmByCLSID('CA034DCC-A580-4333-B52F-15F98C42E04C',AScriptName,'dwnldr.dll');
+end.

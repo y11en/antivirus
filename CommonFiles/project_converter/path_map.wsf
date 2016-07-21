@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<job>
+  <runtime>
+    <description>This script performs patching of MapFile path of VC 2005 projects</description>
+    <named name = "src"
+          helpstring = "a VC 2005 project file to be patched"
+          type = "string"
+          required = "true"/>
+    <example>Example:
+p2.wsf /src:c:\foo.vsproj</example>
+  </runtime>
+
+<script language="JScript">
+<![CDATA[
+
+function setConfigurationName ( conf, compilerTool ) {
+	var isExecutable = conf.getAttribute ( "ConfigurationType" ) == "1";
+	if ( compilerTool == null || isExecutable ) {
+		return false;
+	}
+	var name = conf.getAttribute ( "Name" );
+	var regExpDll = /DebugDll|ReleaseDll/ig;
+	var regExpS = /Debug|Release/ig;
+	var isStatic = false;
+	if ( name.match ( regExpDll ) )
+		isStatic = false;
+	else if ( name.match ( regExpS ) )
+		isStatic = g_dynamic_runtime ? false : true;
+	else {
+		WScript.Echo ( "WARNING! File " + g_source + " has a suspicious configuration '" + name + "'" );
+		return false;
+	}
+	var runTime = compilerTool.getAttribute ( "RuntimeLibrary" ); 
+	
+	if ( ( !isStatic && ( ( runTime == 0 ) || ( runTime == 1 ) ) ) ||
+  	( isStatic && ( ( runTime == 2 ) || ( runTime == 3 ) ) ) ) {
+		WScript.Echo ( "WARNING! File " + g_source + " has a configuration '" + name + "' with wrong runtime lirary option" );
+	}
+	name = name.substr ( 0, name.indexOf ( "|" ) );
+
+	var confName = "";
+	var rtl = "";
+	var rtl_name = "";
+	
+	switch ( name.toLowerCase () ) {
+	case "debug":  
+		if ( isStatic ) { 
+			rtl = "1";
+			rtl_name = "Debug MultiThereaded";
+			confName = "DebugS"; 
+		} 
+		else { 
+			rtl = "3";
+			rtl_name = "Debug MultiThereaded Dll";
+			confName = "Debug"; 
+		}
+		break;
+	case "release": 
+		if ( isStatic ) { 
+			rtl = "0";
+			rtl_name = "Release MultiThereaded";
+			confName = "ReleaseS"; 
+		} 
+		else { 
+			rtl = "2";
+			rtl_name = "Release MultiThereaded Dll";
+			confName = "Release"; 
+		}
+		break;
+	case "debugdll": 
+		rtl = "3";
+		rtl_name = "Debug MultiThereaded Dll";
+		confName = "Debug";
+		break;
+	case "releasedll": 
+		rtl = "2";
+		confName = "Release"; 
+		break;
+	case "unicode debug": 
+		if ( isStatic ) { 
+		  rtl = "1";
+			confName = "DebugUS"; 
+		} 
+		else { 
+		  rtl = "3";
+			confName = "DebugU"; 
+		}
+		break;
+	case "unicode release": 
+		if ( isStatic ) { 
+		  rtl = "0";
+			confName = "ReleaseUS"; 
+		} 
+		else { 
+		  rtl = "2";
+			confName = "ReleaseU"; 
+		}
+		break;
+	case "unicode debugdll": 
+		rtl = "3";
+		confName = "DebugU"; 
+		break;
+	case "unicode releasedll": 
+		rtl = "2";
+		confName = "ReleaseU";
+		break;
+	default:
+		WScript.Echo ( "WARNING! File " + g_source + " has a suspicious configuration '" + name + "'" );
+		return false;	
+	}
+
+	var changed = false;
+	if ( confName != name ) {
+		WScript.Echo ( "INFO! Configuration name '" + name + "' is renamed to '" + confName + "'" );
+		var name = conf.getAttribute ( "Name" );
+		conf.setAttribute ( "Name", confName + name.substr ( name.indexOf ( "|" ) ) );
+	  changed = true;
+	}
+
+	var rtl_have = compilerTool.getAttribute ( "RuntimeLibrary" );
+	if ( rtl != rtl_have ) {
+		WScript.Echo ( "INFO! Configuration name '" + name + "' is renamed to '" + confName + "'" );
+	  compilerTool.setAttribute ( "RuntimeLibrary", rtl );
+	  changed = true;
+	}
+
+	return changed;
+}
+
+
+
+function patchConfiguration( conf ) {
+	var tools = conf.getElementsByTagName( "Tool" ); 
+	for ( var i=0; i< tools.length; i++ ) {
+	  var tool = tools.item(i);
+		var name = tool.getAttribute ( "Name" );
+		if ( name == "VCCLCompilerTool" )
+		  return setConfigurationName( conf, tool );
+	}
+	return false;
+}
+
+var args = WScript.Arguments;
+if ( !args.Named.Exists ( "src" ) ) { //|| !args.Named.Exists ( "outdir" )) {
+	args.ShowUsage ();
+	WScript.Quit (1);
+}
+
+var source = args.Named.Item ( "src" );
+var fsObj = new ActiveXObject ( "Scripting.FileSystemObject" );
+if ( !fsObj.FileExists ( source ) ) {
+	WScript.Echo ( "ERROR! File " + source + " doesn't exist!\n");
+	WScript.Quit ( 1 );
+}
+
+var xml = new ActiveXObject ( "msxml2.DOMDocument.5.0" );
+xml.async = false;
+xml.resolveExternals = false;
+xml.load( source );
+
+if ( xml.parseError.errorCode != 0 ) {
+	var err = xml.parseError;
+	WScript.Echo ( "ERROR! Can't parse the XML file: " + err.reason );
+	WScript.Quit ( 1 );
+} 
+
+var confs = xml.getElementsByTagName ( "Configuration" );
+var save_it = false;
+for ( var i = 0;  i < confs.length; i++ ) {
+	var save_this = patchConfiguration( confs.item(i) );
+	if ( save_this == true )
+	  save_it = true;
+}
+
+if ( save_it == true )
+  xml.save( source );
+
+]]>
+</script>
+</job>
+
+

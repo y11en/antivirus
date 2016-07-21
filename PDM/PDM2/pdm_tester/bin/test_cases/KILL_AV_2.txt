@@ -1,0 +1,8 @@
+# try to multiple kill av processes by name
+
+KP_BY_NAME avp.exe NOT_TO_CLEAR
+KP_BY_NAME mcshield.exe NOT_TO_CLEAR
+KP_BY_NAME nod32m2.exe NOT_TO_CLEAR
+
+#etalon_verdict 100 AntiAVMultiple
+#etalon_verdict 70 AntiAV

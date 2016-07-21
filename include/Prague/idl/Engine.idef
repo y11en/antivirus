@@ -1,0 +1,704 @@
+#import "reg.idef"
+
+forward interface Engine;
+typedef Engine* hENGINE;
+
+
+
+
+[
+  version(1)
+  mnemonic(IID_ENGINE)
+  id(62005)
+  c_type_name(hENGINE)
+  comment_ex("Интерфейс определяет основные правила и методы обработки сложных объектов. 
+    Служит для реализации как абстрактного антивирусного ядра, так и подключаемых сканеров.")
+]
+interface Engine { // Базовый интерфейс обработки объектов.//eng:Generic interface for object processing.
+
+  // ------------------------------------
+
+    [
+      comment_ex("Полное виртуальное имя обрабатываемого объекта.//eng:Full virtual path name of object under processing.")
+    ]
+    const tSTRING npENGINE_VIRTUAL_OBJECT_NAME = "npENGINE_VIRTUAL_OBJECT_NAME"; // Имя строкового свойства \"виртуальное имя объекта\".//eng:Name of string property \"Virtual object name\".
+
+    [
+      comment_ex("Свойство содержит хендл родительского объекта, с которым неразрывно связан хозяин свойства.")
+    ]
+    const tSTRING npENGINE_INTEGRAL_PARENT_IO_hOBJECT = "npENGINE_INTEGRAL_PARENT_IO"; // Имя свойства \"неотьемлемый родитель\"
+
+    [
+      comment_ex("Свойство наследуемое. Означает невозможность модификации содержимого и удаления таких объектов. ")
+    ]
+    const tSTRING npENGINE_OBJECT_READONLY_tBOOL = "npENGINE_OBJECT_READONLY"; // Имя BOOL свойства \"запись в объект невозможна\".//eng:Name of BOOL property \"Object readonly\".
+
+    [
+      comment_ex("В случае обнаружения с ненулевым DETECT_DANGER  выставляется на всех IO от входного до текущего объекта.
+        Инкрементируется при обнаружении.
+        Декрементируется при лечении и удалении.")
+    ]
+    const tSTRING npENGINE_OBJECT_DETECT_STATE_tDWORD = "npENGINE_OBJECT_DETECT_STATE"; // Имя DWORD счетчика инфицированности (с учетом лечения и удаления)
+
+    [
+      comment_ex("В случае обнаружения с ненулевым DETECT_DANGER  выставляется на всех IO от входного до текущего объекта.
+        Инкрементируется при обнаружении.
+        ! Не декрементируется при лечении и удалении.")
+    ]
+    const tSTRING npENGINE_OBJECT_DETECT_COUNTER_tDWORD = "npENGINE_OBJECT_DETECT_COUNTER_tDWORD"; // Имя DWORD счетчика обнаружений
+
+    [
+      comment_ex("Наследуемое свойство.
+        Устанавливается на объект, передаваемый на сканирование клиентом.
+        На этом объекте будут накапливаться хеши сканированных подобъектов.
+        Необходим для поддержки многотомных архивов с внешним циклом енумерации.")
+    ]
+    const tSTRING npENGINE_OBJECT_SESSION_hOBJECT = "npENGINE_OBJECT_SESSION_hOBJECT"; // Имя свойства \"сессионный объект\"
+
+    [
+      comment_ex("Свойство наследуемое. Означает невозможность модификации содержимого и удаления таких объектов. ")
+    ]
+    const tSTRING npENGINE_OBJECT_READONLY_tERROR = "npENGINE_OBJECT_READONLY_tERROR"; // Имя tQWORD свойства \"запись в объект невозможна по причине...\".
+
+    [
+      comment_ex("Свойство наследуемое. Означает невозможность модификации содержимого и удаления таких объектов. ")
+    ]
+    const tSTRING npENGINE_OBJECT_READONLY_hOBJECT = "npENGINE_OBJECT_READONLY_hOBJECT"; // Имя tQWORD свойства \"запись в объект невозможна по причине...\".
+    [ comment_ex("") ]  const tSTRING npENGINE_OBJECT_PARAM_ACTION_CLASS_MASK_tDWORD = "npENGINE_OBJECT_PARAM_ACTION_CLASS_MASK_tDWORD"; // Имя tDWORD параметра  \"маска классов действий\".
+    [ comment_ex("") ]  const tSTRING npENGINE_OBJECT_OBTAINED_TRANSFORMER_NAME = "npENGINE_OBJECT_OBTAINED_TRANSFORMER_NAME"; // Имя параметра  \"имя обнаруженного преобразователя\".
+    [ comment_ex("") ]  const tSTRING npENGINE_OBJECT_TRANSFORMER_NAME = "npENGINE_OBJECT_TRANSFORMER_NAME"; // Имя параметра  \"имя преобразователя\".
+    [ comment_ex("") ]  const tSTRING npENGINE_OBJECT_EXECUTABLE_PARENT_IO_hOBJECT = "npENGINE_OBJECT_EXECUTABLE_PARENT_IO_hOBJECT"; // Имя свойства \"исполняемый родитель\".
+    [ comment_ex("") ]  const tSTRING npENGINE_OBJECT_SKIP_THIS_ONE_tBOOL = "npENGINE_OBJECT_SKIP_THIS_ONE_tBOOL"; // Имя свойства \"пропустить обработку этого объекта\".
+    [ comment_ex("") ]  const tSTRING npENGINE_OBJECT_SET_WRITE_ACCESS_tERROR = "npENGINE_OBJECT_SET_WRITE_ACCESS_tERROR"; // Имя свойства \"ошибка переоткрытия на запись\".
+
+    [
+      comment_ex("Имя детектированного события, ассоцииированого с объектом. Например, имя вируса в случае обнаружения вируса.
+        //eng:Detection event name, associated with object. For ex. virus name in case of virus detection")
+    ]
+    const tDWORD ENGINE_DETECT_NAME = 2; // Имя детектирования.//eng:Detection name.
+
+    [
+      comment_ex("Флаги опасности: потеря информации, несанкцилнированный доступ, размножение,  итд.
+        Смотри константы: ENGINE_DETECT_DANGER_*.
+        //eng:Danger flags: information steal, format media, spread, etc. See constants ENGINE_DETECT_DANGER_*.")
+    ]
+    const tDWORD ENGINE_DETECT_DANGER = 3; // Флаги опасности.//eng:Danger flags.
+
+    [
+      comment_ex("Тип детектированного события: вирус, троян, бэкдор, итд.
+        Смотри константы: ENGINE_DETECT_TYPE_*.
+        //eng: Detection type: vitus, trojan, backdoor, etc. See constants ENGINE_DETECT_TYPE_*.")
+    ]
+    const tDWORD ENGINE_DETECT_TYPE = 4; // Тип детектирования.//eng:Detection type.
+
+    [
+      comment_ex("Тип детектированного события: вирус, троян, бэкдор, итд.
+        Смотри константы: ENGINE_DETECT_TYPE_*.
+        //eng: Detection type: vitus, trojan, backdoor, etc. See constants ENGINE_DETECT_TYPE_*.")
+    ]
+    const tDWORD ENGINE_DETECT_BEHAVIOUR = 5; // Тип детектирования.//eng:Detection type.
+
+    [
+      comment_ex("Возможность удаления обнаруженного кода. Возможно, невозможно, неизвестно итд.
+        Смотри константы: ENGINE_DETECT_DISINFECTABILITY_*.
+        //eng:Disinfectability. Disinfectable  not or unknown. See constants ENGINE_DETECT_DISINFECTABILITY_*.")
+    ]
+    const tDWORD ENGINE_DETECT_DISINFECTABILITY = 6; // Возможность удаления.//eng:Disinfectability.
+
+    [
+      comment_ex("Уровень уверенности детектироания. Точно, вероятно, частично, эвристика  итд.
+        Смотри константы: ENGINE_DETECT_CERTANITY_*.
+        //eng:Certanity of detection:shure, probable, partial, heuristic, etc. See constants ENGINE_DETECT_CERTANITY_*.")
+    ]
+    const tDWORD ENGINE_DETECT_CERTANITY = 7; // Уровень уверенности детектирования.//eng:Detection certanity.
+
+    [
+      comment_ex("Имя объектной системы, которая обнаружена в обрабатываемом объекте. Например: ZIP-архив, почтовая база, самораспаковщик, итд.//eng:Оbject system name, detected in object. For ex. ZIP-archive, mail base, self-extactor, etc.")
+    ]
+    const tDWORD ENGINE_OBTAINED_OS_NAME = 100; // Имя обнаруженной объектной системы.//eng:Obtained object system name.
+
+    [
+      comment_ex("Составляется и используется AVPMGR. 
+        Для прямой проверки объекта приложение вызывает Process с IO BUFFER с установленным pgOBJECT_ORIGIN = OID_REOPEN_DATA")
+    ]
+    const tDWORD ENGINE_REOPEN_DATA = 101; // Данные для прямого повторного открытия объекта и проверки.
+
+    [
+      comment_ex("Имя, соответствующее типу детектирования. Используется приложением в случае неизвестного нового типа. Например: \"Virus\".
+        //eng:Name, descibed detection type. Application should get it in case of new or unknown detection type. For ex. \"Virus\" or smth else. ")
+    ]
+    const tDWORD ENGINE_EXT_DETECT_TYPE_BIT_NAME_ANSI = 1; // Имя типа детектирования.//eng:Detection type name.
+    const tDWORD ENGINE_DETECT_TYPE_UNDEFINED = 0;
+    const tDWORD ENGINE_DETECT_TYPE_VIRWARE = 1;
+    const tDWORD ENGINE_DETECT_TYPE_TROJWARE = 2;
+    const tDWORD ENGINE_DETECT_TYPE_MALWARE = 3;
+    const tDWORD ENGINE_DETECT_TYPE_ADWARE = 4;
+    const tDWORD ENGINE_DETECT_TYPE_PORNWARE = 5;
+    const tDWORD ENGINE_DETECT_TYPE_RISKWARE = 6;
+    const tDWORD ENGINE_DETECT_TYPE_XFILES = 20;
+    const tDWORD ENGINE_DETECT_TYPE_SOFTWARE = 21;
+    const tDWORD ENGINE_DETECT_TYPE_UNDETECT = 30;
+    const tDWORD ENGINE_DETECT_DISINFECTABILITY_UNKNOWN = 0; // Возможность удаления кода не определена.//eng:Disinfectability unknown.
+    const tDWORD ENGINE_DETECT_DISINFECTABILITY_NO = 1; // Удаление кода невозможно.//eng:Non disinfectable.
+    const tDWORD ENGINE_DETECT_DISINFECTABILITY_YES = 2; // Удаление кода возможно.//eng:Disinfectable.
+    const tDWORD ENGINE_DETECT_DISINFECTABILITY_YES_BY_DELETE = 3; // Удаление кода возможно вместе с объектом//eng:Disinfect by delete.
+    const tDWORD ENGINE_DETECT_DISINFECTABILITY_CLEAN = 4; // Не вирус. Удаление кода не имеет смысла.
+    const tDWORD ENGINE_DETECT_CERTANITY_SURE = 1; // Точное совпадение кода.
+    const tDWORD ENGINE_DETECT_CERTANITY_PARTIAL = 2; // Частичное совпадение кода.
+    const tDWORD ENGINE_DETECT_CERTANITY_HEURISTIC = 3; // Обнаружение эвристическим методом.
+    const tDWORD ENGINE_DETECT_CERTANITY_PROBABLY = 4; // Возможное совпадение кода.
+    const tDWORD ENGINE_DETECT_DANGER_HIGH = 0; // Обнаружен вредоносный код.
+    const tDWORD ENGINE_DETECT_DANGER_MEDIUM = 1; // Обнаружен код, открывающий несанкционированный доступ.
+    const tDWORD ENGINE_DETECT_DANGER_LOW = 2; // Обнаружен код легальной программы, могущей анноить пользователя
+    const tDWORD ENGINE_DETECT_DANGER_INFORMATIONAL = 3;
+
+    [
+      comment_ex("Выставляется, если конфигурация загружена корректно")
+    ]
+    const tDWORD cENGINE_DB_STATE_FUNCTIONAL = 0x1; // Движек готов к работе.
+    const tDWORD ENGINE_ACTION_TYPE_NO_ACTION = 0; // Вспомогательный тип
+    const tDWORD ENGINE_ACTION_TYPE_SET_OF_ACTIONS = 1; // Выполнить набор действий
+    const tDWORD ENGINE_ACTION_TYPE_PROCESS_OS_ON_IO = 2; // На текущем объекте пытаться найти OS
+    const tDWORD ENGINE_ACTION_TYPE_CONVERT_IO = 3; // На текущем объекте попытаться создать преобразованный IO
+    const tDWORD ENGINE_ACTION_TYPE_SWITCH_BY_PROPERTY = 4; // Перейти к действию соответствующему значению указанного свойства.
+    const tDWORD ENGINE_ACTION_TYPE_SUBENGINE_PROCESS = 5; // Отдать объект на обработку сканирующему поддвижку
+    const tDWORD ENGINE_ACTION_TYPE_DISINFECT = 6; // Попытаться вылечить вирус
+    const tDWORD ENGINE_ACTION_TYPE_SECTOR_OVERWRITE = 7; // Перезаписать сектор образом из бэкапа или стандарным.
+    const tDWORD ENGINE_ACTION_CLASS_VIRUS_SCAN = 0x00010000; // Поиск вирусов
+    const tDWORD ENGINE_ACTION_CLASS_VIRUS_HEURISTIC = 0x00020000; // Поиск вирусов эвристическим методом
+    const tDWORD ENGINE_ACTION_CLASS_ARCHIVE = 0x00000001; // Обработка архива
+    const tDWORD ENGINE_ACTION_CLASS_MAIL_DATABASE = 0x00000002; // Обработка почтовой базы.
+    const tDWORD ENGINE_ACTION_CLASS_MAIL_PLAIN = 0x00000004; // Обработка почтового формата
+    const tDWORD ENGINE_ACTION_CLASS_ARCHIVE_SFX = 0x00000008; // Обработка самораспаковывающегося архива
+    const tDWORD ENGINE_ACTION_CLASS_OLE_STREAM = 0x00000010; // Обработка OLE потоков
+    const tDWORD ENGINE_ACTION_CLASS_OLE_EMBEDDED = 0x00000020; // обработка OLE вложений
+    const tDWORD ENGINE_ACTION_CLASS_MODULES_IN_PROCESS = 0x00000200; // обработка образов модулей в памяти процессов
+    const tDWORD ENGINE_ACTION_CLASS_PACKED = 0x00001000; // обработка упакованных объектов
+    const tDWORD ENGINE_ACTION_CLASS_OBJECT_MODIFY = 0x10000000; // обработка, подразумевающая модификацию объекта
+    const tDWORD ENGINE_ACTION_CLASS_ALL_FILES = 0x08000000; // Виртуальный класс - для использования маски в IChecker. Должен быть сброшен если используется IsProgram() при енумерации.
+
+    [
+      comment_ex("Если действие не может быть исполнено (отсутствие компонент, ошибка инициализации), то при наличии этого флага движек продолжает работать без генерации ошибки.")
+    ]
+    const tDWORD ENGINE_ACTION_FLAG_NOT_REQUIRED = 0x00000001; // Действие не обязательно должно быть исполнено
+
+    [
+      comment_ex("Если такой флаг стоит, то ошибка выполнения действия будет опущена, и обработка продолжится дальше.")
+    ]
+    const tDWORD ENGINE_ACTION_FLAG_ERROR_NOT_CRITICAL = 0x00000002; // Ошибка выполнения действия не является критичной
+    const tDWORD ENGINE_CONFIGURATION_REQUIRED_VERSION = 3;
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Отсутствует сканирующий поддвижек или неправильные базы или ошибка в конфигурации действий.")
+    ]
+    error errENGINE_BAD_CONFIGURATION; // Неправильная конфигурация.
+
+    [
+      comment_ex("Вспомогательный код ошибки. Используется только AvpMgr.")
+    ]
+    error errENGINE_OS_STOPPED; // Обработка OS остановлена.
+
+    [
+      comment_ex("Вспомогательный код ошибки. Используется только AvpMgr.")
+    ]
+    error errENGINE_IO_MODIFIED; // Обрабатываемый объект был изменен.
+
+    [
+      comment_ex("Управляющий ошибки. Широко используется обработчиком сообщений приложения для отмены тех или иных действий.")
+    ]
+    error errENGINE_ACTION_SKIP; // Управляющий код.
+    error errENGINE_CONFIGURATION_NOT_LOADED;
+    error errENGINE_BAD_ACTION_CONFIGURATION;
+    error errENGINE_BAD_REGISTRY_CONFIGURATION;
+    error errENGINE_BAD_AVP_SET;
+    error errENGINE_MT_DRIVER_NOT_LOADED;
+    error errENGINE_BAD_AVP1_CONFIGURATION;
+    error errENGINE_OS_VOLUME_SET_INCOMPLETE;
+    error errENGINE_HC_NO_OVERWRITE;
+
+
+  // ------------------------------------
+
+    [
+      id(4097)
+      comment_ex("type tVERSION")
+    ]
+    prop tVERSION pgENGINE_VERSION; // Версия движка.
+
+    [
+      id(4098)
+      comment_ex("type tSTRING")
+    ]
+    prop tSTRING pgENGINE_DB_NAME; // Имя конфигурации.
+
+    [
+      id(4099)
+      comment_ex("type tDWORD")
+    ]
+    prop tDWORD pgENGINE_DB_COUNT; // Счетчик записей базы.
+
+    [
+      id(4100)
+      comment_ex("type tDATETIME")
+    ]
+    prop tDATETIME pgENGINE_DB_TIME; // Дата последней модификации базы.
+
+    [
+      id(4101)
+      comment_ex("type tDWORD
+        
+        см. константы")
+    ]
+    prop tDWORD pgENGINE_DB_STATE; // Состояние рабочей конфигурации  движка.
+
+    [
+      id(4103)
+      comment_ex("type tSTRING")
+    ]
+    prop tSTRING pgENGINE_DB_LOAD_NAME; // Имя загружаемой базы
+
+    [
+      id(4104)
+      comment_ex("type tDATETIME")
+    ]
+    prop tDATETIME pgENGINE_DB_LOAD_TIME; // Дата модификации загружаемого файла.
+
+    [
+      id(4105)
+      comment_ex("type tDWORD")
+    ]
+    prop tDWORD pgENGINE_SUBENGINE_COUNT; // Счетчик сканирующих поддвижков.
+
+    [
+      id(4106)
+      comment_ex("type tPTR")
+    ]
+    prop tPTR pgENGINE_SUBENGINE_TABLE; // Указатель на таблицу хендлов поддвижков.
+    [ id(4107) ]  prop tBYTE pgENGINE_DB_VERDICTS; // verdict flags
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Обработка объекта (сканирование). Енумерирует объектные системы  и рекурсивно обрабатывает подобъекты. В зависимости от конфигурации и обработки сообщений передает объекты поддвижкам. Во время работы посылает сообщения о всех событиях и запросы опций. См. классы сообщений pmc_ENGINE_*.
+        //eng:Processes object (scan).")
+    ]
+    method tERROR Process( // Обработать объект.//eng:Process object.
+      hOBJECT obj // Обрабатываемый объект.//eng:Object to process.
+    );
+
+    [
+      comment_ex("Получить рабочие данные, ассоциированные с обрабатываемым объектом. Похожа на функцию PropertyGet.
+        См. Идентификаторы рабочих данных, ассоциированых с объектом. (ENGINE_DETECT_NAME, etc)
+        //eng:Get data associated with object under processing. Very similar to PropertyGet system function. See associated with object info IDs. (ENGINE_DETECT_NAME, etc)")
+    ]
+    method tERROR GetAssociatedInfo( // Получить ассоциированные данные.//eng:Get associated data.
+      hOBJECT obj, // Ассоциированный объект. //eng:Associated object.
+      tDWORD info_id, // Идентификатор данных.
+      tDWORD param, // Параметр расширения.
+      tPTR buffer, // Выходной буффер.
+      tDWORD size, // Размер выходного буффера.
+      tDWORD* out_size // Размер выходных данных.
+    );
+
+    [
+      comment_ex("Функция позволяет получить расширенные параметризованные свойства движка. Например, имя описывающее определенный бит в типах обнаружения.
+        //eng:Returns extended parameterized information about engine abilities.
+        Very similar to PropertyGet system function, but has paramerer.")
+    ]
+    method tERROR GetExtendedInfo( // Получить дополнительные свойства.//eng:Get extended information.
+      tDWORD info_id, // Идентификатор данных.
+      tDWORD param, // Параметр расширения.
+      tPTR buffer, // Выходной буффер.
+      tDWORD size, // Размер выходного буффера.
+      tDWORD* out_size // Размер выходных данных.
+    );
+
+    [
+      comment_ex("Загружает конфигурацию, инициализирует антивирусные базы, инициализирует схему действий.")
+    ]
+    method tERROR LoadConfiguration( // Загрузить конфигурацию.
+      hREGISTRY reg, // объект реестра с конфигурацией
+      ifRegistry.tRegKey key // ключ указывающий на корень конфигурации
+    );
+
+
+  // ------------------------------------
+
+    [
+      id(44288)
+      comment_ex("msg_id == тип Действия
+        send-point == обрабатываемый объект. (зависит от типа)
+        ctx == hENGINE
+        В буффере - tDWORD Класс действия.
+        
+        Посылается только в том случае, если подходит по маске класса. См. pm_ENGINE_IO_OPTIONS_ACTION_CLASS_MASK.
+        
+        Если возаратить errENGINE_ACTION_SKIP - действие будет пропущено.")
+    ]
+    message_cls pmc_ENGINE_ACTION { // Сообщения Action- процессора.
+
+      [
+        id(0)
+        comment_ex("Посылается только в том случае, если подходит по маске класса. См. pm_ENGINE_IO_OPTIONS_ACTION_CLASS_MASK.
+          
+          Если возаратить errENGINE_ACTION_SKIP - действие будет пропущено.")
+      ]
+      message pm_ENGINE_ACTION_NO_ACTION; // Пустое действие - для фильтрации по классу.
+
+      [
+        id(1)
+        comment_ex("Посылается только в том случае, если подходит по маске класса. См. pm_ENGINE_IO_OPTIONS_ACTION_CLASS_MASK.
+          
+          Если возаратить errENGINE_ACTION_SKIP - действие будет пропущено.")
+      ]
+      message pm_ENGINE_ACTION_SET_OF_ACTIONS; // Выполнить набор действий
+
+      [
+        id(2)
+        comment_ex("Посылается только в том случае, если подходит по маске класса. См. pm_ENGINE_IO_OPTIONS_ACTION_CLASS_MASK.
+          
+          Если возаратить errENGINE_ACTION_SKIP - действие будет пропущено.")
+      ]
+      message pm_ENGINE_ACTION_PROCESS_OS_ON_IO; // На текущем объекте пытаться найти OS
+
+      [
+        id(3)
+        comment_ex("Посылается только в том случае, если подходит по маске класса. См. pm_ENGINE_IO_OPTIONS_ACTION_CLASS_MASK.
+          
+          Если возаратить errENGINE_ACTION_SKIP - действие будет пропущено.")
+      ]
+      message pm_ENGINE_ACTION_CONVERT_IO; // На текущем объекте попытаться создать преобразованный IO
+
+      [
+        id(4)
+        comment_ex("Посылается только в том случае, если подходит по маске класса. См. pm_ENGINE_IO_OPTIONS_ACTION_CLASS_MASK.
+          
+          Если возаратить errENGINE_ACTION_SKIP - действие будет пропущено.")
+      ]
+      message pm_ENGINE_ACTION_SWITCH_BY_PROPERTY; // Перейти к действию соответствующему значению указанного свойства.
+
+      [
+        id(5)
+        comment_ex("Посылается только в том случае, если подходит по маске класса. См. pm_ENGINE_IO_OPTIONS_ACTION_CLASS_MASK.
+          
+          Если возаратить errENGINE_ACTION_SKIP - действие будет пропущено.")
+      ]
+      message pm_ENGINE_ACTION_SUBENGINE_PROCESS; // Отдать объект на обработку сканирующему поддвижку 
+
+      [
+        id(6)
+        comment_ex("Посылается только в том случае, если подходит по маске класса. См. pm_ENGINE_IO_OPTIONS_ACTION_CLASS_MASK.
+          
+          Если возаратить errENGINE_ACTION_SKIP - действие будет пропущено.")
+      ]
+      message pm_ENGINE_ACTION_DISINFECT; // Попытаться вылечить вирус
+    }
+
+    [
+      id(44289)
+      comment_ex("Испрользуется во время инициализации.
+        В параметре ctx - hENGINE.")
+    ]
+    message_cls pmc_ENGINE_OPTIONS { // Запрос основных настроек.//eng:General engine options request.
+
+      [
+        id(4096)
+        comment_ex("Используется реализацией AVP1 (движек 3.0)
+          Сообщение посылается во время инициализации AVP1.")
+      ]
+      message pm_ENGINE_OPTIONS_USE_MULTITHREAD_DRIVER; // Запрос режима использования многопоточного драйвера
+
+      [
+        id(4097)
+        comment_ex("Используется реализацией AVP1 (движек 3.0)
+          Сообщение посылается во время инициализации AVP1.")
+      ]
+      message pm_ENGINE_OPTIONS_SEND_LOAD_RECORD_MESSAGE; // Запрос режима посылки соощений о каждой загружаемой рекорде
+
+      [
+        id(4098)
+        comment_ex("Сообщение pm_ENGINE_OPTIONS_SEND_MT_DEBUG_MESSAGE посылается во время инициализации движка AVP1.
+          Сообщения pm_ENGINE_IO_OUTPUT_MT_DEBUG посылаются во время загрузки баз.")
+      ]
+      message pm_ENGINE_OPTIONS_SEND_MT_DEBUG_MESSAGE; // Запрос на посылку сообщений pm_ENGINE_IO_OUTPUT_MT_DEBUG
+      [ id(4099) ]  message pm_ENGINE_OPTIONS_USE_SIGN_CHECK; // Запрос режима проверки подписи
+    }
+
+    [
+      id(44290)
+      comment_ex("Usually hIO in obj parameter.")
+    ]
+    message_cls pmc_ENGINE_IO { // Main notification class for processing.
+
+      [
+        id(4097)
+        comment_ex("код возврата не рассматриваются.")
+      ]
+      message pm_ENGINE_IO_BEGIN; // Начало фрейма обработки io.
+
+      [
+        id(4098)
+        comment_ex("код возврата не рассматривается,
+          но errorтекущей обработки может быть изменен через data.")
+      ]
+      message pm_ENGINE_IO_DONE; // Конец фрейма обработки io.
+
+      [
+        id(4099)
+        comment_ex("Объектная система успешно создана на текущем IO.
+          Имя системы доступно через вызов:
+          
+          CALL_Engine_GetAssociatedInfo((hENGINE)ctx,obj,ENGINE_OBTAINED_OS_NAME,cCP_ANSI,buf,0x20,0);")
+      ]
+      message pm_ENGINE_IO_OS_ENTER; // Enter OS for object enumeration and processing (archives)
+
+      [
+        id(4100)
+        comment_ex("Завершена обработка объектной системы на текущем IO.
+          Имя системы доступно через вызов:
+          
+          CALL_Engine_GetAssociatedInfo((hENGINE)ctx,obj,ENGINE_OBTAINED_OS_NAME,cCP_ANSI,buf,0x20,0);")
+      ]
+      message pm_ENGINE_IO_OS_LEAVE; // Конец фрейма обработки os.
+
+      [
+        id(4101)
+        comment_ex("Преобразованный объект IO был успешно создан на текущем IO.
+          Имя преобразования доступно через вызов:
+          
+          CALL_Engine_GetAssociatedInfo((hENGINE)ctx,obj,ENGINE_OBTAINED_OS_NAME,cCP_ANSI,buf,0x20,0);")
+      ]
+      message pm_ENGINE_IO_SUB_IO_ENTER; // Enter Sub IO processing (packers)
+
+      [
+        id(4102)
+        comment_ex("Завершилась обработка преобразованного IO, созданного на текущем IO.
+          Имя преобразования доступно через вызов:
+          
+          CALL_Engine_GetAssociatedInfo((hENGINE)ctx,obj,ENGINE_OBTAINED_OS_NAME,cCP_ANSI,buf,0x20,0);")
+      ]
+      message pm_ENGINE_IO_SUB_IO_LEAVE; // Exit Sub IO processing (packers)
+
+      [
+        id(4103)
+        comment_ex("Вся информация об обнаружении доступна через вызов CALL_Engine_GetAssociatedInfo() ТОЛЬКО во время обработки сообщения pm_ENGINE_IO_DETECT!
+          
+          Доступные запросы: см. константы ENGINE_DETECT_*
+          
+          Также доступна информация на именованных свойствах:  npENGINE_*")
+      ]
+      message pm_ENGINE_IO_DETECT; // Произошло обнаружение.
+
+      [
+        id(4104)
+        comment_ex("Вся информация об обнаружении доступна через вызов CALL_Engine_GetAssociatedInfo() ТОЛЬКО во время обработки этого сообщения!
+          
+          Доступные запросы: см. константы ENGINE_DETECT_*
+          
+          Также доступна информация на именованных свойствах:  npENGINE_*")
+      ]
+      message pm_ENGINE_IO_DISINFECTED; // Disinfection. Details in npENGINE_... properties.
+
+      [
+        id(4105)
+        comment_ex("Вся информация об обнаружении доступна через вызов CALL_Engine_GetAssociatedInfo() ТОЛЬКО во время обработки этого сообщения!
+          
+          Доступные запросы: см. константы ENGINE_DETECT_*
+          
+          Также доступна информация на именованных свойствах:  npENGINE_*")
+      ]
+      message pm_ENGINE_IO_DISINFECTION_FAILED; // Disinfection. Details in npENGINE_... properties.
+
+      [
+        id(4106)
+        comment_ex("Вся информация об обнаружении доступна через вызов CALL_Engine_GetAssociatedInfo() ТОЛЬКО во время обработки этого сообщения!
+          
+          Доступные запросы: см. константы ENGINE_DETECT_*
+          
+          Также доступна информация на именованных свойствах:  npENGINE_*")
+      ]
+      message pm_ENGINE_IO_DISINFECTION_IMPOSSIBLE; // Disinfection impossibility. Details in npENGINE_... properties.
+
+      [
+        id(4107)
+        comment_ex("Диагностическое сообщение.")
+      ]
+      message pm_ENGINE_IO_CORRUPTED; // rus:Нарушена внутренняя структура обрабатываемого объекта.//eng:Inernal structure inconsistance
+
+      [
+        id(4114)
+        comment_ex("Диагностическое сообщение")
+      ]
+      message pm_ENGINE_IO_ENCRYPTED; // объект зашифрован
+
+      [
+        id(4117)
+        comment_ex("Диагностическое сообщение")
+      ]
+      message pm_ENGINE_IO_PASSWORD_PROTECTED; // доступ к содержимому объекта защищен паролем
+
+      [
+        id(4108)
+        comment_ex("Посылается, если при обработке возникла ошибка, не позволяющая быть уверенным в результате обработки.")
+      ]
+      message pm_ENGINE_IO_PROCESSING_ERROR; // критическая ошибка при обработке объекта
+
+      [
+        id(4109)
+        comment_ex("Вылечен, либо неудачно вылечен, либо пересобран архив.")
+      ]
+      message pm_ENGINE_IO_WAS_MODIFIED; // Объект IO изменен//eng:IO was mofified.
+
+      [
+        id(4110)
+        comment_ex("По умолчанию AvpMgr поддерживает создание виртуальных имен самостоятельно.
+          Укладывает в соответствующее именованное свойство.
+          Можно обрабатывать в приложении.
+          
+          Берет родительское виртуальное имя и добавляет через бэкслеш имя из data.
+          Если не задана data - берет сначала pgOBJECT_FULL_NAME.
+          если нет - то pgOBJECT_NAME.
+          если нет то добавляет {OBJECT WITH BAD NAME}")
+      ]
+      message pm_ENGINE_IO_MAKE_VIRTUAL_NAME; // Запрос на создание виртуального имени.//eng:Request for object virtual name creation
+
+      [
+        id(4111)
+        comment_ex("на объекте готовится виртуальное имя.")
+      ]
+      message pm_ENGINE_IO_NAME_CHECK; // Check name for processing - should it be extracted
+
+      [
+        id(4112)
+        comment_ex("0x200, но взависимости от свойст hIO ")
+      ]
+      message pm_ENGINE_IO_GET_ORIGINAL_BOOT; // Fill buffer with boot sector image
+      [ id(4113) ]  message pm_ENGINE_IO_GET_ORIGINAL_MBR; // Fill buffer with MBR sector image
+
+      [
+        id(4115)
+        comment_ex("Service message for Eugene ONE HALF :)")
+      ]
+      message pm_ENGINE_IO_OUTPUT_STRING; // Output undocumented messages from engine
+
+      [
+        id(4116)
+        comment_ex("used in MonCon")
+      ]
+      message pm_ENGINE_IO_OUTPUT_MT_DEBUG; // Debug message for multithread mode monitoring
+
+      [
+        id(4118)
+        comment_ex("Используется для решения проблемы GUGOL и оптимизации обработки одинаковых подобъектов.")
+      ]
+      message pm_ENGINE_IO_HASH_FRAME_BEGIN; // Начало фрейма обработки, попадающего под запоминание в HASH контейнере.
+
+      [
+        id(4119)
+        comment_ex("В случае возврата PR_FAIL - не помещает в HASH контейнер 
+          
+          Используется для решения проблемы GUGOL и оптимизации обработки одинаковых подобъектов.")
+      ]
+      message pm_ENGINE_IO_HASH_FRAME_LEAVE; // Конец фрейма обработки, попадающего под запоминание в HASH контейнере.
+
+      [
+        id(4120)
+        comment_ex("Используется для решения проблемы GUGOL и оптимизации обработки одинаковых подобъектов.")
+      ]
+      message pm_ENGINE_IO_HASH_FRAME_FOUND; // Объект найден в HASH контейнере. Следующий Фрейм обработки будет пропущен.
+
+      [
+        id(4121)
+        comment_ex("в случае возврата PR_FAIL - не переоткрывает.")
+      ]
+      message pm_ENGINE_IO_CHANGE_ACCESS_MODE; // запрос на изменение режима открытия объекта
+
+      [
+        id(4122)
+        comment_ex("Извлечь содержимое объекта невозможно. Пропускаем.
+          сообщение для поддержки объектных систем AVP1.")
+      ]
+      message pm_ENGINE_IO_UNSUPPORTED_COMPRESSION_METHOD; // неизвестный/неподдерживаемый метод сжатия
+
+      [
+        id(4123)
+        comment_ex("если десайдер возвращает errENGINE_ACTION_SKIP - пропускает обработку.
+          Посылается до фрейма pm_ENGINE_IO_OS_ENTER pm_ENGINE_IO_OS_LEAVE.
+           ")
+      ]
+      message pm_ENGINE_IO_OS_CHECK; // Запрос на подтверждение обработки OS.
+      [ id(4124) ]  message pm_ENGINE_IO_ICHECKER_OK;
+
+      [
+        id(4125)
+        comment_ex("Посылается перед закрытием пражского OS.
+          Посылается после фрейма pm_ENGINE_IO_OS_ENTER pm_ENGINE_IO_OS_LEAVE.
+           ")
+      ]
+      message pm_ENGINE_IO_OS_PRECLOSE; // Завершение обработки OS.
+      [ id(4126) ]  message pm_ENGINE_IO_HC_CLEAN;
+      [ id(4127) ]  message pm_ENGINE_IO_HC_DETECT;
+      [ id(4128) ]  message pm_ENGINE_IO_HC_OVERWRITED;
+      [ id(4129) ]  message pm_ENGINE_IO_HC_OVERWRITE_FAILED;
+      [ id(4130) ]  message pm_ENGINE_IO_HC_MARKED_FOR_DELETE;
+      [ id(4131) ]  message pm_ENGINE_IO_OS_CLOSE_ERROR;
+      [ id(4132) ]  message pm_ENGINE_IO_OS_RECOGNIZE;
+    }
+
+    [
+      id(44292)
+      comment_ex("Сообщения этого класса посылаются во время инициализации ENGINE и вызова метода LoadConfiguration.")
+    ]
+    message_cls pmc_ENGINE_LOAD { // Класс сообщений о ходе загрузки ENGINE и конфигурации
+
+      [
+        id(4096)
+        comment_ex("Имя загружаемой базы и дату - через свойства DB_LOAD_NAME
+          DB_LOAD_TIME
+          для удобства hSTRING имени базы лежит в ctx. 
+          
+          если десайдер вернет ошибку - (например errOPERATION_CANCELLED) то база не грузится.")
+      ]
+      message pm_ENGINE_LOAD_BASE; // Нотификация о загрузке очередного файла базы.
+
+      [
+        id(4097)
+        comment_ex("Посылается только если запрос pm_ENGINE_OPTIONS_SEND_LOAD_RECORD_MESSAGE вернул  TRUE ")
+      ]
+      message pm_ENGINE_LOAD_RECORD; // Нотификация о загрузке очередной записи.
+
+      [
+        id(4098)
+        comment_ex("Если обработчик возвращает PR_ERR, то загрузка модуля продолжается нормально. В противном случае - LoadConfiguration возвращает errBAD_CONFIGURATION.")
+      ]
+      message pm_ENGINE_LOAD_BASE_INTEGRITY_FAILED; // Верификация подписи модуля/базы не прошла
+
+      [
+        id(4099)
+        comment_ex("возможно файл отсутствует на диске,
+          возможно нет прав.")
+      ]
+      message pm_ENGINE_LOAD_BASE_ERROR_OPEN; // Невозможно открыть базу/модуль
+
+      [
+        id(4100)
+        comment_ex("Внутреннее сообщение, для отладки")
+      ]
+      message pm_ENGINE_LOAD_OUTPUT_STRING; // Выводит строку во время загрузки баз
+      [ id(4101) ]  message pm_ENGINE_LOAD_CONFIGURATION_OUT_OF_DATE;
+      [ id(4102) ]  message pm_ENGINE_LOAD_CONFIGURATION_LOADED;
+      [ id(4103) ]  message pm_ENGINE_LOAD_CONFIGURATION_UNLOADED;
+      [ id(4104) ]  message pm_ENGINE_LOAD_CONFIGURATION_ERROR;
+    }
+    [ id(44293) ]
+    message_cls pmc_ENGINE_PROCESS { // Сообщения о прохождении функций Process() и ICheck()
+      [ id(4096) ]  message pm_ENGINE_PROCESS_BEGIN; // Начало обработки объекта
+      [ id(4097) ]  message pm_ENGINE_PROCESS_DONE; // Конец обработки объекта
+    }
+
+}
+

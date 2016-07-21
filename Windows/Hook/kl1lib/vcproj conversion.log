@@ -1,0 +1,12 @@
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Folder: "O:\windows\Hook\kl1lib"
+	File "O:\windows\Hook\kl1lib\kl1lib.dsp"
+		Converting "kl1lib.dsp"
+		Patching   "kl1lib.vcproj"
+			Conf - Debug|Win32
+				INFO! 'RuntimeLibrary' option is changed from 'Multi-threaded Debug Static' to 'Multi-threaded Debug Dll'
+			Conf - Release|Win32
+				INFO! 'RuntimeLibrary' option is changed from 'Multi-threaded Release Static' to 'Multi-threaded Release Dll'
+

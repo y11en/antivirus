@@ -1,0 +1,42 @@
+// $AVZ1505
+//$ Нарушение ассоциации LNK файлов
+// Функция поиска проблемы                                                                          
+function Check : dword;
+var
+ S : string;
+begin
+ Result := 0;
+ // Тяжелая ошибка 1 - зловредом удален ключ '.lnk' или 'lnkfile\shell\open\command'
+ if not(RegKeyExists('HKEY_CLASSES_ROOT','.lnk')) or
+    not(RegKeyExists('HKEY_CLASSES_ROOT','lnkfile')) then begin
+     Result := 3;
+     exit;
+    end;
+ // Тяжелая ошибка 2 - ключ '.lnk' ведет не на тип lnkfile
+ if UpperCase(RegKeyStrParamRead('HKEY_CLASSES_ROOT','.lnk', '')) <> 'LNKFILE' then begin
+     Result := 3;
+     exit;
+    end;
+ // Тяжелая ошибка 3 - ключ 'lnkfile' содержит подмененныы ключ запуска (часто меняется троянами)                                                                                       
+ S := Trim(RegKeyStrParamRead('HKEY_CLASSES_ROOT', 'lnkfile\shell\open\command', ''));
+ // Пераметры запуска удалены                                                                   
+ if S = '' then begin
+  exit;
+ end;
+ // Параметры запуска не совпадают со стандартными                                                                                                           
+ S := StringReplace(S, '  ', ' ');
+ if not((S = '"%1" %*') or (S = '%1 %*')) then begin             
+  Result := 3;
+  exit;
+ end;
+end;
+
+// Функция исправления проблемы                                                                          
+function Fix : dword;
+begin
+ RegKeyCreate('HKEY_CLASSES_ROOT', '.lnk');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', '.lnk', '', 'lnkfile');
+ RegKeyCreate('HKEY_CLASSES_ROOT', 'lnkfile\shell\open\command');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', 'lnkfile\shell\open\command', '', '"%1" %*');
+ Result := 0;
+end;

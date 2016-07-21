@@ -1,0 +1,453 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Localization !!!!!!!!!!!
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+//#pragma code_page(1250)
+#endif //_WIN32
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "#endif\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+//IDB_DAVID               BITMAP  DISCARDABLE     "res\\david1.bmp"
+#endif    // Polish resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Polish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,1,0,1
+ PRODUCTVERSION 0,1,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x9L
+#else
+ FILEFLAGS 0x8L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Kaspersky Lab Ltd.\0"
+            VALUE "FileDescription", "Localization file\0"
+            VALUE "FileVersion", "0, 1, 0, 1\0"
+            VALUE "InternalName", "Polish\0"
+            VALUE "LegalCopyright", "Copyright © 1996-1998\0"
+            VALUE "LegalTrademarks", "AVP\0"
+            VALUE "OriginalFilename", "AVP_LOC.DLL\0"
+            VALUE "PrivateBuild", "Graf\0"
+            VALUE "ProductName", "AntiViral Toolkit Pro for Win32\0"
+            VALUE "ProductVersion", "0, 1, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+IDD_AVP32_DIALOG MENU DISCARDABLE
+BEGIN
+    POPUP "&Plik"
+    BEGIN
+        MENUITEM "Zapisz ustawienia jako &domyœlne", ID_FILE_SAVEPROFILEASDEFAULT
+        MENUITEM SEPARATOR
+        MENUITEM "&Odczytaj ustawienia z...",   ID_FILE_LOADPROFILE
+        MENUITEM "&Zapisz ustawienia jako...",  ID_FILE_SAVEPROFILE
+        MENUITEM SEPARATOR
+        MENUITEM "Zam&knij",                    ID_APP_EXIT
+    END
+    POPUP "&Test"
+    BEGIN
+        MENUITEM "&Start",                      ID_SCAN_NOW
+        MENUITEM "Sto&p",                       ID_STOP
+    END
+    POPUP "Narzêdzia"
+    BEGIN
+        MENUITEM "&Aktualizacja",               ID_TOOLS_UPDATENOW
+        MENUITEM SEPARATOR
+        MENUITEM "&Ustawienia",                 ID_CUSTOMIZE
+        MENUITEM "&Szukaj w raporcie",          ID_FIND
+        MENUITEM "&Wyœwietl listê wirusów",     ID_VIRLIST
+    END
+    POPUP "Pomo&c"
+    BEGIN
+        MENUITEM "&Tematy pomocy",              ID_DEFAULT_HELP
+        MENUITEM "AVP w sieci &Web",            ID_HELP_AVPONTHEWEB
+        MENUITEM SEPARATOR
+        MENUITEM "AVP - i&nformacje",           ID_HELP_ABOUTAVP32
+    END
+END
+
+
+IDR_POP_MENU MENU DISCARDABLE
+BEGIN
+    POPUP "Pop"
+    BEGIN
+        MENUITEM "&Zaznacz",                    ID_POP_MARK
+        MENUITEM "&Anuluj zaznaczenie",         ID_POP_UNMARK
+        MENUITEM SEPARATOR
+        MENUITEM "&Testuj zaznaczone",          ID_POP_SCAN
+    END
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    ID_FILE_SAVEPROFILEASDEFAULT
+                            "Zapisujê konfiguracjê do pliku ustawieñ Default.prf"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    ID_FILE_LOADPROFILE     "£adujê konfiguracjê z pliku ustawieñ"
+    ID_FILE_SAVEPROFILE     "Zapisujê konfiguracjê do pliku ustawieñ"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    ID_APP_EXIT             "Koniec"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_NOTHING_FILES       "Brak obiektów do skanowania.\nZaznacz pliki i/lub sektory w zak³adce Obiekty."
+    IDS_NOTHING_LOCATION    "Brak objektów do skanowania.\nZaznacz przynajmniej jeden z obiektów w zak³adce Obszar testu."
+    IDS_LIST_ONAME          "Obiekt"
+    IDS_LIST_RESULT         "Wynik"
+    IDS_DISINF_OFILE        "Plik"
+    IDS_DISINF_OSECTOR      "Sektor"
+    IDS_DISINF_OMEM         "Pamiêæ"
+    IDS_SCANPROC_SPAWN      "Proces testowania."
+    IDS_SCANPROC_COMPLETE   "Proces testowania zakoñczony."
+    IDS_SCANPROC_INCOMPLETE "Proces testowania niedokoñcznoy."
+    IDS_SCANPROC_QUESTION   "Przerwaæ proces testowania?"
+    IDS_ENTRY_FORMAT        "%s  Wpisów #%d"
+    IDS_LOADBASE_FORMAT     "£adujê %s %d%%"
+    IDS_INTERFACE_FAULT     "b³êdny nag³ówek."
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_KERNEL_FAULT        "j¹dro systemu uszkodzone."
+    IDS_OBJ_CORRUPTED       "uszkodzony."
+    IDS_OBJ_IOERROR         "b³¹d I/O."
+    IDS_OBJ_DISINF_FAILED   "leczenie nie powiod³o siê: %s"
+    IDS_OBJ_ENCRYPTED       "zaszyfrowany."
+    IDS_OBJ_OK              "ok."
+    IDS_OBJ_DISINFECTED     "wyleczony: %s"
+    IDS_OBJ_DELETED         "usuniêty: %s"
+    IDS_OBJ_INFECTED        "zainfekowany: %s"
+    IDS_OBJ_PACKED          "spakowany: %s"
+    IDS_OBJ_ARCHIVE         "archiwum: %s"
+    IDS_OBJ_WARNING         "ostrze¿enie: %s"
+    IDS_OBJ_SUSPICION       "podejrzenie: %s"
+    IDS_OBJ_UNKNOWN         "%s: nieznany format."
+    IDS_ERROR_FILE_OPEN     "Nie mogê otworzyæ pliku: %s"
+    IDS_ERROR_SET           "Uszkodzony plik: %s"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_ERROR_BASE          "Stara lub uszkodzona baza wirusów: %s"
+    IDS_ERROR_KERNEL_PROC   "Brak bazy danych obs³ugi j¹dra: %s"
+    IDS_ERROR_LINK          "Kod obiektu jast nieci¹g³y."
+    IDS_REPORT_CUT          "*** Ograniczony rozmiar pliku raportu: cut\r\n"
+    IDS_BOOT_SECTOR         "Boot sektor napêdu "
+    IDS_MBR_SECTOR          "Master Boot Record HDD%d"
+    IDS_REPORT_BANNER       "   AVP32 Test  %x  %X\r\n"
+    IDS_NEXT_CDROM          "W³ó¿ nastêpny dysk CDROM..."
+    IDS_NEXT_FLOPPY         "W³ó¿ nastêpn¹ dyskietkê..."
+    IDS_BASES_LOADED        "Antywirusowe bazy danych zosta³y za³adowane. Wirusów: %d"
+    IDS_BASES_NOT_LOADED    "£adowanie baz nie zosta³o zakoñczone."
+    IDS_LOAD_PROFILE        "£aduj ustawienia"
+    IDS_SAVE_PROFILE        "Zapisz ustawienia"
+    IDS_PROFILE_EXT         "Ustawienia dla AVP32 (*.prf)|*.prf||"
+    IDS_TAB_LOCATION        " &Obszar testu "
+    IDS_TAB_OBJECTS         " O&biekty "
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_TAB_ACTIONS         " &Reakcje "
+    IDS_TAB_OPTIONS         " Opcj&e "
+    IDS_TAB_STATISTICS      " Statystyk&a "
+    IDS_FLOPPY_DRIVE        "Napêd dyskietek"
+    IDS_CDROM_DRIVE         "Napêd CDROM"
+    IDS_ADD_FOLDER          "Dodaj folder do listy testu"
+    IDS_SCAN_NOW            "&Start"
+    IDS_STOP                "Sto&p"
+    IDS_ABOUT               "AVP® - informacje"
+    IDS_SUPPORT             "Pomo&c techniczna"
+    IDS_ACTION              "Reakcje"
+    IDS_DISINFECT_DIALOG    "Zara¿ony obiekt"
+    IDS_INFECTED_BY         "Zara¿ony przez wirusa:"
+    IDS_DISINFECT_R         "Utwórz tylko raport"
+    IDS_DISINFECT_D         "Wylecz"
+    IDS_DISINFECT_DEL       "Usuñ"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_COPYINFECTED        "Kopiuj do folderu plików zara¿onych"
+    IDS_APPLY_TOALL         "Zastosuj do wszystkich zara¿onych obiektów"
+    IDS_TAB1_LOCAL          "&Lokalne dyski twarde"
+    IDS_TAB1_NETWORK        "Dyski siecio&we"
+    IDS_TAB1_FLOPPY         "&Napêdy dyskietek"
+    IDS_TAB1_ADD_FOLDER     "&Dodaj folder"
+    IDS_TAB2_MEMORY         "Pa&miêæ"
+    IDS_TAB2_SECTORS        "Se&ktory"
+    IDS_TAB2_FILES          "P&liki"
+    IDS_TAB2_PACKED         "Spakowa&ne pliki"
+    IDS_TAB2_EXTRACT        "Arc&hiwa"
+    IDS_TAB2_MASK_FRAME     "Maska plikó&w"
+    IDS_TAB2_SMART          "Wykonywalne pliki"
+    IDS_TAB2_PROGRAMS       "Programy"
+    IDS_TAB2_ALLFILES       "Wszystkie pliki"
+    IDS_TAB2_USERDEF        "Zdefiniowane przez u¿ytkowanika"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_TAB3_WARNINGS       "Ostrz&e¿enia"
+    IDS_TAB3_CA             "Analiza &kodu"
+    IDS_TAB3_REDUNDANT      "Test redu&ndancyjny"
+    IDS_TAB3_SHOWOK         "Poka¿ niezain&fekowane obiekty"
+    IDS_TAB3_SHOWPACK       "Poka¿ infor&macje o pakowaniu"
+    IDS_TAB3_SOUND          "Efekty &dŸwiêkowe"
+    IDS_TAB3_TRACK          "Œ&ledzenie"
+    IDS_TAB3_REPORT         "Plik raport&u"
+    IDS_TAB3_APPEND         "Dopis&z"
+    IDS_TAB3_LIMIT          "&Wielkoœæ pliku raportu, Kb:"
+    IDS_TAB5_SCANNED_FRAME  "Testowane obiekty"
+    IDS_TAB5_FOUND_FRAME    "Efekt testu"
+    IDS_TAB5_STATIC_SECTORS "Sektory :"
+    IDS_TAB5_STATIC_FILES   "Pliki :"
+    IDS_TAB5_STATIC_FOLDERS "Foldery :"
+    IDS_TAB5_STATIC_ARCHIVES "Archiwa :"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_TAB5_STATIC_PACKED  "Spakowane :"
+    IDS_TAB5_STATIC_TIME    "Czas trwania testu :"
+    IDS_TAB5_STATIC_VIRUSES "Znanych wirusów :"
+    IDS_TAB5_STATIC_BODIES  "Cia³ wirusów :"
+    IDS_TAB5_STATIC_DISINFECTED "Wyleczonych :"
+    IDS_TAB5_STATIC_WARNINGS "Ostrze¿eñ :"
+    IDS_TAB5_STATIC_SUSPIC  "Podejrzanych :"
+    IDS_TAB5_STATIC_CORRUPTED "Uszkodzonych :"
+    IDS_TAB5_STATIC_IOERRORS "B³êdów I/O :"
+    IDS_TAB6_INFECTED_OBJ   "Obiekty zara¿one"
+    IDS_TAB6_SUSP_OBJ       "Obiekty podejrzane"
+    IDS_TAB6_REPORTONLY     "Utwórz tylko &raport"
+    IDS_TAB6_DISINFECTDIALOG "Wyœwietl &dialog leczenia"
+    IDS_TAB6_DISINFECTAUTO  "&Lecz automatycznie"
+    IDS_TAB6_DELETE         "&Usuñ automatycznie"
+    IDS_TAB6_COPYINFECTED   "&Kopiuj do folderu zainfekowanych"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_TAB6_COPYSUSPICIOUS "Kop&iuj do folderu podejrzanych"
+    IDS_NAME                "U¿ytkownik"
+    IDS_ORGANIZATION        "Firma"
+    IDS_REGNUMBER           "Numer rejestracji"
+    IDS_REGISTERINFO        "Informacje o rejestracji:"
+    IDS_SUPPORT_DLG         "Pomoc techniczna"
+    IDS_EXPIR_ALARM         "Twoja licencja AVP® koñczy siê z dniem\nat %m/%d/%Y"
+    IDS_EXPIRIED            "Twoja licencja AVP® skoñczy³a siê w dniu\nat %m/%d/%Y"
+    IDS_SET_OUTOFDATE       "Bazy antywirusowe AVP® s¹ stare.\nProszê zaopatrzyæ siê w aktualne wersje."
+    IDS_SHURE_DELETEALL     "Jesteœ pewien, ¿e chcesz USUN¥Æ WSZYSTKIE zara¿one obiekty?"
+    IDS_NEEDTORESTART       "Musisz ponownie uruchomiæ AVP32.EXE."
+    IDS_ASK_DELETE          "Leczenie %s \nzara¿onego przez wirusa %s jest niemo¿liwe.\n\nUsun¹æ ten obiekt?"
+    IDS_ASK_DELETE_ALL      "Usun¹æ wszystkie niewyleczalne obiekty?"
+    IDS_ASK_DELETE_SKIP_ALL "Nie usuwaæ wszystkich niewyleczalnych obiektów?"
+    IDS_CURE_SECTOR         "Leczenie sektorów jest niebezpieczn¹ procedur¹.\nZalecamy zrobienie kopii rezerwowej ca³ej zawartoœci dysku.\n\nPróbowaæ wyleczyæ teraz?"
+    IDS_MEMORY              "Pamiêæ"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_REMOTE_LAUNCH       "Ta kopia AVP® nie posiada licencji do uruchomienia z dysku sieciowego.\nAVP bêdzie uruchomiony w okrojonym trybie."
+    IDS_KEY_PLATHFORM_NT    "Ta kopia AVP® nie posiada licencji do uruchomienia pod Windows NT®.\nAVP bêdzie uruchomiony w okrojonym trybie."
+    IDS_KEY_PLATHFORM_95    "Ta kopia AVP® nie posiada licencji do uruchomienia pod Windows 95®.\nAVP bêdzie uruchomiony w okrojonym trybie."
+    IDS_ADMIN_RIGHTS        "AVP® zosta³ uruchomiony pod Windows NT® bez praw administratora.\nAVP nie bêdzie sprawdza³ fizycznych sektorów."
+    IDS_KEY_ABSENT          "Ta kopia AVP® nie posiada pliku klucza.\nAVP bedzie uruchomiony w okrojonym trybie."
+    IDS_MIN_CAPTION         "AVP Test (%d%%)"
+    IDS_TAB5_STATIC_DELETED "Usuniêtych :"
+    IDS_TAB5_STATIC_SPEED   "Prêdkoœæ testu (Kb/sec) :"
+    IDS_ASK_REDUNDANT       "Test redundancyjny spowalnia proces testowania kilka razy, \nzwiêkszaj¹c prawdopodobieñstwo fa³szywych alarmów.\nSzczegó³y zobacz w instrukcji. \n\nRozpocz¹æ proces testu?"
+    IDS_LAST_UPDATE         "Ostatnie uaktualnienie:   %s,    %d wirusów."
+    IDS_FINDNEXT            "&ZnajdŸ nastêpny"
+    IDS_FIND                "ZnajdŸ"
+    IDS_CANCEL              "Anuluj"
+    IDS_CASE                "Uwzglêdnij wielkoœæ liter"
+    IDS_OBJ_DISKOUTOFSPACE  "brak miejsca na dysku."
+    IDS_OBJ_PROTECTED       "zabezpieczony has³em."
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_TAB2_MAILPLAIN      "Pocztowe &formaty tekstowe"
+    IDS_TAB2_MAILBASES      "Pocztowe &bazy danych"
+    IDS_AVP_URL             "http://www.avp.ru"
+    IDS_SELF_DISINFECTED    "AVP wyleczy³ siê z wirusa: %s\n\nAVP zostanie uruchomiony ponownie."
+    IDS_SELF_DISINFECTION_FAILED 
+                            "AVP zainfekowany wirusem: %s\n\nLECZENIE NIEPOPRAWNE!!!"
+    IDS_NEED_REBOOT         "Niektóre zainfekowane pliki w Twoim komputerze s¹ zajête przez inny proces.\nAVP nie mo¿e otworzyæ ich aby bezpoœredniego leczenia.\nPo prze³adowaniu systemu te pliki zostan¹ zast¹pione wyleczonymi.\n\n\nZrestartowaæ system teraz?"
+    IDS_OBJ_LOCKED          "zablokowane przed zapisem przez inny proces."
+    IDS_OBJ_NO_ACCESS       "odczyt zabroniony."
+    IDS_CUST_SINGLE_CLICK   "Wybór œcie¿ki do testu pojedynczym klikniêciem."
+    IDS_CUST_NEXT_DISK_PROMPT "Zapytaj o nastêpny dysk dla dysków wymiennych"
+    IDS_CUST_REDUNDANT_MESSAGE "Komunikat ostrze¿enia o teœcie redundancyjnym"
+    IDS_CUST_DELETE_ALL_MESSAGE
+                            "Komunikat ostrze¿enia o opcji kasowania wszystkich zainfekowanych obiektów"
+    IDS_CUST_STAT_AFTER_BEGIN "Prze³¹cz do zak³adki statystyki po rozpoczêciu testu"
+    IDS_CUST_STAT_AFTER_FINISH "Prze³¹cz do zak³adki statystyki po zakoñczeniu testu"
+    IDS_CUST_POPUP_AFTER_FINISH "Rozwiñ okno AVP po zakoñczeniu testu"
+    IDS_CUSTOMIZE_BTN       "Ustawienia"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_CUSTOMIZE_DLG       "Ustawienia AVP"
+    IDS_CUST_OTHER_MESSAGES "Inne komunikaty ostrze¿eñ"
+    IDS_REG_SECURITY_WEAK   "Uwaga: Ustawienia ochrony dla strefy '%s' nie s¹ bezpieczne"
+    IDS_REG_IE_OPTIONS      "Opcje Internet Explorera"
+    IDS_REG_MACRO_PROTECTION_DISABLED
+                            "Uwaga: Wy³¹czone zabezpieczenie przed Macro Wirusami"
+    IDS_REG_W97_OPTIONS     "Opcje MS Word 97"
+    IDS_REG_E97_OPTIONS     "Opcje MS Excel 97"
+    IDS_REG_W2000_OPTIONS   "Opcje MS Word 2000"
+    IDS_REG_E2000_OPTIONS   "Opcje MS Excel 2000"
+    IDS_REG_PP97_OPTIONS    "Opcje MS PowerPoint 97"
+    IDS_REG_PP2000_OPTIONS  "Opcje MS PowerPoint 2000"
+    IDS_AUTH_FAILED         "Autentycznoœæ modu³u %s jest nieprawdziwa."
+    IDS_AUTH_CONTINUE       "Powodem mog¹ byæ:\n- przeterminowanie modu³u\n- uszkodzenie podczas pobierania\n- identyfikacja wirusa lub inny rodzaj hakerstwa.\nZalecamy reinstalacjê tego pliku. \n\nKontynuowaæ uruchamianie?"
+    IDS_FULL_NAME           "AVP Scanner"
+    IDS_LIST_KEYS_NUMBER    "Numer klucza"
+    IDS_LIST_KEYS_DESCRIPTION "Informacje"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_LIST_KEYS_FILE      "Plik"
+    IDS_LIST_KEYS_EXPIRATION "Data wa¿noœci"
+    IDS_CUST_UPDATE_CHECK   "&Nowe aktualizacje sprawdŸ    przedzia³ (dni)"
+    IDS_TAB2_EXCLUDE        "Wy³¹czone maski"
+    IDS_LIST_KEYS_PLNAME    "Nazwa licencji"
+    IDS_UPDATE_EXPIRED      "Twoja licencja AVP skoñczy³a siê.\n\nAVP Updaty nie zostan¹ uruchomione.\n\nWARNING!\nAVP nie bêdzie dzia³aæ z bazami antywirusowymi zainstalowanymi rêcznie."
+END
+
+#include "avp_dosp.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+// Andrey Bryksin resources
+
+#include "Extra.rc"
+
+// Andrey Bryksin resources
+/////////////////////////////////////////////////////////////////////////////
+
+#endif    // Polish resources
+/////////////////////////////////////////////////////////////////////////////
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+#endif
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

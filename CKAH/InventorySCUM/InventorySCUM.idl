@@ -1,0 +1,42 @@
+// InventorySCUM.idl : IDL source for InventorySCUM.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (InventorySCUM.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(662776F3-9075-4D34-8FBB-ED9766302C2E),
+		dual,
+		helpstring("IStat Interface"),
+		pointer_default(unique)
+	]
+	interface IStat : IDispatch
+	{
+		[id(1), helpstring("method get_pass_count")] HRESULT get_pass_count([out, retval] __int64* cnt);
+		[id(2), helpstring("method get_drop_count")] HRESULT get_drop_count([out, retval] __int64* nVal);
+		[id(3), helpstring("method get_current_conn_count")] HRESULT get_current_conn_count([out, retval] long* nConn);
+		[id(4), helpstring("method get_dropped_conn_count")] HRESULT get_dropped_conn_count([out, retval] long* nConn);
+	};
+
+[
+	uuid(155F559E-3588-46D8-9F9B-AC25E20C6619),
+	version(1.0),
+	helpstring("InventorySCUM 1.0 Type Library")
+]
+library INVENTORYSCUMLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(35ECE3AB-C67F-4574-9924-2F4D48FDBF64),
+		helpstring("Stat Class")
+	]
+	coclass Stat
+	{
+		[default] interface IStat;
+	};
+};

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8,00"
+	Name="ProductCore"
+	ProjectGUID="{F05EA247-2029-4353-8D54-A3272BB6234F}"
+	RootNamespace="ProductCore"
+	SccProjectName="SAK"
+	SccAuxPath="SAK"
+	SccLocalPath="SAK"
+	SccProvider="SAK"
+	Keyword="MakeFileProj"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="..\out_$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="..\temp_$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="msbuild.exe /t:build /p:Configuration=$(ConfigurationName) /p:Platform=$(PlatformName) ProductCore.sln"
+				ReBuildCommandLine="msbuild.exe /t:rebuild /p:Configuration=$(ConfigurationName) /p:Platform=$(PlatformName) ProductCore.sln"
+				CleanCommandLine="msbuild.exe /t:clean /p:Configuration=$(ConfigurationName) /p:Platform=$(PlatformName) ProductCore.sln"
+				Output=""
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="..\out_$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="..\temp_$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="msbuild.exe /t:build /p:Configuration=$(ConfigurationName) /p:Platform=$(PlatformName) ProductCore.sln"
+				ReBuildCommandLine="msbuild.exe /t:rebuild /p:Configuration=$(ConfigurationName) /p:Platform=$(PlatformName) ProductCore.sln"
+				CleanCommandLine="msbuild.exe /t:clean /p:Configuration=$(ConfigurationName) /p:Platform=$(PlatformName) ProductCore.sln"
+				Output=""
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="..\out_$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="..\temp_$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="msbuild.exe /t:build /p:Configuration=$(ConfigurationName) /p:Platform=$(PlatformName) ProductCore.sln"
+				ReBuildCommandLine="msbuild.exe /t:rebuild /p:Configuration=$(ConfigurationName) /p:Platform=$(PlatformName) ProductCore.sln"
+				CleanCommandLine="msbuild.exe /t:clean /p:Configuration=$(ConfigurationName) /p:Platform=$(PlatformName) ProductCore.sln"
+				Output=""
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="..\out_$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="..\temp_$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="msbuild.exe /t:build /p:Configuration=$(ConfigurationName) /p:Platform=$(PlatformName) ProductCore.sln"
+				ReBuildCommandLine="msbuild.exe /t:rebuild /p:Configuration=$(ConfigurationName) /p:Platform=$(PlatformName) ProductCore.sln"
+				CleanCommandLine="msbuild.exe /t:clean /p:Configuration=$(ConfigurationName) /p:Platform=$(PlatformName) ProductCore.sln"
+				Output=""
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

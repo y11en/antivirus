@@ -1,0 +1,112 @@
+# Microsoft Developer Studio Generated Dependency File, included by DataTreeUtils.mak
+
+.\CmpObjs.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\commonfiles\avpnstid.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\DTUtils.h"\
+	"..\CommonFiles\Property.h"\
+	
+
+.\CmpObjsW.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\commonfiles\avpnstid.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\DTUtils.h"\
+	"..\CommonFiles\Property.h"\
+	
+
+.\CompTree.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\DTUtils.h"\
+	"..\CommonFiles\Property.h"\
+	
+
+.\DtPtrnME.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\commonfiles\avpprpid.h"\
+	"..\CommonFiles\DTUtils.h"\
+	"..\CommonFiles\Property.h"\
+	
+
+.\DTUInit.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\DTUtils.h"\
+	"..\CommonFiles\Property.h"\
+	
+
+.\ExchProp.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\DTUtils.h"\
+	"..\CommonFiles\Property.h"\
+	
+
+.\FindGet.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\commonfiles\avpprpid.h"\
+	"..\CommonFiles\DTUtils.h"\
+	"..\CommonFiles\Property.h"\
+	
+
+.\PIDFind.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\DTUtils.h"\
+	"..\CommonFiles\Property.h"\
+	
+
+.\PrSetGet.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\commonfiles\avpprpid.h"\
+	"..\CommonFiles\DTUtils.h"\
+	"..\CommonFiles\Property.h"\
+	
+
+.\PrSetGetW.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\commonfiles\avpprpid.h"\
+	"..\CommonFiles\DTUtils.h"\
+	"..\CommonFiles\Property.h"\
+	
+
+.\RuleConv.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\commonfiles\avpnstid.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\commonfiles\avpprpid.h"\
+	"..\CommonFiles\DTUtils.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Stuff\Enc2Text.h"\
+	"..\commonfiles\wascres.rh"\
+	
+
+.\SearRule.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\commonfiles\avpnstid.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\DTUtils.h"\
+	"..\CommonFiles\Property.h"\
+	
+
+.\SearRuleW.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\commonfiles\avpnstid.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\DTUtils.h"\
+	"..\CommonFiles\Property.h"\
+	

@@ -1,0 +1,92 @@
+CC = @CC@
+CXX = @CXX@
+AR = @AR@
+RANLIB = @RANLIB@
+INSTALL = @INSTALL@
+CFLAGS = @CFLAGS@
+CXXFLAGS = @CXXFLAGS@
+LDFLAGS = @LDFLAGS@
+DEFS = @DEFS@ $(Defines)
+
+override Include = @STLPORT_INCLUDES@ $(Includes) -I@abs_top_builddir@ -I@includedir@
+LIBS= @LIBS@ $(Libraries)
+prefix = @prefix@
+exec_prefix =@exec_prefix@
+libdir = @libdir@
+includedir = @includedir@
+
+Objects = $(patsubst %.cpp, %.o, $(filter %.cpp, $(Sources)))
+
+ifndef Linker
+    ifeq ($(strip $(Objects)),)
+	Linker=$(CC)
+    else
+	Linker=$(CXX)
+    endif
+endif
+
+Objects += $(patsubst %.c, %.o, $(filter %.c, $(Sources)))
+
+.PHONY: all install prebuild postbuild $(Deps)
+
+.DEFAULT: all
+
+all: $(Deps) prebuild $(Targets) postbuild install
+
+$(Deps):
+	$(MAKE) -C $@
+
+mkdirs:
+	@$(INSTALL) -d $(prefix) 
+	@$(INSTALL) -d $(includedir)/@PACKAGE_NAME@
+	@$(INSTALL) -d $(libdir)
+
+install_includes: $(addprefix $(includedir)/@PACKAGE_NAME@/, $(InstallIncludes))
+	@echo "***** Installing includes"
+	
+$(addprefix $(includedir)/@PACKAGE_NAME@/, %): $(addprefix $(srcdir)/, %)
+	$(INSTALL) -d $(dir $@)
+	$(INSTALL) -m 0644 $< $@
+
+install: mkdirs install_includes $(Targets)
+	@if test ! -z "$(Library)"; then \
+	    echo "***** Installing library"; \
+	    $(INSTALL) $(Library) $(prefix); \
+	fi
+	@if test ! -z "$(Archive)"; then \
+	    echo "***** Installing archive"; \
+	    $(INSTALL) -m 0644 $(Archive) $(libdir); \
+	fi
+	@if test ! -z "$(Application)"; then \
+	    echo "***** Installing application"; \
+	    $(INSTALL) $(Application) $(prefix); \
+	fi	
+	@if test ! -z "$(Link)"; then \
+	    echo "***** Installing link"; \
+	    $(INSTALL) $(Link) $(prefix); \
+	fi
+
+clean:
+	-rm -f $(Objects) $(Targets) *.d *.bb *.bbg *.da $(addprefix $(prefix)/, $(Targets)) $(CleanFiles)
+
+distclean: clean
+	rm Makefile
+
+$(Library): $(Objects)
+	@echo "***** Making $@"
+	$(Linker) @SharedFlag@ -o $@ $(Objects) $(LIBS) $(LDFLAGS)
+
+$(Archive): $(Objects)
+	@echo "***** Making $@"
+	$(AR) cr $@ $(Objects) 
+	$(RANLIB) $@
+
+%.o: %.c
+	@echo "***** Compiling $<"
+	$(CC) $(CFLAGS) -MMD $(DEFS) $(Include)  -c -o $@ $<
+
+%.o: %.cpp
+	@echo "***** Compiling $<"
+	$(CXX) $(CXXFLAGS) -MMD $(DEFS) $(Include)  -c -o $@ $<
+	
+include $(wildcard *.d)

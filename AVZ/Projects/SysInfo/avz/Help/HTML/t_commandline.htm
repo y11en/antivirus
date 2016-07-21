@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?t_commandline.htm"; }
+else { parent.quicksync('a13.1'); }
+//-->
+</script>
+   <title>&#1054;&#1089;&#1085;&#1086;&#1074;&#1085;&#1099;&#1077; &#1087;&#1072;&#1088;&#1072;&#1084;&#1077;&#1090;&#1088;&#1099;</title>
+   <meta name="keywords" content="&#1054;&#1089;&#1085;&#1086;&#1074;&#1085;&#1099;&#1077; &#1087;&#1072;&#1088;&#1072;&#1084;&#1077;&#1090;&#1088;&#1099;,&#1082;&#1086;&#1084;&#1072;&#1085;&#1076;&#1085;&#1072;&#1103; &#1089;&#1090;&#1088;&#1086;&#1082;&#1072;">
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+
+
+<body bgcolor="#FFFFFF">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Основные параметры</span></p>
+
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="t_about.htm">Наверх</a>&nbsp;
+     <a href="t_cmdline.htm">Предыдущая</a>&nbsp;
+     <a href="t_commandlinespec.htm">Последующая</a>
+     </font><B>|</B>
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=717989"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=717989;t=109;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=18 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=717989"><img
+src="http://top.list.ru/counter?js=na;id=717989;t=109"
+border=0 height=18 width=88
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+    </td>
+  </tr>
+</table>
+<br>
+
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">SCAN={каталог}</span> &nbsp; &nbsp; &nbsp; &nbsp;Добавляет каталог или диск в список сканируемых. Путь должен начитаться с буквы диска, например c:\windows. В командной строке можно указать неограниченное количество параметров SCAN - обрабатываются все параметры, что позволяет задать сканирование нескольких каталогов.&nbsp; Указание несуществующего каталога не является ошибкой - он просто игнорируется. Повторное указание одного и того-же каталога или указание родительского каталога и его вложенных каталогов также не является ошибочным AVZ &lt;суммирует&gt; все указанные каталоги с учетом их вложенности.&nbsp; Пример: SCAN=c:\windows</p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">SCANDRIVE= [HDD|FDD|CDROM] </span>Добавляет все диски заданного типа в список сканируемых. Поддерживается три типа дисков: HDD - отмечаются все жесткие диски, FDD-отмечаются все дисководы и Flash диски, CDROM- отмечаются все CD/DVD диски и диски, созданные эмуляторами CD дисков. Допустимо указание нескольких вариантов через запятую или знак + (без пробелов до и после запятой или знака + !), например, SCANDRIVE=HDD+CDROM</p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">SCAN</span><span style="font-weight: bold;">FILE</span><span style="font-weight: bold;">={имя файла}</span> Сканирование отдельного файла. Подобных параметров может быть несколько, сканирование файлов производится в порядке следования ключей. Указание несуществующего файла или повтор не является ошибкой. Пример: SCANFILE=c:\windows\trojan.exe</p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">NOSCAN={каталог} </span>Исключение заданного каталога из списка проверяемых. Путь должен начитаться с буквы диска, например c:\windows. В командной строке можно указать неограниченное количество параметров NOSCAN - обрабатываются все параметры, что позволяет задать сканирование нескольких каталогов. Все параметры NOSCAN анализируются после построения списка сканируемых каталогов, основанного на параметрах SCAN. Указание несуществующего каталога не является ошибкой - он просто игнорируется. Повторное указание одного и того-же каталога или указание родительского каталога и его вложенных каталогов также не является ошибочным AVZ "суммирует" все указанные каталоги с учетом их вложенности.</p>
+<p style="margin: 0px 0px 0px 24px;">Пример: <span style="font-style: italic;">SCAN=c:\ NOSCAN=c:\aids</span> - будет проведено сканирование всего диска C:\ за исключение папки c:\aids</p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">ScanAllFiles=[Y|N]</span>  &nbsp; &nbsp; &nbsp; &nbsp;Сканировать все файлы (независимо от расширения). Аналогично установке переключателя &lt;Типы файлов&gt; в положение &lt;Все файлы&gt;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">ScanFilesMode=</span><span style="font-weight: bold;">[0|1|2]</span> Задает режим сканирования. 0 - сканирование потенциально-опасных файлов, 1 - сканирование всех файлов, 2 - сканирование файлов по маске. В режиме 2 необходимо задать маски ключами IncludeFiles и ExcludeFiles.</p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">IncludeFiles={маска} </span>Задает маску (или набор масок) файлов, которые необходимо проверять. Аналогично заполнению поля &lt;Включая файлы по маске:&gt; и включению одноименного переключателя</p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">ExcludeFiles={маска}</span> &nbsp; &nbsp; &nbsp; &nbsp;Исключить файлы с именами/расширениями по маске. Аналогично заполнению поля &lt;Исключая файлы по маске: :&gt; и включению одноименного переключателя</p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">WinTrustLevel=[0|1|2]</span> &nbsp; &nbsp; &nbsp; &nbsp;Режим проверки файла по каталогу безопасности Microsoft (0-отключена, 1-проверка по каталогу, 2-проверка по каталогу полюс комплексная проверка ЭЦП самого файла). По умолчанию установлен режим 1, включение режима 2 повышает надежность проверки, но увеличивает время проверки файла примерно в 2-3 раза.</p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">ScanProcess=[Y|N]</span> &nbsp; &nbsp; &nbsp; &nbsp;Проверять процессы и DLL, загруженные в память, по умолчанию включена</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">ScanSystem=[Y|N]</span> &nbsp; &nbsp; &nbsp; &nbsp;Эвристическая проверка системы при помощи микропрограмм эвристики, по умолчанию включена</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">ScanSystemIPU=[Y|N]</span> &nbsp; &nbsp; &nbsp; &nbsp;Эвристическая проверка системы при помощи микропрограмм ИПУ - искателя потенциальных уязвимостей, по умолчанию включена</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">RepGoodFiles = [Y|N] </span>Включать в отчет информацию о файлах, которые по мнению AVZ являются "чистыми"</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">RepGoodCheck = [Y|N]</span> Проверка "чистых" файлов по базе безопасных и базе ЭЦП Microsoft в выводом результатов проверки в протокол. Имеет смысл только при RepGoodFiles = Y</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">CheckArchives=[Y|N]</span> Проверять архивы и составные файлы</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">UseInfected=[Y|N]</span> &nbsp; &nbsp; &nbsp; &nbsp;Копировать удаляемые файлы в Infected</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">UseQuarantine=[Y|N] </span>Копировать подозрительные файлы в карантин</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">EvLevel=[0|1|2|3]</span> &nbsp; &nbsp; &nbsp; &nbsp;Уровень чувствительности эвристического анализатора (0-выключен, 3-максимальный уровень)</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">Ext</span><span style="font-weight: bold;">Ev</span><span style="font-weight: bold;">Check</span><span style="font-weight: bold;">=[Y|N]</span> &nbsp; &nbsp; &nbsp; &nbsp;Расширенная эвристическая проверка. Имеет смысл только при уровне эвристической 3.</p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; font-weight: bold; text-decoration: underline;">Антируткит</span></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">RootKitDetect=[Y|N] &nbsp; &nbsp; &nbsp; &nbsp;</span>Включение детектора RootKit и перехватчиков API</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">AntiRootKitSystem=[Y|N]</span> &nbsp; &nbsp; &nbsp; &nbsp;Включение системы противодействия RootKit (на всех доступных уровнях). Включение противодействия RootKit автоматически включает их детектирование. </p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">AntiRootKitSystem</span><span style="font-weight: bold;">User</span><span style="font-weight: bold;">=[Y|N]</span><span style="font-weight: bold;"> </span>Включение системы противодействия RootKit только UserMode. </p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">AntiRootKitSystem</span><span style="font-weight: bold;">Kernel</span><span style="font-weight: bold;">=[Y|N]</span><span style="font-weight: bold;"> </span>Включение системы противодействия RootKit только KernelMode. </p>
+<p style="margin: 0px 0px 0px 24px;">Параметры AntiRootKitSystemUser и AntiRootKitSystemKernel имеют приоритет над AntiRootKitSystem. Например, указание AntiRootKitSystem=Y AntiRootKitSystemKernel=N приведет к тому, что будет включена блокировка только руткитов UserMode (первый параметр включит все, а второй - отключит проверку KernelMode) </p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">CheckLSP=[Y|N] </span>Проверять настройки <a href="t_lsp.htm">SPI/LSP</a>. По умолчанию включено</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">AutoRepairLSP=[Y|N] </span>Автоматически исправлять ошибки в настройке SPI/LSP. Работает только при условии, что CheckLSP=Y. По умолчанию отключено</p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">KeyloggerSearch=[Y|N] </span>Поиск клавиатурных шпионов и троянских DLL. По умолчанию включено</p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">SearchTrojanPorts=[Y|N]</span> Поиск портов, применяемых троянскими программами. По умолчанию включено</p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">Profile={имя профиля}</span> &nbsp; &nbsp; &nbsp; &nbsp;Загрузить профиль, хранящийся в указанном имени файла. Если не указан полный путь, то профиль ищется в текущей папке. Можно указать несколько параметров Profile (в этом случае загружаются все профили в порядке их упоминания в командной строке). Профиль в свою очередь также может содержать параметры Profile, что позволяет профилям ссылаться друг на друга. При загрузке проводится контроль - каждый профиль загружается только один раз, что позволяет корректно отрабатывать ситуации с перекрестными ссылками профилей</p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">DelVir=[Y|N]</span> &nbsp; &nbsp; &nbsp; &nbsp;Удаление/лечение найденных вирусов</p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">ModeVirus=[0|1</span><span style="font-weight: bold;">|2</span><span style="font-weight: bold;">]</span> &nbsp; &nbsp; &nbsp; &nbsp;Режим для вирусов (0-только отчет, 1- удалять или лечить, 2-спросить пользователя)</p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">ModeAdvWare=[0|1</span><span style="font-weight: bold;">|2</span><span style="font-weight: bold;">]</span> &nbsp; &nbsp; &nbsp; &nbsp;Режим для AdvWare (0-только отчет, 1- удалять, 2-спросить пользователя)</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">ModeSpy=[0|1</span><span style="font-weight: bold;">|2</span><span style="font-weight: bold;">]</span> &nbsp; &nbsp; &nbsp; &nbsp;Режим для Spy и SpyWare (0-только отчет, 1- удалять, 2-спросить пользователя)</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">ModePornWare=[0|1</span><span style="font-weight: bold;">|2</span><span style="font-weight: bold;">]</span> &nbsp; &nbsp; &nbsp; &nbsp;Режим для PornWare и Dialer (0-только отчет, 1- удалять, 2-спросить пользователя)</p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">ModeRiskWare=[0|1</span><span style="font-weight: bold;">|2</span><span style="font-weight: bold;">]</span> &nbsp; &nbsp; &nbsp; &nbsp;Режим для RiskWare (0-только отчет, 1- удалять, 2-спросить пользователя)</p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">ExtFileDelete=[Y|N]</span> Эвристическое удаление файлов. Подразумевает анализ системы, поиск и удаление ссылок на каждый стертый файл</p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">Run=[Y|N]</span> &nbsp; &nbsp; &nbsp; &nbsp;Автоматический запуск сканирования. Выполняется после выполнения всех остальных параметров</p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; font-weight: bold; text-decoration: underline;">Обработка параметров без знака "="</span></p>
+<p style="margin: 0px 0px 0px 24px;">Все параметры AVZ имею вид <span style="font-style: italic;">Имя=Значение</span>.&nbsp; Параметры, не содержащие знак равенства рассматриваются как имена файлов и папок, которые требуется просканировать. Для них выполняется две проверки:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">1.</td><td>Параметр рассматривается как имя каталога. Если каталог с таким именем существует, то он отмечается на проверку (в данном случае это эквивалентно ключу SCAN=&lt;каталог&gt;)</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">2.</td><td>Если на шаге 1 каталог с указанным именем не найден, то значение параметра рассматривается как имя файла. Если файл с таким именем существует, то он отмечание&nbsp; на проверку (в данном случае это эквивалентно ключу SCANFILE={имя файла})</td></tr></table></div><p style="text-indent: -27px; margin: 0px 0px 0px 51px;">&nbsp;</p>
+
+
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=717989;js='+js+a+';rand='+Math.random()+
+'" height=1 width=1/>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=717989"
+height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+
+</body>
+</html>

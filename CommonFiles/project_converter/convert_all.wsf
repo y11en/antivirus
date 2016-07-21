@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<job>
+  <runtime>
+		<description>This script performs convertation of VC6 projects to VC 2005 projects</description>
+		<named 
+			name="dir" 
+			helpstring="a root directory where all *.dsp files will be searched and converted"
+			type="string" 
+			required="false" />
+		<named 
+			name="outdir" 
+			helpstring="an absolute path to a directory with out_* and temp_* directories"
+			type="string" 
+			required="false" />
+		<named 
+			name="overwrite" 
+			helpstring="overwrite the files if exist" 
+			type="boolean"
+			required="false" />
+		<named 
+			name="correct" 
+			helpstring="correct project names according to project directories"
+			type="boolean" 
+			required="false" />
+		<named 
+			name="x64" 
+			helpstring="add x64 configuration" 
+			type="boolean" 
+			required="false" />
+		<example>Example:
+convert_all.wsf /dir:c:\foo
+convert_all.wsf /dir:c:\foo /outdir:c:\
+convert_all.wsf /dir:. /x64:-
+		</example>
+	</runtime>
+
+<script language="JScript">
+<![CDATA[
+
+var g_wsh = null;
+var g_overwrite = "";
+var g_correct = "";
+var g_path = "";
+var g_x64 = true;
+var fsObj = new ActiveXObject ( "Scripting.FileSystemObject" );
+
+function InitShell()
+{
+  if (g_wsh == null) {
+    g_wsh = new ActiveXObject( "WScript.Shell" );
+  }
+  return g_wsh;
+}
+
+function exec( cmd ) {
+  var oExec = InitShell().Exec(cmd);
+  while ( oExec.Status == 0 ) {
+		WScript.Sleep(100);
+  }
+  if ( ! oExec.StdErr.AtEndOfStream ) {
+		var err = oExec.StdErr.ReadAll();
+		WScript.Echo( "\tERROR! " + err );
+  }
+  if ( ! oExec.StdOut.AtEndOfStream ) {
+		var out = oExec.StdOut.ReadAll();
+		WScript.Echo( out );
+  }
+  return oExec.ExitCode;
+}
+
+function convert( name, dest ) {       
+	WScript.Echo( "\tFile " + name );
+	var cmd = "cscript /nologo \"" + fsObj.GetParentFolderName(WScript.ScriptFullName) + "\\convert_dsp.wsf\" /src:" + name + dest + " /outdir:\"" + g_path + "\"" + g_overwrite + g_correct + g_x64;
+	exec( cmd );
+}
+
+
+function convertAll ( folder )
+{
+	var files = new Enumerator ( folder.files );
+	var dspCount = 0;
+	
+	WScript.Echo( "Folder: \"" + folder.Path + "\"" );
+	for (; !files.atEnd(); files.moveNext() )
+	{
+		if ( fsObj.GetExtensionName ( files.item().Name ) == "dsp" )
+			dspCount++;
+	}
+	if ( dspCount ) {
+		files = new Enumerator ( folder.files );
+		for (; !files.atEnd(); files.moveNext() )
+		{
+			if ( fsObj.GetExtensionName ( files.item().Name ) != "dsp" ) {
+				continue;
+			}
+			var p1 = "";
+			var p2 = "";
+			if ( dspCount > 1 ) {
+				var regExp = /.dsp/g;
+				var dstName = files.item().Path.replace( regExp, ".vcproj" );
+				p1 = "\"" + files.item().Path + "\"";
+				p2 = " /dst:\"" + dstName + "\"";
+			}
+			else {
+				p1 = "\"" + files.item().Path + "\"";
+			}	
+			convert( p1, p2 );
+		}
+	}
+	var folders = new Enumerator ( folder.SubFolders );
+	for (; !folders.atEnd(); folders.moveNext() )	{
+		convertAll( folders.item() );
+	}
+
+}
+
+
+var args = WScript.Arguments;
+var dirName = ".";
+
+if ( args.Named.Exists("dir") )
+	dirName = args.Named.Item( "dir" );
+
+if ( !fsObj.FolderExists(dirName) ) {
+	WScript.Echo( "\tERROR! Directory " + dirName + " doesn't exist" );
+	WScript.Quit (1);	
+}
+
+if ( args.Named.Exists("overwrite") ) {
+	if ( args.Named.Item ("overwrite") )
+		g_overwrite = " /overwrite:+";
+	else
+		g_overwrite = " /overwrite:-";
+}
+
+if ( args.Named.Exists("correct") )
+	g_correct = " /correct:" + (args.Named.Item("correct") ? "+" : "-");
+
+var g_path = fsObj.GetDriveName( fsObj.GetFolder(dirName) ) + "\\";
+if ( args.Named.Exists("outdir") )
+	g_path = args.Named.Item( "outdir" );
+
+if ( !fsObj.FolderExists(g_path) ) {
+	WScript.Echo( "\tERROR! Directory \"" + g_path + "\" doesn't exist" );
+	WScript.Quit(1);	
+}
+
+var g_x64 = "";
+if ( args.Named.Exists("x64") ) {
+	if ( args.Named.Item("x64") )
+		g_x64 = " /x64+";
+	else
+		g_x64 = " /x64-";
+}
+else
+	g_x64 = " /x64+";
+	
+folder = fsObj.GetFolder( dirName );
+convertAll( folder );
+
+]]>
+</script>
+</job>
+
+

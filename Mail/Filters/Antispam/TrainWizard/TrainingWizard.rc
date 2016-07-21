@@ -1,0 +1,101 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+1                       RCDATA  DISCARDABLE     "AS_TrainWizard.meta"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_PAGE_ANTISPAM DLGINIT
+BEGIN
+    IDC_MCOE_COMBO_CS_ACTION, 0x403, 5, 0
+0x6f4d, 0x6576, "\000" 
+    IDC_MCOE_COMBO_CS_ACTION, 0x403, 5, 0
+0x6f43, 0x7970, "\000" 
+    IDC_MCOE_COMBO_CS_ACTION, 0x403, 7, 0
+0x6544, 0x656c, 0x6574, "\000" 
+    IDC_MCOE_COMBO_CS_ACTION, 0x403, 11, 0
+0x654b, 0x7065, 0x6120, 0x2073, 0x7369, "\000" 
+    IDC_MCOE_COMBO_PS_ACTION, 0x403, 5, 0
+0x6f4d, 0x6576, "\000" 
+    IDC_MCOE_COMBO_PS_ACTION, 0x403, 5, 0
+0x6f43, 0x7970, "\000" 
+    IDC_MCOE_COMBO_PS_ACTION, 0x403, 7, 0
+0x6544, 0x656c, 0x6574, "\000" 
+    IDC_MCOE_COMBO_PS_ACTION, 0x403, 11, 0
+0x654b, 0x7065, 0x6120, 0x2073, 0x7369, "\000" 
+    0
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""ver_mod.h""\0"
+END
+
+4 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "ver_mod.h"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,4 @@
+// ***** Trojan-Proxy.Win32.Small.bk *****
+begin
+ AddEvAlarmByCLSID('0656A137-B161-CADD-9777-E37A75727E78',AScriptName,'thun32.dll');
+end.

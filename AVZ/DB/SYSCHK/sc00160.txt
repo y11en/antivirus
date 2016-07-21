@@ -1,0 +1,6 @@
+// ***** Spy.SaveNow *****
+begin
+ AddEvAlarmByCLSID('45E5DADB-DFDF-4FC3-A46C-DD34B6CDDB38',AScriptName,'searchdt.dll');
+ AddEvAlarmByCLSID('E2F2B9D0-96B9-4B25-B90C-636ECB207D18',AScriptName,'WUInst.d');
+ AddEvAlarmByCLSID('FC327B3F-377B-4CB7-8B61-27CD69816BC3','Spy.SaveNow.n', 'SNDbMark.dll');
+end.

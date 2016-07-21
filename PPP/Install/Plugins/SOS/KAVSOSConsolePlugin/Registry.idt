@@ -1,0 +1,17 @@
+Registry	Root	Key	Name	Value	Component_	ISAttributes
+s72	i2	s255	S255	S0	s72	I4
+Registry	Registry
+Registry13	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVSOS7\7.0.0.0\avp7\environment			ap_sos.dll	0
+Registry14	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVSOS7\7.0.0.0\avp7\environment	Localization	[LOCALIZATION]	ap_sos.dll	0
+Registry15	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVSOS7\7.0.0.0\avp7\environment	ProductRoot	[INSTALLDIR]	ap_sos.dll	0
+Registry16	2	SOFTWARE\KasperskyLab\Components\28\Plugins\{39C76E4B-9153-462A-9F4A-AA0B7E360990}	UninstallString	msiexec.exe /X[ProductCode] /qb	ProductRegistry	0
+Registry17	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVSOS7\7.0.0.0\avp7\environment	ProductStatus	[PRODUCTSTATUS]	ap_sos.dll	0
+Registry19	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVSOS7\7.0.0.0\Tasks\InstallKey		[REGVALUE_INSTALLKEY_TASK]	ap_sos.dll	0
+Registry2021	0	CLSID\{D5470036-0814-49cc-AF25-57F1316886DA}\InProcServer32		[#ap_sos.dll]	ap_sos.dll	0
+Registry22	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVSOS7\7.0.0.0\Tasks\ods		[REGVALUE_ODS_TASK]	ap_sos.dll	0
+Registry24	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVSOS7\7.0.0.0\Tasks\rollback		[REGVALUE_ROLLBACK_TASK]	ap_sos.dll	0
+Registry26	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVSOS7\7.0.0.0\Tasks\updater		[REGVALUE_UPDATER_TASK]	ap_sos.dll	0
+Registry41	2	SOFTWARE\KasperskyLab\Components\28\Plugins\{39C76E4B-9153-462A-9F4A-AA0B7E360990}	DisplayName	[ProductName]	ProductRegistry	0
+Registry6	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVSOS6	-		ap_sos.dll	0
+Registry8	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVSOS7\7.0.0.0	PluginVersion	[ProductVersion]	ap_sos.dll	0
+Registry9	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVSOS7\7.0.0.0		[REGVALUE_PRODUCTNAME_SOS]	ap_sos.dll	0

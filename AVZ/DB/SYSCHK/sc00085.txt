@@ -1,0 +1,4 @@
+// ***** Dialer.TCW *****
+begin
+ AddEvAlarmByCLSID('A51DEDCD-20F7-11D4-98A5-00C0CA130748',AScriptName,'Tcw.exe');
+end.

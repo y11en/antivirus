@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?scr_demo12.htm"; }
+else { parent.quicksync('a15.42.13'); }
+//-->
+</script>
+   <title>&#1057;&#1082;&#1072;&#1085;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077; &#1080; &#1086;&#1090;&#1087;&#1088;&#1072;&#1074;&#1082;&#1072; &#1088;&#1077;&#1079;&#1091;&#1083;&#1100;&#1090;&#1072;&#1090;&#1086;&#1074; &#1087;&#1086; &#1087;&#1086;&#1095;&#1090;&#1077;</title>
+   <meta name="keywords" content="&#1086;&#1090;&#1087;&#1088;&#1072;&#1074;&#1082;&#1072; &#1088;&#1077;&#1079;&#1091;&#1083;&#1100;&#1090;&#1072;&#1090;&#1086;&#1074; &#1087;&#1086; &#1087;&#1086;&#1095;&#1090;&#1077;">
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+
+
+<body bgcolor="#FFFFFF">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">&#1057;&#1082;&#1072;&#1085;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077; &#1080; &#1086;&#1090;&#1087;&#1088;&#1072;&#1074;&#1082;&#1072; &#1088;&#1077;&#1079;&#1091;&#1083;&#1100;&#1090;&#1072;&#1090;&#1086;&#1074; &#1087;&#1086; &#1087;&#1086;&#1095;&#1090;&#1077;</span></p>
+
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="t_about.htm">Наверх</a>&nbsp;
+     <a href="scr_demo11.htm">Предыдущая</a>&nbsp;
+     
+     </font><B>|</B>
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=717989"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=717989;t=109;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=18 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=717989"><img
+src="http://top.list.ru/counter?js=na;id=717989;t=109"
+border=0 height=18 width=88
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+    </td>
+  </tr>
+</table>
+<br>
+
+<p><span style="font-weight: bold; text-decoration: underline;">Постановка задачи:</span></p>
+<p>Необходимо выполнить сканирование диска C: компьютера, после чего отправить на указанный адрес письмо, содержащее протокол сканирования, результаты исследования системы и файлы, помещенные в карантин.</p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #000000;">begin</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #000080;">//&nbsp;Разрешить&nbsp;использовать&nbsp;карантин</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;SetupAVZ(</span><span class="f_CodeExample" style="color: #000080;">'UseQuarantine=Y'</span><span class="f_CodeExample" style="color: #000000;">);&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #000080;">//&nbsp;Сканировать&nbsp;диск&nbsp;C</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;SetupAVZ(</span><span class="f_CodeExample" style="color: #000080;">'Scan=C:\'</span><span class="f_CodeExample" style="color: #000000;">);&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #000080;">//&nbsp;Запуск&nbsp;сканирования</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;RunScan;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #000080;">//&nbsp;Выполнение&nbsp;исследования&nbsp;системы&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;ExecuteSysCheck(GetAVZDirectory&nbsp;+&nbsp;</span><span class="f_CodeExample" style="color: #000080;">'syscheck.htm'</span><span class="f_CodeExample" style="color: #000000;">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #000080;">//&nbsp;Сохранение&nbsp;архива&nbsp;с&nbsp;файлами&nbsp;карантина</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;CreateQurantineArchive(GetAVZDirectory+</span><span class="f_CodeExample" style="color: #000080;">'quarantine.zip'</span><span class="f_CodeExample" style="color: #000000;">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #000080;">//&nbsp;Отправка&nbsp;письма</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;SendEmailMessage(</span><span class="f_CodeExample" style="color: #000080;">'mail.my_mail_server.ru'</span><span class="f_CodeExample" style="color: #000000;">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">'AVZ'</span><span class="f_CodeExample" style="color: #000000;">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">'my_mail@mail.ru'</span><span class="f_CodeExample" style="color: #000000;">,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #000080;">'AVZ&nbsp;email&nbsp;alert'</span><span class="f_CodeExample" style="color: #000000;">,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #000080;">'Report&nbsp;from&nbsp;computer&nbsp;"'</span><span class="f_CodeExample" style="color: #000000;">&nbsp;+&nbsp;GetComputerName&nbsp;+&nbsp;</span><span class="f_CodeExample" style="color: #000080;">'"&nbsp;'</span><span class="f_CodeExample" style="color: #000000;">+</span><span class="f_CodeExample" style="color: #000080;">#13</span><span class="f_CodeExample" style="color: #000000;">&nbsp;+</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #000080;">'SuspCount&nbsp;=&nbsp;'</span><span class="f_CodeExample" style="color: #000000;">&nbsp;+&nbsp;InttoStr(GetSuspCount)&nbsp;+&nbsp;</span><span class="f_CodeExample" style="color: #000080;">#13</span><span class="f_CodeExample" style="color: #000000;">&nbsp;+</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #000080;">'DetectedCount&nbsp;=&nbsp;'</span><span class="f_CodeExample" style="color: #000000;">&nbsp;+&nbsp;InttoStr(GetDetectedCount)&nbsp;,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;false,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">''</span><span class="f_CodeExample" style="color: #000000;">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">''</span><span class="f_CodeExample" style="color: #000000;">,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GetAVZDirectory&nbsp;+&nbsp;</span><span class="f_CodeExample" style="color: #000080;">'syscheck.zip'</span><span class="f_CodeExample" style="color: #000000;">,&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GetAVZDirectory&nbsp;+&nbsp;</span><span class="f_CodeExample" style="color: #000080;">'quarantine.zip'</span><span class="f_CodeExample" style="color: #000000;">,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="color: #000080;">''</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #000080;">//&nbsp;Выход&nbsp;из&nbsp;AVZ</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;ExitAVZ;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #000000;">end</span><span class="f_CodeExample" style="color: #000000;">.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span></p>
+<p>В данном примере исследование системы производится после сканирования, поэтому в протокол исследования включается протокол сканирования.</p>
+
+
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=717989;js='+js+a+';rand='+Math.random()+
+'" height=1 width=1/>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=717989"
+height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+
+</body>
+</html>

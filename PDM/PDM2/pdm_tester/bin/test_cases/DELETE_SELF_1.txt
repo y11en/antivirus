@@ -1,0 +1,5 @@
+# create CMD process with params
+
+CP_CMD 'del %SELF_PATH%' NOT_TO_CLEAR
+
+#etalon_verdict 80 OnDeleteSelf

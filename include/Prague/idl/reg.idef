@@ -1,0 +1,160 @@
+
+
+[
+  version(1)
+  mnemonic(IID_REGISTRY)
+  id(13)
+  c_type_name(hREGISTRY)
+]
+interface Registry { // access to storage like registry
+
+  // ------------------------------------
+    typedef tDWORD tRegKey; // seance unique key of the registry branch
+
+
+  // ------------------------------------
+    const tRegKey cRegRoot = 0; // root of the current registry object
+    const tRegKey cRegNothing = -1;
+
+
+  // ------------------------------------
+    [ warning(true) ]  error warnKEY_NOT_EXISTS; // this key(value) was not exist but created
+    error errKEY_NOT_FOUND; // key(value) not found
+    error errKEY_ENUM_FAILED; // key(value) enumeration failed
+    error errKEY_INDEX_OUT_OF_RANGE; // indicated key (value) index is out of renge
+    error errKEY_CANNOT_BE_CLOSED; // key cannot be closed
+    error errKEY_CANNOT_BE_DELETED; // key cannot be deleted or cleaned
+
+
+  // ------------------------------------
+    [ id(4096) ]  prop tBOOL pgOBJECT_RO; // object is in read only mode. default value is cTRUE
+    [ id(4098) ]  prop tDWORD pgMAX_NAME_LEN; // maximum name len
+    [ id(4099) ]  prop tDWORD pgCLEAN; // clean startup key on ObjectInitDone
+    [ id(4100) ]  prop tBOOL pgSAVE_RESULTS_ON_CLOSE; // сохранять результаты работы при закрытии объекта. Значение по умолчанию cTRUE
+    [ id(4101) ]  prop tSTRING pgROOT_POINT;
+    [ id(4102) ]  prop tPTR pgROOT_KEY;
+    [ id(4103) ]  prop tDWORD pgMAX_VALUE_SIZE; // maximum size of the ordinary value
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("if parametr bCreateIfNotExist is cTRUE and key was really created method must return errKEY_NOT_EXISTS warning")
+    ]
+    method tERROR OpenKey(
+      tRegKey* result,
+      tRegKey key,
+      const tCHAR* szSubKeyName, // key name possible divided by '/'
+      tBOOL bCreateIfNotExist // create the key if it is not exist
+    );
+
+    [
+      comment_ex("if parametr bCreateIfNotExist is cTRUE and key was really created method must return errKEY_NOT_EXISTS warning")
+    ]
+    method tERROR OpenKeyByIndex(
+      tRegKey* result,
+      tRegKey key,
+      tDWORD index, // index of the subkey
+      tBOOL bClosePrev // closes previous opened key if TRUE
+    );
+    method tERROR OpenNextKey( // opens next key on the same level
+      tRegKey* result,
+      tRegKey key, // key to get next
+      tBOOL bClosePrev // closes previous opened key if TRUE
+    );
+    method tERROR CloseKey( // closes the key
+      tRegKey key // key to close
+    );
+    method tERROR GetKeyName( // returns name of the key
+      tDWORD* result,
+      tRegKey key, // key to get name
+      tCHAR* name_buff, // pointer to buffer to get name
+      tDWORD size, // byte size of the name_buff
+      tBOOL bFullName // must returns full name if it is cTRUE
+    );
+    method tERROR GetKeyNameByIndex( // returns name of the subkey by index
+      tDWORD* result,
+      tRegKey key, // key to get name
+      tDWORD index, // index of the subkey
+      tCHAR* name_buff, // pointer to buffer to get name
+      tDWORD size, // byte size of the name_buff
+      tBOOL bFullName // must returns full name if it is cTRUE
+    );
+    method tERROR GetValue( // gets key value, returns byte length of the value put in the buffer
+      tDWORD* result,
+      tRegKey key, // key to set value
+      const tCHAR* szValueName, // value name
+      tTYPE_ID* type, // pointer to the buffer to get type of the value/ May be NULL
+      tPTR pValue, // pointer to the buffer to get value. if NULL method must returns length of the buffer to get value
+      tDWORD size // byte size of the pValue buffer 
+    );
+    method tERROR GetValueByIndex( // gets key value, returns byte length of the value put in the buffer
+      tDWORD* result,
+      tRegKey key, // key to set value
+      tDWORD index, // index of the subkey
+      tTYPE_ID* type, // pointer to the buffer to get type of the value/ May be NULL
+      tPTR pValue, // pointer to the buffer to get value. if NULL method must returns length of the buffer to get value
+      tDWORD size // byte size of the pValue buffer 
+    );
+    method tERROR GetValueNameByIndex( // gets key name, returns byte length of the name put in the buffer
+      tDWORD* result,
+      tRegKey key, // key to set value
+      tDWORD index, // index of the subkey
+      tCHAR* name_buff, // pointer to the buffer to get name of the value
+      tDWORD size // byte size of the name_buff buffer 
+    );
+    method tERROR SetValue( // set key value. Creates key if it is not exist and parameter bCreateIfNotExist is true. Returns warning errKEY_NOT_EXISTS in this case
+      tRegKey key, // key to set value
+      const tCHAR* szValueName, // value name
+      tTYPE_ID type, // type identifier
+      tPTR pValue, // pointer to the value
+      tDWORD size, // byte size of the pValue buffer 
+      tBOOL bCreateIfNotExist // allow creating vlue if it is not exist
+    );
+    method tERROR SetValueByIndex( // set key value, creates key if it is not exist and return warning errKEY_NOT_EXISTS in this case
+      tRegKey key, // key to set value
+      tDWORD index, // index of the subkey
+      tTYPE_ID type, // type identifier
+      tPTR pValue, // pointer to the value
+      tDWORD size, // byte size of the pValue buffer 
+      tBOOL bCreateIfNotExist // allow creating vlue if it is not exist
+    );
+    method tERROR GetKeyCount( // gets subkey count
+      tDWORD* result,
+      tRegKey key // key to set value
+    );
+    method tERROR GetValueCount( // gets subkey count
+      tDWORD* result,
+      tRegKey key // key to set value
+    );
+    method tERROR DeleteKey( // deletes the key
+      tRegKey key,
+      const tCHAR* szSubKeyName // key name possible divided by '/'. Must NOT be NULL
+    );
+    method tERROR DeleteKeyByInd( // deletes the key
+      tRegKey key,
+      tDWORD index // index of the subkey
+    );
+    method tERROR DeleteValue( // deletes the key value
+      tRegKey key,
+      const tCHAR* szValueName // value name
+    );
+    method tERROR DeleteValueByInd( // deletes the key value
+      tRegKey key,
+      tDWORD index // index of the subkey
+    );
+    method tERROR Clean(); // clean the object contained registry data from the root key
+    method tERROR CopyKey( // copy key to another hREGISTRY
+      tRegKey src_key, // source key
+      hREGISTRY destination, // destination registry object
+      tRegKey dest_key // destination key
+    );
+    method tERROR CopyKeyByName( const tCHAR* src, hREGISTRY dst );
+    method tERROR SetRootKey( tRegKey root, tBOOL close_prev );
+    method tERROR SetRootStr( const tCHAR* root, tBOOL close_prev );
+    method tERROR Flush( // saved all changes to persistent storage if acceptable
+      tBOOL force // force save data to storage if that modified or not
+    );
+
+}
+

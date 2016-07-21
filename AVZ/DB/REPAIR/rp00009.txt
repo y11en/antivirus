@@ -1,0 +1,15 @@
+// ***** Удаление отладчиков системных процессов *****
+procedure DelDebug(S : string);
+begin
+ RegKeyParamDel('HKEY_LOCAL_MACHINE', 'SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\'+S, 'Debugger');
+end;
+begin
+ DelDebug('explorer.exe');
+ DelDebug('notepad.exe');
+ DelDebug('regedit.exe');
+ DelDebug('hh.exe');
+ DelDebug('iexplore.exe');
+ DelDebug('taskman.exe');
+ DelDebug('winhelp.exe');
+ DelDebug('winhlp32.exe');
+end.

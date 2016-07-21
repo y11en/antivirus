@@ -1,0 +1,4 @@
+// ***** Backdoor.Adbreak.d *****
+begin
+ AddEvAlarmByCLSID('000E7270-CC7A-0786-8E7A-DA09B51938A6','Backdoor.Adbreak.d','NetPal*.dll');
+end.

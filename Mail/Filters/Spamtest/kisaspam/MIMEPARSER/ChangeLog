@@ -1,0 +1,6 @@
+2004-11-15 Alexey P. Ivanov <alexiv@ashmanov.com>
+	* HEAD/MIMEParser: Исправление сборки под Windows.
+
+2004-11-07 Andrey L. Kalinin <andrey@kalinin.ru>
+
+	Исправлен варнинг относительно неверной проверки out_length.

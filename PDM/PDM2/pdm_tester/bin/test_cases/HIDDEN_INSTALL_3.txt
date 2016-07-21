@@ -1,0 +1,7 @@
+# copy exe-file (not self) to temp folder and create process from it
+
+# COPY_EXE_TO_DF NOT_TO_CLEAR
+# CP_EXE_FROM_DF NOT_TO_CLEAR
+
+EX_COPY_FILE @SELF_DIR@\test_exe.exe @LOCAL_TEST_FOLDER@ NOT_TO_CLEAR
+CREATE_PROCESS @LOCAL_TEST_FOLDER@\test_exe.exe NOT_TO_CLEAR

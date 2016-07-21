@@ -1,0 +1,330 @@
+# Microsoft Developer Studio Generated Dependency File, included by pr_remote.mak
+
+.\pr_system\pr_system_c.cpp : \
+	"..\..\CommonFiles\Service\SA.H"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\include\pr_remote.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\pr_common.h"\
+	".\pr_manager.h"\
+	".\SharedTable.h"\
+	
+
+.\pr_system\pr_system_s.cpp : \
+	"..\..\CommonFiles\Service\SA.H"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\include\pr_remote.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\pr_common.h"\
+	".\pr_manager.h"\
+	".\SharedTable.h"\
+	
+
+.\bl_component.cpp : \
+	"..\..\CommonFiles\Service\SA.H"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\include\pr_remote.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\cm_remote.h"\
+	".\SharedTable.h"\
+	
+
+.\pr_internal.cpp : \
+	"..\..\CommonFiles\Service\SA.H"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\include\pr_remote.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\pr_common.h"\
+	".\pr_manager.h"\
+	".\SharedTable.h"\
+	
+
+.\pr_library.cpp : \
+	"..\..\CommonFiles\Service\SA.H"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\include\pr_remote.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\pr_common.h"\
+	".\pr_manager.h"\
+	".\SharedTable.h"\
+	
+
+.\pr_remote.cpp : \
+	"..\..\CommonFiles\_avpio.h"\
+	"..\..\CommonFiles\avp_data.h"\
+	"..\..\CommonFiles\AVPComID.h"\
+	"..\..\CommonFiles\AVPPort.h"\
+	"..\..\CommonFiles\m_utils.h"\
+	"..\..\commonfiles\property\property.h"\
+	"..\..\commonfiles\serialize\kldtdefs.h"\
+	"..\..\commonfiles\serialize\kldtser.h"\
+	"..\..\CommonFiles\Service\SA.H"\
+	"..\..\commonfiles\swmanager\swm.h"\
+	"..\..\CommonFiles\unix\libcompat\compat.h"\
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\windows\hook\hook\fssync.h"\
+	"..\CodeGen\AVPPveID.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_loadr.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\include\pr_remote.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	"..\Loader\mod_load.h"\
+	"..\Loader\plugin.h"\
+	"..\Loader\prop_util.h"\
+	".\pr_common.h"\
+	".\pr_manager.h"\
+	".\rpc_connect.h"\
+	".\SharedTable.h"\
+	
+
+.\pr_root_c.cpp : \
+	"..\..\CommonFiles\Service\SA.H"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\include\pr_remote.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\pr_common.h"\
+	".\pr_manager.h"\
+	".\SharedTable.h"\
+	
+
+.\pr_root_s.cpp : \
+	"..\..\CommonFiles\Service\SA.H"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\include\pr_remote.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\pr_common.h"\
+	".\pr_manager.h"\
+	".\SharedTable.h"\
+	
+
+.\rpc_connect.cpp : \
+	"..\..\windows\hook\hook\fssync.h"\
+	".\rpc_connect.h"\
+	
+
+!IF  "$(CFG)" == "pr_remote - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "pr_remote - Win32 Debug"
+
+!ELSEIF  "$(CFG)" == "pr_remote - Win32 Debug MBCS"
+
+!ELSEIF  "$(CFG)" == "pr_remote - Win32 Release MBCS"
+
+!ENDIF 
+
+!IF  "$(CFG)" == "pr_remote - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "pr_remote - Win32 Debug"
+
+!ELSEIF  "$(CFG)" == "pr_remote - Win32 Debug MBCS"
+
+!ELSEIF  "$(CFG)" == "pr_remote - Win32 Release MBCS"
+
+!ENDIF 
+
+!IF  "$(CFG)" == "pr_remote - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "pr_remote - Win32 Debug"
+
+!ELSEIF  "$(CFG)" == "pr_remote - Win32 Debug MBCS"
+
+!ELSEIF  "$(CFG)" == "pr_remote - Win32 Release MBCS"
+
+!ENDIF 
+
+..\..\CommonFiles\Service\sa.cpp : \
+	"..\..\CommonFiles\Service\SA.H"\
+	
+
+.\SharedTable.cpp : \
+	"..\..\CommonFiles\Service\SA.H"\
+	".\SharedTable.h"\
+	

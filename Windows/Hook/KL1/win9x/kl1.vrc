@@ -1,0 +1,22 @@
+CompanyName	=	"Kaspersky Labs" 
+FileDescription =	"KL1"
+FileVersion	=	"1.0.0.1" 
+InternalName	=	"KL1"
+LegalCopyright	= 	"Copyright \251 2004, KL"
+OriginalFilename = 	"kl1.vxd"
+ProductName	=	"KL1"
+ProductVersion	= 	"1.0.0.1"
+Translation	=	0x409, 0x4E4
+
+// Binary fields
+
+dwFileVersionMS   = 0x00010000 //1.00
+dwFileVersionLS   = 0x00000001  //00.1
+dwProductVersionMS  = 0x00010000 //2.00
+dwProductVersionLS  = 0x00000001
+dwFileFlagsMask   = 0
+dwFileFlags     = 0
+dwFileOS      = 0
+dwFileSubtype   = 0
+dwFileDateMS    = 0
+dwFileDateLS    = 0

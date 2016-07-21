@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?script_regkeyenumkey.htm"; }
+else { parent.quicksync('a15.29.16'); }
+//-->
+</script>
+   <title>function RegKeyEnumKey</title>
+   <meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+
+
+<body bgcolor="#FFFFFF">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">function RegKeyEnumKey</span></p>
+
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="t_about.htm">Наверх</a>&nbsp;
+     <a href="script_regkeyenumval.htm">Предыдущая</a>&nbsp;
+     <a href="script_regrootnames.htm">Последующая</a>
+     </font><B>|</B>
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=717989"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=717989;t=109;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=18 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=717989"><img
+src="http://top.list.ru/counter?js=na;id=717989;t=109"
+border=0 height=18 width=88
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+    </td>
+  </tr>
+</table>
+<br>
+
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #000000;">function</span><span class="f_CodeExample" style="color: #000000;">&nbsp;RegKeyEnumKey(ARoot,&nbsp;AName&nbsp;:&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">string</span><span class="f_CodeExample" style="color: #000000;">;&nbsp;AList&nbsp;:&nbsp;TStrings);</span></p>
+<p>&nbsp;</p>
+<p>&#1057;&#1090;&#1088;&#1086;&#1080;&#1090; &#1089;&#1087;&#1080;&#1089;&#1086;&#1082; &#1074;&#1083;&#1086;&#1078;&#1077;&#1085;&#1085;&#1099;&#1093; &#1082;&#1083;&#1102;&#1095;&#1077;&#1081; &#1082;&#1083;&#1102;&#1095;&#1072; &#1088;&#1077;&#1077;&#1089;&#1090;&#1088;&#1072; AName. &#1057;&#1087;&#1080;&#1089;&#1086;&#1082; AList &#1076;&#1086;&#1083;&#1078;&#1077;&#1085; &#1073;&#1099;&#1090;&#1100; &#1089;&#1086;&#1079;&#1076;&#1072;&#1085; &#1080; &#1080;&#1085;&#1080;&#1094;&#1080;&#1072;&#1083;&#1080;&#1079;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085; &#1087;&#1077;&#1088;&#1077;&#1076; &#1074;&#1099;&#1079;&#1086;&#1074;&#1086;&#1084; &#1076;&#1072;&#1085;&#1085;&#1086;&#1081; &#1092;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080;.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold; text-decoration: underline;">Совместимость:</span> AVZ 4.28 &#1080; &#1074;&#1099;&#1096;&#1077;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold; text-decoration: underline;">Пример:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #000000;">var</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;Lines&nbsp;:&nbsp;TStrings;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;i&nbsp;:&nbsp;integer;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #000000;">begin</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;Lines&nbsp;:=&nbsp;TStringList.Create;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;RegKeyEnumKey(</span><span class="f_CodeExample" style="color: #000080;">'HKCU'</span><span class="f_CodeExample" style="color: #000000;">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">'Software\Microsoft\Windows\CurrentVersion\Internet&nbsp;Settings\5.0\Cache\Extensible&nbsp;Cache'</span><span class="f_CodeExample" style="color: #000000;">,&nbsp;Lines);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">for</span><span class="f_CodeExample" style="color: #000000;">&nbsp;i:=&nbsp;</span><span class="f_CodeExample" style="color: #000080;">0</span><span class="f_CodeExample" style="color: #000000;">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">to</span><span class="f_CodeExample" style="color: #000000;">&nbsp;Lines.Count-</span><span class="f_CodeExample" style="color: #000080;">1</span><span class="f_CodeExample" style="color: #000000;">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">do</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;AddToLog(Lines[i]);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;Lines.Free;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #000000;">end</span><span class="f_CodeExample" style="color: #000000;">.</span></p>
+
+
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=717989;js='+js+a+';rand='+Math.random()+
+'" height=1 width=1/>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=717989"
+height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+
+</body>
+</html>

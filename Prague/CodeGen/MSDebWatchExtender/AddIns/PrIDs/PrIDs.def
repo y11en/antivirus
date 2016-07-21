@@ -1,0 +1,15 @@
+LIBRARY      PrIDs
+
+DESCRIPTION 'Debug Custom Watcher AddIn for Prague IDs'
+
+VERSION      1.0
+
+HEAPSIZE     0x10000 0x1000
+
+EXPORTS      format_err
+             format_iid
+             format_pg
+             format_pid
+             format_pm
+             format_pmc
+             format_vid

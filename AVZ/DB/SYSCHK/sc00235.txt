@@ -1,0 +1,10 @@
+// ***** Trojan-Clicker.Win32.Adpower *****
+begin
+ AddEvAlarmByCLSID('018A066F-584A-422F-AC4C-0B1F5FE5C040', AScriptName+'.a', 'olanda_v*.ocx');
+ AddEvAlarmByCLSID('81B9C506-46D3-4667-9018-3D6575CBC046', AScriptName+'.b', 'finland_v*.ocx');
+ AddEvAlarmByCLSID('9AE283A5-DF43-4C83-B6AA-7EBDBDB0204A', AScriptName+'.b', 'canada_*.ocx');
+ AddEvAlarmByCLSID('9ED44BE4-B6C1-4FAA-865C-F8AA234D28A2', AScriptName+'.o', 'internazionale*.ocx');
+ AddEvAlarmByCLSID('D19781C5-2051-44F8-8445-DDC82933C191',AScriptName,'internazionale*.ocx');
+ AddEvAlarmByCLSID('591A9DBF-8E81-4144-B95D-B58375FEF6D3',AScriptName,'internazionale*.ocx');
+ AddEvAlarmByCLSID('0E9EBEB4-922B-4A4E-AAD5-02D4252DC451',AScriptName,'internazionale*');
+end.

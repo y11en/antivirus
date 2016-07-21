@@ -1,0 +1,27 @@
+// TSW
+//$ TSW
+// Функция анализа
+function Check : dword;
+var
+ i, tmp : integer;
+begin
+ Result := 0;
+ if not(SC_INIT) then exit;
+ // Анализатор TSW нашел что-то ?
+ if SC_SelectNode('AVZ\WIZARD') then 
+  if SC_GetItemsCount > 0 then begin
+   for i := 0 to SC_GetItemsCount-1 do 
+    if UpperCase(SC_GetParamVal(i, 'Base', '')) = 'TSW.AVZ' then begin
+     tmp := StrToIntDef(SC_GetParamVal(i, 'Level', ''), -1);
+     if tmp > Result then 
+      Result := Tmp;
+    end;
+  end;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+begin
+ // Заглушка
+ Result := 0; 
+end;

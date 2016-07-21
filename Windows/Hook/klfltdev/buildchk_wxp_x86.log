@@ -1,0 +1,77 @@
+BUILD: Examining c:\projects\windows\hook\klfltdev directory for files to compile.
+skipping post pass 0 command
+warnings in directory c:\projects\windows\hook\klfltdev
+filter.c and ..\filter.c exist
+Compiling and Linking c:\projects\windows\hook\klfltdev *************
+'nmake.exe /nologo BUILDMSG=Stop. -i BUILD_PASS=PASS2 LINKONLY=1 NOPASS0=1 MAKEDIR_RELATIVE_TO_BASEDIR='
+c:\projects\windows\hook\klfltdev: TARGETPATH is ..\..\..\out\klfltdev\chk
+BUILDMSG: _NT_TARGET_VERSION SET TO WINXP
+ rc -l 409 -DSXS_PROCESSOR_ARCHITECTURE="""x86"""  -DSXS_TARGET="""klfltdev.sys"""   -DSYSTEM_COMPATIBLE_ASSEMBLY_NAME="""Microsoft.Windows.SystemCompatible"""  -DLSYSTEM_COMPATIBLE_ASSEMBLY_NAME=L"""Microsoft.Windows.SystemCompatible"""   -DSXS_ASSEMBLY_VERSION=""""""  /r /fo c:\projects\windows\hook\klfltdev\objchk_wxp_x86\i386\klfltdev.res /D_X86_=1 /Di386=1  /DSTD_CALL /DCONDITION_HANDLING=1   /DNT_INST=0 /DWIN32=100 /D_NT1X_=100 /DWINNT=1 /D_WIN32_WINNT=0x0501 /DWINVER=0x0501 /D_WIN32_IE=0x0603    /DWIN32_LEAN_AND_MEAN=1  /DDEVL=1 /DDBG=1 /D__BUILDMACHINE__=WinDDK /DFPO=0   /D_DLL=1 /DNDEBUG   -DCLASS_UPPER=1 -DIOCTL_INTERFACE=1 /DDEPRECATE_DDK_FUNCTIONS=1 /DMSC_NOOPT /DNTDDI_VERSION=0x05010200 /DRUN_WPP   /I..\..\..\CommonFiles /Ic:\projects\windows\hook\klfltdev\objchk_wxp_x86\i386 /IC:\WinDDK\6001.17120\inc\api /IC:\WinDDK\6001.17120\inc\api /IC:\WinDDK\6001.17120\inc\ddk /IC:\WinDDK\6001.17120\inc\ddk /IC:\WinDDK\6001.17120\inc\crt .\klfltdev.rc
+Microsoft (R) Windows (R) Resource Compiler Version 6.0.5724.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+ cl.exe @c:\projects\windows\hook\klfltdev\objchk_wxp_x86\i386\cl.rsp
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.278 for 80x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+cl /Fo"c:\projects\windows\hook\klfltdev\objchk_wxp_x86\i386/"
+ /FC
+ /Ii386
+ /I.
+ /I..\..\..\CommonFiles
+ /Ic:\projects\windows\hook\klfltdev\objchk_wxp_x86\i386
+ /IC:\WinDDK\6001.17120\inc\api
+ /IC:\WinDDK\6001.17120\inc\api
+ /IC:\WinDDK\6001.17120\inc\ddk
+ /IC:\WinDDK\6001.17120\inc\ddk
+ /IC:\WinDDK\6001.17120\inc\crt
+ /D_X86_=1
+ /Di386=1
+ /DSTD_CALL
+ /DCONDITION_HANDLING=1
+ /DNT_INST=0
+ /DWIN32=100
+ /D_NT1X_=100
+ /DWINNT=1
+ /D_WIN32_WINNT=0x0501
+ /DWINVER=0x0501
+ /D_WIN32_IE=0x0603
+ /DWIN32_LEAN_AND_MEAN=1
+ /DDEVL=1
+ /DDBG=1
+ /D__BUILDMACHINE__=WinDDK
+ /DFPO=0
+ /D_DLL=1
+ /DNDEBUG
+ -DCLASS_UPPER=1
+ -DIOCTL_INTERFACE=1
+ /DDEPRECATE_DDK_FUNCTIONS=1
+ /DMSC_NOOPT
+ /DNTDDI_VERSION=0x05010200
+ /DRUN_WPP
+ /c
+ /Zc:wchar_t-
+ /Zl
+ /Zp8
+ /Gy
+ /Gm-
+ -cbstring
+ /W3
+ /Gz
+ /hotpatch
+ /EHs-c-
+ /GR-
+ /GF
+ /GS
+ /Z7
+ /Od
+ /Oi
+ /Oy-
+ /Z7
+ /DKMDF_MAJOR_VERSION=01
+ /DKMDF_MINOR_VERSION=007
+ /FIC:\WinDDK\6001.17120\inc\api\warning.h
+ .\filter.c .\devlist.c .\devrul.c 
+filter.c
+devlist.c
+devrul.c
+Generating Code...
+ link.exe /out:..\..\..\out\klfltdev\chk\i386\klfltdev.sys /machine:ix86 @c:\projects\windows\hook\klfltdev\objchk_wxp_x86\i386\lnk.rsp

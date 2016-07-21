@@ -1,0 +1,75 @@
+#import "uacallback.idef"
+
+forward interface MiniArchiver;
+typedef MiniArchiver* hMINIARC;
+
+
+
+
+[
+  version(0)
+  mnemonic(IID_MINIARCHIVER)
+  id(63003)
+  c_type_name(hMINIARC)
+]
+interface MiniArchiver { // Mini Plugin for Universal Archiver
+
+  // ------------------------------------
+    [ id(4097) ]  prop tBOOL pgNAME_CASE_SENSITIVE; // Являются ли имена файлов зависимы от регистра (cTRUE -- да)
+    prop pgOBJECT_NAME; // Object name
+    prop pgOBJECT_PATH; // Object path
+    prop pgOBJECT_FULL_NAME; // Object full name
+    [ id(4096) ]  prop tBOOL pgIS_FOLDER; // Это контейнер?
+    [ id(4096) ]  prop tDWORD pgNAME_MAX_LEN; // Максимальная длина имени файла
+    [ id(4112) ]  prop tBOOL pgIS_READONLY; // Is this mini archiver Read only
+    prop pgOBJECT_ORIGIN;
+    [ id(4113) ]  prop tBOOL pgIS_SOLID; // Это солид архив или нет
+    prop pgOBJECT_AVAILABILITY; // Что умеет делать этот плагин
+    prop pgOBJECT_OS_TYPE;
+    prop pgOBJECT_SIZE_Q; // размер объекта
+    [ id(4100) ]  prop tBYTE pgOBJECT_FILL_CHAR; // заполнитель при Resize
+    [ id(4098) ]  prop tWORD pgNAME_DELIMITER; // разделитель имен между каталогами
+    prop pgOBJECT_OPEN_MODE; // Режимы открытия
+    prop pgOBJECT_ACCESS_MODE; // режимы доступа к файлу
+    prop pgOBJECT_HASH; // HASH архива
+    [ id(4114) ]  prop tQWORD pgMINIARC_PROP_OBJECT_ID; // ID объекта для которого надо брать свойства
+
+    [
+      id(4115)
+      comment_ex("How to present multi volume archives cTRUE -- as single set, cFALSE -- as single volume")
+    ]
+    prop tBOOL pgMULTIVOL_AS_SINGLE_SET; // How to present multi volume archives
+    prop pgOBJECT_COMPRESSED_SIZE; // Object compressed size
+
+    [
+      id(4116)
+      comment_ex("In case of multivolume archvie this property contains volume name of the particular object")
+    ]
+    prop tSTRING pgOBJECT_VOLUME_NAME; // Volume name of the object
+
+
+  // ------------------------------------
+    method tERROR Reset( // First call of Next method after Reset must return *FIRST* object in enumeration
+      tVOID* result
+    );
+    method tERROR Next( // First call of Next method after creating or Reset must return *FIRST* object in enumeration
+      tQWORD* result,
+      tQWORD qwLastObjectId
+    );
+    method tERROR ObjCreate( // Create IO from current enumerated object
+      hIO* result,
+      tQWORD qwObjectIdToCreate,
+      hIO hUniArcIO
+    );
+    method tERROR SetAsCurrent( // Set Object (qwObjectId) as currently enumerated object
+      tVOID* result,
+      tQWORD qwObjectId
+    );
+    method tERROR RebuildArchive(
+      tVOID* result,
+      hUNIARCCALLBACK hCallBack, // handle of MiniArchiverCallback Object
+      hIO hOutputIo
+    );
+
+}
+

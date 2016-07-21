@@ -1,0 +1,4 @@
+// ***** Spy.IMIToolbar *****
+begin
+ AddEvAlarmByCLSID('69135BDE-5FDC-4B61-98AA-82AD2091BCCC',AScriptName,'');
+end.

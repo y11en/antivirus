@@ -1,0 +1,4 @@
+// ***** AdvWare.Toolbar.BHO *****
+begin
+ AddEvAlarmByCLSID('962F12AE-2773-4BEB-99EA-B5C3AB9A6606', AScriptName, 'BHO.DLL');
+end.

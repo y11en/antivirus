@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="id3geveegvzfvo3egvzjgzd">
+        <property name="$metaclass" value="Package Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference4" referencedUin="design:view:::idj28r6egxl7ttqegz41i2t">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="265,10,114,152"/>
+            <reference referencedUin="design:link:::idj28r6egxl7ttqegz41i2t.linkidi5hmheibr88lzeibral40">
+                <property name="sourceAnchor" value="265,78"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="120,78"/>
+                <reference referencedUin="linklabel:stereotype:design:link:::idj28r6egxl7ttqegz41i2t.linkidi5hmheibr88lzeibral40">
+                    <property name="bounds" value="164,58,57,16"/>
+                    <property name="bounds_setted_by_user" value="true"/>
+                </reference>
+            </reference>
+        </reference>
+        <reference df-class-name="reference" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::EditionId:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$hidden" value="true"/>
+            <property name="@$hidden" value="true"/>
+            <property name="bounds" value="1087,230,158,111"/>
+        </reference>
+        <reference df-class-name="reference1" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::Request::Implementation:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$hidden" value="true"/>
+            <property name="@$hidden" value="true"/>
+            <property name="bounds" value="544,447,251,242"/>
+            <reference referencedUin="&lt;oiref:cpp#Extends#OnlineActivation::Request::Implementation#OnlineActivation::ReferenceCounted:oiref&gt;">
+                <property name="sourceAnchor" value="714,447"/>
+                <property name="bendpoints" value="714,412,954,412"/>
+                <property name="targetAnchor" value="954,377"/>
+                <property name="bounds_setted_by_user" value="true"/>
+            </reference>
+            <reference referencedUin="&lt;oiref:cpp#Extends#OnlineActivation::Request::Implementation#OnlineActivation::InternetObserver:oiref&gt;">
+                <property name="sourceAnchor" value="634,447"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="634,335"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference2" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::Response:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$hidden" value="true"/>
+            <property name="@$hidden" value="true"/>
+            <property name="bounds" value="220,730,181,210"/>
+        </reference>
+        <reference df-class-name="reference6" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::HttpResponse:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$hidden" value="true"/>
+            <property name="@$hidden" value="true"/>
+            <property name="bounds" value="815,670,258,162"/>
+        </reference>
+        <reference df-class-name="reference9" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::InternetObserver:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$hidden" value="true"/>
+            <property name="@$hidden" value="true"/>
+            <property name="bounds" value="564,230,212,105"/>
+        </reference>
+        <reference df-class-name="reference11" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::ReferenceCounted:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$hidden" value="true"/>
+            <property name="@$hidden" value="true"/>
+            <property name="bounds" value="841,230,226,147"/>
+        </reference>
+        <reference df-class-name="reference12" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::CustomerId:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$hidden" value="true"/>
+            <property name="@$hidden" value="true"/>
+            <property name="bounds" value="660,1110,176,127"/>
+        </reference>
+        <reference df-class-name="reference13" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::SmartPointer:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$hidden" value="true"/>
+            <property name="@$hidden" value="true"/>
+            <property name="bounds" value="856,1110,196,227"/>
+        </reference>
+        <reference df-class-name="reference14" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::Request:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$hidden" value="true"/>
+            <property name="@$hidden" value="true"/>
+            <property name="bounds" value="1072,1110,159,274"/>
+        </reference>
+        <reference df-class-name="reference15" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::InternetSession:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$hidden" value="true"/>
+            <property name="@$hidden" value="true"/>
+            <property name="bounds" value="1265,230,214,130"/>
+        </reference>
+        <reference df-class-name="reference16" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::ApplicationId:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$hidden" value="true"/>
+            <property name="@$hidden" value="true"/>
+            <property name="bounds" value="1251,1110,183,111"/>
+        </reference>
+        <reference df-class-name="reference17" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::RequestObserver:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$hidden" value="true"/>
+            <property name="@$hidden" value="true"/>
+            <property name="bounds" value="220,1490,217,377"/>
+        </reference>
+        <reference df-class-name="reference18" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::ActivationCode:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$hidden" value="true"/>
+            <property name="@$hidden" value="true"/>
+            <property name="bounds" value="1251,1270,195,159"/>
+        </reference>
+        <reference df-class-name="reference19" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::ActivationFactory::Implementation:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$hidden" value="true"/>
+            <property name="@$hidden" value="true"/>
+            <property name="bounds" value="1096,447,302,178"/>
+            <reference referencedUin="&lt;oiref:cpp#Extends#OnlineActivation::ActivationFactory::Implementation#OnlineActivation::ReferenceCounted:oiref&gt;">
+                <property name="sourceAnchor" value="1247,447"/>
+                <property name="bendpoints" value="1247,412,954,412"/>
+                <property name="targetAnchor" value="954,377"/>
+                <property name="bounds_setted_by_user" value="true"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference20" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::Response::Implementation:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$hidden" value="true"/>
+            <property name="@$hidden" value="true"/>
+            <property name="bounds" value="815,447,261,130"/>
+            <reference referencedUin="&lt;oiref:cpp#Extends#OnlineActivation::Response::Implementation#OnlineActivation::ReferenceCounted:oiref&gt;">
+                <property name="sourceAnchor" value="945,447"/>
+                <property name="bendpoints" value="945,412,954,412"/>
+                <property name="targetAnchor" value="954,377"/>
+                <property name="bounds_setted_by_user" value="true"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference8" referencedUin="design:view:::id1cex6eibjqafceibk1lfq">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="10,10,110,136"/>
+        </reference>
+        <reference df-class-name="reference10" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::HttpRequest:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$hidden" value="true"/>
+            <property name="@$hidden" value="true"/>
+            <property name="bounds" value="352,306,192,450"/>
+        </reference>
+        <reference df-class-name="reference5" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::HttpConnection:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$hidden" value="true"/>
+            <property name="@$hidden" value="true"/>
+            <property name="bounds" value="350,304,197,130"/>
+        </reference>
+        <reference df-class-name="reference3" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::ActivationFactory:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$hidden" value="true"/>
+            <property name="@$hidden" value="true"/>
+            <property name="bounds" value="344,298,208,194"/>
+        </reference>
+        <reference df-class-name="reference7" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::ActivationError:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$hidden" value="true"/>
+            <property name="@$hidden" value="true"/>
+            <property name="bounds" value="151,505,195,210"/>
+        </reference>
+        <property name="$defaultDiagram" value=""/>
+    </view>
+</nodeSet>

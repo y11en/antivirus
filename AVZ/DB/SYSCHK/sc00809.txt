@@ -1,0 +1,9 @@
+// ***** Проверка ключа Default Prefix *****
+var
+ S : string;
+begin
+ S := Trim(RegKeyStrParamRead('HKEY_LOCAL_MACHINE', 'SOFTWARE\Microsoft\Windows\CurrentVersion\URL\DefaultPrefix', ''));
+ if S = '' then exit;
+ if (S = 'http://') or (S = 'http:\\') or (S = 'ftp://') then exit;
+ AddToLog('$AVZ0521: "'+S+'"');
+end.

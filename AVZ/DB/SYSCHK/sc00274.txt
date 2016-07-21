@@ -1,0 +1,7 @@
+// ***** Trojan.Win32.StartPage.ix *****
+begin
+ AddEvAlarmByCLSID('1923E95E-2EE1-4310-9F6F-DD95717211E5', AScriptName, 'npaldaa.dll');
+ AddEvAlarmByCLSID('ED1C21CE-B65F-47AF-9D41-4CD95498EB4E', AScriptName, 'npaldaa.dll');
+ AddEvAlarmByCLSID('02DB4BFC-8BAE-46D6-B45B-D7ED1861DCEF', AScriptName, 'dfghdca.dll');
+ AddEvAlarmByCLSID('6082523E-C19E-47A1-A3DF-68393ACC8C36', AScriptName, 'dfghdca.dll');
+end.

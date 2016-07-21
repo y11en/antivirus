@@ -1,0 +1,208 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Click links to operate on KAV 8.0</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1251">
+
+<SCRIPT language=javascript>
+var gui = new ActiveXObject("AVPGUI.Controller");
+
+function OnGuiDoCommand(params)
+{
+	if( gui == null )
+	{
+		alert('gui == null');
+		return;
+	}
+
+	gui.DoCommand(params);
+}
+
+function OnGuiTrayMenuClick(item)
+{
+	if( gui == null )
+	{
+		alert('gui == null');
+		return;
+	}
+
+	var pCtl = gui.GetItem('Tray');
+	pCtl.Click(1);
+	
+	var pMenuItem = pCtl.GetItem(item, false);
+	if( pMenuItem != null )
+	    pMenuItem.Click();
+}
+
+function OnGuiEnableContentFilter()
+{
+	if( gui == null )
+	{
+		alert('gui == null');
+		return;
+	}
+
+	var pEnable = gui.GetItem('MainWindow._client_area.ContentFilter.Enable');
+	pEnable.SetCheck(!pEnable.Check);
+}
+
+function _List_Enum(pRows, pCols)
+{
+	var i = pRows.Children;
+    while(i.Next())
+    {
+        var strText = "";
+        for(var c = 0; c < pCols.GetCount(); c++)
+        {
+            var pCol = pCols.GetItemByIdx(c);
+            var pCell = i.Cell(pCol);
+            
+            strText += pCol.Text + '(';
+            strText += pCell.Text;
+            strText += pCol.Text + ', ';
+            strText += pCell.Check;
+            strText += ')';
+        }
+           
+        alert(strText);
+
+        _List_Enum(i, pCols);
+    }
+}
+
+/*function _List_Enum(pRows, pCols)
+{
+	var pCh = pRows.Children;
+	for(var it = 0; it < pCh.GetCount(); it++)
+    {
+        var i = pCh.GetItemByIdx(it);
+        
+        var strText = "";
+        for(var c = 0; c < pCols.GetCount(); c++)
+        {
+            var pCol = pCols.GetItemByIdx(c);
+            var pCell = i.Cell(pCol);
+            
+            strText += pCol.Text + '(';
+            strText += pCell.Text;
+            strText += pCol.Text + ', ';
+            strText += pCell.Check;
+            strText += ')';
+        }
+           
+        alert(strText);
+
+        _List_Enum(i, pCols);
+    }
+}*/
+
+function OnGuiTest()
+{
+	if( gui == null )
+	{
+		alert('gui == null');
+		return;
+	}
+
+//	var pCtl = gui.GetItem('OptionsWindow.TrafficMonitor_Ports.DialogPanel.BtnsGroup.Confirm');
+//	pCtl.Click();
+//	var pCtl = gui.GetItem('MainWindow.Navigator._client_area.Antivirus.WorkArea.Home.File_Monitoring.Body.Level.Val');
+//	pCtl.Click();
+//	var pMenuItem = pCtl.GetItem('Customize', false);
+//	pMenuItem.Click();
+	
+//	var pCtl = gui.GetItem('MainWindow.Navigator._client_area.Antivirus.WorkArea.Home.Antivirus.Group1.Body.File_Monitoring.Check.Icon');
+//	alert(pCtl.Background);
+
+//    var pCtl = gui.GetItem('OptionsWindow.Navigator.WorkArea.Exclusions.List.footer.Add');
+//    pCtl.Click();
+    
+//    var pCtl2 = gui.GetItem('OptionsWindow.ExclusionEdit.Rule.ExclusionObjectEdit');
+//    pCtl2.Click();
+
+//    var pCtl = gui.GetItem('OptionsWindow.Navigator.WorkArea.Notifications.List');
+//	var pCols = pCtl.GetItem("cols");
+//	_List_Enum(pCtl, pCols);
+	
+//	pCtl = gui.GetItem('MainWindow.Navigator._client_area.Protection.WorkArea.Events.Report');
+//	pCtl.GetItem("cols").GetItem("Task").Click(2);
+	
+    pCtl = gui.GetItem('MainWindow.Navigator._client_area.Scan.WorkArea.Home.Scan_My_Computer.Body.ScanObjects');
+    pElem = pCtl.Children.GetItemByIdx(7);
+    pElem.Select();
+    pElem.Cell(pCtl.GetItem("cols").GetItemByIdx(0)).SetCheck(1);
+    pCtl.GetItem("rowedit.Edit").Click();
+}
+
+</SCRIPT>
+
+<SCRIPT language=javascript>
+var admingui = new ActiveXObject("AVPADMINGUI.Controller");
+
+function OnAdminGuiSelectProfile(profile)
+{
+	if( admingui == null )
+	{
+		alert('admingui == null');
+		return;
+	}
+
+	var pPage = admingui.GetObject('');
+	if( pPage == null )
+		return;
+	
+	var pCombo = pPage.GetItem('PageCombo');
+	if( pCombo != null )
+		pCombo.SetValueString(profile);
+}
+
+function OnAdminGuiEnableLock(enable)
+{
+	if( admingui == null )
+	{
+		alert('admingui == null');
+		return;
+	}
+
+	var pPage = admingui.GetObject('');
+	if( pPage == null )
+		return;
+	
+	var pAv = pPage.GetItem('File_Monitoring');
+	var pLock = pAv.GetItem('Startup__lb');
+	pLock.SetValueInteger(enable);
+}
+
+</SCRIPT>
+
+<META content="MSHTML 6.00.2800.1515" name=GENERATOR>
+
+</HEAD>
+
+<BODY>
+GUI tests
+<OL>
+  <LI><A onclick="OnGuiTrayMenuClick('KAV')" href="#">Главное окно на разделе Protection (фонарь)</A>
+  <LI><A onclick="OnGuiDoCommand('window(&quot;MainWindow:Antivirus&quot;)')" href="#">Главное окно на разделе Antivirus</A>
+<BR><BR>
+  <LI><A onclick="OnGuiEnableContentFilter()" href="#">Включение\выключение ContentFilter</A>
+  <LI><A onclick="OnGuiTrayMenuClick()" href="#">Клик на иконе трея</A>
+  <LI><A onclick="OnGuiTrayMenuClick('Settings')" href="#">Клик меню трея на Settings</A>
+<BR><BR>
+  <LI><A onclick="OnGuiTest()" href="#">Test</A>
+  </LI>
+</OL>
+
+<BR><BR>
+
+Admin GUI tests
+<OL>
+  <LI><A onclick="OnAdminGuiSelectProfile('File_Monitoring')" href="#">select:File_Monitoring</A></LI>
+  <LI><A onclick="OnAdminGuiEnableLock(1)" href="#">File_Monitoring Lock(1)</A></LI>
+  <LI><A onclick="OnAdminGuiEnableLock(0)" href="#">File_Monitoring Lock(0)</A></LI>
+</OL>
+
+</BODY>
+
+</HTML>

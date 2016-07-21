@@ -1,0 +1,4 @@
+// ***** Trojan-Downloader.Delf *****
+begin
+ AddEvAlarmByCLSID('B212D577-05B7-4963-911E-4A8588160DFA',AScriptName,'Project1.dll');
+end.

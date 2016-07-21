@@ -1,0 +1,72 @@
+
+
+[
+  version(1)
+  mnemonic(IID_REPORT)
+  id(31)
+  c_type_name(hREPORT)
+  comment_ex("//eng: Report Storage interface implements methods to add, update, delete and retrive data on record by record basis in storage. ")
+]
+interface Report { // eng:Report Storage
+
+  // ------------------------------------
+    prop pgOBJECT_ACCESS_MODE; // eng:Object access mode
+
+
+  // ------------------------------------
+    method tERROR GetRecordCount( // eng:Get count of records in report
+      tDWORD* pdwRecords // eng:Count of record
+    );
+
+    [
+      comment_ex("//eng:Retrive record data from report.
+        If pBuffer=NULL and dwSize=0 method put into result required buffer size to hold whole data and returns errOK.
+        If buffer size is too small to get whole data, method copies dwSize bytes into buffer, put into result required buffer size to hold whole data and returns errBUFFER_TOO_SMALL.")
+    ]
+    method tERROR GetRecord( // eng:Retrive record
+      tDWORD* result, // eng:Result value
+      tDWORD dwIndex, // eng:Record index
+      tVOID* pBuffer, // eng:Receiving buffer
+      tDWORD dwSize, // eng:Size of buffer
+      tDATETIME* pdtTimestamp // eng:Record modification time
+    );
+
+    [
+      comment_ex("//eng:Add record to the end of report")
+    ]
+    method tERROR AddRecord( // eng:Add record
+      const tVOID* pBuffer, // eng:Buffer
+      tDWORD dwSize, // eng:Size of buffer
+      tDWORD* pdwRecordIndex // eng:Record index
+    );
+
+    [
+      comment_ex("//eng:Update record in report with new data (replace)")
+    ]
+    method tERROR UpdateRecord( // eng:Update record
+      tDWORD dwIndex, // eng:Index of record to update
+      const tVOID* pBuffer, // eng:Buffer
+      tDWORD dwSize // eng:Buffer size
+    );
+
+    [
+      comment_ex("//eng:Delete record with specified index from report")
+    ]
+    method tERROR DeleteRecord( // eng:Delete record
+      tDWORD dwIndex // eng:Index of record to delete
+    );
+
+    [
+      comment_ex("//eng:Minimize report storage size by removing from report unused data (deleted records) if any")
+    ]
+    method tERROR Compact(); // eng:Compact report
+
+    [
+      comment_ex("//eng: Deletes records with timestamp below specified in dtTime")
+    ]
+    method tERROR DeleteOldRecords( // eng: Deletes old records from report
+      const tDATETIME* pdtTime
+    );
+
+}
+

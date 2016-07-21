@@ -1,0 +1,5 @@
+// ***** Spy.NewDotNet *****
+begin
+ AddEvAlarmByCLSID('DD521A1D-1F98-11D4-9676-00E018981B9E',AScriptName,'newdotnet*.dll, tldctl2.ocx');
+ AddEvAlarmByCLSID('4A2AACF3-ADF6-11D5-98A9-00E018981B9E',AScriptName,'');
+end.

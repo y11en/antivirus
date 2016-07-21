@@ -1,0 +1,8 @@
+// ***** Trojan-Downloader.Win32.Agent.bc *****
+begin       
+ AddEvAlarmByCLSID('23181679-D514-A8F3-8ED1-3A1680B0ED85',AScriptName,'netar32.dll');
+ AddEvAlarmByCLSID('9AB85167-C119-589A-AF82-3AC370A258A2',AScriptName,'msfg32.dll');
+ AddEvAlarmByCLSID('FECCF041-B4E0-D012-618E-2406F49FF483',AScriptName,'d3ft.dll');
+ AddEvAlarmByCLSID('A592CAD0-2783-60E0-3234-6B2905C3A3C9',AScriptName,'appmy32.dll');
+ AddEvAlarmByCLSID('201F9D60-1174-FF48-D83F-010815E66F42',AScriptName,'iehr.dll');
+end.

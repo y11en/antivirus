@@ -1,0 +1,5 @@
+// ***** Adware.CyTron *****
+begin       
+ AddEvAlarmByCLSID('3750BFA3-1392-4AF3-AF86-9D2D4776E5A4',AScriptName,'');
+ AddEvAlarmByCLSID('3750BFA3-1392-4AF3-AF86-9D2D4776E5A4',AScriptName,'');
+end.

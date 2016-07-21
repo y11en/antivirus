@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?script_expregkey.htm"; }
+else { parent.quicksync('a15.29.12'); }
+//-->
+</script>
+   <title>function ExpRegKey</title>
+   <meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+
+
+<body bgcolor="#FFFFFF">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">function ExpRegKey</span></p>
+
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="t_about.htm">Наверх</a>&nbsp;
+     <a href="script_regsearch.htm">Предыдущая</a>&nbsp;
+     <a href="script_expregkeyex.htm">Последующая</a>
+     </font><B>|</B>
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=717989"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=717989;t=109;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=18 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=717989"><img
+src="http://top.list.ru/counter?js=na;id=717989;t=109"
+border=0 height=18 width=88
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+    </td>
+  </tr>
+</table>
+<br>
+
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #000000;">function</span><span class="f_CodeExample" style="color: #000000;">&nbsp;ExpRegKey(ARoot,&nbsp;AName,&nbsp;AFileName&nbsp;:&nbsp;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">string</span><span class="f_CodeExample" style="color: #000000;">)&nbsp;:&nbsp;boolean;</span></p>
+<p>&nbsp;</p>
+<p>&#1042;&#1099;&#1087;&#1086;&#1083;&#1085;&#1103;&#1077;&#1090; &#1101;&#1082;&#1089;&#1087;&#1086;&#1088;&#1090; &#1082;&#1083;&#1102;&#1095;&#1072; &#1088;&#1077;&#1077;&#1089;&#1090;&#1088;&#1072;. &#1069;&#1082;&#1089;&#1087;&#1086;&#1088;&#1090;&#1080;&#1088;&#1091;&#1077;&#1090;&#1089;&#1103; &#1082;&#1083;&#1102;&#1095; AName раздела реестра ARoot в файл с именем AFileName. Формат файла - стандартный REG файл, рекомендуемое расширение - ".reg". Полученный в ходе экспорта ключ можно импортировать в реестра редактором реестра (меню "Файл\Импорт"). По умолчанию стандартная системная реакция на открытие REG файла так-же сводится к попытке его импорта. Функция возвращает true в случае успешного выполнения и false в случае ошибки.</p>
+<p>Экспорт рекомендуется в качестве средства резервного копирования в скриптах, выполняющих модификацию ключей реестра.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold; text-decoration: underline;">Совместимость:</span> AVZ 4.26 &#1080; &#1074;&#1099;&#1096;&#1077;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold; text-decoration: underline;">Пример:</span></p>
+<p><span style="font-weight: bold; text-decoration: underline;">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #000000;">begin</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #000080;">//&nbsp;Экспорт&nbsp;ключа&nbsp;реестра&nbsp;в&nbsp;файл</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;ExpRegKey(</span><span class="f_CodeExample" style="color: #000080;">'HKEY_CURRENT_USER'</span><span class="f_CodeExample" style="color: #000000;">,</span><span class="f_CodeExample" style="color: #000080;">'Software\Microsoft\Windows\CurrentVersion\Policies'</span><span class="f_CodeExample" style="color: #000000;">,</span><span class="f_CodeExample" style="color: #000080;">'policies_backup.reg'</span><span class="f_CodeExample" style="color: #000000;">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #000080;">//&nbsp;Удаление&nbsp;ключа&nbsp;реестра</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;RegKeyDel(</span><span class="f_CodeExample" style="color: #000080;">'HKEY_CURRENT_USER'</span><span class="f_CodeExample" style="color: #000000;">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">'Software\Microsoft\Windows\CurrentVersion\Policies'</span><span class="f_CodeExample" style="color: #000000;">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #000000;">end</span><span class="f_CodeExample" style="color: #000000;">.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span></p>
+
+
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=717989;js='+js+a+';rand='+Math.random()+
+'" height=1 width=1/>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=717989"
+height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+
+</body>
+</html>

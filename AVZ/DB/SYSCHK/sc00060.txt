@@ -1,0 +1,4 @@
+// ***** AdvWare.FlashEnhancer.b *****
+begin
+ AddEvAlarmByCLSID('95795B67-BBAB-47d0-8A9F-069E8242C0E5',AScriptName,'XML.dll');
+end.

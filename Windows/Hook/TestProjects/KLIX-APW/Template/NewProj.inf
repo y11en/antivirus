@@ -1,0 +1,38 @@
+$$// newproj.inf = template for list of template files
+$$//  format is 'sourceResName' \t 'destFileName'
+$$//    The source res name may be preceded by any combination of '=', '-',  '!', '?', ':', '#', and/or '*'
+$$//       '=' => the resource is binary
+$$//       '-' => the file should not be added to the project (all files are added to the project by default)
+$$//       '!' => the file should be marked exclude from build
+$$//       '?' => the file should be treated as a help file
+$$//       ':' => the file should be treated as a resource
+$$//       '#' => the file should be treated as a template (implies '!')
+$$//       '*' => bypass the custom AppWizard's resources when loading
+$$//	if name starts with / => create new subdir
+
+$$// root objects
+g_precomp.h	g_precomp.h
+handlers.h	handlers.h
+handlers.c	handlers.c
+
+/win9x
+/winnt
+
+precomp.h:PLATFORM_9X	win9x\precomp.h
+precomp.h:PLATFORM_NT	winnt\precomp.h
+
+Main9x.c	win9x\main.c
+MainNT.c	winnt\main.c
+
+PostBuildNt.cmd	winnt\PostBuild.cmd
+
+PreBuild9x.cmd	win9x\PreBuild.cmd
+PostBuild9x.cmd	win9x\PostBuild.cmd
+root9x.vrc	win9x\$$root$$.vrc
+root9x.def	win9x\$$root$$.def
+
+install9x.reg	win9x\$$root$$.reg
+installnt.inf	winnt\$$root$$.inf
+
+proj9x.dsp	win9x\$$root$$9x.dsp
+projnt.dsp	winnt\$$root$$nt.dsp

@@ -1,0 +1,8 @@
+REGEDIT4
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor]
+"category"="AHX64"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\SystemWatch\profiles\Hips]
+"category"="AHX64"

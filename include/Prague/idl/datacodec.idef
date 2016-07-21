@@ -1,0 +1,45 @@
+forward interface DataCodec;
+typedef DataCodec* hDATACODEC;
+
+
+
+[
+  mnemonic(IID_DATACODEC)
+  id(58025)
+  c_type_name(hDATACODEC)
+]
+interface DataCodec {
+
+  // ------------------------------------
+
+    [
+      comment_ex("Interface version")
+      id(130)
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      comment_ex("Interface comment")
+      id(131)
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+
+
+  // ------------------------------------
+    method tERROR Encode(
+      tDWORD* result,
+      const tBYTE* pDecodedData,
+      tDWORD nDataSize,
+      tBYTE* pEncodedBuffer,
+      tDWORD nBufferSize
+    );
+    method tERROR Decode(
+      tDWORD* result,
+      const tBYTE* pEncodedData,
+      tDWORD nDataSize,
+      tBYTE* pDecodedBuffer,
+      tDWORD nBufferSize
+    );
+
+}
+

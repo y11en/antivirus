@@ -1,0 +1,4 @@
+// ***** Trojan-Proxy.Win32.Webber.10.a *****
+begin
+ AddEvAlarmByCLSID('79FA9088-19CE-715D-D85A-216290C5B738', AScriptName, '');
+end.

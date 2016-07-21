@@ -1,0 +1,9 @@
+// ***** Spy.CometCursor *****
+begin
+ AddEvAlarmByCLSID('FE6BC4EF-5676-484B-88AE-883323913256',AScriptName,'csietb.dll');
+ AddEvAlarmByCLSID('6F2D6A5E-E3E7-4F18-887C-C777650DEF57',AScriptName,'cseng.dll');
+ AddEvAlarmByCLSID('6D0AC7F7-B628-4581-A8B2-14D97F24AA76',AScriptName,'cseng.dll');
+ AddEvAlarmByCLSID('1678F7E1-C422-11D0-AD7D-00400515CAAA',AScriptName,'cscursor.dll');
+ AddEvAlarmByCLSID('268CBA84-25AE-4D38-89FE-E7606A6460E3',AScriptName,'cscursor.dll');
+ AddEvAlarmByCLSID('197AB1D7-A7DD-4C86-A938-1FCC0DB21B85',AScriptName,'DMProxy.dll');
+end.

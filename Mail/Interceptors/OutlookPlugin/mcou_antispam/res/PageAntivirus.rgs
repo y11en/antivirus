@@ -1,0 +1,34 @@
+HKCR
+{
+	OutlookAddin.PageAntivirus.1 = s 'PageAntivirus Class'
+	{
+		CLSID = s '{21881BCB-9F1E-42CE-BD5B-ED0E13379A54}'
+	}
+	OutlookAddin.PageAntivirus = s 'PageAntivirus Class'
+	{
+		CLSID = s '{21881BCB-9F1E-42CE-BD5B-ED0E13379A54}'
+		CurVer = s 'OutlookAddin.PageAntivirus.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {21881BCB-9F1E-42CE-BD5B-ED0E13379A54} = s 'PageAntivirus Class'
+		{
+			ProgID = s 'OutlookAddin.PageAntivirus.1'
+			VersionIndependentProgID = s 'OutlookAddin.PageAntivirus'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 102'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{EDDBDEA4-5C07-453F-BE8C-81D738984381}'
+			'Version' = s '1.0'
+		}
+	}
+}

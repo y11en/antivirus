@@ -1,0 +1,47 @@
+# Microsoft Developer Studio Generated Dependency File, included by AvpBase.mak
+
+.\AvpBase.cpp : \
+	"..\..\commonfiles\avpvndid.h"\
+	"..\..\CommonFiles\ScanAPI\BaseAPI.h"\
+	".\NTFSStream.h"\
+	{$(INCLUDE)}"_avpio.h"\
+	{$(INCLUDE)}"avp_data.h"\
+	{$(INCLUDE)}"avpcomid.h"\
+	{$(INCLUDE)}"kldtdefs.h"\
+	{$(INCLUDE)}"kldtser.h"\
+	{$(INCLUDE)}"property.h"\
+	{$(INCLUDE)}"ScanAPI\Avp_dll.h"\
+	{$(INCLUDE)}"ScanAPI\RetFlags.h"\
+	{$(INCLUDE)}"ScanAPI\Scanobj.h"\
+	{$(INCLUDE)}"Sign\a_chfile.c"\
+	{$(INCLUDE)}"Sign\ct_fio.h"\
+	{$(INCLUDE)}"Sign\ct_sup_d.h"\
+	{$(INCLUDE)}"Sign\ct_supp.h"\
+	{$(INCLUDE)}"Sign\ct_typs.h"\
+	{$(INCLUDE)}"sign\sign.h"\
+	{$(INCLUDE)}"swm.h"\
+	
+
+.\AvpBase.rc : \
+	".\RES\AVPBASE.RC2"\
+	{$(INCLUDE)}"Version\ver_avp.h"\
+	{$(INCLUDE)}"Version\ver_df.h"\
+	{$(INCLUDE)}"Version\ver_itoa.h"\
+	{$(INCLUDE)}"Version\ver_kl.h"\
+	{$(INCLUDE)}"Version\ver_kl.ver"\
+	
+
+..\..\CommonFiles\IOCache\FileIO.cpp : \
+	"..\..\CommonFiles\DupMem\DupMem.h"\
+	"..\..\CommonFiles\IOCache\TFileData.h"\
+	"..\..\CommonFiles\ScanAPI\BaseAPI.h"\
+	{$(INCLUDE)}"_avpio.h"\
+	{$(INCLUDE)}"ScanAPI\RetFlags.h"\
+	{$(INCLUDE)}"ScanAPI\Scanobj.h"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	{$(INCLUDE)}"ScanAPI\Avp_msg.h"\
+	{$(INCLUDE)}"Stuff\_carray.h"\
+	

@@ -1,0 +1,547 @@
+﻿[Global]
+ErrDifferPswrds.caption         = "The passwords you typed do not match"
+ErrDifferPswrds                 = "Type the same password in both text boxes."
+ErrNoPasswordEntered.caption    = "No program protection password specified"
+ErrNoPasswordEntered            = "Please type the program protection password or uncheck password using."
+ErrPswrdWrong.caption           = "The specified password is wrong."
+ErrPswrdWrong                   = "Please, type the correct password and try again."
+ErrProxyHostIsMissing.caption   = "Proxy host is missing"
+ErrProxyHostIsMissing           = "Please type the proxy host DNS name or IP address"
+SendTroublesErrorDescr          = s_SendTroublesErrorDescr(OperationCode)
+CantCloseTroublesDlg            = "Cannot close the dialog until troubleshooting package is sent"
+
+;------------- Scheduler -----------
+
+[SchedulerView]
+$ScheduleSettings   = "Schedule settings"
+@                   = "Schedule: " + $ProfileName
+Time                = "Tim&e"
+RunIfSkipped        = "&Run task if skipped"
+
+[SchedulerView_Type]
+AtSpecTime          = "At a specified time"
+AtAppStartup        = "At application startup"
+AfterEveryUpdate    = "After every update"
+Minutely            = "Minutely"
+Hours               = "Hours"
+Days                = "Days"
+Weeks               = "Weeks"
+Monthly             = "Monthly"
+
+[SchedulerView_Minutely]
+MinuteEvery = "Every"
+MinuteLalel = "&minute(s)"
+
+[SchedulerView_Hourly]
+HourEvery   = "Every"
+HourLalel   = "&hour(s)"
+
+[SchedulerView_Daily]
+DayRadio    = "&Every"
+DayLalel    = "days"
+Weekday     = "&Every weekday"
+Holiday     = "&Every weekend"
+
+[SchedulerView_Weekly]
+WeekDay0Text    = "&Mon"
+WeekDay1Text    = "&Tue"
+WeekDay2Text    = "&Wed"
+WeekDay3Text    = "T&hu"
+WeekDay4Text    = "&Fri"
+WeekDay5Text    = "&Sat"
+WeekDay6Text    = "S&un"
+
+[SchedulerView_Monthly]
+MonthEvery  = "Every"
+MonthLalel  = "day of month"
+
+[SchedulerView_AtStartup]
+AtStartup       = "Start task after"
+AtStartupLalel  = "minute(s)"
+
+[SchedulerView_Once]
+DateText = "Date:"
+
+; Scheduler switches
+
+[Global]
+$SchedulerExactTime = if(schedule.UseTime, " at " + timeshort(schedule.Time))
+$SchedulerWeekDays  = if(schedule.WeekDay6, "Sun ") + if(schedule.WeekDay0, "Mon ") + if(schedule.WeekDay1, "Tue ") + if(schedule.WeekDay2, "Wed ") + if(schedule.WeekDay3, "Thu ") + if(schedule.WeekDay4, "Fri ") + if(schedule.WeekDay5, "Sat ")
+
+[SchedulerEvery]
+0   = "&Every " + schedule.DaysCount + " day(s)"
+1   = "&Every weekday"
+2   = "&Every weekend"
+
+[SchedulerType]
+0       = "&Every " + schedule.MinutesCount + " minute(s)"
+1       = "&Every " + schedule.HoursCount + " hour(s)"
+2       = switch(schedule.Every,"SchedulerEvery") + $SchedulerExactTime
+3       = $SchedulerWeekDays + $SchedulerExactTime
+4       = "&Once at " + datetime_notz(schedule.Time)
+5       = "&Each " + schedule.DaysCount + " day of month" + $SchedulerExactTime
+6       = "&At application startup"
+7       = "&After every update"
+default = "Not defined"
+
+[SchedulerEveryNoPrefix]
+0   = "Every " + schedule.DaysCount + " day(s)"
+1   = "Every weekday"
+2   = "Every weekend"
+
+[SchedulerTypeNoPrefix]
+0       = "Every " + schedule.MinutesCount + " minute(s)"
+1       = "Every " + schedule.HoursCount + " hour(s)"
+2       = switch(schedule.Every,"SchedulerEveryNoPrefix") + $SchedulerExactTime
+3       = $SchedulerWeekDays + $SchedulerExactTime
+4       = "Once at " + datetime_notz(schedule.Time)
+5       = "Each " + schedule.DaysCount + " day of month" + $SchedulerExactTime
+6       = "At application startup"
+7       = "After every update"
+default = "Not defined"
+
+[SchedulerDescription]
+0       = "Manually"
+1       = switch(schedule.Type,"SchedulerTypeNoPrefix")
+2       = "Automatically"
+default = "Unknown mode"
+
+[HeuristicParams]
+LevelLow    = "light scan"
+LevelMed    = "medium scan"
+LevelHigh   = "deep scan"
+
+[PauseTaskGroup]
+@           = "Pause task"
+SheduleBtn  = "Sc&hedule..."
+Schedule    = "On &schedule"
+AppStart    = "On a&pplications startup"
+AppStartBtn = "App&lications..."
+
+[PauseTaskScheduleSettings]
+@ = "Schedule pause task"
+
+[PauseTaskScheduleSettings_Body]
+FromLabel   = "Pause task at"
+ToLabel     = "Resume task at"
+
+[PauseTaskAppSettings]
+@ = "Applications"
+
+[ScanAction]
+#SCAN_ACTION_REPORT     = "Don't prompt, allow"
+#SCAN_ACTION_ASKUSER    = "Prompt immediately"
+#SCAN_ACTION_DETECT     = "Don't prompt, block"
+#SCAN_ACTION_POSTPONE   = "Prompt on completion"
+#SCAN_ACTION_DISINFECT  = if(!TryDelete && !TryDisinfect, "Block") + if(TryDisinfect, "Disinfect") + if(TryDelete, TryDisinfect ? " or delete" : "Delete")
+#SCAN_ACTION_ASKDETECT  = "Prompt"
+
+[ScanActionMenu]
+AskFinish       = "Prompt on completion"
+AskDetect       = "Prompt immediately"
+DontAsk         = "Don't prompt"
+TryDisinfect    = "Disinfect"
+TryDelete       = TryDisinfect ? "Delete if disinfection fails" : "Delete"
+
+[WmActionMenu]
+Ask     = "Prompt"
+Block   = "Don't prompt, block"
+Allow   = "Don't prompt, allow"
+
+[Firewall_Networks]
+Text = "Rule description (click underlined elements to edit):"
+
+[Firewall_Networks_NetList]
+Network     = "Zone"
+Severity    = "Status"
+Stealthed   = "Invisibility"
+Desc        = "Description"
+
+[FwZoneSeverity]
+#Fw_znTrusted   = "Trusted"
+#Fw_znNetBIOS   = "Local network"
+#Fw_znUntrusted = "Internet"
+
+;-------------------------------- OptionsWindow --------------------------------
+
+[OptionsWindow]
+@ = "Options"
+
+[OptionsWindow_Navigator_Btns]
+General         = "General"
+Threats         = "Threats"
+Exclusions      = "Exclusions"
+Proxy           = "Proxy Settings"
+Traffic         = "Traffic Monitoring"
+Notifications   = "Notifications"
+Reports         = "Reports && Data Files"
+Appearance      = "Appearance"
+Feedback        = "Feedback"
+TroubleShooting = "Troubleshooting"
+
+[OptionsWindow_Navigator_WorkArea_General]
+Caption         = "Kaspersky Internet Security generic options"
+EnableProt      = "Enable real-time &protection"
+RunOnStartup    = "Launch " + $ProductName + "\non computer startup"
+AdvDis          = "Enable Advanced &Disinfection"
+Pswd            = "Self-defense && Password protection"
+Performance     = "Performance && Compatibility"
+
+[OptionsWindow_Navigator_WorkArea_General_Pswd]
+SelfProt        = "Enable Self-Defense"
+ServiceControl  = "Disable external service &control"
+Pswd            = "Enable password protection"
+
+[OptionsWindow_Navigator_WorkArea_General_Performance]
+Battery = "Disable scheduled scans while running on battery power"
+Abs     = "Concede resources to other applications"
+R3Mode  = "Compatibility mode for programs using self-protection"
+
+[OptionsWindow_Navigator_WorkArea_Threats]
+Caption = "Select categories of malicious and potentially unwanted software to be detected by Kaspersky Internet Security."
+
+[OptionsWindow_Navigator_WorkArea_Exclusions]
+Caption     = "Exclusion rules are useful for compatibility between anti-virus protection and resource-eager applications."
+RuleLabel   = "Rule description:"
+
+[OptionsWindow_Navigator_WorkArea_Exclusions_List]
+Object  = "Object"
+Threat  = "Threat"
+
+[OptionsWindow_Navigator_WorkArea_Notifications]
+Caption = "Tune the interaction between Kaspersky Internet Security and you."
+
+[OptionsWindow_Navigator_WorkArea_Notifications_List]
+Event   = "Event"
+Ballon  = "Balloon"
+Sound   = "Sound"
+Email   = "E-mail"
+
+[OptionsWindow_Navigator_WorkArea_Proxy]
+Caption     = "If you are connected to Internet via proxy server, please specify its address."
+UseProxy    = "Use &proxy server"
+
+[OptionsWindow_Navigator_WorkArea_Proxy_Settings]
+Auto    = "&Auto detect proxy settings"
+Manual  = "Specify settings &manually"
+UseAuth = "Proxy &requires authentification"
+Bypass  = "&Bypass proxy for local addresses"
+
+[OptionsWindow_Navigator_WorkArea_Proxy_Settings_Address]
+AddressLabel    = "Address:"
+Sep             = ":"
+
+[OptionsWindow_Navigator_WorkArea_Proxy_Settings_Port]
+PortLabel = "Port:"
+
+[OptionsWindow_Navigator_WorkArea_Proxy_Settings_Login]
+LoginLabel = "Login:"
+
+[OptionsWindow_Navigator_WorkArea_Proxy_Settings_Pass]
+PassLabel = "Password:"
+
+[OptionsWindow_Navigator_WorkArea_Traffic]
+Caption = "Specify how your internet traffic should be checked for malware, spam and inappropriate web content."
+Ports   = "Port settings"
+Crypted = "Encrypted connections"
+
+[OptionsWindow_Navigator_WorkArea_Traffic_Ports]
+All     = "Check all network ports"
+Custom  = "Check selected ports only"
+Select  = "Select..."
+
+[OptionsWindow_Navigator_WorkArea_Traffic_Crypted]
+ChkAll  = "Check all encrypted connections"
+Ask     = "Prompt when a new encrypted connection is detected"
+ChkNon  = "Do not check encrypted connections"
+
+[OptionsWindow_Navigator_WorkArea_Reports]
+Caption     = "Manage disk space restrictions for application reports and data files."
+Enabled     = "Automatically archive or delete old items"
+EventLog    = "Event logs"
+Statistics  = "Statistics"
+OldItems    = "Old items"
+
+[OptionsWindow_Navigator_WorkArea_Reports_EventLog]
+Period      = "Clean up after"
+PeriodLable = "days"
+Size        = "Limit by size"
+SizeLable   = "MB"
+
+[OptionsWindow_Navigator_WorkArea_Reports_Statistics]
+Period      = "Clean up after"
+PeriodLable = "days"
+Size        = "Limit by size"
+SizeLable   = "MB"
+
+[OptionsWindow_Navigator_WorkArea_Reports_OldItems]
+Archive = "Archive to"
+Delete  = "Delete permanently"
+
+[OptionsWindow_Navigator_WorkArea_Appearance]
+Caption = "Tweak Kaspersky Internet Security user interface."
+Tray    = "Interface"
+Skin    = "Skin folder"
+
+[OptionsWindow_Navigator_WorkArea_Appearance_Tray]
+Tray            = "Animate tray &icon when processing items"
+Transparency    = "Enable semi-&transparent windows"
+News            = "Use system tray icon for news notifications"
+Login           = "Show icon above Microsoft Windows &login window"
+
+[OptionsWindow_Navigator_WorkArea_Appearance_Skin]
+Enable = "Use alternative skin"
+
+[OptionsWindow_Navigator_WorkArea_Feedback]
+Caption = "Kaspersky Security Network participants automatically send information about new detected threats to Kaspersky Lab."
+Desc    = "Kaspersky Lab guarantees that any personal data will not be sent." 
+Ksn     = "I agree to participate in Kaspersky Security Network"
+
+[OptionsWindow_Navigator_WorkArea_TroubleShooting]
+Caption = "If the program behaves unexpectedly, you can generate product traces and send them to KL"
+Info    = "Product information"
+Trace   = "Traces"
+Collect = "Send collected traces to KL"
+
+[OptionsWindow_Navigator_WorkArea_TroubleShooting_Trace]
+Label       = "If you are not asked for a specific type of traces, use Level 500."
+StateLabel  = "State:"
+State       = tracer_state() ? "Traces are now ON" : "Traces are now OFF"
+LevelLabel  = "Level:"
+OnOff       = tracer_state() ? "Turn traces OFF" : "Turn traces ON"
+
+[OptionsWindow_Navigator_WorkArea_TroubleShooting_Trace_Level]
+lvl100  = "Min (100)"
+lvl200  = "Middle (200)"
+lvl300  = "Large (300)"
+lvl400  = "Max (400)"
+lvl500  = "Notify (500)"
+
+[OptionsWindow_Navigator_WorkArea_TroubleShooting_Collect]
+Send    = "Send traces"
+Label   = has_traces() ? "The traces are ready to send" : "No traces are available"
+
+[OptionsWindow_Navigator_WorkArea_Threats_List_row]
+Malicious   = "Malicious software"
+Unwanted    = "Unwanted software"
+Packers     = "Packers"
+
+[OptionsWindow_Navigator_WorkArea_Threats_List_row_Malicious]
+Viruses     = "Viruses and worms"
+Trojans     = "Trojans programs"
+Malicious   = "Malicious tools"
+
+[OptionsWindow_Navigator_WorkArea_Threats_List_row_Malicious_Viruses]
+Email-Worm  = "Email-Worm"
+IM-Worm     = "IM-Worm"
+IRC-Worm    = "IRC-Worm"
+Net-Worm    = "Net-Worm"
+P2P-Worm    = "P2P-Worm"
+Worm        = "Worm"
+Virus       = "Virus"
+
+[OptionsWindow_Navigator_WorkArea_Threats_List_row_Malicious_Trojans]
+Trojan-ArcBomb      = "Trojan-ArcBomb"
+Backdoor            = "Backdoor"
+Trojan              = "Trojan"
+Trojan-AOL          = "Trojan-AOL"
+Trojan-Clicker      = "Trojan-Clicker"
+Trojan-Downloader   = "Trojan-Downloader"
+Trojan-Dropper      = "Trojan-Dropper"
+Trojan-Notifier     = "Trojan-Notifier"
+Trojan-Proxy        = "Trojan-Proxy"
+Trojan-PSW          = "Trojan-PSW"
+Trojan-Spy          = "Trojan-Spy"
+Trojan-DDoS         = "Trojan-DDoS"
+Trojan-IM           = "Trojan-IM"
+RootKit             = "RootKit"
+Trojan-SMS          = "Trojan-SMS"
+
+[OptionsWindow_Navigator_WorkArea_Threats_List_row_Malicious_Malicious]
+Constructor         = "Constructor"
+DoS                 = "DoS"
+Exploit             = "Exploit"
+FileCryptor         = "FileCryptor"
+Flooder             = "Flooder"
+HackTool            = "HackTool"
+not-virus:Hoax      = "not-virus:Hoax"
+not-virus:BadJoke   = "not-virus:BadJoke"
+Nuker               = "Nuker"
+PolyCryptor         = "PolyCryptor"
+PolyEngine          = "PolyEngine"
+Sniffer             = "Sniffer"
+SpamTool            = "SpamTool"
+Spoofer             = "Spoofer"
+VirTool             = "VirTool"
+Email-Flooder       = "Email-Flooder"
+IM-Flooder          = "IM-Flooder"
+SMS-Flooder         = "SMS-Flooder"
+
+[OptionsWindow_Navigator_WorkArea_Threats_List_row_Unwanted]
+AdWare      = "Adware"
+PornWare    = "Pornware"
+RiskWare    = "Riskware"
+
+[OptionsWindow_Navigator_WorkArea_Threats_List_row_Unwanted_PornWare]
+not-a-virus:Porn-Dialer     = "Porn-Dialer"
+not-a-virus:Porn-Downloader = "Porn-Downloader"
+not-a-virus:Porn-Tool       = "Porn-Tool"
+
+[OptionsWindow_Navigator_WorkArea_Threats_List_row_Unwanted_RiskWare]
+not-a-virus:Tool            = "Tool"
+not-a-virus:Client-IRC      = "Client-IRC"
+not-a-virus:Dialer          = "Dialer"
+not-a-virus:Downloader      = "Downloader"
+not-a-virus:Monitor         = "Monitor"
+not-a-virus:PSWTool         = "PSWTool"
+not-a-virus:RemoteAdmin     = "RemoteAdmin"
+not-a-virus:Server-FTP      = "Server-FTP"
+not-a-virus:Server-Proxy    = "Server-Proxy"
+not-a-virus:Server-Telnet   = "Server-Telnet"
+not-a-virus:Server-Web      = "Server-Web"
+not-a-virus:RiskTool        = "RiskTool"
+not-a-virus:NetTool         = "NetTool"
+not-a-virus:Client-P2P      = "Client-P2P"
+not-a-virus:Client-SMTP     = "Client-SMTP"
+not-a-virus:AdTool          = "AdTool"
+not-a-virus:FraudTool       = "FraudTool"
+
+[OptionsWindow_Navigator_WorkArea_Threats_List_row_Packers]
+Suspic  = "Suspicious packers"
+Multi   = "Multi-packed objects"
+Grey    = "Grey packers"
+
+[TrafficMonitor_Ports]
+@ = "Port settings"
+
+[TrafficMonitor_Ports_Body]
+Info = "Comment"
+
+[TrafficMonitor_Ports_Body_Info]
+Text = "You are advised to restart your email program and web browser to apply the new settings."
+
+[TrafficMonitor_Ports_Body_List]
+Desc    = "Description"
+Port    = "Port"
+
+[TrafficMonitor_PortEdit]
+@           = "Edit Port"
+PortLabel   = "Port:"
+DescLabel   = "Description:"
+
+[OptionsWindow_Navigator_WorkArea_TroubleShooting_Info]
+Location.Name   = "Location:"
+Version.Name    = "Version:"
+
+[Global]
+$ExclusionMasksDescr_Object     = if(Triggers & #AVS_fObjectMask, "Object: <a ExclusionObjectEdit onclick(dialog(\"ExclusionObjectEdit\")) onok(if(!Object.Mask, balloon(\"ObjectNotSpecified\")))>" + (Object.Mask ? Object.Mask : "<b>specify</b>") + "</a>\n")
+$ExclusionMasksDescr_Verdict    = if(Triggers & #AVS_fVerdictMask, "Threat type: <a ExclusionVerdictEdit onclick(dialog(\"ExclusionVerdictEdit\")) onok(if(!VerdictMask, balloon(\"VerdictNotSpecified\")))>" + (VerdictMask ? VerdictMask + if(Triggers & #AVS_fVerdictPath, " " + VerdictPath.Mask) : "<b>specify</b>") + "</a>\n")
+$ExclusionMasksDescr_Components = "Component: <a AnyTaskList onclick(iterate(bmask(Triggers, #AVS_fTaskList)))>" + (Triggers & #AVS_fTaskList ? "selected" : "any") + "</a> task" + if(Triggers & #AVS_fTaskList, " <a ExclusionTasksEdit onclick(dialog(\"ExclusionTasksEdit\"))>" + (size(TaskList) ? "tasks" : "<b>specify</b>") + "</a>")
+$ExclusionMasksDescr            = "Object will not be scanned if the following conditions are met:\n" + $ExclusionMasksDescr_Object + $ExclusionMasksDescr_Verdict + $ExclusionMasksDescr_Components
+ObjectNotSpecified.caption      = "Object is not specified"
+ObjectNotSpecified              = "Please, specify exact object or objects mask"
+VerdictNotSpecified.caption     = "Verdict is not specified"
+VerdictNotSpecified             = "Please, specify verdict mask"
+AdressNotSpecified.caption      = "Adress is not specified"
+AdressNotSpecified              = "Please, specify exact adress or adress mask"
+WordNotSpecified.caption        = "Phrase mask is not specified"
+WordNotSpecified                = "Please, specify phrase mask"
+
+
+[ExclusionEdit]
+@           = "Exclusion mask"
+PropLabel   = "Properties:"
+NameLabel   = "Comment:"
+RuleLabel   = "Rule description (click underlined parameters to edit):"
+
+[ExclusionEdit_PropList.items]
+ObjectMask  = "Object"
+VerdictMask = "Threat type"
+
+[ExclusionObjectEdit]
+@       = "Excluded object"
+Text    = "Specify the file name, folder name or the file mask to be excluded from protection:"
+Recurse = "Include &subfolders"
+
+[ExclusionVerdictEdit]
+@               = "Threat type"
+Text            = "Enter the name/threat type mask according to the Virus Encyclopedia:"
+VerdictObject   = "Advanced settings"
+
+[ExclusionTasksEdit]
+@ = "Exclusion scope"
+
+[RunAsGroup_PwdGroup]
+PwdLbl = "Password:"
+
+;-------------------------------- PasswordEdit --------------------------------
+
+[PasswordEdit]
+@       = "Password protection"
+Pswd    = "Password"
+Sett    = "Scope"
+
+[PasswordEdit_Pswd]
+OldPswdText     = "Old password:"
+NewPswdText     = "New password:"
+ConfPswdText    = "Confirm new password:"
+
+[PasswordEdit_Sett]
+@                   = "Scope"
+All                 = "A&ll operations (except notifications of dangerous events)"
+Selected            = "&Selected operations"
+WhenSaveSetting     = "&Editing application settings"
+WhenExitApp         = "&Exiting the program"
+WhenStopProtection  = "S&topping/pausing protection components or scan tasks"
+
+[SendTroublesDialog]
+@ = "Send troubleshooting files to Kaspesky Lab"
+
+[SendTroublesDialog_Body_List]
+Size        = "Size"
+PackSize    = "Traffic (approximately)"
+Path        = "File"
+
+[SendTroublesDialog_Body_Footer]
+Send = "Send"
+
+[s_SendTroublesDialog_Header_Name]
+1   = "Previous application launch failed"
+0   = "Send collected trace to Kaspersky Lab FTP server"
+
+[s_SendTroublesDialog_Header_Descr]
+1   = "Information about the application state at the moment when the error occurred has been logged. Description is contained in the files, specified below."
+0   = "All available traces are contained in the files, specified below."
+
+[s_SendTroublesDialog_Header_Help]
+1   = "Help us make this program better, send these files to Kaspersky Lab for analysis in order to eliminate such errors in next product versions.\nFiles will be packed before sending. You can send any of these files, but the more files you send, the better.\n\nIf such cases occur frequently you are advised to contact Kaspersky Lab Technical support service."
+0   = "Files will be packed before sending. You can send any of these files, but the more files you send, the better."
+
+
+[s_SendTroublesDialog_SysInfo]
+1   = "System information"
+0   = @1
+
+[s_SetTroubles_SendState]
+1       = "Preparing data"
+2       = "Generating package"
+3       = "Sending to Kaspersky Lab FTP server"
+default = ""
+
+[s_SendTroublesErrorDescr]
+0       = ""
+1       = "Failed to collect package files"
+2       = "Failed to prepare system information file"
+3       = "Failed to prepare troubleshooting files package"
+4       = "Failed to send a troubleshooting package file to Kaspersky Lab FTP server " + strVal1
+default = "Unspecified error while sending troubleshooting package"
+
+[SchedulerDlg_Body]
+Schedule = "Schedule"
+
+[SchedulerDlg_Body_Schedule]
+Auto    = "Automatically"
+Manual  = "Manually"
+Fixed   = "On schedule"
+
+

@@ -1,0 +1,35 @@
+TARGETNAME=klbg
+
+!IF "$(AMD64)" == "1"
+!IF "$(DDKBUILDENV)" == "chk"
+TARGETPATH=..\..\..\out_x64\debug
+!ELSE
+TARGETPATH=..\..\..\out_x64\release
+!ENDIF
+!ELSE
+!IF "$(DDKBUILDENV)" == "chk"
+TARGETPATH=..\..\..\out_win32\debug
+!ELSE
+TARGETPATH=..\..\..\out_win32\release
+!ENDIF
+!ENDIF
+
+
+PDBPATH=$(TARGETPATH)
+TARGETTYPE=DRIVER
+DRIVERTYPE=FS
+LINKER_FLAGS=/NOLOGO
+
+INCLUDES= ..\..\..\CommonFiles
+
+TARGETLIBS= $(TARGETLIBS) \
+            $(IFSKIT_LIB_PATH)\fltMgr.lib
+
+SOURCES= 	main.c		\
+		md5.c		\
+		watcher.c	\
+		threadcontext.c	\
+		avz.cpp		\
+		avzbc.cpp	\
+		klbg.rc
+

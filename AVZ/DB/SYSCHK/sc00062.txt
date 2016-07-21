@@ -1,0 +1,4 @@
+// ***** AdvWare.Hengbang *****
+begin
+ AddEvAlarmByCLSID('616D4040-5712-4F0F-BCF1-5C6420A99E14',AScriptName,'DownloadStart.DLL');
+end.

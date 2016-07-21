@@ -1,0 +1,4 @@
+// ***** AdvWare.GBX *****
+begin
+ AddEvAlarmByCLSID('D22AC3EF-B7D8-11D5-A281-005056BF0101','AdvWare.GBX.a','gxbplug.dll');
+end.

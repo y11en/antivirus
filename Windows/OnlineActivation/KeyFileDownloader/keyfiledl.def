@@ -1,0 +1,12 @@
+LIBRARY   KEYFILEDL
+DESCRIPTION "Implements Keys Downloading via HTTP"
+EXPORTS
+	InitLibrary
+	StartDownloadKeyFile
+	StartDownloadKeyFileCallback
+	StartDownloadKeyFileSyncCallback
+	StopDownloadKeyFile
+	DeinitLibrary
+	GetKeyFileName
+	SetCredentialProxy
+	SetCredentialServer

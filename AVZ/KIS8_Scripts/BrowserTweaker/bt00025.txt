@@ -1,0 +1,19 @@
+// $AVZ1568
+//$ Internet Explorer - отключено отображение адресной панели
+// Функция поиска проблемы
+function Check : dword;
+var
+ S : string;
+begin
+ Result := 0;
+ S := UpperCase(Trim(RegKeyStrParamRead('HKCU','Software\Microsoft\Internet Explorer\Main','Show_URLToolBar')));
+ if S <> '' then 
+  if S <> 'YES' then 
+   Result := 2;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+begin
+ RegKeyStrParamWrite('HKCU','Software\Microsoft\Internet Explorer\Main','Show_URLToolBar', 'Yes');
+end;

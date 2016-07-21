@@ -1,0 +1,74 @@
+import tSHORT 	 as s16  from "pr_types.h";
+import tINT 	   as s32  from "pr_types.h";
+import tLONGLONG as s64  from "pr_types.h";
+import tCHAR	   as s8   from "pr_types.h";
+import tWCHAR	   as u16  from "pr_types.h";
+import tWORD	   as u16  from "pr_types.h";
+import tDWORD	   as u32  from "pr_types.h";
+import tQWORD	   as u64  from "pr_types.h";
+import tBYTE	   as u8   from "pr_types.h";
+
+import tIID as tDWORD from "pr_types.h";
+
+import tORIG_ID     as tINT        from "pr_types.h";
+import hOBJECT      as void*       from "pr_types.h";
+import tVOID        as void        from "pr_types.h";
+import tDATA        as void*       from "pr_types.h";
+import tBOOL        as tINT        from "pr_types.h";
+import tSBYTE       as tCHAR       from "pr_types.h";
+import tERROR       as tDWORD      from "pr_types.h";
+import tPTR         as void*       from "pr_types.h";
+import tDATETIME    as tQWORD      from "pr_types.h";
+import tBINARY    /*as void**/     from "pr_types.h";
+import tCODEPAGE    as tDATA       from "pr_types.h";
+import tOS_ID       as tDWORD      from "pr_types.h";
+import tVERSION     as tDATA       from "pr_types.h";
+import tVID         as tIID        from "pr_types.h";
+import tPID         as tIID        from "pr_types.h";
+import tUINT        as tDWORD      from "pr_types.h";
+import tPROPID      as tDWORD      from "pr_types.h";
+import tTYPE_ID     as tDATA       from "pr_types.h";
+import tFUNC_PTR    as tVOID*      from "pr_types.h";
+import tEXPORT    /*as tDATA[3]*/  from "pr_types.h";
+import tIMPORT    /*as tDATA[3]*/  from "pr_types.h";
+import tTRACE_LEVEL as tDATA       from "pr_types.h";
+
+typedef tIID    InterfaceId;
+typedef tIID    PluginId;
+typedef tIID    ImplementationId;
+typedef tIID    MessageId;
+typedef tIID    MessageClassId;
+typedef tIID    PropertyId;
+typedef tCHAR*	tSTRING;
+typedef tWCHAR*	tWSTRING;
+
+const tDWORD cTRUE = 1;
+const tDWORD cFALSE = 0;
+const tVOID* NULL = 0;
+
+forward struct cSerializable;
+
+forward interface ifString;
+typedef ifString* hSTRING;
+
+forward interface ifOS;
+typedef ifOS* hOS;
+
+//forward interface ifOS;
+//typedef ifOS* hOS;
+
+forward interface ifObjPtr;
+typedef ifObjPtr* hObjPtr;
+
+forward interface ifIO;
+typedef ifIO* hIO;
+
+forward interface ifSeqIO;
+typedef ifSeqIO* hSEQ_IO;
+
+forward interface ifRegistry;
+typedef ifRegistry* hREGISTRY;
+
+forward interface ifReport;
+typedef ifReport* hREPORT;
+

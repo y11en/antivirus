@@ -1,0 +1,5 @@
+// ***** AdvWare.ToolBar.GamyunIe *****
+begin
+ AddEvAlarmByCLSID('22074192-823A-460B-95C9-71969284F6A7',AScriptName,'GamyunIeToolbar.DLL');
+ AddEvAlarmByCLSID('3AEECF42-EFE4-4AC8-AE9E-83C031EC09AB',AScriptName,'GamyunIeToolbar.DLL');
+end.

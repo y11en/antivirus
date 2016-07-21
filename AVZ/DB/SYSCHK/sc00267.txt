@@ -1,0 +1,4 @@
+// ***** AdvWare.ToolBar.Supaseek *****
+begin
+ AddEvAlarmByCLSID('AAE89D95-75CC-4708-87E5-60CF917B7B5B', AScriptName, '');
+end.

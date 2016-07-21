@@ -1,0 +1,6 @@
+# can not reproduce this case
+# for future purpose  
+
+# SC_TO_MULTIPLE_FOLDERS NOT_TO_CLEAR
+# SC_TO_DF NOT_TO_CLEAR
+# CP_SELF_FROM_DF NOT_TO_CLEAR

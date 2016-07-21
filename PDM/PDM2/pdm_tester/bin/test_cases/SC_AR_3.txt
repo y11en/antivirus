@@ -1,0 +1,11 @@
+# self copy to dest folder and create autorun value in win.ini (SetPrivetProfileString) to this file
+
+# SC_TO_DF NOT_TO_CLEAR
+# CREATE_AR_WIN_INI_TO_DF NOT_TO_CLEAR
+
+EX_COPY_FILE @SELF_PATH@ @LOCAL_TEST_FOLDER@ NOT_TO_CLEAR
+CREATE_RECORD_IN_WIN_INI @LOCAL_TEST_FOLDER@\@SELF_NAME@ windows @WIN_INI_PARAM_NAME@ NOT_TO_CLEAR
+
+
+#etalon_verdict 80 OnSelfCopyNot2Temp
+#etalon_verdict 50 SelfCopy

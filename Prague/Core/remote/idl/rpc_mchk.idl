@@ -1,0 +1,23 @@
+// AVP Prague stamp begin( Interface comment,  )
+// Insider interface implementation
+
+
+
+import "prague.h";
+import "i_mchk.h";
+
+typedef rpcOBJECT	rpcMCHK;
+
+// AVP Prague stamp begin( Interface function forward declarations,  )
+[ uuid (C82A1A76-B682-4ec6-B5D4-4F739EF43152),
+  version(1.0),
+  pointer_default(unique)
+]
+interface rpc_mchk {
+
+	tERROR Mchk_Process( rpcMCHK _this, rpcOBJECT ScanIo ) ;        // -- ;  
+	tERROR Mchk_Initialize( rpcMCHK _this );         // -- ;
+}
+
+// AVP Prague stamp end
+

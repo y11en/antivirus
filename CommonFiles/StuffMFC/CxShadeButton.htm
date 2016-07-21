@@ -1,0 +1,180 @@
+<!-- Article Starts --> 
+<UL class=download>
+<LI><A href="http://www.codeproject.com/buttonctrl/CxShadeButton/CxShadeButton_src.zip">
+Download source files - 16 Kb</A> 
+<LI><A href="http://www.codeproject.com/buttonctrl/CxShadeButton/CxShadeButton_demo.zip">
+Download demo project - 45 Kb</A>
+</LI></UL>
+<P><IMG alt="Sample Image - sample.jpg" src="sample.jpg"></P>
+<!-- Main HTML starts here -->
+<h2>Introduction</h2>
+<P>With this class you can easily give a professional look to your buttons in 
+few steps. <b>No bitmap resources are needed</b> - all bitmaps are generated at runtime. 
+Parts of the code come from the <a href="http://www.codeproject.com/buttonctrl/CxSkinButton.asp">CxSkinButton</a> 
+article.<BR>The goal is to replace the standard buttons, check boxes and radio buttons with minimal 
+modifications in the application code.
+<OL>
+<LI>Add "xShadeButton.cpp" and "xShadeButton.h" to the project.<BR>
+<LI>Include "xShadeButton.h" in the header file where the controls are defined<BR>
+<LI>Create (or edit) a member variable for each button you want to customize as 
+<CODE>CxShadeButton</CODE>. If the Class Wizard doesn't show the <CODE>CxShadeButton</CODE> 
+type, select <CODE>CButton</CODE> and then edit the code manually.<BR>
+<LI>In the window initialization add the <CODE>CxShadeButton</CODE> methods: 
+<PRE>BOOL CxShadeButtonDemoDlg::OnInitDialog()
+{
+	<span class='cpp-comment'>//	...</span>
+	m_btn1.SetTextColor(RGB(<span class='cpp-literal'>255</span>,<span class='cpp-literal'>0</span>,<span class='cpp-literal'>0</span>));
+	m_btn1.SetToolTipText(<span class='cpp-string'>"Button1"</span>);
+	m_btn1.SetShade(SHS_DIAGSHADE,<span class='cpp-literal'>8</span>,<span class='cpp-literal'>10</span>,<span class='cpp-literal'>5</span>,RGB(<span class='cpp-literal'>55</span>,<span class='cpp-literal'>255</span>,<span class='cpp-literal'>55</span>));<br><span class='cpp-comment'>//	...</span>
+</PRE>
+</OL>
+<h2>CxShadeButton Class Members & Operations</h2>
+<CODE>CxShadeButton</CODE> is derived from <CODE>CButton</CODE>. The <code>BS_OWNERDRAW</code> 
+style is added automatically, you don't need to set the "Owner draw" property 
+in the resource editor. You can change some styles (flat, push-like, text alignment, 
+group,...) using the resource editor, however not all the styles are currently 
+supported.<br>If you change the aspect of the button at runtime, to avoid flicker first
+call the functions that don't cause invalidation (like <code>SetShade</code>,
+<code>SetIcon</code> or <code>SetFont</code>) and than invalidate the button, for example with
+<code>SetWindowText</code>, or directly with <code>Invalidate</code>.
+<PRE><span class='cpp-keyword'>void</span> <b>SetShade</b>(UINT shadeID=<span class='cpp-literal'>0</span>,BYTE granularity=<span class='cpp-literal'>8</span>,BYTE highlight=<span class='cpp-literal'>10</span>,BYTE coloring=<span class='cpp-literal'>0</span>,COLORREF color=<span class='cpp-literal'>0</span>);</PRE>
+<UL><table width="95%"><tr><td>
+Generates the button bitmaps.
+</td><td><div align="right"><b><font color="#ff0000">Important</font></b></div></td>
+</tr></table>
+<LI><code><b>shadeID</b></code> : can be one of these effects:<BR>
+<code>SHS_NOISE = <span class='cpp-literal'>0</span><BR>
+SHS_DIAGSHADE = <span class='cpp-literal'>1</span><BR>
+SHS_HSHADE = <span class='cpp-literal'>2</span><BR>
+SHS_VSHADE = <span class='cpp-literal'>3</span><BR>
+SHS_HBUMP = <span class='cpp-literal'>4</span><BR>
+SHS_VBUMP = <span class='cpp-literal'>5</span><BR>
+SHS_SOFTBUMP =<span class='cpp-literal'>6</span><BR>
+SHS_HARDBUMP = <span class='cpp-literal'>7</span><BR>
+SHS_METAL = <span class='cpp-literal'>8</span><BR>
+</code> 
+<LI><code><b>granularity</b></code> : this parameter add an uniform noise to the 
+button bitmaps. A good value is from 5 to 20; 0 to disable the effect. The noise 
+has a positive effect because it hides the palette steps. 
+<LI><code><b>highlight</b></code> : sets the highlight level when the mouse is 
+over the button. A good value is from 5 to 20; 0 to disable the effect. 
+<LI><code><b>coloring</b></code> : sets the percentage of <code>color</code> to 
+blend in the button palette. The value can range from 0 to 100; 0 to disable the effect. 
+<LI><code><b>color</b></code> : if <code>coloring</code> is greater than zero, 
+<code>color</code> is mixed with the standard button colors. 
+<p><b>Remarks</b> : the <code>coloring</code> and <code>color</code> parameter 
+should be used carefully to guarantee a good aspect in all the situations.</p></LI>
+</UL>
+<PRE><span class='cpp-keyword'>void</span> <b>SetToolTipText</b>(CString s, CString sDown=&quot;&quot;);</PRE>
+<UL><table width="95%"><tr><td>
+Sets or changes the tool tip text.
+</td><td><div align="right"><b><font color="#c04020">nice</font></b></div></td>
+</tr></table>
+<li><code><b>s</b></code>: String displayed in normal state.</li>
+<li><code><b>sDown</b></code>: (optional) Specifies a second text to be displayed when a 
+check box or radio button is checked. </li>
+</UL>
+<PRE>COLORREF <b>SetTextColor</b>(COLORREF new_color);</PRE>
+<UL><table width="95%"><tr><td>
+Sets or changes the button text color. Returns the previous button text color.
+</td><td><div align="right"><b><font color="#c04020">nice</font></b></div></td>
+</tr></table></UL>
+<PRE><span class='cpp-keyword'>void</span class='cpp-keyword'> <b>SetIcon</b>(UINT nIcon, UINT nIconAlign=BS_CENTER, UINT nIconDown=0);</PRE>
+<UL><table width="95%"><tr><td>
+Similar to the BS_ICON style.
+</td><td><div align="right"><b><font color="#c04020">nice</font></b></div>
+</td></tr></table>
+<LI><code><b>nIcon</b></code> : ID number of the icon resource<BR>
+<LI><code><b>nIconAlign</b></code> : icon alignment, can be one of the following 
+values:<BR>
+<code>BS_CENTER<BR>
+BS_LEFT<BR>
+BS_RIGHT</code> 
+<LI><code><b>nIconDown</b></code> : (optional) ID number of the icon resource displayed 
+when a check box or radio button is checked. 
+<p><b>Remarks</b> : the button text is automatically placed so that the icon 
+and the text don't overlap.</p>
+</LI></UL>
+<PRE><span class='cpp-keyword'>bool</span class='cpp-keyword'> <b>SetFont</b>(CString sFontName, long lSize=0, long lWeight=400, BYTE bItalic=0, BYTE bUnderline=0);<br>
+<span class='cpp-keyword'>bool</span class='cpp-keyword'> <b>SetFont</b>(LOGFONT* pNewStyle); / LOGFONT* <b>GetFont</b>();</PRE>
+<UL>
+  <table width="95%">
+    <tr> 
+      <td> Changes the text font. </td>
+      <td>
+        <div align="right"><b><font color="#c04020">nice</font></b></div>
+      </td>
+    </tr>
+  </table>
+  <LI><code><b>sFontName</b></code> : specifies the typeface name of the font.<BR>
+  <LI><code><b>lSize</b></code> : (optional) text height<BR>
+  <LI><code><b>lWeight</b></code> : (optional) text weight can range from 0 to 1000; 100=thin, 300=light, 400=normal, 700=bold 
+  <LI><code><b>bItalic</b></code> : (optional) italic style<BR>
+  <LI><code><b>bUnderline</b></code> : (optional) underline style<BR>
+    <p><b>Remarks</b> : use <code><b>GetFont</b></code>/<code><b>SetFont</b></code> with a LOGFONT structure 
+      to get/set the complete attributes of the font. <code><b>GetFont</b></code> returns NULL 
+      if the button is using the default system font.</p>
+  </LI>
+</UL>
+<PRE><span class='cpp-keyword'>void</span class='cpp-keyword'> <b>SetTextAlign</b>(UINT nTextAlign=BS_CENTER);</PRE>
+<UL><table width="95%"><tr><td>
+<LI><code><b>nTextAlign</b></code> : button text alignment, can be one of the following values:<BR>
+</td><td><div align="right"><b><font color="#c08000">optional</font></b></div>
+</td></tr></table>
+<code>BS_CENTER<BR>
+BS_LEFT<BR>
+BS_RIGHT</code>
+</UL>
+<PRE><span class='cpp-keyword'>void</span class='cpp-keyword'> <b>SetFlat</b>(<span class='cpp-keyword'>bool</span class='cpp-keyword'> bFlag);</PRE>
+<UL><table width="95%"><tr><td>
+<LI><code><b>bFlag</b></code> : sets the border style:<BR>
+</td><td><div align="right"><b><font color="#c08000">optional</font></b></div>
+</td></tr></table>
+<code>FALSE</code> = standard 3D border.<BR>
+<code>TRUE</code> = flat border.
+</UL>
+<H2>Release History</H2>
+<b>v1.00 - 12/05/2001</b><br>
+- basic implementation and interface.<br>
+<b>v1.10 - 23/05/2001</b><br>
+- added text shift on button down.<br>
+- fixed many CxDib bugs.<br>
+- fixed SHS_HARDBUMP bug.<br>
+- added icon support.<br>
+- added text alignment.<br>
+- added flat style.<br>
+<b>v1.20 - 23/06/2001</b><br>
+- fixed keyboard shortcut bug.<br>
+- check box & radio button add on.<br>
+- 2nd icon & 2nd tooltip add on.<br>
+- memory DC for painting operations.<br>
+<b>v1.30 - 03/08/2001</b><br>
+- fixed SetIcon bug.<br>
+- added Font support.<br>
+<b>v1.40 - 23/09/2001 </b><br>
+- fixed memory leakage bug in DrawItem() and SetIcon().<br>
+- fixed second tooltip initialization bug.<br>
+- fixed OnLButtonUp() problem with drag &amp; drop.<br>
+- added multiline tooltip support.<br>
+<H2>Compatibility</H2>
+<p>Win95,WinNT = Yes, requires IE3.0 or higher<BR>
+Win98, WinME, W2K, WinXP = Yes 
+<P>For any questions, e-mail to: <A 
+href="mailto:ing.davide.pizzolato@libero.it">ing.davide.pizzolato@libero.it</A></P>
+<P>Thanks to all the Code Project developers! <br>
+  Special thanks to:<br>
+  <a href="mailto:Milan.Gardian@LEIBINGER.com">Milan Gardian</a> for mouse and 
+  keyboard tracking code.<br>
+  <a href="mailto:davide.calabro@cml-ht.it">Davide Calabro</a> for <a href="http://www.codeproject.com/buttonctrl/cbuttonst.asp">CButtonST</a> 
+  code snippets.<br>
+  <a href="mailto:Rainer@Mangold.com">Rainer Mangold</a> for radio-button and 
+  check-box code.<br>
+  <a href="mailto:jmd@jvf.co.uk">Jeremy Davis</a>, <a href="mailto:andreb@phonak.ch">Andre 
+  Brogli</a>, <a href="mailto:rcunday@avaya.com">Richard Cunday</a>, <a href="mailto:shankerc@hotmail.com">Shanker 
+  Chandrabose</a>, <a href="mailto:luis@yfaitbeau.com">Luis</a>,<br>
+  <a href="mailto:gilad@bmidas.com">Gilad</a>, <a href="mailto:ruiglopes@yahoo.com">Rui 
+  Lopes</a>, <a href="mailto:tarcher@mindspring.com">Tom Archer</a>, <a href="mailto:tommy.svensson@cycore.com">Tommy 
+  Svensson</a>, <a href="mailto:dave@bmm.com.au">David Scambler</a>,<br>
+  <a href="mailto:aorioli@temaweb.it">Orioli Alessandro</a>, Jesper Kinn&aring;s, 
+  Derek Lakin for suggestions, debugging & support.<br>
+  <!-- Article Ends -->

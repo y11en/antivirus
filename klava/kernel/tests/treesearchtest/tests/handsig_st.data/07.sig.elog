@@ -1,0 +1,18 @@
+Adding signatures from file "07.sig".
+Saving the static tree to file "07.sig.st".
+Hash level: 16Hash table size: 64[Kb]
+Cleaning the tree.
+Loading a static tree from file "07.sig.st".
+Scanning file "07.sig"
+   0/10; off=0x0000000B; id=7
+   1/10; off=0x00000070; id=7
+   2/10; off=0x000000F5; id=7
+   3/10; off=0x00000118; id=7
+   4/10; off=0x0000013B; id=7
+   5/10; off=0x0000015E; id=7
+   6/10; off=0x00000181; id=7
+   7/10; off=0x000001A4; id=7
+   8/10; off=0x000001C7; id=7
+   9/10; off=0x000001EA; id=7
+Total :
+id=7(10)

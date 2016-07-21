@@ -1,0 +1,9 @@
+PROJECTS+= \
+	unix/wchar16 \
+	unix/compatutils \
+	Dskm \
+	Dskm/Gost/CryptoC \
+	Sign \
+	klsys \
+	hashutil \
+	diffs

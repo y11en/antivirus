@@ -1,0 +1,59 @@
+﻿[Global]
+$OnlineSecurity     = "Online Security"
+$ids                = "Intrusion Shield"
+$antidial           = "Anti-Dialer"
+$antiphishing       = "Anti-Phishing"
+ErrNoPhone.caption  = "Invalid phone number"
+ErrNoPhone          = "Please specify correct phone number"
+
+[MainWindow.OnlineSecurity_WorkArea_Home]
+Enable                          = "Enable Online Security"
+Tasks.Header                    = "Tasks"
+OnlineSecurity.Group2.Header    = "Detected"
+
+[MainWindow.OnlineSecurity.ids.Body]
+BlockedHosts.Name    = "Banned hosts:"
+BlockedHosts.Val     = size(BannedHosts)
+
+[IDSSettings]
+@           = "Banned hosts"
+Ban         = "&Ban attacking hosts for"
+BanLabel    = "min"
+
+[MainWindow.OnlineSecurity.antiphishing.Body]
+Label = "This feature has no settings."
+
+[AntidialSettings]
+@           = "Settings: Trusted numbers"
+Describe    = "Specify phone numbers that you trust (masks * and ? are allowed):"
+
+[AntidialSettings_RuleEdit]
+@ = "Edit phone number"
+
+[MainWindow.OnlineSecurity]
+Home        = "Home"
+Events      = "Events"
+Statistics  = "Statistics"
+
+[MainWindow.OnlineSecurity.Tasks.Body_AvzPrivacyCleanerWizard]
+Icon    = "Privacy Cleaner Wizard"
+Desc    = "Run this wizard after detection and removal of malicious programs from your computer and your system still runs abnormal."
+
+[MainWindow.OnlineSecurity.Tasks.Body_VKeyboard]
+Icon    = "Virtual Keyboard"
+Desc    = "Virtual keybboard is a tool for ptotection passwords and any other confidential data from keyloggers, including hardware keyloggers."
+
+[MainWindow.OnlineSecurity.antidial.Body]
+UserNumbers.Name    = "Trusted numbers:"
+UserNumbers.Val     = "Total " + size(vAllowPhoneNumbersList) + " (Used " + size(vAllowPhoneNumbersList, "Enabled == 1") + ")"
+
+[VirtualKeyboard]
+@ = "Virtual keyboard"
+
+[MainWindow.OnlineSecurity_WorkArea_SysPerf_Legend]
+LegendText1 = "Network Attacks"
+LegendText2 = "Phishing URLs"
+LegendText3 = "Dialers blocked"
+
+[MainWindow.OnlineSecurity_WorkArea]
+Home.Group2.Header = "System performance"

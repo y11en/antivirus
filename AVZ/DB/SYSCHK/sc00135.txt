@@ -1,0 +1,4 @@
+// ***** Spy.FreeScratchWin *****
+begin
+ AddEvAlarmByCLSID('5DD7B3BE-FDEC-4563-B038-FF80F2345B89',AScriptName,'fswinst.ocx');
+end.

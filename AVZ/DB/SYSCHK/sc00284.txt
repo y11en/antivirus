@@ -1,0 +1,4 @@
+// ***** Trojan-Clicker.Win32.Goalweb *****
+begin
+ AddEvAlarmByCLSID('3EC5F496-88CD-4FAC-AAD0-F55CEBA77155', AScriptName, 'msafe.dll');
+end.

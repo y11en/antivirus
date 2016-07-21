@@ -1,0 +1,9 @@
+cd kd4
+call build.cmd
+cd ..\kddispatch
+call build.cmd
+cd ..\kdsplice
+call build.cmd
+cd ..\kdwin32k
+call build.cmd
+cd ..

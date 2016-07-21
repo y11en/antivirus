@@ -1,0 +1,32 @@
+forward interface HashContainer;
+typedef HashContainer* hHASHCONTAINER;
+
+
+
+
+[
+  version(1)
+  mnemonic(IID_HASHCONTAINER)
+  id(63010)
+  c_type_name(hHASHCONTAINER)
+]
+interface HashContainer {
+
+  // ------------------------------------
+    method tERROR GetHash( // Hash Value
+      tVOID* result,
+      tQWORD qwHash, // Hash Value
+      tPTR* ppData // Pointer to associated data
+    );
+    method tERROR SetHash(
+      tVOID* result,
+      tQWORD qwHash, // Hash value
+      tPTR pData // Associated data
+    );
+    method tERROR DeleteHash(
+      tVOID* result,
+      tQWORD qwHash // Hash value
+    );
+
+}
+

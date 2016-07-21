@@ -1,0 +1,320 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "EudoraPluginV4"=..\..\eudora\win32\v4\EudoraPluginV4.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "PGPclientLib"=..\..\clientlib\win32\PGPclientLib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name pflCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PGPsdkNetworkLib
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PGPsdkUI
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name jpeglib
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PGPsdk
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name TreeList
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name echoHeader
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name transLabel
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name validityBar
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name themeex
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PGPdeflate"=..\..\sc\deflate\PGPdeflate.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "PGPhk"=..\..\hk\PGPhk.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "PGPlnLib"=..\..\lnlib\win32\PGPlnLib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "PGPsc"=..\..\sc\PGPsc.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name pflCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PGPsdkUI
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PGPsdkNetworkLib
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PGPdeflate
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PGPsdk
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PGPhk
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PGPclientLib
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PGPlnLib
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PGPsda
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PGPsda"=..\..\sc\sda\PGPsda.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PGPdeflate
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PGPsdk"=..\..\..\libs2\pgpsdk\win32\PGPsdk\PGPsdk.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "PGPsdkNetworkLib"=..\..\..\libs2\pgpsdk\win32\PGPsdkNetworkLib\PGPsdkNetworkLib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PGPsdk
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PGPsdkUI"=..\..\..\libs2\pgpsdk\win32\PGPsdkUILib\PGPsdkUI.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PGPsdk
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PGPsdkNetworkLib
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name pflCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TreeList"=..\..\..\libs2\pfl\win32\TreeList\TreeList.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "echoHeader"=..\..\..\libs2\pfl\win32\echoHeader\echoHeader.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "jpeglib"=..\..\shared\jpeg\win32\jpeglib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "nPGPNts"=.\nPGPNts.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PGPsc
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PGPsdkNetworkLib
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PGPclientLib
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name pflCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PGPsdk
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "pflCommon"=..\..\..\libs2\pfl\win32\pflCommon\pflCommon.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "themeex"=..\..\..\libs2\pfl\win32\ThemeEx\themeex.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "transLabel"=..\..\..\libs2\pfl\win32\translabel\transLabel.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "validityBar"=..\..\..\libs2\pfl\win32\validityBar\validityBar.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

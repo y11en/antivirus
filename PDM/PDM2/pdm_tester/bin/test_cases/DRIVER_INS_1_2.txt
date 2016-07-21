@@ -1,0 +1,9 @@
+# copy drv file to system driver folder and register name only in registry
+
+# REGISTER_DRV_NAME NOT_TO_CLEAR
+# CD_TO_SYS_FOLDER NOT_TO_CLEAR
+
+CREATE_REG_KEY @REG_SYS_SERVICE_KEY@\test_sys NOT_TO_CLEAR
+EX_COPY_FILE @SELF_DIR@\test_sys.sys @SYSTEM_FOLDER@\drivers NOT_TO_CLEAR
+
+#etalon_verdict 80 InstallDriver

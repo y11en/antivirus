@@ -1,0 +1,4 @@
+// ***** Downloader.PopCapLoader *****
+begin
+ AddEvAlarmByCLSID('DF780F87-FF2B-4DF8-92D0-73DB16A1543A', 'Downloader.PopCapLoader', 'PopCapLoader.dll');
+end.

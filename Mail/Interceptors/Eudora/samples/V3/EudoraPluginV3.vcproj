@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioProject ProjectType="Visual C++" Version="8.00" Name="EudoraPluginV3" SccLocalPath="Desktop" SccProjectName="Perforce Project" SccProvider="MSSCCI:Perforce SCM">
+	<Platforms>
+		<Platform Name="Win32"/>
+		<Platform Name="x64"/></Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="Debug|Win32" OutputDirectory="..\..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\MailCommon\Interceptors\Eudora\samples\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="_DEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="1" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="..\..\..\shared,..\..\..\shared\win32,..\..\..\..\libs2\pfl\common,..\..\..\..\libs2\pfl\win32,..\..\..\..\libs2\pgpsdk\pub\include,..\..\..\..\libs2\pgpsdk\win32\pub\include" PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS;_USRDLL;EUDORAPLUGINV3_EXPORTS;PGP_WIN32=1;_WIN32_IE=0x0300;PGP_DEBUG=1;OVERRIDE_BUILDFLAGS=1;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" MinimalRebuild="true" BasicRuntimeChecks="3" RuntimeLibrary="3" UsePrecompiledHeader="2" PrecompiledHeaderThrough="windows.h" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="4" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG,OVERRIDE_BUILDFLAGS=1" Culture="1033"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="odbc32.lib odbccp32.lib comctl32.lib" LinkIncremental="2" SuppressStartupBanner="true" ModuleDefinitionFile=".\EudoraPluginV3.def" GenerateDebugInformation="true" BaseAddress="" TargetMachine="1" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Release|Win32" OutputDirectory="..\..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\MailCommon\Interceptors\Eudora\samples\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="NDEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="1" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" AdditionalIncludeDirectories="..\..\..\shared,..\..\..\shared\win32,..\..\..\..\libs2\pfl\common,..\..\..\..\libs2\pfl\win32,..\..\..\..\libs2\pgpsdk\pub\include,..\..\..\..\libs2\pgpsdk\win32\pub\include" PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS;_USRDLL;EUDORAPLUGINV3_EXPORTS;PGP_WIN32=1;_WIN32_IE=0x0300;PGP_DEBUG=0;OVERRIDE_BUILDFLAGS=1;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" StringPooling="true" RuntimeLibrary="2" EnableFunctionLevelLinking="true" UsePrecompiledHeader="2" PrecompiledHeaderThrough="windows.h" WarningLevel="3" SuppressStartupBanner="true" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG,OVERRIDE_BUILDFLAGS=1" Culture="1033"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="odbc32.lib odbccp32.lib comctl32.lib" LinkIncremental="1" SuppressStartupBanner="true" ModuleDefinitionFile=".\EudoraPluginV3.def" BaseAddress="" TargetMachine="1" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" GenerateDebugInformation="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Debug|x64" OutputDirectory="..\..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\MailCommon\Interceptors\Eudora\samples\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="_DEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="..\..\..\shared,..\..\..\shared\win32,..\..\..\..\libs2\pfl\common,..\..\..\..\libs2\pfl\win32,..\..\..\..\libs2\pgpsdk\pub\include,..\..\..\..\libs2\pgpsdk\win32\pub\include" PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS;_USRDLL;EUDORAPLUGINV3_EXPORTS;PGP_WIN32=1;_WIN32_IE=0x0300;PGP_DEBUG=1;OVERRIDE_BUILDFLAGS=1;_CRT_SECURE_NO_DEPRECATE" MinimalRebuild="true" BasicRuntimeChecks="3" RuntimeLibrary="3" UsePrecompiledHeader="2" PrecompiledHeaderThrough="windows.h" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG,OVERRIDE_BUILDFLAGS=1" Culture="1033"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="odbc32.lib odbccp32.lib comctl32.lib" LinkIncremental="2" SuppressStartupBanner="true" ModuleDefinitionFile=".\EudoraPluginV3.def" GenerateDebugInformation="true" BaseAddress="" TargetMachine="17" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration><Configuration Name="Release|x64" OutputDirectory="..\..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\MailCommon\Interceptors\Eudora\samples\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="NDEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" AdditionalIncludeDirectories="..\..\..\shared,..\..\..\shared\win32,..\..\..\..\libs2\pfl\common,..\..\..\..\libs2\pfl\win32,..\..\..\..\libs2\pgpsdk\pub\include,..\..\..\..\libs2\pgpsdk\win32\pub\include" PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS;_USRDLL;EUDORAPLUGINV3_EXPORTS;PGP_WIN32=1;_WIN32_IE=0x0300;PGP_DEBUG=0;OVERRIDE_BUILDFLAGS=1;_CRT_SECURE_NO_DEPRECATE" StringPooling="true" RuntimeLibrary="2" EnableFunctionLevelLinking="true" UsePrecompiledHeader="2" PrecompiledHeaderThrough="windows.h" WarningLevel="3" SuppressStartupBanner="true" CompileAs="0" DebugInformationFormat="3"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG,OVERRIDE_BUILDFLAGS=1" Culture="1033"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="odbc32.lib odbccp32.lib comctl32.lib" LinkIncremental="1" SuppressStartupBanner="true" ModuleDefinitionFile=".\EudoraPluginV3.def" BaseAddress="" TargetMachine="17" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" GenerateDebugInformation="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration></Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter Name="Source Files" Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
+			<File RelativePath="..\..\..\shared\win32\BlockUtils.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="CBTProc.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="CreateToolbar.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="..\..\..\shared\win32\DecryptVerify.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="DisplayMessage.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="..\..\..\shared\win32\EncryptSign.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="EudoraMailHeaders.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="EudoraMainWndProc.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="EudoraPluginV3.def">
+			</File>
+			<File RelativePath="EudoraPluginV3.rc">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration></File>
+			<File RelativePath="EudoraReadMailWndProc.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="EudoraSendMailWndProc.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="MapFile.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="emssdk\MIMETYPE.CPP">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="MyMIMEUtils.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="..\..\..\shared\win32\ParseMime.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="PGPPlug.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="1"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="1"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="1" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="1" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="..\..\..\shared\pgpVersionHeader.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="..\..\..\shared\win32\Prefs.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="ReadMailToolbarWndProc.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="emssdk\RFC822.CPP">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="..\..\..\shared\win32\RichEdit_IO.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="SendMailToolbarWndProc.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="..\..\..\shared\win32\SigEvent.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="strstri.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="transbmp.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="Translators.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="TranslatorUtils.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="..\..\..\shared\win32\VerificationBlock.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="..\..\..\shared\win32\Working.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+		</Filter>
+		<Filter Name="Header Files" Filter="h;hpp;hxx;hm;inl">
+			<File RelativePath="CBTProc.h">
+			</File>
+			<File RelativePath="CreateToolbar.h">
+			</File>
+			<File RelativePath="DisplayMessage.h">
+			</File>
+			<File RelativePath="EudoraINI.h">
+			</File>
+			<File RelativePath="EudoraMailHeaders.h">
+			</File>
+			<File RelativePath="EudoraMainWndProc.h">
+			</File>
+			<File RelativePath="EudoraReadMailWndProc.h">
+			</File>
+			<File RelativePath="EudoraSendMailWndProc.h">
+			</File>
+			<File RelativePath="MapFile.h">
+			</File>
+			<File RelativePath="MyMIMEUtils.h">
+			</File>
+			<File RelativePath="PGPDefinedMessages.h">
+			</File>
+			<File RelativePath="PGPPlug.h">
+			</File>
+			<File RelativePath="PGPPlugTypes.h">
+			</File>
+			<File RelativePath="ReadMailToolbarWndProc.h">
+			</File>
+			<File RelativePath="SendMailToolbarWndProc.h">
+			</File>
+			<File RelativePath="strstri.h">
+			</File>
+			<File RelativePath="transbmp.h">
+			</File>
+			<File RelativePath="TranslatorIDs.h">
+			</File>
+			<File RelativePath="Translators.h">
+			</File>
+			<File RelativePath="TranslatorUtils.h">
+			</File>
+		</Filter>
+		<Filter Name="Resource Files" Filter="ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe">
+			<File RelativePath="..\Res\lock.ico">
+			</File>
+			<File RelativePath="..\Res\pgp.ico">
+			</File>
+			<File RelativePath="..\Res\readtool.bmp">
+			</File>
+			<File RelativePath="..\Res\sendtool.bmp">
+			</File>
+			<File RelativePath="..\Res\sign.ico">
+			</File>
+			<File RelativePath="..\Res\unlock.ico">
+			</File>
+		</Filter>
+	</Files>
+</VisualStudioProject>

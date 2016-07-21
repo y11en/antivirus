@@ -1,0 +1,4 @@
+// ***** AdvWare.BHO.RedHotNet *****
+begin
+ AddEvAlarmByCLSID('1C955F3B-5B32-4393-A05D-24B4970CD2A1',AScriptName,'');
+end.

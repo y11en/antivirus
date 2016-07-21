@@ -1,0 +1,19 @@
+// $AVZ1541
+//$ Установлена большая задержка перед открытием меню (более секунды)
+// Функция поиска проблемы                                                                          
+function Check : dword;
+begin
+ Result := 0;
+ // Блокировка
+ if StrToIntDef(RegKeyStrParamRead('HKCU', 'Control Panel\Desktop', 'MenuShowDelay'), 0) > 1000 then begin
+   Result := 2;
+   exit;
+  end;
+end;
+
+// Функция исправления проблемы                                                                          
+function Fix : dword;
+begin
+ RegKeyStrParamWrite('HKCU', 'Control Panel\Desktop', 'MenuShowDelay', '400');
+ Result := 0;
+end;

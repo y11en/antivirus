@@ -1,0 +1,20 @@
+// Скрипт сбора информации для раздела "Помогите" virusinfo.info
+// (С) Зайцев О.В., 19.10.2005
+var
+ AVZLogDir : string;
+begin
+ // Формирование имени рабочей папки
+ AVZLogDir := GetAVZDirectory + 'LOG\';
+ CreateDirectory(AVZLogDir);
+ // Настройка AVZ
+ SetupAVZ('UseQuarantine=Y'); // Включить карантин
+ SetupAVZ('SCAN='+GetSystemDisk+':\');  // Сканировать системный диск 
+ // Запуск сканирования
+ RunScan;
+ // Сохранение карантина
+ CreateQurantineArchive(AVZLogDir+'virusinfo_qurantine.zip');          
+ // Выполнение исследования системы
+ ExecuteSysCheck(AVZLogDir+'virusinfo_syscheck.htm');
+ // Завершение работы AVZ 
+ ExitAVZ;
+end.

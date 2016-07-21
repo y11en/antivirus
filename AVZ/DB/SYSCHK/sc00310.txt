@@ -1,0 +1,6 @@
+// ***** Adware.Apropos *****
+begin       
+ AddEvAlarmByCLSID('A1558B18-F76C-40FE-B358-9E47449F3CFE',AScriptName,'');
+ AddEvAlarmByCLSID('A2872B10-39F2-42DF-9335-7DD38CF75255',AScriptName,'');
+ AddEvAlarmByCLSID('A4A58A2C-B039-432B-8BC1-DCA7AC0757DC',AScriptName,'');
+end.

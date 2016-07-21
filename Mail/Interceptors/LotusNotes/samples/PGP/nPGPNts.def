@@ -1,0 +1,25 @@
+; nPGPNts.def : Declares the DLL's exported tokens
+
+LIBRARY      "ndbPGP"
+DESCRIPTION  'ndbPGP Windows Dynamic Link Library'
+
+EXPORTS
+	xus_MailSendHookInitialize @1
+	xus_TestNoteForPgpAscii
+	xus_TestNoteForPgpArmor
+	xus_SetupPgpRtfObj
+	xs_AutomaticDecryptVerify
+	xs_DecryptVerifyNote
+	xs_DefaultSign
+	xs_DefaultEncrypt
+	xul_R45getHandleIllegit
+	xs_PgpSecureMessage
+	xus_ResetToPgpEncodedRtf
+	x_ClearEncodedRtfCopy
+	xs_PrepCheckmarkMenuing
+	xs_PgpWipeFile
+	xs_VetPluginReadiness
+	xs_vetFolderCtx
+	xs_markRead
+	xus_prepPgpMime
+	xus_decodePgpMime

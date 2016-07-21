@@ -1,0 +1,6 @@
+# try to kill av process by name
+
+KP_BY_NAME @AV_FILE_NAME@ NOT_TO_CLEAR
+
+#etalon_verdict 70 AntiAV
+

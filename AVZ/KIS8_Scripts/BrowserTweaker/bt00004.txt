@@ -1,0 +1,19 @@
+// $AVZ1516
+//$ Internet Explorer - разрешены автоматические запросы элементов управления ActiveX
+// Функция поиска проблемы
+function Check : dword;
+var
+ X : integer;
+begin
+ Result := 0;
+ X := RegKeyIntParamRead('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\', '2201');
+ if (X <> 3) then
+  Result := 3;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+begin
+ RegKeyIntParamWrite('HKCU','Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\', '2201', 3);
+ Result := 0;
+end;

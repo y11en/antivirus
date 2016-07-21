@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?script_autofixspi.htm"; }
+else { parent.quicksync('a15.27.3'); }
+//-->
+</script>
+   <title>procedure AutoFixSPI</title>
+   <meta name="keywords" content="AutoFixSPI">
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+
+
+<body bgcolor="#FFFFFF">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">procedure AutoFixSPI</span></p>
+
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="t_about.htm">Наверх</a>&nbsp;
+     <a href="script_checkspi.htm">Предыдущая</a>&nbsp;
+     <a href="script_delwinlogonnotifybyf.htm">Последующая</a>
+     </font><B>|</B>
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=717989"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=717989;t=109;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=18 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=717989"><img
+src="http://top.list.ru/counter?js=na;id=717989;t=109"
+border=0 height=18 width=88
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+    </td>
+  </tr>
+</table>
+<br>
+
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">procedure</span><span style="font-size: 12pt; font-family: 'Courier New';"> AutoFixSPI;</span></p>
+<p>&nbsp;</p>
+<p>Выполняет анализ настроек SPI/LSP и автоматически исправляет все обнаруженные ошибки. Начиная с версии 4.26 перед исправлением ошибок при вызове данной функции AVZ автоматически создает резервную копию настроек в папке BackUp. Резервная копия является стандартным REG файлом.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">На заметку</span></p>
+<p>Принцип поиска ошибок в частности содержит удаление ссылок на несуществующие провайдеры. Поэтому при использовании AutoFixSPI в конце скрипта, удаляющего файлы, может возникнуть ситуация, когда AVZ в ходе выполнения DeleteFile не смог удалить файл и записал его на отложенное удаление. Следовательно, в ходе выполнения команды AutoFixSPI анализатор обнаружит файл и не посчитает ссылку на него ошибкой. Эту ситуацию нужно учитывать при удалении файлов, являющихся SPI провайдерами. Выходом из положения является явное удаление SPI провайдера по имени файла.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">На заметку</span></p>
+<p>Анализатор считает отсутствующими библиотеки провайдеров в случае, если ему не удается найти файл на диске. Однако в некоторых случаях возможные различные сбои в работе анализатора - например в случае, если AVZ запущен из под учетной записи пользователя или из терминального сеанса на сервере. </p>
+<p>&nbsp;</p>
+
+
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=717989;js='+js+a+';rand='+Math.random()+
+'" height=1 width=1/>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=717989"
+height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+
+</body>
+</html>

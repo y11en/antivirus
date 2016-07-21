@@ -1,0 +1,5 @@
+// ***** Adware.BHO.PerfectNav *****
+begin
+ AddEvAlarmByCLSID('0428FFC7-1931-45B7-95CB-3CBB919777E1',AScriptName,'');
+ AddEvAlarmByCLSID('A045DC85-FC44-45BE-8A50-E4F9C62C9A84',AScriptName,'');
+end.

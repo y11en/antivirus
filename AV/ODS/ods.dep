@@ -1,0 +1,71 @@
+# Microsoft Developer Studio Generated Dependency File, included by ods.mak
+
+.\plugin_ods.cpp : \
+	"..\..\prague\include\iface\i_heap.h"\
+	"..\..\prague\include\iface\i_iface.h"\
+	"..\..\prague\include\iface\i_ifenum.h"\
+	"..\..\prague\include\iface\i_impex.h"\
+	"..\..\prague\include\iface\i_methodinfo.h"\
+	"..\..\prague\include\iface\i_plugin.h"\
+	"..\..\prague\include\iface\i_receiv.h"\
+	"..\..\prague\include\iface\i_reg.h"\
+	"..\..\prague\include\iface\i_root.h"\
+	"..\..\prague\include\iface\i_serializer.h"\
+	"..\..\prague\include\iface\i_tracer.h"\
+	"..\..\prague\include\pr_compl.h"\
+	"..\..\prague\include\pr_err.h"\
+	"..\..\prague\include\pr_iid.h"\
+	"..\..\prague\include\pr_int.h"\
+	"..\..\prague\include\pr_msg.h"\
+	"..\..\prague\include\pr_obj.h"\
+	"..\..\prague\include\pr_pid.h"\
+	"..\..\prague\include\pr_prop.h"\
+	"..\..\prague\include\pr_reg.h"\
+	"..\..\prague\include\pr_serdescriptor.h"\
+	"..\..\prague\include\pr_sys.h"\
+	"..\..\prague\include\pr_types.h"\
+	"..\..\prague\include\pr_vid.h"\
+	"..\..\prague\include\pr_vtbl.h"\
+	"..\..\prague\include\prague.h"\
+	
+
+.\task.cpp : \
+	"..\..\prague\include\iface\i_heap.h"\
+	"..\..\prague\include\iface\i_iface.h"\
+	"..\..\prague\include\iface\i_ifenum.h"\
+	"..\..\prague\include\iface\i_impex.h"\
+	"..\..\prague\include\iface\i_io.h"\
+	"..\..\prague\include\iface\i_methodinfo.h"\
+	"..\..\prague\include\iface\i_plugin.h"\
+	"..\..\prague\include\iface\i_posio.h"\
+	"..\..\prague\include\iface\i_receiv.h"\
+	"..\..\prague\include\iface\i_reg.h"\
+	"..\..\prague\include\iface\i_root.h"\
+	"..\..\prague\include\iface\i_serializer.h"\
+	"..\..\prague\include\iface\i_tracer.h"\
+	"..\..\prague\include\pr_compl.h"\
+	"..\..\prague\include\pr_err.h"\
+	"..\..\prague\include\pr_iid.h"\
+	"..\..\prague\include\pr_int.h"\
+	"..\..\prague\include\pr_msg.h"\
+	"..\..\prague\include\pr_obj.h"\
+	"..\..\prague\include\pr_oid.h"\
+	"..\..\prague\include\pr_pid.h"\
+	"..\..\prague\include\pr_prop.h"\
+	"..\..\prague\include\pr_reg.h"\
+	"..\..\prague\include\pr_serdescriptor.h"\
+	"..\..\prague\include\pr_sys.h"\
+	"..\..\prague\include\pr_types.h"\
+	"..\..\prague\include\pr_vid.h"\
+	"..\..\prague\include\pr_vtbl.h"\
+	"..\..\prague\include\prague.h"\
+	"..\include\iface\i_avs.h"\
+	"..\include\iface\i_avssession.h"\
+	"..\include\iface\i_bl.h"\
+	"..\include\iface\i_posio_sp.h"\
+	"..\include\iface\i_qb.h"\
+	"..\include\iface\i_task.h"\
+	"..\include\plugin\p_ods.h"\
+	"..\include\ppp_types.h"\
+	".\task.h"\
+	

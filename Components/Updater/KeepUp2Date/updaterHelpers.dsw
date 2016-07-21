@@ -1,0 +1,252 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "FSDrvLib"=..\..\Windows\Hook\FSDrvLib\FSDrvLib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/FSDrvLib", CLFBAAAA
+    ..\..\windows\hook\fsdrvlib
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "FSSync"=..\..\Windows\Hook\FSSync\FSSync.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/FSSync", RRSDAAAA
+    ..\..\windows\hook\fssync
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name FSDrvLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Property"=..\..\CommonFiles\Property\Property.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/Property"
+    ..\..\commonfiles\property
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "SWManager"=..\..\CommonFiles\SWManager\SWManager.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/SWManager"
+    ..\..\commonfiles\swmanager
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "WinSign"=..\..\CommonFiles\Sign\WinSign.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/Sign", LBDAAAAA
+    ..\..\commonfiles\sign
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "dskm"=..\..\CommonFiles\Dskm\dskm.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/dskm", PFNPBAAA
+    ..\..\commonfiles\dskm
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Property
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name SWManager
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "klcsagt"="..\..\CS AdminKit\development2\agent\klcsagt.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CS AdminKit/development2/agent", HYVFBAAA
+    ..\..\cs adminkit\development2\agent
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name klcskca
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name klcsstd
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name klcstr
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "klcsftb"="..\..\CS AdminKit\development2\kca\ft\ftbridge\klcsftb.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CS AdminKit/development2/kca/ft/ftbridge", SOFCCAAA
+    ..\..\cs adminkit\development2\kca\ft\ftbridge
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "klcskca"="..\..\CS AdminKit\development2\kca\klcskca.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CS AdminKit/development2/kca", SUKFBAAA
+    ..\..\cs adminkit\development2\kca
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name klcsstd
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name klcstr
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "klcsnagt"="..\..\CS AdminKit\development2\nagent\klcsnagt.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CS AdminKit/development2/nagent", TXNHBAAA
+    ..\..\cs adminkit\development2\nagent
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name klcsagt
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name klcskca
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name klcsstd
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name klcstr
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "klcsstd"="..\..\CS AdminKit\development2\std\klcsstd.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CS AdminKit/development2/std", GEZTAAAA
+    ..\..\cs adminkit\development2\std
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "klcstr"="..\..\CS AdminKit\development2\transport\klcstr.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CS AdminKit/development2/transport", MHHCBAAA
+    ..\..\cs adminkit\development2\transport
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name klcsstd
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+    begin source code control
+    Perforce Project
+    .
+    end source code control
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

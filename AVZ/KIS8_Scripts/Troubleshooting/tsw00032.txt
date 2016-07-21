@@ -1,0 +1,41 @@
+// $AVZ1536
+//$ Обнаружен отладчик системного процесса
+const
+ ProcList = 'svchost.exe;explorer.exe;winlogon.exe;notepad.exe;regedit.exe;regedt32.exe;hh.exe;iexplore.exe;taskman.exe;taskmgr.exe;winhelp.exe;winhlp32.exe;logonui.exe;spoolsv.exe';
+// Функция поиска проблемы
+function Check : dword;
+ procedure ScanDebug(ST : string);
+ var
+  S : string;
+ begin
+  S := Trim(RegKeyStrParamRead('HKEY_LOCAL_MACHINE', 'SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\'+ST, 'Debugger'));
+  if S = '' then exit;
+  Result := 3;
+ end;
+var
+  S : string;
+begin
+ Result := 0;
+ S := ProcList+';';
+ while pos(';', S) > 0 do begin
+  ScanDebug(copy(S, 1, pos(';', S)-1));
+  Delete(S, 1, pos(';', S));
+ end;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+ procedure DelDebug(ST : string);
+ begin
+  RegKeyParamDel('HKEY_LOCAL_MACHINE', 'SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\'+ST, 'Debugger');
+ end;
+var
+  S : string;
+begin
+ S := ProcList+';';
+ while pos(';', S) > 0 do begin
+  DelDebug(copy(S, 1, pos(';', S)-1));
+  Delete(S, 1, pos(';', S));
+ end;
+ Result := 0;
+end;

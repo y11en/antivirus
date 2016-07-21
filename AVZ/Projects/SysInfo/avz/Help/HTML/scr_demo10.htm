@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?scr_demo10.htm"; }
+else { parent.quicksync('a15.42.11'); }
+//-->
+</script>
+   <title>&#1055;&#1086;&#1080;&#1089;&#1082; &#1087;&#1086;&#1076;&#1086;&#1079;&#1088;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1093; &#1086;&#1073;&#1098;&#1077;&#1082;&#1090;&#1086;&#1074; &#1087;&#1086; &#1080;&#1084;&#1077;&#1085;&#1072;&#1084;</title>
+   <meta name="keywords" content="&#1055;&#1086;&#1080;&#1089;&#1082; &#1087;&#1086;&#1076;&#1086;&#1079;&#1088;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1093; &#1086;&#1073;&#1098;&#1077;&#1082;&#1090;&#1086;&#1074; &#1087;&#1086; &#1080;&#1084;&#1077;&#1085;&#1072;&#1084;,&#1055;&#1086;&#1080;&#1089;&#1082;">
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+
+
+<body bgcolor="#FFFFFF">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Поиск подозрительных объектов по именам</span></p>
+
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="t_about.htm">Наверх</a>&nbsp;
+     <a href="scr_demo8.htm">Предыдущая</a>&nbsp;
+     <a href="scr_demo11.htm">Последующая</a>
+     </font><B>|</B>
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=717989"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=717989;t=109;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=18 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=717989"><img
+src="http://top.list.ru/counter?js=na;id=717989;t=109"
+border=0 height=18 width=88
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+    </td>
+  </tr>
+</table>
+<br>
+
+<p>Поиск файлов по именам малоэффективен для борьбы с современными вредоносными программами, но он может пригодиться в качестве одной из форм своеобразной эвристики. Достоинство метода - высокая скорость поиска и простота реализации.Рассмотрим несколько вариантов реализации этого поииска при помощи скриптов AVZ</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Пример 1. Простейший поиск по именам</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Поиск файла с указанным именем</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">function</span><span style="font-size: 12pt; font-family: 'Courier New';"> CheckByName(Fname : </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">string</span><span style="font-size: 12pt; font-family: 'Courier New';">) : boolean;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> Result := FileExists(FName) ;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">if</span><span style="font-size: 12pt; font-family: 'Courier New';"> Result </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">then</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  AddToLog(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'Файл '</span><span style="font-size: 12pt; font-family: 'Courier New';">+FName+</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">' имеет подозрительное имя'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';">;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Проверка файлов </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> CheckByName(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'%WinDir%\cservv32.exe'</span><span style="font-size: 12pt; font-family: 'Courier New';">); </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> CheckByName(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'%WinDir%\services.exe'</span><span style="font-size: 12pt; font-family: 'Courier New';">); </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> CheckByName(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'%WinDir%\lsass.exe'</span><span style="font-size: 12pt; font-family: 'Courier New';">); </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';">.</span></p>
+<p>&nbsp;</p>
+<p>В данном примере объявляется функция CheckByName, задачей которой является проверка наличия файла с указанным именем на диске. В случае обнаружения подобного файла функция возвращает true и делает отметку в протоколе при помощи функции <a href="script_addtolog.htm">AddToLog</a>. Недостатком функции является то, что список файлов как таковой отсутствует - вместо него идут повторяющиеся вызовы&nbsp; CheckByName. В более сложном примере можно усовершенствовать поиск, разместив список имен в отдельном файле, который будет выступать в роли базы данных.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Пример 2. Поиск по именам с использованием загружаемого списка файлов</span></p>
+<p><span style="font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Поиск файла с указанным именем </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">function</span><span style="font-size: 12pt; font-family: 'Courier New';"> CheckByName(Fname : </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">string</span><span style="font-size: 12pt; font-family: 'Courier New';">) : boolean;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> Result := FileExists(FName) ;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">if</span><span style="font-size: 12pt; font-family: 'Courier New';"> Result </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">then</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  AddToLog(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'Файл '</span><span style="font-size: 12pt; font-family: 'Courier New';">+FName+</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">' имеет подозрительное имя'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';">;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">var</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SuspNames : TStringList;&nbsp; </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Список имен подозрительных файлов</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> i : integer;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Проверка файлов по обновляемой базе данных</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">if</span><span style="font-size: 12pt; font-family: 'Courier New';"> FileExists(GetAVZDirectory + </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'files.db'</span><span style="font-size: 12pt; font-family: 'Courier New';">) </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">then</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  SuspNames := TStringList.Create; </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  SuspNames.LoadFromFile(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'files.db'</span><span style="font-size: 12pt; font-family: 'Courier New';">); </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  AddToLog(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'База имен загружена - количество записей = '</span><span style="font-size: 12pt; font-family: 'Courier New';">+inttostr(SuspNames.Count));</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Цикл поиска</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">for</span><span style="font-size: 12pt; font-family: 'Courier New';"> i := </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">0</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">to</span><span style="font-size: 12pt; font-family: 'Courier New';"> SuspNames.Count - </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">1</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">do</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> &nbsp; CheckByName(SuspNames[i]);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">else</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> &nbsp; AddToLog(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'Ошибка загрузки списка имен файлов'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';">.</span></p>
+<p>&nbsp;</p>
+<p>В данном примере используется уже снакомая по примеру 1 функция CheckByName, которая вызывается в цикле. Для работы со списком файлов применяется класс <a href="script_stringsexamples.htm">TStringList</a>. Предполагается, что список файлов хранится в текстовом файле files.db, который размещается в каталоге AVZ (путь к этому каталогу определяется при помощи <a href="script_getavzdirectory.htm">GetAVZDirectory</a></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Пример 3. Поиск по именам с использованием загружаемого списка файлов и </span><span style="font-weight: bold;">AV </span><span style="font-weight: bold;">баз </span><span style="font-weight: bold;">AVZ</span></p>
+<p><span style="font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Поиск файла с указанным именем </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">function</span><span style="font-size: 12pt; font-family: 'Courier New';"> CheckByName(Fname : </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">string</span><span style="font-size: 12pt; font-family: 'Courier New';">) : boolean;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">var</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> S : </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">string</span><span style="font-size: 12pt; font-family: 'Courier New';">;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> Result := FileExists(FName) ;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">if</span><span style="font-size: 12pt; font-family: 'Courier New';"> Result </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">then</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  S := </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">''</span><span style="font-size: 12pt; font-family: 'Courier New';">;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">case</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New';">Check</span><span style="font-size: 12pt; font-family: 'Courier New';">File(FName) </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">of</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  -</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">1</span><span style="font-size: 12pt; font-family: 'Courier New';"> : S := </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">', доступ к файлу блокируется'</span><span style="font-size: 12pt; font-family: 'Courier New';">;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> &nbsp; </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">1</span><span style="font-size: 12pt; font-family: 'Courier New';"> : S := </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">', опознан как Malware ('</span><span style="font-size: 12pt; font-family: 'Courier New';">+GetLastCheckTxt+</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">')'</span><span style="font-size: 12pt; font-family: 'Courier New';">; </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> &nbsp; </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">2</span><span style="font-size: 12pt; font-family: 'Courier New';"> : S := </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">', подозревается файловым сканером ('</span><span style="font-size: 12pt; font-family: 'Courier New';">+GetLastCheckTxt+</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">')'</span><span style="font-size: 12pt; font-family: 'Courier New';">; </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> &nbsp; </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">3</span><span style="font-size: 12pt; font-family: 'Courier New';"> : exit; </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Безопасные файлы игнорируем</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';">;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  AddToLog(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'Файл '</span><span style="font-size: 12pt; font-family: 'Courier New';">+</span><span style="font-size: 12pt; font-family: 'Courier New';">NormalFileName(</span><span style="font-size: 12pt; font-family: 'Courier New';">FName</span><span style="font-size: 12pt; font-family: 'Courier New';">)</span><span style="font-size: 12pt; font-family: 'Courier New';">+</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">' имеет подозрительное имя'</span><span style="font-size: 12pt; font-family: 'Courier New';">+S);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';">;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';">;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">var</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SuspNames : TStringList;&nbsp; </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Список имен подозрительных файлов</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> i : integer;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Проверка файлов по обновляемой базе данных</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">if</span><span style="font-size: 12pt; font-family: 'Courier New';"> FileExists(GetAVZDirectory + </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'files.db'</span><span style="font-size: 12pt; font-family: 'Courier New';">) </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">then</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  SuspNames := TStringList.Create; </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  SuspNames.LoadFromFile(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'files.db'</span><span style="font-size: 12pt; font-family: 'Courier New';">); </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  AddToLog(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'База имен загружена - количество записей = '</span><span style="font-size: 12pt; font-family: 'Courier New';">+inttostr(SuspNames.Count));</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Цикл поиска</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">for</span><span style="font-size: 12pt; font-family: 'Courier New';"> i := </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">0</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">to</span><span style="font-size: 12pt; font-family: 'Courier New';"> SuspNames.Count - </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">1</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">do</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> &nbsp; CheckByName(SuspNames[i]);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">else</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> &nbsp; AddToLog(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'Ошибка загрузки списка имен файлов'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';">.</span></p>
+<p>&nbsp;</p>
+<p>В данном примере появляется еще одно усовершенствоание - функция CheckByName проверяет обнаруженный по имени файла по базам AVZ. Для этих целей применяется функция <a href="script_checkfile.htm">CheckFile</a> (она поддерживается начиная с AVZ 4.23). Анализ результатов сканирования файла позволяет исключить из протокола безопасные файлы и файлы, прошедшие контроль по каталогу Microsoft. Функция CheckFile приемняется совместно с GetLastCheckTxt для получения имени зловреда в случае его детектирования или подозрения. Еще одной особенностью является применение функции <a href="script_normalfilename.htm">NormalFileName</a> для нормализации имени файла (которая, в частности, предполагает замену применяемых в AVZ макросов). Дополнительную информацию о поиске файлов можно посмотреть в разделе "<a href="script_filesearch.htm">Поиск файлов и папок</a>"</p>
+
+
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=717989;js='+js+a+';rand='+Math.random()+
+'" height=1 width=1/>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=717989"
+height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+
+</body>
+</html>

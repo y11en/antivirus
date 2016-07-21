@@ -1,0 +1,4 @@
+// ***** Trojan-Spy.Win32.Delf.pg *****
+begin
+ AddEvAlarmByCLSID('FEB94F5A-69F3-4645-8C2B-9E71D270AF2E',AScriptName,'IEXPLORE.Dat');
+end.

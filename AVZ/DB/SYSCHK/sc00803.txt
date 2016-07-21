@@ -1,0 +1,8 @@
+// ***** Проверка ключа Services Controller *****
+var
+ S : string;
+begin
+ S := Trim(RegKeyStrParamRead('HKEY_LOCAL_MACHINE', 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\Explorer\Run', 'Services Controller'));
+ if S = '' then exit;
+ AddToLog('$AVZ1197 policies\Explorer\Run\Services Controller: "'+S+'"');
+end.

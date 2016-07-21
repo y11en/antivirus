@@ -1,0 +1,4 @@
+Feature	Feature_Parent	Title	Description	Display	Level	Directory_	Attributes	ISReleaseFlags	ISComments
+s38	S38	L64	L255	I2	i2	S72	i2	S255	S255
+Feature	Feature
+MainApp		##FEATURE_MAIN##		2	1	INSTALLDIR	0		

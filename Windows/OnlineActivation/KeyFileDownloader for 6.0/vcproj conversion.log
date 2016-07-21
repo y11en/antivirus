@@ -1,0 +1,36 @@
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Folder: "O:\windows\OnlineActivation\KeyFileDownloader for 6.0"
+	File "O:\windows\OnlineActivation\KeyFileDownloader for 6.0\KeyFileDl.dsp"
+		Converting "KeyFileDl.dsp"
+		Patching   "KeyFileDl.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+		Add x64 to "KeyFileDl.vcproj"
+
+	File "O:\windows\OnlineActivation\KeyFileDownloader for 6.0\KeyFileDownloader.dsp"
+		Converting "KeyFileDownloader.dsp"
+		Patching   "KeyFileDownloader.vcproj"
+			Conf - Debug|Win32
+				INFO! configuration is renamed to 'DebugS|Win32'
+			Conf - Debug Dll|Win32
+				INFO! configuration is renamed to 'Debug|Win32'
+			Conf - Release Unicode Dll|Win32
+				WARNING! wrong 'RuntimeLibrary' == Multi-threaded Release Dll
+				INFO! configuration is renamed to 'ReleaseU|Win32'
+			Conf - Debug Unicode|Win32
+				INFO! configuration is renamed to 'DebugUS|Win32'
+			Conf - Release|Win32
+				INFO! configuration is renamed to 'ReleaseS|Win32'
+			Conf - Debug Unicode Dll|Win32
+				INFO! 'RuntimeLibrary' option is changed from 'Multi-threaded Debug Static' to 'Multi-threaded Debug Dll'
+				INFO! configuration is renamed to 'DebugU|Win32'
+			Conf - Release Dll|Win32
+				INFO! configuration is renamed to 'Release|Win32'
+			Conf - Release Unicode|Win32
+				INFO! configuration is renamed to 'ReleaseUS|Win32'
+		Add x64 to "KeyFileDownloader.vcproj"
+
+Folder: "O:\windows\OnlineActivation\KeyFileDownloader for 6.0\Debug"
+Folder: "O:\windows\OnlineActivation\KeyFileDownloader for 6.0\Release"

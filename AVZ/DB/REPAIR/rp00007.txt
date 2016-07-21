@@ -1,0 +1,5 @@
+// ***** Удаление сообщения, выводимого в ходе WinLogon *****
+begin
+ RegKeyParamDel('HKEY_LOCAL_MACHINE', 'SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon', 'LegalNoticeCaption');
+ RegKeyParamDel('HKEY_LOCAL_MACHINE', 'SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon', 'LegalNoticeText');
+end.

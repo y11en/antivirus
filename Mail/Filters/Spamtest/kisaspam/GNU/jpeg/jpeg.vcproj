@@ -1,0 +1,1202 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioProject ProjectType="Visual C++" Version="8.00" Name="jpeg" SccProjectName="Perforce Project" SccProvider="MSSCCI:Perforce SCM">
+	<Platforms>
+		<Platform Name="Win32"/>
+		<Platform Name="x64"/></Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="Debug_SMD|Win32" OutputDirectory="..\..\..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\MailCommon\Filters\Spamtest\kisaspam\GNU\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="_DEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="1" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS;_USRDLL;LIBJPEG_EXPORTS;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" MinimalRebuild="true" BasicRuntimeChecks="3" RuntimeLibrary="1" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="4" CompileAs="0" UsePrecompiledHeader="2"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" LinkIncremental="2" SuppressStartupBanner="true" GenerateDebugInformation="true" TargetMachine="1" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" BaseAddress=""/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Debug_DMD|Win32" OutputDirectory="..\..\..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\MailCommon\Filters\Spamtest\kisaspam\GNU\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="_DEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="1" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS;_USRDLL;LIBJPEG_EXPORTS;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" MinimalRebuild="true" BasicRuntimeChecks="3" RuntimeLibrary="3" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="4" CompileAs="0" UsePrecompiledHeader="2"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" LinkIncremental="2" SuppressStartupBanner="true" GenerateDebugInformation="true" TargetMachine="1" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" BaseAddress=""/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Release_SMR|Win32" OutputDirectory="..\..\..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\MailCommon\Filters\Spamtest\kisaspam\GNU\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="NDEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="1" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS;_USRDLL;LIBJPEG_EXPORTS;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" StringPooling="true" RuntimeLibrary="0" EnableFunctionLevelLinking="true" WarningLevel="3" SuppressStartupBanner="true" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" LinkIncremental="1" SuppressStartupBanner="true" TargetMachine="1" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" GenerateDebugInformation="true" BaseAddress=""/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Release_DMR|Win32" OutputDirectory="..\..\..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\MailCommon\Filters\Spamtest\kisaspam\GNU\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="NDEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="1" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS;_USRDLL;LIBJPEG_EXPORTS;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" StringPooling="true" RuntimeLibrary="2" EnableFunctionLevelLinking="true" WarningLevel="3" SuppressStartupBanner="true" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" LinkIncremental="1" SuppressStartupBanner="true" TargetMachine="1" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" GenerateDebugInformation="true" BaseAddress=""/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Debug_SMD|x64" OutputDirectory="..\..\..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\MailCommon\Filters\Spamtest\kisaspam\GNU\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="_DEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS;_USRDLL;LIBJPEG_EXPORTS;_CRT_SECURE_NO_DEPRECATE" MinimalRebuild="true" BasicRuntimeChecks="3" RuntimeLibrary="1" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" LinkIncremental="2" SuppressStartupBanner="true" GenerateDebugInformation="true" TargetMachine="17" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" BaseAddress=""/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration><Configuration Name="Debug_DMD|x64" OutputDirectory="..\..\..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\MailCommon\Filters\Spamtest\kisaspam\GNU\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="_DEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS;_USRDLL;LIBJPEG_EXPORTS;_CRT_SECURE_NO_DEPRECATE" MinimalRebuild="true" BasicRuntimeChecks="3" RuntimeLibrary="3" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" LinkIncremental="2" SuppressStartupBanner="true" GenerateDebugInformation="true" TargetMachine="17" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" BaseAddress=""/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration><Configuration Name="Release_SMR|x64" OutputDirectory="..\..\..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\MailCommon\Filters\Spamtest\kisaspam\GNU\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="NDEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS;_USRDLL;LIBJPEG_EXPORTS;_CRT_SECURE_NO_DEPRECATE" StringPooling="true" RuntimeLibrary="0" EnableFunctionLevelLinking="true" WarningLevel="3" SuppressStartupBanner="true" CompileAs="0" DebugInformationFormat="3"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" LinkIncremental="1" SuppressStartupBanner="true" TargetMachine="17" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" GenerateDebugInformation="true" BaseAddress=""/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration><Configuration Name="Release_DMR|x64" OutputDirectory="..\..\..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\MailCommon\Filters\Spamtest\kisaspam\GNU\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="NDEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS;_USRDLL;LIBJPEG_EXPORTS;_CRT_SECURE_NO_DEPRECATE" StringPooling="true" RuntimeLibrary="2" EnableFunctionLevelLinking="true" WarningLevel="3" SuppressStartupBanner="true" CompileAs="0" DebugInformationFormat="3"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" LinkIncremental="1" SuppressStartupBanner="true" TargetMachine="17" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" GenerateDebugInformation="true" BaseAddress=""/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration></Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter Name="Source Files" Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
+			<File RelativePath="jcapimin.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jcapistd.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jccoefct.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jccolor.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jcdctmgr.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jchuff.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jcinit.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jcmainct.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jcmarker.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jcmaster.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jcomapi.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jcparam.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jcphuff.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jcprepct.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jcsample.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jctrans.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jdapimin.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jdapistd.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jdatadst.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jdatasrc.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jdcoefct.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jdcolor.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jddctmgr.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jdhuff.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jdinput.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jdmainct.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jdmarker.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jdmaster.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jdmerge.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jdphuff.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jdpostct.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jdsample.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jdtrans.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jerror.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jfdctflt.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jfdctfst.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jfdctint.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jidctflt.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jidctfst.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jidctint.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jidctred.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jmemansi.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jmemmgr.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jquant1.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jquant2.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="jutils.c">
+				<FileConfiguration Name="Debug_SMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_DMD|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_SMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release_DMR|Win32">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug_SMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug_DMD|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_SMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release_DMR|x64">
+					<Tool Name="VCCLCompilerTool" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+		</Filter>
+		<Filter Name="Header Files" Filter="h;hpp;hxx;hm;inl">
+			<File RelativePath="jchuff.h">
+			</File>
+			<File RelativePath="jconfig.h">
+			</File>
+			<File RelativePath="jdct.h">
+			</File>
+			<File RelativePath="jdhuff.h">
+			</File>
+			<File RelativePath="jerror.h">
+			</File>
+			<File RelativePath="jinclude.h">
+			</File>
+			<File RelativePath="jmemsys.h">
+			</File>
+			<File RelativePath="jmorecfg.h">
+			</File>
+			<File RelativePath="..\jpeg.link.h">
+			</File>
+			<File RelativePath="jpegint.h">
+			</File>
+			<File RelativePath="jpeglib.h">
+			</File>
+			<File RelativePath="jversion.h">
+			</File>
+		</Filter>
+	</Files>
+</VisualStudioProject>

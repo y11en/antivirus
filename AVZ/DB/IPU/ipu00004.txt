@@ -1,0 +1,12 @@
+// ***** Проверка наличия SP *****
+var
+ WinVersion, WinBuild, CSDVersion : string; 
+begin
+ if not(IsNT) then exit;
+ WinVersion := Trim(RegKeyStrParamRead('HKEY_LOCAL_MACHINE', 'SOFTWARE\Microsoft\Windows NT\CurrentVersion', 'CurrentVersion'));
+ WinBuild   := Trim(RegKeyStrParamRead('HKEY_LOCAL_MACHINE', 'SOFTWARE\Microsoft\Windows NT\CurrentVersion', 'CurrentBuildNumber'));
+ CSDVersion := Trim(RegKeyStrParamRead('HKEY_LOCAL_MACHINE', 'SOFTWARE\Microsoft\Windows NT\CurrentVersion', 'CSDVersion'));
+ if CSDVersion = '5.1' then 
+  if copy(CSDVersion, 14, 1) <> '2' then 
+   AddToLog('>> $AVZ0955: $AVZ0131 '+CSDVersion+')');   
+end. 

@@ -1,0 +1,797 @@
+ERROR_NOTINSTALLED	Konsola administracyjna Kaspersky Administration Kit nie zosta³a zainstalowana.	
+REGVALUE_ANTIHACKER_TASK	Anty-Hacker	
+REGVALUE_ANTISPAM_TASK	Anti-Spam	
+REGVALUE_ANTISPY_TASK	Anti-Spy	
+REGVALUE_BB_TASK	Ochrona proaktywna	
+REGVALUE_INSTALLKEY_TASK	Instalacja klucza licencyjnego	
+REGVALUE_MC_TASK	Ochrona poczty	
+REGVALUE_OAS_TASK	Ochrona plików	
+REGVALUE_ODS_TASK	Skanowanie antywirusowe	
+REGVALUE_PRODUCTNAME_FS	Kaspersky Anti-Virus 6.0 for Windows File Servers	
+REGVALUE_PRODUCTNAME_WKS	Kaspersky Anti-Virus 6.0 for Windows Workstations	
+REGVALUE_RETRAN_TASK	Dystrybucja uaktualnieñ	
+REGVALUE_ROLLBACK_TASK	Cofniêcie aktualizacji	
+REGVALUE_SC_TASK	Skanowanie skryptów	
+REGVALUE_UPDATER_TASK	Aktualizacja	
+REGVALUE_WM_TASK	Ochrona WWW	
+COMPANY_NAME	Kaspersky Lab	
+DN_AlwaysInstall	Zawsze instaluj	
+FEATURE_MAIN	Funkcje podstawowe	
+IDPROP_ARPCOMMENTS	Kompletna ochrona systemów komputerowych	
+IDPROP_ARPCONTACT	Dzia³ pomocy technicznej	
+IDPROP_ARPHELPLINK	http://kaspersky.pl/services.html?s=support	
+IDPROP_ARPHELPTELEPHONE	(34) 368 18 14	
+IDPROP_ARPURLINFOABOUT	http://www.kaspersky.pl	
+IDPROP_ARPURLUPDATEINFO	http://kaspersky.pl/download.html?s=updates	
+IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR	Ustawienia kolorów w systemie nie s¹ odpowiednie do uruchomienia programu [ProductName].	
+IDPROP_EXPRESS_LAUNCH_CONDITION_OS	System operacyjny nie jest odpowiedni do uruchomienia programu [ProductName].	
+IDPROP_EXPRESS_LAUNCH_CONDITION_PROCESSOR	Procesor nie jest odpowiedni do uruchomienia programu [ProductName].	
+IDPROP_EXPRESS_LAUNCH_CONDITION_RAM	Iloœæ pamiêci RAM jest niewystarczaj¹ca do uruchomienia programu [ProductName].	
+IDPROP_EXPRESS_LAUNCH_CONDITION_SCREEN	Rozdzielczoœæ ekranu jest niewystarczaj¹ca do uruchomienia programu [ProductName].	
+IDPROP_SETUPTYPE_COMPACT	Minimalna	
+IDPROP_SETUPTYPE_COMPACT_DESC	Opis instalacji minimalnej	
+IDPROP_SETUPTYPE_CUSTOM	Niestandardowa	
+IDPROP_SETUPTYPE_CUSTOM_DESC	Opis instalacji niestandardowej	
+IDPROP_SETUPTYPE_TYPICAL	Standardowa	
+IDPROP_SETUPTYPE_TYPICAL_DESC	Opis instalacji standardowej	
+IDS__AgreeToLicense_0	&Nie akceptujê warunków i postanowieñ umowy licencyjnej	
+IDS__AgreeToLicense_1	&Akceptujê warunki i postanowienia umowy licencyjnej	
+IDS__DatabaseFolder_0	[ProductName] - InstallShield Wizard	
+IDS__DatabaseFolder_1	Anuluj	
+IDS__DatabaseFolder_10	Instaluj bazê danych aplikacji [ProductName] do:	
+IDS__DatabaseFolder_11	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__DatabaseFolder_12	<ISProductFolder>\Redist\Language Independent\OS Independent\DestIcon.ibd	
+IDS__DatabaseFolder_2	InstallShield	
+IDS__DatabaseFolder_3	{&MSSWhiteSerif8}InstallShield	
+IDS__DatabaseFolder_4	Kliknij przycisk Dalej, aby zainstalowaæ program w tym folderze lub przycisk Zmieñ, aby wskazaæ inn¹ lokalizacjê.	
+IDS__DatabaseFolder_5	{&MSSansBold8}Folder bazy danych	
+IDS__DatabaseFolder_6	< &Wstecz	
+IDS__DatabaseFolder_7	&Dalej >	
+IDS__DatabaseFolder_8	&Zmieñ	
+IDS__DatabaseFolder_9	[DATABASEDIR]	
+IDS__DestinationFolder_0	[ProductName] - InstallShield Wizard	
+IDS__DestinationFolder_1	Anuluj	
+IDS__DestinationFolder_10	Zainstaluj program [ProductName] w:	
+IDS__DestinationFolder_11	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__DestinationFolder_12	<ISProductFolder>\Redist\Language Independent\OS Independent\DestIcon.ibd	
+IDS__DestinationFolder_2	InstallShield	
+IDS__DestinationFolder_3	{&MSSWhiteSerif8}InstallShield	
+IDS__DestinationFolder_4	Kliknij przycisk Dalej, aby zainstalowaæ program w tym folderze lub przycisk Zmieñ, aby wskazaæ inn¹ lokalizacjê.	
+IDS__DestinationFolder_5	{&MSSansBold8}Folder docelowy	
+IDS__DestinationFolder_6	< &Wstecz	
+IDS__DestinationFolder_7	&Dalej >	
+IDS__DestinationFolder_8	&Zmieñ	
+IDS__DestinationFolder_9	[INSTALLDIR]	
+IDS__DisplayName_Custom	Niestandardowa	
+IDS__DisplayName_Minimal	Minimalna	
+IDS__DisplayName_Typical	Standardowa	
+IDS__IsAdminInstallBrowse_0	[ProductName] - InstallShield Wizard	
+IDS__IsAdminInstallBrowse_1	{&MSSWhiteSerif8}InstallShield	
+IDS__IsAdminInstallBrowse_10	OK	
+IDS__IsAdminInstallBrowse_11		
+IDS__IsAdminInstallBrowse_12	&Nazwa foldera:	
+IDS__IsAdminInstallBrowse_13	Do góry o jeden poziom|	
+IDS__IsAdminInstallBrowse_14	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsAdminInstallBrowse_15	<ISProductFolder>\Redist\Language Independent\OS Independent\New.ibd	
+IDS__IsAdminInstallBrowse_16	<ISProductFolder>\Redist\Language Independent\OS Independent\Up.ibd	
+IDS__IsAdminInstallBrowse_2	InstallShield	
+IDS__IsAdminInstallBrowse_3	Anuluj	
+IDS__IsAdminInstallBrowse_4		
+IDS__IsAdminInstallBrowse_5	&Szukaj w:	
+IDS__IsAdminInstallBrowse_6	Wybór foldera docelowego.	
+IDS__IsAdminInstallBrowse_7	{&MSSansBold8}Zmieñ aktualny folder docelowy	
+IDS__IsAdminInstallBrowse_8		
+IDS__IsAdminInstallBrowse_9	Utwórz nowy folder|	
+IDS__IsAdminInstallPoint_0	[ProductName] - InstallShield Wizard	
+IDS__IsAdminInstallPoint_1	< &Wstecz	
+IDS__IsAdminInstallPoint_10	&Folder sieciowy:	
+IDS__IsAdminInstallPoint_11	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsAdminInstallPoint_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsAdminInstallPoint_3	InstallShield	
+IDS__IsAdminInstallPoint_4	&Zmieñ	
+IDS__IsAdminInstallPoint_5	Anuluj	
+IDS__IsAdminInstallPoint_6	Okreœl lokalizacjê w sieci dla obrazu programu na serwerze.	
+IDS__IsAdminInstallPoint_7	WprowadŸ lokalizacjê w sieci lub kliknij przycisk Zmieñ, aby j¹ wskazaæ. Kliknij przycisk Instaluj, aby utworzyæ obraz programu [ProductName] na serwerze w podanej lokalizacji w sieci lub kliknij przycisk Anuluj, aby zakoñczyæ pracê z kreatorem.	
+IDS__IsAdminInstallPoint_8	{&MSSansBold8}Folder sieciowy	
+IDS__IsAdminInstallPoint_9	&Instaluj	
+IDS__IsAdminInstallPointWelcome_0	[ProductName] - InstallShield Wizard	
+IDS__IsAdminInstallPointWelcome_1	< &Wstecz	
+IDS__IsAdminInstallPointWelcome_2	Anuluj	
+IDS__IsAdminInstallPointWelcome_3	&Dalej >	
+IDS__IsAdminInstallPointWelcome_4	{&TahomaBold10}Witamy w kreatorze InstallShield Wizard dla [ProductName]	
+IDS__IsAdminInstallPointWelcome_5	InstallShield(R) Wizard utworzy obraz programu [ProductName] na serwerze, w okreœlonej lokalizacji w sieci. Aby kontynuowaæ kliknij przycisk Dalej.	
+IDS__IsAdminInstallPointWelcome_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsBitmapDlg_0	[ProductName] - InstallShield Wizard	
+IDS__IsBitmapDlg_1	< &Wstecz	
+IDS__IsBitmapDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsBitmapDlg_3	InstallShield	
+IDS__IsBitmapDlg_4	Anuluj	
+IDS__IsBitmapDlg_5	&Dalej >	
+IDS__IsBitmapDlg_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsBrowseFolderDlg_0	[ProductName] - InstallShield Wizard	
+IDS__IsBrowseFolderDlg_1	{&MSSWhiteSerif8}InstallShield	
+IDS__IsBrowseFolderDlg_10	OK	
+IDS__IsBrowseFolderDlg_11		
+IDS__IsBrowseFolderDlg_12	&Nazwa foldera:	
+IDS__IsBrowseFolderDlg_13	Do góry o jeden poziom|	
+IDS__IsBrowseFolderDlg_14	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsBrowseFolderDlg_15	<ISProductFolder>\Redist\Language Independent\OS Independent\New.ibd	
+IDS__IsBrowseFolderDlg_16	<ISProductFolder>\Redist\Language Independent\OS Independent\Up.ibd	
+IDS__IsBrowseFolderDlg_2	InstallShield	
+IDS__IsBrowseFolderDlg_3	Anuluj	
+IDS__IsBrowseFolderDlg_4		
+IDS__IsBrowseFolderDlg_5	&Szukaj w:	
+IDS__IsBrowseFolderDlg_6	Wybór foldera docelowego.	
+IDS__IsBrowseFolderDlg_7	{&MSSansBold8}Zmieñ aktualny folder docelowy	
+IDS__IsBrowseFolderDlg_8		
+IDS__IsBrowseFolderDlg_9	Utwórz nowy folder|	
+IDS__IsCancelDlg_0	[ProductName] - InstallShield Wizard	
+IDS__IsCancelDlg_1	Ikona informacyjna|	
+IDS__IsCancelDlg_2	InstallShield	
+IDS__IsCancelDlg_3	Czy na pewno chcesz anulowaæ instalacjê?	
+IDS__IsCancelDlg_4	Czy na pewno chcesz anulowaæ instalacjê programu [ProductName]?	
+IDS__IsCancelDlg_5	{&MSSansBold8}Anuluj instalacjê	
+IDS__IsCancelDlg_6	&Nie	
+IDS__IsCancelDlg_7	Aby kontynuowaæ instalacjê programu [ProductName] kliknij przycisk Wznów. Aby zakoñczyæ instalacjê kliknij przycisk Zakoñcz.	
+IDS__IsCancelDlg_8	&Tak	
+IDS__IsCancelDlg_9	<ISProductFolder>\Redist\Language Independent\OS Independent\WarningIcon.ibd	
+IDS__IsCustomSelectionDlg_0	[ProductName] - InstallShield Wizard	
+IDS__IsCustomSelectionDlg_1	< &Wstecz	
+IDS__IsCustomSelectionDlg_10	Opis sk³adnika:	
+IDS__IsCustomSelectionDlg_11	&Dalej >	
+IDS__IsCustomSelectionDlg_12	Rozmiar sk³adnika	
+IDS__IsCustomSelectionDlg_13	&Pomoc	
+IDS__IsCustomSelectionDlg_14	Wielowierszowy opis aktualnie wybranego sk³adnika	
+IDS__IsCustomSelectionDlg_15	Opis sk³adnika	
+IDS__IsCustomSelectionDlg_16	&Zmieñ	
+IDS__IsCustomSelectionDlg_17	<œcie¿ka wybranego sk³adnika>	
+IDS__IsCustomSelectionDlg_18	Miejsce instalacji:	
+IDS__IsCustomSelectionDlg_19	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsCustomSelectionDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsCustomSelectionDlg_3	InstallShield	
+IDS__IsCustomSelectionDlg_4	Anuluj	
+IDS__IsCustomSelectionDlg_5	&Miejsce	
+IDS__IsCustomSelectionDlg_6	Nale¿y wybraæ sk³adniki aplikacji, które zostan¹ zainstalowane.	
+IDS__IsCustomSelectionDlg_7	Kliknij ikonê z poni¿szej listy, aby zmieniæ ustawienia instalacji sk³adnika.	
+IDS__IsCustomSelectionDlg_8	{&MSSansBold8}Instalacja niestandardowa	
+IDS__IsCustomSelectionDlg_9	Wielowierszowy opis aktualnie wybranego sk³adnika	
+IDS__IsDatabaseLocation_1	InstallShield	
+IDS__IsDatabaseLocation_10	[DATABASEDIR]	
+IDS__IsDatabaseLocation_11	Instaluj bazê danych aplikacji do:	
+IDS__IsDatabaseLocation_12	{&MSSWhiteSerif8}InstallShield	
+IDS__IsDatabaseLocation_13	[ProductName] - InstallShield Wizard	
+IDS__IsDatabaseLocation_2	2	
+IDS__IsDatabaseLocation_3	Anuluj	
+IDS__IsDatabaseLocation_4	4	
+IDS__IsDatabaseLocation_5	Kliknij przycisk Dalej, aby zainstalowaæ bazê danych aplikacji w tym folderze lub przycisk Zmieñ, aby wskazaæ inn¹ lokalizacjê.	
+IDS__IsDatabaseLocation_6	{&MSSansBold8}Folder docelowy bazy danych	
+IDS__IsDatabaseLocation_7	< &Wstecz	
+IDS__IsDatabaseLocation_8	&Dalej >	
+IDS__IsDatabaseLocation_9	&Zmieñ	
+IDS__IsDiskSpaceDlg_0	[ProductName] - InstallShield Wizard	
+IDS__IsDiskSpaceDlg_1	{&MSSWhiteSerif8}InstallShield	
+IDS__IsDiskSpaceDlg_10	OK	
+IDS__IsDiskSpaceDlg_11	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsDiskSpaceDlg_2	InstallShield	
+IDS__IsDiskSpaceDlg_3	&Czyszczenie dysku	
+IDS__IsDiskSpaceDlg_4	Iloœæ wolnego miejsca na dysku jest niewystarczaj¹ca do przeprowadzenia instalacji.	
+IDS__IsDiskSpaceDlg_5	Iloœæ wolnego miejsca na wybranych woluminach jest niewystarczaj¹ca do zainstalowania wybranych sk³adników. Mo¿esz usun¹æ pliki z wybranych woluminów, wybraæ instalacjê mniejszej liczby sk³adników na dyskach lokalnych lub wybraæ inne dyski docelowe.	
+IDS__IsDiskSpaceDlg_6	{&MSSansBold8}Brak miejsca na dysku	
+IDS__IsDiskSpaceDlg_7	&Zakoñcz	
+IDS__IsDiskSpaceDlg_8	U¿yj czyszczenia dysku, aby zwolniæ miejsce na dysku poprzez usuniêcie niepotrzebnych plików.	
+IDS__IsDiskSpaceDlg_9	{120}{70}{70}{70}{70}	
+IDS__IsErrorDlg_0	Informacje Instalatora programu [ProductName]	
+IDS__IsErrorDlg_1	&Przerwij	
+IDS__IsErrorDlg_2	&Anuluj	
+IDS__IsErrorDlg_3	<tekst b³êdu><tekst b³êdu><tekst b³êdu><tekst b³êdu><tekst b³êdu><tekst b³êdu><tekst b³êdu><tekst b³êdu><tekst b³êdu><tekst b³êdu><tekst b³êdu>	
+IDS__IsErrorDlg_4	&Ignoruj	
+IDS__IsErrorDlg_5	&Nie	
+IDS__IsErrorDlg_6	&OK	
+IDS__IsErrorDlg_7	&Ponów	
+IDS__IsErrorDlg_8	&Tak	
+IDS__IsErrorDlg_9	<ISProductFolder>\Redist\Language Independent\OS Independent\WarningIcon.ibd	
+IDS__IsExitDialog_0	[ProductName] - InstallShield Wizard	
+IDS__IsExitDialog_1	< &Wstecz	
+IDS__IsExitDialog_2	Anuluj	
+IDS__IsExitDialog_3	&Zakoñcz	
+IDS__IsExitDialog_4	{&TahomaBold10}InstallShield Wizard zakoñczy³ instalacjê	
+IDS__IsExitDialog_5	InstallShield Wizard pomyœlnie zainstalowa³ program [ProductName]. Kliknij przycisk Zakoñcz, aby zakoñczyæ pracê z kreatorem.	
+IDS__IsExitDialog_6	InstallShield Wizard pomyœlnie zdezinstalowa³ program [ProductName]. Kliknij przycisk Zakoñcz, aby zakoñczyæ pracê z kreatorem.	
+IDS__IsExitDialog_7	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsExitDialog_8	Poka¿ plik readme	
+IDS__IsExitDialog_9	Uruchom program	
+IDS__IsExitDialog_Update_0	[ProductName] - InstallShield Wizard	
+IDS__IsExitDialog_Update_1	< &Wstecz	
+IDS__IsExitDialog_Update_2	Anuluj	
+IDS__IsExitDialog_Update_3	&Zakoñcz	
+IDS__IsExitDialog_Update_4	Instalator zakoñczy³ instalowanie programu [ProductName].	
+IDS__IsExitDialog_Update_5	Mo¿liwe, ¿e od momentu zakupu tej kopii programu [ProductName] niektóre pliki zosta³y zaktualizowane.	
+IDS__IsExitDialog_Update_6	Za pomoc¹ istniej¹cego po³¹czenia internetowego mo¿esz sprawdziæ czy masz ju¿ najnowsze wersje tych plików.	
+IDS__IsExitDialog_Update_7	&Tak, szukaj uaktualnieñ aplikacji po zakoñczeniu instalacji (zalecane).	
+IDS__IsFatalError_0	[ProductName] - InstallShield Wizard	
+IDS__IsFatalError_1	< &Wstecz	
+IDS__IsFatalError_10	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsFatalError_2	Anuluj	
+IDS__IsFatalError_3	&Zakoñcz	
+IDS__IsFatalError_4	System nie zosta³ zmodyfikowany. Aby dokoñczyæ instalacjê póŸniej, uruchom instalatora ponownie.	
+IDS__IsFatalError_5	Kliknij przycisk Zakoñcz, aby zakoñczyæ pracê z kreatorem.	
+IDS__IsFatalError_6	Mo¿esz zachowaæ zainstalowane sk³adniki, aby kontynuowaæ instalacjê póŸniej lub przywróciæ stan systemu sprzed instalacji.	
+IDS__IsFatalError_7	Kliknij przycisk Przywróæ lub Kontynuuj póŸniej, aby zakoñczyæ pracê z kreatorem.	
+IDS__IsFatalError_8	{&TahomaBold10}InstallShield Wizard zakoñczy³ instalacjê	
+IDS__IsFatalError_9	Dzia³anie kreatora zosta³o przerwane przed zakoñczeniem instalacji programu [ProductName].	
+IDS__IsFeatureDetailsDlg_0	[ProductName] - InstallShield Wizard	
+IDS__IsFeatureDetailsDlg_1	{&MSSWhiteSerif8}InstallShield	
+IDS__IsFeatureDetailsDlg_10	U¿yj czyszczenia dysku, aby zwolniæ miejsce na dysku poprzez usuniêcie niepotrzebnych plików.	
+IDS__IsFeatureDetailsDlg_11	Miejsce instalacji:	
+IDS__IsFeatureDetailsDlg_12	Ca³kowite wymagane miejsce na dysku:	
+IDS__IsFeatureDetailsDlg_13	{120}{70}{70}{70}{70}	
+IDS__IsFeatureDetailsDlg_14	OK	
+IDS__IsFeatureDetailsDlg_15	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsFeatureDetailsDlg_2	InstallShield	
+IDS__IsFeatureDetailsDlg_3	&Zmieñ	
+IDS__IsFeatureDetailsDlg_4	Anuluj	
+IDS__IsFeatureDetailsDlg_5	&Czyszczenie dysku	
+IDS__IsFeatureDetailsDlg_6	Iloœæ miejsca na dysku potrzebna do instalacji wybranych sk³adników.	
+IDS__IsFeatureDetailsDlg_7	Iloœæ wolnego miejsca na wybranych woluminach jest niewystarczaj¹ca do zainstalowania wybranych sk³adników. Mo¿esz usun¹æ pliki z wybranych woluminów, wybraæ instalacjê mniejszej liczby sk³adników na dyskach lokalnych lub wybraæ inne dyski docelowe.	
+IDS__IsFeatureDetailsDlg_8	{&MSSansBold8}Wymagane miejsce na dysku	
+IDS__IsFeatureDetailsDlg_9		
+IDS__IsFilesInUse_0	[ProductName] - InstallShield Wizard	
+IDS__IsFilesInUse_1	{&MSSWhiteSerif8}InstallShield	
+IDS__IsFilesInUse_10	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsFilesInUse_2	InstallShield	
+IDS__IsFilesInUse_3	Niektóre pliki, które musz¹ zostaæ zaktualizowane s¹ aktualnie u¿ywane.	
+IDS__IsFilesInUse_4	Nastêpuj¹ce aplikacje wykorzystuj¹ pliki, które musz¹ byæ zaktualizowane przez Instalatora. Zamknij te aplikacje i kliknij przycisk Ponów, aby kontynuowaæ.	
+IDS__IsFilesInUse_5	{&MSSansBold8}Pliki w u¿yciu	
+IDS__IsFilesInUse_6	&Zakoñcz	
+IDS__IsFilesInUse_7	&Ignoruj	
+IDS__IsFilesInUse_8	&Ponów	
+IDS__IsFilesInUse_9		
+IDS__IsInitDlg_0	[ProductName] - InstallShield Wizard	
+IDS__IsInitDlg_1		
+IDS__IsInitDlg_2		
+IDS__IsInitDlg_3	< &Wstecz	
+IDS__IsInitDlg_4	Anuluj	
+IDS__IsInitDlg_5	&Dalej >	
+IDS__IsInitDlg_6	{&TahomaBold10}Witamy w kreatorze InstallShield Wizard dla [ProductName]	
+IDS__IsInitDlg_7	Instalator programu [ProductName] przygotowuje kreatora InstallShield, który przeprowadzi u¿ytkownika przez proces instalacji. Proszê czekaæ.	
+IDS__IsInitDlg_8	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsLicenseDlg_0	[ProductName] - InstallShield Wizard	
+IDS__IsLicenseDlg_1	< &Wstecz	
+IDS__IsLicenseDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsLicenseDlg_3	InstallShield	
+IDS__IsLicenseDlg_4	Anuluj	
+IDS__IsLicenseDlg_5	Proszê uwa¿nie przeczytaæ niniejsz¹ umowê licencyjn¹.	
+IDS__IsLicenseDlg_6	Kliknij przycisk Akceptujê, aby zaakceptowaæ warunki niniejszej umowy lub przycisk Nie akceptujê, aby zakoñczyæ pracê z kreatorem.	
+IDS__IsLicenseDlg_7	{&MSSansBold8}Umowa licencyjna	
+IDS__IsLicenseDlg_8	&Dalej >	
+IDS__IsLicenseDlg_9	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsLicenseDlg_EULA	<ISProductFolder>\Redist\0409\Eula.rtf	
+IDS__IsMaintenanceDlg_0	[ProductName] - InstallShield Wizard	
+IDS__IsMaintenanceDlg_1	< &Wstecz	
+IDS__IsMaintenanceDlg_10	{&MSSansBold8}&Usuñ	
+IDS__IsMaintenanceDlg_11		
+IDS__IsMaintenanceDlg_12	Wybierz funkcje aplikacji, które zostan¹ zainstalowane. Ta opcja wyœwietla okno pozwalaj¹ce na modyfikacjê sposobu instalacji aplikacji.	
+IDS__IsMaintenanceDlg_13	Napraw b³êdy instalacji tej aplikacji. Ta opcja naprawia brakuj¹ce lub uszkodzone pliki, skróty oraz wpisy rejestru.	
+IDS__IsMaintenanceDlg_14	Usuñ program [ProductName] z komputera.	
+IDS__IsMaintenanceDlg_15	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsMaintenanceDlg_16	<ISProductFolder>\Redist\Language Independent\OS Independent\RemoveIco.ibd	
+IDS__IsMaintenanceDlg_17	<ISProductFolder>\Redist\Language Independent\OS Independent\ReinstIco.ibd	
+IDS__IsMaintenanceDlg_18	<ISProductFolder>\Redist\Language Independent\OS Independent\CustomSetupIco.ibd	
+IDS__IsMaintenanceDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsMaintenanceDlg_3	InstallShield	
+IDS__IsMaintenanceDlg_4	Anuluj	
+IDS__IsMaintenanceDlg_5	Zmodyfikuj, napraw lub usuñ program.	
+IDS__IsMaintenanceDlg_6	{&MSSansBold8}Obs³uga programu	
+IDS__IsMaintenanceDlg_7	&Dalej >	
+IDS__IsMaintenanceDlg_8	{&MSSansBold8}&Zmodyfikuj	
+IDS__IsMaintenanceDlg_9	{&MSSansBold8}Usuñ &b³êdy	
+IDS__IsMaintenanceWelcome_0	[ProductName] - InstallShield Wizard	
+IDS__IsMaintenanceWelcome_1	< &Wstecz	
+IDS__IsMaintenanceWelcome_2	Anuluj	
+IDS__IsMaintenanceWelcome_3	&Dalej >	
+IDS__IsMaintenanceWelcome_4	{&TahomaBold10}Witamy w kreatorze InstallShield Wizard dla [ProductName]	
+IDS__IsMaintenanceWelcome_5	InstallShield(R) Wizard umo¿liwia modyfikacjê, naprawê lub usuniêcie programu [ProductName]. Aby kontynuowaæ kliknij przycisk Dalej.	
+IDS__IsMaintenanceWelcome_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsPatchDlg_0	[ProductName] - Poprawka - InstallShield Wizard	
+IDS__IsPatchDlg_1	{&TahomaBold10}Witamy w programie koryguj¹cym [ProductName]	
+IDS__IsPatchDlg_2	Kreator InstallShield(R) Wizard zainstaluje w komputerze poprawkê programu [ProductName].  Aby kontynuowaæ kliknij Aktualizuj.	
+IDS__IsPatchDlg_3	Anuluj	
+IDS__IsPatchDlg_4	< &Wstecz	
+IDS__IsPatchDlg_5	&Aktualizuj >	
+IDS__IsPatchDlg_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsProgressDlg_0	[ProductName] - InstallShield Wizard	
+IDS__IsProgressDlg_1	Postêp	
+IDS__IsProgressDlg_10	(Chwilowo ukryte)Sek.	
+IDS__IsProgressDlg_11	Stan:	
+IDS__IsProgressDlg_12	&Dalej >	
+IDS__IsProgressDlg_13	(Chwilowo ukryte)	
+IDS__IsProgressDlg_14	)Chwilowo ukryte)Pozosta³o czasu:	
+IDS__IsProgressDlg_15	{&MSSansBold8}Dezinstalowanie programu [ProductName]	
+IDS__IsProgressDlg_16	Wybrane sk³adniki programu s¹ teraz dezinstalowane.	
+IDS__IsProgressDlg_17	Zaczekaj a¿ InstallShield Wizard dokona dezinstalacji programu [ProductName]. Mo¿e to potrwaæ kilka minut.	
+IDS__IsProgressDlg_18	<ISProductFolder>\Redist\Language Independent\OS Independent\SetupIcon.ibd	
+IDS__IsProgressDlg_19	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsProgressDlg_2		
+IDS__IsProgressDlg_3	< &Wstecz	
+IDS__IsProgressDlg_4	{&MSSWhiteSerif8}InstallShield	
+IDS__IsProgressDlg_5	InstallShield	
+IDS__IsProgressDlg_6	Anuluj	
+IDS__IsProgressDlg_7	Wybrane sk³adniki programu s¹ teraz instalowane.	
+IDS__IsProgressDlg_8	Zaczekaj a¿ InstallShield Wizard zainstaluje program [ProductName]. Mo¿e to potrwaæ kilka minut.	
+IDS__IsProgressDlg_9	{&MSSansBold8}Instalacja [ProductName]	
+IDS__IsReadmeDlg_0	{&MSSansBold8}Informacje Readme	
+IDS__IsReadmeDlg_1	Prosimy o uwa¿ne przeczytanie niniejszych informacji.	
+IDS__IsReadmeDlg_2	[ProductName] - InstallShield Wizard	
+IDS__IsReadmeDlg_3	< &Wstecz	
+IDS__IsReadmeDlg_4	&Dalej >	
+IDS__IsReadmeDlg_5	&Anuluj	
+IDS__IsReadmeDlg_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsReadmeDlg_7	InstallShield	
+IDS__IsReadmeDlg_8	{&MSSWhiteSerif8}InstallShield	
+IDS__IsRegisterUserDlg_0	[ProductName] - InstallShield Wizard	
+IDS__IsRegisterUserDlg_1	< &Wstecz	
+IDS__IsRegisterUserDlg_10	{\Tahoma8}{50}	
+IDS__IsRegisterUserDlg_11	&Nazwa u¿ytkownika:	
+IDS__IsRegisterUserDlg_12	&Dalej >	
+IDS__IsRegisterUserDlg_13	Zainstaluj aplikacjê dla:	
+IDS__IsRegisterUserDlg_14	Dowolne&go u¿ytkownika tego komputera (wszystkich u¿ytkowników)	
+IDS__IsRegisterUserDlg_15	Tylko dla &mnie ([USERNAME])	
+IDS__IsRegisterUserDlg_16		
+IDS__IsRegisterUserDlg_17	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsRegisterUserDlg_18	&Numer seryjny:	
+IDS__IsRegisterUserDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsRegisterUserDlg_3	InstallShield	
+IDS__IsRegisterUserDlg_4	Anuluj	
+IDS__IsRegisterUserDlg_5	{\Tahoma8}{80}	
+IDS__IsRegisterUserDlg_6	&Organizacja:	
+IDS__IsRegisterUserDlg_7	WprowadŸ informacje o sobie.	
+IDS__IsRegisterUserDlg_8	WprowadŸ imiê i nazwisko oraz nazwê firmy.	
+IDS__IsRegisterUserDlg_9	{&MSSansBold8}Informacje o u¿ytkowniku	
+IDS__IsReinstallDlg_0	[ProductName] - InstallShield Wizard	
+IDS__IsReinstallDlg_1	< &Wstecz	
+IDS__IsReinstallDlg_10	&Pe³na	
+IDS__IsReinstallDlg_11		
+IDS__IsReinstallDlg_12	Zast¹p wszystkie pliki, których wersje ró¿ni¹ siê od wymaganej przez program oraz wszystkie wpisy Rejestru i skróty wymagane przez program.	
+IDS__IsReinstallDlg_13	Zast¹p wy³¹cznie brakuj¹ce pliki oraz wpisy rejestru aplikacji.	
+IDS__IsReinstallDlg_14	Zast¹p wszystkie pliki, wpisy Rejestru i skróty wymagane przez program.	
+IDS__IsReinstallDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsReinstallDlg_3	InstallShield	
+IDS__IsReinstallDlg_4	Anuluj	
+IDS__IsReinstallDlg_5	Wybierz sposób ponownej instalacji sk³adników programu.	
+IDS__IsReinstallDlg_6	{&MSSansBold8}Tryb ponownej instalacji	
+IDS__IsReinstallDlg_7	&Dalej >	
+IDS__IsReinstallDlg_8	No&rmalna	
+IDS__IsReinstallDlg_9	&Minimalna	
+IDS__IsResumeDlg_0	[ProductName] - InstallShield Wizard	
+IDS__IsResumeDlg_1	< &Wstecz	
+IDS__IsResumeDlg_2	Anuluj	
+IDS__IsResumeDlg_3	&Dalej >	
+IDS__IsResumeDlg_4	InstallShield(R) Wizard zakoñczy instalacjê programu [ProductName] na tym komputerze. Aby kontynuowaæ kliknij przycisk Dalej.	
+IDS__IsResumeDlg_5	InstallShield(R) Wizard dokoñczy wstrzyman¹ instalacjê programu [ProductName] na tym komputerze. Aby kontynuowaæ kliknij przycisk Dalej.	
+IDS__IsResumeDlg_6	{&TahomaBold10}Wznowienie pracy kreatora InstallShield Wizard dla produktu [ProductName]	
+IDS__IsResumeDlg_7	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsSetupTypeMinDlg_0	[ProductName] - InstallShield Wizard	
+IDS__IsSetupTypeMinDlg_1	< &Wstecz	
+IDS__IsSetupTypeMinDlg_10	&Dalej >	
+IDS__IsSetupTypeMinDlg_11	{&MSSansBold8}&Pe³na	
+IDS__IsSetupTypeMinDlg_12	{&MSSansBold8}&Niestandardowa	
+IDS__IsSetupTypeMinDlg_13		
+IDS__IsSetupTypeMinDlg_14	<ISProductFolder>\Redist\Language Independent\OS Independent\CustomSetupIco.ibd	
+IDS__IsSetupTypeMinDlg_15	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsSetupTypeMinDlg_16	<ISProductFolder>\Redist\Language Independent\OS Independent\CompleteSetupIco.ibd	
+IDS__IsSetupTypeMinDlg_17	<ISProductFolder>\Redist\Language Independent\OS Independent\DestIcon.ibd	
+IDS__IsSetupTypeMinDlg_18	Zainstaluj minimalny zestaw sk³adników	
+IDS__IsSetupTypeMinDlg_19	<ISProductFolder>\Redist\Language Independent\OS Independent\CustomSetupIco.ibd	
+IDS__IsSetupTypeMinDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsSetupTypeMinDlg_20	{&MSSansBold8}&Minimalna	
+IDS__IsSetupTypeMinDlg_21	<ISProductFolder>\Redist\Language Independent\OS Independent\CustomSetupIco.ibd	
+IDS__IsSetupTypeMinDlg_22	<ISProductFolder>\Redist\Language Independent\OS Independent\CompleteSetupIco.ibd	
+IDS__IsSetupTypeMinDlg_23	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsSetupTypeMinDlg_24	{&MSSansBold8}&Standardowa	
+IDS__IsSetupTypeMinDlg_3	InstallShield	
+IDS__IsSetupTypeMinDlg_4	Anuluj	
+IDS__IsSetupTypeMinDlg_5	Zainstalowane zostan¹ wszystkie funkcje aplikacji.	
+IDS__IsSetupTypeMinDlg_6	Nale¿y wybraæ funkcje aplikacji, które zostan¹ zainstalowane i wskazaæ dla nich lokalizacjê. Zalecane tylko dla zaawansowanych u¿ytkowników.	
+IDS__IsSetupTypeMinDlg_7	Wybierz typ instalacji, który najlepiej odpowiada Twoim potrzebom.	
+IDS__IsSetupTypeMinDlg_8	Wybierz typ instalacji.	
+IDS__IsSetupTypeMinDlg_9	{&MSSansBold8}Typ instalacji	
+IDS__IsStartCopyDlg_0	[ProductName] - InstallShield Wizard	
+IDS__IsStartCopyDlg_1	< &Wstecz	
+IDS__IsStartCopyDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsStartCopyDlg_3	InstallShield	
+IDS__IsStartCopyDlg_4	Anuluj	
+IDS__IsStartCopyDlg_5	Kreator jest gotowy do rozpoczêcia instalacji.	
+IDS__IsStartCopyDlg_6	Kliknij przycisk Dalej, aby rozpocz¹æ instalacjê.	
+IDS__IsStartCopyDlg_7	Je¿eli chcesz przejrzeæ lub zmieniæ jakiekolwiek ustawienia instalacji kliknij przycisk Wstecz. Kliknij przycisk Anuluj, aby zakoñczyæ pracê z kreatorem.	
+IDS__IsStartCopyDlg_8	{&MSSansBold8}Gotowy do instalacji	
+IDS__IsStartCopyDlg_9	&Dalej >	
+IDS__IsUserExit_0	[ProductName] - InstallShield Wizard	
+IDS__IsUserExit_1	< &Wstecz	
+IDS__IsUserExit_10	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsUserExit_2	Anuluj	
+IDS__IsUserExit_3	&Zakoñcz	
+IDS__IsUserExit_4	 System nie zosta³ zmodyfikowany. Aby póŸniej zainstalowaæ program, uruchom instalatora ponownie.	
+IDS__IsUserExit_5	Kliknij przycisk Zakoñcz, aby zakoñczyæ pracê z kreatorem.	
+IDS__IsUserExit_6	Mo¿esz zachowaæ zainstalowane sk³adniki, aby kontynuowaæ instalacjê póŸniej lub przywróciæ stan systemu sprzed instalacji.	
+IDS__IsUserExit_7	Kliknij przycisk Przywróæ lub Kontynuuj póŸniej, aby zakoñczyæ pracê z kreatorem.	
+IDS__IsUserExit_8	{&TahomaBold10}InstallShield Wizard zakoñczy³ instalacjê	
+IDS__IsUserExit_9	Dzia³anie kreatora zosta³o przerwane przed zakoñczeniem instalacji programu [ProductName].	
+IDS__IsVerifyReadyDlg_0	[ProductName] - InstallShield Wizard	
+IDS__IsVerifyReadyDlg_1	< &Wstecz	
+IDS__IsVerifyReadyDlg_10	{&MSSansBold8}Gotowy do naprawienia programu	
+IDS__IsVerifyReadyDlg_11	{&MSSansBold8}Gotowy do instalacji programu	
+IDS__IsVerifyReadyDlg_12	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsVerifyReadyDlg_13	Numer seryjny: [SERIALNUMBER]	
+IDS__IsVerifyReadyDlg_13X	Numer seryjny: [ISX_SERIALNUM]	
+IDS__IsVerifyReadyDlg_14	Firma: [COMPANYNAME]	
+IDS__IsVerifyReadyDlg_15	Nazwisko: [USERNAME]	
+IDS__IsVerifyReadyDlg_16	Informacje o u¿ytkowniku:	
+IDS__IsVerifyReadyDlg_17	[INSTALLDIR]	
+IDS__IsVerifyReadyDlg_18	Folder docelowy:	
+IDS__IsVerifyReadyDlg_19	[SelectedSetupType]	
+IDS__IsVerifyReadyDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsVerifyReadyDlg_20	Typ instalacji:	
+IDS__IsVerifyReadyDlg_21	Bie¿¹ce ustawienia:	
+IDS__IsVerifyReadyDlg_3	InstallShield	
+IDS__IsVerifyReadyDlg_4	Anuluj	
+IDS__IsVerifyReadyDlg_5	Kreator jest gotowy do rozpoczêcia instalacji.	
+IDS__IsVerifyReadyDlg_6	Kliknij przycisk Instaluj, aby rozpocz¹æ instalacjê.	
+IDS__IsVerifyReadyDlg_7	Je¿eli chcesz przejrzeæ lub zmieniæ jakiekolwiek ustawienia instalacji kliknij przycisk Wstecz. Kliknij przycisk Anuluj, aby zakoñczyæ pracê z kreatorem.	
+IDS__IsVerifyReadyDlg_8	{&MSSansBold8}Gotowy do przeprowadzenia modyfikacji aplikacji	
+IDS__IsVerifyReadyDlg_9	&Instaluj	
+IDS__IsVerifyRemoveAllDlg_0	[ProductName] - InstallShield Wizard	
+IDS__IsVerifyRemoveAllDlg_1	< &Wstecz	
+IDS__IsVerifyRemoveAllDlg_10	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsVerifyRemoveAllDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsVerifyRemoveAllDlg_3	InstallShield	
+IDS__IsVerifyRemoveAllDlg_4	Anuluj	
+IDS__IsVerifyRemoveAllDlg_5	Wybrano usuniêcie programu z systemu.	
+IDS__IsVerifyRemoveAllDlg_6	Kliknij przycisk Usuñ, aby usun¹æ program [ProductName] z komputera. Po usuniêciu program nie bêdzie ju¿ dostêpny.	
+IDS__IsVerifyRemoveAllDlg_7	Je¿eli chcesz przejrzeæ lub zmieniæ jakiekolwiek ustawienia kliknij przycisk Wstecz.	
+IDS__IsVerifyRemoveAllDlg_8	{&MSSansBold8}Usuñ program	
+IDS__IsVerifyRemoveAllDlg_9	&Usuñ	
+IDS__IsWelcomeDlg_0	[ProductName] - InstallShield Wizard	
+IDS__IsWelcomeDlg_1	< &Wstecz	
+IDS__IsWelcomeDlg_2	Anuluj	
+IDS__IsWelcomeDlg_3	&Dalej >	
+IDS__IsWelcomeDlg_4	{&TahomaBold10}Witamy w kreatorze InstallShield Wizard dla [ProductName]	
+IDS__IsWelcomeDlg_5	InstallShield(R) Wizard zainstaluje program [ProductName] na tym komputerze. Aby kontynuowaæ kliknij przycisk Dalej.	
+IDS__IsWelcomeDlg_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsWelcomeDlg_7	OSTRZE¯ENIE: Ten program jest chroniony prawem autorskim i umowami miêdzynarodowymi.	
+IDS__SetupTips_0	[ProductName] - InstallShield Wizard	
+IDS__TargetReq_DESC_COLOR	Ustawienia kolorów w systemie nie s¹ odpowiednie do uruchomienia programu [ProductName].	
+IDS__TargetReq_DESC_OS	System operacyjny nie jest odpowiedni do uruchomienia programu [ProductName].	
+IDS__TargetReq_DESC_PROCESSOR	Procesor nie jest odpowiedni do uruchomienia programu [ProductName].	
+IDS__TargetReq_DESC_RAM	Iloœæ pamiêci RAM jest niewystarczaj¹ca do uruchomienia programu [ProductName].	
+IDS__TargetReq_DESC_RESOLUTION	Rozdzielczoœæ ekranu jest niewystarczaj¹ca do uruchomienia programu [ProductName].	
+IDS_ACTIONTEXT_1	Anonsowanie aplikacji	
+IDS_ACTIONTEXT_10	Obliczanie wymaganego miejsca	
+IDS_ACTIONTEXT_100	Typ zawartoœci MIME: [1], Rozszerzenie: [2]	
+IDS_ACTIONTEXT_101	Wyrejestrowywanie identyfikatorów aplikacji	
+IDS_ACTIONTEXT_102	Identyfikator programu: [1]	
+IDS_ACTIONTEXT_103	Wyrejestrowywanie bibliotek typów	
+IDS_ACTIONTEXT_104	Identyfikator biblioteki: [1]	
+IDS_ACTIONTEXT_105	Aktualizowanie ci¹gów tekstowych œrodowiska	
+IDS_ACTIONTEXT_106	Nazwa: [1], Wartoœæ: [2], Akcja [3]	
+IDS_ACTIONTEXT_107	Zapisywanie wartoœci plików INI	
+IDS_ACTIONTEXT_108	Plik: [1],  Sekcja: [2],  Klucz: [3], Wartoœæ: [4]	
+IDS_ACTIONTEXT_109	Zapisywanie wartoœci rejestru systemowego	
+IDS_ACTIONTEXT_11	Tworzenie folderów	
+IDS_ACTIONTEXT_110	Klucz: [1], Nazwa: [2], Wartoœæ: [3]	
+IDS_ACTIONTEXT_111	Rejestrowanie aplikacji i sk³adników COM+	
+IDS_ACTIONTEXT_112	IdentyfikatorAplikacji: [1]{{, TypAplikacji: [2], U¿ytkownicy: [3], RSN: [4]}}	
+IDS_ACTIONTEXT_113	Wyrejestrowywanie aplikacji i sk³adników COM+	
+IDS_ACTIONTEXT_114	IdentyfikatorAplikacji: [1]{{, TypAplikacji: [2]}}	
+IDS_ACTIONTEXT_115	Wyszukiwanie powi¹zanych aplikacji	
+IDS_ACTIONTEXT_116	Znaleziono aplikacjê: [1]	
+IDS_ACTIONTEXT_117	Dokonywanie migracji stanu funkcji z powi¹zanych aplikacji	
+IDS_ACTIONTEXT_118	Aplikacja: [1]	
+IDS_ACTIONTEXT_119	Usuwanie aplikacji	
+IDS_ACTIONTEXT_12	Folder: [1]	
+IDS_ACTIONTEXT_120	Aplikacja: [1], Wiersz poleceñ: [2]	
+IDS_ACTIONTEXT_121	Instalacja katalogu systemu	
+IDS_ACTIONTEXT_122	Plik: [1],  Zale¿noœci: [2]	
+IDS_ACTIONTEXT_123	Tworzenie wirtualnych katalogów g³ównych IIS...	
+IDS_ACTIONTEXT_124	Usuwanie wirtualnych katalogów g³ównych IIS...	
+IDS_ACTIONTEXT_13	Tworzenie skrótów	
+IDS_ACTIONTEXT_14	Skrót: [1]	
+IDS_ACTIONTEXT_15	Usuwanie us³ug	
+IDS_ACTIONTEXT_16	Us³uga: [1]	
+IDS_ACTIONTEXT_17	Tworzenie zduplikowanych plików	
+IDS_ACTIONTEXT_18	Plik: [1],  Katalog: [9],  Rozmiar: [6]	
+IDS_ACTIONTEXT_19	Obliczanie wymaganego miejsca	
+IDS_ACTIONTEXT_2	Przydzielanie przestrzeni rejestru	
+IDS_ACTIONTEXT_20	Generowanie skryptu operacji dla akcji:	
+IDS_ACTIONTEXT_21	[1]	
+IDS_ACTIONTEXT_22	Kopiowanie plików instalacji sieciowej	
+IDS_ACTIONTEXT_23	Plik: [1], Katalog: [9], Rozmiar: [6]	
+IDS_ACTIONTEXT_24	Kopiowanie nowych plików	
+IDS_ACTIONTEXT_25	Plik: [1],  Katalog: [9],  Rozmiar: [6]	
+IDS_ACTIONTEXT_26	Instalowanie sk³adników ODBC	
+IDS_ACTIONTEXT_27	Instalowanie nowych us³ug	
+IDS_ACTIONTEXT_28	Us³uga: [2]	
+IDS_ACTIONTEXT_29	Sprawdzanie poprawnoœci instalacji	
+IDS_ACTIONTEXT_3	Wolny obszar: [1]	
+IDS_ACTIONTEXT_30	Wyznaczanie warunków uruchomienia	
+IDS_ACTIONTEXT_31	Przenoszenie plików	
+IDS_ACTIONTEXT_32	Plik: [1],  Katalog: [9],  Rozmiar: [6]	
+IDS_ACTIONTEXT_33	Poprawianie plików	
+IDS_ACTIONTEXT_34	Plik: [1],  Katalog: [2],  Rozmiar: [3]	
+IDS_ACTIONTEXT_35	Aktualizowanie rejestracji sk³adnika	
+IDS_ACTIONTEXT_36	Publikowanie uprawnionych sk³adników	
+IDS_ACTIONTEXT_37	Identyfikator produktu: [1], Kwalifikator: [2]	
+IDS_ACTIONTEXT_38	Publikowanie cech produktów	
+IDS_ACTIONTEXT_39	Cecha: [1]	
+IDS_ACTIONTEXT_4	Wyszukiwanie zainstalowanych aplikacji	
+IDS_ACTIONTEXT_40	Publikowanie informacji o produkcie	
+IDS_ACTIONTEXT_41	Rejestrowanie serwerów klas	
+IDS_ACTIONTEXT_42	Identyfikator klasy: [1]	
+IDS_ACTIONTEXT_43	Rejestrowanie serwerów rozszerzeñ	
+IDS_ACTIONTEXT_44	Rozszerzenie: [1]	
+IDS_ACTIONTEXT_45	Rejestrowanie czcionek	
+IDS_ACTIONTEXT_46	Czcionka: [1]	
+IDS_ACTIONTEXT_47	Rejestrowanie informacji MIME	
+IDS_ACTIONTEXT_48	Typ zawartoœci MIME: [1], Rozszerzenie: [2]	
+IDS_ACTIONTEXT_49	Rejestrowanie produktu	
+IDS_ACTIONTEXT_5	W³aœciwoœæ: [1], Podpis: [2]	
+IDS_ACTIONTEXT_50	[1]	
+IDS_ACTIONTEXT_51	Rejestrowanie identyfikatorów aplikacji	
+IDS_ACTIONTEXT_52	Identyfikator aplikacji	
+IDS_ACTIONTEXT_53	Rejestrowanie bibliotek typów	
+IDS_ACTIONTEXT_54	Identyfikator biblioteki	
+IDS_ACTIONTEXT_55	Rejestrowanie u¿ytkownika	
+IDS_ACTIONTEXT_56	[1]	
+IDS_ACTIONTEXT_57	Usuwanie zduplikowanych plików	
+IDS_ACTIONTEXT_58	Plik: [1], Katalog: [9]	
+IDS_ACTIONTEXT_59	Aktualizowanie ci¹gów tekstowych œrodowiska	
+IDS_ACTIONTEXT_6	Wi¹zanie plików wykonywalnych	
+IDS_ACTIONTEXT_60	Nazwa: [1], Wartoœæ: [2], Akcja [3]	
+IDS_ACTIONTEXT_61	Usuwanie plików	
+IDS_ACTIONTEXT_62	Plik: [1], Katalog: [9]	
+IDS_ACTIONTEXT_63	Usuwanie folderów	
+IDS_ACTIONTEXT_64	Folder: [1]	
+IDS_ACTIONTEXT_65	Usuwanie pozycji pliku INI	
+IDS_ACTIONTEXT_66	Plik: [1],  Sekcja: [2],  Klucz: [3], Wartoœæ: [4]	
+IDS_ACTIONTEXT_67	Usuwanie sk³adników ODBC	
+IDS_ACTIONTEXT_68	Usuwanie wartoœci rejestru systemowego	
+IDS_ACTIONTEXT_69	Klucz: [1], Nazwa: [2]	
+IDS_ACTIONTEXT_7	Plik: [1]	
+IDS_ACTIONTEXT_70	Usuwanie skrótów	
+IDS_ACTIONTEXT_71	Skrót: [1]	
+IDS_ACTIONTEXT_72	Wyszukiwanie uprawniaj¹cych produktów	
+IDS_ACTIONTEXT_73	Wycofywanie akcji:	
+IDS_ACTIONTEXT_74	[1]	
+IDS_ACTIONTEXT_75	Usuwanie plików kopii zapasowych	
+IDS_ACTIONTEXT_76	Plik: [1]	
+IDS_ACTIONTEXT_77	Rejestrowanie modu³ów	
+IDS_ACTIONTEXT_78	Plik: [1], Folder: [2]	
+IDS_ACTIONTEXT_79	Wyrejestrowywanie modu³ów	
+IDS_ACTIONTEXT_8	Wyszukiwanie uprawniaj¹cych produktów	
+IDS_ACTIONTEXT_80	Plik: [1], Folder: [2]	
+IDS_ACTIONTEXT_81	Inicjowanie katalogów ODBC	
+IDS_ACTIONTEXT_82	Uruchamianie us³ug	
+IDS_ACTIONTEXT_83	Us³uga: [1]	
+IDS_ACTIONTEXT_84	Zatrzymywanie us³ug	
+IDS_ACTIONTEXT_85	Us³uga: [1]	
+IDS_ACTIONTEXT_86	Usuwanie przeniesionych plików	
+IDS_ACTIONTEXT_87	Plik: [1], Katalog: [9]	
+IDS_ACTIONTEXT_88	Usuwanie publikacji uprawniaj¹cych produktów	
+IDS_ACTIONTEXT_89	Identyfikator produktu: [1], Kwalifikator: [2]	
+IDS_ACTIONTEXT_9	Obliczanie wymaganego miejsca	
+IDS_ACTIONTEXT_90	Usuwanie publikacji cech produktów	
+IDS_ACTIONTEXT_91	Cecha: [1]	
+IDS_ACTIONTEXT_92	Usuwanie publikacji informacji o produkcie	
+IDS_ACTIONTEXT_93	Wyrejestrowywanie serwerów klas	
+IDS_ACTIONTEXT_94	Identyfikator klasy: [1]	
+IDS_ACTIONTEXT_95	Wyrejestrowywanie serwerów rozszerzeñ	
+IDS_ACTIONTEXT_96	Rozszerzenie: [1]	
+IDS_ACTIONTEXT_97	Wyrejestrowywanie czcionek	
+IDS_ACTIONTEXT_98	Czcionka: [1]	
+IDS_ACTIONTEXT_99	Wyrejestrowywanie informacji MIME	
+IDS_ERROR_0	{{B³¹d krytyczny: }}	
+IDS_ERROR_1	B³¹d [1].	
+IDS_ERROR_10	=== Rejestrowanie rozpoczête: [Date]  [Time] ===	
+IDS_ERROR_100	Nie mo¿na usun¹æ skrótu [2]. Zweryfikuj czy plik skrótu istnieje i czy masz do niego dostêp.	
+IDS_ERROR_101	Nie mo¿na zarejestrowaæ typu biblioteki dla pliku [2]. Nale¿y skontaktowaæ siê z personelem obs³ugi technicznej.	
+IDS_ERROR_102	Nie mo¿na wyrejestrowaæ typu biblioteki dla pliku [2]. Nale¿y skontaktowaæ siê z personelem obs³ugi technicznej.	
+IDS_ERROR_103	Nie mo¿na zaktualizowaæ pliku ini [2][3].  Zweryfikuj czy plik istnieje i czy masz do niego dostêp.	
+IDS_ERROR_104	Nie mo¿na zaplanowaæ pliku [2] do zamiany pliku [3] przy ponownym rozruchu. Zweryfikuj czy masz uprawnienia do zapisu do pliku [3].	
+IDS_ERROR_105	B³¹d usuwania mened¿era sterownika ODBC, b³¹d ODBC [2]: [3]. Skontaktuj siê z personelem obs³ugi technicznej.	
+IDS_ERROR_106	B³¹d instalowania mened¿era sterownika ODBC, b³¹d ODBC [2]: [3]. Skontaktuj siê z personelem obs³ugi technicznej.	
+IDS_ERROR_107	B³¹d usuwania mened¿era sterownika ODBC: [4], b³¹d ODBC [2]: [3]. Zweryfikuj czy masz odpowiednie uprawnienia do usuwania sterowników ODBC.	
+IDS_ERROR_108	B³¹d instalowania sterownika ODBC: [4], b³¹d ODBC [2]: [3]. Zweryfikuj czy plik [4] istnieje i czy masz do niego dostêp.	
+IDS_ERROR_109	B³¹d konfigurowania Ÿród³a danych ODBC: [4], b³¹d ODBC [2]: [3]. Zweryfikuj czy plik [4] istnieje i czy masz do niego dostêp.	
+IDS_ERROR_11	=== Rejestrowanie zatrzymane: [Date]  [Time] ===	
+IDS_ERROR_110	Nie mo¿na uruchomiæ us³ugi '[2]' ([3]). Zweryfikuj czy masz odpowiednie uprawnienia do uruchamiania us³ug systemu.	
+IDS_ERROR_111	Nie mo¿na zatrzymaæ us³ugi '[2]' ([3]).  Zweryfikuj czy masz odpowiednie uprawnienia do zatrzymywania us³ug systemu.	
+IDS_ERROR_112	Nie mo¿na usun¹æ us³ugi '[2]' ([3]).  Zweryfikuj czy masz odpowiednie uprawnienia do usuwania us³ug systemu.	
+IDS_ERROR_113	Nie mo¿na zainstalowaæ us³ugi '[2]' ([3]). Zweryfikuj czy masz odpowiednie uprawnienia do instalowania us³ug systemu.	
+IDS_ERROR_114	Nie mo¿na zaktualizowaæ zmiennej œrodowiskowej '[2]'.  Zweryfikuj czy masz odpowiednie uprawnienia do modyfikacji zmiennych œrodowiskowych.	
+IDS_ERROR_115	Nie masz odpowiednich uprawnieñ do dokoñczenia tej instalacji dla wszystkich u¿ytkowników na tym komputerze. Zaloguj siê jako administrator i ponów próbê instalacji.	
+IDS_ERROR_116	Nie mo¿na ustawiæ zabezpieczeñ dla pliku '[3]'. B³¹d: [2]. Zweryfikuj czy masz odpowiednie uprawnienia do modyfikacji uprawnieñ zabezpieczeñ dla tego pliku.	
+IDS_ERROR_117	Us³ugi sk³adników (COM+ 1.0) nie s¹ zainstalowane na tym komputerze. Instalacja wymaga us³ug sk³adników. Us³ugi sk³adników s¹ dostêpne w systemie Windows 2000.	
+IDS_ERROR_118	Podczas rejestrowania aplikacji COM+ wyst¹pi³ b³¹d.  Skontaktuj siê z personelem obs³ugi technicznej, aby uzyskaæ wiêcej informacji.	
+IDS_ERROR_119	Podczas wyrejestrowywania aplikacji COM+ wyst¹pi³ b³¹d.  Skontaktuj siê z personelem obs³ugi technicznej, aby uzyskaæ wiêcej informacji.	
+IDS_ERROR_12	Pocz¹tek akcji [Time]: [1].	
+IDS_ERROR_120	Trwa usuwanie starszych wersji tej aplikacji	
+IDS_ERROR_121	Trwa przygotowywanie do usuniêcia starszych wersji tej aplikacji	
+IDS_ERROR_122	Podczas stosowania poprawki do pliku [2] wyst¹pi³ b³¹d. Prawdopodobnie plik zosta³ zaktualizowany w inny sposób i nie mo¿e byæ modyfikowany przez tê poprawkê. Aby uzyskaæ wiêcej informacji skontaktuj siê dostawc¹ poprawki.  {{B³¹d systemowy: [3]}}	
+IDS_ERROR_123	[2] nie mo¿e zainstalowaæ jednego z wymaganych produktów. Skontaktuj siê z personelem obs³ugi technicznej.  {{B³¹d systemowy: [3].}}	
+IDS_ERROR_124	Starsza wersja programu [2] nie mo¿e byæ usuniêta. Skontaktuj siê z grup¹ obs³ugi technicznej.  {{B³¹d systemowy [3].}}	
+IDS_ERROR_125	Opis us³ugi '[2]' ([3]) nie móg³ byæ zmieniony.	
+IDS_ERROR_126	Us³uga Instalator Windows nie mo¿e uaktualniæ pliku systemowego [2], poniewa¿ plik ten jest zablokowany przez system operacyjny. Do poprawnej pracy aplikacji konieczne jest uaktualnienie systemu operacyjnego {{Wersja pakietu: [3], wersja OS Protected: [4]}}	
+IDS_ERROR_127	Us³uga Instalator Windows nie mo¿e zaktualizowaæ zabezpieczonego pliku systemu Windows  [2]. {{Wersja pakietu: [3], Wersja OS Protected: [4], Wersja: [5]}}	
+IDS_ERROR_128	Ten instalator wymaga Internet Information Server w wersji 4.0 lub nowszej w celu konfiguracji wirtualnych katalogów IIS. Nale¿y siê upewniæ, ¿e zainstalowano IIS w wersji 4.0 lub nowszej.	
+IDS_ERROR_129	Ten instalator wymaga uprawnieñ administratora w celu konfiguracji wirtualnych katalogów IIS.	
+IDS_ERROR_13	Koniec akcji [Time]: [1]. Zwrócona wartoœæ [2].	
+IDS_ERROR_14	Pozosta³y czas: {[1] min. }{[2] sek.}	
+IDS_ERROR_15	Za ma³o pamiêci. Przed ponowieniem zamknij inne aplikacje.	
+IDS_ERROR_16	Instalator nie odpowiada.	
+IDS_ERROR_17	Instalator przedwczeœnie zatrzyma³ pracê.	
+IDS_ERROR_18	Proszê czekaæ. System Windows konfiguruje: [ProductName]	
+IDS_ERROR_19	Pobieranie wymaganych informacji...	
+IDS_ERROR_2	Ostrze¿enie [1].	
+IDS_ERROR_20	{[ProductName] }Instalacja zakoñczy³a siê pomyœlnie.	
+IDS_ERROR_21	{[ProductName] }Instalacja zosta³a przerwana.	
+IDS_ERROR_22	B³¹d podczas odczytu pliku: [2]. {{ B³¹d systemowy [3].}}  Zweryfikuj czy plik istnieje i czy masz do niego dostêp.	
+IDS_ERROR_23	Nie mo¿na utworzyæ pliku '[2]'.  Katalog o tej nazwie ju¿ istnieje. Anuluj instalacjê i spróbuj zainstalowaæ w innej lokalizacji.	
+IDS_ERROR_24	W³ó¿ dysk: [2]	
+IDS_ERROR_25	Instalator ma niewystarczaj¹ce uprawnienia dostêpu do katalogu: [2]. Instalacja nie mo¿e byæ kontynuowana. Zaloguj siê jako administrator lub skontaktuj siê z administratorem systemu.	
+IDS_ERROR_26	B³¹d zapisu do pliku: [2]. Zweryfikuj czy masz dostêp do tego katalogu.	
+IDS_ERROR_27	B³¹d odczytu z pliku: [2]. Zweryfikuj czy plik istnieje i czy masz do niego dostêp.	
+IDS_ERROR_28	Inna aplikacja ma ju¿ wy³¹czny dostêp do pliku '[2]'.  Zamknij inne aplikacje, a nastêpnie kliknij przycisk Ponów.	
+IDS_ERROR_29	Za ma³o miejsca na dysku, aby zainstalowaæ plik: [2].  Zwolnij trochê miejsca na dysku i kliknij przycisk Ponów lub przycisk Anuluj, aby zakoñczyæ.	
+IDS_ERROR_3	Informacja [1].	
+IDS_ERROR_30	Nie znaleziono pliku Ÿród³owego: [2].  Zweryfikuj czy plik istnieje i czy masz do niego dostêp.	
+IDS_ERROR_31	B³¹d odczytu z pliku: [3]. {{ B³¹d systemowy [2].}}  Zweryfikuj czy plik istnieje i czy masz do niego dostêp.	
+IDS_ERROR_32	B³¹d zapisu do pliku: [3]. {{ B³¹d systemowy [2].}}  Zweryfikuj czy masz dostêp do tego katalogu.	
+IDS_ERROR_33	Nie znaleziono pliku Ÿród³owego{{(plik cabinet)}}: [2].  Zweryfikuj czy plik istnieje i czy masz do niego dostêp.	
+IDS_ERROR_34	Nie mo¿na utworzyæ katalogu '[2]'. Istnieje ju¿ plik o takiej nazwie. Zmieñ nazwê lub usuñ plik i kliknij przycisk Ponów lub przycisk Anuluj, aby zakoñczyæ.	
+IDS_ERROR_35	Wolumin [2] jest teraz niedostêpny. Wybierz inny.	
+IDS_ERROR_36	Podana œcie¿ka '[2]' jest niedostêpna.	
+IDS_ERROR_37	Nie mo¿na zapisaæ w podanym folderze: [2].	
+IDS_ERROR_38	Wyst¹pi³ b³¹d sieciowy podczas próby odczytu z pliku [2]	
+IDS_ERROR_39	Wyst¹pi³ b³¹d podczas próby utworzenia katalogu [2]	
+IDS_ERROR_4	B³¹d wewnêtrzny [1]. [2]{, [3]}{, [4]}	
+IDS_ERROR_40	Wyst¹pi³ b³¹d sieciowy podczas próby utworzenia katalogu [2]	
+IDS_ERROR_41	Wyst¹pi³ b³¹d sieciowy podczas próby otwarcia Ÿród³owego pliku cabinet [2].	
+IDS_ERROR_42	Podana œcie¿ka jest za d³uga [2].	
+IDS_ERROR_43	Instalator ma niewystarczaj¹ce uprawnienia do zmodyfikowania pliku [2].	
+IDS_ERROR_44	Czêœæ œcie¿ki folderu '[2]' jest nieprawid³owa. Jest ona pusta lub przekracza d³ugoœæ dopuszczaln¹ przez system.	
+IDS_ERROR_45	Œcie¿ka folderu '[2]' zawiera niedozwolone s³owa.	
+IDS_ERROR_46	Œcie¿ka folderu '[2]' zawiera nieprawid³owy znak.	
+IDS_ERROR_47	[2] nie jest prawid³ow¹ krótk¹ nazw¹ pliku.	
+IDS_ERROR_48	B³¹d pobierania zabezpieczeñ pliku: [3] GetLastError: [2]	
+IDS_ERROR_49	Nieprawid³owy dysk: [2]	
+IDS_ERROR_5	{{Dysk pe³ny: }}	
+IDS_ERROR_50	Nie mo¿na utworzyæ klucza: [2]. {{B³¹d systemowy [3].}}  Zweryfikuj czy masz odpowiednie prawa dostêpu do klucza lub skontaktuj siê z personelem obs³ugi technicznej.	
+IDS_ERROR_51	Nie mo¿na otworzyæ klucza: [2]. {{B³¹d systemowy [3].}}  Zweryfikuj czy masz odpowiednie prawa dostêpu do klucza lub skontaktuj siê z personelem obs³ugi technicznej.	
+IDS_ERROR_52	Nie mo¿na usun¹æ wartoœci [2] z klucza [3]. {{ B³¹d systemowy [4].}}  Zweryfikuj czy masz odpowiednie prawa dostêpu do klucza lub skontaktuj siê z personelem obs³ugi technicznej.	
+IDS_ERROR_53	Nie mo¿na usun¹æ klucza: [2]. {{B³¹d systemowy [3].}}  Zweryfikuj czy masz odpowiednie prawa dostêpu do klucza lub skontaktuj siê z personelem obs³ugi technicznej.	
+IDS_ERROR_54	Nie mo¿na odczytaæ wartoœci [2] z klucza [3]. {{ B³¹d systemowy [4].}}  Zweryfikuj czy masz odpowiednie prawa dostêpu do klucza lub skontaktuj siê z personelem obs³ugi technicznej.	
+IDS_ERROR_55	Nie mo¿na zapisaæ wartoœci [2] do klucza [3]. {{ B³¹d systemowy [4].}}  Zweryfikuj czy masz odpowiednie prawa dostêpu do klucza lub skontaktuj siê z personelem obs³ugi technicznej.	
+IDS_ERROR_56	Nie mo¿na pobraæ nazw wartoœci dla klucza [2]. {{ B³¹d systemowy [3].}}  Zweryfikuj czy masz odpowiednie prawa dostêpu do klucza lub skontaktuj siê z personelem obs³ugi technicznej.	
+IDS_ERROR_57	Nie mo¿na pobraæ nazw podkluczy dla klucza [2]. {{ B³¹d systemowy [3].}}  Zweryfikuj czy masz odpowiednie prawa dostêpu do klucza lub skontaktuj siê z personelem obs³ugi technicznej.	
+IDS_ERROR_58	Nie mo¿na odczytaæ informacji o zabezpieczeniach klucza [2]. {{ B³¹d systemowy [3].}}  Zweryfikuj czy masz odpowiednie prawa dostêpu do klucza lub skontaktuj siê z personelem obs³ugi technicznej.	
+IDS_ERROR_59	Nie mo¿na zwiêkszyæ dostêpnej przestrzeni rejestru. Do instalacji tej aplikacji wymagane jest [2] KB wolnego miejsca dla rejestru.	
+IDS_ERROR_6	Akcja [Time]: [1]. [2]	
+IDS_ERROR_60	Inna instalacja jest w toku. Przed kontynuowaniem tej instalacji nale¿y zakoñczyæ ju¿ uruchomion¹.	
+IDS_ERROR_61	B³¹d dostêpu do bezpiecznych danych. Upewnij siê, ¿e Instalator Windows jest prawid³owo skonfigurowany i spróbuj ponownie dokonaæ instalacji.	
+IDS_ERROR_62	U¿ytkownik '[2]' zacz¹³ wczeœniej instalacjê produktu '[3]'.  Aby u¿ywaæ tego produktu u¿ytkownik bêdzie musia³ ponownie uruchomiæ instalacjê. Bie¿¹ca instalacja bêdzie kontynuowana.	
+IDS_ERROR_63	U¿ytkownik '[2]' zacz¹³ wczeœniej instalacjê produktu '[3]'.  Aby u¿ywaæ tego produktu u¿ytkownik bêdzie musia³ ponownie uruchomiæ instalacjê.	
+IDS_ERROR_64	Za ma³o miejsca na dysku -- Wolumin: '[2]'; wymagane miejsce: [3] KB; dostêpne miejsce: [4] KB.  Zwolnij trochê miejsca na dysku i ponów próbê.	
+IDS_ERROR_65	Czy na pewno chcesz anulowaæ?	
+IDS_ERROR_66	Plik [2][3] jest zablokowany przez{ nastêpuj¹cy proces: Nazwa: [4], Id: [5], Tytu³ okna: '[6]'}. Zamknij tê aplikacjê i ponów próbê.	
+IDS_ERROR_67	Produkt '[2]' jest ju¿ zainstalowany i jego instalacja nie jest mo¿liwa. Te dwa produkty nie s¹ zgodne.	
+IDS_ERROR_68	Za ma³o miejsca na dysku -- Wolumin: '[2]'; wymagane miejsce: [3] KB; dostêpne miejsce: [4] KB. Jeœli funkcja cofniêcia instalacji zostanie wy³¹czona, bêdzie wystarczaj¹co du¿o miejsca. Kliknij przycisk 'Anuluj' aby zakoñczyæ, przycisk 'Ponów', aby ponownie sprawdziæ iloœæ wolnego miejsca na dysku lub przycisk 'Ignoruj', aby kontynuowaæ bez funkcji cofniêcia instalacji.	
+IDS_ERROR_69	Nie mo¿na uzyskaæ dostêpu do lokalizacji w sieci [2].	
+IDS_ERROR_7	[ProductName]	
+IDS_ERROR_70	Nastêpuj¹ce aplikacje musz¹ zostaæ zamkniête przed kontynuowaniem instalacji:	
+IDS_ERROR_71	Nie mo¿na odnaleŸæ wczeœniej zainstalowanych produktów zale¿nych od instalacji tego produktu.	
+IDS_ERROR_72	Klucz [2] jest nieprawid³owy. Zweryfikuj czy wprowadzono poprawny klucz.	
+IDS_ERROR_73	Przed kontynuacj¹ konfiguracji [2] Instalator musi ponownie uruchomiæ system. Kliknij przycisk Tak, aby ponownie uruchomiæ teraz lub przycisk Nie, aby zrobiæ to póŸniej.	
+IDS_ERROR_74	Przed kontynuacj¹ konfiguracji [2] Instalator musi ponownie uruchomiæ system. Kliknij przycisk Tak, aby ponownie uruchomiæ teraz lub przycisk Nie, aby zrobiæ to póŸniej.	
+IDS_ERROR_75	Instalacja [2] jest w tej chwili wstrzymana. Przed kontynuacj¹ musisz cofn¹æ zmiany dokonane przez tê instalacjê. Czy chcesz cofn¹æ zmiany?	
+IDS_ERROR_76	Poprzednia instalacja tego produktu jest w tej chwili w toku. Przed kontynuacj¹ musisz cofn¹æ zmiany dokonane przez tê instalacjê. Czy chcesz cofn¹æ zmiany?	
+IDS_ERROR_77	Nie odnaleziono w³aœciwej lokalizacji Ÿród³owej produktu [2].  Dzia³anie Instalatora Windows nie mo¿e byæ kontynuowane.	
+IDS_ERROR_78	Instalacja zosta³a pomyœlnie zakoñczona.	
+IDS_ERROR_79	Instalacja nie powiod³a siê.	
+IDS_ERROR_8	{[2]}{, [3]}{, [4]}	
+IDS_ERROR_80	Produkt: [2] -- [3]	
+IDS_ERROR_81	Mo¿esz przywróciæ komputer do poprzedniego stanu lub kontynuowaæ instalacjê póŸniej. Czy chcesz przywróciæ do poprzedniego stanu?	
+IDS_ERROR_82	Podczas zapisywania informacji o instalacji na dysku wyst¹pi³ b³¹d. Upewnij siê czy dysk posiada wystarczaj¹c¹ iloœæ miejsca i kliknij przycisk Ponów lub przycisk Anuluj, aby zakoñczyæ instalacjê.	
+IDS_ERROR_83	Nie mo¿na znaleŸæ jednego lub wiêcej plików wymaganych do przywrócenia komputera do poprzedniego stanu. Przywrócenie nie jest mo¿liwe.	
+IDS_ERROR_84	Œcie¿ka [2] nie jest prawid³owa. Podaj prawid³ow¹ œcie¿kê.	
+IDS_ERROR_85	Za ma³o pamiêci. Przed ponowieniem zamknij inne aplikacje.	
+IDS_ERROR_86	W stacji [2] nie ma dysku. W³ó¿ dysk i kliknij przycisk Ponów lub kliknij przycisk Anuluj, aby zmieniæ na poprzednio wybrany wolumin.	
+IDS_ERROR_87	W stacji [2] nie ma dysku. W³ó¿ dysk i kliknij przycisk Ponów lub kliknij przycisk Anuluj, aby powróciæ do okna dialogowego przegl¹dania i wybraæ inny wolumin.	
+IDS_ERROR_88	Folder [2] nie istnieje. Wpisz œcie¿kê do istniej¹cego foldera.	
+IDS_ERROR_89	Masz niewystarczaj¹ce uprawnienia do czytania tego foldera.	
+IDS_ERROR_9	Typ wiadomoœci: [1], Argument: [2]	
+IDS_ERROR_90	Nie mo¿na ustaliæ prawid³owego foldera docelowego instalacji.	
+IDS_ERROR_91	B³¹d podczas próby odczytu bazy danych Ÿród³a instalacji: [2].	
+IDS_ERROR_92	Planowanie operacji ponownego rozruchu: Zmiana nazwy pliku [2] na [3]. Aby ukoñczyæ operacjê nale¿y dokonaæ ponownego rozruchu.	
+IDS_ERROR_93	Planowanie operacji ponownego rozruchu: Usuwanie pliku [2]. Aby ukoñczyæ operacjê nale¿y dokonaæ ponownego rozruchu.	
+IDS_ERROR_94	Nie mo¿na zarejestrowaæ modu³u [2]. HRESULT [3]. Skontaktuj siê z personelem obs³ugi technicznej.	
+IDS_ERROR_95	Nie mo¿na wyrejestrowaæ modu³u [2].  HRESULT [3].  Skontaktuj siê z personelem obs³ugi technicznej.	
+IDS_ERROR_96	Nie mo¿na umieœciæ pakietu w buforze [2]. B³¹d: [3]. Skontaktuj siê z personelem obs³ugi technicznej.	
+IDS_ERROR_97	Nie mo¿na zarejestrowaæ czcionki [2]. Zweryfikuj czy masz wystarczaj¹ce uprawnienia do instalowania czcionek i czy system obs³uguje tê czcionkê.	
+IDS_ERROR_98	Nie mo¿na wyrejestrowaæ czcionki [2]. Zweryfikuj czy masz wystarczaj¹ce uprawnienia do usuwania czcionek.	
+IDS_ERROR_99	Nie mo¿na utworzyæ skrótu [2]. Zweryfikuj czy folder docelowy istnieje i czy masz do niego dostêp.	
+IDS_ERROR_SN_INVALID	B³êdny numer seryjny.	
+IDS_ISSCRIPT_VERSION_MISSING	W tym komputerze nie znaleziono mechanizmu InstallScript.  Uruchom program ISScript.msi lub zwróæ siê o pomoc do pracownika obs³ugi technicznej.	
+IDS_ISSCRIPT_VERSION_OLD	Mechanizm InstallScript w tym komputerze jest starszy ni¿ wersja wymagana do uruchomienia tej instalacji.  Zainstaluj najnowsz¹ wersjê programu ISScript.msi lub zwróæ siê o pomoc do pracownika obs³ugi technicznej.	
+IDS_PRODUCT_DEFAULT_1	Your Product Name	SYSTEM_GENERATED	
+IDS_SetupTips_1	OK	
+IDS_SetupTips_10	Zostanie zainstalowany przy pierwszym u¿yciu. (Dostêpne tylko wtedy, gdy sk³adnik obs³uguje tê opcjê.)	
+IDS_SetupTips_11	Zostanie zainstalowany do uruchamiania z sieci. (Dostêpne tylko wtedy, gdy sk³adnik obs³uguje tê opcjê.)	
+IDS_SetupTips_12	Ten stan instalacji oznacza, ¿e sk³adnik...	
+IDS_SetupTips_13	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS_SetupTips_14	<ISProductFolder>\Redist\Language Independent\OS Independent\NetworkInstall.ico	
+IDS_SetupTips_15	<ISProductFolder>\Redist\Language Independent\OS Independent\Install.ico	
+IDS_SetupTips_16	<ISProductFolder>\Redist\Language Independent\OS Independent\InstallFirstUse.ico	
+IDS_SetupTips_17	<ISProductFolder>\Redist\Language Independent\OS Independent\InstallPartial.ico	
+IDS_SetupTips_18	<ISProductFolder>\Redist\Language Independent\OS Independent\DontInstall.ico	
+IDS_SetupTips_19	<ISProductFolder>\Redist\Language Independent\OS Independent\InstallStateMenu.ico	
+IDS_SetupTips_2	{&MSSWhiteSerif8}InstallShield	
+IDS_SetupTips_3	InstallShield	
+IDS_SetupTips_4	Instalacja niestandardowa umo¿liwia selektywn¹ instalacjê sk³adników aplikacji.	
+IDS_SetupTips_5	{&MSSansBold8}Wskazówki dotycz¹ce instalacji niestandardowej	
+IDS_SetupTips_6	Nie zostanie zainstalowany.	
+IDS_SetupTips_7	Niektóre jego podsk³adniki zostan¹ zainstalowane na lokalnym dysku twardym. (Dostêpne tylko wtedy, gdy sk³adnik zawiera podsk³adniki.)	
+IDS_SetupTips_8	Zostanie w ca³oœci zainstalowany na lokalnym dysku twardym.	
+IDS_SetupTips_9	Ikona obok nazwy sk³adnika wskazuje stan jego instalacji. Kliknij ikonê, aby rozszerzyæ menu stanu instalacji dla ka¿dego ze sk³adników.	
+IDS_STANDARD_USE_SETUPEXE	Tej instalacji nie mo¿na uruchomiæ bezpoœrednio poprzez otwarcie pakietu MSI; nale¿y uruchomiæ plik setup.exe.	
+IDS_UITEXT_0	bajty	
+IDS_UITEXT_1	GB	
+IDS_UITEXT_10	Ten sk³adnik pozostanie niezainstalowany.	
+IDS_UITEXT_11	Ten sk³adnik zostanie zainstalowany w razie potrzeby.	
+IDS_UITEXT_12	Ten sk³adnik zostanie zainstalowany do uruchamiania z dysku CD-ROM.	
+IDS_UITEXT_13	Ten sk³adnik zostanie zainstalowany na lokalnym dysku twardym.	
+IDS_UITEXT_14	Ten sk³adnik zostanie zainstalowany do uruchamiania z sieci.	
+IDS_UITEXT_15	Ten sk³adnik bêdzie niedostêpny.	
+IDS_UITEXT_16	Zostanie zainstalowany w razie potrzeby.	
+IDS_UITEXT_17	Ten sk³adnik bêdzie dostêpny do uruchamiania z dysku CD-ROM.	
+IDS_UITEXT_18	Ten sk³adnik zostanie zainstalowany na lokalnym dysku twardym.	
+IDS_UITEXT_19	Ten sk³adnik bêdzie uruchamiany z sieci.	
+IDS_UITEXT_2	kB	
+IDS_UITEXT_20	Ten sk³adnik zostanie zdezinstalowany i nie bêdzie mo¿na go uruchamiaæ z dysku CD-ROM.	
+IDS_UITEXT_21	Ten sk³adnik by³ uruchamiany z dysku CD-ROM i zostanie ustawiony do zainstalowania w razie potrzeby.	
+IDS_UITEXT_22	Ten sk³adnik bêdzie dalej uruchamiany z dysku CD-ROM	
+IDS_UITEXT_23	Ten sk³adnik by³ uruchamiany z dysku CD-ROM, ale zostanie zainstalowany na lokalnym dysku twardym.	
+IDS_UITEXT_24	Ten sk³adnik zwalnia [1] miejsca na dysku twardym.	
+IDS_UITEXT_25	Ten sk³adnik wymaga [1] wolnego miejsca na dysku twardym.	
+IDS_UITEXT_26	Obliczanie iloœci wolnego miejsca wymaganego przez sk³adnik...	
+IDS_UITEXT_27	Ten sk³adnik zostanie usuniêty w ca³oœci.	
+IDS_UITEXT_28	Ten sk³adnik zostanie usuniêty z lokalnego dysku twardego, ale zostanie ustawiony do zainstalowania w razie potrzeby.	
+IDS_UITEXT_29	Ten sk³adnik zostanie usuniêty z lokalnego dysku twardego, ale nadal bêdzie móg³ byæ uruchamiany z dysku CD-ROM.	
+IDS_UITEXT_3	MB	
+IDS_UITEXT_30	Ten sk³adnik pozostanie na lokalnym dysku twardym.	
+IDS_UITEXT_31	Ten sk³adnik zostanie usuniêty z lokalnego dysku twardego, ale bêdzie nadal dostêpny w sieci.	
+IDS_UITEXT_32	Ten sk³adnik zostanie zdezinstalowany w ca³oœci i nie bêdzie mo¿na go uruchamiaæ z sieci.	
+IDS_UITEXT_33	Ten sk³adnik by³ uruchamiany z sieci, ale zostanie zainstalowany w razie potrzeby.	
+IDS_UITEXT_34	Ten sk³adnik by³ uruchamiany z sieci, ale zostanie zainstalowany na lokalnym dysku twardym.	
+IDS_UITEXT_35	Ten sk³adnik bêdzie nadal uruchamiany z sieci	
+IDS_UITEXT_36	Ten sk³adnik zwalnia [1] miejsca na dysku twardym. Wybrano [2] z [3] jego podsk³adników. Podsk³adniki zwalniaj¹ [4] miejsca na dysku twardym.	
+IDS_UITEXT_37	Ten sk³adnik zwalnia [1] miejsca na dysku twardym. Wybrano [2] z [3] jego podsk³adników. Podsk³adniki wymagaj¹ [4] wolnego miejsca na dysku twardym.	
+IDS_UITEXT_38	Ten sk³adnik wymaga [1] wolnego miejsca na dysku twardym. Wybrano [2] z [3] jego podsk³adników. Podsk³adniki zwalniaj¹ [4] miejsca na dysku twardym.	
+IDS_UITEXT_39	Ten sk³adnik wymaga [1] wolnego miejsca na dysku twardym. Wybrano [2] z [3] jego podsk³adników. Podsk³adniki wymagaj¹ [4] wolnego miejsca na dysku twardym.	
+IDS_UITEXT_4	Ten sk³adnik nie bêdzie dostêpny.	
+IDS_UITEXT_40	Pozosta³o czasu: {[1] min. }[2] sek.	
+IDS_UITEXT_41	Dostêpne miejsce na dysku:	
+IDS_UITEXT_42	Ró¿nice:	
+IDS_UITEXT_43	Wymagane miejsce na dysku:	
+IDS_UITEXT_44	Rozmiar dyski:	
+IDS_UITEXT_45	Wolumin:	
+IDS_UITEXT_46	Ten sk³adnik i wszystkie jego podsk³adniki bêd¹ zainstalowane do uruchamiania z sieci.	
+IDS_UITEXT_47	Ten sk³adnik i wszystkie jego podsk³adniki bêd¹ zainstalowane do uruchamiania z dysku CD-ROM.	
+IDS_UITEXT_48	Ten sk³adnik i wszystkie jego podsk³adniki bêd¹ zainstalowane na lokalnym dysku twardym.	
+IDS_UITEXT_5	Ten sk³adnik zostanie zainstalowany w razie potrzeby.	
+IDS_UITEXT_6	Ten sk³adnik zostanie zainstalowany do uruchamiania z dysku CD-ROM.	
+IDS_UITEXT_7	Ten sk³adnik zostanie zainstalowany na lokalnym dysku twardym.	
+IDS_UITEXT_8	Ten sk³adnik zostanie zainstalowany do uruchamiania z sieci.	
+IDS_UITEXT_9	Folder|Nowy folder	
+SIS_AUTHOR	Kaspersky Lab	
+SIS_SUBJECT	Kaspersky Anti-Virus 6.0 for Windows Workstations Console Plugin	
+ERROR_APPRUNNING	Close Administration console to continue installation.	
+ERROR_APPVERSION	Current version of Administration console is not supported. It is recommended to upgrade Administration console to newer version.	

@@ -1,0 +1,46 @@
+#import "task.idef"
+#import "tm.idef"
+
+forward interface ProcessMonitor;
+typedef ProcessMonitor* hPROCESSMONITOR;
+
+
+
+
+[
+  version(1)
+  mnemonic(IID_PROCESSMONITOR)
+  id(49034)
+  c_type_name(hPROCESSMONITOR)
+]
+interface ProcessMonitor {
+
+  // ------------------------------------
+    [ id(4098) ]  prop hOBJECT pgTASK_TM; // task manager object
+    [ id(4099) ]  prop tDWORD pgTASK_STATE;
+    [ id(4100) ]  prop tDWORD pgTASK_SESSION_ID;
+    [ id(4101) ]  prop tDWORD pgTASK_ID;
+    [ id(4102) ]  prop hOBJECT pgTASK_PERSISTENT_STORAGE;
+    [ id(4103) ]  prop tDWORD pgTASK_PARENT_ID;
+
+
+  // ------------------------------------
+    method tERROR SetSettings( const cSerializable* settings );
+    method tERROR GetSettings( cSerializable* settings );
+    method tERROR AskAction( Task.tActionId actionId, cSerializable* actionInfo );
+    method tERROR SetState( TaskManager.tTaskRequestState state );
+    method tERROR GetStatistics( cSerializable* statistics );
+    method tERROR CalcObjectHash( hOBJECT object, tQWORD* hash );
+    method tERROR GetProcessInfo( cSerializable* info );
+    method tERROR IsProcessTrusted( cSerializable* p_data, tBOOL* result );
+    method tERROR IsImageActive( const tWCHAR* pFileName, tDWORD* pdwFlags );
+
+
+  // ------------------------------------
+    [ id(4096) ]  message_cls pmc_TASK_STATE_CHANGED {}
+    [ id(4097) ]  message_cls pmc_TASK_REPORT {}
+    [ id(4098) ]  message_cls pmc_TASK_SETTINGS_CHANGED {}
+    [ id(4099) ]  message_cls pmc_TASK_OS_REBOOT_REQUEST {}
+
+}
+

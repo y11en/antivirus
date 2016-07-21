@@ -1,0 +1,4 @@
+// ***** Spy.VCatch *****
+begin
+ AddEvAlarmByCLSID('C15DFCFB-3D1C-4E50-AAC7-037B016B95F7',AScriptName,'VCatchPI.dll');
+end.

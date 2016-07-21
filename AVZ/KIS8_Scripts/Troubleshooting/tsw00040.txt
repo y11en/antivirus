@@ -1,0 +1,26 @@
+// $AVZ1549
+//$ Заблокированы настройки системы System Restore
+// Функция поиска проблемы                                                                          
+function Check : dword;
+begin
+ Result := 0;
+ // Блокировка
+ if IsNT then begin
+  if RegKeyIntParamRead('HKLM', 'SOFTWARE\Policies\Microsoft\Windows NT\SystemRestore', 'Disable Config') > 0 then begin
+   Result := 3;
+   exit;
+  end;
+  if RegKeyIntParamRead('HKLM', 'SOFTWARE\Policies\Microsoft\Windows NT\SystemRestore', 'DisableConfig') > 0 then begin
+   Result := 3;
+   exit;
+  end;
+ end;
+end;
+
+// Функция исправления проблемы                                                                          
+function Fix : dword;
+begin
+ RegKeyParamDel('HKLM', 'SOFTWARE\Policies\Microsoft\Windows NT\SystemRestore', 'Disable Config');
+ RegKeyParamDel('HKLM', 'SOFTWARE\Policies\Microsoft\Windows NT\SystemRestore', 'DisableConfig');
+ Result := 0;
+end;

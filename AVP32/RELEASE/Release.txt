@@ -1,0 +1,786 @@
+////////////////////////////////////////////////////////////////////
+//
+//  RELEASE.TXT
+//  AVP modules what's new
+//  Project AVP
+//  Alexey de Mont de Rique [graf@kaspersky.com], Kaspersky Labs.
+//
+////////////////////////////////////////////////////////////////////
+
+--------------------------------------------------------------------
+6.0.167.6190
+
+AVPFPI.DLL
+1. Bugfix #31682--Scan Manager doubles its memory consumption after implementation #30527
+
+--------------------------------------------------------------------
+4.0.166.6160
+
+AVPFPI.DLL
+1. Bugfix #32188 --lots of AVP??.tmp files left in c:\WINdows\temp
+
+--------------------------------------------------------------------
+4.0.164.5361
+
+AVPFPI.DLL
+1. Bugfix #29274 -- Boot sector viruses are not "disinfected" - debugging
+
+--------------------------------------------------------------------
+4.0.164.5360
+
+AVPFPI.DLL
+1. Bugfix #29274 -- Boot sector viruses are not "disinfected"
+
+--------------------------------------------------------------------
+4.0.164.5201
+
+AVPFPI.DLL
+1. Bugfix #29213: Single-thread fix for 5200.
+
+--------------------------------------------------------------------
+4.0.164.5200
+
+AVPFPI.DLL
+1. Bugfix #29213: AVP engine build 4.0.164.5180
+doesn't report carried out FPI action disinfect in case file was successfully
+disinfected. It happens with updated Mflag: MFlags=0x00150002
+
+--------------------------------------------------------------------
+4.0.164.5182
+
+AVPBASE.DLL
+1. Bugfix BT#4296 & BT#4288:  Caused in version 5180: ARCHIVES under 9X - SHARE_DELETE not supported.
+
+--------------------------------------------------------------------
+4.0.164.5181
+
+AVPBASE.DLL
+1. Bugfix: Deinit on DETACH_PROCESS. (MailChecker)
+
+--------------------------------------------------------------------
+4.0.164.5180
+
+AVP Engine
+1. Bugfix: Dropped temp files. FILE_FLAG_DELETE_ON_CLOSE added for temporary file creation. 
+2. Changed: Logic of sector overwrite request.
+
+--------------------------------------------------------------------
+4.0.164.5170
+
+AVP Engine
+1. Workaround: Infected gugol processing
+
+--------------------------------------------------------------------
+4.0.164.5160
+
+Skarabey
+1. Bugfix: Wrong BT_LINK16 in header.
+
+--------------------------------------------------------------------
+4.0.164.5120
+
+AVP Engine
+1. Workaround: False Positive MIRc in memory.
+
+AVPFPI.DLL
+1. Bugfix: KAV#26294--Updating under high load causes FSAVSD to malfunction
+
+--------------------------------------------------------------------
+4.0.164.5092
+
+AVPFPI.DLL
+1. Fix: GetSetName function (LoadLibraryInst)
+
+--------------------------------------------------------------------
+4.0.164.5091
+
+AVP Engine
+1. Small changes in RF_* flags (delete after failed disinfection)
+
+AVPFPI.DLL
+1. Bugfix: KAV#25972 -- AVP 4.0.164.5090 cannot be loaded - LoadLibraryInst
+
+--------------------------------------------------------------------
+4.0.164.5090
+
+AVP Engine
+AVPFPI.DLL
+1. Bugfix: "strcpy" revision.
+
+--------------------------------------------------------------------
+4.0.164.5030
+
+AVP Engine
+1. Bugfix:  for 4490 - reload base failed
+
+--------------------------------------------------------------------
+4.0.164.4490
+
+AVP Engine
+1. Changed:  Nonsignificant changes for Prague support.
+
+--------------------------------------------------------------------
+4.0.164.4413
+
+AVPFPI.DLL
+1. Bugfix:  #23986 multirprocess deadlock
+
+--------------------------------------------------------------------
+4.0.164.4412
+
+AVP Engine
+1. Changed:  Loop optimization.
+2. Changed:  Nonsignificant changes for AvpEdit support.
+
+--------------------------------------------------------------------
+4.0.164.4410
+
+AVP Engine
+1. Changed:  MaxRepeatBytes check was removed from MailBomb heuristic.
+				(cause: false alarms, too slow)
+
+--------------------------------------------------------------------
+4.0.164.4380
+
+AVP Engine
+1. Bugfix:  Attempt to disinfect macro vir in archive caused exception.
+
+--------------------------------------------------------------------
+4.0.164.4311
+
+AVP Engine, AVPFPI.DLL, AVP95.VXD
+1. Bugfix:  #22840 FIX baseinfo 
+
+--------------------------------------------------------------------
+4.0.164.4310
+
+AVP Engine, AVPFPI.DLL, AVP95.VXD
+1. Bugfix:  #22840 -- Windows XP hangs with large exefile (FSAV 5.40 build 8232)
+
+--------------------------------------------------------------------
+4.0.164.4250
+
+AVP95.VXD
+1. Bugfix: #22577 -- AVP OAS does not remove infection in embedded document
+
+--------------------------------------------------------------------
+4.0.164.4250
+
+AVP Engine, AVPFPI.DLL, AVP95.VXD
+1. Bugfix:  #22261AV disinfects sample but does not report of disinfection
+            modified AVPFPI.CPP and BASEWORK: RF_IN_CURABLE_EMBEDDED
+
+--------------------------------------------------------------------
+4.0.164.4221
+
+AVPFPI.DLL
+1. Bugfix: #21752 -- Handles leak on disable realtime protection (debugged)
+
+--------------------------------------------------------------------
+4.0.164.4220
+
+AVP95.VXD
+1. Bugfix: #22117, AVP95 engine (VxD only) ignores MF_MAILPLAIN flag
+
+AVPFPI.DLL
+1. Bugfix: #21752 -- Handles leak on disable realtime protection
+2. Change: New FSDrvLib.lib, new DupMem logic.
+
+--------------------------------------------------------------------
+4.0.164.4170
+
+AVP Engine, all modules: 
+1. Bugfix: Multiply reporting on some viruses (on each entry) (introduced in version 3.55.161.3480)
+
+--------------------------------------------------------------------
+4.0.164.4160
+
+AVP Engine, all modules: 
+1. Bugfix: Memory leak during reload.(introduced in version 3.55.161.3490)
+
+--------------------------------------------------------------------
+4.0.164.4153
+
+AVPFPI Modules (AVPFPI.DLL AVP95.VXD):
+1. Added: #20891 FPIFILEIO_CREATE flag added to temporal file creation call.(FileIO.cpp)
+
+--------------------------------------------------------------------
+4.0.164.4152
+
+AVP Engine, all modules: 
+1. CRITICAL Bugfix!:#20860 Embedded objects were not scanned in default configuration (wihout ARCHIVES ON)
+This bug was introduced in version 3.55.160.3310 (0x65626d85:	//	'ebmE')
+
+--------------------------------------------------------------------
+4.0.164.4151
+
+AVPFPI Modules (AVPFPI.DLL AVP95.VXD):
+1. Implemented: custom functions: BASE_PATH,BASE_SET,BASE_VND. Details in ..\fpi\avp_cs.h  NOT TESTED!!!
+
+--------------------------------------------------------------------
+4.0.164.4150
+
+AVP Engine:
+1. Bugfix from 4141: (detected on CRU3955.EX_ )
+
+--------------------------------------------------------------------
+4.0.164.4141
+
+AVP Engine:
+1. Possible future bug workaround: Stack alignment check added in all IO functions.
+
+--------------------------------------------------------------------
+4.0.164.4140
+
+AVP Engine:
+1. Bug workaround: LHA faults on specific file (AVPBASE.DLL and BASEWORK.LIB  (FileIO.cpp))
+
+--------------------------------------------------------------------
+4.0.164.4130
+
+AVP Engine:
+1. Changes: Some callback messages for Prague support.
+2. Changes: Little noncritical for Prague support.
+
+--------------------------------------------------------------------
+3.55.161.4062
+
+AVP Engine
+1. Bugfix in gugol workaround (skip virus in test2.rar).
+
+--------------------------------------------------------------------
+3.55.161.4061
+
+AVP Engine
+1. Optimization (speed).
+2. Bugfix in optimization.
+
+--------------------------------------------------------------------
+3.55.161.4060
+
+AVP Engine
+1. Optimization (speed, memory).
+
+--------------------------------------------------------------------
+3.55.161.4041
+
+AVPEDIT.EXE:
+1. Bugfix: Page fill interference
+
+AVP3.PPL, AVPFPI.DLL:
+1. Bugfix: Synchronization during MT & reloading.
+
+--------------------------------------------------------------------
+3.55.161.4040
+
+AVPFPI.DLL:
+1. Bugfix: KAV #19706 - AVP doesn't support FPI_ReportScanningStatus()
+
+--------------------------------------------------------------------
+3.55.161.4030
+
+AVPFPI.DLL:
+1. Bugfix: KAV #19112, Updating databases makes the machine slow
+
+--------------------------------------------------------------------
+3.55.161.3511
+
+AVPFPI.DLL:
+1. Bugfix: AVPFPI 3510 doesn't detect viruses 
+
+--------------------------------------------------------------------
+3.55.161.3510
+
+AVPFPI.DLL & AVP3.PPL:
+1. Bugfix: Synchronization Locking.  Related cases:
+           #18805, Unhandled exception in FSAVSD on scanning raw SMTP data
+AVP Engine
+1. Added: messages for record export
+
+--------------------------------------------------------------------
+3.55.161.3500
+
+AVP_IO.VXD: 
+1. Bugfix: Client_State saving while switching to V86. Sometimes cause GPF during sector scanning.
+
+AVPFPI.DLL & AVP3.PPL:
+1. Bugfix: Synchronization in multithread mode: Base reloading sync.
+
+--------------------------------------------------------------------
+3.55.161.3491
+
+AVPFPI.DLL:
+1. Bugfix: refdata_ overlappintg in MT mode. Related cases:
+           #18805, Unhandled exception in FSAVSD on scanning raw SMTP data
+
+--------------------------------------------------------------------
+3.55.161.3490
+
+AVP Engine
+1. Bugfix: Multithread support. Registration of regions for uninitialized data.
+
+AVPFPI.DLL & AVP3.PPL:
+1. Bugfix: Synchronization & exceptions. Cases that should be closed:
+           #18999, AVP engine got malfunctioned after unhandled exception occurred
+           #18805, Unhandled exception in FSAVSD on scanning raw SMTP data
+
+--------------------------------------------------------------------
+3.55.161.3480
+
+AVPFPI.DLL & AVP95.VXD:
+1. Added: #18515, FPI versions of AVP engine should export function FPI_QuerySignatureCount
+
+AVP Engine:
+1. Changes: Little noncritical for Prague support.
+
+--------------------------------------------------------------------
+3.55.161.3450
+
+AVP Engine:
+1. Bugfix: wildcard mask *.* didn't take filenames w/o extension.
+2. Bugfix: disinfection of some specific multiply-infected files (sandwitches)
+
+--------------------------------------------------------------------
+3.55.161.3430
+
+AVP Engine:
+1. Bugfix: #17885 Disinfection on write protected floppy (CTS#17885)
+2. Changes: Little noncritical for Prague support.(S_Save)
+
+--------------------------------------------------------------------
+3.55.161.3420
+
+AVP Engine:
+1. Added: Some callback messages for Prague support.
+2. Changes: Little noncritical for Prague support.
+
+FSAVP*.SYS:
+1. Bugfix: #18070 (crash on filename containing % character) - (release version only, in debug still present)
+2. Changed: removed all trace output in release version.
+
+--------------------------------------------------------------------
+3.55.161.3401
+
+AVPFPI.DLL:
+1. Bugfix: CTS#15537 (The AVP scan engine does not react on the query
+
+--------------------------------------------------------------------
+3.55.160.3400
+
+FSAVP*.SYS:
+1. Bugfix: #17872 Buffer overrun... Next attempt:(((
+
+--------------------------------------------------------------------
+3.55.160.3391
+
+FSAVP*.SYS:
+1. Bugfix: #17872 Buffer overrun... QueryValue bug workaround.
+
+--------------------------------------------------------------------
+3.55.160.3390
+
+AVPFPI.DLL:
+1. Bugfix: CTS#17975 (AVP FPI plug-in rejects database files signed by F-Secure)
+
+--------------------------------------------------------------------
+3.55.160.3381
+
+AVPFPI.DLL:
+1. Bugfix: CTS#17975 (AVP FPI plug-in rejects database files signed by F-Secure)(not complete)
+
+AVP Engine:
+1. Changed: MailBomb heuristics was modified to reject extracting files with >20M of the same bytes.
+
+--------------------------------------------------------------------
+3.55.160.3380
+
+FSAVP*.SYS:
+1. Bugfix: #17872 Buffer overrun during registry reading "InclusionList" parameter.
+
+--------------------------------------------------------------------
+3.55.160.3321
+
+AVPBASE.DLL:
+1. Removed: GetTickCountAddr function in ExecSpecial.(build 3314) Now there is GetProcAddrEx in AVCWAPI.DLL.
+2. Bugfix: AVP_CALLBACK_ROTATE was masked.
+
+--------------------------------------------------------------------
+3.55.160.3320
+
+AVP Editor & bases:
+1. Added: Support of Win32 HLP format as a separate subtype. Should not affect all other modules.
+
+--------------------------------------------------------------------
+3.55.160.3315
+
+AVP Engine:
+1. Changed: If file length is zero engine now returns OK, before it was RF_NOT_A_PROGRAMM.
+
+--------------------------------------------------------------------
+3.55.160.3314
+
+AVPBASE.DLL:
+1. Added: GetTickCountAddr function in ExecSpecial.
+
+--------------------------------------------------------------------
+3.55.160.3313
+
+AVP Engine:
+1. Bugfix for 3310: Skipping Embedded Also...
+
+--------------------------------------------------------------------
+3.55.160.3312
+
+AVP Engine:
+1. Bugfix: Bufer overrun in case of namesize in archive > 0x1F8
+
+--------------------------------------------------------------------
+3.55.160.3311
+
+AVP Engine:
+1. Bugfix: Jump E9 processing (after Byteorder.h in 3310)
+
+--------------------------------------------------------------------
+3.55.160.3310
+
+AVP Engine:
+1. Removed 3.55.160.3291 change: Archive processing now is blocked by virus detection in original file. (Eugene request)
+
+--------------------------------------------------------------------
+3.55.160.3292
+
+AVP Engine:
+1. Added: AVP_CALLBACK_LOAD_BASE see AVP_MSG.H. (Request: Medvedev)
+
+--------------------------------------------------------------------
+3.55.160.3291
+
+AVP Engine:
+1. Changed: Archive processing has been blocked by virus detection in original file. (Valik request)
+
+--------------------------------------------------------------------
+3.55.160.3290
+
+AVP Engine:
+1. Bugfix: for 3281-3282 - disinfection failure.
+
+--------------------------------------------------------------------
+3.55.160.3282
+
+AVP Engine:
+1. Bugfix: Skipping detection in archives in case of equal entries.
+
+--------------------------------------------------------------------
+3.55.160.3281
+
+AVP Engine:
+1. Bugfix: Unpack skipping for files beginning with 0x40 NUL bytes.
+
+--------------------------------------------------------------------
+3.55.160.3280
+
+AVP Engine:
+1. Bugfix: Endless Loop while disinfection files on RO volumes.
+
+AVP32: 
+1. Bugfix: Reporting ok about infected archives.
+2. Bugfix: Wrong detection of Win9x/Me versions.
+
+--------------------------------------------------------------------
+3.55.160.3240
+
+AVP Engine Modules: AVPBASE.DLL, AVPFPI.DLL, AVP3.PPL, AVP95.VXD
+1. Added: support for Unicode names (Mac byteorder) in archives.
+2. Bugfix: AVP_IONT.DLL wrong RTL linkage -> access violation while 
+   accessing disks with sectors > 0x200
+3. Added: AVP3.PPL, AVPFPI.DLL Exception handling
+
+--------------------------------------------------------------------
+3.55.160.3235
+
+AVP Engine Modules: AVPBASE.DLL, AVPFPI.DLL, AVP3.PPL, AVP95.VXD
+1. Added: support for Unicode names in archives.
+
+--------------------------------------------------------------------
+3.55.160.3234
+
+AVP Engine (all modules):
+1. Bugfix: report while self-extractors parsing 
+2. Changed: Mailbomb heuristics /big file processing/
+
+--------------------------------------------------------------------
+3.55.160.3233
+
+AVP Engine (all modules):
+1. Bugfix: Mailbomb heuristics inducted self-extractors skipping
+
+--------------------------------------------------------------------
+3.55.160.3232
+
+AVP Monitor &
+AVP Scaner:
+1. Changed: defaults settings according last requests.
+
+AVP Engine (all modules):
+1. Added: support for '\' character in embedded object names.
+
+--------------------------------------------------------------------
+3.55.160.3231
+
+AVP Engine (all modules):
+1. Bugfix: Mailbomb heuristics false positives
+2. Bugfix: MT/ST Synchronization
+
+--------------------------------------------------------------------
+3.55.160.3230
+
+AVP Engine (all modules):
+1. Changed: Mailbomb heuristics (#15549 should be fixed)
+2. Fixed: Occational multiply parsing of compound objects
+3. Added: Parse skipping of sequential identical compound objects.
+
+AVPFPI.DLL:
+1. Added: MULTITHREAD support. TSP.VXD and TSP.SYS should be placed to program or windows folder.
+Carefully testing under different OS'es is reqired.
+
+--------------------------------------------------------------------
+3.55.160.3210
+
+1. FSAVP*.SYS fix: #15852 - "BSoD when scanning WBEM files"
+
+--------------------------------------------------------------------
+3.55.160.3203
+
+1. AVP95.VXD & AVPFPI.DLL fix: bad syncronisation.
+
+--------------------------------------------------------------------
+3.55.160.3202
+
+1. AVP95.VXD fix: #12414
+
+--------------------------------------------------------------------
+3.55.160.3201
+
+AVP Engine:  all not tested fixes!
+1. AVP95.VXD FSAV Fix: #15422 - Problems with DB validation of avp.vxd
+2. AVP95.VXD fix: #12414 - FSAV 5.20 conflicts with Acer NeoMagic ZV+ [#13657]
+3. AVPFPI.DLL fix: #12414
+4. FPI modules fix: #15301, AVP scan engine deletes infected files that could not disinfect
+5. FPI modules fix: #15300, AVP problem when scanning ZIP files. Re-written "Parent" handling.
+
+--------------------------------------------------------------------
+3.55.160.3200
+
+AVP Scaner (AVP32.EXE):
+1. Product name moved to localization dll. AVP_LOC.DLL should be signed by KL!!!
+
+--------------------------------------------------------------------
+3.55.160.3180
+
+AVP Engine:
+1. AVP95.VXD under FSAV fix: #15300 scan inside Archives.
+2. AVP under FSAV Fix: #15301 deleting non-disinfectable. Fixed for SYS. probably fixed for VXD.(depends on calling options)
+3. AVP95.VXD under FSAV revised: #15422 probably solved.
+
+--------------------------------------------------------------------
+3.55.160.3171
+
+AVP Engine:
+1. AVP95.VXD fixes : database validation & AVPCleanUpUnUsedFiles
+
+--------------------------------------------------------------------
+3.5.133.3170
+
+AVP Engine:
+1. Finalized for multithread processing ability. (special driver support required. Now implemented in AVP3.PPL)
+2. AVP95.VXD #14323 fix : FPI database validation
+
+--------------------------------------------------------------------
+3.5.133.3160
+
+AVP Engine:
+1. Revised for multithread processing ability. (special driver support required)
+2. Added ability to remove unused bases AVPCleanUpUnUsedFiles (F-Secure feature  fix for #14323)
+
+AVP Scaner:
+1. Added scanning of NTFS streams of folders.
+
+--------------------------------------------------------------------
+3.5.133.3151
+
+AVP Engine:
+1. FSAVP*.SYS under AVPM only: Multiply Vir Alerts on bootsectors fixed.
+
+--------------------------------------------------------------------
+3.5.133.3150
+
+AVP Engine:
+1. Bugfix for processing MF_SFX_ARCHIVED flag.
+
+--------------------------------------------------------------------
+3.5.133.3140
+
+AVP Engine:
+1. Bugfix for processing include/exclude masks.
+
+--------------------------------------------------------------------
+3.5.133.3131
+
+AVP Engine:
+1. Cancel prccess synchronization fixed ( not-demand disinfection in AVP 3.6)
+
+--------------------------------------------------------------------
+3.5.133.3130
+
+AVP Engine:
+1. MF_SFX_ARCHIVED flag added.
+2. FSAVP.SYS exclude mask buffer overrun bug fixed.
+
+--------------------------------------------------------------------
+3.5.133.3112
+
+AVP Monitor:
+1. Support for exclude folders on NT added. Wildcard '*' should be used at the end of the string.
+
+--------------------------------------------------------------------
+3.5.133.3111
+
+AVP Engine:
+1. Bugfix with loading damaged bases (#13165) 
+
+--------------------------------------------------------------------
+3.5.133.3081
+
+AVP Engine:
+1. Changed AVPFPI.DLL & AVP95.VXD: FPIEVENT_QUERYABORT now is called only with refdata!=0. 
+
+--------------------------------------------------------------------
+3.5.133.3080
+
+AVP Engine:
+1. Changed AVPFPI: fix for #14179, disinfection by deleting was removed. 
+
+--------------------------------------------------------------------
+3.5.133.3071
+
+AVP Engine:
+1. Changed MailBomb heuristic / packed file temporary file counter (prob. fix for #13611)
+
+--------------------------------------------------------------------
+3.5.133.3070
+
+AVP Engine:
+1. Bugfix FSAVP: detecting of Backdoor.Bionet.309 (WinNT & 2k)
+
+--------------------------------------------------------------------
+3.5.133.3062
+
+AVP Engine:
+1. Changed MailBomb heuristic
+2. Changed packed file processing
+3. Changed AVPFPI: CustomSettings processing format "Var1=value1;Var2=value2"
+
+AVP Editor:
+1. Small bugfix
+
+--------------------------------------------------------------------
+3.5.133.3061
+
+AVP Engine:
+1. Changed AVPFPI: TEMP CustomSettings added
+2. GetTempPath processing changed in all modules 
+
+--------------------------------------------------------------------
+3.5.133.3060
+
+AVP Monitor: 
+1. Old key support removed
+
+AVP Scaner:
+1. Old key support removed
+
+--------------------------------------------------------------------
+3.5.133.3053
+
+AVP Engine:
+1. Bugfix AVPFPI: NULL refdata_
+2. Bugfix AVPFPI: FPIFILEIO_OPENFLAG_DATABASE flag
+
+--------------------------------------------------------------------
+3.5.133.3052
+
+AVP Scaner:
+1. Changed: NTFS Stream enumeration moved from AVP32.EXE  to AVPBASE.DLL
+
+AVP Monitor: 
+1. Bugfix: Time, reported to AVPCC now is LOCAL (was GMT)
+
+--------------------------------------------------------------------
+3.5.133.3051
+
+AVP Engine:
+1. Changes for prague compatibility (X_AvpMoveFile)
+
+AVP Scaner:
+1. Added: IDS_REG_PATCH_LOCATION strings
+
+--------------------------------------------------------------------
+3.5.133.3050
+
+AVP Engine:
+1. Bugfix for 3.5.133.3030: Disinfection failure.
+2. Bugfix: #13165, FSAVP memory freeing fails
+
+--------------------------------------------------------------------
+3.5.133.3030
+
+All modules:
+
+AVP Engine:
+1. Bugfix: CIH disinfection
+2. Bugfix: FORMAT.COM wrong CORRUPTED detection
+3. New: Mail bomb heuristic
+4. New: Cache for all IO operations
+5. Changed: packed file processing logic
+6. Bugfix: Small fixes in drivers (IO subsystem)
+
+AVP Monitor: 
+1. Bugfix: Disabling error in limited edition
+2. Changed: Limited edition behavior (for use with ne AVP Lite).
+3. Changed: Kaspersky Antivirus icon
+
+AVP Scaner:
+1. Changed: Kaspersky Antivirus icon
+
+
+--------------------------------------------------------------------
+3.0.132.0
+
+All modules:
+1. Changed: Standard versioninfo and version numbering
+2. Changed: All modules recompiled with MaxSpeed option.
+2. Changed: All technologic libraries was revised for consistency.
+
+AVP Engine:
+1. Changed: PP viruses detection without Archives option.
+2. Changed: Faster memory scan
+3. New: API for external DLL proc calling from database
+
+AVP Monitor: 
+1. Changed: CC integration.
+2. New: NT event interception drivers (DF)
+3. Bugfix: Sector disinfection(NT)
+4. Changed: thread registration method
+5. Changed: VtoolD library upgrade to 3.01 (all VxD)
+6. Changed: DriverWorks library upgrade to 2.02 (all KMD)
+7. Revised: Scan result cache (no more multiply alarms on the same object)
+
+AVP Scaner:
+1. Changed: CC integration.
+2. New: /deletearchives option
+3. Changed: some report messages.
+4. New: using SEH for faults (no more GPF messages)
+5. Fixed: if CopyInfected is not checked, folder not created.
+6. Changed: uses new Monitor thread registration method
+
+--------------------------------------------------------------------

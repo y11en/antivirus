@@ -1,0 +1,14 @@
+// ***** Терминальные подключения *****
+var
+ X : integer;
+ S : string;
+begin
+ S := 'SYSTEM\CurrentControlSet\Control\Terminal Server';
+ if (GetServiceStart('TermService') < 4)  then begin
+  X := RegKeyIntParamRead('HKEY_LOCAL_MACHINE',S,'fDenyTSConnections');
+  if X <> 1 then begin
+   AddToLog('>> $AVZ1217');
+   AddSyscheckMenu('$AVZ1218', 'RegKeyIntParamWrite(''HKEY_LOCAL_MACHINE'', '''+S+''',''fDenyTSConnections'', 1);', 1);
+  end;
+ end;
+end.

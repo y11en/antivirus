@@ -1,0 +1,163 @@
+#import "reg.idef"
+#import "task.idef"
+#import "tm.idef"
+
+forward interface AVS;
+typedef AVS* hAVS;
+
+forward interface AVSSession;
+typedef AVSSession* hAVSSESSION;
+
+forward interface AVSTreats;
+typedef AVSTreats* hAVSTREATS;
+
+
+
+
+[
+  version(1)
+  mnemonic(IID_AVS)
+  id(34)
+  c_type_name(hAVS)
+]
+interface AVS {
+
+  // ------------------------------------
+    error errAVS_BASES_LOCK_FAILED;
+    error errAVS_BASES_SIGN_INVALID;
+    error errAVS_BASES_SIZE_INVALID;
+    error errAVS_BASES_CONFIG_NOT_FOUND;
+    error errAVS_BASES_CONFIG_INVALID;
+    error errAVS_INIT_ICHECKER2;
+    error errAVS_INIT_ICHECKERSTREAM;
+    error errAVS_UPDATE_BASES_FAILED;
+    error errAVS_UPDATE_PLUGINS_FAILED;
+    error errAVS_INIT_DRIVER_FAILED;
+    [ warning(true) ]  error warnAVS_LOAD_BASES;
+
+
+  // ------------------------------------
+    [ id(4096) ]  prop tDWORD pgTASK_TYPE;
+    [ id(4098) ]  prop hOBJECT pgTASK_TM; // task manager object
+    [ id(4099) ]  prop tDWORD pgTASK_STATE;
+    [ id(4100) ]  prop tDWORD pgTASK_SESSION_ID;
+    [ id(4101) ]  prop tDWORD pgTASK_ID;
+    [ id(4102) ]  prop hOBJECT pgTASK_PERSISTENT_STORAGE;
+    [ id(4103) ]  prop tDWORD pgTASK_PARENT_ID;
+
+
+  // ------------------------------------
+    method tERROR SetSettings( const cSerializable* settings );
+    method tERROR GetSettings( cSerializable* settings );
+    method tERROR AskAction( Task.tActionId actionId, cSerializable* actionInfo );
+    method tERROR SetState( TaskManager.tTaskState state );
+    method tERROR GetStatistics( cSerializable* statistics );
+    method tERROR Update( const cSerializable* update_info );
+    method tERROR CreateSession(
+      hAVSSESSION* result,
+      hTASK task,
+      tDWORD engine_flags,
+      tDWORD scan_origin
+    );
+    method tERROR GetTreats( tDWORD taskid, hAVSTREATS* treats );
+    method tERROR ReleaseTreats( hAVSTREATS treats );
+    method tERROR MatchExcludes( const cSerializable* object_info );
+    method tERROR ProcessCancel( tDWORD process_id );
+
+
+  // ------------------------------------
+    [ id(4096) ]
+    message_cls pmc_AVS {
+      [ id(4099) ]  message pm_THREATS_STATUS_CHANGED;
+      [ id(4096) ]  message pm_SETTINGS_CHANGED;
+      [ id(4098) ]  message pm_BASES_LOADED;
+      [ id(4101) ]  message pm_BASES_PRELOAD;
+      [ id(4102) ]  message pm_BASES_LOADFAILED;
+    }
+    [ id(4097) ]  message_cls pmc_MATCH_EXCLUDES {}
+    [ id(4099) ]  message_cls pmc_UPDATE_THREATS_LIST {}
+    [ id(4100) ]  message_cls pmc_AVS_UPDATE {}
+    [ id(4101) ]  message_cls pm_AVS_VERIFY_PID_TO_KILL {}
+
+}
+
+
+[
+  version(1)
+  mnemonic(IID_AVSSESSION)
+  id(49031)
+  c_type_name(hAVSSESSION)
+]
+interface AVSSession {
+
+  // ------------------------------------
+    method tERROR PreProcessObject( cSerializable* process_info, const cSerializable* settings );
+    method tERROR ProcessObject(
+      hOBJECT object,
+      cSerializable* process_info,
+      const cSerializable* settings,
+      cSerializable* statistics
+    );
+    method tERROR GetStatistic( cSerializable* statistics );
+    method tERROR SetState( TaskManager.tTaskRequestState state );
+    method tERROR ResetStatistic( cSerializable* statistics, tBOOL p_in );
+    method tERROR RegisterScope( tDWORD* scope, const cSerializable* info );
+    method tERROR ProcessStream(
+      tDWORD chunk_type,
+      tPTR chunk,
+      tDWORD size,
+      cSerializable* process_info,
+      const cSerializable* settings,
+      cSerializable* statistic
+    );
+
+
+  // ------------------------------------
+    [ id(2882342912) ]
+    message_cls pmc_AVS_SESSION {
+      [ id(4096) ]  message pm_PROCESS_BEGIN;
+      [ id(4097) ]  message pm_PROCESS_END;
+    }
+
+}
+
+
+[
+  mnemonic(IID_AVSTREATS)
+  id(49033)
+  c_type_name(hAVSTREATS)
+]
+interface AVSTreats {
+
+  // ------------------------------------
+    const tDWORD FILTER_NONE = 0;
+    const tDWORD FILTER_UNTREATED = 1;
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Interface version")
+      id(130)
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      comment_ex("Interface comment")
+      id(131)
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+
+
+  // ------------------------------------
+    method tERROR GetTreatInfo(
+      tDWORD filter,
+      tDWORD pos,
+      cSerializable* info
+    );
+    method tERROR Process( tDWORD filter, const cSerializable* process_info );
+    method tERROR GetInfo( cSerializable* info );
+    method tERROR ProcessCancel();
+
+}
+

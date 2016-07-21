@@ -1,0 +1,10 @@
+Adding signatures from file "33.sig".
+Saving the static tree to file "33.sig.st".
+Hash level: 16Hash table size: 64[Kb]
+Cleaning the tree.
+Loading a static tree from file "33.sig.st".
+Scanning file "33.sig"
+   0/2; off=0x000000CD; id=33
+   1/2; off=0x000000EE; id=33
+Total :
+id=33(2)

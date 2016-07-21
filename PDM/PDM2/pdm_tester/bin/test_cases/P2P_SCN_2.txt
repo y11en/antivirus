@@ -1,0 +1,10 @@
+# self copy to P2P folder 
+
+# SC_TO_P2P_FOLDER NOT_TO_CLEAR
+
+EX_COPY_FILE @SELF_PATH@ @P2P_FOLDER@ NOT_TO_CLEAR
+
+#etalon_verdict 100 SelfCopyToPeerToPeerFolder
+#etalon_verdict 80 OnSelfCopyNot2Temp
+#etalon_verdict 50 SelfCopy
+

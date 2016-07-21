@@ -1,0 +1,393 @@
+# Microsoft Developer Studio Generated Dependency File, included by Property.mak
+
+.\CRC.C : \
+	"..\CommonFiles\avp_data.h"\
+	
+
+.\d_add.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\d_add_pr.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\d_attach.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\d_comp.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\d_copy.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\d_deser.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\d_detach.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\d_f_each.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\d_f_that.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\d_find.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\d_find_p.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\d_free.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\d_get.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\d_getval.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\d_init.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\d_insert.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\d_mult.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\d_remove.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\d_rempr.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\d_repl_i.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\d_replce.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\d_replpr.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\d_ser.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\d_setval.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\p_arr.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\p_catch.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\p_copy.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\p_free.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\p_get.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\p_init.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\p_mult.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\p_predct.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\p_replce.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\pa_gitms.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\pa_insrt.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\pa_remve.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\pa_sitms.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\prop_wrp.cpp : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	".\prop_wrp.h"\
+	
+
+.\sec.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\sec_add.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\sec_allc.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\sec_comp.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	
+
+.\sec_make.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\m_utils.h"\
+	"..\CommonFiles\Property.h"\
+	".\prop_in.h"\
+	

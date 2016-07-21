@@ -1,0 +1,4 @@
+// ***** AdvWare.Toolbar.Simbar.a *****
+begin
+ AddEvAlarmByCLSID('A6790AA5-C6C7-4BCF-A46D-0FDAC4EA99EB',AScriptName,'SimpleTbar.DLL');
+end.

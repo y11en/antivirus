@@ -1,0 +1,25 @@
+Property	Value
+s72	S0
+InstallShield	Property
+ActiveLanguage	1033
+ApplicationType	Standard Windows Application
+Comments	
+CurrentMedia	Release JapaneseProduct Configuration 1
+ISCompilerOption_Debug	1
+ISCompilerOption_IncludePath	
+ISCompilerOption_MaxErrors	50
+ISCompilerOption_MaxWarnings	50
+ISCompilerOption_OutputPath	<ISProjectDataFolder>
+ISCompilerOption_PreProcessor	
+ISCompilerOption_WarningLevel	3
+ISCompilerOption_WarningsAsErrors	1
+ISDialogLangID	
+MsiExecCmdLineOptions	
+MsiLogFile	
+OnUpgrade	1
+Owner	Kaspersky Lab
+SccDatabasePath	P4SCC#pf.avp.ru:1666##Kudryavtsev##Kudryavtsev-AK-CF5
+SccEnabled	0
+SccPath	
+SchemaVersion	751
+Type	MSI

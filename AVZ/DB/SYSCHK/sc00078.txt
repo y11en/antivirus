@@ -1,0 +1,4 @@
+// ***** Dialer.E-Group.q *****
+begin
+ AddEvAlarmByCLSID('31DDC1FD-CEA3-4837-A6DC-87E67015ADC9',AScriptName,'svcsysnet32.dll');
+end.

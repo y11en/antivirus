@@ -1,0 +1,161 @@
+# SDK files list (avsscan)
+#
+# Available sources:
+# ROOT - project build root
+# XBIN - external binary modules
+#
+
+[SDK]
+.EXCLUDE *.pdb
+
+[DBG]
+.INCLUDE *.pdb
+
+[]
+                                
+:bin
+
+#----------
+
+# MSVC runtime
+XBIN       .                        msvcr80             dll
+XBIN       .                        msvcp80             dll
+XBIN       .                        msvcm80             dll
+XBIN       .                        Microsoft.VC80.CRT  manifest
+
+# Prague core modules
+ROOT       out_win32/release        avsscan     exe,pdb
+
+ROOT       out_win32/release        FSSync      dll,pdb
+
+ROOT       out_win32/release        prLoader    dll,pdb
+ROOT       out_win32/release        prKernel    ppl,pdb
+
+ROOT       out_win32/release        prremote.dll
+
+ROOT       out_win32/release        dmap        ppl,pdb
+ROOT       out_win32/release        dtreg       ppl,pdb
+
+ROOT       out_win32/release        Arj         ppl,pdb
+ROOT       out_win32/release        ArjPack     ppl,pdb
+ROOT       out_win32/release        avlib       ppl,pdb
+ROOT       out_win32/release        Avp1        ppl,pdb
+ROOT       out_win32/release        AVP3Info    ppl,pdb
+ROOT       out_win32/release        AvpMgr      ppl,pdb
+ROOT       out_win32/release        avs         ppl,pdb
+ROOT       out_win32/release        avspm       ppl,pdb
+ROOT       out_win32/release        Base64      ppl,pdb
+ROOT       out_win32/release        Base64P     ppl,pdb
+ROOT       out_win32/release        basegui     ppl,pdb
+ROOT       out_win32/release        btdisk      ppl,pdb
+ROOT       out_win32/release        btimages    ppl,pdb
+ROOT       out_win32/release        buffer      ppl,pdb
+ROOT       out_win32/release        CAB         ppl,pdb
+ROOT       out_win32/release        crpthlpr    ppl,pdb
+ROOT       out_win32/release        deflate     ppl,pdb
+ROOT       out_win32/release        Explode     ppl,pdb
+ROOT       out_win32/release        filemap     ppl,pdb
+ROOT       out_win32/release        HashCont    ppl,pdb
+ROOT       out_win32/release        HashMD5     ppl,pdb
+ROOT       out_win32/release        HCCMP       ppl,pdb
+ROOT       out_win32/release        ichk2       ppl,pdb
+ROOT       out_win32/release        iChkSA      ppl,pdb
+ROOT       out_win32/release        Inflate     ppl,pdb
+ROOT       out_win32/release        IniFile     ppl,pdb
+ROOT       out_win32/release        IWGen       ppl,pdb
+ROOT       out_win32/release        lha         ppl,pdb
+ROOT       out_win32/release        L_llio      ppl,pdb
+ROOT       out_win32/release        MailMsg     ppl,pdb
+ROOT       out_win32/release        mdb         ppl,pdb
+ROOT       out_win32/release        MDMAP       ppl,pdb
+ROOT       out_win32/release        MemModSc    ppl,pdb
+ROOT       out_win32/release        MemScan     ppl,pdb
+ROOT       out_win32/release        minizip     ppl,pdb
+ROOT       out_win32/release        msoe        ppl,pdb
+ROOT       out_win32/release        ndetect     ppl,pdb
+ROOT       out_win32/release        nfio        ppl,pdb
+ROOT       out_win32/release        NTFSstrm    ppl,pdb
+ROOT       out_win32/release        ods         ppl,pdb
+ROOT       out_win32/release        passdmap    ppl,pdb
+ROOT       out_win32/release        procmon     ppl,pdb
+ROOT       out_win32/release        prseqio     ppl,pdb
+ROOT       out_win32/release        PrUtil      ppl,pdb
+ROOT       out_win32/release        qb          ppl,pdb
+ROOT       out_win32/release        Quantum     ppl,pdb
+ROOT       out_win32/release        rar         ppl,pdb
+ROOT       out_win32/release        regmap      ppl,pdb
+ROOT       out_win32/release        Report      ppl,pdb
+ROOT       out_win32/release        schedule    ppl,pdb
+ROOT       out_win32/release        sfdb        ppl,pdb
+ROOT       out_win32/release        StdComp     ppl,pdb
+ROOT       out_win32/release        StEnum2     ppl,pdb
+ROOT       out_win32/release        stored      ppl,pdb
+ROOT       out_win32/release        SubstIO     ppl,pdb
+ROOT       out_win32/release        superio     ppl,pdb
+ROOT       out_win32/release        TempFile    ppl,pdb
+ROOT       out_win32/release        thpimpl     ppl,pdb
+ROOT       out_win32/release        Timer       ppl,pdb
+ROOT       out_win32/release        tm          ppl,pdb
+ROOT       out_win32/release        UnArj       ppl,pdb
+ROOT       out_win32/release        UniArc      ppl,pdb
+ROOT       out_win32/release        UnLZX       ppl,pdb
+ROOT       out_win32/release        Unreduce    ppl,pdb
+ROOT       out_win32/release        UNSHRINK    ppl,pdb
+ROOT       out_win32/release        UnStored    ppl,pdb
+ROOT       out_win32/release        vmarea      ppl,pdb
+ROOT       out_win32/release        WDiskIO     ppl,pdb
+ROOT       out_win32/release        WinReg      ppl,pdb
+ROOT       out_win32/release        xorio       ppl,pdb
+
+# include files
+
+:include
+
+ROOT       CommonFiles              AVPSize_t.h
+ROOT       include                  *           h,c,cpp
+
+:include/Prague
+ROOT       include/Prague           *           h,c,cpp
+
+:include/Prague/iface
+ROOT       include/Prague/iface     *           h,c,cpp
+
+:include/Prague/plugin
+ROOT       include/Prague/plugin    *           h,c,cpp
+
+:include/ProductCore
+ROOT       include/ProductCore          *       h,c,cpp
+
+:include/ProductCore/common
+ROOT       include/ProductCore/common   *       h,c,cpp
+
+:include/ProductCore/iface
+ROOT       include/ProductCore/iface    *       h,c,cpp
+
+:include/ProductCore/plugin
+ROOT       include/ProductCore/plugin   *       h,c,cpp
+
+:include/ProductCore/structs
+ROOT       include/ProductCore/structs  *       h,c,cpp
+
+:include/Extract/iface
+ROOT       include/Extract/iface    *       h,c,cpp
+
+:include/Extract/plugin
+ROOT       include/Extract/plugin   *       h,c,cpp
+
+:include/AV/iface
+ROOT       include/AV/iface         *       h,c,cpp
+
+:include/AV/plugin
+ROOT       include/AV/plugin        *       h,c,cpp
+
+:include/AV/structs
+ROOT       include/AV/structs       *       h,c,cpp
+
+# sample projects
+
+:samples/AvsTest
+ROOT       AV/Avs/Test              main.cpp
+ROOT       AV/Avs/Test              AvsTest.vcproj
+ROOT       AV/Avs/Test              AvsTest.sln

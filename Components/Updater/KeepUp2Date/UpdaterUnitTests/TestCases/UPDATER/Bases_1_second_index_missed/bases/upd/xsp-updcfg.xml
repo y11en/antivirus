@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+
+<UpdaterSettingsSection>
+
+<sites_list>
+	<site url="http://ru1h.kaspersky-labs.com"  weight="30000"  region="Russia"> </site>
+	<site url="http://ru2h.kaspersky-labs.com"  weight="25000"  region="Russia"> </site>
+	<site url="http://ru3h.kaspersky-labs.com"  weight="20000"  region="Russia"> </site>
+	<site url="http://ru4h.kaspersky-labs.com"  weight="10000"  region="Russia"> </site>
+	<site url="http://ru5h.kaspersky-labs.com"  weight="10000"  region="Russia"> </site>
+	<site url="http://ru6h.kaspersky-labs.com"  weight="1"      region="Russia"> </site>
+	<site url="http://ru7h.kaspersky-labs.com"  weight="30000"  region="Russia"> </site>
+	<site url="http://ru8h.kaspersky-labs.com"  weight="30000"  region="Russia"> </site>
+	<site url="ftp://ru1f.kaspersky-labs.com"   weight="1"      region="Russia"> </site>
+	<site url="ftp://ru2f.kaspersky-labs.com"   weight="1"      region="Russia"> </site>
+	<site url="ftp://ru3f.kaspersky-labs.com"   weight="1"      region="Russia"> </site>
+	<site url="ftp://ru4f.kaspersky-labs.com"   weight="1"      region="Russia"> </site>
+	<site url="ftp://ru5f.kaspersky-labs.com"   weight="1"      region="Russia"> </site>
+	<site url="ftp://ru6f.kaspersky-labs.com"   weight="1"      region="Russia"> </site>
+	<site url="ftp://ru7f.kaspersky-labs.com"   weight="1"      region="Russia"> </site>
+	<site url="ftp://ru8f.kaspersky-labs.com"   weight="1"      region="Russia"> </site>
+
+	<site url="http://eu1h.kaspersky-labs.com" 	weight="15000"	region="Europe"> </site>
+	<site url="http://eu2h.kaspersky-labs.com" 	weight="40000"	region="Europe"> </site>
+	<site url="http://eu3h.kaspersky-labs.com" 	weight="40000"	region="Europe"> </site>
+	<site url="http://eu4h.kaspersky-labs.com" 	weight="20000"	region="Europe"> </site>
+	<site url="http://eu5h.kaspersky-labs.com" 	weight="10000"	region="Europe"> </site>
+	<site url="http://eu6h.kaspersky-labs.com" 	weight="1"		region="Europe"> </site>
+	<site url="ftp://eu1f.kaspersky-labs.com" 	weight="1" 		region="Europe"> </site>
+	<site url="ftp://eu2f.kaspersky-labs.com" 	weight="1" 		region="Europe"> </site>
+	<site url="ftp://eu3f.kaspersky-labs.com" 	weight="1" 		region="Europe"> </site>
+	<site url="ftp://eu4f.kaspersky-labs.com" 	weight="1" 		region="Europe"> </site>
+	<site url="ftp://eu5f.kaspersky-labs.com" 	weight="1" 		region="Europe"> </site>
+	<site url="ftp://eu6f.kaspersky-labs.com" 	weight="1" 		region="Europe"> </site>
+
+	<site url="http://us1h.kaspersky-labs.com" 	weight="40000"	region="America"> </site>
+	<site url="http://us2h.kaspersky-labs.com" 	weight="20000"	region="America"> </site>
+	<site url="http://us3h.kaspersky-labs.com" 	weight="20000"	region="America"> </site>
+	<site url="http://us4h.kaspersky-labs.com" 	weight="10000"	region="America"> </site>
+	<site url="http://us5h.kaspersky-labs.com" 	weight="10000"	region="America"> </site>
+	<site url="http://us6h.kaspersky-labs.com" 	weight="1"		region="America"> </site>
+	<site url="ftp://us1f.kaspersky-labs.com" 	weight="1" 		region="America"> </site>
+	<site url="ftp://us2f.kaspersky-labs.com" 	weight="1" 		region="America"> </site>
+	<site url="ftp://us3f.kaspersky-labs.com" 	weight="1" 		region="America"> </site>
+	<site url="ftp://us4f.kaspersky-labs.com" 	weight="1" 		region="America"> </site>
+	<site url="ftp://us5f.kaspersky-labs.com" 	weight="1" 		region="America"> </site>
+	<site url="ftp://us6f.kaspersky-labs.com" 	weight="1" 		region="America"> </site>
+
+	<site url="http://cn1h.kaspersky-labs.com" 	weight="30000"	region="China"> </site>
+	<site url="http://cn2h.kaspersky-labs.com" 	weight="30000"	region="China"> </site>
+	<site url="http://cn3h.kaspersky-labs.com" 	weight="30000"	region="China"> </site>
+	<site url="http://cn4h.kaspersky-labs.com" 	weight="10000"	region="China"> </site>
+	<site url="http://cn5h.kaspersky-labs.com" 	weight="10000"	region="China"> </site>
+	<site url="http://cn6h.kaspersky-labs.com" 	weight="1"		region="China"> </site>
+	<site url="ftp://cn1f.kaspersky-labs.com" 	weight="1" 		region="China"> </site>
+	<site url="ftp://cn2f.kaspersky-labs.com" 	weight="1" 		region="China"> </site>
+	<site url="ftp://cn3f.kaspersky-labs.com" 	weight="1" 		region="China"> </site>
+	<site url="ftp://cn4f.kaspersky-labs.com" 	weight="1" 		region="China"> </site>
+	<site url="ftp://cn5f.kaspersky-labs.com" 	weight="1" 		region="China"> </site>
+	<site url="ftp://cn6f.kaspersky-labs.com" 	weight="1" 		region="China"> </site>
+	<site url="http://jp1h.kaspersky-labs.com"  weight="500"    region="Japan"> </site>
+	<site url="http://jp2h.kaspersky-labs.com"  weight="100"    region="Japan"> </site>
+	<site url="http://jp3h.kaspersky-labs.com"  weight="500"    region="Japan"> </site>
+	<site url="http://jp4h.kaspersky-labs.com"  weight="500"    region="Japan"> </site>
+
+	<site url="http://kr1h.kaspersky-labs.com"	weight="10000"	region="Korea"> </site>
+	<site url="http://kr2h.kaspersky-labs.com"	weight="1"		region="Korea"> </site>
+	<site url="http://kr3h.kaspersky-labs.com"	weight="1"		region="Korea"> </site>
+	<site url="http://kr4h.kaspersky-labs.com"	weight="1"		region="Korea"> </site>
+	<site url="http://kr5h.kaspersky-labs.com"	weight="1"		region="Korea"> </site>
+	<site url="http://kr6h.kaspersky-labs.com"	weight="1"		region="Korea"> </site>
+	<site url="ftp://kr1f.kaspersky-labs.com"	weight="1000"	region="Korea"> </site>
+	<site url="ftp://kr2f.kaspersky-labs.com"	weight="1"		region="Korea"> </site>
+	<site url="ftp://kr3f.kaspersky-labs.com"	weight="1"		region="Korea"> </site>
+	<site url="ftp://kr4f.kaspersky-labs.com"	weight="1"		region="Korea"> </site>
+	<site url="ftp://kr5f.kaspersky-labs.com"	weight="1"		region="Korea"> </site>
+	<site url="ftp://kr6f.kaspersky-labs.com"	weight="1"		region="Korea"> </site>
+
+
+
+
+	<site2 url="http://dnl-ru1.kaspersky-labs.com" 	weight="100000"		region="am,az,by,ge,kg,kz,md,ru,tj,tm,ua,uz" />
+	<site2 url="ftp://dnl-ru1.kaspersky-labs.com" 	weight="50000" 		region="am,az,by,ge,kg,kz,md,ru,tj,tm,ua,uz" />
+	<site2 url="http://dnl-ru2.kaspersky-labs.com" 	weight="1"			region="am,az,by,ge,kg,kz,md,ru,tj,tm,ua,uz" />
+	<site2 url="ftp://dnl-ru2.kaspersky-labs.com" 	weight="1" 			region="am,az,by,ge,kg,kz,md,ru,tj,tm,ua,uz" />
+	<site2 url="http://dnl-ru5.kaspersky-labs.com" 	weight="1"			region="am,az,by,ge,kg,kz,md,ru,tj,tm,ua,uz" />
+	<site2 url="ftp://dnl-ru5.kaspersky-labs.com" 	weight="1" 			region="am,az,by,ge,kg,kz,md,ru,tj,tm,ua,uz" />
+
+	<site2 url="http://dnl-eu1.kaspersky-labs.com" 	weight="100000"		region="fr,de,pl,es,tr,it,ro,gb,uk,at,nl,be,lt,cs,lv,bg,ee,cz,gr,hu" />
+	<site2 url="ftp://dnl-eu1.kaspersky-labs.com" 	weight="50000"		region="fr,de,pl,es,tr,it,ro,gb,uk,at,nl,be,lt,cs,lv,bg,ee,cz,gr,hu" />
+	<site2 url="http://dnl-eu2.kaspersky-labs.com" 	weight="300000"		region="fr,de,pl,es,tr,it,ro,gb,uk,at,nl,be,lt,cs,lv,bg,ee,cz,gr,hu" />
+	<site2 url="ftp://dnl-eu2.kaspersky-labs.com" 	weight="150000"		region="fr,de,pl,es,tr,it,ro,gb,uk,at,nl,be,lt,cs,lv,bg,ee,cz,gr,hu" />
+	<site2 url="http://dnl-eu3.kaspersky-labs.com" 	weight="200000"		region="fr,de,pl,es,tr,it,ro,gb,uk,at,nl,be,lt,cs,lv,bg,ee,cz,gr,hu" />
+	<site2 url="ftp://dnl-eu3.kaspersky-labs.com" 	weight="100000"		region="fr,de,pl,es,tr,it,ro,gb,uk,at,nl,be,lt,cs,lv,bg,ee,cz,gr,hu" />
+	<site2 url="http://dnl-eu4.kaspersky-labs.com" 	weight="300000"		region="fr,de,pl,es,tr,it,ro,gb,uk,at,nl,be,lt,cs,lv,bg,ee,cz,gr,hu" />
+	<site2 url="ftp://dnl-eu4.kaspersky-labs.com" 	weight="150000"		region="fr,de,pl,es,tr,it,ro,gb,uk,at,nl,be,lt,cs,lv,bg,ee,cz,gr,hu" />
+	<site2 url="http://dnl-eu5.kaspersky-labs.com" 	weight="300000"		region="fr,de,pl,es,tr,it,ro,gb,uk,at,nl,be,lt,cs,lv,bg,ee,cz,gr,hu" />
+	<site2 url="ftp://dnl-eu5.kaspersky-labs.com" 	weight="1"			region="fr,de,pl,es,tr,it,ro,gb,uk,at,nl,be,lt,cs,lv,bg,ee,cz,gr,hu" />
+
+	<site2 url="http://dnl-us3.kaspersky-labs.com" 	weight="300000"		region="us,ca,mx,ar,br,cl,cn,tw,hk,th" />
+	<site2 url="ftp://dnl-us3.kaspersky-labs.com" 	weight="1"			region="us,ca,mx,ar,br,cl,cn,tw,hk,th" />
+
+	<site2 url="http://dnl-jp1.kaspersky-labs.com" 	weight="500"		region="jp" />
+	<site2 url="http://dnl-jp2.kaspersky-labs.com" 	weight="100"		region="jp" />
+	<site2 url="http://dnl-jp3.kaspersky-labs.com" 	weight="500"		region="jp" />
+	<site2 url="http://dnl-jp4.kaspersky-labs.com" 	weight="500"		region="jp" />
+
+	<site2 url="http://dnl-kr1.kaspersky-labs.com" 	weight="500"		region="kr" />
+	<site2 url="ftp://dnl-kr1.kaspersky-labs.com" 	weight="1"			region="kr" />
+
+	<site2 url="http://dnl-eu1.kaspersky-labs.com" 	weight="100"		region="*" />
+	<site2 url="ftp://dnl-eu1.kaspersky-labs.com" 	weight="50"			region="*" />
+	<site2 url="http://dnl-eu2.kaspersky-labs.com"	weight="300000"		region="*" />
+	<site2 url="ftp://dnl-eu2.kaspersky-labs.com" 	weight="150000"		region="*" />
+	<site2 url="http://dnl-eu3.kaspersky-labs.com" 	weight="200"		region="*" />
+	<site2 url="ftp://dnl-eu3.kaspersky-labs.com" 	weight="100"		region="*" />
+	<site2 url="http://dnl-eu4.kaspersky-labs.com" 	weight="300000"		region="*" />
+	<site2 url="ftp://dnl-eu4.kaspersky-labs.com" 	weight="150000"		region="*" />
+	<site2 url="http://dnl-eu5.kaspersky-labs.com" 	weight="300000"		region="*" />
+	<site2 url="ftp://dnl-eu5.kaspersky-labs.com" 	weight="1"			region="*" />
+	<site2 url="http://dnl-us3.kaspersky-labs.com" 	weight="300000"		region="*" />
+	<site2 url="ftp://dnl-us3.kaspersky-labs.com" 	weight="1"			region="*" />
+	<site2 url="http://dnl-ru1.kaspersky-labs.com" 	weight="100"		region="*" />
+	<site2 url="ftp://dnl-ru1.kaspersky-labs.com" 	weight="50"			region="*" />
+	<site2 url="http://dnl-ru2.kaspersky-labs.com" 	weight="10"			region="*" />
+	<site2 url="ftp://dnl-ru2.kaspersky-labs.com" 	weight="5"			region="*" />
+	<site2 url="http://dnl-ru5.kaspersky-labs.com" 	weight="1"			region="*" />
+	<site2 url="ftp://dnl-ru5.kaspersky-labs.com" 	weight="1"			region="*" />
+
+</sites_list>
+
+<UpdateFileDescription 	Filename="master.xml" RelativeSrvPath="index"> </UpdateFileDescription>
+
+</UpdaterSettingsSection>
+; 0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR­­

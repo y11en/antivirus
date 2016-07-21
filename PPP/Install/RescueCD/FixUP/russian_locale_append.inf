@@ -1,0 +1,20 @@
+; russian_locale_append.inf
+; *** russian locale specific settings start
+[nls]
+
+AnsiCodepage     = c_1251.nls,1251
+OemCodepage      = c_866.nls,866,c_437.nls,437
+MacCodepage      = c_10007.nls,10007
+UnicodeCasetable = l_intl.nls,0419
+OemHalFont       = vga866.fon
+DefaultLayout    = 00000409
+
+[FontListE]
+"Courier 10,12,15 (VGA)"               = COURER.FON
+"MS Sans Serif 8,10,12,14,18,24 (VGA)" = SSERIFER.FON
+"MS Serif 8,10,12,14,18,24 (VGA)"      = SERIFER.FON
+"Small Fonts (VGA)"                    = SMALLER.FON
+"Tahoma (TrueType)"                    = TAHOMA.TTF
+"Microsoft Sans Serif (TrueType)"      = MICROSS.TTF
+
+; *** russian locale specific settings end

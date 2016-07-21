@@ -1,0 +1,4 @@
+// ***** Spe.EZSearch *****
+begin
+ AddEvAlarmByCLSID('CCE83E45-30B2-4BAE-B1F5-25D128D27A43',AScriptName,'ezsearch.dll');
+end.

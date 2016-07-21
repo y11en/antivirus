@@ -1,0 +1,4 @@
+// ***** TrojanDownloader.Win32.Esepor.w *****
+begin
+ AddEvAlarmByCLSID('4F7681E5-6CAF-478D-9CB8-4CA593BEE7FB','TrojanDownloader.Win32.Esepor.w','XPlugin.dll');
+end.

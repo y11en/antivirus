@@ -1,0 +1,11 @@
+Adding signatures from file "joined32.sig".
+Scanning file "joined32.sig"
+   0/4; off=0x00001651; id=1
+   1/4; off=0x00001758; id=2
+   2/4; off=0x0000185F; id=3
+   3/4; off=0x00001966; id=4
+Total :
+id=1(1)
+id=2(1)
+id=3(1)
+id=4(1)

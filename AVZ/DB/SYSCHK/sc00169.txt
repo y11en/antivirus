@@ -1,0 +1,5 @@
+// ***** Spy.URLBlase *****
+begin
+ AddEvAlarmByCLSID('EF480A61-A953-4D55-B800-94312BA21052',AScriptName,'UBRun.dll');
+ AddEvAlarmByCLSID('CE7C3CF0-4B15-11D1-ABED-709549C10000',AScriptName,'UBmon.dll');
+end.

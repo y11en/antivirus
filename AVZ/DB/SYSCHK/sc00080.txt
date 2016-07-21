@@ -1,0 +1,4 @@
+// ***** Dialer.GlobalDialer *****
+begin
+ AddEvAlarmByCLSID('38545C2A-03CD-42C3-BC62-C537A6D5A8F6',AScriptName,'OLibrary.dll');
+end.

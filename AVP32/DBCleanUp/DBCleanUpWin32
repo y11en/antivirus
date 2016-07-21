@@ -1,0 +1,71 @@
+!IF "$(OS)" == "Windows_NT"
+NULL=
+!ELSE 
+NULL=nul
+!ENDIF 
+
+CPP=cl.exe
+
+!IF "$(CFG)" == "DEBUG"
+OUTDIR=.\Debug
+INTDIR=.\Debug
+!ELSE
+OUTDIR=.\Release
+INTDIR=.\Release
+!ENDIF 
+
+
+ALL : "$(OUTDIR)\DBCleanUp.lib"
+
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+!IF "$(CFG)" == "DEBUG"
+CPP_PROJ=/nologo /G3 /MT /W3 /GX /ZI /I "." /D"_WINDOWS" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /D "_USRDLL" /Fp"$(INTDIR)\DBCleanUp.pch" /YX /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /FD /c 
+!ELSE
+CPP_PROJ=/nologo /G3 /MT /W3 /GX /O2 /I "." /D"_WINDOWS" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /D "_USRDLL" /Fp"$(INTDIR)\DBCleanUp.pch" /YX /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /FD /c 
+!ENDIF 
+	
+LIB32=link.exe -lib
+LIB32_FLAGS=/nologo /out:"$(OUTDIR)\DBCleanUp.lib" 
+LIB32_OBJS= \
+	"$(INTDIR)\DBCleanUp.obj"
+
+"$(OUTDIR)\DBCleanUp.lib" : "$(OUTDIR)" $(DEF_FILE) $(LIB32_OBJS)
+    $(LIB32) @<<
+  $(LIB32_FLAGS) $(DEF_FLAGS) $(LIB32_OBJS)
+<<
+
+
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ)  $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+
+
+SOURCE=.\DBCleanUp.cpp
+
+"$(INTDIR)\DBCleanUp.obj" : $(SOURCE) "$(INTDIR)"
+
+
+
+

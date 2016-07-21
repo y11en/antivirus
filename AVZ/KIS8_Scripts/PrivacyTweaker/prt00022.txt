@@ -1,0 +1,27 @@
+// $AVZ1577
+//$ Очистить список папок, использованных в диалогах открытия и сохранения файлов
+const
+ ScanKey = 'Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\LastVisitedMRU';
+// Функция поиска проблемы
+function Check : dword;
+var
+ Lines : TStrings;
+begin
+ Result := 0;
+ if RegKeyExists('HKCU', ScanKey) then begin
+  Lines := TStringList.Create;
+  RegKeyEnumVal('HKCU', ScanKey, Lines);
+  if Lines.Count > 0 then 
+   Result := 1;
+  Lines.Free;
+ end;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+begin
+ RegKeyDel('HKCU', ScanKey);
+ RegKeyCreate('HKCU', ScanKey);
+ Result := 0;
+end;
+

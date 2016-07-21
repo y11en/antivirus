@@ -1,0 +1,148 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "PGIServer Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "PGIServer\0"
+            VALUE "LegalCopyright", "Copyright 2000\0"
+            VALUE "OriginalFilename", "PGIServer.DLL\0"
+            VALUE "ProductName", "PGIServer Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_PRAGUEISERVER       REGISTRY DISCARDABLE    "PragueIServer.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "PGIServer"
+    IDS_IPP_DEFEXTENTION    "prt"
+    IDS_IPI_DEFEXTENTION    "imp"
+    IDS_IPI_FILTER          "Prague Interface Implementation Files (*.imp)|*.imp|All files (*.*)|*.*||"
+    IDS_IPP_FILTER          "Prague Interface Prototype Files (*.prt)|*.prt|All files (*.*)|*.*||"
+    IDS_IP_FILTER           "Prague Interface Files (*.prt,*.imp)|*.prt;*.imp|Prague Interface Prototype Files (*.prt)|*.prt|Prague Interface Implementation Files (*.imp)|*.imp|All files (*.*)|*.*||"
+		IDS_DUPLICATEINT				"Attention !\n\nDuplicate interface ""%s""\n\n""%s"" in container ""%s""\nand\n""%s"" in container ""%s"""
+		IDS_SELECTFOLDERTITLE		"Select Prototype lookup folder"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_E_INTERNALERROR           "Internal interface error."
+    IDS_E_OUTOFORDER              "Interface is not ready for work due to some reason."
+    IDS_E_HASNOTCONNECTED         "Interface has not connected to storage yet."
+    IDS_E_MEMORYALLOCATIONERROR   "Memory allocation error."
+		IDS_E_DIFFERENTTYPES					"Different types of containers."
+		IDS_E_SAVECONTAINER           "Cannot save container to ""%s"""
+		IDS_E_SAVERESERVECOPY         "Cannot create reserve copy to ""%s"""
+		IDS_E_CONNECTION							"Cannot establish connection to ""%s"""
+		IDS_E_INTNOTFOUND							"Interface is not found ""%s"""
+		IDS_E_SAVEDESCRIPTIONDB				"Cannot save DataBase to ""%s"""
+		IDS_E_UIOWNER									"Cannot perform operation as UI owner has not been set"
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""PGIServer.tlb""\r\n"
+    "#include ""res\\VisualEditor.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Neutral (Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "PGIServer.tlb"
+#include "res\PGIServer.rc2"  // non-Microsoft Visual C++ edited resources
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

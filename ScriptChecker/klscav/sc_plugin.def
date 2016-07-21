@@ -1,0 +1,13 @@
+; sc_plugin.def : Declares the module parameters.
+
+LIBRARY      "klscav.dll"
+
+EXPORTS
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer PRIVATE
+	IsEnabled           @100 PRIVATE 
+	ProcessScript       @101 PRIVATE 
+	CheckPopupURL       @102 PRIVATE 
+	IsDispatchEnabled   @103 PRIVATE 
+	Dispatch            @104 PRIVATE 
+

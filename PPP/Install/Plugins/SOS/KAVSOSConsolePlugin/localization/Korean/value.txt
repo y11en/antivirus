@@ -1,0 +1,788 @@
+ERROR_NOTINSTALLED	카스퍼스키 중앙관리 도구 콘솔이 설치되어 있지 않습니다.		
+REGVALUE_INSTALLKEY_TASK	라이센스 키 설치		
+REGVALUE_ODS_TASK	바이러스 검사	
+REGVALUE_PRODUCTNAME_FS	카스퍼스키 안티 바이러스 6.0 for Windows File Servers	
+REGVALUE_PRODUCTNAME_WKS	카스퍼스키 안티 바이러스 6.0 for Windows Workstations		
+REGVALUE_ROLLBACK_TASK	업데이트 롤백	
+REGVALUE_UPDATER_TASK	업데이트		
+COMPANY_NAME	Kaspersky Lab	
+DN_AlwaysInstall	항상 설치	
+FEATURE_MAIN	주요 기능	
+IDPROP_ARPCOMMENTS	사이버 공간을 보호하십시오!	
+IDPROP_ARPCONTACT	고객 지원 센터
+IDPROP_ARPHELPLINK	http://www.kaspersky.co.kr/service.html	
+IDPROP_ARPHELPTELEPHONE	02-508-8789	
+IDPROP_ARPURLINFOABOUT	http://www.kaspersky.co.kr	
+IDPROP_ARPURLUPDATEINFO	http://www.kaspersky.co.kr/bizupgrade.htm
+IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR	시스템 색 설정이 [ProductName]을 실행하기에 적절하지 않습니다.	
+IDPROP_EXPRESS_LAUNCH_CONDITION_OS	운영체제가 [ProductName]을 실행하기에 적절하지 않습니다.
+IDPROP_EXPRESS_LAUNCH_CONDITION_PROCESSOR	프로세서가 [ProductName]을 실행하기에 적절하지 않습니다.
+IDPROP_EXPRESS_LAUNCH_CONDITION_RAM	RAM 용량이 [ProductName]을 실행하기에 적절하지 않습니다.
+IDPROP_EXPRESS_LAUNCH_CONDITION_SCREEN	화면 해상도가 [ProductName]을 실행하기에 적절하지 않습니다.
+IDPROP_SETUPTYPE_COMPACT	최소
+IDPROP_SETUPTYPE_COMPACT_DESC	최소 설명
+IDPROP_SETUPTYPE_CUSTOM	사용자	
+IDPROP_SETUPTYPE_CUSTOM_DESC	사용자 설명
+IDPROP_SETUPTYPE_TYPICAL	일반
+IDPROP_SETUPTYPE_TYPICAL_DESC	일반 설명
+IDS__AgreeToLicense_0	라이센스 동의서의 조건에 동의하지 않습니다(&D)
+IDS__AgreeToLicense_1	라이센스 동의서의 조건에 동의합니다(&A)
+IDS__DatabaseFolder_0	[ProductName] - InstallShield 마법사
+IDS__DatabaseFolder_1	취소
+IDS__DatabaseFolder_10	[ProductName] 데이터베이스 설치: 
+IDS__DatabaseFolder_11	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__DatabaseFolder_12	<ISProductFolder>\Redist\Language Independent\OS Independent\DestIcon.ibd	
+IDS__DatabaseFolder_2	InstallShield	
+IDS__DatabaseFolder_3	{&MSSWhiteSerif8}InstallShield	
+IDS__DatabaseFolder_4	이 폴더에 설치하려면 다음을 클릭하고 다른 폴더에 설치하려면 변경을 눌러 주십시오.
+IDS__DatabaseFolder_5	{&MSSansBold8}데이터베이스 폴더
+IDS__DatabaseFolder_6	< 뒤로(&B)
+IDS__DatabaseFolder_7	다음(&N) >
+IDS__DatabaseFolder_8	변경(&C)
+IDS__DatabaseFolder_9	[DATABASEDIR]	
+IDS__DestinationFolder_0	[ProductName] - InstallShield 마법사	
+IDS__DestinationFolder_1	취소
+IDS__DestinationFolder_10	[ProductName] 설치:
+IDS__DestinationFolder_11	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__DestinationFolder_12	<ISProductFolder>\Redist\Language Independent\OS Independent\DestIcon.ibd	
+IDS__DestinationFolder_2	InstallShield	
+IDS__DestinationFolder_3	{&MSSWhiteSerif8}InstallShield	
+IDS__DestinationFolder_4	이 폴더에 설치하려면 다음을 클릭하고 다른 폴더에 설치하려면 변경을 눌러 주십시오.	
+IDS__DestinationFolder_5	{&MSSansBold8}대상 폴더
+IDS__DestinationFolder_6	< 뒤로(&B)
+IDS__DestinationFolder_7	다음(&N) >
+IDS__DestinationFolder_8	변경(&C)
+IDS__DestinationFolder_9	[INSTALLDIR]	
+IDS__DisplayName_Custom	사용자 정의
+IDS__DisplayName_Minimal	최소
+IDS__DisplayName_Typical	일반
+IDS__IsAdminInstallBrowse_0	[ProductName] - InstallShield 마법사
+IDS__IsAdminInstallBrowse_1	{&MSSWhiteSerif8}InstallShield	
+IDS__IsAdminInstallBrowse_10	확인
+IDS__IsAdminInstallBrowse_11		
+IDS__IsAdminInstallBrowse_12	폴더 이름(&F):
+IDS__IsAdminInstallBrowse_13	한 수준 위로|
+IDS__IsAdminInstallBrowse_14	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsAdminInstallBrowse_15	<ISProductFolder>\Redist\Language Independent\OS Independent\New.ibd	
+IDS__IsAdminInstallBrowse_16	<ISProductFolder>\Redist\Language Independent\OS Independent\Up.ibd	
+IDS__IsAdminInstallBrowse_2	InstallShield	
+IDS__IsAdminInstallBrowse_3	취소
+IDS__IsAdminInstallBrowse_4		
+IDS__IsAdminInstallBrowse_5	대상(&L):
+IDS__IsAdminInstallBrowse_6	대상 폴더에서 찾아보기.
+IDS__IsAdminInstallBrowse_7	{&MSSansBold8}현재 대상 폴더 변경
+IDS__IsAdminInstallBrowse_8		
+IDS__IsAdminInstallBrowse_9	새 폴더 생성|
+IDS__IsAdminInstallPoint_0	[ProductName] - InstallShield 마법사	
+IDS__IsAdminInstallPoint_1	< 뒤로(&B)
+IDS__IsAdminInstallPoint_10	네트워크 위치(&N):	
+IDS__IsAdminInstallPoint_11	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsAdminInstallPoint_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsAdminInstallPoint_3	InstallShield	
+IDS__IsAdminInstallPoint_4	변경(&C)
+IDS__IsAdminInstallPoint_5	취소
+IDS__IsAdminInstallPoint_6	제품의 서버 이미지에 대한 네트워크 위치를 지정합니다.
+IDS__IsAdminInstallPoint_7	네트워크 이름을 입력하거나 변경을 클릭해서 위치를 변경합니다. 지정된 네트워크 위치에 [ProductName]의 서버 이미지를 생성하려면 설치를 클릭하거나 마법사를 종료하려면 취소를 클릭합니다.
+IDS__IsAdminInstallPoint_8	{&MSSansBold8}네트워크 위치
+IDS__IsAdminInstallPoint_9	설치(&I)
+IDS__IsAdminInstallPointWelcome_0	[ProductName] - InstallShield 마법사
+IDS__IsAdminInstallPointWelcome_1	< 뒤로(&B)
+IDS__IsAdminInstallPointWelcome_2	취소
+IDS__IsAdminInstallPointWelcome_3	다음(&N) >
+IDS__IsAdminInstallPointWelcome_4	{&TahomaBold10}[ProductName] InstallShield 마법사에 오신 것을 환영합니다.
+IDS__IsAdminInstallPointWelcome_5	InstallShield 마법사가 지정된 네트워크 위치에 [ProductName]의 서버 이미지를 생성할 것입니다. 계속하려면, 다음을 클릭합니다.
+IDS__IsAdminInstallPointWelcome_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsBitmapDlg_0	[ProductName] - InstallShield 마법사	
+IDS__IsBitmapDlg_1	< 뒤로(&B)
+IDS__IsBitmapDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsBitmapDlg_3	InstallShield	
+IDS__IsBitmapDlg_4	취소
+IDS__IsBitmapDlg_5	다음(&N) >
+IDS__IsBitmapDlg_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsBrowseFolderDlg_0	[ProductName] - InstallShield 마법사
+IDS__IsBrowseFolderDlg_1	{&MSSWhiteSerif8}InstallShield	
+IDS__IsBrowseFolderDlg_10	확인
+IDS__IsBrowseFolderDlg_11		
+IDS__IsBrowseFolderDlg_12	폴더 이름(&F):
+IDS__IsBrowseFolderDlg_13	한 단계 위로|
+IDS__IsBrowseFolderDlg_14	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsBrowseFolderDlg_15	<ISProductFolder>\Redist\Language Independent\OS Independent\New.ibd	
+IDS__IsBrowseFolderDlg_16	<ISProductFolder>\Redist\Language Independent\OS Independent\Up.ibd	
+IDS__IsBrowseFolderDlg_2	InstallShield	
+IDS__IsBrowseFolderDlg_3	취소
+IDS__IsBrowseFolderDlg_4		
+IDS__IsBrowseFolderDlg_5	대상(&L):
+IDS__IsBrowseFolderDlg_6	대상 폴더 찾아보기.
+IDS__IsBrowseFolderDlg_7	{&MSSansBold8}대상 폴더 변경
+IDS__IsBrowseFolderDlg_8		
+IDS__IsBrowseFolderDlg_9	새 폴더 생성|
+IDS__IsCancelDlg_0	[ProductName] - InstallShield 마법사
+IDS__IsCancelDlg_1	정보 아이콘|
+IDS__IsCancelDlg_2	InstallShield	
+IDS__IsCancelDlg_3	정말로 설치를 취소하시겠습니까?
+IDS__IsCancelDlg_4	정말로 [ProductName] 설치를 취소하시겠습니까?
+IDS__IsCancelDlg_5	{&MSSansBold8}설치 취소
+IDS__IsCancelDlg_6	아니오(&N)
+IDS__IsCancelDlg_7	[ProductName]을 계속 설치하려면, 재시작을 클릭하여 주십시오. 설치를 종료하려면 종료를 클릭합니다.
+IDS__IsCancelDlg_8	예(&Y)
+IDS__IsCancelDlg_9	<ISProductFolder>\Redist\Language Independent\OS Independent\WarningIcon.ibd	
+IDS__IsCustomSelectionDlg_0	[ProductName] - InstallShield 마법사
+IDS__IsCustomSelectionDlg_1	< 뒤로(&B)
+IDS__IsCustomSelectionDlg_10	구성 요소 설명:	
+IDS__IsCustomSelectionDlg_11	다음(&N) >
+IDS__IsCustomSelectionDlg_12	구성 요소 크기
+IDS__IsCustomSelectionDlg_13	도움말(&H)
+IDS__IsCustomSelectionDlg_14	현재 선택된 항목의 복합 설명
+IDS__IsCustomSelectionDlg_15	구성 요소 설명
+IDS__IsCustomSelectionDlg_16	변경(&C)
+IDS__IsCustomSelectionDlg_17	<설치된 구성 요소 경로>
+IDS__IsCustomSelectionDlg_18	설치 위치:
+IDS__IsCustomSelectionDlg_19	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsCustomSelectionDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsCustomSelectionDlg_3	InstallShield	
+IDS__IsCustomSelectionDlg_4	취소
+IDS__IsCustomSelectionDlg_5	공간(&S)
+IDS__IsCustomSelectionDlg_6	설치하기 위한 프로그램 구성 요소를 선택합니다.
+IDS__IsCustomSelectionDlg_7	설치된 구성 요소를 변경하려면 아래 목록의 아이콘을 클릭합니다.
+IDS__IsCustomSelectionDlg_8	{&MSSansBold8}사용자 정의 설치
+IDS__IsCustomSelectionDlg_9	현재 선택된 항목의 복합 설명
+IDS__IsDatabaseLocation_1	InstallShield	
+IDS__IsDatabaseLocation_10	[DATABASEDIR]	
+IDS__IsDatabaseLocation_11	프로그램 데이터베이스 설치 위치:
+IDS__IsDatabaseLocation_12	{&MSSWhiteSerif8}InstallShield	
+IDS__IsDatabaseLocation_13	[ProductName] - InstallShield 마법사
+IDS__IsDatabaseLocation_2	2	
+IDS__IsDatabaseLocation_3	취소
+IDS__IsDatabaseLocation_4	4	
+IDS__IsDatabaseLocation_5	이 폴더에 프로그램 데이터베이스를 설치하려면 다음을 클릭하고, 다른 폴더에 설치하려면 변경을 클릭합니다.
+IDS__IsDatabaseLocation_6	{&MSSansBold8}데이터베이스 대상 폴더
+IDS__IsDatabaseLocation_7	< 뒤로(&B)
+IDS__IsDatabaseLocation_8	다음(&N) >
+IDS__IsDatabaseLocation_9	변경(&C)
+IDS__IsDiskSpaceDlg_0	[ProductName] - InstallShield 마법사
+IDS__IsDiskSpaceDlg_1	{&MSSWhiteSerif8}InstallShield	
+IDS__IsDiskSpaceDlg_10	확인
+IDS__IsDiskSpaceDlg_11	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsDiskSpaceDlg_2	InstallShield	
+IDS__IsDiskSpaceDlg_3	디스크 정리(&D)
+IDS__IsDiskSpaceDlg_4	설치에 필요한 디스크 공간이 사용 가능한 디스크 공간을 초과하였습니다.
+IDS__IsDiskSpaceDlg_5	선택된 볼륨은 현재 선택된 구성 요소에 대한 충분한 디스크 공간을 가지고 있지 않습니다. 선택된 볼륨으로부터 파일을 제거하거나 로컬 드라이브에 선택된 구성 요소 중 일부 구성 요소만 설치하거나 다른 대상 드라이브를 선택합니다.
+IDS__IsDiskSpaceDlg_6	{&MSSansBold8}디스크 공간 부족
+IDS__IsDiskSpaceDlg_7	종료(&E)
+IDS__IsDiskSpaceDlg_8	필요없는 파일을 제거하여 디스크 공간을 확보하기 위해 디스크 정리를 합니다.
+IDS__IsDiskSpaceDlg_9	{120}{70}{70}{70}{70}	
+IDS__IsErrorDlg_0	[ProductName] 설치 정보
+IDS__IsErrorDlg_1	중지(&A)
+IDS__IsErrorDlg_2	취소(&C)
+IDS__IsErrorDlg_3	<error text goes here><error text goes here><error text goes here><error text goes here><error text goes here><error text goes here><error text goes here><error text goes here><error text goes here><error text goes here><error text goes here>	
+IDS__IsErrorDlg_4	무시(&I)
+IDS__IsErrorDlg_5	아니오(&N)
+IDS__IsErrorDlg_6	확인(&O)
+IDS__IsErrorDlg_7	재시도(&R)
+IDS__IsErrorDlg_8	예(&Y)
+IDS__IsErrorDlg_9	<ISProductFolder>\Redist\Language Independent\OS Independent\WarningIcon.ibd	
+IDS__IsExitDialog_0	[ProductName] - InstallShield 마법사
+IDS__IsExitDialog_1	< 뒤로(&B)
+IDS__IsExitDialog_2	취소
+IDS__IsExitDialog_3	마침(&F)
+IDS__IsExitDialog_4	{&TahomaBold10}InstallShield 마법사 종료
+IDS__IsExitDialog_5	InstallShield 마법사가 성공적으로 [ProductName]을 설치하였습니다. 마법사를 종료하려면 마침을 클릭하십시오.
+IDS__IsExitDialog_6	InstallShield 마법사가 성공적으로 [ProductName]을 설치하였습니다. 마법사를 종료하려면 마침을 클릭하십시오.
+IDS__IsExitDialog_7	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsExitDialog_8	Readme 파일 보기
+IDS__IsExitDialog_9	프로그램 실행
+IDS__IsExitDialog_Update_0	[ProductName] - InstallShield 마법사
+IDS__IsExitDialog_Update_1	< 뒤로(&B)
+IDS__IsExitDialog_Update_2	취소
+IDS__IsExitDialog_Update_3	마침(&F)
+IDS__IsExitDialog_Update_4	설치 프로그램이 [ProductName]설치를 마쳤습니다.
+IDS__IsExitDialog_Update_5	일부 프로그램 파일들은 [ProductName]을 구매한 이후에 업데이트 됩니다.
+IDS__IsExitDialog_Update_6	인터넷 연결은 최신 업데이트를 확인하는데 사용됩니다.
+IDS__IsExitDialog_Update_7	예(&Y), 설치 완료후에 프로그램 업데이트를 확인합니다.(권장)
+IDS__IsFatalError_0	[ProductName] - InstallShield 마법사
+IDS__IsFatalError_1	< 뒤로(&B)
+IDS__IsFatalError_10	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsFatalError_2	취소
+IDS__IsFatalError_3	마침(&F)
+IDS__IsFatalError_4	시스템이 변경되지 않았습니다. 다음에 설치를 완료하려면, 설치 프로그램을 다시 실행하여 주십시오.
+IDS__IsFatalError_5	마법사를 종료하려면 마침을 클릭합니다.
+IDS__IsFatalError_6	이 설치를 나중에 계속 하기 위해 현재 설치된 요소들을 계속 유지하거나 설치 이전의 원래 상태로 시스템을 복구할 수 있습니다.
+IDS__IsFatalError_7	마법사를 종료하려면 복구 혹은 나중에 계속을 클릭합니다.
+IDS__IsFatalError_8	{&TahomaBold10}InstallShield 마법사 종료	
+IDS__IsFatalError_9	마법사가 [ProductName]을(를) 완전히 설치되기 이전에 중지되었습니다.
+IDS__IsFeatureDetailsDlg_0	[ProductName] - InstallShield 마법사
+IDS__IsFeatureDetailsDlg_1	{&MSSWhiteSerif8}InstallShield	
+IDS__IsFeatureDetailsDlg_10	필요없는 파일을 제거하여서 디스크 공간을 확보하기 위해 디스크 정리를 이용합니다.
+IDS__IsFeatureDetailsDlg_11	설치 위치
+IDS__IsFeatureDetailsDlg_12	필요한 전체 디스크 공간:
+IDS__IsFeatureDetailsDlg_13	{120}{70}{70}{70}{70}	
+IDS__IsFeatureDetailsDlg_14	확인
+IDS__IsFeatureDetailsDlg_15	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsFeatureDetailsDlg_2	InstallShield	
+IDS__IsFeatureDetailsDlg_3	변경(&C)	
+IDS__IsFeatureDetailsDlg_4	취소
+IDS__IsFeatureDetailsDlg_5	디스크 정리(&D)	
+IDS__IsFeatureDetailsDlg_6	선택된 구성 요소 설치에 대한 필요한 디스크 공간
+IDS__IsFeatureDetailsDlg_7	선택된 볼륨은 현재 선택된 구성 요소에 대한 충분한 디스크 공간을 가지고 있지 않습니다. 선택된 볼륨으로부터 파일을 제거하거나 로컬 드라이브에 선택된 구성 요소 중 일부 구성 요소만을 설치하거나 다른 대상 드라이브를 선택합니다.
+IDS__IsFeatureDetailsDlg_8	{&MSSansBold8}디스크 필요 공간
+IDS__IsFeatureDetailsDlg_9		
+IDS__IsFilesInUse_0	[ProductName] - InstallShield 마법사
+IDS__IsFilesInUse_1	{&MSSWhiteSerif8}InstallShield	
+IDS__IsFilesInUse_10	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsFilesInUse_2	InstallShield	
+IDS__IsFilesInUse_3	업데이트가 필요한 일부 파일이 사용중입니다.
+IDS__IsFilesInUse_4	해당 프로그램이 이 설치에 의해서 업데이트될 파일을 사용하고 있습니다. 이 프로그램들을 닫으시고 계속하려면 재시도를 클릭합니다.
+IDS__IsFilesInUse_5	{&MSSansBold8}사용 중인 파일
+IDS__IsFilesInUse_6	종료(&E)
+IDS__IsFilesInUse_7	무시(&I)
+IDS__IsFilesInUse_8	재시도(&R)
+IDS__IsFilesInUse_9		
+IDS__IsInitDlg_0	[ProductName] - InstallShield 마법사
+IDS__IsInitDlg_1		
+IDS__IsInitDlg_2		
+IDS__IsInitDlg_3	< 뒤로(&B)
+IDS__IsInitDlg_4	취소
+IDS__IsInitDlg_5	다음(&N) >
+IDS__IsInitDlg_6	{&TahomaBold10}[ProductName] InstallShield 마법사에 오신 것을 환영합니다
+IDS__IsInitDlg_7	[ProductName] 설치가 프로그램 설치 과정을 안내할 InstallShield 마법사를 준비하고 있습니다. 잠시만 기다려주십시오.
+IDS__IsInitDlg_8	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsLicenseDlg_0	[ProductName] - InstallShield 마법사
+IDS__IsLicenseDlg_1	< 뒤로(&B)
+IDS__IsLicenseDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsLicenseDlg_3	InstallShield	
+IDS__IsLicenseDlg_4	취소
+IDS__IsLicenseDlg_5	다음의 라이센스 동의서를 주의깊에 읽어 주십시오.
+IDS__IsLicenseDlg_6	이 라이센스 조건에 동의하면 동의를 클릭하고, 마법사를 종료하려면 거절을 클릭하십시오.
+IDS__IsLicenseDlg_7	{&MSSansBold8}라이센스 동의서
+IDS__IsLicenseDlg_8	다음(&N) >
+IDS__IsLicenseDlg_9	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsLicenseDlg_EULA	<ISProductFolder>\Redist\0409\Eula.rtf	
+IDS__IsMaintenanceDlg_0	InstallShield 마법사
+IDS__IsMaintenanceDlg_1	< 뒤로(&B)
+IDS__IsMaintenanceDlg_10	{&MSSansBold8}제거(&R)
+IDS__IsMaintenanceDlg_11		
+IDS__IsMaintenanceDlg_12	설치한 프로그램 구성 요소를 변경합니다. 이 옵션은 프로그램 구성 요소에 대한 설치 방법을 변경할 수 있는 사용자 정의 선택 대화상자를 보여줍니다.
+IDS__IsMaintenanceDlg_13	프로그램의 설치 오류를 수정합니다. 이 옵션은 존재하지 않거나 손상된 파일, 단축 메뉴, 그리고 레지스트리 입력 값을 정합니다.
+IDS__IsMaintenanceDlg_14	컴퓨터에서 [ProductName]을 제거합니다.
+IDS__IsMaintenanceDlg_15	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsMaintenanceDlg_16	<ISProductFolder>\Redist\Language Independent\OS Independent\RemoveIco.ibd	
+IDS__IsMaintenanceDlg_17	<ISProductFolder>\Redist\Language Independent\OS Independent\ReinstIco.ibd	
+IDS__IsMaintenanceDlg_18	<ISProductFolder>\Redist\Language Independent\OS Independent\CustomSetupIco.ibd	
+IDS__IsMaintenanceDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsMaintenanceDlg_3	InstallShield	
+IDS__IsMaintenanceDlg_4	취소
+IDS__IsMaintenanceDlg_5	프로그램을 수정, 복원, 제거합니다.
+IDS__IsMaintenanceDlg_6	{&MSSansBold8}프로그램 유지 관리	
+IDS__IsMaintenanceDlg_7	다음(&N) >
+IDS__IsMaintenanceDlg_8	{&MSSansBold8}수정(&M)
+IDS__IsMaintenanceDlg_9	{&MSSansBold8}복원(&P)
+IDS__IsMaintenanceWelcome_0	[ProductName] - InstallShield 마법사
+IDS__IsMaintenanceWelcome_1	< 뒤로(&B)
+IDS__IsMaintenanceWelcome_2	취소
+IDS__IsMaintenanceWelcome_3	다음(&N) >
+IDS__IsMaintenanceWelcome_4	{&TahomaBold10}[ProductName] InstallShield 마법사에 오신 것을 환영합니다.
+IDS__IsMaintenanceWelcome_5	InstallShield 마법사가 [ProductName]을 수정, 복원, 제거할 수 있도록 해 줍니다. 계속하려면 다음을 클릭하십시오.
+IDS__IsMaintenanceWelcome_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsPatchDlg_0	[ProductName] 패치 - InstallShield 마법사
+IDS__IsPatchDlg_1	{&TahomaBold10}[ProductName] 패치에 오신 것을 환영합니다
+IDS__IsPatchDlg_2	InstallShield 마법사가 [ProductName]을 수정, 복원, 제거할 수 있도록 해 줍니다. 계속하려면 다음을 클릭하십시오.
+IDS__IsPatchDlg_3	취소
+IDS__IsPatchDlg_4	< 뒤로(&B)
+IDS__IsPatchDlg_5	업데이트(&U)
+IDS__IsPatchDlg_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsProgressDlg_0	[ProductName] - InstallShield 마법사	
+IDS__IsProgressDlg_1	진행 완료	
+IDS__IsProgressDlg_10	(남은 시간)Sec.
+IDS__IsProgressDlg_11	상태:
+IDS__IsProgressDlg_12	다음(&N) >
+IDS__IsProgressDlg_13	(남은 시간)
+IDS__IsProgressDlg_14	남은 예상 시간:
+IDS__IsProgressDlg_15	{&MSSansBold8}[ProductName] 제거하기
+IDS__IsProgressDlg_16	선택하신 프로그램 구성 요소가 설치 중입니다.
+IDS__IsProgressDlg_17	InstallShield 마법사가 [ProductName]을 설치하는 동안 잠시만 기다려주십시오. 몇 분이 소요될 수도 있습니다.
+IDS__IsProgressDlg_18	<ISProductFolder>\Redist\Language Independent\OS Independent\SetupIcon.ibd	
+IDS__IsProgressDlg_19	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsProgressDlg_2		
+IDS__IsProgressDlg_3	< 뒤로(&B)
+IDS__IsProgressDlg_4	{&MSSWhiteSerif8}InstallShield	
+IDS__IsProgressDlg_5	InstallShield	
+IDS__IsProgressDlg_6	취소
+IDS__IsProgressDlg_7	선택하신 프로그램 구성 요소가 설치 중입니다.
+IDS__IsProgressDlg_8	InstallShield 마법사가 [ProductName]을 설치하는 동안 잠시만 기다려주십시오. 몇 분이 소요될 수도 있습니다.
+IDS__IsProgressDlg_9	{&MSSansBold8}[ProductName] 설치 중
+IDS__IsReadmeDlg_0	{&MSSansBold8}Readme 정보
+IDS__IsReadmeDlg_1	다음 Readme 정보를 주의깊게 읽어 주십시오.
+IDS__IsReadmeDlg_2	[ProductName] - InstallShield 마법사
+IDS__IsReadmeDlg_3	< 뒤로(&B)
+IDS__IsReadmeDlg_4	다음(&N) >
+IDS__IsReadmeDlg_5	취소(&C)
+IDS__IsReadmeDlg_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsReadmeDlg_7	InstallShield	
+IDS__IsReadmeDlg_8	{&MSSWhiteSerif8}InstallShield	
+IDS__IsRegisterUserDlg_0	[ProductName] - InstallShield 마법사
+IDS__IsRegisterUserDlg_1	< 뒤로(&B)
+IDS__IsRegisterUserDlg_10	{\Tahoma8}{50}	
+IDS__IsRegisterUserDlg_11	사용자 이름(&U):
+IDS__IsRegisterUserDlg_12	다음(&N) >
+IDS__IsRegisterUserDlg_13	프로그램 설치:
+IDS__IsRegisterUserDlg_14	이 컴퓨터를 사용하는 누구나(&A) (모든 사용자)
+IDS__IsRegisterUserDlg_15	현재 사용자 ([USERNAME])
+IDS__IsRegisterUserDlg_16		
+IDS__IsRegisterUserDlg_17	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsRegisterUserDlg_18	시리얼 번호(&S):
+IDS__IsRegisterUserDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsRegisterUserDlg_3	InstallShield	
+IDS__IsRegisterUserDlg_4	취소
+IDS__IsRegisterUserDlg_5	{\Tahoma8}{80}	
+IDS__IsRegisterUserDlg_6	조직(&O): 	
+IDS__IsRegisterUserDlg_7	정보를 입력하여 주십시오.	
+IDS__IsRegisterUserDlg_8	이름과 조직을 입력하여 주십시오.
+IDS__IsRegisterUserDlg_9	{&MSSansBold8}고객 정보
+IDS__IsReinstallDlg_0	[ProductName] - InstallShield 마법사
+IDS__IsReinstallDlg_1	< 뒤로(&B)
+IDS__IsReinstallDlg_10	완료(&C)
+IDS__IsReinstallDlg_11		
+IDS__IsReinstallDlg_12	프로그램에 의해서 요구되는 것과 다른 버전의 모든 파일을 교체하고 프로그램에 의해서 요구되는 레지스트리 입력값과 단축 메뉴를 교체합니다.
+IDS__IsReinstallDlg_13	프로그램에 의해서 요구되는 레지스트리 입력값과 설치되지 않은 프로그램 파일을 교체합니다.	
+IDS__IsReinstallDlg_14	프로그램에 의해서 요구되는 단축 메뉴, 레지스트리 입력값, 모든 파일을 교체합니다.
+IDS__IsReinstallDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsReinstallDlg_3	InstallShield	
+IDS__IsReinstallDlg_4	취소
+IDS__IsReinstallDlg_5	프로그램 요소들에 대한 재설치 방법을 선택하여 주십시오.
+IDS__IsReinstallDlg_6	{&MSSansBold8}재설치 모드
+IDS__IsReinstallDlg_7	다음(&N) >
+IDS__IsReinstallDlg_8	일반 설치(&R)
+IDS__IsReinstallDlg_9	최소 설치(&M)
+IDS__IsResumeDlg_0	[ProductName] - InstallShield 마법사
+IDS__IsResumeDlg_1	< 뒤로(&B)
+IDS__IsResumeDlg_2	취소
+IDS__IsResumeDlg_3	다음(&N) >
+IDS__IsResumeDlg_4	InstallShield 마법사가 컴퓨터에 [ProductName]의 설치를 완료합니다. 계속하려면 다음을 클릭하십시오.
+IDS__IsResumeDlg_5	InstallShield 마법사가 컴퓨터에 [ProductName]의 설치를 완료합니다. 계속하려면 다음을 클릭하십시오.
+IDS__IsResumeDlg_6	{&TahomaBold10}[ProductName] InstallShield 마법사 재시작
+IDS__IsResumeDlg_7	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsSetupTypeMinDlg_0	[ProductName] - InstallShield 마법사	
+IDS__IsSetupTypeMinDlg_1	< 뒤로(&B)
+IDS__IsSetupTypeMinDlg_10	다음(&N) >
+IDS__IsSetupTypeMinDlg_11	{&MSSansBold8}완료(&C)	 
+IDS__IsSetupTypeMinDlg_12	{&MSSansBold8}사용자 정의(&S)
+IDS__IsSetupTypeMinDlg_13		
+IDS__IsSetupTypeMinDlg_14	<ISProductFolder>\Redist\Language Independent\OS Independent\CustomSetupIco.ibd	
+IDS__IsSetupTypeMinDlg_15	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsSetupTypeMinDlg_16	<ISProductFolder>\Redist\Language Independent\OS Independent\CompleteSetupIco.ibd	
+IDS__IsSetupTypeMinDlg_17	<ISProductFolder>\Redist\Language Independent\OS Independent\DestIcon.ibd	
+IDS__IsSetupTypeMinDlg_18	최소 기능 구성 요소 설치.
+IDS__IsSetupTypeMinDlg_19	<ISProductFolder>\Redist\Language Independent\OS Independent\CustomSetupIco.ibd	
+IDS__IsSetupTypeMinDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsSetupTypeMinDlg_20	{&MSSansBold8}&Minimal	-{&MSSansBold8}최소 설치(&M)
+IDS__IsSetupTypeMinDlg_21	<ISProductFolder>\Redist\Language Independent\OS Independent\CustomSetupIco.ibd	
+IDS__IsSetupTypeMinDlg_22	<ISProductFolder>\Redist\Language Independent\OS Independent\CompleteSetupIco.ibd	
+IDS__IsSetupTypeMinDlg_23	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsSetupTypeMinDlg_24	{&MSSansBold8}일반 설치(&T)
+IDS__IsSetupTypeMinDlg_3	InstallShield	
+IDS__IsSetupTypeMinDlg_4	취소
+IDS__IsSetupTypeMinDlg_5	모든 프로그램 구성 요소가 설치됩니다. (최대 디스크 공간 필요)
+IDS__IsSetupTypeMinDlg_6	어떤 프로그램 구성 요소를 설치할지와 어디에 설치할지를 선택합니다. 고급 사용자에게 권장됩니다.
+IDS__IsSetupTypeMinDlg_7	가장 잘 부합하는 설치 형태를 선택합니다.
+IDS__IsSetupTypeMinDlg_8	설치 형태를 선택하십시오.
+IDS__IsSetupTypeMinDlg_9	{&MSSansBold8}설치 형태
+IDS__IsStartCopyDlg_0	[ProductName] - InstallShield 마법사
+IDS__IsStartCopyDlg_1	< 뒤로(&B)
+IDS__IsStartCopyDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsStartCopyDlg_3	InstallShield	
+IDS__IsStartCopyDlg_4	취소
+IDS__IsStartCopyDlg_5	설치할 준비가 되었습니다.
+IDS__IsStartCopyDlg_6	설치를 시작하려면 다음을 클릭하십시오.
+IDS__IsStartCopyDlg_7	설치 설정을 변경하거나 점검하려면, 뒤로를 클릭합니다. 마법사를 종료하려면 취소를 클릭하십시오.
+IDS__IsStartCopyDlg_8	{&MSSansBold8}설치 준비 완료
+IDS__IsStartCopyDlg_9	다음(&N) >
+IDS__IsUserExit_0	[ProductName] - InstallShield 마법사
+IDS__IsUserExit_1	< 뒤로(&B)
+IDS__IsUserExit_10	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsUserExit_2	취소
+IDS__IsUserExit_3	마침(&F)
+IDS__IsUserExit_4	시스템이 변경되지 않았습니다. 이 프로그램을 나중에 설치하려면 설치를 다시 실행하여 주십시오.
+IDS__IsUserExit_5	마법사를 종료하려면 마침을 클릭하십시오.
+IDS__IsUserExit_6	이 설치를 나중에 계속 하기 위해 현재 설치된 요소들을 계속 유지하거나 설치 이전에 원래 상태로 시스템을 복구할 수 있습니다.
+IDS__IsUserExit_7	마법사를 종료하려면 복구 혹은 나중에 계속을 클릭하십시오.
+IDS__IsUserExit_8	{&TahomaBold10}InstallShield 마법사 완료
+IDS__IsUserExit_9	마법사는 [ProductName]이(가) 완전히 설치되기 이전에 중지되었습니다.
+IDS__IsVerifyReadyDlg_0	[ProductName] - InstallShield 마법사
+IDS__IsVerifyReadyDlg_1	< 뒤로(&B)
+IDS__IsVerifyReadyDlg_10	{&MSSansBold8}프로그램 복원 준비 완료
+IDS__IsVerifyReadyDlg_11	{&MSSansBold8}프로그램 설치 준비 완료
+IDS__IsVerifyReadyDlg_12	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsVerifyReadyDlg_13	시리얼: [SERIALNUMBER]
+IDS__IsVerifyReadyDlg_13X	시리얼: [ISX_SERIALNUM]
+IDS__IsVerifyReadyDlg_14	회사: [COMPANYNAME]
+IDS__IsVerifyReadyDlg_15	이름: [USERNAME]	
+IDS__IsVerifyReadyDlg_16	사용자 정보: 	
+IDS__IsVerifyReadyDlg_17	[INSTALLDIR]	
+IDS__IsVerifyReadyDlg_18	대상 폴더:
+IDS__IsVerifyReadyDlg_19	[SelectedSetupType]	
+IDS__IsVerifyReadyDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsVerifyReadyDlg_20	설치 형태:
+IDS__IsVerifyReadyDlg_21	현재 설정:
+IDS__IsVerifyReadyDlg_3	InstallShield	
+IDS__IsVerifyReadyDlg_4	취소
+IDS__IsVerifyReadyDlg_5	마법사가 설치를 시작할 준비가 되었습니다.
+IDS__IsVerifyReadyDlg_6	설치를 시작하기 위해 설치를 클릭하십시오.
+IDS__IsVerifyReadyDlg_7	설치 설정 값을 변경하거나 점검하려면, 뒤로를 클릭하고 마법사를 종료하려면 취소를 클릭하십시오.
+IDS__IsVerifyReadyDlg_8	{&MSSansBold8}프로그램 변경 준비 완료
+IDS__IsVerifyReadyDlg_9	설치(&I)
+IDS__IsVerifyRemoveAllDlg_0	[ProductName] - InstallShield 마법사
+IDS__IsVerifyRemoveAllDlg_1	< 뒤로(&B)
+IDS__IsVerifyRemoveAllDlg_10	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsVerifyRemoveAllDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsVerifyRemoveAllDlg_3	InstallShield	
+IDS__IsVerifyRemoveAllDlg_4	취소
+IDS__IsVerifyRemoveAllDlg_5	프로그램 제거를 선택하셨습니다.
+IDS__IsVerifyRemoveAllDlg_6	컴퓨터에서 [ProductName]을(를) 제거하려면 제거를 클릭합니다. 제거 후에 프로그램은 더 이상 사용할 수 없습니다.
+IDS__IsVerifyRemoveAllDlg_7	설정을 변경하거나 점검하려면, 뒤로를 클릭합니다.
+IDS__IsVerifyRemoveAllDlg_8	{&MSSansBold8}프로그램 제거
+IDS__IsVerifyRemoveAllDlg_9	제거(&R)
+IDS__IsWelcomeDlg_0	[ProductName] - InstallShield 마법사
+IDS__IsWelcomeDlg_1	< 뒤로(&B)
+IDS__IsWelcomeDlg_2	취소
+IDS__IsWelcomeDlg_3	다음(&N) >
+IDS__IsWelcomeDlg_4	{&TahomaBold10}[ProductName] InstallShield 마법사에 오신 것을 환영합니다
+IDS__IsWelcomeDlg_5	InstallShield 마법사가 컴퓨터에 [ProductName]을(를) 설치할 것입니다. 계속 하려면 다음을 클릭합니다.
+IDS__IsWelcomeDlg_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsWelcomeDlg_7	경고: 이 프로그램은 저작권 법과 국제 약정에 의해서 보호받습니다.
+IDS__SetupTips_0	[ProductName] - InstallShield 마법사
+IDS__TargetReq_DESC_COLOR	시스템 색 설정이 [ProductName]을(를) 실행하기에 적절하지 않습니다.
+IDS__TargetReq_DESC_OS	운영체제가 [ProductName]을(를) 실행하기에 적절하지 않습니다.
+IDS__TargetReq_DESC_PROCESSOR	프로세서가 [ProductName]을(를) 실행하기에 적절하지 않습니다.
+IDS__TargetReq_DESC_RAM	RAM 용량이 [ProductName]을 실행하기에 부족합니다.
+IDS__TargetReq_DESC_RESOLUTION	화면 해상도가 [ProductName]을(를) 실행하기에 적절하지 않습니다.
+IDS_ACTIONTEXT_1	Advertising application	프로그램 광고
+IDS_ACTIONTEXT_10	필요 공간 계산 중
+IDS_ACTIONTEXT_100	MIME 내용 형태: [1], 확장자: [2]
+IDS_ACTIONTEXT_101	프로그램 식별자 등록 해제 중
+IDS_ACTIONTEXT_102	ProgID: [1]	
+IDS_ACTIONTEXT_103	형식 라이브러리 등록 해제 중
+IDS_ACTIONTEXT_104	LibID: [1]	
+IDS_ACTIONTEXT_105	환경 문자열 업데이트 중
+IDS_ACTIONTEXT_106	이름: [1], 값: [2], 동작 [3]
+IDS_ACTIONTEXT_107	INI 파일 값 쓰는 중
+IDS_ACTIONTEXT_108	파일: [1], 섹션: [2], 키: [3], 값: [4]
+IDS_ACTIONTEXT_109	시스템 레지스트리 값 쓰는 중
+IDS_ACTIONTEXT_11	폴더 생성 중
+IDS_ACTIONTEXT_110	키:[1], 이름: [2], 값: [3]
+IDS_ACTIONTEXT_111	COM+ 프로그램과 컴포넌트 등록 중
+IDS_ACTIONTEXT_112	AppId: [1]{{, AppType: [2], Users: [3], RSN: [4]}}	
+IDS_ACTIONTEXT_113	COM+ 프로그램과 컴포넌트 등록 해제 중
+IDS_ACTIONTEXT_114	AppId: [1]{{, AppType: [2]}}	
+IDS_ACTIONTEXT_115	관련된 프로그램 검색 중
+IDS_ACTIONTEXT_116	어플리케인션 발견: [1]
+IDS_ACTIONTEXT_117	관련된 프로그램의 구성 요소 상태 이동 중
+IDS_ACTIONTEXT_118	프로그램: [1]
+IDS_ACTIONTEXT_119	프로그램 제거 중
+IDS_ACTIONTEXT_12	폴더: [1]
+IDS_ACTIONTEXT_120	프로그램: [1], 명령 라인: [2]
+IDS_ACTIONTEXT_121	시스템 카달로그 설치 중
+IDS_ACTIONTEXT_122	파일: [1], 종속성: [2]
+IDS_ACTIONTEXT_123	IIS 가상 루트를 생성하고 있습니다...
+IDS_ACTIONTEXT_124	IIS 가상 루트를 제거하고 있습니다...
+IDS_ACTIONTEXT_13	단축 메뉴 생성 중
+IDS_ACTIONTEXT_14	단축 메뉴: [1]
+IDS_ACTIONTEXT_15	서비스 삭제 중
+IDS_ACTIONTEXT_16	서비스: [1]
+IDS_ACTIONTEXT_17	복제 파일 생성 중
+IDS_ACTIONTEXT_18	파일: [1], 디렉토리: [9], 크기: [6]
+IDS_ACTIONTEXT_19	필요 공간 계산 중
+IDS_ACTIONTEXT_2	레지스트리 공간 할당 중
+IDS_ACTIONTEXT_20	동작에 대한 스크립트 운영 생성:
+IDS_ACTIONTEXT_21	[1]	
+IDS_ACTIONTEXT_22	네트워크에 파일 복사 중
+IDS_ACTIONTEXT_23	파일: [1], 디렉토리: [9], 크기: [6]
+IDS_ACTIONTEXT_24	새 파일 복사 중
+IDS_ACTIONTEXT_25	파일: [1], 디렉토리: [9], 크기: [6]
+IDS_ACTIONTEXT_26	ODBC 컴포넌트 설치 중
+IDS_ACTIONTEXT_27	새 서비스 설치 중
+IDS_ACTIONTEXT_28	서비스: [2]
+IDS_ACTIONTEXT_29	설치 확인 중
+IDS_ACTIONTEXT_3	여유 공간: [1]
+IDS_ACTIONTEXT_30	설치 조건 검사 중
+IDS_ACTIONTEXT_31	파일 이동 중
+IDS_ACTIONTEXT_32	파일: [1], 디렉토리: [9], 크기: [6]
+IDS_ACTIONTEXT_33	파일 패치 중
+IDS_ACTIONTEXT_34	파일: [1], 디렉토리: [2], 크기: [3]
+IDS_ACTIONTEXT_35	컴포넌트 등록 업데이트 중
+IDS_ACTIONTEXT_36	인가된 컴포넌트 게시 중
+IDS_ACTIONTEXT_37	컴포넌트 ID: [1], 한정자: [2]
+IDS_ACTIONTEXT_38	제품 구성 요소 게시 중
+IDS_ACTIONTEXT_39	구성 요소: [1]
+IDS_ACTIONTEXT_4	설치된 프로그램 검색 중
+IDS_ACTIONTEXT_40	제품 정보 게시 중
+IDS_ACTIONTEXT_41	클래스 서버 등록 중
+IDS_ACTIONTEXT_42	클래스 ID: [1]
+IDS_ACTIONTEXT_43	확장 서버 등록 중	
+IDS_ACTIONTEXT_44	확장자: [1]
+IDS_ACTIONTEXT_45	글꼴 등록 중
+IDS_ACTIONTEXT_46	글꼴: [1]
+IDS_ACTIONTEXT_47	MIME 정보 등록 중
+IDS_ACTIONTEXT_48	MIME 내용 형태: [1], 확장자: [2]
+IDS_ACTIONTEXT_49	제품 등록 중
+IDS_ACTIONTEXT_5	속성: [1], 서명: [2]
+IDS_ACTIONTEXT_50	[1]	
+IDS_ACTIONTEXT_51	프로그램 식별자 등록 중
+IDS_ACTIONTEXT_52	프로그램 ID: [1]	
+IDS_ACTIONTEXT_53	형식 라이브러리 등록 중
+IDS_ACTIONTEXT_54	Library ID: [1]	
+IDS_ACTIONTEXT_55	사용자 등록 중	
+IDS_ACTIONTEXT_56	[1]	
+IDS_ACTIONTEXT_57	복제된 파일 제거 중
+IDS_ACTIONTEXT_58	파일: [1], 디렉토리: [9]
+IDS_ACTIONTEXT_59	환경 스트링 업데이트 중
+IDS_ACTIONTEXT_6	실행파일 바인드 중
+IDS_ACTIONTEXT_60	이름: [1], 값: [2], 동작 [3]
+IDS_ACTIONTEXT_61	파일 제거 중
+IDS_ACTIONTEXT_62	파일: [1], 디렉토리: [9]	
+IDS_ACTIONTEXT_63	폴더 제거 중
+IDS_ACTIONTEXT_64	폴더: [1]
+IDS_ACTIONTEXT_65	INI 파일 입력 값 제거 중	
+IDS_ACTIONTEXT_66	파일: [1], 섹션: [2], 키: [3], 값: [4]
+IDS_ACTIONTEXT_67	ODBC 컴포넌트 제거 중
+IDS_ACTIONTEXT_68	시스템 레지스트리 값 제거 중
+IDS_ACTIONTEXT_69	키: [1], 이름: [2]
+IDS_ACTIONTEXT_7	파일: [1]
+IDS_ACTIONTEXT_70	단축 메뉴 제거 중
+IDS_ACTIONTEXT_71	단축 메뉴: [1]
+IDS_ACTIONTEXT_72	인가한 제품 검색 중
+IDS_ACTIONTEXT_73	이전 동작으로 롤링 중:
+IDS_ACTIONTEXT_74	[1]	
+IDS_ACTIONTEXT_75	백업 파일 제거 중
+IDS_ACTIONTEXT_76	File: [1]	-파일: [1]
+IDS_ACTIONTEXT_77	모듈 등록 중
+IDS_ACTIONTEXT_78	File: [1], Folder: [2]	-파일: [1], 폴더: [2]
+IDS_ACTIONTEXT_79	모듈 등록 해제 중
+IDS_ACTIONTEXT_8	인가한 제품 검색 중
+IDS_ACTIONTEXT_80	파일: [1], 폴더: [2]
+IDS_ACTIONTEXT_81	ODBC 디렉토리 시작 중
+IDS_ACTIONTEXT_82	서비스 시작 중
+IDS_ACTIONTEXT_83	서비스: [1]
+IDS_ACTIONTEXT_84	서비스 중지 중
+IDS_ACTIONTEXT_85	서비스: [1]
+IDS_ACTIONTEXT_86	이동된 파일 제거 중
+IDS_ACTIONTEXT_87	파일: [1], 디렉토리: [9]
+IDS_ACTIONTEXT_88	인가된 컴포넌트 제거 중	
+IDS_ACTIONTEXT_89	컴포넌트 ID: [1], 한정자: [2]
+IDS_ACTIONTEXT_9	필요 공간 계산 중
+IDS_ACTIONTEXT_90	제품 구성 요소 제거 중
+IDS_ACTIONTEXT_91	구성 요소: [1]
+IDS_ACTIONTEXT_92	제품 정보 제거 중
+IDS_ACTIONTEXT_93	클래스 서버 등록 해제 중
+IDS_ACTIONTEXT_94	클래스 ID: [1]
+IDS_ACTIONTEXT_95	확장 서버 등록 해제 중
+IDS_ACTIONTEXT_96	확장자: [1]
+IDS_ACTIONTEXT_97	글꼴 등록 해제 중
+IDS_ACTIONTEXT_98	글꼴: [1]
+IDS_ACTIONTEXT_99	MIME 정보 등록 해제 중
+IDS_ERROR_0	{{치명적 오류: }}	
+IDS_ERROR_1	오류 [1].
+IDS_ERROR_10	=== 로깅 시작 시간: [Date]  [Time] ===	
+IDS_ERROR_100	[2] 단축 메뉴를 제거할 수 없습니다. 단축 메뉴 파일이 존재하고 액세스 할 수 있는지 확인하여 주십시오.
+IDS_ERROR_101	[2]파일의 형태 라이브러리를 등록할 수 없습니다. 관리자에게 문의하십시오.
+IDS_ERROR_102	[2]파일의 형태 라이브러리 등록 해제를 할 수 없습니다. 관리자에게 문의하십시오.
+IDS_ERROR_103	[2][3] INI 파일을 업데이트 할 수 없습니다. 파일이 존재하는지와 액세스할 수 있는 지를 확인하여 주십시오.
+IDS_ERROR_104	재부팅때 [3] 파일을 [2]파일로 교체하는 것을 스케줄 할 수 없습니다. [3]파일에 쓰기 권한이 있는지 확인하여 주십시오.
+IDS_ERROR_105	ODBC 드라이버 매니저를 제거하는 중 오류 발생 : ODBC 오류 [2]: [3]. 관리자에게 문의하십시오.
+IDS_ERROR_106	ODBC 드라이버 매니저를 설치 오류, ODBC 오류 [2]: [3]. 관리자에게 문의하십시오.
+IDS_ERROR_107	ODBC 드라이버 [4] 제거 오류, ODBC 오류 [2]: [3]. ODBC 드라이버를 제거할 수 있는 충분한 권한이 있는지 확인하여 주십시오.
+IDS_ERROR_108	ODBC 드라이버 [4] 설치 오류, ODBC 오류 [2]: [3]. [4] 파일이 존재하는지와 액세스할 수 있는지를 확인하여 주십시오.
+IDS_ERROR_109	ODBC 데이터 소스 [4] 구성 오류, ODBC 오류 [2]: [3]. [4]파일이 존재하는지와 액세스할 수 있는지를 확인하여 주십시오.
+IDS_ERROR_11	===	로깅 중지 시간: [Date] [Time]
+IDS_ERROR_110	[2]([3]) 서비스 시작 실패. 시스템 서비스를 시작할 충분한 권한이 있는지를 확인하여 주십시오.
+IDS_ERROR_111	[2]([3]) 서비스를 중지할 수 없습니다. 시스템 서비스를 중지할 수 있는 충분한 권한이 있는지를 확인하여 주십시오.
+IDS_ERROR_112	[2]([3]) 서비스를 삭제할 수 없습니다. 시스템 서비스를 제거할 수 있는 충분한 권한이 있는지를 확인하여 주십시오.
+IDS_ERROR_113	[2]([3]) 서비스를 설치할 수 없습니다. 시스템 서비스에 설치할 수 있는 충분한 권한이 있는지를 확인하여 주십시오.
+IDS_ERROR_114	[2]환경 변수를 업데이트할 수 없습니다. 환경 변수를 수정할 수 있는 충분한 권한이 있는지를 확인하여 주십시오.
+IDS_ERROR_115	시스템의 모든 사용자에게 이 설치를 완료할 수 있는 충분한 권한을 가지고 있지 않습니다. 관리자로 로그온하고 설치를 다시 시도하여 주십시오.
+IDS_ERROR_116	[3]파일의 파일 보안을 설정할 수 없습니다. 오류: [2]. 이 파일에 대한 보안 허용을 수정할 수 있는 권한이 있는지를 확인하여 주십시오.
+IDS_ERROR_117	이 컴퓨터에 컴포넌트 서비스(COM+ 1.0)이 설치되어 있지 않습니다. 이 설치를 성공적으로 마치려면, 컴포넌트 서비스가 필요합니다. 컴포넌트 서비스는 윈도우 2000에서 가능합니다.
+IDS_ERROR_118	COM+ 프로그램 등록 오류. 더 자세한 정보는 관리자에게 문의하십시오.
+IDS_ERROR_119	COM+ 프로그램 등록 해제 오류. 더 자세한 정보는 관리자에게 문의하십시오.
+IDS_ERROR_12	동작 시작 [Time]: [1].
+IDS_ERROR_120	이 프로그램의 구 버전을 제거중입니다.
+IDS_ERROR_121	이 프로그램의 구 버전 제거를 준비하고 있습니다.
+IDS_ERROR_122	[2] 파일에 패치 적용 오류. 다른 것에 의해서 업데이트가 되었을 가능성이 높습니다. 더 이상 수정할 패치가 없습니다. 더 자세한 정보는 패치 제조사에 문의하여 주십시오. {{시스템 오류: [3]}}
+IDS_ERROR_123	[2]은(는) 필요한 프로그램을 설치할 수 없습니다. 기술 지원 팀에 문의하여 주십시오. {{시스템 오류: [3].}}
+IDS_ERROR_124	[2]의 구 버전을 제거할 수 없습니다. 기술 지원 팀에 문의하여 주십시오.{{시스템 오류 [3].}}
+IDS_ERROR_125	'[2]' ([3]) 서비스 설명을 변경할 수 없습니다.
+IDS_ERROR_126	[2] 시스템 파일이 윈도우에 의해서 보호되고 있으므로 윈도우 인스톨러로 서비스가 [2] 시스템 파일을 업데이트할 수 없습니다. 정상적으로 프로그램이 실행되도록 하려면 운영체제를 업데이트가 필요할 수도 있습니다. {{패키지 버전: [3], OS 보호 버전: [4]}}
+IDS_ERROR_127	윈도우 인스톨러 서비스가 보호된 [2]윈도우 파일을 업데이트할 수 없습니다. {{패키지 버전: [3], OS 보호 버전: [4], SFP 오류: [5]}}
+IDS_ERROR_128	이 설치 프로그램은 IIS 가상 루트를 구성을 위해 인터넷 정보 서버 4.0 혹은 그 이상이 요구됩니다. IIS 4.0 혹은 그 이상의 버전을 가지고 있는지 확인하여 주십시오.
+IDS_ERROR_129	설치 프로그램은 IIS 가상 루트를 구성하기 위한 관리자 권한이 필요합니다.
+IDS_ERROR_13	동작 종료 [Time]: [1]. 리턴 값 [2].
+IDS_ERROR_14	남은 시간: {[1] 분}{[2] 초}
+IDS_ERROR_15	메모리 부족. 재시도하기 전에 다른 프로그램들을 닫아 주십시오.
+IDS_ERROR_16	인스톨러가 더 이상 응답하지 않습니다.
+IDS_ERROR_17	인스톨러가 갑자기 종료되었습니다.
+IDS_ERROR_18	윈도우가 [ProductName]을(를) 구성하는 동안 기다려 주십시오.
+IDS_ERROR_19	필요한 정보를 수집하고 있습니다...
+IDS_ERROR_2	경고 [1].
+IDS_ERROR_20	{[ProductName]} 설치가 성공적으로 끝났습니다.
+IDS_ERROR_21	{[ProductName]}설치 실패.
+IDS_ERROR_22	[2] 파일로부터 읽기 실패 오류. {{ 시스템 오류 [3].}} 파일이 존재하는지와 액세스할 수 있는지를 확인하여 주십시오.
+IDS_ERROR_23	[3] 파일을 생성할 수 없습니다. 이 이름의 디렉토리가 이미 존재합니다. 설치를 취소하고 다른 위치에 설치를 하여 주십시오.
+IDS_ERROR_24	디스크를 넣으십시오: [2]
+IDS_ERROR_25	인스톨러가 이 디렉토리에 접근할 수 있는 충분한 권한이 없습니다: [2]. 설치를 계속할 수 없습니다. 관리자로 로그온하거나 시스템 관리자에게 문의하여 주십시오.
+IDS_ERROR_26	[2] 파일 쓰기 오류. 디렉토리에 액세스할 수 있는지 확인하여 주십시오.
+IDS_ERROR_27	[2] 파일 읽기 오류. 파일 존재하는지와 액세스할 수 있는지를 확인하여 주십시오.
+IDS_ERROR_28	다른 프로그램이 [2] 파일에 독점적으로 액세스할 수 있습니다. 다른 모든 프로그램을 닫으시고, 재시도를 클릭하십시오.
+IDS_ERROR_29	[2]파일을 설치할 충분한 공간이 없습니다. 디스크 공간을 확보하시고 재시도를 클릭하거나 종료하려면 취소를 클릭하십시오.
+IDS_ERROR_3	정보 [1].
+IDS_ERROR_30	소스 파일을 찾을 수 없습니다: [2]. 파일이 존재하는지와 액세스할 수 있는지를 확인하여 주십시오.
+IDS_ERROR_31	[3]파일로부터 읽기 오류. {{시스템 오류 [2].}} 파일이 존재하는지와 액세스할 수 있는지를 확인하여 주십시오.
+IDS_ERROR_32	[3]파일에 쓰기 오류. {{시스템 오류 [2].}} 디렉토리에 액세스할 수 있는지를 확인하여 주십시오.
+IDS_ERROR_33	{{(cabinet)}}을 찾을 수 없습니다: [2]. 파일이 존재하는지와 액세스할 수 있는지를 확인하여 주십시오.
+IDS_ERROR_34	[2] 디렉토리를 생성할 수 없습니다. 이 이름의 파일이 이미 존재합니다. 이름을 바꾸거나 파일을 제거하고 재시도를 클릭하십시오. 아니면 취소를 눌러서 종료하여 주십시오.
+IDS_ERROR_35	[2] 볼륨을 사용할 수 없습니다. 다른 볼륨을 선택하십시오.
+IDS_ERROR_36	지정된 [2] 폴더를 사용할 수 없습니다.
+IDS_ERROR_37	지정된 [2] 폴더에 쓸 수 없습니다.
+IDS_ERROR_38	[2] 파일로부터 읽기 시도를 하는 동안에 네트워크 오류가 발생하였습니다
+IDS_ERROR_39	[2] 디렉토리를 생성을 시도하는 동안에 오류가 발생하였습니다.
+IDS_ERROR_4	내부 오류 [1]. [2]{, [3]}{, [4]}
+IDS_ERROR_40	[2] 디렉토리를 생성을 시도하는 동안에 네트워크 오류가 발생하였습니다.
+IDS_ERROR_41	[2] 소스 파일 캐비넷을 여는 동안 네트워크 오류가 발생하였습니다.
+IDS_ERROR_42	지정된 경로 경로가 깁니다 [2].
+IDS_ERROR_43	인스톨러가 [2] 파일을 수정할 수 있는 권한이 충분하지 않습니다.
+IDS_ERROR_44	[2] 경로 부분이 시스템에 허용된 길이를 초과하였습니다.
+IDS_ERROR_45	[2] 경로는 폴더에 유효하지 않은 단어를 포함하고 있습니다.
+IDS_ERROR_46	[2] 경로는 유효하지 않은 문자를 가지고 있습니다.
+IDS_ERROR_47	[2]는 유효하지 않은 짧은 파일 이름입니다.
+IDS_ERROR_48	파일 보안 수집 오류: [3] 마지막 발생 오류: [2]
+IDS_ERROR_49	유효하지 않은 드라이브: [2]
+IDS_ERROR_5	{{디스크 꽉참: }}
+IDS_ERROR_50	[2] 키를 생성할 수 없습니다. {{시스템 오류 [3].}} 키에 충분한 권한이 있는지를 확인하거나 관리자에게 문의하여 주십시오.
+IDS_ERROR_51	[2]키를 열수 없습니다. {{시스템 오류 [3].}} 키에 충분한 액세스 권한이 있는지를 확인하거나 관리자에게 문의하여 주십시오.
+IDS_ERROR_52	[3] 키에서 [2] 값을 삭제할 수 없습니다. {{시스템 오류 [4].}} 해당 키에 충분한 액세스 권한이 있는지를 확인하거나 관리자에게 문의하여 주십시오.
+IDS_ERROR_53	[2] 키를 삭제할 수 없습니다. {{시스템 오류 [3].}} 해당 키에 충분한 액세스 권한이 있는지를 확인하거나 관리자에게 문의하여 주십시오.
+IDS_ERROR_54	[3] 키로부터 [2] 값을 읽을 수 없습니다. {{시스템 오류 [4].}} 해당 키에 충분한 액세스 권한이 있는지를 확인하거나 관리자에게 문의하여 주십시오.
+IDS_ERROR_55	[3]에서 [2] 값을 쓸 수 없습니다. {{시스템 오류 [4].}} 해당 키에 충분한 액세스 권한이 있는지를 확인하거나 관리자에게 문의하여 주십시오.
+IDS_ERROR_56	{{시스템 오류 [3].}} 해당 키에 대한 충분한 액세스 권한이 있는지를 확인하거나 관리자에게 문의하여 주십시오.
+IDS_ERROR_57	[2] 키에 대한 서브 키 이름을 얻을 수 없습니다. {{시스템 오류 [3].}} 해당 키에 대한 충분한 액세스 권한이 있는지를 확인하거나 관리자에게 문의하여 주십시오.
+IDS_ERROR_58	[2] 키의 보안 정보를 읽을 수 없습니다. {{시스템 오류 [3].}} 해당 키에 대한 충분한 액세스 권한이 있는지를 확인하거나 관리자에게 문의하여 주십시오.
+IDS_ERROR_59	사용 가능한 레지스트리 공간을 늘릴 수 없습니다. 레지스트리 여유 공간의 [2] KB는 이 프로그램의 설치를 위해 필요합니다.
+IDS_ERROR_6	동작 [Time]: [1]. [2]
+IDS_ERROR_60	다른 설치가 진행 중입니다. 이 설치를 진행하기 전에 현재 설치 중인 것을 완료하여야 합니다.
+IDS_ERROR_61	안전한 데이터에 액세스 오류. 윈도우 인스톨러가 정상적으로 구성되었는지를 확인하고 다시를 다시 시도하여 주십시오.
+IDS_ERROR_62	[2] 사용자가 [3] 제품에 대한 설치를 이전에 시작하였습니다. 그 사용자는 그 제품을 이용하기 전에 설치를 다시 실행하여야 합니다. 현 제품 설치가 지금 시작될 것입니다.
+IDS_ERROR_63	[2] 사용자가 [3] 제품에 대한 설치를 이전에 시작하였습니다. 그 사용자는 그 제품을 이용하기 전에 설치를 다시 실행하여야 합니다. 현 제품 설치가 지금 시작될 것입니다.
+IDS_ERROR_64	디스크 공간 부족 -- [2] 볼륨 필요 공간: [3] KB; 사용 가능한 공간: [4] KB. 디스크 공간을 확보하시고 다시 시도해 주십시오.
+IDS_ERROR_65	정말 취소하시겠습니까?
+IDS_ERROR_66	[2][3] 파일이 사용중입니다. { 다음 프로세서에 의해서 사용됨: 이름: [4], ID: [5], 윈도우 이름: [6]}. 프로그램을 닫고 재시도하여 주십시오. 
+IDS_ERROR_67	이 제품의 설치를 막기 위해 [2] 제품이 이미 설치되었습니다. 두 제품은 호환되지 않습니다.
+IDS_ERROR_68	디스크 공간 부족 -- 볼륨: [2]; 필요한 공간: [3] KB; 사용가능한 공간: [4] KB. 롤백이 중지되어 있지 않으면, 충분한 공간입니다. 멈추려면 취소를 클릭하고, 다시 여유 공간을 확인하려면 재시도를 누르고, 롤백 없이 진행하려면 무시를 클릭하십시오.
+IDS_ERROR_69	[2] 네트워크 위치를 액세스할 수 없습니다.
+IDS_ERROR_7	[ProductName]	
+IDS_ERROR_70	설치를 진행하기 전에 다음의 프로그램은 종료가 되어야 합니다.
+IDS_ERROR_71	시스템에 이전에 설치된 해당 제품을 찾을 수 없습니다. 
+IDS_ERROR_72	[2] 키가 유효하지 않습니다. 입력된 키가 정확한지 확인하여 주십시오.
+IDS_ERROR_73	[2]의 구성이 시작되기 이전에 인스톨러는 시스템을 반드시 다시 시작해야 합니다. 지금 시작하려면 예를 클릭하시고, 나중에 다시 시작하려면 아니오를 클릭하십시오.
+IDS_ERROR_74	구성 변경이 [2] 적용될 수 있도록 시스템을 재시작해야 합니다. 지금 시작하려면 예를 클릭하시고, 나중에 다시 시작하려면 아니오를 클릭하십시오.
+IDS_ERROR_75	[2]의 설치가 중지되었습니다. 설치가 계속 진행되도록 변경된 내용을 실행취소해야 합니다. 변경된 것들을 실행취소 하시겠습니까?
+IDS_ERROR_76	이 제품의 이전 설치가 진행 중입니다. 설치가 계속 진행되도록 변경된 내용을 취소해야 합니다. 변경된 내용을 실행취소하시겠습니까?
+IDS_ERROR_77	[2] 제품의 유효한 소스를 찾을 수 없습니다. 윈도우 인스톨러를 계속할 수 없습니다. 
+IDS_ERROR_78	설치가 성공적으로 끝났습니다.
+IDS_ERROR_79	설치가 실패하였습니다.
+IDS_ERROR_8	{[2]}{, [3]}{, [4]}	
+IDS_ERROR_80	제품: [2] -- [3]
+IDS_ERROR_81	컴퓨터를 이전 상태로 복원하거나 나중에 설치를 계속할 수 있습니다. 복원하시겠습니까?
+IDS_ERROR_82	디스크에 설치 정보를 쓰는 동안 오류가 발생하였습니다. 충분한 디스크 공간이 있는지를 확인하고 재시도를 클릭하거나 설치를 마치려면 취소를 클릭하십시오.
+IDS_ERROR_83	컴퓨터를 이전 상태로 복원하기 위해 필요한 하나 혹은 그 이상의 파일을 찾을 수 없습니다. 복구를 할 수 없습니다.
+IDS_ERROR_84	[2] 경로가 유효하지 않습니다. 유효한 경로를 지정하여 주십시오.
+IDS_ERROR_85	메모리 부족. 재시도 하기 전에 다른 프로그램들을 닫아 주십시오.
+IDS_ERROR_86	[2] 드라이브에 여유 공간이 없습니다. 디스크를 넣고 재시도를 클릭하거나 이전에 선택한 볼륨으로 돌아가려면 취소를 클릭하십시오.
+IDS_ERROR_87	[2] 드라이브에 여유 공간이 없습니다. 디스크를 넣고 재시도를 클릭하거나 찾아보기 대화상자로 돌아가서 다른 볼륨을 선택하려면 취소를 클릭하여 주십시오.
+IDS_ERROR_88	[2] 폴더가 존재하지 않습니다. 존재하는 폴더의 경로를 입력하여 주십시오.
+IDS_ERROR_89	이 폴더에 대한 읽기 권한이 충분하지 않습니다.
+IDS_ERROR_9	메시지 형태: [1], 인수: [2]
+IDS_ERROR_90	설치에 대한 유효한 대상 폴더를 정할 수 없습니다.	
+IDS_ERROR_91	[2] 소스 설치 데이터베이스로부터 읽기 시도 실패
+IDS_ERROR_92	재부팅 스케줄: [2]파일 [3]파일로 이름 바꾸는 중. 운영을 완료하려면 재부팅을 완료해야 합니다.
+IDS_ERROR_93	재부팅 스케줄: [2] 파일 삭제 중. 운영을 완료하려면 재부팅해야 합니다. 
+IDS_ERROR_94	[2] 모듈 등록 실패. HRESULT [3]. 관리자에게 문의하여 주십시오.
+IDS_ERROR_95	[2] 모듈 등록 해제 실패. HRESULT [3]. 관리자에게 문의하여 주십시오.
+IDS_ERROR_96	[2] 패키지 캐쉬 실패. 오류: [3]. 관리자에게 문의하여 주십시오.
+IDS_ERROR_97	[2] 글꼴을 등록할 수 없습니다. 글꼴을 설치할 충분한 권한을 가지고 있는지와 시스템이 이 글꼴을 지원하는지를 확인하여 주십시오. 
+IDS_ERROR_98	[2] 글꼴을 등록해제 할 수 없습니다. 글꼴을 제거할 수 있는 충분한 권한이 있는지 확인하여 주십시오.
+IDS_ERROR_99	[2] 단축 메뉴를 생성할 수 없습니다. 대상 폴더가 존재하는지와 액세스할 수 있는지를 확인하여 주십시오.
+IDS_ERROR_SN_INVALID	시리얼 번호가 유효하지 않습니다.
+IDS_ISSCRIPT_VERSION_MISSING	이 시스템에서 InstallScript 엔진이 없어졌습니다. 사용가능하다면, ISScript.msi를 실행하거나 관리자에게 문의하여 주십시오.
+IDS_ISSCRIPT_VERSION_OLD	InstallScript 엔진이 지금 설치 버전보다 오래되었습니다. 가능하다면, ISScript.msi의 최신 버전을 설치하거나 관리자에게 문의하여 주십시오.
+IDS_PRODUCT_DEFAULT_1	Your Product Name	SYSTEM_GENERATED
+IDS_SetupTips_1	확인
+IDS_SetupTips_10	처음 사용으로 설치될 것입니다. (구성 요소가 이 옵션을 지원할 때만 사용 가능.)
+IDS_SetupTips_11	네트워크로부터 실행되도록 설치될 것입니다. (구성 요소가 이 옵션을 지원할 때에만 사용 가능.)
+IDS_SetupTips_12	이 설치 상태는 구성 요소 설치를 나타냅니다.....
+IDS_SetupTips_13	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS_SetupTips_14	<ISProductFolder>\Redist\Language Independent\OS Independent\NetworkInstall.ico	
+IDS_SetupTips_15	<ISProductFolder>\Redist\Language Independent\OS Independent\Install.ico	
+IDS_SetupTips_16	<ISProductFolder>\Redist\Language Independent\OS Independent\InstallFirstUse.ico	
+IDS_SetupTips_17	<ISProductFolder>\Redist\Language Independent\OS Independent\InstallPartial.ico	
+IDS_SetupTips_18	<ISProductFolder>\Redist\Language Independent\OS Independent\DontInstall.ico	
+IDS_SetupTips_19	<ISProductFolder>\Redist\Language Independent\OS Independent\InstallStateMenu.ico	
+IDS_SetupTips_2	{&MSSWhiteSerif8}InstallShield	
+IDS_SetupTips_3	InstallShield	
+IDS_SetupTips_4	사용자 정의 설치는 선택적으로 프로그램 구성 요소를 설치할 수 있도록 해 줍니다.
+IDS_SetupTips_5	{&MSSansBold8}사용자 정의 설치 팁
+IDS_SetupTips_6	설치되지 않을 것입니다.
+IDS_SetupTips_7	로컬 하드 드라이브에 하위 구성 요소들을 설치 될 것입니다. (구성 요소가 하위 구성요소를 포함할 때에만 사용 가능.)
+IDS_SetupTips_8	로컬 하드 드라이브에 설치가 완료될 것입니다.
+IDS_SetupTips_9	구성 요소 이름 옆의 아이콘은 구성 요소 설치 상태를 가리킵니다. 각 구성 요소에 대한 설치 상태 메뉴를 보려면 아이콘을 클릭하십시오.
+IDS_STANDARD_USE_SETUPEXE	설치는 MSI 패키지를 직접적으로 시작하여서 실행할 수 없습니다. setup.exe를 실행하여야 합니다.
+IDS_UITEXT_0	bytes	
+IDS_UITEXT_1	GB	
+IDS_UITEXT_10	이 구성 요소는 설치안 된 상태로 남습니다.
+IDS_UITEXT_11	이 구성 요소는 필요할 때 설치되도록 설정될 것입니다.
+IDS_UITEXT_12	이 구성 요소는 CD로부터 실행되도록 설치될 것입니다.
+IDS_UITEXT_13	이 구성 요소는 로컬 하드 드라이브에 설치될 것입니다.
+IDS_UITEXT_14	이 구성 요소는 네트워크로부터 실행되도록 설치될 것입니다.
+IDS_UITEXT_15	이 구성 요소는 사용할 수 없습니다.
+IDS_UITEXT_16	필요할 때 설치될 것입니다.
+IDS_UITEXT_17	이 구성 요소는 CD로부터 실행되도록 합니다.
+IDS_UITEXT_18	이 구성 요소는 로컬 하드 드라이브에 설치될 것입니다.
+IDS_UITEXT_19	이 구성 요소는 네트워크로부터 실행되도록 설치될 것입니다.
+IDS_UITEXT_2	KB	
+IDS_UITEXT_20	이 구성 요소는 제거가 완료될 것이고, CD로부터 실행될 수 없을 것입니다.
+IDS_UITEXT_21	이 구성 요소는 CD로부터 실행될 수 있으나 필요할 때 설치될 수 있습니다.
+IDS_UITEXT_22	이 구성 요소는 CD로부터 실행될 수 있도록 합니다.
+IDS_UITEXT_23	이 구성 요소는 CD로부터 실행될 수 있도록 하나 로컬 드라이브에 설치될 수 없습니다.
+IDS_UITEXT_24	이 구성 요소는 하드 드라이브의 [1] 공간을 확보합니다.
+IDS_UITEXT_25	이 구성 요소는 하드 드라이브의 [1] 공간을 확보합니다.
+IDS_UITEXT_26	이 구성 요소에 대한 비용을 컴파일 하고 있습니다.
+IDS_UITEXT_27	이 구성 요소는 완전히 제거되었습니다.
+IDS_UITEXT_28	이 구성 요소는 로컬 하드 드라이브에서 제거되었으나, 필요할 때 설치되도록 설정될 것입니다.
+IDS_UITEXT_29	이 구성 요소는 로컬 하드 드라이브에서 제거가 될 것이나 CD로부터 실행될 수 있도록 합니다.
+IDS_UITEXT_3	MB	
+IDS_UITEXT_30	이 구성 요소는 로컬 하드 드라이브에 남게 될 것입니다.
+IDS_UITEXT_31	이 구성 요소는 로컬 하드 드라이브에서 제거가 될 것이나, 네트워크로부터 실행될 수 있도록 합니다.
+IDS_UITEXT_32	이 구성 요소는 완전히 삭제가 될 것이고, 네트워크로부터 실행할 수 없게 됩니다.
+IDS_UITEXT_33	이 구성 요소는 네트워크로부터 실행될 수 있도록 하나 필요할 때 설치될 수 있습니다.
+IDS_UITEXT_34	이 구성 요소는 네트워크로부터 실행될 수 있도록 하였으나 로컬 하드 드라이브에 설치될 수 있습니다.
+IDS_UITEXT_35	이 구성 요소는 네트워크로부터 실행될 수 있도록 합니다.
+IDS_UITEXT_36	이 구성 요소는 하드 드라이브에 [1] 공간을 확보하도록 합니다. [3] 하위 구성 요소의 [2]을(를) 선택하였습니다. 이 하위 구성 요소는 하드 드라이브의 [4] 공간을 확보합니다.
+IDS_UITEXT_37	이 구성 요소는 하드 드라이브의 [1] 공간을 확보합니다. [3] 하위 구성 요소의 [2]을(를) 선택하였습니다. 하위 구성 요소는 하드 드라이브의 [4] 공간이 필요합니다.
+IDS_UITEXT_38	이 구성 요소는 하드 드라이브의 [1]을 필요합니다. [3] 하위 구성 요소의 [2]을(를) 선택하였습니다. 하위 구성 요소는 하드 드라이브의 [4]를 확보합니다.
+IDS_UITEXT_39	이 구성 요소는 하드 드라이브의 [1]이 필요합니다. [3] 하위 구성 요소의 [2]을(를) 선택하였습니다. 하위 구성 요소는 하드 드라이브의 [4]가 필요합니다.
+IDS_UITEXT_4	이 구성 요소는 사용할 수 없습니다.
+IDS_UITEXT_40	남은 시간: {[1] 분}[2] 초
+IDS_UITEXT_41	여유 디스크 공간:	
+IDS_UITEXT_42	차이
+IDS_UITEXT_43	필요한 디스크 공간:	
+IDS_UITEXT_44	디스크 크기:	
+IDS_UITEXT_45	볼륨:	
+IDS_UITEXT_46	이 구성 요소, 그리고 모든 하위 구성 요소는 네트워크로부터 실행되도록 설치가 될 것입니다.
+IDS_UITEXT_47	이 구성 요소, 그리고 모든 하위 구성 요소는 CD로부터 실행될 수 있도록 설치가 될 것입니다.
+IDS_UITEXT_48	이 구성 요소, 그리고 모든 하위 구성 요소는 로컬 하드 드라이브에 설치가 될 것입니다.
+IDS_UITEXT_5	이 구성 요소는 필요할 때 설치될 것입니다.
+IDS_UITEXT_6	이 구성 요소 CD로부터 실행되도록 설치될 것입니다.
+IDS_UITEXT_7	이 구성 요소는 로컬 하드 드라이브에 설치될 것입니다.
+IDS_UITEXT_8	이 구성 요소는 네트워크로부터 실행되도록 설치될 것입니다.
+IDS_UITEXT_9	폴더|새 폴더
+SIS_AUTHOR	Kaspersky Lab	
+SIS_SUBJECT	카스퍼스키 안티 바이러스 6.0 for Windows Workstations 콘솔 플러그인	
+ERROR_APPRUNNING	설치를 계속하려면 중앙 관리 콘솔을 닫아 주십시오.	
+ERROR_APPVERSION	현재 중앙 관리 콘솔 버전은 지원되지 않습니다. 새로운 버전으로 중앙 관리 콘솔을 업그레이드 하시기 바랍니다.	

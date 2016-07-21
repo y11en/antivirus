@@ -1,0 +1,27 @@
+// $AVZ1510
+//$ Подмена диспетчера задач
+// Функция поиска проблемы                                                                          
+function Check : dword;
+var
+ S : string;
+begin
+ Result := 0;
+ // В Win9x эта проверка не актуальна !!
+ if not(IsNT) then exit;
+ // Подмена Taskman в настройках
+ S := Trim(RegKeyStrParamRead('HKEY_LOCAL_MACHINE', 'SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon', 'Taskman'));
+ if S <> '' then begin
+  Result := 3;
+  // Если такой файл сущуствует на диске - то может быть это альтернативный менеджер
+  if FileExists(S) then 
+   Result := 2;
+  exit;
+ end;
+end;
+
+// Функция исправления проблемы                                                                          
+function Fix : dword;
+begin
+ RegKeyParamDel('HKEY_LOCAL_MACHINE', 'SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon', 'Taskman');
+ Result := 0
+end;

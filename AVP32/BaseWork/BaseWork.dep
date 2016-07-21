@@ -1,0 +1,120 @@
+# Microsoft Developer Studio Generated Dependency File, included by BaseWork.mak
+
+..\..\CommonFiles\Stuff\_carray.cpp : \
+	"..\..\CommonFiles\DupMem\DupMem.h"\
+	"..\..\CommonFiles\Stuff\_carray.h"\
+	
+
+.\_printf.cpp : \
+	"..\..\CommonFiles\_avpio.h"\
+	"..\..\CommonFiles\DupMem\DupMem.h"\
+	"..\..\CommonFiles\Stuff\_carray.h"\
+	".\_printf.h"\
+	
+
+.\BaseAPI.cpp : \
+	"..\..\CommonFiles\_avpio.h"\
+	"..\..\commonfiles\bases\format\records.h"\
+	"..\..\CommonFiles\Bases\Sizes.h"\
+	"..\..\CommonFiles\DupMem\DupMem.h"\
+	"..\..\CommonFiles\FileFormat\Coff.h"\
+	"..\..\CommonFiles\ScanAPI\BaseAPI.h"\
+	"..\..\CommonFiles\ScanAPI\defines.h"\
+	"..\..\CommonFiles\ScanAPI\RetFlags.h"\
+	"..\..\CommonFiles\ScanAPI\Scanobj.h"\
+	"..\..\CommonFiles\Stuff\_carray.h"\
+	".\Basework.h"\
+	".\Clink.h"\
+	".\Workarea.h"\
+	
+
+.\Basework.cpp : \
+	"..\..\CommonFiles\_avpio.h"\
+	"..\..\CommonFiles\avp_data.h"\
+	"..\..\commonfiles\bases\format\base.h"\
+	"..\..\commonfiles\bases\format\records.h"\
+	"..\..\CommonFiles\Bases\Method.h"\
+	"..\..\CommonFiles\Bases\Sizes.h"\
+	"..\..\CommonFiles\byteorder.h"\
+	"..\..\CommonFiles\DupMem\DupMem.h"\
+	"..\..\CommonFiles\FileFormat\Coff.h"\
+	"..\..\CommonFiles\ScanAPI\defines.h"\
+	"..\..\CommonFiles\ScanAPI\RetFlags.h"\
+	"..\..\CommonFiles\ScanAPI\Scanobj.h"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Stuff\_carray.h"\
+	"..\..\CommonFiles\Stuff\CalcSum.h"\
+	".\_printf.h"\
+	".\Basework.h"\
+	".\Clink.h"\
+	".\Workarea.h"\
+	
+
+..\..\CommonFiles\Stuff\CalcSum.c : \
+	"..\..\CommonFiles\Stuff\CalcSum.h"\
+	
+
+.\Clink.cpp : \
+	"..\..\CommonFiles\_avpio.h"\
+	"..\..\CommonFiles\avp_data.h"\
+	"..\..\CommonFiles\Bases\Sizes.h"\
+	"..\..\CommonFiles\byteorder.h"\
+	"..\..\CommonFiles\DupMem\DupMem.h"\
+	"..\..\CommonFiles\FileFormat\Coff.h"\
+	"..\..\CommonFiles\ScanAPI\defines.h"\
+	"..\..\CommonFiles\ScanAPI\RetFlags.h"\
+	"..\..\CommonFiles\ScanAPI\Scanobj.h"\
+	"..\..\CommonFiles\Stuff\_carray.h"\
+	".\Clink.h"\
+	".\Workarea.h"\
+	
+
+.\DupInstance.cpp : \
+	"..\..\CommonFiles\DupMem\DupMem.h"\
+	"..\..\CommonFiles\Stuff\_carray.h"\
+	
+
+.\DupMemory.cpp : \
+	"..\..\CommonFiles\DupMem\DupMem.h"\
+	"..\..\CommonFiles\Stuff\_carray.h"\
+	
+
+..\..\CommonFiles\IOCache\FileIO.cpp : \
+	"..\..\CommonFiles\_avpio.h"\
+	"..\..\CommonFiles\DupMem\DupMem.h"\
+	"..\..\CommonFiles\IOCache\TFileData.h"\
+	"..\..\CommonFiles\ScanAPI\BaseAPI.h"\
+	"..\..\CommonFiles\ScanAPI\defines.h"\
+	"..\..\CommonFiles\ScanAPI\RetFlags.h"\
+	"..\..\CommonFiles\ScanAPI\Scanobj.h"\
+	"..\..\CommonFiles\Stuff\_carray.h"\
+	
+
+..\..\CommonFiles\Stuff\Sq_u.cpp : \
+	"..\..\CommonFiles\DupMem\DupMem.h"\
+	"..\..\CommonFiles\Stuff\_carray.h"\
+	
+
+.\StdAfx.cpp : \
+	"..\..\CommonFiles\Bases\Retcode3.h"\
+	"..\..\CommonFiles\DupMem\DupMem.h"\
+	"..\..\CommonFiles\ScanAPI\Avp_msg.h"\
+	"..\..\CommonFiles\Stuff\_carray.h"\
+	".\StdAfx.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+.\suballoc.cpp : \
+	"..\..\commonfiles\bases\format\records.h"\
+	"..\..\CommonFiles\Bases\Sizes.h"\
+	"..\..\CommonFiles\DupMem\DupMem.h"\
+	"..\..\CommonFiles\FileFormat\Coff.h"\
+	"..\..\CommonFiles\ScanAPI\defines.h"\
+	"..\..\CommonFiles\ScanAPI\RetFlags.h"\
+	"..\..\CommonFiles\ScanAPI\Scanobj.h"\
+	"..\..\CommonFiles\Stuff\_carray.h"\
+	".\_printf.h"\
+	".\Basework.h"\
+	".\Clink.h"\
+	".\Workarea.h"\
+	

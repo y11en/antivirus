@@ -1,0 +1,981 @@
+// --itrace.chk-----------------------------------------------------------------
+// 
+//  Module containing MAPI utility functions for message traces.
+// 
+// Copyright 1986 - 1998 Microsoft Corporation.  All Rights Reserved.
+// -----------------------------------------------------------------------------
+
+
+#ifndef ULONGLONG
+//typedef below causes error on PlatformSDK, many duplicates of this define,
+//most notable - WINNT.H.
+//typedef __int64 ULONGLONG;
+#endif
+
+#ifndef DEBUG
+#define CHK_HrTraceGetEntryListSize(a,b)                 NOERROR
+#define CHK_HrTraceGetEntryList(a,b)                     NOERROR
+#define CHK_HrTraceSetEntryList(a,b)                     NOERROR
+#define CHK_HrTraceCopyEntry(a,b,c,d,e,f,g,h,i,j)        NOERROR
+#define CHK_HrTraceCreateEntryList(a,b,c,d,e,f,g,h,i,j)  NOERROR
+#define CHK_HrTraceAppendEntryList(a,b,c,d,e,f,g,h,i,j)  NOERROR
+#define CHK_HrTraceGotoEntry(a,b,c)                      NOERROR
+#define CHK_HrTraceGotoFirstEntry(a,b,c)                 NOERROR
+#define CHK_HrTraceGotoNextEntry(a,b,c)                  NOERROR
+#define CHK_HrTraceOpenEntry(a,b,c,d,e,f,g,h,i,j)        NOERROR
+#define CHK_HrTraceSetInfo(a,b,c,d,e,f,g)                NOERROR
+#define CHK_HrTraceUpdateInfo(A,b,c,d,e,f,g)             NOERROR
+#define CHK_HrInternalTraceCopyEntry(a,b,c,d,e,f,g,h,i,j, k, l)        NOERROR
+#define CHK_HrInternalTraceCreateEntryList(a,b,c,d,e,f,g,h,i,j, k, l)  NOERROR
+#define CHK_HrInternalTraceAppendEntryList(a,b,c,d,e,f,g,h,i,j, k, l)  NOERROR
+
+#else
+
+//$--CHK_HrTraceGetEntryListSize----------------------------------------------
+//  Get the size of the hop trace information in bytes.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrTraceGetEntryListSize(// RETURNS: return code
+    IN LPTRACEINFO lpTraceInfo,         // Pointer to hop trace address variable
+    OUT ULONG      *lpcbTraceInfo)      // Count of bytes in hop trace list
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_READ_PTR(lpTraceInfo, sizeof(TRACEINFO)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (lpTraceInfo->cEntries != 0))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lpcbTraceInfo, sizeof(ULONG)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrTraceGetEntryList-------------------------------------------------
+//  Get the hop trace information for a given message.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrTraceGetEntryList(// RETURNS: return code
+    IN LPMESSAGE   lpMessage,           // Pointer to message.
+    OUT LPTRACEINFO *lppTraceInfo)      // Pointer to hop trace address variable
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpMessage))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppTraceInfo, sizeof(LPTRACEINFO)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrTraceSetEntryList-------------------------------------------------
+//  Set the hop trace information for a given message.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrTraceSetEntryList(// RETURNS: return code
+    IN LPMESSAGE   lpMessage,           // Pointer to message.
+    IN LPTRACEINFO lpTraceInfo)         // Pointer to hop trace address variable
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpMessage))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_READ_PTR(lpTraceInfo, sizeof(TRACEINFO)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (lpTraceInfo->cEntries != 0))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--HrCheckTraceEntry----------------------------------------------------------
+//  Check a trace entry.
+// -----------------------------------------------------------------------------
+__inline static HRESULT HrCheckTraceEntry(// RETURNS: return code
+    IN LONG     lAction,                // The routing action the tracing site
+                                        // took.
+    IN FILETIME ftArrivalTime,          // The time at which the communique
+                                        // entered the tracing site.
+    IN FILETIME ftDeferredTime,         // The time are which the tracing site
+                                        // released the message.
+    IN LPSTR    lpszADMDName,           // ADMD Name
+    IN LPSTR    lpszCountryName,        // Country Name
+    IN LPSTR    lpszPRMDId,             // PRMD Identifier
+    IN LPSTR    lpszAttADMDName,        // Attempted ADMD Name
+    IN LPSTR    lpszAttCountryName,     // Attempted Country Name
+    IN LPSTR    lpszAttPRMDId)          // Attempted PRMD Identifier
+{
+    HRESULT   hr              = NOERROR;
+    ULONG     cch             = 0;
+    ULONGLONG ullArrivalTime  = 0;
+    ULONGLONG ullDeferredTime = 0;
+
+    if(! (VALID_MD_ACTION(lAction)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_STRINGA_PTR_OR_NULL(lpszADMDName))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    cch = (lpszADMDName ? lstrlenA(lpszADMDName) : 0);
+
+    if((cch < 0) || (cch > 16))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_STRINGA_PTR(lpszCountryName))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    cch = (lpszCountryName ? lstrlenA(lpszCountryName) : 0);
+
+    if((cch < 2) || (cch > 3))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_STRINGA_PTR_OR_NULL(lpszPRMDId))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    cch = (lpszPRMDId ? lstrlenA(lpszPRMDId) : 0);
+
+    if((cch != 0) && ((cch < 1) || (cch > 16)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_STRINGA_PTR_OR_NULL(lpszAttADMDName))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    cch = (lpszAttADMDName ? lstrlenA(lpszAttADMDName) : 0);
+
+    if((cch != 0) && ((cch < 0) || (cch > 16)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_STRINGA_PTR_OR_NULL(lpszAttCountryName))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    cch = (lpszAttCountryName ? lstrlenA(lpszAttCountryName) : 0);
+
+    if((cch != 0) && ((cch < 2) || (cch > 3)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_STRINGA_PTR_OR_NULL(lpszAttPRMDId))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    cch = (lpszAttPRMDId ? lstrlenA(lpszAttPRMDId) : 0);
+
+    if((cch != 0) && ((cch < 1) || (cch > 16)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    ullArrivalTime  = ftArrivalTime.dwHighDateTime  * _UI32_MAX +
+                      ftArrivalTime.dwLowDateTime;
+
+    ullDeferredTime = ftDeferredTime.dwHighDateTime * _UI32_MAX +
+                      ftDeferredTime.dwLowDateTime;
+
+    if(ullArrivalTime < ullDeferredTime)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrTraceCopyEntry----------------------------------------------------
+//  Copy trace entry information to a trace entry structure.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrTraceCopyEntry(// RETURNS: return code
+    IN LONG     lAction,                // The routing action the tracing site
+                                        // took.
+    IN FILETIME ftArrivalTime,          // The time at which the communique
+                                        // entered the tracing site.
+    IN FILETIME ftDeferredTime,         // The time are which the tracing site
+                                        // released the message.
+    IN LPSTR    lpszADMDName,           // ADMD Name
+    IN LPSTR    lpszCountryName,        // Country Name
+    IN LPSTR    lpszPRMDId,             // PRMD Identifier
+    IN LPSTR    lpszAttADMDName,        // Attempted ADMD Name
+    IN LPSTR    lpszAttCountryName,     // Attempted Country Name
+    IN LPSTR    lpszAttPRMDId,          // Attempted PRMD Identifier
+    OUT LPTRACEENTRY lpTraceEntry)      // Pointer to trace entry address
+                                        // variable.
+{
+    HRESULT hr = NOERROR;
+
+    hr = HrCheckTraceEntry(
+        lAction,
+        ftArrivalTime,
+        ftDeferredTime,
+        lpszADMDName,
+        lpszCountryName,
+        lpszPRMDId,
+        lpszAttADMDName,
+        lpszAttCountryName,
+        lpszAttPRMDId);
+
+    if(FAILED(hr))
+    {
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lpTraceEntry, sizeof(TRACEENTRY)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+    
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrTraceCreateEntryList----------------------------------------------
+//  Create a hop trace information list.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrTraceCreateEntryList(// RETURNS: return code
+    IN LONG     lAction,                // The routing action the tracing site
+                                        // took.
+    IN FILETIME ftArrivalTime,          // The time at which the communique
+                                        // entered the tracing site.
+    IN FILETIME ftDeferredTime,         // The time are which the tracing site
+                                        // released the message.
+    IN LPSTR    lpszADMDName,           // ADMD Name
+    IN LPSTR    lpszCountryName,        // Country Name
+    IN LPSTR    lpszPRMDId,             // PRMD Identifier
+    IN LPSTR    lpszAttADMDName,        // Attempted ADMD Name
+    IN LPSTR    lpszAttCountryName,     // Attempted Country Name
+    IN LPSTR    lpszAttPRMDId,          // Attempted PRMD Identifier
+    OUT LPTRACEINFO *lppTraceInfo)      // Pointer to hop trace address variable
+{
+    HRESULT hr = NOERROR;
+
+    hr = HrCheckTraceEntry(
+        lAction,
+        ftArrivalTime,
+        ftDeferredTime,
+        lpszADMDName,
+        lpszCountryName,
+        lpszPRMDId,
+        lpszAttADMDName,
+        lpszAttCountryName,
+        lpszAttPRMDId);
+
+    if(FAILED(hr))
+    {
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppTraceInfo, sizeof(LPTRACEINFO)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrTraceAppendEntryList----------------------------------------------
+//  Append to an existing hop trace information list.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrTraceAppendEntryList(// RETURNS: return code
+    IN LONG     lAction,                // The routing action the tracing site
+                                        // took.
+    IN FILETIME ftArrivalTime,          // The time at which the communique
+                                        // entered the tracing site.
+    IN FILETIME ftDeferredTime,         // The time are which the tracing site
+                                        // released the message.
+    IN LPSTR    lpszADMDName,           // ADMD Name
+    IN LPSTR    lpszCountryName,        // Country Name
+    IN LPSTR    lpszPRMDId,             // PRMD Identifier
+    IN LPSTR    lpszAttADMDName,        // Attempted ADMD Name
+    IN LPSTR    lpszAttCountryName,     // Attempted Country Name
+    IN LPSTR    lpszAttPRMDId,          // Attempted PRMD Identifier
+    IN OUT LPTRACEINFO *lppTraceInfo)   // Pointer to hop trace address variable
+{
+    HRESULT hr = NOERROR;
+
+    hr = HrCheckTraceEntry(
+        lAction,
+        ftArrivalTime,
+        ftDeferredTime,
+        lpszADMDName,
+        lpszCountryName,
+        lpszPRMDId,
+        lpszAttADMDName,
+        lpszAttCountryName,
+        lpszAttPRMDId);
+
+    if(FAILED(hr))
+    {
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppTraceInfo, sizeof(LPTRACEINFO)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(*lppTraceInfo, sizeof(TRACEINFO)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrTraceGotoEntry----------------------------------------------------
+//  Goto the specified TRACEENTRY in a TRACEINFO
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrTraceGotoEntry(// RETURNS: return code
+    IN LPTRACEINFO lpTraceInfo,         // pointer to TRACEINFO
+    IN ULONG ulIndex,                   // index of TRACEENTRY in TRACEINFO
+    OUT LPTRACEENTRY *lppTraceEntry)    // pointer to TRACEENTRY
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_READ_PTR(lpTraceInfo, sizeof(TRACEINFO)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppTraceEntry, sizeof(LPTRACEENTRY)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrTraceGotoFirstEntry-----------------------------------------------
+//  Goto the first TRACEENTRY in a TRACEINFO
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrTraceGotoFirstEntry(// RETURNS: return code
+    IN LPTRACEINFO lpTraceInfo,         // pointer to TRACEINFO
+    OUT ULONG *lpulIndex,               // index of TRACEENTRY in TRACEINFO
+    OUT LPTRACEENTRY *lppTraceEntry)    // pointer to TRACEENTRY
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_READ_PTR(lpTraceInfo, sizeof(TRACEINFO)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppTraceEntry, sizeof(LPTRACEENTRY)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (lpulIndex != NULL))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrTraceGotoNextEntry------------------------------------------------
+//  Goto the next TRACEENTRY in a TRACEINFO
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrTraceGotoNextEntry(// RETURNS: return code
+    IN LPTRACEINFO lpTraceInfo,         // pointer to TRACEINFO
+    IN OUT ULONG *lpulIndex,            // index of TRACEENTRY in TRACEINFO
+    OUT LPTRACEENTRY *lppTraceEntry)    // pointer to TRACEENTRY
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_READ_PTR(lpTraceInfo, sizeof(TRACEINFO)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppTraceEntry, sizeof(LPTRACEENTRY)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (lpulIndex != NULL))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrTraceOpenEntry----------------------------------------------------
+//  Open a TRACEENTRY.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrTraceOpenEntry(// RETURNS: return code
+    IN LPTRACEENTRY lpTraceEntry,       // pointer to TRACEENTRY
+    OUT LONG     *plAction,             // The routing action the tracing site
+                                        // took.
+    OUT FILETIME *pftArrivalTime,       // The time at which the communique
+                                        // entered the tracing site.
+    OUT FILETIME *pftDeferredTime,      // The time are which the tracing site
+                                        // released the message.
+    OUT LPSTR    *lppszADMDName,        // ADMD Name
+    OUT LPSTR    *lppszCountryName,     // Country Name
+    OUT LPSTR    *lppszPRMDId,          // PRMD Identifier
+    OUT LPSTR    *lppszAttADMDName,     // Attempted ADMD Name
+    OUT LPSTR    *lppszAttCountryName,  // Attempted Country Name
+    OUT LPSTR    *lppszAttPRMDId)       // Attempted PRMD Identifier
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_READ_PTR(lpTraceEntry, sizeof(TRACEENTRY)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(plAction, sizeof(LONG)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(pftArrivalTime, sizeof(FILETIME)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(pftDeferredTime, sizeof(FILETIME)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppszADMDName, sizeof(LPSTR)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppszCountryName, sizeof(LPSTR)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppszPRMDId, sizeof(LPSTR)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppszAttADMDName, sizeof(LPSTR)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppszAttCountryName, sizeof(LPSTR)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppszAttPRMDId, sizeof(LPSTR)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrTraceSetInfo------------------------------------------------------
+//  Set the trace-info on a message.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrTraceSetInfo(// RETURNS: return code
+    IN LONG lAction,                    // pointer to action
+    IN FILETIME *lpftArrivalTime,       // pointer to arrival time
+    IN FILETIME *lpftDeferredTime,      // pointer to deferred time
+    IN LPSTR lpszCountry,               // pointer to country
+    IN LPSTR lpszADMD,                  // pointer to ADMD
+    IN LPSTR lpszPRMD,                  // pointer to PRMD
+    IN OUT LPMESSAGE lpMessage)         // pointer to message
+{
+    HRESULT hr = NOERROR;
+
+    hr = HrCheckTraceEntry(
+        lAction,
+        *lpftArrivalTime,
+        *lpftDeferredTime,
+        lpszADMD,
+        lpszCountry,
+        lpszPRMD,
+        NULL,
+        NULL,
+        NULL);
+
+    if(FAILED(hr))
+    {
+        goto cleanup;
+    }
+
+    if(! TEST_IUNKNOWN_PTR(lpMessage))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrTraceUpdateInfo---------------------------------------------------
+//  Update the trace-info on a message.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrTraceUpdateInfo(// RETURNS: return code
+    IN LONG lAction,                    // pointer to action
+    IN FILETIME *lpftArrivalTime,       // pointer to arrival time
+    IN FILETIME *lpftDeferredTime,      // pointer to deferred time
+    IN LPSTR lpszCountry,               // pointer to country
+    IN LPSTR lpszADMD,                  // pointer to ADMD
+    IN LPSTR lpszPRMD,                  // pointer to PRMD
+    IN OUT LPMESSAGE lpMessage)         // pointer to message
+{
+    HRESULT hr = NOERROR;
+
+    hr = HrCheckTraceEntry(
+        lAction,
+        *lpftArrivalTime,
+        *lpftDeferredTime,
+        lpszADMD,
+        lpszCountry,
+        lpszPRMD,
+        NULL,
+        NULL,
+        NULL);
+
+    if(FAILED(hr))
+    {
+        goto cleanup;
+    }
+
+    if(! TEST_IUNKNOWN_PTR(lpMessage))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+
+//$--HrCheckInternalTraceEntry--------------------------------------------------
+//  Check an internal trace entry.
+// -----------------------------------------------------------------------------
+__inline static HRESULT HrCheckInternalTraceEntry(// RETURNS: return code
+    IN LONG     lAction,                // The routing action the tracing site
+                                        // took.
+    IN FILETIME ftArrivalTime,          // The time at which the communique
+                                        // entered the tracing site.
+    IN FILETIME ftDeferredTime,         // The time are which the tracing site
+                                        // released the message.
+    IN LPSTR    lpszADMDName,           // ADMD Name
+    IN LPSTR    lpszCountryName,        // Country Name
+    IN LPSTR    lpszPRMDId,             // PRMD Identifier
+    IN LPSTR    lpszMTAName,            // MTA Name
+    IN LPSTR    lpszAttADMDName,        // Attempted ADMD Name
+    IN LPSTR    lpszAttCountryName,     // Attempted Country Name
+    IN LPSTR    lpszAttPRMDId,          // Attempted PRMD Identifier
+    IN LPSTR    lpszAttMTAName)         // Attempted MTA Name
+{
+    HRESULT   hr              = NOERROR;
+    ULONG     cch             = 0;
+    ULONGLONG ullArrivalTime  = 0;
+    ULONGLONG ullDeferredTime = 0;
+
+    if(! (VALID_MD_ACTION(lAction)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_STRINGA_PTR_OR_NULL(lpszADMDName))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    cch = (lpszADMDName ? lstrlenA(lpszADMDName) : 0);
+
+    if((cch < 0) || (cch > 16))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_STRINGA_PTR(lpszCountryName))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    cch = (lpszCountryName ? lstrlenA(lpszCountryName) : 0);
+
+    if((cch < 2) || (cch > 3))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_STRINGA_PTR_OR_NULL(lpszPRMDId))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    cch = (lpszPRMDId ? lstrlenA(lpszPRMDId) : 0);
+
+    if((cch != 0) && ((cch < 1) || (cch > 16)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_STRINGA_PTR_OR_NULL(lpszMTAName))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    cch = (lpszMTAName ? lstrlenA(lpszMTAName) : 0);
+
+    if((cch < 0) || (cch > 32))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_STRINGA_PTR_OR_NULL(lpszAttADMDName))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    cch = (lpszAttADMDName ? lstrlenA(lpszAttADMDName) : 0);
+
+    if((cch != 0) && ((cch < 0) || (cch > 16)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_STRINGA_PTR_OR_NULL(lpszAttCountryName))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    cch = (lpszAttCountryName ? lstrlenA(lpszAttCountryName) : 0);
+
+    if((cch != 0) && ((cch < 2) || (cch > 3)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_STRINGA_PTR_OR_NULL(lpszAttPRMDId))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    cch = (lpszAttPRMDId ? lstrlenA(lpszAttPRMDId) : 0);
+
+    if((cch != 0) && ((cch < 1) || (cch > 16)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_STRINGA_PTR_OR_NULL(lpszAttMTAName))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    cch = (lpszAttMTAName ? lstrlenA(lpszAttMTAName) : 0);
+
+    if((cch != 0) && ((cch < 0) || (cch > 32)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    ullArrivalTime  = ftArrivalTime.dwHighDateTime  * _UI32_MAX +
+                      ftArrivalTime.dwLowDateTime;
+
+    ullDeferredTime = ftDeferredTime.dwHighDateTime * _UI32_MAX +
+                      ftDeferredTime.dwLowDateTime;
+
+    if(ullArrivalTime < ullDeferredTime)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrInternalTraceCopyEntry-----------------------------------------------
+//  Copy internal trace entry information to an internal trace entry structure.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrInternalTraceCopyEntry(// RETURNS: return code
+    IN LONG     lAction,                // The routing action the tracing site
+                                        // took.
+    IN FILETIME ftArrivalTime,          // The time at which the communique
+                                        // entered the tracing site.
+    IN FILETIME ftDeferredTime,         // The time are which the tracing site
+                                        // released the message.
+    IN LPSTR    lpszADMDName,           // ADMD Name
+    IN LPSTR    lpszCountryName,        // Country Name
+    IN LPSTR    lpszPRMDId,             // PRMD Identifier
+    IN LPSTR    lpszMTAName,            // MTA Name
+    IN LPSTR    lpszAttADMDName,        // Attempted ADMD Name
+    IN LPSTR    lpszAttCountryName,     // Attempted Country Name
+    IN LPSTR    lpszAttPRMDId,          // Attempted PRMD Identifier
+    IN LPSTR    lpszAttMTAName,         // Attempted MTA Name
+    OUT PINTTRACEENTRY lpTraceEntry)    // Pointer to trace entry address
+                                        // variable.
+{
+    HRESULT hr = NOERROR;
+
+    hr = HrCheckInternalTraceEntry(
+        lAction,
+        ftArrivalTime,
+        ftDeferredTime,
+        lpszADMDName,
+        lpszCountryName,
+        lpszPRMDId,
+        lpszMTAName,
+        lpszAttADMDName,
+        lpszAttCountryName,
+        lpszAttPRMDId,
+        lpszAttMTAName);
+
+    if(FAILED(hr))
+    {
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lpTraceEntry, sizeof(INTTRACEENTRY)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+    
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrInternalTraceCreateEntryList-----------------------------------------
+//  Create an internal hop trace information list.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrInternalTraceCreateEntryList(// RETURNS: return code
+    IN LONG     lAction,                // The routing action the tracing site
+                                        // took.
+    IN FILETIME ftArrivalTime,          // The time at which the communique
+                                        // entered the tracing site.
+    IN FILETIME ftDeferredTime,         // The time are which the tracing site
+                                        // released the message.
+    IN LPSTR    lpszADMDName,           // ADMD Name
+    IN LPSTR    lpszCountryName,        // Country Name
+    IN LPSTR    lpszPRMDId,             // PRMD Identifier
+    IN LPSTR    lpszMTAName,            // MTA Name
+    IN LPSTR    lpszAttADMDName,        // Attempted ADMD Name
+    IN LPSTR    lpszAttCountryName,     // Attempted Country Name
+    IN LPSTR    lpszAttPRMDId,          // Attempted PRMD Identifier
+    IN LPSTR    lpszAttMTAName,         // Attempted MTA Name
+    OUT PINTTRACEINFO *lppTraceInfo)    // Pointer to hop trace address variable
+{
+    HRESULT hr = NOERROR;
+
+    hr = HrCheckInternalTraceEntry(
+        lAction,
+        ftArrivalTime,
+        ftDeferredTime,
+        lpszADMDName,
+        lpszCountryName,
+        lpszPRMDId,
+        lpszMTAName,
+        lpszAttADMDName,
+        lpszAttCountryName,
+        lpszAttPRMDId,
+        lpszAttMTAName);
+
+    if(FAILED(hr))
+    {
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppTraceInfo, sizeof(PINTTRACEINFO)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrInternalTraceAppendEntryList-----------------------------------------
+//  Append to an existing internal hop trace information list.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrInternalTraceAppendEntryList(// RETURNS: return code
+    IN LONG     lAction,                // The routing action the tracing site
+                                        // took.
+    IN FILETIME ftArrivalTime,          // The time at which the communique
+                                        // entered the tracing site.
+    IN FILETIME ftDeferredTime,         // The time are which the tracing site
+                                        // released the message.
+    IN LPSTR    lpszADMDName,           // ADMD Name
+    IN LPSTR    lpszCountryName,        // Country Name
+    IN LPSTR    lpszPRMDId,             // PRMD Identifier
+    IN LPSTR    lpszMTAName,            // MTA Name
+    IN LPSTR    lpszAttADMDName,        // Attempted ADMD Name
+    IN LPSTR    lpszAttCountryName,     // Attempted Country Name
+    IN LPSTR    lpszAttPRMDId,          // Attempted PRMD Identifier
+    IN LPSTR    lpszAttMTAName,         // Attempted MTA Name
+    IN OUT PINTTRACEINFO *lppTraceInfo) // Pointer to hop trace address variable
+{
+    HRESULT hr = NOERROR;
+
+    hr = HrCheckInternalTraceEntry(
+        lAction,
+        ftArrivalTime,
+        ftDeferredTime,
+        lpszADMDName,
+        lpszCountryName,
+        lpszPRMDId,
+        lpszMTAName,
+        lpszAttADMDName,
+        lpszAttCountryName,
+        lpszAttPRMDId,
+        lpszAttMTAName);
+
+    if(FAILED(hr))
+    {
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppTraceInfo, sizeof(PINTTRACEINFO)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(*lppTraceInfo, sizeof(TRACEINFO)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+#endif

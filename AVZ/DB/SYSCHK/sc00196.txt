@@ -1,0 +1,4 @@
+// ***** AdvWare.Relevance *****
+begin
+ AddEvAlarmByCLSID('1D7E3B41-23CE-469B-BE1B-A64B877923E1',AScriptName,'SearchRelevancy*.dll');
+end.

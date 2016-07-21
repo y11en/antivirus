@@ -1,0 +1,2871 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8,00"
+	Name="WinSign"
+	ProjectGUID="{4B305E34-A1C5-4B17-8C34-7BB29A76FFB9}"
+	RootNamespace="WinSign"
+	SccProjectName="Perforce Project"
+	SccLocalPath=".."
+	SccProvider="MSSCCI:Perforce SCM"
+	Keyword="Win32Proj"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug With Debug Key|Win32"
+			OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\$(ProjectName)"
+			ConfigurationType="4"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				TypeLibraryName="$(OutDir)\$(TargetName).tlb"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories=".,.."
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_AFXDLL;_DEBUG_KEY;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="3"
+				RuntimeTypeInfo="true"
+				PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch"
+				AssemblerListingLocation="$(IntDir)\"
+				ObjectFile="$(IntDir)\"
+				ProgramDataBaseFileName="$(IntDir)\"
+				WarningLevel="3"
+				SuppressStartupBanner="true"
+				DebugInformationFormat="4"
+				CompileAs="0"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				Culture="1047"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="$(OutDir)\$(ProjectName).lib"
+				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+				SuppressStartupBanner="true"
+				OutputFile="$(IntDir)\$(TargetName).bsc"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				Description="cpoying &quot;$(TargetPath)&quot; to $(OutDir)\sign$(TargetExt)"
+				CommandLine="copy &quot;$(TargetPath)&quot; &quot;$(OutDir)\sign$(TargetExt)&quot;"
+			/>
+		</Configuration>
+		<Configuration
+			Name="DebugS|Win32"
+			OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\$(ProjectName)"
+			ConfigurationType="4"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				TypeLibraryName="$(OutDir)\$(TargetName).tlb"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories=".,.."
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;NO_DEBUG_KEY;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="1"
+				RuntimeTypeInfo="true"
+				PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch"
+				AssemblerListingLocation="$(IntDir)\"
+				ObjectFile="$(IntDir)\"
+				ProgramDataBaseFileName="$(IntDir)\"
+				WarningLevel="3"
+				SuppressStartupBanner="true"
+				DebugInformationFormat="4"
+				CompileAs="0"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				Culture="1047"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="$(OutDir)\$(ProjectName).lib"
+				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+				SuppressStartupBanner="true"
+				OutputFile="$(IntDir)\$(TargetName).bsc"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				Description="cpoying &quot;$(TargetPath)&quot; to $(OutDir)\sign$(TargetExt)"
+				CommandLine="copy &quot;$(TargetPath)&quot; &quot;$(OutDir)\sign$(TargetExt)&quot;"
+			/>
+		</Configuration>
+		<Configuration
+			Name="DebugS With Debug Key|Win32"
+			OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\$(ProjectName)"
+			ConfigurationType="4"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				TypeLibraryName="$(OutDir)\$(TargetName).tlb"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories=".,.."
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_DEBUG_KEY;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="1"
+				RuntimeTypeInfo="true"
+				PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch"
+				AssemblerListingLocation="$(IntDir)\"
+				ObjectFile="$(IntDir)\"
+				ProgramDataBaseFileName="$(IntDir)\"
+				WarningLevel="3"
+				SuppressStartupBanner="true"
+				DebugInformationFormat="4"
+				CompileAs="0"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				Culture="1047"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="$(OutDir)\$(ProjectName).lib"
+				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+				SuppressStartupBanner="true"
+				OutputFile="$(IntDir)\$(TargetName).bsc"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				Description="cpoying &quot;$(TargetPath)&quot; to $(OutDir)\sign$(TargetExt)"
+				CommandLine="copy &quot;$(TargetPath)&quot; &quot;$(OutDir)\sign$(TargetExt)&quot;"
+			/>
+		</Configuration>
+		<Configuration
+			Name="ReleaseS Novell|Win32"
+			OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\$(ProjectName)"
+			ConfigurationType="4"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				TypeLibraryName="$(OutDir)\$(TargetName).tlb"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="2"
+				InlineFunctionExpansion="1"
+				AdditionalIncludeDirectories=".,.."
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;NO_DEBUG_KEY;__WATCOMC__;N_PLAT_NLM;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T"
+				StringPooling="true"
+				RuntimeLibrary="0"
+				EnableFunctionLevelLinking="true"
+				PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch"
+				AssemblerOutput="1"
+				AssemblerListingLocation="$(IntDir)\"
+				ObjectFile="$(IntDir)\"
+				ProgramDataBaseFileName="$(IntDir)\"
+				WarningLevel="3"
+				SuppressStartupBanner="true"
+				CompileAs="0"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				Culture="1033"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="$(OutDir)\$(ProjectName).lib"
+				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+				SuppressStartupBanner="true"
+				OutputFile="$(IntDir)\$(TargetName).bsc"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				Description="cpoying &quot;$(TargetPath)&quot; to $(OutDir)\sign$(TargetExt)"
+				CommandLine="copy &quot;$(TargetPath)&quot; &quot;$(OutDir)\sign$(TargetExt)&quot;"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\$(ProjectName)"
+			ConfigurationType="4"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				TypeLibraryName="$(OutDir)\$(TargetName).tlb"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories=".,.."
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_AFXDLL;NO_DEBUG_KEY;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="3"
+				RuntimeTypeInfo="true"
+				PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch"
+				AssemblerListingLocation="$(IntDir)\"
+				ObjectFile="$(IntDir)\"
+				ProgramDataBaseFileName="$(IntDir)\"
+				WarningLevel="3"
+				SuppressStartupBanner="true"
+				DebugInformationFormat="4"
+				CompileAs="0"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				Culture="1047"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="$(OutDir)\$(ProjectName).lib"
+				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+				SuppressStartupBanner="true"
+				OutputFile="$(IntDir)\$(TargetName).bsc"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				Description="cpoying &quot;$(TargetPath)&quot; to $(OutDir)\sign$(TargetExt)"
+				CommandLine="copy &quot;$(TargetPath)&quot; &quot;$(OutDir)\sign$(TargetExt)&quot;"
+			/>
+		</Configuration>
+		<Configuration
+			Name="ReleaseS|Win32"
+			OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\$(ProjectName)"
+			ConfigurationType="4"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				TypeLibraryName="$(OutDir)\$(TargetName).tlb"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="2"
+				InlineFunctionExpansion="1"
+				AdditionalIncludeDirectories=".,.."
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;NO_DEBUG_KEY;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T"
+				StringPooling="true"
+				RuntimeLibrary="0"
+				EnableFunctionLevelLinking="true"
+				RuntimeTypeInfo="true"
+				PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch"
+				AssemblerListingLocation="$(IntDir)\"
+				ObjectFile="$(IntDir)\"
+				ProgramDataBaseFileName="$(IntDir)\"
+				WarningLevel="3"
+				SuppressStartupBanner="true"
+				CompileAs="0"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				Culture="1033"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="$(OutDir)\$(ProjectName).lib"
+				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+				SuppressStartupBanner="true"
+				OutputFile="$(IntDir)\$(TargetName).bsc"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				Description="cpoying &quot;$(TargetPath)&quot; to $(OutDir)\sign$(TargetExt)"
+				CommandLine="copy &quot;$(TargetPath)&quot; &quot;$(OutDir)\sign$(TargetExt)&quot;"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\$(ProjectName)"
+			ConfigurationType="4"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				TypeLibraryName="$(OutDir)\$(TargetName).tlb"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="2"
+				InlineFunctionExpansion="1"
+				AdditionalIncludeDirectories=".,.."
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_AFXDLL;NO_DEBUG_KEY;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T"
+				StringPooling="true"
+				RuntimeLibrary="2"
+				EnableFunctionLevelLinking="true"
+				RuntimeTypeInfo="true"
+				PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch"
+				AssemblerListingLocation="$(IntDir)\"
+				ObjectFile="$(IntDir)\"
+				ProgramDataBaseFileName="$(IntDir)\"
+				WarningLevel="3"
+				SuppressStartupBanner="true"
+				CompileAs="0"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				Culture="1033"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="$(OutDir)\$(ProjectName).lib"
+				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+				SuppressStartupBanner="true"
+				OutputFile="$(IntDir)\$(TargetName).bsc"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				Description="cpoying &quot;$(TargetPath)&quot; to $(OutDir)\sign$(TargetExt)"
+				CommandLine="copy &quot;$(TargetPath)&quot; &quot;$(OutDir)\sign$(TargetExt)&quot;"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Objs"
+			Filter="*.obj"
+			>
+			<File
+				RelativePath="objs\c_coderf.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\c_crc16f.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\c_crc32.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\c_crypto.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\c_decryp.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\c_find.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\c_fs.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\c_hexcod.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\c_mem.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\c_randfi.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\c_randna.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\c_srand.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\c_swdict.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DebugS|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DebugS With Debug Key|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="ReleaseS Novell|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="ReleaseS|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\c_tm.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\c_urand.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\c_uucode.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\c_verify.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\c_vesta.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\cn_tm.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DebugS|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DebugS With Debug Key|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="ReleaseS Novell|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="ReleaseS|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\cn_urand.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DebugS|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DebugS With Debug Key|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="ReleaseS Novell|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="ReleaseS|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\ct_touch.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\ct_ver.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\f_not.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\f_sha.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\f_sign.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\n_addkey.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\n_constr.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\n_dsa.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\n_file.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\n_fpub.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\n_gostrf.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\n_hash.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\n_privat.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\n_public.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\n_r50.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\n_signrf.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\n_signus.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\n_touch.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\n_vault.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\w_shnor.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="objs\w_signsh.obj"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles..."
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Debug"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Debug&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying $(InputPath) to CommonFiles/Release"
+						CommandLine="copy &quot;$(InputPath)&quot; ..\Release&#x0D;&#x0A;"
+					/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Src"
+			Filter="*.c"
+			>
+			<File
+				RelativePath="src\errno.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\my_strl.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\n_data.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\s_buflen.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\s_chbuf.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\s_check.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\s_chfile.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\s_chfilw.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\s_chfres.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\s_chres.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\s_cnot.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\s_crpriv.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\s_except.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\s_fnguid.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\s_fnstr.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\s_hash.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="1"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\s_klok.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\s_lnfile.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\s_lnot.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\s_putn.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\s_sgnfil.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\s_sgnmem.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\s_sifile.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\s_sign.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\s_spkey.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\s_strver.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\stuff\text2bin.c"
+				>
+				<FileConfiguration
+					Name="Debug With Debug Key|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Hdr"
+			Filter="*.h"
+			>
+			<File
+				RelativePath="avp_base.h"
+				>
+			</File>
+			<File
+				RelativePath="..\AVP_data.h"
+				>
+			</File>
+			<File
+				RelativePath="avp_defs.h"
+				>
+			</File>
+			<File
+				RelativePath="..\AVPPort.h"
+				>
+			</File>
+			<File
+				RelativePath="..\byteorder.h"
+				>
+			</File>
+			<File
+				RelativePath="ct_defs.h"
+				>
+			</File>
+			<File
+				RelativePath="ct_fio.h"
+				>
+			</File>
+			<File
+				RelativePath="ct_funcs.h"
+				>
+			</File>
+			<File
+				RelativePath="ct_strct.h"
+				>
+			</File>
+			<File
+				RelativePath="ct_sup_d.h"
+				>
+			</File>
+			<File
+				RelativePath="ct_supp.h"
+				>
+			</File>
+			<File
+				RelativePath="ct_typs.h"
+				>
+			</File>
+			<File
+				RelativePath="sign.h"
+				>
+			</File>
+			<File
+				RelativePath="sign_lib.h"
+				>
+			</File>
+			<File
+				RelativePath="signport.h"
+				>
+			</File>
+			<File
+				RelativePath="..\stuff\text2bin.h"
+				>
+			</File>
+		</Filter>
+		<File
+			RelativePath="WinSign.dep"
+			>
+		</File>
+		<File
+			RelativePath="WinSign.mak"
+			>
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

@@ -1,0 +1,128 @@
+<UpdateFiles 
+	UpdateDate="03042006 1751">
+	<UpdateSettings 
+		Name="Updater/update_date" 
+		Type="date" 
+		Value="03042006 1751" />
+	<FileDescription 
+		ComponentID="UnitTest"
+		UpdateType="base" 
+		RelativeSrvPath="index" 
+		Filename="updcfg1.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<FromCompVersion Version="5.0.99" />
+	</FileDescription>		
+	<FileDescription 
+		ComponentID="UnitTest"
+		UpdateType="base" 
+		RelativeSrvPath="index" 
+		Filename="updcfg2.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<FromCompVersion Version="5.0.101" />
+	</FileDescription>		
+	<FileDescription 
+		ComponentID="UnitTest"
+		UpdateType="base" 
+		RelativeSrvPath="index" 
+		Filename="updcfg3.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<FromCompVersion Version="5.0.100" />
+	</FileDescription>		
+	<FileDescription 
+		ComponentID="UnitTest1"
+		UpdateType="base" 
+		RelativeSrvPath="index" 
+		Filename="updcfg4.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<FromCompVersion Version="6.0.97" />
+			<FromCompVersion Version="6.0.98" />
+	</FileDescription>		
+	<FileDescription 
+		ComponentID="UnitTest1"
+		UpdateType="base" 
+		RelativeSrvPath="index" 
+		Filename="updcfg5.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<FromCompVersion Version="6.0.97" />
+			<FromCompVersion Version="6.0.101" />
+	</FileDescription>		
+	<FileDescription 
+		ComponentID="UnitTest1"
+		UpdateType="base" 
+		RelativeSrvPath="index" 
+		Filename="updcfg6.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<FromCompVersion Version="6.0.100" />
+	</FileDescription>		
+	<FileDescription 
+		ComponentID="UnitTest2"
+		UpdateType="base" 
+		RelativeSrvPath="index" 
+		Filename="updcfg7.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<FromCompVersion Version="5.0.99" />
+	</FileDescription>		
+	<FileDescription 
+		ComponentID="UnitTest2"
+		UpdateType="base" 
+		RelativeSrvPath="index" 
+		Filename="updcfg8.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<FromCompVersion Version="5.0.101" />
+	</FileDescription>		
+	<FileDescription 
+		ComponentID="UnitTest2"
+		UpdateType="base" 
+		RelativeSrvPath="index" 
+		Filename="updcfg9.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<FromCompVersion Version="5.0.100" />
+	</FileDescription>		
+	<FileDescription 
+		UpdateType="base" 
+		RelativeSrvPath="index" 
+		Filename="updcfg10.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<FromCompVersion Version="5.0.98" />
+			<FromCompVersion Version="5.0.99" />
+	</FileDescription>		
+	<FileDescription 
+		UpdateType="base" 
+		RelativeSrvPath="index" 
+		Filename="updcfg11.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<FromCompVersion Version="5.0.101" />
+	</FileDescription>
+	<FileDescription 
+		UpdateType="base" 
+		RelativeSrvPath="index" 
+		Filename="updcfg12.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<FromCompVersion Version="5.0.100" />
+	</FileDescription>
+</UpdateFiles>
+; 0XLSznpdI71fB300e7Uwj1FBW5dGFXCbsVvwCRIZcPFNF35jmYdA1DJf7L­­

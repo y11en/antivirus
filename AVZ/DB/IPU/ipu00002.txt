@@ -1,0 +1,7 @@
+// ***** Автозапуск *****
+begin
+ if RegKeyIntParamRead('HKEY_LOCAL_MACHINE', 'System\CurrentControlSet\Services\CDROM', 'AutoRun') = 1 then begin
+  AddToLog('>> $AVZ1198');
+  AddSyscheckMenu('$AVZ1199', 'RegKeyIntParamWrite(''HKEY_LOCAL_MACHINE'', ''System\CurrentControlSet\Services\CDROM'',''AutoRun'', 0);', 1); 
+ end; 
+end.

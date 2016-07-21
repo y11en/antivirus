@@ -1,0 +1,87 @@
+// --------------------------------------------------------------------------------
+// AVP Prague stamp begin( Interface header,  )
+// -------- Thursday,  09 October 2003,  13:19 --------
+// File Name   -- rpc_bl.idl
+// Copyright (c) Kaspersky Labs. 1996-2003.
+// -------------------------------------------
+// AVP Prague stamp end
+
+
+#include "rpc_declare.h"
+import "prague.h";
+import "i_taskmanager.h";
+
+typedef rpcOBJECT	rpcTASK;
+typedef rpcOBJECT	rpcAVS;
+typedef rpcOBJECT	rpcTASKMANAGER;
+typedef rpcOBJECT	rpcTMCLIENT;
+typedef rpcOBJECT	rpcTMHOST;
+
+// --------------------------------------------------------------------------------
+// AVP Prague stamp begin( Interface comment,  )
+// BL interface implementation
+// Short comments -- 
+// AVP Prague stamp end
+
+[ uuid (A024B2E9-2799-4575-86E3-E3E75E3632AD),
+  version(1.0),
+  pointer_default(unique)
+]
+interface rpc_taskmanager {
+	tERROR TaskManager_GetProfileInfo         ( rpcTASKMANAGER _this, [string,ptr] const tCHAR* profile_name, rpcSER(info) );		// -- ;
+	tERROR TaskManager_SetProfileInfo         ( rpcTASKMANAGER _this, [string,ptr] const tCHAR* profile_name, rpcSER(info), rpcOBJECT client, tDWORD delay );		// -- ;
+	tERROR TaskManager_EnableProfile          ( rpcTASKMANAGER _this, [string,ptr] const tCHAR* profile_name, tBOOL enabled, tBOOL recursive, rpcOBJECT client );		// -- ;
+	tERROR TaskManager_IsProfileEnabled       ( rpcTASKMANAGER _this, [string,ptr] const tCHAR* profile_name, [mout]tBOOL* enabled );		// -- ;
+	tERROR TaskManager_DeleteProfile          ( rpcTASKMANAGER _this, [string] const tCHAR* profile_name, rpcOBJECT client );		// -- ;
+	tERROR TaskManager_SetProfileState        ( rpcTASKMANAGER _this, [string,ptr] const tCHAR* profile_name, [in] tTaskRequestState state, rpcOBJECT client, tDWORD delay, [mout]tTaskId* task_id );		// -- ;
+	tERROR TaskManager_GetProfileReport       ( rpcTASKMANAGER _this, [string,ptr] const tCHAR* profile_name, [string,ptr] const tCHAR* report_id, rpcOBJECT client, tDWORD access, [mout]rpcOBJECT* report ); // -- ;
+	tERROR TaskManager_CloneProfile           ( rpcTASKMANAGER _this, [string,ptr] const tCHAR* profile_name, rpcSER(profile), tDWORD flags, rpcOBJECT client ); // -- clones profile;
+	tERROR TaskManager_GetSettingsByLevel     ( rpcTASKMANAGER _this, [string,ptr] const tCHAR* profile_name, tDWORD settings_level, tBOOL cumulative, rpcSER(settings) );		// -- ;
+	tERROR TaskManager_GetProfilePersistentStorage( rpcTASKMANAGER _this, [string,ptr] const tCHAR* profile_name, rpcOBJECT dad, [mout]rpcOBJECT* storage, tBOOL rw ); // -- ;
+
+	tERROR TaskManager_OpenTask               ( rpcTASKMANAGER _this, [mout]tTaskId* task_id, [string] const tCHAR* profile_name, tDWORD open_flags, rpcOBJECT client );		// -- ;
+	tERROR TaskManager_ReleaseTask            ( rpcTASKMANAGER _this, tTaskId task_id );		// -- ;
+	tERROR TaskManager_GetTaskState           ( rpcTASKMANAGER _this, tTaskId task_id, [mout] tDWORD* task_state );		// -- ;
+	tERROR TaskManager_SetTaskState           ( rpcTASKMANAGER _this, tTaskId task_id, tTaskRequestState requested_state, rpcOBJECT client, tDWORD delay );		// -- ;
+	tERROR TaskManager_GetTaskInfo            ( rpcTASKMANAGER _this, tTaskId task_id, rpcSER(info) );		// -- ;
+	tERROR TaskManager_SetTaskInfo            ( rpcTASKMANAGER _this, tTaskId task_id, rpcSER(info) );		// -- ;
+	tERROR TaskManager_GetTaskReport          ( rpcTASKMANAGER _this, tTaskId task_id, [string,ptr] const tCHAR* report_id, rpcOBJECT client, tDWORD access, [mout]rpcOBJECT* report ); // -- ;
+	tERROR TaskManager_GetTaskPersistentStorage( rpcTASKMANAGER _this, tTaskId task_id, rpcOBJECT dad, [mout]rpcOBJECT* storage, tBOOL rw ); // -- ;
+	
+	tERROR TaskManager_AskAction              ( rpcTASKMANAGER _this, tTaskId task_id, tDWORD action_id, rpcSER(params) );
+	tERROR TaskManager_AskTaskAction          ( rpcTASKMANAGER _this, tTaskId task_id, tDWORD action_id, rpcSER(params) );
+	tERROR TaskManager_GetService             ( rpcTASKMANAGER _this, tTaskId task_id, rpcOBJECT client, [string,ptr] const tCHAR* service_id, [mout]rpcOBJECT* service, tDWORD delay );
+	tERROR TaskManager_ReleaseService         ( rpcTASKMANAGER _this, tTaskId task_id, rpcOBJECT service );
+	tERROR TaskManager_RegisterRemoteTask     ( rpcTASKMANAGER _this, rpcOBJECT tmhost, rpcOBJECT task, rpcSER(info), [mout]rpcOBJECT* host );
+
+	tERROR TaskManager_RegisterClient         ( rpcTASKMANAGER _this, rpcOBJECT client );
+	tERROR TaskManager_UnregisterClient       ( rpcTASKMANAGER _this, rpcOBJECT client );
+	tERROR TaskManager_CleanupItems           ( rpcTASKMANAGER _this, tDWORD item_type, [ptr] const tDATETIME* time_stamp, rpcOBJECT client ) = 0; // -- clean old reports, quarantine and backup items by time point
+	tERROR TaskManager_AddLicKey              ( rpcTASKMANAGER _this, rpcOBJECT key_name ); // -- add license key;
+	tERROR TaskManager_Init                   ( rpcTASKMANAGER _this, tDWORD flags ); // -- ;
+	tERROR TaskManager_Exit                   ( rpcTASKMANAGER _this, tDWORD cause ); // -- close TM session;
+
+	tERROR TaskManager_AddRecordToTaskReport  ( rpcTASKMANAGER _this, tTaskId task_id, tDWORD msg_cls, rpcSER(record) ); // -- ;
+	tERROR TaskManager_GetTaskReportInfo      ( rpcTASKMANAGER _this, tDWORD flags, tDWORD index, rpcSER(info) );
+	tERROR TaskManager_DeleteTaskReports      ( rpcTASKMANAGER _this, tTaskId task_id, tBOOL force_delete_running_reports );		// -- ;
+}
+
+[ uuid (1CCA14CE-FFE1-4ab5-9EBE-B2BDFEBFF49A),
+  version(1.0),
+  pointer_default(unique)
+]
+interface rpc_tmclient {
+	tERROR TmClient_OpenRequest( rpcTMCLIENT _this, tDWORD request_id, tDWORD request_type, rpcSER(params) );
+	tERROR TmClient_ProcessRequest( rpcTMCLIENT _this, tDWORD request_id, tDWORD request_type, rpcSER(params) );
+	tERROR TmClient_CloseRequest( rpcTMCLIENT _this, tDWORD request_id );
+	tERROR TmClient_Exit( rpcTMCLIENT _this, tDWORD cause );
+}
+
+[ uuid (09205BB3-81F8-410c-B490-19C429C0B125),
+  version(1.0),
+  pointer_default(unique)
+]
+interface rpc_tmhost {
+	tERROR TmHost_CreateTask( rpcTMHOST _this, rpcOBJECT host, rpcSER(info), [mout]rpcOBJECT* task );
+	tERROR TmHost_DestroyTask( rpcTMHOST _this, rpcOBJECT task );
+}

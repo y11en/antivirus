@@ -1,0 +1,10 @@
+-1;AVS;Signatures de programmes malveillants;Signatures de virus et autres programmes malveillants
+-1;AH;Signatures d'attaques pour Anti-Hacker;Descriptions d'attaques de réseau typiques
+-1;AS;Signatures pour Anti-Spam;Exemples de messages non sollicités
+-1;ADB;Signatures pour antibannières;Masques d'URL pour Antibannière
+-1;AP;Signatures pour Anti-pishings;Liste de sites de phishing
+-1;WM;Signatures pour l'analyse en connu de l'antivirus Internet;Signatures pour l'analyse des diffusions
+-1;RM;Valeurs critiques de la base de registres système;Défense proactive: clés et valeurs critiques de la base de registre système
+-1;BB;Signatures des activités dangereuses;Signatures des activités dangereuses et suspectes pour l'Application Activity Analyser
+-1;KAV2006EXEC;Modules binaires pour la version 6.0;Modules binaires pour la version 6.0
+; 0XLSznpdI71fB300e7Uwj1aTGM2qMp0eb8wUGSKpq/IyHBzenkN4lPhb06��

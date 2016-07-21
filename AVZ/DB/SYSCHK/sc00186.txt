@@ -1,0 +1,4 @@
+// ***** AdvWare.DinaDesk *****
+begin
+ AddEvAlarmByCLSID('23B7A816-3647-49D2-9756-6F41CE8F9201','AdvWare.DinaDesk','DDM_CONTROL.OCX');
+end.

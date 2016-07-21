@@ -1,0 +1,4 @@
+// ***** Trojan-Downloader.Win32.Stardler.a *****
+begin       
+ AddEvAlarmByCLSID('F0BC061F-DAF9-4533-8011-53BCB4C10307',AScriptName,'InstallationsAssistent.ocx');
+end.

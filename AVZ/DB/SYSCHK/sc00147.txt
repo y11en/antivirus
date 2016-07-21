@@ -1,0 +1,4 @@
+// ***** Spy.MemoryMeter *****
+begin
+ AddEvAlarmByCLSID('707E6F76-9FFB-4920-A976-EA101271BC25','Spy.MemoryMeter (KAV: AdWare.BHO.Jeired)','jeired.dll,TinyInstaller.dll');
+end.

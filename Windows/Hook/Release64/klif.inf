@@ -1,0 +1,130 @@
+;;;
+;;; 
+;;;
+;;;
+;;; 
+;;;
+
+[Version]
+Signature   = "$Windows NT$"
+Class       = "ActivityMonitor"                         ;This is determined by the work this filter driver does
+ClassGuid   = {b86dff51-a31e-4bac-b3cf-e8cfe75c9fc2}
+Provider    = %KasperskyLab%
+DriverVer   = 01/01/2004,1.0.0.1
+CatalogFile = klif.cat
+DriverPackageType=FileSystemFilter
+
+[Manufacturer]
+%KLName%=KLIFModelSection,ntamd64
+
+[KLIFModelSection]
+%KLIFName%=DefaultInstall,KLIF
+
+[KLIFModelSection.ntamd64]
+%KLIFName%=DefaultInstall,KLIF
+
+[DestinationDirs]
+DefaultDestDir = 12
+klif.DriverFiles = 12                        ;%windir%\system32\drivers
+
+[SourceDisksNames]
+1 = %Disk1%
+
+[SourceDisksFiles]
+klif.sys = 1
+
+;;
+;; Default install sections
+;;
+
+[DefaultInstall]
+OptionDesc          = %KlifServiceDesc%
+CopyFiles           = Klif.DriverFiles
+
+[DefaultInstall.ntamd64]
+OptionDesc          = %KlifServiceDesc%
+CopyFiles           = Klif.DriverFiles
+
+[DefaultInstall.Services]
+AddService          = %KlifServiceName%,,Klif.Service
+
+[DefaultInstall.ntamd64.Services]
+AddService          = %KlifServiceName%,,Klif.Service
+
+;;
+;; Default uninstall sections
+;;
+
+[DefaultUninstall]
+DelFiles   = Klif.DriverFiles
+DelReg     = Klif.DelRegistry
+
+[DefaultUninstall.ntamd64]
+DelFiles   = Klif.DriverFiles
+DelReg     = Klif.DelRegistry
+
+[DefaultUninstall.Services]
+DelService = Klif
+
+[DefaultUninstall.ntamd64.Services]
+DelService = Klif
+
+;
+; Services Section
+;
+
+[Klif.Service]
+DisplayName      = %KlifServiceName%
+Description      = %KlifServiceDesc%
+ServiceBinary    = %12%\klif.sys                 ;%windir%\system32\drivers\klif.sys
+Dependencies     = %FltmgrServiceName%          ;FltMgr
+ServiceType      = 2                            ;SERVICE_FILE_SYSTEM_DRIVER
+StartType        = 1                            ;SERVICE_SYSTEM_START
+ErrorControl     = 1                            ;SERVICE_ERROR_NORMAL
+LoadOrderGroup   = "FSFilter Activity Monitor"
+AddReg           = Klif.AddRegistry
+
+;
+; Registry Modifications
+;
+
+[Klif.AddRegistry]
+HKR,%RegInstancesSubkeyName%,%RegDefaultInstanceValueName%,0x00000000,%DefaultInstance%
+HKR,%RegInstancesSubkeyName%"\"%Instance1.Name%,%RegAltitudeValueName%,0x00000000,%Instance1.Altitude%
+HKR,%RegInstancesSubkeyName%"\"%Instance1.Name%,%RegFlagsValueName%,0x00010001,%Instance1.Flags%
+
+[Klif.DelRegistry]
+;HKR,%RegInstancesSubkeyName%,%RegDefaultInstanceValueName%
+;HKR,%RegInstancesSubkeyName%"\"%Instance1.Name%,%RegAltitudeValueName%
+;HKR,%RegInstancesSubkeyName%"\"%Instance1.Name%,%RegFlagsValueName%
+
+;
+; Copy Files
+;
+
+[Klif.DriverFiles]
+klif.sys
+
+;;
+;; String Section
+;;
+
+[Strings]
+KasperskyLab       = "Kaspersky Lab"
+KlifServiceDesc    = "KLIF Minifilter"
+KlifServiceName    = "KLIF"
+KlifDebugLevel     = "DebugLevel"
+FltmgrServiceName                   = "FltMgr"
+RegInstancesSubkeyName              = "Instances"
+RegDefaultInstanceValueName         = "DefaultInstance"
+RegAltitudeValueName                = "Altitude"
+RegFlagsValueName                   = "Flags"
+Disk1                               = "Klif Source"
+KLName             = "KL"
+KLIFName           = "KLIF"
+
+;Instances specific information.
+DefaultInstance      = "KLIF"
+Instance1.Name       = "KLIF"
+Instance1.Altitude   = "320400"
+Instance1.Flags      = 0x0

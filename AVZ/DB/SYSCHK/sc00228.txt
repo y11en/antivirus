@@ -1,0 +1,6 @@
+// ***** Trojan-Clicker.Win32.Agent *****
+begin
+ AddEvAlarmByCLSID('54645654-2225-4455-44A1-9F4543D34545',AScriptName,'vbsys2.dll');
+ AddEvAlarmByName('%System32%\vbsys2.dll',AScriptName,'vbsys2.dll');
+ AddEvAlarmByName('%WinDir%\vbsys2.dll',AScriptName,'vbsys2.dll');
+end.

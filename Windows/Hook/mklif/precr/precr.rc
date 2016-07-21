@@ -1,0 +1,11 @@
+#include <windows.h>
+#include <ntverp.h>
+
+#define VER_FILETYPE                VFT_APP
+#define VER_FILESUBTYPE             VFT2_UNKNOWN
+#define VER_FILEDESCRIPTION_STR     "PreCreate control sample"
+#define VER_INTERNALNAME_STR        "precr.exe"
+#define VER_ORIGINALFILENAME_STR    "precr.exe"
+
+#include "common.ver"
+

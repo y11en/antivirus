@@ -1,0 +1,112 @@
+﻿[Global]
+$Scan_Objects           = "Поиск вирусов"
+$Scan_My_Computer       = "Полная проверка"
+$Scan_Critical_Areas    = "Быстрая проверка"
+$Scan_Rootkits          = "Поиск руткитов"
+$Scan_Vulnerabilities   = "Поиск уязвимостей"
+$Scan_Startup           = "Проверка объектов автозапуска"
+$QuickScan              = "Быстрая проверка"
+$NewAll                 = "новые" : "все"
+$Scan                   = "Проверка"
+AskResumeScan           = "Задача \"" + $ProfileName + "\" была прервана. Возобновить проверку?\nДля того чтобы начать сначала, нажмите \"Нет\"."
+AskUpdateBeforeFullScan = $BasesOutOfDate + " Обновить сейчас?"
+DeleteItemsConfirm      = "Вы уверены, что хотите удалить элемент(ы)?"
+ScanStopConfirm         = "Вы уверены, что хотите прервать проверку?"
+
+[ScanObjectName]
+#OBJECT_TYPE_MEMORY                 = "Системная память"
+#OBJECT_TYPE_STARTUP                = "Объекты автозапуска"
+#OBJECT_TYPE_MAIL                   = "Моя почта"
+#OBJECT_TYPE_ALL_DRIVES             = "Все диски"
+#OBJECT_TYPE_ALL_REMOVABLE_DRIVES   = "Все съемные носители"
+#OBJECT_TYPE_ALL_FIXED_DRIVES       = "Все жесткие диски"
+#OBJECT_TYPE_ALL_NETWORK_DRIVES     = "Все сетевые диски"
+#OBJECT_TYPE_BOOT_SECTORS           = "Загрузочные сектора"
+#OBJECT_TYPE_QUARANTINE             = "Карантин"
+#OBJECT_TYPE_SYSTEM_RESTORE         = "Резервные копии зараженных объектов"
+default                             = getDisplayName(ObjectType == #OBJECT_TYPE_MY_COMPUTER ? "%mycomputer%" : ScanObjects)
+
+[ScanGroup_Body_Active]
+NowScanningLable    = "Идет проверка:"
+Stop.Name           = "Стоп"
+
+[MainWindow.Scan]
+Home        = "Статус"
+Events      = "События"
+Statistics  = "Статистика"
+
+[MainWindow.Scan_Filters]
+AllItems    = "Без группировок"
+ByVerdict   = "Группировка по вердикту"
+
+[ScanDialog_EventLog]
+Time    = "Время"
+Object  = "Объект"
+Status  = "Статус"
+Reason  = "Причина"
+
+[ScanSettings.Optimization_FileTypesGroup]
+CheckNew = "Проверять только &новые и изменившиеся файлы"
+
+[ScanSettings_Tab]
+Scope       = "Область действия"
+Additional  = "Дополнительно"
+Account     = "Учетная запись"
+
+[ScanSettings_Tab_Scope]
+FileTypesGroup  = "Типы файлов"
+FileTypesGroup1 = "Оптимизация"
+
+[ScanSettings_Tab_Scope_FileTypesGroup]
+All         = "&Все файлы"
+Infectable  = "Потенциально опасные (анализ &содержимого)"
+Predefined  = "Потенциально опасные (по <a FileTypesExtension onclick(help(1063))>&типу файла</a>)"
+
+[ScanSettings_Tab_Scope_FileTypesGroup1]
+CheckNew = "Проверять только &новые и измененные файлы"
+
+[ScanSettings_Tab_Additional]
+Methods     = "Методы проверки"
+Tecnologies = "Технологии"
+
+[ScanSettings_Tab_Additional_Methods]
+Sign            = "Сигнатурный анализ"
+Heur            = "Эвристический &анализ"
+Vulnerability   = "&Сигнатурный поиск уязвимостей"
+Rootkit         = "Поиск &руткитов"
+RootkitDeep     = "&Углубленный анализ"
+
+[ScanSettings_Tab_Additional_Tecnologies]
+Swift   = "Технология i&Swift"
+Check   = "Технология &iChecker"
+
+[ScanGroup_Body_Inactive]
+Level.Name          = "Уровень безопасности:"
+OnDetection.Name    = "При обнаружении:"
+Scheduler.Name      = "Расписание:"
+Start.Name          = "Поиск"
+
+[ScanProgressWindow_Body_All_Info]
+Scanned.Name    = "Проверено:"
+Detected.Name   = "Обнаружено:"
+
+[ScanProgressWindow_Body_All]
+Details = "Подробности..."
+
+[ScanProgressWindow_Body_TopInfo_Active]
+Object.Name = "Идет проверка:"
+
+;------------- Password request Dialog -----------
+
+[PasswordRequestDialog]
+@       = "Введите пароль"
+SkipAll = "Пропустить"
+Skip    = "Отмена"
+Ok      = "OK"
+
+[PasswordRequestDialog_Body]
+Archive.Name    = "Архив:"
+Password.Name   = "Пароль:"
+
+[ScanProgressWindow]
+Footer.Cancel = f_IsStateActive(state) ? "Отмена" : "Закрыть"

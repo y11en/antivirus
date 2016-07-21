@@ -1,0 +1,4 @@
+// ***** Spy.WinAd *****
+begin
+ AddEvAlarmByCLSID('15AD6789-CDB4-47E1-A9DA-992EE8E6BAD6', AScriptName+' Install', '');
+end.

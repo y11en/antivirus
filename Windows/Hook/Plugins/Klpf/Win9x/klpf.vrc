@@ -1,0 +1,22 @@
+CompanyName	=	"Kaspersky Labs" 
+FileDescription =	"TDI interceptor"
+FileVersion	=	"Version 7.12.1.8" 
+InternalName	=	"KLPF"
+LegalCopyright	= 	"Copyright \251 2001, KL"
+OriginalFilename = 	"klpf.vxd"
+ProductName	=	"Kaspersky Anti-Hacker"
+ProductVersion	= 	"Version 7.12"
+Translation	=	0x409, 0x4E4
+
+// Binary fields
+
+dwFileVersionMS   = 0x0006000c //7.12
+dwFileVersionLS   = 0x00010008  //01.08
+dwProductVersionMS  = 0x0006000c //6.12
+dwProductVersionLS  = 0  
+dwFileFlagsMask   = 0
+dwFileFlags     = 0
+dwFileOS      = 0
+dwFileSubtype   = 0
+dwFileDateMS    = 0
+dwFileDateLS    = 0

@@ -1,0 +1,61 @@
+﻿[Global]
+$OnlineSecurity     = "Безопасный Интернет"
+$ids                = "Защита от сетевых атак"
+$antidial           = "Защита от скрытых телефонных звонков"
+$antiphishing       = "Защита от фишинга"
+ErrNoPhone.caption  = "Некорректный номер телефона"
+ErrNoPhone          = "Пожалуйста, укажите корректный номер"
+
+[MainWindow.OnlineSecurity_WorkArea_Home]
+Enable                          = "Включить Безопасный Интернет"
+Tasks.Header                    = "Задачи"
+OnlineSecurity.Group2.Header    = "Обнаружено"
+
+[MainWindow.OnlineSecurity.ids.Body]
+BlockedHosts.Name   = "Заблокированые компьютеры:"
+BlockedHosts.Val    = "Всего " + size(BannedHosts)
+
+[IDSSettings]
+@ = "Заблокированные компьютеры"
+
+[IDSSettings_Body]
+Ban         = "&Блокировать атакующий компьютер на"
+BanLabel    = "мин"
+
+[MainWindow.OnlineSecurity.antiphishing.Body]
+Descr = "Обнаружение поддельных сайтов"
+
+[AntidialSettings]
+@           = "Настройка: Доверенные номера"
+Describe    = "Укажите телефонные номера, скрытый дозвон на которые разрешен. Можно использовать маски * и ?"
+
+[AntidialSettings_RuleEdit]
+@ = "Телефонный номер"
+
+[MainWindow.OnlineSecurity]
+Home        = "Статус"
+Events      = "События"
+Statistics  = "Статистика"
+
+[MainWindow.OnlineSecurity.Tasks.Body_AvzPrivacyCleanerWizard]
+Icon    = "Очистка следов активности"
+Desc    = "Run this wizard after detection and removal of malicious programs from your computer and your system still runs abnormal."
+
+[MainWindow.OnlineSecurity.Tasks.Body_VKeyboard]
+Icon    = "Виртуальная клавиатура"
+Desc    = "Virtual keybboard is a tool for ptotection passwords and any other confidential data from keyloggers, including hardware keyloggers."
+
+[MainWindow.OnlineSecurity.antidial.Body]
+UserNumbers.Name    = "Доверенные номера:"
+UserNumbers.Val     = "Всего " + size(vAllowPhoneNumbersList) + " (Used " + size(vAllowPhoneNumbersList, "Enabled == 1") + ")"
+
+[VirtualKeyboard]
+@ = "Виртуальная клавиатура"
+
+[MainWindow.OnlineSecurity_WorkArea_SysPerf_Legend]
+LegendText1 = "Сетевые атаки"
+LegendText2 = "Фишинг"
+LegendText3 = "Скрытые звонки"
+
+[MainWindow.OnlineSecurity_WorkArea]
+Home.Group2.Header = "Производительность системы"

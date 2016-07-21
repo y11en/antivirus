@@ -1,0 +1,4 @@
+LIB
+TARGET mimeparser
+
+CXXSRC MIMEParser.cpp

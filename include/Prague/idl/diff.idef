@@ -1,0 +1,56 @@
+forward interface Diff;
+typedef Diff* hDIFF;
+
+
+
+
+[
+  mnemonic(IID_DIFF)
+  id(47000)
+  c_type_name(hDIFF)
+]
+interface Diff {
+
+  // ------------------------------------
+    const tDWORD cFORMAT_BDIF = 0;
+    const tDWORD cFORMAT_ZIP = 1;
+    const tDWORD cFORMAT_FULL = 2;
+    const tDWORD cFORMAT_XMLDIFF = 4;
+
+
+  // ------------------------------------
+    [ warning(true) ]  error warnDIFT_MATCHED; // diff chain terminator matched
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Interface version")
+      id(130)
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      comment_ex("Interface comment")
+      id(131)
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+    [ id(4096) ]  prop tDWORD pgSUPPORTED_FORMATS;
+
+
+  // ------------------------------------
+    method tERROR Transform(
+      hIO hBase,
+      hIO hDiff,
+      hIO hResult
+    );
+    method tERROR MakeDiffName(
+      hIO hBase,
+      hSTRING sRemoteBaseName,
+      hSTRING sDiffName
+    );
+    method tERROR GetXmlDiffExtension( hSTRING sXmlDiffExtension );
+    method tERROR GetDefaultDiffFolder( hSTRING sFolder );
+
+}
+

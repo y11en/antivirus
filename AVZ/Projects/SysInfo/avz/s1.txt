@@ -1,0 +1,24 @@
+begin
+ // Использовать карантин
+ SetupAVZ('UseQuarantine=Y'); 
+ // Запуск сканирования
+ RunScan;
+ // Что-то подозрительное ??
+ if true or (GetSuspCount > 0) or (GetDetectedCount > 0) then begin
+  // Выполнение исследования системы  
+  ExecuteSysCheck(GetAVZDirectory + 'syscheck.htm');
+  // Сохранение архива с файлами карантина
+  CreateQurantineArchive(GetAVZDirectory+'quarantine.zip');
+  // Отправка письма
+  SendEmailMessage('172.20.111.5', 'AVZ', 'zaitsev@smolen.ru',
+                 'AVZ email alert',
+                 'Report from computer "' + GetComputerName + '" '+#13 +
+                 'SuspCount = ' + InttoStr(GetSuspCount) + #13 +
+                 'DetectedCount = ' + InttoStr(GetDetectedCount) ,
+                 false, '', '',
+                 GetAVZDirectory + 'syscheck.zip', 
+                 GetAVZDirectory + 'quarantine.zip',
+                 ''
+                 );
+ end;
+end.

@@ -1,0 +1,4 @@
+// ***** AdvWare.OrbitView *****
+begin
+ AddEvAlarmByCLSID('0FDA4D2B-7975-405d-8D7C-F5E2247EAE80', AScriptName, 'localsplnet.dll');
+end.

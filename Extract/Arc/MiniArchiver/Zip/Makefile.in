@@ -1,0 +1,23 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@
+
+Name = minizip
+Plugin = $(Name).@PLUGIN_EXT@
+Metafile = @srcdir@/$(Name).@METAFILE_EXT@
+Targets = $(Plugin)
+
+Sources = \
+	miniarchiver.c \
+	plugin_minizip.c \
+	zip.c 
+
+Libraries = \
+	hashutil
+
+# unix section
+
+VersionScript = @abs_top_srcdir@/unix/prague_plugin.ver
+
+include @abs_top_builddir@/@OS@/Rules

@@ -1,0 +1,3 @@
+# try download file from internet by BITS service
+
+BITS_RESUME_JOB NOT_TO_CLEAR

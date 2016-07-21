@@ -1,0 +1,4 @@
+// ***** AdvWare.ReSearch *****
+begin
+ AddEvAlarmByCLSID('832BEBED-C3DA-4534-A2C2-B2FFF220C820',AScriptName,'replaceSearch.DLL');
+end.

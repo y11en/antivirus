@@ -1,0 +1,4 @@
+// ***** Backdoor.Win32.Small.ls *****
+begin
+ AddEvAlarmByCLSID('D7FFD784-5276-42D1-887B-00267870A4C7',AScriptName,'svshost.dll');
+end.

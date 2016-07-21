@@ -1,0 +1,88 @@
+<UpdateFiles 
+	UpdateDate="03042006 1751">
+	<UpdateSettings 
+		Name="Updater/update_date" 
+		Type="date" 
+		Value="03042006 1751" />
+	<FileDescription 
+		UpdateType="code" 
+		UpdateObligation="optional"
+		RelativeSrvPath="index" 
+		Filename="updcfg1.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629" />
+	<FileDescription 
+		UpdateType="base" 
+		UpdateObligation="optional"
+		RelativeSrvPath="index" 
+		Filename="updcfg2.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629" />
+	<FileDescription 
+		UpdateType="patch" 
+		UpdateObligation="optional"
+		RelativeSrvPath="index" 
+		Filename="updcfg3.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629" />
+	<FileDescription 
+		UpdateType="desc" 
+		UpdateObligation="optional"
+		RelativeSrvPath="index" 
+		Filename="updcfg4.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629" />
+	<FileDescription 
+		UpdateType="blst" 
+		UpdateObligation="optional"
+		RelativeSrvPath="index" 
+		Filename="updcfg5.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629" />
+	<FileDescription 
+		UpdateType="code" 
+		UpdateObligation="mandatory"
+		RelativeSrvPath="index" 
+		Filename="updcfg7.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629" />
+	<FileDescription 
+		UpdateType="base" 
+		UpdateObligation="mandatory"
+		RelativeSrvPath="index" 
+		Filename="updcfg8.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629" />
+	<FileDescription 
+		UpdateType="patch" 
+		UpdateObligation="mandatory"
+		RelativeSrvPath="index" 
+		Filename="updcfg9.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629" />
+	<FileDescription 
+		UpdateType="desc" 
+		UpdateObligation="mandatory"
+		RelativeSrvPath="index" 
+		Filename="updcfg10.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629" />
+	<FileDescription 
+		UpdateType="blst" 
+		UpdateObligation="mandatory"
+		RelativeSrvPath="index" 
+		Filename="updcfg11.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629" />
+</UpdateFiles>
+; 0XLSznpdI71fB300e7Uwj1OZfhzkwCCVN0CM5uAnlJkS+c2yww2K9JTSPe­­

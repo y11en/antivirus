@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8,00"
+	Name="_Spamtst"
+	ProjectGUID="{3B5F6DAB-E76C-41CB-9DE8-3DB75CFA3A99}"
+	SccProjectName="Perforce Project"
+	SccLocalPath="."
+	SccProvider="MSSCCI:Perforce SCM"
+	Keyword="MakeFileProj"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="..\..\..\..\out_$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\ppp\MailCommon\Filters\Spamtest\$(ProjectName)"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="devenv /build &quot;Debug|Win32&quot; ..\spamtest8.sln"
+				ReBuildCommandLine="devenv /rebuild &quot;Debug|Win32&quot; ..\spamtest8.sln"
+				CleanCommandLine="devenv /clean &quot;Debug|Win32&quot; ..\spamtest8.sln"
+				Output="_Spamtst.ppl"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="..\..\..\..\out_$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\ppp\MailCommon\Filters\Spamtest\$(ProjectName)"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="devenv /build &quot;Debug|x64&quot; ..\spamtest8.sln"
+				ReBuildCommandLine="devenv /rebuild &quot;Debug|x64&quot; ..\spamtest8.sln"
+				CleanCommandLine="devenv /clean &quot;Debug|x64&quot; ..\spamtest8.sln"
+				Output="_Spamtst.ppl"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="..\..\..\..\out_$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\ppp\MailCommon\Filters\Spamtest\$(ProjectName)"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="devenv /build &quot;Release|Win32&quot; ..\spamtest8.sln"
+				ReBuildCommandLine="devenv /rebuild &quot;Release|Win32&quot; ..\spamtest8.sln"
+				CleanCommandLine="devenv /clean &quot;Release|Win32&quot; ..\spamtest8.sln"
+				Output="_Spamtst.ppl"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="..\..\..\..\out_$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\ppp\MailCommon\Filters\Spamtest\$(ProjectName)"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="devenv /build &quot;Release|x64&quot; ..\spamtest8.sln"
+				ReBuildCommandLine="devenv /rebuild &quot;Release|x64&quot; ..\spamtest8.sln"
+				CleanCommandLine="devenv /clean &quot;Release|x64&quot; ..\spamtest8.sln"
+				Output="_Spamtst.ppl"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<File
+			RelativePath="_Spamtst.mak"
+			>
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

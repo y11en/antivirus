@@ -1,0 +1,131 @@
+;;;
+;;; 
+;;;
+;;;
+;;; 
+;;;
+
+[Version]
+Signature   = "$Windows NT$"
+Class       = "ActivityMonitor"                         ;This is determined by the work this filter driver does
+ClassGuid   = {b86dff51-a31e-4bac-b3cf-e8cfe75c9fc2}
+Provider    = %KasperskyLab%
+DriverVer   = 01/09/2007,8.0.0.1
+CatalogFile = klbg.cat
+DriverPackageType=FileSystemFilter
+
+[Manufacturer]
+%KLName%=KLBGModelSection,ntamd64
+
+[KLBGModelSection]
+%KLBGName%=DefaultInstall,KLBG
+
+[KLBGModelSection.ntamd64]
+%KLBGName%=DefaultInstall,KLBG
+
+[DestinationDirs]
+DefaultDestDir = 12
+klbg.DriverFiles = 12                        ;%windir%\system32\drivers
+
+[SourceDisksNames]
+1 = %Disk1%
+
+[SourceDisksFiles]
+klbg.sys = 1
+
+;;
+;; Default install sections
+;;
+
+[DefaultInstall]
+OptionDesc          = %KlBgServiceDesc%
+CopyFiles           = klbg.DriverFiles
+
+[DefaultInstall.ntamd64]
+OptionDesc          = %KlBgServiceDesc%
+CopyFiles           = klbg.DriverFiles
+
+[DefaultInstall.Services]
+AddService          = %KlBgServiceName%,,klbg.Service
+
+[DefaultInstall.ntamd64.Services]
+AddService          = %KlBgServiceName%,,klbg.Service
+
+;;
+;; Default uninstall sections
+;;
+
+[DefaultUninstall]
+DelFiles   = klbg.DriverFiles
+DelReg     = klbg.DelRegistry
+
+[DefaultUninstall.ntamd64]
+DelFiles   = klbg.DriverFiles
+DelReg     = klbg.DelRegistry
+
+[DefaultUninstall.Services]
+DelService = klbg
+
+[DefaultUninstall.ntamd64.Services]
+DelService = klbg
+
+;
+; Services Section
+;
+
+[klbg.Service]
+DisplayName      = %KlBgDisplayName%
+Description      = %KlBgServiceDesc%
+ServiceBinary    = %12%\klbg.sys                 ;%windir%\system32\drivers\klbg.sys
+Dependencies     = %FltmgrServiceName%          ;FltMgr
+ServiceType      = 2                            ;SERVICE_FILE_SYSTEM_DRIVER
+StartType        = 4                            ;SERVICE_DISABLED
+ErrorControl     = 1                            ;SERVICE_ERROR_NORMAL
+LoadOrderGroup   = "FSFilter Activity Monitor"
+AddReg           = klbg.AddRegistry
+
+;
+; Registry Modifications
+;
+
+[klbg.AddRegistry]
+HKR,%RegInstancesSubkeyName%,%RegDefaultInstanceValueName%,0x00000000,%DefaultInstance%
+HKR,%RegInstancesSubkeyName%"\"%Instance1.Name%,%RegAltitudeValueName%,0x00000000,%Instance1.Altitude%
+HKR,%RegInstancesSubkeyName%"\"%Instance1.Name%,%RegFlagsValueName%,0x00010001,%Instance1.Flags%
+
+[klbg.DelRegistry]
+;HKR,%RegInstancesSubkeyName%,%RegDefaultInstanceValueName%
+;HKR,%RegInstancesSubkeyName%"\"%Instance1.Name%,%RegAltitudeValueName%
+;HKR,%RegInstancesSubkeyName%"\"%Instance1.Name%,%RegFlagsValueName%
+
+;
+; Copy Files
+;
+
+[klbg.DriverFiles]
+klbg.sys
+
+;;
+;; String Section
+;;
+
+[Strings]
+KlBgDisplayName    = "Kaspersky Lab Boot Guard Driver"
+KasperskyLab       = "Kaspersky Lab"
+KlBgServiceDesc    = "Kaspersky Lab Boot Guard"
+KlBgServiceName    = "KLBG"
+KlBgDebugLevel     = "DebugLevel"
+FltmgrServiceName                   = "FltMgr"
+RegInstancesSubkeyName              = "Instances"
+RegDefaultInstanceValueName         = "DefaultInstance"
+RegAltitudeValueName                = "Altitude"
+RegFlagsValueName                   = "Flags"
+Disk1                               = "Klbg Source"
+KLName             = "KL"
+KLBGName           = "KLBG"
+
+;Instances specific information.
+DefaultInstance      = "KLBG"
+Instance1.Name       = "KLBG"
+Instance1.Altitude   = "320300" 	; todo: request altitude in microsoft
+Instance1.Flags      = 0x0

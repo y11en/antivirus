@@ -1,0 +1,4 @@
+// ***** AdvWare.Serch *****
+begin
+ AddEvAlarmByCLSID('C7EDAB2E-D7F9-11D8-BA48-C79B0C409D70','AdvWare.Serch.a','searchdll.dll');
+end.

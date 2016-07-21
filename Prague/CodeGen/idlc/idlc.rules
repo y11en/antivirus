@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualStudioToolFile
+	Name="idlc"
+	Version="8,00"
+	>
+	<Rules>
+		<CustomBuildRule
+			Name="idef"
+			DisplayName="idef (idl compiler)"
+			CommandLine="idlc.exe --idl &quot;$(InputPath)&quot; [includes] [iface] [plugin] [src] [outdir]"
+			Outputs="$(InputName).cpp;$(InputName).h;$(InputName).metadata"
+			FileExtensions="*.idl;*.idef"
+			ExecutionDescription="prague idl compiling..."
+			SupportsFileBatching="true"
+			>
+			<Properties>
+				<StringProperty
+					Name="includes"
+					DisplayName="include dirs"
+					Description="include dirs delimited by semicolon"
+					Switch="--inc &quot;[value]&quot;"
+					Delimited="true"
+					Inheritable="true"
+				/>
+				<StringProperty
+					Name="iface"
+					DisplayName="iface dir"
+					Description="interface header file output directory"
+					Switch="--iface &quot;[value]&quot;"
+					Delimited="true"
+					Inheritable="true"
+				/>
+				<StringProperty
+					Name="plugin"
+					DisplayName="plugin dir"
+					Description="plugin header file output directory"
+					Switch="--plugin &quot;[value]&quot;"
+					Delimited="true"
+					Inheritable="true"
+				/>
+				<StringProperty
+					Name="src"
+					DisplayName="source dir"
+					Description="source file output directory"
+					Switch="--src &quot;[value]&quot;"
+					Delimited="true"
+					Inheritable="true"
+				/>
+				<StringProperty
+					Name="outdir"
+					DisplayName="output dir"
+					Description="common output directory, used if some of &quot;iface dir&quot;, &quot;plugin dir&quot; or &quot;source dir&quot; options are not defined"
+					Switch="--out &quot;[value]&quot;"
+					Delimited="true"
+					Inheritable="true"
+				/>
+			</Properties>
+		</CustomBuildRule>
+		<CustomBuildRule
+			Name="pdef"
+			DisplayName="pdef (idl compiler)"
+			CommandLine="idlc.exe --idl &quot;$(InputPath)&quot; [includes] [iface] [plugin] [src] [outdir]"
+			Outputs="$(InputName).cpp;$(InputName).h;$(InputName).metadata"
+			FileExtensions="*.pdef"
+			ExecutionDescription="prague idl compiling..."
+			SupportsFileBatching="true"
+			>
+			<Properties>
+				<StringProperty
+					Name="includes"
+					DisplayName="include dirs"
+					Description="include dirs delimited by semicolon"
+					Switch="--inc &quot;[value]&quot;"
+					Delimited="true"
+					Inheritable="true"
+				/>
+				<StringProperty
+					Name="iface"
+					DisplayName="iface dir"
+					Description="interface header file output directory"
+					Switch="--iface &quot;[value]&quot;"
+					Delimited="true"
+					Inheritable="true"
+				/>
+				<StringProperty
+					Name="plugin"
+					DisplayName="plugin dir"
+					Description="plugin header file output directory"
+					Switch="--plugin &quot;[value]&quot;"
+					Delimited="true"
+					Inheritable="true"
+				/>
+				<StringProperty
+					Name="src"
+					DisplayName="source dir"
+					Description="source file output directory"
+					Switch="--src &quot;[value]&quot;"
+					Delimited="true"
+					Inheritable="true"
+				/>
+				<StringProperty
+					Name="outdir"
+					DisplayName="output dir"
+					Description="common output directory, used if some of &quot;iface dir&quot;, &quot;plugin dir&quot; or &quot;source dir&quot; options are not defined"
+					Switch="--out &quot;[value]&quot;"
+					Delimited="true"
+					Inheritable="true"
+				/>
+			</Properties>
+		</CustomBuildRule>
+	</Rules>
+</VisualStudioToolFile>

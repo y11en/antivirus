@@ -1,0 +1,4 @@
+// ***** TrojanDownloader.Small *****
+begin
+ AddEvAlarmByCLSID('FDE3577A-6254-181C-4E11-339E4F746BD3',AScriptName,'');
+end.

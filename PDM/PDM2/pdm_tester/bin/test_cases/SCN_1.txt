@@ -1,0 +1,5 @@
+# create process from network folder
+
+# CP_SELF_FROM_NF NOT_TO_CLEAR
+
+CREATE_PROCESS \\martynenko\common\test\@SELF_NAME@ NOT_TO_CLEAR

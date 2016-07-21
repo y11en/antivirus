@@ -1,0 +1,15 @@
+Adding signatures from file "wtree.sig".
+Scanning file "wtree.sig"
+   0/10; off=0x0000009C; id=3
+   1/10; off=0x0000009D; id=3
+   2/10; off=0x0000009E; id=3
+   3/10; off=0x0000009F; id=3
+   4/10; off=0x000000A0; id=3
+   5/10; off=0x00000159; id=4
+   6/10; off=0x0000015A; id=4
+   7/10; off=0x0000015B; id=4
+   8/10; off=0x0000015C; id=4
+   9/10; off=0x0000015D; id=4
+Total :
+id=3(5)
+id=4(5)

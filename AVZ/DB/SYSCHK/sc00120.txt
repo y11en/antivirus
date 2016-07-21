@@ -1,0 +1,4 @@
+// ***** Spy.BDE *****
+begin
+ AddEvAlarmByCLSID('51958169-D5E3-11D1-AA42-0000E842E40A','Spy.BDE (Brilliant Digital)','bde*.dll');
+end.

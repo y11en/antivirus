@@ -1,0 +1,5 @@
+// ***** Adware.SRNG *****
+begin
+ AddEvAlarmByCLSID('C5067F59-9D0D-11D2-AA90-000000000000',AScriptName,'');
+ AddEvAlarmByCLSID('F08555B0-9CC3-11D2-AA8E-000000000000',AScriptName,'');
+end.

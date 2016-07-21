@@ -1,0 +1,70 @@
+                                 Fast Script 1.9
+              for Delphi 4/5/6/7/2005/2006, C++Builder 4/5/6, Kylix 1/2/3
+
+                  SINGLE USER SOFTWARE LICENSE AND LIMITED WARRANTY
+
+The FastScript is distributed as try-before-you-buy product. This means:
+
+All copyrights to FastScript are exclusively owned by the author - Fast Reports Inc. Fast Script is protected by copyright laws. At all times Fast Reports Inc. retains full title to the software. Subject to your acceptance of and accordance with the terms and conditions stated in this agreement, you shall be granted a single-user software license. Any previous agreement with Fast Reports Inc. is superseded by this agreement.
+
+Anyone may use trial version of this software as long as you want. You can try trial version of Fast Script, that works with nag window "Fast Script - unregistered". Full version of FastScript shipped without nag message with full source code. To use full version of FastScript, you MUST register.
+
+The FastScript unregistered trial version, may be freely distributed, with exceptions noted below, provided the distribution package is not modified. No person or company may charge a fee for the distribution of FastScript without written permission from the copyright holder. The FastScript unregistered trial version may not be bundled or distributed with any other package without written permission of the copyright holder.
+
+Kinds of register is listed in README.TXT.
+
+REGISTER THIS SOFTWARE LICENSE GIVES YOU THE RIGHT TO:
+
+1. Install and use the Software for the sole purposes of designing, developing, testing, and deploying application programs which you create.  You may install a copy of the Software on a computer and freely move the Software from one computer to another, provided that you are the only individual using the Software.  If you are an entity, you must designate one individual within your organization ("Named User") to have the right to use the Software. 
+
+2.  Make one copy of the Software for backup or archival purposes or copy the Software to a single permanent storage medium provided you keep the original solely for backup or archival purposes.
+
+3. Technical support and notifications on those new versions FastScript, which can upgrade with no additional payment. 
+
+4. The registered FastScript software may not be rented or leased, but may be permanently transferred, if the person receiving it agrees to terms of this license. If the software is an update, the transfer must include the update and all previous versions. 
+
+5. It is not provided any additional license deductions, except for cost of the registration, connected with creation and distribution of applications. The registered users, can useFastScript as "Royalty free". It means, that they freely may distribute the programs using FastScript if it does not contradict conditions of this license agreement. Any sanctions to that on from the author is not required.
+
+ENGAGING IN ANY OF THE ACTIVITIES LISTED BELOW WILL TERMINATE THE SOFTWARE LICENSE.  IN ADDITION TO SOFTWARE LICENSE TERMINATION, FASTREPORT SOFTWARE MAY PURSUE CRIMINAL, CIVIL, OR ANY OTHER AVAILABLE REMEDIES.
+
+1. Distribution of any files contained in this software package, other than the runtime packages explicitly listed above, including but not limited to .PAS, .DFM, .DCU files, .DCP files, and design-time packages. 
+
+2. Modification, decompilation, disassembly, reverse engineering or translation of the Software.
+
+3. Removal of proprietary notices, labels or marks from the Software or Software Documentation.
+
+4. Creation of an application that does not differ materially from the Software.
+
+5. Creation of an application (whether it be freeware, shareware or a commercial product) which competes directly or indirectly with the Software.  
+
+
+AGREEMENT PERTAINING TO THE RELEASE OF SOURCE CODE by Fast Reports Inc. to Recipient:
+
+USE OF SOURCE CODE
+
+Recipient will not utilize the source for the creation of  software  (whether it be freeware, shareware or a commercial product) which competes directly or indirectly with FastScript.  In addition, Recipient will not disclose the source itself, nor the implementations discovered therein, to any party involved in the creation of software which competes directly or indirectly with FastScript.
+
+DISTRIBUTION OF SOURCE CODE
+Recipient will not distribute the source.  Specifically this includes all .dcu, .dfm, and .pas files which Fast Reports Inc. has provided.
+
+CHANGES TO SOURCE CODE
+Fast Reports Inc. reserves the right to change any part of the source in future versions of the product. These changes may include the removal of classes, properties and methods or the creation of new classes, properties and methods.
+
+TECHNICAL SUPPORT FOR SOURCE CODE
+Fast Reports Inc. will not provide support for changes Recipient makes to the source.  Recipient assumes full responsibility for supporting any code or application which results from such modification.  Recipient will not hold Fast Reports Inc. liable, directly or indirectly, for any changes made to the source, including changes which Recipient has made based on advice or suggestions provided by Fast Reports Inc.
+
+SOURCE IS PROVIDED AS IS
+FAST SCRIPT IS DISTRIBUTED "AS IS". NO WARRANTY OF ANY KIND IS EXPRESSED OR IMPLIED. YOU USE AT YOUR OWN RISK. FAST REPORTS Inc. WILL NOT BE LIABLE FOR DATA LOSS, DAMAGES, LOSS OF PROFITS OR ANY OTHER KIND OF LOSS WHILE USING OR MISUSING THIS SOFTWARE
+
+LIMITED WARRANTY/LIMITATION OF RESPONSIBILITY:
+
+Fast Reports Inc. may not bear other responsibility, except for stated in this agreement.
+
+In no event will Fast Reports Inc. be liable to you for any damages, including without limitation lost profits or revenues, loss of data, business interruption loss, recovery or substitution costs, or claims by third parties, or other indirect incidental or consequential damages, arising out of the use or inability to use the software, even if Fast Reports Inc. has been advised of the possibility of such damages.  In no case shall Fast Reports Inc.' liability exceed the amount of the license fee paid by you for the software.
+
+    All rights not expressly granted here are reserved by Fast Reports Inc.
+
+    Thank you for using Fast Script!
+
+Alexander Tzyganenko
+(CTO of Fast Reports Inc.)

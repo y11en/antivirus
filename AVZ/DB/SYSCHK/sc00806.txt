@@ -1,0 +1,12 @@
+// ***** Проверка диспетчера задач *****
+var
+ i : integer;
+ S : string;
+begin
+ i := RegKeyIntParamRead('HKEY_CURRENT_USER', 'Software\Microsoft\Windows\CurrentVersion\Policies\System', 'DisableTaskMgr');
+ if (i > 0) then 
+  AddToLog('>>> $AVZ0556');
+ S := Trim(RegKeyStrParamRead('HKEY_LOCAL_MACHINE', 'SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon', 'Taskman'));
+ if S <> '' then 
+  AddToLog('>>> $AVZ0558 "'+S+'"');
+end.

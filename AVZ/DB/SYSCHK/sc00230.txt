@@ -1,0 +1,4 @@
+// ***** Trojan.BiSpy *****
+begin
+ AddEvAlarmByCLSID('00000097-7C67-4BA6-8B42-05128941688A', 'Trojan.BiSpy', 'speeryox.dll');
+end.

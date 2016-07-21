@@ -1,0 +1,8 @@
+; SrcGen.def : Declares the module parameters.
+
+LIBRARY      "wmihlpr.ppl"
+
+EXPORTS
+	wmih_Install
+	wmih_UpdateStatus
+	wmih_Uninstall

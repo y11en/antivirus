@@ -1,0 +1,4 @@
+// ***** AdvWare.SpeedDelivery *****
+begin
+ AddEvAlarmByCLSID('A7798D6C-C6B5-4F26-9363-F7CDBBFFA607','AdvWare.SpeedDelivery.a','vxpspeeddelivery.dll');
+end.

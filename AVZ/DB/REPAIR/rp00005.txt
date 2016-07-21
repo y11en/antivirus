@@ -1,0 +1,26 @@
+// ***** ¬осстановление настроек рабочего стола *****
+begin
+ BackupRegKey('HKEY_CURRENT_USER', 'Control Panel\Desktop', 'Desktop');
+ BackupRegKey('HKEY_CURRENT_USER', 'Software\Microsoft\Internet Explorer\Desktop', 'Desktop');
+ RegKeyStrParamWrite('HKEY_CURRENT_USER', 'Control Panel\Desktop', 'ConvertedWallpaper', '');
+ RegKeyStrParamWrite('HKEY_CURRENT_USER', 'Control Panel\Desktop', 'OriginalWallpaper', '');
+ RegKeyStrParamWrite('HKEY_CURRENT_USER', 'Control Panel\Desktop', 'Wallpaper', '');
+ RegKeyStrParamWrite('HKEY_CURRENT_USER', 'Control Panel\Desktop', 'MenuShowDelay', '400');
+ RegKeyStrParamWrite('HKEY_CURRENT_USER', 'Software\Microsoft\Internet Explorer\Desktop\General', 'Wallpaper', '');
+ RegKeyStrParamWrite('HKEY_CURRENT_USER', 'Software\Microsoft\Internet Explorer\Desktop\General', 'TileWallpaper', '0');
+ RegKeyStrParamWrite('HKEY_CURRENT_USER', 'Software\Microsoft\Internet Explorer\Desktop\General', 'BackUpWallpaper', '');
+ RegKeyStrParamWrite('HKEY_CURRENT_USER', 'Software\Microsoft\Internet Explorer\Desktop\General', 'WallpaperStyle', '2');
+ RegKeyStrParamWrite('HKEY_CURRENT_USER', 'Software\Microsoft\Internet Explorer\Desktop\SafeMode\General', 'Wallpaper', '%SystemRoot%\Web\SafeMode.htt');
+ RegKeyParamDel('HKEY_CURRENT_USER', 'Software\Microsoft\Windows\CurrentVersion\Policies\System', 'Wallpaper');
+ RegKeyParamDel('HKEY_CURRENT_USER', 'Software\Microsoft\Windows\CurrentVersion\Policies\System', 'NoDispBackgroundPage');	
+ RegKeyParamDel('HKEY_CURRENT_USER', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'NoViewContextMenu');
+ RegKeyParamDel('HKEY_CURRENT_USER', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'ForceActiveDesktopOn');
+ RegKeyParamDel('HKEY_CURRENT_USER', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'ClassicShell');
+ RegKeyParamDel('HKEY_CURRENT_USER', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'NoActiveDesktopChanges');
+ RegKeyDel('HKEY_CURRENT_USER', 'Software\Microsoft\Internet Explorer\Desktop\Components');
+ RegKeyCreate('HKEY_CURRENT_USER', 'Software\Microsoft\Internet Explorer\Desktop\Components');
+ RegKeyParamDel('HKEY_LOCAL_MACHINE', 'Software\Microsoft\Windows\CurrentVersion\Policies\System', 'Wallpaper');
+ RegKeyParamDel('HKEY_LOCAL_MACHINE', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'NoViewContextMenu');
+ RegKeyParamDel('HKEY_LOCAL_MACHINE', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'ForceActiveDesktopOn');
+ RegKeyParamDel('HKEY_LOCAL_MACHINE', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'ClassicShell');
+end.

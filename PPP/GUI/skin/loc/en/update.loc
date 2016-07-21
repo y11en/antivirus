@@ -1,0 +1,147 @@
+﻿[Global]
+$Updater                                = "Update"
+$Rollback                               = "Rollback"
+$BasesStatus                            = ((global.UpdateState & #eBasesCorrupted) ? "databases are corrupted" : ((global.UpdateState & #eBasesNotValid) ? "databases are partially corrupted" : ((global.UpdateState & #eBasesOutOfDate) ? "databases are out of date" : ((global.UpdateState & #eBasesNotActual) ? "databases are obsolete" : ((global.UpdateState & #eUpdateNeedReboot) ? "reboot is required" : "databases are up to date")))))
+$UpdateSourceKL                         = "Kaspersky Lab's update servers"
+$UpdateSourceAK                         = "Kaspersky Administration Kit"
+$UpdateSourceMainAdministrationServer   = "Administration Server"
+$UpdateSourceNetworkAgent               = "Network Agent"
+UpdateStopConfirm                       = "Are you sure you want to stop update?"
+NoUpdateSourcesSelected.caption         = "No update sources selected"
+NoUpdateSourcesSelected                 = "Please select at least one update source"
+
+[BasesStatus_Corrupted]
+1
+default
+
+[MainWindow.Update]
+Home        = "Status"
+Events      = "Events"
+Statistics  = "Statistics"
+
+[MainWindow.Update_Filters]
+AllItems = "Do not group"
+
+[MainWindow.Update_Updater]
+BasesDate.Name      = "Databases date:"
+RecordsCount.Name   = "Databases records count:"
+Status.Name         = "Status:"
+Settings.Name       = "Settings:"
+Scheduler.Name      = "Schedule:"
+RollbackDescr       = "In case corrupted updates have been downloaded, you can rollback all changes to the state, corresponding to the previous update."
+
+[UpdaterSettings]
+@ = "Updater settings"
+
+[UpdaterSettings_Tab]
+Source      = "Source"
+Additional  = "Additional"
+Account     = "Account"
+
+[UpdaterSettings_Tab_Source]
+Proxy  = "Proxy server..."
+Region = "Region"
+
+[UpdaterSettings_Tab_Source_List]
+Name = "Label"
+
+[UpdaterSettings_Tab_Source_Region]
+RegionAuto      = "Auto detect"
+RegionManual    = "Select from list"
+
+[UpdaterSettings_Tab_Additional]
+DuringUpdate    = "During update"
+AfterUpdate     = "After update"
+
+[UpdaterSettings_Tab_Additional_DuringUpdate]
+SignAndModules  = "Update program modules and signatures"
+SignOnly        = "Update signatures only"
+
+[UpdaterSettings_Tab_Additional_AfterUpdate]
+Quarantine  = "Rescan quarantined files"
+UseRetr     = "Copy updates to folder"
+
+[s_UpdaterError]
+#errUPDATER_NO_ERROR                            = TaskID == eTASK_UPDATER : type == "updater") ? "Update successfully" : "Rollback successfully"
+#errTASK_ALREADY_RUNNING                        = "Unable to run two tasks at the same time"
+#errUPDATER_FailedToCreateFolder                = "Cannot create folder"
+#errUPDATER_NotEnoughPermissions                = "Not enough rights for file operation"
+#errUPDATER_NoSuchFileOrDirectory               = "File or folder not found"
+#errUPDATER_NO_SOURCE_FILE                      = "Update files are corrupted"
+#errUPDATER_URLS_EXHAUSTED                      = "No update sources are specified"
+#errUPDATER_NOTHING_TO_UPDATE                   = "Database are up-to-date"
+#errUPDATER_NotAllComponentsAreUpdated          = "Not all components were updated"
+#errUPDATER_ComponentRejectedByProduct          = "Error verifying loaded component"
+#errUPDATER_WRONG_KEY                           = "Key verification failed"
+#errUPDATER_ADMKIT_FAILURE                      = "Error retrieving update settings"
+#errUPDATER_INVALID_SIGNATURE                   = "Update files are corrupted"
+#errUPDATER_GenericFileOperationFailure         = "File operations failed"
+#errUPDATER_CANCELLED                           = "Operation cancelled by the user"
+#errUPDATER_CURRENT_VERSION_NEWER               = "Database are up-to-date"
+#errUPDATER_NO_RESERVED_UPDATE_DESCRIPTION      = "Files necessary to perform rollback operation are absent"
+#errUPDATER_UPDATE_DESCRIPTION_DAMAGED          = "Index file corrupted or does not exist"
+#errUPDATER_INTERNAL_ERROR                      = "Error in update component"
+#errUPDATER_DOWNLOAD_ERROR                      = "A network failure occurred during downloading updates"
+#errUPDATER_REMOTE_HOST_CLOSED_CONNECTION       = "Connection terminated"
+#errUPDATER_DOWNLOAD_TIMEOUT                    = "Network operation timeout expired"
+#errUPDATER_FTP_AUTH_ERROR                      = "FTP server authentication error"
+#errUPDATER_PROXY_AUTH_ERROR                    = "Proxy server authentication error"
+#errUPDATER_CANT_RESOLVE_NAME                   = "The updates source cannot be found"
+#errUPDATER_CANT_CONNECT_ADM_SERVER             = "Failed to connect to Administration Server"
+#errUPDATER_RETRANSLATION_SUCCESSFUL            = "Update distribution task completed successfully"
+#errUPDATER_NO_OPERATION_REQUESTED              = "Error in update component"
+#errUPDATER_UpdateSuccessfulRetranslationFailed = "Update completed successfully, update distribution failed"
+#errUPDATER_CANT_CONNECT_INET_SERVER            = "Error connecting to update source"
+#errUPDATER_SERVER_AUTH_ERROR                   = "Update source authentication error " + object(ObjectID)
+#errUPDATER_BASE_CHECK_FAILED                   = "Error checking the update files"
+#errUPDATER_CANT_CONNECT_TO_PROXY               = "Error connecting to proxy server"
+#errUPDATER_CANT_RESOLVE_PROXY                  = "Proxy server is not found"
+#errUPDATER_AK_WrongReceiverId                  = "Error registering on Network Agent"
+#errUPDATER_AK_ServerBusy                       = "Administration Server is busy and cannot handle request now"
+#errUPDATER_AK_ConnectionError                  = "Connection failed, physical error"
+#errUPDATER_AK_ConnectionNagentError            = "Connection failed, physical error"
+#errUPDATER_AK_ConnectionServerError            = "Connection failed, physical error"
+#errUPDATER_AK_CannotConnectToServer            = "Connection failed, unknown error"
+#errUPDATER_AK_WrongArguments                   = "Failed to receive file, invalid transport argument"
+#errUPDATER_AK_ErrorInOperation                 = "Failed to receive file"
+#errUPDATER_AK_UnknownError                     = "Transport error"
+#errUPDATER_SOURCE_SELECTED                     = "Update source is selected"
+#errUPDATER_ADMIN_KIT_SOURCE_SELECTED           = "Update source is selected"
+#errUPDATER_PROXY_SERVER_SELECTED               = "Proxy server is selected"
+default                                         = s_SystemError(@)
+
+[MainWindow.Update_WorkArea_Events_Report]
+Time    = "Time"
+Event   = "Event"
+Object  = "Object"
+row     = "Label"
+
+[MainWindow.Update_WorkArea_Home]
+Speed.Header = "Download speed (Kb/s)"
+
+[ProxyAuthDialog]
+@           = "Proxy server: authentication"
+Login.Name  = "User name"
+Pswd.Name   = "Password"
+Save        = "Save authentication settings"
+
+[UpdaterProgressWindow_Body_All_Info]
+UpdateSize.Name     = "Update size:"
+TransferRate.Name   = "Transfer rate:"
+TransferRate.Val    = filesize(Speed*1024, "FileSizeTypes") + "/s"
+
+[UpdaterProgressWindow_Body_TopInfo_Active]
+Downloading.Name    = "Downloading:"
+Location.Name       = "Location:"
+
+[UpdaterProgressWindow]
+Footer.Cancel = f_IsStateActive(state) ? "&Cancel" : "&Close"
+
+[MainWindow.Update_Updater_DoUpdate]
+Start.Name  = "Update now!"
+Stop.Name   = "Stop"
+
+[MainWindow.Update_Updater_DoRollback]
+Start.Name  = "Rollback"
+Stop.Name   = "Stop"
+

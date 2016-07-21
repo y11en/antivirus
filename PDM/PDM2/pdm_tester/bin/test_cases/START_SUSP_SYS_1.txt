@@ -1,0 +1,5 @@
+# CP_SUSP_EXPLORER NOT_TO_CLEAR
+
+CREATE_PROCESS_SUSP @WINDIR@\explorer.exe NOT_TO_CLEAR
+
+#etalon_verdict 100 StartSystemFileSuspended

@@ -1,0 +1,8 @@
+// ***** Spy.180Solutions *****
+begin
+ AddEvAlarmByCLSID('6EB5B540-1E74-4D91-A7F0-5B758D333702',AScriptName,'nCaseInstaller.dll');
+ AddEvAlarmByCLSID('2BC43670-C0BD-4794-BB11-F60F3E001DC5',AScriptName,'');
+ AddEvAlarmByCLSID('B10031B2-F184-4803-9A88-D239C0641D70',AScriptName,'');
+ AddEvAlarmByCLSID('99410CDE-6F16-42CE-9D49-3807F78F0287',AScriptName,'ClientAX.dll');
+ AddEvAlarmByCLSID('21B4ACC4-8874-4AEC-AEAC-F567A249B4D4',AScriptName,'saishook.dll');	
+end.

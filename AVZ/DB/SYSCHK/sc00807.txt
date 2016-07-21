@@ -1,0 +1,18 @@
+// ***** Проверка ключа Shell/open *****
+procedure CheckShellKey(AKey : string);
+var
+ S : string;
+begin
+ S := Trim(RegKeyStrParamRead('HKEY_CLASSES_ROOT', AKey + '\shell\open\command', ''));
+ if S = '' then exit;
+ if (S = '"%1" %*') or (S = '%1 %*') or (S = '%1') or (UpperCase(S) = '"%1" /S') then exit;
+ AddToLog('$AVZ1195 "'+AKey+'": "'+S+'"');
+end;
+
+begin
+ CheckShellKey('exefile');
+ CheckShellKey('comfile');
+ CheckShellKey('cplfile');
+ CheckShellKey('batfile');
+ CheckShellKey('scrfile');
+end.

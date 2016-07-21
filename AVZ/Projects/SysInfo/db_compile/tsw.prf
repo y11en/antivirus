@@ -1,0 +1,4 @@
+DBFile=tsw.avz
+DBSrcPath=..\..\..\KIS8_Scripts\Troubleshooting
+LogFile=tsw.log
+RusLangFile=..\..\..\..\PPP\GUI\skin\loc\ru\avzkrnl.loc  

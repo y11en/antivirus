@@ -1,0 +1,3 @@
+# set window hook to explorer process
+
+SH_TO_EXPLORER NOT_TO_CLEAR

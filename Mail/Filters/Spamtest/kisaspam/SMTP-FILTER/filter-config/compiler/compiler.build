@@ -1,0 +1,31 @@
+EXE
+TARGET ap-mflt-compiler
+
+CXXSRC parse.cpp
+CXXSRC compiler.cpp
+CXXSRC samples.cpp
+CXXSRC ../CFBuilder/cf-messages.cpp
+
+LIB cfdata
+LIB filter
+LIB lingproc 
+LIB smtp-filter
+LIB sf-config
+LIB xmlfiles
+LIB smtp-paths
+LIB expatutils
+LIB zutils 
+LIB patricia
+LIB adc
+LIB logger
+
+LIB_BDB1
+LIB_RESOLV
+
+LIB expat
+LIB z 
+LIB m
+
+LIB pcre
+
+LIB dnscheck

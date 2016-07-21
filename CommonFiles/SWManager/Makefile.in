@@ -1,0 +1,30 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@ 
+
+Name = swmanager
+Archive = $(Name).@ARCHIVE_EXT@
+Targets = $(Archive)
+
+Sources = \
+	Checker.c \
+	CheckerR.c \
+	CheckerW.c \
+	Encrypt.c \
+	EncryptR.c \
+	EncryptW.c \
+	Manager.c \
+	ManagerR.c \
+	ManagerW.c \
+	Packer.c \
+	PackerR.c \
+	PackerW.c \
+	RawData.c \
+	RawDataR.c \
+	RawDataW.c
+
+InstallIncludes = \
+	@PACKAGE_NAME@/Swm.h
+
+include @abs_top_builddir@/unix/Rules

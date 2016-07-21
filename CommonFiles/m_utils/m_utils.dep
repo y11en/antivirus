@@ -1,0 +1,71 @@
+# Microsoft Developer Studio Generated Dependency File, included by m_utils.mak
+
+!IF  "$(CFG)" == "m_utils - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "m_utils - Win32 Debug"
+
+!ELSEIF  "$(CFG)" == "m_utils - Win32 DebugDll"
+
+!ELSEIF  "$(CFG)" == "m_utils - Win32 ReleaseDll"
+
+!ENDIF 
+
+.\m_memcmp.c : \
+	{$(INCLUDE)}"AVPPort.h"\
+	{$(INCLUDE)}"m_utils.h"\
+	
+
+.\m_memcpy.c : \
+	{$(INCLUDE)}"AVPPort.h"\
+	{$(INCLUDE)}"m_utils.h"\
+	
+
+.\m_memmov.c : \
+	{$(INCLUDE)}"AVPPort.h"\
+	{$(INCLUDE)}"m_utils.h"\
+	
+
+.\m_memset.c : \
+	{$(INCLUDE)}"AVPPort.h"\
+	{$(INCLUDE)}"m_utils.h"\
+	
+
+.\m_strcat.c : \
+	{$(INCLUDE)}"AVPPort.h"\
+	{$(INCLUDE)}"m_utils.h"\
+	
+
+.\m_strcmp.c : \
+	{$(INCLUDE)}"AVPPort.h"\
+	{$(INCLUDE)}"m_utils.h"\
+	
+
+.\m_strcpy.c : \
+	{$(INCLUDE)}"AVPPort.h"\
+	{$(INCLUDE)}"m_utils.h"\
+	
+
+.\m_strlen.c : \
+	{$(INCLUDE)}"AVPPort.h"\
+	{$(INCLUDE)}"m_utils.h"\
+	
+
+.\m_wcscat.c : \
+	{$(INCLUDE)}"AVPPort.h"\
+	{$(INCLUDE)}"m_utils.h"\
+	
+
+.\m_wcscmp.c : \
+	{$(INCLUDE)}"AVPPort.h"\
+	{$(INCLUDE)}"m_utils.h"\
+	
+
+.\m_wcscpy.c : \
+	{$(INCLUDE)}"AVPPort.h"\
+	{$(INCLUDE)}"m_utils.h"\
+	
+
+.\m_wcslen.c : \
+	{$(INCLUDE)}"AVPPort.h"\
+	{$(INCLUDE)}"m_utils.h"\
+	

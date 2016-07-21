@@ -1,0 +1,67 @@
+# Microsoft Developer Studio Generated Dependency File, included by ipc.mak
+
+..\..\gcommon\DateTime.cpp : \
+	"..\..\gcommon\DateTime.h"\
+	
+
+..\..\gcommon\HandlesTable.cpp : \
+	"..\..\gcommon\HandlesTable.h"\
+	
+
+.\ipc.cpp : \
+	"..\..\gcommon\CommonHeader.h"\
+	"..\..\gcommon\HandlesTable.h"\
+	"..\..\gcommon\sa.h"\
+	".\ipc.h"\
+	".\ipc32.h"\
+	".\ipc_def.h"\
+	".\ipc_err.h"\
+	".\ipcBuffer.h"\
+	".\ipcConnection.h"\
+	".\ipcServer.h"\
+	".\version.h"\
+	
+
+.\ipc32.cpp : \
+	"..\..\gcommon\CommonHeader.h"\
+	"..\..\gcommon\HandlesTable.h"\
+	"..\..\gcommon\sa.h"\
+	".\ipc32.h"\
+	".\ipc_def.h"\
+	".\ipc_err.h"\
+	".\ipcBuffer.h"\
+	".\ipcConnection.h"\
+	".\ipcServer.h"\
+	".\version.h"\
+	
+
+.\ipcBuffer.cpp : \
+	".\ipcBuffer.h"\
+	
+
+.\ipcConnection.cpp : \
+	"..\..\gcommon\DateTime.h"\
+	".\ipc_def.h"\
+	".\ipc_err.h"\
+	".\ipcBuffer.h"\
+	".\ipcConnection.h"\
+	
+
+.\ipcInfo.cpp : \
+	".\ipcBuffer.h"\
+	".\ipcInfo.h"\
+	
+
+.\ipcServer.cpp : \
+	"..\..\gcommon\DateTime.h"\
+	".\ipc_def.h"\
+	".\ipc_err.h"\
+	".\ipcBuffer.h"\
+	".\ipcConnection.h"\
+	".\ipcInfo.h"\
+	".\ipcServer.h"\
+	
+
+..\..\gcommon\sa.cpp : \
+	"..\..\gcommon\sa.h"\
+	

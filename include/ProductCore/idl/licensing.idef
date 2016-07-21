@@ -1,0 +1,206 @@
+forward interface Licensing;
+typedef Licensing* hLICENSING;
+
+
+
+
+[
+  mnemonic(IID_LICENSING)
+  id(38009)
+  c_type_name(hLICENSING)
+]
+interface Licensing {
+
+  // ------------------------------------
+    [ warning(true) ]  error warnKEY_ALREADY_IN_USE; // Key is already in use
+    error errKEY_FILE_NOT_FOUND; // Key is not found
+    error errNOT_SIGNED; // Digital sign is not found or corrupted
+    error errSECURE_DATA_CORRUPT; // Licensing secure data is corrupted
+    error errKEY_CORRUPT; // Key is corrupted
+    error errKEY_INST_EXP; // Key installation period is expired
+    error errNO_ACTIVE_KEY; // No active key
+    error errKEY_IS_INVALID; // Key is invalid
+    error errWRITE_SECURE_DATA; // Licensing secure data saving failed
+    error errREAD_SECURE_DATA; // Licensing secure data reading failed
+    error errIO_ERROR; // I/O error
+    error errCANNOT_FIND_BASES; // Cannot find antivirus bases
+    error errCANT_REG_MORE_KEYS; // Both active and reserve key already registered
+    error errNOT_INITIALIZED; // Licensing library is not initialized
+    error errINVALID_BASES; // Antivirus bases corrupted or manually updated
+    error errDATA_CORRUPTED; // Data corrupted
+    error errCANT_REG_EXPIRED_RESERVE_KEY; // Expired license key cannot be registered as reserve key
+    error errSYS_ERROR; // System error
+    error errBLACKLIST_CORRUPTED; // Black list corrupted
+    error errSIGN_DOESNT_CONFIRM_SIGNATURE; // File sign does not confirm given signature
+    error errCANT_REG_BETA_KEY_FOR_RELEASE; // Cannot register beta-key for commercial product release
+    error errCANT_REG_NON_BETA_KEY_FOR_BETA; // Only beta-key can be registered for beta product release
+    error errKEY_WRONG_FOR_PRODUCT; // This license key is not for this product
+    error errKEY_IS_BLACKLISTED; // License key is blocked by Kaspersky Lab
+    error errTRIAL_ALREADY_USED; // Trial key has been already used on this computer
+    error errKEY_IS_CORRUPTED; // License key is corrupted
+    error errDIGITAL_SIGN_CORRUPTED; // Digital signature not found, corrupted, or does not match the Kaspersky Lab digital signature
+    error errCANNOT_REG_EXPIRED_NON_COMMERCIAL_KEY; // Cannot register expired non-commercial key
+    [ warning(true) ]  error warnKEY_DOESNT_PROVIDE_SUPPORT; // License key has expired. It provides you full featured product functionality
+    error errKEY_CREATION_DATE_INVALID; // License key creattion date is invalid. Check system date settings.
+    error errCANNOT_INSTALL_SECOND_TRIAL; // Cannot register trial key while another trial key is in use
+    error errBLACKLIST_CORRUPTED_OR_NOT_FOUND; // Blacklist file is corrupted or not found
+    error errUPDATE_DESC_CORRUPTED_OR_NOT_FOUND; // Update description is corrupted or not found
+    error errLICENSE_INFO_WRONG_FOR_PRODUCT; // Internal license info wrong for this product
+    error errCANNOT_REG_NONVALID_RESERVE_KEY; // Cannot register non-valid reserve key
+    error errONLINE_FILLDATA; // ошибка заполнения формы данными
+    error errONLINE_SENDING; // ошибка посыла http-запроса
+    error errONLINE_BADCONTENT; // в запросе неверные ключевые данные
+    error errONLINE_GETSTATUS; // невозможно получить статус ответа
+    error errONLINE_SAVETEMP; // ошибка при сохранении временного файла
+    error errONLINE_SAVEDST; // ошибка при сохранении целевого файла
+    error errONLINE_BADLICENSE; // лицензия не действительна
+    error errONLINE_CORRUPTLIC; // получить не испорченную лицензию не удалось
+    error errONLINE_CLNT_SYNTHAX; // ошибка синтаксиса в запросе
+    error errONLINE_CLNT_UNAUTH; // необходима авторизация
+    error errONLINE_CLNT_FORBID; // доступ к ресурсу запрещен
+    error errONLINE_CLNT_NOTFND; // ресурс не найден
+    error errONLINE_CLNT_BADMETH; // метод запрещен
+    error errONLINE_CLNT_NONACPT; // не найдено информации требуемого формата
+    error errONLINE_CLNT_PRXAUTHRQ; // требуется прокси-авторизация
+    error errONLINE_CLNT_TIMOUT; // таймаут ожидания запроса
+    error errONLINE_CLNT_STCONFL; // конфликт - необходима доп. информация
+    error errONLINE_CLNT_GONE; // ресурс удален с сервера насовсем
+    error errONLINE_CLNT_LENREQ; // требуется длина содержимого
+    error errONLINE_CLNT_PREFAIL; // вычисление предусловия дало ложь
+    error errONLINE_CLNT_TOOLARGE; // запрос слишком велик
+    error errONLINE_CLNT_URILONG; // URI слишком длинный
+    error errONLINE_CLNT_UNSMEDIA; // не поддерживаемый формат данных
+    error errONLINE_CLNT_OTHER; // неспециф. ошибка на стороне клиента
+    error errONLINE_SERV_INT; // внутренняя ошибка сервера
+    error errONLINE_SERV_NSUP; // функциональность не поддерживается
+    error errONLINE_SERV_BADGATE; // некорректный ответ от шлюза
+    error errONLINE_SERV_UNVL; // ресурс временно недоступен
+    error errONLINE_SERV_GATIMO; // таймаут ожидания ответа от шлюза
+    error errONLINE_SERV_PROT; // протокол не поддерживается сервером
+    error errONLINE_SERV_OTHER; // неспециф. ошибка на стороне сервера
+    error errONLINE_HTTP_OTHER; // неспециф. ошибка http
+    error errONLINE_BAD_RID; // некорректный идентификатор ресурса
+    error errONLINE_BAD_KEY; // неверные данные в поле \"ключ\"
+    error errONLINE_BAD_URL; // некорректный URL
+    error errONLINE_BAD_FOLDER; // некорректный целевой каталог
+    error errONLINE_MEM_ALLOC; // ошибка выделения памяти
+    error errONLINE_CONV_ANSI; // ошибка конвертации параметров в ansi строку (url, folder, agent)
+    error errONLINE_THR_CREATE; // ошибка создания рабочего потока
+    error errONLINE_THR_STARTED; // рабочий поток уже запущен
+    error errONLINE_THR_STOPPED; // рабочий поток не запущен
+    error errONLINE_KEYNOTFOUND; // лицензионный ключ не найден на сервере активации
+    error errONLINE_BLOCKED; // лицензионный ключи или код активации заблокирован
+    error errONLINE_SRVERROR; // внутренняя ошибка сервера активации
+    error errONLINE_MALFORMEDREQ; // недостаточно данных в запросе на акитвацию
+    error errONLINE_WRONGCUSTORPWD; // неверный ID пользователя или пароль
+    error errONLINE_WRONACTGCODE; // неверный код активации
+    error errKEY_INST_FUTURE_EXP;
+    error errONLINE_BADLOCALDATE;
+    error errTRIAL_PERIOD_OVER; // триальный период истек
+    error errPERIOD_EXPIRED; // период активации истек
+    error errNO_MORE_ATTEMPTS; // количество попыток активации исчерпано
+    error errUNKNOWN_OLA_SERVER_ERROR; // Cервер активации вернул неизвестную ошибку
+    error errKEY_CONFLICTS_WITH_COMMERCIAL;
+    error errOLA_INTERNAL_SERVER_ERROR; // Internal server error
+    error errOLA_BLOCKED; // ключ или код активации заблокирован
+    error errOLA_ACT_CODE_OR_EDITION_ID_REQUIRED; // в запросе вообще нет кода активации или тиража
+    error errOLA_WRONG_CUSTOMER_ID_OR_PASSWORD; // Wrong CustomerID or password (ошибка авторизации)
+    error errOLA_WRONG_ACTIVATION_CODE; // Wrong Activation Code (неправильный код - нет такого)
+    error errOLA_ACTIVATION_CODE_REQUIRED; // Activation Code required (прислали тираж, к которому обязательно требуется код активации)
+    error errOLA_ACTIVATION_PERIOD_EXPIRED; // Activation period expired (установлено ограничение по времени на повторные активации)
+    error errOLA_QUANTITY_OF_ATTEMPTS_EXHAUSTED; // установлено ограничение на кол-во повторных активаций одного кода
+    error errOLA_NO_CONNECTION_WITH_SERVER;
+    error errOLA_WRONG_APPLICATION_ID; // для такого APP_ID нет ключей, включая совместимые
+    error errOLA_SERVER_NOT_AVAILABLE; // Сервер не доступен (возможно нет доступа в Интренет)
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Interface version")
+      id(130)
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      comment_ex("Interface comment")
+      id(131)
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+    [ id(4096) ]  prop hOBJECT pgSTORAGE;
+    [ id(4097) ]  prop tWSTRING pgBASES_PATH;
+    [ id(4098) ]  prop hOBJECT pgTM; // task manager object
+
+
+  // ------------------------------------
+    method tERROR GetActiveKeyInfo( cSerializable* pResult );
+    method tERROR GetInstalledKeysInfo( cSerializable* pResult );
+    method tERROR RevokeActiveKey();
+    method tERROR RevokeKey( cSerializable* pKeySerialNumber );
+    method tERROR CheckKeyFile(
+      tWSTRING szKeyFileName,
+      tDWORD dwKeyAddMode,
+      cSerializable* pResult
+    );
+    method tERROR CheckActiveKey( cSerializable* pResult );
+    method tERROR AddKey( tWSTRING szFileName, tDWORD dwKeyAddMode );
+    method tERROR AddOnlineKey(
+      cSerializable* pUserData,
+      tDWORD dwKeyAddMode,
+      cSerializable* pResult,
+      tDWORD* pdwOLASrvErr // Ошибка сервера активации
+    );
+    method tERROR StopOnlineLoadKey();
+    method tERROR ClearTrialLimitDate();
+    method tERROR GetInfo( cSerializable* pInfo );
+    method tERROR AddOLAKey( // Initiate activation of a key using OLA library
+      cSerializable* pUserData,
+      tDWORD dwKeyAddMode,
+      hSTRING pResForm,
+      cSerializable* pResult,
+      tDWORD* pdwOLAErrCode, // OLA error code in case of errUNKNOWN_OLA_SERVER_ERROR
+      tDWORD* pdwOLAErrCodeSpecific // OLA specific error code in case of errUNKNOWN_OLA_SERVER_ERROR
+    );
+    method tERROR SubmitOLAForm(
+      cSerializable* pForm,
+      tDWORD dwKeyAddMode,
+      hSTRING pResForm,
+      cSerializable* pResult,
+      tDWORD* pdwOLAErrCode, // OLA error code in case of errUNKNOWN_OLA_SERVER_ERROR
+      tDWORD* pdwOLAErrCodeSpecific // OLA specific error code in case of errUNKNOWN_OLA_SERVER_ERROR
+    );
+    method tERROR StopOLA();
+    method tERROR GetCustomerCredentials( hSTRING strCustomerId, hSTRING strCustomerPassword );
+
+
+  // ------------------------------------
+    [ id(503482484) ]
+    message_cls pmc_ONLINE_LICENSING {
+      [ id(4096) ]  message pm_INITING; // инициализация соединения
+      [ id(4097) ]  message pm_POSTING_DATA; // отсыл данных на сервер
+      [ id(4098) ]  message pm_SAVING_TMP; // сохранение лицензии во временном каталоге
+      [ id(4099) ]  message pm_VERIFYING; // проверка лицензии
+      [ id(4100) ]  message pm_RETRYING; // повторная попытка получения лицензии
+      [ id(4101) ]  message pm_SAVING_DST; // сохранение лицензии в целевом каталоге
+      [ id(4102) ]  message pm_POSTING_STAT; // отсылка статуса завершения операции на сервер
+      [ id(4103) ]  message pm_DOWNLOAD_COMPLETED; // задача закачки завершена
+      [ id(4104) ]  message pm_CONNECTING; // соединение с сервером
+      [ id(4105) ]  message pm_RESOLVING; // разрешение IP адреса
+      [ id(4106) ]  message pm_SENDING; // отсыл сообщения
+      [ id(4107) ]  message pm_SENT; // сообщение послано
+      [ id(4108) ]  message pm_RECEIVING; // получение ответа сервера
+      [ id(4109) ]  message pm_RECEIVED; // ответа сервера получен
+      [ id(4110) ]  message pm_REDIRECTING; // перенаправление
+      [ id(4111) ]  message pm_COMPLETED; // задача завершена
+      [ id(4112) ]  message pm_GET_PASS_FOR_PROXY;
+    }
+    [ id(1629806945) ]
+    message_cls pmc_LICENSING {
+      [ id(4096) ]  message pm_DATA_CHANGED;
+      [ id(1629806977) ]  message pm_LICENSE_REPLACE; // request to replace license storage, par_buff=new storage data
+      [ id(4097) ]  message pm_CUSTOMER_ID_OBTAINED; // получен CustomerID
+      [ id(1629806978) ]  message pm_GET_PRODUCT_IDENTIFIER;
+    }
+
+}
+

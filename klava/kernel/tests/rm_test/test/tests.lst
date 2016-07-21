@@ -1,0 +1,94 @@
+// =============================================================
+// IO regions
+// =============================================================
+
+// register IO regions
+test001 -rio 0 1 0  0 100 0x1 -a
+test002 -rio 0 1 0  0 100 0x1 -rio 0 2   0   0 100 0x1 -a
+test003 -rio 0 1 0  0 100 0x1 -rio 0 2 251 100   0 0x1 -a
+test004 -rio 0 1 0  0 100 0x1 -rio 0 2 151   0 100 0x1 -a
+test005 -rio 0 1 0  0 100 0x1 -rio 0 2  49   0 100 0x1 -a
+test006 -rio 0 1 0  0 100 0x1 -rio 0 2 149 100   0 0x1 -a
+test007 -rio 0 1 0 50  50 0x1 -a
+test008 -rio 0 1 0 50  50 0x1 -rio 0 2 251  50  50 0x1 -a
+test009 -rio 0 1 0 50  50 0x1 -rio 0 2 251  50  50 0x1 -rio 0 3 125  50  50 0x1 -a
+test010 -rio 0 1 0  0 100 0x1 -rio 0 2  49   0 100 0x1 -rio 0 3 149   0 100 0x1 -a
+
+// register IO regions, map regions
+test011 -d data1 -rio 0 1 0  0 100 0x0001 -a  -m 0 1 0x1 -a
+test012 -d data1 -rio 0 1 0  0 100 0x0001 -rio 0 2   0   0 100 0x1 -a -m 0 1 0x1 -a -m 0 2 0x0 -a
+test013 -d data1 -rio 0 1 0  0 100 0x0001 -rio 0 2 251 100   0 0x1 -a -m 0 1 0x1 -a -m 0 2 0x0 -a
+test014 -d data1 -rio 0 1 0  0 100 0x0001 -rio 0 2 151   0 100 0x1 -a -m 0 1 0x1 -a -m 0 2 0x0 -a
+test015 -d data1 -rio 0 1 0  0 100 0x0001 -rio 0 2  49   0 100 0x1 -a -m 0 1 0x1 -a -m 0 2 0x0 -a
+test016 -d data1 -rio 0 1 0  0 100 0x0001 -rio 0 2 149 100   0 0x1 -a -m 0 1 0x1 -a -m 0 2 0x0 -a
+test017 -d data1 -rio 0 1 0 50  50 0x0001 -a                             -m 0 1 0x1 -a
+test018 -d data1 -rio 0 1 0 50  50 0x0001 -rio 0 2 251  50  50 0x1 -a -m 0 1 0x1 -a -m 0 2 0x0 -a
+test019 -d data1 -rio 0 1 0 50  50 0x0001 -rio 0 2 251  50  50 0x1 -rio 0 3 125  50  50 0x0001 -a -m 0 1 0x0000 -a -m 0 2 0x0000 -a -m 0 3 0x0000 -a
+test020 -d data1 -rio 0 1 0  0 100 0x0001 -rio 0 2  49   0 100 0x1 -rio 0 3 149   0 100 0x0001 -a -m 0 1 0x0000 -a -m 0 2 0x0000 -a -m 0 3 0x0000 -a
+
+// register IO regions, map regions, trace data
+test021 -d data1 -rio 0 1 0  0 100 0x1 -m 0 1 0x0008 -tds 0 1
+test022 -d data1 -rio 0 1 0  0 100 0x1 -rio 0 2   0   0 100 0x1 -m 0 1 0x1 -m 0 2 0x1 -a -tds 0 1 -tds 0 2
+test023 -d data1 -rio 0 1 0  0 100 0x1 -rio 0 2 251 100   0 0x1 -m 0 1 0x1 -m 0 2 0x1 -a -tds 0 1 -tds 0 2
+test024 -d data1 -rio 0 1 0  0 100 0x1 -rio 0 2 151   0 100 0x1 -m 0 1 0x1 -m 0 2 0x1 -a -tds 0 1 -tds 0 2
+test025 -d data1 -rio 0 1 0  0 100 0x1 -rio 0 2  49   0 100 0x1 -m 0 1 0x1 -m 0 2 0x1 -a -tds 0 1 -tds 0 2
+test026 -d data1 -rio 0 1 0  0 100 0x1 -rio 0 2 149 100   0 0x1 -m 0 1 0x1 -m 0 2 0x1 -a -tds 0 1 -tds 0 2
+test027 -d data1 -rio 0 1 0 50  50 0x1                          -m 0 1 0x1               -a -tds 0 1
+test028 -d data1 -rio 0 1 0 50  50 0x1 -rio 0 2 251  50  50 0x1 -m 0 1 0x1 -m 0 2 0x0 -a -tds 0 1 -tds 0 2
+test029 -d data1 -rio 0 1 0 50  50 0x1 -rio 0 2 251  50  50 0x1 -rio 0 3 125  50  50 0x1 -m 0 1 0x1 -m 0 2 0x0 -m 0 3 0x0 -a -tds 0 1 -tds 0 2 -tds 0 3
+test030 -d data1 -rio 0 1 0  0 100 0x1 -rio 0 2  49   0 100 0x1 -rio 0 3 149   0 100 0x1 -m 0 1 0x1 -m 0 2 0x0 -m 0 3 0x0 -a -tds 0 1 -tds 0 2 -tds 0 3
+
+test031 -d data1 -rio 0 1 0  0 100 0x0 -m 0 1 0x00000 -a -tds 0 1 -w 0 1 0 00000000 -a -tds 0 1 -tdc 0 1
+
+// test032 -d data1 -rio 0 1 0  0 100 0x0 -m 0 1 0x80000 -a -tds 0 1 -w 0 1 0 11111111 -a
+// test032 -d data1 -rio 0 1 0  0 100 0x0 -a -m 0 1 0x80000 -a -w 0 1 0 11111111 -a -tdc 0 1
+
+// test033 -d data1 -rio 0 1 0  0 100 0x0 -m 0 1 0x80001 -a -tds 0 1 -w 0 1 0 22222222 -a -tds 0 1 -r 0 1 0 -a -tds 0 1
+test033 -d data1 -rio 0 1 0  0 100 0x0 -a -w 0 1 0 22222222 -a -tdc 0 1 -r 0 1 0 -a
+
+// test034 -d data1 -rio 0 1 0  0 100 0x0 -m 0 1 0x80001 -a -tds 0 1 -w 0 1 0 33333333 -a -tds 0 1 -c 0 1 0 -a -tds 0 1 -tdc 0 1
+// test034 -d data1 -rio 0 1 0  0 100 0x0 -a -w 0 1 0 33333333 -a -tdc 0 1 -c 0 1 0 -a -tdc 0 1 -w 0 1 0 61626364 -a -tdc 0 1 -c 0 1 0 -a -tdc 0 1
+
+// =============================================================
+// MEMORY regions
+// =============================================================
+
+// register MEMORY regions
+test100 -rmem 0 1 0  0 100 0x1 -a
+test101 -rmem 0 1 0  0 100 0x1 -rmem 0 2   0   0 100 0x1 -a
+test102 -rmem 0 1 0  0 100 0x1 -rmem 0 2 251 100   0 0x1 -a
+test103 -rmem 0 1 0  0 100 0x1 -rmem 0 2 151   0 100 0x1 -a
+test104 -rmem 0 1 0  0 100 0x1 -rmem 0 2  49   0 100 0x1 -a
+test105 -rmem 0 1 0  0 100 0x1 -rmem 0 2 149 100   0 0x1 -a
+test106 -rmem 0 1 0 50  50 0x1 -a
+test107 -rmem 0 1 0 50  50 0x1 -rmem 0 2 251  50  50 0x1 -a
+test108 -rmem 0 1 0 50  50 0x1 -rmem 0 2 251  50  50 0x1 -rmem 0 3 125  50  50 0x1 -a
+test109 -rmem 0 1 0  0 100 0x1 -rmem 0 2  49   0 100 0x1 -rmem 0 3 149   0 100 0x1 -a
+
+// register MEMORY regions, map regions
+test110 -b data1 -rmem 0 1 0  0 100 0 -a                         -m 0 1 0 -a
+test111 -b data1 -rmem 0 1 0  0 100 0 -rmem 0 2   0   0 100 0 -a -m 0 1 0 -a -m 0 2 0 -a
+test112 -b data1 -rmem 0 1 0  0 100 0 -rmem 0 2 251 100   0 0 -a -m 0 1 0 -a -m 0 2 0 -a
+test113 -b data1 -rmem 0 1 0  0 100 0 -rmem 0 2 151   0 100 0 -a -m 0 1 0 -a -m 0 2 0 -a
+test114 -b data1 -rmem 0 1 0  0 100 0 -rmem 0 2  49   0 100 0 -a -m 0 1 0 -a -m 0 2 0 -a
+test115 -b data1 -rmem 0 1 0  0 100 0 -rmem 0 2 149 100   0 0 -a -m 0 1 0 -a -m 0 2 0 -a
+test116 -b data1 -rmem 0 1 0 50  50 0 -a                         -m 0 1 0 -a
+test117 -b data1 -rmem 0 1 0 50  50 0 -rmem 0 2 251  50  50 0 -a -m 0 1 0 -a -m 0 2 0 -a
+test118 -b data1 -rmem 0 1 0 50  50 0 -rmem 0 2 251  50  50 0 -rmem 0 3 125  50  50 0 -a -m 0 1 0 -a -m 0 2 0 -a -m 0 3 0 -a
+test119 -b data1 -rmem 0 1 0  0 100 0 -rmem 0 2  49   0 100 0 -rmem 0 3 149   0 100 0 -a -m 0 1 0 -a -m 0 2 0 -a -m 0 3 0 -a
+
+// register MEMORY regions, map regions, trace data
+test120 -b data1 -rmem 0 1 0  0 100 0 -m 0 1 0x0001 -tds 0 1
+test121 -b data1 -rmem 0 1 0  0 100 0 -rmem 0 2   0   0 100 0 -m 0 1 0 -m 0 2 0  -a -tds 0 1 -tds 0 2
+test122 -b data1 -rmem 0 1 0  0 100 0 -rmem 0 2 251 100   0 0 -m 0 1 0 -m 0 2 0  -a -tds 0 1 -tds 0 2
+test123 -b data1 -rmem 0 1 0  0 100 0 -rmem 0 2 151   0 100 0 -m 0 1 0 -m 0 2 0  -a -tds 0 1 -tds 0 2
+test124 -b data1 -rmem 0 1 0  0 100 0 -rmem 0 2  49   0 100 0 -m 0 1 0 -m 0 2 0  -a -tds 0 1 -tds 0 2
+test125 -b data1 -rmem 0 1 0  0 100 0 -rmem 0 2 149 100   0 0 -m 0 1 0 -m 0 2 0  -a -tds 0 1 -tds 0 2
+
+test129 -b data1 -rmem 0 1 0  0 100 0x1 -rmem 0 2  49   0 100 0x1 -rmem 0 3 149   0 100 0x1 -m 0 1 0x0 -m 0 2 0x0 -m 0 3 0x0 -a -tds 0 1 -tds 0 2 -tds 0 3
+
+// register MEMORY regions, map regions, change data, commit, release, trace data
+// test130 -b data1 -rmem 0 1 0  0 100 0x00080001 -m 0 1 0x00001 -a -tds 0 1 -w 0 1 0 00000000 -a -tds 0 1 -tdc 0 1
+// test131 -b data1 -rmem 0 1 0  0 100 0x00000001 -m 0 1 0x80001 -a -tds 0 1 -w 0 1 0 11111111 -a -tds 0 1 -tdc 0 1
+// test132 -b data1 -rmem 0 1 0  0 100 0x00000001 -m 0 1 0x80001 -a -tds 0 1 -w 0 1 0 22222222 -a -tds 0 1 -r 0 1 0 -a -tds 0 1
+// test133 -b data1 -rmem 0 1 0  0 100 0x00000001 -m 0 1 0x80001 -a -tds 0 1 -w 0 1 0 33333333 -a -tds 0 1 -c 0 1 0 -a -tds 0 1 -tdc 0 1

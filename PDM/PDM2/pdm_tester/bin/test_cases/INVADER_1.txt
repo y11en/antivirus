@@ -1,0 +1,6 @@
+# try to create romote thread in explorer process with LoadLibraryA param
+
+CT_IN_EXPLORER_WITH_LOADLIB NOT_TO_CLEAR
+
+#etalon_verdict 100 ProcessInvader
+

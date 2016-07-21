@@ -1,0 +1,281 @@
+# Microsoft Developer Studio Generated Dependency File, included by Win32Utils.mak
+
+..\..\CommonFiles\Stuff\AutoReg.cpp : \
+	"..\..\commonfiles\avpregid.h"\
+	"..\..\CommonFiles\Stuff\AutoReg.h"\
+	"..\..\CommonFiles\Stuff\Parray.h"\
+	"..\..\CommonFiles\Stuff\StdDefs.h"\
+	
+
+..\..\CommonFiles\Stuff\CalcSum.c : \
+	"..\..\CommonFiles\Stuff\CalcSum.h"\
+	
+
+..\..\CommonFiles\Stuff\CLParse.cpp : \
+	"..\..\CommonFiles\Stuff\CLParse.h"\
+	"..\..\CommonFiles\Stuff\cpointer.h"\
+	"..\..\CommonFiles\Stuff\Pathstr.h"\
+	"..\..\CommonFiles\Stuff\StdDefs.h"\
+	"..\..\CommonFiles\StuffIO\Ioutil.h"\
+	"..\..\CommonFiles\StuffIO\Xerrors.h"\
+	
+
+..\..\CommonFiles\Stuff\CmdLine.cpp : \
+	"..\..\CommonFiles\Stuff\CmdLine.h"\
+	
+
+..\..\CommonFiles\Stuff\COMUtils.cpp : \
+	"..\..\CommonFiles\Stuff\COMUtils.h"\
+	
+
+..\..\CommonFiles\Stuff\csystem.cpp : \
+	"..\..\CommonFiles\Stuff\csystem.h"\
+	"..\..\CommonFiles\Stuff\StdDefs.h"\
+	
+
+..\..\CommonFiles\Stuff\CType2ID.cpp : \
+	"..\..\CommonFiles\AVPComID.h"\
+	"..\..\commonfiles\avpregid.h"\
+	"..\..\CommonFiles\Stuff\CType2ID.h"\
+	
+
+..\..\CommonFiles\Stuff\DesrFile.cpp : \
+	"..\..\CommonFiles\avp_data.h"\
+	"..\..\CommonFiles\Stuff\nw_wait.h"\
+	"..\..\CommonFiles\Stuff\StdAfx.h"\
+	"..\..\CommonFiles\Stuff\Tracelog.h"\
+	"..\..\CommonFiles\Swm.h"\
+	
+
+..\..\CommonFiles\Stuff\DIBConv.cpp : \
+	"..\..\CommonFiles\Stuff\DIBConv.h"\
+	
+
+..\..\CommonFiles\Version\DllCheck.cpp : \
+	"..\..\CommonFiles\Version\DllCheck.h"\
+	"..\..\CommonFiles\Version\versinfo.h"\
+	
+
+..\..\CommonFiles\Stuff\Enc2Text.c : \
+	"..\..\CommonFiles\Stuff\Enc2Text.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	
+
+..\..\CommonFiles\Stuff\FAutomat.cpp : \
+	"..\..\CommonFiles\Stuff\FAutomat.h"\
+	"..\..\CommonFiles\Stuff\Parray.h"\
+	"..\..\CommonFiles\Stuff\StdDefs.h"\
+	
+
+..\..\CommonFiles\Stuff\FFind.cpp : \
+	"..\..\CommonFiles\Stuff\cpointer.h"\
+	"..\..\CommonFiles\Stuff\FFind.h"\
+	"..\..\CommonFiles\Stuff\Pathstr.h"\
+	"..\..\CommonFiles\Stuff\StdAfx.h"\
+	
+
+..\..\CommonFiles\Stuff\FFindW.cpp : \
+	"..\..\CommonFiles\Stuff\cpointer.h"\
+	"..\..\CommonFiles\Stuff\FFindW.h"\
+	"..\..\CommonFiles\Stuff\Pathstr.h"\
+	"..\..\CommonFiles\Stuff\PathstrW.h"\
+	"..\..\CommonFiles\Stuff\StdAfx.h"\
+	
+
+..\..\CommonFiles\StuffIO\Ioutil.cpp : \
+	"..\..\CommonFiles\Stuff\cpointer.h"\
+	"..\..\CommonFiles\Stuff\csystem.h"\
+	"..\..\CommonFiles\Stuff\Pathstr.h"\
+	"..\..\CommonFiles\Stuff\PathstrA.h"\
+	"..\..\CommonFiles\Stuff\PathstrW.h"\
+	"..\..\CommonFiles\Stuff\StdDefs.h"\
+	"..\..\CommonFiles\StuffIO\Ioutil.h"\
+	"..\..\CommonFiles\StuffIO\Xerrors.h"\
+	"..\..\CommonFiles\StuffIO\Xfile.h"\
+	"..\..\CommonFiles\StuffIO\XFlags.h"\
+	
+
+..\..\CommonFiles\StuffIO\IoutilW.cpp : \
+	"..\..\CommonFiles\Stuff\cpointer.h"\
+	"..\..\CommonFiles\Stuff\csystem.h"\
+	"..\..\CommonFiles\Stuff\Pathstr.h"\
+	"..\..\CommonFiles\Stuff\PathstrA.h"\
+	"..\..\CommonFiles\Stuff\PathstrW.h"\
+	"..\..\CommonFiles\Stuff\StdDefs.h"\
+	"..\..\CommonFiles\StuffIO\Ioutil.h"\
+	"..\..\CommonFiles\StuffIO\Xerrors.h"\
+	"..\..\CommonFiles\StuffIO\Xfile.h"\
+	"..\..\CommonFiles\StuffIO\XFlags.h"\
+	
+
+..\..\CommonFiles\Stuff\Layout.c : \
+	"..\..\CommonFiles\Stuff\Layout.h"\
+	"..\..\CommonFiles\Stuff\Win95adg.h"\
+	
+
+..\..\CommonFiles\Stuff\LoadCompDll.cpp : \
+	"..\..\CommonFiles\avp_data.h"\
+	"..\..\commonfiles\avpcmpid.h"\
+	"..\..\CommonFiles\AVPComID.h"\
+	"..\..\commonfiles\avpregid.h"\
+	"..\..\commonfiles\debugging.h"\
+	"..\..\CommonFiles\Property.h"\
+	"..\..\CommonFiles\Stuff\LoadCompDll.h"\
+	
+
+..\..\CommonFiles\Hook\MemManag.c : \
+	"..\..\CommonFiles\Hook\MemManag.h"\
+	"..\..\prague\include\iface\i_heap.h"\
+	"..\..\prague\include\iface\i_iface.h"\
+	"..\..\prague\include\iface\i_ifenum.h"\
+	"..\..\prague\include\iface\i_impex.h"\
+	"..\..\prague\include\iface\i_methodinfo.h"\
+	"..\..\prague\include\iface\i_plugin.h"\
+	"..\..\prague\include\iface\i_receiv.h"\
+	"..\..\prague\include\iface\i_root.h"\
+	"..\..\prague\include\iface\i_tracer.h"\
+	"..\..\prague\include\pr_compl.h"\
+	"..\..\prague\include\pr_err.h"\
+	"..\..\prague\include\pr_iid.h"\
+	"..\..\prague\include\pr_int.h"\
+	"..\..\prague\include\pr_msg.h"\
+	"..\..\prague\include\pr_obj.h"\
+	"..\..\prague\include\pr_pid.h"\
+	"..\..\prague\include\pr_prop.h"\
+	"..\..\prague\include\pr_reg.h"\
+	"..\..\prague\include\pr_sys.h"\
+	"..\..\prague\include\pr_types.h"\
+	"..\..\prague\include\pr_vid.h"\
+	"..\..\prague\include\pr_vtbl.h"\
+	"..\..\prague\include\prague.h"\
+	
+
+..\..\CommonFiles\Stuff\nw_wait.c : \
+	"..\..\CommonFiles\Stuff\nw_wait.h"\
+	
+
+..\..\CommonFiles\Stuff\OCXReg.cpp : \
+	"..\..\commonfiles\avpregid.h"\
+	"..\..\CommonFiles\Stuff\COMUtils.h"\
+	"..\..\CommonFiles\Stuff\OCXReg.h"\
+	
+
+..\..\CommonFiles\Stuff\ProcessEnumerator.cpp : \
+	"..\..\CommonFiles\Hook\MemManag.h"\
+	"..\..\CommonFiles\Stuff\ProcessEnumerator.h"\
+	"..\..\CommonFiles\Stuff\StdAfx.h"\
+	"..\..\prague\include\iface\i_heap.h"\
+	"..\..\prague\include\iface\i_iface.h"\
+	"..\..\prague\include\iface\i_ifenum.h"\
+	"..\..\prague\include\iface\i_impex.h"\
+	"..\..\prague\include\iface\i_methodinfo.h"\
+	"..\..\prague\include\iface\i_plugin.h"\
+	"..\..\prague\include\iface\i_receiv.h"\
+	"..\..\prague\include\iface\i_root.h"\
+	"..\..\prague\include\iface\i_tracer.h"\
+	"..\..\prague\include\pr_compl.h"\
+	"..\..\prague\include\pr_err.h"\
+	"..\..\prague\include\pr_iid.h"\
+	"..\..\prague\include\pr_int.h"\
+	"..\..\prague\include\pr_msg.h"\
+	"..\..\prague\include\pr_obj.h"\
+	"..\..\prague\include\pr_pid.h"\
+	"..\..\prague\include\pr_prop.h"\
+	"..\..\prague\include\pr_reg.h"\
+	"..\..\prague\include\pr_sys.h"\
+	"..\..\prague\include\pr_types.h"\
+	"..\..\prague\include\pr_vid.h"\
+	"..\..\prague\include\pr_vtbl.h"\
+	"..\..\prague\include\prague.h"\
+	
+
+..\..\CommonFiles\Stuff\RegStorage.cpp : \
+	"..\..\commonfiles\avpregid.h"\
+	"..\..\CommonFiles\Stuff\cpointer.h"\
+	"..\..\CommonFiles\Stuff\Pathstr.h"\
+	"..\..\CommonFiles\Stuff\PathstrA.h"\
+	"..\..\CommonFiles\Stuff\PathstrW.h"\
+	"..\..\CommonFiles\Stuff\RegStorage.h"\
+	"..\..\CommonFiles\Stuff\StdAfx.h"\
+	
+
+..\..\CommonFiles\Stuff\SnakePainter.cpp : \
+	"..\..\CommonFiles\Stuff\SnakePainter.h"\
+	"..\..\CommonFiles\Stuff\StdAfx.h"\
+	"..\..\CommonFiles\Stuff\thread.h"\
+	
+
+..\..\CommonFiles\Stuff\Text2bin.c : \
+	"..\..\CommonFiles\AVPPort.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	
+
+..\..\CommonFiles\Stuff\TextRotator.cpp : \
+	"..\..\CommonFiles\Stuff\cpointer.h"\
+	"..\..\CommonFiles\Stuff\Parray.h"\
+	"..\..\CommonFiles\Stuff\Pathstr.h"\
+	"..\..\CommonFiles\Stuff\StdAfx.h"\
+	"..\..\CommonFiles\Stuff\StdDefs.h"\
+	"..\..\CommonFiles\Stuff\TextRotator.h"\
+	
+
+..\..\CommonFiles\Stuff\thread.cpp : \
+	"..\..\CommonFiles\Stuff\cpointer.h"\
+	"..\..\CommonFiles\Stuff\thread.h"\
+	
+
+..\..\CommonFiles\Stuff\TODialog.cpp : \
+	"..\..\CommonFiles\Stuff\TODialog.h"\
+	
+
+..\..\CommonFiles\Stuff\TOMsgBox.cpp : \
+	"..\..\CommonFiles\Stuff\TOMsgBox.h"\
+	
+
+..\..\CommonFiles\Stuff\TraceLog.cpp : \
+	"..\..\CommonFiles\Stuff\cpointer.h"\
+	"..\..\CommonFiles\Stuff\Pathstr.h"\
+	"..\..\CommonFiles\Stuff\StdAfx.h"\
+	"..\..\CommonFiles\Stuff\Tracelog.h"\
+	
+
+..\..\CommonFiles\Stuff\UNCConvert.cpp : \
+	"..\..\CommonFiles\Stuff\cpointer.h"\
+	"..\..\CommonFiles\Stuff\Pathstr.h"\
+	"..\..\CommonFiles\Stuff\StdAfx.h"\
+	"..\..\CommonFiles\Stuff\UNCConvert.h"\
+	
+
+..\..\CommonFiles\StuffIO\Utils.cpp : \
+	"..\..\CommonFiles\Stuff\Sarray.h"\
+	"..\..\CommonFiles\Stuff\StdDefs.h"\
+	"..\..\CommonFiles\StuffIO\Utils.h"\
+	
+
+..\..\CommonFiles\Version\versinfo.cpp : \
+	"..\..\CommonFiles\Version\versinfo.h"\
+	
+
+..\..\CommonFiles\StuffIO\XErrors.cpp : \
+	"..\..\CommonFiles\StuffIO\Xerrors.h"\
+	
+
+..\..\CommonFiles\StuffIO\Xfile.cpp : \
+	"..\..\CommonFiles\Stuff\cpointer.h"\
+	"..\..\CommonFiles\Stuff\StdDefs.h"\
+	"..\..\CommonFiles\StuffIO\Xerrors.h"\
+	"..\..\CommonFiles\StuffIO\Xfile.h"\
+	"..\..\CommonFiles\StuffIO\XFlags.h"\
+	
+
+..\..\CommonFiles\StuffIO\XfileW.cpp : \
+	"..\..\CommonFiles\Stuff\cpointer.h"\
+	"..\..\CommonFiles\Stuff\StdDefs.h"\
+	"..\..\CommonFiles\StuffIO\Xerrors.h"\
+	"..\..\CommonFiles\StuffIO\Xfile.h"\
+	"..\..\CommonFiles\StuffIO\XFlags.h"\
+	
+
+..\..\CommonFiles\StuffIO\XFlags.cpp : \
+	"..\..\CommonFiles\StuffIO\XFlags.h"\
+	

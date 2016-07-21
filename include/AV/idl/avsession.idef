@@ -1,0 +1,45 @@
+#import "tm.idef"
+
+forward interface AVSSession;
+typedef AVSSession* hAVSSESSION;
+
+
+
+
+[
+  version(1)
+  mnemonic(IID_AVSSESSION)
+  id(49028)
+  c_type_name(hAVSSESSION)
+]
+interface AVSSession {
+
+  // ------------------------------------
+    [ id(4096) ]  prop tBOOL pgAVS_SESSION_LOCK_ENGINE;
+    [ id(4097) ]  prop hOBJECT pgAVS_SESSION_ENGINE;
+    [ id(4098) ]  prop hOBJECT pgAVS_SESSION_TASK;
+
+
+  // ------------------------------------
+    method tERROR PreProcessObject( cSerializable* process_info, const cSerializable* settings );
+    method tERROR ProcessObject(
+      hOBJECT object,
+      cSerializable* process_info,
+      const cSerializable* settings,
+      cSerializable* statistics
+    );
+    method tERROR GetStatistic( cSerializable* statistics );
+    method tERROR SetState( TaskManager.tTaskState state );
+    method tERROR ResetStatistic( cSerializable* statistics, tBOOL p_in );
+    method tERROR RegisterScope( tDWORD* scope, cSerializable* info );
+
+
+  // ------------------------------------
+    [ id(2882342912) ]
+    message_cls pmc_AVS_SESSION {
+      [ id(4096) ]  message pm_PROCESS_BEGIN;
+      [ id(4097) ]  message pm_PROCESS_END;
+    }
+
+}
+

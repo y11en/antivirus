@@ -1,0 +1,405 @@
+﻿[Global]
+$Anti_Spam              = "Anti-Spam"
+$ParCtl                 = "Parental Control"
+$AdBlocker              = "Anti-Banner"
+$DayTimeUnlimited       = "unlimited"
+$DayTimeFullRestriction = "full restriction"
+$Clear                  = "&Clear all"
+$ContentFilter          = "Content Filtering"
+$TrafficMonitor         = "Traffic Monitor"
+
+[MainWindow.ContentFilter]
+Home        = "Home"
+Events      = "Events"
+Statistics  = "Statistics"
+
+[MainWindow.ContentFilter.Anti_Spam.Body]
+Level.Name      = "Sensitivity level:"
+Dispatcher.Name = "Mail Dispatcher:"
+Bases.Name      = "Anti-Spam database:"
+Bases.Val       = "Good"
+
+[MainWindow.ContentFilter.ParCtl.Body]
+Level.Name      = "Restriction level:"
+Profile.Name    = "User profile:"
+
+[MainWindow.ContentFilter_WorkArea_Home]
+Enable                      = "Enable content filtration"
+Tasks.Header                = "Tasks"
+ContentFilter.Group2.Header = "Objects detected"
+
+[MainWindow.ContentFilter.Tasks.Body_TrainWizard]
+TrainWizard     = "Anti-Spam: training"
+TrainWizardDesc = "This wizard will help you to increase spam detection rate and to decrease a number of false positives."
+
+[AdBlockerSettings_Tab]
+General = "General"
+Black   = "\"Black\" list"
+White   = "\"White\" list"
+
+[AdBlockerSettings_Tab_General]
+UseHeuristics = "Use heuristic analyzer"
+
+[AntiSpamSettings_Tab]
+White   = "\"White\" list"
+Black   = "\"Black\" list"
+Bayes   = "Spam recognition"
+Options = "Additional"
+
+[AntiSpamSettings_Tab_White]
+TrustedSenders  = "Allowed senders"
+TrustedWords    = "Allowed phrases"
+
+[AntiSpamSettings_Tab_White_TrustedSenders]
+Check = "I wish to receive messages from the following &senders:"
+
+[AntiSpamSettings_Tab_White_TrustedSenders_TSList]
+Rule = "Sender's address"
+
+[AntiSpamSettings_Tab_White_TrustedWords]
+Check = "I wish to receive messages containing the following &phrases:"
+
+[AntiSpamSettings_Tab_White_TrustedWords_TWList]
+Rule = "Key phrase"
+
+[AntiSpamSettings_Tab_Black]
+BlockedSenders  = "Blocked senders"
+BlockedWords    = "Blocked phrases"
+
+[AntiSpamSettings_Tab_Black_BlockedSenders]
+Check = "I do not wish to receive messages from the following &senders:"
+
+[AntiSpamSettings_Tab_Black_BlockedSenders_BSList]
+Rule = "Sender's address"
+
+[AntiSpamSettings_Tab_Black_BlockedWords]
+Check = "I do not wish to receive messages containing the following &phrases:"
+
+[AntiSpamSettings_Tab_Black_BlockedWords_BWList]
+Rule    = "Key phrase"
+Level   = "Weighting coefficient"
+
+[AntiSpamSettings_Tab_Bayes]
+General         = "Filters"
+CertainSpam     = "Spam rate"
+PossibleSpam    = "Probable spam rate"
+ExcludesSpam    = "Exclusions"
+
+[AntiSpamSettings_Tab_Bayes_General]
+EnableBayes = "Use self-training iBayes algorithm (&text recognition)"
+Graphics    = "Use GSG technology (&image recognition)"
+Headers     = "Use PDB technology (&header recognition)"
+
+[AntiSpamSettings_Tab_Bayes_CertainSpam]
+Text = "Add label [!! &SPAM] to subject if message has rating above"
+
+[AntiSpamSettings_Tab_Bayes_PossibleSpam]
+Text = "Add label [?? &Probable spam] to subject if message has rating above"
+
+[AntiSpamSettings_Tab_Bayes_ExcludesSpam]
+DontCheckMsExNative = "Do no&t check Microsoft Exchange Server native messages"
+
+[AntiSpamSettings_Tab_Options]
+Common = "Assign spam ratings to messages"
+
+[AntiSpamSettings_Tab_Options_Common]
+Not4me                  = "Not addressed to me"
+MyAdresses              = "My &addresses..."
+Objects                 = "Without text, but with embedded &images"
+ObjectsLabel            = "%"
+ExternalObjects         = "Containing links to external images"
+ExternalObjectsLabel    = "%"
+UnknownDefs             = "Containing incorrect HTML tags"
+UnknownDefsLabel        = "%"
+SeemsColors             = "Containing &background colour text"
+SeemsColorsLabel        = "%"
+SmallText               = "Containing very small &fonts"
+SmallTextLabel          = "%"
+InvisibleChar           = "Containing invisible characters"
+InvisibleCharLabel      = "%"
+Scripts                 = "Containing &scripts"
+ScriptsLabel            = "%"
+HiddenElements          = "Containing &hidden elements"
+HiddenElementsLabel     = "%"
+NonLatLimit             = "Containing at least"
+NonLatLimitpart2        = "% non-ASCII characters"
+NonLatLimitLabel        = "%"
+Empty                   = "With &empty subject line and body"
+
+[AntiSpam_AddressList]
+@ = "My Email Addresses"
+
+[AntiSpam_AddressEdit]
+@ = "Emal address mask"
+
+[AntiSpam_BlackWordEdit]
+@           = "Blocked phrase mask"
+Example     = "Example: *viagra.*"
+LevelText   = "Weighting coefficient:"
+
+[AntiSpam_WordEdit]
+@           = "Allowed phrase"
+@.Example   = "Example: *yahoo.*"
+
+[s_ParCtlProfileName]
+#eParCtl_ProfId_Parent  = "Parent"
+#eParCtl_ProfId_Teen    = "Teenager"
+#eParCtl_ProfId_Child   = "Child"
+
+[MainWindow.ContentFilter.AdBlocker.Body]
+Database.Name   = "Anti-Banner database:"
+BlackWhite.Name = "\"White\" and \"black\" lists:"
+BlackWhite.Val  = "Total " + (size(ublist) + size(wlist)) + " (Used " + (size(ublist, "Enabled == 1") + size(wlist, "Enabled == 1")) + ")"
+
+[AdBlocker_RuleEdit]
+@           = "Editing URL address masks"
+@.Example   = "Example: *yahoo.*"
+
+[ParCtl_SwitchProfile_Dialog]
+@ = "Changing user profile"
+
+[ParCtl_SwitchProfile_Dialog_Body]
+Descr       = "Temporary change of user account."
+ProfileLbl  = "User name:"
+PasswdLbl   = "Password:"
+
+[ParCtlProfileSettView]
+SecurityGrp = "Restriction level"
+ActionGrp   = "Action"
+TimeGrp     = "Time"
+
+[ParCtl_ProtLevelDescr]
+#SETTINGS_LEVEL_DEFAULT = "Allow using Web mail and chats"
+#SETTINGS_LEVEL_CUSTOM  = "- Press <" + $ResetLevel + "> to restore the default settings"
+#SETTINGS_LEVEL_LOW     = "Block attempts to view sites with adult, \nobscene content or providing information about \ndrugs and violence"
+#SETTINGS_LEVEL_HIGH    = "Block attempts to view sites covering all \nprohibited categories"
+
+[ParCtlProfileSettView_ActionGrp]
+ReportOnly  = "Log event"
+DenyReport  = "Block access"
+
+[ParCtlProfileSettView_TimeGrp_TimeView]
+DayTimeLimit.Name   = "Time:"
+DayTimeSpace.Name   = "Hours:"
+
+[ParCtlSettings_Tab_Profile3]
+Descr = "By default, all Microsoft Windows users are assigned the \"Child\" profile. To assign the \"Teenager\" or \"Parent\" profiles to users, you have to select the corresponding tab and check the flag \"Use profile\"."
+
+[ParCtlSettings_Tab_Profile1]
+Descr = "\"Parent\" profile does not limit web browsing by content and is designed for parents only."
+
+[ParCtlProfileOperateView]
+Enable          = "Use profile"
+Identification  = "User identification"
+
+[ParCtlProfileOperateView_Identification]
+PasswordLbl = "Password:"
+Button1     = "Accounts..."
+
+[ParCtl_ProfileTime_Dlg_Body_DayTimeLimitGrp]
+UseDayTimeLimit = "Limit daily operating time on the Internet"
+
+[ParCtl_ProfileTime_Dlg_Body_DayTimeSpaceGrp]
+UseDayTimeSpace = "Allow Internet access at a specified time"
+
+[ParCtl_ProfileTime_Dlg]
+@ = "Настройка ограничения времени"
+
+[ParCtl_DayTimeSpaceGrp_Edit]
+@ = "Time limit"
+
+[ParCtl_DayTimeSpaceGrp_Edit_Body]
+Text    = "Set time limits:"
+From    = "from"
+To      = "to"
+
+[ParCtl_Url.Edit]
+@ = "Editing URL address masks"
+
+[ParCtl_ProfileFilter_Dlg]
+@ = "Parental Control"
+
+[ParCtl_ProfileFilter_Dlg_Body]
+CategoriesPage  = "Category"
+WhiteListPage   = "\"White\" list"
+BlackListPage   = "\"Black\" list"
+
+[ParCtl_ProfileFilter_Dlg_Body_CategoriesPage]
+CategoriesDescr         = "Blocked categories of websites:"
+DenyCategoryPorno       = "Pornography, erotic materials"
+DenyCategoryDrugs       = "Drugs"
+DenyCategoryViolence    = "Violence"
+DenyCategoryUncens      = "Explicit language"
+DenyCategoryWeapons     = "Weapons"
+DenyCategoryGambling    = "Gambling"
+DenyCategoryChat        = "Chat"
+DenyCategoryWebMail     = "Web mail"
+
+[ParCtl_ProfileAccounts]
+@ = "Accounts"
+
+;------------- OutlookPlugun.TrainingWizard -----------
+
+[OutlookPlugun.TrainingWizard]
+@ = "Training Wizard: " + $Anti_Spam
+
+[OutlookPlugun.TrainingWizardPages]
+Page1.Name  = "Step 1. General information"
+Page1.Descr = "Welcome to the spam recognition algorithm Training Wizard."
+Page2.Name  = "Not Spam email"
+Page2.Descr = "Please specify folders with sample good emails (not spam)."
+Page3.Name  = "Spam email"
+Page3.Descr = "Please specify folders with sample spam email, if you have any."
+Page4.Name  = "Training"
+Page4.Descr = "Выполняется обучение на коллекциях спама и полезной почте, пожалуйста, подождите..."
+Page5.Name  = "Training Complete"
+Page5.Descr = "Training Wizard is about to complete."
+
+[OutlookPlugun.TrainingWizardPages_Page1]
+Text1       = "There are several ways to commence training:\n\n    - the Wizard, to reset the Anti-Spam database\n      and to train using emails which are identified as spam or non-spam\n\n    - the pop-up menu in the report window\n\n    - the \"Mark as Spam\" and \"Mark as Not Spam\" buttons in\n      Microsoft Office Outlook and " + $WinMailer + ".\n\n    - the menu \"Specials/Mark as Spam/Mark as Not Spam\" in The Bat! application!"
+Next.Name   = "&Next"
+Next.Descr  = "Go to good mail selection step"
+
+[OutlookPlugun.TrainingWizardPages_Page2]
+Next.Name   = "&Next"
+Next.Descr  = "Go to spam selection step"
+Clear       = $Clear
+
+[OutlookPlugun.TrainingWizardPages_Page3]
+Next.Name   = "&Next"
+Next.Descr  = "Begin training"
+Clear       = $Clear
+InfoText    = "If you do not have any spam, you can skip this step"
+
+[OutlookPlugun.TrainingWizardPages_Page4]
+TrainingStatus  = "Training status"
+MessageCount    = "Messages processed:"
+NowProcessing   = "Now processing:"
+Folder.Name     = "Current folder:"
+Message.Name    = "Current message:"
+Skip.Name       = "&Stop"
+Skip.Descr      = "Stop training process"
+
+[OutlookPlugun.TrainingWizardPages_Page5]
+StatGroup           = "Statistics"
+MessageCount.Name   = "Messages processed:"
+RetrainGroup        = "Action"
+KeepExisting        = "&Append the results of this training to existing Anti-Spam database"
+Retrain             = "&Create new Anti-Spam database"
+Finish.Name         = "&Done"
+Finish.Descr        = "Save training results and close the wizard"
+
+[MainWindow.ContentFilter_WorkArea_SysPerf_Legend]
+LegendText1 = "Definite spam rating threshold"
+LegendText2 = "Popup messages"
+LegendText3 = "Banners"
+
+;------------- TrafficMonConnectionTerm -------------
+
+[TrafficMonConnectionTerm]
+@           = $TrafficMonitor + ": connections terminated"
+Confirm     = "Attention! There are " + statistics.SessionsOpened + " currently open network connections. They will be terminated. Do you agree?"
+AutoTerm    = "Connections will be terminated automatically in " + Timeout + " seconds."
+
+[TrafficMonAskActionDlg]
+@.Caption = $TrafficMonitor
+
+[TrafficMonAskActionDlg_Body_Descr]
+Info        = "Outgoing encrypted connection"
+Descr       = "This protected connection can be scanned for viruses. Do you want this connection to be scanned?"
+Host.Name   = "Remote address:"
+Port.Name   = "Remote port:"
+
+[TrafficMonAskActionDlg_Body_Action]
+Process.Name    = "Check"
+Process.Descr   = "Check connection"
+Skip.Name       = "Do not check"
+Skip.Descr      = "Do not check connection"
+
+;------------- MailWasher -------------
+
+[MailWasher]
+@           = "Preview messages before receiving"
+Info        = "Total number of messages on the server: " + TotalMessages + " (" + NewMessages + " new)"
+New         = "Show new messages only"
+DontShow    = "Show this window next time when receiving email"
+
+[MailWasher_Toolbar]
+Del         = "&Delete selected"
+ReadNext    = "&Read next"
+Letters     = "messages"
+
+[MailWasher_Msgs_List]
+New         = "Delete"
+From        = "From"
+Subject     = "Subject"
+To          = "To"
+Size        = "Size"
+DateTime    = "Time limit"
+Reason      = "Reason"
+
+[MailWasher_CodepageMenu]
+KOI8-R          = "koi8-r"
+WINDOWS-1251    = "windows-1252"
+IBM866          = "ibm866"
+ISO8859-5       = "iso8859-5"
+X-MAC-CYRILLIC  = "x-mac-cyrillic"
+
+[s_ReasonEx]
+-3  = "Address added to the white list"
+-2  = "Message is already in the Anti-Spam database"
+-1  = "Training"
+1   = "iBayes"
+2   = "Address from the white list"
+3   = "Address from the black list"
+4   = "Phrase from the white list"
+5   = "Phrase from the black list"
+6   = "Phishing email"
+7   = "Address not found in the white list"
+8   = "Address not found in the black list"
+9   = "Phrase not found in the white list"
+10  = "Phrase not found in the black list"
+11  = "Phishing-free email"
+12  = "Email message deleted from the server"
+13  = "Test message"
+14  = "Junk mail"
+15  = "Spam-free email"
+16  = "Incorrect HTML"
+17  = "Correct HTML"
+18  = "Link to external image"
+19  = "No links to external images"
+20  = "Internal object without text"
+21  = "No incorrect internal objects"
+22  = "Empty"
+23  = "Not empty"
+24  = "Not addressed to me"
+25  = "Addressed to me"
+26  = "Contains non-ANSI characters"
+27  = "Contains ANSI characters only"
+28  = "Too many recipients"
+29  = "One recipient"
+30  = "GSG technology (image recognition)"
+31  = "PDB technology (header recognition)"
+32  = "Incorrect HTML: incorrect HTML tags"
+33  = "Incorrect HTML: background colour text"
+34  = "Incorrect HTML: very small fonts"
+35  = "Incorrect HTML: invisible characters"
+36  = "Incorrect HTML: scripts"
+37  = "Incorrect HTML: hidden elements"
+38  = "Internal Microsoft Exchange Server mail"
+39  = "Spam test"
+40  = "RecentTerms technology"
+
+[MainWindow.ContentFilter_WorkArea]
+Home.Group2.Header = "Objects detected"
+
+[s_ParCtlError]
+0x800000C5  = "no driver"
+def         = s_SystemError(@)
+
+[s_ProductNotifyText_ParCtl]
+#eUrlFltEvent_SwitchProfile     = $ParCtl + ": switching to profile " + s_ParCtlProfileName(ExtraInfoSub1) + "."
+#eUrlFltEvent_HeuristicStatus   = $ParCtl + ": cannot perform heuristic analysis of the website " + object(ObjectID) + ": " + s_UpdaterError(ExtraInfoSub2) + "."
+def                             = $ParCtl + ": " + object(ObjectID) + ": " + s_Verdict(Verdict) + ". Detection method: " + s_DecisionReason(DecisionReason) + "."
+
+

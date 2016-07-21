@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "POP3UnitTests", "POP3UnitTests\POP3UnitTests.vcproj", "{05A8D7B9-2B3F-4416-901B-77AB3580DD2E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "POP3Protocoller", "..\..\POP3Protocoller\POP3Protocoller.vcproj", "{B1C6765D-A6E8-42ED-8606-A16E583674A7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FakeTaskManager", "TaskManager\tm.vcproj", "{2EB85799-5406-4BB4-8DE2-841A8EDA3596}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FakeTrafficMonitor", "TrafficMonitor\TrafficMonitor2.vcproj", "{31C2055E-98F9-430B-9F18-13C98BD7E271}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PipeliningTest", "PipeliningTest\PipeliningTest.vcproj", "{0061B253-8136-4134-9526-32A8D76A2C3D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "POP3TestsRunner", "POP3TestsRunner\POP3TestsRunner.vcproj", "{572EDDF7-E8C9-48DF-A919-A0058917278C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{31C2055E-98F9-430B-9F18-13C98BD7E271} = {31C2055E-98F9-430B-9F18-13C98BD7E271}
+		{2EB85799-5406-4BB4-8DE2-841A8EDA3596} = {2EB85799-5406-4BB4-8DE2-841A8EDA3596}
+		{05A8D7B9-2B3F-4416-901B-77AB3580DD2E} = {05A8D7B9-2B3F-4416-901B-77AB3580DD2E}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 7
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\..\\POP3Protocoller\\POP3Protocoller.vcproj
+		SccLocalPath1 = ..\\..\\POP3Protocoller
+		SccProjectUniqueName2 = TaskManager\\tm.vcproj
+		SccLocalPath2 = TaskManager
+		SccProjectUniqueName3 = TrafficMonitor\\TrafficMonitor2.vcproj
+		SccLocalPath3 = TrafficMonitor
+		SccProjectUniqueName4 = POP3UnitTests\\POP3UnitTests.vcproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = POP3UnitTests\\
+		SccProjectUniqueName5 = PipeliningTest\\PipeliningTest.vcproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = PipeliningTest\\
+		SccProjectUniqueName6 = POP3TestsRunner\\POP3TestsRunner.vcproj
+		SccLocalPath6 = .
+		SccProjectFilePathRelativizedFromConnection6 = POP3TestsRunner\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release_SSL_PDB|Win32 = Release_SSL_PDB|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05A8D7B9-2B3F-4416-901B-77AB3580DD2E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{05A8D7B9-2B3F-4416-901B-77AB3580DD2E}.Debug|Win32.Build.0 = Debug|Win32
+		{05A8D7B9-2B3F-4416-901B-77AB3580DD2E}.Release_SSL_PDB|Win32.ActiveCfg = Release|Win32
+		{05A8D7B9-2B3F-4416-901B-77AB3580DD2E}.Release_SSL_PDB|Win32.Build.0 = Release|Win32
+		{05A8D7B9-2B3F-4416-901B-77AB3580DD2E}.Release|Win32.ActiveCfg = Release|Win32
+		{05A8D7B9-2B3F-4416-901B-77AB3580DD2E}.Release|Win32.Build.0 = Release|Win32
+		{B1C6765D-A6E8-42ED-8606-A16E583674A7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B1C6765D-A6E8-42ED-8606-A16E583674A7}.Debug|Win32.Build.0 = Debug|Win32
+		{B1C6765D-A6E8-42ED-8606-A16E583674A7}.Release_SSL_PDB|Win32.ActiveCfg = Release|Win32
+		{B1C6765D-A6E8-42ED-8606-A16E583674A7}.Release_SSL_PDB|Win32.Build.0 = Release|Win32
+		{B1C6765D-A6E8-42ED-8606-A16E583674A7}.Release|Win32.ActiveCfg = Release|Win32
+		{B1C6765D-A6E8-42ED-8606-A16E583674A7}.Release|Win32.Build.0 = Release|Win32
+		{2EB85799-5406-4BB4-8DE2-841A8EDA3596}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2EB85799-5406-4BB4-8DE2-841A8EDA3596}.Debug|Win32.Build.0 = Debug|Win32
+		{2EB85799-5406-4BB4-8DE2-841A8EDA3596}.Release_SSL_PDB|Win32.ActiveCfg = Release|Win32
+		{2EB85799-5406-4BB4-8DE2-841A8EDA3596}.Release_SSL_PDB|Win32.Build.0 = Release|Win32
+		{2EB85799-5406-4BB4-8DE2-841A8EDA3596}.Release|Win32.ActiveCfg = Release|Win32
+		{2EB85799-5406-4BB4-8DE2-841A8EDA3596}.Release|Win32.Build.0 = Release|Win32
+		{31C2055E-98F9-430B-9F18-13C98BD7E271}.Debug|Win32.ActiveCfg = Debug|Win32
+		{31C2055E-98F9-430B-9F18-13C98BD7E271}.Debug|Win32.Build.0 = Debug|Win32
+		{31C2055E-98F9-430B-9F18-13C98BD7E271}.Release_SSL_PDB|Win32.ActiveCfg = Release_SSL_PDB|Win32
+		{31C2055E-98F9-430B-9F18-13C98BD7E271}.Release_SSL_PDB|Win32.Build.0 = Release_SSL_PDB|Win32
+		{31C2055E-98F9-430B-9F18-13C98BD7E271}.Release|Win32.ActiveCfg = Release|Win32
+		{31C2055E-98F9-430B-9F18-13C98BD7E271}.Release|Win32.Build.0 = Release|Win32
+		{0061B253-8136-4134-9526-32A8D76A2C3D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0061B253-8136-4134-9526-32A8D76A2C3D}.Debug|Win32.Build.0 = Debug|Win32
+		{0061B253-8136-4134-9526-32A8D76A2C3D}.Release_SSL_PDB|Win32.ActiveCfg = Release|Win32
+		{0061B253-8136-4134-9526-32A8D76A2C3D}.Release_SSL_PDB|Win32.Build.0 = Release|Win32
+		{0061B253-8136-4134-9526-32A8D76A2C3D}.Release|Win32.ActiveCfg = Release|Win32
+		{0061B253-8136-4134-9526-32A8D76A2C3D}.Release|Win32.Build.0 = Release|Win32
+		{572EDDF7-E8C9-48DF-A919-A0058917278C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{572EDDF7-E8C9-48DF-A919-A0058917278C}.Debug|Win32.Build.0 = Debug|Win32
+		{572EDDF7-E8C9-48DF-A919-A0058917278C}.Release_SSL_PDB|Win32.ActiveCfg = Release|Win32
+		{572EDDF7-E8C9-48DF-A919-A0058917278C}.Release_SSL_PDB|Win32.Build.0 = Release|Win32
+		{572EDDF7-E8C9-48DF-A919-A0058917278C}.Release|Win32.ActiveCfg = Release|Win32
+		{572EDDF7-E8C9-48DF-A919-A0058917278C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

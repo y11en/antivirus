@@ -1,0 +1,7 @@
+# temporarily disable windows wile protection sistem on file calc.exe in system folder
+
+# WFP_OFF_CALC NOT_TO_CLEAR
+
+DISABLE_WFP @SYSTEM_FOLDER@\calc.exe NOT_TO_CLEAR
+
+#etalon_verdict 100 SecurityViolation

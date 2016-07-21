@@ -1,0 +1,102 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ntreelib", "ntreelib.vcproj", "{D07D4292-9364-4736-B8EF-EA55318B4A42}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ntreetest", "ntreetest\ntreetest.vcproj", "{5C48E84A-AA87-4DEE-851B-528E6BDBFE6E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3578942A-366F-4A2E-A563-743C78565B69} = {3578942A-366F-4A2E-A563-743C78565B69}
+		{D07D4292-9364-4736-B8EF-EA55318B4A42} = {D07D4292-9364-4736-B8EF-EA55318B4A42}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "klavcorelib", "..\klavcorelib\klavcorelib.vcproj", "{3578942A-366F-4A2E-A563-743C78565B69}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "_All_", "..\..\_All_.vcproj", "{69A41A3F-D92A-4630-A7E2-E11C8CAE267E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D07D4292-9364-4736-B8EF-EA55318B4A42} = {D07D4292-9364-4736-B8EF-EA55318B4A42}
+		{5C48E84A-AA87-4DEE-851B-528E6BDBFE6E} = {5C48E84A-AA87-4DEE-851B-528E6BDBFE6E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ntreelink", "ntreelink\ntreelink.vcproj", "{2D17FD69-8E8D-47C5-A11D-C6AAAE8129C3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3578942A-366F-4A2E-A563-743C78565B69} = {3578942A-366F-4A2E-A563-743C78565B69}
+		{D07D4292-9364-4736-B8EF-EA55318B4A42} = {D07D4292-9364-4736-B8EF-EA55318B4A42}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 6
+		SccLocalPath0 = .
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = ntreelib.vcproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectUniqueName2 = ntreetest\\ntreetest.vcproj
+		SccLocalPath2 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection2 = ntreetest\\
+		SccProjectUniqueName3 = ..\\klavcorelib\\klavcorelib.vcproj
+		SccProjectName3 = \u0022$/Release/KLAVA/klava/kernel/klavcorelib\u0022,\u0020MAIJAAAA
+		SccLocalPath3 = ..\\klavcorelib
+		CanCheckoutShared = false
+		SccProjectUniqueName4 = ..\\..\\_All_.vcproj
+		SccProjectName4 = \u0022$/Release/KLAVA/klava\u0022,\u0020QSQGAAAA
+		SccLocalPath4 = ..\\..
+		CanCheckoutShared = false
+		SccProjectUniqueName5 = ntreelink\\ntreelink.vcproj
+		SccLocalPath5 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection5 = ntreelink\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D07D4292-9364-4736-B8EF-EA55318B4A42}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D07D4292-9364-4736-B8EF-EA55318B4A42}.Debug|Win32.Build.0 = Debug|Win32
+		{D07D4292-9364-4736-B8EF-EA55318B4A42}.Debug|x64.ActiveCfg = Debug|x64
+		{D07D4292-9364-4736-B8EF-EA55318B4A42}.Debug|x64.Build.0 = Debug|x64
+		{D07D4292-9364-4736-B8EF-EA55318B4A42}.Release|Win32.ActiveCfg = Release|Win32
+		{D07D4292-9364-4736-B8EF-EA55318B4A42}.Release|Win32.Build.0 = Release|Win32
+		{D07D4292-9364-4736-B8EF-EA55318B4A42}.Release|x64.ActiveCfg = Release|x64
+		{D07D4292-9364-4736-B8EF-EA55318B4A42}.Release|x64.Build.0 = Release|x64
+		{5C48E84A-AA87-4DEE-851B-528E6BDBFE6E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5C48E84A-AA87-4DEE-851B-528E6BDBFE6E}.Debug|Win32.Build.0 = Debug|Win32
+		{5C48E84A-AA87-4DEE-851B-528E6BDBFE6E}.Debug|x64.ActiveCfg = Debug|x64
+		{5C48E84A-AA87-4DEE-851B-528E6BDBFE6E}.Debug|x64.Build.0 = Debug|x64
+		{5C48E84A-AA87-4DEE-851B-528E6BDBFE6E}.Release|Win32.ActiveCfg = Release|Win32
+		{5C48E84A-AA87-4DEE-851B-528E6BDBFE6E}.Release|Win32.Build.0 = Release|Win32
+		{5C48E84A-AA87-4DEE-851B-528E6BDBFE6E}.Release|x64.ActiveCfg = Release|x64
+		{5C48E84A-AA87-4DEE-851B-528E6BDBFE6E}.Release|x64.Build.0 = Release|x64
+		{3578942A-366F-4A2E-A563-743C78565B69}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3578942A-366F-4A2E-A563-743C78565B69}.Debug|Win32.Build.0 = Debug|Win32
+		{3578942A-366F-4A2E-A563-743C78565B69}.Debug|x64.ActiveCfg = Debug|x64
+		{3578942A-366F-4A2E-A563-743C78565B69}.Debug|x64.Build.0 = Debug|x64
+		{3578942A-366F-4A2E-A563-743C78565B69}.Release|Win32.ActiveCfg = Release|Win32
+		{3578942A-366F-4A2E-A563-743C78565B69}.Release|Win32.Build.0 = Release|Win32
+		{3578942A-366F-4A2E-A563-743C78565B69}.Release|x64.ActiveCfg = Release|x64
+		{3578942A-366F-4A2E-A563-743C78565B69}.Release|x64.Build.0 = Release|x64
+		{69A41A3F-D92A-4630-A7E2-E11C8CAE267E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{69A41A3F-D92A-4630-A7E2-E11C8CAE267E}.Debug|Win32.Build.0 = Debug|Win32
+		{69A41A3F-D92A-4630-A7E2-E11C8CAE267E}.Debug|x64.ActiveCfg = Debug|x64
+		{69A41A3F-D92A-4630-A7E2-E11C8CAE267E}.Debug|x64.Build.0 = Debug|x64
+		{69A41A3F-D92A-4630-A7E2-E11C8CAE267E}.Release|Win32.ActiveCfg = Release|Win32
+		{69A41A3F-D92A-4630-A7E2-E11C8CAE267E}.Release|Win32.Build.0 = Release|Win32
+		{69A41A3F-D92A-4630-A7E2-E11C8CAE267E}.Release|x64.ActiveCfg = Release|x64
+		{69A41A3F-D92A-4630-A7E2-E11C8CAE267E}.Release|x64.Build.0 = Release|x64
+		{2D17FD69-8E8D-47C5-A11D-C6AAAE8129C3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2D17FD69-8E8D-47C5-A11D-C6AAAE8129C3}.Debug|Win32.Build.0 = Debug|Win32
+		{2D17FD69-8E8D-47C5-A11D-C6AAAE8129C3}.Debug|x64.ActiveCfg = Debug|x64
+		{2D17FD69-8E8D-47C5-A11D-C6AAAE8129C3}.Debug|x64.Build.0 = Debug|x64
+		{2D17FD69-8E8D-47C5-A11D-C6AAAE8129C3}.Release|Win32.ActiveCfg = Release|Win32
+		{2D17FD69-8E8D-47C5-A11D-C6AAAE8129C3}.Release|Win32.Build.0 = Release|Win32
+		{2D17FD69-8E8D-47C5-A11D-C6AAAE8129C3}.Release|x64.ActiveCfg = Release|x64
+		{2D17FD69-8E8D-47C5-A11D-C6AAAE8129C3}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

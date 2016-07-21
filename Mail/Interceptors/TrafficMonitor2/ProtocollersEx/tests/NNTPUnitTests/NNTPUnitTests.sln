@@ -1,0 +1,89 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NNTPUnitTests", "NNTPUnitTests\NNTPUnitTests.vcproj", "{BD9CAA1D-F1F6-46D8-8D8B-5C74CEC64DFE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NNTPProtocoller", "..\..\NNTPProtocoller\NNTPProtocoller.vcproj", "{DC3F6C71-BE1B-413C-8121-A9E71B207688}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NNTPTestsRunner", "NNTPTestsRunner\NNTPTestsRunner.vcproj", "{6D28E7D7-8D54-4706-8253-A180240D07F1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BD9CAA1D-F1F6-46D8-8D8B-5C74CEC64DFE} = {BD9CAA1D-F1F6-46D8-8D8B-5C74CEC64DFE}
+		{31C2055E-98F9-430B-9F18-13C98BD7E271} = {31C2055E-98F9-430B-9F18-13C98BD7E271}
+		{2EB85799-5406-4BB4-8DE2-841A8EDA3596} = {2EB85799-5406-4BB4-8DE2-841A8EDA3596}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FakeTaskManager", "TaskManager\tm.vcproj", "{2EB85799-5406-4BB4-8DE2-841A8EDA3596}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FakeTrafficMonitor", "TrafficMonitor\TrafficMonitor2.vcproj", "{31C2055E-98F9-430B-9F18-13C98BD7E271}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NNTPTestUtil", "NNTPTestUtil\NNTPTestUtil.vcproj", "{15B2EADE-E160-4DD1-B851-1F9C3BF52956}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 7
+		SccProjectUniqueName0 = ..\\..\\NNTPProtocoller\\NNTPProtocoller.vcproj
+		SccLocalPath0 = ..\\..\\NNTPProtocoller
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = NNTPUnitTests\\NNTPUnitTests.vcproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = NNTPUnitTests\\
+		SccProjectUniqueName3 = NNTPTestsRunner\\NNTPTestsRunner.vcproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = NNTPTestsRunner\\
+		SccProjectUniqueName4 = TaskManager\\tm.vcproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = TaskManager\\
+		SccProjectUniqueName5 = TrafficMonitor\\TrafficMonitor2.vcproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = TrafficMonitor\\
+		SccProjectUniqueName6 = NNTPTestUtil\\NNTPTestUtil.vcproj
+		SccLocalPath6 = .
+		SccProjectFilePathRelativizedFromConnection6 = NNTPTestUtil\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release_SSL_PDB|Win32 = Release_SSL_PDB|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD9CAA1D-F1F6-46D8-8D8B-5C74CEC64DFE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BD9CAA1D-F1F6-46D8-8D8B-5C74CEC64DFE}.Debug|Win32.Build.0 = Debug|Win32
+		{BD9CAA1D-F1F6-46D8-8D8B-5C74CEC64DFE}.Release_SSL_PDB|Win32.ActiveCfg = Release|Win32
+		{BD9CAA1D-F1F6-46D8-8D8B-5C74CEC64DFE}.Release_SSL_PDB|Win32.Build.0 = Release|Win32
+		{BD9CAA1D-F1F6-46D8-8D8B-5C74CEC64DFE}.Release|Win32.ActiveCfg = Release|Win32
+		{BD9CAA1D-F1F6-46D8-8D8B-5C74CEC64DFE}.Release|Win32.Build.0 = Release|Win32
+		{DC3F6C71-BE1B-413C-8121-A9E71B207688}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DC3F6C71-BE1B-413C-8121-A9E71B207688}.Debug|Win32.Build.0 = Debug|Win32
+		{DC3F6C71-BE1B-413C-8121-A9E71B207688}.Release_SSL_PDB|Win32.ActiveCfg = Release|Win32
+		{DC3F6C71-BE1B-413C-8121-A9E71B207688}.Release_SSL_PDB|Win32.Build.0 = Release|Win32
+		{DC3F6C71-BE1B-413C-8121-A9E71B207688}.Release|Win32.ActiveCfg = Release|Win32
+		{DC3F6C71-BE1B-413C-8121-A9E71B207688}.Release|Win32.Build.0 = Release|Win32
+		{6D28E7D7-8D54-4706-8253-A180240D07F1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6D28E7D7-8D54-4706-8253-A180240D07F1}.Debug|Win32.Build.0 = Debug|Win32
+		{6D28E7D7-8D54-4706-8253-A180240D07F1}.Release_SSL_PDB|Win32.ActiveCfg = Release|Win32
+		{6D28E7D7-8D54-4706-8253-A180240D07F1}.Release_SSL_PDB|Win32.Build.0 = Release|Win32
+		{6D28E7D7-8D54-4706-8253-A180240D07F1}.Release|Win32.ActiveCfg = Release|Win32
+		{6D28E7D7-8D54-4706-8253-A180240D07F1}.Release|Win32.Build.0 = Release|Win32
+		{2EB85799-5406-4BB4-8DE2-841A8EDA3596}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2EB85799-5406-4BB4-8DE2-841A8EDA3596}.Debug|Win32.Build.0 = Debug|Win32
+		{2EB85799-5406-4BB4-8DE2-841A8EDA3596}.Release_SSL_PDB|Win32.ActiveCfg = Release|Win32
+		{2EB85799-5406-4BB4-8DE2-841A8EDA3596}.Release_SSL_PDB|Win32.Build.0 = Release|Win32
+		{2EB85799-5406-4BB4-8DE2-841A8EDA3596}.Release|Win32.ActiveCfg = Release|Win32
+		{2EB85799-5406-4BB4-8DE2-841A8EDA3596}.Release|Win32.Build.0 = Release|Win32
+		{31C2055E-98F9-430B-9F18-13C98BD7E271}.Debug|Win32.ActiveCfg = Debug|Win32
+		{31C2055E-98F9-430B-9F18-13C98BD7E271}.Debug|Win32.Build.0 = Debug|Win32
+		{31C2055E-98F9-430B-9F18-13C98BD7E271}.Release_SSL_PDB|Win32.ActiveCfg = Release_SSL_PDB|Win32
+		{31C2055E-98F9-430B-9F18-13C98BD7E271}.Release_SSL_PDB|Win32.Build.0 = Release_SSL_PDB|Win32
+		{31C2055E-98F9-430B-9F18-13C98BD7E271}.Release|Win32.ActiveCfg = Release|Win32
+		{31C2055E-98F9-430B-9F18-13C98BD7E271}.Release|Win32.Build.0 = Release|Win32
+		{15B2EADE-E160-4DD1-B851-1F9C3BF52956}.Debug|Win32.ActiveCfg = Debug|Win32
+		{15B2EADE-E160-4DD1-B851-1F9C3BF52956}.Debug|Win32.Build.0 = Debug|Win32
+		{15B2EADE-E160-4DD1-B851-1F9C3BF52956}.Release_SSL_PDB|Win32.ActiveCfg = Release|Win32
+		{15B2EADE-E160-4DD1-B851-1F9C3BF52956}.Release_SSL_PDB|Win32.Build.0 = Release|Win32
+		{15B2EADE-E160-4DD1-B851-1F9C3BF52956}.Release|Win32.ActiveCfg = Release|Win32
+		{15B2EADE-E160-4DD1-B851-1F9C3BF52956}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

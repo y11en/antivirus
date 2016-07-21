@@ -1,0 +1,220 @@
+# Process this file with autoconf to produce a configure script.
+#
+# Configure.in for klsys
+#
+AC_PREREQ(2.57)
+AC_INIT(klsys, VERSION, BUG-REPORT-ADDRESS)
+AC_CONFIG_SRCDIR([$srcdir/filemapping/filemapping.h])
+AC_CONFIG_HEADER([unix/config-unix.h])
+AC_CONFIG_AUX_DIR([$srcdir/unix])
+AC_PREFIX_DEFAULT([/usr/local/kl])
+
+AC_MSG_RESULT(***********************************************)
+AC_MSG_RESULT(*              configuring klsys              *)
+AC_MSG_RESULT(***********************************************)
+
+AC_ARG_ENABLE(enable_short_wchar,
+	[  --enable-short-wchar     wchar_t will be 2 byte size (no)])
+
+AC_ARG_ENABLE(enable_debug,
+	[  --enable-debug           compile with debug information (no)])
+
+AC_ARG_ENABLE(enable_profiling,
+	[  --enable-profiling       compile with profiling information (no)])
+
+# Checks for programs.
+AC_CANONICAL_SYSTEM
+AC_PROG_CC
+AC_PROG_CXX
+AC_CHECK_TOOL(RANLIB,ranlib,:)
+AC_CHECK_TOOL(AR,ar,:)
+AC_ISC_POSIX
+AC_PROG_MAKE_SET
+AC_PROG_INSTALL
+
+# clear flags
+CFLAGS=""
+CXXFLAGS=""
+
+# *** check for built-in wchar_t in C++ compiler, and -fshort-wchar ***
+AC_LANG_SAVE
+AC_LANG_CPLUSPLUS
+AC_CACHE_CHECK([for built-in wchar_t type in C++ compiler], vss_builtin_wchar_t,
+        AC_TRY_COMPILE(,[ wchar_t aa;],
+                                        [builtin_wchar_t="yes"],
+                                        [builtin_wchar_t="no"]
+                                  )
+                          )
+
+if test "$builtin_wchar_t" = "yes"; then
+        CFLAGS="$CFLAGS -DHAS_BUILTIN_WCHAR_T"
+        CXXFLAGS="$CXXFLAGS -DHAS_BUILTIN_WCHAR_T"	
+	# Checks for size of wchar  
+fi
+
+if test "$enable_short_wchar" = "yes"; then
+    AC_CHECK_SIZEOF(wchar_t)
+    if test "$ac_cv_sizeof_wchar_t" = "2" ; then
+        AC_MSG_RESULT(size of type wchar_t is already 2 bytes. Standard C-library will be used.)	
+    elif test "$ac_cv_sizeof_wchar_t" = "4" ; then
+	save_CXXFLAGS=$CXXFLAGS
+	CXXFLAGS="-fshort-wchar"
+                
+        AC_CACHE_CHECK([whether C++ compiler accepts -fshort-wchar], vss_acc_short_wchar,
+            AC_TRY_COMPILE(,[], [vss_acc_short_wchar="yes"], [vss_acc_short_wchar="no"])
+        )
+        CXXFLAGS=$save_CXXFLAGS
+	
+	if test "$vss_acc_short_wchar" = "yes"; then
+	    AC_MSG_RESULT(size of buildin type wchar_t is 4 bytes and  will be changed by -fshort-wchar compiler option.)
+    	    CFLAGS="$CFLAGS -fshort-wchar -DSHORT_WCHAR"
+	    CXXFLAGS="$CXXFLAGS -fshort-wchar -DSHORT_WCHAR"
+	    LDFLAGS="$LDFLAGS \$(libdir)/libwchar16.a  \$(libdir)/libutf.a"
+	else
+            AC_MSG_ERROR([size of buildin type wchar_t is 4 bytes and cannot be changed.])
+        fi	
+    fi
+fi
+
+AC_LANG_RESTORE
+
+# Checks for header files.
+AC_HEADER_DIRENT
+AC_HEADER_STDC
+AC_CHECK_HEADERS([fcntl.h string.h unistd.h])
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_HEADER_STDBOOL
+AC_C_CONST
+AC_C_INLINE
+AC_TYPE_OFF_T
+AC_TYPE_SIZE_T
+
+# Checks for library functions.
+AC_FUNC_ERROR_AT_LINE
+AC_CHECK_FUNCS([closedir memmove memset munmap madvise mmap stat fnmatch])
+
+OutputFiles="Makefile"
+AuxFiles="unix/Rules"
+
+if test "$enable_debug" = "yes"; then
+	CFLAGS="$CFLAGS -g -Wall"
+	CXXFLAGS="$CXXFLAGS -g -Wall"
+else
+	CFLAGS="$CFLAGS -O2"
+	CXXFLAGS="$CXXFLAGS -O2"
+fi
+
+CFLAGS="$CFLAGS -fPIC -pipe"
+CXXFLAGS="$CXXFLAGS -fPIC -pipe"
+ARCHIVE_EXT="a"
+SHARED_EXT="so"
+OS="unix"
+SharedFlag="-shared"
+VersionScript="-Wl,-version-script,\$(VersionScript)"
+
+case "$target" in
+	*-*-freebsd*)
+    		CFLAGS="$CFLAGS -pthread -D_THREAD_SAFE"
+		CXXFLAGS="$CXXFLAGS -pthread -D_THREAD_SAFE"
+		LibC="-lc_r"
+		DynamicLibrariesSupportLib="-lc"
+		ThreadsSupportLib="-pthread"
+		;;
+
+        *-*-openbsd*)
+                CFLAGS="$CFLAGS -pthread"
+                CXXFLAGS="$CXXFLAGS -pthread"
+                LibC=""         
+                DynamicLibrariesSupportLib=""
+                ThreadsSupportLib="-pthread"
+                ;;
+		
+	*-*-linux*)
+		CFLAGS="$CFLAGS -pthread -D_FILE_OFFSET_BITS=64"
+		CXXFLAGS="$CXXFLAGS -pthread -D_FILE_OFFSET_BITS=64"
+		LibC="-lc"		
+		DynamicLibrariesSupportLib="-ldl"
+		ThreadsSupportLib="-pthread"
+		;;
+		
+	*-*-solaris*)
+		CFLAGS="$CFLAGS -pthreads"
+		CXXFLAGS="$CXXFLAGS -pthreads"
+		VersionScript="-Wl,-M,\$(VersionScript)"
+		LibC="-lc"
+		DynamicLibrariesSupportLib="-ldl"
+		ThreadsSupportLib="-pthreads"
+		;;
+
+        *-*-darwin*)
+                CFLAGS="$CFLAGS -D__unix__"
+                CXXFLAGS="$CXXFLAGS -D__unix__ -fvisibility-inlines-hidden"
+		SHARED_EXT="dylib"	
+		SharedFlag="-dynamiclib -single_module"
+		VersionScript=""
+                LibC=""
+                DynamicLibrariesSupportLib=""
+                ThreadsSupportLib=""
+                ;;
+        *-*-cygwin*)
+		ARCHIVE_EXT="lib"
+		SHARED_EXT="dll"
+		CFLAGS=""
+		CXXFLAGS=""
+		DEFINES="/D _WIN32 /D _WINDOWS"		
+		OS="windows"	
+		AuxFiles="windows/Rules"
+		if test "$enable_debug" = "yes"; then
+			DEFINES="$DEFINES /D _DEBUG"
+			CFLAGS="$CFLAGS /Zi /MDd"
+			LDFLAGS="$LDFLAGS /debug"
+		else
+			DEFINES="$DEFINES /D NDEBUG"
+			CFLAGS="$CFLAGS /MD"
+		fi
+		backup_IFS=$IFS
+		IFS=';'
+		for dir in $LIB; do
+			LIBS="$LIBS /LIBPATH:\"$dir\""
+		done
+		for dir in $INCLUDE; do
+			INCLUDES="$INCLUDES /I \"$dir\""
+		done
+		IFS=$backup_IFS
+		AC_SUBST(WindowsIncludes)
+		AC_SUBST(INCLUDES)
+		;;
+        *)
+                AC_MSG_ERROR([unsupported system])
+                ;;
+esac
+
+OutputFiles="$OutputFiles $AuxFiles"
+
+if test "$enable_profiling" = "yes"; then
+	CFLAGS="$CFLAGS -fprofile-arcs -ftest-coverage -pg "
+	CXXFLAGS="$CXXFLAGS -fprofile-arcs -ftest-coverage -pg "
+	LDFLAGS="$LDFLAGS -pg "    
+	LIBS="$LIBS -lgcc"
+fi
+
+AC_DEFINE_UNQUOTED(SHARED_EXT,"$SHARED_EXT",[A shared library extension])
+AC_DEFINE_UNQUOTED(ARCHIVE_EXT,"$ARCHIVE_EXT",[A archive extension])
+
+AC_SUBST(CFLAGS)
+AC_SUBST(CXXFLAGS)
+AC_SUBST(LDFLAGS)
+AC_SUBST(DEFS)
+AC_SUBST(DEFINES)
+AC_SUBST(LIBS)
+AC_SUBST(SHARED_EXT)
+AC_SUBST(ARCHIVE_EXT)
+AC_SUBST(OS)
+AC_SUBST(LibC)
+AC_SUBST(DynamicLibrariesSupportLib)
+AC_SUBST(ThreadsSupportLib)
+AC_SUBST(SharedFlag)
+AC_SUBST(VersionScript)
+AC_OUTPUT($OutputFiles)
+AC_MSG_RESULT(***********************************************)

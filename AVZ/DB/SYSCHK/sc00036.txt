@@ -1,0 +1,6 @@
+// ***** AdvWare.ToolBar.Zbar *****
+begin
+ AddEvAlarmByCLSID('A6790AA5-C6C7-4BCF-A46D-0FDAC4EA90EB',AScriptName,'ztoolb*.dll');
+ AddEvAlarmByCLSID('D7BF3304-138B-4DD5-86EE-491BB6A2286C',AScriptName,'ztoolb*.dll');
+ AddEvAlarmByCLSID('FFF5092F-7172-4018-827B-FA5868FB0478',AScriptName,'ztoolb*.dll');
+end.

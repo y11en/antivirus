@@ -1,0 +1,10 @@
+# copy test-exe to dest folder with system name (explorer.exe) and launch it
+
+# COPY_EXE_TO_DF explorer.exe NOT_TO_CLEAR
+# CP_EXE_FROM_DF explorer.exe NOT_TO_CLEAR
+
+EX_COPY_FILE @SELF_DIR@\test_exe.exe @LOCAL_TEST_FOLDER@ explorer.exe NOT_TO_CLEAR
+CREATE_PROCESS @LOCAL_TEST_FOLDER@\explorer.exe NOT_TO_CLEAR
+
+
+#etalon_verdict 100 StartWithSystemName

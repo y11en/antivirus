@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "treesearchlib_rt", "treesearchlib_rt.vcproj", "{476857C6-FAA7-4840-BD93-827E267D2FE4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "avp_tree", "avp_tree.vcproj", "{D2EEC989-A520-428F-86B3-3BD18B010A50}"
+	ProjectSection(ProjectDependencies) = postProject
+		{476857C6-FAA7-4840-BD93-827E267D2FE4} = {476857C6-FAA7-4840-BD93-827E267D2FE4}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 3
+		SccLocalPath0 = .
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = treesearchlib_rt.vcproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectUniqueName2 = avp_tree.vcproj
+		SccLocalPath2 = .
+		CanCheckoutShared = false
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{476857C6-FAA7-4840-BD93-827E267D2FE4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{476857C6-FAA7-4840-BD93-827E267D2FE4}.Debug|Win32.Build.0 = Debug|Win32
+		{476857C6-FAA7-4840-BD93-827E267D2FE4}.Debug|x64.ActiveCfg = Debug|x64
+		{476857C6-FAA7-4840-BD93-827E267D2FE4}.Debug|x64.Build.0 = Debug|x64
+		{476857C6-FAA7-4840-BD93-827E267D2FE4}.Release|Win32.ActiveCfg = Release|Win32
+		{476857C6-FAA7-4840-BD93-827E267D2FE4}.Release|Win32.Build.0 = Release|Win32
+		{476857C6-FAA7-4840-BD93-827E267D2FE4}.Release|x64.ActiveCfg = Release|x64
+		{476857C6-FAA7-4840-BD93-827E267D2FE4}.Release|x64.Build.0 = Release|x64
+		{D2EEC989-A520-428F-86B3-3BD18B010A50}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D2EEC989-A520-428F-86B3-3BD18B010A50}.Debug|Win32.Build.0 = Debug|Win32
+		{D2EEC989-A520-428F-86B3-3BD18B010A50}.Debug|x64.ActiveCfg = Debug|x64
+		{D2EEC989-A520-428F-86B3-3BD18B010A50}.Release|Win32.ActiveCfg = Release|Win32
+		{D2EEC989-A520-428F-86B3-3BD18B010A50}.Release|Win32.Build.0 = Release|Win32
+		{D2EEC989-A520-428F-86B3-3BD18B010A50}.Release|x64.ActiveCfg = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

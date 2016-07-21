@@ -1,0 +1,220 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff1\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}{\f6\fmodern\fcharset0\fprq1{\*\panose 00000000000000000000}Courier;}{\f17\froman\fcharset238\fprq2 Times New Roman CE;}{\f18\froman\fcharset204\fprq2 Times New Roman Cyr;}
+{\f20\froman\fcharset161\fprq2 Times New Roman Greek;}{\f21\froman\fcharset162\fprq2 Times New Roman Tur;}{\f22\froman\fcharset186\fprq2 Times New Roman Baltic;}{\f23\fswiss\fcharset238\fprq2 Arial CE;}{\f24\fswiss\fcharset204\fprq2 Arial Cyr;}
+{\f26\fswiss\fcharset161\fprq2 Arial Greek;}{\f27\fswiss\fcharset162\fprq2 Arial Tur;}{\f28\fswiss\fcharset186\fprq2 Arial Baltic;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;
+\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}
+{\stylesheet{\li839\ri23\sb80\sa80\nowidctlpar\adjustright \f1\fs20\cgrid \snext0 Normal;}{\s1\ri23\sb720\sa120\keep\keepn\nowidctlpar\adjustright \b\f1\fs36\cgrid \sbasedon0 \snext2 heading 1;}{\s2\ri23\sb240\sa80\keep\keepn\nowidctlpar\adjustright 
+\b\f1\cgrid \sbasedon0 \snext0 heading 2;}{\s3\ri23\sb80\sa80\keep\keepn\nowidctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 3;}{\s4\ri23\sb240\sa80\keep\keepn\nowidctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{
+\s5\ri23\sa80\nowidctlpar\adjustright \f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\s6\ri23\sa80\nowidctlpar\adjustright \f1\fs20\cgrid \sbasedon0 \snext0 heading 6;}{\s7\ri23\sb80\sa80\nowidctlpar\adjustright \f1\fs20\cgrid \sbasedon0 \snext0 
+heading 7;}{\s8\ri23\sb80\sa80\nowidctlpar\adjustright \f1\fs20\cgrid \sbasedon0 \snext0 heading 8;}{\s9\sl240\slmult0\nowidctlpar\adjustright \fs2\cgrid \sbasedon15 \snext0 heading 9;}{\*\cs10 \additive Default Paragraph Font;}{
+\s15\fi-295\li1559\ri40\nowidctlpar\adjustright \f6\fs18\cgrid \sbasedon0 \snext15 Code Sample;}{\s16\li1200\ri23\nowidctlpar\tqr\tldot\tx9600\adjustright \fs18\cgrid \sbasedon0 \snext0 \sautoupd toc 7;}{\s17\li1000\ri23\nowidctlpar
+\tqr\tldot\tx9600\adjustright \fs18\cgrid \sbasedon0 \snext0 \sautoupd toc 6;}{\s18\li800\ri23\nowidctlpar\tqr\tldot\tx9600\adjustright \fs18\cgrid \sbasedon0 \snext0 \sautoupd toc 5;}{\s19\li600\ri23\nowidctlpar\tqr\tldot\tx9600\adjustright \fs18\cgrid 
+\sbasedon0 \snext0 \sautoupd toc 4;}{\s20\li400\ri23\nowidctlpar\tqr\tldot\tx9600\adjustright \i\fs20\cgrid \sbasedon0 \snext0 \sautoupd toc 3;}{\s21\li200\ri23\nowidctlpar\tqr\tldot\tx9600\adjustright \f1\fs20\cgrid \sbasedon0 \snext0 \sautoupd toc 2;}{
+\s22\ri23\sb120\sa120\nowidctlpar\tqr\tldot\tx9600\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 \sautoupd toc 1;}{\s23\li283\sb20\sa80\nowidctlpar\adjustright \f1\fs20\cgrid \sbasedon0 \snext0 \sautoupd index 2;}{
+\s24\ri23\sb80\sa80\nowidctlpar\adjustright \f1\fs20\cgrid \sbasedon0 \snext0 \sautoupd index 1;}{\s25\nowidctlpar\brdrt\brdrs\brdrw15 \tqc\tx4780\tqr\tx9600\adjustright \f1\fs16\cgrid \sbasedon0 \snext25 footer;}{\s26\sb320\nowidctlpar\brdrb
+\brdrs\brdrw15 \tqc\tx4780\tqr\tx9600\adjustright \f1\fs16\cgrid \sbasedon0 \snext26 header;}{\*\cs27 \additive \f1\fs18\up6 \sbasedon10 footnote reference;}{\s28\fi-700\li839\ri23\sa80\nowidctlpar\adjustright \f1\fs20\cgrid \sbasedon0 \snext28 
+footnote text;}{\s29\fi-238\li1259\ri17\sb40\sa40\keep\nowidctlpar{\*\pn \pnlvlbody\ilvl10\ls2047\pnrnot0\pnf3\pnstart1\pnindent240\pnhang{\pntxtb \'b7}}\ls2047\ilvl10\adjustright \f1\fs20\cgrid \sbasedon0 \snext29 Bulleted List;}{
+\s30\qc\li680\ri23\sb200\sa80\sl300\slmult0\keep\nowidctlpar\adjustright \f1\fs20\cgrid \sbasedon0 \snext31 Picture;}{\s31\qc\li1120\ri498\sa80\keep\nowidctlpar\adjustright \f1\fs20\cgrid \sbasedon30 \snext0 Picture Annotation;}{
+\s32\sa120\keep\keepn\pagebb\nowidctlpar\adjustright \b\f1\fs48\cgrid \sbasedon0 \snext0 Title Heading;}{\s33\qc\sa80\nowidctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext33 Picture Title;}{\*\cs34 \additive \fs16 \sbasedon10 annotation reference;}{
+\s35\li839\ri23\sb80\sa80\nowidctlpar\adjustright \f1\fs20\cgrid \sbasedon0 \snext35 annotation text;}{\s36\fi-1288\li2127\ri23\sb80\sa80\nowidctlpar\adjustright \f1\fs20\cgrid \sbasedon0 \snext36 Table;}{\s37\fi-4264\li5103\ri23\keep\nowidctlpar
+\tx3686\adjustright \f1\fs20\cgrid \sbasedon0 \snext37 Menu Item;}{\s38\li1400\ri23\nowidctlpar\tqr\tldot\tx9600\adjustright \fs18\cgrid \sbasedon0 \snext0 \sautoupd toc 8;}{\s39\li1600\ri23\nowidctlpar\tqr\tldot\tx9600\adjustright \fs18\cgrid 
+\sbasedon0 \snext0 \sautoupd toc 9;}{\s40\fi-357\li641\sa100\nowidctlpar{\*\pn \pnlvlbody\ilvl10\ls2047\pnrnot0\pnf3\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\ls2047\ilvl10\adjustright \fs20\cgrid \sbasedon0 \snext40 bulleted List 1;}{
+\s41\sb20\sa20\nowidctlpar\adjustright \fs20\cgrid \sbasedon0 \snext41 Table Text;}}{\*\listtable{\list\listtemplateid758655230{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat2\levelspace0\levelindent0{\leveltext\'01\'00;}{\levelnumbers\'01;}
+\fbias0 \fi-705\li705\jclisttab\tx705 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat4\levelspace0\levelindent0{\leveltext\'03\'00.\'01;}{\levelnumbers\'01\'03;}\fbias0 \fi-705\li705\jclisttab\tx705 }{\listlevel\levelnfc0\leveljc0\levelfollow0
+\levelstartat8\levelspace0\levelindent0{\leveltext\'05\'00.\'01.\'02;}{\levelnumbers\'01\'03\'05;}\fbias0 \fi-720\li720\jclisttab\tx720 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'07\'00.\'01.\'02.\'03;}{\levelnumbers\'01\'03\'05\'07;}\fbias0 \fi-720\li720\jclisttab\tx720 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'09\'00.\'01.\'02.\'03.\'04;}{\levelnumbers\'01\'03\'05\'07\'09;}
+\fbias0 \fi-1080\li1080\jclisttab\tx1080 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0b\'00.\'01.\'02.\'03.\'04.\'05;}{\levelnumbers\'01\'03\'05\'07\'09\'0b;}\fbias0 \fi-1080\li1080\jclisttab\tx1080 }
+{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0d\'00.\'01.\'02.\'03.\'04.\'05.\'06;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d;}\fbias0 \fi-1440\li1440\jclisttab\tx1440 }{\listlevel\levelnfc0\leveljc0
+\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0f\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f;}\fbias0 \fi-1440\li1440\jclisttab\tx1440 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1
+\levelspace0\levelindent0{\leveltext\'11\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07.\'08;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f\'11;}\fbias0 \fi-1440\li1440\jclisttab\tx1440 }{\listname ;}\listid617294006}}{\*\listoverridetable
+{\listoverride\listid617294006\listoverridecount0\ls1}}{\*\revtbl {Unknown;}{F-Secure Corp.;}}{\info{\title Design Description}{\subject Design Description}{\author Ari Hypp\'f6nen}{\keywords Design Description}{\operator F-Secure Corp.}{\creatim\yr2000\mo11\dy1\hr13\min40}
+{\revtim\yr2001\mo2\dy16\hr12\min43}{\printim\yr2000\mo11\dy1\hr16\min36}{\version6}{\edmins32}{\nofpages4}{\nofwords1205}{\nofchars6872}{\*\company Data Fellows Ltd.}{\nofcharsws0}{\vern71}}
+\paperw11880\paperh16820\margl1140\margr1140\margt1417\margb1417 \deftab709\widowctrl\ftnbj\aenddoc\ftnrstpg\hyphhotz0\revisions\aftnnar\lytprtmet\hyphcaps0\viewkind4\viewscale100\pgbrdrhead\pgbrdrfoot \fet0{\*\template 
+N:\\template\\FSC-Engineering\\Design Description-new.dot}\sectd \pgnrestart\linex0\headery709\footery709\colsx709\endnhere\titlepg\sectdefaultcl {\header \pard\plain \s26\sb320\nowidctlpar\brdrb\brdrs\brdrw15 \tqc\tx4780\tqr\tx9600\adjustright 
+\f1\fs16\cgrid {\field{\*\fldinst {savedate  \\@ "yyyy-MM-dd"}}{\fldrslt {2000-11-01}}}{\tab Security Classification: Internal\tab \chpgn 
+\par }}{\footer \pard\plain \s25\nowidctlpar\brdrt\brdrs\brdrw15 \tqc\tx4780\tqr\tx9600\adjustright \f1\fs16\cgrid {\tab }{\field{\*\fldinst {filename  \\p \\*lower}}{\fldrslt {k:\\anti-virus\\jazz\\doc\\specifications\\avp-fpi-dll\\avp-fpi-dll-spec.doc}}}{
+
+\par \tab Copyright \'a9 2000 F-Secure Corporation. All Rights Reserved.
+\par }}{\headerf \pard\plain \s26\sb320\nowidctlpar\tqc\tx4780\tqr\tx9600\adjustright \f1\fs16\cgrid {
+\par }}{\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta ?}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta ?}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta ?}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta ?}}
+{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb ?}{\pntxta ?}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb ?}{\pntxta ?}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb ?}{\pntxta ?}}{\*\pnseclvl8
+\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb ?}{\pntxta ?}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb ?}{\pntxta ?}}\pard\plain \s32\sa120\keep\keepn\pagebb\nowidctlpar\widctlpar\adjustright \b\f1\fs48\cgrid {{\*\bkmkstart NameOfProject}
+AVP FPI DLL{\*\bkmkend NameOfProject} Specification
+\par }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx4320\clvertalt\cltxlrtb \cellx8748\pard\plain \ri23\sb80\sa80\nowidctlpar\widctlpar\intbl\adjustright \f1\fs20\cgrid {Last saved: }{\field{\*\fldinst {savedate \\@ "yyyy-MM-dd" \\* Mergeformat }
+}{\fldrslt {\revised\lang1024\revauth1\revdttm-1504541909 2001-02-08}{\deleted\lang1024\revauthdel1\revdttmdel-1504541909 2000-11-01}}}{\line Version: }{\field{\*\fldinst {revnum  \\* Mergeformat }}{\fldrslt {\revised\lang1024\revauth1\revdttm-1504541909 
+5}{\deleted\lang1024\revauthdel1\revdttmdel-1504541909 1}}}{\line Last saved by: }{\field{\*\fldinst {lastsavedby  \\* Mergeformat }}{\fldrslt {\revised\lang1024\revauth1\revdttm-1504541909 F-Secure Corp.}{
+\deleted\lang1024\revauthdel1\revdttmdel-1504541909 Jari Lehtonen}}}{\cell Status: }{\b Draft}{, Reviewed, Valid, Archive \line Keywords: }{\field{\*\fldinst {keywords  \\* Mergeformat }}{\fldrslt {Design Description}}}{\cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx8748\pard \ri23\sb80\sa80\nowidctlpar\widctlpar\intbl\adjustright {Filename: }{\field{\*\fldinst {filename \\p \\* Mergeformat }}{\fldrslt {\lang1024 K:
+\\Anti-Virus\\jazz\\DOC\\Specifications\\avp-fpi-dll\\AVP-FPI-DLL-spec.doc}}}{
+\par SourceSafe location: $/Anti-Virus/AVP/Spec: AVP-FPI-DLL-spec.doc\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\row }\trowd \trgaph108\trleft-108 \clvertalt\cltxlrtb \cellx8748\pard \ri23\sb80\sa80\nowidctlpar\widctlpar\intbl\adjustright {
+Security Classification: Internal\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\row }\pard \li839\ri23\sb80\sa80\nowidctlpar\widctlpar\adjustright {
+\par This document is confidential and contains trade secrets of F-Secure Corporation.\line Copyright \'a9 2000 F-Secure Corporation. All Rights Reserved.
+\par }\pard \ri23\sb80\sa80\nowidctlpar\widctlpar\adjustright {\b\fs36 Table of Contents
+\par }\pard\plain \s22\ri23\sb120\sa120\nowidctlpar\tqr\tldot\tx9600\adjustright \b\f1\fs20\cgrid {\field\fldedit{\*\fldinst {toc \\o "1-3" }}{\fldrslt {\revised\lang1024\revauth1\revdttm-2041428889 Project synopsis\tab }{\field{\*\fldinst {
+\revised\lang1024\revauth1\revdttm-2041428889  PAGEREF _Toc506288208 \\h }{\revised\lang1024\revdttm-1504541918 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300350030003600320038003800320030003800000000}}}{\fldrslt 
+{\revised\lang1024\revauth1\revdttm-2041428889 2}}}{\revised\lang1024\revauth1\revdttm-2041428889 
+\par }\pard\plain \s21\li200\ri23\nowidctlpar\tx800\tqr\tldot\tx9600\adjustright \f1\fs20\cgrid {\revised\lang1024\revauth1\revdttm-2041428889 1.1\tab Purpose of the project\tab }{\field{\*\fldinst {\revised\lang1024\revauth1\revdttm-2041428889 
+ PAGEREF _Toc506288209 \\h }{\revised\lang1024\revdttm-1504541918 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300350030003600320038003800320030003900000000}}}{\fldrslt {
+\revised\lang1024\revauth1\revdttm-2041428889 2}}}{\revised\lang1024\revauth1\revdttm-2041428889 
+\par 1.2\tab Benefits of the project for F\_Secure\tab }{\field{\*\fldinst {\revised\lang1024\revauth1\revdttm-2041428889  PAGEREF _Toc506288210 \\h }{\revised\lang1024\revdttm-1504541918 {\*\datafield 
+08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300350030003600320038003800320031003000000000}}}{\fldrslt {\revised\lang1024\revauth1\revdttm-2041428889 2}}}{\revised\lang1024\revauth1\revdttm-2041428889 
+\par 1.3\tab Benefits of the project for Kaspersky Labs\tab }{\field{\*\fldinst {\revised\lang1024\revauth1\revdttm-2041428889  PAGEREF _Toc506288211 \\h }{\revised\lang1024\revdttm-1504541918 {\*\datafield 
+08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300350030003600320038003800320031003100000000}}}{\fldrslt {\revised\lang1024\revauth1\revdttm-2041428889 2}}}{\revised\lang1024\revauth1\revdttm-2041428889 
+\par }\pard\plain \s22\ri23\sb120\sa120\nowidctlpar\tx400\tqr\tldot\tx9600\adjustright \b\f1\fs20\cgrid {\revised\lang1024\revauth1\revdttm-2041428889 2.\tab Project requirements\tab }{\field{\*\fldinst {\revised\lang1024\revauth1\revdttm-2041428889 
+ PAGEREF _Toc506288212 \\h }{\revised\lang1024\revdttm-1504541918 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300350030003600320038003800320031003200000000}}}{\fldrslt {
+\revised\lang1024\revauth1\revdttm-2041428889 2}}}{\revised\lang1024\revauth1\revdttm-2041428889 
+\par }\pard\plain \s21\li200\ri23\nowidctlpar\tx800\tqr\tldot\tx9600\adjustright \f1\fs20\cgrid {\revised\lang1024\revauth1\revdttm-2041428889 2.4\tab \ldblquote Shall\rdblquote  requirements \endash  must have\tab }{\field{\*\fldinst {
+\revised\lang1024\revauth1\revdttm-2041428889  PAGEREF _Toc506288213 \\h }{\revised\lang1024\revdttm-1504541918 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300350030003600320038003800320031003300000000}}}{\fldrslt 
+{\revised\lang1024\revauth1\revdttm-2041428889 2}}}{\revised\lang1024\revauth1\revdttm-2041428889 
+\par }\pard\plain \s20\li400\ri23\nowidctlpar\tx1200\tqr\tldot\tx9600\adjustright \i\fs20\cgrid {\revised\lang1024\revauth1\revdttm-2041428889 2.4.1\tab FPI API version\tab }{\field{\*\fldinst {\revised\lang1024\revauth1\revdttm-2041428889 
+ PAGEREF _Toc506288214 \\h }{\revised\lang1024\revdttm-1504541918 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300350030003600320038003800320031003400000000}}}{\fldrslt {
+\revised\lang1024\revauth1\revdttm-2041428889 2}}}{\revised\lang1024\revauth1\revdttm-2041428889 
+\par 2.4.2\tab Supported operating system requirement\tab }{\field{\*\fldinst {\revised\lang1024\revauth1\revdttm-2041428889  PAGEREF _Toc506288215 \\h }{\revised\lang1024\revdttm-1504541918 {\*\datafield 
+08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300350030003600320038003800320031003500000000}}}{\fldrslt {\revised\lang1024\revauth1\revdttm-2041428889 3}}}{\revised\lang1024\revauth1\revdttm-2041428889 
+\par 2.4.3\tab Filename parameter in FPI_ScanFile()\tab }{\field{\*\fldinst {\revised\lang1024\revauth1\revdttm-2041428889  PAGEREF _Toc506288216 \\h }{\revised\lang1024\revdttm-1504541918 {\*\datafield 
+08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300350030003600320038003800320031003600000000}}}{\fldrslt {\revised\lang1024\revauth1\revdttm-2041428889 3}}}{\revised\lang1024\revauth1\revdttm-2041428889 
+\par 2.4.4\tab FPIFILEIO_OPENFLAG_DATABASE\tab }{\field{\*\fldinst {\revised\lang1024\revauth1\revdttm-2041428889  PAGEREF _Toc506288217 \\h }{\revised\lang1024\revdttm-1504541918 {\*\datafield 
+08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300350030003600320038003800320031003700000000}}}{\fldrslt {\revised\lang1024\revauth1\revdttm-2041428889 3}}}{\revised\lang1024\revauth1\revdttm-2041428889 
+\par 2.4.5\tab Database validation and updating\tab }{\field{\*\fldinst {\revised\lang1024\revauth1\revdttm-2041428889  PAGEREF _Toc506288218 \\h }{\revised\lang1024\revdttm-1504541918 {\*\datafield 
+08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300350030003600320038003800320031003800000000}}}{\fldrslt {\revised\lang1024\revauth1\revdttm-2041428889 3}}}{\revised\lang1024\revauth1\revdttm-2041428889 
+\par 2.4.6\tab Initialization of AVP DLL\tab }{\field{\*\fldinst {\revised\lang1024\revauth1\revdttm-2041428889  PAGEREF _Toc506288219 \\h }{\revised\lang1024\revdttm-1504541918 {\*\datafield 
+08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300350030003600320038003800320031003900000000}}}{\fldrslt {\revised\lang1024\revauth1\revdttm-2041428889 3}}}{\revised\lang1024\revauth1\revdttm-2041428889 
+\par 2.4.7\tab Reentrancy \endash  no internal queues\tab }{\field{\*\fldinst {\revised\lang1024\revauth1\revdttm-2041428889  PAGEREF _Toc506288220 \\h }{\revised\lang1024\revdttm-1504541918 {\*\datafield 
+08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300350030003600320038003800320032003000000000}}}{\fldrslt {\revised\lang1024\revauth1\revdttm-2041428889 3}}}{\revised\lang1024\revauth1\revdttm-2041428889 
+\par 2.4.8\tab Custom settings for AVP DLL\tab {\*\bkmkstart _Hlt506288233}}{\field{\*\fldinst {\revised\lang1024\revauth1\revdttm-2041428889  PAGEREF _Toc506288221 \\h }{\revised\lang1024\revdttm-1504541918 {\*\datafield 
+08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300350030003600320038003800320032003100000000}}}{\fldrslt {\revised\lang1024\revauth1\revdttm-2041428889 3}}}{\revised\lang1024\revauth1\revdttm-2041428889 {\*\bkmkend _Hlt506288233}
+
+\par }\pard\plain \s21\li200\ri23\nowidctlpar\tx800\tqr\tldot\tx9600\adjustright \f1\fs20\cgrid {\revised\lang1024\revauth1\revdttm-2041428889 2.5\tab  \ldblquote Should\rdblquote  requirements \endash  nice to have\tab }{\field{\*\fldinst {
+\revised\lang1024\revauth1\revdttm-2041428889  PAGEREF _Toc506288222 \\h }{\revised\lang1024\revdttm-1504541918 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300350030003600320038003800320032003200000000}}}{\fldrslt 
+{\revised\lang1024\revauth1\revdttm-2041428889 4}}}{\revised\lang1024\revauth1\revdttm-2041428889 
+\par }\pard\plain \s20\li400\ri23\nowidctlpar\tx1200\tqr\tldot\tx9600\adjustright \i\fs20\cgrid {\revised\lang1024\revauth1\revdttm-2041428889 2.5.1\tab Keeping database files on disk\tab }{\field{\*\fldinst {\revised\lang1024\revauth1\revdttm-2041428889 
+ PAGEREF _Toc506288223 \\h }{\revised\lang1024\revdttm-1504541918 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300350030003600320038003800320032003300000000}}}{\fldrslt {
+\revised\lang1024\revauth1\revdttm-2041428889 4}}}{\revised\lang1024\revauth1\revdttm-2041428889 
+\par 2.5.2\tab Reentrancy\tab }{\field{\*\fldinst {\revised\lang1024\revauth1\revdttm-2041428889  PAGEREF _Toc506288224 \\h }{\revised\lang1024\revdttm-1504541918 {\*\datafield 
+08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300350030003600320038003800320032003400000000}}}{\fldrslt {\revised\lang1024\revauth1\revdttm-2041428889 4}}}{\revised\lang1024\revauth1\revdttm-2041428889 
+\par }\pard\plain \s22\ri23\sb120\sa120\nowidctlpar\tx400\tqr\tldot\tx9600\adjustright \b\f1\fs20\cgrid {\revised\lang1024\revauth1\revdttm-2041428889 3.\tab Project finishing criteria\tab }{\field{\*\fldinst {\revised\lang1024\revauth1\revdttm-2041428889 
+ PAGEREF _Toc506288225 \\h }{\revised\lang1024\revdttm-1504541918 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300350030003600320038003800320032003500000000}}}{\fldrslt {
+\revised\lang1024\revauth1\revdttm-2041428889 4}}}{\revised\lang1024\revauth1\revdttm-2041428889 
+\par }\pard\plain \s21\li200\ri23\nowidctlpar\tx800\tqr\tldot\tx9600\adjustright \f1\fs20\cgrid {\revised\lang1024\revauth1\revdttm-2041428889 3.1\tab Project finishing criteria from F\_Secure\rquote s point of view\tab }{\field{\*\fldinst {
+\revised\lang1024\revauth1\revdttm-2041428889  PAGEREF _Toc506288226 \\h }{\revised\lang1024\revdttm-1504541918 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300350030003600320038003800320032003600000000}}}{\fldrslt 
+{\revised\lang1024\revauth1\revdttm-2041428889 4}}}{\revised\lang1024\revauth1\revdttm-2041428889 
+\par }\pard\plain \s22\ri23\sb120\sa120\nowidctlpar\widctlpar\tx600\tqr\tldot\tx9600\adjustright \b\f1\fs20\cgrid {\deleted\lang1024\revauthdel1\revdttmdel-2041428889 1.}{\b0\deleted\f0\fs24\lang1024\revauthdel1\revdttmdel-2041428889 \tab }{
+\deleted\lang1024\revauthdel1\revdttmdel-2041428889 Project synopsis\tab 1}{\b0\deleted\f0\fs24\lang1024\revauthdel1\revdttmdel-2041428889 
+\par }\pard\plain \s21\li200\ri23\nowidctlpar\widctlpar\tx800\tqr\tldot\tx9600\adjustright \f1\fs20\cgrid {\deleted\lang1024\revauthdel1\revdttmdel-2041428889 1.1}{\deleted\f0\fs24\lang1024\revauthdel1\revdttmdel-2041428889 \tab }{
+\deleted\lang1024\revauthdel1\revdttmdel-2041428889 Purpose of the project\tab 1}{\deleted\f0\fs24\lang1024\revauthdel1\revdttmdel-2041428889 
+\par }{\deleted\lang1024\revauthdel1\revdttmdel-2041428889 1.2}{\deleted\f0\fs24\lang1024\revauthdel1\revdttmdel-2041428889 \tab }{\deleted\lang1024\revauthdel1\revdttmdel-2041428889 Benefits of the project for F\_Secure\tab 1}{
+\deleted\f0\fs24\lang1024\revauthdel1\revdttmdel-2041428889 
+\par }{\deleted\lang1024\revauthdel1\revdttmdel-2041428889 1.3}{\deleted\f0\fs24\lang1024\revauthdel1\revdttmdel-2041428889 \tab }{\deleted\lang1024\revauthdel1\revdttmdel-2041428889 Benefits of the project for Kaspersky Labs\tab 2}{
+\deleted\f0\fs24\lang1024\revauthdel1\revdttmdel-2041428889 
+\par }\pard\plain \s22\ri23\sb120\sa120\nowidctlpar\widctlpar\tx600\tqr\tldot\tx9600\adjustright \b\f1\fs20\cgrid {\deleted\lang1024\revauthdel1\revdttmdel-2041428889 2.}{\b0\deleted\f0\fs24\lang1024\revauthdel1\revdttmdel-2041428889 \tab }{
+\deleted\lang1024\revauthdel1\revdttmdel-2041428889 Project requirements\tab 2}{\b0\deleted\f0\fs24\lang1024\revauthdel1\revdttmdel-2041428889 
+\par }\pard\plain \s21\li200\ri23\nowidctlpar\widctlpar\tx800\tqr\tldot\tx9600\adjustright \f1\fs20\cgrid {\deleted\lang1024\revauthdel1\revdttmdel-2041428889 2.1}{\deleted\f0\fs24\lang1024\revauthdel1\revdttmdel-2041428889 \tab }{
+\deleted\lang1024\revauthdel1\revdttmdel-2041428889 \ldblquote Shall\rdblquote  requirements \endash  must have\tab 2}{\deleted\f0\fs24\lang1024\revauthdel1\revdttmdel-2041428889 
+\par }\pard\plain \s20\li400\ri23\nowidctlpar\widctlpar\tx1200\tqr\tldot\tx9600\adjustright \i\fs20\cgrid {\deleted\lang1024\revauthdel1\revdttmdel-2041428889 2.1.1}{\i0\deleted\fs24\lang1024\revauthdel1\revdttmdel-2041428889 \tab }{
+\deleted\lang1024\revauthdel1\revdttmdel-2041428889 FPI API version\tab 2}{\i0\deleted\fs24\lang1024\revauthdel1\revdttmdel-2041428889 
+\par }{\deleted\lang1024\revauthdel1\revdttmdel-2041428889 2.1.2}{\i0\deleted\fs24\lang1024\revauthdel1\revdttmdel-2041428889 \tab }{\deleted\lang1024\revauthdel1\revdttmdel-2041428889 Supported operating system requirement\tab 2}{
+\i0\deleted\fs24\lang1024\revauthdel1\revdttmdel-2041428889 
+\par }{\deleted\lang1024\revauthdel1\revdttmdel-2041428889 2.1.3}{\i0\deleted\fs24\lang1024\revauthdel1\revdttmdel-2041428889 \tab }{\deleted\lang1024\revauthdel1\revdttmdel-2041428889 Filename parameter in FPI_ScanFile()\tab 2}{
+\i0\deleted\fs24\lang1024\revauthdel1\revdttmdel-2041428889 
+\par }{\deleted\lang1024\revauthdel1\revdttmdel-2041428889 2.1.4}{\i0\deleted\fs24\lang1024\revauthdel1\revdttmdel-2041428889 \tab }{\deleted\lang1024\revauthdel1\revdttmdel-2041428889 FPIFILEIO_OPENFLAG_DATABASE\tab 2}{
+\i0\deleted\fs24\lang1024\revauthdel1\revdttmdel-2041428889 
+\par }{\deleted\lang1024\revauthdel1\revdttmdel-2041428889 2.1.5}{\i0\deleted\fs24\lang1024\revauthdel1\revdttmdel-2041428889 \tab }{\deleted\lang1024\revauthdel1\revdttmdel-2041428889 Database validation and updating\tab 3}{
+\i0\deleted\fs24\lang1024\revauthdel1\revdttmdel-2041428889 
+\par }\pard\plain \li839\ri23\sb80\sa80\nowidctlpar\pnrnot1\adjustright \f1\fs20\cgrid {\deleted\lang1024\revauthdel1\revdttmdel-2041428889 2.1.6}{\i\deleted\fs24\lang1024\revauthdel1\revdttmdel-2041428889 \tab }{
+\deleted\lang1024\revauthdel1\revdttmdel-2041428889 Initialization of AVP DLL\tab 3
+\par }\pard\plain \s21\li200\ri23\nowidctlpar\widctlpar\tx800\tqr\tldot\tx9600\adjustright \f1\fs20\cgrid {\deleted\lang1024\revauthdel1\revdttmdel-2041428889 2.2}{\deleted\f0\fs24\lang1024\revauthdel1\revdttmdel-2041428889 \tab }{
+\deleted\lang1024\revauthdel1\revdttmdel-2041428889 \ldblquote Should\rdblquote  requirements \endash  nice to have\tab 3}{\deleted\f0\fs24\lang1024\revauthdel1\revdttmdel-2041428889 
+\par }\pard\plain \s20\li400\ri23\nowidctlpar\widctlpar\tx1200\tqr\tldot\tx9600\adjustright \i\fs20\cgrid {\deleted\lang1024\revauthdel1\revdttmdel-2041428889 2.2.1}{\i0\deleted\fs24\lang1024\revauthdel1\revdttmdel-2041428889 \tab }{
+\deleted\lang1024\revauthdel1\revdttmdel-2041428889 Keeping database files on disk\tab 3}{\i0\deleted\fs24\lang1024\revauthdel1\revdttmdel-2041428889 
+\par }{\deleted\lang1024\revauthdel1\revdttmdel-2041428889 2.2.2}{\i0\deleted\fs24\lang1024\revauthdel1\revdttmdel-2041428889 \tab }{\deleted\lang1024\revauthdel1\revdttmdel-2041428889 Reentrancy\tab 3}{
+\i0\deleted\fs24\lang1024\revauthdel1\revdttmdel-2041428889 
+\par }\pard\plain \s22\ri23\sb120\sa120\nowidctlpar\widctlpar\tx600\tqr\tldot\tx9600\adjustright \b\f1\fs20\cgrid {\deleted\lang1024\revauthdel1\revdttmdel-2041428889 3.}{\b0\deleted\f0\fs24\lang1024\revauthdel1\revdttmdel-2041428889 \tab }{
+\deleted\lang1024\revauthdel1\revdttmdel-2041428889 Project finishing criteria\tab 3}{\b0\deleted\f0\fs24\lang1024\revauthdel1\revdttmdel-2041428889 
+\par }\pard\plain \s21\li200\ri23\nowidctlpar\widctlpar\tx800\tqr\tldot\tx9600\adjustright \f1\fs20\cgrid {\deleted\lang1024\revauthdel1\revdttmdel-2041428889 3.1}{\deleted\f0\fs24\lang1024\revauthdel1\revdttmdel-2041428889 \tab }{
+\deleted\lang1024\revauthdel1\revdttmdel-2041428889 Project finishing criteria from F\_Secure\rquote s point of view\tab 3}{\deleted\f0\fs24\lang1024\revauthdel1\revdttmdel-2041428889 
+\par }\pard\plain \s1\ri23\sb720\sa120\keep\keepn\nowidctlpar\widctlpar\outlinelevel0\adjustright \b\f1\fs36\cgrid {\deleted\lang1024\revauthdel1\revdttmdel-2041428889 1.\tab }}}\pard\plain 
+\s1\ri23\sb720\sa120\keep\keepn\nowidctlpar\widctlpar\outlinelevel0\adjustright \b\f1\fs36\cgrid {{\*\bkmkstart _Toc506288208}{\*\bkmkstart _Toc319385593}{\*\bkmkstart _Toc319385706}{\*\bkmkstart _Toc319385915}Project synopsis{\*\bkmkend _Toc506288208}
+
+\par }\pard\plain \s2\ri23\sb240\sa80\keep\keepn\nowidctlpar\widctlpar\outlinelevel1\adjustright \b\f1\cgrid {{\*\bkmkstart _Toc506288209}1.1\tab Purpose of the project{\*\bkmkend _Toc506288209}
+\par }\pard\plain \li839\ri23\sb80\sa80\nowidctlpar\widctlpar\adjustright \f1\fs20\cgrid {The purpose of the project is to make an FPI compatible AVP scanning engine DLL for Win32 platfor
+m. It will be used in the revised FSAV5 scanning subsystem. It will replace the kernel driver on Windows NT/2k. It will work in addition to the kernel driver on Win9x (real-time scanning will still be done with the kernel driver there).
+\par }\pard\plain \s2\ri23\sb240\sa80\keep\keepn\nowidctlpar\widctlpar\outlinelevel1\adjustright \b\f1\cgrid {{\*\bkmkstart _Toc506288210}1.2\tab Benefits of the project for F\_Secure{\*\bkmkend _Toc506288210}
+\par }\pard\plain \fi-360\li1559\ri23\sb80\sa80\nowidctlpar\widctlpar\tx1559\adjustright \f1\fs20\cgrid {\f3 \'b7\tab }{Uniform scanning engine API used in all platforms with FSAV5. This makes maintenance and development easier.
+\par }{\f3 \'b7\tab }{Pure FPI API allows file I/O performance optimizations in the future.
+\par }{\f3 \'b7\tab }{Support for database validation and updating in the AVP engine (these are not implemented in the conversion DLL that could possibly otherwise be used instead of pure AVP FPI DLL).
+\par }{\f3 \'b7\tab }{Easier and faster debugging/bugfixing because more of the code is in F\_Secure\rquote s components (i.e. the file I/O callbacks).
+\par }{\f3 \'b7\tab }{Moving scanning to user mode, for which the AVP FPI DLL is needed, will make most scan engine problems less severe than before, and thus there will be less requests like \ldblquote this needs to be fixed now\rdblquote 
+ from F-Secure to KL. }{\field{\*\fldinst {symbol 222 \\f "Symbol" \\s 10}}{\fldrslt {\f3 \'de}}}{ Less stress to Kaspersky Labs and F-Secure personnel and less bad schedule surprises for both.
+\par }\pard \li839\ri23\sb80\sa80\nowidctlpar\widctlpar\adjustright {
+\par }\pard\plain \s2\ri23\sb240\sa80\keep\keepn\nowidctlpar\widctlpar\outlinelevel1\adjustright \b\f1\cgrid {{\*\bkmkstart _Toc506288211}1.3\tab Benefits of the project for Kaspersky Labs{\*\bkmkend _Toc506288211}
+\par }\pard\plain \fi-360\li1559\ri23\sb80\sa80\nowidctlpar\widctlpar\tx1559\adjustright \f1\fs20\cgrid {\f3 \'b7\tab }{Kaspersky Labs doesn\rquote t have to put so much resources in problems reported by F\_
+Secure in the future because more of the potential problematic code and bugs are in F\_Secure\rquote s components (i.e. the file I/O callbacks).
+\par }{\f3 \'b7\tab }{Moving scanning to user mode, for which the AVP FPI DLL is needed, will make most scan engine problems less severe than before, and thus {\*\bkmkend _Toc319385593}{\*\bkmkend _Toc319385706}{\*\bkmkend _Toc319385915}
+there will be less requests like \ldblquote this needs to be fixed now\rdblquote  from F-Secure to KL. }{\field{\*\fldinst {symbol 222 \\f "Symbol" \\s 10}}{\fldrslt {\f3 \'de}}}{ Less stress to Kaspersky Labs and F-Secure personnel and less b
+ad schedule surprises for both. 
+\par }\pard\plain \s1\ri23\sb720\sa120\keep\keepn\nowidctlpar\widctlpar\outlinelevel0\adjustright \b\f1\fs36\cgrid {{\*\bkmkstart _Toc506288212}2.\tab Project requirements{\*\bkmkend _Toc506288212}
+\par }\pard\plain \li839\ri23\sb80\sa80\nowidctlpar\widctlpar\adjustright \f1\fs20\cgrid {Please note: The requirements are written using the established practice where \ldblquote shall\rdblquote  means that the product must meet the requirement, and 
+\ldblquote should\rdblquote  means that the product would be nice to meet the requirement, but it\rquote s not mandatory.
+\par }\pard\plain \s2\ri23\sb240\sa80\keep\keepn\nowidctlpar\widctlpar\outlinelevel1\adjustright \b\f1\cgrid {{\*\bkmkstart _Toc506288213}2.4\tab \ldblquote Shall\rdblquote  requirements \endash  must have{\*\bkmkend _Toc506288213}
+\par }\pard\plain \s3\ri23\sb80\sa80\keep\keepn\nowidctlpar\widctlpar\outlinelevel2\adjustright \b\f1\fs20\cgrid {{\*\bkmkstart _Toc506288214}2.4.1\tab FPI API version{\*\bkmkend _Toc506288214}
+\par }\pard\plain \li839\ri23\sb80\sa80\nowidctlpar\widctlpar\adjustright \f1\fs20\cgrid {AVP FPI DLL shall conform to FPI API v1.17.
+\par All FPI functions shall be implemented according to the FPI API specification.
+\par FPI virus description functions (FPIVI_*) shall not be implemented.
+\par }\pard\plain \s3\ri23\sb80\sa80\keep\keepn\nowidctlpar\widctlpar\outlinelevel2\adjustright \b\f1\fs20\cgrid {{\*\bkmkstart _Toc506288215}2.4.2\tab Supported operating system requirement{\*\bkmkend _Toc506288215}
+\par }\pard\plain \li839\ri23\sb80\sa80\nowidctlpar\widctlpar\adjustright \f1\fs20\cgrid {AVP FPI DLL shall operate on Win32 platforms: Windows NT/2k/9x.
+\par }\pard\plain \s3\ri23\sb80\sa80\keep\keepn\nowidctlpar\widctlpar\outlinelevel2\adjustright \b\f1\fs20\cgrid {{\*\bkmkstart _Toc506288216}2.4.3\tab Filename parameter in FPI_ScanFile(){\*\bkmkend _Toc506288216}
+\par }\pard\plain \li839\ri23\sb80\sa80\nowidctlpar\widctlpar\adjustright \f1\fs20\cgrid {AVP FPI DLL shall not make any assumptions about the filename passed in FPI_ScanFile(). It shall not use the parameter for anything internally; it shall only pas
+s received pointer to file name string to FPIFIO_Open().
+\par This is required because that way we can later optimize the system so that a file handle is passed to FPI_ScanFile() instead of filename, and it will not then require changes in AVP DLL if it doesn\rquote t use the parameter.
+\par }\pard\plain \s3\ri23\sb80\sa80\keep\keepn\nowidctlpar\widctlpar\outlinelevel2\adjustright \b\f1\fs20\cgrid {{\*\bkmkstart _Toc506288217}2.4.4\tab FPIFILEIO_OPENFLAG_DATABASE{\*\bkmkend _Toc506288217}
+\par }\pard\plain \li839\ri23\sb80\sa80\nowidctlpar\widctlpar\adjustright \f1\fs20\cgrid {
+AVP FPI DLL shall use FPIFILEIO_OPENFLAG_DATABASE when opening database files and other files for internal plugin use, if any. This is documented in the API, but I want to emphasize it here separately.
+\par This is required for the same reason as 2.2. When AVP calls FPIFIO_Open(), the function must be able to determine from this flag whether the filename parameter contains a handle or a filename, after the handle optimization has been implemented.
+\par }\pard\plain \s3\ri23\sb80\sa80\keep\keepn\nowidctlpar\widctlpar\outlinelevel2\adjustright \b\f1\fs20\cgrid {{\*\bkmkstart _Toc506288218}2.4.5\tab Database validation and updating{\*\bkmkend _Toc506288218} 
+\par }\pard\plain \li839\ri23\sb80\sa80\nowidctlpar\widctlpar\adjustright \f1\fs20\cgrid {AVP FPI DLL shall implement database validation and updating according to FPI API specification.
+\par This has been a common source of problems, so it will need special attention.
+\par }\pard\plain \s3\ri23\sb80\sa80\keep\keepn\nowidctlpar\widctlpar\outlinelevel2\adjustright \b\f1\fs20\cgrid {{\*\bkmkstart _Toc506288219}2.4.6\tab Initialization of AVP DLL{\*\bkmkend _Toc506288219}
+\par }\pard\plain \li839\ri23\sb80\sa80\nowidctlpar\widctlpar\adjustright \f1\fs20\cgrid {
+It shall be possible to call FPI_Initialize() from one thread context and FPI_ScanFile() from another thread context. It is guaranteed that FPI_Initialize() will be called before FPI_ScanFile().
+\par This requirement will help to design multithreaded architecture in the caller of FPI_ScanFile().
+\par }\pard\plain \s3\ri23\sb80\sa80\keep\keepn\nowidctlpar\widctlpar\outlinelevel2\adjustright \b\f1\fs20\cgrid {{\*\bkmkstart _Toc506288220}2.4.7\tab Reentrancy \endash  no internal queues{\*\bkmkend _Toc506288220}
+\par }\pard\plain \li839\ri23\sb80\sa80\nowidctlpar\widctlpar\adjustright \f1\fs20\cgrid {AVP FPI DLL shall be either natively re-entrant, or if it is not, then it shall }{\b not}{ use any intern
+al task queues (or the like) to handle re-reentrancy. The caller of the DLL shall take care that only one thread at a time executes inside AVP DLL.}{\revised\revauth1\revdttm-2041428901 
+\par {\*\bkmkstart _Toc506288221}{\listtext\pard\plain\s3 \b\f1\fs20\revised\revauth1\revdttm-2041428901\cgrid \hich\af1\dbch\af0\loch\f1 2.4.8\tab}}\pard\plain \s3\fi-720\li720\ri23\sb80\sa80\keep\keepn\nowidctlpar\widctlpar
+\jclisttab\tx720\ls1\ilvl2\outlinelevel2\pnrnot1\adjustright \b\f1\fs20\cgrid {\revised\revauth1\revdttm-2041428901 Custom settings for AVP DLL{\*\bkmkend _Toc506288221}
+\par }\pard\plain \li839\ri23\sb80\sa80\nowidctlpar\pnrnot1\adjustright \f1\fs20\cgrid {\revised\revauth1\revdttm-2041428901 AVP FPI DLL shall be possible to receive }{\revised\revauth1\revdttm-2041428900 custom 
+settings through FPI_CustomSettings call. The parameter for this }{\revised\revauth1\revdttm-2041428899 function }{\revised\revauth1\revdttm-2041428888 has}{\revised\revauth1\revdttm-2041428890  the following format}{\revised\revauth1\revdttm-2041428899 
+
+\par }{\revised\revauth1\revdttm-2041428887 [}{\revised\revauth1\revdttm-2041428899 Variable1=value1}{\revised\revauth1\revdttm-2041428887 ][;}{\revised\revauth1\revdttm-2041428899 Variable2=value2}{\revised\revauth1\revdttm-2041428887 ]}{
+\revised\revauth1\revdttm-2041428888 [}{\revised\revauth1\revdttm-2041428898 ;Variable3=value3}{\revised\revauth1\revdttm-2041428888 ]}{\revised\revauth1\revdttm-2041428899 
+\par }{\revised\revauth1\revdttm-2041428898 Currently the following variable}{\revised\revauth1\revdttm-2041428888 s}{\revised\revauth1\revdttm-2041428898  are defi}{\revised\revauth1\revdttm-2041428888 n}{\revised\revauth1\revdttm-2041428898 ed
+\par MFlag \endash  }{\revised\revauth1\revdttm-2041428897 specifies }{\revised\revauth1\revdttm-2041428898 mode flag}{\revised\revauth1\revdttm-2041428897 , }{\revised\revauth1\revdttm-2041428896 default is 0x08150002}{\revised\revauth1\revdttm-2041428898 
+
+\par TEMP \endash  }{\revised\revauth1\revdttm-2041428897 specifies folder where}{\revised\revauth1\revdttm-2041428896  AVP DLL makes temporary files.}{\revised\revauth1\revdttm-2041428897  }{\revised\revauth1\revdttm-2041428895 
+Default is %TEMP% (environment variable}{\revised\revauth1\revdttm-2041428894 )}{\revised\revauth1\revdttm-2041428892 . Path }{\revised\revauth1\revdttm-1504541917 must }{\revised\revauth1\revdttm-2041428892 not have trail slash (\\).}{
+\revised\revauth1\revdttm-2041428894 
+\par If during FPI_CustomSettings call the variable is not specified the default value is taken}{\revised\revauth1\revdttm-2041428893 .}{\revised\revauth1\revdttm-2041428894 
+\par }\pard \li839\ri23\sb80\sa80\nowidctlpar\adjustright {\revised\revauth1\revdttm-2041428891 If in future new variable }{\revised\revauth1\revdttm-2041428890 will be}{\revised\revauth1\revdttm-2041428891  required they can to be added }{
+\revised\revauth1\revdttm-2041428890 using semicolon (;) delimiter. }{\revised\revauth1\revdttm-2041428891  
+\par }\pard \li839\ri23\sb80\sa80\nowidctlpar\pnrnot1\adjustright {\revised\revauth1\revdttm-1504541917 
+\par }\pard \li839\ri23\sb80\sa80\nowidctlpar\pnrnot1\adjustright {\revised\revauth1\revdttm-1504541917 Custom settings have to be taken in use }{\revised\revauth1\revdttm-1504541916 immediately as FPI_ }{\revised\revauth1\revdttm-1504541916 CustomSettings }{
+\revised\revauth1\revdttm-1504541916 called. It means that scan engine }{\revised\revauth1\revdttm-1504541915 must}{\revised\revauth1\revdttm-1504541916  not expect reload, re}{\revised\revauth1\revdttm-1504541915 initialization}{
+\revised\revauth1\revdttm-1504541916  }{\revised\revauth1\revdttm-1504541915 or others calls}{\revised\revauth1\revdttm-1504541914  to enable a new setting.
+\par }\pard \li839\ri23\sb80\sa80\nowidctlpar\pnrnot1\adjustright {\revised\revauth1\revdttm-1504541917  }{\revised\revauth1\revdttm-2041428891 
+\par }\pard \li839\ri23\sb80\sa80\nowidctlpar\pnrnot1\adjustright {\revised\revauth1\revdttm-2041428893 The example of the parameter is
+\par MFlag=0x08150002;TEMP=C:\\Temp}{\revised\revauth1\revdttm-2041428891 
+\par }{\revised\revauth1\revdttm-2041428892 
+\par }\pard \li839\ri23\sb80\sa80\nowidctlpar\widctlpar\pnrnot1\adjustright {
+\par }\pard\plain \s2\ri23\sb240\sa80\keep\keepn\nowidctlpar\widctlpar\outlinelevel1\adjustright \b\f1\cgrid {{\*\bkmkstart _Toc506288222}2.5\tab  \ldblquote Should\rdblquote  requirements \endash  nice to have{\*\bkmkend _Toc506288222}
+\par }\pard\plain \s3\ri23\sb80\sa80\keep\keepn\nowidctlpar\widctlpar\outlinelevel2\adjustright \b\f1\fs20\cgrid {{\*\bkmkstart _Toc506288223}2.5.1\tab Keeping database files on disk{\*\bkmkend _Toc506288223}
+\par }\pard\plain \li839\ri23\sb80\sa80\nowidctlpar\widctlpar\adjustright \f1\fs20\cgrid {AVP FPI DLL should keep as much of the database files on disk as possible, not load them into memory entirely.
+\par This is probably not realistic requirement because it would require fundamental changes in the driver. It would dramatically reduce memory consumption if implemented, though.
+\par }\pard\plain \s3\ri23\sb80\sa80\keep\keepn\nowidctlpar\widctlpar\outlinelevel2\adjustright \b\f1\fs20\cgrid {{\*\bkmkstart _Toc506288224}2.5.2\tab Reentrancy{\*\bkmkend _Toc506288224}
+\par }\pard\plain \li839\ri23\sb80\sa80\nowidctlpar\widctlpar\adjustright \f1\fs20\cgrid {AVP FPI DLL should be natively re-entrant. 
+\par Making the engine re-entrant is probably not realistic requirement.
+\par }\pard\plain \s1\ri23\sb720\sa120\keep\keepn\nowidctlpar\widctlpar\outlinelevel0\adjustright \b\f1\fs36\cgrid {{\*\bkmkstart _Toc506288225}3.\tab Project finishing criteria{\*\bkmkend _Toc506288225}
+\par }\pard\plain \s2\ri23\sb240\sa80\keep\keepn\nowidctlpar\widctlpar\outlinelevel1\adjustright \b\f1\cgrid {{\*\bkmkstart _Toc506288226}3.1\tab Project finishing criteria from F\_Secure\rquote s point of view{\*\bkmkend _Toc506288226}
+\par }\pard\plain \li839\ri23\sb80\sa80\nowidctlpar\widctlpar\adjustright \f1\fs20\cgrid {The project is considered finished by F-Secure when the AVP FPI DLL has been tested by F-Secure against all requirements and the DLL has passed the tests successfully.
+
+\par 
+\par }}

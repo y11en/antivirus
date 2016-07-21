@@ -1,0 +1,6 @@
+# try to accessing to known password file
+
+IS_FILE_EXIST @PSW_FILE@ NOT_TO_CLEAR
+
+#etalon_verdict 50 PswAccess
+

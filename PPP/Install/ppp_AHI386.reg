@@ -1,0 +1,8 @@
+REGEDIT4
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor]
+"category"="AHI386"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\SystemWatch\profiles\Hips]
+"category"="AHI386"

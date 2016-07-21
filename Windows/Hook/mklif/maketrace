@@ -1,0 +1,8 @@
+!if "$(_BUILDARCH)"=="x86"
+TARGET:
+	$(NTMAKEENV)\..\tools\tracing\i386\tracepdb -f ..\..\..\out\mklif\$(DDKBUILDENV)\i386\klif.pdb -p ..\..\..\out\mklif\$(DDKBUILDENV)\i386
+!else
+TARGET:
+	$(NTMAKEENV)\..\tools\tracing\i386\tracepdb -f ..\..\..\out\mklif\$(DDKBUILDENV)\amd64\klif.pdb -p ..\..\..\out\mklif\$(DDKBUILDENV)\amd64	
+!endif
+

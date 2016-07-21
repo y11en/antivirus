@@ -1,0 +1,19 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@
+
+Name = meta2atem
+Application = $(Name)
+Targets = $(Application)
+
+Sources = \
+	meta2atem.cpp
+
+Libraries = \
+	metautils \
+	klsys
+
+Deps = ../metautils
+
+include @abs_top_builddir@/@OS@/Rules

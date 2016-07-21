@@ -1,0 +1,404 @@
+
+=============== Fixed в 8.0.0.xx ====
+
+Fixed:
+
++ В AVZSecurity... при установке/снятии галочек Not important фокус (выбор) всегда переходит на Recommended. Аналогичная ситуация в Privacy Cleaner
++ Privacy Cleaner: при любом нажатии и наведении на Cancel группа схлопывается
++ When there is only one defined Update Server it should not be uncheckable because it would lead to update failure ("No update server defined" error).
+
+
+=============== Fixed в 8.0.0.45 ====
+ 
+
+Новый функционал:
+1) диалог настройки правил HIPS для приложения (File & Registry
+2) сканирование в несколько потоков
+3) фильтрация данных в списках
+
+Fixed new:
++ добавлен % выполнения задачи и количество объектов для задач сканирования
++ Heuristics slider still movable in 'E-mail and IM' window even when heuristics is disabled.
++ Clicking the "Kaspersky Lab Servers" in the Update>Source doesn't open the "Source" tab in the Updater settings, instead it opens the last viewed tab.
++ typo: 
+	+ choosen=chosen 
+	+ "Delete on undisinfectable" -> "Delete if disinfection fails"
+	+ Diagnostics still spelt as 'Diagtostics' in Privacy Cleaner Wizard
+	+ For the compound files, I think 'new only' should be replaced with 'only new'
+	+ 'Scan new and changed files only' should be rephrased to 'Scan only new and changed files'
+	+ Popup blocked -> 'Popups'; Banner's cut -> "Banners"; "Spam" -> "Spam emails"; Phishing URL's -> Phishing URLs
+	+ "Click here to find toubles" -> "Click here to diagnose security settings"
+	+ "Click here to got a lot of toubles" -> "Click here to diagnose various problems/issues"
+	+ "In case of downloading corrupted update" -> "In case corrupted updates have been downloaded"
+	+ "Allow all attachmends" -> "Allow all attachments"
++ "Scan new and changed files only" - неверно поправили http://forum.kaspersky.com/index.php?s=&showtopic=51670&view=findpost&p=466395
++ У Web traffic нельзя установить переключатель Scan depth в положение Customize.
++ Информация о лицензии - надо понимать множ. число "для 2-х компьютеров" (сейчас всегда "компьютер")
++ диалог AskUpdateBeforeScan
++ The "Pause task on applications startup" option in FileAV doesn't work. When I add an .exe it's name/path isn't displayed in the list but there is a blue selection/marker pointing that *something* has been added.
++ Mail AV: Attachment filter - "переименовывать файлы указанного расширения", а выбор расширения не активен. При выборе "удалить..." - окно для выбора активируется 
++ При обнаружении вируса алерт появляется но звука свиньи нету. 
++ 30921: Какие-то глюки с окном обновления - скроллинг в форме ввода промежутка обновлений то появляется, то исчезает, то скрывает курсор. Такого раньше нигде не видел
++ 15. Действия с объектами в списке угроз (кроме действия с Q&B)
++ окно задачи сканирования для Shellex ("сканировение по правой кнопке")
++ диалог обновления в PIW'е
++ задачи сканирования не останавливаются
++ предложение: везде в таблицах, где файл указан с путем, разбить это на два столбца - файл и папка 
++ убывающая группировка в списках по столбцу времени.	
++ задачи сканирования не останавливаются
++ Не поддерживаем работу с архивами 
++ 30915  ODS: При поднятом алерте проверка обьектов не продолжается
++ При обновлении сбиваются предыдущие даты обновлений
++ No items in the Column dropdown list
++ Возможность выключения сразу всех нотификаций (общая галка над группами)
++ Обработка shortcut'ов для контрола (CTRL+A)
++ двойной клик по заголовку группы раскрывает группу, так же как и "+"
+
+
+Известные проблемы/недоработки:
+- задача HIPS не запускается автоматически - требуется её ручной запуск после старта продукта
+- диалоги обновления и сканирования вставлены в базовом варианте
+- задача pdm вставлена, но событий и алертов пока нет
+- действия с карантином и бекапом не реализованы
+- окно приостановки защиты сломано повторно...
+
+
+
+==============
+bugs 8.0.0.56:
+
+Паша Н.
+- "Не смотря на то, что при удалении писал: сохранить настройки, при установке, вроде бы, он их нашел, но не применил. Так и стал работать с дефолтными по установке настройками"
+- Ability to resize the "options" window... it is too small on my screen at high resolution
+- The "Pause protection" text is not well worded, it should be rephrased (много идей - http://forum.kaspersky.com/index.php?s=&showtopic=52637&view=findpost&p=476059)
+- Disabling the tray animation doesn't take effect. 
+- "исчезают" иконки задач при ресайзе главного окна
+- If some components are disabled, changing an option (like disabling a port), will make kis enable all of them 
+- in Options, KAV asks me for password even if I make no changes (different behavior to KAV 7)
+- only operative in Options - does not ask me for password if I alter settings in main window+ Password protection
++ Completed at пусто для окна обновления из PIW
++ (!) banner for detected threats is yellow, should be red for high risk threats. 
++ не перерисовывается фонарь (Go to malware protection, scan depth and select custom. Just close it and see as below)
++ "Enable clearing of swao file during reboot" should be "Enable clearing of swap file during reboot".
++ unexpected -> unexpectedly
++ "secutity" -> "security"
++ изменить текст в диалоге "Pause protection" (http://forum.kaspersky.com/index.php?s=&showtopic=52637&view=findpost&p=476059)
++ правила нельзя редактировать (список портов)
+
+
+===============
+09/11 8.0.0.45:
+
+Влад: 
+- HIPS: Hips keeps on turning off even when manually started
+
+Паша Н.
++ убывающая группировка по дате не реализована в HIPS
++ if you expand the verdict column in the scan report, every file is listed with "new threat" 
++ "Privacy cleaner wizards..." -> "Privacy cleaner wizard will help you to find and correct settings that may compromise your privacy"
++ Options не модальное окно. Так может стоит прикрутить кнопку Применить
++ Стеклянные бары + исправить визуальный баг http://forum.kaspersky.com/index.php?act=attach&type=post&id=39008
++ the scan always starts from the beginning, even when you answer yes in the resume popup
++ "very ago" could be "Past 6 months" or "Past year" ...depending on how long you want to sort back OR "a long time ago"
++ tray context menu does not reflect status of a running scan (full scan)
++  "update bar" does not according to real status
++ (!) include the ability to activate packer detection and riskware detection in the PIW, so that users give their consent that they understand what will be detected, same for joining the kaspersky network
+- HISP: rule - заменить элементы http://forum.kaspersky.com/index.php?s=&showtopic=52234&view=findpost&p=472179
+- There are incorrect options for this detected virus (by web av) with right click. You can not "disinfect" or "disinfect all threats" because it is an infected URL that was blocked, there is nothing to disinfect. Also, you can not add it to  quarantine because it is an infected URL that was blocked, not a file 
+
+
+- Source на странице апдейтера -> "Updater settings: Automatic, Kaspersky Lab Servers"
+- баг прогресс-бара
+
+Паша М.:
+- Context menu scan window doesn't show the number of scanned files when processing an installation package.
+- After scanning my malware collection all detections are listed twice - once as "Detected" and once as "Not found". "Not found" is wrong because the files are there. Maybe it has something to do with the fact that KIS has no write access to the viruses (http://forum.kaspersky.com/index.php?s=&showtopic=52236&view=findpost&p=471754) - (in archives?)
+- детект по имени файла - пример реализации идеи в AVZ (http://forum.kaspersky.com/index.php?s=&showtopic=49691&view=findpost&p=471272)
+- HIPS: last entry out of line in the rules lsit (does not look good) + the added application is not correct \systemroot\.. (it should be c:\windows\...)
+- ложные UPacker и компонент FSG (http://forum.kaspersky.com/index.php?s=&showtopic=52235&view=findpost&p=471790)
+
+Андрей Г.
+- On the virtual keyboard, I find this fails http://forum.kaspersky.com/index.php?s=&showtopic=52236&view=findpost&p=472100
+
+Макс
+- везде, где участвует служба винды, указывать не только ее имя образа, путь и командную строку, но и имена службы - краткое и полное (полное, конечно, в соответствии с текущим языком интерфейса системы). Учитывая количество и частоту встречаемости служб, для этого вполне оправдано будет завести дополнительные столбцы/поля
+- разрешать\запрещать какому-то модулю выход в интернет - сделать лучше чтоб фаерволл один раз спросил и все. а то несколько раз тоже нехорошо
+- ввиду коренной разницы в смысле безопасности входящих и исходящих потоков - сделать алерт для входящих потоков красным 
+- отчёты сетевого экрана: предлагаю добавить столбец Размер, понятно для чего , а возможно и Код (для icmp - в текстовом виде) 
+- обновление давно закончилось, а на "графике трафика" обновления все еще 1 minutes ago  Может писать Last (или Recent) Update
+- предлагаю такой порядок - кол-во_обработанных/кол-во_обнаруженных (процент) индикатор выполнения
+
+Decline (иначе двойной клик долго ждать - замирает открытие главного окна):
++ i would prefer for the main gui that when i click on the protections on the left side the home window would always open (not the last one as now).
+
+
++ GUI overlap after a completed update
+
++ "Suterday -> Saturday"; "Wensday" -> "Wednesday"; "Tree weeks" -> "Three weeks"
++ "No any traces are available" -> "No traces are available"
+
+- Some problems with parental control (http://forum.kaspersky.com/index.php?s=&showtopic=52236&view=findpost&p=471732)
+
++ меню Settings значка кис в трее открывает окно Options . 
+
+- Мб все таки заюзать покраску вкладок? В любом случае, как-то нужно указывать при таком количестве компонентов 
+
++ фильтр на System watch>Detected>All detected malware не поставлен (отображает детекты OAS)
+- Сделайте в Анти-Фишинге функции создать правило ото вечно приходится нажимать запретить см.фото .После того как нажимаю запретить то сайт mediaportal.ru не блокируется в IE 7
+- 45 сборка показывает количество сигнатур на 15-20 тысяч больше, чем шестрерки и семерки?
+- Детект пакеров - уровнь вложенности (возможно) стоит сделать настраиваемым
+- ОБСУдить: нижнию часть сделать цветом светофорной полосы (можно и формы обьемной) таким образом GUI
+выглядеть более целостным
+ 
+ПРОВЕРЯТЬ
+- В окне Privacy Cleaner Wizard при нажатии правой кнопки на Clear самая последняя строчка переключается http://forum.kaspersky.com/index.php?s=&showtopic=52235&view=findpost&p=472399
+
+
+- Updater crashed when the net connection was not enabled 
+- File-Anti-Virus seems to be not working correctly on network drives: it seems to deny access to the viruses but shows no alert , on the hard drive it's working.
+- Кейс с бесконечным запуском eicar'а (http://forum.kaspersky.com/index.php?s=&showtopic=51674&view=findpost&p=472132)
+ 
+=================
+ 
+- ie7 при запущеном антивире запускается без панели ссылок (http://forum.kaspersky.com/index.php?s=&showtopic=51674&view=findpost&p=470804)
+ 
+- многократная упаковка http://forum.kaspersky.com/index.php?showtopic=51963
+- возможности custom-фильтров в популярной банерорезке http://forum.kaspersky.com/index.php?act=attach&type=post&id=38724
+- при наличии нескольких сообщений их приходится просматривать по очереди, причем заранее не зная, сколько их. Надо что-то делать, и вариантов много. Например - добавить вкладку Messages после Home. Еще - под кнопкой Skip this message добавить надпись с номером сообщения из общего числа сообщений, типа message 2 from 5 messages. Первое предложение не отрицает второго 
+- не стоит такие длинные тексты, как есть на снимке, выключать по центру http://forum.kaspersky.com/index.php?act=attach&type=post&id=38683
+
+
+================================================ 8.0.0.36 ================================================
+
+- ie7 при запущеном антивире запускается без панели ссылок (http://forum.kaspersky.com/index.php?s=&showtopic=51674&view=findpost&p=470804)
+- многократная упаковка http://forum.kaspersky.com/index.php?showtopic=51963
+- возможности custom-фильтров в популярной банерорезке http://forum.kaspersky.com/index.php?act=attach&type=post&id=38724
+- при наличии нескольких сообщений их приходится просматривать по очереди, причем заранее не зная, сколько их. Надо что-то  
+делать, и вариантов много. Например - добавить вкладку Messages после Home. Еще - под кнопкой Skip this message добавить надпись  
+с номером сообщения из общего числа сообщений, типа message 2 from 5 messages. Первое предложение не отрицает второго 
+- не стоит такие длинные тексты, как есть на снимке, выключать по центру 
+ (http://forum.kaspersky.com/index.php?act=attach&type=post&id=38683)
+
+
+02/11 8.0.0.36: 
+
+-------- Паша Н.
+На потом:
+- Наложение кнопок в Options (http://forum.kaspersky.com/index.php?s=&showtopic=51510&view=findpost&p=464460)
+- в Events, при длинном пути, резалась не концовка пути, а середина
+- Какая-то белая рамка вокруг кнопок. Это задумка или баг? (http://forum.kaspersky.com/index.php?act=attach&type=post&id=38062)
+- Посмотрел я тут на КИС на тех ПК, где используется классическая система оформления окон (аля 9х). Особенно на окон настройки. Плохо! Разделы настройки (слева) выглядят красиво — на белом фоне, а вот все остальное — на сером. Может сделать так, чтобы КИС не зависил бы от настроек внешнего вида ОС и всегда выглядел бы красиво и чисто — все на белом (НГ: пройтись по окнам при такой схеме и везде заменить фон на белый)
+- 30916  Title:  Installer: При установке только ODS остаются гуй для других компонентов 
+- проверить загрузку 
+
+-------- Паша М.
+
+- Сканирование в запороленных архивах не работает. В логе видно, что сканируются только названия файлов, а запроса на пароль нет. 
++ предложение: везде в таблицах, где файл указан с путем, разбить это на два столбца - файл и папка (как сделано в кис7 в таблице правил для приложений). Будет и точность, и наглядность, и дополнительные возможности для сортировки/группировки 
+- For the found viruses I only get a popup for the first virus. The other viruses are classified as "not found" and no popups are showed for them, but this is wrong because all files exist and get found again on the next scan.
+- Валсы пакеров (http://forum.kaspersky.com/index.php?s=&showtopic=51674&view=findpost&p=466871; http://forum.kaspersky.com/index.php?s=&showtopic=51674&view=findpost&p=467278; http://ifolder.ru/4000512)
++ При обновлении сбиваются предыдущие даты обновлений на общем экране (см. картинку). Т.е. всем присваивается время последнего обновления. Внутри "дерева событий" дата нормальная сохраняется 
+- Also the "Pause task on schedule" doesn't work. 
+
+На потом:
+- проблемы с шириной столбцов при ресайзе (http://forum.kaspersky.com/index.php?s=&showtopic=51522&view=findpost&p=467519)
+
+-------- Боря
+- График: заголовок с переключателем, без палки, скинование всех осей (1,5 дня)
+- Статистический график (для AVS-ный детектов, типы детектов)
+- Направление графика справа-налево 
+
+- График вылезает за границы при обновлении (http://forum.kaspersky.com/index.php?act=attach&type=post&id=38070), после переключений туда-сюда, видимо
+- При уменьшении масштаба с 2 мин и выше начинается торможение прокрутки графика (что понятно), но сетка двигается с той же скоростью. Также надо масштабировать сетку по 10 секунд на других масштабах (чаще рисовать вертикальные линии). 
+- На графиках надо сделать обозначение осей (Х кб/с шт) Желательно с авто масштабированием кратности величин (байт/с, кб/с, мб/с).
+- Интеграция в Windows Control Center неверная (брандмауэра нет, вместо названия продукта в области антивируса два квадратика)
+
+
+-------- Макс
+- An option to define which colors should be used in the System performance graph would be nice
+- предложение: использовать цветовое выделение в навигаторе выключенных компонент
+- Password protection works only for the Options/settings window but not for the GUI ("All operations" defined under the Scope). (I can easily change a setting or turn off components).
+- цвет надписей статуса задач должен зависеть от статуса (http://forum.kaspersky.com/index.php?s=&showtopic=51668&view=findpost&p=468382)
+- Kaspersky should write WITHIN the layout of all alphas and betas versions something like "KASPERSKY ALPHA (or BETA) - DANGEROUS FOR COMMON USERS - USE AT OWN RISK".
+- Предложение: The File-AV module has already a feature to get paused if a certain application is started which you have determined before. There should be the same feature for the automatic update.
+- There is no difference between High and Medium settings in MailAV and WebAV.
+- Два раза Delete / Allow в алерте (http://forum.kaspersky.com/index.php?act=attach&type=post&id=38157)
+
+-------- Андрей Г.
+
+
+-------- Слава:
+- почему всегда у меня пишется "Datebase is out of date", не смотря на то, что я обновляюсь каждый день??? К примеру, я сейчас обновился (сегодня 5-е число), а в логах пишется, что последнее обновление было 2-го
+
+======== Воспроизводить
+- раньше обходили защиту КИСа от пиратства путем установки атрибута Только чтение на файл черного листа
+- виртуальная клава не поддерживает (не отображает на своих кнопках и не позволяет набирать) спецсимволы при нажатой правой клавише Alt (AltGrey, AltGr). Например, в украинской раскладке при нажатии AltGr+Г должна вводиться буква ґ, при нажатии AltGr+Shift+Г - буква Ґ 
+- витруальная клава пропадает (http://forum.kaspersky.com/index.php?s=&showtopic=51508&view=findpost&p=464921)
+- "ei[car" (без кавычек естественно) - файл в Доверенную Зону добавляется, но продолжает проверяться. Еще пример здесь: http://forum.kaspersky.com/index.php?showtopic=51718 (содержащее символ "[")
+- Избавиться от горизонтальных скроллингов во всех визардах и Options (где это проявляется)?
+
+================================================ 8.0.0.33 ================================================
+
+==== Fixed:
++ Невозможно изменить адрес папки для копирования обновлений, Упорно сохраняется папка, указанная по умолчанию в Document and Settings
++ Установил пароль ,выбераю отключить каспера вылетает окошко ввода пароля, я ничего не ввожу нажимаю просто ОК и всё он отключается, а если в окошко вводить что-то то тогда пишет что пароль не верный
++ Зачем тут скобки? Лучше просто "Update 25%" - иконка в трее Full scan (24)%, it should be Full scan (24%)
++ Опечатка в локализации, вместо SWAP написано SWAO (http://forum.kaspersky.com/index.php?s=&showtopic=51508&view=findpost&p=464558)
++ В файловом поставил на высокий уровень и как видно на фото галка не поменялась на сканировать все файлы ,а осталась как и была, так что высокий уровень что рекомендуемый одно и тоже http://forum.kaspersky.com/index.php?s=&showtopic=51508&view=findpost&p=464666
++ If the option "Scan new and changed files only" is selected there shouldn't be any clickable words "all" or "new only" in the compound files section, just "Scan archives", "Scan installation packages"
++ the main window pops up when starting the product after exiting it
++ heuristics scan slider is movable even though it is turned off. (except for web av) 
++ Typo in GUI:
+	+ "Prompt immedietly" should be "Prompt immediately" 
+	+ ballon should be baloon?
+	+ "Use heuristic analyze methods" should be "Use heuristic analysis methods"
+	+ Mailes (график)
+	+ IPS block netowkr activity with attaking... -> should be attacking 
+	+ Start diagtostics -> diagnostics
++ GUI overlap bug and spelling mistake in the "pause" dialogue (http://forum.kaspersky.com/index.php?act=attach&type=post&id=38050)
++ И таки заменить throuth на through (диалог Pause protection). А вернее даже in (по окончании промежутка времени)
++ Мелкий баг GUI (http://forum.kaspersky.com/index.php?act=attach&type=post&id=38053)
++ Локализация названия диалога AvzPrivacyCleanerWizard
++ "My Account" была бы ссылка на Персональный кабинет на сайте ТП ЛК (И чтобы оно вело прямо в персональный кабинет, а не на страницу авторизации, а то надоело каждый раз восстанавливать пароль, но "выдавать стандартный запрос на ввод пароля, как сейчас" ) - должно быть "https://support.kaspersky.com/en/PersonalCabinet"
++ When I going to pause the protection of Kaspersky. The options are: 1 minute, and, 1 minutes!!
++ when you exclude a directory and/or file from scanning, the real time protection (scanning for files) will give the reason for skipping as "object is locked" instead of excluded
++ (!) Files which have been "deleted" by KIS, are still detected in a full scan in the K "quarantine" folder (http://forum.kaspersky.com/index.php?s=&showtopic=51510&view=findpost&p=464798)
++ Web-AV и Mail-AV показывают KIS вместо браузера и почтового клиента
++ Куда делась опция "Сканировать запароленные архивы"? Очень нужна...
++ No tooltips (the small balloon popup) are displayed on mouse-hover on the tray icon
++ Окно запроса подтверждения разрыва соединений
++ Окно авторизации updater'а/ активация
+
+
+=============== БАГИ
+
+Паша М.
++ Поиск в отчётах: No items in the Column dropdown list
+- Фолсы Multipacked на ряд программ (http://forum.kaspersky.com/index.php?s=&showtopic=51508&view=findpost&p=464785 + 
+http://forum.kaspersky.com/index.php?s=&showtopic=51508&view=findpost&p=465313)
+- Детектиться ли новыми базами Backdoor.Win32.Rbot.gey File: C:\Inst\vir\kernel.exe//Armadillo детектирование добавлено 7 сентября 2007 17:00 - 17:55 (файл у меня в PM)
+- Падение при неясных обстоятельствах - дамп http://dump.ru/files/n/n459591761/, после чего базы стали Corrupted
+
+Андрей Г.
+-
+
+Паша Н.
+-  Scan selected objects определить будут ли проверяться подкаталоги (вложенные папки)? Объекты с галочкой Include subfolders и без нее выглядят одинаково (иконка!)
+
+Майк
+- Работает ли самозащита? +  на попытки выгрузить из памяти посредством Диспетчера задач. Иногда после этой процедуры остаётся только один процесс, знак в трее - серого цвета. В семёрке на такое действие есть алерт. И соответственно сделать выгрузку не удаётся
+- Почему всё так тормози-и-и-ттт
+- В настройках ставлю галку Online Check а она вечно слетает 
+
+
+=============== ОБСУДИТЬ/НУЖЕН ДИЗАЙН
+
+Макс
+- Балуны надо улучшать! (http://forum.kaspersky.com/index.php?s=&showtopic=51505&view=findpost&p=464734) + Текст на алертах в средней части, в частности System Watch'а + the "registry guard" popup is not very clear, only parts of the key can be viewed (so you don't know what's actually going on)
+- looks like we're missing the delete whole archive option like in v6/7 (http://forum.kaspersky.com/index.php?s=&showtopic=51670&view=findpost&p=466525)
+- опция add to trusted zone на алертах + "применять ко всем"
+
+- where is settings when full my computeror only simple scan complete PC is turn off or restarted????? 
+
+- trusted apps - реализация
+- PIW: after applying a key you get a "finished" button, it might be more appropriate to have a "proceed" button instead (он ещё и отдельно может открываться)
+- PIW: не мешало бы правую стрелку перенести вправо - логическая симметрия(http://forum.kaspersky.com/index.php?act=attach&type=post&id=38180)
+- сделать прорисовывание графика справа-налево, как принято в Диспетчере задач, Process Explorer, Flashget или других продуктах. Это и привычнее и удобнее для просмотра (обсудить быстро)
+- Реализация important events (надо обсудить, что выделять в них / посмотреть, что было в 7.0)
+- Окно About не открывается
+- Нигде нет указания процента пройденной задачи
+- В главном окне сканирования на вирусы над строкой адреса сканируемого файла предлагаю прикрепить таймер времени сканирования. Очень непривычно не видеть сколько времени прошло от начала сканирования. Приходится вычислять его самому начиная с момента запуска сканирования. 
+- Кнопочка "Update now" в PIW, а окна обновления нет...
+
+- зеленую полоску надо переделать, чтобы она была бы такойже теплой и смачной, как желто-оранжевая (http://forum.kaspersky.com/index.php?s=&showtopic=51516&view=findpost&p=464602)
+- Точка в "80" в рисунке в инсталляторе
+- Вот эти кнопки (на скриншоте) хорошо бы доделать до стиля "семёрки". Т.е. чтобы при наведении мышки они становились выпуклыми, как на алертах (http://forum.kaspersky.com/index.php?s=&showtopic=51517&view=findpost&p=464633)
+- При инсталяции: Слишком крупный шрифт указателей для активации, как по-сравнению с шрифтом в окне, так и по-сравнению с размером самого окна +2
+- Предложение: Если в отчёте кликнуть по строчке, то появится окошко, подробно и более наглядно описывающее событие. К примеру, если есть длиннющая строчка в отчёте о том, что regedit попытался записать что-то длиннющее в длиннющую ветку реестра, то не очень удобно мучаться со скроллингом и столбцами в таблице отчётов. У Checkpoint при щелчке по этой строчке появилось бы окошко, где сверху вниз были бы перечислены все данные:
+"Процесс: такой-то  Ключ: такой-то Данные: такие-то " ... и так далее. Это зачастую гораздо удобнее, чем строчка в таблице. Плюс появляется возможность и место для разных интерактивных "фич", таких как кнопка "Перейти к данному ключу", "Перейти к файлу данного процесса", "Перейти к данному правилу" и т.п.
+- Реализация System Security Analysis (у нас готов прототип визарда?)
+- отвистить (отполировать) икону в трее, нарисовать свой заголовок окна (Просто серый заголовок не в тему к зеленому гую)
+- when it says "Some components are disabled" it should tell you which components are disabled... otherwise it is very confusing
+- packet sniffer: the ability to exclude items by right click (see filemon and regmon on how they do it), see loopback traffic
+- При убирании галочек с подкатегории, значок главной категории остаётся прежним. По моему лучше когда он в квадрат превращается - Видно что в под категории не всё включено (http://forum.kaspersky.com/index.php?s=&showtopic=51508&view=findpost&p=464960)
+- Когда же изменят эту мазутную коробку? (инсталлятор)
+
+- интеграция новостного агента
+- pause optinos for scans
+- The website that's comes when i try to download a virus could be more colourful (как я понял, речь о странице, которую мы отдаём браузеру при блокировании скачивания вредоноса/фишинге)
+- Почему не выставлено по умолчанию "Проверять все порты"?
+- Netherlands - не нравятся разделённые настройки и отчёты; DonKid: I'd like to be able to setup all kind of scan (Full, Rootkit, Vulnerability and Startup) in the same time using the "Apply"button like version 7, and not module by module.
+- Кнопка - "Применить настройки ко всем задачам сканирования"
+- сделать возможность в Notifications менять звук для разных событий
+- Функция упаковки в запароленый архив подозрительного файла и отправки его на исследование - это будет реализовано? В AVZ это сейчас встроено, а в восьмой версии KIS это будет доступно? 
+
+
+=============== РЕАЛИЗАЦИЯ НОВЫХ ФИЧ
+
+На мне:
+- join the Kaspersky Security Network - реализация  + there should be a link to privacy policy from that window
+- Interceptors & Plugings - реализация
+- Защищенные соединения не мониторятся
+
+Паша М.
++ (!) klava uses only cpu0 until about it's halfway through (meaning it only goes up to 50%) - just like the old avc. afterwars t uses both cores and both cpu's are used. - выгребаем в 3 потока; оптимизация вычитки из файлов (некешированное чтение)
+- (!) Реализация Карантин и бекап
++ Возможность выключения сразу всех нотификаций (общая галка над группами)
++ Опция Select All (CTRL+A) там, где есть куча галок (визарды, отчёты) - http://forum.kaspersky.com/index.php?act=attach&type=post&id=38104
+- предложение по новому control'у-списку: сделайте, чтобы двойной клик раскрывал категорию, также как нажатие на "плюс". Чтобы не целиться в "плюс"...
+- Предлагаю добавить кнопку-переключатель "Autoscroll", отвечающую за автоматический скроллинг отчёта. А то отчёт System Watch очень динамический, а иногда нужно сконцентрироваться на какой-то строке, но она постоянно "убегает" из-за добавления новых строк. 
+- строку поиска стоит добавить всюду, где есть этот новый control (например, пока её нет на закладке "Detected"... 
+- right mouse button and choose delete or a button to delete a specific entry (in reports)
+- "Это две строки в отчёте, но они по сути относятся к одному событию. Так было в 6-ке и 7-ке. В 8-ке действие ("файл удалён") будет в той же строчке, что и сам вердикт ("Найден вирус"), так?" Паша?
+- The progress bar for scans/ Full scan is flickering backwards/forwards very fast when the scan is running (НГ: действительно, почему он такой "быстрый"?)
+- (!) Надо менять по умолчанию Search на фильтр! см. пост "I think the search bar on the events screen does not work. For example i downloaded the eicar test and a event was added (with eicar in the description). If i enter Eicar in the search bar nothing happens"
+
+
+Паша Н.
++ "Хотелось бы, чтобы была бы фича, как в 6/7 - жмем один раз по иконке в трее и открsdftncz прошлое окно, 2 раза - открывается главная закладка" - делаем так: по меню открывается Main, по щелчку на иконке - последняя закладка. Сделали всегда открытие на Protection:Home.
+- Кнопка сохранить отчеты не работает ни в одном из окон
+- Жаль, что для листания закладок надо обязательно навести курсор мыши на панель закладок. Хочу листать закладки держа указатель мыши в середине окна КИСа + клавиатурой? (НГ: может быть, вместе с CTRL?)
+- Empty profile dropdown list in Parental Control
+- нет функции импорта, экспорта чёрного списка баннеров
+- Реализация тултипов
+- Нет функции добавить в Анти-Баннер (IE 7)
+- Не работает проверка файлов по правому клику на них и выбором пункта "Check for viruses" -> окно задачи сканирования.
+
+- Реализация настроек "Отчеты и файлы"
+
+Андрей Г.
++ В сообщении самозащиты в дополнение к PID'у показать информацию о процессе
++ Окно настроек HIPS для приложения
+
+Андрей Б.
+- прикрутить ко встроенному трейсеру возможность выбирать какой процесс (модуль) трейсить, как это сделано в отдельной утилите
+
+
+Слава
+- Ошибка при подсчете сигнатур (:)) - всегда 0
+- Работает ли плагин в IE?
+- Подключение эвристика
+
+Майк/Влад
+- Не могу удалить не одно правило в HIPS
+- Включение PDM
+- вернуть Анти-Попап как галку в Anti-Banner'е
+
+
+=============== ВОСПРОИЗВОДИТЬ
+- Может подвиснуть на 3-ем шаге активации (нужно долго разбираться)
+- Откройте мой комп , сверху выберите Adress Bar поставте галку перед ним , закройте затем через 5 секунд откройте снова и Adress Bara уже нету
+- При выгруженом кисе автоматически вернулся рамблер см.фото. Затем включил кис и опять стартовая страница исчезла (http://forum.kaspersky.com/index.php?s=&showtopic=51508&view=findpost&p=464673)
+- Проверить кейс http://forum.kaspersky.com/index.php?s=&showtopic=51508&view=findpost&p=464702 - там лишние кнопки на окне Web-AV?
+- После сноса КИС, поиск Windows не работал (!) - надо воспроизводить.
+- After using the virtual keyboard and exiting it the real keyboard is totally messed up: all of my comma keys and symbols have changed to different keys and the mouse is selecting everything on webpage and sticking
+- Vista 32bit: get totally stuck on desktop after application start. Can't do anything but move mouse cursor. Click anywhere coses block of all PC activity. Это же было у нас вчера! Надо воспроизводить.
+- Проверять - anti spam is not working as well. Outlook 2007
+- gmail (webmail) is still not blocked on "high" setting parental control + also it doesn't block searches for different words on google (for example, if you search porn, it does not block the url for the image search, it only blocks the images in the search - v7 blocked the whole search page)
+- Включаю КИС 8 - при загрузке Office Outlook 2007 всё время вылетают разнообразный алерты (см. http://forum.kaspersky.com/index.php?s=&showtopic=51508&view=findpost&p=465037)
+- Проверить "KIS 8.0 is not able to detect active Elite Keylogger 3.6 (even full scan with max options set)" - найти, скачать, установить и провести скан (с включённой опцией детекта руткитов, если не детектим - писать багой)
+- По каким-то причинам левый верхний угол алерта остаётся пустым, вроде бы там должен быть значок explorer.exe (http://forum.kaspersky.com/index.php?s=&showtopic=51508&view=findpost&p=464425; http://forum.kaspersky.com/index.php?s=&showtopic=51510&view=findpost&p=465253)
+- Нет данных о приложении while extracting a virus from a pswrd protected .rar archive using WinRAR (http://forum.kaspersky.com/index.php?act=attach&type=post&id=38084)
+- Зацикливание на скрипте: winamp5111_full_emusic-7plus.exe//stream//Script (скачать можно, например, здесь http://browse.files.filefront.com/Winamp+Windows+v5111/;1461078;/browsefiles.html)
+
+--------------------

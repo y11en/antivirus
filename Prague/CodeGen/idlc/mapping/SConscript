@@ -1,0 +1,41 @@
+import os
+Import("*")
+
+libs = {}
+
+libs['windows-msvc-debug']      = ['advapi32.lib']
+libs['windows-msvc-release']    = ['advapi32.lib']
+
+libs['linux-gcc-debug']         = []
+libs['linux-gcc-release']       = []
+
+def make_path(lib) :
+    return '#' + os.path.join(profile.buildDir, lib)
+        
+lib_list = libs[env['PLATFORM']] + Split('idl boost')    
+                
+program = env.Program(
+        target = ['idlcpp'], 
+        source = [	'Collector.cpp',
+        			'Metadata.cpp',
+        			'c/CMapping.cpp',
+        			'c/Generator.cpp',
+        			'c/InterfaceMapping.cpp',
+        			'c/ImplementationMapping.cpp',
+        			'c/PluginMapping.cpp',
+					'c/Redirector.cpp',
+					'c/MappingTools.cpp',
+					'c/CommonMapping.cpp',
+					'c/GlobalMapping.cpp',
+					'c/CodeBlock.cpp',
+					'c/ImplementationMappingCpp.cpp',
+					'c/InterfaceMappingCpp.cpp',
+					'c/Dispatcher.cpp',
+					'c/Splitter.cpp',
+					'md5.cpp',
+					'tools.cpp'],
+        
+                LIBPATH = [make_path(i) for i in Split('idl boost')],
+                LIBS = lib_list)
+
+env.Install(dir = profile.binAbsDir, source = program + [])

@@ -1,0 +1,12 @@
+# add to copy of host file anti-AV record, del orig host, raname changed host to orig
+
+# RENAME_HOSTS NOT_TO_CLEAR
+
+EX_COPY_FILE @SYSTEM_FOLDER@\drivers\etc\hosts @SYSTEM_FOLDER@\drivers\etc hosts_or NOT_TO_CLEAR
+ADD_BUFF_TO_FILE_END @SYSTEM_FOLDER@\drivers\etc\hosts_or '@\r\n@127.0.0.1       .avp.' NOT_TO_CLEAR
+DEL_FILE @SYSTEM_FOLDER@\drivers\etc\hosts NOT_TO_CLEAR
+EX_RENAME_FILE @SYSTEM_FOLDER@\drivers\etc\hosts_or @SYSTEM_FOLDER@\drivers\etc hosts NOT_TO_CLEAR
+
+#etalon_verdict 70 AntiAV
+#etalon_verdict 30 HostsAdded
+

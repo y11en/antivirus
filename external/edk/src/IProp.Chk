@@ -1,0 +1,740 @@
+// --iprop.chk--------------------------------------------------------------------
+// 
+//  Module containing MAPI utility functions for properties.
+// 
+// Copyright (C) Microsoft Corp. 1986-1996.  All Rights Reserved.
+// -----------------------------------------------------------------------------
+#ifndef DEBUG
+
+#define CHK_HrMAPIOpenCachedProp(a,b,c,d)       NOERROR
+#define CHK_HrMAPICloseCachedProp(a,b,c,d)      NOERROR
+#define CHK_HrMAPIGetPropString(a,b,c,d)        NOERROR
+#define CHK_HrMAPISetPropString(a,b,c)          NOERROR
+#define CHK_HrMAPIGetPropBinary(a,b,c,d)        NOERROR
+#define CHK_HrMAPISetPropBinary(a,b,c,d)        NOERROR
+#define CHK_HrMAPIGetPropBoolean(a,b,c)         NOERROR
+#define CHK_HrMAPISetPropBoolean(a,b,c)         NOERROR
+#define CHK_HrMAPIGetPropLong(a,b,c)            NOERROR
+#define CHK_HrMAPISetPropLong(a,b,c)            NOERROR
+#define CHK_HrMAPIGetPropSystime(a,b,c)         NOERROR
+#define CHK_HrMAPISetPropSystime(a,b,c)         NOERROR
+#define CHK_HrMAPIGetPropToFile(a,b,c,d)        NOERROR
+#define CHK_HrMAPISetPropFromFile(a,b,c,d)      NOERROR
+#define CHK_HrMAPIOpenStreamOnProperty(a,b,c,d) NOERROR
+#define CHK_HrMAPIAppendSPropValues(a,b,c,d,e,f) NOERROR
+#define CHK_HrMAPIMoveOneProp(a,b,c,d,e,f)      NOERROR
+
+#else
+
+//$--CHK_HrMAPIOpenCachedProp----------------------------------------------------
+//  Check the parameters for HrMAPIOpenCachedProp().
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIOpenCachedProp(
+    IN LPMAPIPROP lpObj,                // source object
+    IN LPSPropTagArray lpPropList,      // list of properties to cache
+    IN ULONG ulFlags,                   // open for reading only or for writing only
+	OUT LPPROPDATA FAR * lppCachedObj)  // cached version of source object
+{
+	HRESULT hr = NOERROR;
+
+    // lpPropList be NULL.
+
+    if(! TEST_IUNKNOWN_PTR(lpObj))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if ( (ulFlags != EDK_CACHE_READ) &&
+         (ulFlags != EDK_CACHE_WRITE) )
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(lppCachedObj == NULL)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrMAPICloseCachedProp---------------------------------------------------
+//  Check the parameters for HrMAPICloseCachedProp().
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPICloseCachedProp(
+    IN LPPROPDATA lpCachedObj,          // cached property object
+    IN LPMAPIPROP lpOriginalObj,        // original object
+    IN ULONG ulFlags,                   // cache type (EDK_CACHE_READ or EDK_CACHE_WRITE)
+    OUT LPSPropProblemArray FAR * lppProblems) // pointer to property problems array
+{
+	HRESULT hr = NOERROR;	
+
+    if(! TEST_IUNKNOWN_PTR(lpCachedObj))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_IUNKNOWN_PTR(lpOriginalObj))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if ( (ulFlags != EDK_CACHE_READ) &&
+         (ulFlags != EDK_CACHE_WRITE) )
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if ( ! TEST_WRITE_PTR(lppProblems, sizeof(LPSPropProblemArray)) )
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrMAPIGetPropString-----------------------------------------------------
+//   Check the parameters for HrMAPIGetPropString().
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIGetPropString(
+    IN LPMAPIPROP lpObj,                // pointer to object
+    IN ULONG ulPropTag,                 // property tag
+    OUT ULONG *lpcbProp,                // count of bytes in property
+    OUT LPVOID *lppvProp)               // pointer to property address variable
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpObj))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (VALID_PROP_ID(ulPropTag)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(!((PROP_TYPE(ulPropTag) == PT_STRING8) ||
+         (PROP_TYPE(ulPropTag) == PT_UNICODE)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(lpcbProp == NULL)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(lppvProp == NULL)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--HrMAPISetPropString---------------------------------------------------------
+//  Set a string property. 
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPISetPropString(
+    IN LPMAPIPROP lpObj,                // pointer to object
+    IN ULONG ulPropTag,                 // property tag
+    IN LPVOID lpvProp)                  // pointer to property
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpObj))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (VALID_PROP_ID(ulPropTag)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! ((PROP_TYPE(ulPropTag) == PT_STRING8) ||
+          (PROP_TYPE(ulPropTag) == PT_UNICODE)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(lpvProp == NULL)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--HrMAPIGetPropBinary---------------------------------------------------------
+//  Get a binary property.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIGetPropBinary(
+    IN LPMAPIPROP lpObj,                // pointer to object
+    IN ULONG ulPropTag,                 // property tag
+    OUT ULONG *lpcbProp,                // count of bytes in property
+    OUT LPVOID *lppvProp)               // pointer to property address variable
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpObj))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (VALID_PROP_ID(ulPropTag)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (PROP_TYPE(ulPropTag) == PT_BINARY))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(lpcbProp == NULL)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(lppvProp == NULL)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--HrMAPISetPropBinary---------------------------------------------------------
+//  Set a binary property.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPISetPropBinary(
+    IN LPMAPIPROP lpObj,                // pointer to object
+    IN ULONG ulPropTag,                 // property tag
+    IN ULONG cbProp,                    // count of bytes in property
+    IN LPVOID lpvProp)                  // pointer to property
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpObj))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (VALID_PROP_ID(ulPropTag)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (PROP_TYPE(ulPropTag) == PT_BINARY))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (PROP_TYPE(ulPropTag) == PT_BINARY))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(lpvProp == NULL)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--HrMAPIGetPropBoolean--------------------------------------------------------
+//  Get a boolean property.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIGetPropBoolean(
+    IN LPMAPIPROP lpObj,                // pointer to object
+    IN ULONG ulPropTag,                 // property tag
+    OUT BOOL *lpfProp)                  // pointer to property variable
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpObj))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (VALID_PROP_ID(ulPropTag)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (PROP_TYPE(ulPropTag) == PT_BOOLEAN))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(lpfProp == NULL)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--HrMAPISetPropBoolean--------------------------------------------------------
+//  Set a boolean property.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPISetPropBoolean(
+    IN LPMAPIPROP lpObj,                // pointer to object
+    IN ULONG ulPropTag,                 // property tag
+    IN BOOL fProp)                      // property
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpObj))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (VALID_PROP_ID(ulPropTag)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (PROP_TYPE(ulPropTag) == PT_BOOLEAN))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--HrMAPIGetPropLong-----------------------------------------------------------
+//  Get a long property.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIGetPropLong(
+    IN LPMAPIPROP lpObj,                // pointer to object
+    IN ULONG ulPropTag,                 // property tag
+    OUT ULONG *lpulProp)                // pointer to property variable
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpObj))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (VALID_PROP_ID(ulPropTag)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (PROP_TYPE(ulPropTag) == PT_LONG))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(lpulProp == NULL)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--HrMAPISetPropLong-----------------------------------------------------------
+//  Set a long property.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPISetPropLong(
+    IN LPMAPIPROP lpObj,                // pointer to object
+    IN ULONG ulPropTag,                 // property tag
+    IN ULONG ulProp)                    // property
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpObj))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (VALID_PROP_ID(ulPropTag)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (PROP_TYPE(ulPropTag) == PT_LONG))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--HrMAPIGetPropSystime--------------------------------------------------------
+//  Get a systime property.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIGetPropSystime(
+    IN LPMAPIPROP lpObj,                // pointer to object
+    IN ULONG ulPropTag,                 // property tag
+    OUT LPFILETIME lpSystime)           // pointer to property variable
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpObj))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (VALID_PROP_ID(ulPropTag)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (PROP_TYPE(ulPropTag) == PT_SYSTIME))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(lpSystime == NULL)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--HrMAPISetPropSystime--------------------------------------------------------
+//  Set a systime property.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPISetPropSystime(
+    IN LPMAPIPROP lpObj,                // pointer to object
+    IN ULONG ulPropTag,                 // property tag
+    IN LPFILETIME lpSystime)            // pointer to property
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpObj))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (VALID_PROP_ID(ulPropTag)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (PROP_TYPE(ulPropTag) == PT_SYSTIME))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--HrMAPIGetPropToFile---------------------------------------------------------
+//  Get a property and put in a given file.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIGetPropToFile(
+    IN LPMAPIPROP lpObj,                // pointer to object
+    IN ULONG ulPropTag,                 // property tag
+    IN LPSTR lpszFilename,             // pointer to destination file name
+    OUT ULONG *lpcbProp)                // pointer to count of bytes address
+                                        // variable
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpObj))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (VALID_PROP_ID(ulPropTag)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (((PROP_TYPE(ulPropTag) == PT_STRING8) ||
+          (PROP_TYPE(ulPropTag) == PT_UNICODE)) ||
+          (PROP_TYPE(ulPropTag) == PT_BINARY)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_STRINGA_PTR(lpszFilename))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(lpcbProp == NULL)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--HrMAPISetPropFromFile-------------------------------------------------------
+//  Set a property from a given file.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPISetPropFromFile(
+    IN LPMAPIPROP lpObj,                // pointer to object
+    IN ULONG ulPropTag,                 // property tag
+    IN LPSTR lpszFilename,             // pointer to source file name
+    OUT ULONG *lpcbProp)                // pointer to count of bytes address
+                                        // variable
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpObj))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (VALID_PROP_ID(ulPropTag)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (((PROP_TYPE(ulPropTag) == PT_STRING8) ||
+           (PROP_TYPE(ulPropTag) == PT_UNICODE)) ||
+           (PROP_TYPE(ulPropTag) == PT_BINARY)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(lpszFilename == NULL)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(lpcbProp == NULL)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--HrMAPIOpenStreamOnProperty--------------------------------------------------
+//  Open a stream on a given property.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIOpenStreamOnProperty(
+    IN LPMAPIPROP lpObj,                // pointer to object
+    IN ULONG ulPropTag,                 // property tag
+    IN ULONG ulFlags,                   // flags (MAPI_CREATE and/or MAPI_MODIFY)
+    OUT LPSTREAM *lppStream)            // pointer to stream address variable
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpObj))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (VALID_PROP_ID(ulPropTag)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+	if((ulFlags != 0) && (ulFlags & ~(MAPI_CREATE|MAPI_MODIFY)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppStream,sizeof(LPSTREAM)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--HrMAPIAppendSPropValues-----------------------------------------------------
+//  Append one set of SPropValue's to another.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIAppendSPropValues(
+    IN ULONG cHeadProps,                // count of property values in head
+    IN LPSPropValue lpHeadProps,        // pointer to property values in
+                                        // head
+    IN ULONG cTailProps,                // count of property values in tail
+    IN LPSPropValue lpTailProps,        // pointer to property values in
+                                        // tail
+    OUT ULONG *lpcNewProps,             // pointer to count of property
+                                        // values
+    OUT LPSPropValue *lppNewProps)      // pointer to property values 
+{
+    HRESULT hr = NOERROR;
+
+    if(cHeadProps == 0)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_READ_PTR(lpHeadProps, CbSPropValue(cHeadProps)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(cTailProps == 0)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_READ_PTR(lpTailProps, CbSPropValue(cTailProps)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lpcNewProps,sizeof(ULONG *)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppNewProps,sizeof(LPSPropValue *)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--HrMAPIMoveOneProp-----------------------------------------------------------
+//  Move one property from a source object to a destination object.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIMoveOneProp(
+    IN LPMAPIPROP lpSrcObj,             // pointer to source object
+    IN ULONG ulSrcPropTag,              // source property tag
+    IN ULONG ulDstPropTag,              // destination property tag
+    IN BOOL IsMust,                     // TRUE if a required property
+    IN BOOL IsReplace,                  // TRUE if existing destination
+                                        // property can be replaced
+    IN OUT LPMAPIPROP lpDstObj)         // pointer to destination object
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpSrcObj))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (VALID_BOOL(IsMust)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (VALID_BOOL(IsReplace)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_IUNKNOWN_PTR(lpDstObj))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+         
+cleanup:
+
+    return(hr);
+}
+
+#endif /* DEBUG */

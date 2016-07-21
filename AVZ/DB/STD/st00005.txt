@@ -1,0 +1,23 @@
+// ***** Обновление баз с автоматической настройкой *****
+begin
+ if ExecuteAVUpdateEx('', 0, '','','') then begin
+  AddToLog('$AVZ0548');
+  exit;
+ end;
+ if ExecuteAVUpdateEx('', 0, '','','') then begin
+  AddToLog('$AVZ0548');
+  exit;
+ end;
+ if ExecuteAVUpdateEx('', 1, '','','') then begin
+  AddToLog('$AVZ0549');
+  exit;
+ end;
+ if ExecuteAVUpdateEx('', 1, '','','') then begin
+  AddToLog('$AVZ0549');
+  exit;
+ end;
+ if ExecuteAVUpdateEx('', 2, '','','') then begin
+  AddToLog('$AVZ0547');
+  exit;
+ end;
+end.

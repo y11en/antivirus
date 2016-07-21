@@ -1,0 +1,64 @@
+TARGETNAME=klif
+
+!IFNDEF TARGETPATH
+!IF "$(W2K)" == "_w2k"
+TARGETPATH=..\..\..\out\mklif\$(DDKBUILDENV)_w2k
+!ELSE
+TARGETPATH=..\..\..\out\mklif\$(DDKBUILDENV)
+!ENDIF
+!ENDIF
+
+PDBPATH=$(TARGETPATH)
+TARGETTYPE=DRIVER
+DRIVERTYPE=FS
+LINKER_FLAGS=/NOLOGO
+
+TARGETLIBS= $(TARGETLIBS) \
+            $(IFSKIT_LIB_PATH)\fltMgr.lib
+
+!IF "$(_BUILDARCH)"=="AMD64"
+TARGETLIBS= $(TARGETLIBS) \
+	    obj$(BUILD_ALT_DIR)\osspec_asm.obj
+!ENDIF
+
+INCLUDES=..\..\..\CommonFiles
+
+SOURCES= init.c\
+        Operations.c \
+	debug.c \
+	osspec.c \
+	client.c \
+	evqueue.c \
+	filter.c \
+	klsecur.c \
+	InvThread.c \
+	runproc.c \
+	hook.c \
+	prepfltd.c \
+	SysIO.c \
+	extreq.c \
+	lldio.c \
+	cdwork.c \
+	regops.c \
+	comm.c \
+	regflt.c \
+	specfunc.c \
+	ichdrv.c \
+	fidbox.c \
+	oidb.c \
+	resolve.c \
+	md5.c \
+	apprul.c \
+	klfltdev.c \
+	virt.c \
+	gencache.c \
+	HkCheckLock.c \
+	klif.rc
+
+!IF "$(W2K)" == "_w2k"
+RUN_WPP=$(SOURCES) -km -gen:{km-w2k.tpl}*.tmh -func:DoTraceEx(LEVEL,FLAGS,MSG,...)
+!ELSE
+RUN_WPP= $(SOURCES) -km -func:DoTraceEx(LEVEL,FLAGS,MSG,...)
+!ENDIF
+
+

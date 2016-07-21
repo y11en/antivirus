@@ -1,0 +1,9 @@
+; PGPinstl.def : Declares the module parameters for the DLL.
+
+LIBRARY      "PGPinstl"
+DESCRIPTION  'PGPinstl Windows Dynamic Link Library'
+
+EXPORTS
+	xus_InstallNotesComponents
+	xus_UninstallNotesComponents
+	xus_RefreshPgpTemplateForms

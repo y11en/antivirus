@@ -1,0 +1,47 @@
+<UpdateFiles
+	UpdateDate="26122006 2133">
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		LocalPath="%BaseFolder%"
+		Filename="base101.avc"
+		FileSize="49110" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		LocalPath="%BaseFolder%"
+		Filename="base102.avc"
+		FileSize="47855" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		LocalPath="%BaseFolder%"
+		Filename="base103.avc"
+		FileSize="49307" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		LocalPath="%BaseFolder%"
+		Filename="base104.avc"
+		FileSize="49877" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		LocalPath="%BaseFolder%"
+		Filename="base105.avc"
+		FileSize="49459" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		LocalPath="%BaseFolder%"
+		Filename="base106.avc"
+		FileSize="49416" />
+	<Registry
+		ComponentID="CORE"
+		UpdateType="REGISTRY"
+		LocalPath="%DSKM%"
+		Body="S0xyZwEIAABLTHN3AACtrQEAAAD8AwAAAQAAAAEAABRqBgABACAAiDfB2yjw4xBYDJ3aXH3uIWQCqDllCpP5S55WE1Qz9VwgAES42JtTcr2QwgKRGE5VDRlpKrtTiQ+ZYZ+HINfafVDgIACeUCUvg+V7e7vf5KUlNP9yiLJ6QTRMd3hhGEUWyxNauiAAB5EGAseNrrV3hxr5J8mEcguj2f8c6/grPnXMMlZceqkgAIaY1sDl1QBZ/mr8IRobZNTsvbGaaulmfw/voYfQNZrrIACxBSodt1SH8h+36gkQQeCoytF1I9O93Zg5xq5dTvrPPQEAHgkIAAAAAQAACRAO0RENCjs6MTBLSzl5ekJvVHpnU2hYRUl1cDdDMWN5YU9NR1NhZlVGRDJKTFI1ZGlLcGp0aTdWMzhxNml1ZzJqVmNFdXYrR2hsRVorZGVKSFN5Q1d6cEJTakJ3ZWg2RyUl"
+		Filename="av-i386-0607g.krg" />
+</UpdateFiles>
+;:10KNUYrHsjzOrqe6wt7oUV9TtFCB+dBwqFkLzCqqUgiIPm78Bhta4XYgIZWiTlgkkSVphbGB2h871i+PqM2VqmaV%%
+; 0XLSznpdI71fB300e7Uwj1lJpLIRzz3r9sljLvPsQ9tJEq6dqgl04IR/xz­­

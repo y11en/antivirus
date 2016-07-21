@@ -1,0 +1,5 @@
+// ***** Dialer.DialerActivex *****
+begin
+ AddEvAlarmByCLSID('D53B810F-6219-11D4-95B6-0040950375E7',AScriptName,'dialer_activex.ocx');
+ AddEvAlarmByCLSID('8702D9E1-890B-4BF2-A233-FA44E582B2DE',AScriptName,'');
+end.

@@ -1,0 +1,4 @@
+// ***** AdvWare.NetNucleus *****
+begin
+ AddEvAlarmByCLSID('9A9C9B68-F908-4AAB-8D0C-10EA8997F37E',AScriptName,'');
+end.

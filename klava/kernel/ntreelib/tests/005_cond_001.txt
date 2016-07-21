@@ -1,0 +1,8 @@
+1 (ROOT) <CONDITION> DATA [0x7]
+    [&0F=05]
+
+2 (1.NXT) <JOINED> DATA [0x9]
+    DATA [0x5]: 61 62 63 64 65
+
+3 (2.NXT) <TAIL> EVID:0x00000001
+

@@ -1,0 +1,6 @@
+
+#include <inttypes.h>
+
+
+#define KU_IS_BIG_ENDIAN @KU_IS_BIG_ENDIAN@
+

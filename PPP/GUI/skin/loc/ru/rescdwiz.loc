@@ -1,0 +1,116 @@
+﻿;------------- MakeRescueDiskWizard -------------
+
+[Global]
+$RescueDisk             = "Диск аварийного восстановления"
+RescueDiskErrorDescr    = s_MakeRescueDiskErrors(OperationCode)
+ForderNotEmpty          = "Указаная папка не пуста. Данные будут потеряны.\nПродолжить?"
+ForderNotExist          = "Указанной папки не существует.\nСоздать папку?"
+
+[s_MakeRescueDiskErrors]
+1   = "Невозможно подготовить данные. " + strVal1 + " " + s_SystemError(ErrorCode) + "."
+2   = s_ProgramRCodes(nVal1)
+3   = "Невозможно удалить временные данные. " + s_SystemError(ErrorCode) + "."
+4   = "Невозможно создать ISO-файл. " + s_SystemError(ErrorCode) + "."
+5   = "Невозможно открыть ISO-файл. " + s_SystemError(ErrorCode) + "."
+6   = "Программа PE Builder не обнаружена."
+7   = "Дистрибутив Microsoft Windows XP не найден."
+8   = "Сохраненные файлы для записи диска не обнаружены."
+9   = "Невозможно создать папку с таким именем.\nИмя папки не должно содержать следующих символов: \\\\/:*?\"<>|"
+
+[s_ProgramRCodes]
+0
+2       = "Ошибка запуска приложения " + strVal1 + ". " + s_SystemError(ErrorCode)
+default = "Приложение завершилось с ошибкой."
+
+[MakeRescueDiskWizard]
+@ = "Мастер создания диска аварийного восстановления"
+
+[MakeRescueDiskWizardPages]
+Intro.Name                      = "Добро пожаловать!"
+Intro.Descr                     = "Мастер создания диска аварийного восстановления готов к работе."
+BartPE_Prepare.Name             = "Подготовка к записи"
+BartPE_Prepare.Descr            = "Пожалуйста, укажите пути к ресурсам, необходимым для записи диска."
+BartPE_Prepare_Progress.Name    = "Подготовка к записи"
+BartPE_Prepare_Progress.Descr   = "Подождите, идет подготовка к записи. Этом может занять несколько минут."
+BartPE_MakeIso.Name             = "Создание ISO-файла"
+BartPE_MakeIso.Descr            = "Пожалуйста, выберите требуемое действие."
+BartPE_MakeIso_Progress.Name    = "Создание ISO-файла"
+BartPE_MakeIso_Progress.Descr   = "Подождите, идет создание IS0-файла. Это может занять несколько минут."
+BartPE_BurnCd.Name              = "Запись диска"
+BartPE_BurnCd.Descr             = "С помощью ISO-файла можно записать диск сейчас или в любое другое время."
+BartPE_BurnCd_Progress.Name     = "Запись диска"
+BartPE_BurnCd_Progress.Descr    = "Подождите, идет запись диска. Это может занять несколько минут."
+Finish.Name                     = "Завершение работы мастера"
+Finish.Descr                    = "Мастер создания аварийного диска окончил работу."
+
+[MakeRescueDiskWizardPages_Intro]
+Description = "Диск аварийного восстановления дает возможность восстановить работоспособность системы после вирусной атаки, когда невозможно произвести начальную загрузку.\n"
+Info        = "Для создания диска аварийного восстановления требуется установленная программа <a PEBuilder onclick(url(\"www.nu2.nu/pebuilder/\"))>PE Builder</a> версии 3.1.3 или выше, а также установочный диск Microsoft Windows XP Service Pack 2.\n\nВнимательно прочтите лицензионное соглашение PE Builder перед началом его использования.\n\nДля записи диска аварийного восстановления ваш компьютер должен быть оснащен устройством, поддерживающим запись компакт-дисков (CD-R, CD-RW)."
+Next.Name   = "&Далее"
+Next.Descr  = "Перейти к следующему шагу"
+
+[MakeRescueDiskWizardPages_BartPE_Prepare_Inner]
+ToolPathLabel   = "Папка с установленным PE Builder:"
+DestPathLabel   = "Папка, в которую будут сохранены файлы, необходимые для записи:"
+Prepare         = "Использовать ранее сохраненные файлы"
+XPCDPathLabel   = "Путь к установочному диску Microsoft Windows XP Service Pack 2:"
+UseIAMT         = "Разрешить удаленное управление проверяемым компьютером"
+IAMT_Info       = "Проверяемый компьютер должен поддерживать технологию Intel® vPro™ или Intel® Active Management."
+
+[MakeRescueDiskWizardPages_BartPE_MakeIso_Inner]
+Text1           = "Выберите один из вариантов:"
+IsoPathLabel    = "Имя ISO-файла:"
+
+[MakeRescueDiskWizardPages_BartPE_MakeIso_Inner_CreateOrUse]
+Make    = "Создать новый ISO-файл"
+Use     = "Использовать существующий ISO-файл"
+
+[MakeRescueDiskWizardPages_BartPE_MakeIso_Progress_Inner]
+Text1 = "Пожалуйста, подождите..."
+
+[MakeRescueDiskWizardPages_BartPE_Prepare_Progress_Inner]
+Text1 = "Пожалуйста, подождите..."
+
+[MakeRescueDiskWizardPages_BartPE_BurnCd_Inner]
+Text1 = "Выберите один из вариантов:"
+
+[MakeRescueDiskWizardPages_BartPE_BurnCd_Inner_NowLater]
+BurnNow         = "Записать диск сейчас"
+CDDriveLabel    = "Выберите привод CD-R(W):"
+EraseDisk       = "Удалить содержимое диска перед началом записи"
+BurnLater       = "Записать диск позже"
+
+[MakeRescueDiskWizardPages_BartPE_BurnCd_Progress_Inner]
+Text1 = "Пожалуйста, подождите..."
+
+[MakeRescueDiskWizardPages_Finish]
+Finish.Name     = "&Готово"
+Finish.Descr    = "Завершить работу Мастера"
+
+[MakeRescueDiskWizardPages_BartPE_Prepare]
+Next.Name   = "&Далее"
+Next.Descr  = "Перейти к следующему шагу"
+
+[MakeRescueDiskWizardPages_BartPE_Prepare_Progress]
+Back.Name   = "&Назад"
+Back.Descr  = "Вернуться к предыдущему шагу"
+
+[MakeRescueDiskWizardPages_BartPE_MakeIso]
+Back.Name   = "&Назад"
+Back.Descr  = "Вернуться к предыдущему шагу"
+Next.Name   = "&Далее"
+Next.Descr  = "Перейти к следующему шагу"
+
+[MakeRescueDiskWizardPages_BartPE_MakeIso_Progress]
+Back.Name   = "&Назад"
+Back.Descr  = "Вернуться к предыдущему шагу"
+
+[MakeRescueDiskWizardPages_BartPE_BurnCd]
+Back.Name   = "&Назад"
+Back.Descr  = "Вернуться к предыдущему шагу"
+Next.Name   = "&Далее"
+Next.Descr  = "Перейти к следующему шагу"
+
+[MakeRescueDiskWizardPages_BartPE_BurnCd_Progress]
+Back.Name   = "&Назад"
+Back.Descr  = "Вернуться к предыдущему шагу"

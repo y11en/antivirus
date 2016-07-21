@@ -1,0 +1,4 @@
+// ***** AdvWare.Serpo *****
+begin
+ AddEvAlarmByCLSID('28F65FCB-D130-11D8-BA48-8BE0C49AF370',AScriptName,'popup_bl.dll');
+end.

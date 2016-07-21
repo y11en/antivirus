@@ -1,0 +1,4 @@
+// ***** Dialer.Creazione.k *****
+begin
+ AddEvAlarmByCLSID('BB1B5064-1496-4E40-A80D-EFF7C5A953A6', AScriptName, 'italy_vdem.ocx');
+end.

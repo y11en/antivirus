@@ -1,0 +1,15 @@
+#import "ProductCore/idl/task.idef"
+#import "ProductCore/idl/tm.idef"
+
+forward interface NetWatch;
+typedef NetWatch* hNETWATCH;
+
+[
+  version(1)
+  mnemonic(IID_NETWATCH)
+  c_type_name(hNETWATCH)
+]
+interface NetWatch : Task {
+   method tERROR GetNWAddresses(  cSerializable * param1 );
+}
+

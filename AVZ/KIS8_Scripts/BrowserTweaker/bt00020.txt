@@ -1,0 +1,17 @@
+// $AVZ1543
+//$ Internet Explorer - включить автоматическую очистку кеша при завершении работы
+// Функция поиска проблемы
+function Check : dword;
+begin
+ Result := 0;
+ if RegKeyIntParamRead('HKCU','Software\Microsoft\Windows\CurrentVersion\Internet Settings\Cache', 'Persistent') <> 0 then
+  Result := 2;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+begin
+ RegKeyIntParamWrite('HKCU','Software\Microsoft\Windows\CurrentVersion\Internet Settings\Cache', 'Persistent', 0);
+ Result := 0;
+end;
+

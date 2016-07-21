@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?t_stdscripts.htm"; }
+else { parent.quicksync('a6.3'); }
+//-->
+</script>
+   <title>&#1057;&#1090;&#1072;&#1085;&#1076;&#1072;&#1088;&#1090;&#1085;&#1099;&#1077; &#1089;&#1082;&#1088;&#1080;&#1087;&#1090;&#1099;</title>
+   <meta name="keywords" content="&#1057;&#1090;&#1072;&#1085;&#1076;&#1072;&#1088;&#1090;&#1085;&#1099;&#1077; &#1089;&#1082;&#1088;&#1080;&#1087;&#1090;&#1099;,&#1089;&#1082;&#1088;&#1080;&#1087;&#1090;&#1099;">
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+
+
+<body bgcolor="#FFFFFF">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Стандартные скрипты</span></p>
+
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="t_about.htm">Наверх</a>&nbsp;
+     <a href="sys_repair.htm">Предыдущая</a>&nbsp;
+     <a href="t_backup.htm">Последующая</a>
+     </font><B>|</B>
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=717989"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=717989;t=109;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=18 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=717989"><img
+src="http://top.list.ru/counter?js=na;id=717989;t=109"
+border=0 height=18 width=88
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+    </td>
+  </tr>
+</table>
+<br>
+
+<p>Стандартные скрипты предназначены для автоматизации основных операций, выполняемых при помощи AVZ. Они хранятся в базе AVZ и обновляются при помощи автоматического обновления.  Вызов окна "Стандартные скрипты" производится из меню "Файл/Стандартные скрипты".</p>
+<p style="text-align: center;"><img src="avz_stdscript.jpg" width="607" height="434" border="0" alt="avz_stdscript"></p>
+<p>Для выполнения одного или нескольких стандартных скриптов необходимо отметить их в списке и затем нажать кнопку "Выполнить отмеченные скрипты". Окно можно закрыть только после завершения последнего из выбранных скриптов - это сделано специально для блокировки органов управления AVZ на время выполнения стандартных скриптов. </p>
+<p>Для аварийной остановки процесса выполнения скриптов необходимо нажать кнопку "Остановить выполнение". Следует учитывать, что остановка происходит не мгновенно - с момент нажатия кнопки до остановки может пройти несколько секунд. Это нормальное явление, т.к. остановка некоторых операций в ходе их выполнения невозможна.</p>
+<p>В настоящий момент поддерживаются следующие операции:</p>
+<p style="text-indent: -27px; margin: 0px 0px 0px 27px;"><span style="font-weight: bold;">1. Поиск и нейтрализации RootKit UserMode и KernelMode</span>. Выполняет поиск руткитов с нейтрализацией всех обнаруженных перехватов</p>
+<p><span style="font-weight: bold;">2. Скрипт сбора информации для раздела "Помогите" virusinfo.info</span>. Выполняет операции по проверке компьютера (без лечения) и исследования системы, после чего создает папку LOG в рабочем каталоге AVZ и помещает туда протокол и архив с заподозренными файлами</p>
+<p><span style="font-weight: bold;">3. Скрипт лечения/карантина и сбора информации для раздела "Помогите" virusinfo.info</span>. Выполняет операции по проверке компьютера с лечением и выполняет исследование системы, после чего создает папку LOG в рабочем каталоге AVZ и помещает туда протокол и архив с заподозренными файлами</p>
+<p><span style="font-weight: bold;">4. Скрипт сбора неопознанных и подозрительных файлов. </span>Выполняет две операции - сканирование системы с карантином всех заподозренных файлов + автоматический карантин с максимальными настройками. В результате в карантин попадают файлы, которые заподозрены AVZ или не опознаны по базе безопасных объектов.</p>
+<p><span style="font-weight: bold;">5. Обновление баз с автоматической настройкой</span>. Производит обновление баз, используя различные настройки. Данная операция полезна в случае, если обновление стандартным способом не проходит и выводится сообщение об ошибке.</p>
+<p><span style="font-weight: bold;">6. Удаление всех драйверов и ключей реестра </span><span style="font-weight: bold;">AVZ.</span> Производит автоматическое удаление всех драйверов и ключей реестра, которые могли быть созданы в процессе работы AVZ. В обычной ситуации это не требуется, так как AVZ автоматически удаляет ключи и файлы, установленные в систему. Является аналогом деинсталляции и рекомендуется к применению на ПК после завершения использования AVZ</p>
+<p>&nbsp;</p>
+<p>Номера скриптов уникальны и не меняются при дополнении и обновлении базы. Стандартные скрипты могут вызываться из скриптов пользователя при помощи функции <a href="script_executestdscr.htm">ExecuteStdScr</a></p>
+
+
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=717989;js='+js+a+';rand='+Math.random()+
+'" height=1 width=1/>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=717989"
+height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+
+</body>
+</html>

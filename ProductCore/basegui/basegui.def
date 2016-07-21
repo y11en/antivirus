@@ -1,0 +1,8 @@
+; basegui.def : Declares the module parameters.
+
+EXPORTS
+	MailSender
+	SendSrvMgrRequest
+	ShellExecuter
+	ShowHelp
+	ShortcatResolver

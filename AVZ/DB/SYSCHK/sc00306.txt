@@ -1,0 +1,4 @@
+// ***** Dialer.Win32.Lanzar *****
+begin       
+ AddEvAlarmByCLSID('03FBB191-FB50-4154-91D7-587D5E3C3C9A',AScriptName,'');
+end.

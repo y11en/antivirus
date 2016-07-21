@@ -1,0 +1,789 @@
+ERROR_APPRUNNING	Закройте Консоль администрирования для продолжения установки.	
+ERROR_APPVERSION	Текущая версия приложения не совместима с версией Консоли администрирования, установленной на вашем компьютере. Рекомендуется обновить Консоль администрирования.	
+ERROR_NOTINSTALLED	Консоль администрирования не установлена.		
+REGVALUE_INSTALLKEY_TASK	Установка лицензионного ключа		
+REGVALUE_ODS_TASK	Поиск вирусов	
+REGVALUE_ROLLBACK_TASK	Откат обновления			
+REGVALUE_UPDATER_TASK	Обновление	
+COMPANY_NAME	Лаборатория Касперского	
+DN_AlwaysInstall	Всегда устанавливать	
+FEATURE_MAIN	Основные компоненты	
+ID_STRING1	{&MSSWhiteSerif8}InstallShield	
+IDPROP_ARPCOMMENTS	Комплексная защита вашего компьютера!	
+IDPROP_ARPCONTACT	Служба технической поддержки	
+IDPROP_ARPHELPLINK	http://www.kaspersky.ru/support.asp	
+IDPROP_ARPHELPTELEPHONE	+7-495-797-8700	
+IDPROP_ARPURLINFOABOUT	http://www.kaspersky.com	
+IDPROP_ARPURLUPDATEINFO	http://www.kaspersky.ru/updates.asp	
+IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR	Настройки цвета системы не подходят для работы приложения [ProductName].	
+IDPROP_EXPRESS_LAUNCH_CONDITION_OS	Операционная система не подходит для работы приложения [ProductName].	
+IDPROP_EXPRESS_LAUNCH_CONDITION_PROCESSOR	Процессор не подходит для работы приложения [ProductName].	
+IDPROP_EXPRESS_LAUNCH_CONDITION_RAM	Объем оперативной памяти не достаточен для работы приложения [ProductName].	
+IDPROP_EXPRESS_LAUNCH_CONDITION_SCREEN	Разрешение экрана не подходит для работы приложения [ProductName].	
+IDPROP_SETUPTYPE_COMPACT	Минимальная	
+IDPROP_SETUPTYPE_COMPACT_DESC	Установка только необходимых для работы приложения компонентов	
+IDPROP_SETUPTYPE_CUSTOM	Выборочная	
+IDPROP_SETUPTYPE_CUSTOM_DESC	Установка только выбранных компонентов приложения	
+IDPROP_SETUPTYPE_TYPICAL	Обычная	
+IDPROP_SETUPTYPE_TYPICAL_DESC	Установка всех компонентов приложения	
+IDS__AgreeToLicense_0	{&Tahoma8}Я не п&ринимаю условия лицензионного соглашения	
+IDS__AgreeToLicense_1	{&Tahoma8}Я &принимаю условия лицензионного соглашения	
+IDS__DatabaseFolder_0	[ProductName] - мастер установки	
+IDS__DatabaseFolder_1	Отмена	
+IDS__DatabaseFolder_10	Установить базу данных приложения [ProductName] в:	
+IDS__DatabaseFolder_11	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__DatabaseFolder_12	<ISProductFolder>\Redist\Language Independent\OS Independent\DestIcon.ibd	
+IDS__DatabaseFolder_2	InstallShield	
+IDS__DatabaseFolder_3	{&MSSWhiteSerif8}InstallShield	
+IDS__DatabaseFolder_4	Нажмите на кнопку "Далее", чтобы установить базу в эту папку. Нажмите на кнопку "Изменить", чтобы выполнить установку в другую папку.	
+IDS__DatabaseFolder_5	{&MSSansBold8}Папка базы данных	
+IDS__DatabaseFolder_6	< &Назад	
+IDS__DatabaseFolder_7	&Далее >	
+IDS__DatabaseFolder_8	&Изменить...	
+IDS__DatabaseFolder_9	[DATABASEDIR]	
+IDS__DestinationFolder_0	[ProductName] - мастер установки	
+IDS__DestinationFolder_1	{&Tahoma8}Отмена	
+IDS__DestinationFolder_10	{&Tahoma8}Установка приложения [ProductName] в:	
+IDS__DestinationFolder_11	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__DestinationFolder_12	<ISProductFolder>\Redist\Language Independent\OS Independent\DestIcon.ibd	
+IDS__DestinationFolder_2	{&Tahoma8}InstallShield	
+IDS__DestinationFolder_3	{&MSSWhiteSerif8}InstallShield	
+IDS__DestinationFolder_4	{&Tahoma8}Нажмите на кнопку "Далее", чтобы установить приложение в эту папку. Нажмите на кнопку "Изменить", чтобы выполнить установку в другую папку.	
+IDS__DestinationFolder_5	{&MSSansBold8}Папка установки приложения	
+IDS__DestinationFolder_6	{&Tahoma8}< &Назад	
+IDS__DestinationFolder_7	{&Tahoma8}Д&алее >	
+IDS__DestinationFolder_8	{&Tahoma8}&Изменить...	
+IDS__DestinationFolder_9	{&Tahoma8}[INSTALLDIR]	
+IDS__DisplayName_Custom	Выборочная	
+IDS__DisplayName_Minimal	Минимальная	
+IDS__DisplayName_Typical	Обычная	
+IDS__IsAdminInstallBrowse_0	[ProductName] - мастер установки	
+IDS__IsAdminInstallBrowse_1	{&MSSWhiteSerif8}InstallShield	
+IDS__IsAdminInstallBrowse_10	{&Tahoma8}OK	
+IDS__IsAdminInstallBrowse_11	{&Tahoma8}	
+IDS__IsAdminInstallBrowse_12	{&Tahoma8}&Имя папки:	
+IDS__IsAdminInstallBrowse_13	Переход на один уровень вверх|	
+IDS__IsAdminInstallBrowse_14	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsAdminInstallBrowse_15	<ISProductFolder>\Redist\Language Independent\OS Independent\New.ibd	
+IDS__IsAdminInstallBrowse_16	<ISProductFolder>\Redist\Language Independent\OS Independent\Up.ibd	
+IDS__IsAdminInstallBrowse_2	{&Tahoma8}InstallShield	
+IDS__IsAdminInstallBrowse_3	{&Tahoma8}Отмена	
+IDS__IsAdminInstallBrowse_4	{&Tahoma8}	
+IDS__IsAdminInstallBrowse_5	{&Tahoma8}&Поиск в папке:	
+IDS__IsAdminInstallBrowse_6	{&Tahoma8}Перейдите в папку назначения.	
+IDS__IsAdminInstallBrowse_7	{&MSSansBold8}Изменение текущей папки назначения	
+IDS__IsAdminInstallBrowse_8	{&Tahoma8}	
+IDS__IsAdminInstallBrowse_9	Создать новую папку|	
+IDS__IsAdminInstallPoint_0	[ProductName] - мастер установки	
+IDS__IsAdminInstallPoint_1	{&Tahoma8}< &Назад	
+IDS__IsAdminInstallPoint_10	{&Tahoma8}&Сетевая папка:	
+IDS__IsAdminInstallPoint_11	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsAdminInstallPoint_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsAdminInstallPoint_3	{&Tahoma8}InstallShield	
+IDS__IsAdminInstallPoint_4	{&Tahoma8}&Изменить...	
+IDS__IsAdminInstallPoint_5	{&Tahoma8}Отмена	
+IDS__IsAdminInstallPoint_6	{&Tahoma8}Укажите сетевую папку для образа диска приложения на сервере.	
+IDS__IsAdminInstallPoint_7	{&Tahoma8}Введите имя сетевой папки или нажмите на кнопку "Изменить" для перехода в другую папку. Нажмите на кнопку "Установить", чтобы создать образ диска приложения [ProductName] на сервере в указанной сетевой папке, или нажмите на кнопку "Отмена" для выхода из мастера установки.	
+IDS__IsAdminInstallPoint_8	{&MSSansBold8}Сетевая папка	
+IDS__IsAdminInstallPoint_9	{&Tahoma8}&Установить	
+IDS__IsAdminInstallPointWelcome_0	[ProductName] - мастер установки	
+IDS__IsAdminInstallPointWelcome_1	{&Tahoma8}< &Назад	
+IDS__IsAdminInstallPointWelcome_2	{&Tahoma8}Отмена	
+IDS__IsAdminInstallPointWelcome_3	{&Tahoma8}Д&алее >	
+IDS__IsAdminInstallPointWelcome_4	{&VerdanaBold14}Вас приветствует мастер установки приложения [ProductName]	
+IDS__IsAdminInstallPointWelcome_5	{&Tahoma8}Мастер установки создаст образ диска [ProductName] на сервере в указанной сетевой папке. Для продолжения нажмите на кнопку "Далее".	
+IDS__IsAdminInstallPointWelcome_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsBitmapDlg_0	[ProductName] - мастер установки	
+IDS__IsBitmapDlg_1	{&Tahoma8}< &Назад	
+IDS__IsBitmapDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsBitmapDlg_3	{&Tahoma8}InstallShield	
+IDS__IsBitmapDlg_4	{&Tahoma8}Отмена	
+IDS__IsBitmapDlg_5	{&Tahoma8}Д&алее >	
+IDS__IsBitmapDlg_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsBrowseFolderDlg_0	[ProductName] - мастер установки	
+IDS__IsBrowseFolderDlg_1	{&MSSWhiteSerif8}InstallShield	
+IDS__IsBrowseFolderDlg_10	{&Tahoma8}OK	
+IDS__IsBrowseFolderDlg_11	{&Tahoma8}	
+IDS__IsBrowseFolderDlg_12	{&Tahoma8}&Имя папки:	
+IDS__IsBrowseFolderDlg_13	Переход на один уровень вверх|	
+IDS__IsBrowseFolderDlg_14	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsBrowseFolderDlg_15	<ISProductFolder>\Redist\Language Independent\OS Independent\New.ibd	
+IDS__IsBrowseFolderDlg_16	<ISProductFolder>\Redist\Language Independent\OS Independent\Up.ibd	
+IDS__IsBrowseFolderDlg_2	{&Tahoma8}InstallShield	
+IDS__IsBrowseFolderDlg_3	{&Tahoma8}Отмена	
+IDS__IsBrowseFolderDlg_4	{&Tahoma8}	
+IDS__IsBrowseFolderDlg_5	{&Tahoma8}&Поиск в папке:	
+IDS__IsBrowseFolderDlg_6	{&Tahoma8}Перейдите в папку назначения.	
+IDS__IsBrowseFolderDlg_7	{&MSSansBold8}Изменение текущей папки назначения	
+IDS__IsBrowseFolderDlg_8	{&Tahoma8}	
+IDS__IsBrowseFolderDlg_9	Создать новую папку|	
+IDS__IsCancelDlg_0	[ProductName] - мастер установки	
+IDS__IsCancelDlg_1	{&Tahoma8}Информационный значок|	
+IDS__IsCancelDlg_2	{&Tahoma8}InstallShield	
+IDS__IsCancelDlg_3	{&Tahoma8}Вы действительно хотите отменить установку?	
+IDS__IsCancelDlg_4	{&Tahoma8}Отменить установку приложения [ProductName]?	
+IDS__IsCancelDlg_5	{&MSSansBold8}Отмена установки	
+IDS__IsCancelDlg_6	{&Tahoma8}&Нет	
+IDS__IsCancelDlg_7	{&Tahoma8}Чтобы продолжить установку приложения [ProductName], нажмите на кнопку "Возобновить". Для выхода из мастера установки нажмите на кнопку "Выход".	
+IDS__IsCancelDlg_8	{&Tahoma8}Д&а	
+IDS__IsCancelDlg_9	<ISProductFolder>\Redist\Language Independent\OS Independent\WarningIcon.ibd	
+IDS__IsCustomSelectionDlg_0	[ProductName] - мастер установки	
+IDS__IsCustomSelectionDlg_1	{&Tahoma8}< &Назад	
+IDS__IsCustomSelectionDlg_10	Описание компонента:	
+IDS__IsCustomSelectionDlg_11	{&Tahoma8}Д&алее >	
+IDS__IsCustomSelectionDlg_12	{&Tahoma8}Размер компонента	
+IDS__IsCustomSelectionDlg_13	{&Tahoma8}&Справка	
+IDS__IsCustomSelectionDlg_14	{&Tahoma8}Многострочное описание выбранного элемента	
+IDS__IsCustomSelectionDlg_15	{&Tahoma8}Описание компонента	
+IDS__IsCustomSelectionDlg_16	{&Tahoma8}&Изменить...	
+IDS__IsCustomSelectionDlg_17	{&Tahoma8}<выбранный путь компонента>	
+IDS__IsCustomSelectionDlg_18	{&Tahoma8}Папка:	
+IDS__IsCustomSelectionDlg_19	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsCustomSelectionDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsCustomSelectionDlg_3	{&Tahoma8}InstallShield	
+IDS__IsCustomSelectionDlg_4	{&Tahoma8}Отмена	
+IDS__IsCustomSelectionDlg_5	{&Tahoma8}Дис&к	
+IDS__IsCustomSelectionDlg_6	{&Tahoma8}Выберите компоненты приложения, которые необходимо установить.	
+IDS__IsCustomSelectionDlg_7	{&Tahoma8}Выберите один из приведенных ниже способов установки компонента.	
+IDS__IsCustomSelectionDlg_8	{&MSSansBold8}Выборочная установка	
+IDS__IsCustomSelectionDlg_9	{&Tahoma8}Многострочное описание выбранного элемента	
+IDS__IsDatabaseLocation_1	InstallShield	
+IDS__IsDatabaseLocation_10	[DATABASEDIR]	
+IDS__IsDatabaseLocation_11	Установка базы данных приложений в:	
+IDS__IsDatabaseLocation_12	{&MSSWhiteSerif8}InstallShield	
+IDS__IsDatabaseLocation_13	[ProductName] - мастер установки	
+IDS__IsDatabaseLocation_2	2	
+IDS__IsDatabaseLocation_3	Отмена	
+IDS__IsDatabaseLocation_4	4	
+IDS__IsDatabaseLocation_5	Нажмите на кнопку "Далее", чтобы установить базу данных приложений в эту папку. Нажмите на кнопку "Изменить", чтобы установить ее в другую папку.	
+IDS__IsDatabaseLocation_6	{&MSSansBold8}Папка назначения для базы данных	
+IDS__IsDatabaseLocation_7	< &Назад	
+IDS__IsDatabaseLocation_8	&Далее >	
+IDS__IsDatabaseLocation_9	&Изменить...	
+IDS__IsDiskSpaceDlg_0	[ProductName] - мастер установки	
+IDS__IsDiskSpaceDlg_1	{&MSSWhiteSerif8}InstallShield	
+IDS__IsDiskSpaceDlg_10	{&Tahoma8}&OK	
+IDS__IsDiskSpaceDlg_11	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsDiskSpaceDlg_2	{&Tahoma8}InstallShield	
+IDS__IsDiskSpaceDlg_3	{&Tahoma8}&Очистка диска	
+IDS__IsDiskSpaceDlg_4	{&Tahoma8}Свободного места на диске меньше, чем требуется для установки.	
+IDS__IsDiskSpaceDlg_5	{&Tahoma8}На указанных дисках недостаточно места для установки выбранных компонентов. Можно удалить файлы с выбранных дисков, установить меньше компонентов на локальные диски или выбрать другие диски.	
+IDS__IsDiskSpaceDlg_6	{&MSSansBold8}Не хватает места на диске	
+IDS__IsDiskSpaceDlg_7	{&Tahoma8}&Выход	
+IDS__IsDiskSpaceDlg_8	{&Tahoma8}Используйте функцию очистки диска для удаления ненужных файлов.	
+IDS__IsDiskSpaceDlg_9	{&Tahoma8}{120}{70}{70}{70}{70}	
+IDS__IsErrorDlg_0	Сведения о программе установки приложения [ProductName]	
+IDS__IsErrorDlg_1	{&Tahoma8}&Прервать	
+IDS__IsErrorDlg_2	{&Tahoma8}&Отмена	
+IDS__IsErrorDlg_3	{&Tahoma8}<error text goes here><error text goes here><error text goes here><error text goes here><error text goes here><error text goes here><error text goes here><error text goes here><error text goes here><error text goes here><error text goes here>	
+IDS__IsErrorDlg_4	{&Tahoma8}&Пропустить	
+IDS__IsErrorDlg_5	{&Tahoma8}&Нет	
+IDS__IsErrorDlg_6	{&Tahoma8}&OK	
+IDS__IsErrorDlg_7	{&Tahoma8}По&вторить	
+IDS__IsErrorDlg_8	{&Tahoma8}Д&а	
+IDS__IsErrorDlg_9	<ISProductFolder>\Redist\Language Independent\OS Independent\WarningIcon.ibd	
+IDS__IsExitDialog_0	[ProductName] - мастер установки	
+IDS__IsExitDialog_1	{&Tahoma8}< &Назад	
+IDS__IsExitDialog_2	{&Tahoma8}Отмена	
+IDS__IsExitDialog_3	{&Tahoma8}&Готово	
+IDS__IsExitDialog_4	{&TahomaBold10}Работа мастера установки завершена	
+IDS__IsExitDialog_5	{&Tahoma8}Приложение [ProductName] успешно установлено. Нажмите на кнопку "Готово" для завершения работы мастера установки.	
+IDS__IsExitDialog_6	{&Tahoma8}Приложение [ProductName] успешно удалено. Нажмите на кнопку "Готово" для завершения работы мастера установки.	
+IDS__IsExitDialog_7	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsExitDialog_8	Открыть файл Readme для просмотра	
+IDS__IsExitDialog_9	Запустить приложение	
+IDS__IsExitDialog_Update_0	[ProductName] - мастер установки	
+IDS__IsExitDialog_Update_1	 < &Назад	
+IDS__IsExitDialog_Update_2	Отмена	
+IDS__IsExitDialog_Update_3	&Готово	
+IDS__IsExitDialog_Update_4	масетр установки завершил установку приложения [ProductName].	
+IDS__IsExitDialog_Update_5	Некоторые программные файлы возможно были обновлены с тех пор, как вы приобрели свою копию приложения [ProductName].	
+IDS__IsExitDialog_Update_6	Установите соединение с интернетом и убедитесь, что у вас самые последние обновления.	
+IDS__IsExitDialog_Update_7	&Да, проверьте программные обновления после завершения процедуры установки.	
+IDS__IsFatalError_0	[ProductName] - мастер установки	
+IDS__IsFatalError_1	{&Tahoma8}< &Назад	
+IDS__IsFatalError_10	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsFatalError_2	{&Tahoma8}Отмена	
+IDS__IsFatalError_3	{&Tahoma8}&Готово	
+IDS__IsFatalError_4	{&Tahoma8}Параметры системы не изменены. Чтобы выполнить установку приложения в другое время, повторно запустите мастер установки.	
+IDS__IsFatalError_5	{&Tahoma8}Нажмите на кнопку "Готово" для завершения работы мастера установки.	
+IDS__IsFatalError_6	{&Tahoma8}Можно либо сохранить установленные элементы в системе, чтобы продолжить данную установку позднее, либо восстановить первоначальное состояние системы до начала установки.	
+IDS__IsFatalError_7	{&Tahoma8}Нажмите на кнопку "Восстановить" или "Продолжить позже" для завершения работы мастера установки.	
+IDS__IsFatalError_8	{&TahomaBold10}Работа мастера установки завершена	
+IDS__IsFatalError_9	{&Tahoma8}Работа мастера установки была прервана до завершения установки приложения [ProductName].	
+IDS__IsFeatureDetailsDlg_0	[ProductName] - мастер установки	
+IDS__IsFeatureDetailsDlg_1	{&MSSWhiteSerif8}InstallShield	
+IDS__IsFeatureDetailsDlg_10	{&Tahoma8}Используйте функцию очистки диска для удаления ненужных файлов.	
+IDS__IsFeatureDetailsDlg_11	{&Tahoma8}Папка:	
+IDS__IsFeatureDetailsDlg_12	{&Tahoma8}Требуется на диске:	
+IDS__IsFeatureDetailsDlg_13	{&Tahoma8}{120}{70}{70}{70}{70}	
+IDS__IsFeatureDetailsDlg_14	{&Tahoma8}OK	
+IDS__IsFeatureDetailsDlg_15	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsFeatureDetailsDlg_2	{&Tahoma8}InstallShield	
+IDS__IsFeatureDetailsDlg_3	{&Tahoma8}&Изменить...	
+IDS__IsFeatureDetailsDlg_4	{&Tahoma8}Отмена	
+IDS__IsFeatureDetailsDlg_5	{&Tahoma8}&Очистка диска	
+IDS__IsFeatureDetailsDlg_6	{&Tahoma8}Требуемое пространство на диске для установки выбранных компонентов.	
+IDS__IsFeatureDetailsDlg_7	{&Tahoma8}На указанных дисках недостаточно места для установки выбранных компонентов. Можно удалить файлы с выбранных дисков, установить меньше компонентов на локальные диски или выбрать другие диски.	
+IDS__IsFeatureDetailsDlg_8	{&MSSansBold8}Требования к пространству на диске	
+IDS__IsFeatureDetailsDlg_9	{&Tahoma8}	
+IDS__IsFilesInUse_0	[ProductName] - мастер установки	
+IDS__IsFilesInUse_1	{&MSSWhiteSerif8}InstallShield	
+IDS__IsFilesInUse_10	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsFilesInUse_2	{&Tahoma8}InstallShield	
+IDS__IsFilesInUse_3	{&Tahoma8}В данный момент используются файлы, которые необходимо обновить.	
+IDS__IsFilesInUse_4	{&Tahoma8}Следующие приложения используют файлы, которые необходимо обновить в процессе установки. Закройте эти приложения и для возобновления установки нажмите на кнопку "Повторить".	
+IDS__IsFilesInUse_5	{&MSSansBold8}Используются файлы	
+IDS__IsFilesInUse_6	{&Tahoma8}&Выход	
+IDS__IsFilesInUse_7	{&Tahoma8}&Пропустить	
+IDS__IsFilesInUse_8	{&Tahoma8}По&вторить	
+IDS__IsFilesInUse_9	{&Tahoma8}	
+IDS__IsInitDlg_0	[ProductName] - мастер установки	
+IDS__IsInitDlg_1	{&Tahoma8}	
+IDS__IsInitDlg_2	{&Tahoma8}	
+IDS__IsInitDlg_3	{&Tahoma8}< &Назад	
+IDS__IsInitDlg_4	{&Tahoma8}Отмена	
+IDS__IsInitDlg_5	{&Tahoma8}Д&алее >	
+IDS__IsInitDlg_6	{&VerdanaBold14}Вас приветствует мастер установки приложения [ProductName]	
+IDS__IsInitDlg_7	{&Tahoma8}Мастер установки приложения [ProductName] подготавливает программу, которая поможет выполнить установку.  Пожалуйста, подождите.	
+IDS__IsInitDlg_8	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsLicenseDlg_0	[ProductName] - мастер установки	
+IDS__IsLicenseDlg_1	{&Tahoma8}< &Назад	
+IDS__IsLicenseDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsLicenseDlg_3	{&Tahoma8}InstallShield	
+IDS__IsLicenseDlg_4	{&Tahoma8}Отмена	
+IDS__IsLicenseDlg_5	{&Tahoma8}Ознакомление с Лицензионным соглашением.	
+IDS__IsLicenseDlg_6	{&Tahoma8}Нажмите на кнопку "Принимаю", чтобы принять условия данного соглашения. Нажмите на кнопку "Не принимаю" для выхода из программы установки.	
+IDS__IsLicenseDlg_7	{&MSSansBold8}Лицензионное соглашение	
+IDS__IsLicenseDlg_8	{&Tahoma8}Д&алее >	
+IDS__IsLicenseDlg_9	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsLicenseDlg_EULA	<ISProductFolder>\Redist\0409\Eula.rtf	
+IDS__IsMaintenanceDlg_0	[ProductName] - мастер установки	
+IDS__IsMaintenanceDlg_1	{&Tahoma8}< &Назад	
+IDS__IsMaintenanceDlg_10	{&MSSansBold8}&Удалить	
+IDS__IsMaintenanceDlg_11	{&Tahoma8}	
+IDS__IsMaintenanceDlg_12	{&Tahoma8}Изменение устанавливаемых компонентов приложения: выбор способа установки компонентов.	
+IDS__IsMaintenanceDlg_13	{&Tahoma8}Исправление ошибок в приложении: добавление отсутствующих и исправление поврежденных файлов, ярлыков и записей реестра.	
+IDS__IsMaintenanceDlg_14	{&Tahoma8}Удаление приложения [ProductName].	
+IDS__IsMaintenanceDlg_15	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsMaintenanceDlg_16	<ISProductFolder>\Redist\Language Independent\OS Independent\RemoveIco.ibd	
+IDS__IsMaintenanceDlg_17	<ISProductFolder>\Redist\Language Independent\OS Independent\ReinstIco.ibd	
+IDS__IsMaintenanceDlg_18	<ISProductFolder>\Redist\Language Independent\OS Independent\CustomSetupIco.ibd	
+IDS__IsMaintenanceDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsMaintenanceDlg_3	{&Tahoma8}InstallShield	
+IDS__IsMaintenanceDlg_4	{&Tahoma8}Отмена	
+IDS__IsMaintenanceDlg_5	{&Tahoma8}Изменение, исправление или удаление приложения.	
+IDS__IsMaintenanceDlg_6	{&MSSansBold8}Обслуживание приложений	
+IDS__IsMaintenanceDlg_7	{&Tahoma8}Д&алее >	
+IDS__IsMaintenanceDlg_8	{&MSSansBold8}&Изменить	
+IDS__IsMaintenanceDlg_9	{&MSSansBold8}Ис&править	
+IDS__IsMaintenanceWelcome_0	[ProductName] - мастер установки	
+IDS__IsMaintenanceWelcome_1	{&Tahoma8}< &Назад	
+IDS__IsMaintenanceWelcome_2	{&Tahoma8}Отмена	
+IDS__IsMaintenanceWelcome_3	{&Tahoma8}Д&алее >	
+IDS__IsMaintenanceWelcome_4	{&TahomaBold10}Вас приветствует мастер установки/удаления приложения [ProductName]	
+IDS__IsMaintenanceWelcome_5	{&Tahoma8}Мастер установки/удаления предоставляет возможность удалить приложение [ProductName]. Для продолжения нажмите на кнопку "Далее".	
+IDS__IsMaintenanceWelcome_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsPatchDlg_0	Программа-заплата для приложения [ProductName] - мастер установки	
+IDS__IsPatchDlg_1	{&TahomaBold10}Добро пожаловать в программу-заплату для приложения [ProductName]	
+IDS__IsPatchDlg_2	Мастер установки/удаления установит программу-заплату для приложения [ProductName] на ваш компьютер.  Для продолжения нажмите на кнопку ""Обновить"".	
+IDS__IsPatchDlg_3	Отмена	
+IDS__IsPatchDlg_4	< &Назад	
+IDS__IsPatchDlg_5	&Обновить >	
+IDS__IsPatchDlg_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsProgressDlg_0	[ProductName] - мастер установки	
+IDS__IsProgressDlg_1	Выполнено	
+IDS__IsProgressDlg_10	{&Tahoma8}(Hidden for now)с.	
+IDS__IsProgressDlg_11	{&Tahoma8}Состояние:	
+IDS__IsProgressDlg_12	{&Tahoma8}Д&алее >	
+IDS__IsProgressDlg_13	{&Tahoma8}(Hidden for now)	
+IDS__IsProgressDlg_14	{&Tahoma8})Hidden for now)Осталось примерно:	
+IDS__IsProgressDlg_15	{&MSSansBold8}Удаление приложения [ProductName]	
+IDS__IsProgressDlg_16	{&Tahoma8}Удаление выбранных компонентов приложения.	
+IDS__IsProgressDlg_17	{&Tahoma8}Дождитесь окончания удаления приложения [ProductName]. Это может занять несколько минут...	
+IDS__IsProgressDlg_18	<ISProductFolder>\Redist\Language Independent\OS Independent\SetupIcon.ibd	
+IDS__IsProgressDlg_19	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsProgressDlg_2	{&Tahoma8}	
+IDS__IsProgressDlg_3	{&Tahoma8}< &Назад	
+IDS__IsProgressDlg_4	{&MSSWhiteSerif8}InstallShield	
+IDS__IsProgressDlg_5	{&Tahoma8}InstallShield	
+IDS__IsProgressDlg_6	{&Tahoma8}Отмена	
+IDS__IsProgressDlg_7	{&Tahoma8}Устанавливаются выбранные компоненты приложения.	
+IDS__IsProgressDlg_8	{&Tahoma8}Дождитесь окончания установки приложения [ProductName]. Это может занять несколько минут...	
+IDS__IsProgressDlg_9	{&MSSansBold8}Установка приложения [ProductName]	
+IDS__IsReadmeDlg_0	{&MSSansBold8}Информация в файле Readme	
+IDS__IsReadmeDlg_1	Ознакомление с информацией в файле Readme.	
+IDS__IsReadmeDlg_2	[ProductName] - мастер установки	
+IDS__IsReadmeDlg_3	< &Назад	
+IDS__IsReadmeDlg_4	&Далее >	
+IDS__IsReadmeDlg_5	&Отмена	
+IDS__IsReadmeDlg_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsReadmeDlg_7	InstallShield	
+IDS__IsReadmeDlg_8	{&MSSWhiteSerif8}InstallShield	
+IDS__IsRegisterUserDlg_0	[ProductName] - мастер установки	
+IDS__IsRegisterUserDlg_1	{&Tahoma8}< &Назад	
+IDS__IsRegisterUserDlg_10	{50}	
+IDS__IsRegisterUserDlg_11	{&Tahoma8}Имя &пользователя:	
+IDS__IsRegisterUserDlg_12	{&Tahoma8}Д&алее >	
+IDS__IsRegisterUserDlg_13	{&Tahoma8}Установить приложение для:	
+IDS__IsRegisterUserDlg_14	{&Tahoma8}&всех пользователей данного компьютера	
+IDS__IsRegisterUserDlg_15	{&Tahoma8}Определенного пользователя ([USERNAME])	
+IDS__IsRegisterUserDlg_16	{&Tahoma8}	
+IDS__IsRegisterUserDlg_17	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsRegisterUserDlg_18	&Серийный номер:	
+IDS__IsRegisterUserDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsRegisterUserDlg_3	{&Tahoma8}InstallShield	
+IDS__IsRegisterUserDlg_4	{&Tahoma8}Отмена	
+IDS__IsRegisterUserDlg_5	{80}	
+IDS__IsRegisterUserDlg_6	{&Tahoma8}&Организация:	
+IDS__IsRegisterUserDlg_7	{&Tahoma8}Ввод сведений о пользователе.	
+IDS__IsRegisterUserDlg_8	{&Tahoma8}Укажите свои имя и фамилию, а также название организации.	
+IDS__IsRegisterUserDlg_9	{&MSSansBold8}Сведения о пользователе	
+IDS__IsReinstallDlg_0	[ProductName] - мастер установки	
+IDS__IsReinstallDlg_1	{&Tahoma8}< &Назад	
+IDS__IsReinstallDlg_10	{&Tahoma8}&Полная	
+IDS__IsReinstallDlg_11	{&Tahoma8}	
+IDS__IsReinstallDlg_12	{&Tahoma8}Замена всех файлов, версии которых отличаются от требуемых для приложения, а также всех записей реестра и ярлыков, необходимых для приложения.	
+IDS__IsReinstallDlg_13	{&Tahoma8}Замена только отсутствующих программных файлов и записей реестра для установленных компонентов.	
+IDS__IsReinstallDlg_14	{&Tahoma8}Замена всех файлов, записей реестра и ярлыков, необходимых для приложения.	
+IDS__IsReinstallDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsReinstallDlg_3	{&Tahoma8}InstallShield	
+IDS__IsReinstallDlg_4	{&Tahoma8}Отмена	
+IDS__IsReinstallDlg_5	{&Tahoma8}Выберите способ повторной установки компонентов приложения.	
+IDS__IsReinstallDlg_6	{&MSSansBold8}Режим повторной установки	
+IDS__IsReinstallDlg_7	{&Tahoma8}Д&алее >	
+IDS__IsReinstallDlg_8	{&Tahoma8}&Обычная	
+IDS__IsReinstallDlg_9	{&Tahoma8}&Минимальная	
+IDS__IsResumeDlg_0	[ProductName] - мастер установки	
+IDS__IsResumeDlg_1	{&Tahoma8}< &Назад	
+IDS__IsResumeDlg_2	{&Tahoma8}Отмена	
+IDS__IsResumeDlg_3	{&Tahoma8}Д&алее >	
+IDS__IsResumeDlg_4	{&Tahoma8}Мастер установки завершит установку приложения [ProductName] на вашем компьютере. Для продолжения нажмите на кнопку "Далее".	
+IDS__IsResumeDlg_5	{&Tahoma8}Мастер установки выполнит отложенную установку приложения [ProductName] на вашем компьютере. Для продолжения нажмите на кнопку "Далее".	
+IDS__IsResumeDlg_6	{&TahomaBold10}Продолжение установки приложения [ProductName]	
+IDS__IsResumeDlg_7	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsSetupTypeMinDlg_0	[ProductName] - мастер установки	
+IDS__IsSetupTypeMinDlg_1	{&Tahoma8}< &Назад	
+IDS__IsSetupTypeMinDlg_10	{&Tahoma8}Д&алее >	
+IDS__IsSetupTypeMinDlg_11	{&MSSansBold8}&Полная	
+IDS__IsSetupTypeMinDlg_12	{&MSSansBold8}&Выборочная	
+IDS__IsSetupTypeMinDlg_13	{&Tahoma8}	
+IDS__IsSetupTypeMinDlg_14	<ISProductFolder>\Redist\Language Independent\OS Independent\CustomSetupIco.ibd	
+IDS__IsSetupTypeMinDlg_15	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsSetupTypeMinDlg_16	<ISProductFolder>\Redist\Language Independent\OS Independent\CompleteSetupIco.ibd	
+IDS__IsSetupTypeMinDlg_17	<ISProductFolder>\Redist\Language Independent\OS Independent\DestIcon.ibd	
+IDS__IsSetupTypeMinDlg_18	{&Tahoma8}Установка минимального набора функций	
+IDS__IsSetupTypeMinDlg_19	<ISProductFolder>\Redist\Language Independent\OS Independent\CustomSetupIco.ibd	
+IDS__IsSetupTypeMinDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsSetupTypeMinDlg_20	{&MSSansBold8}&Минимальная	
+IDS__IsSetupTypeMinDlg_21	<ISProductFolder>\Redist\Language Independent\OS Independent\CustomSetupIco.ibd	
+IDS__IsSetupTypeMinDlg_22	<ISProductFolder>\Redist\Language Independent\OS Independent\CompleteSetupIco.ibd	
+IDS__IsSetupTypeMinDlg_23	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsSetupTypeMinDlg_24	{&MSSansBold8}&Обычная	
+IDS__IsSetupTypeMinDlg_3	{&Tahoma8}InstallShield	
+IDS__IsSetupTypeMinDlg_4	{&Tahoma8}Отмена	
+IDS__IsSetupTypeMinDlg_5	{&Tahoma8}Установка всех компонентов приложения.	
+IDS__IsSetupTypeMinDlg_6	{&Tahoma8}Выбор необходимых компонентов приложения и папки, в которую они будут установлены.	
+IDS__IsSetupTypeMinDlg_7	{&Tahoma8}Выбор подходящего типа установки.	
+IDS__IsSetupTypeMinDlg_8	{&Tahoma8}Выберите тип установки.	
+IDS__IsSetupTypeMinDlg_9	{&MSSansBold8}Тип установки	
+IDS__IsStartCopyDlg_0	[ProductName] - мастер установки	
+IDS__IsStartCopyDlg_1	{&Tahoma8}< &Назад	
+IDS__IsStartCopyDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsStartCopyDlg_3	{&Tahoma8}InstallShield	
+IDS__IsStartCopyDlg_4	{&Tahoma8}Отмена	
+IDS__IsStartCopyDlg_5	{&Tahoma8}Мастер установки готов к началу установки.	
+IDS__IsStartCopyDlg_6	{&Tahoma8}Для продолжения нажмите на кнопку "Далее".	
+IDS__IsStartCopyDlg_7	{&Tahoma8}Чтобы просмотреть или изменить параметры установки, нажмите на кнопку "Назад". Нажмите на кнопку "Отмена" для завершения работы мастера установки.	
+IDS__IsStartCopyDlg_8	{&MSSansBold8}Мастер установки готов к установке	
+IDS__IsStartCopyDlg_9	{&Tahoma8}Д&алее >	
+IDS__IsUserExit_0	[ProductName] - мастер установки	
+IDS__IsUserExit_1	{&Tahoma8}< &Назад	
+IDS__IsUserExit_10	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsUserExit_2	{&Tahoma8}Отмена	
+IDS__IsUserExit_3	{&Tahoma8}&Готово	
+IDS__IsUserExit_4	{&Tahoma8}Параметры системы не изменены. В дальнейшем, чтобы установить программу, повторно запустите мастер установки.	
+IDS__IsUserExit_5	{&Tahoma8}Нажмите на кнопку "Готово" для завершения работы мастера установки.	
+IDS__IsUserExit_6	{&Tahoma8}Можно либо сохранить установленные элементы в системе, чтобы продолжить данную установку позднее, либо восстановить первоначальное состояние системы до установки.	
+IDS__IsUserExit_7	{&Tahoma8}Нажмите на кнопку "Восстановить" или "Продолжить позже" для завершения работы мастера установки.	
+IDS__IsUserExit_8	{&TahomaBold10}Работа мастера установки завершена	
+IDS__IsUserExit_9	{&Tahoma8}Выполнение мастера установки было прервано до завершения установки приложения [ProductName].	
+IDS__IsVerifyReadyDlg_0	[ProductName] - мастер установки	
+IDS__IsVerifyReadyDlg_1	{&Tahoma8}< &Назад	
+IDS__IsVerifyReadyDlg_10	{&MSSansBold8}Готова к исправлению приложения	
+IDS__IsVerifyReadyDlg_11	{&MSSansBold8}Готова к установке приложения	
+IDS__IsVerifyReadyDlg_12	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsVerifyReadyDlg_13	Серийный номер: [SERIALNUMBER]	
+IDS__IsVerifyReadyDlg_13X	Серийный номер: [ISX_SERIALNUM]	
+IDS__IsVerifyReadyDlg_14	Организация: [COMPANYNAME]	
+IDS__IsVerifyReadyDlg_15	Имя пользователя: [USERNAME]	
+IDS__IsVerifyReadyDlg_16	Сведения о пользователе:	
+IDS__IsVerifyReadyDlg_17	[INSTALLDIR]	
+IDS__IsVerifyReadyDlg_18	Папка назначения:	
+IDS__IsVerifyReadyDlg_19	[SelectedSetupType]	
+IDS__IsVerifyReadyDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsVerifyReadyDlg_20	Тип установки:	
+IDS__IsVerifyReadyDlg_21	Текущие установки:	
+IDS__IsVerifyReadyDlg_3	{&Tahoma8}InstallShield	
+IDS__IsVerifyReadyDlg_4	{&Tahoma8}Отмена	
+IDS__IsVerifyReadyDlg_5	{&Tahoma8}Мастер установки готов к установке.	
+IDS__IsVerifyReadyDlg_6	{&Tahoma8}Для начала установки нажмите на кнопку "Установить".	
+IDS__IsVerifyReadyDlg_7	{&Tahoma8}Чтобы просмотреть или изменить параметры установки, нажмите на кнопку "Назад". Нажмите на кнопку "Отмена" для завершения работы мастера установки.	
+IDS__IsVerifyReadyDlg_8	{&MSSansBold8}Готова к изменению программы	
+IDS__IsVerifyReadyDlg_9	{&Tahoma8}&Установить	
+IDS__IsVerifyRemoveAllDlg_0	[ProductName] - мастер установки	
+IDS__IsVerifyRemoveAllDlg_1	{&Tahoma8}< &Назад	
+IDS__IsVerifyRemoveAllDlg_10	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsVerifyRemoveAllDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsVerifyRemoveAllDlg_3	{&Tahoma8}InstallShield	
+IDS__IsVerifyRemoveAllDlg_4	{&Tahoma8}Отмена	
+IDS__IsVerifyRemoveAllDlg_5	{&Tahoma8}Вы выбрали удаление программы.	
+IDS__IsVerifyRemoveAllDlg_6	{&Tahoma8}Нажмите на кнопку "Удалить", чтобы удалить приложение [ProductName]. После удаления данное приложение будет недоступно.	
+IDS__IsVerifyRemoveAllDlg_7	{&Tahoma8}Чтобы просмотреть или изменить настройки, нажмите на кнопку "Назад".	
+IDS__IsVerifyRemoveAllDlg_8	{&MSSansBold8}Удаление приложения	
+IDS__IsVerifyRemoveAllDlg_9	{&Tahoma8}&Удалить	
+IDS__IsWelcomeDlg_0	[ProductName] - мастер установки	
+IDS__IsWelcomeDlg_1	{&Tahoma8}< &Назад	
+IDS__IsWelcomeDlg_2	{&Tahoma8}Отмена	
+IDS__IsWelcomeDlg_3	{&Tahoma8}Д&алее >	
+IDS__IsWelcomeDlg_4	{&TahomaBold10}Вас приветствует мастер установки/удаления приложения [ProductName]	
+IDS__IsWelcomeDlg_5	{&Tahoma8}Мастер установки выполнит установку приложения [ProductName] на ваш компьютер. Для продолжения нажмите на кнопку "Далее".	
+IDS__IsWelcomeDlg_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsWelcomeDlg_7	ПРЕДУПРЕЖДЕНИЕ: Данная программа защищена законами об авторских правах и международными соглашениями.	
+IDS__SetupTips_0	[ProductName] - мастер установки	
+IDS__TargetReq_DESC_COLOR	Настройки цвета системы не подходят для работы приложения [ProductName].	
+IDS__TargetReq_DESC_OS	Операционная система не подходит для работы приложения [ProductName].	
+IDS__TargetReq_DESC_PROCESSOR	Процессор не подходит для работы приложения [ProductName].	
+IDS__TargetReq_DESC_RAM	Объем  оперативной памяти не достаточен для работы приложения [ProductName].	
+IDS__TargetReq_DESC_RESOLUTION	Разрешение экрана не подходит для работы приложения [ProductName].	
+IDS_ACTIONTEXT_1	Публикация сведений о программе...	
+IDS_ACTIONTEXT_10	Вычисление необходимого свободного места...	
+IDS_ACTIONTEXT_100	Тип содержимого MIME: [1], Расширение: [2]	
+IDS_ACTIONTEXT_101	Отмена регистрации кодов приложений...	
+IDS_ACTIONTEXT_102	Идентификационный номер продукта: [1]	
+IDS_ACTIONTEXT_103	Отмена регистрации библиотек типов...	
+IDS_ACTIONTEXT_104	Идентификационный номер библиотек: [1]	
+IDS_ACTIONTEXT_105	Обновление строк среды...	
+IDS_ACTIONTEXT_106	Имя: [1], Значение: [2], Действие [3]	
+IDS_ACTIONTEXT_107	Сохранение значений в INI-файлах...	
+IDS_ACTIONTEXT_108	Файл: [1], Раздел: [2],  Подраздел: [3], Значение: [4]	
+IDS_ACTIONTEXT_109	Запись параметров системного реестра...	
+IDS_ACTIONTEXT_11	Создание папок...	
+IDS_ACTIONTEXT_110	Раздел: [1], Имя: [2], Значение: [3]	
+IDS_ACTIONTEXT_111	Регистрация приложений и компонентов COM+...	
+IDS_ACTIONTEXT_112	Код: [1]{{, Тип: [2], Пользователи: [3], RSN: [4]}}	
+IDS_ACTIONTEXT_113	Отмена регистрации приложений и компонентов COM+...	
+IDS_ACTIONTEXT_114	Код: [1]{{, Тип: [2]}}	
+IDS_ACTIONTEXT_115	Поиск связанных приложений...	
+IDS_ACTIONTEXT_116	Найдено приложение: [1]	
+IDS_ACTIONTEXT_117	Перенос состояний свойств из связанных приложений...	
+IDS_ACTIONTEXT_118	Приложение: [1]	
+IDS_ACTIONTEXT_119	Удаление приложений...	
+IDS_ACTIONTEXT_12	Папка: [1]	
+IDS_ACTIONTEXT_120	Приложение: [1], Командная строка: [2]	
+IDS_ACTIONTEXT_121	Установка системной папки...	
+IDS_ACTIONTEXT_122	Файл: [1],  Зависимости: [2]	
+IDS_ACTIONTEXT_123	Создание IIS Virtual Roots...	
+IDS_ACTIONTEXT_124	Удаление IIS Virtual Roots...	
+IDS_ACTIONTEXT_13	Создание ярлыков...	
+IDS_ACTIONTEXT_14	Ярлык: [1]	
+IDS_ACTIONTEXT_15	Удаление служб...	
+IDS_ACTIONTEXT_16	Служба: [1]	
+IDS_ACTIONTEXT_17	Создание дубликатов файлов...	
+IDS_ACTIONTEXT_18	Файл: [1], Папка: [9],  Размер: [6]	
+IDS_ACTIONTEXT_19	Вычисление необходимого свободного места...	
+IDS_ACTIONTEXT_2	Выделение памяти для реестра...	
+IDS_ACTIONTEXT_20	Создание операций сценария для макрокоманды...	
+IDS_ACTIONTEXT_21	[1]	
+IDS_ACTIONTEXT_22	Копирование файлов сетевой установки...	
+IDS_ACTIONTEXT_23	Файл: [1], Папка: [9], Размер: [6]	
+IDS_ACTIONTEXT_24	Копирование новых файлов...	
+IDS_ACTIONTEXT_25	Файл: [1], Папка: [9],  Размер: [6]	
+IDS_ACTIONTEXT_26	Установка компонентов ODBC...	
+IDS_ACTIONTEXT_27	Установка новых служб...	
+IDS_ACTIONTEXT_28	Служба: [2]	
+IDS_ACTIONTEXT_29	Проверка установки...	
+IDS_ACTIONTEXT_3	Свободно: [1]	
+IDS_ACTIONTEXT_30	Проверка условий запуска...	
+IDS_ACTIONTEXT_31	Перемещение файлов...	
+IDS_ACTIONTEXT_32	Файл: [1], Папка: [9],  Размер: [6]	
+IDS_ACTIONTEXT_33	Обновление файлов...	
+IDS_ACTIONTEXT_34	Файл: [1], Папка: [2],  Размер: [3]	
+IDS_ACTIONTEXT_35	Обновление регистрации компонентов...	
+IDS_ACTIONTEXT_36	Публикация подходящих компонентов...	
+IDS_ACTIONTEXT_37	Код компонента: [1], Описатель: [2]	
+IDS_ACTIONTEXT_38	Публикация компонентов продукта...	
+IDS_ACTIONTEXT_39	Компонент: [1]	
+IDS_ACTIONTEXT_4	Поиск установленных приложений...	
+IDS_ACTIONTEXT_40	Публикация сведений о продукте...	
+IDS_ACTIONTEXT_41	Регистрация серверов классов...	
+IDS_ACTIONTEXT_42	Идентификационный номер класса: [1]	
+IDS_ACTIONTEXT_43	Регистрация серверов расширений...	
+IDS_ACTIONTEXT_44	Расширение: [1]	
+IDS_ACTIONTEXT_45	Регистрация шрифтов...	
+IDS_ACTIONTEXT_46	Шрифт: [1]	
+IDS_ACTIONTEXT_47	Регистрация MIME...	
+IDS_ACTIONTEXT_48	Тип содержимого MIME: [1], Расширение: [2]	
+IDS_ACTIONTEXT_49	Регистрация продукта...	
+IDS_ACTIONTEXT_5	Свойство: [1], Подпись: [2]	
+IDS_ACTIONTEXT_50	[1]	
+IDS_ACTIONTEXT_51	Отмена регистрации кодов приложений...	
+IDS_ACTIONTEXT_52	Идентификационный номер приложения: [1]	
+IDS_ACTIONTEXT_53	Регистрация библиотек типов...	
+IDS_ACTIONTEXT_54	Идентификационный номер библиотеки: [1]	
+IDS_ACTIONTEXT_55	Регистрация пользователей...	
+IDS_ACTIONTEXT_56	[1]	
+IDS_ACTIONTEXT_57	Удаление дублирующихся файлов...	
+IDS_ACTIONTEXT_58	Файл: [1], Папка: [9]	
+IDS_ACTIONTEXT_59	Обновление строк среды...	
+IDS_ACTIONTEXT_6	Привязка выполняемых файлов...	
+IDS_ACTIONTEXT_60	Имя: [1], Значение: [2], Действие [3]	
+IDS_ACTIONTEXT_61	Удаление файлов...	
+IDS_ACTIONTEXT_62	Файл: [1], Папка: [9]	
+IDS_ACTIONTEXT_63	Удаление папок...	
+IDS_ACTIONTEXT_64	Папка: [1]	
+IDS_ACTIONTEXT_65	Удаление записей в INI-файлах...	
+IDS_ACTIONTEXT_66	Файл: [1], Раздел: [2],  Подраздел: [3], Значение: [4]	
+IDS_ACTIONTEXT_67	Удаление компонентов ODBC...	
+IDS_ACTIONTEXT_68	Удаление параметров системного реестра...	
+IDS_ACTIONTEXT_69	Раздел: [1], Имя: [2]	
+IDS_ACTIONTEXT_7	Файл: [1]	
+IDS_ACTIONTEXT_70	Удаление ярлыков...	
+IDS_ACTIONTEXT_71	Ярлык: [1]	
+IDS_ACTIONTEXT_72	Поиск подходящих продуктов...	
+IDS_ACTIONTEXT_73	Откат действия:	
+IDS_ACTIONTEXT_74	[1]	
+IDS_ACTIONTEXT_75	Удаление временных файлов...	
+IDS_ACTIONTEXT_76	Файл: [1]	
+IDS_ACTIONTEXT_77	Регистрация модулей...	
+IDS_ACTIONTEXT_78	Файл: [1], Папка: [2]	
+IDS_ACTIONTEXT_79	Отмена регистрации модулей...	
+IDS_ACTIONTEXT_8	Поиск подходящих продуктов...	
+IDS_ACTIONTEXT_80	Файл: [1], Папка: [2]	
+IDS_ACTIONTEXT_81	Инициализация каталогов ODBC...	
+IDS_ACTIONTEXT_82	Запуск служб...	
+IDS_ACTIONTEXT_83	Служба: [1]	
+IDS_ACTIONTEXT_84	Останов служб	
+IDS_ACTIONTEXT_85	Служба: [1]	
+IDS_ACTIONTEXT_86	Удаление перемещенных файлов...	
+IDS_ACTIONTEXT_87	Файл: [1], Папка: [9]	
+IDS_ACTIONTEXT_88	Отмена публикация подходящих компонентов...	
+IDS_ACTIONTEXT_89	Код компонента: [1], Идентификатор: [2]	
+IDS_ACTIONTEXT_9	Вычисление необходимого свободного места...	
+IDS_ACTIONTEXT_90	Отмена публикации компонентов продукта...	
+IDS_ACTIONTEXT_91	Компонент: [1]	
+IDS_ACTIONTEXT_92	Отмена публикация сведений о продукте...	
+IDS_ACTIONTEXT_93	Отмена регистрация серверов классов...	
+IDS_ACTIONTEXT_94	Идентификационный номер класса: [1]	
+IDS_ACTIONTEXT_95	Отмена регистрация серверов расширений...	
+IDS_ACTIONTEXT_96	Расширение: [1]	
+IDS_ACTIONTEXT_97	Отмена регистрации шрифтов...	
+IDS_ACTIONTEXT_98	Шрифт: [1]	
+IDS_ACTIONTEXT_99	Отмена регистрации MIME...	
+IDS_ERROR_0	{{Неустранимая ошибка: }}	
+IDS_ERROR_1	{{Ошибка [1]. }}	
+IDS_ERROR_10	=== Начало записи журнала: [Date]  [Time] ===	
+IDS_ERROR_100	Не удается удалить ярлык [2]. Проверьте, что файл ярлыка существует и доступен.	
+IDS_ERROR_101	Не удается зарегистрировать библиотеку типов для файла [2].  Обратитесь в Службу технической поддержки.	
+IDS_ERROR_102	Не удается отменить регистрацию библиотеки типов для файла [2].  Обратитесь в Службу технической поддержки.	
+IDS_ERROR_103	Не удается обновить ini-файл [2][3].  Проверьте, что файл существует и доступен.	
+IDS_ERROR_104	Не удается спланировать замену файла [3] на [2] при перезагрузке.  Убедитесь, что у вас достаточно прав для доступа к файлу [3].	
+IDS_ERROR_105	Ошибка при удалении диспетчера драйвера ODBC, ошибка ODBC [2]: [3]. Обратитесь в Службу технической поддержки.	
+IDS_ERROR_106	Ошибка при установке диспетчера драйвера ODBC, ошибка ODBC [2]: [3]. Обратитесь в Службу технической поддержки.	
+IDS_ERROR_107	Ошибка при удалении драйвера ODBC: [4], ошибка ODBC [2]: [3]. Убедитесь, что у вас достаточно прав для удаление драйверов ODBC.	
+IDS_ERROR_108	Ошибка при установке драйвера ODBC: [4], ошибка ODBC [2]: [3]. Проверьте, что файл [4] существует и доступен.	
+IDS_ERROR_109	Ошибка при настройке источника данных ODBC: [4], ошибка ODBC [2]: [3]. Проверьте, что файл [4] существует и доступен.	
+IDS_ERROR_11	=== Завершение записи журнала: [Date]  [Time] ===	
+IDS_ERROR_110	Ошибка при запуске службы "[2]" ([3]).  Убедитесь, что у вас достаточно прав для запуска системных служб.	
+IDS_ERROR_111	Не удается остановить службу "[2]" ([3]).  Убедитесь, что у вас достаточно прав для остановки системных служб.	
+IDS_ERROR_112	Не удается удалить службу "[2]" ([3]).  Убедитесь, что у вас достаточно прав для удаления системных служб.	
+IDS_ERROR_113	Не удается установить службу "[2]" ([3]).  Убедитесь, что у вас достаточно прав для установки системных служб.	
+IDS_ERROR_114	Не удается обновить переменную среды "[2]".  Убедитесь, что у вас достаточно прав для изменения переменных среды.	
+IDS_ERROR_115	У вас недостаточно прав для выполнения этой установки для всех пользователей данного компьютера.  Войдите в систему в качестве администратора и повторите установку.	
+IDS_ERROR_116	Не удается установить атрибуты безопасности для файла "[3]". Ошибка: [2].  Убедитесь, что у вас достаточно прав для изменения разрешений на доступ к этому файлу.	
+IDS_ERROR_117	Службы COM+ 1.0 не установлены на данном компьютере.  Они необходимы для успешной установки.  Эти службы входят в состав Microsoft Windows 2000.	
+IDS_ERROR_118	Произошла ошибка при регистрации приложения COM+.  За дополнительными сведениями обратитесь в Cлужбу технической поддержки.	
+IDS_ERROR_119	Произошла ошибка при отмене регистрации приложения COM+.  За дополнительными сведениями обратитесь в Службу технической поддержки.	
+IDS_ERROR_12	Начало действия [Time]: [1].	
+IDS_ERROR_120	Удаление более ранних версий этого приложения...	
+IDS_ERROR_121	Подготовка к удалению более ранних версий этого приложения...	
+IDS_ERROR_122	Произошла ошибка при обновлении файла [2].  Возможно, он уже был обновлен другими средствами, и к нему не может быть применен данный пакет исправлений.  За дополнительными сведениями обратитесь к поставщику пакета.  {{Системная ошибка: [3]}}	
+IDS_ERROR_123	[2] не удается установить один из обязательных продуктов. Обратитесь в Службу технической поддержки.  {{Системная ошибка: [3].}}	
+IDS_ERROR_124	Не удается удалить более раннюю версию [2]. Обратитесь в Службу технической поддержки.  {{Системная ошибка: [3].}}	
+IDS_ERROR_125	Изменение описания службы  '[2]' ([3]) не допускается.	
+IDS_ERROR_126	Службе Windows Installer не удается обновить системный файл [2], поскольку он защищен средствами Microsoft Windows.  Возможно, для корректной работы приложения потребуется обновление операционной системы. {{Версия пакета: [3], Защищенная версия операционной системы: [4]}}	
+IDS_ERROR_127	Службе Windows Installer не удается обновить защищенный системный файл [2]. {{Версия пакета: [3], Защищенная версия операционной системы: [4], Ошибка SFP: [5]}}	
+IDS_ERROR_128	Для установки приложения необходимо наличие Internet Information Server версии 4.0 или выше, чтобы выполнить настройку виртуальных корней службы IIS. Убедитесь, что на вашем компьютере установлен Internet Information Server версии 4.0 или выше.	
+IDS_ERROR_129	Для установки приложения необходимо обладать правами администратора, чтобы выполнить настройку виртуальных корней службы IIS.	
+IDS_ERROR_13	Завершение действия [Time]: [1]. Возвращенное значение [2].	
+IDS_ERROR_14	Оставшееся время: {[1] мин }{[2] сек}	
+IDS_ERROR_15	Недостаточно памяти. Закройте другие приложения и повторите попытку.	
+IDS_ERROR_16	Мастер установки не отвечает.	
+IDS_ERROR_17	Работа мастера установки завершена преждевременно.	
+IDS_ERROR_18	Идет настройка приложения [ProductName]	
+IDS_ERROR_19	Сбор сведений...	
+IDS_ERROR_2	Предупреждение [1]. 	
+IDS_ERROR_20	{[ProductName] }Установка успешно завершена.	
+IDS_ERROR_21	{[ProductName] }Установка не выполнена.	
+IDS_ERROR_22	Ошибка чтения из файла: [2]. {{ Системная ошибка [3].}}  Проверьте, что файл существует и доступен.	
+IDS_ERROR_23	Не удается создать файл "[2]".  Папка с этим именем уже существует.  Прервите установку и укажите другую папку.	
+IDS_ERROR_24	Вставьте диск [2]	
+IDS_ERROR_25	У мастера установки недостаточно прав для получения доступа к этой папке: [2].  Установка не может быть продолжена.  Войдите в систему в качестве администратора, либо обратитесь к системному администратору.	
+IDS_ERROR_26	Ошибка записи в файл [2].  Убедитесь, что у вас есть доступ к этой папке.	
+IDS_ERROR_27	Ошибка чтения из файла: [2]. {{ Системная ошибка [3].}} Проверьте, что файл существует и доступен.	
+IDS_ERROR_28	Другое приложение имеет монопольный доступ к файлу "[2]".  Закройте другие приложения и повторите попытку.	
+IDS_ERROR_29	На диске недостаточно места для установки файла [2].  Освободите место и нажмите на кнопку "Повторить" для возобновления установки либо на кнопку "Отмена" для прекращения установки.	
+IDS_ERROR_3	Сведения [1]. 	
+IDS_ERROR_30	Исходный файл не найден: [2].  Проверьте, что этот файл существует и доступен.	
+IDS_ERROR_31	Ошибка чтения из файла [3]. {{ Системная ошибка [2].}}  Проверьте, что файл существует и доступен.	
+IDS_ERROR_32	Ошибка записи в файл [3]. {{ Системная ошибка [2].}}  Убедитесь, что у вас есть доступ к этой папке.	
+IDS_ERROR_33	Исходный файл не найден{{(CAB-файл)}}: [2].  Проверьте, что файл существует и доступен.	
+IDS_ERROR_34	Не удается создать папку "[2]".  Файл с этим именем уже существует.  Переименуйте или переместите этот файл и повторите попытку, либо нажмите на кнопку "Отмена" для прекращения установки.	
+IDS_ERROR_35	Том [2] недоступен.  Выберите другой том.	
+IDS_ERROR_36	Указанный путь "[2]" недоступен.	
+IDS_ERROR_37	Запись в указанную папку "[2]" запрещена.	
+IDS_ERROR_38	Ошибка в сети при чтении из файла [2]	
+IDS_ERROR_39	Ошибка при создании папки [2]	
+IDS_ERROR_4	Внутренняя ошибка [1]. [2]{, [3]}{, [4]}	
+IDS_ERROR_40	Ошибка в сети при создании папки [2]	
+IDS_ERROR_41	Ошибка в сети при открытии исходного CAB-файла [2]	
+IDS_ERROR_42	Указан слишком длинный путь: [2]	
+IDS_ERROR_43	У мастера установки недостаточно полномочий для изменения этого файла: [2].	
+IDS_ERROR_44	Неверная часть пути к папке "[2]". Путь либо пуст, либо превышает максимально допустимую длину.	
+IDS_ERROR_45	Путь к папке "[2]" содержит недопустимые имена.	
+IDS_ERROR_46	Путь к папке "[2]" содержит недопустимый символ.	
+IDS_ERROR_47	"[2]" не является допустимым коротким именем файла.	
+IDS_ERROR_48	Ошибка при получении сведений о безопасности файла: [3] GetLastError: [2]	
+IDS_ERROR_49	Недопустимый диск: [2]	
+IDS_ERROR_5	{{Диск переполнен: }}	
+IDS_ERROR_50	Не удается создать раздел [2]. {{ Системная ошибка [3].}}  Убедитесь, что у вас достаточно прав для доступа к этому разделу, либо обратитесь в Службу технической поддержки. 	
+IDS_ERROR_51	Не удается открыть раздел [2]. {{ Системная ошибка [3].}}  Убедитесь, что у вас достаточно прав для доступа к этому разделу, либо обратитесь в Службу технической поддержки. 	
+IDS_ERROR_52	Не удается удалить значение [2] из раздела [3]. {{ Системная ошибка [4].}}  Убедитесь, что у вас достаточно прав для доступа к этому разделу, либо обратитесь в Службу технической поддержки. 	
+IDS_ERROR_53	Не удается удалить раздел [2]. {{ Системная ошибка [3].}}  Убедитесь, что у вас достаточно прав для доступа к этому разделу, либо обратитесь в Службу технической поддержки. 	
+IDS_ERROR_54	Не удается прочитать значение [2] из раздела [3]. {{ Системная ошибка [4].}}  Убедитесь, что у вас достаточно прав для доступа к этому разделу, либо обратитесь в Службу технической поддержкии. 	
+IDS_ERROR_55	Не удается записать значение [2] в раздел [3]. {{ Системная ошибка [4].}}  Убедитесь, что у вас достаточно прав для доступа к этому разделу, либо обратитесь в Службу технической поддержки.	
+IDS_ERROR_56	Не удается получить имена значений из раздела [2]. {{ Системная ошибка [3].}}  Убедитесь, что у вас достаточно прав для доступа к этому разделу, либо обратитесь в Службу технической поддержки.	
+IDS_ERROR_57	Не удается получить имена подразделов из раздела [2]. {{ Системная ошибка [3].}}  Убедитесь, что у вас достаточно прав для доступа к этому разделу, либо обратитесь в Службу технической поддержки.	
+IDS_ERROR_58	Не удается прочитать сведения о безопасности из раздела [2]. {{ Системная ошибка [3].}}  Убедитесь, что у вас достаточно прав для доступа к этому разделу, либо обратитесь в Службу технической поддержки.	
+IDS_ERROR_59	Не удается увеличить размер реестра. Для установки данного приложения необходимо [2] КБ свободного места в реестре.	
+IDS_ERROR_6	Действие [Time]: [1]. [2]	
+IDS_ERROR_60	Другой процесс установки уже выполняется. Завершите этот процесс перед новой установкой.	
+IDS_ERROR_61	Ошибка доступа к защищенным данным. Проверьте правильность настройки мастера установки и повторите попытку.	
+IDS_ERROR_62	Пользователь "[2]" ранее начал установку приложения "[3]".  Этому пользователю придется выполнить установку заново.  Ваша текущая установка будет продолжена.	
+IDS_ERROR_63	Пользователь "[2]" ранее начал установку приложения "[3]".  Этому пользователю придется выполнить установку заново.	
+IDS_ERROR_64	Недостаточно места на диске -- том: "[2]"; требуемый объем: [3] КБ; доступный объем: [4] КБ.  Освободите место на диске и повторите попытку.	
+IDS_ERROR_65	Вы действительно хотите отменить установку?	
+IDS_ERROR_66	Файл [2][3] используется{ следующим процессом: Имя: [4], Код: [5], Заголовок окна: "[6]"}.  Закройте это приложение и повторите попытку.	
+IDS_ERROR_67	Продукт "[2]" уже установлен, установка данного приложения невозможна.  Эти два приложения несовместимы.	
+IDS_ERROR_68	Недостаточно места на диске -- том: "[2]"; требуемый объем: [3] КБ; доступный объем: [4] КБ.  При отключении отката места будет достаточно. Нажмите на кнопку "Отмена" для выхода, "Повторить" для повторной проверки доступного места на диске или "Пропустить" для продолжения без отката.	
+IDS_ERROR_69	Не удается подключиться по сети к [2].	
+IDS_ERROR_7	[ProductName]	
+IDS_ERROR_70	Для продолжения установки следует закрыть следующие приложения:	
+IDS_ERROR_71	Не удается найти установленные совместимые продукты для установки данного приложения.	
+IDS_ERROR_72	Неверный ключ [2].  Проверьте правильность ключа.	
+IDS_ERROR_73	Перед продолжением настройки [2] мастер установки должен перезагрузить систему.  Нажмите на кнопку "Да", чтобы перезагрузить компьютер сейчас, либо на кнопку "Нет", чтобы выполнить перезагрузку позже вручную.	
+IDS_ERROR_74	Для учета изменений в настройках [2] требуется перезагрузка системы. Нажмите на кнопку "Да", чтобы перезагрузить компьютер сейчас, либо на кнопку "Нет", чтобы выполнить перезагрузку позже вручную.	
+IDS_ERROR_75	Установка [2] приостановлена.  Для продолжения необходимо отменить изменения, внесенные в процессе этой установки.  Отменить изменения?	
+IDS_ERROR_76	Выполняется предыдущая установка этого продукта.  Для продолжения необходимо отменить изменения, внесенные в процессе этой установки.  Отменить изменения?	
+IDS_ERROR_77	Не удается найти пакет установки для продукта [2]. Повторите установку с использованием правильной копии пакета "[3]".	
+IDS_ERROR_78	Установка успешно завершена.	
+IDS_ERROR_79	Установка не выполнена.	
+IDS_ERROR_8	{[2]}{, [3]}{, [4]}	
+IDS_ERROR_80	Приложение: [2] -- [3]	
+IDS_ERROR_81	Можно либо восстановить исходное состояние системы, либо продолжить установку позже. Восстановить исходное состояние?	
+IDS_ERROR_82	Ошибка при записи сведений об установке на диск.  Проверьте наличие свободного места на диске и нажмите на кнопку "Повторить", либо нажмите на кнопку "Отмена", чтобы прервать установку.	
+IDS_ERROR_83	Не удается найти файлы, необходимые для восстановления исходного состояния компьютера.  Восстановление невозможно.	
+IDS_ERROR_84	Недопустимый путь [2].  Укажите правильный путь.	
+IDS_ERROR_85	Недостаточно памяти. Закройте другие приложения и повторите попытку.	
+IDS_ERROR_86	В дисководе [2] нет диска. Вставьте диск и нажмите на кнопку "Повторить", либо нажмите на кнопку "Отмена" для возврата к ранее выбранному тому.	
+IDS_ERROR_87	В дисководе [2] нет диска. Вставьте диск и нажмите на кнопку "Повтор" или нажмите на нопку "Отмена", чтобы вернуться в окно обзора и выбрать другий том.	
+IDS_ERROR_88	Папка [2] не существует. Введите путь к существующей папке.	
+IDS_ERROR_89	У вас недостаточно прав для чтения этой папки.	
+IDS_ERROR_9	Тип сообщения: [1], Аргумент: [2]	
+IDS_ERROR_90	Не удается определить конечную папку для установки.	
+IDS_ERROR_91	Ошибка при чтении исходной базы данных установки. [2].	
+IDS_ERROR_92	Планирование операции перезагрузки: переименование файла [2] в [3]. Для завершения операции требуется перезагрузка.	
+IDS_ERROR_93	Планирование операции перезагрузки: удаление файла [2]. Для завершения операции требуется перезагрузка.	
+IDS_ERROR_94	Не удается зарегистрировать модуль [2].  HRESULT [3].  Обратитесь в Службу технической поддержки.	
+IDS_ERROR_95	Не удается отменить регистрацию модуля [2].  HRESULT [3].  Обратитесь в Службу технической поддержкии.	
+IDS_ERROR_96	Ошибка кеширования пакета [2]. Ошибка: [3]. Обратитесь в Службу технической поддержки.	
+IDS_ERROR_97	Не удается зарегистрировать шрифт [2].  Убедитесь, что у вас есть права на установку шрифтов, и что система поддерживает этот шрифт.	
+IDS_ERROR_98	Не удается отменить регистрацию шрифта [2]. Убедитесь, что у вас есть права на удаление шрифтов.	
+IDS_ERROR_99	Не удается создать ярлык [2]. Проверьте, что конечная папка существует и доступна.	
+IDS_ERROR_SN_INVALID	Неверный серийный номер.	
+IDS_ISSCRIPT_VERSION_MISSING	Компонент InstallScript отсутствует на этом компьютере.  Если возможно, запустите пакет ISScript.msi или обратитесь за помощью в Службу технической поддержки.	
+IDS_ISSCRIPT_VERSION_OLD	Версия компонента InstallScript на этом компьютере более ранняя, чем требуется для данной установки.  Если возможно, установите последнюю версию пакета ISScript.msi или обратитесь за помощью в Службу технической поддержки.	
+IDS_PRODUCT_DEFAULT_1	Название приложения SYSTEM_GENERATED	
+IDS_SetupTips_1	{&Tahoma8}OK	
+IDS_SetupTips_10	{&Tahoma8}будет установлен при первом использовании.		 	
+IDS_SetupTips_11	{&Tahoma8}будет установлен для запуска по сети.	
+IDS_SetupTips_12	{&Tahoma8}Данное состояние установки означает, что компонент...	
+IDS_SetupTips_13	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS_SetupTips_14	<ISProductFolder>\Redist\Language Independent\OS Independent\NetworkInstall.ico	
+IDS_SetupTips_15	<ISProductFolder>\Redist\Language Independent\OS Independent\Install.ico	
+IDS_SetupTips_16	<ISProductFolder>\Redist\Language Independent\OS Independent\InstallFirstUse.ico	
+IDS_SetupTips_17	<ISProductFolder>\Redist\Language Independent\OS Independent\InstallPartial.ico	
+IDS_SetupTips_18	<ISProductFolder>\Redist\Language Independent\OS Independent\DontInstall.ico	
+IDS_SetupTips_19	<ISProductFolder>\Redist\Language Independent\OS Independent\InstallStateMenu.ico	
+IDS_SetupTips_2	{&MSSWhiteSerif8}InstallShield	
+IDS_SetupTips_3	{&Tahoma8}InstallShield	
+IDS_SetupTips_4	{&Tahoma8}Выборочная установка позволяет установить определенные компоненты приложения.	
+IDS_SetupTips_5	{&MSSansBold8}Советы по выборочной установке	
+IDS_SetupTips_6	{&Tahoma8}Не будет установлен.	
+IDS_SetupTips_7	{&Tahoma8}Некоторые подкомпоненты будут установлены на локальном жестком диске.	
+IDS_SetupTips_8	{&Tahoma8}Будет полностью установлен на локальный жесткий диск.		
+IDS_SetupTips_9	{&Tahoma8}Значок рядом с названием компонента показывает состояние его установки. Щелкните по значку, чтобы раскрыть меню состояния установки для каждого компонента.	
+IDS_STANDARD_USE_SETUPEXE	Запуск этой установки путем непосредственного запуска пакета MSI невозможен. Необходимо запустить файл setup.exe.	
+IDS_UITEXT_0	байт	
+IDS_UITEXT_1	ГБ	
+IDS_UITEXT_10	Данный компонент не будет удален.	
+IDS_UITEXT_11	Данный компонент можно при необходимости установить.	
+IDS_UITEXT_12	Данный компонент будет установлен для запуска с компакт-диска.	
+IDS_UITEXT_13	Данный компонент будет установлен на локальный жесткий диск.	
+IDS_UITEXT_14	Данный компонент будет установлен для запуска по сети.	
+IDS_UITEXT_15	Данный компонент станет недоступным.	
+IDS_UITEXT_16	Его можно установить при необходимости.	
+IDS_UITEXT_17	Данный компонент будет доступен для запуска с компакт-диска.	
+IDS_UITEXT_18	Данный компонент будет установлен на локальный жесткий диск.	
+IDS_UITEXT_19	Данный компонент будет доступен для запуска по сети.	
+IDS_UITEXT_2	КБ	
+IDS_UITEXT_20	Данный компонент будет полностью удален, и его нельзя будет запускать с компакт-диска.	
+IDS_UITEXT_21	Данный компонент запущен с компакт-диска, но его при необходимости можно установить.	
+IDS_UITEXT_22	Данный компонент по-прежнему будет запускаться с компакт-диска	
+IDS_UITEXT_23	Данный компонент запущен с компакт-диска, но будет установлен на локальный диск.	
+IDS_UITEXT_24	Данный компонент освобождает [1] на жестком диске.	
+IDS_UITEXT_25	Для данного компонента требуется [1] на жестком диске.	
+IDS_UITEXT_26	Оценка дискового пространства для данного компонента...	
+IDS_UITEXT_27	Данный компонент будет полностью удален.	
+IDS_UITEXT_28	Данный компонент будет удален с локального жесткого диска, но его при необходимости можно установить.	
+IDS_UITEXT_29	Данный компонент будет удален с локального жесткого диска, но его по-прежнему можно будет запускать с компакт-диска.	
+IDS_UITEXT_3	МБ	
+IDS_UITEXT_30	Данный компонент останется на локальном жестком диске.	
+IDS_UITEXT_31	Данный компонент будет удален с локального жесткого диска, но его по-прежнему можно будет запускать по сети.	
+IDS_UITEXT_32	Данный компонент будет полностью удален, и его нельзя будет запускать по сети.	
+IDS_UITEXT_33	Данный компонент запущен по сети, но его при необходимости можно установить.	
+IDS_UITEXT_34	Данный компонент запущен по сети, но его при необходимости можно установить локальный жесткий диск.	
+IDS_UITEXT_35	Данный компонент по-прежнему будет запускаться по сети	
+IDS_UITEXT_36	Данный компонент освобождает [1] на жестком диске. Для него выбраны [2] из [3] подкомпонентов. Подкомпоненты освобождают [4] на жестком диске.	
+IDS_UITEXT_37	Данный компонент освобождает [1] на жестком диске. Для него выбраны [2] из [3] подкомпонентов. Для подкомпонентов требуется [4] на жестком диске.	
+IDS_UITEXT_38	Для данного компонента требуется [1] на жестком диске. Для него выбраны [2] из [3] подкомпонентов. Подкомпоненты освобождают [4] на жестком диске.	
+IDS_UITEXT_39	Для данного компонента требуется [1] на жестком диске. Для него выбраны [2] из [3] подкомпонентов. Для подкомпонентов требуется [4] на жестком диске.	
+IDS_UITEXT_4	Данный компонент будет недоступен.	
+IDS_UITEXT_40	Осталось времени: {[1] мин }[2] сек	
+IDS_UITEXT_41	Доступно	
+IDS_UITEXT_42	Разница	
+IDS_UITEXT_43	Требуется	
+IDS_UITEXT_44	Размер диска	
+IDS_UITEXT_45	Том	
+IDS_UITEXT_46	Данный компонент и все подкомпоненты будут установлены для запуска по сети.	
+IDS_UITEXT_47	Данный компонент и все подкомпоненты будут установлены для запуска с компакт-диска.	
+IDS_UITEXT_48	Данный компонент и все подкомпоненты будут установлены на локальный жесткий диск.	
+IDS_UITEXT_5	Данный компонент можно при необходимости установить.	
+IDS_UITEXT_6	Данный компонент будет установлен для запуска с компакт-диска.	
+IDS_UITEXT_7	Данный компонент будет установлен на локальный жесткий диск.	
+IDS_UITEXT_8	Данный компонент будет установлен для запуска по сети.	
+IDS_UITEXT_9	Папка|Создать папку	
+IDS_UnloadApp	[ProductName] - InstallShield Wizard	
+REGVALUE_PRODUCTNAME_SOS	Антивирус Касперского 7.0 SOS	
+SIS_AUTHOR	Лаборатория Касперского	
+SIS_SUBJECT	Плагин управления Антивирусом Касперского 7.0 SOS	

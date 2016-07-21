@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioProject ProjectType="Visual C++" Version="8,00" Name="licpolicy" ProjectGUID="{BC1DE84E-FF87-46AC-977E-BF68F002FFA2}">
+	<Platforms>
+		<Platform Name="Win32"/>
+		<Platform Name="x64"/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="ReleaseUS|Win32" OutputDirectory="..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\Licensing\build\win32\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="1">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TypeLibraryName="$(OutDir)\$(TargetName).tlb"/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" AdditionalIncludeDirectories="..\..\..\include,..\..\..\..\environment\include\win32,..\..\..\.." PreprocessorDefinitions="WIN32;NDEBUG;UNICODE;_LIB;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" StringPooling="true" RuntimeLibrary="0" EnableFunctionLevelLinking="true" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" OutputFile="$(OutDir)\$(ProjectName).lib" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="ReleaseUS|x64" OutputDirectory="..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\Licensing\build\win32\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="1">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb"/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" AdditionalIncludeDirectories="..\..\..\include,..\..\..\..\environment\include\win32,..\..\..\.." PreprocessorDefinitions="WIN32;NDEBUG;UNICODE;_LIB;_CRT_SECURE_NO_DEPRECATE" StringPooling="true" RuntimeLibrary="0" EnableFunctionLevelLinking="true" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" OutputFile="$(OutDir)\$(ProjectName).lib" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Debug|Win32" OutputDirectory="..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\Licensing\build\win32\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TypeLibraryName="$(OutDir)\$(TargetName).tlb"/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="..\..\..\include,..\..\..\..\environment\include\win32,..\..\..\.." PreprocessorDefinitions="WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" BasicRuntimeChecks="3" RuntimeLibrary="3" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" OutputFile="$(OutDir)\$(ProjectName).lib" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Debug|x64" OutputDirectory="..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\Licensing\build\win32\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb"/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="..\..\..\include,..\..\..\..\environment\include\win32,..\..\..\.." PreprocessorDefinitions="WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE" BasicRuntimeChecks="3" RuntimeLibrary="3" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" OutputFile="$(OutDir)\$(ProjectName).lib" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="DebugUS|Win32" OutputDirectory="..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\Licensing\build\win32\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="1">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TypeLibraryName="$(OutDir)\$(TargetName).tlb"/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="..\..\..\include,..\..\..\..\environment\include\win32,..\..\..\.." PreprocessorDefinitions="WIN32;_DEBUG;UNICODE;_LIB;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" BasicRuntimeChecks="3" RuntimeLibrary="1" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" OutputFile="$(OutDir)\$(ProjectName).lib" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="DebugUS|x64" OutputDirectory="..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\Licensing\build\win32\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="1">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb"/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="..\..\..\include,..\..\..\..\environment\include\win32,..\..\..\.." PreprocessorDefinitions="WIN32;_DEBUG;UNICODE;_LIB;_CRT_SECURE_NO_DEPRECATE" BasicRuntimeChecks="3" RuntimeLibrary="1" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" OutputFile="$(OutDir)\$(ProjectName).lib" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="ReleaseU|Win32" OutputDirectory="..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\Licensing\build\win32\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="1">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TypeLibraryName="$(OutDir)\$(TargetName).tlb"/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" AdditionalIncludeDirectories="..\..\..\include,..\..\..\..\environment\include\win32,..\..\..\.." PreprocessorDefinitions="WIN32;NDEBUG;UNICODE;_LIB;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" StringPooling="true" RuntimeLibrary="2" EnableFunctionLevelLinking="true" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" OutputFile="$(OutDir)\$(ProjectName).lib" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="ReleaseU|x64" OutputDirectory="..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\Licensing\build\win32\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="1">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb"/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" AdditionalIncludeDirectories="..\..\..\include,..\..\..\..\environment\include\win32,..\..\..\.." PreprocessorDefinitions="WIN32;NDEBUG;UNICODE;_LIB;_CRT_SECURE_NO_DEPRECATE" StringPooling="true" RuntimeLibrary="2" EnableFunctionLevelLinking="true" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" OutputFile="$(OutDir)\$(ProjectName).lib" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="DebugU|Win32" OutputDirectory="..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\Licensing\build\win32\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="1">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TypeLibraryName="$(OutDir)\$(TargetName).tlb"/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="..\..\..\include,..\..\..\..\environment\include\win32,..\..\..\.." PreprocessorDefinitions="WIN32;_DEBUG;UNICODE;_LIB;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" BasicRuntimeChecks="3" RuntimeLibrary="3" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" OutputFile="$(OutDir)\$(ProjectName).lib" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="DebugU|x64" OutputDirectory="..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\Licensing\build\win32\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="1">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb"/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="..\..\..\include,..\..\..\..\environment\include\win32,..\..\..\.." PreprocessorDefinitions="WIN32;_DEBUG;UNICODE;_LIB;_CRT_SECURE_NO_DEPRECATE" BasicRuntimeChecks="3" RuntimeLibrary="3" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" OutputFile="$(OutDir)\$(ProjectName).lib" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Release|Win32" OutputDirectory="..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\Licensing\build\win32\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TypeLibraryName="$(OutDir)\$(TargetName).tlb"/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" AdditionalIncludeDirectories="..\..\..\include,..\..\..\..\environment\include\win32,..\..\..\.." PreprocessorDefinitions="WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" StringPooling="true" RuntimeLibrary="2" EnableFunctionLevelLinking="true" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" OutputFile="$(OutDir)\$(ProjectName).lib" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Release|x64" OutputDirectory="..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\Licensing\build\win32\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb"/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" AdditionalIncludeDirectories="..\..\..\include,..\..\..\..\environment\include\win32,..\..\..\.." PreprocessorDefinitions="WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE" StringPooling="true" RuntimeLibrary="2" EnableFunctionLevelLinking="true" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" OutputFile="$(OutDir)\$(ProjectName).lib" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="DebugS|Win32" OutputDirectory="..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\Licensing\build\win32\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TypeLibraryName="$(OutDir)\$(TargetName).tlb"/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="..\..\..\include,..\..\..\..\environment\include\win32,..\..\..\.." PreprocessorDefinitions="WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" BasicRuntimeChecks="3" RuntimeLibrary="1" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" OutputFile="$(OutDir)\$(ProjectName).lib" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="DebugS|x64" OutputDirectory="..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\Licensing\build\win32\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb"/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="..\..\..\include,..\..\..\..\environment\include\win32,..\..\..\.." PreprocessorDefinitions="WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE" BasicRuntimeChecks="3" RuntimeLibrary="1" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" OutputFile="$(OutDir)\$(ProjectName).lib" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="ReleaseS|Win32" OutputDirectory="..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\Licensing\build\win32\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TypeLibraryName="$(OutDir)\$(TargetName).tlb"/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" AdditionalIncludeDirectories="..\..\..\include,..\..\..\..\environment\include\win32,..\..\..\.." PreprocessorDefinitions="WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" StringPooling="true" RuntimeLibrary="0" EnableFunctionLevelLinking="true" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" OutputFile="$(OutDir)\$(ProjectName).lib" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="ReleaseS|x64" OutputDirectory="..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\Licensing\build\win32\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb"/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" AdditionalIncludeDirectories="..\..\..\include,..\..\..\..\environment\include\win32,..\..\..\.." PreprocessorDefinitions="WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE" StringPooling="true" RuntimeLibrary="0" EnableFunctionLevelLinking="true" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" OutputFile="$(OutDir)\$(ProjectName).lib" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter Name="Source Files" Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
+			<File RelativePath="..\..\..\src\appinfo.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="..\..\..\src\blacklist.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="..\..\..\src\datatree.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="..\..\..\src\date_t.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="..\..\..\src\err_defs.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="..\..\..\src\keyfile.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="..\..\..\src\licensing_policy.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="..\..\..\src\licensing_policy_c_intf.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="..\..\..\src\licpolicy_msg.rc">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="" AdditionalIncludeDirectories="\commonfiles\Licensing\src"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="" AdditionalIncludeDirectories="\commonfiles\Licensing\src"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="" AdditionalIncludeDirectories="\commonfiles\Licensing\src"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="" AdditionalIncludeDirectories="\commonfiles\Licensing\src"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="..\..\..\src\LoadResStr.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="..\..\..\src\novel_io_redir.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="..\..\..\src\secure_data.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="..\..\..\src\updateconfig_win32.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter Name="Header Files" Filter="h;hpp;hxx;hm;inl">
+			<File RelativePath="..\..\..\include\appinfo.h">
+			</File>
+			<File RelativePath="..\..\..\include\appinfo_struct.h">
+			</File>
+			<File RelativePath="..\..\..\include\blacklist.h">
+			</File>
+			<File RelativePath="..\..\..\include\datatree.h">
+			</File>
+			<File RelativePath="..\..\..\include\date_t.h">
+			</File>
+			<File RelativePath="..\..\..\include\err_defs.h">
+			</File>
+			<File RelativePath="..\..\..\include\getupdateconfig_win32.h">
+			</File>
+			<File RelativePath="..\..\..\include\keyfile.h">
+			</File>
+			<File RelativePath="..\..\..\include\lic_defs.h">
+			</File>
+			<File RelativePath="..\..\..\include\lic_storage_intf.h">
+			</File>
+			<File RelativePath="..\..\..\include\licensing_intf.h">
+			</File>
+			<File RelativePath="..\..\..\include\licensing_policy.h">
+			</File>
+			<File RelativePath="..\..\..\include\licensing_policy_c_intf.h">
+			</File>
+			<File RelativePath="..\..\..\src\LoadResStr.h">
+			</File>
+			<File RelativePath="..\..\..\include\messages.h">
+			</File>
+			<File RelativePath="..\..\..\include\msxmlhelper.h">
+			</File>
+			<File RelativePath="..\..\..\include\novell_io_redir.h">
+			</File>
+			<File RelativePath="..\..\..\include\platform_compat.h">
+			</File>
+			<File RelativePath="..\..\..\src\resource.h">
+			</File>
+			<File RelativePath="..\..\..\include\secure_data.h">
+			</File>
+			<File RelativePath="..\..\..\include\updateconfig.h">
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

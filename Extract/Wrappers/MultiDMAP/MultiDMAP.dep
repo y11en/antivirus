@@ -1,0 +1,77 @@
+# Microsoft Developer Studio Generated Dependency File, included by MultiDMAP.mak
+
+.\mdmap.c : \
+	"..\..\include\iface\i_heap.h"\
+	"..\..\include\iface\i_iface.h"\
+	"..\..\include\iface\i_ifenum.h"\
+	"..\..\include\iface\i_impex.h"\
+	"..\..\include\iface\i_io.h"\
+	"..\..\include\iface\i_methodinfo.h"\
+	"..\..\include\iface\i_plugin.h"\
+	"..\..\include\IFace\i_receiv.h"\
+	"..\..\Include\IFace\i_reg.h"\
+	"..\..\include\iface\i_root.h"\
+	"..\..\include\iface\i_seqio.h"\
+	"..\..\Include\iface\i_serializer.h"\
+	"..\..\include\iface\i_string.h"\
+	"..\..\include\iface\i_tracer.h"\
+	"..\..\include\iface\m_dmap.h"\
+	"..\..\include\pr_compl.h"\
+	"..\..\include\pr_err.h"\
+	"..\..\include\pr_iid.h"\
+	"..\..\include\pr_int.h"\
+	"..\..\include\pr_msg.h"\
+	"..\..\include\pr_obj.h"\
+	"..\..\Include\pr_oid.h"\
+	"..\..\include\pr_pid.h"\
+	"..\..\include\pr_prop.h"\
+	"..\..\include\pr_reg.h"\
+	"..\..\Include\pr_serdescriptor.h"\
+	"..\..\include\pr_sys.h"\
+	"..\..\include\pr_types.h"\
+	"..\..\include\pr_vid.h"\
+	"..\..\include\pr_vtbl.h"\
+	"..\..\INCLUDE\PRAGUE.H"\
+	".\mdmap.h"\
+	".\plugin_mdmap.h"\
+	
+
+.\plugin_mdmap.c : \
+	"..\..\include\iface\i_heap.h"\
+	"..\..\include\iface\i_iface.h"\
+	"..\..\include\iface\i_ifenum.h"\
+	"..\..\include\iface\i_impex.h"\
+	"..\..\include\iface\i_io.h"\
+	"..\..\include\iface\i_methodinfo.h"\
+	"..\..\include\iface\i_plugin.h"\
+	"..\..\include\IFace\i_receiv.h"\
+	"..\..\Include\IFace\i_reg.h"\
+	"..\..\include\iface\i_root.h"\
+	"..\..\include\iface\i_seqio.h"\
+	"..\..\Include\iface\i_serializer.h"\
+	"..\..\include\iface\i_string.h"\
+	"..\..\include\iface\i_tracer.h"\
+	"..\..\include\iface\m_dmap.h"\
+	"..\..\include\pr_compl.h"\
+	"..\..\include\pr_err.h"\
+	"..\..\include\pr_iid.h"\
+	"..\..\include\pr_int.h"\
+	"..\..\include\pr_msg.h"\
+	"..\..\include\pr_obj.h"\
+	"..\..\Include\pr_oid.h"\
+	"..\..\include\pr_pid.h"\
+	"..\..\include\pr_prop.h"\
+	"..\..\include\pr_reg.h"\
+	"..\..\Include\pr_serdescriptor.h"\
+	"..\..\include\pr_sys.h"\
+	"..\..\include\pr_types.h"\
+	"..\..\include\pr_vid.h"\
+	"..\..\include\pr_vtbl.h"\
+	"..\..\INCLUDE\PRAGUE.H"\
+	".\mdmap.h"\
+	".\plugin_mdmap.h"\
+	
+
+.\mdmap.rc : \
+	"..\..\..\CommonFiles\version\ver_mod.rc2"\
+	

@@ -1,0 +1,63 @@
+[ProductInfo]
+
+Folder=out/installation
+BaseFolder=out/bases
+DataFolder=out/defaultlocalpath
+DSKM=out/DSKM
+
+;   * Language Identifier *
+LocID=1
+;   * Components to download - which bases should be downloaded *
+components=MATCH
+;   * OS information *
+OsName=Windows
+
+ProdName=5
+
+Class=zoo
+Localization=ua
+
+;  ** InstallationID and SessionID: these two optional parameters serve for statistics **
+;   ** and can freely be removed from the ss_storage.ini file **
+InstallationID=41
+SessionID=498
+
+
+[Updater]
+primaryIndexFileName=master.xml
+primaryIndexRelativeUrlPath=index
+primaryIndexLocalPath=
+
+temporary_dir=out/tmp
+retranslation_dir=out/retranslation
+
+self_region=<default>
+log_level=10
+
+connect_tmo=20
+passive_ftp=1
+
+
+;  ** Proxy Settings **
+proxy=0
+proxy_url=proxy.avp.ru
+proxy_port=8080
+use_ie_proxy=1
+proxy_authorisation=1
+proxy_ntlm_access_token=1
+
+
+;  ** Source specification **
+master_asrv_update=0
+asrv_update=0
+inet_update=0
+try_inet=0
+
+
+;retranslate_only_listed_apps defaul value is 0
+retranslate_check_for_available_updates=1
+retranslate_bases=1
+retranslate_urgent_updates=1
+retranslate_available_updates=1
+
+

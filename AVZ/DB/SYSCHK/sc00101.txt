@@ -1,0 +1,4 @@
+// ***** TrojanDownloader.Dia *****
+begin
+ AddEvAlarmByCLSID('F5192746-22D6-41BD-9D2D-1E75D14FBD3C',AScriptName,'test.ocx');
+end.

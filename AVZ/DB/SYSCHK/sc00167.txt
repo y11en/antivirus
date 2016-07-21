@@ -1,0 +1,4 @@
+// ***** Spy.TopSites *****
+begin
+ AddEvAlarmByCLSID('8786386E-4B22-11D6-9C60-E5DA06D87378',AScriptName,'BandObjs*.dll');
+end.

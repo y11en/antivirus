@@ -1,0 +1,32 @@
+// $AVZ1578
+//$ Очистить списки файлов, использованных в диалогах открытия и сохранения
+const
+ ScanKey = 'Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSaveMRU';
+// Функция поиска проблемы
+function Check : dword;
+var
+ Lines : TStrings;
+begin
+ Result := 0;
+ if RegKeyExists('HKCU', ScanKey) then begin
+  Lines := TStringList.Create;
+  RegKeyEnumVal('HKCU', ScanKey, Lines);
+  if Lines.Count > 0 then 
+   Result := 1;
+  if Result = 0 then begin
+   RegKeyEnumKey('HKCU', ScanKey, Lines);
+   if Lines.Count > 0 then 
+    Result := 1;
+  end;
+  Lines.Free;
+ end;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+begin
+ RegKeyDel('HKCU', ScanKey);
+ RegKeyCreate('HKCU', ScanKey);
+ Result := 0;
+end;
+

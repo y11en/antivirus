@@ -1,0 +1,4 @@
+// ***** AdvWare.ToolBar.Astabar *****
+begin       
+ AddEvAlarmByCLSID('12F02779-6D88-4958-8AD3-83C12D86ADC7',AScriptName,'toolbar.dll');
+end.

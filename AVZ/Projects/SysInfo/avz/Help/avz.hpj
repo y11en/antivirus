@@ -1,0 +1,27 @@
+; This file is maintained by HCW. Do not modify this file directly.
+
+[OPTIONS]
+COMPRESS=12 Hall Zeck
+ERRORLOG=avz.log
+LCID=0x419 0x0 0x0 ; Русский
+REPORT=Yes
+CHARSET=204
+FTS=1
+CONTENTS=t_main
+TITLE=AVZ - справка по работе с программой
+CNT=avz.cnt
+COPYRIGHT=AVZ, (C) Зайцев О.В., http://z-oleg.com/secur
+CITATION=AVZ, (C) Зайцев О.В., http://z-oleg.com/secur
+HLP=avz.hlp
+
+[FILES]
+avz.rtf
+
+[MAP]
+t_main=1        ; Главное окно
+
+[WINDOWS]
+win1="Справка по терминологии",(653,102,360,600),28932,(r14876671),(r12632256),f3
+
+[CONFIG]
+BrowseButtons()         ; Кнопки навигации

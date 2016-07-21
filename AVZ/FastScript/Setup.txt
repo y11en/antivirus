@@ -1,0 +1,156 @@
+            Manual install of FastScript library
+
+   FastScript shipped with full source code. Trial version has two compiled
+units - fs_iinterpreter.dcu and fs_iilparser.dcu (fs_iinterpreter.obj and 
+fs_iilparser.obj for C++Builder). These files for Delphi 4-7 & C++Builder 4-6 
+are in folders Delphi4...Delphi7, C++Builder4..C++Builder6. Before installing 
+FastScript, copy necessary *.dcu files to FastScript\Source folder.
+
+1.1. Delphi 4.0.
+   Copy fs_iinterpreter.dcu and fs_iilparser.dcu from FastScript\Delphi4 folder 
+to FastScript\Source (if you have a trial version).
+   Run Delphi 4.
+   Select menu item "File/Close all".
+   Select menu item "Tools/Environment options..." and add path to FastScript\Source
+folder to "Library path" edit box (in the "Library" tab).
+   Select menu item "File/Open..." and open the package FastScript\Source\fs4.dpk.
+Press "Compile" button in the "Package - ..." window. 
+   Select menu item "File/Close all". 
+   Select menu item "File/Open..." and open the package FastScript\Source\dclfs4.dpk.
+Press "Compile" button in the "Package - ..." window. After compilation, press
+"Install" button in the same window.
+  Copy FastScript\Source\fs4.bpl file to the Windows\System32 (or 
+Windows\System for Win9x/Me) folder.
+  Close Delphi.
+
+   To add FastScript help file to the Delphi help system, you should:
+- copy files from FastScript\Help to Delphi4\Help;
+- add the following lines to Delphi4\Help\Delphi4.cnt:
+:Index FastScript Reference=fs.hlp
+:Link fs.hlp
+
+1.2. Delphi 5.0.
+   Copy fs_iinterpreter.dcu and fs_iilparser.dcu from FastScript\Delphi5 folder 
+to FastScript\Source (if you have a trial version).
+   Run Delphi 5.
+   Select menu item "File/Close all".
+   Select menu item "Tools/Environment options..." and add path to FastScript\Source
+folder to "Library path" edit box (in the "Library" tab).
+   Select menu item "File/Open..." and open the package FastScript\Source\fs5.dpk.
+Press "Compile" button in the "Package - ..." window. 
+   Select menu item "File/Close all". 
+   Select menu item "File/Open..." and open the package FastScript\Source\dclfs5.dpk.
+Press "Compile" button in the "Package - ..." window. After compilation, press
+"Install" button in the same window.
+  Copy Delphi5\Projects\Bpl\fs5.bpl file to the Windows\System32 (or 
+Windows\System for Win9x/Me) folder.
+  Close Delphi.
+
+   To add FastScript help file to the Delphi help system, you should:
+- copy files from FastScript\Help to Delphi5\Help;
+- add the following lines to Delphi5\Help\Delphi5.cnt:
+:Index FastScript Reference=fs.hlp
+:Link fs.hlp
+
+1.3. Delphi 6.0.
+   Copy fs_iinterpreter.dcu and fs_iilparser.dcu from FastScript\Delphi6 folder 
+to FastScript\Source (if you have a trial version).
+   Run Delphi 6.
+   Select menu item "File/Close all".
+   Select menu item "Tools/Environment options..." and add path to FastScript\Source
+folder to "Library path" edit box (in the "Library" tab).
+   Select menu item "File/Open..." and open the package FastScript\Source\fs6.dpk.
+Press "Compile" button in the "Package - ..." window. 
+   Select menu item "File/Close all". 
+   Select menu item "File/Open..." and open the package FastScript\Source\dclfs6.dpk.
+Press "Compile" button in the "Package - ..." window. After compilation, press
+"Install" button in the same window.
+  Copy Delphi5\Projects\Bpl\fs6.bpl file to the Windows\System32 (or 
+Windows\System for Win9x/Me) folder.
+  Close Delphi.
+
+   To add FastScript help file to the Delphi help system, you should:
+- copy files from FastScript\Help to Delphi6\Help;
+- add the following lines to Delphi6\Help\Delphi6.cnt:
+:Index FastScript Reference=fs.hlp
+:Link fs.hlp
+
+1.4. Delphi 7.0.
+   Copy fs_iinterpreter.dcu and fs_iilparser.dcu from FastScript\Delphi7 folder 
+to FastScript\Source (if you have a trial version).
+   Run Delphi 7.
+   Select menu item "File/Close all".
+   Select menu item "Tools/Environment options..." and add path to FastScript\Source
+folder to "Library path" edit box (in the "Library" tab).
+   Select menu item "File/Open..." and open the package FastScript\Source\fs7.dpk.
+Press "Compile" button in the "Package - ..." window. 
+   Select menu item "File/Close all". 
+   Select menu item "File/Open..." and open the package FastScript\Source\dclfs7.dpk.
+Press "Compile" button in the "Package - ..." window. After compilation, press
+"Install" button in the same window.
+  Copy Delphi5\Projects\Bpl\fs7.bpl file to the Windows\System32 (or 
+Windows\System for Win9x/Me) folder.
+  Close Delphi.
+
+   To add FastScript help file to the Delphi help system, you should:
+- copy files from FastScript\Help to Delphi7\Help;
+- add the following lines to Delphi7\Help\Delphi7.cnt:
+:Index FastScript Reference=fs.hlp
+:Link fs.hlp
+
+1.5. C++Builder 4.0
+   Copy fs_iinterpreter.dcu, fs_iilparser.dcu, fs_iinterpreter.hpp, 
+fs_iilparser.hpp, fs_iinterpreter.obj, fs_iilparser.obj from FastScript\C++Builder4 
+folder to FastScript\Source (if you have a trial version).
+   Run C++Builder 4.
+   Select menu item "File/Close all". 
+   Select menu item "Tools/Environment options..." and add path to FastScript\Source
+folder to "Library path" edit box (in the "Library" tab).
+   Select menu item "File/Open..." and open the package FastScript\Source\fs4.bpk.
+Press "Compile" button in the "Package - ..." window. After compilation, press
+"Install" button in the same window.
+   Select menu item "File/Close all". 
+   Close Delphi.
+   To add FastScript help file to the C++Builder help system, you should:
+- copy files from FastScript\Help to CBuilder4\Help;
+- add the following lines to CBuilder4\Help\bcb4.cnt:
+:Index FastScript Reference=fs.hlp
+:Link fs.hlp
+
+1.6. C++Builder 5.0
+   Copy fs_iinterpreter.dcu, fs_iilparser.dcu, fs_iinterpreter.hpp, 
+fs_iilparser.hpp, fs_iinterpreter.obj, fs_iilparser.obj from FastScript\C++Builder5 
+folder to FastScript\Source (if you have a trial version).
+   Run C++Builder 5.
+   Select menu item "File/Close all". 
+   Select menu item "Tools/Environment options..." and add path to FastScript\Source
+folder to "Library path" edit box (in the "Library" tab).
+   Select menu item "File/Open..." and open the package FastScript\Source\fs5.bpk.
+Press "Compile" button in the "Package - ..." window. After compilation, press
+"Install" button in the same window.
+   Select menu item "File/Close all". 
+   Close Delphi.
+   To add FastScript help file to the C++Builder help system, you should:
+- copy files from FastScript\Help to CBuilder5\Help;
+- add the following lines to CBuilder5\Help\bcb5.cnt:
+:Index FastScript Reference=fs.hlp
+:Link fs.hlp
+
+1.7. C++Builder 6.0
+   Copy fs_iinterpreter.dcu, fs_iilparser.dcu, fs_iinterpreter.hpp, 
+fs_iilparser.hpp, fs_iinterpreter.obj, fs_iilparser.obj from FastScript\C++Builder6 
+folder to FastScript\Source (if you have a trial version).
+   Run C++Builder 6.
+   Select menu item "File/Close all". 
+   Select menu item "Tools/Environment options..." and add path to FastScript\Source
+folder to "Library path" edit box (in the "Library" tab).
+   Select menu item "File/Open..." and open the package FastScript\Source\fs6.bpk.
+Press "Compile" button in the "Package - ..." window. After compilation, press
+"Install" button in the same window.
+   Select menu item "File/Close all". 
+   Close Delphi.
+   To add FastScript help file to the C++Builder help system, you should:
+- copy files from FastScript\Help to CBuilder6\Help;
+- add the following lines to CBuilder6\Help\bcb6.cnt:
+:Index FastScript Reference=fs.hlp
+:Link fs.hlp

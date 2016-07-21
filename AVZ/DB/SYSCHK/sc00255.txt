@@ -1,0 +1,4 @@
+// ***** AdvWare.DealHelper *****
+begin
+ AddEvAlarmByCLSID('F00586DE-A432-4B9F-877D-E29CD87EFDD6', AScriptName, 'dhbrwsr.EXE');
+end.

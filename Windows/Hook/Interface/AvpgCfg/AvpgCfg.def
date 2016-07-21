@@ -1,0 +1,7 @@
+; AvpgCfg.def : Declares the module parameters for the DLL.
+
+LIBRARY      "AvpgCfg"
+DESCRIPTION  'AvpgCfg Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here

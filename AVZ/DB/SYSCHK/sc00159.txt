@@ -1,0 +1,4 @@
+// ***** Spy.SAHAgent *****
+begin
+ AddEvAlarmByCLSID('30402FF4-3E71-4A1C-9B4B-1CD3486A9FB2', AScriptName,'WEBInstaller.dll');
+end.

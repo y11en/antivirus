@@ -1,0 +1,20 @@
+LIB
+TARGET png-local
+
+CSRC png.c
+CSRC pngset.c
+CSRC pngget.c
+CSRC pngrutil.c
+CSRC pngtrans.c
+CSRC pngwutil.c 
+CSRC pngread.c
+CSRC pngrio.c
+CSRC pngwio.c
+CSRC pngwrite.c
+CSRC pngrtran.c 
+CSRC pngwtran.c
+CSRC pngmem.c
+CSRC pngerror.c
+CSRC pngpread.c
+CSRC pnggccrd.c
+

@@ -1,0 +1,3 @@
+#!/bin/bash
+unlink ./\$klnagent-1103.log
+./klnagent -d -tl 4

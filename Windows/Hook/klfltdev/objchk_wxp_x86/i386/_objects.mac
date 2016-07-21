@@ -1,0 +1,19 @@
+
+
+386_OBJECTS=\
+ $(OBJ_PATH)\$O\filter.obj \
+ $(OBJ_PATH)\$O\devlist.obj \
+ $(OBJ_PATH)\$O\devrul.obj \
+
+
+_RES_FILE=$(OBJ_PATH)\$O\klfltdev.res
+
+
+
+# lowercased
+BASEDIR=c:\winddk\6001.17120
+OBJECT_ROOT=c:\winddk\6001.17120
+MAKEDIR_LOWERCASE=c:\projects\windows\hook\klfltdev
+OBJ_PATH=c:\projects\windows\hook\klfltdev
+CONCURRENT_MIDL=0
+CONCURRENT_MANIFEST_BUILD=0

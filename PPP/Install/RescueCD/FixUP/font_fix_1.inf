@@ -1,0 +1,368 @@
+;  font_fix_1.inf
+;  v3 plug-in INF file for PE Builder Font trouble FIX
+;  Created by Victor Baskakov
+;  27.01.2004 18:00 (local; GMT+3)
+
+[Version]
+Signature= "$Windows NT$"
+
+[PEBuilder]
+Name="Font trouble FIX part 2"
+Enable=1
+
+; ############################# <optional>
+; ### <note>If you don't need font viewer - comment next strings </note>
+[SourceDisksFiles]
+fontview.exe=2
+
+[Software.AddReg]
+0x1, "Classes\fonfile", "", "Font file"
+0x2, "Classes\fonfile\DefaultIcon", "", "%SystemRoot%\System32\shell32.dll,-155"
+0x2, "Classes\fonfile\shell\open\command", "", "%SystemRoot%\System32\fontview.exe %1"
+; ############################# </optional>
+
+[SourceDisksFiles]
+
+; ### <note>
+; ### Bitmap fonts
+; ### If You can add comments for your language, please do it
+; ### </note>
+;
+8514fix.fon=22
+8514fixe.fon=22
+8514fixg.fon=22
+8514fixr.fon=22;english - russian
+8514fixt.fon=22
+8514oem.fon=22
+8514oeme.fon=22
+8514oemg.fon=22
+8514oemr.fon=22;english - russian
+8514oemt.fon=22
+8514sys.fon=22
+8514syse.fon=22
+8514sysg.fon=22
+8514sysr.fon=22;english - russian
+8514syst.fon=22
+85775.fon=22
+85855.fon=22
+85f1257.fon=22
+85s1257.fon=22
+app775.fon=22
+app850.fon=22
+app852.fon=22
+app855.fon=22
+app857.fon=22
+app866.fon=22;english - russian (code page 866)
+cga40737.fon=22
+cga40850.fon=22
+cga40852.fon=22
+cga40857.fon=22
+cga40866.fon=22;english - russian (code page 866)
+cga40869.fon=22
+cga40woa.fon=22
+cga80737.fon=22
+cga80850.fon=22
+cga80852.fon=22
+cga80857.fon=22
+cga80866.fon=22;;english - russian (code page 866)
+cga80869.fon=22
+cga80woa.fon=22
+coue1257.fon=22
+couf1257.fon=22
+coure.fon=22
+couree.fon=22
+coureg.fon=22
+courer.fon=22;Courier 10,12,15 (VGA res)    english - russian
+couret.fon=22
+courf.fon=22
+courfe.fon=22
+courfg.fon=22
+courfr.fon=22;english - russian
+courft.fon=22
+dos737.fon=22
+dosapp.fon=22
+ega40737.fon=22
+ega40850.fon=22
+ega40852.fon=22
+ega40857.fon=22
+ega40866.fon=22;english - russian (code page 866)
+ega40869.fon=22
+ega40woa.fon=22
+ega80737.fon=22
+ega80850.fon=22
+ega80852.fon=22
+ega80857.fon=22
+ega80866.fon=22;english - russian (code page 866)
+ega80869.fon=22
+ega80woa.fon=22
+modern.fon=22
+roman.fon=22
+script.fon=22; Script (All res)
+sere1257.fon=22
+serf1257.fon=22
+serife.fon=22; MS Serif 8,10,12,14,18,24 (VGA res)
+serifee.fon=22; MS Serif 8,10,12,14,18,24 (VGA res)
+serifeg.fon=22; MS Serif 8,10,12,14,18,24 (VGA res)
+serifer.fon=22; MS Serif 8,10,12,14,18,24 (VGA res);english - russian
+serifet.fon=22; MS Serif 8,10,12,14,18,24 (VGA res)
+seriff.fon=22
+seriffe.fon=22
+seriffg.fon=22
+seriffr.fon=22
+serifft.fon=22
+smae1257.fon=22
+smaf1257.fon=22
+smalle.fon=22; Small Fonts (VGA res)
+smallee.fon=22; Small Fonts (VGA res)
+smalleg.fon=22; Small Fonts (VGA res)
+smaller.fon=22; Small Fonts (VGA res);english - russian
+smallet.fon=22; Small Fonts (VGA res)
+smallf.fon=22
+smallfe.fon=22
+smallfg.fon=22
+smallfr.fon=22
+smallft.fon=22
+ssee1257.fon=22
+ssef1257.fon=22
+sserife.fon=22; MS Sans Serif 8,10,12,14,18,24 (VGA res)
+sserifee.fon=22; MS Sans Serif 8,10,12,14,18,24 (VGA res)
+sserifeg.fon=22; MS Sans Serif 8,10,12,14,18,24 (VGA res)
+sserifer.fon=22; MS Sans Serif 8,10,12,14,18,24 (VGA res);english - russian
+sserifet.fon=22; MS Sans Serif 8,10,12,14,18,24 (VGA res)
+sseriff.fon=22
+sseriffe.fon=22
+sseriffg.fon=22
+sseriffr.fon=22
+sserifft.fon=22
+symbole.fon=22; Symbol 8,10,12,14,18,24 (VGA res)
+vga737.fon=22
+vga775.fon=22
+vga850.fon=22
+vga852.fon=22
+vga855.fon=22
+vga857.fon=22
+vga860.fon=22
+vga863.fon=22
+vga865.fon=22
+vga866.fon=22;english - russian (code page 866)
+vga869.fon=22
+vgaf1257.fon=22
+vgafix.fon=22
+vgafixe.fon=22
+vgafixg.fon=22
+vgafixr.fon=22;english - russian
+vgafixt.fon=22
+vgaoem.fon=2; OEMFONT.FON
+vgaoem.fon=22; OEMFONT.FON
+vgas1257.fon=22
+vgasys.fon=22; font installed by default
+vgasyse.fon=22
+vgasysg.fon=22
+vgasysr.fon=22;english - russian
+vgasyst.fon=22
+wst_engl.fon=22; WST_Engl (All res)
+
+
+; ### <note>
+; ### UNICODE TTF FONTS
+arial.ttf=22; Arial (TrueType)
+arialbd.ttf=22; Arial Bold (TrueType)
+arialbi.ttf=22; Arial Bold Italic (TrueType)
+ariali.ttf=22; Arial Italic (TrueType)
+ariblk.ttf=22; Arial Black (TrueType)
+cour.ttf=22; Courier New (TrueType)
+courbd.ttf=22; Courier New Bold (TrueType)
+courbi.ttf=22; Courier New Bold Italic (TrueType)
+couri.ttf=22; Courier New Italic (TrueType)
+l_10646.ttf=22; Lucida Sans Unicode (TrueType)
+lucon.ttf=22; Lucida Console (TrueType)
+marlett.ttf=22; must be, do not comment!!!
+micross.ttf=22; Microsoft Sans Serif (TrueType)
+symbol.ttf=22; Symbol (TrueType)
+tahoma.ttf=22; Tahoma (TrueType)
+tahomabd.ttf=22; Tahoma Bold (TrueType)
+times.ttf=22; Times New Roman (TrueType)
+timesbd.ttf=22; Times New Roman Bold (TrueType)
+timesbi.ttf=22; Times New Roman Bold Italic (TrueType)
+timesi.ttf=22; Times New Roman Italic (TrueType)
+verdana.ttf=22; Verdana (TrueType)
+verdanab.ttf=22; Verdana Bold (TrueType)
+verdanai.ttf=22; Verdana Italic (TrueType)
+verdanaz.ttf=22; Verdana Bold Italic (TrueType)
+webdings.ttf=22; Webdings (TrueType)
+wingding.ttf=22; WingDings (TrueType)
+
+; ### <optional>
+; ### <note>
+; ### uncomment if you need these fonts
+; ###
+; ### UNICODE TTF fonts
+;
+;comic.ttf=22; Comic Sans MS (TrueType)
+;comicbd.ttf=22; Comic Sans MS Bold (TrueType)
+;estre.ttf=22
+;framd.ttf=22; Franklin Gothic Medium (TrueType)
+;framdit.ttf=22; Franklin Gothic Medium Italic (TrueType)
+;gautami.ttf=22; Gautami (TrueType)
+;georgia.ttf=22; Georgia (TrueType)
+;georgiab.ttf=22; Georgia Bold (TrueType)
+;georgiai.ttf=22; Georgia Italic (TrueType)
+;georgiaz.ttf=22; Georgia Bold Italic (TrueType)
+;impact.ttf=22
+;latha.ttf=22
+;mangal.ttf=22
+;mvboli.ttf=22
+;pala.ttf=22; Palatino Linotype (TrueType)
+;palab.ttf=22; Palatino Linotype Bold (TrueType)
+;palabi.ttf=22; Palatino Linotype Bold Italic (TrueType)
+;palai.ttf=22; Palatino Linotype Italic (TrueType)
+;raavi.ttf=22; Raavi (TrueType)
+;shruti.ttf=22; Shruti (TrueType)
+;sylfaen.ttf=22
+;trebuc.ttf=22; Trebuchet MS (TrueType)
+;trebucbd.ttf=22; Trebuchet MS Bold (TrueType)
+;trebucbi.ttf=22; Trebuchet MS Bold Italic (TrueType)
+;trebucit.ttf=22; Trebuchet MS Italic (TrueType)
+;tunga.ttf=22; Tunga (TrueType)
+;
+; ### Bitmap fonts
+;
+;wst_czec.fon=22
+;wst_fren.fon=22
+;wst_germ.fon=22
+;wst_ital.fon=22
+;wst_span.fon=22
+;wst_swed.fon=22
+;
+; ### </note>
+; ### </optional>
+
+[Software.AddReg]
+
+0x0, "Microsoft\Windows NT\CurrentVersion\FontDPI"
+0x4, "Microsoft\Windows NT\CurrentVersion\FontDPI", "LogPixels", 0x00000060
+
+0x0, "Microsoft\Windows NT\CurrentVersion\FontMapper"
+0x0, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes"
+0x0, "Microsoft\Windows NT\CurrentVersion\Fonts"
+
+0x0, "Microsoft\Windows NT\CurrentVersion\GRE_Initialize"
+0x4, "Microsoft\Windows NT\CurrentVersion\GRE_Initialize", "DisableRemoteFontBootCache", 0x00000000
+
+0x4, "Microsoft\Windows NT\CurrentVersion\FontMapper", "ARIAL", 0x00000000
+0x4, "Microsoft\Windows NT\CurrentVersion\FontMapper", "COURIER NEW", 0x00008000
+0x4, "Microsoft\Windows NT\CurrentVersion\FontMapper", "COURIER", 0x00008800
+0x4, "Microsoft\Windows NT\CurrentVersion\FontMapper", "FIXEDSYS", 0x00009000
+0x4, "Microsoft\Windows NT\CurrentVersion\FontMapper", "MS SANS SERIF", 0x00001000
+0x4, "Microsoft\Windows NT\CurrentVersion\FontMapper", "MS SERIF", 0x00005000
+0x4, "Microsoft\Windows NT\CurrentVersion\FontMapper", "SMALL FONTS", 0x00000800
+0x4, "Microsoft\Windows NT\CurrentVersion\FontMapper", "SYMBOL", 0x00004002
+0x4, "Microsoft\Windows NT\CurrentVersion\FontMapper", "SYMBOL1", 0x0000a002
+0x4, "Microsoft\Windows NT\CurrentVersion\FontMapper", "TIMES NEW ROMAN", 0x00004000
+0x4, "Microsoft\Windows NT\CurrentVersion\FontMapper", "WINGDINGS", 0x00000002
+0x4, "Microsoft\Windows NT\CurrentVersion\FontMapper", "WINGDINGS2", 0x00008002
+
+;0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Arial Baltic,186", "Arial,186"
+;0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Arial CE,238", "Arial,238"
+0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Arial CYR,204", "Arial,204"
+;0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Arial Greek,161", "Arial,161"
+;0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Arial TUR,162", "Arial,162"
+;0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Courier New Baltic,186", "Courier New,186"
+;0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Courier New CE,238", "Courier New,238"
+0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Courier New CYR,204", "Courier New,204"
+;0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Courier New Greek,161", "Courier New,161"
+;0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Courier New TUR,162", "Courier New,162"
+0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Helv", "MS Sans Serif"
+0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Helvetica", "Arial"
+;0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "MS Shell Dlg 2", "Tahoma"
+0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "MS Shell Dlg", "Microsoft Sans Serif"
+;0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Times New Roman Baltic,186", "Times New Roman,186"
+;0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Times New Roman CE,238", "Times New Roman,238"
+0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Times New Roman CYR,204", "Times New Roman,204"
+;0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Times New Roman Greek,161", "Times New Roman,161"
+;0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Times New Roman TUR,162", "Times New Roman,162"
+0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Times", "Times New Roman"
+0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Tms Rmn", "MS Serif"
+;Tahoma fix
+0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Tahoma", "MS Sans Serif"
+0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "MS Shell Dlg 2", "MS Sans Serif"
+; ### <note>
+; ### Bitmap fonts
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Courier 10,12,15 (VGA res)", "COURE.FON"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "MS Sans Serif 8,10,12,14,18,24 (VGA res)", "SSERIFE.FON"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "MS Serif 8,10,12,14,18,24 (VGA res)", "SERIFE.FON"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Small Fonts (VGA res)", "SMALLE.FON"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Symbol 8,10,12,14,18,24 (VGA res)", "SYMBOLE.FON"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "WST_Engl (All res)", "wst_engl.FON"
+;
+; ### TTF UNICODE FONTS
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Arial (TrueType)", "ARIAL.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Arial Black (TrueType)", "ariblk.TTF"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Arial Bold (TrueType)", "ARIALBD.TTF"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Arial Bold Italic (TrueType)", "ARIALBI.TTF"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Arial Italic (TrueType)", "ARIALI.TTF"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Courier New (TrueType)", "COUR.TTF"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Courier New Bold (TrueType)", "COURBD.TTF"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Courier New Bold Italic (TrueType)", "COURBI.TTF"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Courier New Italic (TrueType)", "COURI.TTF"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Lucida Console (TrueType)", "LUCON.TTF"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Lucida Sans Unicode (TrueType)", "L_10646.TTF"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Microsoft Sans Serif (TrueType)", "MICROSS.TTF"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Symbol (TrueType)", "SYMBOL.TTF"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Tahoma (TrueType)", "TAHOMA.TTF"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Tahoma Bold (TrueType)", "tahomabd.TTF"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Times New Roman (TrueType)", "TIMES.TTF"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Times New Roman Bold (TrueType)", "TIMESBD.TTF"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Times New Roman Bold Italic (TrueType)", "TIMESBI.TTF"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Times New Roman Italic (TrueType)", "TIMESI.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Verdana (TrueType)", "verdana.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Verdana Bold (TrueType)", "verdanab.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Verdana Bold Italic (TrueType)", "verdanaz.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Verdana Italic (TrueType)", "verdanai.TTF"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Webdings (TrueType)", "webdings.TTF"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "WingDings (TrueType)", "WINGDING.TTF"
+; ### </note>
+
+; ### <optional>
+; ### <note>
+; ### If You need more fonts - uncomment desired strings
+;
+; ### bitmap fonts
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Modern (All res)", "MODERN.FON"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Roman (All res)", "ROMAN.FON"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Script (All res)", "SCRIPT.FON"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "WST_Czec (All res)", "wst_czec.FON"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "WST_Fren (All res)", "wst_fren.FON"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "WST_Germ (All res)", "wst_germ.FON"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "WST_Ital (All res)", "wst_ital.FON"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "WST_Span (All res)", "wst_span.FON"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "WST_Swed (All res)", "wst_swed.FON"
+;
+; ### TTF UNICODE fonts
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Comic Sans MS (TrueType)", "comic.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Comic Sans MS Bold (TrueType)", "comicbd.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Estrangelo Edessa (TrueType)", "estre.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Franklin Gothic Medium (TrueType)", "Framd.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Franklin Gothic Medium Italic (TrueType)", "Framdit.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Gautami (TrueType)", "gautami.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Georgia (TrueType)", "georgia.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Georgia Bold (TrueType)", "georgiab.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Georgia Bold Italic (TrueType)", "georgiaz.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Georgia Italic (TrueType)", "georgiai.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Impact (TrueType)", "impact.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Latha (TrueType)", "latha.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Mangal (TrueType)", "mangal.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Mv Boli (TrueType)", "mvboli.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Palatino Linotype (TrueType)", "pala.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Palatino Linotype Bold (TrueType)", "palab.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Palatino Linotype Bold Italic (TrueType)", "palabi.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Palatino Linotype Italic (TrueType)", "palai.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Raavi (TrueType)", "raavi.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Shruti (TrueType)", "shruti.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Sylfaen (TrueType)", "sylfaen.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Trebuchet MS (TrueType)", "trebuc.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Trebuchet MS Bold (TrueType)", "trebucbd.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Trebuchet MS Bold Italic (TrueType)", "trebucbi.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Trebuchet MS Italic (TrueType)", "trebucit.TTF"
+;0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Tunga (TrueType)", "tunga.TTF"
+; ### </optional>

@@ -1,0 +1,20 @@
+# Microsoft Developer Studio Generated Dependency File, included by WinAVPIO.mak
+
+.\FFRedirect.cpp : \
+	"..\..\_avpff.h"\
+	{$(INCLUDE)}"_avpio.h"\
+	
+
+.\IORedirect.cpp : \
+	"..\..\Stuff\StdDefs.h"\
+	"..\..\StuffIO\Xerrors.h"\
+	"..\..\StuffIO\Xfile.h"\
+	"..\..\StuffIO\XFlags.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\winefs.h"\
+	{$(INCLUDE)}"_avpio.h"\
+	

@@ -1,0 +1,140 @@
+// --ifolder.chk----------------------------------------------------------------
+// 
+//  Module containing MAPI utility functions for folders.
+// 
+// Copyright (C) Microsoft Corp. 1986-1996.  All Rights Reserved.
+// -----------------------------------------------------------------------------
+
+#ifndef DEBUG
+
+#define CHK_HrMAPIFindInbox(a,b,c)                NOERROR
+#define CHK_HrMAPIFindOutbox(a,b,c)               NOERROR
+#define CHK_HrMAPIFindIPMSubtree(a,b,c)              NOERROR
+#define CHK_HrGWFindMtsOutFolder(a,b,c)                  NOERROR
+#define CHK_HrGWFindMtsInFolder(a,b,c)                   NOERROR
+#define CHK_HrFindExchangePublicStore(a,b,c)             NOERROR
+
+#else
+
+//$--CHK_HrMAPIFindInbox------------------------------------------------------
+//  Find IPM inbox folder.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIFindInbox(
+    IN LPMDB lpMdb,                     // pointer to message store
+    OUT ULONG *lpcbeid,                 // count of bytes in entry ID
+    OUT LPENTRYID *lppeid)              // Entry ID of IPM inbox
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_IUNKNOWN_PTR(lpMdb) ||
+        !TEST_WRITE_PTR(lpcbeid, sizeof(ULONG)) ||
+        !TEST_WRITE_PTR(lppeid, sizeof(LPENTRYID)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+//$--CHK_HrMAPIFindOutbox-----------------------------------------------------
+//  Find IPM outbox folder.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIFindOutbox(
+    IN LPMDB lpMdb,                     // pointer to message store
+    OUT ULONG *lpcbeid,                 // count of bytes in entry ID
+    OUT LPENTRYID *lppeid)              // Entry ID of IPM outbox
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_IUNKNOWN_PTR(lpMdb) ||
+        !TEST_WRITE_PTR(lpcbeid, sizeof(ULONG)) ||
+        !TEST_WRITE_PTR(lppeid, sizeof(LPENTRYID)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+//$--CHK_HrMAPIFindIPMSubtree----------------------------------------------------
+//  Find IPM subtree folder.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIFindIPMSubtree(
+    IN LPMDB lpMdb,                     // pointer to message store
+    OUT ULONG *lpcbeid,                 // count of bytes in entry ID
+    OUT LPENTRYID *lppeid)              // entry ID of IPM subtree
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_IUNKNOWN_PTR(lpMdb) ||
+        !TEST_WRITE_PTR(lpcbeid, sizeof(ULONG)) ||
+        !TEST_WRITE_PTR(lppeid, sizeof(LPENTRYID)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+//$--CHK_HrGWFindMtsOutFolder--------------------------------------------------------
+//  Find MTS-OUT folder.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrGWFindMtsOutFolder(
+    IN LPMDB lpMdb,                     // pointer to message store
+    OUT ULONG *lpcbeid,                 // count of bytes in entry ID
+    OUT LPENTRYID *lppeid)              // entry ID of MTS-OUT
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_IUNKNOWN_PTR(lpMdb) ||
+        !TEST_WRITE_PTR(lpcbeid, sizeof(ULONG)) ||
+        !TEST_WRITE_PTR(lppeid, sizeof(LPENTRYID)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+//$--CHK_HrGWFindMtsInFolder---------------------------------------------------------
+//  Find MTS-IN folder.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrGWFindMtsInFolder(
+    IN LPMDB lpMdb,                     // pointer to message store
+    OUT ULONG *lpcbeid,                 // count of bytes in entry ID
+    OUT LPENTRYID *lppeid)              // entry ID of MTS-IN
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_IUNKNOWN_PTR(lpMdb) ||
+        !TEST_WRITE_PTR(lpcbeid, sizeof(ULONG)) ||
+        !TEST_WRITE_PTR(lppeid, sizeof(LPENTRYID)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+//$--CHK_HrFindExchangePublicStore---------------------------------------------------
+//  Find public store root folder.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrFindExchangePublicStore(
+    IN LPMDB lpMdb,                     // pointer to message store
+    OUT ULONG *lpcbeid,                 // count of bytes in entry ID
+    OUT LPENTRYID *lppeid)              // entry ID of public store
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_IUNKNOWN_PTR(lpMdb) ||
+        !TEST_WRITE_PTR(lpcbeid, sizeof(ULONG)) ||
+        !TEST_WRITE_PTR(lppeid, sizeof(LPENTRYID)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+#endif /* DEBUG */
+

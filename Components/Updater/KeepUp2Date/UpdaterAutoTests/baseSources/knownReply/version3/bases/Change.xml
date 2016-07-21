@@ -1,0 +1,14 @@
+<UpdateFiles UpdateDate="08112005 1500">
+  <UpdateSettings Name="Updater/update_date" Type="date" Value="08112005 1050" />
+  <UpdateSettings Name="Updater/av_records" Type="long" Value="163522" />
+
+  <FileDescription ComponentID="MATCH"
+         UpdateType="base"
+         RelativeSrvPath="bases/1"
+         LocalPath="%BaseFolder%"
+         Filename="Change.avc"
+         FileDate="25052005 1307" />
+
+</UpdateFiles>
+
+;:1044DHs960jJxhRWWrGJSg8sNfCWofJy19fsZaUm4gHxcA7bn2B97u/CHNxJcBu4/7jHujyZKXg9Agho0bkOl1v5%%

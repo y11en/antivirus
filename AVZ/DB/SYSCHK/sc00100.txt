@@ -1,0 +1,4 @@
+// ***** Trojan-Downloader.Axload *****
+begin
+ AddEvAlarmByCLSID('AD7FAFB0-16D6-40C3-AF27-585D6E6453FD',AScriptName,'comload.dll');
+end.

@@ -1,0 +1,501 @@
+﻿[Global]
+$Anti_Spam              = "Анти-Спам"
+$ParCtl                 = "Родительский контроль"
+$AdBlocker              = "Анти-Баннер"
+$DayTimeUnlimited       = "неограниченный"
+$DayTimeFullRestriction = "полное ограничение"
+$Clear                  = "&Очистить все"
+$ContentFilter          = "Фильтрация данных"
+$TrafficMonitor         = "Мониторинг трафика"
+
+[MainWindow.ContentFilter]
+Home        = "Статус"
+Events      = "События"
+Statistics  = "Статистика"
+
+[MainWindow.ContentFilter.Anti_Spam.Body]
+Level.Name  = "Уровень агрессивности:"
+Bases.Name  = "База Анти-Спама:"
+Bases.Val   = "Наполнена"
+
+[MainWindow.ContentFilter.ParCtl.Body]
+Level.Name      = "Уровень ограничения:"
+Profile.Name    = "Профиль пользователя:"
+
+[MainWindow.ContentFilter_WorkArea_Home]
+Enable                      = "Включить контентную фильтрацию"
+Tasks.Header                = "Задачи"
+ContentFilter.Group2.Header = "Обнаружено объектов"
+
+[MainWindow.ContentFilter.Tasks.Body_TrainWizard]
+TrainWizard     = "Анти-Спам: обучение"
+TrainWizardDesc = "Этот мастер поможет вам повысить уровень распознавания спама и уменьшить количество ошибочных результатов."
+
+[AdBlockerSettings_Tab]
+General = "Общие"
+Black   = "\"Черный\" список"
+White   = "\"Белый\" список"
+
+[AdBlockerSettings_Tab_General]
+UseHeuristics = "Использовать эвристический анализ"
+
+[AntiSpamSettings_Tab]
+White   = "\"Белый\" список"
+Black   = "\"Черный\" список"
+Bayes   = "Распознавание спама"
+Options = "Дополнительно"
+
+[AntiSpamSettings_Tab_White]
+TrustedSenders  = "Разрешенные отправители"
+TrustedWords    = "Разрешенные фразы"
+
+[AntiSpamSettings_Tab_White_TrustedSenders]
+Check = "Я хочу получать письма от следующих адресатов:"
+
+[AntiSpamSettings_Tab_White_TrustedSenders_TSList]
+Rule = "Адрес отправителя"
+
+[AntiSpamSettings_Tab_White_TrustedWords]
+Check = "Я хочу получать письма со следующими фразами:"
+
+[AntiSpamSettings_Tab_White_TrustedWords_TWList]
+Rule = "Ключевая фраза"
+
+[AntiSpamSettings_Tab_Black]
+BlockedSenders  = "Запрещенные отправители"
+BlockedWords    = "Запрещенные фразы"
+
+[AntiSpamSettings_Tab_Black_BlockedSenders]
+Check = "Я не хочу получать письма от следующих адресатов:"
+
+[AntiSpamSettings_Tab_Black_BlockedSenders_BSList]
+Rule = "Адрес отправителя"
+
+[AntiSpamSettings_Tab_Black_BlockedWords]
+Check = "Я не хочу получать письма со следующими фразами:"
+
+[AntiSpamSettings_Tab_Black_BlockedWords_BWList]
+Rule    = "Ключевая фраза"
+Level   = "Весовой коэффициент"
+
+[AntiSpamSettings_Tab_Bayes]
+General         = "Алгоритмы распознавания"
+CertainSpam     = "Фактор спама"
+PossibleSpam    = "Фактор потенциального спама"
+ExcludesSpam    = "Исключения"
+
+[AntiSpamSettings_Tab_Bayes_General]
+EnableBayes = "Cамообучающийся алгоритм анализа текста (iBayes)"
+Graphics    = "Распознавание изображений (GSG)"
+Headers     = "Анализ заголовков сообщений (PDB)"
+
+[AntiSpamSettings_Tab_Bayes_CertainSpam]
+Text = "Добавлять метку [!! &SPAM] к теме сообщений со спам-фактором выше"
+
+[AntiSpamSettings_Tab_Bayes_PossibleSpam]
+Text = "Добавлять метку [?? &Probable spam] к теме сообщений со спам-фактором выше"
+
+[AntiSpamSettings_Tab_Bayes_ExcludesSpam]
+DontCheckMsExNative = "Не проверять сообщения Microsoft Exchange Server"
+
+[AntiSpamSettings_Tab_Options]
+Common = "Увеличивать спам-фактор для следующих сообщений"
+
+[AntiSpamSettings_Tab_Options_Common]
+Not4me                  = "Адресованных не мне"
+MyAdresses              = "Мои адреса..."
+Objects                 = "Без текста, но с изображениями"
+ObjectsLabel            = "%"
+ExternalObjects         = "Со ссылками на изображения"
+ExternalObjectsLabel    = "%"
+UnknownDefs             = "C некорректными HTML-тегами"
+UnknownDefsLabel        = "%"
+SeemsColors             = "С текстом цвета фона"
+SeemsColorsLabel        = "%"
+SmallText               = "С очень мелким текстом"
+SmallTextLabel          = "%"
+InvisibleChar           = "С невидимыми символами"
+InvisibleCharLabel      = "%"
+Scripts                 = "С исполняемыми скриптами"
+ScriptsLabel            = "%"
+HiddenElements          = "Со скрытыми элементами"
+HiddenElementsLabel     = "%"
+NonLatLimit             = "Содержащие не менее"
+NonLatLimitpart2        = "% не-ASCII символов"
+NonLatLimitLabel        = "%"
+Empty                   = "С пустой темой и текстом"
+
+[AntiSpam_AddressList]
+@ = "Мои адреса"
+
+[AntiSpam_AddressEdit]
+@ = "Маска адреса электронной почты"
+
+[AntiSpam_BlackWordEdit]
+@           = "Запрещенная фраза"
+Example     = "Пример: *viagra.*"
+LevelText   = "Весовой коэффициент:"
+
+[AntiSpam_WordEdit]
+@           = "Разрешенная фраза"
+@.Example   = "Пример: *kaspersky.ru*"
+
+[s_ParCtlProfileName]
+#eParCtl_ProfId_Parent  = "Родитель"
+#eParCtl_ProfId_Teen    = "Подросток"
+#eParCtl_ProfId_Child   = "Ребенок"
+
+[MainWindow.ContentFilter.AdBlocker.Body]
+Database.Name   = "База Анти-Баннера:"
+BlackWhite.Name = "\"Белые\" и \"черные\" списки:"
+BlackWhite.Val  = "Всего " + (size(ublist) + size(wlist)) + " (активных " + (size(ublist, "Enabled == 1") + size(wlist, "Enabled == 1")) + ")"
+
+[AdBlocker_RuleEdit]
+@           = "Маска адреса (URL)"
+@.Example   = "Пример: *kaspersky.ru*"
+
+[ParCtl_SwitchProfile_Dialog]
+@ = "Смена профиля пользователя"
+
+[ParCtl_SwitchProfile_Dialog_Body]
+Descr       = "Временное изменение профиля пользователя."
+ProfileLbl  = "Имя пользователя:"
+PasswdLbl   = "Пароль:"
+
+[ParCtlProfileSettView]
+SecurityGrp = "Уровень ограничения"
+ActionGrp   = "Действие"
+TimeGrp     = "Ограничение времени"
+
+[ParCtl_ProtLevelDescr]
+#SETTINGS_LEVEL_DEFAULT = "Разрешение использования интернет-почты\nи чатов"
+#SETTINGS_LEVEL_CUSTOM  = "- Нажмите <" + $ResetLevel + "> чтобы восстановить параметры по-умолчанию"
+#SETTINGS_LEVEL_LOW     = "Запрет просмотра сайтов о наркотиках,\nнасилии, порнографического характера, с\nнецензурной лексикой"
+#SETTINGS_LEVEL_HIGH    = "Блокирование просмотра сайтов по всем\nзапрещенным категориям"
+
+[ParCtlProfileSettView_ActionGrp]
+ReportOnly  = "Записать в отчет"
+DenyReport  = "Заблокировать доступ"
+
+[ParCtlProfileSettView_TimeGrp_TimeView]
+DayTimeLimit.Name   = "Время:"
+DayTimeSpace.Name   = "Часы:"
+
+[ParCtlSettings_Tab_Profile3]
+Descr = "По умолчанию всем пользователям Microsoft Windows назначен профиль \"Ребенок\". Для назначения пользователям профиля \"Подросток\" или \"Родитель\" откройте соответствующую закладку и установите флажок \"Использовать профиль\"."
+
+[ParCtlSettings_Tab_Profile1]
+Descr = "Профиль \"Родитель\" не имеет ограничений на просмотр содержимого веб-сайтов."
+
+[ParCtlProfileOperateView]
+Enable          = "Использовать профиль"
+Identification  = "Идентификация пользователя"
+
+[ParCtlProfileOperateView_Identification]
+PasswordLbl = "Пароль:"
+Button1     = "Пользователи..."
+
+[ParCtl_ProfileTime_Dlg_Body_DayTimeLimitGrp]
+UseDayTimeLimit = "Ограничить суточное время работы в интернете"
+
+[ParCtl_ProfileTime_Dlg_Body_DayTimeSpaceGrp]
+UseDayTimeSpace = "Разрешить доступ к интернету в указанное время"
+
+[ParCtl_ProfileTime_Dlg]
+@ = "Настройка ограничения времени"
+
+[ParCtl_DayTimeSpaceGrp_Edit]
+@ = "Временной интервал"
+
+[ParCtl_DayTimeSpaceGrp_Edit_Body]
+Text    = "Укажите временной интервал:"
+From    = "с"
+To      = "до"
+
+[ParCtl_Url.Edit]
+@ = "Маска адреса (URL)"
+
+[ParCtl_ProfileFilter_Dlg]
+@ = "Родительский контроль"
+
+[ParCtl_ProfileFilter_Dlg_Body]
+CategoriesPage  = "Категории"
+WhiteListPage   = "\"Белый\" список"
+BlackListPage   = "\"Черный\" список"
+
+[ParCtl_ProfileFilter_Dlg_Body_CategoriesPage]
+CategoriesDescr         = "Запрещенные категории веб-сайтов:"
+DenyCategoryPorno       = "Порнография, эротика"
+DenyCategoryDrugs       = "Наркотики"
+DenyCategoryViolence    = "Жестокость"
+DenyCategoryUncens      = "Нецензурная лексика"
+DenyCategoryWeapons     = "Оружие"
+DenyCategoryGambling    = "Азартные игры"
+DenyCategoryChat        = "Чаты"
+DenyCategoryWebMail     = "Интернет-почта"
+
+[ParCtl_ProfileAccounts]
+@ = "Пользователи"
+
+;------------- OutlookPlugun.TrainingWizard -----------
+
+[OutlookPlugun.TrainingWizard]
+@ = "Мастер обучения: " + $Anti_Spam
+
+[OutlookPlugun.TrainingWizardPages]
+Page1.Name  = "Добро пожаловать"
+Page1.Descr = "Вас приветствует мастер обучения алгоритма распознавания спама."
+Page2.Name  = "Полезная почта"
+Page2.Descr = "Пожалуйста, выберите папки, содержащие полезную почту (не спам)."
+Page3.Name  = "Нежелательная почта"
+Page3.Descr = "Пожалуйста, выберите папки, содержащие спам (если таковые имеются)."
+Page4.Name  = "Обучение"
+Page4.Descr = "Выполняется обучение на коллекциях спама и полезной почте, пожалуйста, подождите..."
+Page5.Name  = "Процесс обучения завершен"
+Page5.Descr = "Мастер обучения готов к завершению работы."
+
+[OutlookPlugun.TrainingWizardPages_Page1]
+Text1       = "   Используйте для обучения:\n\n    - этот мастер (для очистки базы Анти-Спама и обучения на коллекциях \n      полезной и нежелательной почты); \n\n    - контекстное меню в истории событий;\n\n    - кнопки \"Отметить как спам\" и \"Отметить как не спам\" в программах \n      Microsoft Office Outlook и " + $WinMailer+ ";\n\n    - меню \"Специальное/Пометить как спам/Пометить как НЕ спам\"\n      в программе The Bat!"
+Next.Name   = "&Далее"
+Next.Descr  = "Перейти в выбору полезной почты"
+
+[OutlookPlugun.TrainingWizardPages_Page2]
+Next.Name   = "&Далее"
+Next.Descr  = "Перейти к выбору нежелательной почты"
+Clear       = $Clear
+
+[OutlookPlugun.TrainingWizardPages_Page3]
+Next.Name   = "&Далее"
+Next.Descr  = "Начать обучение"
+Clear       = $Clear
+InfoText    = "Если у вас нет таких папок, этот шаг можно пропустить"
+
+[OutlookPlugun.TrainingWizardPages_Page4]
+TrainingStatus  = "Статус обучения"
+MessageCount    = "Обработано сообщений:"
+NowProcessing   = "Обрабатывается:"
+Folder.Name     = "Папка:"
+Message.Name    = "Сообщение:"
+Skip.Name       = "&Стоп"
+Skip.Descr      = "Остановить обучение"
+
+[OutlookPlugun.TrainingWizardPages_Page5]
+StatGroup           = "Статистика"
+MessageCount.Name   = "Обработано сообщений:"
+RetrainGroup        = "Действие"
+KeepExisting        = "&Дополнить базу Анти-Спама результатами обучения"
+Retrain             = "&Создать новую базу Анти-Спама"
+Finish.Name         = "&Готово"
+Finish.Descr        = "Сохранить результат обучения и завершить работу мастера"
+
+[MainWindow.ContentFilter_WorkArea_SysPerf_Legend]
+LegendText1 = "Спам"
+LegendText2 = "Всплывающие сообщения"
+LegendText3 = "Баннеры"
+LegendText4 = "Подозрительный сайтов"
+
+;------------- TrafficMonConnectionTerm -------------
+
+[TrafficMonConnectionTerm]
+@           = $TrafficMonitor + ": разрыв соединений"
+Confirm     = "Внимание! В данный момент открыто " + statistics.SessionsOpened + " сетевых соединений. Они будут разорваны. Вы согласны?"
+AutoTerm    = "Соединения будут разорваны автоматически через " + Timeout + " сек."
+
+[TrafficMonAskActionDlg]
+@.Caption       = $TrafficMonitor
+@.ApplyToAll    = "Применить ко всем"
+
+[TrafficMonAskActionDlg_Body_Descr]
+Info        = "Outgoing encrypted connection"
+Descr       = "This protected connection can be scanned for viruses. Do you want this connection to be scanned?"
+Host.Name   = "Remote address:"
+Port.Name   = "Remote port:"
+
+[TrafficMonAskActionDlg_Body_Action]
+Process.Name    = "Проверять"
+Process.Descr   = "Проверять соединение"
+Skip.Name       = "Не проверять"
+Skip.Descr      = "Не проверять соединение"
+
+;------------- MailWasher -------------
+
+[MailWasher]
+@           = "Просмотр писем перед получением"
+Info        = "Всего писем на сервере: " + TotalMessages + " (" + NewMessages + " new)"
+New         = "Показывать только новые"
+DontShow    = "Показывать это окно при получении почты"
+
+[MailWasher_Toolbar]
+Del         = "&Удалить выбранные"
+ReadNext    = "&ПРосмотреть следующие"
+Letters     = "писем"
+
+[MailWasher_Msgs_List]
+New         = "Удалить"
+From        = "От"
+Subject     = "Тема"
+To          = "Кому"
+Size        = "Размер"
+DateTime    = "Время"
+Reason      = "Причина"
+
+[MailWasher_CodepageMenu]
+KOI8-R          = "koi8-r"
+WINDOWS-1251    = "windows-1252"
+IBM866          = "ibm866"
+ISO8859-5       = "iso8859-5"
+X-MAC-CYRILLIC  = "x-mac-cyrillic"
+
+[s_ReasonEx]
+-3  = "Адрес добавлен в \"белый\" список"
+-2  = "Это письмо уже присутствует в базе Анти-Спама"
+-1  = "Обучение"
+1   = "iBayes"
+2   = "Адрес из \"белого\" списка"
+3   = "Адрес из \"черного\" списка"
+4   = "Фраза из \"белого\" списка"
+5   = "Фраза из \"черного\" списка"
+6   = "Письмо с элементами фишинга"
+7   = "Адрес не найден в \"белом\" списке"
+8   = "Адрес не найден в \"черном\" списке"
+9   = "Фраза не найдена в \"белом\" списке"
+10  = "Фраза не найдена в \"черном\" списке"
+11  = "Письмо без элементов фишинга"
+12  = "Письмо, удаленное с сервера"
+13  = "Тестовое письмо"
+14  = "Рекламное письмо"
+15  = "Письмо без рекламы"
+16  = "Некорректный код HTML"
+17  = "Корректный код HTML"
+18  = "Ссылка на изображение"
+19  = "Нет ссылок на изображения"
+20  = "Встроенный объект без текста"
+21  = "Нет встроенных объектов без текста"
+22  = "Пустое письмо"
+23  = "Непустое письмо"
+24  = "Адресовано не мне"
+25  = "Адресовано мне"
+26  = "Содержит нелатинские символы"
+27  = "Содержит только латинские символы"
+28  = "Много получателей"
+29  = "Один получатель"
+30  = "Технология GSG (анализ изображений)"
+31  = "Технология PDB (анализ заголовков)"
+32  = "Некорректный код HTML: некорректные HTML-теги"
+33  = "Некорректный код HTML: текст цвета фона"
+34  = "Некорректный код HTML: очень мелкий текст"
+35  = "Некорректный код HTML: невидимые символы"
+36  = "Некорректный код HTML: скрипты"
+37  = "Некорректный код HTML: скрытые элементы"
+38  = "Внутренняя почта Microsoft Exchange Server"
+39  = "Спам-тест"
+40  = "Технология RecentTerms"
+
+[MainWindow.ContentFilter_WorkArea]
+Home.Group2.Header = "Обнаружено объектов"
+
+[s_ParCtlError]
+0x800000C5  = "нет драйвера"
+def         = s_SystemError(@)
+
+[s_ProductNotifyText_ParCtl]
+#eUrlFltEvent_SwitchProfile     = $ParCtl + ": переключене на профиль " + s_ParCtlProfileName(ExtraInfoSub1) + "."
+#eUrlFltEvent_HeuristicStatus   = $ParCtl + ": невозможно провести эвристический анализ сайта " + object(ObjectID) + ": " + s_UpdaterError(ExtraInfoSub2) + "."
+def                             = if(Verdict == #eDENIED, $ParCtl + ": " + object(ObjectID) + ": " + s_Verdict(Verdict) + "." + if(DecisionReason, " Метод обнаружения: " + s_DecisionReason(DecisionReason) + "."))
+
+;------------- OutlookPlugun.Antivirus -----------
+
+[MC_Enabled]
+0           = "отключен"
+default     = "включен"
+
+[MC_Enable]
+0           = "Включить"
+default     = "Отключить"
+
+[MC_KavStarted]
+0           = "Для защиты почты необходимо запустить приложение."
+default     = switch(McEnabled,"MC_Enable") + " Почтовый Антивирус или настроить его можно "
+
+[OutlookPlugun.Antivirus]
+@           = "Почтовый Антивирус"
+
+[OutlookPlugun.AntivirusCmn]
+Main        = "Почтовый Антивирус"
+Info        = "Почтовый Антивирус проверяет все входящие и исходящие письма на присутствие вирусов и других вредоносных объектов."
+Status      = "Статус"
+EnableStat  = "Почтовый Антивирус " + switch(McEnabled,"MC_Enabled") + "."
+Settings    = switch(KavStarted,"MC_KavStarted")
+Link        = "здесь"
+Options     = "Настройка"
+CheckDelivery = "Проверять при получении"
+CheckRead   = "Проверять при прочтении"
+CheckSend   = "Проверять при отправке"
+
+;------------- OutlookPlugin.Antispam -----------
+
+[AS_Error]
+@           = $Anti_Spam
+CannotMoveToFolder = "Невозможно переместить сообщение. Указанная папка для сбора спама недоступна. Проверьте параметры Анти-Спама."
+
+[AS_Enabled]
+0           = "отключена"
+default     = "включена"
+
+[AS_Enable]
+0           = "Включить"
+default     = "Отключить"
+
+[AS_KavStarted]
+0           = "Для защиты от спама необходимо запустить Kaspersky Internet Security"
+default     = switch(AsEnabled,"AS_Enable") + " фильтрацию спама или настроить ее можно "
+
+[AS_Actions]
+0           = "Поместить в папку"
+1           = "Скопировать в папку"
+2           = "Удалить"
+3           = "Пропустить"
+default     = "Неизвестно"
+
+[OutlookPlugun.AntispamDlg]
+@           = $Anti_Spam
+FolderMissing = "Пожалуйста, укажите папку"
+OENeedRestart = "Вы изменили параметры плагина Анти-Спама. Чтобы изменения вступили в силу, необходимо перезапустить Microsoft Outlook Express."
+WinMailNeedRestart = "Вы изменили параметры плагина Анти-Спама. Чтобы изменения вступили в силу, необходимо перезапустить Microsoft Windows Mail."
+ShowSettingsAgain = "Показывать это окно при следующем запуске плагина Анти-Спама?"
+
+[OutlookPlugun.Antispam]
+@           = $Anti_Spam
+FolderMissing = "Пожалуйста, укажите папку"
+SpamCaption = "Спам"
+Spam        = "Отметить как спам"
+HamCaption  = "Не Спам"
+Ham         = "Отметить как не спам"
+
+[OutlookPlugun.AntispamCmn]
+Main        = $Anti_Spam
+Info        = $Anti_Spam + " обеспечивает защиту от спама во входящей почте."
+Status      = "Статус"
+EnableStat  = "Фильтрация спама " + switch(AsEnabled,"AS_Enabled") + "."
+Settings    = switch(KavStarted,"AS_KavStarted")
+Link        = "здесь"
+CSpam       = "Спам"
+CS_Browse   = "..."
+CS_MarkAsRead = "Отметить как прочтенное"
+PSpam       = "Потенциальный спам"
+PS_Browse   = "..."
+PS_MarkAsRead = "Отметить как прочтенное"
+CAlgo       = "Дополнительно"
+
+[C_AlgoGroup]
+Radio1      = "Проверять при получении"
+Radio2      = "Использовать "
+LinkOutlook = "правило Microsoft Office Outlook"
+Radio2Text  = ""
+
+;------------- OutlookPlugun.Antispam.Browse -----------
+
+[OutlookPlugun.Antispam.Browse]
+@           = "Выбор папки"
+progress_spam = "Выполняется действие \"Отметить как спам\""
+progress_notspam = "Выполняется действие \"Отметить как не спам\""

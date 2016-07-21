@@ -1,0 +1,29 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH= @srcdir@ @abs_top_srcdir@/remote @abs_top_srcdir@/remote/pr_system 
+
+Name = remote
+Library = $(Name).@SHARED_EXT@
+Targets = $(Library)
+
+Sources = \
+	rpc_connect_unix.cpp \
+	pr_remote.cpp \
+	pr_internal.cpp \
+	pr_root_c.cpp \
+	pr_system_c.cpp \
+	SharedTable.cpp
+
+
+Includes = @srcdir@ @srcdir@/rpc_headers @srcdir@/rpc_headers/pr_system @abs_top_srcdir@/remote 
+
+Defines = _USE_VTBL
+
+Deps = rpc rpc_proxies rpc_stubs
+
+Libraries = \
+	rpc \
+	hashutil
+
+include @abs_top_builddir@/@OS@/Rules

@@ -1,0 +1,73 @@
+# Microsoft Developer Studio Generated Dependency File, included by klscav.mak
+
+.\CalcSum.c : \
+	".\CalcSum.h"\
+	
+
+.\debug.cpp : \
+	".\debug.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\winefs.h"\
+	
+
+.\main.cpp : \
+	"..\..\..\commonfiles\sign\sign.h"\
+	"..\..\..\prague\include\iface\i_engine.h"\
+	"..\..\..\prague\include\iface\i_heap.h"\
+	"..\..\..\prague\include\iface\i_iface.h"\
+	"..\..\..\prague\include\iface\i_ifenum.h"\
+	"..\..\..\prague\include\iface\i_impex.h"\
+	"..\..\..\prague\include\iface\i_io.h"\
+	"..\..\..\prague\include\iface\i_list.h"\
+	"..\..\..\prague\include\iface\i_loader.h"\
+	"..\..\..\prague\include\iface\i_methodinfo.h"\
+	"..\..\..\prague\include\iface\i_objptr.h"\
+	"..\..\..\prague\include\iface\i_os.h"\
+	"..\..\..\prague\include\iface\i_plugin.h"\
+	"..\..\..\prague\include\iface\i_receiv.h"\
+	"..\..\..\prague\include\iface\i_reg.h"\
+	"..\..\..\prague\include\iface\i_root.h"\
+	"..\..\..\prague\include\iface\i_seqio.h"\
+	"..\..\..\prague\include\iface\i_serializer.h"\
+	"..\..\..\prague\include\iface\i_string.h"\
+	"..\..\..\prague\include\iface\i_tracer.h"\
+	"..\..\..\prague\include\pr_compl.h"\
+	"..\..\..\prague\include\pr_err.h"\
+	"..\..\..\prague\include\pr_iid.h"\
+	"..\..\..\prague\include\pr_int.h"\
+	"..\..\..\prague\include\pr_msg.h"\
+	"..\..\..\prague\include\pr_obj.h"\
+	"..\..\..\prague\include\pr_pid.h"\
+	"..\..\..\prague\include\pr_prop.h"\
+	"..\..\..\prague\include\pr_reg.h"\
+	"..\..\..\prague\include\pr_remote.h"\
+	"..\..\..\prague\include\pr_serdescriptor.h"\
+	"..\..\..\prague\include\pr_sys.h"\
+	"..\..\..\prague\include\pr_types.h"\
+	"..\..\..\prague\include\pr_vid.h"\
+	"..\..\..\prague\include\pr_vtbl.h"\
+	"..\..\..\prague\include\prague.h"\
+	"..\..\..\prague\tempfile\tempfile.h"\
+	"..\..\include\iface\i_task.h"\
+	"..\..\include\plugin\p_sc.h"\
+	".\CalcSum.h"\
+	".\CRC.H"\
+	".\debug.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\shtypes.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\winefs.h"\
+	
+
+".\klscav_res.rc" : \
+	".\sc_plugin.rgs"\
+	

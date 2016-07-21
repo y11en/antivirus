@@ -1,0 +1,12 @@
+// ***** Проверка ключа Policies\Run *****
+var
+ S : string;
+begin
+ S := Trim(RegKeyStrParamRead('HKEY_LOCAL_MACHINE', 'SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'Run'));
+ if S <> '' then
+  AddToLog('$AVZ1196 Policies\Explorer\Run: "'+S+'"');
+ 
+ S := Trim(RegKeyStrParamRead('HKEY_LOCAL_MACHINE', 'SOFTWARE\Microsoft\Windows\CurrentVersion\policies\Explorer\Run', 'system'));
+ if S <> '' then
+  AddToLog('$AVZ1196 Policies\Explorer\Run\System: "'+S+'"');
+end.

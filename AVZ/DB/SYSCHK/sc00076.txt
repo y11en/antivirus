@@ -1,0 +1,4 @@
+// ***** Dialer.Minidial *****
+begin
+ AddEvAlarmByCLSID('1D2DCA0D-B30F-40AD-9690-087105F214EC', AScriptName,'IEAccess*.dll');
+end.

@@ -1,0 +1,852 @@
+﻿[Global]
+$LinkMoreDetails        = "More details"
+$LinkTechnicalSupport   = "Technical support"
+$LinkGetFullLicense     = "Buy license"
+$LinkRenewLicense       = "License renewal"
+$LinkRestartComputer    = "Restart computer"
+$LinkRestartProduct     = "Restart product"
+$LinkTreatAll           = "Neutralize all"
+$LinkDetails            = "Details..."
+$LinkActivate           = "Activate"
+$LinkRetry              = "Retry"
+$LinkSettings           = $Configure
+$LinkUpdateNow          = "Update now"
+$LinkProtectionTurnOn   = "Resume protection"
+$LinkRestartService     = "Restart service"
+$LinkSupport            = "Technical support"
+$LinkSendReport         = "Submit report"
+$LinkServicesTurnOn     = "Resume all"
+$LinkServicesResume     = "Resume paused"
+$LinkTrainNow           = "Start Training Wizard"
+$LinkScanMyComputer     = "Scan My Computer"
+$LinkShowMessages       = "Show all messages"
+$LinkLearnMore          = "Learn more about security threats"
+$LinkSkip               = "Skip this message"
+$LinkSomeSkipped        = "Show skipped messages"
+$KeyExpBeforeActive     = "This key expires before the active key"
+$LicensingSubsystem     = "License"
+
+[MainWindow.Protection]
+$UpdateInfoNormal   = "Protection is up to date"
+$ThreatInfoNormal   = "All threats have been neutralized"
+$ProductInfoNormal  = "Essential protection services are active"
+Home                = "Status"
+Events              = "Events"
+Threats             = "Detected"
+
+[MainWindow.Protection_Filters]
+AllItems    = "Do not group"
+ByTask      = "Group by task"
+ByApp       = "Group by application"
+
+[MainWindow.Protection.Tasks_SysSecurityWizard]
+Icon = "System Security Analysis"
+
+[MainWindow.Protection.Tasks_AvzSecurityTweakerWizard]
+Icon = "Web Browser Tweaker"
+
+[s_MainWindowProtectionBannerText]
+#eProtStateNormal   = "Computer is protected"
+#eProtStateCrit     = "Security is at risk!"
+#eProtStateWarn     = "Security is at risk!"
+
+[s_ProdState]
+#ProdStateKeyTrial                  = "Trial product key"
+#ProdStateProductNotActivated       = "Product is not activated"
+#ProdStateProductNotAutoRun         = "Application autorun is disabled"
+#ProdStateProductNotProtected       = "Self Defense is disabled"
+#ProdStateKeyAboutExpiration        = "License key validity period has expires"
+#ProdStateKeyExpired                = "License key validity period has expired"
+#ProdStateKeyWillBeExpired          = "License key validity period will be expired soon"
+#ProdStateKeyWillBeBlocked          = "License key will be blocked"
+#ProdStateKeyTrialExpired           = "Trial key validity period has expired"
+#ProdStateKeyBlocked                = "Key blocked"
+#ProdStateNoKeys                    = "Application is not activated"
+#ProdStateKeyInvalid                = "Application key is invalid"
+#ProdStateKeyLimited                = "A license agreement has been violated"
+#ProdStateTasksNotRunning           = "Some protection components are not running"
+#ProdStateTasksMalfunction          = "Some components cannot be enabled"
+#ProdStateTasksDisabled             = "Some components are disabled"
+#ProdStateProtectionSafeMode        = "System runs in security mode"
+#ProdStateProtectionNotInstalled    = "Protection is not installed"
+#ProdStateBasesNotValid             = "Database is corrupted"
+#ProdStateBasesOutOfDate            = "Database is out of date"
+#ProdStateBasesNotActual            = "Database is obsolete"
+#ProdStateUpdateNeedReboot          = "It is necessary to restart the computer after update"
+#ProdStateBasesCorrupted            = "Database is corrupted"
+#ProdStateUpdateNotAuto             = "Automatic updates are disabled"
+#ProdStateMyComputerNotScanned      = "A full computer scan has never been performed"
+#ProdStateOnDemandTaskRunning       = "Task is being executed"
+#ProdStateProtectionNotRunning      = "No protection services are running"
+#ProdStateProtectionDisabled        = "All protection services are disabled"
+#ProdStateThreatsUntreated          = "Threats have been detected"
+#ProdStateThreatsNeedReboot         = "Need to restart the computer after disinfection"
+default                             = "My Computer is protected"
+
+[ProdState_Description]
+#ProdStateKeyTrial                  = "Trial product key is used"
+#ProdStateProductNotActivated       = $ProductName + " is not activated"
+#ProdStateProductNotAutoRun         = "Autorun of " + $ProductName + " at the operating system startup is disabled. It means that you will have to run the application manually after every computer reboot to ensure protection of your data. You are advised to enable autorun of the application."
+#ProdStateProductNotProtected       = "Self-Defense blocks attempts of other applications to modify the files and registry keys created during " + $ProductName +" installation. The feature is currently disabled and therefore the application may be rendered inoperable. You are advised to enable Self-Defense."
+#ProdStateKeyAboutExpiration        = "Attention! The validity period of your key will expire in " + LicDaysTillExpiration + " " + switch(f_numdeclension(LicDaysTillExpiration), "DayForm") + ". You are advised to renew your key or purchase a new one. Otherwise application updates and technical support will become unavailable after the remaining days pass."
+#ProdStateKeyExpired                = "Attention! Validity period of your key has expired. It means that application database and modules update as well as technical support are not available. To resume full application functionality it is necessary to renew the key."
+#ProdStateKeyWillBeExpired          = "Attention! License key validity period will be expired soon"
+#ProdStateKeyWillBeBlocked          = "Attention! License key will be blocked"
+#ProdStateKeyTrialExpired           = "Attention! Your trial key has expired. Protection of your computer has been disabled. To resume protection of your computer, you need to purchase a commercial key from Kaspersky Lab or our distributors. The trial key cannot be reused."
+#ProdStateKeyBlocked                = "Attention! Your key has been blacklisted. Application updating is disabled. The key might be blocked because you have purchased an illegal copy of the " + $ProductName +" application. You are advised to contact the Technical Support service to check the reason for key blocking. Purchase a new key in order to restore the functionality of the application."
+#ProdStateNoKeys                    = $ProductName + " has not been activated. You have to activate the application to enable its functionality. Activate the product using its key or a special code provided to you during purchase. If you have no key or activation code, please contact your distributor or Technical Support service."
+#ProdStateKeyInvalid                = "Attention! Your key is no longer valid. Computer protection has been disabled. Please contact your Technical Support service or the distributor of the application."
+#ProdStateKeyLimited                = "You have exceeded the maximum number of application copies that can be installed with this license key. Protection is disabled. You need to purchase a new key in order to resume computer protection. Do not forget to specify the number of computers on which the application will be installed when purchasing the key."
+#ProdStateTasksNotRunning           = "Some protection components are off. It means that protection of your data is incomplete. You are advised to start the protection components. Not running component is " + switch(TaskNotRunning, "ProfileName") + "."
+#ProdStateTasksMalfunction          = "Some protection components failed to start automatically. " + $ProductName + " cannot provide complete protection. Information about errors can be found inside the components, marked with red color. If you cannot find out the error reason yourself, please contact Technical Support Service for problem investigation."
+#ProdStateTasksDisabled             = "Some protection components are stopped. It means that protection of your data is incomplete. You are advised to enable the protection components. Disabled component is " + switch(TaskDisabled, "ProfileName") + "."
+#ProdStateProtectionSafeMode        = "Some protection components are disabled when the operating system runs in safe mode. If you wish to resume the activity of all protection components, you should restart the computer and select normal startup instead of safe mode."
+#ProdStateProtectionNotInstalled    = $ProductName + " installed on your computer has limited functionality: protection components are not installed. You can start scans of your computer and update the application databases. If you wish to provide for real-time protection of your computer against all known and yet unknown threats, you need to install the corresponding protection components."
+#ProdStateBasesNotValid             = "The databases that the application uses to protect your computer are invalid. In particular, they can be damaged because of an incorrect update. You are advised to update the databases or rollback to their previous version."
+#ProdStateBasesOutOfDate            = "The databases that the application uses to protect your computer are out of date. It means that protection of your data may be inadequate. You are advised to update the application databases as soon as possible."
+#ProdStateBasesNotActual            = "The databases that the application uses to protect your computer are out of date. It means that protection of your data may be inadequate. You are advised to update the application databases as soon as possible."
+#ProdStateUpdateNeedReboot          = "You computer should be restarted in order to complete the installation of new databases and application modules"
+#ProdStateBasesCorrupted            = "The databases that the application uses to protect your computer are invalid. In particular, they can be damaged because of an incorrect update. You are advised to update the databases or rollback to their previous version."
+#ProdStateUpdateNotAuto             = "Attention! The application could not be updated automatically. Please check the update parameters and proxy server settings."
+#ProdStateMyComputerNotScanned      = "Your computer has never been scanned for presence of dangerous objects since application setup. You are advised to perform complete computer scanning as soon as possible."
+#ProdStateOnDemandTaskRunning       = "Being executed " + format_struct(profile(ScanningTaskId), "ProfileName")
+#ProdStateProtectionNotRunning      = "Protection of your computer is disabled. Information on the computer can be infected, damaged or stolen. You are advised to resume computer protection."
+#ProdStateProtectionDisabled        = "Protection of your computer is disabled. Information on the computer can be infected, damaged or stolen. You are advised to enable computer protection."
+#ProdStateThreatsUntreated          = $ProductName + " has detected malicious objects on your computer. You are strongly advised to neutralize them as soon as possible."
+#ProdStateThreatsNeedReboot         = "You computer should be restarted in order to complete the disinfection of infected objects. Possibly infected file is in use by another application and therefore it is not possible to disinfect it correctly. Restart the computer and application will disinfect such objects automatically. You will be able to view the disinfection results in report."
+default                             = "All protection components are enabled and are working in a normal mode. Databases updated " + datetime(AVService.BasesDate) + ". TODO(statistics)!!!."
+
+;-------------------------------- AvzTroubleshootWizard --------------------------------
+
+[AvzWizard_Progress]
+Label = "Events:"
+
+[AvzWizard_ProgressVul]
+CurObject.Name = "Object:"
+
+[s_AvzSeverity]
+0   = "Corrected"
+1   = "Not important"
+2   = "Recommended"
+3   = "Strongly recommended"
+
+[AvzTroubleshootWizard]
+@ = "Troubleshooting wizard"
+
+[AvzTroubleshootWizardPages]
+Welcome.Name    = "Welcome"
+Welcome.Descr   = "Troubleshooting wizard will help you to diagnose and repair various problems, that may occur after removal of malicious software from your computer."
+Search.Name     = "Looking for troubles"
+Search.Descr    = "Please wait while Kaspersky Internet Security is checking your computer..."
+Problems.Name   = "Diagnostics complete"
+Problems.Descr  = "Some settings of system do not match default values."
+Fix.Name        = "Shooting the trouble(s)"
+Fix.Descr       = "Please wait while Kaspersky Internet Security is fixing your system..."
+Finish.Name     = "Troubleshooting complete"
+Finish.Descr    = "In order to complete troubleshooting, you must reboot your computer."
+
+[AvzTroubleshootWizard_Welcome]
+Start.Name  = "Start diagnostics"
+Start.Descr = "Click here to diagnose various problems/issues"
+
+[AvzTroubleshootWizard_Problems]
+Fix.Name    = "Fix it!"
+Fix.Descr   = "Click here to fix selected trouble(s)"
+
+[AvzTroubleshootWizard_Problems_List]
+Trouble = "Trouble"
+SideEff = "Side effects"
+
+[AvzTroubleshootWizard_Finish]
+Reboot.Name     = "Restart computer"
+Reboot.Descr    = "Please save all documents you have opened in other applications and click this link."
+Exit.Name       = "&Finished"
+Exit.Descr      = "Click here to close wizard."
+
+;-------------------------------- AvzPrivacyCleanerWizard --------------------------------
+
+[AvzPrivacyCleanerWizard]
+@ = "Privacy Cleaner Wizard"
+
+[AvzPrivacyCleanerWizardPages]
+Welcome.Name    = "Welcome"
+Welcome.Descr   = "Privacy cleaner wizard will help you to find and correct settings that may compromise your privacy"
+Search.Name     = "Looking for areas contains private data"
+Search.Descr    = "Please wait while Kaspersky Internet Security is checking your computer..."
+Problems.Name   = "Select items to clean"
+Problems.Descr  = "The following areas can contain data that might compromise your privacy."
+Fix.Name        = "Cleaning in progress..."
+Fix.Descr       = "Please wait while Kaspersky Internet Security is cleaning your privacy."
+Finish.Name     = "Cleaning complete"
+Finish.Descr    = "Security Analyzer has finished system analysis."
+
+[AvzPrivacyCleanerWizard_Welcome]
+Start.Name  = "Start diagnostics"
+Start.Descr = "Click here to find non clean privacy areas"
+
+[AvzPrivacyCleanerWizard_Problems]
+Fix.Name    = "Clean"
+Fix.Descr   = "Click here to clean selected areas(s)"
+
+[AvzPrivacyCleanerWizard_Problems_List]
+Trouble = "Trouble"
+SideEff = "Side effects"
+
+[AvzPrivacyCleanerWizard_Finish]
+Reboot.Name     = "Restart computer"
+Reboot.Descr    = "Attention! Please save all documents you have opened in other applications!"
+Exit.Name       = "Exit"
+Exit.Descr      = "Click here to close wizard."
+
+;-------------------------------- AvzSecurityTweakerWizard --------------------------------
+
+[AvzSecurityTweakerWizard]
+@ = "Web Browser Tweaker"
+
+[AvzSecurityTweakerWizardPages]
+Welcome.Name    = "Welcome"
+Welcome.Descr   = "Security Tweaker will help you to check security settings and turn off potential vulnerable services. In order to continue, you must choose the depth of tweak."
+Search.Name     = "Diagnostics in progress"
+Search.Descr    = "Please wait while Kaspersky Internet Security is checking your computer..."
+Problems.Name   = "Diagnostics complete"
+Problems.Descr  = "Some system settings can be tuned up. Please select items for tweaking."
+Fix.Name        = "Tweaking in progress"
+Fix.Descr       = "Please wait while Kaspersky Internet Security is tweaking your computer..."
+Finish.Name     = "Tweaking complete"
+Finish.Descr    = "Security Analyzer has finished system analysis."
+
+[AvzSecurityTweakerWizard_Welcome]
+Start.Name  = "Start diagnostics"
+Start.Descr = "Click here to diagnose security settings"
+
+[AvzSecurityTweakerWizard_Problems]
+Fix.Name    = "Execute selected tweaks"
+Fix.Descr   = "Click here to fix all found problems"
+
+[AvzSecurityTweakerWizard_Problems_List]
+Trouble = "Trouble"
+SideEff = "Side effects"
+
+[AvzSecurityTweakerWizard_Finish]
+Reboot.Name     = "Restart computer"
+Reboot.Descr    = "Attention! Please save all documents you have opened in other applications!"
+Exit.Name       = "Exit"
+Exit.Descr      = "Click here to close wizard."
+
+;-------------------------------- AvzSecurityAnalyzerWizard --------------------------------
+
+[Global]
+$AvzScriptUrl               = "http://avptool.virusinfo.info/en/AVPTool_helpdesk.htm"
+AvzAlreadyRunning.caption   = "One of AVZ wizards is already started"
+AvzAlreadyRunning           = "Please close all running AVZ wizards before starting the new one."
+
+[AvzSecurityAnalyzerWizard]
+@ = "System Security Analysis"
+
+[AvzSecurityAnalyzerWizardPages]
+Welcome.Name        = "Welcome"
+Welcome.Descr       = "Security Analyser Wizard will help you to measure your system security settings."
+ScanVulnerab.Name   = "Application vulnerability analysis"
+ScanVulnerab.Descr  = "Please wait while the applications are being checked..."
+Vulnerab.Name       = "Vulnerable applications"
+Vulnerab.Descr      = "Application vulnerability analysis completed."
+ScanTrouble.Name    = "System Security Analysis"
+ScanTrouble.Descr   = "Please wait while you system is being checked..."
+ScanSolution.Name   = "Search for solution"
+ScanSolution.Descr  = "Please wait while the solution is being searched..."
+Solution.Name       = "Correction"
+Solution.Descr      = "Security Analyser Wizard has finished searching for solution."
+Fix.Name            = "Correction"
+Fix.Descr           = "Please wait while correction is being applied..."
+ScanTrouble2.Name   = "System Security Analysis"
+ScanTrouble2.Descr  = "Please wait while you system is being checked..."
+Script.Name         = "Your system security is at risk"
+Script.Descr        = "Editing and executing the script for eliminating security problems."
+RunScript.Name      = "Cure script"
+RunScript.Descr     = "Please wait while the script is being executed..."
+ScriptError.Name    = "Script execution failed!"
+ScriptError.Descr   = "Please correct errors in the script and try again."
+Finish.Name         = DetectDanger > 1 ? "Script completed" : "No threats detected"
+Finish.Descr        = "The Wizard is about to complete."
+
+[AvzSecurityAnalyzerWizard_Welcome]
+Min.Name    = "Fast diagnostics"
+Min.Descr   = "Click here to start computer security diagnostics"
+Max.Name    = "Full diagnostics"
+Max.Descr   = "Starting computer security diagnostics and vulnerabilities scan"
+
+[AvzSecurityAnalyzerWizard_Vulnerab]
+Rescan.Name     = "Repeated scan"
+Rescan.Descr    = "Repeated scan for vulnerable applications"
+Next.Name       = "System analysis"
+Next.Descr      = "Click here to start computer security diagnostics"
+
+[AvzSecurityAnalyzerWizard_Vulnerab_AppList]
+App     = "Application"
+Todo    = "Solution"
+
+[AvzSecurityAnalyzerWizard_Solution]
+Fix.Name    = "Correct"
+Fix.Descr   = "Elimination of selected vulnerabilities"
+
+[AvzSecurityAnalyzerWizard_Solution_List]
+Trouble = "Problem"
+SideEff = "Side effect"
+
+[AvzSecurityAnalyzerWizard_Script]
+Lable       = "Paste cure scripts here:"
+Web.Name    = "Get cure script"
+Web.Descr   = "virusinfo.info web community will help you to generate a cure script."
+Fix.Name    = "Run cure script"
+Fix.Descr   = "Start the process of eliminating security problems."
+
+[AvzSecurityAnalyzerWizard_ScriptError]
+Reedit.Name     = "Change script"
+Reedit.Descr    = "Correct errors in the script and run it again"
+
+[AvzSecurityAnalyzerWizard_Finish]
+Reboot.Name     = "Restart computer"
+Reboot.Descr    = "Attention! Please save all documents you have opened in other applications!"
+Rescan.Name     = "Repeated system analysis"
+Rescan.Descr    = "Repeated system analysis"
+Exit.Name       = "Exit"
+Exit.Descr      = "Click here to close the wizard."
+
+;-------------------------------- AlertDialog --------------------------------
+
+[Global]
+$AlertDefault   = " (recommended)"
+$UnknownApp     = "Unknown application"
+
+[s_AlertDialogCaption]
+oas
+mc
+wmuf
+pdm
+httpscan        = "Detected: " + s_DetectType(DetectType)
+ods		        = nActionID == 0xf0804 ? "Active infection" : "Detected: " + s_DetectType(DetectType)
+antidial        = "Anti-Dial aler"
+antiphishing    = "Anti-Phishing alert"
+hips            = $SystemWatch + " alert"
+avs             = "Treating: " + s_DetectType(DetectType)
+
+[s_AlertDialogTrouble]
+oas             = "<b>" + sDescription + "</b> is trying to access the file containing malware " + DetectName + "."  + if(nActionID == 0xf0804, "\nA special disinfection procedure is required <b>which demands system reboot</b>. You are advised to close all other applications. Perform disinfection?")
+ods             = "<b>" + sDescription + "</b> has detected a file containing malware " + DetectName + "." + if(nActionID == 0xf0804, "\nA special disinfection procedure is required <b>which demands system reboot</b>. You are advised to close all other applications. Perform disinfection?")
+mc              = "<b>" + sDescription + "</b> is trying to receive email containing malware."
+wmuf
+httpscan        = "The page you are trying to download contains malware " + DetectName + "."
+antiphishing    = "Some text about danger of visiting phishing sites."
+antidial        = "<b>" + sDescription + "</b> is trying to dial the number."
+hips            = "<b>" + sDescription + "</b> is trying to " + s_ActionV(Action) + " " + s_ObjectType(ObjectType) + "."
+pdm             = "<b>" + sDescription + "</b> is behaving as " + ObjectName + "."
+avs             = "<b>" + sDescription + "</b> is treating a file containing malware."
+
+[s_ActionType]
+oas
+wmuf
+antiphishing
+httpscan        = "opening"
+ods             = "detected"
+antidial        = "dialing"
+hips            = s_Action(Action)
+pdm             = "behave as"
+
+[AlertDialogT_Footer]
+ApplyToAll  = ApplyToAll & #APPLYTOALL_USE_SESSION ? "Apply <a f(\"Header1White\") onclick(iterate(bmask(ApplyToAll, #APPLYTOALL_SESSION)))>" + (ApplyToAll & #APPLYTOALL_SESSION ? "to this session" : "to all") + "</a>" : "Apply to all"
+Help        = "Help"
+
+[AlertDialog_Body_Desc_Process]
+Desc.Name       = "Description:"
+Product.Name    = "Application:"
+Vendor.Name     = "Vendor:"
+Image.Name      = "Image:"
+PID.Name        = "Process ID:"
+
+[AlertDialog_Body_Desc_Malware]
+DetGroup.Name   = "Detected:"
+DetName.Name    = "Name:"
+DetType.Name    = "Category:"
+DetDanger.Name  = "Level:"
+
+[AlertDialog_Body_Desc_Object]
+ResGroup.Name   = "Group:"
+ResDescr.Name   = "Description:"
+ResDescr.Val    = const(strUserDescription ? strUserDescription : "no description")
+
+[AlertDialog_Body_Action]
+Allow.Name          = "Allow" + $Def
+Allow.Descr         = "The action will be allowed"
+Deny.Name           = "Block" + $Def
+Deny.Descr          = "The action will be blocked"
+Disinfect.Name      = ActionsMask & #ACTION_DISINFECT ? "Disinfect" + $Def : "Disinfection is not possible"
+Disinfect.Descr     = ActionsMask & #ACTION_DISINFECT ? "A copy of infected file will be saved to backup" : "File does not contain useful information"
+Delete.Name         = "Delete" + $Def
+Delete.Descr        = "File will be deleted"
+Skip.Name           = "Skip" + $Def
+Skip.Descr          = "Do not perform any actions"
+Ok.Name             = "OK" + $Def
+Ok.Descr            = "Action will be performed"
+Cancel.Name         = "Cancel" + $Def
+Cancel.Descr        = "Do not perform any actions"
+Terminate.Name      = "Finish" + $Def
+Terminate.Descr     = "Terminate execution"
+Quarantine.Name     = "Quarantine" + $Def
+Quarantine.Descr    = "Move file to Quarantine"
+
+;-------------------------------- MalwareInfo --------------------------------
+
+[MalwareInfo]
+@ = "Malware description"
+
+[MalwareInfo_Tab]
+Malware = "Malware info"
+File    = "File info"
+
+[MalwareInfo_Tab_Malware]
+Category.Name   = "Category:"
+Type.Name		= "Type:"
+
+[MalwareInfo_Tab_Malware_info]
+Text = "View full malware description on: "
+
+[MalwareInfo_Tab_File]
+File.Name       = "File name:"
+
+[MalwareInfo_Tab_File_Info1]
+Location.Name = "Location:"
+Size.Name     = "Size:"
+DiskSize.Name = "Size on disk:"
+
+[MalwareInfo_Tab_File_Info2]
+Created.Name    = "Created:"
+Modified.Name   = "Modified:"
+
+
+[ProtectStatus_Header.StatusMenu.menu]
+StatusHide      = "Hide this message"
+StatusShowAll   = "Show all messages"
+
+[s_DetectObjectTypes]
+#ObjectFile         = "File"
+#ObjectLogSector    = "Logical disk sector"
+#ObjectPhysSector   = "Physical disk sector"
+#ObjectMemory       = "Memory"
+#ObjectMail
+#ObjectMailMessage  = "Mail message"
+#ObjectMailBody     = "Mail body"
+#ObjectMailAttach   = "Mail attachment"
+#ObjectRunProcess   = "Running process"
+#ObjectRunModule    = "Running module"
+#ObjectStartup      = "Startup object"
+#ObjectPhoneNumber  = "Phone number"
+default             = "Object " + @
+
+[s_DetectType]
+#DETYPE_VIRWARE         = "Virus"
+#DETYPE_TROJWARE        = "Trojan program"
+#DETYPE_MALWARE         = "Malware"
+#DETYPE_ADWARE          = "Adware"
+#DETYPE_PORNWARE        = "Pornware"
+#DETYPE_RISKWARE        = "Riskware"
+#DETYPE_XFILES
+#DETYPE_SOFTWARE        = "Known safe software"
+#DETYPE_ATTACK          = "Network attack"
+#DETYPE_REGISTRY        = "Registry access"
+#DETYPE_SUSPICACTION    = "Suspicious action"
+#DETYPE_VULNERABILITY   = "Vulnerability"
+default                 = "Unknown threat"
+
+[s_DetectTypeTip]
+#DETYPE_VIRWARE     = "This class of malicious programs covers programs that spread copies of themselves throughout a single machine in order to launch and/or execute this code once a user fulfills a designated action or penetrate other resources within the victim machine. Viruses do not use network resources to penetrate other machines. Copies of viruses can penetrate other machines only if an infected object is accessed and the code is launched by a user on an uninfected machine."
+#DETYPE_TROJWARE    = "This class of malware includes a wide variety of programs that perform actions without the user's knowledge or consent: collecting data and sending it to a cyber criminal, destroying or altering data with malicious intent, causing the computer to malfunction, or using a machine's capabilities for malicious or criminal purposes, such as sending spam. A subset of Trojans damage remote machines or networks without compromising infected machines; these are Trojans that utilize victim machines to participate in a DoS attack on a designated web site."
+#DETYPE_MALWARE     = "Malware (short for malicious software) refers to any program that is deliberately created to perform an unauthorized, often harmful, action."
+#DETYPE_ADWARE      = "Programs designed to launch advertisements, often pop-up banners, on host machines and/or to re-direct search engine results to promotional web sites. Adware programs are often built into freeware or shareware programs, where the adware forms an indirect 'price' for using the free program. Sometimes a Trojan silently downloads an adware program from a web site and installs it onto a user's machine. Or hacker tools, often referred to as Browser Hijackers (because they subvert the web browser to install a program without the user's knowledge), download the adware program using a web browser vulnerability."
+#DETYPE_PORNWARE    = "Pornware is the generic term used by Kaspersky Lab to describe malware-related programs that either use the computer's modem to connect to pornographic pay-to-view services, or download pornographic content from the web, without the consent of the user."
+#DETYPE_RISKWARE    = "Riskware is the generic term used by Kaspersky Lab to describe programs that are legitimate in themselves, but that have the potential for misuse by cyber criminals: for example, remote administration utilities. Such programs have always had the potential to be misused, but they now have a higher profile. During the last few years, there has been a fusion of traditional virus techniques with those of hackers. In the changing climate, such riskware programs have come in to their own as a means of controlling machines for malicious purposes."
+
+[s_DetectGroup]
+#DETYPE_VIRWARE
+#DETYPE_TROJWARE
+#DETYPE_MALWARE     = "Malicious software"
+#DETYPE_ADWARE
+#DETYPE_PORNWARE
+#DETYPE_RISKWARE    = "Unwanted software"
+default             = "Unknown software"
+
+[s_DetectGroupTip]
+#DETYPE_VIRWARE
+#DETYPE_TROJWARE
+#DETYPE_MALWARE     = "Malware (short for malicious software) refers to any program that is deliberately created to perform an unauthorized, often harmful, action."
+#DETYPE_ADWARE
+#DETYPE_PORNWARE
+#DETYPE_RISKWARE    = "The term \"spyware and potentially unwanted software\" refers to software that is unwanted but is not unambiguously harmful. This definition includes both clearly malicious viruses and worms and the more ambiguous spyware and potentially unwanted software. Software such as viruses and worms can spread from computer to computer by exploiting software vulnerabilities or tricking users with social engineering techniques. Spyware and potentially unwanted software spread via these techniques and also by seemingly legitimate installations initiated by users. Users may install an application and due to inadequate notice and consent not be aware of the undesired functionality of the program or the software it came bundled with."
+
+[s_DetectDanger]
+#DETDANGER_HIGH             = "High"
+#DETDANGER_MEDIUM           = "Medium"
+#DETDANGER_LOW              = "Low"
+#DETDANGER_INFORMATIONAL    = "Informational"
+default                     = if(@, "unk: " + @)
+
+[s_DetectSureTypeName]
+#DETYPE_VIRWARE = s_DetectType(DetectType) + " " + DetectName
+default         = s_DetectType(DetectType) + " " + DetectName + if(DetectType != #DETYPE_REGISTRY && TaskType != "pdm", " (modification)")
+
+[s_DetectObjectStatus]
+#OBJSTATUS_INFECTED
+#OBJSTATUS_SUSPICION
+#OBJSTATUS_NOTDISINFECTED           = "Detected"
+#OBJSTATUS_UNKNOWN                  = "Not found"
+#OBJSTATUS_DISINFECTED              = "Disinfected"
+#OBJSTATUS_DELETED                  = "Deleted"
+#OBJSTATUS_QUARANTINED              = "Quarantined"
+#OBJSTATUS_DELETED_ON_REBOOT        = "Will be deleted when the computer is restarted"
+#OBJSTATUS_DISINFECTED_ON_REBOOT    = "Will be disinfected when the computer is restarted"
+#OBJSTATUS_QUARANTINED_ON_REBOOT    = "Will be quarantined when the computer is restarted"
+#OBJSTATUS_ADDEDBYUSER              = "Added by user"
+#OBJSTATUS_ADDEDTOEXCLUDE           = "Added to exclusions"
+#OBJSTATUS_ALLOWED                  = "Allowed"
+#OBJSTATUS_DENIED                   = "Denied"
+default                             = "unk: " + ObjectStatus
+
+[s_ProductKeyInvalid]
+#ekirWrongProduct           = "This license key is intended for another product."
+#ekirTrialAlredyUsed        = "This license key has already been used."
+#ekirKeyCreationDateInvalid
+#ekirKeyInstallDateInvalid  = "Incorrect license key activation date."
+#ekirTrialAlreadyInUse      = "This license key is already in use."
+#ekirInvalidBlacklist       = "File black.lst is missing or corrupted. Please run Updater to fix this problem."
+default                     = "Your license key is invalid. Please contact your dealer or local support service."
+
+[MainWindow.Protection.ProductInfo]
+KeyBlocked.Text             = "Your license key is blacklisted. Updates are disabled. Please contact your dealer or local support service."
+KeyLimited.Text             = "You have exceeded the maximum number of application copies that can be installed with this license key."
+KeyTrialExpired.Text        = "Trial license has expired. Protection is disabled."
+KeyExpired.Text             = "License has expired."
+NoKeys.Text                 = $ProductName + " is not activated."
+ProductAdminPolicy.Text     = "Application settings are controlled by the network security policy. Please contact your system administrator if necessary."
+ProductNotActivated.Text    = $ProductName + " is not activated. Updates are disabled."
+KeyAboutExpiration.Text     = "Product license expires in " + LicInfo.DaysTillExpiration + " days. You are advised to renew the license."
+KeyWillBeBlocked.Text       = "Your license key has been compromised. Protection might be disabled at any time. Please contact your dealer or local support service."
+TasksMalfunction.Text       = "Some protection components failed to start." + if($IsNeedReboot, " Please restart your computer.")
+ProtectionNotRunning.Text   = "Malware Protection is not running."
+ProtectionSafeMode.Text     = "System is running in safe mode. Some protection services are disabled."
+ProtectionDisabled.Text     = "Malware Protection is disabled."
+TasksDisabled.Text          = "Some protection services are disabled."
+TasksNotRunning.Text        = "Some protection services are not running."
+KeyWillBeExpired.Text       = "Product license expires in " + LicInfo.DaysTillExpiration + " days. When the license expires, " + switch(LicInfo.KeyInfo.KeyType, "LicAction") + " will be disabled."
+UpdateRunning.Text          = "Updater is running."
+ScanRunning.Text            = profiledesc(ScanningTask) + " is running."
+MyComputerNotScanned.Text   = "A full computer scan has never been performed. You are advised to perform a full scan as soon as possible."
+KeyTrial.Text               = "You are using a product with a trial license (" + LicInfo.DaysTillExpiration + " days left)."
+ProductNotAutoRun.Text      = $ProductName + "auto-start is disabled. You are advised enable it."
+AntiSpamNeedTraining.Text   = "Anti-Spam: training needed"
+OnBatteriesScanOff.Text     = "Computer is running on battery power. Automatic scanning is disabled."
+SomeSkipped.Text            = "You have hidden messages."
+
+[MainWindow.Protection.ThreatInfo_Normal]
+Scanned.Name        = "Total scanned:"
+Threats.Name        = "Detected:"
+AttacksBlocked.Name = "Attacks blocked:"
+
+[s_LicKeyType]
+#ektBeta        = "Beta key"
+#ektTrial       = "Trial key"
+#ektTest        = "Test key (Not for resale)"
+#ektOEM         = "OEM key"
+#ektCommercial  = "Commercial key"
+default         = "Unknown key"
+
+[MainWindow.Protection.ProductInfo_Normal]
+Version.Name        = "Product version:"
+VersionHotfix.Name  = "Product hotfix:"
+LicenceOwner.Name   = "Owner:"
+LicenceNumber.Name  = "License number:"
+LicenceType.Name    = "Type:"
+ExpirationDate.Name = "Expiration date:"
+OSVersion.Name      = "Operating system:"
+
+[Product_Events_ReportNavigator_Find]
+MatchCase   = "Match case"
+WholeWord   = "Match whole word only"
+
+[Product_Events_Report]
+Time        = "Time"
+Application = "Application"
+Task        = "Subsystem"
+Verdict     = "Verdict"
+Action      = "Action"
+Object      = "Object"
+Reason      = "Reason"
+
+[Product_Events_Report_Application]
+Path        = "Path"
+Name        = "Name"
+PID         = "Process ID"
+CommandLine = "Settings"
+
+[Product_Events_Report_Verdict]
+Descr           = "Description"
+DetectType      = "Type"
+DetectName      = "Name"
+DetectDanger    = "Threat"
+Exact           = "Precision"
+
+[Product_Events_Report_Object]
+Type    = "Type"
+Path    = "Path"
+Name    = "Name"
+Size    = "Size"
+
+[Product_Scan_Statistics_List]
+Object          = "Object"
+Time            = "Time spent"
+Scaned          = "Scanned"
+Detected        = "Detected"
+NotProcessed    = "Not processed"
+Archived        = "Archives"
+Packed          = "Packed"
+PswProtected    = "Password-protected"
+Corrupted       = "Corrupted"
+ScanErrors      = "Errors"
+
+[PauseProtectionRequestDialog]
+@       = "Pause protection"
+Text    = "Protection will now paused. It is able to resume according following scenaries:"
+
+[PauseProtectionRequestDialog_TimeButton]
+Name = "In"
+
+[PauseProtectionRequestDialog_TimeButton_Time]
+60      = "1 minute"
+180     = "3 minutes"
+300     = "5 minutes"
+900     = "15 minutes"
+1800    = "30 minutes"
+3600    = "1 hour"
+10800   = "3 hours"
+18000   = "5 hours"
+
+[Product_Threats_Report_Menu]
+Treat           = "Disinfect"
+GotoToVulDesc   = "Go to description"
+AddToExclude    = "Add to exclusions"
+GotoFile        = "Go to file"
+Discard         = "Delete from the list"
+TreatAll        = "Disinfect all"
+DiscardAll      = "Clear list"
+QuarantineAdd   = "Add to quarantine..."
+Restore         = "Restore"
+ViewOnWeb       = "View on web"
+
+[s_PasswordConfirmReason]
+default = "To perform this operation, please enter the password specified in " + $ProductName + " settings."
+
+[CheckProductPassword]
+@ = "Password checking"
+
+[CheckProductPassword_Body_EditBlock]
+Pswd2CheckText  = "Password:"
+Pswd2Save       = "Save password for current session"
+
+[NewAppSniffer]
+@       = "New application started"
+Info    = "Please wait while " + $ProductName + " investigates it"
+
+[PauseProtectionRequestDialog_Actions]
+Time.Descr      = "Protection will be paused, please specify when protection should resume"
+Reboot.Name     = "After reboot"
+Reboot.Descr    = "Protection will automatically resumed after computer restart"
+OnDemand.Name   = "Manually"
+OnDemand.Descr  = "Protection will be paused until the user enables it again"
+
+[MainWindow.Protection_WorkArea_Home]
+Tasks.Header            = "Tasks"
+HomeLeft.Group2.Header  = "Scanned (objects/sec)"
+
+[Product_Threats_Navigator]
+CureAll.Name = "Disinfect all"
+
+[Product_Threats_Navigator_Filter]
+Active      = "Active threats"
+Quarantined = "Quarantined files"
+Disinfected = "Disinfected files"
+All         = "All detected malware"
+
+[Product_Threats_Report]
+Status      = "Status"
+Object      = "Object"
+Detected    = "Detected"
+row         = "Label"
+
+[Product_Threats_Report_Footer]
+CureAll = "Disinfect all"
+AddToQB = "Add to quarantine..."
+
+[Product_Threats_Report_Object]
+Path    = "Path"
+Name    = "Name"
+
+[MainWindow.Protection_WorkArea]
+Home.Group2.Header = "Objects scanned"
+
+[s_ProductNotifyTextByTaskID]
+#eTASK_SELFPROT = $AppName + ": " + s_Action(Action) + " of our process. " + s_Verdict(Verdict) + ". "
+#eTASK_SCAN     = if($IsEventObjInfected, "File " + object(ObjectID) + " contains " + s_RepDetectType(DetectType) + if(DetectName, " " + object(DetectName)) + "." + if(Verdict != #eDETECTED, " " + s_Verdict(Verdict) + ". "))
+#eTASK_FAV      = if($IsEventObjInfected, $AppName + ": obtaining access to file " + object(ObjectID) + " containing " + s_RepDetectType(DetectType) + if(DetectName, " " + object(DetectName)) + "." + if(Verdict != #eDETECTED, " " + s_Verdict(Verdict) + ". "))
+#eTASK_MAV      = if($IsEventObjInfected, $AppName + ": receiving email message containing " + s_RepDetectType(DetectType) + if(DetectName, " " + object(DetectName)) + "." + if(Verdict != #eDETECTED, " " + s_Verdict(Verdict) + ". "))
+#eTASK_HTTP     = if($IsEventObjInfected, $AppName + ": downloading object " + object(ObjectID) + " containing " + s_RepDetectType(DetectType) + if(DetectName, " " + object(DetectName)) + ". " + s_Verdict(Verdict) + ". ")
+#eTASK_AB       = if(!$IsEventTask, "Banner " + object(ObjectID) + ". " + s_Verdict(Verdict) + ".")
+#eTASK_PC       = if(!$IsEventTask, s_ProductNotifyText_ParCtl(Verdict))
+#eTASK_AD       = if(!$IsEventTask, $AppName + ": dialing the number " + object(ObjectID) + ". " + s_Verdict(Verdict) + ".")
+#eTASK_AP       = if(!$IsEventTask, $AppName + ": visiting the phishing site " + object(ObjectID) + ". " + s_Verdict(Verdict) + ".")
+#eTASK_IDS      = if(!$IsEventTask, "Network attack " + object(DetectName) + ". Blocked.")
+#eTASK_HIPS     = if(!$IsEventTask, $AppName + ": " + s_Action(Action) + s_ObjectType(ObjectType) + ". " + s_Verdict(Verdict) + ".")
+#eTASK_PDM      = if(!$IsEventTask, $AppName + ": behavior similar to " + object(DetectName) + ". " + s_Verdict(Verdict) + ".")
+
+[s_DetectBehaviour]
+100 = "Trojan-ArcBomb"
+101 = "Backdoor"
+102 = "Trojan"
+103 = "Trojan-AOL"
+104 = "Trojan-Clicker"
+105 = "Trojan-Downloader"
+106 = "Trojan-Dropper"
+107 = "Trojan-MSN"
+108 = "Trojan-Notifier"
+109 = "Trojan-Proxy"
+110 = "Trojan-PSW"
+111 = "Trojan-Spy"
+112 = "Trojan-DDoS"
+114 = "Trojan-IM"
+115 = "RootKit"
+116 = "Trojan-SMS"
+    
+200 = "Email-Worm"
+201 = "IM-Worm"
+202 = "IRC-Worm"
+203 = "Net-Worm"
+204 = "P2P-Worm"
+205 = "Worm"
+206 = "Virus"
+
+300 = "Constructor"
+301 = "DoS"
+302 = "Exploit"
+303 = "FileCryptor"
+304 = "Flooder"
+305 = "HackTool"
+306 = "not-virus:Hoax"
+307 = "not-virus:BadJoke"
+308 = "Nuker"
+309 = "PolyCryptor"
+310 = "PolyEngine"
+311 = "Sniffer"
+312 = "SpamTool"
+313 = "Spoofer"
+314 = "VirTool"
+315 = "Email-Flooder"
+316 = "IM-Flooder"
+317 = "SMS-Flooder"
+
+400 = "not-a-virus:AdWare"
+
+500 = "not-a-virus:Porn-Dialer"
+501 = "not-a-virus:Porn-Downloader"
+502 = "not-a-virus:Porn-Tool"
+
+600 = "not-a-virus:Tool"
+601 = "not-a-virus:Client-IRC"
+602 = "not-a-virus:Dialer"
+603 = "not-a-virus:Downloader"
+604 = "not-a-virus:Monitor"
+605 = "not-a-virus:PSWTool"
+606 = "not-a-virus:RemoteAdmin"
+607 = "not-a-virus:Server-FTP"
+608 = "not-a-virus:Server-Proxy	= 608"
+609 = "not-a-virus:Server-Telnet"
+610 = "not-a-virus:Server-Web"
+611 = "not-a-virus:RiskTool"
+612 = "not-a-virus:NetTool"
+613 = "not-a-virus:Client-P2P"
+614 = "not-a-virus:Client-SMTP"
+615 = "not-a-virus:AdTool"
+616 = "not-a-virus:FraudTool"
+
+700 = "X-Files"
+default	= "Unknown type"
+
+[s_BehaviourDetails]
+100 = "These Trojans are archived files coded to sabotage the de-compressor when it attempts to open the infected archived file. The victim machine will slow or crash when the Trojan bomb explodes, or the disk will be filled with nonsense data. ArcBombs are especially dangerous for servers, particularly when incoming data is initially processed automatically: in such cases, an ArcBomb can crash the server."
+101 = "Today backdoors are the most dangerous type of Trojans and the most widespread. These Trojans are remote administration utilities that open infected machines to external control via a LAN or the Internet. They function in the same way as legal remote administration programs used by system administrators. This makes them difficult to detect."
+102 = "This loose category includes a variety of Trojans that damage victim machines or threaten data integrity, or impair the functioning of the victim machine."
+103 = "Currently there is no description available for Trojan-AOL."
+104 = "This family of Trojans redirects victim machines to specified websites or other Internet resources. Clickers either send the necessary commands to the browser or replace system files where standard Internet urls are stored (e.g. the 'hosts' file in MS Windows)."
+105 = "This family of Trojans downloads and installs new malware or adware on the victim machine. The downloader then either launches the new malware or registers it to enable autorun according to the local operating system requirements. All of this is done without the knowledge or consent of the user."
+106 = "These Trojans are used to install other malware on victim machines without the knowledge of the user. Droppers install their payload either without displaying any notification, or displaying a false message about an error in an archived file or in the operating system. The new malware is dropped to a specified location on a local disk and then launched."
+107 = "Currently there is no description available for Trojan-MSN."
+108 = "These Trojans inform the 'master' about an infected machine. Notifiers confirm that a machine has been successfully infected, and send information about IP-address, open port numbers, the email address etc. of the victim machine. This information may be sent by email, to the master's website, or by ICQ."
+109 = "These Trojans function as a proxy server and provide anonymous access to the Internet from victim machines. Today these Trojans are very popular with spammers who always need additional machines for mass mailings. Virus coders will often include Trojan-proxies in Trojan packs and sell networks of infected machines to spammers."
+110 = "This family of Trojans steals passwords, normally system passwords from victim machines. They search for system files which contain confidential information such as passwords and Internet access telephone numbers and then send this information to an email address coded into the body of the Trojan. It will then be retrieved by the 'master' or user of the illegal program."
+111 = "This family includes a variety of spy programs and key loggers, all of which track and save user activity on the victim machine and then forward this information to the master. Trojan-spies collect a range of information including: Keystrokes, Screenshots, Logs of active applications, Other user actions. These Trojans are most often used to steal banking and other financial information to support online fraud."
+112 = "Currently there is no description available for Trojan-DDoS."
+114 = "Currently there is no description available for Trojan-IM."
+115 = "A rootkit is a collection of programs used by a hacker to evade detection while trying to gain unauthorized access to a computer. This is done either by replacing system files or libraries, or by installing a kernel module. The hacker installs the rootkit after obtaining user-level access: typically this is done by cracking a password or by exploiting a vulnerability. This is then used to gather other user IDs until the hacker gains root, or administrator, access to the system."
+116 = "This Trojan infects mobile phones."
+
+200 = "Email worms spread via infected email messages. The worm may be in the form of an attachment or the email may contain a link to an infected website. However, in both cases email is the vehicle. In the first case the worm will be activated when the user clicks on the attachment.In the second case the worm will be activated when the user clicks on the link leading to the infected site."
+201 = "These worms have a single propagation method. They spread using instant messaging applications by sending links to infected websites to everyone on the local contact list. The only difference between these worms and email worms which send links is the media chosen to send the links."
+202 = "These worms target chat channels, although to day IRC worms have been detected. IRC worms also use the propagation methods listed above - sending links to infected websites or infected files to contacts harvested from the infected user. Sending infected files is less effective as the recipient needs to confirm receipt, save the file and open it before the worm is able to penetrate the victim machine."
+203
+204 = "P2P worms copy themselves into a shared folder, usually located on the local machine. Once the worm has successfully placed a copy of itself under a harmless name in a shared folder, the P2P network takes over: the network informs other users about the new resource and provides the infrastructure to download and execute the infected file."
+205 = "This category includes programs that propagate via LANs or the Internet with the following objectives: Penetrating remote machines, Launching copies on victim machines, Spreading further to new machines. Worms use different networking systems to propagate: email, instant messaging, file-sharing (P2P), IRC channels, LANs, WANs and so forth."
+206 = "This class of malicious programs covers programs that spread copies of themselves throughout a single machine in order to: Launch and/or execute this code once a user fulfills a designated action, Penetrate other resources within the victim machine."
+
+300
+314 = "Virus writers use constructor utilities to create new malicious programs and Trojans. It is known that constructors to create macro-viruses and viruses for Windows are in existence. Constructors can be used to generate virus source code, object modules and infected files."
+301 = "These programs attack web servers by sending numerous requests to the specified server, often causing it to crash under an excessive volume of requests. If the server is not backed by additional resources, it will signal the failure to process requests by denying service. This is why such attacks are called Denial of Service attacks."
+302
+305 = "These utilities are designed to penetrate remote computers in order to use them as zombies (by using backdoors) or to download other malicious programs to victim machines. Exploits use vulnerabilities in operating systems and applications to achieve the same result."
+303
+309 = "These are hacker utilities used by virus writers use to encrypt malicious programs to prevent them being detected by antivirus software."
+304 
+315
+316
+317 = "These utilities are used to flood data channels with useless packets and emails."
+306 = "not-virus:Hoax"
+307 = "not-virus:BadJoke"
+308 = "Hackers use these utilities to crash attacked machines by sending specially coded/phrased requests. These requests exploit vulnerabilities in applications and operating systems to cause fatal errors."
+310 = "Polymorphic generators are not viruses in the true sense of the word. They do not propagate by opening, closing or writing code into files or reading and writing sectors. These programs encrypt the body of the virus and generate a de-encryption routine."
+311 = "Currently there is no description available for Sniffer"
+312 = "Currently there is no description available for SpamTool"
+313 = "Currently there is no description available for Spoofer"
+400 = "Programs belonging to this class display advertising, usually in the form of banners. They also redirect search requests to advertising sites. Apart from displaying advertising, there is usually no other visible sign that adware is present on the host system: they do not add icons to the system tray, and there is no sign in the Program Menu that files have been installed. Adware programs often do not have a de-installation routine."
+500
+501
+502 = "The term Pornware denotes programs which are involved in causing pornographic content to be displayed to the user. The Pornware class currently includes Porn-Dialer, Porn-Downloader and Porn-Tool programs. Dialers connect to pornographic phone services. Downloader programs will download pornographic material to the host machine. Porn-Tool covers all types of utilities which are connected with searching for and displaying pornographic material (e.g. special browser toolbars or video players)."
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620 = "Riskware is a term used to describe legal programs (many of which have legitimate applications and which are freely available) which could be used for malicious purposes. The Riskware class includes such programs as legitimate remote administration utilities, IRC client programs, dialer programs, downloader programs, any type of activity monitor, password utilities, and many internet services such as FTP, Web, Proxy and Telnet."
+default	= "Currently there is no description available for this object type."
+
+
+

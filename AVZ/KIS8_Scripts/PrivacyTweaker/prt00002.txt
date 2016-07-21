@@ -1,0 +1,56 @@
+// $AVZ1494
+//$ Очистить журнал браузера
+// Функция поиска проблемы
+function Check : dword;
+var
+ Lines : TStrings;
+ i : integer;
+ S : string;                           
+begin
+ Result := 0;                               
+ Lines := TStringList.Create;
+ RegKeyEnumKey('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\Extensible Cache', Lines);
+ for i:= 0 to Lines.Count-1 do
+  if pos('MSHIST', UpperCase(Lines[i])) = 1 then begin
+   S := Trim(RegKeyStrParamRead('HKCU','Software\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\Extensible Cache\'+Lines[i],'CachePath'));
+   if S <> '' then begin
+    S := NormalFileName(NormalDir(S)+'index.dat');                            
+    if FileExists(S) then begin 
+     // Найден журнал !            
+     Result := 3;
+    end;             
+   end;              
+  end;
+ Lines.Free;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+var
+ Lines : TStrings;
+ i : integer;
+ S : string;                           
+begin
+ Result := 0;                               
+ Lines := TStringList.Create;
+ RegKeyEnumKey('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\Extensible Cache', Lines);
+ for i:= 0 to Lines.Count-1 do
+  if pos('MSHIST', UpperCase(Lines[i])) = 1 then begin
+   S := Trim(RegKeyStrParamRead('HKCU','Software\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\Extensible Cache\'+Lines[i],'CachePath'));
+   if S <> '' then begin
+    S := NormalFileName(NormalDir(S)+'index.dat');                            
+    // Удаление ключа реестра с описанием журнала
+    RegKeyDel('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\Extensible Cache'+Lines[i]);
+    if FileExists(S) then begin
+     // Удаление самого журнала
+     DeleteFile(S);                                 
+     // Удаление каталога журнала
+     DeleteDirectory(ExtractFilePath(S));                                                                               
+    end;             
+    // Файл не удалился - попросим перезагрузку
+    if FileExists(S) then
+     Result := 1;                               
+   end;              
+  end;
+ Lines.Free;
+end;

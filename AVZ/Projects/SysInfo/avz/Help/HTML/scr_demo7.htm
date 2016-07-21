@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?scr_demo7.htm"; }
+else { parent.quicksync('a15.42.8'); }
+//-->
+</script>
+   <title>&#1047;&#1072;&#1075;&#1086;&#1090;&#1086;&#1074;&#1082;&#1072; &#1089;&#1082;&#1088;&#1080;&#1087;&#1090;&#1072; &#1076;&#1083;&#1103; &#1089;&#1082;&#1072;&#1085;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1103; &#1089;&#1077;&#1090;&#1080;</title>
+   <meta name="keywords" content="&#1089;&#1082;&#1072;&#1085;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1103; &#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072; &#1055;&#1050;">
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+
+
+<body bgcolor="#FFFFFF">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Заготовка скрипта для сканирования сети</span></p>
+
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="t_about.htm">Наверх</a>&nbsp;
+     <a href="scr_demo6.htm">Предыдущая</a>&nbsp;
+     <a href="scr_demo9.htm">Последующая</a>
+     </font><B>|</B>
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=717989"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=717989;t=109;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=18 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=717989"><img
+src="http://top.list.ru/counter?js=na;id=717989;t=109"
+border=0 height=18 width=88
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+    </td>
+  </tr>
+</table>
+<br>
+
+<p>Заготовка типового скрипта для сканирования множества ПК в сети:</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Проверка - блокировки запуска</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;"> if</span><span style="font-size: 12pt; font-family: 'Courier New';"> pos(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'первые буквы имени'</span><span style="font-size: 12pt; font-family: 'Courier New';">, GetComputerName) = </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">1</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">then</span><span style="font-size: 12pt; font-family: 'Courier New';"> ExitAVZ;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;"> if</span><span style="font-size: 12pt; font-family: 'Courier New';"> GetComputerName = </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'имя1'</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">then</span><span style="font-size: 12pt; font-family: 'Courier New';"> ExitAVZ;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;"> if</span><span style="font-size: 12pt; font-family: 'Courier New';"> GetComputerName = </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'имя2'</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">then</span><span style="font-size: 12pt; font-family: 'Courier New';"> ExitAVZ;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;"> // Пауза на 50 сек, чтобы не мешать автозагрузке </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> Sleep(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">50</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;"> // Настройка AVZ</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SetupAVZ(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'UseQuarantine=Y'</span><span style="font-size: 12pt; font-family: 'Courier New';">); </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Включить карантин</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SetupAVZ(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'nw=Y'</span><span style="font-size: 12pt; font-family: 'Courier New';">); </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Сетевой режим карантина</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SetupAVZ(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'Priority=-1'</span><span style="font-size: 12pt; font-family: 'Courier New';">); </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Пониженный приоритет</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SetupAVZ(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'EvLevel=3'</span><span style="font-size: 12pt; font-family: 'Courier New';">); </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Эвристика на максимум </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SetupAVZ(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'ExtEvCheck=Y'</span><span style="font-size: 12pt; font-family: 'Courier New';">); </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Расширенный анализ включен </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SetupAVZ(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'DelVir=Y'</span><span style="font-size: 12pt; font-family: 'Courier New';">); </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Включить лечение </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;"> // Активирование сторожевого таймера на 15 минут</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> ActivateWatchDog(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">60</span><span style="font-size: 12pt; font-family: 'Courier New';"> * </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">15</span><span style="font-size: 12pt; font-family: 'Courier New';">); </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;"> // Запуск сканирования</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> RunScan;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;"> // Добавление данных о имени ПК</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> AddToLog(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'---------------'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> AddToLog(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'Протокол с компьютера '</span><span style="font-size: 12pt; font-family: 'Courier New';">+GetComputerName);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> AddToLog(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'Путь к AVZ = '</span><span style="font-size: 12pt; font-family: 'Courier New';"> + GetAVZDirectory);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;"> // Автокарантин</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> ExecuteAutoQuarantine;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;"> // Сохранение протокола</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SaveLog(GetAVZDirectory+</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'\LOG\'</span><span style="font-size: 12pt; font-family: 'Courier New';">+GetComputerName+</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'_ log.txt'</span><span style="font-size: 12pt; font-family: 'Courier New';">); </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;"> // Завершение работы AVZ </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> ExitAVZ;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';">. </span></p>
+<p>&nbsp;</p>
+<p>Параметры запуска AVZ в этом случае:</p>
+<p><span style="font-weight: bold;">\\</span><span style="font-weight: bold;">my_server</span><span style="font-weight: bold;">\AVZ\avz.exe Priority=-1 nw=Y nq=Y HiddenMode=2 Script=\\</span><span style="font-weight: bold;">my_server</span><span style="font-weight: bold;">\AVZ\</span><span style="font-weight: bold;">netscan</span><span style="font-weight: bold;">.avz</span></p>
+<p>&nbsp;</p>
+<p>при этом предполагается, что AVZ находится в папке \\my_server\AVZ, а скрипт сохранен в файле netscan.avz.</p>
+<p>Некоторые комментарии по скрипту и параметрам запуска:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Priority=-1 - запускает AVZ с пониженным приоритетом, чтобы он не мешал работе компьютера. Этот ключ дублируется в скрипте и командной строке и в принципе не обязателен в случае сканирования современных ПК</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>nw=Y - аналогично, дублируется в командной строке и скрипте (дублирование это не обязательно, достаточно в одном месте). Этот ключ переключает карантин в "сетевой режим" - в нем в папке Quarantine появляется еще один уровень - по сетевому имени компьютера</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>HiddenMode=2 - запуск AVZ в скрытом режиме - в трее на время сканирования видна иконка AVZ, но доступ пользователя к органам управления AVZ-ом блокирован. Папку Quarantine необходимо предварительно создать и выдать пользователям права на запись в нее</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><a href="script_savelog.htm">SaveLog</a>(GetAVZDirectory+'\LOG\'+GetComputerName+'_ log.txt'); - в данном случае сохранение протокола идет в рабочем каталоге AVZ, причем протокол содержит в имени имя компьютера. Папку LOG необходимо предварительно создать и выдать пользователям права на запись в нее</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Вызов <a href="script_executeautoquarantin.htm">ExecuteAutoQuarantine</a>; в скрипте для обычного сканирования следует закомментировать - эта функция собирает все файлы, находящиеся в памяти или автозапуске и не опознанные как безопасные и системные. Сбор таких файлов удобен для их последующей проверки несколькими антивирусами</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Проверки вида "if pos('первые буквы имени', <a href="script_getcomputername.htm">GetComputerName</a>) = 1 then ExitAVZ;" и "if GetComputerName = 'имя2' then ExitAVZ;" естественно не обязательны&nbsp; и позволяют исключать из сканирования компьютеры с заданными сетевыми именами. Это удобно для отключения ежедневного сканирования компьютеров администраторов сети и IT-специалистов (но при этом AVZ у них находится в автозапуске и в случае чего можно убрать фильтр и включить их ПК в сканирование).</td></tr></table></div><p>&nbsp;</p>
+
+
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=717989;js='+js+a+';rand='+Math.random()+
+'" height=1 width=1/>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=717989"
+height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+
+</body>
+</html>

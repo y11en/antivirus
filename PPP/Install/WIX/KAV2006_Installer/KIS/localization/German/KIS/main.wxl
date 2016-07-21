@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+
+<WixLocalization xmlns="http://schemas.microsoft.com/wix/2003/11/localization" Codepage="1252">
+
+	<String Id="LANG">1031</String>
+	<String Id="Localization">de</String>  <!-- DO NOT LOCALIZE THIS VALUE! -->
+	<String Id="LoginImage">images\lgnkis.png</String>	<!-- DO NOT LOCALIZE THIS VALUE! -->
+	<!-- Common project information -->
+
+	<String Id="ProductName">Kaspersky Internet Security 7.0</String>
+	<String Id="ProductDesc">Kaspersky Internet Security 7.0</String>
+	<String Id="ProductManufacturer">Kaspersky Lab</String>
+	<String Id="ProductKeywords">Installer,MSI,Database</String>
+	<String Id="ProductHelpLink">http://www.kaspersky.com/de/dienste?chapter=146440298</String>
+	<String Id="ProductUpdateLink">http://www.kaspersky.com/de/downloads?chapter=146440560</String>
+	<String Id="ProductSummaryCodepage">1252</String>  <!-- DO NOT LOCALIZE THIS VALUE! -->
+	<String Id="DiskPrompt">Bitte legen Sie die folgendermaßen markierte CD ein: &quot;Simple&quot;</String>
+	<String Id="ProductLicBuyLink"><![CDATA[http://www.kaspersky.com/de/store]]></String>
+	<String Id="ProductLicRenewLink"><![CDATA[http://www.kaspersky.com/de/renew]]></String>
+
+	<!--Legacy version 6 folder-->
+	<String Id="ProductVer6StartMenuFolderName">Kaspersky Internet Security 6.0</String>
+	<String Id="ProductVer6StartMenuShortFolderName">KIS6.0</String>
+	
+	<String Id="ProductStartMenuFolderName">Kaspersky Internet Security 7.0</String>
+        <!-- format 8.3!!! -->
+	<String Id="ProductStartMenuShortFolderName">KIS7.0</String>
+        <!-- format 8.3!!! -->
+	<String Id="ProductShortcutShortName">KIS7.0</String>
+	<String Id="ProductShortcutLongName">Kaspersky Internet Security 7.0</String>
+        <!-- format 8.3!!! -->
+	<String Id="UninstallShortcutShortName">Löschen</String>
+	<String Id="UninstallShortcutLongName">Ändern, Reparieren oder Löschen</String>
+        <!-- format 8.3!!! -->
+	<String Id="InternetShortcutShortName">kaspersky.de</String>
+	<String Id="InternetShortcutLongName">Kaspersky Lab im Internet</String>
+        <!-- format 8.3!!! -->
+	<String Id="HelpShortcutShortName">Hilfe</String>
+	<String Id="HelpShortcutLongName">Hilfe für Kaspersky Internet Security 7.0</String>
+        <!-- format 8.3!!! -->
+	<String Id="LicenseShortcutShortName">Lizenz</String>
+	<String Id="LicenseShortcutLongName">Lizenzvertrag</String>
+        <!-- format 8.3!!! -->
+	<String Id="NotesShortcutShortName">Readme</String>
+	<String Id="NotesShortcutLongName">Release Notes</String>
+	
+	<String Id="UpdaterRegion">America</String>  <!-- DO NOT LOCALIZE THIS VALUE! -->
+	
+	<!-- Drivers names and descriptions -->
+
+	<String Id="KlifDriverDesc">Klif</String>
+	<String Id="KlifDriverDisplayName">Klif</String>
+	<String Id="KlinDriverDesc">Klin</String>
+	<String Id="KlinDriverDisplayName">Klin</String>
+	<String Id="KlickDriverDesc">Klick</String>
+	<String Id="KlickDriverDisplayName">Klick</String>
+	<String Id="Kl1DriverDesc">Kl1</String>
+	<String Id="Kl1DriverDisplayName">Kl1</String>
+	<String Id="KlFltDevDriverDesc">KlFltDev</String>
+	<String Id="KlFltDevDriverDisplayName">KlFltDev</String>
+	<String Id="KlBgDriverDesc">KlBg</String>
+	<String Id="KlBgDriverDisplayName">KlBg</String>
+	<String Id="KlopDriverDesc">Klop</String>
+	<String Id="KlopDriverDisplayName">Klop</String>
+	
+	<String Id="AVPServiceDescription">Bietet Schutz vor Computerviren, Spionageprogrammen, Hackerangriffen, Cyberkriminalität und Spam.</String>
+	<String Id="AVPServiceDisplayName">Kaspersky Internet Security 7.0</String>
+
+	<!-- Product features -->	
+	<String Id="WholeProductFeatureTitle"><![CDATA[Kaspersky Internet Security 7.0]]></String>
+	<String Id="WholeProductFeatureDesc"><![CDATA[Kaspersky Internet Security bietet den komplexen Schutz Ihres Computers vor beliebigen Bedrohungen und gefährlichen Programmen (Viren, Hackerangriffe, Spam usw.)]]></String>
+		
+</WixLocalization>

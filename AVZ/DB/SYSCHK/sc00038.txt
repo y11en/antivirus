@@ -1,0 +1,4 @@
+// ***** AdvWare.ToolBar.FreeComm.b *****
+begin
+ AddEvAlarmByCLSID('2E9CAFF6-30C7-4208-8807-E79D4EC6F806',AScriptName,'submithook.dll');
+end.

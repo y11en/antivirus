@@ -1,0 +1,4 @@
+// ***** AdvWare.MediaMotor.a *****
+begin
+ AddEvAlarmByCLSID('E0CE16CB-741C-4B24-8D04-A817856E07F4',AScriptName,'m*.ocx');
+end.

@@ -1,0 +1,17 @@
+// $AVZ1544
+//$ MediaPlayer - отключить передачу запросов на загрузку кодеков
+// Функция поиска проблемы
+function Check : dword;
+begin
+ Result := 0;
+ if RegKeyIntParamRead('HKCU','Software\Microsoft\MediaPlayer\Preferences', 'UpgradeCodecPrompt') <> 0 then
+  Result := 1;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+begin
+ RegKeyIntParamWrite('HKCU','Software\Microsoft\MediaPlayer\Preferences', 'UpgradeCodecPrompt', 0);
+ Result := 0;
+end;
+

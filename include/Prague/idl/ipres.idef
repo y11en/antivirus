@@ -1,0 +1,61 @@
+forward interface IPRESOLVER;
+typedef IPRESOLVER* hIPRESOLVER;
+
+
+
+
+[
+  mnemonic(IID_IPRESOLVER)
+  id(61011)
+  c_type_name(hIPRESOLVER)
+]
+interface IPRESOLVER {
+
+  // ------------------------------------
+    typedef tDWORD tResolveMethod;
+
+
+  // ------------------------------------
+    const tResolveMethod cJUST_RESOLVE = 0;
+    const tResolveMethod cTIMED_RESOLVE = 1;
+    const tResolveMethod cCONTINOUS_RESOLVE = 2;
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Interface version")
+      id(130)
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      comment_ex("Interface comment")
+      id(131)
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+
+
+  // ------------------------------------
+    method tERROR ResolveHost(
+      tUINT* result,
+      hSTRING HostName,
+      tResolveMethod ResolveMethod
+    );
+    method tERROR ResolveBreak( tVOID* result, tUINT ResolveID );
+    method tERROR ResolveHostAtOnce( hSTRING HostName, cSerializable* IPs );
+    method tERROR ResolveIP(
+      tUINT* result,
+      tDWORD ip,
+      tResolveMethod ResolveMethod
+    );
+
+
+  // ------------------------------------
+    [ id(3617569419) ]
+    message_cls pmc_IPRESOLVER_RESULT {
+      [ id(4096) ]  message pm_RESOLVE_INFO;
+    }
+
+}
+

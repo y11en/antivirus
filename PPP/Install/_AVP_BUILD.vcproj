@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioProject ProjectType="Visual C++" Version="8,00" Name="_AVP_BUILD" ProjectGUID="{91D3B8D7-9A02-4641-8D1C-E35DE1F9D9D7}" SccProjectName="Perforce Project" SccLocalPath="." SccProvider="MSSCCI:Perforce SCM" Keyword="MakeFileProj">
+	<Platforms>
+		<Platform Name="Win32"/>
+		<Platform Name="x64"/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="Release|Win32" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\$(ProjectName)" ConfigurationType="0" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool Name="VCNMakeTool" BuildCommandLine="nmake /f &quot;_AVP_BUILD.mak&quot; BUILD=Release" ReBuildCommandLine="nmake /f &quot;_AVP_BUILD.mak&quot; BUILD=Release rebuild" CleanCommandLine="" Output="_AVP_BUILD.exe" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged=""/>
+		</Configuration>
+		<Configuration Name="Release|x64" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\$(ProjectName)" ConfigurationType="0" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool Name="VCNMakeTool" BuildCommandLine="nmake /f &quot;_AVP_BUILD.mak&quot; BUILD=Release" ReBuildCommandLine="nmake /f &quot;_AVP_BUILD.mak&quot; BUILD=Release rebuild" CleanCommandLine="" Output="_AVP_BUILD.exe" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged=""/>
+		</Configuration>
+		<Configuration Name="Debug|Win32" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\$(ProjectName)" ConfigurationType="0" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool Name="VCNMakeTool" BuildCommandLine="nmake /f &quot;_AVP_BUILD.mak&quot; BUILD=Debug" ReBuildCommandLine="nmake /f &quot;_AVP_BUILD.mak&quot; BUILD=Debug rebuild" CleanCommandLine="" Output="_AVP_BUILD.exe" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged=""/>
+		</Configuration>
+		<Configuration Name="Debug|x64" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\$(ProjectName)" ConfigurationType="0" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool Name="VCNMakeTool" BuildCommandLine="nmake /f &quot;_AVP_BUILD.mak&quot; BUILD=Debug" ReBuildCommandLine="nmake /f &quot;_AVP_BUILD.mak&quot; BUILD=Debug rebuild" CleanCommandLine="" Output="_AVP_BUILD.exe" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged=""/>
+		</Configuration>
+		<Configuration Name="ReleaseVSS|Win32" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\$(ProjectName)" ConfigurationType="0" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool Name="VCNMakeTool" BuildCommandLine="nmake /f &quot;_AVP_BUILD.mak&quot; BUILD=Release BuildType_VSSLabelOnly=&quot;1&quot;" ReBuildCommandLine="nmake /f &quot;_AVP_BUILD.mak&quot; BUILD=Release BuildType_VSSLabelOnly=&quot;1&quot; rebuild REBUILD=/REBUILD" CleanCommandLine="" Output="_AVP_BUILD.exe" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged=""/>
+		</Configuration>
+		<Configuration Name="ReleaseVSS|x64" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\$(ProjectName)" ConfigurationType="0" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool Name="VCNMakeTool" BuildCommandLine="nmake /f &quot;_AVP_BUILD.mak&quot; BUILD=Release BuildType_VSSLabelOnly=&quot;1&quot;" ReBuildCommandLine="nmake /f &quot;_AVP_BUILD.mak&quot; BUILD=Release BuildType_VSSLabelOnly=&quot;1&quot; rebuild REBUILD=/REBUILD" CleanCommandLine="" Output="_AVP_BUILD.exe" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged=""/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<File RelativePath="_AVP_BUILD.MAK">
+		</File>
+		<File RelativePath="avp_version.mak">
+		</File>
+		<File RelativePath="get_http_content.pl">
+		</File>
+		<File RelativePath="..\..\out\Release\hist.txt">
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

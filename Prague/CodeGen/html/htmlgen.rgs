@@ -1,0 +1,36 @@
+HKCR
+{
+	'Component Categories'
+	{
+		'{3621F930-DA1A-11d3-BF0D-00D0B7161FB8}'
+		{
+			val 409 = s 'AVP Prague Source Code Generators'
+		}
+	}
+	AVP.PragueSampleCodeGen.1 = s 'AVP Prague Sample Code Generator Class'
+	{
+		CLSID = s '{CD4DF888-F7F4-4e87-86D3-B58BC1DBC456}'
+	}
+	AVP.PragueSampleCodeGen = s 'AVP Prague Sample Code Generator Class'
+	{
+		CLSID = s '{CD4DF888-F7F4-4e87-86D3-B58BC1DBC456}'
+		CurVer = s 'AVP.PragueSampleCodeGen.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {CD4DF888-F7F4-4e87-86D3-B58BC1DBC456} = s 'AVP Prague ANSI C Code Generator Class'
+		{
+			ProgID = s 'AVP.PragueSampleCodeGen.1'
+			'Implemented Categories'
+			{
+				{3621F930-DA1A-11d3-BF0D-00D0B7161FB8}
+			}
+			VersionIndependentProgID = s 'AVP.PragueSampleCodeGen'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{65F686DE-F3CA-41d7-98BF-35043B571503}'
+		}
+	}
+}

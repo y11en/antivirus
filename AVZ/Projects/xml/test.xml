@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<!-- Пример описания процесса инсталляции. (С) Зайцев О.В., 2002 --> 
+
+<INSTALLER>
+ <!-- Главная секция - описание программы --> 
+ <MAIN>
+   <PRGNAME>FINARM</PRGNAME>
+   <VERSION>1.55</VERSION>
+   <NAME>"АРМ Главная книга - оборотный баланс"</NAME>
+   <AUTHOR>Зайцев О.В.</AUTHOR>
+   <SUPPORT>0-48</SUPPORT>
+   <REBOOT>FALSE</REBOOT>
+   <GPS>
+    <TASK>2</TASK>
+    <ARM>2</ARM>
+   </GPS>
+ </MAIN> 
+ <!-- Связи с другими программами --> 
+ <LINKS>
+  <REF>ZREPORTS</REF>
+ </LINKS>
+ <!-- Описание процесса инсталляции --> 
+ <INSTALL>
+ <!-- Секция 1 - сама программма --> 
+  <SECTION name="Программа">   
+   <MKDIR>$ROOT</MKDIR>
+   <FILE>
+    <SRC>test\docum.doc</SRC>
+    <DEST>docum.doc</DEST>
+   </FILE>
+   <FILE>
+    <SRC>test\finarm.exe</SRC>
+    <DEST>finarm.exe</DEST>
+   </FILE>
+   <FILE copy_mode="2">
+    <SRC>test\finarm.ini</SRC>
+    <DEST>finarm.ini</DEST>
+   </FILE>
+   <SHOTCUT>
+    <CMD>finarm.exe</CMD>
+    <DEST>$Desctop\Тыкнуть сюды</DEST>
+   </SHOTCUT>
+  </SECTION>
+
+  <!-- Секция 2 - Отчеты --> 
+  <SECTION name="Отчеты" default="true">   
+   <MKDIR>$ROOT\REP</MKDIR>
+   <FILE>
+    <SRC>rep\avizo.rpz</SRC>
+    <DEST>rep\avizo.rpz</DEST>
+   </FILE>
+   <FILE>
+    <SRC>rep\calk02.rpz</SRC>
+    <DEST>rep\calk02.rpz</DEST>
+   </FILE>
+  </SECTION>
+
+  <!-- Общие файлы --> 
+  <SHARED_FILES>
+   <FILE os="*">
+    <SRC>ilda32.dll</SRC>
+    <DEST>$System\ilda32.dll</DEST>
+   </FILE>
+  </SHARED_FILES>
+ </INSTALL>
+</INSTALLER>

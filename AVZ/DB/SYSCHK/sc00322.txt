@@ -1,0 +1,7 @@
+// ***** Hijacker.iLookup *****
+begin
+ AddEvAlarmByCLSID('4352D88A-78AA-E168-BA26-0020AFC36E79',AScriptName,'');
+ AddEvAlarmByCLSID('54A85A38-A699-4AEC-8F88-AB542210C93B',AScriptName,'');
+ AddEvAlarmByCLSID('FBAA0B9E-A059-43E4-9699-76EB0AEB975B',AScriptName,'');
+ AddEvAlarmByCLSID('4C759EC6-96BD-4551-A320-E61A1D68437F',AScriptName,'');
+end.

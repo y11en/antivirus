@@ -1,0 +1,4 @@
+// ***** AdvWare.DlMax.a *****
+begin
+ AddEvAlarmByCLSID('00000000-DD60-0064-6EC2-6E0100000000', AScriptName, 'Pynix.dll');
+end.

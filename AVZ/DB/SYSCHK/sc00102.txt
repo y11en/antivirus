@@ -1,0 +1,12 @@
+// ***** TrojanDownloader.Dyfuca *****
+begin
+ AddEvAlarmByCLSID('E8EDB60C-951E-4130-93DC-FAF1AD25F8E7',AScriptName,'UniDist.ocx');
+ AddEvAlarmByCLSID('0733B8F9-8B52-4693-A9FA-829E12D27F78','TrojanDownloader.Dyfuca.aw','preload2.ocx');
+ AddEvAlarmByCLSID('DA9A0B1E-9B7B-11D3-B8A4-00C04F79641C','TrojanDownloader.Dyfuca.bb','nsupdate.dll');
+ AddEvAlarmByCLSID('0873478E-E67A-4876-B0A9-9A36D3AB3602','TrojanDownloader.Dyfuca.ch','vviewer.ocx');
+ AddEvAlarmByCLSID('8F4E5661-F99E-4B3E-8D85-0EA71C0748E4','TrojanDownloader.Dyfuca.cn, cv (Dyfuca BHO)','wsem300.dll');
+ AddEvAlarmByCLSID('00000010-6F7D-442C-93E3-4A4827C2E4C8','TrojanDownloader.Dyfuca.gen (Dyfuca BHO)','nem*.dll');
+ AddEvAlarmByCLSID('FC87A650-207D-4392-A6A1-82ADBC56FA64','TrojanDownloader.Dyfuca.0','MulDist.ocx');
+ AddEvAlarmByCLSID('F7F808F0-6F7D-442C-93E3-4A4827C2E4C8','TrojanDownloader.Dyfuca.j (Dyfuca BHO)','wsem300.dll');
+ AddEvAlarmByCLSID('CC87B8B6-5947-46FA-9734-68196FCF9632',AScriptName,'');
+end.

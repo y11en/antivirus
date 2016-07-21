@@ -1,0 +1,2 @@
+# Symbol sources for WinDbg
+srv*\\strelka\symbols\kav6;srv*\\avp.ru\Global\Symbols\Build;srv*\\avp.ru\Global\Symbols\Release;srv*\\avp.ru\Global\Symbols\Dev;srv*\\avp.ru\Global\Symbols\Old;srv*\\avp.ru\Global\Symbols\MS*http://msdl.microsoft.com/download/symbols

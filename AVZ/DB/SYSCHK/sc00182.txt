@@ -1,0 +1,5 @@
+// ***** AdvWare.Bispy *****
+begin
+ AddEvAlarmByCLSID('0000607D-D204-42C7-8E46-216055BF9918','AdvWare.Bispy.p','mxTarget.dll');
+ AddEvAlarmByCLSID('00320615-B6C2-40A6-8F99-F1C52D674FAD','AdvWare.Bispy.s','localNRD.dll');
+end.

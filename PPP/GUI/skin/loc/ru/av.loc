@@ -1,0 +1,202 @@
+﻿[Global]
+$Antivirus          = "Постоянная защита"
+$AntivirusDesc      = "Защита от вирусов и шпионского ПО"
+$File_Monitoring    = "Файловый Антивирус"
+$Mail_Monitoring    = "Почтовый Антивирус"
+$Web_Monitoring     = "Веб-Антивирус"
+
+[MainWindow.Antivirus]
+Home        = "Статус"
+Events      = "События"
+Statistics  = "Статистика"
+
+[MainWindow.Antivirus_Filters]
+AllItems    = "Без группировок"
+ByTask      = "Группировка по задаче"
+ByApp       = "Группировка по приложению"
+ByVerdict   = "Группировка по вердикту"
+
+[AV_Home_Tasks]
+Header = "Задачи"
+
+[MainWindow.Antivirus_WorkArea_Tasks_AvzTroubleshootWizard]
+Icon = "Восстановление после заражения"
+
+[MainWindow.Antivirus_WorkArea_Tasks_RescueDiskWizard]
+Icon = "Диск аварийного восстановления"
+
+;-------------------------------- AvzTroubleshootWizard --------------------------------
+
+[FileMonSettings_Tab]
+Scope       = "Общие"
+Performance = "Производительность"
+Additional  = "Дополнительно"
+
+[FileMonSettings_Tab_Scope]
+FileTypesGroup  = "Типы файлов"
+Area            = "Область защиты"
+
+[FileMonSettings_Tab_Scope_FileTypesGroup]
+All         = "&Все файлы"
+Infectable  = "Файлы, проверяемые по &формату"
+Predefined  = "Файлы, проверяемые по &расширению"
+
+[FileMonSettings_Tab_Performance]
+FirstTimeCheck  = "Методы проверки"
+FileTypesGroup  = "Оптмизация"
+
+[FileMonSettings_Tab_Performance_FirstTimeCheck]
+Sign    = "Сигнатурный анализ"
+Online  = "&Онлайн-проверка"
+Heur    = "&Эвристический анализ"
+
+[FileMonSettings_Tab_Performance_FileTypesGroup]
+CheckNew = "Проверять только &новые и измененные файлы"
+
+[FileMonSettings_Tab_Additional]
+ScanMode = "Режим проверки"
+
+[FileMonSettings_Tab_Additional_ScanMode]
+CheckModeSmart  = "&Интеллектуальный"
+CheckModeAll    = "При доступе и из&менении"
+CheckModeOpen   = "При &доступе"
+CheckModeExec   = "При в&ыполнении"
+
+[MalwareSettingsWindow.Threats]
+Check1  = "Check"
+Radio1  = "Radio"
+
+[CompoundFilesGroup]
+@           = "Составные файлы"
+Archive     = "Проверять" + if(ScanUnchangedObjects, " <a Unchanged_ScanArchived onclick(iterate(ForUnchangedObjects.ScanArchived))>" + (ForUnchangedObjects.ScanArchived ? $NewAll) + "</a>") + " &архивы"
+SFX         = "Проверять" + if(ScanUnchangedObjects, " <a Unchanged_ScanSFXArchived onclick(iterate(ForUnchangedObjects.ScanSFXArchived))>" + (ForUnchangedObjects.ScanSFXArchived ? $NewAll) + "</a>") + " &установочные пакеты"
+OLE         = "Проверять" + if(ScanUnchangedObjects, " <a Unchanged_ScanOLE onclick(iterate(ForUnchangedObjects.ScanOLE))>" + (ForUnchangedObjects.ScanOLE ? $NewAll) + "</a>") + " &вложенные OLE-объекты"
+Mail        = "Проверять файлы почтовых &форматов"
+AskPwd      = "Проверять защищенные &паролем архивы"
+Advanced    = "&Дополнительно..."
+
+[MainWindow.Antivirus_WorkArea_Home]
+Tasks.Header            = "Задачи"
+Antivirus.Group2.Header = "Статистика проверки"
+
+[MainWindow.Antivirus.Mail_Monitoring]
+Level.Name          = "Уровень безопасности:"
+OnDetection.Name    = "Реакция на угрозу:"
+
+[MainWindow.Antivirus.File_Monitoring]
+Level.Name          = "Уровень безопасности:"
+OnDetection.Name    = "Реакция на угрозу:"
+
+[MainWindow.Antivirus.Web_Monitoring]
+Level.Name          = "Уровень безопасности:"
+OnDetection.Name    = "Реакция на угрозу:"
+
+[WebMonSettings]
+@ = "Dialog"
+
+[WebMonSettings_Tab]
+Scope       = "Общие"
+Performance = "Производительность"
+
+[WebMonSettings_Tab_Scope]
+Traffic         = "Проверять HTTP-трафик"
+Scripts         = "Блокировать опасные скрипты в Microsoft Internet Explorer"
+TrustedSites    = "Доверенные адреса"
+
+[WebMonSettings_Tab_Performance]
+Methods         = "Методы проверки"
+CompoundFiles   = "Составные файлы"
+
+[WebMonSettings_Tab_Performance_Methods]
+QuickScan   = "Потоковая проверка (ограниченный набор сигнатур)"
+FullScan    = "Проверка с буферизацией (полный набор сигнатур)"
+Heur        = "Эвристический анализ"
+HeurParams  = "Глубина проверки"
+
+[WebMonSettings_Tab_Performance_CompoundFiles]
+Archive         = "Не проверять архивы"
+SkipSizeCheck   = "Не проверять архивы размером более"
+SkipSizeLabel   = "MБ"
+
+[MailMonSettings_Tab]
+Scope       = "Общие"
+Performance = "Производительность"
+Filter      = "Фильтр вложений"
+
+[MailMonSettings_Tab_Scope]
+Directions  = "Область защиты"
+Plugins     = "Встраивание в систему"
+
+[MailMonSettings_Tab_Scope_Directions]
+All         = "Входящие и исходящие сообщения"
+Incoming    = "Только входящие сообщения"
+
+[MailMonSettings_Tab_Scope_Plugins]
+Traffic                 = "Трафик POP3/SMTP/NMTP/IMAP"
+ClientOutlook           = "Microsoft Office Outlook"
+ClientOutlookExpress    = "Microsoft Outlook Express"
+ClientEudora            = "Eudora"
+ClientThunderbird       = "Thunderbird"
+ClientTheBat            = "The Bat!"
+
+[MailMonSettings_Tab_Performance]
+Methods         = "Методы проверки"
+CompoundFiles   = "Составные файлы"
+
+[MailMonSettings_Tab_Performance_Methods]
+Heur = "Эвристический анализ"
+
+[MailMonSettings_Tab_Performance_CompoundFiles]
+Archive         = "Не проверять вложенные архивы"
+SkipSizeCheck   = "Не проверять архивы размером более"
+SkipSizeLabel   = "MБ"
+
+[MailMonSettings_Tab_Filter]
+Skip    = "Не применять фильтр"
+Rename  = "Переименовывать вложения указанных типов"
+Delete  = "Удалять вложения указанных типов"
+
+[MailAttachmentFilter_Edit]
+@           = "Маска имени файла"
+@.Example   = "Пример: *.exe"
+
+[WebTrustedSites_Edit]
+@           = "Маска адреса (URL)"
+@.Example   = "Пример: *kaspersky.ru*"
+
+[CompoundFilesSettings]
+@ = "Составные файлы"
+
+[CompoundFilesSettings_Body]
+BackgroundScan  = "Фоновая проверка"
+SizeLimit       = "Ограничение по размеру"
+
+[CompoundFilesSettings_Body_BackgroundScan]
+PostponeSizeCheck   = "Распаковывать составные файлы в фоновом режиме"
+Descr               = "Асинхронная проверка архивов и других составных файлов"
+Label2              = "Минимальный размер файла:"
+PostponeSizeLabel   = "MБ"
+Label1              = "Составные файлы меньшего размера проверяются в обычном режиме"
+
+[CompoundFilesSettings_Body_SizeLimit]
+SkipSizeCheck   = "Не распаковывать составные файлы большого размера"
+Descr           = "На проверку файлов, извлекаемых из архивов, этот параметр не распространяется"
+Label2          = "Максимальный размер файла:"
+SkipSizeLabel   = "MБ"
+Label1          = "Составные файлы большего размера не проверяются"
+
+[MainWindow.Antivirus.SysPerf]
+Chart = "Label"
+
+[MainWindow.Antivirus.SysPerf_Legend]
+LegendText1 = "Файлы"
+LegendText2 = "Почта"
+LegendText3 = "Веб-трафик"
+
+[MainWindow.Antivirus.SysPerf_Chart]
+line1   = "Файлы"
+line2   = "Почта"
+line3   = "Веб"
+
+[MainWindow.Antivirus_WorkArea]
+Home.Group2.Header = "Проверено объектов"

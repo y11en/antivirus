@@ -1,0 +1,361 @@
+# Microsoft Developer Studio Generated Dependency File, included by pr_server.mak
+
+.\buffer.cpp : \
+	"..\..\include\iface\i_heap.h"\
+	"..\..\include\iface\i_iface.h"\
+	"..\..\include\iface\i_ifenum.h"\
+	"..\..\include\iface\i_impex.h"\
+	"..\..\include\iface\i_methodinfo.h"\
+	"..\..\include\iface\i_plugin.h"\
+	"..\..\include\IFace\i_receiv.h"\
+	"..\..\include\iface\i_tracer.h"\
+	"..\..\include\pr_compl.h"\
+	"..\..\include\pr_err.h"\
+	"..\..\include\pr_iid.h"\
+	"..\..\include\pr_int.h"\
+	"..\..\include\pr_msg.h"\
+	"..\..\include\pr_obj.h"\
+	"..\..\include\pr_pid.h"\
+	"..\..\include\pr_prop.h"\
+	"..\..\include\pr_reg.h"\
+	"..\..\include\pr_sys.h"\
+	"..\..\include\pr_types.h"\
+	"..\..\include\pr_vid.h"\
+	"..\..\include\pr_vtbl.h"\
+	"..\..\INCLUDE\PRAGUE.H"\
+	"..\pr_manager.h"\
+	
+
+.\engine.cpp : \
+	"..\..\include\iface\i_heap.h"\
+	"..\..\include\iface\i_iface.h"\
+	"..\..\include\iface\i_ifenum.h"\
+	"..\..\include\iface\i_impex.h"\
+	"..\..\include\iface\i_methodinfo.h"\
+	"..\..\include\iface\i_plugin.h"\
+	"..\..\include\IFace\i_receiv.h"\
+	"..\..\include\iface\i_tracer.h"\
+	"..\..\include\pr_compl.h"\
+	"..\..\include\pr_err.h"\
+	"..\..\include\pr_iid.h"\
+	"..\..\include\pr_int.h"\
+	"..\..\include\pr_msg.h"\
+	"..\..\include\pr_obj.h"\
+	"..\..\include\pr_pid.h"\
+	"..\..\include\pr_prop.h"\
+	"..\..\include\pr_reg.h"\
+	"..\..\include\pr_sys.h"\
+	"..\..\include\pr_types.h"\
+	"..\..\include\pr_vid.h"\
+	"..\..\include\pr_vtbl.h"\
+	"..\..\INCLUDE\PRAGUE.H"\
+	"..\pr_manager.h"\
+	
+
+.\ifenum.cpp : \
+	"..\..\include\iface\i_heap.h"\
+	"..\..\include\iface\i_iface.h"\
+	"..\..\include\iface\i_ifenum.h"\
+	"..\..\include\iface\i_impex.h"\
+	"..\..\include\iface\i_methodinfo.h"\
+	"..\..\include\iface\i_plugin.h"\
+	"..\..\include\IFace\i_receiv.h"\
+	"..\..\include\iface\i_tracer.h"\
+	"..\..\include\pr_compl.h"\
+	"..\..\include\pr_err.h"\
+	"..\..\include\pr_iid.h"\
+	"..\..\include\pr_int.h"\
+	"..\..\include\pr_msg.h"\
+	"..\..\include\pr_obj.h"\
+	"..\..\include\pr_pid.h"\
+	"..\..\include\pr_prop.h"\
+	"..\..\include\pr_reg.h"\
+	"..\..\include\pr_sys.h"\
+	"..\..\include\pr_types.h"\
+	"..\..\include\pr_vid.h"\
+	"..\..\include\pr_vtbl.h"\
+	"..\..\INCLUDE\PRAGUE.H"\
+	"..\pr_manager.h"\
+	
+
+.\insider.cpp : \
+	"..\..\include\iface\i_heap.h"\
+	"..\..\include\iface\i_iface.h"\
+	"..\..\include\iface\i_ifenum.h"\
+	"..\..\include\iface\i_impex.h"\
+	"..\..\include\iface\i_methodinfo.h"\
+	"..\..\include\iface\i_plugin.h"\
+	"..\..\include\IFace\i_receiv.h"\
+	"..\..\include\iface\i_tracer.h"\
+	"..\..\include\pr_compl.h"\
+	"..\..\include\pr_err.h"\
+	"..\..\include\pr_iid.h"\
+	"..\..\include\pr_int.h"\
+	"..\..\include\pr_msg.h"\
+	"..\..\include\pr_obj.h"\
+	"..\..\include\pr_pid.h"\
+	"..\..\include\pr_prop.h"\
+	"..\..\include\pr_reg.h"\
+	"..\..\include\pr_sys.h"\
+	"..\..\include\pr_types.h"\
+	"..\..\include\pr_vid.h"\
+	"..\..\include\pr_vtbl.h"\
+	"..\..\INCLUDE\PRAGUE.H"\
+	"..\pr_manager.h"\
+	
+
+.\io.cpp : \
+	"..\..\include\iface\i_heap.h"\
+	"..\..\include\iface\i_iface.h"\
+	"..\..\include\iface\i_ifenum.h"\
+	"..\..\include\iface\i_impex.h"\
+	"..\..\include\iface\i_methodinfo.h"\
+	"..\..\include\iface\i_plugin.h"\
+	"..\..\include\IFace\i_receiv.h"\
+	"..\..\include\iface\i_tracer.h"\
+	"..\..\include\pr_compl.h"\
+	"..\..\include\pr_err.h"\
+	"..\..\include\pr_iid.h"\
+	"..\..\include\pr_int.h"\
+	"..\..\include\pr_msg.h"\
+	"..\..\include\pr_obj.h"\
+	"..\..\include\pr_pid.h"\
+	"..\..\include\pr_prop.h"\
+	"..\..\include\pr_reg.h"\
+	"..\..\include\pr_sys.h"\
+	"..\..\include\pr_types.h"\
+	"..\..\include\pr_vid.h"\
+	"..\..\include\pr_vtbl.h"\
+	"..\..\INCLUDE\PRAGUE.H"\
+	"..\pr_manager.h"\
+	
+
+.\mchk.cpp : \
+	"..\..\include\iface\i_heap.h"\
+	"..\..\include\iface\i_iface.h"\
+	"..\..\include\iface\i_ifenum.h"\
+	"..\..\include\iface\i_impex.h"\
+	"..\..\include\iface\i_methodinfo.h"\
+	"..\..\include\iface\i_plugin.h"\
+	"..\..\include\IFace\i_receiv.h"\
+	"..\..\include\iface\i_tracer.h"\
+	"..\..\include\pr_compl.h"\
+	"..\..\include\pr_err.h"\
+	"..\..\include\pr_iid.h"\
+	"..\..\include\pr_int.h"\
+	"..\..\include\pr_msg.h"\
+	"..\..\include\pr_obj.h"\
+	"..\..\include\pr_pid.h"\
+	"..\..\include\pr_prop.h"\
+	"..\..\include\pr_reg.h"\
+	"..\..\include\pr_sys.h"\
+	"..\..\include\pr_types.h"\
+	"..\..\include\pr_vid.h"\
+	"..\..\include\pr_vtbl.h"\
+	"..\..\INCLUDE\PRAGUE.H"\
+	"..\pr_manager.h"\
+	
+
+.\objptr.cpp : \
+	"..\..\include\iface\i_heap.h"\
+	"..\..\include\iface\i_iface.h"\
+	"..\..\include\iface\i_ifenum.h"\
+	"..\..\include\iface\i_impex.h"\
+	"..\..\include\iface\i_methodinfo.h"\
+	"..\..\include\iface\i_plugin.h"\
+	"..\..\include\IFace\i_receiv.h"\
+	"..\..\include\iface\i_tracer.h"\
+	"..\..\include\pr_compl.h"\
+	"..\..\include\pr_err.h"\
+	"..\..\include\pr_iid.h"\
+	"..\..\include\pr_int.h"\
+	"..\..\include\pr_msg.h"\
+	"..\..\include\pr_obj.h"\
+	"..\..\include\pr_pid.h"\
+	"..\..\include\pr_prop.h"\
+	"..\..\include\pr_reg.h"\
+	"..\..\include\pr_sys.h"\
+	"..\..\include\pr_types.h"\
+	"..\..\include\pr_vid.h"\
+	"..\..\include\pr_vtbl.h"\
+	"..\..\INCLUDE\PRAGUE.H"\
+	"..\pr_manager.h"\
+	
+
+.\os.cpp : \
+	"..\..\include\iface\i_heap.h"\
+	"..\..\include\iface\i_iface.h"\
+	"..\..\include\iface\i_ifenum.h"\
+	"..\..\include\iface\i_impex.h"\
+	"..\..\include\iface\i_methodinfo.h"\
+	"..\..\include\iface\i_plugin.h"\
+	"..\..\include\IFace\i_receiv.h"\
+	"..\..\include\iface\i_tracer.h"\
+	"..\..\include\pr_compl.h"\
+	"..\..\include\pr_err.h"\
+	"..\..\include\pr_iid.h"\
+	"..\..\include\pr_int.h"\
+	"..\..\include\pr_msg.h"\
+	"..\..\include\pr_obj.h"\
+	"..\..\include\pr_pid.h"\
+	"..\..\include\pr_prop.h"\
+	"..\..\include\pr_reg.h"\
+	"..\..\include\pr_sys.h"\
+	"..\..\include\pr_types.h"\
+	"..\..\include\pr_vid.h"\
+	"..\..\include\pr_vtbl.h"\
+	"..\..\INCLUDE\PRAGUE.H"\
+	"..\pr_manager.h"\
+	
+
+.\pr_server.cpp : \
+	"..\..\include\iface\i_heap.h"\
+	"..\..\include\iface\i_iface.h"\
+	"..\..\include\iface\i_ifenum.h"\
+	"..\..\include\iface\i_impex.h"\
+	"..\..\include\iface\i_methodinfo.h"\
+	"..\..\include\iface\i_plugin.h"\
+	"..\..\include\IFace\i_receiv.h"\
+	"..\..\Include\IFace\i_reg.h"\
+	"..\..\include\iface\i_root.h"\
+	"..\..\Include\iface\i_serializer.h"\
+	"..\..\include\iface\i_tracer.h"\
+	"..\..\include\pr_compl.h"\
+	"..\..\include\pr_err.h"\
+	"..\..\include\pr_iid.h"\
+	"..\..\include\pr_int.h"\
+	"..\..\include\pr_msg.h"\
+	"..\..\include\pr_obj.h"\
+	"..\..\include\pr_pid.h"\
+	"..\..\include\pr_prop.h"\
+	"..\..\include\pr_reg.h"\
+	"..\..\Include\pr_serdescriptor.h"\
+	"..\..\include\pr_sys.h"\
+	"..\..\include\pr_types.h"\
+	"..\..\include\pr_vid.h"\
+	"..\..\include\pr_vtbl.h"\
+	"..\..\INCLUDE\PRAGUE.H"\
+	"..\pr_manager.h"\
+	
+
+.\pr_server.rc : \
+	"..\..\..\CommonFiles\Version\ver_av50.h"\
+	"..\..\..\CommonFiles\Version\ver_itoa.h"\
+	"..\..\..\CommonFiles\Version\ver_kl.h"\
+	
+
+.\reg.cpp : \
+	"..\..\include\iface\i_heap.h"\
+	"..\..\include\iface\i_iface.h"\
+	"..\..\include\iface\i_ifenum.h"\
+	"..\..\include\iface\i_impex.h"\
+	"..\..\include\iface\i_methodinfo.h"\
+	"..\..\include\iface\i_plugin.h"\
+	"..\..\include\IFace\i_receiv.h"\
+	"..\..\include\iface\i_tracer.h"\
+	"..\..\include\pr_compl.h"\
+	"..\..\include\pr_err.h"\
+	"..\..\include\pr_iid.h"\
+	"..\..\include\pr_int.h"\
+	"..\..\include\pr_msg.h"\
+	"..\..\include\pr_obj.h"\
+	"..\..\include\pr_pid.h"\
+	"..\..\include\pr_prop.h"\
+	"..\..\include\pr_reg.h"\
+	"..\..\include\pr_sys.h"\
+	"..\..\include\pr_types.h"\
+	"..\..\include\pr_vid.h"\
+	"..\..\include\pr_vtbl.h"\
+	"..\..\INCLUDE\PRAGUE.H"\
+	"..\pr_manager.h"\
+	
+
+!IF  "$(CFG)" == "pr_server - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "pr_server - Win32 Debug"
+
+!ENDIF 
+
+!IF  "$(CFG)" == "pr_server - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "pr_server - Win32 Debug"
+
+!ENDIF 
+
+!IF  "$(CFG)" == "pr_server - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "pr_server - Win32 Debug"
+
+!ENDIF 
+
+!IF  "$(CFG)" == "pr_server - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "pr_server - Win32 Debug"
+
+!ENDIF 
+
+!IF  "$(CFG)" == "pr_server - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "pr_server - Win32 Debug"
+
+!ENDIF 
+
+!IF  "$(CFG)" == "pr_server - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "pr_server - Win32 Debug"
+
+!ENDIF 
+
+!IF  "$(CFG)" == "pr_server - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "pr_server - Win32 Debug"
+
+!ENDIF 
+
+!IF  "$(CFG)" == "pr_server - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "pr_server - Win32 Debug"
+
+!ENDIF 
+
+!IF  "$(CFG)" == "pr_server - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "pr_server - Win32 Debug"
+
+!ENDIF 
+
+!IF  "$(CFG)" == "pr_server - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "pr_server - Win32 Debug"
+
+!ENDIF 
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	
+
+.\string.cpp : \
+	"..\..\include\iface\i_heap.h"\
+	"..\..\include\iface\i_iface.h"\
+	"..\..\include\iface\i_ifenum.h"\
+	"..\..\include\iface\i_impex.h"\
+	"..\..\include\iface\i_methodinfo.h"\
+	"..\..\include\iface\i_plugin.h"\
+	"..\..\include\IFace\i_receiv.h"\
+	"..\..\include\iface\i_tracer.h"\
+	"..\..\include\pr_compl.h"\
+	"..\..\include\pr_err.h"\
+	"..\..\include\pr_iid.h"\
+	"..\..\include\pr_int.h"\
+	"..\..\include\pr_msg.h"\
+	"..\..\include\pr_obj.h"\
+	"..\..\include\pr_pid.h"\
+	"..\..\include\pr_prop.h"\
+	"..\..\include\pr_reg.h"\
+	"..\..\include\pr_sys.h"\
+	"..\..\include\pr_types.h"\
+	"..\..\include\pr_vid.h"\
+	"..\..\include\pr_vtbl.h"\
+	"..\..\INCLUDE\PRAGUE.H"\
+	"..\pr_manager.h"\
+	

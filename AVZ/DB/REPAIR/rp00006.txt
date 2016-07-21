@@ -1,0 +1,17 @@
+// ***** ”даление всех Policies (ограничений) текущего пользовател€ *****
+procedure BackupDelPoliciesKey(AKey, AName : string;);
+begin
+ BackUpRegKey(AKey, AName, 'Policies');
+ RegKeyDel(AKey, AName);
+end;
+
+procedure DelPoliciesKey(AName : string;);
+begin
+ BackupDelPoliciesKey('HKEY_CURRENT_USER', AName);
+ BackupDelPoliciesKey('HKEY_LOCAL_MACHINE', AName);
+end;
+
+begin
+ DelPoliciesKey('Software\Microsoft\Windows\CurrentVersion\Policies');
+ DelPoliciesKey('Software\Policies');
+end.

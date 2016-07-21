@@ -1,0 +1,4 @@
+// ***** AdvWare.Toolbar.WebEx *****
+begin
+ AddEvAlarmByCLSID('E06E2E99-0AA1-11D4-ABA6-0060082AA75C','AdvWare.Toolbar.WebEx','ieatgpc.dll');
+end.

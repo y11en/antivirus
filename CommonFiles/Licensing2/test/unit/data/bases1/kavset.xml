@@ -1,0 +1,54 @@
+<UpdateFiles 
+	UpdateSeqNumber="111111" 
+	UpdateDate="07092005 1728">
+	<UpdateSettings 
+		Name="Updater/update_date" 
+		Type="date" 
+		Value="07092005 1728" />
+	<UpdateSettings 
+		Name="Updater/av_records" 
+		Type="long" 
+		Value="148130" />
+	<FileDescription 
+		ComponentID="AVS" 
+		UpdateType="base" 
+		RelativeSrvPath="bases/av/avc/i386" 
+		Filename="avcmhk4.dll" 
+		LoadingOrder="121" 
+		LocalPath="%BaseFolder%" 
+		FileSign="0XLSznpdI71fB300e7Uwj1X0urcZqq7UQAijs7XwwsteJi/4UZeMWWsvFJ" 
+		FileSize="21568" 
+		FileDate="25052005 1307" />
+	<FileDescription 
+		ComponentID="AVS" 
+		UpdateType="blst" 
+		RelativeSrvPath="bases/av/avc/i386" 
+		Filename="black.lst" 
+		LoadingOrder="122" 
+		LocalPath="%BaseFolder%" 
+		FileSign="0XLSznpdI71fB300e7Uwj1EWXqPpljWFxYYJY1ZkO3FF4rqf+/AL50amoV" 
+		FileSize="56924" 
+		FileDate="02092005 1449" />
+	<FileDescription 
+		ComponentID="AVS" 
+		UpdateType="base" 
+		RelativeSrvPath="bases/av/avc/i386" 
+		Filename="avp.klb" 
+		LoadingOrder="127" 
+		LocalPath="%BaseFolder%" 
+		FileSign="0XLSznpdI71fB300e7Uwj1OtNoVGwSBZC8RPs1A6FZox9kcDNsYbFTXTQZ" 
+		FileSize="11586" 
+		FileDate="07092005 1728" />
+	<FileDescription 
+		ComponentID="AVS" 
+		UpdateType="base" 
+		RelativeSrvPath="bases/av/avc/i386" 
+		Filename="avp.set" 
+		LoadingOrder="123" 
+		LocalPath="%BaseFolder%" 
+		Set="normal" 
+		FileSign="0XLSznpdI71fB300e7Uwj1MW5ZBNN6m7F/pzAIwLSbfhtxcxqz+9lVXvdd" 
+		FileSize="1484" 
+		FileDate="26082005 1509" />
+</UpdateFiles>
+

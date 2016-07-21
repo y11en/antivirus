@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?faq_7.htm"; }
+else { parent.quicksync('a14.7'); }
+//-->
+</script>
+   <title>&#1042;&#1086; &#1074;&#1088;&#1077;&#1084;&#1103; &#1089;&#1082;&#1072;&#1085;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1103; &#1076;&#1080;&#1089;&#1082;&#1072; &#1084;&#1086;&#1081; &#1072;&#1085;&#1090;&#1080;&#1074;&#1080;&#1088;&#1091;&#1089;&#1085;&#1099;&#1081; &#1084;&#1086;&#1085;&#1080;&#1090;&#1086;&#1088; &#1089;&#1086;&#1086;&#1073;&#1097;&#1080;&#1083;, &#1095;&#1090;&#1086; &#1092;&#1072;&#1081;&#1083; avz*.tmp &#1079;&#1072;&#1088;&#1072;&#1078;&#1077;&#1085; &#1074;&#1080;&#1088;&#1091;&#1089;&#1086;&#1084; &#1080;&#1083;&#1080; &#1103;&#1074;&#1083;&#1103;&#1077;&#1090;&#1089;&#1103; &#1074;&#1088;&#1077;&#1076;&#1086;&#1085;&#1086;&#1089;&#1085;&#1086;&#1081; &#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1086;&#1081;</title>
+   <meta name="keywords" content="avz*.tmp,&#1084;&#1086;&#1085;&#1080;&#1090;&#1086;&#1088;">
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+
+
+<body bgcolor="#FFFFFF">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Во время сканирования диска мой антивирусный монитор сообщил, что файл avz*.tmp заражен вирусом или является вредоносной программой</span></p>
+
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="t_about.htm">Наверх</a>&nbsp;
+     <a href="faq_6.htm">Предыдущая</a>&nbsp;
+     <a href="faq_8.htm">Последующая</a>
+     </font><B>|</B>
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=717989"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=717989;t=109;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=18 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=717989"><img
+src="http://top.list.ru/counter?js=na;id=717989;t=109"
+border=0 height=18 width=88
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+    </td>
+  </tr>
+</table>
+<br>
+
+<p>Подобные сообщения могут выдаваться антивирусными мониторами, при этом зараженный файл обнаруживается в папке TEMP и имеет имя вида avz_XXXX_Y.tmp. Это временные файлы, которые создаются AVZ в ходе проверки архивов, писем электронной почты, MHT файлов и т.п., причем XXXX - это PID процесса AVZ, а Y - уровень вложенности архива. Есть другой вариант имени файла - avz_XXXX_raw.tmp - подобные файлы создаются в ходе анализа объектов, доступ к кторым блокирован путем их монопольного открытия.</p>
+<p>Причина срабатывания заключается в том, что применяемый антивирусный сканер и монитор&nbsp; почему-то не находит вирусы/трояны в каком-либо архиве. Можно выделить несколько типовых причин:</p>
+<p>1. В настройках антивируса и антивирусного монитора отключена проверка архивов </p>
+<p>2. Антивирус не умеет проверять данный тип архива </p>
+<p>3. Архив находится в папке, проверка которой запрещена в настройке антивируса и его монитора</p>
+<p>4. Когда архив попал на компьютер, в базе антивируса не было сигнатур содержащихся там вредоносных программ - поэтому монитор пропустил данный архив и позволил его сохранение. </p>
+<p>&nbsp;</p>
+<p>Соответственно в момент извлечения AVZ-ом файла из архива антивирусный монитор проверяет его и может обнаружить вредоносную программу. В этом случае срабатывание вполне объяснимо и дальнейшая реакция может быть любой, в частности </p>
+<p>1. Можно разрешить антивирусному монитору "вылечить" файл, </p>
+<p>2. Можно дать монитору команду проверку файла&nbsp; </p>
+<p>В любом случае AVZ рассчитан на возможность неожиданного удаления временного файла или блокировки доступа к нему со стороны антивирусного монитора, поэтому сбоя в его работе не последует. </p>
+
+
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=717989;js='+js+a+';rand='+Math.random()+
+'" height=1 width=1/>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=717989"
+height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+
+</body>
+</html>

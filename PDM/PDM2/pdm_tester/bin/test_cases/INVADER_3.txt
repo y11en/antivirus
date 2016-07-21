@@ -1,0 +1,6 @@
+# try to change thread context of explorer process with redirected EIP to LoadLibrary address
+
+STHC_TO_EXPLORER NOT_TO_CLEAR
+
+#etalon_verdict 100 ProcessInvader
+

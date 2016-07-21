@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="Windows-1251"?>
+<WixLocalization xmlns="http://schemas.microsoft.com/wix/2003/11/localization" Codepage="1251">
+
+  <String Id="ProductName_NOM">Антивирус Касперского 8.0 для Windows Servers</String>
+  <String Id="ProductName_GEN">Антивируса Касперского 8.0 для Windows Servers</String>
+  <String Id="ProductName_INS">Антивирусом Касперского 8.0 для Windows Servers</String>
+  <String Id="WholeProductFeatureDesc"><![CDATA[[ProductName_NOM] - комплексная защита вашего компьютера от вирусов и вредоносных программ.]]></String>
+  <String Id="AVPServiceDescription">Обеспечивает защиту компьютера от вирусов и другого опасного ПО.</String>
+  <String Id="ProductNamePrfix">Антивирус Касперского</String>
+
+  <!-- DO NOT LOCALIZE BELOW! -->
+  <String Id="LoginImage">ru\images\lgnkav.png</String>
+</WixLocalization>

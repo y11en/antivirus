@@ -1,0 +1,7 @@
+// ***** Adware.Effectivei *****
+begin
+ AddEvAlarmByCLSID('267395C4-3CBA-4E6E-8FE1-EFAA33185685',AScriptName,'');
+ AddEvAlarmByCLSID('ED8DB0FD-D8F4-4B2C-BB5B-9EF040FE104D',AScriptName,'');
+ AddEvAlarmByCLSID('ED8DB0FD-D8F4-4B2C-BB5B-9EF040FE104D',AScriptName,'');
+ AddEvAlarmByCLSID('53CBEE82-D747-11D3-9ED0-005004189684',AScriptName,'');
+end.

@@ -1,0 +1,11 @@
+TARGETNAME = kdsplice
+TARGETPATH = obj
+TARGETTYPE = DRIVER
+DRIVERTYPE = FS
+
+MSC_WARNING_LEVEL = /W3 /WX
+LINKER_FLAGS = /SECTION:.exdata,ERW
+
+TARGETLIBS = 	..\kdprint\kernel\obj$(BUILD_ALT_DIR)\i386\kdprkrnl.lib
+
+SOURCES = kdsplice.c

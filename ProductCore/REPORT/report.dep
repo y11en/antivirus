@@ -1,0 +1,13 @@
+# Microsoft Developer Studio Generated Dependency File, included by report.mak
+
+.\plugin_report.c : \
+	"..\prague\include\prague.h"\
+	".\plugin_report.h"\
+	".\report.h"\
+	
+
+.\report.c : \
+	"..\prague\include\prague.h"\
+	".\plugin_report.h"\
+	".\report.h"\
+	

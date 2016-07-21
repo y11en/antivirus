@@ -1,0 +1,5 @@
+// ***** Adware.BHO.iPend *****
+begin       
+ AddEvAlarmByCLSID('0054AD19-7E4E-4AE4-B275-20F237280F5C',AScriptName,'');
+ AddEvAlarmByCLSID('8D91ECD1-2A29-41B8-9988-FD892F07F859',AScriptName,'');
+end.

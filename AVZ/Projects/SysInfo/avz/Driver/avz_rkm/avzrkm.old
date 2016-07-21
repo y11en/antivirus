@@ -1,0 +1,415 @@
+// (С) Зайцев Олег, 2006
+#include "StdAfx.h"
+#include <ntddk.h>
+#include <ntdef.h>
+#include <avzrkm.h>
+
+// Имя устройства (в формате UnicodeString, формируется макросом)
+PRESET_UNICODE_STRING (usDeviceName,       CSTRING (\\Device\\AvzRMDevice));
+// Имя символьной ссыки (в формате UnicodeString, формируется макросом)
+PRESET_UNICODE_STRING (usSymbolicLinkName, CSTRING (\\??\\AvzRMDeviceLink));
+// Имя переменной и именем функции
+PRESET_UNICODE_STRING (usZwQueryInformationProcess, CSTRING (ZwQueryInformationProcess));
+
+// Глобальные переменные - указатели на объекты "Устройство"
+PDEVICE_OBJECT  gpDeviceObject  = NULL;
+PDEVICE_CONTEXT gpDeviceContext = NULL;
+
+// Указатель на функцию ZwQueryInformationProcess
+PZwQueryInformationProcess ZwQueryInformationProcess = NULL;
+
+extern "C" 	{
+	extern  PWORD NtBuildNumber; // Номер сборки NT
+	extern NTSYSAPI NTSTATUS NTAPI ZwQuerySystemInformation(
+		IN SYSTEM_INFORMATION_CLASS SystemInformationClass,
+		IN OUT PVOID SystemInformation,
+		IN ULONG SystemInformationLength,
+		OUT PULONG ReturnLength OPTIONAL);
+}
+
+// Массив процессов
+PROCESS_ITEM PROCESS_LIST[0xFF];
+
+// Смещения в структуре EPROCESS
+ULONG ActiveProcessLinkOffset = 0; // Структура ActiveProcessLinks
+ULONG ProcessNameOffset = 0;       // Имя процесса
+ULONG PIDOffset = 0;               // PID процесса
+ULONG PEBOffset = 0;               // PEB процесса
+
+VOID InitProcessList() 
+{
+	for (int i = 0; i < 0xFF; i++)
+		PROCESS_LIST[i].PID = 0xFFFFFFFF;
+}
+
+
+VOID AddToProcessList(DWORD APID, PVOID AEPROCESS) 
+{
+	for (int i = 0; i < 0xFF; i++)
+		if (PROCESS_LIST[i].PID == 0xFFFFFFFF) {
+			PROCESS_LIST[i].PID      = APID;
+			PROCESS_LIST[i].EPROCESS = AEPROCESS;
+			if (AEPROCESS != NULL &&
+				(DWORD)AEPROCESS != 0xFFFFFFFF && 
+				MmIsAddressValid(AEPROCESS) &&
+				MmIsAddressValid((PVOID)((DWORD)AEPROCESS + ProcessNameOffset))
+				) 
+				memcpy(&PROCESS_LIST[i].NAME, (PVOID)((DWORD)AEPROCESS + ProcessNameOffset), 16);
+			return;
+		}
+		
+}
+
+VOID DeleteFromProcessList(DWORD APID, PVOID AEPROCESS) 
+{
+	for (int i = 0; i < 0xFF; i++)
+		if (PROCESS_LIST[i].EPROCESS == AEPROCESS) {
+			PROCESS_LIST[i].PID = 0xFFFFFFFF;
+			PROCESS_LIST[i].EPROCESS = (PVOID)0xFFFFFFFF;
+			return;
+		}
+}
+// Загрузка образа исполняемого файла или DLL
+VOID MyLoadImageNotifyRoutine(IN PUNICODE_STRING  FullImageName,
+							  IN HANDLE  ProcessId, 
+							  IN PIMAGE_INFO  ImageInfo)
+{
+	zDbgPrint("Load Image. PID = %d, Image Name = %ws \n", ProcessId, FullImageName->Buffer);  
+}
+
+
+NTSTATUS GetProcessExeName(PUNICODE_STRING ProcessImageName)
+{
+NTSTATUS status;
+    ULONG returnedLength;
+    ULONG bufferLength;
+    PVOID buffer = NULL;
+    PUNICODE_STRING imageName;
+    
+    // Step one - get the size we need
+    status = ZwQueryInformationProcess( NtCurrentProcess(), 
+                                        ProcessImageFileName,
+                                        NULL, // buffer
+                                        0, // buffer size
+                                        &returnedLength);
+
+    if (STATUS_INFO_LENGTH_MISMATCH != status)
+		return status;
+
+/*    //
+    // Is the passed-in buffer going to be big enough for us?  
+    // This function returns a single contguous buffer model...
+    //
+    bufferLength = returnedLength - sizeof(UNICODE_STRING);
+    
+    if (ProcessImageName->MaximumLength < bufferLength) {
+
+        ProcessImageName->Length = (USHORT) bufferLength;
+
+        return STATUS_BUFFER_OVERFLOW;
+        
+    }
+*/
+	// Выделение буфера для строки
+    buffer = ExAllocatePool(PagedPool, returnedLength);
+
+    if (NULL == buffer)
+		return STATUS_UNSUCCESSFUL;
+
+	// Запрос данных
+    status = ZwQueryInformationProcess( NtCurrentProcess(), 
+                                        ProcessImageFileName,
+                                        buffer,
+                                        returnedLength,
+                                        &returnedLength);
+
+	if (status == STATUS_SUCCESS) {
+        //
+        // Ah, we got what we needed
+        //
+        imageName = (PUNICODE_STRING) buffer;
+		zDbgPrint("Image Name = %S", buffer);
+
+
+       // RtlCopyUnicodeString(ProcessImageName, imageName);
+        
+    }
+
+    ExFreePool(buffer);
+    return status;	
+
+}
+// **** Поиск адреса EPROCESS по PID процесса ****
+PVOID SearchEPROCESSPtr(DWORD APID) 
+{
+	// Смещения полей структуры EPROCESS
+	if (ActiveProcessLinkOffset == 0 || PIDOffset == 0) return NULL; 
+    // Повышение привилегий
+	KIRQL OldIRQL = KeRaiseIrqlToDpcLevel();			 
+	// Поиск текущего процесса
+	PEPROCESS   CurrentProcess    = PsGetCurrentProcess(); 
+	if (!CurrentProcess) return NULL;
+	PLIST_ENTRY CurrentProcessAPL = (PLIST_ENTRY)((ULONG)CurrentProcess + ActiveProcessLinkOffset);
+	PLIST_ENTRY ProcessAPL        = CurrentProcessAPL;
+	ULONG ProcessPID;
+	PVOID EPROCESSPtr = NULL;
+	do  {
+	  ProcessPID  = *(PULONG)((ULONG)ProcessAPL - ActiveProcessLinkOffset + PIDOffset);
+	  if (ProcessPID == APID) {
+		  EPROCESSPtr = (PVOID)((DWORD)ProcessAPL - ActiveProcessLinkOffset);
+		  break;
+	  }
+	  ProcessAPL = ProcessAPL -> Flink;
+	} while (ProcessAPL != CurrentProcessAPL);
+       KeLowerIrql(OldIRQL);
+	   return EPROCESSPtr;
+}
+
+// **** Мониторинг создания/завершение процессов ****
+VOID MyCreateProcessNotifyRoutine(IN HANDLE  ParentId,
+								  IN HANDLE  ProcessId,
+								  IN BOOLEAN  Create)
+{
+	if (Create) {
+		zDbgPrint("Create process.  ParentId = %d, ProcessId = %d \n", ParentId, ProcessId);
+		// Добавление процесса
+		AddToProcessList((DWORD)ProcessId, SearchEPROCESSPtr((DWORD)ProcessId));		
+	}
+	else {
+		zDbgPrint("Delete process.  ParentId = %d, ProcessId = %d \n", ParentId, ProcessId);
+		// Удаление процесса
+		DeleteFromProcessList((DWORD)ProcessId, PsGetCurrentProcess());
+	}
+	zDbgPrint("Current PID = %d \n", PsGetCurrentProcessId());
+	zDbgPrint("Current EPROCESS = %d \n", PsGetCurrentProcess());
+}
+
+
+// ***** Обработчик событий Открытия/Закрытия/Очистки *****
+NTSTATUS DispatchCreateCloseControl (PDEVICE_OBJECT pDeviceObject,
+									 PIRP           pIrp)
+{
+	PIO_STACK_LOCATION pisl;
+	DWORD              dInfo = 0;
+	NTSTATUS           ns    = STATUS_NOT_IMPLEMENTED; // Код возврата
+
+	// Получаем размещение IRP стека
+	pisl = IoGetCurrentIrpStackLocation (pIrp);
+	zDbgPrint("Device Open !");	
+	// Проверяем код поддерживаемых функций
+	switch (pisl->MajorFunction)
+	{
+	case IRP_MJ_CREATE:
+	case IRP_MJ_CLEANUP:
+	case IRP_MJ_CLOSE:
+		{
+			ns = STATUS_SUCCESS;
+			break;
+		}
+	}
+
+	// Завершаем IRP запрос
+	pIrp->IoStatus.Status      = ns;
+	pIrp->IoStatus.Information = dInfo;
+	IoCompleteRequest (pIrp, IO_NO_INCREMENT);
+	return ns;
+}
+
+// ***** Обработчик событий IO Control *****
+NTSTATUS DispatchControl (PDEVICE_OBJECT pDeviceObject,
+						  PIRP           pIrp)
+{
+	PIO_STACK_LOCATION pisl;
+	DWORD              dInfo = 0;
+	NTSTATUS           ns    = STATUS_NOT_IMPLEMENTED; // Код возврата
+	// Получение расположения IRP стека
+	pisl = IoGetCurrentIrpStackLocation (pIrp);
+
+	// Входной буфер и его размер
+	PVOID  InputBuffer         = pIrp->AssociatedIrp.SystemBuffer;
+	ULONG  InputBufferLength   = pisl->Parameters.DeviceIoControl.InputBufferLength;
+	// Выходной буфер и его размер
+	PVOID  OutputBuffer        = pIrp->AssociatedIrp.SystemBuffer;
+	ULONG  OutputBufferLength  = pisl->Parameters.DeviceIoControl.OutputBufferLength;
+	// Код управление 
+	ULONG  IoControlCode		  = pisl->Parameters.DeviceIoControl.IoControlCode;
+	// Вывод данных для отладки
+	zDbgPrint("IoControlCode = %x\n", IoControlCode);	
+	zDbgPrint("InputBufferLength  = %x\n", InputBufferLength);	
+	zDbgPrint("OutputBufferLength = %x\n", OutputBufferLength);	
+	// Получение кода процесса
+	HANDLE  CurrentProcess = PsGetCurrentProcess();
+	
+	// ***** Получение IOCTL_Z_GET_PROCESSLIST *****
+	if (IoControlCode == IOCTL_Z_GET_PROCESSLIST) {
+		zDbgPrint("IOCTL_Z_GET_PROCESSLIST \n");
+		if (OutputBufferLength >= sizeof(PROCESS_LIST)) {				
+			// Возврат списка процессов
+			memcpy(OutputBuffer, &PROCESS_LIST, sizeof(PROCESS_LIST));
+			dInfo = sizeof(PROCESS_LIST);
+			ns = STATUS_SUCCESS;   
+		} 
+		else 
+			ns = STATUS_BUFFER_TOO_SMALL; // Возврат ошибки
+	}
+
+	// ***** Получение текущего PID процесса из EPROCESS - IOCTL_Z_GET_EPROCESS_PID *****
+	if (IoControlCode == IOCTL_Z_GET_EPROCESS_PID) {
+		zDbgPrint("IOCTL_Z_GET_EPROCESS_PID \n");
+		if (InputBufferLength >= 4 && OutputBufferLength >= 4) {				
+			DWORD Indx;
+			memcpy(&Indx, InputBuffer, 4);
+			if (Indx >= 0 && Indx < 0xFF && 
+				PROCESS_LIST[Indx].EPROCESS != NULL && 
+				(DWORD)PROCESS_LIST[Indx].EPROCESS != 0xFFFFFFFF && 
+				MmIsAddressValid(PROCESS_LIST[Indx].EPROCESS) &&
+				MmIsAddressValid((PVOID)((DWORD)PROCESS_LIST[Indx].EPROCESS + PIDOffset))) 
+			{
+				// Возврат PID процесса, считанного из EPROCESS
+				memcpy(OutputBuffer, (PVOID)((DWORD)PROCESS_LIST[Indx].EPROCESS + PIDOffset), 4);
+				dInfo = 4;
+				ns = STATUS_SUCCESS;
+			}
+			else 
+				ns = STATUS_UNSUCCESSFUL; // Возврат ошибки
+
+		} 
+		else 
+			ns = STATUS_BUFFER_TOO_SMALL; // Возврат ошибки
+	}
+
+	// ***** Получение текущего NAME процесса из EPROCESS - IOCTL_Z_GET_EPROCESS_NAME *****
+	if (IoControlCode == IOCTL_Z_GET_EPROCESS_NAME) {
+		zDbgPrint("IOCTL_Z_GET_EPROCESS_NAME \n");
+		if (InputBufferLength >= 4 && OutputBufferLength >= 0x0F) {				
+			DWORD Indx;
+			memcpy(&Indx, InputBuffer, 4);
+			if (Indx >= 0 && Indx < 0xFF && 
+				PROCESS_LIST[Indx].EPROCESS != NULL && 
+				(DWORD)PROCESS_LIST[Indx].EPROCESS != 0xFFFFFFFF && 
+				MmIsAddressValid(PROCESS_LIST[Indx].EPROCESS) &&
+				MmIsAddressValid((PVOID)((DWORD)PROCESS_LIST[Indx].EPROCESS + ProcessNameOffset))) 
+			{
+				// Возврат NAME процесса, считанного из EPROCESS
+				memcpy(OutputBuffer, (PVOID)((DWORD)PROCESS_LIST[Indx].EPROCESS + ProcessNameOffset), 0x0F);
+				dInfo = 0x0F;
+				ns = STATUS_SUCCESS;
+			}
+			else 
+				ns = STATUS_UNSUCCESSFUL; // Возврат ошибки
+
+		} 
+		else 
+			ns = STATUS_BUFFER_TOO_SMALL; // Возврат ошибки
+	}
+	
+	// Завершение IRP запроса
+	pIrp->IoStatus.Status      = ns;
+	pIrp->IoStatus.Information = dInfo;
+	IoCompleteRequest (pIrp, IO_NO_INCREMENT);
+	return ns;  
+}
+
+// ***** Выгрузка драйвера *****
+void DriverUnload (PDRIVER_OBJECT pDriverObject)
+{
+	PsSetCreateProcessNotifyRoutine(*MyCreateProcessNotifyRoutine, true);
+	// Удаление символьной ссылки
+	IoDeleteSymbolicLink (&usSymbolicLinkName);
+	// Удаление устройства
+	IoDeleteDevice       (gpDeviceObject);
+	return;
+}
+
+
+// ***** Инициализация драйвера *****
+NTSTATUS DriverInitialize (PDRIVER_OBJECT  pDriverObject,
+						   PUNICODE_STRING pusRegistryPath)
+{
+	PDEVICE_OBJECT pDeviceObject = NULL;
+	NTSTATUS       ns            = STATUS_DEVICE_CONFIGURATION_ERROR; // Код возврата
+	// Создание устройства
+	if ((ns = IoCreateDevice (pDriverObject, DEVICE_CONTEXT_,
+		&usDeviceName, FILE_DEVICE_UNKNOWN,
+		0, FALSE, &pDeviceObject))
+		== STATUS_SUCCESS)
+	{
+		// Устройство создано - создаем символьной ссылки
+		if ((ns = IoCreateSymbolicLink (&usSymbolicLinkName,
+			&usDeviceName))
+			== STATUS_SUCCESS)
+		{ 
+			// Ссылка (и естественно устройство !) созданы - запоминаем ссылки
+			gpDeviceObject  = pDeviceObject;
+			gpDeviceContext = (PDEVICE_CONTEXT)pDeviceObject->DeviceExtension;
+
+			gpDeviceContext->pDriverObject = pDriverObject;
+			gpDeviceContext->pDeviceObject = pDeviceObject;
+		}
+		else
+		{
+			// Устройство создано, а ссылка - нет. Тогда удалим устройство
+			IoDeleteDevice (pDeviceObject);
+		}
+	}
+	zDbgPrint("Driver Initialize, Status = %d", ns);
+	return ns; 
+}
+
+
+VOID SetupEPROCESSPTR()
+{
+    // Инициализация смещений в EPROCESS
+    switch (*NtBuildNumber) {
+     case  2195:  // Win 2k
+      ActiveProcessLinkOffset = 0xA0;
+	  ProcessNameOffset       = 0x01FC;
+	  PIDOffset               = 0x09C;
+	  break;
+     case 2600:   // Win XP
+      ActiveProcessLinkOffset = 0x88;
+	  ProcessNameOffset       = 0x174;
+	  PIDOffset               = 0x084;
+	  PEBOffset               = 0x1b0;
+	  break;
+     case 3790:  // W2K3
+      ActiveProcessLinkOffset = 0x98;
+	  ProcessNameOffset       = 0x164;
+	  PIDOffset               = 0x094;
+	  PEBOffset               = 0x1a0;
+	  break;
+	}	
+}
+// ***** Точка входа в драйвер *****
+NTSTATUS DriverEntry(IN PDRIVER_OBJECT pDriverObject, IN PUNICODE_STRING pusRegistryPath)
+{
+	// Подготовка списка
+	InitProcessList();
+	// Настройка смещений в EPROCESS
+	SetupEPROCESSPTR();
+	// Определение адреса функции ZwQueryInformationProcess
+    ZwQueryInformationProcess = (PZwQueryInformationProcess) MmGetSystemRoutineAddress(&usZwQueryInformationProcess);
+	zDbgPrint("%X", ZwQueryInformationProcess);
+	// Устновка функций мониторинга
+	//NTSTATUS Res1 = PsSetLoadImageNotifyRoutine(*MyLoadImageNotifyRoutine);
+	NTSTATUS Res2 = PsSetCreateProcessNotifyRoutine(*MyCreateProcessNotifyRoutine, false); 
+	// Возврат результата инициализации. 
+	if ((Res2 == STATUS_SUCCESS)) {
+		// Если хотя-бы одна функция отработала успешно, то драйвер
+		// должен остаться в памяти
+		// Подключение обработчика выгрузки драйвера
+		pDriverObject->DriverUnload  = DriverUnload;
+		// Создание ссылки
+		if ((DriverInitialize (pDriverObject, pusRegistryPath))
+			== STATUS_SUCCESS)   
+		{		
+			// Подключение обработчика DEVICE_CONTROL	 
+			pDriverObject->MajorFunction [IRP_MJ_DEVICE_CONTROL] = DispatchControl;
+			// Подключение обработчиков CREATE/CLOSE/CLEANUP
+			pDriverObject->MajorFunction [IRP_MJ_CLEANUP] = 
+				pDriverObject->MajorFunction [IRP_MJ_CREATE] = 
+				pDriverObject->MajorFunction [IRP_MJ_CLOSE] =  DispatchCreateCloseControl;
+		}
+		return STATUS_SUCCESS; 
+	}
+}

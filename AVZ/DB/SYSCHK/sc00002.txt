@@ -1,0 +1,6 @@
+// ***** AdvWare.ToolBar.SearchIt.l *****
+begin       
+ AddEvAlarmByCLSID('B5F3970B-745E-46AC-B890-E08F69777D80',AScriptName,'ca2.dll');
+ AddEvAlarmByCLSID('C109664B-CEB1-420b-B353-D55A561536DD',AScriptName,'sfi2.dll');
+ AddEvAlarmByCLSID('919F8A8D-135D-44FC-A809-B36083EEAE35',AScriptName,'ca2.dll');
+end.

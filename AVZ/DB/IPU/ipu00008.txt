@@ -1,0 +1,14 @@
+// ***** Удаленный помошник *****
+var
+ X : integer;
+ S : string;
+begin
+ S := 'SYSTEM\CurrentControlSet\Control\Terminal Server';
+ if (GetServiceStart('TermService') < 4)  then begin
+  X := RegKeyIntParamRead('HKEY_LOCAL_MACHINE',S,'fAllowToGetHelp');
+  if X <> 0 then begin
+   AddToLog('>> $AVZ1214');
+   AddSyscheckMenu('$AVZ1215', 'RegKeyIntParamWrite(''HKEY_LOCAL_MACHINE'', '''+S+''',''fAllowToGetHelp'', 0);', 1);
+  end;
+ end;
+end.

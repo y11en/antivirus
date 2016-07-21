@@ -1,0 +1,4 @@
+#include <version/ver_mod.rc2>
+
+1 RCDATA  DISCARDABLE "L_llio.meta"
+

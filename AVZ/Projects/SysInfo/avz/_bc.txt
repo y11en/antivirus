@@ -1,0 +1,9 @@
+begin
+ // Добавление в сценарий команды удаления драйвера PE386
+ BC_DeleteSvc('PE386');
+ BC_DeleteSvc('%Windir%\trojan1.exe');
+ BC_DeleteSvc('%Windir%\trojan2.exe');
+ BC_LogFile(GetAVZDirectory + 'boot_clr.log');
+ // Активация драйвера
+ BC_Execute;
+end.

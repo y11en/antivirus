@@ -1,0 +1,14 @@
+LIBRARY      "AVP_IONT"
+
+EXPORTS
+        _AvpRead13
+        _AvpWrite13
+        _AvpRead25
+        _AvpWrite26
+        _AvpMemoryRead
+        _AvpMemoryWrite
+		_AvpGetDosMemSize
+		_AvpGetFirstMcbSeg
+		_AvpGetIfsApiHookTable
+		_AvpGetDosTraceTable
+        _AvpGetDiskParam

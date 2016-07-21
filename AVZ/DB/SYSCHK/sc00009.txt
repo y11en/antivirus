@@ -1,0 +1,4 @@
+// ***** Trojan-PSW.Win32.Lmir *****
+begin       
+ AddEvAlarmByCLSID('081FE200-A103-11D7-A46D-C770E4459F2F',AScriptName,'interapi64.dll');
+end.

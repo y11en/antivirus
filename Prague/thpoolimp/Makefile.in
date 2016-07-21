@@ -1,0 +1,24 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@
+
+Name = thpoolimp
+Plugin = $(Name).@PLUGIN_EXT@
+Metafile = @srcdir@/$(Name).@METAFILE_EXT@
+Targets = $(Plugin)
+
+Sources = \
+	plugin_thpoolimp.cpp \
+	thpimpl_unix.cpp \
+	threadpool.cpp
+
+# unix section
+
+UnixLibraries = \
+	@LibC@ \
+	@ThreadsSupportLib@
+
+VersionScript = @abs_top_srcdir@/unix/prague_plugin.ver
+
+include @abs_top_builddir@/@OS@/Rules

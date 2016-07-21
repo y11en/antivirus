@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "setup", "setup.vcproj", "{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 1
+		SccProjectUniqueName0 = setup.vcproj
+		SccProjectName0 = Perforce\u0020Project
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Perforce\u0020SCM
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+		ReleaseFS|Win32 = ReleaseFS|Win32
+		ReleaseFS|x64 = ReleaseFS|x64
+		ReleaseKAV|Win32 = ReleaseKAV|Win32
+		ReleaseKAV|x64 = ReleaseKAV|x64
+		ReleaseKIS|Win32 = ReleaseKIS|Win32
+		ReleaseKIS|x64 = ReleaseKIS|x64
+		ReleaseSOS|Win32 = ReleaseSOS|Win32
+		ReleaseSOS|x64 = ReleaseSOS|x64
+		ReleaseWKS|Win32 = ReleaseWKS|Win32
+		ReleaseWKS|x64 = ReleaseWKS|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.Debug|Win32.Build.0 = Debug|Win32
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.Debug|x64.ActiveCfg = Debug|x64
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.Debug|x64.Build.0 = Debug|x64
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.Release|Win32.ActiveCfg = ReleaseFS|x64
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.Release|x64.ActiveCfg = ReleaseFS|x64
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.Release|x64.Build.0 = ReleaseFS|x64
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.ReleaseFS|Win32.ActiveCfg = ReleaseFS|Win32
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.ReleaseFS|Win32.Build.0 = ReleaseFS|Win32
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.ReleaseFS|x64.ActiveCfg = ReleaseFS|x64
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.ReleaseFS|x64.Build.0 = ReleaseFS|x64
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.ReleaseKAV|Win32.ActiveCfg = ReleaseKAV|Win32
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.ReleaseKAV|Win32.Build.0 = ReleaseKAV|Win32
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.ReleaseKAV|x64.ActiveCfg = ReleaseKAV|x64
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.ReleaseKAV|x64.Build.0 = ReleaseKAV|x64
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.ReleaseKIS|Win32.ActiveCfg = ReleaseKIS|Win32
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.ReleaseKIS|Win32.Build.0 = ReleaseKIS|Win32
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.ReleaseKIS|x64.ActiveCfg = ReleaseKIS|x64
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.ReleaseKIS|x64.Build.0 = ReleaseKIS|x64
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.ReleaseSOS|Win32.ActiveCfg = ReleaseSOS|Win32
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.ReleaseSOS|Win32.Build.0 = ReleaseSOS|Win32
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.ReleaseSOS|x64.ActiveCfg = ReleaseSOS|x64
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.ReleaseSOS|x64.Build.0 = ReleaseSOS|x64
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.ReleaseWKS|Win32.ActiveCfg = ReleaseWKS|Win32
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.ReleaseWKS|Win32.Build.0 = ReleaseWKS|Win32
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.ReleaseWKS|x64.ActiveCfg = ReleaseWKS|x64
+		{6C2D74B6-F7D3-4EF0-95A0-C656FEA76AE8}.ReleaseWKS|x64.Build.0 = ReleaseWKS|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

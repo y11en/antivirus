@@ -1,0 +1,8 @@
+PROPFIND /Boxes%24 HTTP/1.1
+Depth: 0
+translate: f
+User-Agent: Microsoft-WebDAV-MiniRedir/5.1.2600
+Host: Dump
+Content-Length: 0
+Connection: Keep-Alive
+

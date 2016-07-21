@@ -1,0 +1,55 @@
+// $AVZ1507
+//$ Нарушение ассоциации REG файлов
+// Функция поиска проблемы                                                                          
+function Check : dword;
+var
+ S : string;
+begin
+ Result := 0;
+ // Тяжелая ошибка 1 - зловредом удален ключ '.reg' или 'regfile\shell\open\command'
+ if not(RegKeyExists('HKEY_CLASSES_ROOT','.reg')) or
+    not(RegKeyExists('HKEY_CLASSES_ROOT','regfile\shell\open\command')) then begin
+     Result := 3;
+     exit;
+    end;
+ // Тяжелая ошибка 2 - ключ '.reg' ведет не на тип regfile
+ if UpperCase(RegKeyStrParamRead('HKEY_CLASSES_ROOT','.reg', '')) <> 'REGFILE' then begin
+     Result := 3;
+     exit;
+    end;
+ // Тяжелая ошибка 3 - ключ 'regfile' содержит подмененныы ключ запуска (часто меняется троянами)                                                                                       
+ S := Trim(RegKeyStrParamRead('HKEY_CLASSES_ROOT', 'regfile\shell\open\command', ''));
+ // Пераметры запуска удалены                                                                   
+ if S = '' then begin
+  Result := 3;
+  exit;
+ end;
+ // Параметры запуска не совпадают со стандартными                                                                                                           
+ S := LowerCase(StringReplace(S, '  ', ' '));
+ if not((S = 'regedit.exe "%1"')) then begin             
+  // Возможно, ключ некорректно восстановлен твикерами или вручную - это менее опасно
+  if (S = 'regedit.exe %1') then 
+   Result := 2
+  else
+   Result := 3;
+  exit;
+ end;
+ // Ошибка средней тяжести - ключ 'regfile' содержит подмененныы ключ редактирования
+ S := Trim(RegKeyStrParamRead('HKEY_CLASSES_ROOT', 'regfile\shell\edit\command', ''));
+ if IsNT and (LowerCase(S) <> LowerCase('%SystemRoot%\system32\NOTEPAD.EXE %1')) then begin
+   Result := 2;
+   exit;
+ end;
+end;
+
+// Функция исправления проблемы                                                                          
+function Fix : dword;
+begin
+ RegKeyCreate('HKEY_CLASSES_ROOT', '.reg');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', '.reg', '', 'regfile');
+ RegKeyCreate('HKEY_CLASSES_ROOT', 'regfile\shell\open\command');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', 'regfile\shell\open\command', '', 'regedit.exe "%1"');
+ if IsNT then 
+  RegKeyStrParamWrite('HKEY_CLASSES_ROOT', 'regfile\shell\edit\command', '', '%SystemRoot%\system32\NOTEPAD.EXE %1');
+ Result := 0;
+end;

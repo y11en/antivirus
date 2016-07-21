@@ -1,0 +1,4 @@
+// ***** VirTool.Win32.Collector *****
+begin
+ AddEvAlarmByCLSID('0F9B4CA4-A30F-480A-841D-69B45C50A8F8', AScriptName, 'AktiveSekurity.ocx');
+end.

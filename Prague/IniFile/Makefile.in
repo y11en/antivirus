@@ -1,0 +1,22 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@ @abs_top_srcdir@/IniLib
+
+Name = inifile
+Plugin = $(Name).@PLUGIN_EXT@
+Metafile = @srcdir@/IniFile.@METAFILE_EXT@
+Targets = $(Plugin)
+
+Sources = \
+	inifile.cpp \
+	plugin_inifile.cpp \
+	IniLib.c
+
+Libraries = \
+	compatutils
+# unix section
+
+VersionScript = @abs_top_srcdir@/unix/prague_plugin.ver
+
+include @abs_top_builddir@/@OS@/Rules

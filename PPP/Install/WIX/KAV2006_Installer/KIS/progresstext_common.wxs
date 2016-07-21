@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+<Fragment Id="ProgressTextCommonFragmentId">
+
+	<UI>
+	
+	<ProgressText Action="InstallValidate">$(loc.IDS_ACTIONTEXT_Validating)</ProgressText>
+	<ProgressText Action="InstallFiles" Template="$(loc.IDS_ACTIONTEXT_FileDirSize)">$(loc.IDS_ACTIONTEXT_CopyingNewFiles)</ProgressText>
+	<ProgressText Action="InstallAdminPackage" Template="$(loc.IDS_ACTIONTEXT_FileDirSize)">$(loc.IDS_ACTIONTEXT_CopyingNetworkFiles)</ProgressText>
+	<ProgressText Action="FileCost">$(loc.IDS_ACTIONTEXT_ComputingSpace2)</ProgressText>
+	<ProgressText Action="CostInitialize">$(loc.IDS_ACTIONTEXT_ComputingSpace)</ProgressText>
+	<ProgressText Action="CostFinalize">$(loc.IDS_ACTIONTEXT_ComputingSpace3)</ProgressText>
+	<ProgressText Action="CreateShortcuts" Template="$(loc.IDS_ACTIONTEXT_Shortcut)">$(loc.IDS_ACTIONTEXT_CreatingShortcuts)</ProgressText>
+	<ProgressText Action="PublishComponents" Template="$(loc.IDS_ACTIONTEXT_ComponentIDQualifier)">$(loc.IDS_ACTIONTEXT_PublishingQualifiedComponents)</ProgressText>
+	<ProgressText Action="PublishFeatures" Template="$(loc.IDS_ACTIONTEXT_FeatureColon)">$(loc.IDS_ACTIONTEXT_PublishProductFeatures)</ProgressText>
+	<ProgressText Action="PublishProduct">$(loc.IDS_ACTIONTEXT_PublishProductInfo)</ProgressText>
+	<ProgressText Action="RegisterClassInfo" Template="$(loc.IDS_ACTIONTEXT_ClassId)">$(loc.IDS_ACTIONTEXT_RegisterClassServer)</ProgressText>
+	<ProgressText Action="RegisterExtensionInfo" Template="$(loc.IDS_ACTIONTEXT_Extension2)">$(loc.IDS_ACTIONTEXT_RegisterExtensionServers)</ProgressText>
+	<ProgressText Action="RegisterMIMEInfo" Template="$(loc.IDS_ACTIONTEXT_ContentTypeExtension)">$(loc.IDS_ACTIONTEXT_RegisterMimeInfo)</ProgressText>
+	<ProgressText Action="RegisterProgIdInfo" Template="$(loc.IDS_ACTIONTEXT_ProgID2)">$(loc.IDS_ACTIONTEXT_RegisteringProgIdentifiers)</ProgressText>
+	<ProgressText Action="AllocateRegistrySpace" Template="$(loc.IDS_ACTIONTEXT_FreeSpace)">$(loc.IDS_ACTIONTEXT_AllocatingRegistry)</ProgressText>
+	<ProgressText Action="AppSearch" Template="$(loc.IDS_ACTIONTEXT_PropertySignature)">$(loc.IDS_ACTIONTEXT_SearchInstalled)</ProgressText>
+	<ProgressText Action="BindImage" Template="$(loc.IDS_ACTIONTEXT_File)">$(loc.IDS_ACTIONTEXT_BindingExes)</ProgressText>
+	<ProgressText Action="CCPSearch">$(loc.IDS_ACTIONTEXT_SearchingQualifyingProducts2)</ProgressText>
+	<ProgressText Action="CreateFolders" Template="$(loc.IDS_ACTIONTEXT_KeyNameValue)">$(loc.IDS_ACTIONTEXT_CreatingFolders)</ProgressText>
+	<ProgressText Action="DeleteServices" Template="$(loc.IDS_ACTIONTEXT_Service)">$(loc.IDS_ACTIONTEXT_DeletingServices)</ProgressText>
+	<ProgressText Action="DuplicateFiles" Template="$(loc.IDS_ACTIONTEXT_FileDirectorySize)">$(loc.IDS_ACTIONTEXT_CreatingDuplicate)</ProgressText>
+	<ProgressText Action="FindRelatedProducts" Template="$(loc.IDS_ACTIONTEXT_FoundApp)">$(loc.IDS_ACTIONTEXT_SearchForRelated)</ProgressText>
+	<ProgressText Action="InstallODBC">$(loc.IDS_ACTIONTEXT_InstallODBC)</ProgressText>
+	<ProgressText Action="InstallServices" Template="$(loc.IDS_ACTIONTEXT_Service2)">$(loc.IDS_ACTIONTEXT_InstallServices)</ProgressText>
+	<ProgressText Action="LaunchConditions">$(loc.IDS_ACTIONTEXT_EvaluateLaunchConditions)</ProgressText>
+	<ProgressText Action="MigrateFeatureStates" Template="$(loc.IDS_ACTIONTEXT_Application)">$(loc.IDS_ACTIONTEXT_MigratingFeatureStates)</ProgressText>
+	<ProgressText Action="MoveFiles" Template="$(loc.IDS_ACTIONTEXT_FileDirSize3)">$(loc.IDS_ACTIONTEXT_MovingFiles)</ProgressText>
+	<ProgressText Action="PatchFiles" Template="$(loc.IDS_ACTIONTEXT_FileDirSize4)">$(loc.IDS_ACTIONTEXT_PatchingFiles)</ProgressText>
+	<ProgressText Action="ProcessComponents">$(loc.IDS_ACTIONTEXT_UpdateComponentRegistration)</ProgressText>
+	<ProgressText Action="RegisterComPlus" Template="$(loc.IDS_ACTIONTEXT_AppIdAppTypeRSN)">$(loc.IDS_ACTIONTEXT_RegisteringComPlus)</ProgressText>
+	<ProgressText Action="RegisterFonts" Template="$(loc.IDS_ACTIONTEXT_Font)">$(loc.IDS_ACTIONTEXT_RegisterFonts)</ProgressText>
+	<ProgressText Action="RegisterProduct" Template="$(loc.IDS_ACTIONTEXT_1b)">$(loc.IDS_ACTIONTEXT_RegisteringProduct)</ProgressText>
+	<ProgressText Action="RegisterTypeLibraries" Template="$(loc.IDS_ACTIONTEXT_LibId)">$(loc.IDS_ACTIONTEXT_RegisterTypeLibs)</ProgressText>
+	<ProgressText Action="RegisterUser" Template="$(loc.IDS_ACTIONTEXT_1c)">$(loc.IDS_ACTIONTEXT_RegUser)</ProgressText>
+	<ProgressText Action="RemoveDuplicateFiles" Template="$(loc.IDS_ACTIONTEXT_FileDir)">$(loc.IDS_ACTIONTEXT_RemovingDuplicates)</ProgressText>
+	<ProgressText Action="RemoveEnvironmentStrings" Template="$(loc.IDS_ACTIONTEXT_NameValueAction2)">$(loc.IDS_ACTIONTEXT_EnvironmentStrings)</ProgressText>
+	<ProgressText Action="RemoveExistingProducts" Template="$(loc.IDS_ACTIONTEXT_AppCommandLine)">$(loc.IDS_ACTIONTEXT_RemoveApps)</ProgressText>
+	<ProgressText Action="RemoveFiles" Template="$(loc.IDS_ACTIONTEXT_FileDir2)">$(loc.IDS_ACTIONTEXT_RemovingFiles)</ProgressText>
+	<ProgressText Action="RemoveFolders" Template="$(loc.IDS_ACTIONTEXT_Folder1)">$(loc.IDS_ACTIONTEXT_RemovingFolders)</ProgressText>
+	<ProgressText Action="RemoveIniValues" Template="$(loc.IDS_ACTIONTEXT_FileSectionKeyValue)">$(loc.IDS_ACTIONTEXT_RemovingIni)</ProgressText>
+	<ProgressText Action="RemoveODBC">$(loc.IDS_ACTIONTEXT_RemovingODBC)</ProgressText>
+	<ProgressText Action="RemoveRegistryValues" Template="$(loc.IDS_ACTIONTEXT_KeyName)">$(loc.IDS_ACTIONTEXT_RemovingRegistry)</ProgressText>
+	<ProgressText Action="RemoveShortcuts" Template="$(loc.IDS_ACTIONTEXT_Shortcut1)">$(loc.IDS_ACTIONTEXT_RemovingShortcuts)</ProgressText>
+	<ProgressText Action="RMCCPSearch">$(loc.IDS_ACTIONTEXT_SearchingQualifyingProducts)</ProgressText>
+	<ProgressText Action="SelfRegModules" Template="$(loc.IDS_ACTIONTEXT_FileFolder)">$(loc.IDS_ACTIONTEXT_RegisteringModules)</ProgressText>
+	<ProgressText Action="SelfUnregModules" Template="$(loc.IDS_ACTIONTEXT_FileFolder2)">$(loc.IDS_ACTIONTEXT_UnregisterModules)</ProgressText>
+	<ProgressText Action="SetODBCFolders">$(loc.IDS_ACTIONTEXT_InitializeODBCDirs)</ProgressText>
+	<ProgressText Action="StartServices" Template="$(loc.IDS_ACTIONTEXT_Service3)">$(loc.IDS_ACTIONTEXT_StartingServices)</ProgressText>
+	<ProgressText Action="StopServices" Template="$(loc.IDS_ACTIONTEXT_Service4)">$(loc.IDS_ACTIONTEXT_StoppingServices)</ProgressText>
+	<ProgressText Action="UninstallCompetitorsSoftware">$(loc.IDS_ACTIONTEXT_UninstallCompetitorsSoftware)</ProgressText>
+	<ProgressText Action="UnpublishComponents" Template="$(loc.IDS_ACTIONTEXT_ComponentIdQualifier2)">$(loc.IDS_ACTIONTEXT_UnpublishQualified)</ProgressText>
+	<ProgressText Action="UnpublishFeatures" Template="$(loc.IDS_ACTIONTEXT_Feature)">$(loc.IDS_ACTIONTEXT_UnpublishProductFeatures)</ProgressText>
+	<ProgressText Action="UnregisterClassInfo" Template="$(loc.IDS_ACTIONTEXT_ClsID)">$(loc.IDS_ACTIONTEXT_UnregisterClassServers)</ProgressText>
+	<ProgressText Action="UnregisterComPlus" Template="$(loc.IDS_ACTIONTEXT_AppId)">$(loc.IDS_ACTIONTEXT_UnregisteringComPlus)</ProgressText>
+	<ProgressText Action="UnregisterExtensionInfo" Template="$(loc.IDS_ACTIONTEXT_Extension)">$(loc.IDS_ACTIONTEXT_UnregisterExtensionServers)</ProgressText>
+	<ProgressText Action="UnregisterFonts" Template="$(loc.IDS_ACTIONTEXT_Font2)">$(loc.IDS_ACTIONTEXT_UnregisteringFonts)</ProgressText>
+	<ProgressText Action="UnregisterMIMEInfo" Template="$(loc.IDS_ACTIONTEXT_ContentTypeExtension2)">$(loc.IDS_ACTIONTEXT_UnregisteringMimeInfo)</ProgressText>
+	<ProgressText Action="UnregisterProgIdInfo" Template="$(loc.IDS_ACTIONTEXT_ProgID)">$(loc.IDS_ACTIONTEXT_UnregisteringProgramIds)</ProgressText>
+	<ProgressText Action="UnregisterTypeLibraries" Template="$(loc.IDS_ACTIONTEXT_Libid2)">$(loc.IDS_ACTIONTEXT_UnregTypeLibs)</ProgressText>
+	<ProgressText Action="WriteEnvironmentStrings" Template="$(loc.IDS_ACTIONTEXT_NameValueAction)">$(loc.IDS_ACTIONTEXT_EnvironmentStrings)</ProgressText>
+	<ProgressText Action="WriteIniValues" Template="$(loc.IDS_ACTIONTEXT_FileSectionKeyValue2)">$(loc.IDS_ACTIONTEXT_WritingINI)</ProgressText>
+	<ProgressText Action="WriteRegistryValues" Template="$(loc.IDS_ACTIONTEXT_KeyNameValue)">$(loc.IDS_ACTIONTEXT_WritingRegistry)</ProgressText>
+	<ProgressText Action="Advertise">$(loc.IDS_ACTIONTEXT_Advertising)</ProgressText>
+	<ProgressText Action="GenerateScript" Template="$(loc.IDS_ACTIONTEXT_1)">$(loc.IDS_ACTIONTEXT_GeneratingScript)</ProgressText>
+	<ProgressText Action="InstallSFPCatalogFile" Template="$(loc.IDS_ACTIONTEXT_FileDependencies)">$(loc.IDS_ACTIONTEXT_InstallingSystemCatalog)</ProgressText>
+	<ProgressText Action="MsiPublishAssemblies" Template="Application Context:[1], Assembly Name:[2]">Publishing assembly information</ProgressText>
+	<ProgressText Action="MsiUnpublishAssemblies" Template="Application Context:[1], Assembly Name:[2]">Unpublishing assembly information</ProgressText>
+	<ProgressText Action="Rollback" Template="$(loc.IDS_ACTIONTEXT_1d)">$(loc.IDS_ACTIONTEXT_RollingBack)</ProgressText>
+	<ProgressText Action="RollbackCleanup" Template="$(loc.IDS_ACTIONTEXT_File2)">$(loc.IDS_ACTIONTEXT_RemovingBackup)</ProgressText>
+	<ProgressText Action="UnmoveFiles" Template="$(loc.IDS_ACTIONTEXT_FileDir3)">$(loc.IDS_ACTIONTEXT_RemovingMoved)</ProgressText>
+	<ProgressText Action="UnpublishProduct">$(loc.IDS_ACTIONTEXT_UnpublishingProductInfo)</ProgressText>
+	<ProgressText Action="InstallInitialize">$(loc.IDS_ACTIONTEXT_InstallInitialize)</ProgressText>
+
+
+	<ProgressText Action="CheckAdmin">$(loc.IDS_ACTIONTEXT_EvaluateLaunchConditions)</ProgressText>
+	<ProgressText Action="CheckRebootPending">$(loc.IDS_ACTIONTEXT_EvaluateLaunchConditions)</ProgressText>
+	<ProgressText Action="AppFound">$(loc.IDS_ACTIONTEXT_EvaluateLaunchConditions)</ProgressText>
+	
+	<ProgressText Action="PrepareKlifSysInstallString2k">$(loc.IDS_ACTIONTEXT_RegisteringDrivers)</ProgressText>
+	<ProgressText Action="PrepareKl1SysInstallString2k">$(loc.IDS_ACTIONTEXT_RegisteringDrivers)</ProgressText>
+	<ProgressText Action="PrepareKlFltDevSysInstallString2k">$(loc.IDS_ACTIONTEXT_RegisteringDrivers)</ProgressText>
+	<ProgressText Action="PrepareKlBgSysInstallString2k">$(loc.IDS_ACTIONTEXT_RegisteringDrivers)</ProgressText>
+	<ProgressText Action="InstallServiceKlifSysSetProp">$(loc.IDS_ACTIONTEXT_RegisteringDrivers)</ProgressText>
+	<ProgressText Action="InstallServiceKlifSys">$(loc.IDS_ACTIONTEXT_RegisteringDrivers)</ProgressText>
+	<ProgressText Action="InstallServiceKlFltDevSysSetProp">$(loc.IDS_ACTIONTEXT_RegisteringDrivers)</ProgressText>
+	<ProgressText Action="InstallServiceKlFltDevSys">$(loc.IDS_ACTIONTEXT_RegisteringDrivers)</ProgressText>
+	<ProgressText Action="InstallServiceKlBgSysSetProp">$(loc.IDS_ACTIONTEXT_RegisteringDrivers)</ProgressText>
+	<ProgressText Action="InstallServiceKlBgSys">$(loc.IDS_ACTIONTEXT_RegisteringDrivers)</ProgressText>
+	<ProgressText Action="InstallServiceKl1SysSetProp">$(loc.IDS_ACTIONTEXT_RegisteringDrivers)</ProgressText>
+	<ProgressText Action="InstallServiceKl1Sys">$(loc.IDS_ACTIONTEXT_RegisteringDrivers)</ProgressText>
+
+	<ProgressText Action="DisableWFW">$(loc.IDS_ACTIONTEXT_DisablingWFW)</ProgressText>
+
+	<ProgressText Action="UninstallProtectionSetProp">$(loc.IDS_ACTIONTEXT_RemovingProtection)</ProgressText>
+	<ProgressText Action="UninstallProtection">$(loc.IDS_ACTIONTEXT_RemovingProtection)</ProgressText>
+
+	<ProgressText Action="ProductDeinitialize">$(loc.IDS_ACTIONTEXT_ProductDeinitialize)</ProgressText>
+
+	<ProgressText Action="Unregister_BatPluginSetProp">$(loc.IDS_ACTIONTEXT_UnregisterPlugins)</ProgressText>
+	<ProgressText Action="Unregister_BatPlugin">$(loc.IDS_ACTIONTEXT_UnregisterPlugins)</ProgressText>
+	<ProgressText Action="Unregister_BatASSetProp">$(loc.IDS_ACTIONTEXT_UnregisterPlugins)</ProgressText>
+	<ProgressText Action="Unegister_BatAS">$(loc.IDS_ACTIONTEXT_UnregisterPlugins)</ProgressText>
+
+	<ProgressText Action="UninstallServiceKl1SysSetProp">$(loc.IDS_ACTIONTEXT_UnregisteringDrivers)</ProgressText>
+	<ProgressText Action="UninstallServiceKl1Sys">$(loc.IDS_ACTIONTEXT_UnregisteringDrivers)</ProgressText>
+	<ProgressText Action="UninstallServiceKlifSysSetProp">$(loc.IDS_ACTIONTEXT_UnregisteringDrivers)</ProgressText>
+	<ProgressText Action="UninstallServiceKlifSys">$(loc.IDS_ACTIONTEXT_UnregisteringDrivers)</ProgressText>
+	<ProgressText Action="UninstallServiceKlFltDevSysSetProp">$(loc.IDS_ACTIONTEXT_UnregisteringDrivers)</ProgressText>
+	<ProgressText Action="UninstallServiceKlFltDevSys">$(loc.IDS_ACTIONTEXT_UnregisteringDrivers)</ProgressText>
+	<ProgressText Action="UninstallServiceKlBgSysSetProp">$(loc.IDS_ACTIONTEXT_UnregisteringDrivers)</ProgressText>
+	<ProgressText Action="UninstallServiceKlBgSys">$(loc.IDS_ACTIONTEXT_UnregisteringDrivers)</ProgressText>
+
+	<ProgressText Action="SaveLicenseInfo">$(loc.IDS_ACTIONTEXT_SavingObjects)</ProgressText>
+	<ProgressText Action="RestoreLicenseInfo">$(loc.IDS_ACTIONTEXT_SavingObjects)</ProgressText>
+	<ProgressText Action="SaveAVBasesSetProp">$(loc.IDS_ACTIONTEXT_SavingObjects)</ProgressText>
+	<ProgressText Action="SaveAVBases">$(loc.IDS_ACTIONTEXT_SavingObjects)</ProgressText>
+	<ProgressText Action="RestoreAVBasesSetProp">$(loc.IDS_ACTIONTEXT_SavingObjects)</ProgressText>
+	<ProgressText Action="RestoreAVBases">$(loc.IDS_ACTIONTEXT_SavingObjects)</ProgressText>
+	
+	<ProgressText Action="RemoveExtraFilesFoldersSetProp" Template="$(loc.IDS_ACTIONTEXT_FileDir2)">$(loc.IDS_ACTIONTEXT_RemovingFiles)</ProgressText>
+	<ProgressText Action="RemoveExtraFilesFolders" Template="$(loc.IDS_ACTIONTEXT_FileDir2)">$(loc.IDS_ACTIONTEXT_RemovingFiles)</ProgressText>
+
+	<ProgressText Action="RollbackDriverKlifX64">$(loc.IDS_ACTIONTEXT_RegisteringDrivers)</ProgressText>
+	<ProgressText Action="InstallDriverKlifX64">$(loc.IDS_ACTIONTEXT_RegisteringDrivers)</ProgressText>
+
+	<ProgressText Action="WriteRegistryValuesCA" Template="$(loc.IDS_ACTIONTEXT_KeyNameValue)">$(loc.IDS_ACTIONTEXT_WritingRegistry)</ProgressText>
+
+	<ProgressText Action="EnableAutoUpdateCA">$(loc.IDS_ACTIONTEXT_EnablingOptions)</ProgressText>
+	<ProgressText Action="EnableFullScanCA">$(loc.IDS_ACTIONTEXT_EnablingOptions)</ProgressText>
+	<ProgressText Action="EnableTraceToFileCA">$(loc.IDS_ACTIONTEXT_EnablingOptions)</ProgressText>
+	<ProgressText Action="EnableTraceToDebugOutputCA">$(loc.IDS_ACTIONTEXT_EnablingOptions)</ProgressText>
+
+	<ProgressText Action="StartServiceKlifSysSetProp">$(loc.IDS_ACTIONTEXT_StartingServices))</ProgressText>
+	<ProgressText Action="StartServiceKlifSys">$(loc.IDS_ACTIONTEXT_StartingServices)</ProgressText>
+	<ProgressText Action="StartServiceKlFltDevSysSetProp">$(loc.IDS_ACTIONTEXT_StartingServices)</ProgressText>
+	<ProgressText Action="StartServiceKlFltDevSys">$(loc.IDS_ACTIONTEXT_StartingServices)</ProgressText>
+	<ProgressText Action="StartServiceKlBgSysSetProp">$(loc.IDS_ACTIONTEXT_StartingServices)</ProgressText>
+	<ProgressText Action="StartServiceKlBgSys">$(loc.IDS_ACTIONTEXT_StartingServices)</ProgressText>
+	<ProgressText Action="StartServiceKl1SysSetProp">$(loc.IDS_ACTIONTEXT_StartingServices)</ProgressText>
+	<ProgressText Action="StartServiceKl1Sys">$(loc.IDS_ACTIONTEXT_StartingServices)</ProgressText>
+
+	<ProgressText Action="Register_BatPluginSetProp">$(loc.IDS_ACTIONTEXT_UnregisterPlugins)</ProgressText>
+	<ProgressText Action="Register_BatPlugin">$(loc.IDS_ACTIONTEXT_UnregisterPlugins)</ProgressText>
+	<ProgressText Action="Register_BatASSetProp">$(loc.IDS_ACTIONTEXT_UnregisterPlugins)</ProgressText>
+	<ProgressText Action="Register_BatAS">$(loc.IDS_ACTIONTEXT_UnregisterPlugins)</ProgressText>
+
+	<ProgressText Action="SetServiceDACLSetProp">$(loc.IDS_ACTIONTEXT_ConfiguringServices)</ProgressText>
+	<ProgressText Action="SetServiceDACL">$(loc.IDS_ACTIONTEXT_ConfiguringServices)</ProgressText>
+	
+	<ProgressText Action="InstallProtectionSetProp">$(loc.IDS_ACTIONTEXT_InstallingProtection)</ProgressText>
+	<ProgressText Action="InstallProtection">$(loc.IDS_ACTIONTEXT_InstallingProtection)</ProgressText>
+	
+	<ProgressText Action="CheckRebootPendingOnEnd">$(loc.IDS_ACTIONTEXT_SchedulingRebootOperation)</ProgressText>
+	<ProgressText Action="SetRebootRequired">$(loc.IDS_ACTIONTEXT_SchedulingRebootOperation)</ProgressText>
+	<ProgressText Action="EnableRebootPending">$(loc.IDS_ACTIONTEXT_SchedulingRebootOperation)</ProgressText>
+
+	<ProgressText Action="ImportSetupRegCA">$(loc.IDS_ACTIONTEXT_ImportingRegistryValues)</ProgressText>
+		
+	</UI>
+	
+</Fragment>
+</Wix>

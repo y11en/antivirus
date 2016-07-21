@@ -1,0 +1,106 @@
+; -- klim5.INF --
+;
+; This file is based on Passthru driver INF file
+; klim5 driver INF file - this is the INF for the service (protocol)
+; part.
+; 
+; Copyright (c) 2006 , Kaspersky Lab
+;
+
+
+[Version]
+Signature  = "$Windows NT$"
+Class      = NetService
+ClassGUID  = {4D36E974-E325-11CE-BFC1-08002BE10318}
+Provider   = %Klft%
+CatalogFile= klim5.cat
+DriverVer  = 01/21/2007,6.1.17.0			;mm/dd/yy
+
+
+[Manufacturer]
+%klft% = KLFT,NTx86,NTia64,NTamd64
+
+[ControlFlags]
+;
+;=========================================================================
+;
+;=========================================================================
+;For Win2K
+
+[KLFT]
+%klim5_Desc% = klim5.ndi, kl_klim5
+ 
+;For WinXP and later
+
+[KLFT.NTx86]
+%klim5_Desc% = klim5.ndi, kl_klim5
+
+[KLFT.NTia64]
+%klim5_Desc% = klim5.ndi, kl_klim5
+
+[KLFT.NTamd64]
+%klim5_Desc% = klim5.ndi, kl_klim5
+
+
+[klim5.ndi]
+AddReg          = klim5.ndi.AddReg, klim5.AddReg
+Characteristics = 0x4410 ;  NCF_FILTER | NCF_NDIS_PROTOCOL !--Filter Specific--!!
+CopyFiles       = klim5.Files.Sys
+CopyInf         = klim5_m.inf
+
+[klim5.ndi.Remove]
+DelFiles = klim5.Files.Sys
+DelReg= klim5.DelReg
+
+; ----------------------------------------------------------------------
+; File copy
+;
+[SourceDisksNames]
+1=%DiskDescription%,"",,
+
+[SourceDisksFiles]
+klim5.sys=1
+
+[DestinationDirs]
+DefaultDestDir = 12
+klim5.Files.Sys   = 12   ; %windir%\System32\drivers
+
+[klim5.Files.Sys]
+klim5.sys,,,2
+
+; ----------------------------------------------------------------------
+; Filter Install
+;
+
+[klim5.ndi.AddReg]
+HKR, Ndi, HelpText, , %klim5_HELP%
+HKR, Ndi,            FilterClass,         , failover
+HKR, Ndi,            FilterDeviceInfId,   , kl_klim5mp
+HKR, Ndi,            Service,             , klim5
+HKR, Ndi\Interfaces, UpperRange,          , noupper
+HKR, Ndi\Interfaces, LowerRange,          , nolower
+HKR, Ndi\Interfaces, FilterMediaTypes,    , "ethernet, tokenring, fddi, wan"
+HKR, Ndi\Interfaces, LowerExclude,        , "ndisatm, ndiscowan, ndiswan, ndiswanasync, ndiswanipx, ndiswannbf"
+
+
+[klim5.AddReg]
+; The following key is Required
+; The following key is klim5 specific
+HKLM, System\CurrentControlSet\Services\KL1, UseKlim,, "klim5"
+
+[klim5.DelReg]
+HKLM, System\CurrentControlSet\Services\KL1, UseKlim
+HKLM, System\CurrentControlSet\Services\klim5\Parameters
+
+;[Klim5.Ndi.Remove.Services]
+;DelService = klim5
+
+; ----------------------------------------------------------------------
+[Strings]
+Klft = "Kaspersky Lab"
+DiskDescription = "Kaspersky Anti-Virus NDIS Filter Driver Disk"
+
+klim5_Desc = "Kaspersky Anti-Virus NDIS Filter"
+klim5_HELP = "Kaspersky Anti-Virus NDIS Filter"
+
+

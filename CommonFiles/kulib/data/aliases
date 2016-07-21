@@ -1,0 +1,59 @@
+cp037		ibm037 ebcdic-cp-us ebcdic-cp-ca ebcdic-cp-wt ebcdic-cp-nl cp037_ibmuscanada
+cp424		ibm424 424 ebcdic-cp-he csibm424
+cp437		ibm437 437 cspc8codepage437
+cp500		ibm500 ebcdic-cp-be ebcdic-cp-ch csibm500
+cp737		ibm737 cp737latingreek
+cp856		cp856_hebrew_pc
+cp857		ibm857 857 csibm857
+cp860		ibm860 860 csibm860
+cp861		ibm861 861 cp-is csibm861
+cp862		ibm862 862 cspc862latinhebrew
+cp863		ibm863 863 csibm863
+cp864		ibm864 csibm864
+cp865		ibm865 865 csibm865
+cp869		ibm869 869 cp-gr csibm869
+cp874		ibm874
+cp875		cp875_ibmgreek
+cp1026		ibm1026 csibm1026
+cp10000		cp10000_macroman
+cp10006		cp10006_macgreek
+cp10007		cp10007_maccyrillic
+cp10029		cp10029_maclatin2
+cp10079		cp10079_macicelandic
+cp10081		cp10081_macturkish
+iso-8859-3	iso_8859-3:1988 iso-ir-109  latin3 l3 csisolatin3
+iso-8859-6	iso_8859-6:1987 iso-ir-127  ecma-114 asmo-708 arabic csisolatinarabic
+iso-8859-7	iso_8859-7:1987 iso-ir-126  elot_928 ecma-118 greek greek8 csisolatingreek
+iso-8859-8	iso_8859-8:1988 iso-ir-138  hebrew csisolatinhebrew
+iso-8859-9	iso_8859-9:1989 iso-ir-148 latin5 l5 csisolatin5
+iso-8859-10	iso_8859-10:1992 iso-ir-157  latin6 l6 csisolatin6
+iso-8859-13	iso_8859-13:1998
+iso-8859-14	iso_8859-14:1998
+mac-ce		maccenteuro
+mac-croatian	# maccroatian
+mac-cyrillic	# maccyrillic
+mac-dingbats	# macdingbats
+mac-greek	#macgreek
+mac-iceland	#maciceland
+mac-roman	#macroman
+mac-romania	#macromania
+mac-thai	#macthai
+mac-turkish	#macturkish
+mac-ukraine	#macukraine
+windows-1250	cp1250
+windows-1251	cp1251
+windows-1252	cp1252
+windows-1253	cp1253
+windows-1254	cp1254
+windows-1255	cp1255
+windows-1256	cp1256
+
+windows-1257	cp1257
+
+
+
+windows-1258	cp1258
+
+
+utf16 windows-1200
+utf16be windows-1201

@@ -1,0 +1,100 @@
+[Product]								
+Name=KAVFS7
+LocalizedName=Kaspersky Anti-Virus 7.0 for Windows Servers
+RegKey=KAVFS7
+AdaptedProduct = 1
+									
+[Setup]
+UseWrapper=1
+ExecutableRelPath=EXEC
+Params=/s /v"/qn AKINSTALL=1"
+Executable=SETUP.EXE
+RebootDelegated = 1
+RebootAllowed=1
+ConfigFile=installer.ini
+
+[SetupProcessResult]
+Wait=1
+DescriptionFile=avpsetup.rep
+ 
+[SetupProcessResult_SuccessCodes]
+0=La suppression a réussi.
+3010=Le redémarrage de l'ordinateur est requis pour terminer la suppression.
+ 
+[SetupProcessResult_ErrorCodes]
+13=Données non valides. 
+87=Un des paramètres est erroné. 
+120=Cette fonction n'est pas accessible sous cette plateforme. Elle est disponible uniquement sous Windows 2000 et Windows XP avec l'installateur Windows version 2.0. 
+1259=Ce code d'erreur apparaît uniquement lors de l'utilisation de l'installateur Windows version 2.0 et Windows XP ou suivant. Si l'installateur Windows décide qu'un logiciel n'est pas compatible avec le système d'exploitation actuel, il affiche une boîte de dialogue qui en informe l'utilisateur et qui l'invite malgré à tout à essayer de l'installer. Ce code d'erreur est renvoyé uniquement si l'utilisateur décide de ne pas essayer l'installation. 
+1601=Le service d'installation de Windows n'est pas accessible. Veuillez contacter le service d'assistance technique de l'entreprise pour vérifier l'enregistrement du service d'installation de Windows. 
+1602=Suppression interrompue par l'utilisateur. 
+1603=Une erreur fatale s'est produite durant la suppression. 
+1604=La suppression a été interrompue avant d'être terminée. 
+1605=Cette action est admise uniquement pour les logiciels installés. 
+1606=L'identificateur de fonctions n'est pas enregistré. 
+1607=L'identificateur du composant n'est pas enregistré. 
+1608=Propriété inconnue. 
+1609=Le dispositif de traitement n'est pas dans un état admis. 
+1610=Les données de configuration de ce logiciel sont corrompues. Contactez le service d'assistance technique de votre entreprise. 
+1611=Le qualificatif du composant est manquant. 
+1612=La ressource avec les fichiers d'installation de ce logiciel n'est pas accessible. Vérifiez si la ressource exercice et si elle est accessible. 
+1613=Ce paquet d'installation ne peut pas être ouvert pas le service d'installation de Windows. Il faut installer la mise à jour de Windows qui contient la version actualisée de service d'installation de Windows. 
+1614=Le logiciel a été supprimé du système. 
+1615=La syntaxe de la requête SQL est invalide ou non prise en charge. 
+1616=Le champ d'enregistrement est manquant. 
+1618=Une autre copie du processus de suppression est déjà en cours. Arrêtez la suppression en cours avant d'en lancer une nouvelle.
+1619=Impossible d'ouvrir le paquet d'installation. Vérifiez que le paquet existe et que vous y avez accès ou contactez le fournisseur du paquet pour confirmer qu'il s'agit du bon correctif du paquet d'installation Windows.
+1620=Impossible d'ouvrir ce paquet d'installation. Contactez le fournisseur du logiciel pour s'assurer que ce paquet d'installation Windows et le bon. 
+1621=Une erreur s'est produite au lancement de l'interface utilisateur du service d'installation Windows. Contactez le service d'assistance technique de votre organisation. 
+1622=Erreur d'ouverture du fichier journal d'installation. Vérifiez que ce journal existe et que vous jouissez des privilèges d'écriture. 
+1623=Le système ne prend pas en charge la langue du paquet d'installation. 
+1624=Erreur d'application de l'apparence. Vérifiez que le chemin d'accès est exact. 
+1625=La suppression est interdite par la politique du système. Contactez l'administrateur système. 
+1626=Impossible d'exécuter la fonction. 
+1627=Erreur d'exécution de la fonction. 
+1628=Un tableau inaccessible ou inconnu a été indiqué. 
+1629=Des données d'un type inexact ont été reçues. 
+1630=Les données de ce type ne sont pas prises en charge. 
+1631=Erreur de lancement du service d'installation Windows. Contactez le service d'assistance technique de votre organisation. 
+1632=Le dossier temporaire est rempli ou vous n'y avez pas accès. Vérifiez si le fichier temporaire existe et si vous pouvez y écrire. 
+1633=Le système ne prend pas en charge ce paquet d'installation. Contactez le fournisseur du logiciel. 
+1634=Le composant n'est pas utilisé sur cet ordinateur. 
+1635=Impossible d'ouvrir le correctif. Vérifiez si le paquet existe et si vous y avez accès. Vous pouvez aussi contacter le fournisseur du paquet pour s'assurer qu'il s'agit bien du bon correctif pour Windows. 
+1636=Impossible d'ouvrir ce correctif. Contactez le fournisseur du programme pour vérifier si ce paquet d'installation Windows est correct. 
+1637=Ce correctif ne peut pas être traité par le service d'installation Windows actuel. Installez la mise à jour de Windows contenant la nouvelle version du service d'installation de Windows. 
+1638=Une autre version de ce logiciel est déjà installée. Il est impossible de poursuivre l'installation. Afin de configurer la version actuelle ou de la supprimer, cliquez sur  «Ajout/suppression de programmes» dans le panneau de configuration. 
+1639=Argument invalide de la ligne de commande. Consultez le Windows Installer SDK pour obtenir de l'aide sur l'utilisation de la ligne de commande. 
+1640=Ce client n'autorise pas la suppression au départ d'un serveur terminal. 
+1641=Le programme d'installation a lancé le redémarrage du système. Ce code d'erreur n'est pas utilisé par l'installateur Windows version 1.0. 
+1642=Le programme ne peut installer la mise à jour car le programme à actualiser est introuvable ou la mise à jour est prévue pour une autre version. Assurez-vous que le programme à actualiser est installé sur l'ordinateur et que le chemin pour la mise à jour est correctement indiqué. Ce code d'erreur n'est pas utilisé par l'installateur Windows version 1.0.
+1643=Le correctif n'est pas autorisé par la politique du système. Ce code d'erreur est utilisé par le programme d'installation Windows version 2.0 ou suivante. 
+1644=La politique du système n'admet pas une ou plusieurs personnalisations. Ce code d'erreur est utilisé par le programme d'installation Windows version 2.0 ou suivante. 
+1645=L'installateur Windows n'autorise pas les installations depuis une connexion Internet du bureau à distance. Pour de plus amples informations, consultez le point connexion internet du bureau à distance de la rubrique Terminal Services du Platform SDK.  
+
+[SetupProcessResult_WarningCodes]
+ 
+[SetupMainResult]
+File=setup.log
+Section=ResponseResult
+Value=ResultCode
+DescriptionFile=avpsetup.rep
+ 
+[SetupMainResult_SuccessCodes]
+0=La suppression a réussi.
+ 
+[SetupMainResult_ErrorCodes]
+100=Une erreur fatale s'est produite durant la suppression.
+
+[SetupMainResult_WarningCodes]
+50=Un avertissement a été affiché durant la suppression.
+
+[SetupRestart]
+File=setup.log
+Section=ResponseResult
+Value=RebootZombieFile
+
+[Version]								
+VerMajor=6								
+VerMinor=0								
+VerBuild=0								
+VerPatch=0								

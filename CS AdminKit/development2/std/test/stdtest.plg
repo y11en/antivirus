@@ -1,0 +1,40 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: stdtest - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\SHIYAF~1\LOCALS~1\Temp\RSP7578.tmp" with contents
+[
+/nologo /G5 /MDd /W3 /Gm /GX /ZI /Od /I "../../include" /I "../../gsoap" /I "../../tst/kltester/" /I "../../gsoap/std" /I "../../include/stlport" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_UNICODE" /D "_USRDLL" /D "WITH_NONAMESPACES" /D "_STLP_NEW_PLATFORM_SDK" /Fp"..\..\bin\debug\std\test\Debug/stdtest.pch" /YX /Fo"..\..\bin\debug\std\test\Debug/" /Fd"..\..\bin\debug\std\test\Debug/" /FD /GZ /c 
+"O:\CS AdminKit\development2\std\test\tp\tptest.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\SHIYAF~1\LOCALS~1\Temp\RSP7578.tmp" 
+Creating temporary file "C:\DOCUME~1\SHIYAF~1\LOCALS~1\Temp\RSP7579.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:yes /pdb:"..\..\bin\dll/stdtest.pdb" /debug /machine:I386 /out:"..\..\bin\dll/stdtest.dll" /implib:"..\..\bin\dll/stdtest.lib" /pdbtype:sept /libpath:"O:\CommonFiles\ReleaseDll\\" /libpath:"../../include/stlport/lib" 
+"\CS AdminKit\development2\bin\debug\std\test\Debug\partest.obj"
+"\CS AdminKit\development2\bin\debug\std\test\Debug\testing.obj"
+"\CS AdminKit\development2\bin\debug\std\test\Debug\errtest.obj"
+"\CS AdminKit\development2\bin\debug\std\test\Debug\schtestfunc.obj"
+"\CS AdminKit\development2\bin\debug\std\test\Debug\schtest.obj"
+"\CS AdminKit\development2\bin\debug\std\test\Debug\stdtest.obj"
+"\CS AdminKit\development2\bin\debug\std\test\Debug\thrtest.obj"
+"\CS AdminKit\development2\bin\debug\std\test\Debug\tptest.obj"
+"\CS ADMINKIT\DEVELOPMENT2\bin\dlld\klcsstd.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\SHIYAF~1\LOCALS~1\Temp\RSP7579.tmp"
+<h3>Output Window</h3>
+Compiling...
+tptest.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+stdtest.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

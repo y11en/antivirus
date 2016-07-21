@@ -1,0 +1,7 @@
+<Include>
+  <?define Localization = "en" ?>
+  <?define Language = "1033" ?>
+  <?define Codepage = "1252" ?>
+  <?define UpdaterRegion = "America" ?>
+  <?define MainDlgBrandingWidth = "220" ?>
+</Include>		

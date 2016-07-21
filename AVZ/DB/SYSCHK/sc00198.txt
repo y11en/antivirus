@@ -1,0 +1,5 @@
+// ***** AdvWare.KlikBar.b, AdvWare.ToolBar.ToolBand *****
+begin
+ AddEvAlarmByCLSID('0E1230F8-EA50-42A9-983C-D22ABC2EED3B',AScriptName, 'webdlg32.dll');
+ AddEvAlarmByCLSID('30192F8D-0958-44E6-B54D-331FD39AC959',AScriptName, 'webdlg32.dll');
+end.

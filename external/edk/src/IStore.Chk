@@ -1,0 +1,146 @@
+// --istore.c-------------------------------------------------------------------
+// 
+//  Module containing MAPI utility functions for message stores.
+// 
+// Copyright (C) Microsoft Corp. 1986-1996.  All Rights Reserved.
+// -----------------------------------------------------------------------------
+
+#ifndef DEBUG
+
+#define CHK_HrMAPIFindStoreW(a,b,c,d)          NOERROR
+#define CHK_HrMAPIFindStoreA(a,b,c,d)          NOERROR
+#define CHK_HrMAPIFindDefaultMsgStore(a,b,c)   NOERROR
+#define CHK_FIsPublicStore(a)                  NOERROR
+#define CHK_HrOpenStoreFromGuid(a,b,c)         NOERROR
+
+#else
+
+// $--CHK_HrMAPIFindStore@------------------------------------------------------
+// Get the entry ID of the specified store.
+//-----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIFindStoreW(
+	IN		LPMAPISESSION	lpSession,		// MAPI session handle
+	IN		LPCWSTR			lpszStore,		// store name
+	OUT		ULONG FAR *		lpcbentryid,	// ptr to #bytes in entry ID
+	OUT		LPENTRYID FAR *	lppentryid)		// entry ID buffer ptr
+{
+    HRESULT	hr =	NOERROR; 
+
+    if( !TEST_IUNKNOWN_PTR( lpSession) ||
+        !TEST_STRINGW_PTR( lpszStore) ||
+        !TEST_WRITE_PTR( lpcbentryid, sizeof(ULONG)) ||
+        !TEST_WRITE_PTR( lppentryid, sizeof(LPENTRYID)) )
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return hr;
+}
+
+__inline static HRESULT CHK_HrMAPIFindStoreA(
+	IN		LPMAPISESSION	lpSession,		// MAPI session handle
+	IN		LPCSTR			lpszStore,		// store name
+	OUT		ULONG FAR *		lpcbentryid,	// ptr to #bytes in entry ID
+	OUT		LPENTRYID FAR *	lppentryid)		// entry ID buffer ptr
+{
+    HRESULT	hr =	NOERROR; 
+
+    if( !TEST_IUNKNOWN_PTR( lpSession) ||
+        !TEST_STRINGA_PTR( lpszStore) ||
+        !TEST_WRITE_PTR( lpcbentryid, sizeof(ULONG)) ||
+        !TEST_WRITE_PTR( lppentryid, sizeof(LPENTRYID)) )
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return hr;
+}
+
+//$--CHK_HrMAPIFindDefaultMsgStore------------------------------------------------
+//  Get the entry ID of the default message store.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIFindDefaultMsgStore(// RETURNS: return code
+    IN LPMAPISESSION lplhSession,   // session pointer
+    OUT ULONG *lpcbeid,             // count of bytes in entry ID
+    OUT LPENTRYID *lppeid)          // entry ID of default store
+{   
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lplhSession))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lpcbeid, sizeof(ULONG)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppeid, sizeof(LPENTRYID)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+
+//$--CHK_FIsPublicStore---------------------------------------------------------
+//  Returns TRUE if the MDB is a public store.
+// -----------------------------------------------------------------------------
+__inline static BOOL CHK_FIsPublicStore(
+    IN LPMDB lpmdb)                     // pointer to message store
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpmdb))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+
+//$--CHK_HrOpenStoreFromGuid----------------------------------------------------
+//  Check function for _HrOpenStoreFromGuid().
+//------------------------------------------------------------------------------
+__inline static HRESULT CHK_HrOpenStoreFromGuid(
+    IN LPMAPISESSION lphSession,        // open session handle
+    IN LPGUID pbStoreProviderGuid,      // ptr to GUID data
+    OUT LPMDB * lppMDB)                 // ptr to store opened
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lphSession))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_READ_PTR(pbStoreProviderGuid, sizeof(GUID)) )
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppMDB, sizeof(LPMDB)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+#endif

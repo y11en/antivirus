@@ -1,0 +1,30 @@
+// AVP Prague stamp begin( Interface comment,  )
+// Engine interface implementation
+// Short comments -- Базовый интерфейс обработки объектов.//eng:Generic interface for object processing.
+//    Интерфейс определяет основные правила и методы обработки сложных объектов.
+//    Служит для реализации как абстрактного антивирусного ядра, так и подключаемых сканеров.
+// AVP Prague stamp end
+
+
+
+import "prague.h";
+import "i_engine.h";
+
+typedef rpcOBJECT	rpcENGINE;
+typedef rpcOBJECT	rpcREGISTRY;
+
+// AVP Prague stamp begin( Interface function forward declarations,  )
+[ uuid (EBCC0EE9-B352-42f9-867B-F6F85691FAAA),
+  version(1.0),
+  pointer_default(unique)
+]
+interface rpc_engine {
+
+	tERROR Engine_Process           ( rpcENGINE _this, rpcOBJECT obj );   // -- Обработать объект.//eng:Process object.;
+	tERROR Engine_GetAssociatedInfo ( rpcENGINE _this, rpcOBJECT obj, tDWORD info_id, tDWORD param, [mout, size_is(size)] tCHAR* buffer, tDWORD size, [mout] tDWORD* out_size ); // -- Получить ассоциированные данные.//eng:Get associated data.;
+	tERROR Engine_GetExtendedInfo   ( rpcENGINE _this, tDWORD info_id, tDWORD param, [mout, size_is(size)] tCHAR* buffer, tDWORD size, [mout] tDWORD* out_size ); // -- Получить дополнительные свойства.//eng:Get extended information.;
+	tERROR Engine_LoadConfiguration ( rpcENGINE _this, rpcREGISTRY reg, tRegKey key ); // -- Инициализирует конфигурацию Engine ;
+
+}
+// AVP Prague stamp end
+

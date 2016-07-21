@@ -1,0 +1,19 @@
+// $AVZ1517
+//$ Internet Explorer - разрешен запуск программ и файлов в окне IFRAME
+// Функция поиска проблемы
+function Check : dword;
+var
+ X : integer;
+begin
+ Result := 0;
+ X := RegKeyIntParamRead('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\', '1804');
+ if not((X = 3) or (X = 1)) then
+  Result := 3;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+begin
+ RegKeyIntParamWrite('HKCU','Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\', '1804', 1);
+ Result := 0;
+end;

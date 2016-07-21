@@ -1,0 +1,4 @@
+// ***** Adware.ClearSearch *****
+begin       
+ AddEvAlarmByCLSID('00000000-0000-4D15-A015-73302FE20193',AScriptName,'system32.dll');
+end.

@@ -1,0 +1,5 @@
+// ***** Spy.AdRotator *****
+begin
+ AddEvAlarmByCLSID('5074851C-F67A-488E-A9C9-C244573F4068',AScriptName,'ieasst.dll');
+ AddEvAlarmByCLSID('34EF5B1C-52CB-400B-8B7C-F787018B3826',AScriptName,'mwsvm.ocx');
+end.

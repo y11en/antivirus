@@ -1,0 +1,4 @@
+// ***** Adware.Matrix *****
+begin       
+ AddEvAlarmByCLSID('83C76E5F-2980-4E32-A8AC-69DBD1973D96',AScriptName,'');
+end.

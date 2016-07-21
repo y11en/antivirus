@@ -1,0 +1,4 @@
+// ***** Dialer.EGHTML *****
+begin
+ AddEvAlarmByCLSID('AF7410C1-FBA3-415E-800A-4110CED40536',AScriptName,'egaccess4*.dll');
+end.

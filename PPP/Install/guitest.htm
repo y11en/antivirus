@@ -1,0 +1,103 @@
+<HTML>
+<HEAD><TITLE>Click buttons to operate on KAV 6.0</TITLE>
+<SCRIPT LANGUAGE="VBScript">
+<!--
+Sub Show_Object(Capt, Obj)
+Dim StrText
+   StrText = Capt + ": pos=("
+   StrText = StrText + CStr(Obj.X) + ","
+   StrText = StrText + CStr(Obj.Y) + ","
+   StrText = StrText + CStr(Obj.Width) + ","
+   StrText = StrText + CStr(Obj.Height) + ") "
+   StrText = StrText + "text=" + Obj.Text
+
+   MsgBox StrText
+End Sub
+
+Sub Button1_OnClick
+    On Error Resume Next
+    Set gui = CreateObject("AVPGUI.Controller")
+    If Err.Number <> 0 then
+      MsgBox "Please start the product first"
+    End If
+
+    Set settings_oas = gui.GetItem("SettingsWindow").GetItem("File_Monitoring")
+	Set treatValue = settings_oas.GetItem("TreatGroup")
+	treatValue.SetValueInteger(4)
+	Set tryDeleteValue = settings_oas.GetItem("TryDelete")
+	tryDeleteValue.SetCheck(1)
+
+	gui.ShowMainWnd()
+
+    Set main = gui.GetItem("MainWindow")
+    If Err.Number <> 0 then
+      MsgBox "Cannot get main window"
+    Else
+      Call Show_Object("MainWindow",main)
+    End If
+
+    Set nav = main.GetItem("Navigator")
+    If Err.Number <> 0 then
+      MsgBox "Cannot get navigator"
+    Else
+      Call Show_Object("Navigator",nav)
+    End If
+
+    Set item1 = nav.GetItem("Protection")
+    If Err.Number <> 0 then
+      MsgBox "Cannot get navigator item"
+    Else
+      Call Show_Object("Navigator_Protection",item1)
+    End If
+	
+    Set item0 = nav.GetItem("File_Monitoring")
+    If Err.Number <> 0 then
+      MsgBox "Cannot get navigator item"
+    Else
+      Call Show_Object("Navigator_File_Monitoring",item0)
+    End If
+
+    Set prot = main.GetItem("Protection")
+    If Err.Number <> 0 then
+      MsgBox "Cannot get protection panel"
+    Else
+      Call Show_Object("Protection Panel",prot)
+    End If
+
+    Set conf = prot.GetItem("Configure")
+    If Err.Number <> 0 then
+      MsgBox "Cannot get configure button"
+    Else
+      Call Show_Object("Configure_Button",conf)
+    End If
+
+	Set objs_list_item = gui.GetItem("Scan_Objects").GetItem("ObjectsList").GetItemByIdx(0)
+	If Err.Number < 0 then
+	  MsgBox "Cannot get objs_list_item"
+	Else
+	  Call Show_Object("item(0) of event list on report dialog",objs_list_item)
+	End If
+	
+	If objs_list_item.Check <> 0 then
+	  objs_list_item.SetCheck(0)
+	Else
+	  objs_list_item.SetCheck(1)
+	End If
+
+	Set task_settings = gui.GetItem("Scan_Objects").GetItem("Settings")
+	task_settings.Select()
+End Sub
+
+-->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<HR>
+<FORM>
+<INPUT NAME="Button1" TYPE="BUTTON" VALUE="Test AVPGUI">
+</FORM>
+
+</BODY>
+
+</HTML>

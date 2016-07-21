@@ -1,0 +1,12 @@
+// ***** Доступ анонимного пользователя к информации о ПК *****
+var
+ X : integer;
+begin
+ X := RegKeyIntParamRead('HKEY_LOCAL_MACHINE', 'SYSTEM\CurrentControlSet\Control\LSA', 'RestrictAnonymous');
+ // 1 - подключение разрешено, сбор информации запрещен; 2-жесткий запрет
+ if X = 0 then begin
+  AddToLog('>> $AVZ1204');
+  AddSyscheckMenu('$AVZ1205',
+                  'RegKeyIntParamWrite(''HKEY_LOCAL_MACHINE'', ''SYSTEM\CurrentControlSet\Control\LSA'',''RestrictAnonymous'', 2);', 1);
+ end;
+end.

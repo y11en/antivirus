@@ -1,0 +1,545 @@
+[Global]
+
+$PIDProduct             = -1
+$AppIdProduct           = 0xFFFFFFFF
+
+$IsRepItem              = bindok("TaskID")
+$RepEventIcon           = s_VerdictIcon(Verdict)
+$RepEventBg             = s_VerdictIconBacknd(s_VerdictIcon(Verdict))
+$ActionText             = s_Action(Action)
+$VerdictDescrText       = s_Verdict(Verdict)
+$VerdictText            = $VerdictDescrText + if(DetectName, ": " + $DetectNameText)
+$ObjectTypeText         = s_ObjectType(ObjectType)
+$ReasonText             = s_DecisionReason(DecisionReason)
+$DetectTypeText         = if(DetectDanger, s_RepDetectType(DetectType))
+$DetectDangerText       = s_DetectDanger(DetectDanger)
+$ExactText              = s_Exact(IsExact)
+$ObjectIdText           = c_object(ObjectID, object(ObjectID))
+$ObjectSerText          = s_EventObjSerByType(ObjectType, c_repser(ObjectID, repser(ObjectID)))
+$ObjectText             = (ObjectID ? ($IsEventObjSer ? $ObjectSerText : $ObjectIdText) : ($IsEventTask ? $TaskText : s_ObjectTextByTask(TaskID)))
+$ObjectPathText         = if(ObjectID && !$IsEventObjSer, objdir($ObjectIdText))
+$ObjectNameText         = ObjectID ? ($IsEventObjSer ? $ObjectSerText : objfile($ObjectIdText)) : ($IsEventTask ? $TaskText : s_ObjectTextByTask(TaskID))
+$DetectNameText         = c_detect(DetectName, object(DetectName))
+$ObjectSizeText         = if(ObjectID && ExtraInfoSub2, f_ObjSize(ExtraInfoSub2))
+$AppName                = if(AppID, (AppID != $AppIdProduct ? f_AppName(f_AppInfo(AppID)) : $ProductName))
+$AppPath                = if(AppID && AppID != $AppIdProduct, f_AppPath(f_AppInfo(AppID)))
+$AppModule              = if(AppID, (AppID != $AppIdProduct ? objfile(f_AppImagePath(f_AppInfo(AppID))) : $ProductName))
+$AppIcon                = f_AppIcon(AppID)
+$AppNativePID           = if(PID && PID != $PIDProduct, f_ProcessInfo(PID).NativePid)
+;$AppNativePID           = if(PID && PID != $PIDProduct, f_ProcessInfo(PID).NativePid) + " (PID: " + format("016I64X", PID) + ")" + " (AppID: " + format("08X", AppID) + ")"
+$AppCmdLine             = if(PID && PID != $PIDProduct, f_ProcessInfo(PID).sCmdLine)
+$TaskText               = s_TaskID(TaskID)
+$IsTaskStateEvent       = s_IsTaskStateEvent(Verdict)
+$IsEventObjInfected     = s_IsEventObjInfected(Verdict)
+$IsVerdictProductStatusId = ((Verdict >= #ePROTECTION) && (Verdict <= (#ePROTECTION + 64)))
+$Verdict2ProductStatusId = (Verdict - #ePROTECTION)
+$IsEventTask             = s_IsEventTask(Verdict)
+$IsEventObjSer           = s_IsEventObjSer(ObjectType)
+
+#dbGlobalObjects        = 0
+#dbRTP                  = 1
+#dbScan                 = 2
+#dbUpdate               = 3
+#dbNetworkPackets       = 4
+
+#eTASK_GROUP_PROTECTION = 0x00
+#eTASK_GROUP_AV      = 0x01
+#eTASK_GROUP_OS      = 0x02
+#eTASK_GROUP_UC      = 0x03
+#eTASK_GROUP_HIPS    = 0x04
+#eTASK_GROUP_SCAN    = 0x05
+#eTASK_GROUP_UPDATER = 0x06
+
+#eTASK_F_RUNTIME	 = 0x80
+#eTASK_PROTECTION	 = 0x00
+#eTASK_FAV	         = 0x01
+#eTASK_MAV	         = 0x02
+#eTASK_HTTP	         = 0x04
+#eTASK_AP	         = 0x05
+#eTASK_AD	         = 0x06
+#eTASK_IDS	         = 0x07
+#eTASK_AB	         = 0x08
+#eTASK_AS	         = 0x09
+#eTASK_PC	         = 0x0A
+#eTASK_HIPS	         = 0x0B
+#eTASK_SW            = 0x0C
+#eTASK_SELFPROT      = 0x0D
+#eTASK_PDM           = 0x0E
+#eTASK_LIC           = 0x0F
+#eTASK_SCAN          = 0x80
+#eTASK_UPDATER       = 0x81
+#eTASK_ROLLBACK      = 0x82
+#eTASK_SNIFFER       = 0x83
+
+#eUnknown               = 0
+
+; enVerdict
+#eCLEAN		            = 1
+#eDETECTED              = 2
+#eSUSPICION             = 4
+#eARCHIVED	            = 5
+#ePACKED	            = 6
+#eENCRYPTED	            = 7
+#eCORRUPTED	            = 8
+#ePASSWORD_PROTECTED    = 19
+#ePROCESSING_ERROR      = 18
+#eCANTCHANGEATTR        = 20
+#eALLOWED               = 34
+#eDENIED                = 33
+#eREJECTED              = 40
+#eNOT_PROCESSED         = 17
+#eADDEDTOEXCLUDE        = 30
+#eTERMINATED            = 41
+#eTERMINATE_FAILED      = 42
+#eDISINFECTED           = 9
+#eDISINFECTED_ON_REBOOT = 25
+#eDISINFECT_ON_REBOOT_FAILED = 26
+#eNOT_DISINFECTED       = 10
+#eCURED                 = 28
+#eDELETED               = 11
+#eDELETED_ON_REBOOT     = 23
+#eDELETE_ON_REBOOT_FAILED = 24
+#eNOT_DELETED           = 12
+#eOVERWRITED	        = 27
+#eQUARANTINED           = 15
+#eQUARANTINED_ON_REBOOT = 31
+#eNOT_QUARANTINED       = 16
+#eRESTORED              = 32
+#eRENAMED               = 35
+#eNOT_RENAMED           = 37
+#eROLLBACKED            = 43
+#eROLLBACK_FAILED       = 44
+#eBACKUPED              = 13
+#eBACKUP_FAILED         = 14
+#eREPARED               = 45
+#eREPAIR_FAILED         = 46
+#eDISABLED              = 47
+#ePROTECTION            = 80
+#eTASK_STARTED          = 0x91
+#eTASK_STOPPED          = 0x92
+#eTASK_FAILED           = 0x93
+#eUPDATER_ERROR         = 0x101
+#eUPDATER               = 0x102
+#eUPDATER_SOURCE_SELECTED                   = (#eUPDATER + 0x0064)
+#eUPDATER_ADMIN_KIT_SOURCE_SELECTED         = (#eUPDATER + 0x0065)
+#eUPDATER_PROXY_SERVER_SELECTED             = (#eUPDATER + 0x0066)
+#eUPDATER_DOWNLOAD_FILE_STARTED             = (#eUPDATER + 0x0067)
+#eUPDATER_FILE_DOWNLOADED                   = (#eUPDATER + 0x0068)
+#eUPDATER_NEW_FILE_INSTALLED                = (#eUPDATER + 0x0069)
+#eUPDATER_FILE_UPDATED                      = (#eUPDATER + 0x006B)
+#eUPDATER_FILE_ROLLED_BACK                  = (#eUPDATER + 0x006C)
+#eUPDATER_StartInstallFilesForUpdate		= (#eUPDATER + 0x0070)
+#eUPDATER_StartInstallFilesForRetranslation = (#eUPDATER + 0x0071)
+#eUPDATER_StartCopyFilesForRollback         = (#eUPDATER + 0x0072)
+#eUPDATER_DNS_NAME_RESOLVED                 = (#eUPDATER + 0x0074)
+#eUPDATER_ComponentIsNotUpdated             = (#eUPDATER + 0x0075)
+#eUPDATER_GeneratingFileListToDownload      = (#eUPDATER + 0x0076)
+#ePARCTL_SWITCHPROFILE   = 0x0200
+#ePARCTL_HEURISTICSTATUS = 0x0201
+
+; enObjType
+#eFile        = 0x01
+#eDirectory   = 0x02
+#eRegKey      = 0x03
+#eRegValue    = 0x04
+#eProcess     = 0x05
+#eThread      = 0x06
+#eModule      = 0x07
+#eLogSector   = 0x08
+#ePhysSector  = 0x09
+#eMemory	  = 0x0A
+#eMailMessage = 0x0B
+#eMailAttach  = 0x0C
+#eURL         = 0x0D
+#eScript      = 0x0E
+#ePort        = 0x0F
+#eConnection  = 0x10
+#ePacket      = 0x11
+#eDialStr     = 0x12
+#eDetectName  = 0x13
+#eLogicalDisk = 0x14
+#eDevice      = 0x15
+#eVolume      = 0x16
+#eString      = 0x17
+#eRegRoot     = 0x18
+#eTask        = 0x19
+
+; enEventAction
+#evtOpen             = 0x01
+#evtCreate           = 0x02
+#evtRead             = 0x03 
+#evtWrite            = 0x04
+#evtModify           = 0x04
+#evtDelete           = 0x05
+#evtRename           = 0x06
+#evtProcessStart     = 0x07
+#evtProcessStop      = 0x08
+#evtImageLoad        = 0x09
+#evtImageUnload      = 0x0A
+#evtSend             = 0x0B
+#evtReceive          = 0x0C
+#evtTerminate        = 0x0D
+#evtProcStart          = 0x0E
+#evtProcStop           = 0x0F
+#evtSetHook            = 0x10
+#evtCodeInject         = 0x11
+#evtWindowsShutDown    = 0x12
+#evtHiddenRegistry     = 0x12
+#evtKeyLogger          = 0x13
+#evtSetHardLink        = 0x14
+#evtSespend            = 0x15
+#evtSchedulerStart     = 0x16
+#evtWMSend             = 0x17
+#evtDrvStart           = 0x18
+#evtServiceStart       = 0x19
+#evtScreenShots        = 0x1A
+#evtDiskFormat         = 0x1B
+#evtLLDiskAccess       = 0x1C
+#evtLLFSAccess         = 0x1D
+#evtClipBoardAcceess   = 0x1E
+#evtSysEnterChange     = 0x1F
+#evtADSAccess          = 0x20
+#evtDirectMemAccess    = 0x21
+#evtReadProcMem        = 0x22
+#evtSetDbgPrivilege    = 0x23
+#evtChangeObjPrivilege = 0x24
+#evtUseBrowserCL       = 0x25
+#evtUseBrowserAPI      = 0x26
+#evtUseSystemAPI       = 0x27
+#evtAddAppToGr         = 0x28
+
+; enRDetectType
+#eVirware           = 1
+#eTrojware          = 2
+#eMalware           = 3
+#eAdware            = 4
+#ePornware          = 5
+#eRiskware          = 6
+#eXFiles            = 20
+#eSoftware          = 21
+#eVulnerability     = 22
+#ePhishing          = 30
+#eDialing           = 31
+#eAttack            = 32
+#eBanner            = 40
+#eUnwantedWebContent = 41
+#eSpam              = 42
+#eProbableSpam      = 43
+#eHam               = 44
+#eFileAccess        = 50
+#eRegistryAccess	= 51
+#eNetworkAccess	    = 52
+#eHardwareAccess	= 53
+#eSecurityAccess	= 54
+#eSuspicionActivity = 60
+
+; enRDetectDanger
+#eDDHigh		     = 1
+#eDDMedium			 = 2
+#eDDLow				 = 4
+#eDDInformational	 = 8
+
+; enIsExactDetect
+#eExact		      = 0x01
+#ePartial         = 0x02
+#eHeuristic       = 0x03
+#eProbably	      = 0x04
+
+; enDecisionReason
+#eUSER                = 0x0001
+#eREPORTONLY          = 0x0002
+#ePOSTPONED           = 0x0003
+#eTASKSTOPPED         = 0x0004
+#eERROR               = 0x0005
+#eDATABASE            = 0x0021
+#eUSER_BLACK_LIST     = 0x0022
+#eWHITE_LIST          = 0x0023
+#eUSER_WHITE_LIST     = 0x0024
+#eEMULATOR            = 0x0025
+#eBB                  = 0x0026
+#eHEURISTIC           = 0x0027
+#eBAYES               = 0x0028
+#eGSG                 = 0x0029
+#ePDB                 = 0x0030
+#eSFDB                = 0x0031
+#eISWIFT              = 0x0032
+#eALLOWED_SENDER      = 0x0033
+#eBLOCKED_SENDER      = 0x0034
+#eALLOWED_PHRASE      = 0x0035
+#eBLOCKED_PHRASE      = 0x0036
+#eDETECT_BYHASH       = 0x0041
+#eDETECT_INFORMATION  = 0x0042
+#eSIZE                = 0x0081
+#eTYPE                = 0x0082
+#eEXCLUDE             = 0x0083
+#eTIME                = 0x0084
+#eNORIGHTS            = 0x0085
+#eNOTFOUND            = 0x0086
+#eLOCKED              = 0x0089
+#eNONCURABLE          = 0x0102
+#eWRITEPROTECT        = 0x0103
+#eNONOVERWRITABLE     = 0x0106
+#eCOPYFAILED          = 0x0107
+#eWRITEERROR          = 0x0108
+#eOUTOFSPACE          = 0x0109
+#eREADERROR           = 0x0110
+#eDEVICENOTREADY      = 0x0111
+#eWRITENOTSUPPORTED   = 0x0112
+#eCANNOTBACKUP        = 0x0113
+#eANTISPAM_BASE       = 0x0210
+#eANTISPAM_AddedToWhiteRecipient  = (#eANTISPAM_BASE + -3)
+#eANTISPAM_HasBeenTrained         = (#eANTISPAM_BASE + -2)
+#eANTISPAM_Training               = (#eANTISPAM_BASE + -1)
+#eANTISPAM_NeedTraining           = (#eANTISPAM_BASE + 0)
+#eANTISPAM_WhiteAddress           = (#eANTISPAM_BASE + 2)
+#eANTISPAM_BlackAddress           = (#eANTISPAM_BASE + 3)
+#eANTISPAM_WhiteString            = (#eANTISPAM_BASE + 4)
+#eANTISPAM_BlackString            = (#eANTISPAM_BASE + 5)
+#eANTISPAM_AntiFishing            = (#eANTISPAM_BASE + 6)
+#eANTISPAM_WhiteAddress_NOTFOUND  = (#eANTISPAM_BASE + 7)
+#eANTISPAM_BlackAddress_NOTFOUND  = (#eANTISPAM_BASE + 8)
+#eANTISPAM_WhiteString_NOTFOUND   = (#eANTISPAM_BASE + 9)
+#eANTISPAM_BlackString_NOTFOUND   = (#eANTISPAM_BASE + 10)
+#eANTISPAM_AntiFishing_NOTFOUND   = (#eANTISPAM_BASE + 11)
+#eANTISPAM_MailDispatcher         = (#eANTISPAM_BASE + 12)
+#eANTISPAM_Eicar                  = (#eANTISPAM_BASE + 13)
+#eANTISPAM_Banner                 = (#eANTISPAM_BASE + 14)
+#eANTISPAM_Banner_NOTFOUND        = (#eANTISPAM_BASE + 15)
+#eANTISPAM_InvalidHTML            = (#eANTISPAM_BASE + 16)
+#eANTISPAM_InvalidHTML_NOTFOUND   = (#eANTISPAM_BASE + 17)
+#eANTISPAM_ExternalObj            = (#eANTISPAM_BASE + 18)
+#eANTISPAM_ExternalObj_NOTFOUND   = (#eANTISPAM_BASE + 19)
+#eANTISPAM_InternalObj            = (#eANTISPAM_BASE + 20)
+#eANTISPAM_InternalObj_NOTFOUND   = (#eANTISPAM_BASE + 21)
+#eANTISPAM_EmptyMessage           = (#eANTISPAM_BASE + 22)
+#eANTISPAM_EmptyMessage_NOTFOUND  = (#eANTISPAM_BASE + 23)
+#eANTISPAM_NotForMe               = (#eANTISPAM_BASE + 24)
+#eANTISPAM_NotForMe_NOTFOUND      = (#eANTISPAM_BASE + 25)
+#eANTISPAM_NotEnglish             = (#eANTISPAM_BASE + 26)
+#eANTISPAM_NotEnglish_NOTFOUND    = (#eANTISPAM_BASE + 27)
+#eANTISPAM_RecipLimit             = (#eANTISPAM_BASE + 28)
+#eANTISPAM_RecipLimit_NOTFOUND    = (#eANTISPAM_BASE + 29)
+#eANTISPAM_InvalidHTML_UnknownDefsCount 	 = (#eANTISPAM_BASE + 32)
+#eANTISPAM_InvalidHTML_SeemsColors		 = (#eANTISPAM_BASE + 33)
+#eANTISPAM_InvalidHTML_SmallText			 = (#eANTISPAM_BASE + 34)
+#eANTISPAM_InvalidHTML_InvisibleCharCount	 = (#eANTISPAM_BASE + 35)
+#eANTISPAM_InvalidHTML_Scripts			 = (#eANTISPAM_BASE + 36)
+#eANTISPAM_InvalidHTML_HiddenElements		 = (#eANTISPAM_BASE + 37)
+#eANTISPAM_CannotBeSpam					 = (#eANTISPAM_BASE + 38)
+#eANTISPAM_SPAMTEST               = (#eANTISPAM_BASE + 39)
+#eANTISPAM_RecentTerms			= (#eANTISPAM_BASE + 40)
+
+#eNotifyThreats               = 1
+#eNotifySuspicious            = 2
+#eNotifyThreatNotCured        = 3
+#eNotifyThreatDeleted         = 4
+#eNotifyThreatQuarantined     = 5
+#eNotifyLicensing             = 6
+#eNotifyProduct               = 7
+#eNotifyUpdater               = 8
+#eNotifyBases                 = 9
+#eNotifyAttackBlocked         = 10
+#eNotifyPswdArchive           = 11
+#eNotifyRuleTriggered         = 12
+#eNotifyPopups                = 13
+#eNotifyProtocoller           = 14
+#eNotifySelfProtection        = 15
+#eNotifyBan                   = 16
+#eNotifySSL					  = 17
+#eNotifyThreatsUntreated      = 18
+#eNotifyMyComputerNotScaned   = 19
+#eNotifyUpdateNeedReboot      = 20
+#eNotifyParCtl                = 21
+
+; enum enNotifySeverity
+#eNotifySeverityNone          = 0
+#eNotifySeverityCritical      = 1
+#eNotifySeverityError         = 2
+#eNotifySeverityImportant     = 3
+#eNotifySeverityNotImportant  = 4
+
+[s_TaskID]
+#eTASK_PROTECTION = $Protection
+#eTASK_FAV	      = $File_Monitoring
+#eTASK_MAV	      = $Mail_Monitoring
+#eTASK_HTTP	      = $Web_Monitoring
+#eTASK_AP	      = $antiphishing
+#eTASK_AD	      = $antidial
+#eTASK_IDS	      = $ids
+#eTASK_AB	      = $AdBlocker
+#eTASK_AS	      = $Anti_Spam
+#eTASK_PC	      = $ParCtl
+#eTASK_HIPS	      = $Hips
+#eTASK_SW         = $SysWatch
+#eTASK_SCAN       = $Scan_Objects
+#eTASK_UPDATER    = $Updater
+#eTASK_ROLLBACK   = $Rollback
+#eTASK_SELFPROT   = $SelfProtection
+#eTASK_PDM        = $Pdm
+#eTASK_LIC        = $LicensingSubsystem
+def               = "unk: " + @
+
+[s_ObjectTypeIcon]
+#eFile       = getIcon(@1, "file", 0, !@2)
+#eLogSector
+#ePhysSector = "bootsect"
+#eMemory     = "memory"
+#eMailMessage
+#eMailAttach = "mail"
+#eRegKey
+#eRegValue
+#eThread
+#eURL
+#eScript
+#ePort
+#eConnection
+#ePacket
+#eDialStr    = "startupobj"
+#eDirectory
+#eProcess
+#eModule     = getIcon(@1, "startupobj", 0, !@2)
+#eTask       = "file"
+def          = if(@, "file")
+
+[s_VerdictIcon]
+#eCLEAN
+#eDISINFECTED
+#eDELETED
+#eQUARANTINED
+#eDISINFECTED_ON_REBOOT
+#eOVERWRITED
+#eCURED
+#eQUARANTINED_ON_REBOOT
+#eRESTORED
+#eALLOWED
+#eRENAMED = "ok"
+#eARCHIVED
+#ePACKED
+#eENCRYPTED
+#eCORRUPTED
+#ePASSWORD_PROTECTED
+#eADDEDTOEXCLUDE
+#eTASK_STARTED
+#eTASK_STOPPED          = "info"
+#eDENIED
+#eTASK_FAILED           = "error"
+#eUPDATER_ERROR                             = s_UpdaterActionIcon_Status(Error)
+#eUPDATER_SOURCE_SELECTED
+#eUPDATER_ADMIN_KIT_SOURCE_SELECTED
+#eUPDATER_PROXY_SERVER_SELECTED
+#eUPDATER_DOWNLOAD_FILE_STARTED
+#eUPDATER_FILE_DOWNLOADED
+#eUPDATER_NEW_FILE_INSTALLED
+#eUPDATER_FILE_UPDATED
+#eUPDATER_FILE_ROLLED_BACK                  = "ok"
+#eUPDATER_StartInstallFilesForUpdate
+#eUPDATER_StartInstallFilesForRetranslation
+#eUPDATER_StartCopyFilesForRollback
+#eUPDATER_DNS_NAME_RESOLVED
+#eUPDATER_GeneratingFileListToDownload      = "info"
+#eUPDATER_ComponentIsNotUpdated             = "warning"
+default = s_EventSeverityIcon(Severity)
+
+[s_EventSeverityIcon]
+#eNotifySeverityCritical
+#eNotifySeverityError         = "error"
+#eNotifySeverityImportant     = "warning"
+def                           = "info"
+
+[s_UpdaterActionIcon_Status]
+#errUPDATER_NO_ERROR
+#errUPDATER_RETRANSLATION_SUCCESSFUL = "info"
+#errUPDATER_NOTHING_TO_UPDATE
+#errUPDATER_CURRENT_VERSION_NEWER = "ok"
+#errUPDATER_NotAllComponentsAreUpdated
+#errUPDATER_ComponentRejectedByProduct
+#errUPDATER_CANCELLED
+#errUPDATER_NO_RESERVED_UPDATE_DESCRIPTION
+#errUPDATER_UpdateSuccessfulRetranslationFailed = "warning"
+def = "error"
+
+[s_VerdictIconBacknd]
+"error" = "EventErr"
+"warning" = "EventWarn"
+
+[s_ObjectTextByTask]
+#eTASK_UPDATER = s_UpdaterObjectText(Verdict)
+def = if(ObjectType, $UnknownApp)
+
+[f_ProcessInfo]
+ret = c_PID(@, processInfo(@))
+
+[f_AppInfo]
+ret = c_APP(@, appInfo(@))
+
+[f_AppName]
+ret = @.sDescription ? @.sDescription : objfile(f_AppImagePath(@))
+
+[f_AppPath]
+ret = if(@.sImagePath, objdir(@.sImagePath))
+
+[f_AppImagePath]
+ret = @.sImagePath ? @.sImagePath : $UnknownApp
+
+[f_AppIcon]
+ret = if(@, @ == $AppIdProduct ? "Main" : getIconAsync(f_AppInfo(@).sImagePath, "unkobj"))
+
+[f_PIDIcon]
+ret = if(@, @ == $PIDProduct ? "Main" : getIconAsync(f_ProcessInfo(@).Module.sImagePath, "unkobj"))
+
+[s_IsTaskStateEvent]
+#eTASK_STARTED
+#eTASK_STOPPED
+#eTASK_FAILED           = 1
+
+[s_TaskId2TaskType]
+#eTASK_FAV	         = "oas"
+#eTASK_MAV	         = "mc"
+#eTASK_HTTP	         = "wm"
+#eTASK_AP	         = "antiphishing"
+#eTASK_AD	         = "antidial"
+#eTASK_IDS	         = "ids"
+#eTASK_AB	         = "adblocker"
+#eTASK_AS	         = "antispam"
+#eTASK_PC	         = "parctl"
+#eTASK_HIPS	         = "hips"
+#eTASK_SW            = "SysWatch"
+#eTASK_SELFPROT      = "selfprot"
+#eTASK_PDM           = "pdm"
+#eTASK_SCAN          = "ods"
+#eTASK_UPDATER       = "updater"
+#eTASK_ROLLBACK      = "rollback"
+#eTASK_SNIFFER       = "sniffer"
+
+[s_IsEventObjInfected]
+#eDETECTED
+#eNOT_DISINFECTED
+#eDISINFECTED
+#eDISINFECTED_ON_REBOOT
+#eDISINFECT_ON_REBOOT_FAILED
+#eCURED
+#eDELETED
+#eDELETED_ON_REBOOT
+#eDELETE_ON_REBOOT_FAILED
+#eNOT_DELETED
+#eOVERWRITED
+#eQUARANTINED
+#eQUARANTINED_ON_REBOOT
+#eNOT_QUARANTINED
+#eRESTORED
+#eRENAMED
+#eNOT_RENAMED
+#eROLLBACKED
+#eROLLBACK_FAILED
+#eBACKUPED
+#eBACKUP_FAILED
+#eREPARED
+#eREPAIR_FAILED = 1
+
+[s_IsEventTask]
+#eTASK_STARTED
+#eTASK_STOPPED
+#eTASK_FAILED           = 1
+
+[s_IsEventObjSer]
+#ePacket      = 1

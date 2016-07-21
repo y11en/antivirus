@@ -1,0 +1,7 @@
+// ***** TrojanDownloader.Ladder *****
+begin
+ AddEvAlarmByCLSID('00000000-ABBA-0704-0B53-2C8830E9FAEC',AScriptName,'ieloader.dll');
+ AddEvAlarmByCLSID('67B15B0B-160C-4579-95AF-858169659092',AScriptName,'ieloader.dll');
+ AddEvAlarmByCLSID('1E50B82A-0D78-48B9-97EC-391B2F81CE8A',AScriptName+'.b','ieloader.dll');
+ AddEvAlarmByCLSID('07B8EAD7-1EE1-4656-88E7-BF968546A348',AScriptName+'.d','iereg.dll');
+end.

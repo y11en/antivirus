@@ -1,0 +1,1077 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\VisualEditor.ico"
+IDI_INTERFACEENABLEDICON ICON    DISCARDABLE     "res\\InterfaceE.ico"
+IDI_INTERFACEDISABLEDICON ICON    DISCARDABLE     "res\\InterfaceD.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_DIALOG_ACCELERATORS ACCELERATORS DISCARDABLE 
+BEGIN
+    "^C",           ID_EDIT_COPY,           ASCII,  NOINVERT
+    "^N",           ID_FILE_NEW,            ASCII,  NOINVERT
+    "^O",           ID_FILE_OPEN,           ASCII,  NOINVERT
+    "^S",           ID_FILE_SAVE,           ASCII,  NOINVERT
+    "^V",           ID_EDIT_PASTE,          ASCII,  NOINVERT
+    "^X",           ID_EDIT_CUT,            ASCII,  NOINVERT
+    "^G",           ID_FILE_SRCGEN,         ASCII,  NOINVERT
+    "^Y",           ID_FILE_SYNCHRONIZE,    ASCII,  NOINVERT
+    "^W",           ID_FILE_EXIT,           ASCII,  NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MENUTOOLBAR         BITMAP  DISCARDABLE     "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MENUTOOLBAR TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_DIALOG_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&file"
+    BEGIN
+        MENUITEM "&New Interface Prototype\tctl-n", ID_FILE_NEW
+        MENUITEM "New Interface Prototype by &base...", 
+                                                ID_FILE_NEWDEF_BYBASE
+        MENUITEM "N&ew Plugin",                 ID_FILE_NEWIMP
+        MENUITEM "&Open...\tctl-o",             ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "&Save\tctl-s",                ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "&ReInit Interface Server",    ID_FILE_REINITISERVER
+        MENUITEM SEPARATOR
+        MENUITEM "S&ynchronize Implementation and Prototype...\tctl-y", 
+                                                ID_FILE_SYNCHRONIZE
+        MENUITEM SEPARATOR
+        MENUITEM "&Import Interface Prototype into current interface...", 
+                                                ID_FILE_IMPORTDEF
+        MENUITEM "A&dd Interface Implementation...", ID_FILE_ADDDEF
+        MENUITEM "&Generate source code...\tctl-g", ID_FILE_SRCGEN
+        MENUITEM SEPARATOR
+        POPUP "Recent &Files"
+        BEGIN
+            MENUITEM "Empty",                       ID_EMPTY
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "O&ptions",                    ID_OPTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tctl-w",                ID_FILE_EXIT
+    END
+    POPUP "&edit"
+    BEGIN
+        MENUITEM "Cu&t\tctl-x",                 ID_EDIT_CUT
+        MENUITEM "&Copy\tctl-c",                ID_EDIT_COPY
+        MENUITEM "&Paste\tctl-v",               ID_EDIT_PASTE
+    END
+    MENUITEM SEPARATOR
+    MENUITEM "--->",                       ID_EMPTY
+    MENUITEM "&save",                       ID_FILE_SAVE
+    MENUITEM "&gen...",                     ID_FILE_SRCGEN
+    MENUITEM "s&ync...",                    ID_FILE_SYNCHRONIZE
+    MENUITEM "e&xit",                       ID_FILE_EXIT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_VISUALEDITOR_DIALOG DIALOGEX 0, 0, 418, 292
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "PragueVisualEditor"
+MENU IDR_DIALOG_MENU
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Tree1",IDC_INTERFACES_TREE,"SysTreeView32",WS_TABSTOP,
+                    13,13,183,212
+    CONTROL         "Tree2",IDC_IF_DESCRIPTION_TREE,"SysTreeView32",
+                    WS_TABSTOP,217,14,185,208
+    CONTROL         "",IDC_SPLITTER,"{D482802A-8152-11D3-96B0-00104B5B66AA}",
+                    0x0,5,5,408,234
+END
+
+IDD_LARGECOMMENT_DLG DIALOG DISCARDABLE  0, 0, 248, 225
+STYLE WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Interface Large Comment"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_LARGECOMMENT_EDIT,5,5,238,189,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL
+    DEFPUSHBUTTON   "&OK",IDOK,85,205,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,139,205,50,14
+    PUSHBUTTON      "&Font...",IDC_LARGECOMMENT_FONT_BUTTON,193,205,50,14
+END
+
+IDD_SELECTGENERATOR_DLG DIALOG DISCARDABLE  0, 0, 330, 220
+STYLE DS_CONTROL | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Implemented generators",IDC_STATIC,0,0,330,8
+    CONTROL         "List1",IDC_CG_OBJECTS,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,0,13,330,88
+    LTEXT           "Addition generator info",IDC_STATIC,0,112,330,8
+    CONTROL         "List2",IDC_CG_OBJINFO,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,0,125,330,67
+    PUSHBUTTON      "&Add generator...",IDC_CG_ADDGENERATOR,261,206,68,14
+END
+
+IDD_CODEGENERATIONWIZARD_DLG DIALOG DISCARDABLE  0, 0, 340, 260
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Code generation wizard"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "",IDC_CGW_DLGFRAME,5,5,330,220,NOT WS_VISIBLE | 
+                    WS_BORDER | NOT WS_GROUP
+    PUSHBUTTON      "< &Back",IDC_CGW_BACK,121,241,50,14
+    PUSHBUTTON      "&Next >",IDC_CGW_NEXT,171,241,50,14
+    PUSHBUTTON      "&Finish",IDC_CGW_FINISH,229,241,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,285,241,50,14
+END
+
+IDD_GENERATOROPTIONS_DLG DIALOG DISCARDABLE  0, 0, 330, 225
+STYLE DS_CONTROL | WS_CHILD | WS_CLIPCHILDREN
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Code generator options",IDC_CGO_TITLE,0,0,329,8
+    CONTROL         "",IDC_CGO_CTTCONTROL,
+                    "{D2B34AE8-B9CF-11D2-96B0-00104B5B66AA}",WS_TABSTOP,0,14,
+                    329,211
+END
+
+IDD_CODEGENGENERAL_DLG DIALOG DISCARDABLE  0, 0, 330, 225
+STYLE DS_CONTROL | WS_CHILD | WS_CLIPCHILDREN
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "You have selected several interfaces. Would you like to generate all interfaces's  implementation in single source module?",
+                    IDC_STATIC,0,5,330,21
+    CONTROL         "Yes, I would like to generate all interfaces's implementation in single source module",
+                    IDC_CGG_SINGLEFILE_RBTN,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,10,32,320,10
+    CONTROL         "No, I would like to generate all interfaces's implementation in separate files",
+                    IDC_CGG_DIFFERENTFILE_RBTN,"Button",BS_AUTORADIOBUTTON,
+                    10,49,320,10
+    LTEXT           "Static",IDC_STATIC,0,65,19,8,NOT WS_VISIBLE
+END
+
+IDD_SUMMARYINFO_DLG DIALOG DISCARDABLE  0, 0, 330, 225
+STYLE DS_CONTROL | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_CGS_EDITVIEW,0,16,329,174,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | 
+                    WS_VSCROLL | WS_HSCROLL
+    EDITTEXT        IDC_CGS_EDITFILENAME,0,195,247,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "&Save options...",IDC_CGS_SAVEBUTTON,251,195,79,14
+    CONTROL         "&Auto save",IDC_CGS_AUTOSAVE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,252,215,77,10
+    LTEXT           "Generation options summary",IDC_STATIC,0,0,329,8
+END
+
+IDD_PROPMEMBER_DLG DIALOG DISCARDABLE  0, 0, 280, 258
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CLIPCHILDREN | 
+    WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Select structure member"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,107,239,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,225,239,50,14
+    CONTROL         "Tree1",IDC_PM_STRUCTTREE,"SysTreeView32",WS_BORDER | 
+                    WS_TABSTOP,5,5,270,225
+    PUSHBUTTON      "CleanUp",IDC_PM_CLEANUP,166,239,50,14
+END
+
+IDD_OPTIONSFILE_DLG DIALOG DISCARDABLE  0, 0, 330, 225
+STYLE DS_CONTROL | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Would you like to use previously saved generation options?",
+                    IDC_STATIC,1,0,328,16
+    CONTROL         "&No, I want to begin new code generation session",
+                    IDC_CGOF_NEWSESSION_RBTN,"Button",BS_AUTORADIOBUTTON,10,
+                    20,319,10
+    CONTROL         "&Yes, I want to use options file",IDC_CGOF_USEFILE_RBTN,
+                    "Button",BS_AUTORADIOBUTTON,10,37,319,10
+    EDITTEXT        IDC_CGOF_FILENAME,23,51,256,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | WS_GROUP
+    PUSHBUTTON      "&Open...",IDC_CGOF_BROWSE,282,51,47,14
+    LTEXT           "",IDC_CGOF_LOADSTATUS,23,73,255,8
+    LTEXT           "Generation output &directory",IDC_STATIC,0,105,329,8
+    EDITTEXT        IDC_CGOF_OUTPUTDIR,0,117,276,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse...",IDC_CGOF_OUTPUTBROWSE,279,117,50,14
+    LTEXT           "Additional &include directory",IDC_STATIC,0,143,329,8
+    EDITTEXT        IDC_CGOF_INCLUDEDIR,0,154,276,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "B&rowse",IDC_CGOF_INCLUDEBROWSE,279,153,50,14
+END
+
+IDD_IMPORTDEF_DLG DIALOG DISCARDABLE  0, 0, 202, 30
+STYLE DS_3DLOOK | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Link to file",IDC_IDF_LINKTOFILE_CBTN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,10,184,10
+END
+
+IDD_HEADERGENERATIONWIZARD_DLG DIALOG DISCARDABLE  0, 0, 340, 260
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Header generation wizard"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "",IDC_HGW_DLGFRAME,5,5,330,220,NOT WS_VISIBLE | 
+                    WS_BORDER | NOT WS_GROUP
+    PUSHBUTTON      "< &Back",IDC_HGW_BACK,121,241,50,14
+    PUSHBUTTON      "&Next >",IDC_HGW_NEXT,171,241,50,14
+    PUSHBUTTON      "&Finish",IDC_HGW_FINISH,229,241,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,285,241,50,14
+END
+
+IDD_SELECTINTERFACES_DLG DIALOGEX 0, 0, 329, 225
+STYLE DS_CONTROL | WS_CHILD | WS_CLIPCHILDREN
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Select interfaces you want to generate",IDC_STATIC,2,4,
+                    74,29
+    CONTROL         "Tree1",IDC_HGG_CTTTREE,"SysTreeView32",WS_BORDER | 
+                    WS_TABSTOP,80,0,248,69,WS_EX_CLIENTEDGE
+    CONTROL         "List1",IDC_CG_OBJECTS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOLABELWRAP | 
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,79,89,240,50
+    PUSHBUTTON      "Register...",IDC_CG_ADDGENERATOR,5,91,70,14
+    PUSHBUTTON      "Unregister",IDC_CG_REMOVE_GENERATOR,5,107,70,14
+    PUSHBUTTON      "Update list",IDC_CG_UPDATE_GENERATOR_LIST,5,123,70,14
+    CONTROL         "&File",IDC_CGOF_USEFILE_RBTN,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,8,151,59,10
+    CONTROL         "&New session",IDC_CGOF_NEWSESSION_RBTN,"Button",
+                    BS_AUTORADIOBUTTON,8,166,59,10
+    EDITTEXT        IDC_CGOF_FILENAME,79,148,188,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | WS_GROUP
+    LTEXT           "",IDC_CGOF_LOADSTATUS,79,166,243,8
+    PUSHBUTTON      "&Open...",IDC_CGOF_BROWSE,270,148,55,14
+    LTEXT           "P&ublic",IDC_S_OUTPUT,12,195,48,8
+    EDITTEXT        IDC_CGOF_OUTPUTDIR,79,193,188,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse...",IDC_CGOF_OUTPUTBROWSE,270,193,55,14
+    LTEXT           "Pri&vate",IDC_S_INCLUDE,12,210,48,8
+    EDITTEXT        IDC_CGOF_INCLUDEDIR,79,207,188,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "B&rowse...",IDC_CGOF_INCLUDEBROWSE,270,207,55,14
+    GROUPBOX        "Generators",IDC_G_OBJECTS,0,79,328,62,0,
+                    WS_EX_TRANSPARENT
+    GROUPBOX        "Options",IDC_OPTIONS_BOX,0,140,328,41,0,
+                    WS_EX_TRANSPARENT
+    GROUPBOX        "Output folders",IDC_FOLDER_BOX,0,182,328,43,0,
+                    WS_EX_TRANSPARENT
+END
+
+IDD_SELECTLOADEDINTERFACES_DLG DIALOGEX 0, 0, 308, 214
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+CAPTION "Prague Interface Server"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,200,195,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,253,195,50,14
+    LTEXT           "&Select interfaces you are in need of",IDC_STATIC,5,5,
+                    298,8
+    CONTROL         "Tree1",IDC_SID_CTTTREE,"SysTreeView32",WS_BORDER | 
+                    WS_TABSTOP,5,18,298,171,WS_EX_CLIENTEDGE
+END
+
+IDD_INTERFACENAME_DLG DIALOG DISCARDABLE  0, 0, 251, 92
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "VisualEditor"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,139,73,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,196,73,50,14
+    LTEXT           "Enter new interface name",IDC_STATIC,5,6,241,8
+    EDITTEXT        IDC_NIN_NAMEEDIT,21,20,225,14,ES_AUTOHSCROLL
+END
+
+IDD_RENAMEINTRELATED_DLG DIALOG DISCARDABLE  0, 0, 211, 103
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,99,84,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,156,84,50,14
+    LTEXT           "Would you like to rename related interface properties?",
+                    IDC_STATIC,5,5,201,8
+    CONTROL         "Related_1",IDC_RELATED_1_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,15,22,191,10
+    CONTROL         "Related_2",IDC_RELATED_2_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,38,191,10
+    CONTROL         "Related_3",IDC_RELATED_3_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,54,191,10
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,41
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "VisualEditor MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 41\0"
+            VALUE "InternalName", "VisualEditor\0"
+            VALUE "LegalCopyright", "Copyright (C) 2000\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "VisualEditor.EXE\0"
+            VALUE "ProductName", "VisualEditor Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_VISUALEDITOR_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 413
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 287
+    END
+
+    IDD_LARGECOMMENT_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 243
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 219
+    END
+
+    IDD_CODEGENERATIONWIZARD_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 335
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 255
+    END
+
+    IDD_GENERATOROPTIONS_DLG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 329
+    END
+
+    IDD_CODEGENGENERAL_DLG, DIALOG
+    BEGIN
+        TOPMARGIN, 5
+    END
+
+    IDD_PROPMEMBER_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 275
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 253
+    END
+
+    IDD_HEADERGENERATIONWIZARD_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 335
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 255
+    END
+
+    IDD_SELECTLOADEDINTERFACES_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 303
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 209
+    END
+
+    IDD_INTERFACENAME_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 246
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_RENAMEINTRELATED_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 206
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 98
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_VISUALEDITOR_DIALOG DLGINIT
+BEGIN
+    IDC_SPLITTER, 0x376, 36, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x3f41, 0x0000, 0x2746, 0x0000, 0x0000, 
+0x0000, 0x3201, 0x3200, 0x6400, 0x6400, 0x0000, 0xff00, 0xffff, 0x05b9, 
+
+    0
+END
+
+IDD_GENERATOROPTIONS_DLG DLGINIT
+BEGIN
+    IDC_CGO_CTTCONTROL, 0x376, 32, 0
+0x0000, 0x0000, 0x0003, 0x0001, 0x330e, 0x0000, 0x2373, 0x0000, 0x00a0, 
+0x0000, 0x0000, 0x0001, 0x0000, 0x0101, 0x0101, 0x0001, 
+    0
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\VisualEditor.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_SB_TEXT             "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_INTERFACESCLIPBOARDFORMAT "AVP_INTERFACESCLIP_FORMAT"
+    IDS_DESCRIPTIONSCLIPBOARDFORMAT "AVP_DESCRIPTIONSCLIP_FORMAT"
+    IDS_MAINTITLE           "PragueVisualEditor"
+    IDS_WINDOWTITLE         "%s - PragueVisualEditor"
+    IDS_OCX_FILTER          "ActiveX modules (*.ocx)|*.ocx|All files (*.*)|*.*||"
+    IDS_COM_FILTER          "COM modules (*.dll)|*.dll|All files (*.*)|*.*||"
+    IDS_MENU_EDIT_CUT       "Cu&t\tctl-x"
+    IDS_MENU_EDIT_COPY      "&Copy\tctl-c"
+    IDS_MENU_EDIT_PASTE     "&Paste\tctl-v"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MEMBERISARRAY       "Array"
+    IDS_PLUGIN              "Plugin"
+    IDS_CONST               "Const"
+    IDS_PLMNEMONIC_ID       "PID_"
+    IDS_STATIC              "Static"
+    IDS_PROPFORWRITE        "Writable"
+    IDS_TRANSFERPROPUP      "TransferPropertyUP"
+    IDS_LASTCALLPROP        "LastCallProperty"
+    IDS_INTERFACEFLAGS      "InterfaceFlags"
+    IDS_NONSWAPABLE         "UnSwappable"
+    IDS_POINTER             "Pointer"
+    IDS_IFACE_FLAG_SYNCHRONIZED "Synchronized"
+    IDS_PROPWRITABLEDURINGINIT "WritableDuringInitOnly"
+    IDS_IFACE_FLAG_CS       "Critical section"
+    IDS_IFACE_FLAG_MUTEX    "Mutex"
+    IDS_SYSTEM              "System"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DATASTRUCTURE       "Structures"
+    IDS_DATASTRUCTUREMEMBERS "Members"
+    IDS_PROPERTIES          "Properties"
+    IDS_METHODS             "ExternalMethods"
+    IDS_SYSMETHODS          "InternalMethods"
+    IDS_TYPES               "Types"
+    IDS_CONSTANTS           "Constants"
+    IDS_INCLUDES            "Includes"
+    IDS_ERRORCODES          "ErrorCodes"
+    IDS_NEWINTERFACE        "NewInterface"
+    IDS_NEWPROPERTY         "NewProperty"
+    IDS_NEWMETHOD           "NewMethod"
+    IDS_NEWMETHODPARAMETER  "NewParameter"
+    IDS_NEWDATASRUCTURE     "NewStructure"
+    IDS_NEWDATASRUCTUREMEMBER "NewMember"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_NEWTYPE             "NewType"
+    IDS_NEWCONSTANT         "NewConstant"
+    IDS_NEWERRORCODE        "NewErrorCode"
+    IDS_METHODDESCRIPTION   "Method Description"
+    IDS_MNEMONIC_ID         "IID_"
+    IDS_INCLUDEFILE         "i_"
+    IDS_OBJECTTYPE          "h"
+    IDS_PROPLOCAL           "Local"
+    IDS_PROPSHARED          "Static"
+    IDS_PROPREQUIRED        "Required for Init"
+    IDS_PROPNONE            "None"
+    IDS_PROPREAD            "Read"
+    IDS_PROPWRITE           "Write"
+    IDS_PROPREADWRITE       "ReadWrite"
+    IDS_PROPPOINTER         "Pointer"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HGW_ERR_SOMEERROR   "Header generation finished. Some interfaces headers wasn't generated"
+    IDS_HGW_ERR_SETTYPES    "Types table setup failed"
+    IDS_HGW_ERR_INITFAILED  "Header generator initialization failed."
+    IDS_LET_LARGECOMMENT    "Large Comment"
+    IDS_LET_BEHAVIORCOMMENT "Behavior Comment"
+    IDS_LET_VALUECOMMENT    "Value Comment"
+    IDS_FILESYNCHRONIZATIONCOMPLETED 
+                            "Synchronization implementation with prototype\n%s\n\ncompleted successfully."
+    IDS_SYNCHRONIZATIONCOMPLETED "Synchronization completed successfully."
+    IDS_NOUIDSFORSYNCHRONIZATION 
+                            "There are no UIDs to synchronization have been found."
+    IDS_ERRORISWARNING      "Warning"
+    IDS_METHODPARAMETERS    "Method Parameters"
+    IDS_AUTOSTART           "AutoStart"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MNEMONICID_PREFIX   "MnemonicID"
+    IDS_DIGITALID_PREFIX    "ID"
+    IDS_REVISIONID_PREFIX   "Revision"
+    IDS_CREATIONDATE_PREFIX "CreationDate"
+    IDS_INCLUDEFILE_PREFIX  "IncludeFile"
+    IDS_OBJECTTYPE_PREFIX   "ObjectName"
+    IDS_SHORTCOMMENT_PREFIX "ShortComment"
+    IDS_LARGECOMMENT_PREFIX "LargeComment"
+    IDS_BEHAVIORCOMMENT_PREFIX "BehaviorComment"
+    IDS_VALUECOMMENT_PREFIX "ValueComment"
+    IDS_RESULTNAME_PREFIX   "ResultType"
+    IDS_RESULTDEFVALUE_PREFIX "ResultDefValue"
+    IDS_PARAMTYPENAME_PREFIX "Type"
+    IDS_PROPTYPENAME_PREFIX "Type"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DSMTYPENAME_PREFIX  "Type"
+    IDS_PLSMEMBER_PREFIX    "Member"
+    IDS_PLSREADFUNC_PREFIX  "ReadFunctionName"
+    IDS_PLSWRITEFUNC_PREFIX "WriteFunctionName"
+    IDS_PROPVARIABLE_PREFIX "VariableName"
+    IDS_PROPDEFVALUE_PREFIX "VariableDefValue"
+    IDS_DSMARRAYBOUND_PREFIX "Bound"
+    IDS_PLNAME_PREFIX       "Name"
+    IDS_PLDIGITALID_PREFIX  "ID"
+    IDS_PLVERSION_PREFIX    "Version"
+    IDS_SUBTYPEID_PREFIX    "SubtypeID"
+    IDS_AUTORNAME_PREFIX    "Author"
+    IDS_BASETYPENAME_PREFIX "BaseType"
+    IDS_CONSTTYPENAME_PREFIX "Type"
+    IDS_VALUE_PREFIX        "Value"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PLVENDORID_PREFIX   "VendorID"
+    IDS_PLCODEPAGE_PREFIX   "DefaultCodePage"
+    IDS_PLDATEFORMAT_PREFIX "DefaultDateFormat"
+    IDS_OUTPUTFILE_PREFIX   "SourceName"
+    IDS_PLAUTHORNAME_PREFIX "Author"
+    IDS_PLPROJECTNAME_PREFIX "Project"
+    IDS_PLSUBPROJECTNAME_PREFIX "SubProject"
+    IDS_FILE_GENERATEHEADER "&Generate prototype..."
+    IDS_FILE_GENERATESOURCE "&Generate implementation..."
+    IDS_IPP_DEFEXTENTION    "prt"
+    IDS_IPI_DEFEXTENTION    "imp"
+    IDS_IPI_FILTER          "Prague Interface Implementation Files (*.imp)|*.imp|All files (*.*)|*.*||"
+    IDS_IPP_FILTER          "Prague Interface Prototype Files (*.prt)|*.prt|All files (*.*)|*.*||"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_IP_FILTER           "Prague Interface Prototype Files (*.prt)|*.prt|Prague Interface Implementation Files (*.imp)|*.imp|Prague Interface Files (*.prt,*.imp)|*.prt;*.imp|All files (*.*)|*.*||"
+    IDS_CGO_DEFEXTENTION    "cgo"
+    IDS_CGO_FILTER          "Prague Code Generation Options Files (*.cgo)|*.cgo|All files (*.*)|*.*||"
+    IDS_HGO_DEFEXTENTION    "hgo"
+    IDS_HGO_FILTER          "Prague Header Generation Options Files (*.hgo)|*.hgo|All files (*.*)|*.*||"
+    IDS_SM_NEWOBJECT        "NewObject"
+    IDS_SM_RECOGNIZE        "Recognize"
+    IDS_SM_CLOSE            "Close"
+    IDS_SM_INIT             "Init"
+    IDS_SM_INIT_DONE        "InitDone"
+    IDS_SM_RECEIVEMSG       "MsgRecieve"
+    IDS_SM_IFACETRANSFER    "IFaceTransfer"
+    IDS_CG_OD_DESCRIPTION   "Description"
+    IDS_CG_OD_VENDOR        "Vendor"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CG_OD_VERSION       "Version"
+    IDS_CG_OAI_CATEGORY     "Category"
+    IDS_CG_OAI_VALUE        "Value"
+    IDS_CGW_NEXTBTN         "&Next >"
+    IDS_CGW_FINISHBTN       "Fi&nish"
+    IDS_CGW_SEVERALINT      "Several Interfaces"
+    IDS_CGW_ERR_NOINTERFACES 
+                            "You haven't selected any interface or plugin node to generate source code."
+    IDS_CGW_ERR_GENERATION  "Code generation failed for interface ""%s"""
+    IDS_CGW_ERR_GENERATION_FALSE 
+                            "Code generation finished with some errors for interface ""%s"""
+    IDS_CGW_ERR_SUCCEEDED   "Code generation finished successfully."
+    IDS_CGW_ERR_SOMEERROR   "Code generation finished. Some interfaces wasn't generated"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CG_DEFEXTENTION     "dll"
+    IDS_CG_FILTER           "Generators (*.dll)|*.dll|All files (*.*)|*.*||"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CGW_ERR_SETTYPES    "Types table setup failed"
+    IDS_CGW_ERR_NOGENERATORS "There are no code generators presented"
+    IDS_CGW_ERR_INITFAILED  "Code generator initialization failed."
+    IDS_CGO_TITLE           "Code generator's options for ""%s"""
+    IDS_CGO_DLGFILTER       "%s "
+    IDS_CGO_DLGSUBFILTER_1  " (*.%s)"
+    IDS_CGO_DLGSUBFILTER_2  "|*.%s|"
+    IDS_CGO_DLGSUBFILTER_3  "All files (*.*)|*.*||"
+    IDS_CGS_INTERFACENAME   "Options for interface ""%s"""
+    IDS_CGOF_LOADED         "The options file has been loaded successfully."
+    IDS_CGOF_NOTLOADED      "The options file above has not been loaded yet."
+    IDS_HGW_ERR_NOINTERFACES 
+                            "You haven't selected any interface to generate headers."
+    IDS_HGW_ERR_GENERATION  "Header generation failed for interface ""%s"""
+    IDS_HGW_ERR_GENERATION_FALSE 
+                            "Header generation finished with some errors for interface ""%s"""
+    IDS_HGW_ERR_SUCCEEDED   "Header generation finished successfully."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERR_SAVEREQUEST     "Some information was changed.\nWould  you like to save description?"
+    IDS_ERR_CANCLOSE        "Do you really want to finish session?"
+    IDS_ERR_OPENCLIPBOARD   "Cannot open the Clipboard"
+    IDS_ERR_EMPTYCLIPBOARD  "Cannot empty the Clipboard"
+    IDS_ERR_SETCLIPDATA     "Unable to set Clipboard data"
+    IDS_ERR_CLIPRECURSION   "Attempt to recursive insertion.\nOperation hasn't been completed."
+    IDS_ERR_CLIPIDALREADYEXISTS 
+                            "Idetifier ""%d"" already exists in target subtree.\nIt will be replaced to value ""%d""."
+    IDS_ERR_INCORRECTIDVALUE "Incorrect digital value."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERR_IFALREADYEXISTS "Incorrect replacement of a value of the Interface name, ID or revision.\nInterface with such name, ID and revision already exists."
+    IDS_ERR_INCORRECTNAMEVALUE "Incorrect string value."
+    IDS_ERR_IFMALREADYEXISTS "Edit option\nEdit options"
+    IDS_ERR_IFMPALREADYEXISTS 
+                            "Incorrect replacement of a value of the Interface Method Parameter name.\nInterface Method Parameter with such name already exists."
+    IDS_ERR_IFPALREADYEXISTS 
+                            "Incorrect replacement of a value of the Interface Property name.\nInterface Property with such name already exists."
+    IDS_ERR_IFPIDALREADYEXISTS 
+                            "Incorrect replacement of a value of the Interface Property ID.\nInterface Property with such ID already exists."
+    IDS_ERR_WRITEFILE       "Cannot write file\n%s"
+    IDS_ERR_READFILE        "Cannot read file\n%s"
+    IDS_ERR_INCORRECTPASTE  "Incorrect paste target node type"
+    IDS_ERR_INCORRECTFILETYPE "The file you selected has a incorrect type"
+    IDS_ERR_IFONAMEALREADYEXISTS 
+                            "Incorrect replacement of a value of the Interface Object Name.\nInterface with such object name already exists."
+    IDS_ERR_IFONAMEUSED     "The name of Interface Object you entered\nis already used as a Interface Method parameter's or result's type.\nWould you like to accept value and exchange all types to new Object name ?"
+    IDS_ERR_NODENOTMEMBER   "The item you selected is not a structure member.\nCorrect your choice, please."
+    IDS_ERR_DIFFERENTTYPES  "The target file you selected has a different type.\nAre you sure to continue?"
+    IDS_ERR_LOADINTERFACEFAILED 
+                            "Loading code generator failed for object CLSID\n%s"
+    IDS_ERR_DUPLICATEINTNAME 
+                            "The interface with name ""%s"" already exists.\nYou should change this hame."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERR_ALREADYIMPORTED "The interface definition file\n""%s""\n already imported."
+    IDS_ERR_REMOVELINKED    "Attempt to remove imported interface linked to file\n""%s""\nVisualEditor will remove all interfaces imported from this file.\n\nWould you like to continue ?"
+    IDS_ERR_IFTALREADYEXISTS 
+                            "Incorrect replacement of a value of the Interface User Type name.\nInterface User Type with such name already exists."
+    IDS_ERR_IFCALREADYEXISTS 
+                            "Incorrect replacement of a value of the Interface User Constant name.\nInterface User Constant with such name already exists."
+    IDS_ERR_IFPIDOUTOFRANGE "Property ID value ""%#x"" is out of range ""%#x - %#x"""
+    IDS_ERR_PIDS_ERROR      "Prague ID Server error\n""%s"""
+    IDS_ERR_IDALREADYUSED   "Incorrect replacement of a value of the ID.\nThis ID of such type already used."
+    IDS_ERR_VALUEOUTOFRANGE "The value you entered is out of range\n""%#x"" - ""%#x"""
+    IDS_ERR_INCORRECTVALUE  "The value you entered is incorrect."
+    IDS_ERR_DISCARDDEFVALUE "The type of property you choose is different from presented.\nBecause of this the property default value will be discarded.\n\nWould you like to continue?"
+    IDS_ERR_MERGEDISCARDDEFVALUE 
+                            "Prototype and implementation of property\n""%s""\nhave a different type.\nBecause of this the property default value will be discarded."
+    IDS_ERR_TYPENAMEUSED    "The name ""%s"" is used as a type name somewhere.\nDo you really whant to change this name to new name ?"
+    IDS_ERR_TYPENAMEUSEDDEL "The name ""%s"" is used as a type name somewhere.\nDo you really whant to delete this object ?"
+    IDS_ERR_OCXNOTREGISTERED 
+                            "Required ActiveX module ""%s"" is not registered.\nWould you like to find and register it now?"
+    IDS_ERR_OCXREGISTRATION "Error registation ActiveX module\n""%s"".\nWould you like to choose and register another one?"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERR_OPENOCXTITLE    "Choose the ActiveX module"
+    IDS_ERR_COMNOTREGISTERED 
+                            "Required COM module ""%s"" is not registered.\nWould you like to find and register it now?"
+    IDS_ERR_COMREGISTRATION "Error registation COM module\n""%s"".\nWould you like to choose and register another one?"
+    IDS_ERR_OPENCOMTITLE    "Choose the COM module"
+    IDS_ERR_FILEEXISTS      "Imported file\n%s\nhas not been found.\nWould you like to find it ?"
+    IDS_ERR_MERGEDISCARDCONSTANT 
+                            "Prototype and implementation of constant\n""%s""\nhave a different base type or value.\nThe constant by prototype will be used."
+    IDS_ERR_IFEXISTS        "Attention !\n\nInterface with such name, ID and revision already exists."
+    IDS_ERR_VALUEOUTOFLENGTH 
+                            "The value ""%s"" exceeds capacity of variable. Value will be truncated!"
+    IDS_ERR_INCOMPATIBLEFILES 
+                            "Files\n""%s""\nand\n""%s""\n\nare incompatible."
+    IDS_ERR_PIS_ERROR       "Prague Interface Server error\n""%s"""
+    IDS_ERR_MERGEDISCARDERRCODE 
+                            "Prototype and implementation of error code\n""%s""\nhave a different default value or IsWarning flag.\nThe error code by prototype will be used."
+    IDS_ERR_MERGEDISCARDTYPE 
+                            "Prototype and implementation of type\n""%s""\nhave a different base type.\nThe type by prototype will be used."
+    IDS_TITLE_CHOOSE_TYPE_DLG "Please, choose type name..."
+    IDS_MESSAGES            "Messages"
+    IDS_NEW_MESSAGE_CLASS   "New message class"
+    IDS_NEW_MESSAGE         "New message"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MSG_CONTEXT_PREFIX  """context"" parameter comment"
+    IDS_MSG_DATA_PREFIX     """data"" parameter comment"
+    IDS_IDENTIFICATOR_PREFIX "Identificator"
+    IDS_ERR_IFCNALREADYEXISTS 
+                            "Incorrect replacement of a value of the Interface Message Class name.\nInterface Message Class with such name already exists."
+    IDS_ERR_IFMNALREADYEXISTS 
+                            "Incorrect replacement of a value of the Interface Message name.\nInterface Message with such name already exists."
+    IDS_CLASSES_OF_MESSAGES "Classes of messages"
+    IDS_MSG_SEND_POINT_PREFIX """send point"" parameter comment"
+    IDS_LET_MSG_SEND_POINT  "comment for the message ""send point"" parameter"
+    IDS_LET_MSG_CONTEXT     "comment of the message ""context"" parameter"
+    IDS_LET_MSG_DATA        "comment of the message ""data"" parameter "
+    IDS_DEFAULT_PLUGIN_NAME_WARNING 
+                            "Default plugin name did not corrected. Do you still want to exit?"
+    IDS_DEFAULT_PLUGIN_PID_WARNING 
+                            "Default plugin PID did not corrected. Do you still want to exit?"
+    IDS_OPTIONS_SAVE_FAILED "There was error while options saving..."
+    IDS_IMPLCOMMENT_PREFIX  "ImplComment"
+    IDS_LET_IMPLCOMMENT     "Implementation comment"
+    IDS_NEWINCLUDE          "New include"
+END
+
+#endif    // Neutral (Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR1 ACCELERATORS DISCARDABLE 
+BEGIN
+    VK_F2,          ID_ACCEL33069,          VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_OPTIONS DIALOG DISCARDABLE  0, 0, 312, 167
+STYLE DS_MODALFRAME | WS_CHILD | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Use registry instead of sql",IDC_USE_REGISTRY_NOT_SQL,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,105,76,96,10
+END
+
+IDD_METHOD_DESCRIPTION DIALOG DISCARDABLE  0, 0, 533, 191
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Method description"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "method description",IDC_STATIC,7,7,264,160
+    LTEXT           "return &value + ",IDC_STATIC,10,22,46,8
+    COMBOBOX        IDC_CB_RET_VAL,95,21,73,86,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "meth &name",IDC_STATIC,57,22,36,8
+    EDITTEXT        IDC_ED_NAME,171,20,95,14,ES_AUTOHSCROLL
+    RTEXT           "return default value",IDC_STATIC,10,38,81,8
+    EDITTEXT        IDC_RET_DEF_VAL,95,35,171,14,ES_AUTOHSCROLL
+    RTEXT           "&short",IDC_STATIC,23,58,38,8
+    EDITTEXT        IDC_ED_COMM_SHORT,68,58,198,14,ES_AUTOHSCROLL
+    RTEXT           "return val&ue",IDC_STATIC,23,73,38,8
+    EDITTEXT        IDC_ED_COMM_VAL,68,74,198,28,ES_MULTILINE | 
+                    ES_AUTOVSCROLL
+    RTEXT           "&large",IDC_STATIC,23,104,38,8
+    EDITTEXT        IDC_ED_COMM_LARGE,68,104,198,28,ES_MULTILINE | 
+                    ES_AUTOVSCROLL
+    RTEXT           "&behaviour",IDC_STATIC,23,134,38,8
+    EDITTEXT        IDC_ED_COMM_BEHAV,68,134,198,28,ES_AUTOHSCROLL
+    GROUPBOX        "method &parameters",IDC_STATIC,273,7,253,160
+    CONTROL         "List2",IDC_PAR_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,325,15,194,64
+    PUSHBUTTON      "&change",IDC_BT_PAR_CHANGE,284,20,35,14
+    PUSHBUTTON      "&add",IDC_BT_PAR_ADD,284,40,35,14
+    PUSHBUTTON      "&delete",IDC_BT_PAR_DEL,284,60,36,14
+    RTEXT           "s&hort",IDC_STATIC,278,86,38,8
+    EDITTEXT        IDC_ED_PAR_COMM_SHORT,325,86,194,14,ES_AUTOHSCROLL
+    RTEXT           "lar&ge",IDC_STATIC,278,104,38,8
+    EDITTEXT        IDC_ED_PAR_COMM_LARGE,325,104,194,28,ES_MULTILINE | 
+                    ES_AUTOVSCROLL
+    RTEXT           "b&ehaviour",IDC_STATIC,278,134,38,8
+    EDITTEXT        IDC_ED_PAR_COMM_BEHAV,325,134,194,28,ES_AUTOHSCROLL
+    LTEXT           "co&mment language",IDC_STATIC,128,171,61,8
+    COMBOBOX        IDC_CB_LANG,198,169,48,54,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,420,170,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,476,170,50,14
+    GROUPBOX        "comment",IDC_STATIC,7,50,264,117
+    GROUPBOX        "comment",IDC_STATIC,273,77,253,90
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 305
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 160
+    END
+
+    IDD_METHOD_DESCRIPTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 526
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_METHOD_DESCRIPTION DLGINIT
+BEGIN
+    IDC_CB_LANG, 0x403, 4, 0
+0x6c61, 0x006c, 
+    IDC_CB_LANG, 0x403, 4, 0
+0x7572, 0x0073, 
+    IDC_CB_LANG, 0x403, 4, 0
+0x6e65, 0x0067, 
+    0
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CHOOSE_NAME_FROM_LIST_DLG DIALOG DISCARDABLE  0, 0, 264, 206
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,74,183,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,140,183,50,14
+    LISTBOX         IDC_LIST_OF_NAMES,19,15,226,150,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_CHOOSE_NAME_FROM_LIST_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 257
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 199
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\VisualEditor.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

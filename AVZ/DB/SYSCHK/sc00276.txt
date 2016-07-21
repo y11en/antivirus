@@ -1,0 +1,4 @@
+// ***** AdvWare.ToPicks *****
+begin
+ AddEvAlarmByCLSID('5C40012E-44CA-11D7-8411-0002A5F9D08E', AScriptName, 'IdiumUpdater.DLL');
+end.

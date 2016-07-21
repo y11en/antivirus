@@ -1,0 +1,4 @@
+// ***** Downloader.Win32.Skilin.c *****
+begin       
+ AddEvAlarmByCLSID('D94AAA2A-C415-42E3-82B6-49FAB4EBFFE9',AScriptName,'HALFLE*.DLL');
+end.

@@ -1,0 +1,13 @@
+<Include>
+  <ComponentRef Id="klfltdev.cat_X64" />
+  <ComponentRef Id="klfltdev.inf_X64" />
+  <ComponentRef Id="klfltdev.sys_X64" />
+
+  <ComponentRef Id="klfltdev.inf_X86" />
+  <ComponentRef Id="klfltdev.sys_X86" />
+  <ComponentRef Id="klfltdev.cat_X86" />
+
+  <ComponentRef Id="klfltdev.inf_W2K" />
+  <ComponentRef Id="klfltdev.sys_W2K" />
+  <ComponentRef Id="klfltdev.cat_W2K" />
+</Include>

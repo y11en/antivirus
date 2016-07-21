@@ -1,0 +1,305 @@
+# Microsoft Developer Studio Generated Dependency File, included by Signlib.mak
+
+..\Common\ERRNO.C : \
+	"..\..\CommonFiles\Sign\CT_SUPP.H"\
+	".\signport.h"\
+	{$(INCLUDE)}"Sign\CT_FIO.H"\
+	{$(INCLUDE)}"Sign\CT_SUP_D.H"\
+	{$(INCLUDE)}"Sign\CT_TYPS.H"\
+	
+
+.\my_strl.c : \
+	".\signport.h"\
+	
+
+.\S_BUFLEN.C : \
+	"..\..\CommonFiles\compat_unix.h"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Sign\Sign_lib.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	".\signport.h"\
+	{$(INCLUDE)}"Sign\CT_DEFS.H"\
+	{$(INCLUDE)}"Sign\CT_STRCT.H"\
+	{$(INCLUDE)}"Sign\CT_TYPS.H"\
+	
+
+.\s_chbuf.c : \
+	"..\..\CommonFiles\compat_unix.h"\
+	"..\..\CommonFiles\Sign\CT_FUNCS.H"\
+	"..\..\CommonFiles\Sign\CT_SUPP.H"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Sign\Sign_lib.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	"..\Common\Avp_defs.h"\
+	".\nrotate.h"\
+	".\signport.h"\
+	{$(INCLUDE)}"Sign\CT_DEFS.H"\
+	{$(INCLUDE)}"Sign\CT_FIO.H"\
+	{$(INCLUDE)}"Sign\CT_STRCT.H"\
+	{$(INCLUDE)}"Sign\CT_SUP_D.H"\
+	{$(INCLUDE)}"Sign\CT_TYPS.H"\
+	
+
+.\S_CHECK.C : \
+	"..\..\CommonFiles\compat_unix.h"\
+	"..\..\CommonFiles\Sign\CT_FUNCS.H"\
+	"..\..\CommonFiles\Sign\CT_SUPP.H"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Sign\Sign_lib.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	"..\Common\Avp_defs.h"\
+	".\signport.h"\
+	{$(INCLUDE)}"Sign\CT_DEFS.H"\
+	{$(INCLUDE)}"Sign\CT_FIO.H"\
+	{$(INCLUDE)}"Sign\CT_STRCT.H"\
+	{$(INCLUDE)}"Sign\CT_SUP_D.H"\
+	{$(INCLUDE)}"Sign\CT_TYPS.H"\
+	
+
+.\S_CHFILE.C : \
+	"..\..\CommonFiles\compat_unix.h"\
+	"..\..\CommonFiles\Sign\CT_SUPP.H"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Sign\Sign_lib.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	".\signport.h"\
+	{$(INCLUDE)}"Sign\CT_DEFS.H"\
+	{$(INCLUDE)}"Sign\CT_FIO.H"\
+	{$(INCLUDE)}"Sign\CT_STRCT.H"\
+	{$(INCLUDE)}"Sign\CT_SUP_D.H"\
+	{$(INCLUDE)}"Sign\CT_TYPS.H"\
+	
+
+.\S_CHFILW.C : \
+	"..\..\CommonFiles\compat_unix.h"\
+	"..\..\CommonFiles\Sign\CT_SUPP.H"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Sign\Sign_lib.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	".\signport.h"\
+	{$(INCLUDE)}"Sign\CT_DEFS.H"\
+	{$(INCLUDE)}"Sign\CT_FIO.H"\
+	{$(INCLUDE)}"Sign\CT_STRCT.H"\
+	{$(INCLUDE)}"Sign\CT_SUP_D.H"\
+	{$(INCLUDE)}"Sign\CT_TYPS.H"\
+	
+
+.\S_CHFRES.C : \
+	"..\..\CommonFiles\compat_unix.h"\
+	"..\..\CommonFiles\Sign\CT_SUPP.H"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Sign\Sign_lib.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	".\signport.h"\
+	{$(INCLUDE)}"Sign\CT_DEFS.H"\
+	{$(INCLUDE)}"Sign\CT_FIO.H"\
+	{$(INCLUDE)}"Sign\CT_STRCT.H"\
+	{$(INCLUDE)}"Sign\CT_SUP_D.H"\
+	{$(INCLUDE)}"Sign\CT_TYPS.H"\
+	
+
+.\S_CHRES.C : \
+	"..\..\CommonFiles\compat_unix.h"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Sign\Sign_lib.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	".\signport.h"\
+	{$(INCLUDE)}"Sign\CT_DEFS.H"\
+	{$(INCLUDE)}"Sign\CT_STRCT.H"\
+	{$(INCLUDE)}"Sign\CT_TYPS.H"\
+	
+
+.\S_cnot.c : \
+	"..\..\CommonFiles\compat_unix.h"\
+	"..\..\CommonFiles\Sign\CT_FUNCS.H"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Sign\Sign_lib.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	"..\Common\Avp_defs.h"\
+	".\signport.h"\
+	{$(INCLUDE)}"Sign\CT_DEFS.H"\
+	{$(INCLUDE)}"Sign\CT_STRCT.H"\
+	{$(INCLUDE)}"Sign\CT_TYPS.H"\
+	
+
+.\s_crpriv.c : \
+	"..\..\CommonFiles\compat_unix.h"\
+	"..\..\CommonFiles\Sign\CT_FUNCS.H"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Sign\Sign_lib.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	".\signport.h"\
+	{$(INCLUDE)}"Sign\CT_DEFS.H"\
+	{$(INCLUDE)}"Sign\CT_STRCT.H"\
+	{$(INCLUDE)}"Sign\CT_TYPS.H"\
+	
+
+.\S_except.c : \
+	"..\..\CommonFiles\compat_unix.h"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Sign\Sign_lib.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	".\signport.h"\
+	{$(INCLUDE)}"Sign\CT_DEFS.H"\
+	{$(INCLUDE)}"Sign\CT_STRCT.H"\
+	{$(INCLUDE)}"Sign\CT_TYPS.H"\
+	
+
+.\S_fnguid.c : \
+	"..\..\CommonFiles\compat_unix.h"\
+	"..\..\CommonFiles\Sign\CT_FUNCS.H"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Sign\Sign_lib.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	".\signport.h"\
+	{$(INCLUDE)}"Sign\CT_DEFS.H"\
+	{$(INCLUDE)}"Sign\CT_STRCT.H"\
+	{$(INCLUDE)}"Sign\CT_TYPS.H"\
+	
+
+.\s_fnstr.c : \
+	"..\..\CommonFiles\compat_unix.h"\
+	"..\..\CommonFiles\Sign\CT_FUNCS.H"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Sign\Sign_lib.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	".\signport.h"\
+	{$(INCLUDE)}"Sign\CT_DEFS.H"\
+	{$(INCLUDE)}"Sign\CT_STRCT.H"\
+	{$(INCLUDE)}"Sign\CT_TYPS.H"\
+	
+
+.\S_HASH.C : \
+	"..\..\CommonFiles\compat_unix.h"\
+	"..\..\CommonFiles\Sign\CT_FUNCS.H"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Sign\Sign_lib.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	".\signport.h"\
+	{$(INCLUDE)}"Sign\CT_DEFS.H"\
+	{$(INCLUDE)}"Sign\CT_STRCT.H"\
+	{$(INCLUDE)}"Sign\CT_TYPS.H"\
+	
+
+.\s_klok.c : \
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	".\signport.h"\
+	
+
+.\S_LNFILE.C : \
+	"..\..\CommonFiles\compat_unix.h"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Sign\Sign_lib.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	".\signport.h"\
+	{$(INCLUDE)}"Sign\CT_DEFS.H"\
+	{$(INCLUDE)}"Sign\CT_STRCT.H"\
+	{$(INCLUDE)}"Sign\CT_TYPS.H"\
+	
+
+.\S_LNOT.C : \
+	"..\..\CommonFiles\byteorder.h"\
+	"..\..\CommonFiles\compat_unix.h"\
+	"..\..\CommonFiles\Sign\CT_FUNCS.H"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Sign\Sign_lib.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	"..\Common\Avp_defs.h"\
+	".\signport.h"\
+	{$(INCLUDE)}"avp_data.h"\
+	{$(INCLUDE)}"Sign\CT_DEFS.H"\
+	{$(INCLUDE)}"Sign\CT_STRCT.H"\
+	{$(INCLUDE)}"Sign\CT_TYPS.H"\
+	
+
+.\S_PUTN.C : \
+	"..\..\CommonFiles\compat_unix.h"\
+	"..\..\CommonFiles\Sign\CT_FUNCS.H"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Sign\Sign_lib.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	".\signport.h"\
+	{$(INCLUDE)}"Sign\CT_DEFS.H"\
+	{$(INCLUDE)}"Sign\CT_STRCT.H"\
+	{$(INCLUDE)}"Sign\CT_TYPS.H"\
+	
+
+.\s_sgnfil.c : \
+	"..\..\CommonFiles\compat_unix.h"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Sign\Sign_lib.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	".\signport.h"\
+	{$(INCLUDE)}"Sign\CT_DEFS.H"\
+	{$(INCLUDE)}"Sign\CT_STRCT.H"\
+	{$(INCLUDE)}"Sign\CT_TYPS.H"\
+	
+
+.\s_sgnmem.c : \
+	"..\..\CommonFiles\compat_unix.h"\
+	"..\..\CommonFiles\Sign\CT_FUNCS.H"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Sign\Sign_lib.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	".\signport.h"\
+	{$(INCLUDE)}"Sign\CT_DEFS.H"\
+	{$(INCLUDE)}"Sign\CT_STRCT.H"\
+	{$(INCLUDE)}"Sign\CT_TYPS.H"\
+	
+
+.\S_SIFILE.C : \
+	"..\..\CommonFiles\compat_unix.h"\
+	"..\..\CommonFiles\Sign\CT_SUPP.H"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Sign\Sign_lib.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	"..\Common\AVP_Base.h"\
+	".\signport.h"\
+	{$(INCLUDE)}"Sign\CT_DEFS.H"\
+	{$(INCLUDE)}"Sign\CT_FIO.H"\
+	{$(INCLUDE)}"Sign\CT_STRCT.H"\
+	{$(INCLUDE)}"Sign\CT_SUP_D.H"\
+	{$(INCLUDE)}"Sign\CT_TYPS.H"\
+	
+
+.\S_SIGN.C : \
+	"..\..\CommonFiles\compat_unix.h"\
+	"..\..\CommonFiles\Sign\CT_FUNCS.H"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Sign\Sign_lib.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	".\signport.h"\
+	{$(INCLUDE)}"Sign\CT_DEFS.H"\
+	{$(INCLUDE)}"Sign\CT_STRCT.H"\
+	{$(INCLUDE)}"Sign\CT_TYPS.H"\
+	
+
+.\S_SPKEY.C : \
+	"..\..\CommonFiles\compat_unix.h"\
+	"..\..\CommonFiles\Sign\CT_FUNCS.H"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Sign\Sign_lib.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	"..\Common\Avp_defs.h"\
+	".\signport.h"\
+	{$(INCLUDE)}"Sign\CT_DEFS.H"\
+	{$(INCLUDE)}"Sign\CT_STRCT.H"\
+	{$(INCLUDE)}"Sign\CT_TYPS.H"\
+	
+
+.\s_strver.c : \
+	"..\..\CommonFiles\compat_unix.h"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Sign\Sign_lib.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	".\signport.h"\
+	{$(INCLUDE)}"Sign\CT_DEFS.H"\
+	{$(INCLUDE)}"Sign\CT_STRCT.H"\
+	{$(INCLUDE)}"Sign\CT_TYPS.H"\
+	
+
+..\..\CommonFiles\Stuff\TEXT2BIN.C : \
+	"..\..\CommonFiles\avpport.h"\
+	"..\..\CommonFiles\m_utils.h"\
+	"..\..\CommonFiles\Stuff\TEXT2BIN.H"\
+	

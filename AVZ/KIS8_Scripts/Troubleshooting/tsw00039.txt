@@ -1,0 +1,19 @@
+// $AVZ1548
+//$ Заблокированы настройки системы Windows Update
+// Функция поиска проблемы                                                                          
+function Check : dword;
+begin
+ Result := 0;
+ // Блокировка
+ if RegKeyIntParamRead('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'NoWindowsUpdate') > 0 then begin
+   Result := 3;
+   exit;
+  end;
+end;
+
+// Функция исправления проблемы                                                                          
+function Fix : dword;
+begin
+ RegKeyParamDel('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'NoWindowsUpdate');
+ Result := 0;
+end;

@@ -1,0 +1,6 @@
+// ***** Hijacker.PeopleOnPage *****
+begin
+ AddEvAlarmByCLSID('279B863F-2467-424F-A67E-5371BB88C04D',AScriptName,'');
+ AddEvAlarmByCLSID('8BC618AC-A556-40E6-A7B6-857C84039ACB',AScriptName,'');
+ AddEvAlarmByCLSID('5532A807-748C-4738-80C5-473321AD9EA7',AScriptName,'');
+end.

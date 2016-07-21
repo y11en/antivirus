@@ -1,0 +1,6 @@
+// ***** Dialer.Win32.Cutygirls *****
+begin       
+ AddEvAlarmByCLSID('F32C4EF7-329B-4FFD-A71D-88AB39DC0849', AScriptName, 'XEng*.ocx');
+ AddEvAlarmByCLSID('A5E3B21E-CCBB-450E-9D0C-EEF06076B856', AScriptName, 'XEng*.ocx');
+ AddEvAlarmByCLSID('B67E0278-CD82-4CCA-AD9D-C1FBF538774A', AScriptName, 'XPink.ocx');
+end.

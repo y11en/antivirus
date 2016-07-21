@@ -1,0 +1,56 @@
+;;;
+;;; 
+;;;
+;;;
+;;; 
+;;;
+
+[Version]
+Signature   = "$Windows NT$"
+Provider    = %KasperskyLab%
+
+[DestinationDirs]
+klop.SrcFiles = 12                        ;%windir%\system32\drivers
+
+[SourceDisksNames]
+1 = %Disk1%
+
+[SourceDisksFiles]
+klop.dat = 1
+
+;;
+;; Default install sections
+;;
+
+[DefaultInstall]
+CopyFiles  = klop.SrcFiles
+AddReg     = klop.AddReg
+
+;;
+;; Default uninstall sections
+;;
+
+[DefaultUninstall]
+DelReg     = klop.DelReg
+DelFiles   = klop.SrcFiles
+
+;
+; Copy Files
+;
+
+[klop.SrcFiles]
+klop.dat
+
+[klop.AddReg]
+HKLM, System\CurrentControlSet\Services\KL1\Parameters, klop,, %12%\klop.dat
+
+[klop.DelReg]
+HKLM, System\CurrentControlSet\Services\KL1\Parameters, klop
+
+
+;;
+;; String Section
+;;
+
+[Strings]
+KasperskyLab       = "Kaspersky Lab"

@@ -1,0 +1,4 @@
+EXPORTS
+  ExchEntryPoint        @1  PRIVATE
+  DllRegisterServer     @2  PRIVATE
+  DllUnregisterServer   @3  PRIVATE

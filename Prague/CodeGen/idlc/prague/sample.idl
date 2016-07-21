@@ -1,0 +1,56 @@
+interface SampleI;
+
+interface Base {
+
+
+	typedef tDWORD BaseTypedef;
+	
+  const tDWORD BASE_CONST = 0x00000001;
+
+	[ 
+		comment(".....")
+		comment_ex("tra-ta-ta") 
+	]    
+  error errBASE;
+    
+  message_cls BaseMsgClass {
+   	message BaseMsg;
+  }
+    
+  prop tDATA BaseProp;
+	prop pgOBJECT_NAME;
+    
+  method tERROR baseMethod( SampleI* prm );
+}
+
+
+interface SampleI : Base {
+	/*struct StructA {
+		tDWORD field;
+	};
+
+	enum EnumX {
+		enum_field0	,
+		enum_field1	,
+	};*/
+	
+
+	typedef tDWORD ITypedef;
+	
+    const tDWORD I_CONST = 0x00000001;
+    
+    error errI;
+    
+    prop tSTRING IProp;
+		prop pgOBJECT_NAME;
+    
+    message_cls IMsgClass {
+    	message IMsg;
+    }
+    
+    extend message_cls BaseMsgClass {
+    	message IMsg;
+    }
+    
+    method tERROR iMethod();
+}

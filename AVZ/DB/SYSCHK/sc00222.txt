@@ -1,0 +1,4 @@
+// ***** Trojan.Win32.Madise.b *****
+begin
+ AddEvAlarmByCLSID('F760CB9E-C60F-4A89-890E-FAE8B849493E','Trojan.Win32.Madise.b','');
+end.

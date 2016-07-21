@@ -1,0 +1,18 @@
+<UpdateFiles
+	UpdateDate="21112006 1647">
+	<FileDescription
+		ComponentID="CORE"
+		UpdateType="blst"
+		IssuePeriodDays="1000"
+		FileDate="31072006 1353"
+		LocalPath="%BaseFolder%"
+		Filename="black.lst"
+		FileSize="120840" />
+	<Registry
+		ComponentID="CORE"
+		UpdateType="REGISTRY"
+		LocalPath="%DSKM%"
+		Body="S0xyZwEDAABLTHN3AACtrQEAAAD8AwAAAQAAAAEAABRqBQABACAAxfAW7yk8UR6l6VPs9xriRAj2iqC20Y0zwvhV3XyzbmYgABkHzX4g0WqxtqADoz/6ABzBi1b7Tb9DSJ0efFoxqvnhIAAsp1wdC2jGzyLSDC4e9BNUKidCaM2QjN33WyGzh8hbniAAiR7W6YPNkBK7rGbpUIqg9EttmRehXLL+p9AaSssY4YEgAK8NSTQ3mxbwqyT1KiyyzmLoMJ1897Fl7ZvErRkHvcYHAQAeCQMAAAABAAAJVCd/aw0KOzoxMEtGQzRIVHlxM2ozdW1EUjdDc0M5WDQwU1o4dHhBa0ZRdldxMk9pRzFVZEtFWUlRQVJsb2g1dzJVckYxOE4wN1dWWUZXNzg4UWdlczA3Rnc4b1k5ZWxJJSU="
+		Filename="blst-rt-0607g.krg" />
+</UpdateFiles>
+;:104TCM7B25PzGnZ8xtz+5oW/P6sq/grrSGgiJ/kAZCaioA0EYlh63LW7CCBL2AU7phuvw2XTIPtG0TbAhSX7neYK%%

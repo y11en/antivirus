@@ -1,0 +1,5 @@
+// ***** AdvWare.Toolbar.Visua.a *****
+begin
+ AddEvAlarmByCLSID('92E1B3F7-0546-421E-9835-904D25B7BA66',AScriptName,'msiev32.dll');
+ AddEvAlarmByCLSID('C4F147D7-BF25-488E-A12B-EFD43E7029BF',AScriptName,'');
+end.

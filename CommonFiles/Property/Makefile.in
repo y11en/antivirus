@@ -1,0 +1,64 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@ @srcdir@/compat
+
+Name = property
+Archive = $(Name).@ARCHIVE_EXT@
+Targets = $(Archive)
+
+Sources = \
+	crc.c \
+	d_add.c \
+	d_add_pr.c \
+	d_attach.c \
+	d_comp.c \
+	d_copy.c \
+	d_deser.c \
+	d_detach.c \
+	d_f_each.c \
+	d_find.c \
+	d_find_p.c \
+	d_free.c \
+	d_f_that.c \
+	d_get.c \
+	d_getval.c \
+	d_init.c \
+	d_insert.c \
+	d_merge.c \
+	d_mult.c \
+	d_remove.c \
+	d_rempr.c \
+	d_replce.c \
+	d_repl_i.c \
+	d_replpr.c \
+	d_ser.c \
+	d_setval.c \
+	pa_gitms.c \
+	pa_insrt.c \
+	pa_remve.c \
+	p_arr.c \
+	pa_sitms.c \
+	p_catch.c \
+	p_copy.c \
+	p_free.c \
+	p_get.c \
+	p_init.c \
+	p_mult.c \
+	p_predct.c \
+	p_replce.c \
+	prop_wrp.cpp \
+	sec_add.c \
+	sec_allc.c \
+	sec.c \
+	sec_comp.c \
+	sec_make.c \
+	@Compat@
+
+
+Includes = @srcdir@ @srcdir@/../
+
+InstallIncludes = \
+	@PACKAGE_NAME@/Property.h
+
+include @abs_top_builddir@/unix/Rules

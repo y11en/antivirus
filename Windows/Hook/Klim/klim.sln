@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Klim", "IM5\KLIM.vcproj", "{5B75D534-776F-4E97-8C45-953F394DBF70}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "klim6", "IM6\klim6.vcproj", "{ED27C0DF-F45B-4775-81D7-4421585CA0FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B75D534-776F-4E97-8C45-953F394DBF70}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5B75D534-776F-4E97-8C45-953F394DBF70}.Debug|Win32.Build.0 = Debug|Win32
+		{5B75D534-776F-4E97-8C45-953F394DBF70}.Debug|x64.ActiveCfg = Debug|x64
+		{5B75D534-776F-4E97-8C45-953F394DBF70}.Debug|x64.Build.0 = Debug|x64
+		{5B75D534-776F-4E97-8C45-953F394DBF70}.Release|Win32.ActiveCfg = Release|Win32
+		{5B75D534-776F-4E97-8C45-953F394DBF70}.Release|Win32.Build.0 = Release|Win32
+		{5B75D534-776F-4E97-8C45-953F394DBF70}.Release|x64.ActiveCfg = Release|x64
+		{5B75D534-776F-4E97-8C45-953F394DBF70}.Release|x64.Build.0 = Release|x64
+		{ED27C0DF-F45B-4775-81D7-4421585CA0FC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{ED27C0DF-F45B-4775-81D7-4421585CA0FC}.Debug|Win32.Build.0 = Debug|Win32
+		{ED27C0DF-F45B-4775-81D7-4421585CA0FC}.Debug|x64.ActiveCfg = Debug|x64
+		{ED27C0DF-F45B-4775-81D7-4421585CA0FC}.Debug|x64.Build.0 = Debug|x64
+		{ED27C0DF-F45B-4775-81D7-4421585CA0FC}.Release|Win32.ActiveCfg = Release|Win32
+		{ED27C0DF-F45B-4775-81D7-4421585CA0FC}.Release|Win32.Build.0 = Release|Win32
+		{ED27C0DF-F45B-4775-81D7-4421585CA0FC}.Release|x64.ActiveCfg = Release|x64
+		{ED27C0DF-F45B-4775-81D7-4421585CA0FC}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

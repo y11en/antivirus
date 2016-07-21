@@ -1,0 +1,38 @@
+<html><head><meta http-equiv=expires content=0><meta http-equiv=pragma content=no-cache><meta http-equiv=cache-control content=no-cache>
+<script language="VBScript">
+
+Sub DoCommand(params)
+	On Error Resume Next
+	set AVPGui=CreateObject("AVPGUI.Controller")
+	if err<>0 then
+		MsgBox("AVPGUI.Controller is not enabled!"+ vbCrLf+"Please enable ActiveX before")
+	else
+		call AVPGui.DoCommand(params)
+	end if
+end sub 
+
+set srcEvent=external.menuArguments.event
+set EventElement=external.menuArguments.document.elementFromPoint(srcEvent.clientX,srcEvent.clientY)
+set srcAnchor=EventElement
+
+' Deny image source as banner
+if TypeName(srcAnchor) = "HTMLImg" Then
+	DoCommand("banner_deny:" + srcAnchor.href)
+elseif TypeName(srcAnchor) = "HTMLAnchorElement" Then
+	DoCommand("banner_deny:" + srcAnchor.href)
+elseif TypeName(srcAnchor) = "HTMLAreaElement" Then
+	DoCommand("banner_deny:" + srcEvent.srcElement.href)
+elseif TypeName(srcAnchor) = "HTMLInputElement" Then
+	DoCommand("banner_deny:" + srcAnchor.src)
+end if
+
+'	' Allow link for web antivirus
+'	if TypeName(srcAnchor) = "HTMLAnchorElement" Then
+'		do until TypeName(srcAnchor)="HTMLAnchorElement"
+'			set srcAnchor=srcAnchor.parentElement
+'		Loop
+'		DoCommand("webav_allow:" + srcAnchor.href)
+'	end if
+
+</script></head></html>
+    

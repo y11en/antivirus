@@ -1,0 +1,6 @@
+EXE
+TARGET test_mimeparser
+
+CXXSRC test_parser.cpp
+
+LIB mimeparser

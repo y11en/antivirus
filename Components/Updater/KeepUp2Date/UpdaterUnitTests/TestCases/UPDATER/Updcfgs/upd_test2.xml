@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<UpdaterSettingsSection>
+
+<sites_list>
+	<site2 url="ftp://tl-srv-wxp" 	weight="10"			region="*" />
+	<site2 url="ftp://tl-srv-w2k" 	weight="vasya"			region="*" />
+	<site2 url="ftp://tl-srv-w03" 	weight="30"			region="*" />
+</sites_list>
+
+<UpdateFileDescription 	Filename="master.xml" RelativeSrvPath="index"> </UpdateFileDescription>
+
+</UpdaterSettingsSection>
+; 0XLSznpdI71fB300e7Uwj1jCdccMmwzxNVK+oXfkI1R1nqcB6qbC7X+4Us­­

@@ -1,0 +1,164 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "adc"="..\..\smtp-filter\adc\adc.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libnet
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "libgsg2"="..\..\smtp-filter\libgsg2\libgsg2.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libjpeg
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ungif
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "libjpeg"="..\..\gnu\jpeg\libjpeg.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "libnet"="..\..\gnu\libnet\libnet.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "librules"=".\librules.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name adc
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libgsg2
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libsigs
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name md5a
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name regex
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "libsigs"="..\..\smtp-filter\libsigs\libsigs.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name md5a
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "md5a"="..\..\gnu\md5a\md5a.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "pcommon"="..\..\lib\pcommon\pcommon.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "regex"="..\..\gnu\regex\regex.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "ungif"="..\..\smtp-filter\ungif\ungif.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

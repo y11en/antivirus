@@ -1,0 +1,9 @@
+PROJECTS+= \
+	rm_test \
+	klaviotest \
+	objstack_test \
+	format_test \
+	klavssp_testgen \
+	treesearchtest \
+	klavstl_test \
+	klaveng_test

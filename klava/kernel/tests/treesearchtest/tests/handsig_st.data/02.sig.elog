@@ -1,0 +1,14 @@
+Adding signatures from file "02.sig".
+Saving the static tree to file "02.sig.st".
+Hash level: 16Hash table size: 64[Kb]
+Cleaning the tree.
+Loading a static tree from file "02.sig.st".
+Scanning file "02.sig"
+   0/6; off=0x00000016; id=2
+   1/6; off=0x00000075; id=2
+   2/6; off=0x0000010E; id=2
+   3/6; off=0x00000130; id=2
+   4/6; off=0x00000152; id=2
+   5/6; off=0x00000174; id=2
+Total :
+id=2(6)

@@ -1,0 +1,4 @@
+// ***** Downloader.Win32.Skilin.c *****
+begin       
+ AddEvAlarmByCLSID('18D9C485-7EEC-4395-95DA-DC3875B10E81',AScriptName,'TEInstallPlugIn.ocx');
+end.

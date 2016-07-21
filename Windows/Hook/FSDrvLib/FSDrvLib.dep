@@ -1,0 +1,16 @@
+# Microsoft Developer Studio Generated Dependency File, included by FSDrvLib.mak
+
+.\FSDrv.cpp : \
+	"..\..\..\commonfiles\hook\avpgcom.h"\
+	"..\..\..\commonfiles\hook\fsdrvlib.h"\
+	"..\..\..\commonfiles\hook\idriver.h"\
+	"..\..\..\commonfiles\stuff\sarray.h"\
+	"..\..\..\commonfiles\stuff\stddefs.h"\
+	
+
+.\IDriver.cpp : \
+	"..\..\..\commonfiles\avpregid.h"\
+	"..\..\..\commonfiles\hook\avpgcom.h"\
+	"..\..\..\commonfiles\hook\hookspec.h"\
+	"..\..\..\commonfiles\hook\idriver.h"\
+	

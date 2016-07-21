@@ -1,0 +1,4 @@
+// ***** Dialer.VLoader *****
+begin
+ AddEvAlarmByCLSID('11BF0E2B-4229-4ADC-9C11-1C6968731018',AScriptName,'VLoading.dll');
+end.

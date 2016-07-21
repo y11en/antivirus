@@ -1,0 +1,34 @@
+forward interface AS_TrainWizard;
+typedef AS_TrainWizard* hAS_TRAINWIZARD;
+
+
+
+[
+  mnemonic(IID_AS_TRAINWIZARD)
+  id(40013)
+  c_type_name(hAS_TRAINWIZARD)
+]
+interface AS_TrainWizard {
+
+  // ------------------------------------
+
+    [
+      comment_ex("Interface version")
+      id(130)
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      comment_ex("Interface comment")
+      id(131)
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+
+
+  // ------------------------------------
+    method tERROR Run(
+      cSerializable* p_pSettings // cASWizardSettings
+    );
+
+}
+

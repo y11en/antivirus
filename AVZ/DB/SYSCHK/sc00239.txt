@@ -1,0 +1,4 @@
+// ***** Email-Worm.Win32.Padowor.a *****
+begin
+ AddEvAlarmByCLSID('3845CD5A-6FA0-3E0C-3980-000CD8DE3A31', AScriptName, '');
+end.

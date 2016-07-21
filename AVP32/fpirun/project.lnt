@@ -1,0 +1,26 @@
+-D__DF__
+-D__DFFPI__
+-D_WIN32
+-D_CONSOLE
+-DMULTI=0
+
+// Disable certain warnings in this project:
+-e118	// "Too few arguments". Lint gives this when default arguments are used, although that is quite ok.
+	// And the compiler will give an error anyway if arguments are really missing.
+
+
+-e578	// "Declaration of xxx hides xxx" -- there are several of this kind in FPIRUN, on purpose.
+
+
+// Source files:
+-t4
+fpirun.cpp
+mydir.c
+collect.cpp
+filecallback.cpp
+reportcallback.cpp
+statist.cpp
+rgstry32.cpp
+
+-t8
+uscanman.cpp

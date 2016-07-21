@@ -1,0 +1,27 @@
+; TheBatPlugin.def : Declares the module parameters for the DLL.
+EXPORTS
+; Explicit exports can go here
+	BAV_Initialize		@1
+	BAV_Uninitialize	@2
+	BAV_GetName		@3
+	BAV_GetVersion		@4
+	BAV_GetStatus		@5
+	BAV_ConfigNeeded	@6
+	BAV_Setup		@7
+	BAV_SetCfgData		@8
+	BAV_GetCfgData		@9
+	BAV_ComNeeded		@10
+	BAV_FileChecking	@11
+	BAV_CheckFile		@12
+	BAV_CureFile		@13
+	Register			@14
+	BAV_CheckStreamEx	@15
+	BAV_CureStreamEx	@16
+	Unregister			@17
+	BAV_StreamChecking	@18
+	BAV_CheckStream		@19
+	BAV_CureStream		@20
+	BAV_MemoryChecking	@21
+	BAV_CheckMemory		@22
+	BAV_CureMemory		@23
+	CleanRegFlag

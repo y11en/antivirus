@@ -1,0 +1,53 @@
+HKCR
+{
+	OutlookAddin.Addin.1 = s 'Addin Class'
+	{
+		CLSID = s '{C704648D-6030-47E9-ADBA-1E13B6A784AE}'
+	}
+	OutlookAddin.Addin = s 'Addin Class'
+	{
+		CLSID = s '{C704648D-6030-47E9-ADBA-1E13B6A784AE}'
+		CurVer = s 'OutlookAddin.Addin.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {C704648D-6030-47E9-ADBA-1E13B6A784AE} = s 'Addin Class'
+		{
+			ProgID = s 'OutlookAddin.Addin.1'
+			VersionIndependentProgID = s 'OutlookAddin.Addin'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{EDDBDEA4-5C07-453F-BE8C-81D738984381}'
+		}
+	}
+}
+
+HKLM
+{
+  	Software
+	{
+		Microsoft
+		{
+			Office
+			{
+				Outlook
+				{
+					Addins
+					{
+						'OutlookAddin.Addin'
+						{
+							val FriendlyName = s 'Kaspersky Antispam Outlook Addin'
+							val Description = s 'ATLCOM Outlook Addin'
+							val LoadBehavior = d '00000003'
+							val CommandLineSafe = d '00000001' 
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

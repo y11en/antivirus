@@ -1,0 +1,156 @@
+// --iaddress.chk---------------------------------------------------------------
+// 
+//  Module containing MAPI utility functions for addressing.
+// 
+// Copyright (C) Microsoft Corp. 1986-1996.  All Rights Reserved.
+// -----------------------------------------------------------------------------
+
+#ifndef DEBUG
+#define CHK_HrMAPICreateAddressList(a,b,c)      NOERROR
+#define CHK_HrMAPIAppendAddressList(a,b,c)      NOERROR
+#define CHK_HrMAPICreateSizedAddressList(a,b)   NOERROR
+#define CHK_HrMAPISetAddressList(a,b,c,d)       NOERROR
+
+#else
+
+//$--CHK_HrMAPICreateAddressList-------------------------------------------------
+//  Create an address list.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPICreateAddressList(// RETURNS: return code
+    IN ULONG cProps,                        // count of values in address list
+                                            // entry
+    IN LPSPropValue lpPropValues,           // pointer to address list entry
+    OUT LPADRLIST *lppAdrList)              // pointer to address list pointer
+{
+    HRESULT hr = NOERROR;
+
+    if(cProps == 0)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_READ_PTR(lpPropValues,CbSPropValue(cProps)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppAdrList,sizeof(LPADRLIST)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrMAPIAppendAddressList-------------------------------------------------
+//  Append to an address list.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIAppendAddressList(// RETURNS: return code
+    IN ULONG cProps,                        // count of values in address list
+                                            // entry
+    IN LPSPropValue lpPropValues,           // pointer to address list entry
+    IN OUT LPADRLIST *lppAdrList)           // pointer to address list pointer
+{
+    HRESULT hr = NOERROR;
+
+    if(cProps == 0)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_READ_PTR(lpPropValues, CbSPropValue(cProps)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppAdrList,sizeof(LPADRLIST)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(*lppAdrList,CbADRLIST(*lppAdrList)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrMAPICreateSizedAddressList--------------------------------------------
+//  Create a sized address list.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPICreateSizedAddressList(// RETURNS: return code
+    IN ULONG cEntries,                      // count of entries in address list
+    IN OUT LPADRLIST *lppAdrList)           // pointer to address list pointer
+{
+    HRESULT hr = NOERROR;
+
+    if(cEntries == 0)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppAdrList,sizeof(LPADRLIST)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrMAPISetAddressList----------------------------------------------------
+//  Set an address list.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPISetAddressList(// RETURNS: return code
+    IN ULONG iEntry,                        // index of address list entry
+    IN ULONG cProps,                        // count of values in address list
+                                            // entry
+    IN LPSPropValue lpPropValues,           // pointer to address list entry
+    IN OUT LPADRLIST lpAdrList)             // pointer to address list pointer
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_WRITE_PTR(lpAdrList,CbADRLIST(lpAdrList)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(iEntry >= lpAdrList->cEntries)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(cProps == 0)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_READ_PTR(lpPropValues,CbSPropValue(cProps)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+#endif

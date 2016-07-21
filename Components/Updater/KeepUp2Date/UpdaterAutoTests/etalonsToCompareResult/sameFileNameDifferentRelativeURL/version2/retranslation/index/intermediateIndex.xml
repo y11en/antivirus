@@ -1,0 +1,13 @@
+<UpdateFiles 
+	UpdateDate="08112005 1100">
+
+        <!-- matches ONLY retranslation -->
+        <FileDescription
+		ComponentID="MATCH_ONLY_RETRANSLATION"
+                UpdateType="base"
+                ServerFolder="differentFolder2"
+                LocalPath="%BaseFolder%/equalLocalFolder"
+                Filename="equalFileName.avc" />
+</UpdateFiles>
+
+;:10q3vNLiAhBTxgq2Br/PV++IXX/bieHE1RnEFTNJqlQdc+KbvCm9xq7qmMBoXxjfd3vTJCFT6g/LLPp/X2vrI79s%%

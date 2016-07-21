@@ -1,0 +1,321 @@
+// --edkutils.chk---------------------------------------------------------------
+// 
+//  EDK utility functions.
+// 
+// Copyright (C) Microsoft Corp. 1986-1996.  All Rights Reserved.
+// -----------------------------------------------------------------------------
+
+#ifndef DEBUG
+
+#define CHK__HrWriteFile(a,b,c)					NOERROR
+#define CHK_HrCreateDirEntryId(a,b,c)			NOERROR
+#define CHK__HrMemoryToFile(a,b,c)				NOERROR
+#define CHK__HrFileToMemory(a,b,c)				NOERROR
+#define CHK_HrGetServiceStatus(a,b,c)			NOERROR
+#define CHK_HrGetExchangeStatus(a,b,c)			NOERROR
+#define CHK_HrGetExchangeServiceStatus(a,b,c)	NOERROR
+#define CHK_HrEDKComputerExists(a)				NOERROR
+#define CHK_HrStrTokAllW(a,b,c,d)				NOERROR
+#define CHK_HrStrTokAllA(a,b,c,d)				NOERROR
+#define CHK_HrSearchGAL(a,b,c,d)				NOERROR
+#define CHK_HrSearchHierarchyTable(a,b,c,d)		NOERROR
+#define CHK_HrCreateDirEntryIdEx(a,b,c,d)		NOERROR
+
+#else
+
+//$--CHK__HrWriteFile-----------------------------------------------------------
+//  Transfer contents from a given memory location & length to an open file.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK__HrWriteFile(
+    IN HANDLE hFile,                    // file handle
+    IN ULONG cbmem,                     // count of bytes of memory
+    IN LPBYTE lpbmem)                   // pointer to memory
+{
+    HRESULT hr = NOERROR;
+
+    if(hFile == INVALID_HANDLE_VALUE)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(cbmem == 0)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if( !TEST_READ_PTR(lpbmem, cbmem))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrCreateDirEntryId--------------------------------------------------
+//  Create a directory entry ID given the address of the object
+//  in the directory.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrCreateDirEntryId(
+    IN LPSTR lpszAddress,               // pointer to address
+    OUT ULONG *lpcbeid,                 // count of bytes in entry ID
+    OUT LPENTRYID *lppeid)              // pointer to entry ID
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_STRINGA_PTR(lpszAddress) ||
+        !TEST_WRITE_PTR(lpcbeid, sizeof(ULONG *)) ||
+        !TEST_WRITE_PTR(lppeid, sizeof(LPENTRYID *)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+//$--CHK__HrMemoryToFile------------------------------------------------------
+//  Transfer contents from a given memory location & length to a given file.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK__HrMemoryToFile(
+    IN ULONG cbmem,                     // count of bytes of memory
+    IN LPBYTE lpbmem,                   // pointer to memory
+    IN LPSTR lpszFilename)             // pointer to destination file name
+{
+    HRESULT hr = NOERROR;
+
+    if( cbmem == 0 ||
+        !TEST_READ_PTR(lpbmem, cbmem) ||
+        !TEST_STRINGA_PTR(lpszFilename))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+//$--CHK__HrFileToMemory------------------------------------------------------
+//  Transfer contents from a given file to memory.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK__HrFileToMemory(
+    IN LPSTR lpszFilename,             // pointer to source file name
+    OUT ULONG *lpcbmem,                 // pointer to count of bytes of memory
+                                        // variable
+    OUT LPBYTE *lppbmem)                // pointer to bytes of memory address
+                                        // variable
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_STRINGA_PTR(lpszFilename) ||
+        !TEST_WRITE_PTR(lpcbmem, sizeof(ULONG)) ||
+        !TEST_WRITE_PTR(lppbmem, sizeof(LPBYTE)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+//$--CHK_HrGetServiceStatus--------------------------------------------------
+//  Get the current state of a service on a given machine.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrGetServiceStatus(
+    IN LPSTR lpszMachineName,          // machine name
+    IN LPSTR lpszServiceName,          // service name
+    OUT DWORD *lpdwCurrentState)        // current state
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_STRINGA_PTR_OR_NULL(lpszMachineName) ||
+        !TEST_STRINGA_PTR(lpszServiceName) ||
+        !TEST_WRITE_PTR(lpdwCurrentState, sizeof(DWORD)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+//$--CHK_HrGetExchangeStatus-------------------------------------------------
+//  Get the current state of the Exchange server on a given machine.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrGetExchangeStatus(
+    IN LPSTR lpszMachineName,          // machine name
+    OUT DWORD *lpdwService,             // service
+    OUT DWORD *lpdwCurrentState)        // current state
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_STRINGA_PTR_OR_NULL(lpszMachineName) ||
+        !TEST_WRITE_PTR(lpdwService, sizeof(DWORD)) ||
+        !TEST_WRITE_PTR(lpdwCurrentState, sizeof(DWORD)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+//$--CHK_HrGetExchangeServiceStatus------------------------------------------
+//  Get the current state of an Exchange service on a given machine.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrGetExchangeServiceStatus(
+    IN LPSTR lpszMachineName,          // machine name
+    IN DWORD dwService,                 // service
+    OUT DWORD *lpdwCurrentState)        // current state
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_STRINGA_PTR_OR_NULL(lpszMachineName) ||
+        !TEST_WRITE_PTR(lpdwCurrentState, sizeof(DWORD)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    switch(dwService)
+    {
+    case EXCHANGE_DS:
+    case EXCHANGE_IS:
+    case EXCHANGE_MTA:
+    case EXCHANGE_SA:
+        break;
+    default:
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--FMachineExists---------------------------------------------------------
+//  Returns TRUE if the computer exists.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrEDKComputerExists(
+    IN LPSTR  lpszComputerName)        // address of name of remote computer 
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_STRINGA_PTR_OR_NULL(lpszComputerName))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+//$--CHK_HrStrTokAll@-----------------------------------------------------------
+//  Splits string lpsz at token separators and points elements of array
+//  *lpppsz to string components.
+//------------------------------------------------------------------------------
+__inline static HRESULT CHK_HrStrTokAllW(
+    IN LPCWSTR lpsz,                // separated string
+    IN LPCWSTR lpszEOT,             // pointer to string containing separators
+    OUT ULONG * lpcpsz,             // count of string pointers
+    OUT LPWSTR ** lpppsz)           // pointer to list of strings
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_STRINGW_PTR(lpsz) ||
+        !TEST_STRINGW_PTR(lpszEOT) ||
+        !TEST_WRITE_PTR(lpcpsz, sizeof(ULONG)) ||
+        !TEST_WRITE_PTR(lpppsz, sizeof(LPWSTR *)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+__inline static HRESULT CHK_HrStrTokAllA(
+    IN LPCSTR lpsz,                 // separated string
+    IN LPCSTR lpszEOT,              // pointer to string containing separators
+    OUT ULONG * lpcpsz,             // count of string pointers
+    OUT LPSTR ** lpppsz)            // pointer to list of strings
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_STRINGA_PTR(lpsz) ||
+        !TEST_STRINGA_PTR(lpszEOT) ||
+        !TEST_WRITE_PTR(lpcpsz, sizeof(ULONG)) ||
+        !TEST_WRITE_PTR(lpppsz, sizeof(LPSTR *)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+//$--CHK_HrSearchGAL------------------------------------------------------------
+//  Look for the entry ID by searching for the DN in the global address list.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrSearchGAL(
+	IN	LPADRBOOK	lpAdrBook,			// address book (directory) to look in
+	IN	LPSTR		lpszDN,	            // object distinguished name
+	OUT	ULONG *		lpcbEntryID,		// count of bytes in entry ID
+	OUT	LPENTRYID * lppEntryID)		    // pointer to entry ID
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_IUNKNOWN_PTR(lpAdrBook) ||
+		!TEST_STRINGA_PTR(lpszDN) ||
+        !TEST_WRITE_PTR(lpcbEntryID, sizeof(ULONG *)) ||
+        !TEST_WRITE_PTR(lppEntryID, sizeof(LPENTRYID *)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+//$--CHK_HrSearchHierarchyTable-------------------------------------------------
+//  Look for the entry ID by searching for the DN in the hierarchy table.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrSearchHierarchyTable(
+	IN	LPADRBOOK	lpAdrBook,			// address book (directory) to look in
+	IN	LPSTR		lpszDN,	            // object distinguished name
+	OUT	ULONG *		lpcbEntryID,		// count of bytes in entry ID
+	OUT	LPENTRYID * lppEntryID)		    // pointer to entry ID
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_IUNKNOWN_PTR(lpAdrBook) ||
+		!TEST_STRINGA_PTR(lpszDN) ||
+        !TEST_WRITE_PTR(lpcbEntryID, sizeof(ULONG *)) ||
+        !TEST_WRITE_PTR(lppEntryID, sizeof(LPENTRYID *)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+//$--CHK_HrCreateDirEntryIdEx------------------------------------------------
+//  Create a directory entry ID given the address of the object
+//  in the directory.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrCreateDirEntryIdEx(
+	IN LPADRBOOK lpAdrBook,				// address book (directory) to look in
+    IN LPSTR lpszAddress,               // pointer to address
+    OUT ULONG *lpcbeid,                 // count of bytes in entry ID
+    OUT LPENTRYID *lppeid)              // pointer to entry ID
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_IUNKNOWN_PTR(lpAdrBook) ||
+		!TEST_STRINGA_PTR(lpszAddress) ||
+        !TEST_WRITE_PTR(lpcbeid, sizeof(ULONG *)) ||
+        !TEST_WRITE_PTR(lppeid, sizeof(LPENTRYID *)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+#endif

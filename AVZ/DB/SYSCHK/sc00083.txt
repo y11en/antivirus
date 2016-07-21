@@ -1,0 +1,4 @@
+// ***** Dialer.WebRecomendada *****
+begin
+ AddEvAlarmByCLSID('5F426A93-0821-47D2-A126-5A48A874B289',AScriptName+', Dialer.PDialerWeb','Ole32ws.dll');
+end.

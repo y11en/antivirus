@@ -1,0 +1,43 @@
+#define IDS_TAB3_PRIORITY_TEXT          20100
+#define IDS_TAB3_PRIORITY_LOW           20101
+#define IDS_TAB3_PRIORITY_HIGH          20102
+#define IDS_TAB3_FRAME                  20103
+#define IDS_TAB3_BYTIMER                20105
+#define IDS_TAB3_REF_BYCRITEVENT        20106
+#define IDS_TAB3_REF_BYALLEVENT         20107
+#define IDS_TAB3_BYEVENT                20108
+
+#define IDR_CONTEXT_MENUS               21000
+
+#define ID_ADD_LOC                      32776
+#define ID_DEL_LOC                      32777
+
+IDR_CONTEXT_MENUS MENU DISCARDABLE
+BEGIN
+    POPUP "0"
+    BEGIN
+        MENUITEM "Dodaj...",                    ID_ADD_LOC
+        MENUITEM "Skasuj",                      ID_DEL_LOC
+        MENUITEM SEPARATOR
+        MENUITEM "Zaznacz",                     ID_POP_MARK
+        MENUITEM "Anuluj zaznaczone",           ID_POP_UNMARK
+    END
+    POPUP "1"
+    BEGIN
+        MENUITEM "Zaznacz",                     ID_POP_MARK
+        MENUITEM "Anuluj zaznaczone",           ID_POP_UNMARK
+    END
+END
+
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_TAB3_PRIORITY_TEXT  "Priorytet testu"
+    IDS_TAB3_PRIORITY_LOW   "Niski"
+    IDS_TAB3_PRIORITY_HIGH  "Wysoki"
+    IDS_TAB3_FRAME          "Odœwie¿anie statystyki"
+    IDS_TAB3_BYTIMER        "W czasie (sec) :"
+    IDS_TAB3_REF_BYCRITEVENT "W krytycznych wydarzeniach"
+    IDS_TAB3_REF_BYALLEVENT "We wszystkich wydarzeniach"
+    IDS_TAB3_BYEVENT        "W wydarzeniu:"
+END

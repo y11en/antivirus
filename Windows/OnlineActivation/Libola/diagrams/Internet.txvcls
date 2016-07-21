@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="id1cex6eibjqafceibk1lfq">
+        <property name="$metaclass" value="Class Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::InternetSession:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="10,10,220,130"/>
+            <property name="bounds_setted_by_user" value="true"/>
+            <reference referencedUin="MemberLink#&lt;oiref:cpp#Member#OnlineActivation::InternetSession#lnkInternetConnection:oiref&gt;">
+                <property name="sourceAnchor" value="125,140"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="125,220"/>
+                <reference referencedUin="Composite#stereotype#MemberLink#&lt;oiref:cpp#Member#OnlineActivation::InternetSession#lnkInternetConnection:oiref&gt;">
+                    <property name="bounds" value="0,0,93,16"/>
+                    <property name="bounds_setted_by_user" value="true"/>
+                </reference>
+            </reference>
+        </reference>
+        <reference df-class-name="reference2" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::HttpResponse:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="640,160,258,162"/>
+        </reference>
+        <reference df-class-name="reference3" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::HttpRequest:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="330,10,210,460"/>
+            <property name="bounds_setted_by_user" value="true"/>
+            <reference referencedUin="MemberLink#&lt;oiref:cpp#Member#OnlineActivation::HttpRequest#m_pObserver:oiref&gt;">
+                <property name="sourceAnchor" value="540,62"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="640,62"/>
+            </reference>
+            <reference referencedUin="MemberLink#&lt;oiref:cpp#Member#OnlineActivation::HttpRequest#lnkHttpResponse:oiref&gt;">
+                <property name="sourceAnchor" value="540,241"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="640,241"/>
+                <reference referencedUin="Composite#stereotype#MemberLink#&lt;oiref:cpp#Member#OnlineActivation::HttpRequest#lnkHttpResponse:oiref&gt;">
+                    <property name="bounds" value="544,221,93,16"/>
+                    <property name="bounds_setted_by_user" value="true"/>
+                </reference>
+            </reference>
+        </reference>
+        <reference df-class-name="reference4" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::InternetObserver:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="640,10,260,105"/>
+            <property name="bounds_setted_by_user" value="true"/>
+        </reference>
+        <reference df-class-name="reference5" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::HttpConnection:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="20,220,210,140"/>
+            <property name="bounds_setted_by_user" value="true"/>
+            <reference referencedUin="MemberLink#&lt;oiref:cpp#Member#OnlineActivation::HttpConnection#lnkHttpRequest:oiref&gt;">
+                <property name="sourceAnchor" value="230,290"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="330,290"/>
+            </reference>
+        </reference>
+    </view>
+</nodeSet>

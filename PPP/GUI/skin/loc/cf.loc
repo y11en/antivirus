@@ -1,0 +1,24 @@
+;-------------------- ParCtl -------------------------
+
+[Global]
+#eParCtl_ProfId_Parent	    = 1
+#eParCtl_ProfId_Teen	    = 2
+#eParCtl_ProfId_Child	    = 3
+
+#eUrlFltEvent_Process			= 0
+#eUrlFltEvent_SwitchProfile		= 1
+#eUrlFltEvent_HeuristicStatus	= 2
+
+#eUrlFltCategoryPorno		= 0x00000001
+#eUrlFltCategoryDrugs		= 0x00000004
+#eUrlFltCategoryViolence	= 0x00000008
+#eUrlFltCategoryUncens		= 0x00000010
+#eUrlFltCategoryWeapons		= 0x00000020
+#eUrlFltCategoryGambling	= 0x00000040
+#eUrlFltCategoryChat		= 0x00000080
+#eUrlFltCategoryWebMail		= 0x00000100
+
+[ParCtlProfileDefCategories]
+#SETTINGS_LEVEL_DEFAULT	= #eUrlFltCategoryPorno|#eUrlFltCategoryDrugs|#eUrlFltCategoryViolence|#eUrlFltCategoryUncens|#eUrlFltCategoryWeapons|#eUrlFltCategoryGambling
+#SETTINGS_LEVEL_LOW		= #eUrlFltCategoryPorno|#eUrlFltCategoryDrugs|#eUrlFltCategoryViolence|#eUrlFltCategoryUncens
+#SETTINGS_LEVEL_HIGH	= 0xFFFFFFFF

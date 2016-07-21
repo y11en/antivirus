@@ -1,0 +1,4 @@
+// ***** AdvWare.Kodpye *****
+begin
+ AddEvAlarmByCLSID('3DD496D1-7EED-4f13-B3DB-68F584BA15A5',AScriptName,'AutoSearch.DLL');
+end.

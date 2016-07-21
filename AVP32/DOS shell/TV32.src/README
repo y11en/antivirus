@@ -1,0 +1,241 @@
+		TVision for DOS, OS/2, DOS32 (Level D)
+
+WHAT IS THIS?
+-------------
+
+	This is a TurboVision v1.03 (originally by Borland International)
+	bugfixed & ported to:
+		
+	Operating system		Compiler
+	================		=====================
+	MS DOS				Borland C++ v3.1
+	MS DOS 32 bit (DOS4GW)		Watcom C++ v10.0
+	OS/2				Borland C++ v1.5 for OS/2
+	OS/2				Watcom C++ v10.0
+	WIN NT (and Win'95)		Borland C++ v5.01
+	WIN NT (and Win'95)		Watcom C++ v10.0
+
+	All known bugs of TVision are fixed.
+
+   news for level A:
+	Long file names under OS/2 are supported now.
+	Mouse handler bug is fixed (Tvision works with PMODE/W now).
+	Several bugs are fixed.
+
+   news for level B:
+	Bug in TEditor::nextWord()
+	OS/2: keys Ctrl-S,Ctrl-Q,Ctrl-P etc are recognized now
+	OS/2: Alt-Space is recognized now
+	DOS32: Alt-Space,Shift/Ctrl-Ins/Del...
+	TProgram::getPalette: added help palette
+	OS/2: setmode/getmode functions work now
+	OS/2: setCursorType/getCursorType functions work now
+
+   news for level C:
+	Fixed bug in new.cpp: 4 bytes for each character was allocated.
+	OS/2: now TVision can be run without a mouse
+	Fixed a bug in tlstview.cpp: short lines were incorrectly displayed
+		if indentation was bigger that line length.
+	The following 2 bugs were found by Harry Nikolayev (2:5020/75):
+	OS/2: screen was garbled on some adapters when switching from
+	full-screen TVision application to PM and back.
+	fpstream: removed ios::out so that resource files can be opened
+	for read only.
+
+   news for level D:
+	applied new patches from J”rn Sierwald
+	OS/2 & NT: a new variable in TProgram:
+	    static int near event_delay;// time to wait for an event
+    					// in milliseconds. default: 200
+					// the idle() function may change
+					// this value to lower values
+					// and it will be called more frequently
+	    int set_event_delay(int delay);	// returns old value
+	    int get_event_delay(void);
+	OS/2: keyboard and mouse thread run at time critical priority
+	32bit: selection highlight in TEditor worked incorrectly.
+		(thanks to Sergey Bogdanov, 2:5100/26.106)
+	Win32 version is supported now (Windows NT and Windows 95).
+	  it can be compiled with watcom v10.0 or bcc v5.01
+	NO_TV_STREAMS removes streams support from TV. Look at .CFG files.
+	Mouse evMouseAuto event is generated properly under OS/2
+
+    TODO:
+   	!!! VIO.. structures must be relocated to 'tiled' structure !!!
+
+WHAT YOU NEED TO COMPILE IT
+---------------------------
+
+	- MAKE.EXE from BORLAND (for OS/2 or for MS DOS or for Win32)
+	  I don't use WMAKE.EXE
+	- BCC C++ or Watcom C++ (evidently)
+
+INSTALLATION AND COMPILATION GUIDE
+----------------------------------
+
+	TVision was simply copied from the IDA directory,
+	so you'll have to modify some files to compile it.
+
+	Please read this file completely!
+
+  IMPORTANT NOTE:
+  	If you don't have make.exe from Borland and want to compile
+	TVision manually, don't forget that you should define a some
+	macros to define the target platform. Please read this file and
+	look at *.CFG files for macro names.
+
+0. Unpack the archive _tvos3d.zip into any directory with -d switch:
+
+	d:
+	md \idasrc
+	cd \idasrc
+	pkunzip -d _tvos3d.zip
+
+1. Inspect and modify the following files:
+
+	allmake.mak	- the main make configuration file
+	dosbor.cfg	- switches for BCC C++ v3.1 compiler
+	os2bor.cfg	- switches for BCC C++ for OS/2 v1.5
+	w32bor.cfg	- switches for BCC C++ v5.01 target WIN NT
+	os2wat.cfg	- switches for Watcom C++ v10.0 target OS/2
+	d32wat.cfg	- switches for Watcom C++ v10.0 target DOS4GW
+	w32wat.cfg	- switches for Watcom C++ v10.0 target WIN NT
+
+   In these files there are directory names, don't forget to modify them.
+
+   Of course, you are free to use other compilation switches too.
+
+2. Set the environment variable IDA to the root directory of the original
+   archive _tvos3.zip, for example:
+
+   	set IDA=d:\idasrc\
+
+   Don't forget the trailing backslash.
+
+3. How to compile it? I prepared .BAT & .CMD files to compile
+   the library. To compile manually, in the tvision\source directory enter:
+
+	Target OS			Command
+	---------			-------
+	MS DOS      			 - make
+	OS/2 using Borland		 - make
+	OS/2 using Watcom		 - make -D__WATCOMC__ -U__MSDOS__
+	WIN NT using Watcom		 - make -D__WATCOMC__ -D__NT__
+	WIN NT using Borland		 - make               -D__NT__
+	MS DOS 32 bit			 - make -D__WATCOMC__ -D__MSDOS__
+
+   To get libraries for MS DOS 16 bit, you need to run make under MS DOS.
+   For other libraries, use OS/2 or MS DOS (or Windows).
+
+4. Object files will be stored into:
+
+	tvision\source		- MS DOS obj files
+	tvision\source\bor.os2	- OS/2 BCC obj files
+	tvision\source\wat.os2	- OS/2 Watcom obj files
+	tvision\source\wat.w32	- WIN NT Watcom obj files
+	tvision\source\bor.w32	- WIN NT Borland obj files
+	tvision\source\wat.d32	- MS DOS 32 bit obj files
+
+   Libraries:
+
+	tvision\lib		- MS DOS libraries
+	tvision\libbor.os2	- OS/2 BCC libraries
+	tvision\libwat.os2	- OS/2 Watcom libraries
+	tvision\libwat.w32	- WIN NT Watcom libraries
+	tvision\libbor.w32	- WIN NT Borland libraries
+	tvision\libwat.d32	- MS DOS 32 bit libraries
+
+   There will be 2 libraries for each system:
+
+   	tv.lib    - overlayable library
+   	tvasm.lib - non-overlayable library
+
+   Obviously, overlays are meaningful only for 16 bit MS DOS, I create
+   2 libraries only for compatibility of makefiles.
+
+   TLIB.EXE or WLIB.EXE are never called directly from the makefile,
+   a special utility called AR.EXE is called instead to create libraries.
+   This utility provides a unique interface (similar to unix ar command)
+   and creates a zero-length flag file which is used by makefile.
+   This utility is in /bin and /bin/os2 directories.
+
+5. About compilation time variables:
+
+	__MSDOS__	should be defined for MSDOS
+	__OS2__		should be defined for OS/2
+	__NT__		should be defined for WIN NT
+	__DOS16__	should be defined for MSDOS 16 bit
+	__DOS32__	should be defined for MSDOS 32 bit
+	__BORLANDC__	should be defined for Borland compiler
+	__WATCOMC__	should be defined for Watcom compiler
+	__NOROW__	this var disables a special processing
+			for screens with >25 rows. Honestly,
+			I don't clearly understand why TVision
+			does this processing.
+	NO_TV_STREAMS	removes streams support from TVision.
+
+   The allmake.mak, makefile and *.cfg files automatically
+   define them, just don't delete these definitions.
+
+ADDITONAL NOTES (PLEASE READ THEM TOO!)
+---------------------------------------
+
+1. Allocate enough stack space when linking executables for DOS4GW.
+   I lost about a week trying to understand why HELLO.EXE program
+   (included in the package) causes a trap. 8k stack is enough, I recommend
+   at least 16k.
+
+2. There is no error handling code for OS/2 and NT. It is not nesessary,
+   though.
+
+3. TVision doesn't give up timeslices under MSDOS - you have to
+   do it yourself in your application, in the idle() for example.
+
+4. Build and run HELLO.EXE for each library created. There is
+   a special target 'hello' in the makefile.
+
+5. Any feedback is appreciated. E-mail address is at the end of the file.
+
+6. Ctrl-Break is not handled under OS/2. You need to set up your own SIGINT
+   signal handler. Also, some quirk needed in handling Ctrl-Break under DOS32:
+   you need to call _bios_keybrd(_KEYBRD_READ) when you clear ctrlBreakHit.
+   Here is an example:
+
+#ifdef __DOS32__
+    if ( TSystemError::ctrlBreakHit == Boolean(1) )
+      _bios_keybrd(_KEYBRD_READ);
+#endif
+    TSystemError::ctrlBreakHit = False;
+
+  You need it because otherwise a call
+
+	_bios_keybrd(_KEYBRD_READY)
+
+  will always return 0, even if the user continues to press keys
+  and your program (well, it keyboard) will hang.
+  I don't know the reason, most likely it is a bug in _bios_keybrd().
+  This behaviour is present in Watcom 10.0b
+----------------------------------------------------------------
+
+   I've used the following patches:
+
+	Dated 28.6.1994
+	Patches Copyright 1993,1994 by J”rn Sierwald
+	Credits:
+	  Support for 'Borland C++ for OS/2' by Tommy Andreasen
+
+   I've used the following buglist:
+
+	Last Updated: 24 september 93
+
+	Maintained by: Marc Stern
+	  Internet:    stern@mble.philips.be
+	  compuserve:  >INTERNET:stern@mble.philips.be
+
+----------------------------------------------------------------
+
+   Good luck! :)
+
+Ilfak Guilfanov, 2:5020/209@fidonet			29.01.97
+		 email: ig@estar.msk.su
+

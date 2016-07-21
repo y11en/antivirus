@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CryptoC", "CryptoC.vcproj", "{EDD6E050-0D85-4FF3-99E7-FF694F42250D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		DebugS|Win32 = DebugS|Win32
+		DebugS|x64 = DebugS|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+		ReleaseS|Win32 = ReleaseS|Win32
+		ReleaseS|x64 = ReleaseS|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDD6E050-0D85-4FF3-99E7-FF694F42250D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EDD6E050-0D85-4FF3-99E7-FF694F42250D}.Debug|Win32.Build.0 = Debug|Win32
+		{EDD6E050-0D85-4FF3-99E7-FF694F42250D}.Debug|x64.ActiveCfg = Debug|x64
+		{EDD6E050-0D85-4FF3-99E7-FF694F42250D}.Debug|x64.Build.0 = Debug|x64
+		{EDD6E050-0D85-4FF3-99E7-FF694F42250D}.DebugS|Win32.ActiveCfg = DebugS|Win32
+		{EDD6E050-0D85-4FF3-99E7-FF694F42250D}.DebugS|Win32.Build.0 = DebugS|Win32
+		{EDD6E050-0D85-4FF3-99E7-FF694F42250D}.DebugS|x64.ActiveCfg = DebugS|x64
+		{EDD6E050-0D85-4FF3-99E7-FF694F42250D}.DebugS|x64.Build.0 = DebugS|x64
+		{EDD6E050-0D85-4FF3-99E7-FF694F42250D}.Release|Win32.ActiveCfg = Release|Win32
+		{EDD6E050-0D85-4FF3-99E7-FF694F42250D}.Release|Win32.Build.0 = Release|Win32
+		{EDD6E050-0D85-4FF3-99E7-FF694F42250D}.Release|x64.ActiveCfg = Release|x64
+		{EDD6E050-0D85-4FF3-99E7-FF694F42250D}.Release|x64.Build.0 = Release|x64
+		{EDD6E050-0D85-4FF3-99E7-FF694F42250D}.ReleaseS|Win32.ActiveCfg = ReleaseS|Win32
+		{EDD6E050-0D85-4FF3-99E7-FF694F42250D}.ReleaseS|Win32.Build.0 = ReleaseS|Win32
+		{EDD6E050-0D85-4FF3-99E7-FF694F42250D}.ReleaseS|x64.ActiveCfg = ReleaseS|x64
+		{EDD6E050-0D85-4FF3-99E7-FF694F42250D}.ReleaseS|x64.Build.0 = ReleaseS|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

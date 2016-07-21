@@ -1,0 +1,19 @@
+// $AVZ1537
+//$ Заблокирована закладка Рабочий стол в окне свойств экрана
+// Функция поиска проблемы                                                                          
+function Check : dword;
+begin
+ Result := 0;
+ // Блокировка
+ if RegKeyIntParamRead('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Policies\System', 'NoDispBackgroundPage') > 0 then begin
+   Result := 3;
+   exit;
+  end;
+end;
+
+// Функция исправления проблемы                                                                          
+function Fix : dword;
+begin
+ RegKeyParamDel('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Policies\System', 'NoDispBackgroundPage');
+ Result := 0;
+end;

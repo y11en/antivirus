@@ -1,0 +1,4 @@
+// ***** AdvWare.BHO.Ruboskizo *****
+begin
+ AddEvAlarmByCLSID('51641EF3-8A7A-4D84-8659-B0911E947CC8',AScriptName,'DownloadHtml.dll');
+end.

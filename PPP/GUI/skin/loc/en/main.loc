@@ -1,0 +1,498 @@
+﻿;------------- Global ------------
+
+[Locale]
+Value = 1033
+
+[Global]
+$Protection                         = "Protection"
+$SelfProtection                     = "Self-Protection"
+$GroupTask                          = "(group task)"
+$Help                               = "Help"
+$Home                               = "Status"
+$Events                             = "Events"
+$Statistics                         = "Statistics"
+$Start                              = "Start"
+$Pause                              = "Pause"
+$Stop                               = "Stop"
+$High                               = "High"
+$Medium                             = "Medium"
+$Low                                = "Low"
+$Custom                             = "Custom"
+$Customize                          = "Settings..."
+$Settings                           = "Settings..."
+$AllowAll                           = "Allow All"
+$BlockAll                           = "Block All"
+$Details                            = "Details..."
+$Enabled                            = "Enabled"
+$Disabled                           = "Disabled"
+$Enable                             = "Enable"
+$Disable                            = "Disable"
+$Browse                             = "Browse..."
+$ResetLevel                         = "&Default"
+$Configure                          = "Configure..."
+$Cancel                             = "&Cancel"
+$Unknown                            = "Unknown"
+$LevelSettStd                       = "Standard"
+$LevelSettCustom                    = "Other"
+
+; well used lables
+$Add                                = "&Add..."
+$Edit                               = "&Change..."
+$Delete                             = "De&lete"
+$MoveUp                             = "Move &up"
+$MoveDown                           = "Move &down"
+$Export                             = "E&xport..."
+$Import                             = "&Import..."
+
+; dialog panel buttons
+Ok                                  = &OK
+Yes                                 = &Yes
+No                                  = &No
+Cancel                              = &Cancel
+Apply                               = &Apply
+Next                                = &Next >
+Back                                = < &Back
+Finish                              = &Finish
+Close                               = &Close
+StopTaskOnClose                     = "Do you really want to stop the task execution?"
+FolderNotEmpty                      = "The specified folder is not empty. All data will be lost.\nDo you wish to delete this folder anyway?"
+FolderNotExist                      = "The folder with such name does not exist.\nDo you wish to create a folder with the specified name?"
+RestartProductWarning               = "It is necessary to restart " + $ProductName + ".\nRestart now?"
+RestartComputerWarning              = "It is necessary to restart the computer.\nRestart now?"
+ErrorSendEmail                      = "Email message has not been sent."
+UpdateNoKeysUnavailable             = "Cannot update. " + $ProductName + " is not activated. Updates are disabled."
+UpdateNotAvailable                  = "Updates are controlled by administrator."
+LicenseKeysDiscarted                = "Some keys are not compatible with this application. <a LicenseKeysDiscartedDetails onclick(dialog(\"LicenseKeysDiscartedDetails\"))>Details...</a>."
+LicenseRemoveKeyWarning             = "Are you sure you want to delete the key?"
+ActivateOnExistingCommercKeyWarning = "Attention! The active key will remain valid for more than two weeks. If you activate the new key now, its life will begin at the moment of activation and you will lose the remaining weeks of the current license key.\nIt is recommended to activate a new key not earlier than two weeks before the current key expiration.\n\nDo you really want to activate the new key right now?"
+DiscardThreatsWarning               = "This operation will delete the report entry about the event occurred. Do you really want to delete the report entry?"
+TimeUnknown                         = "Unknown"
+NoRunAsAccount.caption              = "No account specified"
+NoRunAsAccount                      = "Please, type account name"
+
+;------------- FileSize types --------------
+
+[FileSizeTypes]
+B   = "bytes"
+KB  = "KB"
+MB  = "MB"
+GB  = "GB"
+
+[s_EstimatedDays]
+1       = day
+2
+3
+4       = days
+default = days
+
+;------------- Browse Dialogs ------------
+
+[BrowseForObject]
+@ = "Browse for object"
+
+[BrowseForObject_Body]
+PathLabel   = "Object:"
+Recursive   = "Include subfolders"
+
+[BrowseForFolder]
+@           = "Select folder"
+@.PathLabel = "Folder:"
+
+[BrowseForFile]
+@           = "Select file or folder"
+PathLabel   = "Object:"
+Recursive   = "Include subfolders"
+
+[BrowseForScanObject]
+@           = "Select object to scan"
+PathLabel   = "Object:"
+Recursive   = "Include subfolders"
+
+[BrowseForUpdateSource]
+@           = "Select update source"
+PathLabel   = "Source:"
+
+[BrowseForRegistry]
+@           = "Please specify a registry object"
+PathLabel   = "Key:"
+ValueLabel  = "Value:"
+Recursive   = "Include subkeys"
+
+[BrowseForAppMenu]
+Browse  = $Browse
+AppList = "Applications"
+
+;------------- Grid Groups --------
+
+[s_date]
+0       = "Today"
+-1      = "Yesterday"
+-2      = "Monday"
+-3      = "Tuesday"
+-4      = "Wednesday"
+-5      = "Thursday"
+-6      = "Friday"
+-7      = "Saturday"
+-8      = "Sunday"
+-11     = "Last week"
+-12     = "Two weeks ago"
+-13     = "Three weeks ago"
+-100    = "Last month"
+-1000   = "A long time ago"
+
+[Grid.Groups]
+$items          = "   (items: " + count + ")"
+date            = "Date: " + s_date(val) + $items
+dateonly        = "Date: " + s_date(val)
+size            = "Size: " + val + $items
+Action          = "Action: " + s_Action(val) + $items
+Verdict         = "Result: " + s_Verdict(val) + $items
+ObjectType      = "Object: " + s_ObjectType(val) + $items
+DetectType      = "Type: " + s_RepDetectType(val) + $items
+DetectName      = "Detect name: " + val + $items
+PIDGroup        = "Process: " + (val != $PIDProduct ? f_PIDGroupAppText(f_ProcessInfo(val)) : $ProductName) + $items
+AppGroup        = "Application: " + (val != $AppIdProduct ? f_AppName(f_AppInfo(val)) : $ProductName) + $items
+DetectDanger    = "Detect danger: " + s_DetectDanger(val) + $items
+Exact           = "Detect probability: " + s_Exact(val) + $items
+dettype         = "Type: " + s_RepDetectType(val) + $items
+detobjtype      = "Object: " + s_DetectObjectTypes(val) + $items
+detobjstatus    = "Status: " + s_DetectObjectStatus(val) + $items
+AvzSeverity     = s_AvzSeverity(val)
+
+[f_PIDGroupAppText]
+ret = objfile(f_AppImagePath(@.Module)) + "  PID(" + @.NativePid + ")"
+
+[Grid.Find]
+@       = "Search"
+Mark    = "Mark all"
+Find    = "Find next"
+
+[Grid.Filter]
+@       = "Custom filter"
+Label   = "Show rows where:"
+And     = "And"
+Or      = "Or"
+
+[Grid.Filter.Condition]
+None                = ""
+Equals              = "equals"
+DoNotEqual          = "does not equal"
+GreaterThan         = "is greater than"
+GreaterThanOrEqual  = "is greater than or equal to"
+LessThan            = "is less than"
+LessThanOeEqual     = "is less than or equal to"
+Blanks              = "blanks"
+NonBlanks           = "non blanks"
+Like                = "like"
+NotLike             = "not like"
+
+[Grid.FindBody]
+ColumnLbl   = "Column:"
+FindLbl     = "Find what:"
+MatchCase   = "Match case"
+WholeWord   = "Match whole word only"
+NotFound    = "Cannot find specified data"
+
+[Grid.ColumnCmb]
+All = "(All)"
+
+[Grid.HdrPopup]
+SortDown    = "Sort descending"
+SortUp      = "Sort ascending"
+Find        = "Search..."
+Group       = "Group by this field"
+Filter      = "Filter by this field..."
+Remove      = "Remove this field"
+
+[Grid.FltPopup]
+Custom  = "(Custom)"
+All     = "(All)"
+
+[Grid.Footer.Template]
+Add = "Add new item"
+
+[Grid.Footer2.Template]
+Add         = "Add"
+Edit        = "Edit"
+Delete      = "Delete"
+MoveUp      = "Move up"
+MoveDown    = "Move down"
+
+;------------- common enums ------------
+
+[ProductTitle]
+kis     = "Kaspersky Internet Security"
+default = "Kaspersky Anti-Virus"
+
+[ProductTitleLong]
+kis     = "Kaspersky Internet Security 8.0"
+kavpe   = "Kaspersky Anti-Virus 8.0 PE"
+wks     = "Kaspersky Anti-Virus 8.0 for Windows Workstations"
+fs      = "Kaspersky Anti-Virus 8.0 for Windows Servers"
+sos     = "Kaspersky Anti-Virus 8.0 SOS"
+default = "Kaspersky Anti-Virus 8.0"
+
+;------------- Profile Enums ------------
+
+[s_ProfileState]
+#StateRunning       = "Running"
+#StatePaused        = "Paused"
+#StateStopped       = "Stopped"
+#StateCompleted     = "Completed at " + datetime(lastCompleted)
+#StateStarting      = "Starting"
+#StatePausing       = "Pausing"
+#StateResuming      = "Resuming"
+#StateStopping      = "Stopping"
+#StateFailed        = "Failed"
+#StateMalfunction   = "Malfunction"
+#StateDisabled      = $Disabled
+#StateNotStarted    = "Never started"
+default             = "Not defined: " + state
+
+;------------- Tray ------------
+
+[Tray]
+@ = if(TaskManagerState, TaskManagerState == 1 ? ($ProductName + " " + env("ProductVersion") + s_ProdyctTrayStatus(ProdStateId)) : "Service part of the program was unloaded")
+
+[s_ProdyctTrayStatus]
+#ProdStateOnDemandTaskRunning   = "\n" + format_struct(profile(ScanningTaskId), "ProfileName") + " is running"
+#ProdStateProtectionDisabled    = "\nProtection is disabled"
+default                         = if(bindok("AVService.BasesDate"), "\nDatabases release date: " + datetime(AVService.BasesDate))
+
+[Tray.menu]
+ScanCustom          = "Virus scan..."
+Scan_My_Computer    = "Scan My Computer" + if(s_IsStateActive(state), " (" + Completion + "%)")
+Updater             = "Update" + if(f_IsStateActive(state), " (" + Completion + "%)")
+NetMonitor          = "Network Monitor..."
+Activate            = "Activate..."
+Settings            = "Settings..."
+KAV                 = "" + $ProductName
+BlockNetwork        = "Block network traffic..."
+VirtualKeyboard     = "Virtual keyboard..."
+About               = "About the program..."
+DisableProtect      = (s_IsStateRunning(Protection.state) ? "Pausing protection..." : "Resuming protection...") + if(s_IsStateTransitional(Protection.state), " (" + s_ProfileState(Protection.state) + ")")
+Unload              = "Exit"
+
+[TrayNewsMenu.menu]
+KAV     = $ProductName
+News    = "News..."
+
+;------------- Main Window ------------
+
+[MainWindow.Antivirus]
+Header = "Security Level"
+
+[MainWindow_Navigator]
+Protection.Name         = "Protection Status"
+Protection.Descr        = "General information\nabout computer protection"
+Hips.Name               = "System Watch"
+Hips.Descr              = "Proactive Defense\nand Firewall"
+Antivirus.Name          = "Malware Protection"
+Antivirus.Descr         = "Protection against viruses\nand other malicious software"
+OnlineSecurity.Name     = "Online Security"
+OnlineSecurity.Descr    = "Anti-Phishing && IPS"
+ContentFilter.Name      = "Content Filtering"
+ContentFilter.Descr     = "Protection against spam and publicity,\nParental Control"
+Scan.Name               = "Scan"
+Scan.Descr              = "Malware && vulnerability scans"
+Update.Name             = "Update"
+Update.Descr            = "Updating databases and\napplication modules"
+
+[MainWindow_Footer]
+Support = "Technical Support"
+Account = "My account"
+
+[RunAsGroup]
+@       = "User account"
+Enable  = "&Run as"
+AccLbl  = "Account:"
+
+[EventTypes]
+#eNotifyNone                = switch(Severity,"EventTypesSeverity")
+#eNotifyThreats             = switch(Severity,"EventTypesThreats")
+#eNotifySuspicious          = "Detection of possibly infected object"
+#eNotifyLicensing           = switch(Severity,"EventTypesLicence")
+#eNotifyProduct             = switch(Severity,"EventTypesProduct")
+#eNotifyUpdater             = switch(Severity,"EventTypesUpdater")
+#eNotifyBases               = switch(Severity,"EventTypesBases")
+#eNotifyPopups              = "Popup windows blocking"
+#eNotifyProtocoller         = "Protocol messages"
+#eNotifySSL                 = "Encrypted connection checking"
+#eNotifySelfProtection      = "Self-Defense messages"
+#eNotifyPswdArchive         = "Password-protected archive detected"
+#eNotifyThreatNotCured      = "Disinfection impossible"
+#eNotifyThreatDeleted       = "Removal of infected objects"
+#eNotifyThreatQuarantined   = "Object quarantined"
+#eNotifyRuleTriggered       = "Firewall rule triggering"
+#eNotifyAttackBlocked       = "Hacker attack detection"
+#eNotifyBan                 = "Notifications about blocking access from computer"
+#eNotifyThreatsUntreated    = "Not processed malicious objects"
+#eNotifyMyComputerNotScaned = "Scan of My Computer has not been performed"
+#eNotifyUpdateNeedReboot    = "Reboot is required"
+#eNotifyParCtl              = $ParCtl
+
+[EventTypesSeverity]
+0   = "All notifications"
+1   = "Critical notifications"
+2   = "Functional failure"
+3   = "Important notifications"
+4   = "Minor notifications"
+
+[EventTypesThreats]
+1   = "Detection of viruses, worms, Trojans, hack tools"
+3   = "Detection of adware, spyware, etc."
+4   = "Disinfection of infected objects"
+
+[EventTypesLicence]
+1   = "Key validity period has expired"
+2   = "Key is missing, corrupted or blacklisted"
+3   = "Key validity period expires soon"
+
+[EventTypesProduct]
+2   = "Task can not execute"
+3   = "Other important events"
+4   = "Enabling/disabling protection components"
+
+[EventTypesUpdater]
+2   = "Update error"
+4   = "Update completion"
+
+[EventTypesBases]
+1   = "Databases are out of date"
+2   = "Databases are missing or corrupted"
+3   = "Databases are obsolete"
+
+[s_SystemError]
+0x80000040
+0x8000004B  = "Unexpected error"
+0x80000041  = "Not enough memory"
+0x80000042  = "Not supported"
+0x80000043  = "Not implemented"
+0x80000045  = "Access denied or object not found"
+0x8000004C  = "Object not found"
+0x8000004F  = "Object is locked"
+0x80000051  = "Operation cancelled"
+0x80000059  = "Media error"
+0x8000005A  = "Invalid signature"
+0x8000005B  = "Invalid version"
+0x8000005F  = "Write protection"
+0x80000061  = "No license key"
+0x80000062  = "Out of space"
+0x80000063  = "Object not found"
+0x800000C0  = "Invalid format"
+0x800000C1  = "Required rights are not granted"
+0x800000C2
+0x800000C3  = "Initialization error"
+0x800000C5  = "Object not found or update source unavailable"
+0x800000C7  = "Incorrect object state"
+0x800000C8  = "Object password protected"
+0x800000CA
+0x800000CC  = "Read error"
+0x800000CB
+0x800000CD  = "Write error"
+0x800000D0  = "Invalid object"
+0x800000D1  = "Object already exists"
+0x800000D5  = "Object is in use by other application"
+0x800000D8  = "Database is corrupted"
+0x800001C0  = "Module corrupted"
+0x800001C1  = "Module not found"
+0x800001C4  = "Component cannot be loaded"
+0x80000221  = "Operation timeout"
+0x90005000  = "Digital signature invalid"
+0x90005002  = "Not digital signed"
+0x80027006
+0x80027007
+0x80380fbb  = "The task was stopped"
+0x80017007  = "Task cannot be started in the safe mode"
+0x80017005  = "Task disabled"
+0x80017006  = "Incorrect user name or password"
+0x80017008  = "Task launch on behalf of another user account is not possible in the safe mode"
+0x80022005  = "Error loading databases"
+default     = "Error code: " + format("08X", @)
+
+[s_LicKeyType]
+1       = "Beta key"
+2       = "Trial"
+3       = "Test key"
+4       = "OEM key"
+5       = "Commercial"
+default = "Unknown key"
+
+[s_ComputersForm]
+1       = "computer"
+default = "computers"
+
+[MyAccount]
+@ = "Key info"
+
+[MyAccount_Body]
+Keys    = Information about keys
+Actions = "Actions"
+
+[SupportWindow]
+@ = "Support"
+
+[SupportWindow_Body]
+SysInfo = "System information"
+Links   = "Useful links"
+
+[SupportWindow_Body_SysInfo]
+ProdVer.Name    = "Application version:"
+Signatures.Name = "Databases published:"
+OSVer.Name      = "Operating system:"
+
+[SupportWindow_Body_Links]
+Support.Name    = "Technical Support Service"
+Support.Descr   = "Official website Cke;.s of Kaspersky Lab Technical Support Service."
+Forum.Name      = "Forum"
+Forum.Descr     = "Share your experience. Get advice from our experts and other users on forum.kaspersky.com."
+Cabinet.Name    = "Personal Cabinet"
+Cabinet.Descr   = "Ask your question and see how your issue is processed at Technical Support Service."
+
+[MyAccount_Body_Actions]
+Activate.Name   = "&Activate the application"
+Activate.Descr  = "Activate your copy of " + $ProductName + " and obtain access to updates and technical support"
+RemoveKey.Name  = "&Remove key"
+RemoveKey.Descr = "Application will not function without a key."
+BuyRenew.Name   = LicInfo.KeyInfo.KeyType == #ektTrial ? "Purchase key" : "Renew key"
+BuyRenew.Descr  = "Please renew the key before it expires."
+
+[MainWindow]
+@ = $ProductNameLong + (env("ProductStatus") == "release" ? "" : " ALPHA")
+
+[MainWindow_Header]
+Help            = "Help"
+Settings        = "Options"
+AlphaWarning    = "DEVELOPMENT BUILD - FOR TESTING PURPOSES ONLY"
+
+[MainWindow_Footer]
+Support = "Support"
+Account = "Key"
+
+[MainWindow_Navigator_Banner]
+Fix = "Fix"
+
+[WizardTpl_WizardPanel]
+Back = "&Back"
+
+[MainWindow_Navigator_Protection]
+Fix = "Close"
+
+[ProfileHome]
+Tasks.Header = "Tasks"
+
+[Product_Notification_OptionsMenu]
+NotifyDisable       = "Disable this notification"
+NotifyDisableAll    = "Disable all notifications"
+
+;------------- ProductInfo --------------
+
+[ProductInfo]
+@   = "About the program"
+
+[ProductInfo_Body_About]
+Product     = $ProductNameLong + "\nVersion " + env("ProductVersion") + global.ProductHotfix
+Warning     = "Warning! Exclusive intellectual property rights for the program belong to Kaspersky Lab. This program is protected by Programming Library of Information Protection exclusive intellectual property rights for which belong to CryptoEx OOO."
+Warning2    = "Unauthorized reproduction or distribution of this program, or any portion of it, may result in severe civil and criminal penalties, and will be prosecuted to the full extent of the law."
+
+

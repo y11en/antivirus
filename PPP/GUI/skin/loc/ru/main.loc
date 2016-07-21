@@ -1,0 +1,495 @@
+﻿;------------- Global ------------
+
+[Locale]
+Value = 1033
+
+[Global]
+$Protection                         = "Защита"
+$SelfProtection                     = "Самозащита"
+$GroupTask                          = "(групповая задача)"
+$Help                               = "Справка"
+$Home                               = "Статус"
+$Events                             = "События"
+$Statistics                         = "Статистика"
+$Start                              = "Старт"
+$Pause                              = "Пауза"
+$Stop                               = "Стоп"
+$High                               = "Высокий"
+$Medium                             = "Средний"
+$Low                                = "Низкий"
+$Custom                             = "Другой"
+$Customize                          = "Настройка..."
+$Settings                           = "Настройка..."
+$AllowAll                           = "Разрешить все"
+$BlockAll                           = "Запретить все"
+$Details                            = "Подробно..."
+$Enabled                            = "Включено"
+$Disabled                           = "Выключено"
+$Enable                             = "Включить"
+$Disable                            = "Выключить"
+$Browse                             = "Обзор..."
+$ResetLevel                         = "По умолчанию"
+$Configure                          = "Настроить..."
+$Cancel                             = "Отмена"
+$Unknown                            = "Unknown"
+$LevelSettStd                       = "Стандартные"
+$LevelSettCustom                    = "Другие"
+$NullObj                            = "Отсутствует"
+
+; well used lables
+$Add                                = "До&бавить..."
+$Edit                               = "Из&менить..."
+$Delete                             = "&Удалить"
+$MoveUp                             = "Ввер&х"
+$MoveDown                           = "Вни&з"
+$Export                             = "&Экспорт..."
+$Import                             = "&Импорт..."
+
+; dialog panel buttons
+Ok                                  = &ОК
+Yes                                 = &Да
+No                                  = &Нет
+Cancel                              = &Отмена
+Apply                               = &Применить
+Next                                = Д&алее >
+Back                                = < &Назад
+Finish                              = &Завершить
+Close                               = &Закрыть
+StopTaskOnClose                     = "Вы действительно хотите остановить задачу?"
+FolderNotEmpty                      = "Выбранная папка не пустая. Все данные будут потеряны.\nВы действительно хотите удалить папку?"
+FolderNotExist                      = "Папки с таким именем не существует.\nВы хотите создать папку с заданным именем?"
+RestartProductWarning               = "Необходимо перезапустить " + $ProductName + ".\nВы хотите сделать это сейчас?"
+RestartComputerWarning              = "Необходимо перезагрузить компьютер.\nВы хотите сделать это сейчас?"
+ErrorSendEmail                      = "Письмо не было отправлено."
+UpdateNoKeysUnavailable             = $ProductName + " не активирован.\nОбновление отключено."
+UpdateNotAvailable                  = "Обновления контролируются администратором."
+LicenseKeysDiscarted                = "Некоторые ключи несовместимы с этим приложением. <a LicenseKeysDiscartedDetails onclick(dialog(\"LicenseKeysDiscartedDetails\"))>Подробно...</a>."
+LicenseRemoveKeyWarning             = "Вы действительно хотите удалить ключ?"
+ActivateOnExistingCommercKeyWarning = "Внимание! Активный ключ будет действителен еще больше 2 недель. Если вы активируете сейчас новый ключ, срок его действия начнется в момент активации, и оставшееся время действия текущего ключа пропадет.\nРекомендуется активировать новый ключ не ранее чем за 2 недели до окончания срока действия текущего."
+DiscardThreatsWarning               = "Вы действительно хотите удалить запись о событии?"
+TimeUnknown                         = "Неизвестно"
+NoRunAsAccount.caption              = "Не указана учетная запись"
+NoRunAsAccount                      = "Пожалуйста, введите учетную запись"
+
+;------------- FileSize types --------------
+
+[FileSizeTypes]
+B   = "байт"
+KB  = "KБ"
+MB  = "MБ"
+GB  = "ГБ"
+
+[s_EstimatedDays]
+1       = день
+2
+3
+4       = дня
+default = дней
+
+;------------- Browse Dialogs ------------
+
+[BrowseForObject]
+@ = "Выбор объекта"
+
+[BrowseForObject_Body]
+PathLabel   = "Объект:"
+Recursive   = "Включая вложенные папки"
+
+[BrowseForFolder]
+@           = "Выбор папки"
+@.PathLabel = "Папка:"
+
+[BrowseForFile]
+@           = "Выбор файла или папки"
+PathLabel   = "Объект:"
+Recursive   = "Включая вложенные папки"
+
+[BrowseForScanObject]
+@           = "Выбор объекта для проверки"
+PathLabel   = "Объект:"
+Recursive   = "Включая вложенные папки"
+
+[BrowseForUpdateSource]
+@           = "Выбор источника обновлений"
+PathLabel   = "Источник:"
+
+[BrowseForRegistry]
+@           = "Выбор объекта в реестре"
+PathLabel   = "Ключ:"
+ValueLabel  = "Значение:"
+Recursive   = "Включая вложенные ключи"
+
+[BrowseForAppMenu]
+Browse  = $Browse
+AppList = "Applications"
+
+;------------- Grid Groups --------
+
+[s_date]
+0       = "Сегодня"
+-1      = "Вчера"
+-2      = "Понедельник"
+-3      = "Вторник"
+-4      = "Среда"
+-5      = "Четверг"
+-6      = "Пятница"
+-7      = "Суббота"
+-8      = "Воскресенье"
+-11     = "Неделю назад"
+-12     = "Две недели назад"
+-13     = "Три недели назад"
+-100    = "Месяц назад"
+-1000   = "Давно"
+
+[Grid.Groups]
+$items          = "   (элементов: " + count + ")"
+date            = "Дата: " + s_date(val) + $items
+dateonly        = "Дата: " + s_date(val)
+size            = "Размер: " + val + $items
+Action          = "Действие: " + (val ? s_Action(val) : $NullObj) + $items
+Verdict         = "Результат: " + (val ? s_Verdict(val) : $NullObj) + $items
+ObjectType      = "Объект: " + (val ? s_ObjectType(val) : $NullObj) + $items
+DetectType      = "Тип: " + (val ? s_RepDetectType(val) : $NullObj) + $items
+DetectName      = "Имя: " + (val ? val : $NullObj) + $items
+PIDGroup        = "Процесс: " + (val ? (val != $PIDProduct ? f_PIDGroupAppText(f_ProcessInfo(val)) : $ProductName) : $NullObj) + $items
+AppGroup        = "Приложение: " + (val ? (val != $AppIdProduct ? f_AppName(f_AppInfo(val)) : $ProductName) : $NullObj) + $items
+DetectDanger    = "Опасность: " + (val ? s_DetectDanger(val) : $NullObj) + $items
+Exact           = "Вероятность: " + (val ? s_Exact(val) : $NullObj) + $items
+dettype         = "Тип: " + (val ? s_DetectType(val) : $NullObj) + $items
+detobjtype      = "Объект: " + (val ? s_DetectObjectTypes(val) : $NullObj) + $items
+detobjstatus    = "Статус: " + (val ? s_DetectObjectStatus(val) : $NullObj) + $items
+AvzSeverity     = s_AvzSeverity(val)
+
+[f_PIDGroupAppText]
+ret = objfile(f_AppImagePath(@.Module)) + "  PID(" + @.NativePid + ")"
+
+[Grid.Find]
+@       = "Поиск"
+Mark    = "Отметить все"
+Find    = "Искать дальше"
+
+[Grid.Filter]
+@       = "Сложный фильтр"
+Label   = "Условие:"
+And     = "И"
+Or      = "ИЛИ"
+
+[Grid.Filter.Condition]
+None                = ""
+Equals              = "равно"
+DoNotEqual          = "не равно"
+GreaterThan         = "больше"
+GreaterThanOrEqual  = "больше или равно"
+LessThan            = "меньше"
+LessThanOeEqual     = "меньше или равно"
+Blanks              = "пусто"
+NonBlanks           = "не пусто"
+Like                = "похоже"
+NotLike             = "не похоже"
+
+[Grid.FindBody]
+ColumnLbl   = "Графа:"
+FindLbl     = "Искать:"
+MatchCase   = "С учетом регистра"
+WholeWord   = "Только слова целиком"
+NotFound    = "Не найдено"
+
+[Grid.ColumnCmb]
+All = "(Все)"
+
+[Grid.HdrPopup]
+SortDown    = "Сортировать по убыванию"
+SortUp      = "Сортировать по возрастанию"
+Find        = "Поиск..."
+Group       = "Группировка"
+Filter      = "Фильтр..."
+Remove      = "Удалить"
+
+[Grid.FltPopup]
+Custom  = "(Сложный)"
+All     = "(Все)"
+
+[Grid.Footer.Template]
+Add = "Добавить"
+
+[Grid.Footer2.Template]
+Add         = "Добавить"
+Edit        = "Редактировать"
+Delete      = "Удалить"
+MoveUp      = "Вверх"
+MoveDown    = "Вниз"
+
+;------------- common enums ------------
+
+[ProductTitle]
+kis     = "Kaspersky Internet Security"
+default = "Антивирус Касперского"
+
+[ProductTitleLong]
+kis     = "Kaspersky Internet Security 8.0"
+kavpe   = "Антивирус Касперского 8.0 PE"
+wks     = "Антивирус Касперского 8.0 для Windows Workstations"
+fs      = "Антивирус Касперского 8.0 для Windows Servers"
+sos     = "Антивирус Касперского 8.0 SOS"
+default = "Антивирус Касперского 8.0"
+
+;------------- Profile Enums ------------
+
+[s_ProfileState]
+#StateRunning       = "выполняется"
+#StatePaused        = "приостановлено"
+#StateStopped       = "остановлено " + datetime(statistics.FinishTime)
+#StateCompleted     = "завершено " + datetime(lastCompleted)
+#StateStarting      = "запускается"
+#StatePausing       = "приостанавливается"
+#StateResuming      = "возобновляется"
+#StateStopping      = "останавливается"
+#StateFailed        = "ошибка"
+#StateMalfunction   = "сбой"
+#StateDisabled      = $Disabled
+#StateNotStarted    = "не запускалось"
+default             = "не определено: " + state
+
+;------------- Tray ------------
+
+[Tray]
+@ = if(TaskManagerState, TaskManagerState == 1 ? ($ProductName + " " + env("ProductVersion") + s_ProdyctTrayStatus(ProdStateId)) : "Сервисная часть программы была выгружена из памяти компьютера.")
+
+[s_ProdyctTrayStatus]
+#ProdStateOnDemandTaskRunning   = "\nВыполняется " + format_struct(profile(ScanningTaskId), "ProfileName")
+#ProdStateProtectionDisabled    = "\nЗащита отключена"
+default                         = if(bindok("AVService.BasesDate"), "\nДата выпуска баз: " + datetime(AVService.BasesDate))
+
+[Tray.menu]
+ScanCustom          = "Поиск вирусов..."
+Scan_My_Computer    = "Проверка Моего компьютера" + if(s_IsStateActive(state), " (" + Completion + "%)")
+Updater             = "Обновление" + if(s_IsStateActive(state), " (" + Completion + "%)")
+NetMonitor          = "Мониторинг сети..."
+Activate            = "Активация..."
+Settings            = "Настройка..."
+KAV                 = "" + $ProductName
+BlockNetwork        = "Блокирование сетевого трафика..."
+VirtualKeyboard     = "Виртуальная клавиатура..."
+About               = "О программе..."
+DisableProtect      = (s_IsStateRunning(Protection.state) ? "Приостановка защиты..." : "Возобновление защиты") + if(s_IsStateTransitional(Protection.state), " (" + s_ProfileState(Protection.state) + ")")
+Unload              = "Выход"
+
+[TrayNewsMenu.menu]
+KAV     = $ProductName
+News    = "Новости..."
+
+;------------- Main Window ------------
+
+[MainWindow.Antivirus]
+Header = "Уровень безопасности"
+
+[MainWindow_Navigator]
+Protection.Name         = "Статус защиты"
+Protection.Descr        = "Общая информация о\nзащите компьютера"
+Hips.Name               = "Мониторинг системы"
+Hips.Descr              = "Проактивная защита и\nсетевой экран"
+Antivirus.Name          = "Постоянная защита"
+Antivirus.Descr         = "Защита от вирусов и\nдругих вредоносных программ"
+OnlineSecurity.Name     = "Безопасный интернет"
+OnlineSecurity.Descr    = "Защита от мошенничества\nи сетевых атак"
+ContentFilter.Name      = "Фильтрация данных"
+ContentFilter.Descr     = "Защита от спама и рекламы,\nРодительский контроль"
+Scan.Name               = "Проверка по требованию"
+Scan.Descr              = "Поиск вирусов, руткитов\nи уязвимостей"
+Update.Name             = "Обновление"
+Update.Descr            = "Обновление баз и программных\nмодулей приложения"
+
+[RunAsGroup]
+@       = "Пользователь"
+Enable  = "&Запустить как"
+AccLbl  = "Учетная запись:"
+
+[EventTypes]
+#eNotifyNone                = switch(Severity,"EventTypesSeverity")
+#eNotifyThreats             = switch(Severity,"EventTypesThreats")
+#eNotifySuspicious          = "Detection of possibly infected object"
+#eNotifyLicensing           = switch(Severity,"EventTypesLicence")
+#eNotifyProduct             = switch(Severity,"EventTypesProduct")
+#eNotifyUpdater             = switch(Severity,"EventTypesUpdater")
+#eNotifyBases               = switch(Severity,"EventTypesBases")
+#eNotifyPopups              = "Popup windows blocking"
+#eNotifyProtocoller         = "Protocol messages"
+#eNotifySSL                 = "Encrypted connection checking"
+#eNotifySelfProtection      = "Self-Defense messages"
+#eNotifyPswdArchive         = "Password-protected archive detected"
+#eNotifyThreatNotCured      = "Disinfection impossible"
+#eNotifyThreatDeleted       = "Removal of infected objects"
+#eNotifyThreatQuarantined   = "Object quarantined"
+#eNotifyRuleTriggered       = "Firewall rule triggering"
+#eNotifyAttackBlocked       = "Hacker attack detection"
+#eNotifyBan                 = "Notifications about blocking access from computer"
+#eNotifyThreatsUntreated    = "Not processed malicious objects"
+#eNotifyMyComputerNotScaned = "Scan of My Computer has not been performed"
+#eNotifyUpdateNeedReboot    = "Reboot is required"
+#eNotifyParCtl              = $ParCtl
+
+[EventTypesSeverity]
+0   = "Все уведомления"
+1   = "Критические уведомления"
+2   = "Нарушения в работе приложения"
+3   = "Важные уведомления"
+4   = "Прочие уведомления"
+
+[EventTypesThreats]
+1   = "Обнаружение вирусов, червей, троянских программ, хакерских утилит"
+3   = "Обнаружение шпионского, рекламного ПО"
+4   = "Лечение зараженных объектов"
+
+[EventTypesLicence]
+1   = "Истек срок действия ключа"
+2   = "Ключ отсутствует, поврежден или занесен в ""черный"" список"
+3   = "Срок действия ключа скоро истекает"
+
+[EventTypesProduct]
+2   = "Задача не может быть выполнена"
+3   = "Прочие важные уведомления"
+4   = "Включение/выключение компонентов защиты"
+
+[EventTypesUpdater]
+2   = "Ошибка обновления"
+4   = "Обновление завершено"
+
+[EventTypesBases]
+1   = "Базы устарели"
+2   = "Базы повреждены или отсутствуют"
+3   = "Базы сильно устарели"
+
+[s_SystemError]
+0x80000040
+0x8000004B              = "Неопределенная ошибка"
+0x80000041              = "Недостаточно памяти"
+0x80000042              = "Поддержка отсутствует"
+0x80000043              = "Функция не реализована"
+0x80000045              = "Доступ запрещен или объект не найден"
+0x8000004C              = "Объект не найден"
+0x8000004F              = "Объект заблокирован"
+0x80000051              = "Операция отменена"
+0x80000059              = "Ошибка устройства"
+0x8000005A              = "Неправильная подпись"
+0x8000005B              = "Неправильная версия"
+0x8000005F              = "Объект защищен от записи"
+0x80000061              = "Ключ отсутствует"
+0x80000062              = "Недостаточно места"
+0x80000063              = "Устройство не готово"
+0x800000C0              = "Неверный формат"
+0x800000C1              = "Недостаточно прав"
+0x800000C2
+0x800000C3              = "Ошибка инициализации"
+0x800000C5              = "Объект не найден или источник обновлений недоступен"
+0x800000C7              = "Неправильное состояние объекта"
+0x800000C8              = "Объект защищен паролем"
+0x800000CA
+0x800000CC              = "Ошибка чтения"
+0x800000CB
+0x800000CD              = "Ошибка записи"
+0x800000D0              = "Объект недействителен"
+0x800000D1              = "Объект уже существует"
+0x800000D5              = "Объект используется другим приложением"
+0x800000D8              = "Базы повреждены"
+0x800001C0              = "Неверный модуль"
+0x800001C1              = "Модуль не найден"
+0x800001C4              = "Модуль не может быть загружен"
+0x80000221              = "Тайм-аут истек"
+#errPROXY_STATE_INVALID = "Ошибка взаимодействия компонент"
+0x90005000              = "Цифровая подпись недействительна"
+0x90005002              = "Отсутствует цифровая подпись"
+0x80027006
+0x80027007
+0x80380fbb              = "Выполнение задачи прервано"
+0x80017007              = "Задача не может быть запущена в безопасном режиме"
+0x80017005              = "Задача отключена"
+0x80017006              = "Неверное имя пользователя или пароль"
+0x80017008              = "Запуск задачи от имени другой учетной записи в безопасном режиме невозможен"
+0x80022005              = "Ошибка загрузки баз"
+default                 = "Код ошибки: " + format("08X", @)
+
+[s_LicKeyType]
+1       = "Для бета-тестирования"
+2       = "Пробный"
+3       = "Для тестирования"
+4       = "Для OEM-поставок"
+5       = "Коммерческий"
+default = "Неизвестный тип"
+
+[s_ComputersForm]
+1       = "компьютера"
+default = "компьютеров"
+
+[MyAccount]
+@ = "Информация о ключах"
+
+[MyAccount_Body]
+Keys    = "Информация о ключах"
+Actions = "Действия"
+
+[SupportWindow]
+@ = "Поддержка"
+
+[SupportWindow_Body]
+SysInfo = "Информация о системе"
+Links   = "Полезные ссылки"
+
+[SupportWindow_Body_SysInfo]
+ProdVer.Name    = "Версия приложения:"
+Signatures.Name = "Дата выпуска баз:"
+OSVer.Name      = "Операционная система:"
+
+[SupportWindow_Body_Links]
+Support.Name    = "Служба технической поддержки"
+Support.Descr   = "Официальный сайт Cke;.s технической поддержки ""Лаборатории Касперского""."
+Forum.Name      = "Форум"
+Forum.Descr     = "Обмен опытом с другими пользователями. Советы экспертов."
+Cabinet.Name    = "Персональный кабинет"
+Cabinet.Descr   = "Отслеживание процесса обработки заявок в Службу технической поддержки."
+
+[MyAccount_Body_Actions]
+Activate.Name   = "&Активировать приложение"
+Activate.Descr  = "Активируйте вашу копию " + $ProductName + " и получите доступ к обновлениям и технической поддержке."
+RemoveKey.Name  = "&Удалить ключ"
+RemoveKey.Descr = "Без ключа приложение работать не будет."
+BuyRenew.Name   = LicInfo.KeyInfo.KeyType == #ektTrial ? "Купить ключ" : "Продлить срок действия ключа"
+BuyRenew.Descr  = "Продлите ключ прежде чем закончится срок его действия."
+
+[MainWindow]
+@ = $ProductNameLong + (env("ProductStatus") == "release" ? "" : " АЛЬФА-ВЕРСИЯ")
+
+[MainWindow_Header]
+Help            = "Справка"
+Settings        = "Настройка"
+AlphaWarning    = "!!! ТОЛЬКО ДЛЯ ТЕСТИРОВАНИЯ !!!"
+
+[MainWindow_Footer]
+Support = "Поддержка"
+Account = "Ключ"
+
+[MainWindow_Footer]
+Support = "Поддержка"
+Account = "Ключ"
+
+[WizardTpl_WizardPanel]
+Back = "&Назад"
+
+[MainWindow_Navigator_Protection]
+Fix = "Исправить"
+
+[ProfileHome]
+Tasks.Header = "Задачи"
+
+[Product_Notification_OptionsMenu]
+NotifyDisable       = "Отключить это уведомление"
+NotifyDisableAll    = "Отключить все уведомления"
+
+;------------- ProductInfo --------------
+
+[ProductInfo]
+@ = "О программе"
+
+[ProductInfo_Body_About]
+Product     = $ProductNameLong + "\nВерсия " + env("ProductVersion") + global.ProductHotfix
+Warning     = "Внимание! Исключительные имущественные авторские права на программу принадлежат ЗАО \"Лаборатория Касперского\". Исключительные права на программную библиотеку защиты информации (ПБЗИ) принадлежат ООО \"КриптоЭкс\"."
+Warning2    = "За незаконное копирование и распространение приложения и его отдельных компонентов нарушитель несет гражданскую, административную или уголовную ответственность в соответствии с законодательством Российской Федерации."

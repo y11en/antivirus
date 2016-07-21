@@ -1,0 +1,6 @@
+// ***** AdvWare.ToolBar.Alibabar *****
+begin       
+ AddEvAlarmByCLSID('09F59435-7814-48ED-A73A-96FF861A91EB',AScriptName,'Bar.dll');
+ AddEvAlarmByCLSID('850B69E4-90DB-4F45-8621-891BF35A5B53',AScriptName,'Bar.dll');
+ AddEvAlarmByCLSID('0C588F7D-A2B3-4001-B59B-D856C1BF3AD7',AScriptName,'Bar.dll');
+end.

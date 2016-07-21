@@ -1,0 +1,38 @@
+Registry	Root	Key	Name	Value	Component_	ISAttributes
+s72	i2	s255	S255	S0	s72	I4
+Registry	Registry
+Registry1	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVFS7\7.0.0.0\Avp7\environment			ap_fs.dll	0
+Registry10	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\antihacker		[REGVALUE_ANTIHACKER_TASK]	ap_wks.dll	0
+Registry11	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\antispam		[REGVALUE_ANTISPAM_TASK]	ap_wks.dll	0
+Registry12	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\antispy		[REGVALUE_ANTISPY_TASK]	ap_wks.dll	0
+Registry13	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Avp7\environment			ap_wks.dll	0
+Registry14	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Avp7\environment	Localization	[LOCALIZATION]	ap_wks.dll	0
+Registry15	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Avp7\environment	ProductRoot	[INSTALLDIR]	ap_wks.dll	0
+Registry16	2	SOFTWARE\KasperskyLab\Components\28\Plugins\{8B062705-C56E-4505-90B9-B4F89E629CF4}	UninstallString	msiexec.exe /X{8B062705-C56E-4505-90B9-B4F89E629CF4} /qb	ProductRegistry	0
+Registry17	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Avp7\environment	ProductStatus	[PRODUCTSTATUS]	ap_wks.dll	0
+Registry18	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\bb		[REGVALUE_BB_TASK]	ap_wks.dll	0
+Registry19	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\InstallKey		[REGVALUE_INSTALLKEY_TASK]	ap_wks.dll	0
+Registry2	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVFS7\7.0.0.0\Avp7\environment	Localization	[LOCALIZATION]	ap_fs.dll	0
+Registry20	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\mc		[REGVALUE_MC_TASK]	ap_wks.dll	0
+Registry2021	0	CLSID\{063C2F2F-F310-4d3e-8BFF-0F1B919BFA3B}\InProcServer32		[#ap_wks.dll]	ap_wks.dll	0
+Registry2023	0	CLSID\{D97099F0-3D49-424e-8C69-6634907DCD9B}\InProcServer32		[#ap_fs.dll]	ap_fs.dll	0
+Registry21	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\oas		[REGVALUE_OAS_TASK]	ap_wks.dll	0
+Registry22	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\ods		[REGVALUE_ODS_TASK]	ap_wks.dll	0
+Registry24	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\rollback		[REGVALUE_ROLLBACK_TASK]	ap_wks.dll	0
+Registry25	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\sc		[REGVALUE_SC_TASK]	ap_wks.dll	0
+Registry26	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\updater		[REGVALUE_UPDATER_TASK]	ap_wks.dll	0
+Registry27	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\wm		[REGVALUE_WM_TASK]	ap_wks.dll	0
+Registry28	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVFS7\7.0.0.0		[REGVALUE_PRODUCTNAME_FS]	ap_fs.dll	
+Registry29	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVFS7\7.0.0.0\Tasks\InstallKey		[REGVALUE_INSTALLKEY_TASK]	ap_fs.dll	
+Registry3	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVFS7\7.0.0.0\Avp7\environment	ProductRoot	[INSTALLDIR]	ap_fs.dll	0
+Registry30	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVFS7\7.0.0.0\Tasks\oas		[REGVALUE_OAS_TASK]	ap_fs.dll	
+Registry31	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVFS7\7.0.0.0\Tasks\ods		[REGVALUE_ODS_TASK]	ap_fs.dll	
+Registry33	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVFS7\7.0.0.0\Tasks\rollback		[REGVALUE_ROLLBACK_TASK]	ap_fs.dll	
+Registry34	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVFS7\7.0.0.0\Tasks\updater		[REGVALUE_UPDATER_TASK]	ap_fs.dll	
+Registry4	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVFS7\7.0.0.0\Avp7\environment	ProductStatus	[PRODUCTSTATUS]	ap_fs.dll	0
+Registry41	2	SOFTWARE\KasperskyLab\Components\28\Plugins\{8B062705-C56E-4505-90B9-B4F89E629CF4}	DisplayName	[ProductName]	ProductRegistry	0
+Registry5	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVFS7	-		ap_fs.dll	0
+Registry6	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7	-		ap_wks.dll	0
+Registry7	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVFS7\7.0.0.0	PluginVersion	[ProductVersion]	ap_fs.dll	0
+Registry8	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0	PluginVersion	[ProductVersion]	ap_wks.dll	0
+Registry9	2	SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0		[REGVALUE_PRODUCTNAME_WKS]	ap_wks.dll	0

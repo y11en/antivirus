@@ -1,0 +1,19 @@
+; SrcGen.def : Declares the module parameters.
+
+LIBRARY      "FSSync.dll"
+
+EXPORTS
+	FSSync_Init
+	FSSync_Done
+	FSSync_SetCheck
+	FSSync_Remove
+	FSSync_ScreeUp
+	FSSync_ScreeDown
+	FSSync_ScreeUpEx
+	FSSync_ScreeDownEx
+	FSSync_GetDriveType
+	FSSync_GetUserFromSidW
+	FSSync_ScreeNotify
+	FSSync_ScreeActive
+	FSSync_ScreeState
+	FSSync_ScreeFState

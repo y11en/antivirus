@@ -1,0 +1,4 @@
+// ***** AdvWare.Toolbar.HotSearchBar *****
+begin
+ AddEvAlarmByCLSID('DE910060-8EFB-44B9-B492-75180696643F',AScriptName,'hsrb.dll');
+end.

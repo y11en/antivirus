@@ -1,0 +1,4 @@
+// ***** AdvWare.BHO.IEHlpr *****
+begin                   
+ AddEvAlarmByCLSID('EE7C3CF0-4B15-11D1-ABED-709549C10000',AScriptName,'IEHELPER.DLL');
+end.

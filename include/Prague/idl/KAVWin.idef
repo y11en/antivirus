@@ -1,0 +1,53 @@
+forward interface KAVWin;
+typedef KAVWin* hKAVWIN;
+
+forward interface ObjectStorage;
+typedef ObjectStorage* hOBJECTSTORAGE;
+
+
+
+[
+  version(1)
+  mnemonic(IID_KAVWIN)
+  id(61006)
+  c_type_name(hKAVWIN)
+]
+interface KAVWin { // Интерфейс для упраления объектами
+
+  // ------------------------------------
+    const tDWORD pmc_CONFIGURATOR = 0xee4e;
+    const tDWORD pm_CONFIGURATOR_GET_PATTERN = 1001;
+    const tDWORD pm_CONFIGURATOR_GET_DATA = 1002;
+    const tDWORD pm_CONFIGURATOR_GET_DATA_TREE = 1003;
+    const tDWORD pm_CONFIGURATOR_SET_DATA = 1004;
+    const tDWORD pm_CONFIGURATOR_GET_STATUS = 1005;
+    const tDWORD pm_CONFIGURATOR_WHO_IS_RUNNING = 1006;
+    const tDWORD pm_CONFIGURATOR_RUNNING = 1007;
+    const tDWORD pm_CONFIGURATOR_RUN_STATISTIC = 2001;
+    const tDWORD pm_CONFIGURATOR_STOP_STATISTIC = 2002;
+    const tDWORD pm_CONFIGURATOR_RESET_STATISTIC = 2003;
+    const tDWORD pm_CONFIGURATOR_UPDATE_STATISTIC = 2004;
+
+
+  // ------------------------------------
+    method tERROR WaitForExit(); // Вернуть управление после освобождения ресурсов
+
+}
+
+
+[
+  version(1)
+  mnemonic(IID_OBJECTSTORAGE)
+  id(61007)
+  c_type_name(hOBJECTSTORAGE)
+]
+interface ObjectStorage { // Интерфейс для оперирования объектами
+
+  // ------------------------------------
+    method tERROR RegisterObject( hOBJECT hCfgObject );
+    method tERROR UnRegisterObject( hOBJECT hCfgObject );
+    method tERROR GetFirstObject( hOBJECT* result );
+    method tERROR GetNextObject( hOBJECT* result, hOBJECT hCfgObject );
+
+}
+

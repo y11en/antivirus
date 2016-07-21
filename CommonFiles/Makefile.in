@@ -1,0 +1,111 @@
+subdirs = @subdirs@
+srcdir = @srcdir@
+prefix = @prefix@
+includedir = @includedir@
+INSTALL = @INSTALL@
+# Uncomment the line below if you want to do parallel build.
+# PARALLELMFLAGS = -j 4
+
+InstallIncludes = \
+	AddonInterface.h \
+	AppInfoID.h \
+	AVPCmpID.h \
+	AVPComID.h \
+	AVP_data.h \
+	_avpff.h \
+	_AVPIO.h \
+	AVPNstID.h \
+	AVPPort.h \
+	AVPPrpID.h \
+	AVPRegID.h \
+	AVPRptID.h \
+	AVPSize_t.h \
+	AVPStcID.h \
+	avpupdate.h \
+	AVPVndID.h \
+	byteorder.h \
+	CommonNotificationEventIDs.h \
+	compat_unix.h \
+	CompInfoInterface.h \
+	Debugging.h \
+	dskmparm.h \
+	kl_byteswap.h \
+	KLKeyRec.h \
+	kl_platform.h \
+	kl_stdint.h \
+	kl_types.h \
+	LAX.h \
+	LAXi.h \
+	m_utils.h \
+	nestednodelist.h \
+	nestednodemap.h \
+	utf8.h \
+	DupMem/DupMem.h \
+	DupMem/dupmem_unix.cpp \
+	FileFormat/Coff.h \
+	Stuff/_CARRAY.h \
+	Stuff/_carray.cpp \
+	Stuff/cpointer.h \
+	Stuff/CalcSum.h \
+	Stuff/Sq_u.cpp \
+	Stuff/CalcSum.c \
+	Stuff/StdAfx.h \
+	Serialize/KLDTSer.h \
+	Serialize/KLDTDefs.h \
+	SWManager/Swm.h \
+	LoadKeys/AVPKeyID.h \
+	Version/ver_itoa.h \
+	Version/ver_pf15.h \
+	Version/ver_prag.h \
+	Version/ver_df.h \
+	Version/ver_kl.h \
+	Version/ver_avpedit.h \
+	Version/ver_avpexch.h \
+	Version/ver_avp.h \
+	Version/ver_product.h \
+	Version/ver_ppp.h \
+	Version/ver_avpocx.h \
+	Version/ver_av50.h \
+	Version/ver_avpw.h \
+	Version/versinfo.h
+
+
+.PHONY: all install install_includes clean distclean
+.DEFAULT: install
+
+all: install_includes 
+	for dir in $(subdirs); do \
+	if test -f $$dir/Makefile; then \
+	$(MAKE) PARALLELMFLAGS="$(PARALLELMFLAGS)" -C $$dir $@ || exit 1; \
+	fi \
+	done
+
+install: all
+	for dir in $(subdirs); do \
+	if test -f $$dir/Makefile; then \
+	$(MAKE) PARALLELMFLAGS="$(PARALLELMFLAGS)" -C $$dir $@ || exit 1; \
+	fi \
+	done
+
+clean:
+	for dir in $(subdirs); do \
+	if test -f $$dir/Makefile; then \
+	$(MAKE) PARALLELMFLAGS="$(PARALLELMFLAGS)" -C $$dir $@ || exit 1; \
+	fi \
+	done
+
+distclean:
+	for dir in $(subdirs); do \
+	if test -f $$dir/Makefile; then \
+	$(MAKE) PARALLELMFLAGS="$(PARALLELMFLAGS)" -C $$dir $@ || exit 1; \
+	fi \
+	done
+
+install_includes: $(addprefix $(includedir)/, $(InstallIncludes))
+	@echo "***** Installing includes"; 
+	$(INSTALL) -d $(includedir)
+
+$(addprefix $(includedir)/, %): $(addprefix $(srcdir)/, %)
+	$(INSTALL) -d $(dir $@)
+	$(INSTALL) -m 0644 $< $@
+

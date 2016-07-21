@@ -1,0 +1,24 @@
+warnings in directory c:\projects\windows\hook\mklif\sius
+c:\projects\windows\hook\mklif\sius\sius.c(23) : warning C4133: 'function' : incompatible types - from 'char *' to 'LPCWSTR'
+c:\projects\windows\hook\mklif\sius\sius.c(40) : warning C4133: 'function' : incompatible types - from 'char *' to 'LPCWSTR'
+c:\projects\windows\hook\mklif\sius\sius.c(56) : warning C4133: 'function' : incompatible types - from 'char *' to 'LPCWSTR'
+c:\projects\windows\hook\mklif\sius\sius.c(124) : warning C4133: 'function' : incompatible types - from 'unsigned short [16]' to 'char *'
+c:\projects\windows\hook\mklif\sius\sius.c(125) : warning C4133: 'function' : incompatible types - from 'unsigned short [16]' to 'char *'
+c:\projects\windows\hook\mklif\sius\sius.c(180) : warning C4995: 'sprintf': name was marked as #pragma deprecated
+c:\projects\windows\hook\mklif\sius\sius.c(185) : warning C4995: 'sprintf': name was marked as #pragma deprecated
+c:\projects\windows\hook\mklif\sius\sius.c(196) : warning C4995: 'sprintf': name was marked as #pragma deprecated
+c:\projects\windows\hook\mklif\sius\sius.c(267) : warning C4995: 'sprintf': name was marked as #pragma deprecated
+c:\projects\windows\hook\mklif\sius\sius.c(278) : warning C4995: 'sprintf': name was marked as #pragma deprecated
+c:\projects\windows\hook\mklif\sius\sius.c(283) : warning C4995: 'sprintf': name was marked as #pragma deprecated
+c:\projects\windows\hook\mklif\sius\sius.c(293) : warning C4995: 'sprintf': name was marked as #pragma deprecated
+c:\projects\windows\hook\mklif\sius\sius.c(299) : warning C4995: 'sprintf': name was marked as #pragma deprecated
+c:\projects\windows\hook\mklif\sius\sius.c(305) : warning C4995: 'sprintf': name was marked as #pragma deprecated
+c:\projects\windows\hook\mklif\sius\sius.c(311) : warning C4995: 'sprintf': name was marked as #pragma deprecated
+c:\projects\windows\hook\mklif\sius\sius.c(317) : warning C4995: 'sprintf': name was marked as #pragma deprecated
+c:\projects\windows\hook\mklif\sius\sius.c(323) : warning C4995: 'sprintf': name was marked as #pragma deprecated
+c:\projects\windows\hook\mklif\sius\sius.c(329) : warning C4995: 'sprintf': name was marked as #pragma deprecated
+c:\projects\windows\hook\mklif\sius\sius.c(336) : warning C4995: 'sprintf': name was marked as #pragma deprecated
+c:\projects\windows\hook\mklif\sius\sius.c(341) : warning C4995: 'sprintf': name was marked as #pragma deprecated
+c:\projects\windows\hook\mklif\sius\sius.c(363) : warning C4995: 'wcscpy': name was marked as #pragma deprecated
+c:\projects\windows\hook\mklif\sius\sius.c(422) : warning C4995: 'sprintf': name was marked as #pragma deprecated
+c:\projects\windows\hook\mklif\sius\sius.c(427) : warning C4995: 'sprintf': name was marked as #pragma deprecated

@@ -1,0 +1,339 @@
+﻿[s_ObjectType]
+#eFile        = "Файл"
+#eDirectory   = "Папка"
+#eRegKey      = "Ключ реестра"
+#eRegValue    = "Значение реестра"
+#eProcess     = "Процесс"
+#eThread      = "Поток"
+#eModule      = "Модуль"
+#eLogSector   = "Логический сектор"
+#ePhysSector  = "Физический сектор"
+#eMemory	  = "Память"
+#eMailMessage = "Почтовое сообщение"
+#eMailAttach  = "Почтовое вложение"
+#eURL         = "Веб-страница"
+#eScript      = "VB или Java-скрипт"
+#ePort        = "Сетевой порт"
+#eConnection  = "Сетевое соединение"
+#ePacket      = "Сетевой пакет"
+#eDialStr     = "Телефонный номер"
+#eDetectName  = "Имя угрозы"
+#eLogicalDisk = "Логический диск"
+#eDevice      = "Устройство"
+#eVolume      = "Том"
+#eString      = "Строка"
+#eRegRoot     = "Реестр"
+#eTask        = "Подсистема"
+def  = if(@, "unk: " + @)
+
+[s_RepDetectType]
+#eVirware            = "Вирус"
+#eTrojware           = "Троянская программа"
+#eMalware            = "Вредоносное ПО (malware)"
+#eAdware             = "Рекламное ПО (adware)"
+#ePornware           = "Pornware"
+#eRiskware           = "Нежелательное ПО (riskware)"
+#eXFiles			
+#eSoftware           = "Известное ПО"
+#eVulnerability      = "Уязвимость"
+#ePhishing           = "Фишинговый сайт"
+#eDialing            = "Попытка скрытого набора"
+#eAttack             = "Сетевая атака"
+#eBanner             = "Баннер"
+#eUnwantedWebContent = "Нежелательный веб-контент"
+#eSpam               = "Спам"
+#eProbableSpam       = "Возможный спам"
+#eHam                = "Не спам"
+#eFileAccess         = "Доступ к файлам"
+#eRegistryAccess     = "Доступ к реестру"
+#eNetworkAccess	     = "Доступ к сети"
+#eHardwareAccess     = "Доступ к аппаратным ресурсам"
+#eSecurityAccess     = "Доступ к настройкам безопасности"
+#eSuspicionActivity  = "Подозрительное действие"
+default              = if(@, "Неизвестная угроза")
+
+[s_Verdict]
+#eCLEAN    				= "ОК"
+#eSUSPICION
+#eDETECTED    			= "Обнаружено"
+#eARCHIVED    			= "Архив"
+#ePACKED    			= "Упаковано"
+#eENCRYPTED    			= "Зашифровано"
+#eCORRUPTED    			= "Повреждено"
+#eDISINFECTED    		= "Вылечено"
+#eNOT_DISINFECTED   	= "Не вылечено"
+#eDELETED   			= "Удалено"
+#eNOT_DELETED   		= "Невозможно удалить"
+#eBACKUPED   			= "Создана резервная копия"
+#eBACKUP_FAILED   		= "Невозможно создать резервную копию"
+#eQUARANTINED   		= "Помещено в карантин"
+#eNOT_QUARANTINED   	= "Невозможно поместить в карантин"
+#eNOT_PROCESSED   		= "Не обработано"
+#ePROCESSING_ERROR      = "Ошибка обработки"
+#ePASSWORD_PROTECTED    = "Защищено паролем"
+#eCANTCHANGEATTR   		= "Невозможно изменить атрибуты"
+#eDISINFECTED           = "Вылечено"
+#eDELETED_ON_REBOOT     = "Будет удалено при перезагрузке"
+#eDISINFECTED_ON_REBOOT 	= "Будет вылечено при перезагрузке"
+#eDELETE_ON_REBOOT_FAILED   	= "Невозможно удалить при перезагрузке"
+#eDISINFECT_ON_REBOOT_FAILED   	= "Невозможно вылечить при перезагрузке"
+#eOVERWRITED	        	= "Перезаписано вылеченной ранее копией"
+#eCURED   			= "Лечение завершено"
+#eQUARANTINED_ON_REBOOT   	= "Будет помещено в карантин при перезагрузке"
+#eRESTORED              	= "Восстановлено из карантина"
+#eDENIED   			= "Запрещено"
+#eALLOWED   			= "Разрешено"
+#eRENAMED   			= "Переименовано"
+#eNOT_RENAMED   		= "Не переименовано"
+#eDISABLED 			= "Отключено"
+#eUPDATER_ERROR                             = $IsRepItem ? s_UpdaterError(Error) : "Сообщение"
+#eUPDATER_SOURCE_SELECTED
+#eUPDATER_ADMIN_KIT_SOURCE_SELECTED         = "Выбран источник обновлений"
+#eUPDATER_PROXY_SERVER_SELECTED             = "Выбран прокси-сервер"
+#eUPDATER_DOWNLOAD_FILE_STARTED             = "Началась загрузка файла"
+#eUPDATER_FILE_DOWNLOADED                   = "Файл загружен"
+#eUPDATER_NEW_FILE_INSTALLED                = "Файл установлен"
+#eUPDATER_FILE_UPDATED                      = "Файл обновлен"
+#eUPDATER_FILE_ROLLED_BACK                  = "Выполнен откат файла"
+#eUPDATER_StartInstallFilesForUpdate		= "Началось обновление файлов"
+#eUPDATER_StartInstallFilesForRetranslation = "Началось копирование обновлений"
+#eUPDATER_StartCopyFilesForRollback         = "Начался откат файлов"
+#eUPDATER_DNS_NAME_RESOLVED                 = "DNS-имя преобразовано"
+#eUPDATER_ComponentIsNotUpdated             = "Ошибка обновления компонента"
+#eUPDATER_GeneratingFileListToDownload      = "Формируется список файлов для загрузки"
+#ePARCTL_SWITCHPROFILE    = "Смена пользователя"
+#ePARCTL_HEURISTICSTATUS  = "Эвристический анализ этого веб-сайта невозможен"
+#ePROTECTION + #ProdStateKeyTrial
+#ePROTECTION + #ProdStateProductNotActivated     
+#ePROTECTION + #ProdStateProductNotAutoRun       
+#ePROTECTION + #ProdStateProductNotProtected     
+#ePROTECTION + #ProdStateKeyAboutExpiration      
+#ePROTECTION + #ProdStateKeyExpired              
+#ePROTECTION + #ProdStateKeyWillBeExpired        
+#ePROTECTION + #ProdStateKeyWillBeBlocked        
+#ePROTECTION + #ProdStateKeyTrialExpired         
+#ePROTECTION + #ProdStateKeyBlocked              
+#ePROTECTION + #ProdStateNoKeys                  
+#ePROTECTION + #ProdStateKeyInvalid              
+#ePROTECTION + #ProdStateKeyLimited              
+#ePROTECTION + #ProdStateTasksNotRunning         
+#ePROTECTION + #ProdStateTasksMalfunction        
+#ePROTECTION + #ProdStateTasksDisabled           
+#ePROTECTION + #ProdStateProtectionSafeMode      
+#ePROTECTION + #ProdStateProtectionNotInstalled  
+#ePROTECTION + #ProdStateBasesNotValid           
+#ePROTECTION + #ProdStateBasesOutOfDate          
+#ePROTECTION + #ProdStateBasesNotActual          
+#ePROTECTION + #ProdStateUpdateNeedReboot        
+#ePROTECTION + #ProdStateBasesCorrupted          
+#ePROTECTION + #ProdStateUpdateNotAuto           
+#ePROTECTION + #ProdStateMyComputerNotScanned    
+#ePROTECTION + #ProdStateProtectionNotRunning    
+#ePROTECTION + #ProdStateProtectionDisabled      
+#ePROTECTION + #ProdStateThreatsUntreated        
+#ePROTECTION + #ProdStateThreatsNeedReboot = s_ProdState(@ - #ePROTECTION)
+#eTASK_STARTED          = "Задача запущена"
+#eTASK_STOPPED          = "Задача завершена"
+#eTASK_FAILED           = "Невозможно запустить задачу"
+default = if(@, "unk: " + @)
+
+[s_DecisionReason]
+#eUSER                = "Пропущено пользователем"
+#eREPORTONLY          = "Только отчет"
+#ePOSTPONED           = "Отложено"
+#eTASKSTOPPED         = "Обработка остановлена"
+#eERROR               = $IsRepItem ? ($IsTaskStateEvent ? s_ProfileError(s_TaskId2TaskType(TaskID), ExtraInfoSub2) : s_DecisionReasonErrorByTaskID(TaskID, ExtraInfoSub2)) : "Ошибка"
+#eDATABASE            = "Сигнатуры"
+#eWHITE_LIST          = "Белый список"
+#eUSER_BLACK_LIST     = "Черный список пользователя"
+#eUSER_WHITE_LIST     = "Белый список пользователя"
+#eEMULATOR            = "Эумлятор"
+#eBB                  = "Анализ активности"
+#eHEURISTIC           = "Эвристика"
+#eBAYES               = "Анализ содержимого (iBayes)"
+#eGSG                 = "Распознавание изображений (GSG)"
+#ePDB                 = "Анализ заголовков (PDB)"
+#eSFDB                = "Объект не изменялся (iChecker)"
+#eISWIFT              = "Объект не изменялся (iSwift 2)"
+#eALLOWED_SENDER      = "Разрешенный отправитель"
+#eBLOCKED_SENDER      = "Запрещенный отправитель"
+#eALLOWED_PHRASE      = "Разрешенная фраза"
+#eBLOCKED_PHRASE      = "Запрещенная фраза"
+#eDETECT_BYHASH       = "Контрольная сумма"
+#eDETECT_INFORMATION  = "Информация"
+#eSIZE                = "Размер"
+#eTYPE                = "Тип"
+#eEXCLUDE             = "Исключения"
+#eTIME                = "Лимит времени"
+#eNORIGHTS            = "Доступ запрещен"
+#eNOTFOUND            = "Объект не найден"
+#eLOCKED              = "Объект заблокирован"
+#eNONCURABLE          = "Не лечится"
+#eWRITEPROTECT        = "Защищен от записи"
+#eNONOVERWRITABLE     = "Не перезаписывается"
+#eCOPYFAILED          = "Ошибка копирования"
+#eWRITEERROR          = "Ошибка записи"
+#eOUTOFSPACE          = "Недостаточно свободного места"
+#eREADERROR           = "Ошибка чтения"
+#eDEVICENOTREADY      = "Устройство не готово"
+#eWRITENOTSUPPORTED   = "Запись не поддерживается"
+#eCANNOTBACKUP        = "Невозможно создать резервную копию"
+#eANTISPAM_AddedToWhiteRecipient  = "Адрес добавлен в белый список"
+#eANTISPAM_HasBeenTrained         = "Сообщение уже есть в базе знаний"
+#eANTISPAM_Training               = "Обучение"
+#eANTISPAM_NeedTraining           = "Необходимо обучение"
+#eANTISPAM_WhiteAddress           = "Разрешенный отправитель"
+#eANTISPAM_BlackAddress           = "Запрещенный отправитель"
+#eANTISPAM_WhiteString            = "Фраза из белого списка"
+#eANTISPAM_BlackString            = "Фраза из черного списка"
+#eANTISPAM_AntiFishing            = "Фишинговое письмо"
+#eANTISPAM_WhiteAddress_NOTFOUND  = "Отправитель не разрешен"
+#eANTISPAM_BlackAddress_NOTFOUND  = "Отправитель не запрещен"
+#eANTISPAM_WhiteString_NOTFOUND   = "Фразы не найдены в белом списке"
+#eANTISPAM_BlackString_NOTFOUND   = "Фразы не найдены в черном списке"
+#eANTISPAM_AntiFishing_NOTFOUND   = "Не фишинговое письмо"
+#eANTISPAM_MailDispatcher         = "Сообщение удалено с сервера"
+#eANTISPAM_Eicar                  = "Тестовое сообщение"
+#eANTISPAM_Banner                 = "Мусор"
+#eANTISPAM_Banner_NOTFOUND        = "Не мусор"
+#eANTISPAM_InvalidHTML            = "Некорректная HTML-разметка"
+#eANTISPAM_InvalidHTML_NOTFOUND   = "Корректная HTML-разметка"
+#eANTISPAM_ExternalObj            = "Со ссылками на изображения в Интернете"
+#eANTISPAM_ExternalObj_NOTFOUND   = "Без ссылок на избражения в Интернете"
+#eANTISPAM_InternalObj            = "Внутренний объект без текста"
+#eANTISPAM_InternalObj_NOTFOUND   = "Без некорректных внутренних объектов"
+#eANTISPAM_EmptyMessage           = "Пусто"
+#eANTISPAM_EmptyMessage_NOTFOUND  = "Не пусто"
+#eANTISPAM_NotForMe               = "Не адресовано мне"
+#eANTISPAM_NotForMe_NOTFOUND      = "Адресовано мне"
+#eANTISPAM_NotEnglish             = "Contains non-ANSI characters"
+#eANTISPAM_NotEnglish_NOTFOUND    = "Contains ANSI characters only"
+#eANTISPAM_RecipLimit             = "Слишком много адресатов"
+#eANTISPAM_RecipLimit_NOTFOUND    = "Один адресат"
+#eANTISPAM_InvalidHTML_UnknownDefsCount 	 = "Некорректный HTML: некорректные HTML-тэги"
+#eANTISPAM_InvalidHTML_SeemsColors		 = "Некорректный HTML: текст цвета фона"
+#eANTISPAM_InvalidHTML_SmallText		 = "Некорректный HTML: очень мелкий текст"
+#eANTISPAM_InvalidHTML_InvisibleCharCount	 = "Некорректный HTML: невидимые символы"
+#eANTISPAM_InvalidHTML_Scripts			 = "Некорректный HTML: скрипты"
+#eANTISPAM_InvalidHTML_HiddenElements		 = "Некорректный HTML: скрытые элементы"
+#eANTISPAM_CannotBeSpam				 = "Внутренняя почта Microsoft Exchange Server"
+#eANTISPAM_SPAMTEST               		 = "Spamtest"
+#eANTISPAM_RecentTerms		  		 = "Recent terms"
+default = if(@, "unk: " + @)
+
+[s_DecisionReasonErrorByTaskID]
+#eTASK_PC         = s_UpdaterError(@1)
+def               = s_SystemError(@1)
+
+[s_Action]
+#evtOpen                   = "Открытие"
+#evtCreate                 = "Создание"
+#evtRead                   = "Чтение"
+#evtWrite                  = "Модификация"
+#evtDelete                 = "Удаление"
+#evtRename                 = "Переименование"
+#evtProcessStart           = "Запуск процесса"
+#evtProcessStop            = "Остановка процесса"
+#evtImageLoad              = "Загрузка модуля"
+#evtImageUnload            = "Выгрузка модуля"
+#evtSend                   = "Отправка данных по сети"
+#evtReceive                = "Получение данных по сети"
+#evtTerminate              = "Завершение процесса"
+#evtProcStart              = "Запуск процесса"
+#evtProcStop               = "Остановка процесса"
+#evtSetHook                = "Внедрение кода"
+#evtCodeInject             = "Внедрение кода"
+#evtWindowsShutDown        = "Выключение системы"
+#evtHiddenRegistry         = "Создание скрытых ключей"
+#evtKeyLogger              = "Клавиатурный перехват"
+#evtSetHardLink            = "Создание ссылок на файл"
+#evtSuspend                = "Изменение работы приложения"
+#evtSchedulerStart         = "Запуск планировщика"
+#evtWMSend                 = "Посылка оконных сообщений"
+#evtDrvStart               = "Запуск драйвера"
+#evtServiceStart           = "Запуск сервиса"
+#evtScreenShots            = "Снятие скриншотов"
+#evtDiskFormat             = "Форматирование диска"
+#evtLLDiskAccess           = "Низкоуровневый доступ к диску"
+#evtLLFSAccess             = "Низкоуровневый доступ к файловой системе"
+#evtClipBoardAcceess       = "Доступ к буферу обмена"
+#evtSysEnterChange         = "Изменение точки входа в систему"
+#evtADSAccess              = "Доступ к файловым стримам"
+#evtDirectMemAccess        = "Прямой доступ к общей памяти"
+#evtReadProcMem            = "Чтение памяти из других процессов"
+#evtSetDbgPrivilege        = "Установка привилегий отладчика"
+#evtChangeObjPrivilege     = "Изменение привилегий у объектов"
+#evtUseBrowserCL           = "Использование командной строки браузера"
+#evtUseBrowserAPI          = "Использование скрытых функций браузера"
+#evtUseSystemAPI           = "Использование скрытых функций системы"
+#evtAddAppToGr             = "помещено в группу"
+default = if(@, "unk: " + @)
+
+[s_ActionV]
+#evtOpen                   = "открыть"
+#evtCreate                 = "создать"
+#evtRead                   = "читать"
+#evtWrite                  = "изменить"
+#evtDelete                 = "удалить"
+#evtRename                 = "переименовать"
+#evtProcessStart           = "запустить"
+#evtProcessStop            = "остановить"
+#evtImageLoad              = "загрузить"
+#evtImageUnload            = "выгрузить"
+#evtSend                   = "отправить"
+#evtReceive                = "получить"
+#evtTerminate              = "остановить"
+#evtProcStart              = "запустить процесс"
+#evtProcStop               = "остановить процесс"
+#evtSetHook                = "внедрить код"
+#evtCodeInject             = "внедрить код"
+#evtWindowsShutDown        = "остановить операционную систему"
+#evtHiddenRegistry         = "создать скрытый ключ"
+#evtKeyLogger              = "перехватить ввод с клавиатуры"
+#evtSetHardLink            = "создать ссылку на файл"
+#evtSuspend                = "изменить работу приложения"
+#evtSchedulerStart         = "запустить планировщик"
+#evtWMSend                 = "послать оконное сообщение"
+#evtDrvStart               = "запустить драйвер"
+#evtServiceStart           = "запустить сервис"
+#evtScreenShots            = "снять копию экрана"
+#evtDiskFormat             = "отформатировать диск"
+#evtLLDiskAccess           = "получить доступ к диску на низком уровне"
+#evtLLFSAccess             = "получить доступ к файловой системе на низком уровне"
+#evtClipBoardAcceess       = "получить доступ к буферу обмена"
+#evtSysEnterChange         = "измененить точку входа в систему"
+#evtADSAccess              = "получить доступ к файловым стримам"
+#evtDirectMemAccess        = "получить прямой доступ к общей памяти"
+#evtReadProcMem            = "прочитать память из другого процесса"
+#evtSetDbgPrivilege        = "установить привилегию отладчика"
+#evtChangeObjPrivilege     = "измененить привилегию у объекта"
+#evtUseBrowserCL           = "использовать командную строку браузера"
+#evtUseBrowserAPI          = "использовать скрытую функцию браузера"
+#evtUseSystemAPI           = "использовать скрытую функцию системы"
+#evtAddAppToGr             = "помещено в группу"
+default = if(@, "unk: " + @)
+
+[s_Exact]
+#eExact		      	= "Точно"
+#ePartial         	= "Частично"
+#eProbably	      	= "Возможно"
+#eHeuristic       	= "Эвристика"
+default = if(@, "unk: " + @)
+
+[s_DetectDanger]
+#eDDHigh		= "Высокая"
+#eDDMedium		= "Средняя"
+#eDDLow			= "Низкая"
+#eDDInformational	= "Информация"
+default = if(@, "unk: " + @)
+
+[s_TaskTextProtection]
+#eNotifyLicensing             = "Licensing"
+#eNotifyMyComputerNotScaned   = $Scan_My_Computer
+#eNotifyBases
+#eNotifyUpdater
+#eNotifyUpdateNeedReboot      = $Updater
+def                           = $Protection
+
+[s_EventObjSerByType]
+#ePacket      = s_Protocols(@1.Proto) + " от " + ip(@1.AttackerIP) + " на локальный порт " + @1.LocalPort

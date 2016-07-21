@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<UpdaterSettingsSection>
+
+<sites_list>
+	<site2 url="http://tl-srv-w2k" 	weight="1000000"			region="*" />
+</sites_list>
+
+<UpdateFileDescription 	Filename="master.xml" RelativeSrvPath="index"> </UpdateFileDescription>
+
+</UpdaterSettingsSection>
+; 0XLSznpdI71fB300e7Uwj1jCdccMmwzxNVK+oXfkI1R1nqcB6qbC7X+4Us­­

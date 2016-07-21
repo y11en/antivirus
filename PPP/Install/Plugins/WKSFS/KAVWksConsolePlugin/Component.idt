@@ -1,0 +1,124 @@
+Component	ComponentId	Directory_	Attributes	Condition	KeyPath	ISAttributes	ISComments	ISScanAtBuildFile	ISRegFileToMergeAtBuild
+s72	S38	s72	i2	S255	S72	I4	S255	S255	S255
+Component	Component
+ap_fs.dll	{A89DEFCD-4B53-4D22-B763-A108CCBEBF52}	INSTALLDIR	0		ap_fs.dll	1	This component consists of a Windows dynamic link library.		<ISProjectDataFolder>\_data\registry\ap_fs.reg
+ap_fsi.dll	{DAA08CAB-2D60-4F36-B116-FC867EFC07F1}	INSTALLDIR	0		ap_fsi.dll	1	This component consists of a Windows dynamic link library.		
+ap_wks.dll	{5FF68F86-8022-4D0B-AB02-7993AC1288AF}	INSTALLDIR	0		ap_wks.dll	1	This component consists of a Windows dynamic link library.		<ISProjectDataFolder>\_data\registry\ap_wks.reg
+ap_wksi.dll	{3D14D9D4-379E-4B86-9D5E-2C6DF55E4AF6}	INSTALLDIR	0		ap_wksi.dll	1	This component consists of a Windows dynamic link library.		
+base64.ppl	{04D1E01E-F96E-43CB-ABC9-657F888367FC}	INSTALLDIR	0		base64.ppl	1	This component consists of files not belonging to other components.		
+basegui.dll	{9981ABBE-5063-49BC-BABB-168DA8166530}	INSTALLDIR	0		basegui.dll	1	This component consists of a Windows dynamic link library.		
+basegui.ppl	{B656C7A8-D197-47C9-99BB-9D6045A5D471}	INSTALLDIR	0		basegui.ppl	1	This component consists of files not belonging to other components.		
+bl.ppl	{59822953-E24C-4D8D-B497-4D128ECC61C6}	INSTALLDIR	0		bl.ppl	1	This component consists of files not belonging to other components.		
+context.chm_English	{BF276018-8D18-4026-A4CE-67CD3301B871}	DOCDIR	0			1	This component consists of a Windows Help file and Help contents.		
+context.chm_Russian	{D64C3C3B-3B45-4D3C-B0F2-302AA3B560BF}	DOCDIR	0			1	This component consists of a Windows Help file and Help contents.		
+context_fs.chm_Albanian	{FBB37DDB-4F6D-42A5-BBF9-2B18C71C0633}	DOCDIR	0		context_fs.chm10	1			
+context_fs.chm_Brazilian	{D9C692F3-0803-4AF8-813B-91EF9C58F2AE}	DOCDIR	0		context_fs.chm7	1			
+context_fs.chm_Bulgarian	{5CFDD3B0-C516-48EE-837D-4A1B0172947E}	DOCDIR	0		context_fs.chm8	1			
+context_fs.chm_Croatian	{818F6967-720F-4B63-B0F5-0BFE91E61A4D}	DOCDIR	0		context_fs.chm9	1			
+context_fs.chm_Czech	{556B6B63-3281-43C1-BF22-1FA7790CC659}	DOCDIR	0		context_fs.chm11	1			
+context_fs.chm_Danish	{09F2C4EC-F6A3-4514-B7ED-E0F09F0B1580}	DOCDIR	0		context_fs.chm12	1			
+context_fs.chm_Dutch	{28B6ED9C-D77E-4F0B-A778-A2B149DA09B4}	DOCDIR	0		context_fs.chm13	1			
+context_fs.chm_English	{1CB9FEEE-7D2F-47CE-AF78-FEB16FBD6BDC}	DOCDIR	0		context_fs.chm	1	This component consists of a Windows Help file and Help contents.		
+context_fs.chm_Estonian	{55AFD3E5-6CBB-46F1-B70D-D52DB9E3865D}	DOCDIR	0		context_fs.chm14	1			
+context_fs.chm_French	{C645C5E1-6C56-413C-B660-901F532931A6}	DOCDIR	0		context_fs.chm2	1	This component consists of a Windows Help file and Help contents.		
+context_fs.chm_German	{3F2E2E34-B25D-4529-BF39-3FC34435FDFC}	DOCDIR	0		context_fs.chm3	1	This component consists of a Windows Help file and Help contents.		
+context_fs.chm_Hungarian	{FFBD0D96-BAF5-4185-9C87-3041A5258534}	DOCDIR	0		context_fs.chm15	1			
+context_fs.chm_Italian	{20C03F56-B1F2-4A03-8D28-A05A1DBDA7CD}	DOCDIR	0		context_fs.chm16	1			
+context_fs.chm_Japanese	{9EDAD166-CDB6-47BE-B7A8-F28A6C72B823}	DOCDIR	0		context_fs.chm17	1			
+context_fs.chm_Korean	{D910D61A-6B17-4F2C-8E7F-C4B01635C370}	DOCDIR	0		context_fs.chm4	1	This component consists of a Windows Help file and Help contents.		
+context_fs.chm_Macedonian	{D9960E6E-5913-482A-86FB-4D3EC9CFD4C1}	DOCDIR	0		context_fs.chm18	1			
+context_fs.chm_Norwegian	{7ED9E845-DC0A-4469-AF3B-ABE5CD86C582}	DOCDIR	0		context_fs.chm19	1			
+context_fs.chm_Polish	{28DD321F-8462-43C8-8B9B-B836631D08EA}	DOCDIR	0		context_fs.chm5	1	This component consists of a Windows Help file and Help contents.		
+context_fs.chm_Portuguese	{D74E0971-B857-442A-8778-D55725467DA7}	DOCDIR	0		context_fs.chm20	1			
+context_fs.chm_Russian	{959198AF-B88C-4496-A6A7-4A2ED7D16E12}	DOCDIR	0		context_fs.chm1	1	This component consists of a Windows Help file and Help contents.		
+context_fs.chm_Serbian	{01B97DD3-8342-4754-9411-698FECD5808D}	DOCDIR	0		context_fs.chm21	1			
+context_fs.chm_SimpChinese	{8DB88E39-D1CF-4177-93BB-6B2675C27B20}	DOCDIR	0		context_fs.chm22	1			
+context_fs.chm_Slovenian	{191D1B59-30D7-4380-805E-40E66D9DAE82}	DOCDIR	0		context_fs.chm23	1			
+context_fs.chm_Spanish	{AE554760-6E0A-4573-A2F7-EF5B6BB81387}	DOCDIR	0		context_fs.chm6	1	This component consists of a Windows Help file and Help contents.		
+context_fs.chm_Thai	{D1207AA1-381B-44A2-9C67-ADE9D23EAF03}	DOCDIR	0		context_fs.chm24	1			
+context_fs.chm_TradChinese	{50BAB96F-094F-4765-B291-744085C0F534}	DOCDIR	0		context_fs.chm25	1			
+context_fs.chm_Turkish	{FA53AF0C-C87B-4E98-B16C-2EEB1273E5CF}	DOCDIR	0		context_fs.chm26	1			
+context_wks.chm_Albanian	{1A4CF718-54AA-481B-A27A-BD66B5A11A0C}	DOCDIR	0		context_wks.chm10	1			
+context_wks.chm_Brazilian	{1C8B8021-073C-45E7-B356-6ACCEB5F0D0B}	DOCDIR	0		context_wks.chm7	1			
+context_wks.chm_Bulgarian	{1354EFC6-7AE0-4FD4-B611-9EB165BF7529}	DOCDIR	0		context_wks.chm8	1			
+context_wks.chm_Croatian	{A672816B-2AE2-43C5-8C56-BCDF8E78A6D1}	DOCDIR	0		context_wks.chm9	1			
+context_wks.chm_Czech	{5D896B0B-77A0-43C1-9C0C-6511C216DDE4}	DOCDIR	0		context_wks.chm11	1			
+context_wks.chm_Danish	{D9AEB150-FF0B-4CBD-8D97-6CE71F777812}	DOCDIR	0		context_wks.chm12	1			
+context_wks.chm_Dutch	{5980CC25-8EF9-45B7-89E5-8E6B9771F0F3}	DOCDIR	0		context_wks.chm13	1			
+context_wks.chm_English	{98A2DF64-90D1-4CC6-85A9-70B7253C2AE3}	DOCDIR	0		context_wks.chm	1	This component consists of a Windows Help file and Help contents.		
+context_wks.chm_Estonian	{EC9FD4A1-DE19-4EEA-B96A-2AB251930BC6}	DOCDIR	0		context_wks.chm14	1			
+context_wks.chm_French	{B2DC3326-8F3D-4727-B84B-85EC555BEFC3}	DOCDIR	0		context_wks.chm2	1	This component consists of a Windows Help file and Help contents.		
+context_wks.chm_German	{B06A9249-A435-4E16-944E-540555476777}	DOCDIR	0		context_wks.chm3	1	This component consists of a Windows Help file and Help contents.		
+context_wks.chm_Hungarian	{0688621A-12F2-4FF1-8BF5-F1A4EC357C7C}	DOCDIR	0		context_wks.chm15	1			
+context_wks.chm_Italian	{BEE6BFAB-3B67-43BF-93F2-D4ED04F602AF}	DOCDIR	0		context_wks.chm16	1			
+context_wks.chm_Japanese	{F940A830-2D68-45EC-8E90-64EF16DF7F32}	DOCDIR	0		context_wks.chm17	1			
+context_wks.chm_Korean	{E50AF702-26C7-47F5-968E-6218EEBED2AB}	DOCDIR	0		context_wks.chm4	1	This component consists of a Windows Help file and Help contents.		
+context_wks.chm_Macedonian	{6178584D-E6A0-4D1D-9572-A86596E48644}	DOCDIR	0		context_wks.chm18	1			
+context_wks.chm_Norwegian	{935D1373-476E-459B-AB4D-0DBD0E921B86}	DOCDIR	0		context_wks.chm19	1			
+context_wks.chm_Polish	{2996507D-8662-4361-945B-400725469AEB}	DOCDIR	0		context_wks.chm5	1	This component consists of a Windows Help file and Help contents.		
+context_wks.chm_Portuguese	{794496F2-1084-40FB-8720-0E63C03751E3}	DOCDIR	0		context_wks.chm20	1			
+context_wks.chm_Russian	{629F9B2B-21BA-42AD-8176-74DF6EB040DD}	DOCDIR	0		context_wks.chm1	1	This component consists of a Windows Help file and Help contents.		
+context_wks.chm_Serbian	{69EA3740-B214-4288-8620-929D40926266}	DOCDIR	0		context_wks.chm21	1			
+context_wks.chm_SimpChinese	{77291D91-7587-4C0A-8ED0-6B9B5099016E}	DOCDIR	0		context_wks.chm22	1			
+context_wks.chm_Slovenian	{B76E3ED0-F0D5-41AA-A0B6-AF2F13EF7D8F}	DOCDIR	0		context_wks.chm23	1			
+context_wks.chm_Spanish	{8E48E88A-4FDA-452D-A5A8-AAA78DC8E930}	DOCDIR	0		context_wks.chm6	1	This component consists of a Windows Help file and Help contents.		
+context_wks.chm_Thai	{ACD12238-B479-4486-9234-AD0402283C82}	DOCDIR	0		context_wks.chm24	1			
+context_wks.chm_TradChinese	{7917D7D7-5228-466E-A07F-6D4F91A2DB9B}	DOCDIR	0		context_wks.chm25	1			
+context_wks.chm_Turkish	{94D0C6EC-5251-42BE-A65F-E52313333760}	DOCDIR	0		context_wks.chm26	1			
+crpthlpr.ppl	{8CF06985-2548-492E-9C02-9B9CE3AA65A0}	INSTALLDIR	0		crpthlpr.ppl	1	This component consists of files not belonging to other components.		
+fwpresets.ini	{A28319B6-2DEA-41CD-8166-EB60A34B0A33}	INSTALLDIR	0		FwPresets.ini	1	This component consists of files not belonging to other components.		
+inflate.ppl	{D452FE9A-69CE-4DD9-9C99-EA6413B34767}	INSTALLDIR	0		Inflate.ppl	1	This component consists of files not belonging to other components.		
+inifile.ppl	{C77A46E5-830A-4A2D-8FBE-B30FC743BB5B}	INSTALLDIR	0		inifile.ppl	1	This component consists of files not belonging to other components.		
+lic.ppl	{A013A587-1439-47D0-ADA0-FBC58DBAF911}	INSTALLDIR	0		lic.ppl	1	This component consists of files not belonging to other components.		
+Microsoft.VC80.CRT.manifest	{4B7CAF32-BACC-4773-9CB2-0C7DD1076861}	INSTALLDIR	0		Microsoft.VC80.CRT.manifest	1	This component consists of files not belonging to other components.		
+msvcm80.dll	{57A02D7A-12A0-4938-9D96-686FB8D30A80}	INSTALLDIR	0		msvcm80.dll	1			
+msvcp80.dll	{42CA5874-DF56-4DB8-A5DA-717676BED76A}	INSTALLDIR	0		msvcp80.dll	1			
+msvcr80.dll	{D770CDBC-E4EC-4861-82C0-F1955B34789E}	INSTALLDIR	0	Version9X OR VersionNT >= 500	msvcr80.dll	1			
+msvcr80.dll_WinNT4	{F6F6D639-1138-4D4B-BE80-84AAA8B69CC0}	INSTALLDIR	0	VersionNT >= 400 AND VersionNT < 500	msvcr80.dll1	1			
+nfio.ppl	{62043729-C0A1-4D63-9632-BAC65118D7BD}	INSTALLDIR	0		nfio.ppl	1	This component consists of files not belonging to other components.		
+params.ppl	{52CF0E84-796E-40A6-8515-96CA3BB720B7}	INSTALLDIR	0		params.ppl	1	This component consists of files not belonging to other components.		
+prkernel.ppl	{CC3890AA-09D8-4ADC-A641-1C04668E2F35}	INSTALLDIR	0		PrKernel.ppl	1	This component consists of files not belonging to other components.		
+prloader.dll	{C89AD266-6640-4126-A568-B4E11E91EA47}	INSTALLDIR	0		prloader.dll	1	This component consists of a Windows dynamic link library.		
+procmon.ppl	{A8283446-71F3-438B-B95A-EFFB3A373234}	INSTALLDIR	0		procmon.ppl	1	This component consists of files not belonging to other components.		
+ProductRegistry	{806D3606-0ADF-491D-B3A5-0E9C85D0E448}	INSTALLDIR	0			1			
+prremote.dll	{2F57FBD8-E7C4-43DB-AFBE-F4A948FABDFD}	INSTALLDIR	0		prremote.dll	1	This component consists of a Windows dynamic link library.		
+pxstub.ppl	{2BDDB8DC-5670-40EB-8EB4-EB999AD0AA32}	INSTALLDIR	0		pxstub.ppl	1	This component consists of files not belonging to other components.		
+resip.ppl	{5722F721-ACDF-481B-AD27-83941ED0C285}	INSTALLDIR	0		resip.ppl	1	This component consists of files not belonging to other components.		
+Skin_Component_bg	{40C9D60E-CECE-4D76-9213-E9E3F7E1F783}	SKINBGDIR	0			1			
+Skin_Component_br	{E7DEE47A-A1EC-4250-87C1-A7F7154848AE}	SKINBRDIR	0			1			
+Skin_Component_cz	{9DA4C639-65CE-4526-9801-69FBE1C47600}	SKINCZDIR	0			1			
+Skin_Component_da	{2F558C1B-9369-45B1-B115-E5AE5CC2A271}	SKINDADIR	0			1			
+Skin_Component_de	{C6894A00-15E9-4CCB-A50E-85B937BFC060}	SKINDEDIR	0			1			
+Skin_Component_ee	{27ECBCBB-4882-4B51-BA62-6702C0E4F452}	SKINEEDIR	0			1			
+Skin_Component_en	{135BC7A2-B65B-4BD2-9556-01D5C5415F48}	SKINENDIR	0			1			
+Skin_Component_esp	{F0D03DA8-1143-44CE-A816-9707AB6006C7}	SKINESPDIR	0			1	This component consists of files not belonging to other components.		
+Skin_Component_fr	{D523B317-DFCA-4DEB-9D02-99B66283CB07}	SKINFRDIR	0			1			
+Skin_Component_hr	{1B71250F-E799-49F1-87D8-C0C4D77CC4A9}	SKINHRDIR	0			1			
+Skin_Component_hu	{A38A2ACD-00A4-49F1-B03F-CB0D305DB7D6}	SKINHUDIR	0			1			
+Skin_Component_images	{44200880-0C97-4487-983E-99FCB0D1FEF7}	SKINIMAGESDIR	0			1			
+Skin_Component_it	{A04EBF3B-0D2C-46A9-8F4A-3CD2E852D027}	SKINITDIR	0			1			
+Skin_Component_jp	{8532BBB6-E068-4D4A-ABEB-9F06AE2DDF9A}	SKINJADIR	0			1			
+Skin_Component_kor	{3FDFA533-1F49-41DF-A3D5-39EB3EEA0C07}	SKINKODIR	0			1	This component consists of files not belonging to other components.		
+Skin_Component_layout	{151329DA-604A-415E-8167-4F6763B2F466}	SKINLAYOUTDIR	0			1			
+Skin_Component_mk	{58CBD592-F174-478A-9C81-F683FABE2E00}	SKINMKDIR	0			1			
+Skin_Component_nl	{3BBAB170-D596-4DF5-92ED-CB9188D3BFCC}	SKINNLDIR	0			1			
+Skin_Component_nor	{D95E92EE-DD81-41CB-9FB4-025B89FF1C95}	SKINNORDIR	0			1			
+Skin_Component_pl	{D4B04F15-A23D-461E-92BA-BD6F3E7D3EC7}	SKINPLDIR	0			1	This component consists of files not belonging to other components.		
+Skin_Component_pt	{E70869E5-EE25-411C-92C5-734DD7E8DF77}	SKINPTDIR	0			1			
+Skin_Component_ru	{05721F7D-AB70-482D-A601-438967CC9ADB}	SKINRUDIR	0			1			
+Skin_Component_sch	{C20470E3-6FC6-4859-9859-41C24F411A53}	SKINSCHDIR	0			1			
+Skin_Component_skin	{D9DD2078-C23C-44AF-A030-5933E5FF4174}	SKINDIR	0			1			
+Skin_Component_sl	{5EA1CB38-8707-4273-A889-918C9A76F5FE}	SKINSLDIR	0			1			
+Skin_Component_sounds	{A675E588-F634-4F91-9D19-7DE92D6B605F}	INSTALLDIR	0			1			
+Skin_Component_sq	{32094299-25AD-4A5E-B4E3-EDA62DB64FDD}	SKINSQDIR	0			1			
+Skin_Component_sr	{F306F41E-D2D7-4033-A5F5-EA2671F3453C}	SKINSRDIR	0			1			
+Skin_Component_tasks	{F5E3B272-CE36-4795-B5AB-DFF8D5F578AD}	SKINSOUNDSDIR	0			1			
+Skin_Component_tch	{138B29BE-C272-4E13-A0E7-1DB32AFA8D43}	SKINTCHDIR	0			1			
+Skin_Component_th	{C05D546D-DBAA-4653-9343-A2966C31506F}	SKINTHDIR	0			1			
+Skin_Component_tray	{526A47BD-1DE7-4895-B492-36C46E50EEE2}	SKINTRAYDIR	0			1			
+Skin_Component_tur	{327A14EF-9BF4-48C9-9808-1542E2CCAE3A}	SKINTURDIR	0			1			
+tempfile.ppl	{8129512A-71A5-4ABC-BEED-60829E1B13DB}	INSTALLDIR	0		TempFile.ppl	1	This component consists of files not belonging to other components.		
+thpimpl.ppl	{51CF5A4B-6E17-4DC7-9E6E-51227A4C4BE3}	INSTALLDIR	0		thpimpl.ppl	1	This component consists of files not belonging to other components.		
+tm.ppl	{6CED377B-2309-41E5-B35F-3A4211D9AE52}	INSTALLDIR	0		tm.ppl	1	This component consists of files not belonging to other components.		
+winreg.ppl	{41368196-8ADC-455E-9E8D-163CF63417DB}	INSTALLDIR	0		WinReg.ppl	1	This component consists of files not belonging to other components.		
+wmihlpr.ppl	{30F31250-BF6A-451C-AA7B-C33954D7D9F4}	INSTALLDIR	0		wmihlpr.ppl	1	This component consists of files not belonging to other components.		

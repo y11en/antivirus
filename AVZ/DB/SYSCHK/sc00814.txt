@@ -1,0 +1,17 @@
+// ***** Τΰιλ Autorun.inf *****
+procedure CheckDisk(S: string);
+begin
+ if FileExists(S+':\autorun.inf') then
+  AddEvAlarmByName(S+':\autorun.inf', ' $AVZ0997','autorun.inf');
+end;
+
+var
+ Disk : char;
+ i    : integer;
+begin
+ for i := 0 to 10 do begin
+  Disk := chr(ord('C')+i);
+  if GetDriveType(Disk+':\') in [2,3,4] then
+   CheckDisk(Disk);
+ end;
+end.

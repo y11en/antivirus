@@ -1,0 +1,15 @@
+; TheBatAntispam.def : Declares the module parameters for the DLL.
+EXPORTS
+; Explicit exports can go here
+	TBP_Initialize		@1
+	TBP_Finalize		@2
+	TBP_GetName			@3
+	TBP_GetVersion		@4
+	TBP_GetStatus		@5
+	TBP_GetSpamScore	@6
+	TBP_FeedSpam		@7
+	TBP_NeedConfig		@8
+	TBP_Setup			@9
+	Register			@10
+	Unregister			@11
+	CleanRegFlag

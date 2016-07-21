@@ -1,0 +1,668 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "AVP Engine"=".\AVP Engine\AVP Engine.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/AVP Engine", UREAAAAA
+    .\avp engine
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Avp_io VxD
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Avp_io32
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name AVPFPI
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name BaseWork
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "AVP Engine GData"=".\AVP Engine GData\AVP Engine GData.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/AVP Engine Gdata", UXTCAAAA
+    .\avp engine gdata
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name AvpBase
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name BaseWork
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "AVPFPI"=.\AVPFPI\AVPFPI.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/AVPFPI", YDGBAAAA
+    .\avpfpi
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name BaseWork
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name FSDrvLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Avp Monitor"=.\AVPM\Avpm.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/AvpM", TBEAAAAA
+    .\avpm
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name FSAVP 400
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Avp95 VxD
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name FSAVP 4002
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name AVPFPI
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Avp32"=.\AVP_32\Avp32.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/AVP_32", YJEAAAAA
+    .\avp_32
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Dos AVP_STUB
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name AvpBase
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Avp95 VxD"=".\Avp95\Avp95 VxD.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/Avp95", QYDAAAAA
+    .\avp95
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Avp_io VxD
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name MemHlp
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name BaseWork
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "AvpBase"=.\AvpBase\AvpBase.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/AvpBase", KGDAAAAA
+    .\avpbase
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Avp_io32
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Avp_ioNT
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name BaseWork
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "AvpEdit"=.\AvpEdit\AvpEdit.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/AvpEdit", IAEAAAAA
+    .\avpedit
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name AvpBase
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Method
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "AvpMem"=.\BaseWork\AvpMem.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/BaseWork", RDDAAAAA
+    .\basework
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "AvpUnp"=.\AvpUnp\AvpUnp.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/AvpUnp", GYKCAAAA
+    .\avpunp
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Avp_io VxD"=".\AVP_IO\Avp_io VxD.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/Avp_IO", ZHDAAAAA
+    .\avp_io
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Avp_io32"=.\AVP_IO\Avp_io32.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/Avp_IO", ZHDAAAAA
+    .\avp_io
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Avp_io VxD
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Avp_ioNT"=.\AVP_IO\Avp_iont.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/Avp_IO", ZHDAAAAA
+    .\avp_io
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Avp_io VxD
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Avp_io32
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "BaseWork"=.\BaseWork\BaseWork.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/BaseWork", RDDAAAAA
+    .\basework
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Dos AVP_STUB"=".\AVP_32\Dos AVP_STUB.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/AVP_32", YJEAAAAA
+    .\avp_32
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "FSAVP 350"=".\Fsavp\FSAVP 350.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/FSAVP", MDEAAAAA
+    .\fsavp
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name BaseWork
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name MemHlp
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "FSAVP 351"=".\Fsavp\FSAVP 351.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/FSAVP", MDEAAAAA
+    .\fsavp
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name BaseWork
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "FSAVP 400"=".\FSAVP\FSAVP 400.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/FSAVP", MDEAAAAA
+    .\fsavp
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name BaseWork
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "FSAVP 4002"=".\Fsavp\FSAVP 4002.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/FSAVP", MDEAAAAA
+    .\fsavp
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name BaseWork
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "FSAVP 400G"=".\Fsavp\FSAVP 400G.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/FSAVP", MDEAAAAA
+    .\fsavp
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name BaseWork
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "FSDrvLib"=..\Windows\Hook\FSDrvLib\FSDrvLib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/FSDrvLib", JNFBAAAA
+    ..\windows\hook\fsdrvlib
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Install"=.\Install\Install.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/Install", YHPIAAAA
+    .\install
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Avp_io VxD
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Avp_io32
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Avp_ioNT
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Avp32
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name AvpBase
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name AvpEdit
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name BaseWork
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Method
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "MemHlp"=.\MemHlp\MemHlp.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/MemHlp", WLEAAAAA
+    .\memhlp
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Method"=.\METHOD\Method.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/Method", WEEAAAAA
+    .\method
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Release"=.\Release\Release.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/Release", THEAAAAA
+    .\release
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Avp Monitor
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Avp32
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name AvpEdit
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Method
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Scarabey
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name AVP Engine
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ResetKey"=.\ResetKey\ResetKey.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/ResetKey", RTNAAAAA
+    .\resetkey
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Scarabey"=.\Scarabey\Scarabey.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/Scarabey", BFEAAAAA
+    .\scarabey
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "_AVP_IO"=.\_AVP_IO\_AVP_IO.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/_AVP_IO", NRNSAAAA
+    .\_avp_io
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "_CommonFiles_NoUnicode"=..\CommonFiles\_CommonFiles_NoUnicode.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles", ZXAAAAAA
+    ..\commonfiles
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "_CommonFiles_NoUnicode_Static"=..\CommonFiles\_CommonFiles_NoUnicode_Static.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles", ZXAAAAAA
+    ..\commonfiles
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "avcwapi"=.\avcwapi\avcwapi.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/avcwapi", YPOBAAAA
+    .\avcwapi
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "fpirun"=.\fpirun\fpirun.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/fpirun", SXLBAAAA
+    .\fpirun
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Avp32", QDDAAAAA
+    .
+    end source code control
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

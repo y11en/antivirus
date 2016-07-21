@@ -1,0 +1,302 @@
+﻿;------------- ConfigureWizard -------------
+
+[Global]
+$BrowseForKey                   = "Key selection"
+SettingsOperationError          = "Cannot save settings: " + s_SystemError(p_Err)
+LicOperationError               = s_LicenseOperationsError(OperationCode)
+CancelWizardWarning             = "Setup Wizard is not complete. Do you really want to exit the Setup Wizard?"
+ErrEmptyActivationCode.caption  = "Empty activation code"
+ErrEmptyActivationCode          = "Type the activation code."
+ErrEmptyKeyPath.caption         = "Empty key path"
+ErrEmptyKeyPath                 = "Please type the valid key path."
+
+[ConfigureWizard]
+@ = ((PiwFlags & (#fPiwActivation|#fPiwSettings)) == #fPiwActivation ? "Activation Wizard: " : "Setup Wizard: ") + $ProductName
+
+[ConfigureWizardPages]
+InitBegin.Name              = "Welcome!"
+InitBegin.Descr             = "Welcome to " + $ProductName + " Setup Wizard."
+ActivationBegin.Name        = "Activation"
+ActivationBegin.Descr       = "In order to continue you must activate the product."
+ActivationForm.Name         = "Activate online"
+ActivationForm.Descr        = "Please enter the activation code."
+ActivationProgress.Name     = "Activate online"
+ActivationProgress.Descr    = "Setup Wizard is connecting to Kaspersky Lab's activation server. This may take some time, depending on your Internet connection speed."
+ActivationChooseKey.Name    = "Activate using the key file"
+ActivationChooseKey.Descr   = "Please specify a name of the key file."
+ActivationEnd.Name          = "Activation"
+ActivationEnd.Descr         = "Activation procedure completed"
+Update.Name                 = "Update"
+Update.Descr                = "To protect your computer from new threats that appear on a daily basis, you must update your protection routinely. Please select an update mode."
+Antivirus.Name              = "Regular scans"
+Antivirus.Descr             = ($IsSOS ? "Regular scans ensure that your computer is free of malicious programs." : "Regular scans ensure that your computer is free of malicious programs. It also improves the productivity of protection.") + " Please select a scan method."
+Password.Name               = "Password protection"
+Password.Descr              = $IsSOS ? "Password protection prevents unauthorized attempts to disable scan for viruses tasks or change settings." : "Password protection prevents unauthorized attempts to disable protection or change settings."
+Threats.Name                = "Threats"
+Threats.Descr               = "Select categories of malicious and potentially unwanted software to be detected by Kaspersky Internet Security."
+Feedback.Name               = "Feedback"
+Feedback.Descr              = "Kaspersky Security Network participants automatically send information about new detected threats to Kaspersky Lab."
+InitFinish.Name             = "Finishing the installation"
+InitFinish.Descr            = $IsInstallNeedReboot ? "You must restart your computer to complete installation." : "You can start " + $ProductName + " now."
+;ActivationServerForm.Name   = "Activation"
+;ActivationServerForm.Descr  = "Please, fill in this form. The information will be used solely for your identification and communication with the Technical Support service."
+
+[ConfigureWizard.ActivationChooseKey]
+Back.Name       = "&Back"
+Back.Descr      = "Previous page"
+Activate.Name   = "&Activate"
+Activate.Descr  = "Apply selected key"
+
+[ConfigureWizard.ActivationEnd]
+Finish.Name     = "&Finish"
+Finish.Descr    = "Close activation wizard"
+Next.Name       = "&Next"
+Next.Descr      = "Go to next configuration step"
+
+[ConfigureWizard.ActivationBegin_Info]
+ActivationUrlsInfo = "You must activate your copy of " + $ProductName + " to have access to security updates and user support."+ if($CorporateOnly, " You may obtain <a Activate onclick(url($ActivationLink))>commercial</a> or <a ActivateTrial onclick(url($ActivationTrialLink))>trial</a> license key on the activation server.")
+
+[ConfigureWizard.ActivationBegin]
+Later.Name                  = "Activate &later"
+Later.Descr                 = "Skip activation."
+ChooseKey.Name              = "Activate using key file"
+ChooseKey.Descr             = "Use this option if you have a license key file."
+ActivateTrial.Name          = "Activate &trial version"
+ActivateTrial.Descr         = "Trial activation"
+ActivateCommercial.Name     = "&Activate online"
+ActivateCommercial.Descr    = "Use this option if you have an activation code."
+
+[ConfigureWizard.ActivationChooseKey_Info]
+KeyPathLabel    = "Key file:"
+KeyInfo         = "License information"
+
+[ConfigureWizard.ActivationChooseKey_Info_KeyInfo]
+Owner.Name          = "Owner:"
+Number.Name         = "Number:"
+Type.Name           = "License type:"
+Type.Val            = s_LicKeyType(LicInfo.KeyInfo.KeyType) + " for " + LicInfo.KeyInfo.LicenseCount + " " + s_ComputersForm(f_numdeclension(LicInfo.KeyInfo.LicenseCount))
+ExpirationDate.Name = "Expiration date:"
+
+[s_LicenseOperationsError]
+1       = "System error: " + s_SystemError(ErrorCode)
+2       = "Cannot add \"" + KeyFile + "\" key file: " + s_LicenseError(ErrorCode) + "\n\nTo purchase a new license, please contact your distributor or <a Buy onclick(buy)>Kaspersky Lab Sales Department</a>"
+3       = "Cannot delete key \"" + KeyFile + "\": " + s_LicenseError(ErrorCode)
+4       = s_LicenseError(ErrorCode)
+default = "Error code: " + ErrorCode
+
+; Online activation error codes
+
+[s_LicenseError]
+0x09479001  = "This key is already in use"
+0x0947901d  = "Your key has expired. Database update feature is unavailable."
+0x89479002  = "Key is missing"
+0x89479003  = "Digital signature is either missing or corrupted"
+0x89479004  = "Data is corrupted"
+0x89479005  = "Key is corrupted"
+0x89479006  = "Key validity period has expired"
+0x89479007  = "No key specified"
+0x89479008  = "Key is invalid"
+0x89479009  = "Failed to save data"
+0x8947900a  = "Failed to read data"
+0x8947900b  = "I/O error"
+0x8947900c  = "Database is missing"
+0x8947900d  = "Both active and backup keys are already registered"
+0x8947900e  = "Licensing library is not initialized"
+0x8947900f  = "Database is corrupted or have been manually updated"
+0x89479010  = "Database is corrupted"
+0x89479011  = "Expired license key cannot be registered as a backup key"
+0x89479012  = "System error"
+0x89479013  = "Black list is corrupted"
+0x89479014  = "Digital signature does not match the Kaspersky Lab digital signature"
+0x89479015  = "Cannot register beta license key for commercial product release"
+0x89479016  = "Only beta keys can be registered for beta product release"
+0x89479017  = "This license key is not for this application"
+0x89479018  = "License key is blocked by Kaspersky Lab"
+0x89479019  = "This trial key has already been used on this computer. It is not possible to use the same trial key twice."
+0x8947901a  = "Key is corrupted"
+0x8947901b  = "Digital signature missing, corrupted, or does not match the Kaspersky Lab digital signature"
+0x8947901c  = "Cannot register expired non-commercial key"
+0x8947901e  = "License key creation or activation date is invalid. Check system date settings"
+0x8947901f  = "Cannot register trial key while another trial key is in use"
+0x89479020  = "Black list of license keys is either missing or corrupted"
+0x89479021  = "Update description is missing or corrupted"
+0x89479022  = "Internal data is invalid for this product"
+0x89479023  = "Cannot register non-valid key as a backup key"
+0x89479024  = "User form data completion error"
+0x89479025  = "Error sending activation server request.\nProbable reasons: connection problems or temporary problems on activation server.nTry to activate the code later (in 1-2 hours) or contact\nTechnical Support Service."
+0x89479026  = "Request contains incorrect license key data"
+0x89479027  = "Unable to obtain response status"
+0x89479028  = "Error saving temporary file"
+0x89479029  = "Activation code has been entered incorrectly or system date is incorrect. Check system date settings."
+0x8947902a  = "Key is not compatible with application or expired"
+0x8947902b  = "Failed to receive license key. Incorrect activation code was specified."
+0x8947902c  = "Activation server has returned error 400.\nPlease try to activate the code later (in 1-2 hours) or contact Technical Support Service."
+0x8947902d  = "Activation server has returned error 401.\nPlease try to activate the code later (in 1-2 hours) or contact Technical Support Service."
+0x8947902e  = "Activation server has returned error 403.\nPlease try to activate the code later (in 1-2 hours) or contact Technical Support Service."
+0x8947902f  = "Necessary resource unavailable on activation server.\nActivation server has returned error 404.\nPlease check internet connection settings,\ntry to activate the code later (in 1-2 hours) or contact\nTechnical Support Service"
+0x89479030  = "Activation server has returned error 405.\nPlease try to activate the code later (in 1-2 hours) or contact Technical Support Service."
+0x89479031  = "Activation server has returned error 406.\nPlease try to activate the code later (in 1-2 hours) or contact Technical Support Service."
+0x89479032  = "Proxy authentication required. Please check LAN settings"
+0x89479033  = "Waiting request timeout"
+0x89479034  = "Activation server has returned error 409.\nPlease try to activate the code later (in 1-2 hours) or contact Technical Support Service."
+0x89479035  = "Necessary resource unavailable on activation server.\nActivation server has returned error 410.\nPlease check internet connection settings,\ntry to activate the code later (in 1-2 hours) or contact\nTechnical Support Service."
+0x89479036  = "Activation server has returned error 411.\nPlease try to activate the code later (in 1-2 hours) or contact Technical Support Service."
+0x89479037  = "Activation server has returned error 412.\nPlease try to activate the code later (in 1-2 hours) or contact Technical Support Service."
+0x89479038  = "Activation server has returned error 413.\nPlease try to activate the code later (in 1-2 hours) or contact Technical Support Service."
+0x89479039  = "Activation server has returned error 414.\nPlease try to activate the code later (in 1-2 hours) or contact Technical Support Service."
+0x8947903a  = "Activation server has returned error 415.\nPlease try to activate the code later (in 1-2 hours) or contact Technical Support Service."
+0x8947903b  = "Unknown error on the client.\nPlease try to activate the code later (in 1-2 hours) or contact Technical Support Service."
+0x8947903c  = "Internal server error"
+0x8947903d  = "Functionality is not supported"
+0x8947903e  = "Invalid server response. Please check LAN settings"
+0x8947903f  = "Resource is temporary unavailable"
+0x89479040  = "Waiting request timeout. Please check LAN settings"
+0x89479041  = "The protocol is not supported by the server.\nPlease try to activate the code later (in 1-2 hours) or contact Technical Support Service."
+0x89479042  = "Unknown error on the server.\nPlease try to activate the code later (in 1-2 hours) or contact Technical Support Service."
+0x89479043  = "Unknown HTTP error.\nPlease try to activate the code later (in 1-2 hours) or contact Technical Support Service."
+0x89479044  = "Invalid resource identifier"
+0x89479045  = "Incorrect info in field \"key\""
+0x89479046  = "Incorrect URL"
+0x89479047  = "Incorrect destination folder"
+0x89479048  = "Memory allocation error"
+0x89479049  = "Error converting parameters to ANSI string (url, folder, agent)"
+0x8947904a  = "Error creating working thread"
+0x8947904b  = "Working thread is already running"
+0x8947904c  = "Working thread is not running"
+0x8947904d  = "License key is not found on activation server"
+0x8947904e  = "License key or activation code is blocked"
+0x8947904f  = "Activation server internal error"
+0x89479050  = "Not enough data in activation request"
+0x89479051  = "Incorrect user ID or password"
+0x89479052  = "Incorrect activation code"
+0x89479053  = "The selected key expires earlier than the active key"
+0x89479054  = "System date is incorrect. Check system date settings"
+0x89479055  = "Trial license key has expired"
+0x89479056  = "Activation period has expired"
+0x89479057  = "<b>The entered code has exceeded the limit of allowed activations!</b>\n\nTo get a new activation code please apply to technical support by submitting a request <a HelpDesk onclick(url(\"http://support.kaspersky.ru/helpdesk.html?LANG=enfeedback_category=1004&product=\"))>via web-form</a> and select "key probllem" as request type.\nIn description of your request indicate:\n-   information about date and place of purchase,\n-   activation code and registration number (order number/license number),\n-   information about he owner of the license.\n\nIf you have received the activation code illegally (maybe through the third party) we recommend to purchase the licensed version of the application in our <a OnlineShop onclick(url(\"http://www.kaspersky.com/store\"))>Online store</a> or at <a BuyOffline onclick(url(\"http://www.kaspersky.com/buyoffline"))>Kaspersky Lab partners</a>"
+0x89479058  = "Code activation procedure failed " + OnlineActSrvError + ":" + OnlineActSrvErrorSpecific + ".\nTry to repeat the activation or contact our Technical Support Service"
+0x89479059  = "Cannot install non-commercial license key if commercial license key is installed."
+0x8947905a  = "Internal server activation error. Try again or contact the Technical Support Service"
+0x8947905b  = "License key or activation code is blocked"
+0x8947905c  = "Activation code required"
+0x8947905d  = "Invalid client number or password"
+0x8947905e  = "Incorrect activation code"
+0x8947905f  = "Activation code required"
+0x89479060  = "Activation period expired"
+0x89479061  = "Number of activations for this code exceeded"
+0x89479062  = "Unable to connect to activation server"
+0x89479063  = "Key type is invalid for this application"
+0x89479064  = "<b>Activation server unavailable</b>.\n\nPlease check internet connection and try to activate application again."
+default     = s_SystemError(@)
+
+[ConfigureWizard.ActivationForm_Info]
+ActivationCodeDescr 		= "Please enter the <b><a Support onclick(url(\"support.kaspersky.com/pc_help#q8\"))>activation code</a></b> in format XXXXX-XXXXX-XXXXX-XXXXX, which you received when you purchased " + $ProductName + ":"
+ActivationCodeLabel 		= "Activation code:"
+HasContactInfo			= "I already have a Customer ID. "
+HasContactInfoHelp  		= "What's this?"
+HasContactInfoRecoverHelp	= "How to recover?"
+
+[ConfigureWizard.ActivationForm_ContactInfo]
+Text4				        = "Please specify your Customer ID and Password for Personal Cabinet on <a Support onclick(url(\"http://support.kaspersky.com\"))Technical Support Service website</a>. Please do not specify your online shop user account information."
+UserNameLabel       		= "Initials:"
+UserEmailLabel      		= "Email:"
+CountryLabel        		= "Country:"
+CityLabel           		= "City:"
+CustomerIdLabel     		= "Customer ID:"
+CustomerPwdLabel    		= "Password:"
+
+[ConfigureWizard.ActivationForm]
+Back.Name       = "&Back"
+Back.Descr      = "To previous page"
+Activate.Name   = "&Activate"
+Activate.Descr  = "Activate product by activation code"
+
+[ConfigureWizard.ActivationServerForm_Info]
+Hint = "Fields marked with * are mandatory."
+
+[ConfigureWizard.ActivationServerForm]
+Activate.Name   = "&Continue"
+Activate.Descr  = "Send activation information and continue activation"
+
+[ConfigureWizard.ActivationProgress_Info]
+Info                    = "Setup Wizard is connecting to Kaspersky Lab activation server. This may take some time, depending on your Internet connection speed."
+ConnectingInfo.Name     = "Connecting to Activation Server..."
+ConnectingInfo.Val      = if(bConnected, "OK")
+SendingCodeInfo.Name    = "Sending activation code..."
+SendingCodeInfo.Val     = if(bSentCode, "OK")
+RetrievingKeyInfo.Name  = "Waiting for response from server..."
+RetrievingKeyInfo.Val   = if(bRetrievedKey, "OK")
+
+[ConfigureWizard.ActivationEnd_Info]
+Text2   = bActivationNeeded ? "License key successfully installed." : "License key already installed."
+KeyInfo = "License key information"
+
+[ConfigureWizard.InitBegin]
+Next.Name   = "&Next"
+Next.Descr  = "Start configuration process"
+
+[ConfigureWizard.InitBegin_Info]
+Descr = "Setup Wizard will help you to collect information about your computer and to configure protection properly.\n\nPress Next to continue."
+
+[ConfigureWizard.Update]
+Back.Name   = "&Back"
+Back.Descr  = "To the previous page"
+Next.Name   = "&Next"
+Next.Descr  = "To the next page"
+
+[ConfigureWizard.Update_Updater_Actions]
+UpdateNow       = "&Update now"
+UpdaterSettings = "&Settings..."
+
+[ConfigureWizard.Update_Updater_Schedule]
+Auto    = "Automatic schedule"
+Fixed   = "Fixed schedule"
+Manual  = "Manual schedule"
+
+[ConfigureWizard.Antivirus]
+Back.Name   = "&Back"
+Back.Descr  = "To previous page"
+Next.Name   = "&Next"
+Next.Descr  = "Go to next configuration step"
+
+[ConfigureWizard.InitFinish_Info]
+FinishDescr     = $IsInstallNeedReboot ? "You must restart your computer to complete installation." : "Installation of " + $ProductName + " has completed."
+Reboot          = "&Restart computer"
+StartProduct    = "Start product"
+
+[ConfigureWizard.Password_Info]
+Enable = "Enable &password protection"
+
+[ConfigureWizard.Password_Info_Params]
+PswdText        = "Password:"
+ConfPswdText    = "Confirm password:"
+
+[ConfigureWizard.Password]
+Back.Name   = "&Back"
+Back.Descr  = "To previous page"
+Next.Name   = "&Next"
+Next.Descr  = "Go to next configuration step"
+
+[ConfigureWizard.InitFinish]
+Back.Name       = "&Back"
+Back.Descr      = "To previous page"
+Finish.Name     = "&Finish"
+Finish.Descr    = "Finish configuration"
+
+[ConfigureWizard.Threats]
+Back.Name   = "&Back"
+Back.Descr  = "To previous page"
+Next.Name   = "&Next"
+Next.Descr  = "Go to next configuration step"
+
+[ConfigureWizard.Feedback]
+Back.Name   = "&Back"
+Back.Descr  = "To previous page"
+Next.Name   = "&Next"
+Next.Descr  = "Go to next configuration step"
+
+[ConfigureWizard.Feedback_Info]
+Desc    = "Kaspersky Security Network - is a system, that automatically sends information about virus infections and other problems of our users to Kaspersky Lab. This allows to react faster to appearing threats and to constantly improve our products and services.\n\nKaspersky Lab guarantees that Kaspersky Security Network does not collect and resend any personal information."
+Ksn     = "I agree to participate in Kaspersky Security Network"
+
+

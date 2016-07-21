@@ -1,0 +1,53 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "KLDriverTest9x"=.\KLDriverTest9x\KLDriverTest9x.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/TestProjects/KLDriverTest/KLDriverTest9x", YGAFAAAA
+    .\kldrivertest9x
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "KLDriverTestNT"=.\KLDriverTestNT\KLDriverTestNT.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/TestProjects/KLDriverTest/KLDriverTestNT", ZGAFAAAA
+    .\kldrivertestnt
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/TestProjects/KLDriverTest", WGAFAAAA
+    .
+    end source code control
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

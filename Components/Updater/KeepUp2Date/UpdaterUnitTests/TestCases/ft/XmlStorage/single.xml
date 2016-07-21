@@ -1,0 +1,117 @@
+<UpdateFiles 
+	UpdateDate="03042006 1751">
+	<UpdateSettings 
+		Name="Updater/update_date" 
+		Type="date" 
+		Value="03042006 1751" />
+
+	<FileDescription 
+		ComponentID="Application"
+		UpdateType="base" 
+		Filename="updcfg1.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629" />
+	<FileDescription 
+		ComponentID="Application"
+		UpdateType="base" 
+		Filename="updcfg2.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<FromAppVersion Version="11.0">
+			<FromAppVersion Version="12.0">
+	</FileDescription>
+	<FileDescription 
+		ComponentID="Application"
+		UpdateType="base" 
+		Filename="updcfg3.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<FromAppVersion Version="1.0">
+	</FileDescription>
+	<FileDescription 
+		ComponentID="Application"
+		UpdateType="base" 
+		Filename="updcfg4.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<FromAppVersion Version="5.5">
+	</FileDescription>
+	<FileDescription 
+		ComponentID="Application1"
+		UpdateType="base" 
+		Filename="updcfg5.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<FromAppVersion Version="10.0">
+	</FileDescription>
+	<FileDescription 
+		ComponentID="Application2"
+		UpdateType="base" 
+		Filename="updcfg6.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629" />
+	<FileDescription 
+		ComponentID="Application3"
+		UpdateType="base" 
+		Filename="updcfg7.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629" />
+
+
+
+	<FileDescription 
+		UpdateType="base" 
+		Filename="updcfg8.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629" />
+	<FileDescription 
+		ComponentID="Component"
+		UpdateType="base" 
+		Filename="updcfg8.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629" />
+	<FileDescription 
+		ComponentID="Component"
+		UpdateType="base" 
+		Filename="updcfg10.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<FromCompVersion Version="1.0">
+			<FromCompVersion Version="2.0">
+	</FileDescription>
+	<FileDescription 
+		ComponentID="Component"
+		UpdateType="base" 
+		Filename="updcfg11.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<FromCompVersion Version="5.0">
+	</FileDescription>
+	<FileDescription 
+		ComponentID="Component"
+		UpdateType="base" 
+		Filename="updcfg12.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<FromCompVersion Version="6.0">
+	</FileDescription>
+	<FileDescription 
+		UpdateType="base" 
+		Filename="updcfg13.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629" />
+	
+</UpdateFiles>

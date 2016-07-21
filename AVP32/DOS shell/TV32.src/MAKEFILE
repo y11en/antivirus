@@ -1,0 +1,430 @@
+# make -D__WATCOMC__ -D__MSDOS__
+
+IDA     =c:\lang\avp\avp32.dos\shell\
+__WATCOMC__=1
+__MSDOS__=1
+
+_CFLAGS = -D__NOROW__ -D__RUS__
+                                # see tscreen.cpp for the use of __NOROW__
+                                # __RUS__ changes some characters to russian
+_AFLAGS = /o
+
+#--------------------------- Compiler Directories --------------------------
+# Borland C++ for OS/2 v1.5
+# If environment variable is not set, set default value:
+!ifndef BC2
+BC2=d:\bcos2\\
+!endif
+
+######################### set debug switches
+!ifdef DEBUG
+!ifdef __WATCOMC__                      # Watcom
+CCDEBUG=-d1
+!else                                   # assume Borland
+CCDEBUG=-v
+!endif
+!endif
+
+# include and help directories are common for all platforms and compilers:
+I=$(IDA)include\\
+H=$(IDA)help\\
+HS=.hls                 #       help source
+HH=.hhp                 #       help headers
+
+#############################################################################
+#RS      =$(IDA)bin\\                                    # host utilities directory
+
+#############################################################################
+__IDA_MSDOS__=1
+__DOS32__=1
+IMPLIB  =implib                                         # implib executable name
+ASM     =wasm                                           # assembler
+CC      =wpp386                                         # C++ compiler
+#CFLAGS  =-bt=dos -d1 -s -w2 -ew -zld -j -5r -mf -zq -zm -onax -fo=wat.d32\ -ufar -Dfar= -unear -Dnear= -uhuge -Dhuge= -DMAXSTR=256 -D__MSDOS__ -D__DOS32__ -DNO_TV_STREAMS -i\idasrc\include -i\idasrc\tvision\include $(_CFLAGS) $(CCDEBUG)    # default
+# d1             line number debugging information
+# s              remove stack overflow checks
+# w<number>      set warning level numbe
+# ew             alternate error message formattin
+# zld            remove file dependency informatio
+# j              change char default from unsigned to signed
+# 3s             386 stack calling conventions
+# m{s,m,c,l,f}   memory model (Small,Medium,Compact,Large,Flat)
+# zq             operate quietly
+# zm             place each function in separate segment
+# o{a,c,d,e,f[+],i,l[+],m,n,o,p,r,s,t,u,x,z} control optimization
+#   a            relax aliasing constraints
+#   c            disable <call followed by return> to <jump> optimization
+#   d            disable all optimizations
+#   e[=<num>]    expand user functions inline. <num> controls max size
+#   f            generate traceable stack frames as needed
+#   f+           always generate traceable stack frames
+#   i            expand intrinsic functions inline
+#   l            enable loop optimizations
+#   l+           enable loop unrolling optimizations
+#   m            generate inline 80x87 code for math functions
+#   n            allow numerically unstable optimizations
+#   o            continue compilation if low on memory
+#   p            generate consistent floating-point results
+#   r            reorder instructions for best pipeline usage
+#   s            favor code size over execution time in optimizations
+#   t            favor execution time over code size in optimizations
+#   u            all functions must have unique addresses
+#   x            equivalent to -omilr -s
+#   z            NULL points to valid memory in the target environment
+# fo=<file_name> set object or preprocessor output file name
+# u<name>        undefine macro name
+# i=<directory>  another include directory
+#CFLAGS  =-bt=dos -d1 -s -w2 -ew -zld -j -3s -mf -zq -zm -onax -fo=wat.d32\ -ufar -Dfar= -unear -Dnear= -uhuge -Dhuge= -DMAXSTR=256 -D__MSDOS__ -D__DOS32__ -DNO_TV_STREAMS $(_CFLAGS) $(CCDEBUG)
+CFLAGS   =-bt=dos     -s -w4 -ew -zld -j -3s -mf -zq -onax -fp3 -fpi87 -fo=wat.d32\ -ufar -Dfar= -unear -Dnear= -uhuge -Dhuge= -DMAXSTR=256 -D__MSDOS__ -D__DOS32__ -DNO_TV_STREAMS $(_CFLAGS) $(CCDEBUG)
+cAFLAGS  =/d__WATCOM__ /3r /mf /e $(_AFLAGS)             # default assembler flags
+OUTSW   =/fe=                                           # outfile name switch for one-line linker
+OUTDLL  =/bd                                            # output is DLL switch
+LINKER  =$(RS)ld $(_LDFLAGS)                            # indirect file linker
+CCL     =$(RS)ld _lwcl386 -l=dos4g /\"option stack=8192\" $(_CFLAGS) $(CCDEBUG) $(_LDFLAGS) # one-line linker
+LINKSYS =dos4g                                          # target link system
+C_STARTUP=                                              # indirect linker: C startup file
+C_LIB   =                                               # indirect linker: default C library
+L       =$(IDA)tvlibwat.d32\                            # libraries directory
+TL      =$(IDA)tvlibwat.d32\                            # TVision libraries directory
+R       =$(IDA)bin\                                     # results directory
+F       =wat.d32\                                       # object files directory
+B       =x.exe                                          # exe file extension
+BS      =.exe                                           # host utility extension
+MAP     =.mp3                                           # map file extension
+T       =.ad3                                           # library flag file extension
+IDP     =.d32                                           # IDP extension
+O       =.obj                                           # object file extension
+A       =.lib                                           # library file extension
+API     =.apw                                           # API definition file extension
+DEF     =.dfw                                           # DEF file extension
+IDPSTUB =$(L)inirt386$(O)                               # STUB file for IDPs
+IDPSLIB =clib3r                                         # system libraries for IDPs
+AR      =$(RS)ar$(BS) _e$(T) "_lwlib -b -s -t" ruv      # librarian
+#############################################################################
+
+#!if 0           # this is for makedep
+#F=
+#CFLAGS=+$(IDA)dosbor.cfg
+#!endif
+
+HC=$(RS)hc$(BS)                                 # Help Compiler
+RM=$(R)rm                                       # File Remover
+
+IDALIB=$(L)ida$(A)
+
+HLIB=$(H)_ida.hlp
+
+########################################################################
+!ifdef __WATCOMC__
+.cpp$(O):
+        $(CC) $(CFLAGS) $<
+.c$(O):
+        $(CC) $(CFLAGS) $<
+.asm$(O):
+        $(ASM) $(AFLAGS) /fo=$(F)$* $*
+!else                                   # assume Borland
+
+!ifndef CONLY
+CONLY=-c
+!endif
+
+.cpp$(O):
+        $(CC) $(CFLAGS) $(CONLY) {$< }
+.c$(O):
+        $(CC) $(CFLAGS) $(CONLY) {$< }
+.asm$(O):
+        $(ASM) $(AFLAGS) $*,$(F)$*
+!endif
+
+#.hls.hhp:
+#        $(HC) -t $(HLIB) -i$@ $?
+#$(API)$(DEF):
+#        $(RS)api2df$(BS) $? $@
+#$(DEF)$(A):
+#        $(IMPLIB) $@ temp.def >nul
+########################################################################
+
+#!if $d(__MSDOS__) && !$d(__WATCOMC__)
+#ASMOBJ0= $(F)EDITS$(O)    $(F)FRAMELIN$(O) $(F)SWAPST$(O)   $(F)TGRMV$(O)    \
+#ASMOBJ1= $(F)TTPRVLNS$(O) $(F)TVCURSOR$(O) $(F)TVEXPOSD$(O)                  \
+#ASMOBJ2= $(F)TVWRITE$(O)  $(F)sysint$(O)
+#!else
+ASMOBJ0= $(F)EDITS2$(O)   $(F)FRMLINE2$(O) $(F)SWAPST2$(O)  $(F)TGRMV2$(O)   \
+ASMOBJ1= $(F)TTPRVLN2$(O) $(F)TVCURSR2$(O) $(F)TVEXPSD2$(O) $(F)TVWRITE2$(O) \
+ASMOBJ2= $(F)OS2HANDL$(O)
+#!endif
+
+ASMOBJ= $(ASMOBJ0) $(ASMOBJ1) $(ASMOBJ2)
+
+OBJSR0 =$(ASMOBJ)        $(F)drivers$(O)  $(F)drivers2$(O) $(F)editstat$(O)
+OBJSR1 =$(F)grp$(O)      $(F)mapcolor$(O) $(F)misc$(O)     $(F)msgbox$(O)
+OBJSR2 =$(F)new$(O)      $(F)newstr$(O)   $(F)names$(O)    $(F)tscreen$(O)
+OBJSR3 =$(F)sbkgrnd$(O)  $(F)sbutton$(O)  $(F)schdrdlg$(O) $(F)scheckbo$(O)
+OBJSR4 =$(F)sclrsel$(O)  $(F)scluster$(O) $(F)sdesktop$(O) $(F)sdialog$(O)
+OBJSR5 =$(F)sdircoll$(O) $(F)sdirlist$(O) $(F)seditors$(O) $(F)sfilcoll$(O)
+OBJSR6 =$(F)sfildlg$(O)  $(F)sfilelst$(O) $(F)sfinfpne$(O) $(F)sfinputl$(O)
+OBJSR7 =$(F)sframe$(O)   $(F)sgroup$(O)   $(F)shistory$(O) $(F)sinputli$(O)
+OBJSR8 =$(F)slabel$(O)   $(F)slistbox$(O) $(F)slstview$(O) $(F)smenubar$(O)
+OBJSR9 =$(F)smenubox$(O) $(F)smnuview$(O) $(F)sparamte$(O) $(F)sradiobu$(O)
+OBJSR10=$(F)srescoll$(O) $(F)sscrlbar$(O) $(F)sscrolle$(O) $(F)sstatict$(O)
+OBJSR11=$(F)sstatusl$(O) $(F)sstrcoll$(O) $(F)sstrlst$(O)  $(F)strmstat$(O)
+OBJSR12=$(F)sview$(O)    $(F)swindow$(O)  $(F)syserr$(O)   $(F)tcheckbo$(O)
+OBJSR13=$(F)tcmdset$(O)  $(F)tevent$(O)   $(F)tgroup$(O)   $(F)tindictr$(O)
+OBJSR14=$(F)tmouse$(O)   $(F)tobject$(O)  $(F)tparamte$(O) $(F)tpoint$(O)
+OBJSR15=$(F)tview$(O)    $(F)tvtext1$(O)  $(F)tvtext2$(O)
+
+OBJSR= $(OBJSR0) $(OBJSR1) $(OBJSR2) $(OBJSR3) $(OBJSR4) $(OBJSR5) $(OBJSR6) $(OBJSR7) $(OBJSR8) $(OBJSR9) $(OBJSR10) $(OBJSR11) $(OBJSR12) $(OBJSR13) $(OBJSR14) $(OBJSR15)
+
+OBJSO0= $(F)colorsel$(O) $(F)help$(O)     $(F)helpbase$(O) $(F)histlist$(O)
+OBJSO1= $(F)menu$(O)     $(F)tlabel$(O)   $(F)tlistbox$(O) $(F)tlstview$(O)
+OBJSO2= $(F)tmemo$(O)    $(F)tmenubar$(O) $(F)tmenubox$(O) $(F)tmnuview$(O)
+OBJSO3= $(F)tradiobu$(O) $(F)trescoll$(O) $(F)tresfile$(O) $(F)tscrlbar$(O)
+OBJSO4= $(F)tscrolle$(O) $(F)tsortcol$(O) $(F)tstatict$(O) $(F)tstatusl$(O)
+OBJSO5= $(F)tstrcoll$(O) $(F)tstrlist$(O) $(F)tbkgrnd$(O)  $(F)tbutton$(O)
+OBJSO6= $(F)tchdrdlg$(O) $(F)tcluster$(O) $(F)tcollect$(O) $(F)tdesktop$(O)
+OBJSO7= $(F)tdialog$(O)  $(F)tdircoll$(O) $(F)tdirlist$(O) $(F)teditor1$(O)
+OBJSO8= $(F)teditor2$(O) $(F)teditwnd$(O) $(F)tfildlg$(O)  $(F)tfilecol$(O)
+OBJSO9= $(F)tfiledtr$(O) $(F)tfillist$(O) $(F)tframe$(O)   $(F)twindow$(O)
+OBJSO10=$(F)thistory$(O) $(F)thistwin$(O) $(F)thstview$(O) $(F)stddlg$(O)
+OBJSO11=$(F)textview$(O) $(F)tinputli$(O) $(F)tapplica$(O) $(F)tobjstrm$(O)
+OBJSO12=$(F)tprogram$(O) $(F)palette$(O)
+
+OBJSO= $(OBJSO0) $(OBJSO1) $(OBJSO2) $(OBJSO3) $(OBJSO4) $(OBJSO5) $(OBJSO6) $(OBJSO7) $(OBJSO8) $(OBJSO9) $(OBJSO10) $(OBJSO11) $(OBJSO12)
+
+OBJS = $(OBJSR) $(OBJSO)
+LIBFLAGS=tv$(T) tvasm$(T)
+
+#all: hello.exe
+all: $(LIBFLAGS)
+
+hello.exe : $(F)hello$(O) $(TL)tv$(A) $(TL)tvasm$(A)
+        wcl386 -l=dos4g /"option stack=8192" $(_CFLAGS) $(_LDFLAGS) /fm=hello.map $(OUTSW)$@ $(F)hello$(O) $(TL)tv$(A) $(TL)tvasm$(A)
+
+!ifdef __DLL__
+hello:  makefile
+!else   # __DLL__
+hello:  .\hello.exe
+.\hello.exe: $(LIBFLAGS) $(F)hello$(O)
+!ifdef __WATCOMC__
+#(__DOS32__)
+        wcl386 -l=dos4g /"option stack=8192" $(_CFLAGS) $(_LDFLAGS) /fm=hello.map $(OUTSW)$@ $(F)hello$(O) $(TL)tv$(A) $(TL)tvasm$(A)
+!else  # __WATCOMC__
+        $(CC) /lm $(CFLAGS) $(_LDFLAGS) $(OUTSW)$@ $(F)hello$(O) @&&!
+$(OVROFF) $(OBJSR)
+$(OVRON) $(OBJSO)
+!
+!endif # __WATCOMC__
+!endif # __DLL__
+
+$(F)hello$(O):  hello.cpp
+$(F)t$(O):      t.cpp
+
+tv$(T): $(OBJSO)
+#        $(AR) $(TL)tv$(A) @&&!
+        wlib -b -s -t tv.ad3 +-$(F)colorsel.obj
+        wlib -b -s -t tv.ad3 +-$(F)colorsel$(O) +-$(F)help$(O)     +-$(F)helpbase$(O) +-$(F)histlist$(O)
+        wlib -b -s -t tv.ad3 +-$(F)menu$(O)     +-$(F)tlabel$(O)   +-$(F)tlistbox$(O) +-$(F)tlstview$(O)
+        wlib -b -s -t tv.ad3 +-$(F)tmemo$(O)    +-$(F)tmenubar$(O) +-$(F)tmenubox$(O) +-$(F)tmnuview$(O)
+        wlib -b -s -t tv.ad3 +-$(F)tradiobu$(O) +-$(F)trescoll$(O) +-$(F)tresfile$(O) +-$(F)tscrlbar$(O)
+        wlib -b -s -t tv.ad3 +-$(F)tscrolle$(O) +-$(F)tsortcol$(O) +-$(F)tstatict$(O) +-$(F)tstatusl$(O)
+        wlib -b -s -t tv.ad3 +-$(F)tstrcoll$(O) +-$(F)tstrlist$(O) +-$(F)tbkgrnd$(O)  +-$(F)tbutton$(O)
+        wlib -b -s -t tv.ad3 +-$(F)tchdrdlg$(O) +-$(F)tcluster$(O) +-$(F)tcollect$(O) +-$(F)tdesktop$(O)
+        wlib -b -s -t tv.ad3 +-$(F)tdialog$(O)  +-$(F)tdircoll$(O) +-$(F)tdirlist$(O) +-$(F)teditor1$(O)
+        wlib -b -s -t tv.ad3 +-$(F)teditor2$(O) +-$(F)teditwnd$(O) +-$(F)tfildlg$(O)  +-$(F)tfilecol$(O)
+        wlib -b -s -t tv.ad3 +-$(F)tfiledtr$(O) +-$(F)tfillist$(O) +-$(F)tframe$(O)   +-$(F)twindow$(O)
+        wlib -b -s -t tv.ad3 +-$(F)thistory$(O) +-$(F)thistwin$(O) +-$(F)thstview$(O) +-$(F)stddlg$(O)
+        wlib -b -s -t tv.ad3 +-$(F)textview$(O) +-$(F)tinputli$(O) +-$(F)tapplica$(O) +-$(F)tobjstrm$(O)
+        wlib -b -s -t tv.ad3 +-$(F)tprogram$(O) +-$(F)palette$(O)
+$(OBJSO)
+!
+
+tvasm$(T):  $(OBJSR)
+#        $(AR) $(TL)tvasm$(A) @&&!
+#        wlib -b -s -t tvasm.ad3 +-$(F)EDITS$(O)    +-$(F)FRAMELIN$(O) +-$(F)SWAPST$(O)   +-$(F)TGRMV$(O)
+#        wlib -b -s -t tvasm.ad3 +-$(F)TTPRVLNS$(O) +-$(F)TVCURSOR$(O) +-$(F)TVEXPOSD$(O)
+#        wlib -b -s -t tvasm.ad3 +-$(F)TVWRITE$(O)  +-$(F)sysint$(O)
+
+        wlib -b -s -t tvasm.ad3 +-$(F)EDITS2$(O)   +-$(F)FRMLINE2$(O) +-$(F)SWAPST2$(O)  +-$(F)TGRMV2$(O)
+        wlib -b -s -t tvasm.ad3 +-$(F)TTPRVLN2$(O) +-$(F)TVCURSR2$(O) +-$(F)TVEXPSD2$(O)
+        wlib -b -s -t tvasm.ad3 +-$(F)TVWRITE2$(O) +-$(F)OS2HANDL$(O)
+        wlib -b -s -t tvasm.ad3 +-$(F)drivers$(O)  +-$(F)drivers2$(O) +-$(F)editstat$(O)
+        wlib -b -s -t tvasm.ad3 +-$(F)grp$(O)      +-$(F)mapcolor$(O) +-$(F)misc$(O)     +-$(F)msgbox$(O)
+        wlib -b -s -t tvasm.ad3 +-$(F)new$(O)      +-$(F)newstr$(O)   +-$(F)names$(O)    +-$(F)tscreen$(O)
+        wlib -b -s -t tvasm.ad3 +-$(F)sbkgrnd$(O)  +-$(F)sbutton$(O)  +-$(F)schdrdlg$(O) +-$(F)scheckbo$(O)
+        wlib -b -s -t tvasm.ad3 +-$(F)sclrsel$(O)  +-$(F)scluster$(O) +-$(F)sdesktop$(O) +-$(F)sdialog$(O)
+        wlib -b -s -t tvasm.ad3 +-$(F)sdircoll$(O) +-$(F)sdirlist$(O) +-$(F)seditors$(O) +-$(F)sfilcoll$(O)
+        wlib -b -s -t tvasm.ad3 +-$(F)sfildlg$(O)  +-$(F)sfilelst$(O) +-$(F)sfinfpne$(O) +-$(F)sfinputl$(O)
+        wlib -b -s -t tvasm.ad3 +-$(F)sframe$(O)   +-$(F)sgroup$(O)   +-$(F)shistory$(O) +-$(F)sinputli$(O)
+        wlib -b -s -t tvasm.ad3 +-$(F)slabel$(O)   +-$(F)slistbox$(O) +-$(F)slstview$(O) +-$(F)smenubar$(O)
+        wlib -b -s -t tvasm.ad3 +-$(F)smenubox$(O) +-$(F)smnuview$(O) +-$(F)sparamte$(O) +-$(F)sradiobu$(O)
+        wlib -b -s -t tvasm.ad3 +-$(F)srescoll$(O) +-$(F)sscrlbar$(O) +-$(F)sscrolle$(O) +-$(F)sstatict$(O)
+        wlib -b -s -t tvasm.ad3 +-$(F)sstatusl$(O) +-$(F)sstrcoll$(O) +-$(F)sstrlst$(O)  +-$(F)strmstat$(O)
+        wlib -b -s -t tvasm.ad3 +-$(F)sview$(O)    +-$(F)swindow$(O)  +-$(F)syserr$(O)   +-$(F)tcheckbo$(O)
+        wlib -b -s -t tvasm.ad3 +-$(F)tcmdset$(O)  +-$(F)tevent$(O)   +-$(F)tgroup$(O)   +-$(F)tindictr$(O)
+        wlib -b -s -t tvasm.ad3 +-$(F)tmouse$(O)   +-$(F)tobject$(O)  +-$(F)tparamte$(O) +-$(F)tpoint$(O)
+        wlib -b -s -t tvasm.ad3 +-$(F)tview$(O)    +-$(F)tvtext1$(O)  +-$(F)tvtext2$(O)
+$(OBJSR)
+!
+
+#---------------------------------------------------
+!ifndef __WATCOMC__
+!ifdef __OS2__
+*.asm : tvwrit32.inc
+
+tvwrit32.inc: geninc$(B)
+     geninc$(B) > tvwrit32.inc
+
+geninc$(B): $(F)geninc$(O)
+     $(CCL) $(OUTSW)$@ $?
+
+!else
+*.asm : tvwrite.inc
+
+tvwrite.inc: geninc$(B)
+     geninc$(B) > tvwrite.inc
+
+geninc$(B): $(F)geninc$(O)
+     $(CCL) $(OUTSW)$@ $?
+!endif
+!endif
+
+#-----------------------------------------------------------------------
+$(F)tvtext1$(O): tvtext1.cpp
+#!if $d(__MSDOS__) && !$d(__WATCOMC__)
+#        $(CC) -c $(CFLAGS) -B- tvtext1.cpp
+#!endif
+
+#$(F)EDITS$(O):          EDITS.asm
+#$(F)FRAMELIN$(O):       FRAMELIN.asm
+#$(F)SWAPST$(O):         SWAPST.asm
+#$(F)TGRMV$(O):          TGRMV.asm
+#$(F)TTPRVLNS$(O):       TTPRVLNS.asm
+#$(F)TTPRVLNW$(O):       TTPRVLNW.asm
+#$(F)TVCURSOR$(O):       TVCURSOR.asm
+#$(F)TVEXPOSD$(O):       TVEXPOSD.asm
+#$(F)TVWRITE$(O):        TVWRITE.asm
+#$(F)sysint$(O):         sysint.asm
+
+$(F)EDITS2$(O):         EDITS2.cpp
+$(F)FRMLINE2$(O):       FRMLINE2.cpp
+$(F)SWAPST2$(O):        SWAPST2.cpp
+$(F)TGRMV2$(O):         TGRMV2.cpp
+$(F)TTPRVLN2$(O):       TTPRVLN2.cpp    #
+$(F)TVCURSR2$(O):       TVCURSR2.cpp    #
+$(F)TVEXPSD2$(O):       TVEXPSD2.cpp    #
+$(F)TVWRITE2$(O):       TVWRITE2.cpp    #
+$(F)OS2HANDL$(O):       OS2HANDL.cpp    #
+
+$(F)drivers$(O):        drivers.cpp
+$(F)drivers2$(O):       drivers2.cpp
+$(F)editstat$(O):       editstat.cpp
+$(F)grp$(O):            grp.cpp
+$(F)mapcolor$(O):       mapcolor.cpp
+$(F)misc$(O):           misc.cpp
+$(F)msgbox$(O):         msgbox.cpp
+$(F)new$(O):            new.cpp
+$(F)newstr$(O):         newstr.cpp
+$(F)names$(O):          names.cpp
+$(F)sbkgrnd$(O):        sbkgrnd.cpp
+$(F)sbutton$(O):        sbutton.cpp
+$(F)schdrdlg$(O):       schdrdlg.cpp
+$(F)scheckbo$(O):       scheckbo.cpp
+$(F)sclrsel$(O):        sclrsel.cpp
+$(F)scluster$(O):       scluster.cpp
+$(F)sdesktop$(O):       sdesktop.cpp
+$(F)sdialog$(O):        sdialog.cpp
+$(F)sdircoll$(O):       sdircoll.cpp
+$(F)sdirlist$(O):       sdirlist.cpp
+$(F)seditors$(O):       seditors.cpp
+$(F)sfilcoll$(O):       sfilcoll.cpp
+$(F)sfildlg$(O):        sfildlg.cpp
+$(F)sfilelst$(O):       sfilelst.cpp
+$(F)sfinfpne$(O):       sfinfpne.cpp
+$(F)sfinputl$(O):       sfinputl.cpp
+$(F)sframe$(O):         sframe.cpp
+$(F)sgroup$(O):         sgroup.cpp
+$(F)shistory$(O):       shistory.cpp
+$(F)sinputli$(O):       sinputli.cpp
+$(F)slabel$(O):         slabel.cpp
+$(F)slistbox$(O):       slistbox.cpp
+$(F)slstview$(O):       slstview.cpp
+$(F)smenubar$(O):       smenubar.cpp
+$(F)smenubox$(O):       smenubox.cpp
+$(F)smnuview$(O):       smnuview.cpp
+$(F)sparamte$(O):       sparamte.cpp
+$(F)sradiobu$(O):       sradiobu.cpp
+$(F)srescoll$(O):       srescoll.cpp
+$(F)sscrlbar$(O):       sscrlbar.cpp
+$(F)sscrolle$(O):       sscrolle.cpp
+$(F)sstatict$(O):       sstatict.cpp
+$(F)sstatusl$(O):       sstatusl.cpp
+$(F)sstrcoll$(O):       sstrcoll.cpp
+$(F)sstrlst$(O):        sstrlst.cpp
+$(F)strmstat$(O):       strmstat.cpp
+$(F)sview$(O):          sview.cpp
+$(F)swindow$(O):        swindow.cpp
+$(F)syserr$(O):         syserr.cpp
+$(F)tcheckbo$(O):       tcheckbo.cpp
+$(F)tcmdset$(O):        tcmdset.cpp
+$(F)tevent$(O):         tevent.cpp
+$(F)tgroup$(O):         tgroup.cpp
+$(F)tindictr$(O):       tindictr.cpp
+$(F)tmouse$(O):         tmouse.cpp
+$(F)tobject$(O):        tobject.cpp
+$(F)tparamte$(O):       tparamte.cpp
+$(F)tpoint$(O):         tpoint.cpp
+$(F)tview$(O):          tview.cpp
+$(F)tvtext2$(O):        tvtext2.cpp
+$(F)tscreen$(O):        tscreen.cpp
+
+$(F)colorsel$(O):       colorsel.cpp
+$(F)help$(O):           help.cpp
+$(F)helpbase$(O):       helpbase.cpp
+$(F)histlist$(O):       histlist.cpp
+$(F)menu$(O):           menu.cpp
+$(F)tlabel$(O):         tlabel.cpp
+$(F)tlistbox$(O):       tlistbox.cpp
+$(F)tlstview$(O):       tlstview.cpp
+$(F)tmemo$(O):          tmemo.cpp
+$(F)tmenubar$(O):       tmenubar.cpp
+$(F)tmenubox$(O):       tmenubox.cpp
+$(F)tmnuview$(O):       tmnuview.cpp
+$(F)tradiobu$(O):       tradiobu.cpp
+$(F)trescoll$(O):       trescoll.cpp
+$(F)tresfile$(O):       tresfile.cpp
+$(F)tscrlbar$(O):       tscrlbar.cpp
+$(F)tscrolle$(O):       tscrolle.cpp
+$(F)tsortcol$(O):       tsortcol.cpp
+$(F)tstatict$(O):       tstatict.cpp
+$(F)tstatusl$(O):       tstatusl.cpp
+$(F)tstrcoll$(O):       tstrcoll.cpp
+$(F)tstrlist$(O):       tstrlist.cpp
+$(F)tbkgrnd$(O):        tbkgrnd.cpp
+$(F)tbutton$(O):        tbutton.cpp
+$(F)tchdrdlg$(O):       tchdrdlg.cpp
+$(F)tcluster$(O):       tcluster.cpp
+$(F)tcollect$(O):       tcollect.cpp
+$(F)tdesktop$(O):       tdesktop.cpp
+$(F)tdialog$(O):        tdialog.cpp
+$(F)tdircoll$(O):       tdircoll.cpp
+$(F)tdirlist$(O):       tdirlist.cpp
+$(F)teditor1$(O):       teditor1.cpp
+$(F)teditor2$(O):       teditor2.cpp
+$(F)teditwnd$(O):       teditwnd.cpp
+$(F)tfildlg$(O):        tfildlg.cpp
+$(F)tfilecol$(O):       tfilecol.cpp
+$(F)tfiledtr$(O):       tfiledtr.cpp
+$(F)tfillist$(O):       tfillist.cpp
+$(F)tframe$(O):         tframe.cpp
+$(F)twindow$(O):        twindow.cpp
+$(F)thistory$(O):       thistory.cpp
+$(F)thistwin$(O):       thistwin.cpp
+$(F)thstview$(O):       thstview.cpp
+$(F)stddlg$(O):         stddlg.cpp
+$(F)textview$(O):       textview.cpp
+$(F)tinputli$(O):       tinputli.cpp
+$(F)tapplica$(O):       tapplica.cpp
+$(F)tobjstrm$(O):       tobjstrm.cpp
+$(F)tprogram$(O):       tprogram.cpp
+$(F)palette$(O):        palette.cpp
+$(F)geninc$(O):         geninc.cpp     #

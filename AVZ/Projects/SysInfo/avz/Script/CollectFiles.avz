@@ -1,0 +1,18 @@
+// Скрипт сбора неопознанных и подозрительных файлов
+var
+ AVZLogDir : string;
+begin
+ // Формирование имени рабочей папки
+ AVZLogDir := GetAVZDirectory + 'LOG\';
+ CreateDirectory(AVZLogDir);
+ // Настройка AVZ
+ SetupAVZ('UseQuarantine=Y'); // Включить карантин
+ // Запуск сканирования
+ RunScan;
+ // Выполнение автоматического карантина
+ ExecuteAutoQuarantine;
+ // Сохранение карантина
+ CreateQurantineArchive(AVZLogDir+'virusinfo_files_'+GetComputerName+'.zip');          
+ // Завершение работы AVZ 
+ ExitAVZ;
+end.

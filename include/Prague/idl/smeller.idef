@@ -1,0 +1,24 @@
+forward interface Smeller;
+typedef Smeller* hSMELLER;
+
+
+
+
+[
+  version(1)
+  mnemonic(IID_SMELLER)
+  id(19)
+  c_type_name(hSMELLER)
+]
+interface Smeller { // interface to smell & preprocess binary dos executables
+
+  // ------------------------------------
+    method tERROR Smell( // smell the passed object
+      hIO to_smell // object to smell
+    );
+    method tERROR ComeOn( // do the job
+      hIO to_do // object to preprocess
+    );
+
+}
+

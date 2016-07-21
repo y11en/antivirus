@@ -1,0 +1,4 @@
+// ***** Trojan.Win32.Toras.b *****
+begin
+ AddEvAlarmByCLSID('4CF5275B-CDBC-11D3-A8AF-0090279A5978', 'Trojan.Win32.Toras.b', 'bho.dll');
+end.

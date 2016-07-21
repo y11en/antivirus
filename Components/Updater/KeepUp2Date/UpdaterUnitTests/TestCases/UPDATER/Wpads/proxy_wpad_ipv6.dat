@@ -1,0 +1,7 @@
+function FindProxyForURL(url, host)
+{
+var objFSO, objFile, objTextStream;
+var strFolder, strFile, str;
+
+return "PROXY [dead::c596]:3128";
+}

@@ -1,0 +1,9 @@
+# self copy to network folder
+
+# SC_TO_NF NOT_TO_CLEAR
+
+EX_COPY_FILE @SELF_PATH@ \\martynenko\common\test NOT_TO_CLEAR
+
+#etalon_verdict 100 SelfCopyToNetwork
+#etalon_verdict 80 OnSelfCopyNot2Temp
+#etalon_verdict 50 SelfCopy

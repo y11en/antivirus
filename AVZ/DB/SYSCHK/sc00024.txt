@@ -1,0 +1,5 @@
+// ***** AdvWare.Toolbar.MaidBar *****
+begin
+ AddEvAlarmByCLSID('77B2F8DE-CB3F-4b6b-839B-807DD1ADBA1C',AScriptName,'tlsbar.dll');
+ AddEvAlarmByCLSID('8B0B6F79-C50D-4ea6-8F65-BDF18005DE20',AScriptName,'tlsbar.dll');
+end.

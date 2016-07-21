@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioProject ProjectType="Visual C++" Version="8.00" Name="EngineDt" SccProjectName="&quot;$/Prague/AvpMgr&quot;, DHCCAAAA" SccLocalPath="." Keyword="MakeFileProj">
+	<Platforms>
+		<Platform Name="Win32"/>
+		<Platform Name="x64"/></Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="Debug|Win32" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\prague\$(ProjectName)" ConfigurationType="0" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool Name="VCNMakeTool" BuildCommandLine="nmake /f &quot;EngineDt.mak&quot;" ReBuildCommandLine="nmake /f &quot;EngineDt.mak&quot; /a" CleanCommandLine="" Output="../Engine.Dt" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged=""/>
+		</Configuration>
+		<Configuration Name="Release|Win32" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\prague\$(ProjectName)" ConfigurationType="0" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool Name="VCNMakeTool" BuildCommandLine="nmake /f &quot;EngineDt.mak&quot;" ReBuildCommandLine="nmake /f &quot;EngineDt.mak&quot; /a" CleanCommandLine="" Output="../Engine.Dt" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged=""/>
+		</Configuration>
+		<Configuration Name="Debug|x64" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\prague\$(ProjectName)" ConfigurationType="0" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool Name="VCNMakeTool" BuildCommandLine="nmake /f &quot;EngineDt.mak&quot;" ReBuildCommandLine="nmake /f &quot;EngineDt.mak&quot; /a" CleanCommandLine="" Output="../Engine.Dt" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged=""/>
+		</Configuration><Configuration Name="Release|x64" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\prague\$(ProjectName)" ConfigurationType="0" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool Name="VCNMakeTool" BuildCommandLine="nmake /f &quot;EngineDt.mak&quot;" ReBuildCommandLine="nmake /f &quot;EngineDt.mak&quot; /a" CleanCommandLine="" Output="../Engine.Dt" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged=""/>
+		</Configuration></Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter Name="Resource Files" Filter="ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe">
+			<File RelativePath="CONFIG\engine.dt">
+			</File>
+			<File RelativePath="CONFIG\Engine.reg">
+			</File>
+		</Filter>
+		<Filter Name="Source Files" Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
+		</Filter>
+		<Filter Name="Header Files" Filter="h;hpp;hxx;hm;inl">
+		</Filter>
+		<File RelativePath="EngineDt.mak">
+		</File>
+	</Files>
+</VisualStudioProject>

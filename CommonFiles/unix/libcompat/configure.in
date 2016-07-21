@@ -1,0 +1,193 @@
+# Process this file with autoconf to produce a configure script.
+#
+# Configure.in for klava kernel
+#
+AC_PREREQ(2.57)
+AC_INIT(libcompat, VERSION, BUG-REPORT-ADDRESS)
+AC_CONFIG_SRCDIR([$srcdir/compat.h])
+AC_CONFIG_HEADER([config-unix.h])
+AC_CONFIG_AUX_DIR([$srcdir])
+AC_PREFIX_DEFAULT([/usr/local/kl])
+
+AC_MSG_RESULT(***********************************************)
+AC_MSG_RESULT(*             configuring libcompat           *)
+AC_MSG_RESULT(***********************************************)
+
+AC_ARG_ENABLE(enable_prague,
+	[  --enable-prague           compile with prague support (no)])
+
+AC_ARG_ENABLE(enable_debug,
+	[  --enable-debug           compile with debug information (no)])
+
+AC_ARG_ENABLE(enable_profiling,
+	[  --enable-profiling       compile with profiling information (no)])
+
+AC_ARG_ENABLE(enable_mt,
+	[  --enable-mt              enable compilation in thread-safe mode (default: no)])
+
+
+# Checks for programs.
+AC_CANONICAL_SYSTEM
+AC_PROG_CC
+AC_PROG_CXX
+AC_CHECK_TOOL(RANLIB,ranlib,:)
+AC_CHECK_TOOL(AR,ar,:)
+AC_ISC_POSIX
+AC_PROG_MAKE_SET
+AC_PROG_INSTALL
+
+# clear flags
+CFLAGS=""
+CXXFLAGS=""
+
+# Checks for header files.
+AC_HEADER_DIRENT
+AC_HEADER_STDC
+AC_CHECK_HEADERS([fcntl.h limits.h stdlib.h string.h sys/file.h sys/socket.h sys/time.h unistd.h])
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_HEADER_STDBOOL
+AC_C_CONST
+AC_TYPE_MODE_T
+
+# Checks for library functions.
+AC_CHECK_FUNCS([mkfifo flock])
+
+# Checks for size of long != 8 (64bit platform)
+AC_CHECK_SIZEOF(long)
+
+if test x$ac_cv_sizeof_long = x8 ; then
+  AC_MSG_ERROR([*** 64-bit compilation is unsupported yet.])
+fi
+
+OutputFiles="Makefile Rules "
+
+if test "$enable_debug" = "yes"; then
+	CFLAGS="$CFLAGS -g -Wall"
+	CXXFLAGS="$CXXFLAGS -g -Wall"
+else
+	CFLAGS="$CFLAGS -O2"
+	CXXFLAGS="$CXXFLAGS -O2"
+fi
+
+CFLAGS="$CFLAGS -fPIC -pipe"
+CXXFLAGS="$CXXFLAGS -fPIC -pipe"
+ARCHIVE_EXT="a"
+SHARED_EXT="so"
+SharedFlag="-shared"
+
+case "$target" in
+	*-*-freebsd*)
+		if test "$enable_mt" = "yes"; then
+    		    CFLAGS="$CFLAGS -pthread -D_THREAD_SAFE";
+		    CXXFLAGS="$CXXFLAGS -pthread -D_THREAD_SAFE";
+		    ThreadsSupportLib="-pthread";
+		fi
+		DynamicLibrariesSupportLib=""	    
+		;;
+
+        *-*-openbsd*)
+		if test "$enable_mt" = "yes"; then
+            	    CFLAGS="$CFLAGS -pthread -D_POSIX_THREADS";
+            	    CXXFLAGS="$CXXFLAGS -pthread -D_POSIX_THREADS";
+            	    ThreadsSupportLib="-pthread";
+		fi
+		DynamicLibrariesSupportLib=""		
+                ;;
+		
+	*-*-linux*)
+		if test "$enable_mt" = "yes"; then
+		    CFLAGS="$CFLAGS -D_REENTRANT -pthread ";
+		    CXXFLAGS="$CXXFLAGS -D_REENTRANT -pthread ";
+		    ThreadsSupportLib="-lrt -pthread ";
+		fi
+		CFLAGS="$CFLAGS -D_FILE_OFFSET_BITS=64"
+		CXXFLAGS="$CXXFLAGS -D_FILE_OFFSET_BITS=64"
+		DynamicLibrariesSupportLib="-ldl"		
+		;;
+		
+		
+	*-*-solaris*)
+		if test "$enable_mt" = "yes"; then	
+		    CFLAGS="$CFLAGS -pthreads";
+		    CXXFLAGS="$CXXFLAGS -pthreads";
+		    ThreadsSupportLib="-lrt -pthreads";
+		fi
+		DynamicLibrariesSupportLib="-ldl"		
+		;;
+
+        *-*-darwin*)
+                CFLAGS="$CFLAGS -D__unix__ -fvisibility-inlines-hidden"
+                CXXFLAGS="$CXXFLAGS -D__unix__ -fvisibility-inlines-hidden"
+		SHARED_EXT="dylib"	
+		SharedFlag="-dynamiclib -single_module"
+                LibC=""
+                DynamicLibrariesSupportLib=""
+                ThreadsSupportLib=""
+                ;;
+
+        *)
+                AC_MSG_ERROR([unsupported system])
+                ;;
+esac
+
+AC_ARG_WITH(stlport,
+[  --with-stlport  If compile with stlport [default=no]],
+stlport="$withval", stlport="")
+
+if test ! -z "$stlport"; then
+case "$host" in
+            *openbsd*)
+                CFLAGS="-D_POSIX_THREADS $CFLAGS"
+                CXXFLAGS="-D_POSIX_THREADS $CXXFLAGS"
+            ;;
+            *freebsd*)
+                CFLAGS="-D_THREAD_SAFE $CFLAGS"
+                CXXFLAGS="-D_THREAD_SAFE $CXXFLAGS"
+            ;;
+            *linux*)
+                CFLAGS="-D_REENTRANT $CFLAGS"
+                CXXFLAGS="-D_REENTRANT $CXXFLAGS"
+            ;;
+esac
+STLPORT_INCLUDES="-I$stlport/stlport"
+if test "$enable_debug" = "yes"; then
+CFLAGS="$CFLAGS -D_STLP_DEBUG"
+CXXFLAGS="$CXXFLAGS -D_STLP_DEBUG"
+CPPFLAGS="$CPPFLAGS -D_STLP_DEBUG"
+fi
+fi
+
+if test "$enable_profiling" = "yes"; then
+	CFLAGS="$CFLAGS -fprofile-arcs -ftest-coverage -pg "
+	CXXFLAGS="$CXXFLAGS -fprofile-arcs -ftest-coverage -pg "
+	LDFLAGS="$LDFLAGS -pg "    
+	LIBS="$LIBS -lgcc"
+fi
+
+if test "$enable_prague" != "yes"; then
+	CFLAGS="$CFLAGS -D_NO_PRAGUE_ "
+	CXXFLAGS="$CXXFLAGS -D_NO_PRAGUE_ "
+fi
+
+
+AC_DEFINE_UNQUOTED(SHARED_EXT,"$SHARED_EXT",[A shared library extension])
+AC_DEFINE_UNQUOTED(ARCHIVE_EXT,"$ARCHIVE_EXT",[A archive extension])
+
+AC_SUBST(CFLAGS)
+AC_SUBST(CXXFLAGS)
+AC_SUBST(LDFLAGS)
+AC_SUBST(INCLUDES)
+AC_SUBST(DEFS)
+AC_SUBST(LIBS)
+AC_SUBST(SHARED_EXT)
+AC_SUBST(ARCHIVE_EXT)
+AC_SUBST(STLPORT_INCLUDES)
+AC_SUBST(subdirs)
+AC_SUBST(ExternLibsPath)
+AC_SUBST(DynamicLibrariesSupportLib)
+AC_SUBST(ThreadsSupportLib)
+AC_SUBST(SharedFlag)
+AC_OUTPUT($OutputFiles)
+
+AC_MSG_RESULT(***********************************************)

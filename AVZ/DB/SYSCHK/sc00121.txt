@@ -1,0 +1,4 @@
+// ***** Spy.BDPlugin *****
+begin
+ AddEvAlarmByCLSID('BC207F7D-3E63-4ACA-99B5-FB5F8428200C',AScriptName,'BDSrHook.dll');
+end.

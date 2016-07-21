@@ -1,0 +1,4 @@
+// ***** AdvWare.F1Organizer *****
+begin
+ AddEvAlarmByCLSID('00000EF1-0786-4633-87C6-1AA7A44296DA',AScriptName,'plytuSc.dll');
+end.

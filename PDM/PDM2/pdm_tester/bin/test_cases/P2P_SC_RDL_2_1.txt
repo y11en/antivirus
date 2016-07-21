@@ -1,0 +1,11 @@
+# self copy to dest folder and register dest folder in P2Pkey
+
+# SC_TO_DF NOT_TO_CLEAR
+# REGISTER_IN_P2P_KEY_DF NOT_TO_CLEAR
+
+EX_COPY_FILE @SELF_PATH@ @LOCAL_TEST_FOLDER@ NOT_TO_CLEAR
+CREATE_REG_STR_VALUE @P2P_KEY@ temp @LOCAL_TEST_FOLDER@ NOT_TO_CLEAR
+
+#etalon_verdict 100 SelfCopyToPeerToPeerFolder
+#etalon_verdict 80 OnSelfCopyNot2Temp
+#etalon_verdict 50 SelfCopy

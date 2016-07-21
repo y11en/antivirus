@@ -1,0 +1,8 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\environment]
+"ComponentsToDistribute"="INFO;CORE;KAV8Exec;RT;AVS;EMUI386;Updater"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def]
+"AllowServiceStop"=dword:00000001
+"EnableSelfProtection"=dword:00000000

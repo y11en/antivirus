@@ -1,0 +1,49 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@ @srcdir@/time
+
+Name = prkernel
+Plugin = $(Name).@PLUGIN_EXT@
+Metafile = @srcdir@/kernel.@METAFILE_EXT@
+Targets = $(Plugin)
+
+Sources = \
+	dt.c \
+	custprop.c \
+	handle.c \
+	iface.c \
+	impex.c \
+	kernel.c \
+	k_ifenum.c \
+	k_root.c \
+	k_trace.c \
+	memory.c \
+	mh_array.c \
+	not_sink.c \
+	output.c \
+	prop.c \
+	prop_str.c \
+	receiver.c \
+	ser_reg.cpp \
+	ser_stream.cpp \
+	serializer.cpp \
+	synchro.c \
+	sys_hand.c \
+	sys_mem.c \
+	sys_msg.c \
+	sys_obj.c \
+	sys_prop.c \
+	sys_sync.c \
+	system.c \
+	sys_trc.c \
+	wrappers.c
+
+Libraries = \
+	hashutil
+
+# unix section
+
+VersionScript = @abs_top_srcdir@/unix/prague_plugin.ver
+
+include @abs_top_builddir@/@OS@/Rules

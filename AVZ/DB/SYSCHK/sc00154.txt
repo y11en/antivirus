@@ -1,0 +1,4 @@
+// ***** Spy.NetPal *****
+begin
+ AddEvAlarmByCLSID('6085FB5B-C281-4B9C-8E5D-D2792EA30D2F','Spy.NetPal (TrojanDownloader.Win32.BHO)','netpal.dll');
+end.

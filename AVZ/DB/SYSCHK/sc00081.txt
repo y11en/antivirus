@@ -1,0 +1,8 @@
+// ***** Dialer.InstantAccess *****
+begin
+ AddEvAlarmByCLSID('3446598E-00E4-4B5E-99A6-87ECCA8324A2',AScriptName,'EGDACCESS*.dll');
+ AddEvAlarmByCLSID('DDF44FD9-749F-4761-89BB-E8A59339E459',AScriptName,'LiveService*.dll');
+ AddEvAlarmByCLSID('EAAB55CB-9D6E-457A-A10B-4AAEC8317CFC',AScriptName,'LiveService*.dll');
+ AddEvAlarmByCLSID('8B936702-C234-40D0-B69C-A2F669A33978',AScriptName,'LiveService*.dll');
+ AddEvAlarmByCLSID('CAAF9105-A683-4ED1-89CC-18F6D194DD84',AScriptName,'LiveService*.dll');
+end.

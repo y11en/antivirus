@@ -1,0 +1,25 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@
+
+Name = ichecker2
+Plugin = $(Name).@PLUGIN_EXT@
+Metafile = @srcdir@/$(Name).@METAFILE_EXT@
+Targets = $(Plugin)
+
+Includes = -I@top_srcdir@/avpgs/
+
+Sources = \
+	calc_file_hash.c \
+	ichecker2.c \
+	plugin_ichecker2.c
+
+# unix section
+
+UnixLibraries = \
+	-lcompat
+
+VersionScript = @abs_top_srcdir@/unix/prague_plugin.ver
+
+include @abs_top_builddir@/@OS@/Rules

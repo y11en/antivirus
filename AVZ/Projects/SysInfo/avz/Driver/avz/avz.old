@@ -1,0 +1,398 @@
+// Драйвер для антивирусной утилиты AVZ
+// (С) Зайцев Олег, 2005
+#include "StdAfx.h"
+#include <ntddk.h>
+#include <ntdef.h>
+#include <avz.h>
+#include <drvinfo.h>
+
+// Имя устройства (в формате UnicodeString, формируется макросом)
+PRESET_UNICODE_STRING (usDeviceName,       CSTRING (\\Device\\AvzKernelDevice));
+// Имя символьной ссыки (в формате UnicodeString, формируется макросом)
+PRESET_UNICODE_STRING (usSymbolicLinkName, CSTRING (\\??\\AvzKernelDeviceLink));
+
+// Глобальные переменные - указатели на объекты "Устройство" и "Контекст устройства"
+PDEVICE_OBJECT  gpDeviceObject  = NULL;
+PDEVICE_CONTEXT gpDeviceContext = NULL;
+
+
+extern "C" {
+	// Указатель на SDT
+	extern PSERVICE_DESCRIPTOR_TABLE    KeServiceDescriptorTable;
+
+	// Номер сборки NT - для анализа
+	extern  PWORD						NtBuildNumber;
+	extern ZwDeleteFile(IN POBJECT_ATTRIBUTES ObjectAttributes); 
+}
+
+// ***** Обработчик событий Открытия/Закрытия/Очистки *****
+NTSTATUS DispatchCreateCloseControl (PDEVICE_OBJECT pDeviceObject,
+                           PIRP           pIrp)
+{
+    PIO_STACK_LOCATION pisl;
+    DWORD              dInfo = 0;
+    NTSTATUS           ns    = STATUS_NOT_IMPLEMENTED; // Код возврата
+
+	// Получаем размещение IRP стека
+    pisl = IoGetCurrentIrpStackLocation (pIrp);
+    AvzDbgPrint("Device Open !");	
+	// Проверяем код поддерживаемых функций
+    switch (pisl->MajorFunction)
+        {
+        case IRP_MJ_CREATE:
+        case IRP_MJ_CLEANUP:
+        case IRP_MJ_CLOSE:
+            {
+            ns = STATUS_SUCCESS;
+            break;
+            }
+        }
+    
+	// Завершаем IRP запрос
+    pIrp->IoStatus.Status      = ns;
+    pIrp->IoStatus.Information = dInfo;
+    IoCompleteRequest (pIrp, IO_NO_INCREMENT);
+    return ns;
+}
+
+// ***** Обработчик событий IO Control *****
+NTSTATUS DispatchControl (PDEVICE_OBJECT pDeviceObject,
+                           PIRP           pIrp)
+{
+   PIO_STACK_LOCATION pisl;
+   DWORD              dInfo = 0;
+   NTSTATUS           ns    = STATUS_NOT_IMPLEMENTED; // Код возврата
+   // Получение расположения IRP стека
+   pisl = IoGetCurrentIrpStackLocation (pIrp);
+   
+   // Входной буфер и его размер
+   PVOID  InputBuffer         = pIrp->AssociatedIrp.SystemBuffer;
+   ULONG  InputBufferLength   = pisl->Parameters.DeviceIoControl.InputBufferLength;
+   // Выходной буфер и его размер
+   PVOID  OutputBuffer        = pIrp->AssociatedIrp.SystemBuffer;
+   ULONG  OutputBufferLength  = pisl->Parameters.DeviceIoControl.OutputBufferLength;
+   // Код управление 
+   ULONG  IoControlCode		  = pisl->Parameters.DeviceIoControl.IoControlCode;
+   // Вывод данных для отладки
+   AvzDbgPrint("IoControlCode = %x\n", IoControlCode);	
+   AvzDbgPrint("InputBufferLength  = %x\n", InputBufferLength);	
+   AvzDbgPrint("OutputBufferLength = %x\n", OutputBufferLength);	
+   // Получение кода процесса
+   HANDLE  CurrentProcess = PsGetCurrentProcess();
+	 
+   // **** IOCTL_Z_GET_KESDT_PTR - Запрос адреса SDT *****
+   if (IoControlCode == IOCTL_Z_GET_KESDT_PTR) {
+	   //Проверка размера входного буфера
+       if (OutputBufferLength >= 4) 
+	   {
+		 __try {
+		   DWORD Tmp = (DWORD)KeServiceDescriptorTable;
+		   AvzDbgPrint("KeServiceDescriptorTable Address = %x\n", Tmp);	
+		   memcpy(OutputBuffer, &Tmp, 4);
+		   dInfo = 4;
+		   ns = STATUS_SUCCESS;         
+		 } __except(EXCEPTION_EXECUTE_HANDLER) {
+             dInfo = 0; 
+			 ns = STATUS_DATA_ERROR;
+		 }
+	   }
+		 else ns = STATUS_BUFFER_TOO_SMALL; // Возврат ошибки		   
+	   }
+
+   // **** IOCTL_Z_GET_SDT_PTR - Запрос адреса SDT *****
+   if (IoControlCode == IOCTL_Z_GET_SDT_PTR) {
+	   //Проверка размера входного буфера
+       if (OutputBufferLength >= 4) 
+	   {
+		 __try {
+		   DWORD Tmp = (DWORD)(KeServiceDescriptorTable->ntoskrnl.ServiceTable);
+		   AvzDbgPrint("ntoskrnl table Address = %x\n", Tmp);	
+		   memcpy(OutputBuffer, &Tmp, 4);
+		   dInfo = 4;
+		   ns = STATUS_SUCCESS;         
+		 } __except(EXCEPTION_EXECUTE_HANDLER) {
+             dInfo = 0; 
+			 ns = STATUS_DATA_ERROR;
+		 }
+	   }
+		 else ns = STATUS_BUFFER_TOO_SMALL; // Возврат ошибки		   
+	   }
+
+   // **** IOCTL_Z_GET_SDT_SIZE - Запрос кол-ва элементов SDT *****
+   if (IoControlCode == IOCTL_Z_GET_SDT_SIZE) {
+	   //Проверка размера входного буфера
+       if (OutputBufferLength >= 4) 
+	   {
+		 __try {
+		   DWORD Tmp = KeServiceDescriptorTable->ntoskrnl.ServiceLimit;
+		   AvzDbgPrint("SDT ServiceLimit = %x\n", Tmp);	
+		   memcpy(OutputBuffer, &Tmp, 4);
+		   dInfo = 4;
+		   ns = STATUS_SUCCESS;         
+		 } __except(EXCEPTION_EXECUTE_HANDLER) {
+             dInfo = 0; 
+			 ns = STATUS_DATA_ERROR;
+		 }
+	   }
+		 else ns = STATUS_BUFFER_TOO_SMALL; // Возврат ошибки		   
+	   }
+
+   // Запрос адреса функции с заданным номером
+   if (IoControlCode == IOCTL_Z_GET_SDT_ENTRY) {
+		// Проверка размера входного/выходного буфера
+		if (OutputBufferLength >= 4 && InputBufferLength >= 4) {
+		 // Чтение кода функции из первых 4х байт из входного буфера 
+		 DWORD ServiceID = 0;
+		 // Копирование 
+		 memcpy(&ServiceID, InputBuffer, 4);
+		 AvzDbgPrint("ServiceID = @%x\n", ServiceID);
+		 // Контроль номера функции (она должна быть в диапазоне 0..ntoskrnl.ServiceLimit-1)
+		 if ((ServiceID >= 0) && (ServiceID < KeServiceDescriptorTable->ntoskrnl.ServiceLimit)) {
+			 __try {
+			  DWORD Tmp = (DWORD)KeServiceDescriptorTable->ntoskrnl.ServiceTable[ServiceID];
+			  memcpy(OutputBuffer, &Tmp, 4);
+			  dInfo = 4;
+			  ns = STATUS_SUCCESS;         
+			 } __except(EXCEPTION_EXECUTE_HANDLER) {
+                 dInfo = 0; 
+				 ns = STATUS_DATA_ERROR;
+			 }
+		 }
+		 else
+			 ns = STATUS_DATA_ERROR; // Возврат ошибки			
+		}
+		else
+			ns = STATUS_BUFFER_TOO_SMALL; // Возврат ошибки
+   }
+            
+   // Установка адреса функции с заданным номером
+   if (IoControlCode == IOCTL_Z_SET_SDT_ENTRY) {
+		// Проверка размера входного/выходного буфера
+		if (OutputBufferLength >= 4 && InputBufferLength >= 8) {
+		 // Чтение кода функции из первых 4х байт из входного буфера 
+		 DWORD ServiceID = 0, NewPtr = 0;
+		 // Копирование 
+		 memcpy(&ServiceID, InputBuffer, 4);
+		 memcpy(&NewPtr,    (PVOID)((DWORD)InputBuffer+4), 4);
+		 AvzDbgPrint("ServiceID = %x\n", ServiceID);
+		 AvzDbgPrint("NewPtr = @%x\n", NewPtr);
+		 // Контроль номера функции (она должна быть в диапазоне 0..ntoskrnl.ServiceLimit-1)
+		 if ((ServiceID >= 0) && (ServiceID < KeServiceDescriptorTable->ntoskrnl.ServiceLimit)) {
+			 __try {
+			  // Повышение приоритета
+			  KIRQL OldIRQL = KeRaiseIrqlToDpcLevel();			 
+              _asm cli
+			  // Модифицировать таблицу
+			  __try {
+			   KeServiceDescriptorTable->ntoskrnl.ServiceTable[ServiceID] = (NTPROC)NewPtr;
+			  } __except(EXCEPTION_EXECUTE_HANDLER) { // В случае ошибки разрешить прерывания 
+			  }
+			  _asm sti				   
+			  KeLowerIrql(OldIRQL);
+			 } __except(EXCEPTION_EXECUTE_HANDLER) { // В случае ошибки разрешить прерывания 
+			  _asm sti
+			 }
+             dInfo = 4;
+			 ns = STATUS_SUCCESS;         
+		 }
+		 else
+			 ns = STATUS_DATA_ERROR; // Возврат ошибки			
+		}
+		else
+			ns = STATUS_BUFFER_TOO_SMALL; // Возврат ошибки
+   }
+
+   // Удаление файла с указанным именем
+   if (IoControlCode == IOCTL_Z_DELETE_FILE) {
+	   __try {
+		OBJECT_ATTRIBUTES oaDeletedFile;
+		oaDeletedFile.Length = sizeof(OBJECT_ATTRIBUTES);
+		oaDeletedFile.Attributes = OBJ_CASE_INSENSITIVE;
+		oaDeletedFile.RootDirectory      = NULL;
+		oaDeletedFile.SecurityQualityOfService = NULL;
+		oaDeletedFile.SecurityDescriptor = NULL;
+		UNICODE_STRING ObjName;
+		ObjName.Length        = InputBufferLength;
+		ObjName.MaximumLength = InputBufferLength;	  
+		ObjName.Buffer = (PWSTR)InputBuffer;
+		oaDeletedFile.ObjectName = &ObjName;
+		DWORD Res = ZwDeleteFile(&oaDeletedFile);
+		memcpy(OutputBuffer, &Res, 4);
+		dInfo = 4;
+		ns = STATUS_SUCCESS;   
+	   } __except(EXCEPTION_EXECUTE_HANDLER) {
+         dInfo = 0; 
+		 ns = STATUS_DATA_ERROR;
+	   }
+   }
+   // ***** Чтение N байт по заданному адресу *****
+   if (IoControlCode == IOCTL_Z_READ_MEMORY) {
+		AvzDbgPrint("Read Memory \n");
+	   __try {
+	    // Контроль размера буфера - там должно быть два DWORD - адрес и размер буфера
+		if (InputBufferLength >= 8) {
+			DWORD MemPtr, MemSize = 0;
+			// Копирование 
+			memcpy(&MemPtr, InputBuffer, 4);
+			memcpy(&MemSize,    (PVOID)((DWORD)InputBuffer+4), 4);
+			// Вывод отладочной информации
+			AvzDbgPrint("MemPtr  = %x\n", MemPtr);
+			AvzDbgPrint("MemSize = @%x\n", MemSize);
+			// Проверка размера буфера
+			if (MemSize > 0 && MemSize <= OutputBufferLength) {
+				// Проверка корректности адресов памяти в двух точках - начале и конце отрезка
+				    __try {
+						// Чтение памяти по заданному адресу	
+						memcpy(OutputBuffer, (PVOID)MemPtr, MemSize);
+						// Возврат размера и кода успешного завершения
+						dInfo = MemSize;
+						ns = STATUS_SUCCESS;   
+					} __except(EXCEPTION_EXECUTE_HANDLER) { 
+						ns = STATUS_DATA_ERROR; 
+					}					
+			} 
+			else 
+				ns = STATUS_BUFFER_TOO_SMALL; // Возврат ошибки
+		} 
+		else
+			 ns = STATUS_DATA_ERROR; // Возврат ошибки			
+	   } __except(EXCEPTION_EXECUTE_HANDLER) {
+         dInfo = 0; 
+		 ns = STATUS_DATA_ERROR;
+	   }
+   }
+   // ***** Запись N байт по заданному адресу *****
+   if (IoControlCode == IOCTL_Z_WRITE_MEMORY) {
+		AvzDbgPrint("Write Memory \n");
+	   __try {
+	    // Контроль размера буфера - там должно быть два DWORD - адрес и размер буфера
+		if (InputBufferLength > 8) {
+			DWORD MemPtr, MemSize = 0;
+			// Копирование 
+			memcpy(&MemPtr, InputBuffer, 4);
+			memcpy(&MemSize,    (PVOID)((DWORD)InputBuffer+4), 4);
+			// Вывод отладочной информации
+			AvzDbgPrint("MemPtr  = %x\n", MemPtr);
+			AvzDbgPrint("MemSize = @%x\n", MemSize);
+			// Проверка размера буфера
+			if (MemSize > 0 && MemSize <= InputBufferLength-8) {
+				// Проверка корректности адресов памяти в двух точках - начале и конце отрезка
+					__try {
+						// Повышение приоритета
+						KIRQL OldIRQL = KeRaiseIrqlToDpcLevel();			 
+						_asm cli
+						// Запись памяти по заданному адресу	
+						memcpy((PVOID)MemPtr, (PVOID)((DWORD)InputBuffer+8),  MemSize);
+						_asm sti				   
+						KeLowerIrql(OldIRQL);
+						// Возврат размера и кода успешного завершения
+						dInfo = 0;
+						ns = STATUS_SUCCESS;   
+					} __except(EXCEPTION_EXECUTE_HANDLER) { 
+						_asm sti
+						ns = STATUS_DATA_ERROR; 
+					}					
+					
+			} 
+			else 
+				ns = STATUS_BUFFER_TOO_SMALL; // Возврат ошибки
+		} 
+		else
+			 ns = STATUS_DATA_ERROR; // Возврат ошибки			
+	   } __except(EXCEPTION_EXECUTE_HANDLER) {
+         dInfo = 0; 
+		 ns = STATUS_DATA_ERROR;
+	   }
+   }
+   // ***** Получение регистра 176h процессора *****
+   if (IoControlCode == IOCTL_Z_GET_CPU_176REG) {
+		AvzDbgPrint("Write Memory \n");
+		DWORD SysCallPTR = 0;
+		if (OutputBufferLength >= 4) {
+         __asm {
+		  pushad
+		  mov ecx, 0x176
+		  rdmsr
+		  mov SysCallPTR, eax		
+		  popad
+	     }
+		// Возврат найденного адреса	
+		memcpy(OutputBuffer, (PVOID)SysCallPTR, 4);
+		dInfo = 4;
+		ns = STATUS_SUCCESS;   
+        } 
+		else 
+		 ns = STATUS_BUFFER_TOO_SMALL; // Возврат ошибки
+
+   }
+   // Завершение IRP запроса
+   pIrp->IoStatus.Status      = ns;
+   pIrp->IoStatus.Information = dInfo;
+   IoCompleteRequest (pIrp, IO_NO_INCREMENT);
+   return ns;  
+}
+
+
+// ***** Инициализация драйвера *****
+NTSTATUS DriverInitialize (PDRIVER_OBJECT  pDriverObject,
+                           PUNICODE_STRING pusRegistryPath)
+{
+ PDEVICE_OBJECT pDeviceObject = NULL;
+ NTSTATUS       ns            = STATUS_DEVICE_CONFIGURATION_ERROR; // Код возврата
+ // Создание устройства
+ if ((ns = IoCreateDevice (pDriverObject, DEVICE_CONTEXT_,
+                              &usDeviceName, FILE_DEVICE_UNKNOWN,
+                              0, FALSE, &pDeviceObject))
+        == STATUS_SUCCESS)
+        {
+		// Устройство создано - создаем символьной ссылки
+        if ((ns = IoCreateSymbolicLink (&usSymbolicLinkName,
+                                        &usDeviceName))
+            == STATUS_SUCCESS)
+            { 
+		    // Ссылка (и естественно устройство !) созданы - запоминаем ссылки
+            gpDeviceObject  = pDeviceObject;
+            gpDeviceContext = (PDEVICE_CONTEXT)pDeviceObject->DeviceExtension;
+
+            gpDeviceContext->pDriverObject = pDriverObject;
+            gpDeviceContext->pDeviceObject = pDeviceObject;
+            }
+        else
+            {
+			// Устройство создано, а ссылка - нет. Тогда удалим устройство
+            IoDeleteDevice (pDeviceObject);
+            }
+        }
+ return ns; 
+}
+
+// ***** Выгрузка драйвера *****
+void DriverUnload (PDRIVER_OBJECT pDriverObject)
+{
+ // Удаление символьной ссылки
+ IoDeleteSymbolicLink (&usSymbolicLinkName);
+ // Удаление устройства
+ IoDeleteDevice       (gpDeviceObject);
+ return;
+}
+
+// ***** Точка входа в драйвер *****
+NTSTATUS DriverEntry(IN PDRIVER_OBJECT pDriverObject, IN PUNICODE_STRING pusRegistryPath)
+{
+    NTSTATUS          InitRes = STATUS_DEVICE_CONFIGURATION_ERROR;
+	// Вызов функции инициализации (создающей устройство и линк)
+    if ((InitRes = DriverInitialize (pDriverObject, pusRegistryPath))
+        == STATUS_SUCCESS)   
+	{		
+     // Подключение обработчика DEVICE_CONTROL	 
+	 pDriverObject->MajorFunction [IRP_MJ_DEVICE_CONTROL] = DispatchControl;
+	 // Подключение обработчиков CREATE/CLOSE/CLEANUP
+	 pDriverObject->MajorFunction [IRP_MJ_CLEANUP] = 
+     pDriverObject->MajorFunction [IRP_MJ_CREATE] = 
+	 pDriverObject->MajorFunction [IRP_MJ_CLOSE] =  DispatchCreateCloseControl;
+	 // Подключение обработчика выгрузки драйвера
+     pDriverObject->DriverUnload  = DriverUnload;
+	}  
+    // Возврат результата инициализации
+    return InitRes;
+}

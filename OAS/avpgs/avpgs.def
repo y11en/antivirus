@@ -1,0 +1,6 @@
+; SrcGen.def : Declares the module parameters.
+
+LIBRARY      "avpgs.ppl"
+
+EXPORTS
+	Ushata

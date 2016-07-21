@@ -1,0 +1,20 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@ 
+
+Name = hashutil
+Archive = $(Name).@ARCHIVE_EXT@
+Targets = $(Archive)
+
+Sources = \
+	crc16.c \
+	crc32.c \
+	crc32str.c \
+	src16str.c
+
+InstallIncludes = \
+	@PACKAGE_NAME@/hashutil.h
+
+include @abs_top_builddir@/unix/Rules
+

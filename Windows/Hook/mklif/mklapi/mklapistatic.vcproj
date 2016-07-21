@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="mklapi_Static"
+	ProjectGUID="{5D25A730-385A-4BA0-B9F3-9DCAD50AC210}"
+	RootNamespace="mklapi_Static"
+	Keyword="MakeFileProj"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="..\..\..\..\out_$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="devenv /build &quot;ReleaseS|Win32&quot; mklapi.vcproj"
+				ReBuildCommandLine="devenv /rebuild &quot;ReleaseS|Win32&quot; mklapi.vcproj"
+				CleanCommandLine="devenv /clean &quot;ReleaseS|Win32&quot; mklapi.vcproj"
+				Output="mklapi"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="..\..\..\..\out_$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="devenv /build &quot;DebugS|Win32&quot; mklapi.vcproj"
+				ReBuildCommandLine="devenv /rebuild &quot;DebugS|Win32&quot; mklapi.vcproj"
+				CleanCommandLine="devenv /clean &quot;DebugS|Win32&quot; mklapi.vcproj"
+				Output="mklapi"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="..\..\..\..\out_$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="devenv /build &quot;ReleaseS|x64&quot; mklapi.vcproj"
+				ReBuildCommandLine="devenv /rebuild &quot;ReleaseS|x64&quot; mklapi.vcproj"
+				CleanCommandLine="devenv /clean &quot;ReleaseS|x64&quot; mklapi.vcproj"
+				Output="mklapi"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="..\..\..\..\out_$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="devenv /build &quot;DebugS|x64&quot; mklapi.vcproj"
+				ReBuildCommandLine="devenv /rebuild &quot;DebugS|x64&quot; mklapi.vcproj"
+				CleanCommandLine="devenv /clean &quot;DebugS|x64&quot; mklapi.vcproj"
+				Output="mklapi"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

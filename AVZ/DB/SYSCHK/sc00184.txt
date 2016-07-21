@@ -1,0 +1,9 @@
+// ***** AdvWare.Coupons *****
+begin
+ AddEvAlarmByCLSID('9522B3FB-7A2B-4646-8AF6-36E7F593073C',AScriptName,'cpbrkpie.ocx');
+ AddEvAlarmByCLSID('1954A4B1-9627-4CF2-A041-58AA2045CB35',AScriptName,'brix6ie.ocx');
+ AddEvAlarmByCLSID('87255C51-CD7D-4506-B9AD-97606DAF53F3',AScriptName,'cpbrkpie.ocx');
+ AddEvAlarmByCLSID('412F2472-59BC-4ccb-A3D4-C16A7D57CDCF',AScriptName,'brix7ie.dll');
+ AddEvAlarmByCLSID('1D8A63E5-F219-11D4-9BD1-000039051213',AScriptName,'CouponTBInst.ocx');
+ AddEvAlarmByCLSID('A85A5E6A-DE2C-4F4E-99DC-F469DF5A0EEC',AScriptName,'cpbrkpie.ocx');
+end.

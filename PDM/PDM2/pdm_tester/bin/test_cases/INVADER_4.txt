@@ -1,0 +1,6 @@
+# try to write to process memory of explorer process
+
+WM_TO_EXPLORER NOT_TO_CLEAR
+
+#etalon_verdict 100 ProcessInvader
+

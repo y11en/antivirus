@@ -1,0 +1,4 @@
+// ***** TrojanDownloader.Small.aah *****
+begin
+ AddEvAlarmByCLSID('B72F75B8-93F3-429D-B13E-660B206D897A',AScriptName, 'beem.dll');
+end.

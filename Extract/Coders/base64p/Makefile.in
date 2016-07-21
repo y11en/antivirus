@@ -1,0 +1,18 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@ 
+
+Name = base64p
+Plugin = $(Name).@PLUGIN_EXT@
+Metafile = @srcdir@/$(Name).@METAFILE_EXT@
+Targets = $(Plugin)
+
+Sources = \
+	base64p.cpp \
+	plugin_base64p.cpp
+
+VersionScript = @abs_top_srcdir@/unix/prague_plugin.ver
+
+include @abs_top_builddir@/@OS@/Rules
+

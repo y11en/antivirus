@@ -1,0 +1,135 @@
+# Microsoft Developer Studio Generated Dependency File, included by Arj.mak
+
+.\arj.c : \
+	"..\..\..\commonfiles\hashutil\hashutil.h"\
+	"..\..\Extract\UnArj\plugin_unarj.h"\
+	"..\..\Extract\UnArj\unarj.h"\
+	"..\..\Extract\UnStored\plugin_unstore.h"\
+	"..\..\Hash\MD5\plugin_hash_md5.h"\
+	"..\..\include\iface\i_hash.h"\
+	"..\..\include\iface\i_heap.h"\
+	"..\..\include\iface\i_iface.h"\
+	"..\..\include\iface\i_ifenum.h"\
+	"..\..\include\iface\i_impex.h"\
+	"..\..\include\iface\i_io.h"\
+	"..\..\include\iface\i_methodinfo.h"\
+	"..\..\include\iface\i_minarc.h"\
+	"..\..\Include\IFace\i_objptr.h"\
+	"..\..\INCLUDE\IFACE\i_os.h"\
+	"..\..\include\iface\i_plugin.h"\
+	"..\..\include\IFace\i_receiv.h"\
+	"..\..\Include\IFace\i_reg.h"\
+	"..\..\include\iface\i_root.h"\
+	"..\..\include\iface\i_seqio.h"\
+	"..\..\Include\iface\i_serializer.h"\
+	"..\..\include\iface\i_string.h"\
+	"..\..\include\iface\i_tracer.h"\
+	"..\..\include\iface\i_transformer.h"\
+	"..\..\include\iface\i_uacall.h"\
+	"..\..\include\pr_compl.h"\
+	"..\..\include\pr_err.h"\
+	"..\..\include\pr_iid.h"\
+	"..\..\include\pr_int.h"\
+	"..\..\include\pr_msg.h"\
+	"..\..\include\pr_obj.h"\
+	"..\..\include\pr_pid.h"\
+	"..\..\include\pr_prop.h"\
+	"..\..\include\pr_reg.h"\
+	"..\..\Include\pr_serdescriptor.h"\
+	"..\..\include\pr_sys.h"\
+	"..\..\include\pr_types.h"\
+	"..\..\include\pr_vid.h"\
+	"..\..\include\pr_vtbl.h"\
+	"..\..\INCLUDE\PRAGUE.H"\
+	"..\..\Packers\ArjPack\plugin_arjpacker.h"\
+	"..\..\Packers\stored\plugin_stored.h"\
+	"..\..\Wrappers\DMAP\plugin_dmap.h"\
+	".\arj.h"\
+	".\arj_i.h"\
+	".\plugin_arj.h"\
+	
+
+.\extra.c : \
+	"..\..\Hash\MD5\plugin_hash_md5.h"\
+	"..\..\include\iface\i_hash.h"\
+	"..\..\include\iface\i_heap.h"\
+	"..\..\include\iface\i_iface.h"\
+	"..\..\include\iface\i_ifenum.h"\
+	"..\..\include\iface\i_impex.h"\
+	"..\..\include\iface\i_io.h"\
+	"..\..\include\iface\i_methodinfo.h"\
+	"..\..\include\iface\i_minarc.h"\
+	"..\..\Include\IFace\i_objptr.h"\
+	"..\..\INCLUDE\IFACE\i_os.h"\
+	"..\..\include\iface\i_plugin.h"\
+	"..\..\include\IFace\i_receiv.h"\
+	"..\..\Include\IFace\i_reg.h"\
+	"..\..\include\iface\i_root.h"\
+	"..\..\include\iface\i_seqio.h"\
+	"..\..\Include\iface\i_serializer.h"\
+	"..\..\include\iface\i_string.h"\
+	"..\..\include\iface\i_tracer.h"\
+	"..\..\include\iface\i_uacall.h"\
+	"..\..\include\pr_compl.h"\
+	"..\..\include\pr_err.h"\
+	"..\..\include\pr_iid.h"\
+	"..\..\include\pr_int.h"\
+	"..\..\include\pr_msg.h"\
+	"..\..\include\pr_obj.h"\
+	"..\..\include\pr_pid.h"\
+	"..\..\include\pr_prop.h"\
+	"..\..\include\pr_reg.h"\
+	"..\..\Include\pr_serdescriptor.h"\
+	"..\..\include\pr_sys.h"\
+	"..\..\include\pr_types.h"\
+	"..\..\include\pr_vid.h"\
+	"..\..\include\pr_vtbl.h"\
+	"..\..\INCLUDE\PRAGUE.H"\
+	".\arj.h"\
+	".\arj_i.h"\
+	".\plugin_arj.h"\
+	
+
+.\plugin_arj.c : \
+	"..\..\Hash\MD5\plugin_hash_md5.h"\
+	"..\..\include\iface\i_hash.h"\
+	"..\..\include\iface\i_heap.h"\
+	"..\..\include\iface\i_iface.h"\
+	"..\..\include\iface\i_ifenum.h"\
+	"..\..\include\iface\i_impex.h"\
+	"..\..\include\iface\i_io.h"\
+	"..\..\include\iface\i_methodinfo.h"\
+	"..\..\include\iface\i_minarc.h"\
+	"..\..\Include\IFace\i_objptr.h"\
+	"..\..\INCLUDE\IFACE\i_os.h"\
+	"..\..\include\iface\i_plugin.h"\
+	"..\..\include\IFace\i_receiv.h"\
+	"..\..\Include\IFace\i_reg.h"\
+	"..\..\include\iface\i_root.h"\
+	"..\..\include\iface\i_seqio.h"\
+	"..\..\Include\iface\i_serializer.h"\
+	"..\..\include\iface\i_string.h"\
+	"..\..\include\iface\i_tracer.h"\
+	"..\..\include\iface\i_uacall.h"\
+	"..\..\include\pr_compl.h"\
+	"..\..\include\pr_err.h"\
+	"..\..\include\pr_iid.h"\
+	"..\..\include\pr_int.h"\
+	"..\..\include\pr_msg.h"\
+	"..\..\include\pr_obj.h"\
+	"..\..\include\pr_pid.h"\
+	"..\..\include\pr_prop.h"\
+	"..\..\include\pr_reg.h"\
+	"..\..\Include\pr_serdescriptor.h"\
+	"..\..\include\pr_sys.h"\
+	"..\..\include\pr_types.h"\
+	"..\..\include\pr_vid.h"\
+	"..\..\include\pr_vtbl.h"\
+	"..\..\INCLUDE\PRAGUE.H"\
+	".\arj.h"\
+	".\plugin_arj.h"\
+	
+
+.\arj.rc : \
+	"..\..\..\CommonFiles\version\ver_mod.rc2"\
+	

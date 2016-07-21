@@ -1,0 +1,48 @@
+#import "reg.idef"
+#import "task.idef"
+#import "tm.idef"
+
+forward interface MailTask;
+typedef MailTask* hMAILTASK;
+
+
+
+
+[
+  version(1)
+  mnemonic(IID_MAILTASK)
+  id(40006)
+  c_type_name(hMAILTASK)
+]
+interface MailTask {
+
+  // ------------------------------------
+    [ id(4096) ]  prop tDWORD pgTASK_TYPE;
+    [ id(4097) ]  prop hOBJECT pgTASK_CONFIG; // Стартовая конфигурация
+    [ id(4098) ]  prop hOBJECT pgTASK_TM;
+    [ id(4099) ]  prop tDWORD pgTASK_STATE;
+    [ id(4100) ]  prop tDWORD pgTASK_SESSION_ID;
+
+
+  // ------------------------------------
+    method tERROR SetSettings( const cSerializable* settings );
+    method tERROR GetSettings( cSerializable* settings );
+    method tERROR AskAction( Task.tActionId actionId, cSerializable* actionInfo );
+    method tERROR SetState( TaskManager.tTaskState state );
+    method tERROR GetStatistics( cSerializable* statistics );
+    method tERROR Process( // Функция процессирования. Используется перехватчиком. Реентерабельна!
+      hOBJECT p_hTopIO, // [IN] Объект в виде IO, предназначенный для процессирования
+      tDWORD* p_hTotalPrimaryAction, // [OUT] Идентификатор основного завершающего действия
+      tSTRING p_szMailTaskName, // [IN] Уникальное имя задачи почтовой фильтрации
+      tDWORD p_dwTimeOut // [IN] Таймаут (мс), в течение которого должна прозойти проверка
+    );
+
+
+  // ------------------------------------
+    [ id(4096) ]  message_cls pmc_TASK_STATE_CHANGED {}
+    [ id(4097) ]  message_cls pmc_TASK_REPORT {}
+    [ id(4098) ]  message_cls pmc_MAILTASK_PROCESS {}
+    [ id(4099) ]  message_cls pmc_MAILCHECKER_PROCESS {}
+
+}
+

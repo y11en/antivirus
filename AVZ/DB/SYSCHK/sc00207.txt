@@ -1,0 +1,6 @@
+// ***** AdvWare.Toolbar.Quick *****
+begin
+ AddEvAlarmByCLSID('82315A18-6CFB-44A7-BDFD-90E36537C252','AdvWare.Toolbar.Quick','SearchBar.dll');
+ AddEvAlarmByCLSID('899D71E2-FDDE-4209-BCC5-5A4BEAEEB729','AdvWare.Toolbar.Quick','SearchBar.dll');
+ AddEvAlarmByCLSID('0D26FF67-6B36-4E7F-9D46-CCDDE7B519FA','AdvWare.Toolbar.Quick','SearchBar.dll');
+end.

@@ -1,0 +1,77 @@
+!IF "$(OS)" == "Windows_NT"
+NULL=
+!ELSE 
+NULL=nul
+!ENDIF 
+
+CPP=cl.exe
+
+!IF "$(CFG)" == "DEBUG"
+OUTDIR=.\Debug\Win9x
+INTDIR=.\Debug\Win9x
+!ELSE
+OUTDIR=.\Release\Win9x
+INTDIR=.\Release\Win9x
+!ENDIF 
+
+
+ALL : "$(OUTDIR)\DBCleanUp.lib"
+
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+
+
+!IF "$(CFG)" == "DEBUG"
+CPP_PROJ=/nologo /G3 /Zp1 /MTd /W3 /Gm /Zi /Od /I "$(VTOOLSD)\include" /D "DEBUG" /D "_DEBUG" /D "_X86_" /D "IS_32" /D "WIN40" /D "VTOOLSD" /D "WANTVXDWRAPS" /D "ALT_INIT_SEG" /D "WIN40_OR_LATER" /D "WFW311_OR_LATER"  /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /FD /Gs /c 
+!ELSE
+CPP_PROJ= /nologo /G3 /Zp1 /MT /W3 /O2 /Oy- /I "$(VTOOLSD)\include" /D "NDEBUG" /D "_X86_" /D "IS_32" /D "VTOOLSD" /D "WANTVXDWRAPS" /D "ALT_INIT_SEG" /D "WIN40" /D "WIN40_OR_LATER" /D "WFW311_OR_LATER"  /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /Zl /FD /Gs /c 
+!ENDIF 
+	
+LIB32=link.exe -lib
+LIB32_FLAGS=/nologo /out:"$(OUTDIR)\DBCleanUp.lib" 
+LIB32_OBJS= \
+	"$(INTDIR)\DBCleanUp.obj"  \
+	"$(INTDIR)\DirIterators9x.obj"
+
+"$(OUTDIR)\DBCleanUp.lib" : "$(OUTDIR)" $(DEF_FILE) $(LIB32_OBJS)
+    $(LIB32) @<<
+  $(LIB32_FLAGS) $(DEF_FLAGS) $(LIB32_OBJS)
+<<
+
+
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ)  $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+
+
+SOURCE=.\DBCleanUp.cpp \
+	   .\DirIteratorsNT.cpp
+
+
+"$(INTDIR)\DBCleanUp.obj" : $(SOURCE) "$(INTDIR)"
+"$(INTDIR)\DirIteratorsNT.obj" : $(SOURCE) "$(INTDIR)"
+
+
+
+

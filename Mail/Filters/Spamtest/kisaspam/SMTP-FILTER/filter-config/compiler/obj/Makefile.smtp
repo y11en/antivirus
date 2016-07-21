@@ -1,0 +1,45 @@
+#
+# Build of smtp data compiler
+#
+
+.include <$(MAKE_INCLUDES_PATH)/common.mk>
+
+#
+# Data compiler rules
+#
+
+PROGNAME  = ap-mflt-compiler
+
+SOURCES   = parse.cpp compiler.cpp samples.cpp ../CFBuilder/cf-messages.cpp
+PROGOBJS := $(OBJS_FULLNAME)
+
+LIBNAMES  = filter cfdata lingproc smtp-filter xmlfiles smtp-paths expatutils zutils patricia
+PROGLIBS  = $(LIBNAMES_WITHSUFFIX:S/^/-l/g) $(BDB_LIB) -lexpat -lz -lm
+
+.include <$(MAKE_INCLUDES_PATH)/build_exe.mk>
+
+COMPILER_FULLNAME := $(PROGFULLNAME)
+COMPILER_OBJS     := $(PROGOBJS_FULLNAME)
+
+#
+# BuildALL targets and rules
+#
+
+BUILD_TARGETS = $(COMPILER_FULLNAME)
+
+begin : $(BUILD_TARGETS)
+
+#
+# Clean rules
+#
+
+clean: 
+	@echo 
+	@echo "============================================================"
+	@echo "Cleaning in $(MAINDIR)"
+	@echo "============================================================"
+	@echo 
+	rm -f $(PROCOBJS) $(BUILD_TARGETS)
+
+clean-all: 
+	ls | grep -v Makefile | xargs rm -f

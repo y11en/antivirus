@@ -1,0 +1,9 @@
+# Microsoft Developer Studio Generated Dependency File, included by kav50.mak
+
+.\kav50.cpp : \
+	".\StdAfx.h"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	

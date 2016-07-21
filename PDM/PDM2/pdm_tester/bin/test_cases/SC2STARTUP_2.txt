@@ -1,0 +1,12 @@
+# self copy to startup folder
+# SC_TO_SF NOT_TO_CLEAR
+
+EX_COPY_FILE @SELF_PATH@ @START_UP_FOLDER@ NOT_TO_CLEAR
+
+#etalon_verdict 100 SelfCopyToStartup
+#etalon_verdict 80 OnSelfCopyNot2Temp
+#etalon_verdict 50 Installer
+#etalon_verdict 50 OnInstallNotSelf
+#etalon_verdict 50 SelfCopy
+
+

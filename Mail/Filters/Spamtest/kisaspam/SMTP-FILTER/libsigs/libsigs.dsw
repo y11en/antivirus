@@ -1,0 +1,236 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "checksigdb"=".\checksigdb.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name fstorage
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libsigs
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name md5a
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "dumpsigdb"=".\dumpsigdb.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name fstorage
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libsigs
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name md5a
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "findsig"=".\findsig.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name fstorage
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libsigs
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name md5a
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "fsexport"=".\fsexport.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name fstorage
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name md5a
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libsigs
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "fstorage"="..\..\lib\fstorage\fstorage.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "libdb1"="..\..\gnu\db-1.85\PORT\win32\libdb1.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "libsigs"=".\libsigs.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "md5a"="..\..\gnu\md5a\md5a.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "mkfsdiffs"=".\mkfsdiffs.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name fstorage
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libsigs
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name md5a
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "mksigdb"=".\mksigdb.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name fstorage
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libdb1
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name md5a
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libsigs
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "testsigdb"=".\testsigdb.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name fstorage
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libsigs
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name md5a
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "updatesigdb"=".\updatesigdb.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name fstorage
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libsigs
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name md5a
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

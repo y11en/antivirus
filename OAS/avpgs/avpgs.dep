@@ -1,0 +1,235 @@
+# Microsoft Developer Studio Generated Dependency File, included by avpgs.mak
+
+.\AVPG.c : \
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\..\windows\hook\hook\avpgcom.h"\
+	"..\..\windows\hook\hook\funcs.h"\
+	"..\..\Windows\hook\hook\HookSpec.h"\
+	"..\..\Windows\hook\hook\IDriver.h"\
+	"..\Include\IFace\e_clsid.h"\
+	"..\Include\IFace\i_avpg.h"\
+	"..\Include\IFace\i_buffer.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_io.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\Include\IFace\i_objptr.h"\
+	"..\INCLUDE\IFACE\i_os.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_seqio.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_string.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\Include\IFace\impexhlp.h"\
+	"..\Include\plugin\p_win32_nfio.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\Include\pr_oid.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	"..\mkavio\plugin_mkavio.h"\
+	"..\NFIO\win32_io.h"\
+	"..\TempFile\tempfile.h"\
+	"..\WinDiskIO\plugin_windiskio.h"\
+	".\AVPG.h"\
+	".\DgsThrd.h"\
+	".\EvThread.h"\
+	".\NonOpF.h"\
+	".\plugin_avpg.h"\
+	".\TimeStats.h"\
+	
+
+.\DgsThrd.cpp : \
+	"..\..\commonfiles\stuff\parray.h"\
+	"..\..\commonfiles\stuff\stddefs.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\..\windows\hook\hook\avpgcom.h"\
+	"..\..\Windows\hook\hook\IDriver.h"\
+	".\DgsThrd.h"\
+	
+
+.\EvCache.cpp : \
+	".\EvCache.h"\
+	
+
+.\EvThread.cpp : \
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\..\windows\hook\hook\avpgcom.h"\
+	"..\..\windows\hook\hook\fsdrvlib.h"\
+	"..\..\windows\hook\hook\funcs.h"\
+	"..\..\Windows\hook\hook\HookSpec.h"\
+	"..\..\Windows\hook\hook\IDriver.h"\
+	"..\..\windows\hook\hook\minikav_api.h"\
+	"..\Include\IFace\e_clsid.h"\
+	"..\Include\IFace\e_ktrace.h"\
+	"..\Include\IFace\i_avpg.h"\
+	"..\Include\IFace\i_buffer.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_io.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\Include\IFace\i_objptr.h"\
+	"..\INCLUDE\IFACE\i_os.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_seqio.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_string.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\Include\IFace\impexhlp.h"\
+	"..\Include\plugin\p_win32_nfio.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\Include\pr_oid.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	"..\mkavio\plugin_mkavio.h"\
+	"..\NFIO\win32_io.h"\
+	"..\TempFile\tempfile.h"\
+	"..\WinDiskIO\plugin_windiskio.h"\
+	".\AvpgNotify.h"\
+	".\DgsThrd.h"\
+	".\EvCache.h"\
+	".\EvThread.h"\
+	".\NonOpF.h"\
+	
+
+.\NonOpF.cpp : \
+	"..\..\commonfiles\stuff\parray.h"\
+	"..\..\commonfiles\stuff\stddefs.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\..\windows\hook\hook\avpgcom.h"\
+	".\NonOpF.h"\
+	
+
+.\plugin_avpg.c : \
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\..\windows\hook\hook\avpgcom.h"\
+	"..\..\windows\hook\hook\funcs.h"\
+	"..\..\Windows\hook\hook\HookSpec.h"\
+	"..\..\Windows\hook\hook\IDriver.h"\
+	"..\Include\IFace\e_clsid.h"\
+	"..\Include\IFace\e_ktrace.h"\
+	"..\Include\IFace\i_avpg.h"\
+	"..\Include\IFace\i_buffer.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_io.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\Include\IFace\i_objptr.h"\
+	"..\INCLUDE\IFACE\i_os.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_seqio.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_string.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\Include\IFace\impexhlp.h"\
+	"..\Include\plugin\p_win32_nfio.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\Include\pr_oid.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	"..\mkavio\plugin_mkavio.h"\
+	"..\NFIO\win32_io.h"\
+	"..\TempFile\tempfile.h"\
+	"..\WinDiskIO\plugin_windiskio.h"\
+	".\AVPG.h"\
+	".\EvThread.h"\
+	".\NonOpF.h"\
+	".\plugin_avpg.h"\
+	".\TimeStats.h"\
+	
+
+.\StdAfx.cpp : \
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	".\StdAfx.h"\
+	
+
+.\avpg.rc : \
+	"..\..\CommonFiles\version\ver_mod.rc2"\
+	

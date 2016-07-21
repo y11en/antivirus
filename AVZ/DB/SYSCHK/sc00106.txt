@@ -1,0 +1,5 @@
+// ***** TrojanDownloader.LookMe *****
+begin
+ AddEvAlarmByCLSID('A7F82252-EF7F-4E46-8595-84AE76D5FE03',AScriptName,'inst.ocx');
+ AddEvAlarmByCLSID('C9C71C9E-BF72-4B17-B05A-B6DBBB73C7E0',AScriptName,'vlpodbc.dll');
+end.

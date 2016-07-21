@@ -1,0 +1,4 @@
+// ***** TrojanDropper.Win32.Small.do *****
+begin
+ AddEvAlarmByCLSID('17DA0C9E-4A27-4AC5-BB75-5D24B8CDB972','TrojanDropper.Win32.Small.do, TrojanDownloader.Win32.IstBar.ay','');
+end.

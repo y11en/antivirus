@@ -1,0 +1,73 @@
+forward interface MailInterceptorLoader;
+typedef MailInterceptorLoader* hMAILINTERCEPTORLOADER;
+
+
+
+[
+  mnemonic(IID_MAILINTERCEPTORLOADER)
+  id(40009)
+  c_type_name(hMAILINTERCEPTORLOADER)
+  comment_ex("Интерфейс загрузчика почтового перехватчика.
+    Каждый перехватчик должен снабжаться загрузчиком.")
+]
+interface MailInterceptorLoader {
+
+  // ------------------------------------
+
+    [
+      comment_ex("Interface version")
+      id(130)
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      comment_ex("Interface comment")
+      id(131)
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+
+    [
+      id(4096)
+      comment_ex("Средства, предоставляемые объектом hBL:
+        - Диалог в пользовательском интерфейсе
+        
+        ... и т.п.")
+    ]
+    prop hOBJECT pgBL; // Указатель на объект бизнесс-логики продукта
+
+    [
+      id(4097)
+      comment_ex("Средства, предоставляемые hMTM:
+        - Информация о состоянии задачи MTM
+        - Процессирование объекта")
+    ]
+    prop hOBJECT pgMTM; // Указатель на объект MTM
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Загружает экземпляр перехватчика для выполнения задачи p_szMailTaskName и передает ему настройки p_settings")
+    ]
+    method tERROR LoadInterceptor( // Загружает экземпляр перехватчика
+      const tCHAR* p_szMailTaskName, // Имя задачи MailCommon, исполняемой данным перехватчиком
+      const hOBJECT p_RegSum // Настройки работы перехватчика
+    );
+
+    [
+      comment_ex("Выгружает экземпляр перехватчика, выполняющего задачу p_szMailTaskName")
+    ]
+    method tERROR UnloadInterceptor( // Выгружает экземпляр перехватчика
+      const tCHAR* p_szMailTaskName
+    );
+
+    [
+      comment_ex("Перегружает экземпляр перехватчика, выполняющего задачу p_szMailTaskName и передает ему настройки p_settings")
+    ]
+    method tERROR ReloadInterceptor( // Перегружает экземпляр перехватчика
+      const tCHAR* p_szMailTaskName, // Имя задачи MailCommon, исполняемой данным перехватчиком
+      const hOBJECT p_RegSum // Настройки работы перехватчика
+    );
+
+}
+

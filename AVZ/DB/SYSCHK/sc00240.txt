@@ -1,0 +1,4 @@
+// ***** Trojan.Win32.Krepper.ae, Trojan.Win32.Small.rr *****
+begin
+ AddEvAlarmByCLSID('0388EC16-BA98-416f-9D9B-B9A031E427AF', AScriptName, '');
+end.

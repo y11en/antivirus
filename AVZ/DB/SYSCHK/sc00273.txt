@@ -1,0 +1,4 @@
+// ***** AdvWare.AdMir.a *****
+begin
+ AddEvAlarmByCLSID('DC341F1B-EC77-47BE-8F58-96E83861CC5A', AScriptName, 'ContentMatchControl*.DLL');
+end.

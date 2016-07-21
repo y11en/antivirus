@@ -1,0 +1,6 @@
+// ***** AdvWare.BHO.SideStep *****
+begin
+ AddEvAlarmByCLSID('08351226-6472-43BD-8A40-D9221FF1C4CE', AScriptName,'');
+ AddEvAlarmByCLSID('08361226-6472-43BD-8A40-D9221FF1C4CE', AScriptName,'');
+ AddEvAlarmByCLSID('0837121A-6472-43BD-8A40-D9221FF1C4CE', AScriptName, 'SbCIe*.dll');
+end.

@@ -1,0 +1,117 @@
+﻿;------------- MakeRescueDiskWizard -------------
+
+[Global]
+$RescueDisk             = "RescueDisk"
+RescueDiskErrorDescr    = s_MakeRescueDiskErrors(OperationCode)
+ForderNotEmpty          = "The folder you have specified is not empty. All data will be lost.\nDo you wish to continue?"
+ForderNotExist          = "The folder you have specified does not exist.\nDo you wish to create it?"
+
+[s_MakeRescueDiskErrors]
+1   = "Cannot prepare data." + strVal1 + " " + s_SystemError(ErrorCode) + "."
+2   = s_ProgramRCodes(nVal1)
+3   = "Cannot delete temporary data. " + s_SystemError(ErrorCode) + "."
+4   = "Cannot create ISO file." + s_SystemError(ErrorCode) + "."
+5   = "Cannot open ISO file." + s_SystemError(ErrorCode) + "."
+6   = "Cannot find PE Builder."
+7   = "Cannot find Microsoft Windows XP distributive."
+8   = "Cannot find BartPE data files."
+9   = "Cannot create output folder. \nA file name cannot contain any of the following characters: \\\\/:*?\"<>|"
+
+[s_ProgramRCodes]
+0
+2       = "Error executing program " + strVal1 + ". " + s_SystemError(ErrorCode)
+default = "Program returned error."
+
+[MakeRescueDiskWizard]
+@ = "Rescue disk creation wizard"
+
+[MakeRescueDiskWizardPages]
+Intro.Name                      = "Step 1. General information"
+Intro.Descr                     = "It is a good idea to make an anti-virus rescue disk, so that if your computer system is completely destroyed by a virus, you will be able to recover your data."
+BartPE_Prepare.Name             = "Step 2. Getting ready to burn"
+BartPE_Prepare.Descr            = "Please, type the path to PE Builder, path to output folder and path to Microsoft Windows XP Service Pack 2 installation CD."
+BartPE_Prepare_Progress.Name    = "Step 2. Getting ready to burn"
+BartPE_Prepare_Progress.Descr   = "Burning preparation is in progress. It usually takes a few minutes."
+BartPE_MakeIso.Name             = "Step 3. ISO file creation"
+BartPE_MakeIso.Descr            = "Choose the ISO file name."
+BartPE_MakeIso_Progress.Name    = "Step 3. ISO file creation"
+BartPE_MakeIso_Progress.Descr   = "ISO file creation is in progress. It usually takes a few minutes."
+BartPE_BurnCd.Name              = "Step 4. Burning the CD"
+BartPE_BurnCd.Descr             = "You may burn the ISO file immediatly or burn it later."
+BartPE_BurnCd_Progress.Name     = "Step 4. Burning the CD"
+BartPE_BurnCd_Progress.Descr    = "CD is being written. It usually takes a few minutes."
+Finish.Name                     = "Wizard Completion"
+Finish.Descr                    = "Rescue Disk Creation Wizard is completed.\nPress 'Finish' to close this window."
+
+[MakeRescueDiskWizardPages_Intro]
+Description = "It is a good idea to make an anti-virus rescue disk, so that if your computer system is completely destroyed by a virus, you will be able to recover your data."
+Info        = "To create a rescue disk it is necessary to have Bart <a onclick(url(\"http://www.nu2.nu/pebuilder\"))>PE Builder</a> version 3.1.3 or higher installed on your computer. Additionally, you must have the Microsoft Windows XP Service Pack 2 installation CD.\n\nPlease carefully read through the PE Builder license agreement before using it.\n\nA CD-R or CD-RW device is required to create the Rescue Disk."
+Next.Name   = "&Next"
+Next.Descr  = "Begin wizard"
+
+[MakeRescueDiskWizardPages_BartPE_Prepare_Inner]
+ToolPathLabel   = "Installed PE Builder folder:"
+DestPathLabel   = "Output folder:"
+Prepare         = "Use previously saved files"
+XPCDPathLabel   = "Path to Microsoft Windows XP Service Pack 2 installation CD:"
+UseIAMT         = "Enable remote administration for rescued computer"
+IAMT_Info       = "Rescued computer must support Intel® vPro™ Technology Platform or Intel® Active Management technology"
+
+[MakeRescueDiskWizardPages_BartPE_MakeIso_Inner]
+Text1           = "Choose one of the following:"
+IsoPathLabel    = "ISO file name:"
+
+[MakeRescueDiskWizardPages_BartPE_MakeIso_Inner_CreateOrUse]
+Make    = "Create new ISO file"
+Use     = "Use existing ISO file"
+
+[MakeRescueDiskWizardPages_BartPE_MakeIso_Progress_Inner]
+Text1 = "Please wait..."
+
+[MakeRescueDiskWizardPages_BartPE_Prepare_Progress_Inner]
+Text1 = "Please wait..."
+
+[MakeRescueDiskWizardPages_BartPE_BurnCd_Inner]
+Text1 = "Choose one of the following:"
+
+[MakeRescueDiskWizardPages_BartPE_BurnCd_Inner_NowLater]
+BurnNow         = "Burn now"
+CDDriveLabel    = "Select CD-R(W) drive:"
+EraseDisk       = "Erase disk before burning"
+BurnLater       = "Burn later"
+
+[MakeRescueDiskWizardPages_BartPE_BurnCd_Progress_Inner]
+Text1 = "Please wait..."
+
+[MakeRescueDiskWizardPages_Finish]
+Finish.Name     = "&Finish"
+Finish.Descr    = "Finish wizard"
+
+[MakeRescueDiskWizardPages_BartPE_Prepare]
+Next.Name   = "&Next"
+Next.Descr  = "Go to next configuration step"
+
+[MakeRescueDiskWizardPages_BartPE_Prepare_Progress]
+Back.Name   = "&Back"
+Back.Descr  = "Return to the previous step"
+
+[MakeRescueDiskWizardPages_BartPE_MakeIso]
+Back.Name   = "&Back"
+Back.Descr  = "Return to the previous step"
+Next.Name   = "&Next"
+Next.Descr  = "Go to next configuration step"
+
+[MakeRescueDiskWizardPages_BartPE_MakeIso_Progress]
+Back.Name   = "&Back"
+Back.Descr  = "Return to the previous step"
+
+[MakeRescueDiskWizardPages_BartPE_BurnCd]
+Back.Name   = "&Back"
+Back.Descr  = "Return to the previous step"
+Next.Name   = "&Next"
+Next.Descr  = "Go to next configuration step"
+
+[MakeRescueDiskWizardPages_BartPE_BurnCd_Progress]
+Back.Name   = "&Back"
+Back.Descr  = "Return to the previous step"
+

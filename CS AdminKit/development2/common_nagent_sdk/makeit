@@ -1,0 +1,26 @@
+#!/bin/bash
+rm -R -f ./include
+rm -R -f ./lib
+perl -w make_sdk.pl
+
+mkdir ./bin
+mkdir ./bin-g
+mkdir ./lib
+
+cp ../build/lib/libklcsstd.so.0.1 ./lib/libklcsstd.so.0.1
+cp ../build/lib/libklcsstdg.so.0.1 ./lib/libklcsstdg.so.0.1
+
+cp ../build/lib/libklcstr.so.0.1 ./lib/libklcstr.so.0.1
+cp ../build/lib/libklcstrg.so.0.1 ./lib/libklcstrg.so.0.1
+
+cp ../build/lib/libklcskca.so.0.1 ./lib/libklcskca.so.0.1
+cp ../build/lib/libklcskcag.so.0.1 ./lib/libklcskcag.so.0.1
+
+cp ../build/lib/libklcsagt.so.0.1 ./lib/libklcsagt.so.0.1
+cp ../build/lib/libklcsagtg.so.0.1 ./lib/libklcsagtg.so.0.1
+
+cp ../build/lib/libklcsnagt.so.0.1 ./lib/libklcsnagt.so.0.1
+cp ../build/lib/libklcsnagtg.so.0.1 ./lib/libklcsnagtg.so.0.1
+
+cp ../build/bin/klnagent ./bin/klnagent
+cp ../build/bin-g/klnagent ./bin-g/klnagent

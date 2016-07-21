@@ -1,0 +1,5 @@
+# Microsoft Developer Studio Generated Dependency File, included by inifile.mak
+
+".\inifile_res.rc" : \
+	".\ver_mod.h"\
+	

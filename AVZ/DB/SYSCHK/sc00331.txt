@@ -1,0 +1,5 @@
+// ***** Adware.RapidBlaster *****
+begin
+ AddEvAlarmByCLSID('29CAC0B6-D6C2-4395-8289-BF3FBF27AD5F',AScriptName,'');
+ AddEvAlarmByCLSID('F0AA2376-F073-4E57-86E8-0238F99087C7',AScriptName,'');
+end.

@@ -1,0 +1,4 @@
+// ***** Spy.Bulla *****
+begin
+ AddEvAlarmByCLSID('3E8A1971-45A5-45EE-828B-8C78431C0BD4',AScriptName,'IEPLUGIN.dll');
+end.

@@ -1,0 +1,119 @@
+LIBRARY      "msi_misc.dll"
+
+EXPORTS
+	ReturnUserExit					@1
+	ReturnError						@2
+	RemoveFiles                     @3
+	WriteRegistryValuesCA			@4
+	FindApp							@5
+	WFwIsEnabled					@6
+	WFwEnable						@7
+	WFwDisable						@64
+	CleanRegFlag_BatPlugin
+	Register_BatPlugin				@10
+	Unregister_BatPlugin			@11
+	ListCompetitorsSoftware			@12
+	ClearListCompetitorsSoftware	@13
+	UninstallCompetitorsSoftware	@14
+	RunCleaner
+;	EnableAutoUpdateCA				@15
+	EnableFullScanCA				@16
+	EnableTraceToFileCA				@17
+	EnableTraceToDebugOutputCA		@18
+	EnableRebootPending				@19
+	CheckRebootPending				@20
+	
+	SaveAVBases						@32
+	RestoreAVBases					@33
+	SetNumberofProcessors			@36
+	DeleteFolder					@37
+	DeleteEmptyFolder
+	SetUpdateState					@38
+	DisableAntiHacker				@39
+	RestoreDNSCache					@41
+	CheckUpgrade					@42
+	SetPIWInitModeSetProp
+	SetPIWInitMode					@43
+	SetSetupResultSuccess			@44
+	SetAllowServiceStop				@45
+	RbSetAllowServiceStop
+	SetAllowServiceStopAVP6
+	AddLicenseFile					@46
+	SystemRestart					@47
+	UninstallAH						@48
+	EnableStartAfterReboot			@49
+	VerifyInstallDir				@50
+;	CheckSelfProtectionStatus		@51
+	CheckObjectsToSave				@52
+	SaveASBases						@53
+	RestoreASBases					@54
+	RemoveProtectionFiles			@57
+	DeleteLicenseInfo				@58
+	SetInstalledFeaturesProp		@60
+	WriteRegInstalledFeatures		@61
+	SetupFilesCleanup				@63
+	SetINSTALLDIR
+	SetFeaturesState				@65
+	SetFeaturesStateUI				
+;	HideTaskScanMyComputer			@66
+;	HideTaskScanStartup				@67
+;	HideTaskScanCritical			@68
+;	HideTaskUpdater					@69
+	CopyFileFromSource				@70
+	ReportCAError					@71
+	GetDocumentsFolder				@72
+	SetCurrentTime					@73
+	WriteZombie						@74
+	SetOS4Updater					@76
+	CheckRegistryPermissions		@77
+	CKAHUM_Reload					@78
+	CKAHUM_Uninstall				@79
+	RemoveFilesX64					@81
+	SaveSettings					@82
+	RestoreSettings					@83
+	SetConnInstalled
+	UnloadConnector					@84
+;	HideTaskRetranslation			@85
+	SetIsKAVUnPasswd				@86
+	CheckKAVUnPasswd				@87
+	InitKAVUnPasswd					@88
+	SetSetupDir						@89
+	RegisterDriver					@90
+	UnregisterDriver				@91
+	StartDriver						@92
+	SetServiceDACL					@93
+	SetServiceRestart
+	ExecImmediate
+	ExecDeferred
+	RemoveAllUsersRegKey
+	SelfRegOnRebootInit
+	SelfRegOnRebootRun
+	Extract
+	RemoveUpdaterList
+	SetREINSTALLProp
+	SetFeaturesStateSetProp
+	SetAppTasks
+	SetDeinstall
+	RemoveDeinstall
+	ImportReg
+	GetSettingsVersion
+	SetProductMenuFolder
+	UnloadApp
+	OutBinFile
+	AVP6UpgradeSettings
+	AVP6UpgradeQB
+	AVP6UpgradeAS
+	RbCreateFolders
+	
+	; sync with selfdef.wxi and selfdef.cpp
+    SetSTATUSProp
+    RbInitCAServerDef
+    InitCAServerDef
+    InitCAServerImm
+    RegisterRMLoc
+    RbRegisterRMLoc
+    SetIsInstalled
+    DisableFidbox
+    
+	
+	

@@ -1,0 +1,19 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@
+
+Name = avpmgr
+Plugin = $(Name).@PLUGIN_EXT@
+Metafile = @srcdir@/AvpMgr.@METAFILE_EXT@
+Targets = $(Plugin)
+
+Sources = \
+	engine.c \
+	plugin_avpmgr.c
+
+# unix section
+
+VersionScript = @abs_top_srcdir@/unix/prague_plugin.ver
+
+include @abs_top_builddir@/@OS@/Rules

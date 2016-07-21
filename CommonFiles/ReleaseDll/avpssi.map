@@ -1,0 +1,929 @@
+ avpssi
+
+ Timestamp is 4051988c (Fri Mar 12 14:01:32 2004)
+
+ Preferred load address is 60750000
+
+ Start         Length     Name                   Class
+ 0001:00000000 000155c0H .text                   CODE
+ 0001:000155c0 00000085H .text$x                 CODE
+ 0002:00000000 000001b8H .idata$5                DATA
+ 0002:000001b8 000014ecH .rdata                  DATA
+ 0002:000016a8 000002a8H .xdata$x                DATA
+ 0002:00001950 00000050H .idata$2                DATA
+ 0002:000019a0 00000014H .idata$3                DATA
+ 0002:000019b4 000001b8H .idata$4                DATA
+ 0002:00001b6c 000006f6H .idata$6                DATA
+ 0002:00002270 000001bbH .edata                  DATA
+ 0003:00000000 00000004H .CRT$XCA                DATA
+ 0003:00000004 0000001cH .CRT$XCU                DATA
+ 0003:00000020 00000004H .CRT$XCZ                DATA
+ 0003:00000024 00000004H .CRT$XIA                DATA
+ 0003:00000028 00000004H .CRT$XIZ                DATA
+ 0003:00000030 00002f60H .data                   DATA
+ 0003:00002f90 00005744H .bss                    DATA
+ 0004:00000000 00000058H .rsrc$01                DATA
+ 0004:00000060 000004a8H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0001:0000003d       ?IsAvpTempFile@@YAHPAXH@Z  6075103d f   avp_api.obj
+ 0001:00000082       ?AvpTempFile_Add@@YAHPAX@Z 60751082 f   avp_api.obj
+ 0001:000000c1       ?XorMemory@@YAHPAEKE@Z     607510c1 f   avp_api.obj
+ 0001:000000e0       __AvpConvertChar@12        607510e0 f   avp_api.obj
+ 0001:00000199       __AvpStrlwr@4              60751199 f   avp_api.obj
+ 0001:000001a7       __AvpStrrchr@8             607511a7 f   avp_api.obj
+ 0001:000001ba       __AvpCallback@8            607511ba f   avp_api.obj
+ 0001:00000243       ?ExecSpecial@@YGKPADKK@Z   60751243 f   avp_api.obj
+ 0001:00000248       ?VerifyStreamPointer@@YAJPAUIStream@@PAT_ULARGE_INTEGER@@@Z 60751248 f   avp_api.obj
+ 0001:000002d1       ?VerifyStreamPointerExternal@@YAJPAUIStream@@PAK@Z 607512d1 f   avp_api.obj
+ 0001:0000033b       ?GetStreamSize@@YAKPAUIStream@@@Z 6075133b f   avp_api.obj
+ 0001:0000038e       _Cache_AvpReadFile@20      6075138e f   avp_api.obj
+ 0001:00000556       _Cache_AvpWriteFile@20     60751556 f   avp_api.obj
+ 0001:00000738       _Cache_AvpCloseHandle@4    60751738 f   avp_api.obj
+ 0001:00000784       _Cache_AvpSetFilePointer@16 60751784 f   avp_api.obj
+ 0001:0000097b       _Cache_AvpSetEndOfFile@4   6075197b f   avp_api.obj
+ 0001:00000a51       _Cache_AvpGetFileSize@8    60751a51 f   avp_api.obj
+ 0001:00000aff       ?Cache_AvpFlush@@YGHPAX@Z  60751aff f   avp_api.obj
+ 0001:00000b3f       _Cache_AvpDeleteFile@4     60751b3f f   avp_api.obj
+ 0001:00000b4c       _Cache_AvpCreateFile@28    60751b4c f   avp_api.obj
+ 0001:00000b86       _Cache_Destroy             60751b86 f   avp_api.obj
+ 0001:00000b86       _Cache_Init                60751b86 f   avp_api.obj
+ 0001:00000b8a       _AVP_Init                  60751b8a f   avp_api.obj
+ 0001:00000c53       _AVP_Destroy               60751c53 f   avp_api.obj
+ 0001:00000ce8       _AVP_RegisterCallbackPtr   60751ce8 f   avp_api.obj
+ 0001:00000cf2       _AVP_SetTempPath           60751cf2 f   avp_api.obj
+ 0001:00000d33       __AvpGetTempPath@8         60751d33 f   avp_api.obj
+ 0001:00000d7c       _AVP_EnableVirusListGen    60751d7c f   avp_api.obj
+ 0001:00000d86       _AVP_LoadBase              60751d86 f   avp_api.obj
+ 0001:00000f92       _AVP_UnloadBase            60751f92 f   avp_api.obj
+ 0001:00000fe5       _AVP_AddMask               60751fe5 f   avp_api.obj
+ 0001:00001039       _AVP_AddExcludeMask        60752039 f   avp_api.obj
+ 0001:0000108d       ?AvpScanExceptHandler@@YAXPAUAVPScanObject@@@Z 6075208d f   avp_api.obj
+ 0001:000010a6       _AVP_ScanFile              607520a6 f   avp_api.obj
+ 0001:00001122       _AVP_ScanFileInMemory      60752122 f   avp_api.obj
+ 0001:000011af       _AVP_ScanStream            607521af f   avp_api.obj
+ 0001:0000123a       _AVP_MakeFullName          6075223a f   avp_api.obj
+ 0001:0000124a       _AVP_CancelScan            6075224a f   avp_api.obj
+ 0001:00001253       ??1?$vector@PAXV?$allocator@PAX@std@@@std@@QAE@XZ 60752253 f i avp_api.obj
+ 0001:00001273       ?push_back@?$vector@PAXV?$allocator@PAX@std@@@std@@QAEXABQAX@Z 60752273 f i avp_api.obj
+ 0001:00001284       ?erase@?$vector@PAXV?$allocator@PAX@std@@@std@@QAEPAPAXPAPAX@Z 60752284 f i avp_api.obj
+ 0001:000012ba       ?insert@?$vector@PAXV?$allocator@PAX@std@@@std@@QAEXPAPAXIABQAX@Z 607522ba f i avp_api.obj
+ 0001:000014b7       _DllMain@12                607524b7 f   avpssi.obj
+ 0001:000014f4       _f01@0                     607524f4 f   avpssi.obj
+ 0001:000014fa       _f02@24                    607524fa f   avpssi.obj
+ 0001:00001521       _f23@36                    60752521 f   avpssi.obj
+ 0001:00001637       _f03@4                     60752637 f   avpssi.obj
+ 0001:000016c1       _f04@8                     607526c1 f   avpssi.obj
+ 0001:000016fd       _f05@12                    607526fd f   avpssi.obj
+ 0001:0000173d       _f06@8                     6075273d f   avpssi.obj
+ 0001:00001780       _f19@8                     60752780 f   avpssi.obj
+ 0001:000017a6       _f07@8                     607527a6 f   avpssi.obj
+ 0001:000017e2       _f22@8                     607527e2 f   avpssi.obj
+ 0001:0000181e       _f08@12                    6075281e f   avpssi.obj
+ 0001:0000185e       _f09@8                     6075285e f   avpssi.obj
+ 0001:00001870       _f24@12                    60752870 f   avpssi.obj
+ 0001:000019c7       _f20@16                    607529c7 f   avpssi.obj
+ 0001:00001a7d       _f21@12                    60752a7d f   avpssi.obj
+ 0001:00001b3d       _f10@8                     60752b3d f   avpssi.obj
+ 0001:00001b90       _f11@4                     60752b90 f   avpssi.obj
+ 0001:00001be3       _f12@4                     60752be3 f   avpssi.obj
+ 0001:00001c2e       _f13@4                     60752c2e f   avpssi.obj
+ 0001:00001c79       _f14@8                     60752c79 f   avpssi.obj
+ 0001:00001cf5       _f15@4                     60752cf5 f   avpssi.obj
+ 0001:00001d8a       _f16@0                     60752d8a f   avpssi.obj
+ 0001:00001d8f       _f17@0                     60752d8f f   avpssi.obj
+ 0001:00001da4       _f18@0                     60752da4 f   avpssi.obj
+ 0001:00001dbb       _f25@4                     60752dbb f   avpssi.obj
+ 0001:00001dcc       _f26@16                    60752dcc f   avpssi.obj
+ 0001:00001df2       _f27@20                    60752df2 f   avpssi.obj
+ 0001:00001e1b       _f28@0                     60752e1b f   avpssi.obj
+ 0001:00001e2e       _DATETIME_IsLeapYear       60752e2e f   DateTime.obj
+ 0001:00001e59       _DATETIME_IsValidDate      60752e59 f   DateTime.obj
+ 0001:00001ed1       _DATETIME_GetDaysCount     60752ed1 f   DateTime.obj
+ 0001:00001f95       ??0C_FILE_MASK_PARSER@@QAE@PAD@Z 60752f95 f   FileMaskParser.obj
+ 0001:0000207d       ??0C_HANDLES_TABLE@@QAE@K@Z 6075307d f   HandlesTable.obj
+ 0001:000020ce       ??1C_HANDLES_TABLE@@QAE@XZ 607530ce f   HandlesTable.obj
+ 0001:000020f0       ?Reserve@C_HANDLES_TABLE@@QAEKXZ 607530f0 f   HandlesTable.obj
+ 0001:0000213c       ?UnReserve@C_HANDLES_TABLE@@QAE_NK@Z 6075313c f   HandlesTable.obj
+ 0001:00002188       ?UnReserveAndAdd@C_HANDLES_TABLE@@QAE_NKK@Z 60753188 f   HandlesTable.obj
+ 0001:000021e5       ?Remove@C_HANDLES_TABLE@@QAEKK@Z 607531e5 f   HandlesTable.obj
+ 0001:00002237       ?Get@C_HANDLES_TABLE@@QAEKK@Z 60753237 f   HandlesTable.obj
+ 0001:00002272       ??0C_MON_REG@@QAE@XZ       60753272 f   mon_reg.obj
+ 0001:000022af       ??1C_MON_REG@@QAE@XZ       607532af f   mon_reg.obj
+ 0001:000022db       ?RegisterUnregisterInvisibleThread@C_MON_REG@@AAE_N_N@Z 607532db f   mon_reg.obj
+ 0001:000023f4       ?Reset@C_REPORT_PROP@@QAEXXZ 607533f4 f   repfile.obj
+ 0001:00002424       ?Truncate@C_REPORT_FILE@@AAE_NXZ 60753424 f   repfile.obj
+ 0001:0000246d       ??0C_REPORT_FILE@@QAE@PAVC_REPORT_PROP@@PBD@Z 6075346d f   repfile.obj
+ 0001:00002506       ??1C_REPORT_FILE@@QAE@XZ   60753506 f   repfile.obj
+ 0001:0000251d       ?Init@C_REPORT_FILE@@AAE_NPBVC_REPORT_PROP@@@Z 6075351d f   repfile.obj
+ 0001:00002628       ?Done@C_REPORT_FILE@@AAEXXZ 60753628 f   repfile.obj
+ 0001:0000265c       ?Write@C_REPORT_FILE@@AAE_NPAD@Z 6075365c f   repfile.obj
+ 0001:00002709       ?WriteHeader@C_REPORT_FILE@@AAE_NXZ 60753709 f   repfile.obj
+ 0001:00002716       ?Purge@C_REPORT_FILE@@QAE_NXZ 60753716 f   repfile.obj
+ 0001:0000275b       ?WriteMsg@C_REPORT_FILE@@QAEKPAD@Z 6075375b f   repfile.obj
+ 0001:00002834       ??0C_HSCAN@@QAE@PAUSCAN_OBJ@@KKPAEKPAUIStream@@@Z 60753834 f   Scan.obj
+ 0001:0000288f       ??1C_HSCAN@@QAE@XZ         6075388f f   Scan.obj
+ 0001:000028a6       ?IsValid@C_HSCAN@@QBE_NXZ  607538a6 f   Scan.obj
+ 0001:000028b8       ?AddHead@C_HSCAN@@QAE_NPAV1@@Z 607538b8 f   Scan.obj
+ 0001:000028d5       ?RemoveTail@C_HSCAN@@QAEPAV1@XZ 607538d5 f   Scan.obj
+ 0001:000028f1       ?Remove@C_HSCAN@@QAE_NXZ   607538f1 f   Scan.obj
+ 0001:00002932       ?RFlagsToObjResult@@YAKK@Z 60753932 f   ScanLoop.obj
+ 0001:0000297c       ?CurScan@@YAKXZ            6075397c f   ScanLoop.obj
+ 0001:00002cee       ?StopCurScan@@YAXXZ        60753cee f   ScanLoop.obj
+ 0001:00002d0a       ?AVPCallbacksHandrer@@YGJIJ@Z 60753d0a f   ScanLoop.obj
+ 0001:00003234       ?Loop@@YGKPAX@Z            60754234 f   ScanLoop.obj
+ 0001:0000339a       ?InitDatabasesInfo@C_SCAN_LOOP@@AAEXXZ 6075439a f   ScanLoop.obj
+ 0001:000033d5       ?InitTempFolder@C_SCAN_LOOP@@AAE_NPAD@Z 607543d5 f   ScanLoop.obj
+ 0001:000034f6       ?FindSetFile@C_SCAN_LOOP@@AAE_NKPAD@Z 607544f6 f   ScanLoop.obj
+ 0001:000036d6       ?InitDatabases@C_SCAN_LOOP@@AAE_NPAD@Z 607546d6 f   ScanLoop.obj
+ 0001:000037b7       ??0C_SCAN_LOOP@@QAE@P6AX_N@ZPAD2KKK@Z 607547b7 f   ScanLoop.obj
+ 0001:000038a1       ??1C_SCAN_LOOP@@QAE@XZ     607548a1 f   ScanLoop.obj
+ 0001:00003939       ?IsValid@C_SCAN_LOOP@@QAE_NXZ 60754939 f   ScanLoop.obj
+ 0001:0000398e       ?Start@C_SCAN_LOOP@@QAE_NXZ 6075498e f   ScanLoop.obj
+ 0001:000039c7       ?Stop@C_SCAN_LOOP@@QAEXXZ  607549c7 f   ScanLoop.obj
+ 0001:00003a08       ?SetTempFolder@C_SCAN_LOOP@@QAE_NPAD@Z 60754a08 f   ScanLoop.obj
+ 0001:00003b14       ?SetTempFolderIsNeeded@C_SCAN_LOOP@@QAEXXZ 60754b14 f   ScanLoop.obj
+ 0001:00003bb4       ?GetTempFolder@C_SCAN_LOOP@@QAE_NPADK@Z 60754bb4 f   ScanLoop.obj
+ 0001:00003bfa       ?ReloadDatabases@C_SCAN_LOOP@@QAE_NPAD@Z 60754bfa f   ScanLoop.obj
+ 0001:00003c9a       ?ReloadDatabasesIsNeeded@C_SCAN_LOOP@@QAE_NXZ 60754c9a f   ScanLoop.obj
+ 0001:00003d9a       ?ReloadDatabasesEx@C_SCAN_LOOP@@QAE_NPAD@Z 60754d9a f   ScanLoop.obj
+ 0001:00003db5       ?GetDatabasesInfo@C_SCAN_LOOP@@QAE_NPAUDATABASES_INFO@@@Z 60754db5 f   ScanLoop.obj
+ 0001:00003ed9       ?GetDatabasesInfoEx@C_SCAN_LOOP@@QAE_NPAUDATABASES_INFO_EX@@@Z 60754ed9 f   ScanLoop.obj
+ 0001:00004023       ?GetCurDatabasesSet@C_SCAN_LOOP@@QAE_NPADK@Z 60755023 f   ScanLoop.obj
+ 0001:0000406c       ?Scan@C_SCAN_LOOP@@QAE_NPAVC_HSCAN@@@Z 6075506c f   ScanLoop.obj
+ 0001:00004080       ?CloseScan@C_SCAN_LOOP@@QAE_NPAVC_HSCAN@@@Z 60755080 f   ScanLoop.obj
+ 0001:000040cd       ?FirstVirusName@C_SCAN_LOOP@@QAE_NKPADPAK1@Z 607550cd f   ScanLoop.obj
+ 0001:000040e7       ?NextVirusName@C_SCAN_LOOP@@QAE_NKKPADPAK1@Z 607550e7 f   ScanLoop.obj
+ 0001:00004197       ?VirusNamesCount@C_SCAN_LOOP@@QAEKXZ 60755197 f   ScanLoop.obj
+ 0001:000041b7       ??0C_HSCAN_QUEUE@@QAE@XZ   607551b7 f   ScanQueue.obj
+ 0001:000041f1       ??1C_HSCAN_QUEUE@@QAE@XZ   607551f1 f   ScanQueue.obj
+ 0001:0000421b       ?IsValid@C_HSCAN_QUEUE@@QAE_NXZ 6075521b f   ScanQueue.obj
+ 0001:0000422c       ?Push@C_HSCAN_QUEUE@@QAE_NPAVC_HSCAN@@@Z 6075522c f   ScanQueue.obj
+ 0001:00004281       ?Pop@C_HSCAN_QUEUE@@QAEPAVC_HSCAN@@XZ 60755281 f   ScanQueue.obj
+ 0001:000042eb       ?Remove@C_HSCAN_QUEUE@@QAE_NPAVC_HSCAN@@@Z 607552eb f   ScanQueue.obj
+ 0001:00004362       ?sys_log_Init@@YA_NPBD0@Z  60755362 f   sys_log.obj
+ 0001:0000443c       ?sys_log_Done@@YAXXZ       6075543c f   sys_log.obj
+ 0001:00004463       ?sys_log_Purge@@YA_NXZ     60755463 f   sys_log.obj
+ 0001:00004475       ?sys_log_Msg@@YA_NPAD@Z    60755475 f   sys_log.obj
+ 0001:00004590       ??0FSDrvLib_Sync@@QAE@XZ   60755590 f i FSDrvLib:FSDrv.obj
+ 0001:000046d0       _FSDrvInterceptorInit      607556d0 f   FSDrvLib:FSDrv.obj
+ 0001:000046f0       _FSDrvInterceptorInitEx    607556f0 f   FSDrvLib:FSDrv.obj
+ 0001:00004950       _FSDrvInterceptorDone      60755950 f   FSDrvLib:FSDrv.obj
+ 0001:00004af0       _FSDrvInterceptorRegisterInvisibleThread 60755af0 f   FSDrvLib:FSDrv.obj
+ 0001:00004be0       _FSDrvInterceptorUnregisterInvisibleThread 60755be0 f   FSDrvLib:FSDrv.obj
+ 0001:00004cc0       ?NTSysCall0@@YGKW4AVPG_W32_Services@@@Z 60755cc0 f   FSDrvLib:IDriver.obj
+ 0001:00004cd0       ?NTSysCall1@@YGKW4AVPG_W32_Services@@K@Z 60755cd0 f   FSDrvLib:IDriver.obj
+ 0001:00004cf0       ?NTSysCall2@@YGKW4AVPG_W32_Services@@KK@Z 60755cf0 f   FSDrvLib:IDriver.obj
+ 0001:00004d10       ?NTSysCall3@@YGKW4AVPG_W32_Services@@KKK@Z 60755d10 f   FSDrvLib:IDriver.obj
+ 0001:00004d30       ?NTSysCall4@@YGKW4AVPG_W32_Services@@KKKK@Z 60755d30 f   FSDrvLib:IDriver.obj
+ 0001:00004e70       ?IDriverInitDirectCalls@@YAHPAU_OSVERSIONINFOA@@@Z 60755e70 f   FSDrvLib:IDriver.obj
+ 0001:00004ef0       ?ReparseDrvPath@@YAXPADK@Z 60755ef0 f   FSDrvLib:IDriver.obj
+ 0001:00005000       ?EnableLoadDriverPrivilege@@YAHXZ 60756000 f   FSDrvLib:IDriver.obj
+ 0001:000050a0       ?LoadDeviceDriver@@YAKPBD0@Z 607560a0 f   FSDrvLib:IDriver.obj
+ 0001:00005230       ?GetDriverHandle@@YAPAXPAD@Z 60756230 f   FSDrvLib:IDriver.obj
+ 0001:000052b0       _IDriverInitDirectCallIO   607562b0 f   FSDrvLib:IDriver.obj
+ 0001:00005320       _IDriverGetVersion         60756320 f   FSDrvLib:IDriver.obj
+ 0001:00005380       _RegisterAppInDrv          60756380 f   FSDrvLib:IDriver.obj
+ 0001:00005840       _RegisterApp               60756840 f   FSDrvLib:IDriver.obj
+ 0001:00005880       _UnRegisterApp             60756880 f   FSDrvLib:IDriver.obj
+ 0001:00005930       ?IDriverInvisibleTransmit@@YAKPAXPAUINVISIBLE_TRANSMIT@@1@Z 60756930 f   FSDrvLib:IDriver.obj
+ 0001:00005990       _IDriverRegisterInvisibleThread 60756990 f   FSDrvLib:IDriver.obj
+ 0001:000059d0       _IDriverUnregisterInvisibleThread 607569d0 f   FSDrvLib:IDriver.obj
+ 0001:00005a10       _IDriverUnregisterInvisibleThreadByID 60756a10 f   FSDrvLib:IDriver.obj
+ 0001:00005a60       _IDriverGetAdditionalState 60756a60 f   FSDrvLib:IDriver.obj
+ 0001:00005ab0       _BAvpInit                  60756ab0 f   BaseWork:BaseAPI.obj
+ 0001:00005b10       _BAvpDestroy               60756b10 f   BaseWork:BaseAPI.obj
+ 0001:00005b40       _BAvpLoadBase              60756b40 f   BaseWork:BaseAPI.obj
+ 0001:00005b60       _BAvpProcessObject         60756b60 f   BaseWork:BaseAPI.obj
+ 0001:00005be0       _BAvpCancelProcessObject   60756be0 f   BaseWork:BaseAPI.obj
+ 0001:00005c00       _BAvpMakeFullName          60756c00 f   BaseWork:BaseAPI.obj
+ 0001:00005c20       _BAvpAddMask               60756c20 f   BaseWork:BaseAPI.obj
+ 0001:00005c40       _BAvpAddExcludeMask        60756c40 f   BaseWork:BaseAPI.obj
+ 0001:00005c60       _BAvpErrorFlush            60756c60 f   BaseWork:BaseAPI.obj
+ 0001:00005c80       ?InitCache@@YAXPAEPAK@Z    60756c80 f   BaseWork:Basework.obj
+ 0001:00005cd0       ?FreeAllPtr@@YAXAAVCPtrArray@@@Z 60756cd0 f   BaseWork:Basework.obj
+ 0001:00005d00       ?Get_Sector_Image@@YAPAXE@Z 60756d00 f   BaseWork:Basework.obj
+ 0001:00005d30       ?dummy@@YAHXZ              60756d30 f   BaseWork:Basework.obj
+ 0001:00005d40       ?_DoJump@@YAKPAVCBaseWork@@PAE@Z 60756d40 f   BaseWork:Basework.obj
+ 0001:00005d50       ?_Seek@@YAKPAVCBaseWork@@J@Z 60756d50 f   BaseWork:Basework.obj
+ 0001:00005db0       ?_LSeek@@YAKPAVCBaseWork@@JH@Z 60756db0 f   BaseWork:Basework.obj
+ 0001:00005e20       ?_Read@@YAKPAVCBaseWork@@PAXI@Z 60756e20 f   BaseWork:Basework.obj
+ 0001:00005ec0       ?IfCanWrite@@YAHPAVCBaseWork@@I@Z 60756ec0 f   BaseWork:Basework.obj
+ 0001:00005f70       ?_Write@@YAKPAVCBaseWork@@PBXI@Z 60756f70 f   BaseWork:Basework.obj
+ 0001:00006010       ?_Read13@@YAHPAVCBaseWork@@EGEGPAE@Z 60757010 f   BaseWork:Basework.obj
+ 0001:000060c0       ?_Write13@@YAHPAVCBaseWork@@EGEGPAE@Z 607570c0 f   BaseWork:Basework.obj
+ 0001:00006160       ?_Read25@@YAHPAVCBaseWork@@EKGPAE@Z 60757160 f   BaseWork:Basework.obj
+ 0001:00006200       ?_Write26@@YAHPAVCBaseWork@@EKGPAE@Z 60757200 f   BaseWork:Basework.obj
+ 0001:00006290       ?_ChSize@@YAHPAVCBaseWork@@K@Z 60757290 f   BaseWork:Basework.obj
+ 0001:00006330       ?MemoryRead@@YAHKKPAE@Z    60757330 f   BaseWork:Basework.obj
+ 0001:000063c0       ?Peek@@YAKGG@Z             607573c0 f   BaseWork:Basework.obj
+ 0001:000063f0       ?Poke@@YAHGGKE@Z           607573f0 f   BaseWork:Basework.obj
+ 0001:00006470       ?SavePages@@YAHPAVCBaseWork@@@Z 60757470 f   BaseWork:Basework.obj
+ 0001:000064c0       ?_Rotate@@YAGPAVCBaseWork@@D@Z 607574c0 f   BaseWork:Basework.obj
+ 0001:00006550       ?Copy_File@@YAHPAX0PAVCBaseWork@@@Z 60757550 f   BaseWork:Basework.obj
+ 0001:00006630       ?_Copy_P_File@@YAHPAVCBaseWork@@@Z 60757630 f   BaseWork:Basework.obj
+ 0001:000066d0       ?_P_Read@@YAHPAVCBaseWork@@PAEG@Z 607576d0 f   BaseWork:Basework.obj
+ 0001:000067a0       ?_P_Seek@@YAJPAVCBaseWork@@JH@Z 607577a0 f   BaseWork:Basework.obj
+ 0001:00006810       ?_V_Read@@YAHPAVCBaseWork@@PAEG@Z 60757810 f   BaseWork:Basework.obj
+ 0001:00006930       ?_V_Write@@YAHPAVCBaseWork@@PAEG@Z 60757930 f   BaseWork:Basework.obj
+ 0001:00006ab0       ?_V_Seek@@YAJPAVCBaseWork@@JH@Z 60757ab0 f   BaseWork:Basework.obj
+ 0001:00006b20       ?_S_Save@@YAHPAVCBaseWork@@PADJ@Z 60757b20 f   BaseWork:Basework.obj
+ 0001:00006c40       ?_S_Load@@YAHPAVCBaseWork@@PAD@Z 60757c40 f   BaseWork:Basework.obj
+ 0001:00006d50       ?_S_Free@@YAHPAVCBaseWork@@@Z 60757d50 f   BaseWork:Basework.obj
+ 0001:00006d60       ?_CheckExt@@YAHPAVCBaseWork@@@Z 60757d60 f   BaseWork:Basework.obj
+ 0001:00007000       ?_Yield@@YAXXZ             60758000 f   BaseWork:Basework.obj
+ 0001:00007010       ?_NextVolume@@YAHPAVCBaseWork@@@Z 60758010 f   BaseWork:Basework.obj
+ 0001:00007050       ??0CBaseWork@@QAE@XZ       60758050 f   BaseWork:Basework.obj
+ 0001:00007660       ??1CBaseWork@@QAE@XZ       60758660 f   BaseWork:Basework.obj
+ 0001:00007780       ?ReadString@@YAHPADKPAX@Z  60758780 f   BaseWork:Basework.obj
+ 0001:00007810       ?LoadBase@CBaseWork@@QAEJPADH@Z 60758810 f   BaseWork:Basework.obj
+ 0001:00007ed0       ?UnloadBase@CBaseWork@@QAEJPADH@Z 60758ed0 f   BaseWork:Basework.obj
+ 0001:00007f80       ?DoJump@CBaseWork@@QAEKPAE@Z 60758f80 f   BaseWork:Basework.obj
+ 0001:00008130       ?ErrorFlush@CBaseWork@@QAEKXZ 60759130 f   BaseWork:Basework.obj
+ 0001:00008180       ?ProcessObject@CBaseWork@@QAEJPAUAVPScanObject@@@Z 60759180 f   BaseWork:Basework.obj
+ 0001:00009800       ?CureFile@CBaseWork@@QAEHPAU_R_FILE@@@Z 6075a800 f   BaseWork:Basework.obj
+ 0001:00009a00       ?CureSector@CBaseWork@@QAEHPAU_R_SECTOR@@@Z 6075aa00 f   BaseWork:Basework.obj
+ 0001:00009be0       ??1CBase@@QAE@XZ           6075abe0 f   BaseWork:Basework.obj
+ 0001:00009cb0       ??0CBase@@QAE@XZ           6075acb0 f   BaseWork:Basework.obj
+ 0001:00009d20       ?LoadBase@CBase@@QAEHPADPAVCGlobalNames@@PAVCBaseWork@@@Z 6075ad20 f   BaseWork:Basework.obj
+ 0001:0000a490       ?DoRecords@CBaseWork@@QAEPAXG@Z 6075b490 f   BaseWork:Basework.obj
+ 0001:0000a500       ?DoRecords@CBase@@QAEPAXGPAU_CWorkArea@@@Z 6075b500 f   BaseWork:Basework.obj
+ 0001:0000b400       ?CheckMask@CBaseWork@@QAEHPAD@Z 6075c400 f   BaseWork:Basework.obj
+ 0001:0000b470       ?AddMask@CBaseWork@@QAEHPADPAVCPtrArray@@@Z 6075c470 f   BaseWork:Basework.obj
+ 0001:0000b560       ?Analyze@CBaseWork@@IAEHXZ 6075c560 f   BaseWork:Basework.obj
+ 0001:0000b5c0       ?CheckFalseAlarm@CBaseWork@@QAEHXZ 6075c5c0 f   BaseWork:Basework.obj
+ 0001:0000b7c0       ?X_AvpMoveFile@@YGHPAXPBD@Z 6075c7c0 f   BaseWork:Basework.obj
+ 0001:0000b860       ?ProcessPacked@CBaseWork@@QAEHPAUAVPScanObject@@@Z 6075c860 f   BaseWork:Basework.obj
+ 0001:0000bf50       ?ProcessArchive@CBaseWork@@QAEHK@Z 6075cf50 f   BaseWork:Basework.obj
+ 0001:0000ca70       ?CheckMemory@CBaseWork@@QAEHPAUAVPScanObject@@@Z 6075da70 f   BaseWork:Basework.obj
+ 0001:0000cc80       ?NextVolume@CBaseWork@@QAEHXZ 6075dc80 f   BaseWork:Basework.obj
+ 0001:0000cd70       ?ProcessRedundant@CBaseWork@@QAEHPAUAVPScanObject@@@Z 6075dd70 f   BaseWork:Basework.obj
+ 0001:0000d010       ?RegisterHash@CBaseWork@@QAEHPAU_R_FILE@@@Z 6075e010 f   BaseWork:Basework.obj
+ 0001:0000d050       ?FreeHash@CBaseWork@@QAEXXZ 6075e050 f   BaseWork:Basework.obj
+ 0001:0000d080       ?strchr@@YAPADPADH@Z       6075e080 f   BaseWork:Basework.obj
+ 0001:0000d0c0       ?FindPrevString@@YAPADPAD@Z 6075e0c0 f   BaseWork:Basework.obj
+ 0001:0000d0f0       ?MakeFullName@CBaseWork@@QAEPADPADPBD@Z 6075e0f0 f   BaseWork:Basework.obj
+ 0001:0000d270       ?syinsy@@YAHIII@Z          6075e270 f   BaseWork:Basework.obj
+ 0001:0000d320       ?match@@YAHPAD0@Z          6075e320 f   BaseWork:Basework.obj
+ 0001:0000d4c0       ?CheckWildcards@CBaseWork@@QAEHPADPAVCPtrArray@@@Z 6075e4c0 f   BaseWork:Basework.obj
+ 0001:0000d630       _DupSetCustomDWord         6075e630 f   BaseWork:DupInstance.obj
+ 0001:0000d640       _DupGetCustomDWord         6075e640 f   BaseWork:DupInstance.obj
+ 0001:0000d650       ??0CPtrArray@@QAE@XZ       6075e650 f   BaseWork:_carray.obj
+ 0001:0000d660       ??1CPtrArray@@QAE@XZ       6075e660 f   BaseWork:_carray.obj
+ 0001:0000d670       ?SetSize@CPtrArray@@QAEXHH@Z 6075e670 f   BaseWork:_carray.obj
+ 0001:0000d7d0       ?SetAtGrow@CPtrArray@@QAEXHPAX@Z 6075e7d0 f   BaseWork:_carray.obj
+ 0001:0000d810       ?RemoveAt@CPtrArray@@QAEXHH@Z 6075e810 f   BaseWork:_carray.obj
+ 0001:0000d850       ?Add@CPtrArray@@QAEHPAX@Z  6075e850 f   BaseWork:_carray.obj
+ 0001:0000d870       ?_New@@YAPAEJ@Z            6075e870 f   BaseWork:suballoc.obj
+ 0001:0000d910       ?_Delete@@YAXPAE@Z         6075e910 f   BaseWork:suballoc.obj
+ 0001:0000d990       _CalcSum                   6075e990 f   BaseWork:CalcSum.obj
+ 0001:0000d9f0       ?Printf@@YAHPBDZZ          6075e9f0 f   BaseWork:_printf.obj
+ 0001:0000da20       ??1GName@@QAE@XZ           6075ea20 f   BaseWork:Clink.obj
+ 0001:0000da50       ??0GName@@QAE@PADKPAXH@Z   6075ea50 f   BaseWork:Clink.obj
+ 0001:0000dae0       ?Remove@CGlobalNames@@QAEXPAX@Z 6075eae0 f   BaseWork:Clink.obj
+ 0001:0000db30       ?FreeAll@CGlobalNames@@QAEXXZ 6075eb30 f   BaseWork:Clink.obj
+ 0001:0000db70       ?GetName@CGlobalNames@@QAEKPADH@Z 6075eb70 f   BaseWork:Clink.obj
+ 0001:0000dc20       ?SetName@CGlobalNames@@QAEKPADKPAXH@Z 6075ec20 f   BaseWork:Clink.obj
+ 0001:0000dcb0       ?ExecuteEntry@CLink@@QAEHPAU_CWorkArea@@H@Z 6075ecb0 f   BaseWork:Clink.obj
+ 0001:0000dd50       ??1CLink@@QAE@XZ           6075ed50 f   BaseWork:Clink.obj
+ 0001:0000dd70       ?FreeAll@CLink@@IAEXXZ     6075ed70 f   BaseWork:Clink.obj
+ 0001:0000dde0       ??0CLink@@QAE@XZ           6075ede0 f   BaseWork:Clink.obj
+ 0001:0000de00       ?SetGlobalNames@CLink@@QAEXPAVCGlobalNames@@@Z 6075ee00 f   BaseWork:Clink.obj
+ 0001:0000de10       ?Link@CLink@@QAEHPAEPAVCBaseWork@@@Z 6075ee10 f   BaseWork:Clink.obj
+ 0001:0000e3a0       _DupAlloc                  6075f3a0 f   BaseWork:DupMemory.obj
+ 0001:0000e3b0       _DupFree                   6075f3b0 f   BaseWork:DupMemory.obj
+ 0001:0000e3c0       ??0PageMemoryManager@PageMemoryManagerNS@@QAE@W4memoryProtection@01@@Z 6075f3c0 f   BaseWork:pagememorymanager.obj
+ 0001:0000e3f0       ??1PageMemoryManager@PageMemoryManagerNS@@QAE@XZ 6075f3f0 f   BaseWork:pagememorymanager.obj
+ 0001:0000e420       ?allocate@PageMemoryManager@PageMemoryManagerNS@@QAEPAXI@Z 6075f420 f   BaseWork:pagememorymanager.obj
+ 0001:0000e510       ?deallocate@PageMemoryManager@PageMemoryManagerNS@@QAEXPAX@Z 6075f510 f   BaseWork:pagememorymanager.obj
+ 0001:0000e520       ?setMemoryProtection@PageMemoryManager@PageMemoryManagerNS@@QAEXW4memoryProtection@12@@Z 6075f520 f   BaseWork:pagememorymanager.obj
+ 0001:0000e590       ?fillbitbuf@@YAXAAUs_data@@@Z 6075f590 f   BaseWork:Sq_u.obj
+ 0001:0000e730       ?unsqu_y@@YAKPAE0PAX@Z     6075f730 f   BaseWork:Sq_u.obj
+ 0001:0000e790       _KLDT_DeserializeUsingSWM  6075f790 f   kldtser:DeserSWM.obj
+ 0001:0000e850       _KLDT_Init_Library         6075f850 f   kldtser:SeriaInt.obj
+ 0001:0000e8d0       _LoadFromFileCallBack      6075f8d0 f   kldtser:DeserR.obj
+ 0001:0000e910       _KLDT_DeserializeRead      6075f910 f   kldtser:DeserR.obj
+ 0001:0000ea70       _KLDT_DeserializeHeaders   6075fa70 f   kldtser:DeserHdr.obj
+ 0001:0000ead0       _KLDT_DeserializeFullHeaders 6075fad0 f   kldtser:DeserHdr.obj
+ 0001:0000ebf0       _DATA_Remove               6075fbf0 f   property:d_remove.obj
+ 0001:0000ec50       _PROP_Arr_Get_Items        6075fc50 f   property:pa_gitms.obj
+ 0001:0000ee30       _PROP_Arr_Count            6075fe30 f   property:p_arr.obj
+ 0001:0000ee50       _DATA_Find_Prop            6075fe50 f   property:d_find_p.obj
+ 0001:0000eeb0       _DATA_Find                 6075feb0 f   property:d_find.obj
+ 0001:0000ef40       _DATA_Get_Id               6075ff40 f   property:d_get.obj
+ 0001:0000ef70       _DATA_Init_Library         6075ff70 f   property:d_init.obj
+ 0001:0000efb0       _DATA_Attach               6075ffb0 f   property:d_attach.obj
+ 0001:0000f0d0       _DATA_Deserialize          607600d0 f   property:d_deser.obj
+ 0001:0000f470       _DATA_Get_Property_Item_Addr 60760470 f   property:d_deser.obj
+ 0001:0000fd80       _DATA_Free                 60760d80 f   property:d_free.obj
+ 0001:0000fdc0       _DATA_Detach               60760dc0 f   property:d_detach.obj
+ 0001:0000fe30       _DATA_Add_Prop             60760e30 f   property:d_add_pr.obj
+ 0001:0000fee0       _DATA_Add                  60760ee0 f   property:d_add.obj
+ 0001:0000ffa0       _PROP_Arr_Catch_Mem        60760fa0 f   property:p_catch.obj
+ 0001:00010080       _CountCRC32WithCRC         60761080 f   property:CRC.OBJ
+ 0001:000100c0       _PROP_Free                 607610c0 f   property:p_free.obj
+ 0001:00010140       _PROP_Arr_Free             60761140 f   property:p_free.obj
+ 0001:000101f0       _PROP_Init                 607611f0 f   property:p_init.obj
+ 0001:000102a0       _PROP_Arr_Init             607612a0 f   property:p_init.obj
+ 0001:00010360       _PROP_Predict_Size         60761360 f   property:p_predct.obj
+ 0001:000103f0       _PROP_Set_Val              607613f0 f   property:d_setval.obj
+ 0001:00010890       _PROP_Arr_Insert           60761890 f   property:pa_insrt.obj
+ 0001:00010b70       _SWM_Init_Library          60761b70 f   swm:Manager.obj
+ 0001:00010bb0       _SWM_Init_LibraryEx        60761bb0 f   swm:Manager.obj
+ 0001:00010c10       _SWMAdvise                 60761c10 f   swm:Manager.obj
+ 0001:00010cf0       _SWMCreateInstance         60761cf0 f   swm:Manager.obj
+ 0001:00011130       _SWM_Create_Manager        60762130 f   swm:Manager.obj
+ 0001:00011140       _SWM_Shut_Down_Library     60762140 f   swm:Manager.obj
+ 0001:00011180       _SWM_Prepare_To_Read       60762180 f   swm:ManagerR.obj
+ 0001:00011260       _SWM_Register_Unpacker     60762260 f   swm:PackerR.obj
+ 0001:00011aa0       _SWM_Register_Decrypter    60762aa0 f   swm:EncryptR.obj
+ 0001:00011d50       _SWM_Register_CRCInChecker 60762d50 f   swm:CheckerR.obj
+ 0001:00012160       _SWM_Register_UnRawData    60763160 f   swm:RawDataR.obj
+ 0001:00012410       _SWPackerCreateSWInstance  60763410 f   swm:Packer.obj
+ 0001:000126d0       _SWEncrypterCreateSWInstance 607636d0 f   swm:Encrypt.obj
+ 0001:00012910       _EDBinary                  60763910 f   swm:Encrypt.obj
+ 0001:000129f0       _SWCRCCheckerCreateSWInstance 607639f0 f   swm:Checker.obj
+ 0001:00012c30       _CountCRC                  60763c30 f   swm:Checker.obj
+ 0001:00012c70       _SWRawDataCreateSWInstance 60763c70 f   swm:RawData.obj
+ 0001:00012e40       _sign_check_file           60763e40 f   sign:S_CHFILE.OBJ
+ 0001:00012f60       _sign_check_buffer         60763f60 f   sign:S_CHECK.OBJ
+ 0001:00013300       _CTN_LANSNot               60764300 f   sign:w_shnor.obj
+ 0001:000133f0       _TextToBin                 607643f0 f   sign:TEXT2BIN.OBJ
+ 0001:00013480       _sign_load_open_key        60764480 f   sign:S_LNOT.OBJ
+ 0001:00013720       _sign_calc_hash_value      60764720 f   sign:S_HASH.OBJ
+ 0001:0001373a       _sign_hash_buffer          6076473a f   sign:S_HASH.OBJ
+ 0001:000137d0       _CTN_NotInitVariables      607647d0 f   sign:N_constr.obj
+ 0001:000137e0       _sign_collect_notaries     607647e0 f   sign:S_cnot.obj
+ 0001:00013880       ___CTS_func_MA             60764880 f   sign:C_mem.obj
+ 0001:00013890       ___CTS_func_MF             60764890 f   sign:C_mem.obj
+ 0001:000138a0       ___CTS_func_SO             607648a0 f   sign:w_signsh.obj
+ 0001:00014112       _CTN_SHAInit               60765112 f   sign:f_SHA.obj
+ 0001:0001414f       _CTN_SHABuffer             6076514f f   sign:f_SHA.obj
+ 0001:00014361       _CTN_SHAEnd                60765361 f   sign:f_SHA.obj
+ 0001:00014430       _my_strl                   60765430 f   sign:my_strl.obj
+ 0001:00014450       _sign_get_txt_stream_version 60765450 f   sign:s_strver.obj
+ 0001:00014520       _FSDr1InterceptorInit      60765520 f   FSDrvLib1:FSDrv.obj
+ 0001:000146f0       _FSDr1InterceptorDone      607656f0 f   FSDrvLib1:FSDrv.obj
+ 0001:00014820       _FSDr1InterceptorRegisterInvisibleThread 60765820 f   FSDrvLib1:FSDrv.obj
+ 0001:000148f0       _FSDr1InterceptorUnregisterInvisibleThread 607658f0 f   FSDrvLib1:FSDrv.obj
+ 0001:00014980       ?EnableLoadDriverPrivileg1@@YAHXZ 60765980 f   FSDrvLib1:IDriver.obj
+ 0001:00014a00       ?_IDriver_GetProcAddress@@YAPAXPAXK@Z 60765a00 f   FSDrvLib1:IDriver.obj
+ 0001:00014a00       ?_IDriver_GetProcAddres1@@YAPAXPAXK@Z 60765a00 f   FSDrvLib1:IDriver.obj
+ 0001:00014a60       ?LoadDeviceDrive1@@YAKPBD0@Z 60765a60 f   FSDrvLib1:IDriver.obj
+ 0001:00014bd0       ?UnloadDeviceDrive1@@YAKPBD@Z 60765bd0 f   FSDrvLib1:IDriver.obj
+ 0001:00014bd0       ?UnloadDeviceDriver@@YAKPBD@Z 60765bd0 f   FSDrvLib1:IDriver.obj
+ 0001:00014c60       ?GetDriverHandl1@@YAPAXPAU_OSVERSIONINFOA@@PAD@Z 60765c60 f   FSDrvLib1:IDriver.obj
+ 0001:00014ce0       _RegisterAp1               60765ce0 f   FSDrvLib1:IDriver.obj
+ 0001:00015180       _UnRegisterAp1             60766180 f   FSDrvLib1:IDriver.obj
+ 0001:00015220       _IDrive1RegisterInvisibleThread 60766220 f   FSDrvLib1:IDriver.obj
+ 0001:00015280       _IDrive1UnregisterInvisibleThread 60766280 f   FSDrvLib1:IDriver.obj
+ 0001:000152e0       _IDrive1UnregisterInvisibleThreadByID 607662e0 f   FSDrvLib1:IDriver.obj
+ 0001:00015340       ??3@YAXPAX@Z               60766340 f   msvcprt:delop_s.obj
+ 0001:0001534b       __onexit                   6076634b f   MSVCRT:atonexit.obj
+ 0001:00015377       _atexit                    60766377 f   MSVCRT:atonexit.obj
+ 0001:0001538a       ___CxxFrameHandler         6076638a f   MSVCRT:MSVCRT.dll
+ 0001:00015390       __EH_prolog                60766390 f   MSVCRT:ehprolog.obj
+ 0001:000153b0       _strcpy                    607663b0 f   MSVCRT:MSVCRT.dll
+ 0001:000153b6       _memset                    607663b6 f   MSVCRT:MSVCRT.dll
+ 0001:000153bc       __except_handler3          607663bc f   MSVCRT:MSVCRT.dll
+ 0001:000153c2       _memcpy                    607663c2 f   MSVCRT:MSVCRT.dll
+ 0001:000153c8       ??2@YAPAXI@Z               607663c8 f   MSVCRT:MSVCRT.dll
+ 0001:000153ce       _strlen                    607663ce f   MSVCRT:MSVCRT.dll
+ 0001:000153d4       _malloc                    607663d4 f   MSVCRT:MSVCRT.dll
+ 0001:000153da       _free                      607663da f   MSVCRT:MSVCRT.dll
+ 0001:000153e0       _strcmp                    607663e0 f   MSVCRT:MSVCRT.dll
+ 0001:000153e6       _strcat                    607663e6 f   MSVCRT:MSVCRT.dll
+ 0001:000153ec       __CRT_INIT@12              607663ec f   MSVCRT:crtdll.obj
+ 0001:00015497       __DllMainCRTStartup@12     60766497 f   MSVCRT:crtdll.obj
+ 0001:00015540       __alloca_probe             60766540 f   MSVCRT:chkstk.obj
+ 0001:00015540       __chkstk                   60766540 f   MSVCRT:chkstk.obj
+ 0001:00015570       __allmul                   60766570 f   MSVCRT:llmul.obj
+ 0001:000155a4       _wcslen                    607665a4 f   MSVCRT:MSVCRT.dll
+ 0001:000155aa       _memmove                   607665aa f   MSVCRT:MSVCRT.dll
+ 0001:000155b0       ___dllonexit               607665b0 f   MSVCRT:MSVCRT.dll
+ 0001:000155b6       __initterm                 607665b6 f   MSVCRT:MSVCRT.dll
+ 0002:00000000       __imp__RegOpenKeyExA@20    60767000     advapi32:ADVAPI32.dll
+ 0002:00000004       __imp__AdjustTokenPrivileges@24 60767004     advapi32:ADVAPI32.dll
+ 0002:00000008       __imp__LookupPrivilegeValueA@12 60767008     advapi32:ADVAPI32.dll
+ 0002:0000000c       __imp__OpenProcessToken@12 6076700c     advapi32:ADVAPI32.dll
+ 0002:00000010       __imp__CreateServiceA@52   60767010     advapi32:ADVAPI32.dll
+ 0002:00000014       __imp__CloseServiceHandle@4 60767014     advapi32:ADVAPI32.dll
+ 0002:00000018       __imp__StartServiceA@12    60767018     advapi32:ADVAPI32.dll
+ 0002:0000001c       __imp__OpenServiceA@12     6076701c     advapi32:ADVAPI32.dll
+ 0002:00000020       __imp__RegOpenKeyA@12      60767020     advapi32:ADVAPI32.dll
+ 0002:00000024       __imp__RegQueryValueExA@24 60767024     advapi32:ADVAPI32.dll
+ 0002:00000028       __imp__RegCloseKey@4       60767028     advapi32:ADVAPI32.dll
+ 0002:0000002c       __imp__OpenSCManagerA@12   6076702c     advapi32:ADVAPI32.dll
+ 0002:00000030       __imp__ControlService@12   60767030     advapi32:ADVAPI32.dll
+ 0002:00000034       \177ADVAPI32_NULL_THUNK_DATA 60767034     advapi32:ADVAPI32.dll
+ 0002:00000038       __imp__SetFileAttributesA@8 60767038     kernel32:KERNEL32.dll
+ 0002:0000003c       __imp__GetFileAttributesA@4 6076703c     kernel32:KERNEL32.dll
+ 0002:00000040       __imp__GetTempPathA@8      60767040     kernel32:KERNEL32.dll
+ 0002:00000044       __imp__DeleteCriticalSection@4 60767044     kernel32:KERNEL32.dll
+ 0002:00000048       __imp__InitializeCriticalSection@4 60767048     kernel32:KERNEL32.dll
+ 0002:0000004c       __imp__DisableThreadLibraryCalls@4 6076704c     kernel32:KERNEL32.dll
+ 0002:00000050       __imp__LeaveCriticalSection@4 60767050     kernel32:KERNEL32.dll
+ 0002:00000054       __imp__EnterCriticalSection@4 60767054     kernel32:KERNEL32.dll
+ 0002:00000058       __imp__GetCurrentThreadId@0 60767058     kernel32:KERNEL32.dll
+ 0002:0000005c       __imp__DeviceIoControl@32  6076705c     kernel32:KERNEL32.dll
+ 0002:00000060       __imp__lstrcpyA@8          60767060     kernel32:KERNEL32.dll
+ 0002:00000064       __imp__lstrlenA@4          60767064     kernel32:KERNEL32.dll
+ 0002:00000068       __imp__GetDiskFreeSpaceA@20 60767068     kernel32:KERNEL32.dll
+ 0002:0000006c       __imp__CreateEventA@16     6076706c     kernel32:KERNEL32.dll
+ 0002:00000070       __imp__ReleaseSemaphore@12 60767070     kernel32:KERNEL32.dll
+ 0002:00000074       __imp__VirtualAlloc@16     60767074     kernel32:KERNEL32.dll
+ 0002:00000078       __imp__SetEvent@4          60767078     kernel32:KERNEL32.dll
+ 0002:0000007c       __imp__WaitForMultipleObjects@16 6076707c     kernel32:KERNEL32.dll
+ 0002:00000080       __imp__VirtualFree@12      60767080     kernel32:KERNEL32.dll
+ 0002:00000084       __imp__GetModuleFileNameA@12 60767084     kernel32:KERNEL32.dll
+ 0002:00000088       __imp__CreateSemaphoreA@16 60767088     kernel32:KERNEL32.dll
+ 0002:0000008c       __imp__GetCurrentDirectoryA@8 6076708c     kernel32:KERNEL32.dll
+ 0002:00000090       __imp__ResetEvent@4        60767090     kernel32:KERNEL32.dll
+ 0002:00000094       __imp__GetTimeFormatA@24   60767094     kernel32:KERNEL32.dll
+ 0002:00000098       __imp__GetDateFormatA@24   60767098     kernel32:KERNEL32.dll
+ 0002:0000009c       __imp__GetFullPathNameA@16 6076709c     kernel32:KERNEL32.dll
+ 0002:000000a0       __imp__GetTempFileNameA@16 607670a0     kernel32:KERNEL32.dll
+ 0002:000000a4       __imp__CreateFileA@28      607670a4     kernel32:KERNEL32.dll
+ 0002:000000a8       __imp__DeleteFileA@4       607670a8     kernel32:KERNEL32.dll
+ 0002:000000ac       __imp__FlushFileBuffers@4  607670ac     kernel32:KERNEL32.dll
+ 0002:000000b0       __imp__GetFileSize@8       607670b0     kernel32:KERNEL32.dll
+ 0002:000000b4       __imp__SetEndOfFile@4      607670b4     kernel32:KERNEL32.dll
+ 0002:000000b8       __imp__GetVersionExA@4     607670b8     kernel32:KERNEL32.dll
+ 0002:000000bc       __imp__SetFilePointer@16   607670bc     kernel32:KERNEL32.dll
+ 0002:000000c0       __imp__CloseHandle@4       607670c0     kernel32:KERNEL32.dll
+ 0002:000000c4       __imp__WriteFile@20        607670c4     kernel32:KERNEL32.dll
+ 0002:000000c8       __imp__ReadFile@20         607670c8     kernel32:KERNEL32.dll
+ 0002:000000cc       __imp__WaitForSingleObject@8 607670cc     kernel32:KERNEL32.dll
+ 0002:000000d0       __imp__WideCharToMultiByte@32 607670d0     kernel32:KERNEL32.dll
+ 0002:000000d4       __imp__VirtualProtect@16   607670d4     kernel32:KERNEL32.dll
+ 0002:000000d8       __imp__GetSystemInfo@4     607670d8     kernel32:KERNEL32.dll
+ 0002:000000dc       __imp__LoadLibraryA@4      607670dc     kernel32:KERNEL32.dll
+ 0002:000000e0       __imp__FreeLibrary@4       607670e0     kernel32:KERNEL32.dll
+ 0002:000000e4       __imp__SearchPathA@24      607670e4     kernel32:KERNEL32.dll
+ 0002:000000e8       __imp__GetShortPathNameA@12 607670e8     kernel32:KERNEL32.dll
+ 0002:000000ec       __imp__Sleep@4             607670ec     kernel32:KERNEL32.dll
+ 0002:000000f0       __imp__CreateMutexA@12     607670f0     kernel32:KERNEL32.dll
+ 0002:000000f4       __imp__ReleaseMutex@4      607670f4     kernel32:KERNEL32.dll
+ 0002:000000f8       __imp__GetCurrentProcess@0 607670f8     kernel32:KERNEL32.dll
+ 0002:000000fc       __imp__GetLastError@0      607670fc     kernel32:KERNEL32.dll
+ 0002:00000100       __imp__lstrcatA@8          60767100     kernel32:KERNEL32.dll
+ 0002:00000104       __imp__InterlockedDecrement@4 60767104     kernel32:KERNEL32.dll
+ 0002:00000108       __imp__QueryPerformanceCounter@4 60767108     kernel32:KERNEL32.dll
+ 0002:0000010c       __imp__GetTickCount@0      6076710c     kernel32:KERNEL32.dll
+ 0002:00000110       __imp__GetCurrentProcessId@0 60767110     kernel32:KERNEL32.dll
+ 0002:00000114       __imp__GetProcAddress@8    60767114     kernel32:KERNEL32.dll
+ 0002:00000118       __imp__GetModuleHandleA@4  60767118     kernel32:KERNEL32.dll
+ 0002:0000011c       __imp__HeapFree@12         6076711c     kernel32:KERNEL32.dll
+ 0002:00000120       __imp__HeapAlloc@12        60767120     kernel32:KERNEL32.dll
+ 0002:00000124       __imp__GetProcessHeap@0    60767124     kernel32:KERNEL32.dll
+ 0002:00000128       __imp__InterlockedIncrement@4 60767128     kernel32:KERNEL32.dll
+ 0002:0000012c       __imp__SetLastError@4      6076712c     kernel32:KERNEL32.dll
+ 0002:00000130       \177KERNEL32_NULL_THUNK_DATA 60767130     kernel32:KERNEL32.dll
+ 0002:00000134       __imp___adjust_fdiv        60767134     MSVCRT:MSVCRT.dll
+ 0002:00000138       __imp___initterm           60767138     MSVCRT:MSVCRT.dll
+ 0002:0000013c       __imp___onexit             6076713c     MSVCRT:MSVCRT.dll
+ 0002:00000140       __imp____dllonexit         60767140     MSVCRT:MSVCRT.dll
+ 0002:00000144       __imp__memmove             60767144     MSVCRT:MSVCRT.dll
+ 0002:00000148       __imp__wcslen              60767148     MSVCRT:MSVCRT.dll
+ 0002:0000014c       __imp__vsprintf            6076714c     MSVCRT:MSVCRT.dll
+ 0002:00000150       __imp__strtoul             60767150     MSVCRT:MSVCRT.dll
+ 0002:00000154       __imp___beginthreadex      60767154     MSVCRT:MSVCRT.dll
+ 0002:00000158       __imp__strcat              60767158     MSVCRT:MSVCRT.dll
+ 0002:0000015c       __imp__strcmp              6076715c     MSVCRT:MSVCRT.dll
+ 0002:00000160       __imp__sprintf             60767160     MSVCRT:MSVCRT.dll
+ 0002:00000164       __imp__free                60767164     MSVCRT:MSVCRT.dll
+ 0002:00000168       __imp__malloc              60767168     MSVCRT:MSVCRT.dll
+ 0002:0000016c       __imp__strlen              6076716c     MSVCRT:MSVCRT.dll
+ 0002:00000170       __imp___strlwr             60767170     MSVCRT:MSVCRT.dll
+ 0002:00000170       __imp__strlwr              60767170     MSVCRT:MSVCRT.dll
+ 0002:00000174       __imp___access             60767174     MSVCRT:MSVCRT.dll
+ 0002:00000178       __imp_??2@YAPAXI@Z         60767178     MSVCRT:MSVCRT.dll
+ 0002:0000017c       __imp__memcpy              6076717c     MSVCRT:MSVCRT.dll
+ 0002:00000180       __imp___except_handler3    60767180     MSVCRT:MSVCRT.dll
+ 0002:00000184       __imp__strrchr             60767184     MSVCRT:MSVCRT.dll
+ 0002:00000188       __imp__memset              60767188     MSVCRT:MSVCRT.dll
+ 0002:0000018c       __imp__strcpy              6076718c     MSVCRT:MSVCRT.dll
+ 0002:00000190       __imp____CxxFrameHandler   60767190     MSVCRT:MSVCRT.dll
+ 0002:00000194       __imp___strupr             60767194     MSVCRT:MSVCRT.dll
+ 0002:00000194       __imp__strupr              60767194     MSVCRT:MSVCRT.dll
+ 0002:00000198       __imp__strcmpi             60767198     MSVCRT:MSVCRT.dll
+ 0002:00000198       __imp___strcmpi            60767198     MSVCRT:MSVCRT.dll
+ 0002:0000019c       __imp__strncpy             6076719c     MSVCRT:MSVCRT.dll
+ 0002:000001a0       __imp___strnicmp           607671a0     MSVCRT:MSVCRT.dll
+ 0002:000001a0       __imp__strnicmp            607671a0     MSVCRT:MSVCRT.dll
+ 0002:000001a4       \177MSVCRT_NULL_THUNK_DATA 607671a4     MSVCRT:MSVCRT.dll
+ 0002:000001a8       __imp__OemToCharA@8        607671a8     user32:USER32.dll
+ 0002:000001ac       __imp__wsprintfA           607671ac     user32:USER32.dll
+ 0002:000001b0       __imp__CharToOemA@8        607671b0     user32:USER32.dll
+ 0002:000001b4       \177USER32_NULL_THUNK_DATA 607671b4     user32:USER32.dll
+ 0002:000014fc       ?HANDLES_TABLE_RESERVED@C_HANDLES_TABLE@@0KB 607684fc     HandlesTable.obj
+ 0002:00001500       ?HANDLES_TABLE_ERROR@C_HANDLES_TABLE@@0KB 60768500     HandlesTable.obj
+ 0002:00001504       ?HANDLES_TABLE_MAX_HANDLES@C_HANDLES_TABLE@@0KB 60768504     HandlesTable.obj
+ 0002:00001508       ?DW_VIRUS_LIST_REG_SIZE@C_SCAN_LOOP@@2KB 60768508     ScanLoop.obj
+ 0002:00001520       _gnGetOutSize              60768520     swm:Packer.obj
+ 0002:00001524       _SW_PACKER_ID              60768524     swm:Packer.obj
+ 0002:00001528       _SW_ENCRYPTER_ID           60768528     swm:Encrypt.obj
+ 0002:0000152c       _BUFFER_SIZE               6076852c     swm:Encrypt.obj
+ 0002:00001534       _SW_CRCCHECKER_ID          60768534     swm:Checker.obj
+ 0002:00001538       _SW_RAWDATA_ID             60768538     swm:RawData.obj
+ 0002:0000167c       __                         6076867c     sign:s_klok.obj
+ 0002:00001950       __IMPORT_DESCRIPTOR_KERNEL32 60768950     kernel32:KERNEL32.dll
+ 0002:00001964       __IMPORT_DESCRIPTOR_USER32 60768964     user32:USER32.dll
+ 0002:00001978       __IMPORT_DESCRIPTOR_ADVAPI32 60768978     advapi32:ADVAPI32.dll
+ 0002:0000198c       __IMPORT_DESCRIPTOR_MSVCRT 6076898c     MSVCRT:MSVCRT.dll
+ 0002:000019a0       __NULL_IMPORT_DESCRIPTOR   607689a0     kernel32:KERNEL32.dll
+ 0003:00000000       ___xc_a                    6076a000     MSVCRT:cinitexe.obj
+ 0003:00000020       ___xc_z                    6076a020     MSVCRT:cinitexe.obj
+ 0003:00000024       ___xi_a                    6076a024     MSVCRT:cinitexe.obj
+ 0003:00000028       ___xi_z                    6076a028     MSVCRT:cinitexe.obj
+ 0003:00000030       ??_C@_07LPCM@AVP?4VND?$AA@ 6076a030     avp_api.obj
+ 0003:00000038       ??_C@_0BH@MAJO@?4?4?4?7AVPSS_Init?3?5failed?$AA@ 6076a038     avpssi.obj
+ 0003:00000050       ??_C@_0CP@OJKP@?4?4?4?7AVPSS_Init?3?5ok?0?5Scanner?5thre@ 6076a050     avpssi.obj
+ 0003:00000080       ??_C@_0CK@EEKO@?4?4?4?7AVPSS_Init?3?5failed?0?5not?5enou@ 6076a080     avpssi.obj
+ 0003:000000ac       ??_C@_0BJ@INDD@?4?4?4?7AVPSS_Done?3?5failed?$AN?6?$AA@ 6076a0ac     avpssi.obj
+ 0003:000000c8       ??_C@_0BF@IDIF@?4?4?4?7AVPSS_Done?3?5ok?$AN?6?$AA@ 6076a0c8     avpssi.obj
+ 0003:000000e0       ??_C@_0CA@JKLJ@?4?4?4?7AVPSS_SetTempFolder?3?5failed?$AA@ 6076a0e0     avpssi.obj
+ 0003:00000100       ??_C@_0BM@CEE@?4?4?4?7AVPSS_SetTempFolder?3?5ok?$AA@ 6076a100     avpssi.obj
+ 0003:0000011c       ??_C@_0CA@NPIJ@?4?4?4?7AVPSS_GetTempFolder?3?5failed?$AA@ 6076a11c     avpssi.obj
+ 0003:0000013c       ??_C@_0BM@JANP@?4?4?4?7AVPSS_GetTempFolder?3?5ok?$AA@ 6076a13c     avpssi.obj
+ 0003:00000158       ??_C@_0DF@ONJP@?4?4?4?7AVPSS_ReloadDatabases?3?5faile@ 6076a158     avpssi.obj
+ 0003:00000190       ??_C@_0BO@GDFG@?4?4?4?7AVPSS_ReloadDatabases?3?5ok?$AA@ 6076a190     avpssi.obj
+ 0003:000001b0       ??_C@_0CC@DPFP@?4?4?4?7AVPSS_ReloadDatabases?3?5faile@ 6076a1b0     avpssi.obj
+ 0003:000001d4       ??_C@_0CD@LFKN@?4?4?4?7AVPSS_GetDatabasesInfo?3?5fail@ 6076a1d4     avpssi.obj
+ 0003:000001f8       ??_C@_0BP@IDJN@?4?4?4?7AVPSS_GetDatabasesInfo?3?5ok?$AA@ 6076a1f8     avpssi.obj
+ 0003:00000218       ??_C@_0CF@PBEH@?4?4?4?7AVPSS_GetDatabasesInfoEx?3?5fa@ 6076a218     avpssi.obj
+ 0003:00000240       ??_C@_0CB@BBNA@?4?4?4?7AVPSS_GetDatabasesInfoEx?3?5ok@ 6076a240     avpssi.obj
+ 0003:00000264       ??_C@_0CC@NLCB@?4?4?4?7AVPSS_GetDatabasesSet?3?5faile@ 6076a264     avpssi.obj
+ 0003:00000288       ??_C@_0BO@FNPP@?4?4?4?7AVPSS_GetDatabasesSet?3?5ok?$AA@ 6076a288     avpssi.obj
+ 0003:000002a8       ??_C@_0CM@JGOI@?$CFld?$DO?7AVPSS_Scan?3?5failed?0?5invalid@ 6076a2a8     avpssi.obj
+ 0003:000002d4       ??_C@_0BE@JJLD@?$CFld?$DO?7AVPSS_Scan?3?5ok?$AA@ 6076a2d4     avpssi.obj
+ 0003:000002e8       ??_C@_0BI@PJGM@?$CFld?$DO?7AVPSS_Scan?3?5failed?$AA@ 6076a2e8     avpssi.obj
+ 0003:00000300       ??_C@_0CJ@HOIK@?$CFld?$DO?7AVPSS_Scan?3?5failed?0?5C_HSCAN@ 6076a300     avpssi.obj
+ 0003:0000032c       ??_C@_0CL@JFAA@?$CFld?$DO?7AVPSS_Scan?3?5failed?0?5not?5eno@ 6076a32c     avpssi.obj
+ 0003:00000358       ??_C@_0BL@JIPI@?$CFld?7AVPSS_SetUserDWORD?3?5ok?$AA@ 6076a358     avpssi.obj
+ 0003:00000374       ??_C@_0BL@DNI@?$CFld?7AVPSS_GetUserDWORD?3?5ok?$AA@ 6076a374     avpssi.obj
+ 0003:00000390       ??_C@_0BJ@BBIE@?$CFld?7AVPSS_GetScanObj?3?5ok?$AA@ 6076a390     avpssi.obj
+ 0003:000003ac       ??_C@_0BL@OPBL@?$CFld?7AVPSS_GetVirusName?3?5ok?$AA@ 6076a3ac     avpssi.obj
+ 0003:000003c8       ??_C@_0BK@FEON@?$CFld?7AVPSS_WaitForScan?3?5ok?$AA@ 6076a3c8     avpssi.obj
+ 0003:000003e4       ??_C@_0DD@JIIP@?$CFld?7AVPSS_WaitForScan?3?5failed?0?5W@ 6076a3e4     avpssi.obj
+ 0003:00000418       ??_C@_0CH@BHBK@?$CFld?$FN?7AVPSS_CloseScan?3?5ok?0?5result@ 6076a418     avpssi.obj
+ 0003:00000440       ??_C@_0CI@INIJ@?$CFld?$FN?7AVPSS_CloseScan?3?5failed?0?5Cl@ 6076a440     avpssi.obj
+ 0003:00000468       ?DATETIME_g_Names@@3PAY0BP@PBW4DATETIME_NAME@@A 6076a468     DateTime.obj
+ 0003:00000a38       ??_C@_09PJCD@?2?2?4?2AVP95?$AA@ 6076aa38     mon_reg.obj
+ 0003:00000a44       ??_C@_0BB@BKBG@?2?2?4?2FSAVPDevice0?$AA@ 6076aa44     mon_reg.obj
+ 0003:00000a58       ?REPFILE_SZ_DF_FILENAME@@3PBDB 6076aa58     repfile.obj
+ 0003:00000a5c       ??_C@_0L@DKBM@report?4txt?$AA@ 6076aa5c     repfile.obj
+ 0003:00000a68       ??_C@_01PCFE@?2?$AA@       6076aa68     ScanLoop.obj
+ 0003:00000a6c       ??_C@_06IPFE@Folder?$AA@   6076aa6c     ScanLoop.obj
+ 0003:00000a74       ??_C@_07CFMG@avp?4set?$AA@ 6076aa74     ScanLoop.obj
+ 0003:00000a7c       ??_C@_0CF@MBLM@Software?2KasperskyLab?2Components@ 6076aa7c     ScanLoop.obj
+ 0003:00000aa4       ??_C@_0O@NHGA@bases?2avp?4set?$AA@ 6076aaa4     ScanLoop.obj
+ 0003:00000ab4       ??_C@_0N@HHCL@data?2avp?4set?$AA@ 6076aab4     ScanLoop.obj
+ 0003:00000ac4       ??_C@_02PIMC@?$AN?6?$AA@   6076aac4     sys_log.obj
+ 0003:00000ac8       ??_C@_08GDBF@HH?3mm?3ss?$AA@ 6076aac8     sys_log.obj
+ 0003:00000ad4       ??_C@_01POCP@?7?$AA@       6076aad4     sys_log.obj
+ 0003:00000ad8       ?g_hDevice@@3PAXA          6076aad8     FSDrvLib:FSDrv.obj
+ 0003:00000adc       ??_C@_0BA@GNIL@FSDRV_?$CF08Xd?$CF08X?$AA@ 6076aadc     FSDrvLib:FSDrv.obj
+ 0003:00000aec       ??_C@_0M@HFDF@DWC?$CFd?$CFd?$CFd?$CFd?$AA@ 6076aaec     FSDrvLib:FSDrv.obj
+ 0003:00000af8       ??_C@_0M@NMAH@DWU?$CFd?$CFd?$CFd?$CFd?$AA@ 6076aaf8     FSDrvLib:FSDrv.obj
+ 0003:00000b04       ??_C@_0BH@KAJB@GetProcessAffinityMask?$AA@ 6076ab04     FSDrvLib:FSDrv.obj
+ 0003:00000b1c       ??_C@_0BH@GDNE@SetProcessAffinityMask?$AA@ 6076ab1c     FSDrvLib:FSDrv.obj
+ 0003:00000b34       ??_C@_0N@MMAA@KERNEL32?4DLL?$AA@ 6076ab34     FSDrvLib:FSDrv.obj
+ 0003:00000b44       ?_APPNAME@@3PADA           6076ab44     FSDrvLib:IDriver.obj
+ 0003:00000c48       ?_DebugInfoLevel@@3KA      6076ac48     FSDrvLib:IDriver.obj
+ 0003:00000c4c       ?_drvpath_avpg@@3PAGA      6076ac4c     FSDrvLib:IDriver.obj
+ 0003:00000cc0       ?_drvpath_tsp@@3PAGA       6076acc0     FSDrvLib:IDriver.obj
+ 0003:00000d30       ?pDrvPath@@3PAGA           6076ad30     FSDrvLib:IDriver.obj
+ 0003:00000d34       ??_C@_0BK@EEEB@ExpandEnvironmentStringsA?$AA@ 6076ad34     FSDrvLib:IDriver.obj
+ 0003:00000d50       ??_C@_09PHII@lstrcmpiW?$AA@ 6076ad50     FSDrvLib:IDriver.obj
+ 0003:00000d5c       ??_C@_08INFD@lstrcmpW?$AA@ 6076ad5c     FSDrvLib:IDriver.obj
+ 0003:00000d68       ??_C@_08IFDO@lstrcpyW?$AA@ 6076ad68     FSDrvLib:IDriver.obj
+ 0003:00000d74       ??_C@_08GFMK@lstrlenW?$AA@ 6076ad74     FSDrvLib:IDriver.obj
+ 0003:00000d80       ??_C@_0BC@IKHI@LookupAccountSidW?$AA@ 6076ad80     FSDrvLib:IDriver.obj
+ 0003:00000d94       ??_C@_0BC@NMHK@LookupAccountSidA?$AA@ 6076ad94     FSDrvLib:IDriver.obj
+ 0003:00000da8       ??_C@_0N@MBOE@advapi32?4dll?$AA@ 6076ada8     FSDrvLib:IDriver.obj
+ 0003:00000db8       ??_C@_04GKLJ@?2?$DP?$DP?2?$AA@ 6076adb8     FSDrvLib:IDriver.obj
+ 0003:00000dc0       ??_C@_07FDDL@?2Device?$AA@ 6076adc0     FSDrvLib:IDriver.obj
+ 0003:00000dc8       ??_C@_0BA@BABF@QueryDosDeviceA?$AA@ 6076adc8     FSDrvLib:IDriver.obj
+ 0003:00000dd8       ??_C@_0BG@ILDP@SeLoadDriverPrivilege?$AA@ 6076add8     FSDrvLib:IDriver.obj
+ 0003:00000df0       ??_C@_0BE@CCGD@FSDrvLibSyncService?$AA@ 6076adf0     FSDrvLib:IDriver.obj
+ 0003:00000e04       ??_C@_09CMOA@NTDLL?4DLL?$AA@ 6076ae04     FSDrvLib:IDriver.obj
+ 0003:00000e10       ??_C@_0N@NBLK@ZwLoadDriver?$AA@ 6076ae10     FSDrvLib:IDriver.obj
+ 0003:00000e20       ??_C@_09FNFO@ImagePath?$AA@ 6076ae20     FSDrvLib:IDriver.obj
+ 0003:00000e2c       ??_C@_0CH@FPPM@SYSTEM?2CurrentControlSet?2Service@ 6076ae2c     FSDrvLib:IDriver.obj
+ 0003:00000e54       ??_C@_0CH@KFJG@?$CFSystemRoot?$CF?2system32?2drivers?2kl@ 6076ae54     FSDrvLib:IDriver.obj
+ 0003:00000e7c       ??_C@_0O@PJPA@OpenVxDHandle?$AA@ 6076ae7c     FSDrvLib:IDriver.obj
+ 0003:00000e8c       ??_C@_0N@IDOE@kernel32?4dll?$AA@ 6076ae8c     FSDrvLib:IDriver.obj
+ 0003:00000e9c       ??_C@_04GNEN@?4VXD?$AA@    6076ae9c     FSDrvLib:IDriver.obj
+ 0003:00000ea4       ??_C@_04JNDO@?4SYS?$AA@    6076aea4     FSDrvLib:IDriver.obj
+ 0003:00000eac       ??_C@_06FIJO@?2?2?4?2?$CFs?$AA@ 6076aeac     FSDrvLib:IDriver.obj
+ 0003:00000eb4       ?BombName@@3PADA           6076aeb4     BaseWork:Basework.obj
+ 0003:00000ec8       ??_C@_03GMPP@AVP?$AA@      6076aec8     BaseWork:Basework.obj
+ 0003:00000ecc       ??_C@_01FDLN@?1?$AA@       6076aecc     BaseWork:Basework.obj
+ 0003:00000ed0       ??_C@_0L@DGKB@_SavePages?$AA@ 6076aed0     BaseWork:Basework.obj
+ 0003:00000edc       ??_C@_05IEGJ@_Poke?$AA@    6076aedc     BaseWork:Basework.obj
+ 0003:00000ee4       ??_C@_05NJJA@_Peek?$AA@    6076aee4     BaseWork:Basework.obj
+ 0003:00000eec       ??_C@_0BC@BBDE@_Get_Sector_Image?$AA@ 6076aeec     BaseWork:Basework.obj
+ 0003:00000f00       ??_C@_0N@EELL@_Disk_Max_DH?$AA@ 6076af00     BaseWork:Basework.obj
+ 0003:00000f10       ??_C@_0N@IMJO@_Disk_Max_CX?$AA@ 6076af10     BaseWork:Basework.obj
+ 0003:00000f20       ??_C@_07KOGI@_AFlags?$AA@  6076af20     BaseWork:Basework.obj
+ 0003:00000f28       ??_C@_04GPEN@_P_N?$AA@     6076af28     BaseWork:Basework.obj
+ 0003:00000f30       ??_C@_07MGID@_Delete?$AA@  6076af30     BaseWork:Basework.obj
+ 0003:00000f38       ??_C@_04BAKA@_New?$AA@     6076af38     BaseWork:Basework.obj
+ 0003:00000f40       ??_C@_0N@LIKN@__NextVolume?$AA@ 6076af40     BaseWork:Basework.obj
+ 0003:00000f50       ??_C@_08KHDL@__Rotate?$AA@ 6076af50     BaseWork:Basework.obj
+ 0003:00000f5c       ??_C@_0L@GEIB@__CheckExt?$AA@ 6076af5c     BaseWork:Basework.obj
+ 0003:00000f68       ??_C@_08BBGL@__S_Load?$AA@ 6076af68     BaseWork:Basework.obj
+ 0003:00000f74       ??_C@_08EJMN@__S_Save?$AA@ 6076af74     BaseWork:Basework.obj
+ 0003:00000f80       ??_C@_08DICL@__V_Seek?$AA@ 6076af80     BaseWork:Basework.obj
+ 0003:00000f8c       ??_C@_09DAJO@__V_Write?$AA@ 6076af8c     BaseWork:Basework.obj
+ 0003:00000f98       ??_C@_08EGIO@__V_Read?$AA@ 6076af98     BaseWork:Basework.obj
+ 0003:00000fa4       ??_C@_08EFOL@__P_Seek?$AA@ 6076afa4     BaseWork:Basework.obj
+ 0003:00000fb0       ??_C@_08DLEO@__P_Read?$AA@ 6076afb0     BaseWork:Basework.obj
+ 0003:00000fbc       ??_C@_0O@MFFE@__Copy_P_File?$AA@ 6076afbc     BaseWork:Basework.obj
+ 0003:00000fcc       ??_C@_07NCEB@__LSeek?$AA@  6076afcc     BaseWork:Basework.obj
+ 0003:00000fd4       ??_C@_0L@LNOE@__Write_26?$AA@ 6076afd4     BaseWork:Basework.obj
+ 0003:00000fe0       ??_C@_09PAEA@__Read_25?$AA@ 6076afe0     BaseWork:Basework.obj
+ 0003:00000fec       ??_C@_0L@IGNA@__Write_13?$AA@ 6076afec     BaseWork:Basework.obj
+ 0003:00000ff8       ??_C@_09DEMN@__Read_13?$AA@ 6076aff8     BaseWork:Basework.obj
+ 0003:00001004       ??_C@_09HPA@__Ch_Size?$AA@ 6076b004     BaseWork:Basework.obj
+ 0003:00001010       ??_C@_06MBAM@__Seek?$AA@   6076b010     BaseWork:Basework.obj
+ 0003:00001018       ??_C@_07LBGH@__Write?$AA@  6076b018     BaseWork:Basework.obj
+ 0003:00001020       ??_C@_06LPKJ@__Read?$AA@   6076b020     BaseWork:Basework.obj
+ 0003:00001028       ??_C@_08IDDK@__DoJump?$AA@ 6076b028     BaseWork:Basework.obj
+ 0003:00001034       ??_C@_0L@FCAO@_Check_Sum?$AA@ 6076b034     BaseWork:Basework.obj
+ 0003:00001040       ??_C@_07IBID@_Printf?$AA@  6076b040     BaseWork:Basework.obj
+ 0003:00001048       ??_C@_0M@DMLJ@_Area_Owner?$AA@ 6076b048     BaseWork:Basework.obj
+ 0003:00001054       ??_C@_0N@JIOF@_File_Length?$AA@ 6076b054     BaseWork:Basework.obj
+ 0003:00001064       ??_C@_07EKIK@_RFlags?$AA@  6076b064     BaseWork:Basework.obj
+ 0003:0000106c       ??_C@_06IPHP@_Drive?$AA@   6076b06c     BaseWork:Basework.obj
+ 0003:00001074       ??_C@_05NMEA@_Disk?$AA@    6076b074     BaseWork:Basework.obj
+ 0003:0000107c       ??_C@_09HPDJ@_Sub_Type?$AA@ 6076b07c     BaseWork:Basework.obj
+ 0003:00001088       ??_C@_0N@HIFL@_Object_Type?$AA@ 6076b088     BaseWork:Basework.obj
+ 0003:00001098       ??_C@_09DHLH@_Zip_Name?$AA@ 6076b098     BaseWork:Basework.obj
+ 0003:000010a4       ??_C@_04BKGK@_Ext?$AA@     6076b0a4     BaseWork:Basework.obj
+ 0003:000010ac       ??_C@_05CPAJ@_Name?$AA@    6076b0ac     BaseWork:Basework.obj
+ 0003:000010b4       ??_C@_0L@JHPI@_Full_Name?$AA@ 6076b0b4     BaseWork:Basework.obj
+ 0003:000010c0       ??_C@_07GOL@_Page_E?$AA@   6076b0c0     BaseWork:Basework.obj
+ 0003:000010c8       ??_C@_07FDAO@_Page_B?$AA@  6076b0c8     BaseWork:Basework.obj
+ 0003:000010d0       ??_C@_07KMLH@_Page_A?$AA@  6076b0d0     BaseWork:Basework.obj
+ 0003:000010d8       ??_C@_07PJJJ@_Page_C?$AA@  6076b0d8     BaseWork:Basework.obj
+ 0003:000010e0       ??_C@_07HFAI@_Header?$AA@  6076b0e0     BaseWork:Basework.obj
+ 0003:000010e8       ??_C@_04FAFO@_Psw?$AA@     6076b0e8     BaseWork:Basework.obj
+ 0003:000010f0       ??_C@_0N@FKHE@_GetArchOffs?$AA@ 6076b0f0     BaseWork:Basework.obj
+ 0003:00001100       ??_C@_0P@IBPB@_CureStdSector?$AA@ 6076b100     BaseWork:Basework.obj
+ 0003:00001110       ??_C@_0N@IEFO@_CureStdFile?$AA@ 6076b110     BaseWork:Basework.obj
+ 0003:00001120       ??_C@_0O@DHGL@_GetNextEntry?$AA@ 6076b120     BaseWork:Basework.obj
+ 0003:00001130       ??_C@_0P@JMHK@_GetFirstEntry?$AA@ 6076b130     BaseWork:Basework.obj
+ 0003:00001140       ??_C@_0L@MKBI@_IsProgram?$AA@ 6076b140     BaseWork:Basework.obj
+ 0003:0000114c       ??_C@_0L@IDHJ@_DoStdJump?$AA@ 6076b14c     BaseWork:Basework.obj
+ 0003:00001158       ??_C@_0M@DGJJ@?$DL?5VERDICTS?$DN?$AA@ 6076b158     BaseWork:Basework.obj
+ 0003:00001164       ??_C@_05MCGM@_gr01?$AA@    6076b164     BaseWork:Basework.obj
+ 0003:0000116c       ??_C@_05CAJK@?5?4?4?4?5?$AA@ 6076b16c     BaseWork:Basework.obj
+ 0003:00001174       ??_C@_01PJCK@?4?$AA@       6076b174     BaseWork:Basework.obj
+ 0003:00001178       _ImgBoot95                 6076b178     BaseWork:ImgSect.obj
+ 0003:00001378       _ImgMBR95                  6076b378     BaseWork:ImgSect.obj
+ 0003:00001578       ??_C@_04PKJO@_jmp?$AA@     6076b578     BaseWork:Clink.obj
+ 0003:00001580       ??_C@_07PMJI@_decode?$AA@  6076b580     BaseWork:Clink.obj
+ 0003:00001588       ??_C@_05MIFJ@_cure?$AA@    6076b588     BaseWork:Clink.obj
+ 0003:00001590       ??_C@_06DPLK@?4debug?$AA@  6076b590     BaseWork:Clink.obj
+ 0003:00001598       ??_C@_06GFNL@?4drect?$AA@  6076b598     BaseWork:Clink.obj
+ 0003:00001da0       _ptrAMemAlloc              6076bda0     sign:ERRNO.OBJ
+ 0003:00001da4       _ptrAMemFree               6076bda4     sign:ERRNO.OBJ
+ 0003:00001da8       ___mb_cur_max              6076bda8     sign:ERRNO.OBJ
+ 0003:00001dac       __pctype                   6076bdac     sign:ERRNO.OBJ
+ 0003:00001db0       __pwctype                  6076bdb0     sign:ERRNO.OBJ
+ 0003:00001db4       __ctype                    6076bdb4     sign:ERRNO.OBJ
+ 0003:00001fb8       ??_C@_0BF@POOE@Kaspersky?5Lab?5SK?5000?$AA@ 6076bfb8     sign:S_LNOT.OBJ
+ 0003:00001fd0       _kl_ok                     6076bfd0     sign:s_klok.obj
+ 0003:00002d2c       ?g_hDevic1@@3PAXA          6076cd2c     FSDrvLib1:FSDrv.obj
+ 0003:00002d30       ?_APPNAM1@@3PADA           6076cd30     FSDrvLib1:IDriver.obj
+ 0003:00002e34       ?_DebugInfoLeve1@@3KA      6076ce34     FSDrvLib1:IDriver.obj
+ 0003:00002e38       ?_drvpath_avp1@@3PAGA      6076ce38     FSDrvLib1:IDriver.obj
+ 0003:00002eac       ?_drvpath_ts1@@3PAGA       6076ceac     FSDrvLib1:IDriver.obj
+ 0003:00002f1c       ?pDrvPat1@@3PAGA           6076cf1c     FSDrvLib1:IDriver.obj
+ 0003:00002f20       ??_C@_0CH@CGNP@SYSTEM?2CurrentControlSet?2Service@ 6076cf20     FSDrvLib1:IDriver.obj
+ 0003:00002f48       ??_C@_0BI@NEBF@FSInterceptorDriverPath?$AA@ 6076cf48     FSDrvLib1:IDriver.obj
+ 0003:00002f60       ??_C@_0CC@HHFN@Software?2KasperskyLab?2SharedFile@ 6076cf60     FSDrvLib1:IDriver.obj
+ 0003:00002f90       ?hAvpTmpFiles@@3V?$vector@PAXV?$allocator@PAX@std@@@std@@A 6076cf90     avp_api.obj
+ 0003:00002fa4       ?g_pAvpCallback@@3P6GJIJ@ZA 6076cfa4     avp_api.obj
+ 0003:000030c4       ?g_pfnMemRead@@3P6GKPBXPAXK@ZA 6076d0c4     avp_api.obj
+ 0003:000030c8       ?g_pfnMemWrite@@3P6GKPAXPBXK@ZA 6076d0c8     avp_api.obj
+ 0003:000030d0       ?g_pfnStreamRead@@3P6GKPAUIStream@@PAXK@ZA 6076d0d0     avp_api.obj
+ 0003:000030d4       ?g_pfnStreamWrite@@3P6GKPAUIStream@@PBXK@ZA 6076d0d4     avp_api.obj
+ 0003:000030d8       ?g_pfnStreamSeek@@3P6GKPAUIStream@@JK@ZA 6076d0d8     avp_api.obj
+ 0003:000030dc       ?g_pfnStreamSetSize@@3P6GJPAUIStream@@K@ZA 6076d0dc     avp_api.obj
+ 0003:00003120       ?g_hInstance@@3PAUHINSTANCE__@@A 6076d120     avpssi.obj
+ 0003:00003130       ?g_boObjectCureFailed@@3_NA 6076d130     ScanLoop.obj
+ 0003:00003138       ?g_DatabasesInfoEx@@3UDATABASES_INFO_EX@@A 6076d138     ScanLoop.obj
+ 0003:00007754       ?g_boObjectNeedsDeletions@@3_NA 60771754     ScanLoop.obj
+ 0003:00007758       ?g_loAskCureRet@@3JA       60771758     ScanLoop.obj
+ 0003:0000775c       ?m_dwMaxYear@C_SCAN_LOOP@@2KA 6077175c     ScanLoop.obj
+ 0003:00007760       ?g_dwSubObjectRes@@3KA     60771760     ScanLoop.obj
+ 0003:00007764       ?m_dwMaxDay@C_SCAN_LOOP@@2KA 60771764     ScanLoop.obj
+ 0003:00007768       ?g_szLastObjName@@3PADA    60771768     ScanLoop.obj
+ 0003:00007968       ?g_boAskCureFlag@@3_NA     60771968     ScanLoop.obj
+ 0003:0000796c       ?m_dwMaxMonth@C_SCAN_LOOP@@2KA 6077196c     ScanLoop.obj
+ 0003:00007970       ?g_phScanLoop@@3PAVC_SCAN_LOOP@@A 60771970     ScanLoop.obj
+ 0003:00007974       ?g_dwCurrentRFlags@@3KA    60771974     ScanLoop.obj
+ 0003:00007978       ?g_LoadProgress@@3PAULOAD_PROGRESS_S@@A 60771978     ScanLoop.obj
+ 0003:00007d7c       ??_C@_00A@?$AA@            60771d7c     ScanLoop.obj
+ 0003:00007d80       ?sys_log_g_p@@3PAVC_REPORT_FILE@@A 60771d80     sys_log.obj
+ 0003:00007d88       ?gFSSync@@3VFSDrvLib_Sync@@A 60771d88     FSDrvLib:FSDrv.obj
+ 0003:00007d94       ?g_WFChangedName@@3PADA    60771d94     FSDrvLib:FSDrv.obj
+ 0003:00007e98       ?g_WhistleupName@@3PADA    60771e98     FSDrvLib:FSDrv.obj
+ 0003:00007fa0       ?g_FSDrvLibOSVer@@3U_OSVERSIONINFOA@@A 60771fa0     FSDrvLib:FSDrv.obj
+ 0003:00008034       _gFSDrvLibAppOffset        60772034     FSDrvLib:FSDrv.obj
+ 0003:00008038       ?g_pAppReg@@3PAU_APP_REGISTRATION@@A 60772038     FSDrvLib:FSDrv.obj
+ 0003:0000803c       ?g_hWhistleup@@3PAXA       6077203c     FSDrvLib:FSDrv.obj
+ 0003:00008040       ?g_hWFChanged@@3PAXA       60772040     FSDrvLib:FSDrv.obj
+ 0003:0000804c       ?g_RefCount@@3JA           6077204c     FSDrvLib:FSDrv.obj
+ 0003:00008058       ?gIDriverDirectCall@@3VIDirver_DirectCall@@A 60772058     FSDrvLib:IDriver.obj
+ 0003:00008060       ?gExternCalls@@3VIDriver_ExtCalls@@A 60772060     FSDrvLib:IDriver.obj
+ 0003:00008068       ?gpSysCall0@@3P6GKW4AVPG_W32_Services@@@ZA 60772068     FSDrvLib:IDriver.obj
+ 0003:0000806c       ?gpSysCall1@@3P6GKW4AVPG_W32_Services@@K@ZA 6077206c     FSDrvLib:IDriver.obj
+ 0003:00008070       ?gpSysCall2@@3P6GKW4AVPG_W32_Services@@KK@ZA 60772070     FSDrvLib:IDriver.obj
+ 0003:00008074       ?gpSysCall3@@3P6GKW4AVPG_W32_Services@@KKK@ZA 60772074     FSDrvLib:IDriver.obj
+ 0003:00008078       ?gpSysCall4@@3P6GKW4AVPG_W32_Services@@KKKK@ZA 60772078     FSDrvLib:IDriver.obj
+ 0003:0000807c       ?_plstrlenW@@3P6GHPAG@ZA   6077207c     FSDrvLib:IDriver.obj
+ 0003:00008080       ?_plstrcpyW@@3P6GHPAG0@ZA  60772080     FSDrvLib:IDriver.obj
+ 0003:00008084       ?_plstrcmpW@@3P6GHPAG0@ZA  60772084     FSDrvLib:IDriver.obj
+ 0003:00008088       ?_plstrcmpiW@@3P6GHPAG0@ZA 60772088     FSDrvLib:IDriver.obj
+ 0003:000080a8       ?AVP_PagePtr@@3PAEA        607720a8     BaseWork:BaseAPI.obj
+ 0003:000080b4       ?TempDisk@@3PADA           607720b4     BaseWork:Basework.obj
+ 0003:000080c0       ?LPS@@3ULOAD_PROGRESS_S@@A 607720c0     BaseWork:Basework.obj
+ 0003:00008118       _AvpCallback               60772118     BaseWork:Basework.obj
+ 0003:0000811c       _AvpStrrchr                6077211c     BaseWork:Basework.obj
+ 0003:00008120       _AvpStrlwr                 60772120     BaseWork:Basework.obj
+ 0003:00008124       _AvpConvertChar            60772124     BaseWork:Basework.obj
+ 0003:00008128       _AvpCreateFile             60772128     BaseWork:Basework.obj
+ 0003:0000812c       _AvpCloseHandle            6077212c     BaseWork:Basework.obj
+ 0003:00008130       _AvpReadFile               60772130     BaseWork:Basework.obj
+ 0003:00008134       _AvpWriteFile              60772134     BaseWork:Basework.obj
+ 0003:00008138       _AvpGetFileSize            60772138     BaseWork:Basework.obj
+ 0003:0000813c       _AvpSetFilePointer         6077213c     BaseWork:Basework.obj
+ 0003:00008140       _AvpSetEndOfFile           60772140     BaseWork:Basework.obj
+ 0003:00008144       _AvpGetDiskFreeSpace       60772144     BaseWork:Basework.obj
+ 0003:00008148       _AvpGetFullPathName        60772148     BaseWork:Basework.obj
+ 0003:0000814c       _AvpDeleteFile             6077214c     BaseWork:Basework.obj
+ 0003:00008150       _AvpGetFileAttributes      60772150     BaseWork:Basework.obj
+ 0003:00008154       _AvpSetFileAttributes      60772154     BaseWork:Basework.obj
+ 0003:00008158       _AvpGetTempPath            60772158     BaseWork:Basework.obj
+ 0003:0000815c       _AvpGetTempFileName        6077215c     BaseWork:Basework.obj
+ 0003:00008160       _AvpMemoryRead             60772160     BaseWork:Basework.obj
+ 0003:00008164       _AvpMemoryWrite            60772164     BaseWork:Basework.obj
+ 0003:00008168       _AvpGetDosMemSize          60772168     BaseWork:Basework.obj
+ 0003:0000816c       _AvpGetFirstMcbSeg         6077216c     BaseWork:Basework.obj
+ 0003:00008170       _AvpGetIfsApiHookTable     60772170     BaseWork:Basework.obj
+ 0003:00008174       _AvpGetDosTraceTable       60772174     BaseWork:Basework.obj
+ 0003:00008178       _AvpGetDiskParam           60772178     BaseWork:Basework.obj
+ 0003:0000817c       _AvpRead13                 6077217c     BaseWork:Basework.obj
+ 0003:00008180       _AvpWrite13                60772180     BaseWork:Basework.obj
+ 0003:00008184       _AvpRead25                 60772184     BaseWork:Basework.obj
+ 0003:00008188       _AvpWrite26                60772188     BaseWork:Basework.obj
+ 0003:0000818c       _AvpExecSpecial            6077218c     BaseWork:Basework.obj
+ 0003:00008190       _callbackNames             60772190     BaseWork:Basework.obj
+ 0003:00008194       _callbackRecords           60772194     BaseWork:Basework.obj
+ 0003:00008198       ?__InstanceData@@3KA       60772198     BaseWork:DupInstance.obj
+ 0003:0000839c       _DTAllocator               6077239c     kldtser:SeriaInt.obj
+ 0003:000083a0       _DTLiberator               607723a0     kldtser:SeriaInt.obj
+ 0003:000083a4       _SWAllocator               607723a4     swm:Manager.obj
+ 0003:000083a8       _SWLiberator               607723a8     swm:Manager.obj
+ 0003:000083ac       _gpSWManager               607723ac     swm:Manager.obj
+ 0003:000083b8       ?g_hWFChange1@@3PAXA       607723b8     FSDrvLib1:FSDrv.obj
+ 0003:000083bc       ?g_WFChangedNam1@@3PADA    607723bc     FSDrvLib1:FSDrv.obj
+ 0003:000084c0       ?g_WhistleupNam1@@3PADA    607724c0     FSDrvLib1:FSDrv.obj
+ 0003:000085c4       ?g_hFSEven1@@3PAXA         607725c4     FSDrvLib1:FSDrv.obj
+ 0003:000085c8       ?g_hWhistleu1@@3PAXA       607725c8     FSDrvLib1:FSDrv.obj
+ 0003:000085d0       ?ThreadLis1@@3V?$CSArray@K@@A 607725d0     FSDrvLib1:FSDrv.obj
+ 0003:000085e0       ?g_OSVe1@@3U_OSVERSIONINFOA@@A 607725e0     FSDrvLib1:FSDrv.obj
+ 0003:00008674       ?g_pAppRe1@@3PAU_APP_REGISTRATION@@A 60772674     FSDrvLib1:FSDrv.obj
+ 0003:00008680       ?g_RefCoun1@@3JA           60772680     FSDrvLib1:FSDrv.obj
+ 0003:0000868c       ?_plstrle1W@@3P6GHPAG@ZA   6077268c     FSDrvLib1:IDriver.obj
+ 0003:00008690       ?_plstrcp1W@@3P6GHPAG0@ZA  60772690     FSDrvLib1:IDriver.obj
+ 0003:000086a4       _DTLocker                  607726a4     <common>
+ 0003:000086a8       _DTContext                 607726a8     <common>
+ 0003:000086ac       _DTUnlocker                607726ac     <common>
+ 0003:000086b0       _allocator                 607726b0     <common>
+ 0003:000086b4       _liberator                 607726b4     <common>
+ 0003:000086b8       _SWLocker                  607726b8     <common>
+ 0003:000086bc       _SWUnlocker                607726bc     <common>
+ 0003:000086c0       _SWLContext                607726c0     <common>
+ 0003:000086c4       __adjust_fdiv              607726c4     <common>
+ 0003:000086c8       __pRawDllMain              607726c8     <common>
+ 0003:000086cc       ___onexitend               607726cc     <common>
+ 0003:000086d0       ___onexitbegin             607726d0     <common>
+
+ entry point at        0001:00015497
+
+ Static symbols
+
+ 0001:0000148a       _$E11                      6075248a f   avpssi.obj
+ 0001:00001494       _$E8                       60752494 f   avpssi.obj
+ 0001:000014a1       _$E10                      607524a1 f   avpssi.obj
+ 0001:000014ad       _$E9                       607524ad f   avpssi.obj
+ 0001:00000000       _$E6                       60751000 f   avp_api.obj
+ 0001:0000000a       _$E3                       6075100a f   avp_api.obj
+ 0001:00000027       _$E5                       60751027 f   avp_api.obj
+ 0001:00000033       _$E4                       60751033 f   avp_api.obj
+ 0001:00000c5d       ?VndDestroy@@YAXXZ         60751c5d f   avp_api.obj
+ 0001:00000e40       ?VndInit@@YAHPBD@Z         60751e40 f   avp_api.obj
+ 0001:00004d50       _$E2                       60755d50 f   FSDrvLib:IDriver.obj
+ 0001:00004d60       _$E1                       60755d60 f   FSDrvLib:IDriver.obj
+ 0001:00004e30       _$E7                       60755e30 f   FSDrvLib:IDriver.obj
+ 0001:00004e40       _$E4                       60755e40 f   FSDrvLib:IDriver.obj
+ 0001:00004e50       _$E6                       60755e50 f   FSDrvLib:IDriver.obj
+ 0001:00004e60       _$E5                       60755e60 f   FSDrvLib:IDriver.obj
+ 0001:00004570       _$E4                       60755570 f   FSDrvLib:FSDrv.obj
+ 0001:00004580       _$E1                       60755580 f   FSDrvLib:FSDrv.obj
+ 0001:00004650       _$E3                       60755650 f   FSDrvLib:FSDrv.obj
+ 0001:00004660       _$E2                       60755660 f   FSDrvLib:FSDrv.obj
+ 0001:0000e5d0       ?init@@YAXAAUs_data@@@Z    6075f5d0 f   BaseWork:Sq_u.obj
+ 0001:0000e5f0       ?process@@YAHAAUs_data@@@Z 6075f5f0 f   BaseWork:Sq_u.obj
+ 0001:0000e870       _KLDT_Init_LibraryImp      6075f870 f   kldtser:SeriaInt.obj
+ 0001:0000f230       _get_word                  60760230 f   property:d_deser.obj
+ 0001:0000f260       _get_dword                 60760260 f   property:d_deser.obj
+ 0001:0000f290       _DATA_Get                  60760290 f   property:d_deser.obj
+ 0001:0000f420       _get_byte                  60760420 f   property:d_deser.obj
+ 0001:0000f440       _get_avp_property          60760440 f   property:d_deser.obj
+ 0001:0000f4e0       _PROP_Get                  607604e0 f   property:d_deser.obj
+ 0001:0000f530       _ReadPropertyItem          60760530 f   property:d_deser.obj
+ 0001:0000f7f0       _get_qword                 607607f0 f   property:d_deser.obj
+ 0001:0000f820       _get_date                  60760820 f   property:d_deser.obj
+ 0001:0000f850       _get_time                  60760850 f   property:d_deser.obj
+ 0001:0000f880       _get_datetime              60760880 f   property:d_deser.obj
+ 0001:0000f8b0       _convert_wchar_string      607608b0 f   property:d_deser.obj
+ 0001:0000f8d0       _PROP_Arr_Get              607608d0 f   property:d_deser.obj
+ 0001:0000faa0       _init_get_bytes            60760aa0 f   property:d_deser.obj
+ 0001:0000fb00       _flush_get_bytes           60760b00 f   property:d_deser.obj
+ 0001:0000fb50       _get_bytes                 60760b50 f   property:d_deser.obj
+ 0001:0000fd70       _next_byte                 60760d70 f   property:d_deser.obj
+ 0001:000124d0       _AddRef                    607634d0 f   swm:Packer.obj
+ 0001:00012d30       _Release                   60763d30 f   swm:RawData.obj
+ 0001:00012d60       _SWGetId                   60763d60 f   swm:RawData.obj
+ 0001:00012d70       _SWReleaseContext          60763d70 f   swm:RawData.obj
+ 0001:00012da0       _SWCreateContext           60763da0 f   swm:RawData.obj
+ 0001:00012de0       _SWDuplicate               60763de0 f   swm:RawData.obj
+ 0001:000124d0       _AddRef                    607634d0 f   swm:Packer.obj
+ 0001:00012ab0       _Release                   60763ab0 f   swm:Checker.obj
+ 0001:00012ae0       _SWGetId                   60763ae0 f   swm:Checker.obj
+ 0001:00012af0       _SWReleaseContext          60763af0 f   swm:Checker.obj
+ 0001:00012b20       _SWCreateContext           60763b20 f   swm:Checker.obj
+ 0001:00012bd0       _SWDuplicate               60763bd0 f   swm:Checker.obj
+ 0001:000124d0       _AddRef                    607634d0 f   swm:Packer.obj
+ 0001:00012790       _Release                   60763790 f   swm:Encrypt.obj
+ 0001:000127c0       _SWGetId                   607637c0 f   swm:Encrypt.obj
+ 0001:000127d0       _SWReleaseContext          607637d0 f   swm:Encrypt.obj
+ 0001:00012820       _SWCreateContext           60763820 f   swm:Encrypt.obj
+ 0001:000128b0       _SWDuplicate               607638b0 f   swm:Encrypt.obj
+ 0001:000124d0       _AddRef                    607634d0 f   swm:Packer.obj
+ 0001:000124e0       _Release                   607634e0 f   swm:Packer.obj
+ 0001:00012510       _SWGetId                   60763510 f   swm:Packer.obj
+ 0001:00012520       _SWReleaseContext          60763520 f   swm:Packer.obj
+ 0001:000125b0       _SWCreateContext           607635b0 f   swm:Packer.obj
+ 0001:00012670       _SWDuplicate               60763670 f   swm:Packer.obj
+ 0001:000121e0       _SWAcceptBuffer            607631e0 f   swm:RawDataR.obj
+ 0001:000121f0       _SWReadProc                607631f0 f   swm:RawDataR.obj
+ 0001:00012270       _SWLoadBuffer              60763270 f   swm:RawDataR.obj
+ 0001:00012380       _SWCreateInstance          60763380 f   swm:RawDataR.obj
+ 0001:00011dd0       _SWAcceptBuffer            60762dd0 f   swm:CheckerR.obj
+ 0001:00011e90       _SWReadProc                60762e90 f   swm:CheckerR.obj
+ 0001:000120d0       _SWCreateInstance          607630d0 f   swm:CheckerR.obj
+ 0001:00011b20       _SWAcceptBuffer            60762b20 f   swm:EncryptR.obj
+ 0001:00011bb0       _SWReadProc                60762bb0 f   swm:EncryptR.obj
+ 0001:00011cc0       _SWCreateInstance          60762cc0 f   swm:EncryptR.obj
+ 0001:000112e0       _SWAcceptBuffer            607622e0 f   swm:PackerR.obj
+ 0001:00011390       _SWReadProc                60762390 f   swm:PackerR.obj
+ 0001:000115c0       _SWCreateInstance          607625c0 f   swm:PackerR.obj
+ 0001:00011650       _Unsqueeze                 60762650 f   swm:PackerR.obj
+ 0001:000119a0       _GetBuffer                 607629a0 f   swm:PackerR.obj
+ 0001:000119e0       _GetByte                   607629e0 f   swm:PackerR.obj
+ 0001:00011a00       _GetBytes                  60762a00 f   swm:PackerR.obj
+ 0001:00011a50       _GetBit                    60762a50 f   swm:PackerR.obj
+ 0001:000124d0       _AddRef                    607634d0 f   swm:Packer.obj
+ 0001:00010e20       _Release                   60761e20 f   swm:Manager.obj
+ 0001:00010e80       _SWMGetContext             60761e80 f   swm:Manager.obj
+ 0001:00010ed0       _SWMEnterBufferProc        60761ed0 f   swm:Manager.obj
+ 0001:00010ee0       _SWMLeaveBufferProc        60761ee0 f   swm:Manager.obj
+ 0001:00010ef0       _SWMAttachSW               60761ef0 f   swm:Manager.obj
+ 0001:000110a0       _FindSiblingControl        607620a0 f   swm:Manager.obj
+ 0001:00011100       _SWMIsSWRegistered         60762100 f   swm:Manager.obj
+ 0001:000141d6       _CalcHash                  607651d6 f   sign:f_SHA.obj
+ 0001:00013a2a       _priv                      60764a2a f   sign:w_signsh.obj
+ 0001:00013ae3       _multmod                   60764ae3 f   sign:w_signsh.obj
+ 0001:00013c6c       _pack                      60764c6c f   sign:w_signsh.obj
+ 0001:00013cc6       _unpack                    60764cc6 f   sign:w_signsh.obj
+ 0001:00013d10       _expmod                    60764d10 f   sign:w_signsh.obj
+ 0001:00014046       _stel                      60765046 f   sign:w_signsh.obj
+ 0001:000132e0       _free_not                  607642e0 f   sign:S_CHECK.OBJ
+ 0001:00012f30       _destr                     60763f30 f   sign:S_CHFILE.OBJ
+ 0001:00014490       _$E4                       60765490 f   FSDrvLib1:FSDrv.obj
+ 0001:000144a0       _$E1                       607654a0 f   FSDrvLib1:FSDrv.obj
+ 0001:000144c0       _$E3                       607654c0 f   FSDrvLib1:FSDrv.obj
+ 0001:000144d0       _$E2                       607654d0 f   FSDrvLib1:FSDrv.obj
+ 0001:000144f0       _$E7                       607654f0 f   FSDrvLib1:FSDrv.obj
+ 0001:00014500       _$E6                       60765500 f   FSDrvLib1:FSDrv.obj
+
+ 244 bytes saved through ICF
+

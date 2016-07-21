@@ -1,0 +1,36 @@
+forward interface VARS;
+typedef VARS* hVARS;
+
+
+
+
+[
+  mnemonic(IID_VARS)
+  id(58024)
+  c_type_name(hVARS)
+  comment_ex("Provides functionality a-la environment variables")
+]
+interface VARS {
+
+  // ------------------------------------
+
+    [
+      comment_ex("Interface version")
+      id(130)
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      comment_ex("Interface comment")
+      id(131)
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+
+
+  // ------------------------------------
+    method tERROR GetValue( hSTRING sName, hSTRING sValue );
+    method tERROR SetValue( hSTRING sName, hSTRING sValue );
+    method tERROR ExpandString( hSTRING hStr );
+
+}
+

@@ -1,0 +1,376 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_SRCGEN              REGISTRY DISCARDABLE    "CodeGen.rgs"
+IDR_SRCGENCPP           REGISTRY DISCARDABLE    "CodeGenCPP.rgs"
+IDR_SRCGEN2             REGISTRY DISCARDABLE    "CodeGen2.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDR_IFACE_DESCRIPTION   RCDATA  DISCARDABLE     "CodeDescription.dsc"
+IDR_OPTIONS_TEMPLATE    RCDATA  DISCARDABLE     "Options.klp"
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""CodeGen.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,51
+ PRODUCTVERSION 1,0,0,5
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "SrcGen Module\0"
+            VALUE "FileVersion", "1, 0, 0, 43\0"
+            VALUE "InternalName", "SrcGen\0"
+            VALUE "LegalCopyright", "Copyright 2000\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OLESelfRegister", "\0"
+            VALUE "OriginalFilename", "SrcGen.DLL\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "SrcGen Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 5\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "AVP Prague Code Generator"
+    IDS_IFACE_DESCRIPTION   "ANSI C Code Generator"
+    IDS_IFACE_VENDOR        "Kaspersky Labs"
+    IDS_IFACE_VERSION       "1.0.0.0"
+    IDS_HDR_TIME_FORMAT     "// -------- %A,  %d %B %Y,  %H:%M --------"
+    IDS_HDR_PROJ_FORMAT     "// Project -- %s"
+    IDS_HDR_SUBPROJ_FORMAT  "// Sub project -- %s"
+    IDS_HDR_PURPOSE_FORMAT  "// Purpose -- %s"
+    IDS_HDR_EXTINFO_FORMAT  "// %s"
+    IDS_METHOD_PARAM_COMMENT_FMT "// Parameter ""%s"":"
+    IDS_HDR_INC_FNAME_FORMAT "// File Name -- %s"
+    IDS_HDR_IFDEF_FORMAT    "#if !defined( %s )"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HDR_ENDIF_FORMAT    "#endif // %s"
+    IDS_HDR_PROJ_DEF        "Prague"
+    IDS_HDR_SUBPROJ_DEF     "Not defined"
+    IDS_HDR_DEFINE_FORMAT   "#define %s"
+    IDS_HDR_AUTHOR_FORMAT   "// Author -- %s"
+    IDS_IFS_COMM_NAME       "// %s interface implementation"
+    IDS_IFS_COMM_COMMENT    "//   %s"
+    IDS_IFS_COMM_SHORT_COMMENTS "// Short comments -- %s"
+    IDS_IFACE_DESCRIPTION_CPP "ANSI C++ Code Generator"
+    IDS_IFACE_VERSION_CPP   "1.0.0.0"
+    IDS_INTERFACE_STOP_DECL_FMT "} *%s;"
+    IDS_INTERFACE_START_METHODS_TBL_FMT "%sstruct i%sVtbl %s{"
+    IDS_INTERFACE_STOP_METHODS_TBL_FMT "}; // %s"
+    IDS_INTERFACE_FORWARD_DECL_FMT "typedef struct i%sVtbl i%sVtbl;"
+    IDS_IFS_COMM_START      "// --- %s ---"
+    IDS_IFS_COMM_DELIMITER  "// --------------------------------------------"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_INTERFACE_DECL_ID_FMT "#define %s  ((tIID)(0x%08x))"
+    IDS_PROP_GLOBAL_DECL    "// #define %s %smPROPERTY_MAKE_GLOBAL( %s, %s0x%08x )"
+    IDS_STRUCT_HDR_FMT      "struct tag_%s {"
+    IDS_STRUCT_FTR_FMT      "} %s;"
+    IDS_DEF_STRUCT_NAME_FMT "%sData"
+    IDS_INNER_DATA_STRUCTURE_COMMENT 
+                            "// Interface ""%s"". Inner data structure"
+    IDS_PROP_TBL_START_FMT  "mPROPERTY_TABLE(%s_PropTable)"
+    IDS_PROP_TBL_STOP_FMT   "mPROPERTY_TABLE_END(%s_PropTable)"
+    IDS_PROP_TBL_COMMENT_FMT "// Interface ""%s"". Property table"
+    IDS_PROP_DEF_LOCAL_FMT  "m%sLOCAL_PROPERTY%s( %s, %s, %s, %s, %s, %s )"
+    IDS_PROP_DEF_LOCAL_FN_FMT "m%sLOCAL_PROPERTY_FN%s( %s, %s, %s )"
+    IDS_PROP_DEF_LOCAL_BUF_FMT "m%sLOCAL_PROPERTY_BUF%s( %s, %s, %s, %s )"
+    IDS_PROP_REQUIR_FLAG    " | cPROP_REQUIRED"
+    IDS_PROP_NAME_GLOBAL_FMT "pg%s"
+    IDS_PROP_R_FLAG         "cPROP_BUFFER_READ"
+    IDS_PROP_W_FLAG         "cPROP_BUFFER_WRITE"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROP_RW_FLAG        "cPROP_BUFFER_READ_WRITE"
+    IDS_PROP_DEF_SHARED_FMT "mSHARED_PROPERTY%s( %s, %s )"
+    IDS_PROP_DEF_SHARED_PTR_FMT "mSHARED_PROPERTY_PTR%s( %s, %s, %s )"
+    IDS_STRUCT_HDR_TYPEDEF_FMT "typedef struct tag_%s {"
+    IDS_PROP_TBL_GLOBAL_VARS_COMMENT_FMT 
+                            "// Interface ""%s"". Global(shared) property table variables"
+    IDS_PROP_TBL_METHODS_COMMENT_FMT 
+                            "// Interface ""%s"". Get/Set property methods"
+    IDS_PROP_GET_METHOD_FMT "tUINT pr_call %s( %s _this, tPROPID prop, tCHAR* buffer, tUINT size )"
+    IDS_PROP_SET_METHOD_FMT "tUINT pr_call %s( %s _this, tPROPID prop, tCHAR* buffer, tUINT size )"
+    IDS_PROP_GET_METHOD_COMMENT_FMT 
+                            "// Interface ""%s"". Method ""Get"" for property(s):"
+    IDS_PROP_GET_METHOD_PROP_FMT "//  -- %s"
+    IDS_PROP_SET_METHOD_COMMENT_FMT 
+                            "// Interface ""%s"". Method ""Set"" for property(s):"
+    IDS_METHOD_NAME_FMT     "%s_%s"
+    IDS_EXTENDED_METHOD_COMMENT "// Extended method comment"
+    IDS_BEHAVIOUR_METHOD_COMMENT "// Behaviour comment"
+    IDS_RESULT_METHOD_COMMENT "// Result comment"
+    IDS_METHOD_HDR_FMT      "// --- Interface ""%s"". Method ""%s"""
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_METHOD_RETURN_FMT   "return (%s)(%s);"
+    IDS_METHOD_PREFIX       "static "
+    IDS_IFACE_METHOD_TABLE_COMMENT_FMT 
+                            "// Interface ""%s"". External method table. Forward declarations"
+    IDS_IFACE_METHOD_TABLE_COMMENT_FMT2 
+                            "// Interface ""%s"". External method table."
+    IDS_INTERNAL_METHOD_TABLE_COMMENT_FMT 
+                            "// Interface ""%s"". Internal method table. Forward declarations"
+    IDS_INTERNAL_METHOD_NEW_FMT "tERROR pr_call %s( hOBJECT dad )"
+    IDS_INTERNAL_METHOD_RECOGNIZE_FMT "tBOOL pr_call %s( hOBJECT object )"
+    IDS_INTERNAL_METHOD_RPOP_GET_FMT 
+                            "tUINT pr_call %s( %s _this, tPROPID prop, tPTR buffer, tUINT size )"
+    IDS_INTERNAL_METHOD_PROP_SET_FMT 
+                            "tUINT pr_call %s( %s _this, tPROPID prop, tPTR buffer, tUINT size )"
+    IDS_INTERNAL_METHOD_CLOSE_FMT "tERROR pr_call %s( %s _this )"
+    IDS_INTERNAL_METHOD_TABLE_COMMENT_FMT2 
+                            "// Interface ""%s"". Internal method table."
+    IDS_INTERNAL_METHOD_TABLE_FMT "static iINTERNAL i_%s_vtbl = {"
+    IDS_INTERNAL_METHOD_NAME_NEW_FMT "%s_NewObject"
+    IDS_INTERNAL_METHOD_NAME_RECOGNIZE_FMT "%s_Recognize"
+    IDS_INTERNAL_METHOD_NAME_PROP_GET_FMT "%s_PropertyGet"
+    IDS_INTERNAL_METHOD_NAME_PROP_SET_FMT "%s_PropertySet"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_INTERNAL_METHOD_NAME_CLOSE_FMT "%s_Close"
+    IDS_INTERNAL_METHOD_COMMENT_FMT 
+                            "// Interface ""%s"". Internal method %s implementation."
+    IDS_INTERNAL_METHOD_RET_ERR "tERROR"
+    IDS_INTERNAL_METHOD_RET_BOOL "tBOOL"
+    IDS_INTERNAL_METHOD_RET_COUNT "tUINT"
+    IDS_PROP_NAME_LOCAL_FMT "pl%s"
+    IDS_PLUGIN_DECL_ID_FMT  "#define %s  ((tPID)(0x%08x))"
+    IDS_REGISTER_FUNC_FMT   "tERROR pr_call %s_Register( hROOT root )"
+    IDS_REGISTER_FUNC_COMMENT_FMT "// Interface ""%s"". Register function"
+    IDS_REG_PAR_IID         "interface identifier"
+    IDS_REG_PAR_PID         "plugin identifier"
+    IDS_REG_PAR_SUBTYPE     "subtype identifier"
+    IDS_REG_PAR_VERSION     "interface version"
+    IDS_REG_PAR_VENDOR      "interface developer"
+    IDS_REG_PAR_INTERNAL_VTBL "internal(kernel called) function table"
+    IDS_REG_PAR_EXTERNAL_VTBL "external function table"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_REG_PAR_EXTERNAL_VTBL_SIZE "external function table size"
+    IDS_REG_PROP_TABLE      "property table"
+    IDS_REG_PROP_TABLE_SIZE "property table size"
+    IDS_REG_MEM_SIZE        "memory size"
+    IDS_REG_CALL            "return CALL_Root_RegisterIFace("
+    IDS_IFACE_DEFINE_FMT    "__%s__%s"
+    IDS_INCLUDE_HDR_FMT     "#include <%s>"
+    IDS_INCLUDE_LOCAL_HDR_FMT "#include ""%s"""
+    IDS_INTERNAL_METHOD_CAST_NEW "(tIntFnObjectNew)"
+    IDS_INTERNAL_METHOD_CAST_RECOGNIZE "(tIntFnRecognize)"
+    IDS_INTERNAL_METHOD_CAST_PROP_GET "(tIntFnPropIO)"
+    IDS_INTERNAL_METHOD_CAST_PROP_SET "(tIntFnPropIO)"
+    IDS_INTERNAL_METHOD_CAST_CLOSE "(tIntFnObjectClose)"
+    IDS_INTERNAL_METHOD_CAST_INIT "(tIntFnObjectInit)"
+    IDS_INTERNAL_METHOD_CAST_INIT_DONE "(tIntFnObjectInitDone)"
+    IDS_REG_PAR_INTERNAL_VTBL_SIZE "internal function table size"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FUNC_TYPEDEF_FMT    "typedef %s;"
+    IDS_FUNC_TYPEDEFS_STAMP "interface function forward declarations"
+    IDS_INTERNAL_METHOD_NAME_RECEIVE_MSG_FMT "%s_MsgReceive"
+    IDS_IFACE_DECL_STAMP    "interface declaration"
+    IDS_IFACE_OBJECT_DECL_STAMP "interface object declaration"
+    IDS_FORWARD_IFACE_DECL_STAMP "interface forward declaration"
+    IDS_OBJECT_DECL_STAMP   "object declaration"
+    IDS_INTERNAL_METHOD_RECEIVE_MSG_FMT 
+                            "tERROR pr_call %s( %s _this, tDWORD msg_id, tDWORD param1, tDWORD param2 )"
+    IDS_INTERNAL_METHOD_CAST_RECEIVE_MSG "(tIntFnMsgReceive)"
+    IDS_REG_IFACE_FLAGS     "interface flags"
+    IDS_IFACE_PROPERTIES    "interface declared properties"
+    IDS_MNEMONIC_ID_STAMP   "interface menonic identificator"
+    IDS_INTERNAL_METHOD_IFACE_TRANSFER 
+                            "tERROR pr_call %s( %s _this, tDWORD sub_type, tDWORD op_code )"
+    IDS_IFACE_FORWARD_DECL_FMT "typedef struct %s *%s;"
+    IDS_INTERNAL_METHOD_NAME_IFACE_TRANSFER_FMT "%s_IFaceTransfer"
+    IDS_PROP_DEF_LOCAL_REQUIR_FN_FMT 
+                            "m%sLOCAL_PROPERTY_REQUIRED_FN%s( %s, %s, %s )"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_INTERNAL_METHOD_NAME_INIT_FMT "%s_Init"
+    IDS_INTERNAL_METHOD_NAME_INIT_DONE_FMT "%s_InitDone"
+    IDS_INTERNAL_METHOD_INIT_FMT "tERROR pr_call %s( %s _this )"
+    IDS_INTERNAL_METHOD_INIT_DONE_FMT "tERROR pr_call %s( %s _this )"
+    IDS_BEG_SECT_FMT        "// AVP Prague stamp begin( %s, %s )"
+    IDS_END_SECT_FMT        "// AVP Prague stamp end( %s, %s )"
+    IDS_DATA_STRUCT_STAMP   "Data structure"
+    IDS_INT_METHOD_TABLE_STAMP "Internal method table"
+    IDS_EXT_METHOD_TABLE_STAMP "External method table"
+    IDS_EXT_METHOD_TABLE_PROTOTYPE_STAMP "External method table prototypes"
+    IDS_FORWARDED_PROP_METHODS_STAMP "Forwarded property methods declarations"
+    IDS_GLOBAL_PROP_VARS_STAMP "Global property variable declaration"
+    IDS_PROPERTY_TABLE_STAMP "Property table"
+    IDS_REGISTER_CALL_STAMP "Registration call"
+    IDS_PROP_METHOD_HEADER_STAMP "Property method implementation"
+    IDS_INTERNAL_METHOD_HEADER_STAMP 
+                            "Internal(kernel called) interface method implementation"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CAUTION_STAMP       "Caution !!!"
+    IDS_INTERFACE_METHOD_STAMP 
+                            "External(user called) interface method implementation"
+    IDS_IFACE_COMMENT_STAMP "Interface comment"
+    IDS_INCLUDE_PROPERTY_TABLE_STAMP "Property table"
+    IDS_INCLUDE_RGISTER_CALL_STAMP "Register call"
+    IDS_PROP_LOCAL_DECL     "#define %s %smPROPERTY_MAKE_LOCAL( %s, %s0x%08x )"
+    IDS_HAVE_TO_IMPL_PROP_FMT "You have to implement ""%s"" properties for: "
+    IDS_PLUGIN_ID_STAMP     "Plugin identifier"
+    IDS_INTERFACE_BODY_DATA_FMT 
+                            "%s* %s data;   // pointer to the ""%s"" data structure"
+    IDS_ERR_GLOB_PROP_VAR_FMT 
+                            "Global property ""%s"" has no neither variable name nor default value"
+    IDS_ERR_PROP_DEF_FMT    "Error in property definition. Property - %s, value - %s"
+    IDS_TYPEDEF_FMT         "typedef %s %s%s;"
+    IDS_TYPEDEFS_STAMP      "Interface typedefs"
+    IDS_CONSTANTS_STAMP     "Interface constants"
+    IDS_CONSTANT_FMT        "#define %s %s((%s)(%s))"
+    IDS_INTERNAL_METHOD_IFACE_TRANSFER_FMT 
+                            "tERROR pr_call %s( %s _this, tDWORD sub_type, tDWORD op_code )"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_INTERNAL_METHOD_CAST_IFACE_TRANSFER "(tIntFnIFaceTransfer)"
+    IDS_VENDOR_ID_STAMP     "Vendor identifier"
+    IDS_VENDOR_DECL_ID_FMT  "#define %s  ((tVID)(0x%08x))"
+    IDS_IFACE_CALL_DEFINES  "defines to simplify interface method calls"
+    IDS_ERRORS_STAMP        "Interface defined errors"
+    IDS_REG_ROOT_IID        "root object"
+    IDS_PROP_DEF_LOCAL_WRITABLE_OI_FN_FMT 
+                            "m%sLOCAL_PROPERTY_WRITABLE_OI_FN%s( %s, %s, %s )"
+    IDS_PROP_DEF_LOCAL_REQ_WRITABLE_OI_FN_FMT 
+                            "m%sLOCAL_PROPERTY_REQ_WRITABLE_OI_FN%s( %s, %s, %s )"
+    IDS_IFACE_VERSION2      "2.0.0.0"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "CodeGen.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

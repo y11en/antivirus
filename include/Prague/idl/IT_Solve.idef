@@ -1,0 +1,40 @@
+forward interface IT_Solver;
+typedef IT_Solver* hIT_SOLVER;
+
+
+
+[
+  version(1)
+  mnemonic(IID_IT_SOLVER)
+  id(61001)
+  c_type_name(hIT_SOLVER)
+]
+interface IT_Solver { // Provide intergrated solution (pre-view)
+
+  // ------------------------------------
+    typedef tDWORD tIT_OBJECT_MODE; // Current object operating mode
+    typedef tDWORD tIT_VERDICT; // verdict for events
+
+
+  // ------------------------------------
+    const tIT_OBJECT_MODE cIT_OBJECT_MODE_ACTIVE = 1; // go active
+    const tDWORD cIT_OBJECT_MODE_SLEEP = 0; // go sleep
+    const tDWORD cIT_NOTIFY_THREAD_STARTED = 0;
+    const tDWORD cIT_NOTIFY_THREAD_STOPPED = 1;
+    const tDWORD cIT_NOTIFY_FOR_EACH_THREAD = 2;
+    const tDWORD cIT_NOTIFY_OBJECT_MOUNTED = 3;
+    const tDWORD cIT_NOTIFY_CONNECTION_BROKEN = 4;
+    const tIT_VERDICT cIT_VERDICT_DEFAULT = 0;
+    const tIT_VERDICT cIT_VERDICT_ALLOW = 1;
+    const tIT_VERDICT cIT_VERDICT_DENY = 2;
+    const tIT_VERDICT cIT_VERDICT_KILL = 3;
+
+
+  // ------------------------------------
+    method tERROR RegisterEventsGenerator( // Regsiter new events generator
+      tDWORD* result,
+      hOBJECT hEventsGenerator
+    );
+
+}
+

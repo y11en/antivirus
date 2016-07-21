@@ -1,0 +1,20 @@
+// ***** Настройки WinLogon *****
+procedure AddBackUpData(ARoot, AName : string;Lines : TStrings);
+begin
+ Lines.Add('[-'+ ARoot + '\' + AName + ']');
+ ExpRegKeyEx(ARoot, AName, Lines);
+ Lines.Add('');
+end;
+
+var
+ Lines : TStrings;
+begin
+ Lines := TStringList.Create;
+ Lines.Add('REGEDIT4');
+ Lines.Add('');
+ AddBackUpData('HKEY_LOCAL_MACHINE', 'SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon', Lines);
+  
+ if SaveBackupDataSt(Lines, 'User_Winlogon.reg') then
+  AddToLog('$AVZ1236 $AVZ1230'); 
+ Lines.Free;
+end.

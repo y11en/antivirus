@@ -1,0 +1,6 @@
+// ***** Hijacker.IBIS *****
+begin       
+ AddEvAlarmByCLSID('26E8361F-BCE7-4F75-A347-98C88B418322',AScriptName,'');
+ AddEvAlarmByCLSID('63B78BC1-A711-4D46-AD2F-C581AC420D41',AScriptName,'');
+ AddEvAlarmByCLSID('708BE496-E202-497B-BC31-9CF47E3BF8D6',AScriptName,'');
+end.

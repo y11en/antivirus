@@ -1,0 +1,4 @@
+// ***** AdvWare.BHO.Ihbo *****
+begin
+ AddEvAlarmByCLSID('5321E378-FFAD-4999-8C62-03CA8155F0B3',AScriptName,'');
+end.

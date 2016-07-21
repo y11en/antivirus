@@ -1,0 +1,4 @@
+DBFile=test_db.avz
+DBSrcPath=E:\avz4perforce\dev\KIS8_Scripts\Troubleshooting\
+RusLangFile=E:\avz4perforce\dev\Translate\ru\avzkrnl.loc
+LogFile=test_db.log

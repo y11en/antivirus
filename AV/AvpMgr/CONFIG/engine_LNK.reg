@@ -1,0 +1,14 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Engine\Version2\Actions\act_GENERIC_OBJECT_SYSTEMS]
+"Action3"="act_OS_LNK"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Engine\Version2\Actions\act_OS_LNK]
+"Class"="ENGINE_ACTION_CLASS_VIRUS_SCAN"
+"PID"="PID_MSLNK"
+"Type"="ENGINE_ACTION_TYPE_PROCESS_OS_ON_IO"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Engine\Version2\Constants]
+"PID_MSLNK"=dword:0000e67a
+
+

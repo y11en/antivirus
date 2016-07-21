@@ -1,0 +1,4 @@
+// ***** Backdoor.WbeCheck.a *****
+begin
+ AddEvAlarmByCLSID('00000012-890E-4AAC-AFD9-EFF6954A34DD','Backdoor.WbeCheck.a','');
+end.

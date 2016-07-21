@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioProject ProjectType="Visual C++" Version="8,00" Name="KLUtil" ProjectGUID="{45CCBD41-FB12-4A84-A72C-6B34BC64C1F9}" SccProjectName="Perforce Project" SccLocalPath="..\.." SccProvider="MSSCCI:Perforce SCM">
+	<Platforms>
+		<Platform Name="Win32"/>
+		<Platform Name="x64"/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="Release|Win32" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\CommonFiles\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="NDEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="1" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="2" AdditionalIncludeDirectories="..\" PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;BUILD_KLUTIL_DLL;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" StringPooling="true" RuntimeLibrary="2" EnableFunctionLevelLinking="true" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1049" AdditionalIncludeDirectories=".."/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="Mpr.lib Version.lib" OutputFile="$(OutDir)\$(ProjectName).dll" LinkIncremental="1" SuppressStartupBanner="true" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" GenerateDebugInformation="true" ProgramDatabaseFile="$(OutDir)\$(TargetName).pdb" OptimizeReferences="2" BaseAddress="" ImportLibrary="" TargetMachine="1"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool" CommandLine=""/>
+		</Configuration>
+		<Configuration Name="Release|x64" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\CommonFiles\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="NDEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="2" AdditionalIncludeDirectories="..\" PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;BUILD_KLUTIL_DLL;_CRT_SECURE_NO_DEPRECATE" StringPooling="true" RuntimeLibrary="2" EnableFunctionLevelLinking="true" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1049" AdditionalIncludeDirectories=".."/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="Mpr.lib Version.lib" OutputFile="$(OutDir)\$(ProjectName).dll" LinkIncremental="1" SuppressStartupBanner="true" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" GenerateDebugInformation="true" ProgramDatabaseFile="$(OutDir)\$(TargetName).pdb" OptimizeReferences="2" BaseAddress="" ImportLibrary="" TargetMachine="17"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool" CommandLine=""/>
+		</Configuration>
+		<Configuration Name="Debugport|Win32" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\CommonFiles\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="_DEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="1" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="../../CS AdminKit/development2/include/stlport/stlport,..\" PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS;_USRDLL;BUILD_KLUTIL_DLL;_STLP_NEW_PLATFORM_SDK;_STLP_DEBUG;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" MinimalRebuild="true" BasicRuntimeChecks="3" RuntimeLibrary="3" UsePrecompiledHeader="2" PrecompiledHeaderThrough="stdafx.h" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="4" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1049" AdditionalIncludeDirectories=".."/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="Rpcrt4.lib odbc32.lib odbccp32.lib klcsrt.lib Mpr.lib Version.lib" OutputFile="$(OutDir)\$(ProjectName).dll" LinkIncremental="2" SuppressStartupBanner="true" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" GenerateDebugInformation="true" ProgramDatabaseFile="$(OutDir)\$(TargetName).pdb" BaseAddress="" ImportLibrary="" TargetMachine="1"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Debugport|x64" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\CommonFiles\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="_DEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="../../CS AdminKit/development2/include/stlport/stlport,..\" PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS;_USRDLL;BUILD_KLUTIL_DLL;_STLP_NEW_PLATFORM_SDK;_STLP_DEBUG;_CRT_SECURE_NO_DEPRECATE" MinimalRebuild="true" BasicRuntimeChecks="3" RuntimeLibrary="3" UsePrecompiledHeader="2" PrecompiledHeaderThrough="stdafx.h" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1049" AdditionalIncludeDirectories=".."/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="Rpcrt4.lib odbc32.lib odbccp32.lib klcsrt.lib Mpr.lib Version.lib" OutputFile="$(OutDir)\$(ProjectName).dll" LinkIncremental="2" SuppressStartupBanner="true" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" GenerateDebugInformation="true" ProgramDatabaseFile="$(OutDir)\$(TargetName).pdb" BaseAddress="" ImportLibrary="" TargetMachine="17"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Releaseport|Win32" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\CommonFiles\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="NDEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="1" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" AdditionalIncludeDirectories="../../CS AdminKit/development2/include/stlport/stlport,..\" PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS;_USRDLL;BUILD_KLUTIL_DLL;_STLP_NEW_PLATFORM_SDK;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" StringPooling="true" RuntimeLibrary="2" EnableFunctionLevelLinking="true" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1049" AdditionalIncludeDirectories=".."/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="Rpcrt4.lib odbc32.lib odbccp32.lib klcsrt.lib Mpr.lib Version.lib" OutputFile="$(OutDir)\$(ProjectName).dll" LinkIncremental="1" SuppressStartupBanner="true" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" GenerateDebugInformation="true" ProgramDatabaseFile="$(OutDir)\$(TargetName).pdb" BaseAddress="" ImportLibrary="" TargetMachine="1"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool" CommandLine=""/>
+		</Configuration>
+		<Configuration Name="Releaseport|x64" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\CommonFiles\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="NDEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" AdditionalIncludeDirectories="../../CS AdminKit/development2/include/stlport/stlport,..\" PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS;_USRDLL;BUILD_KLUTIL_DLL;_STLP_NEW_PLATFORM_SDK;_CRT_SECURE_NO_DEPRECATE" StringPooling="true" RuntimeLibrary="2" EnableFunctionLevelLinking="true" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1049" AdditionalIncludeDirectories=".."/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="Rpcrt4.lib odbc32.lib odbccp32.lib klcsrt.lib Mpr.lib Version.lib" OutputFile="$(OutDir)\$(ProjectName).dll" LinkIncremental="1" SuppressStartupBanner="true" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" GenerateDebugInformation="true" ProgramDatabaseFile="$(OutDir)\$(TargetName).pdb" BaseAddress="" ImportLibrary="" TargetMachine="17"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool" CommandLine=""/>
+		</Configuration>
+		<Configuration Name="Debug|Win32" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\CommonFiles\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="_DEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="1" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="..\" PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;BUILD_KLUTIL_DLL;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" MinimalRebuild="true" BasicRuntimeChecks="3" RuntimeLibrary="3" UsePrecompiledHeader="2" PrecompiledHeaderThrough="stdafx.h" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="4" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1049" AdditionalIncludeDirectories=".."/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="Mpr.lib Version.lib" OutputFile="$(OutDir)\$(ProjectName).dll" LinkIncremental="2" SuppressStartupBanner="true" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" GenerateDebugInformation="true" ProgramDatabaseFile="$(OutDir)\$(TargetName).pdb" BaseAddress="" ImportLibrary="" TargetMachine="1"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Debug|x64" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\CommonFiles\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="_DEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="..\" PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;BUILD_KLUTIL_DLL;_CRT_SECURE_NO_DEPRECATE" MinimalRebuild="true" BasicRuntimeChecks="3" RuntimeLibrary="3" UsePrecompiledHeader="2" PrecompiledHeaderThrough="stdafx.h" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1049" AdditionalIncludeDirectories=".."/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="Mpr.lib Version.lib" OutputFile="$(OutDir)\$(ProjectName).dll" LinkIncremental="2" SuppressStartupBanner="true" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" GenerateDebugInformation="true" ProgramDatabaseFile="$(OutDir)\$(TargetName).pdb" BaseAddress="" ImportLibrary="" TargetMachine="17"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter Name="Source Files" Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
+			<File RelativePath="block.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="Clipboard.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="CrashHandler.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="CRC32.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="2" PrecompiledHeaderThrough="stdafx.h"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="2" PrecompiledHeaderThrough="stdafx.h" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="2" PrecompiledHeaderThrough="stdafx.h"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="2" PrecompiledHeaderThrough="stdafx.h" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="..\Stuff\csystem.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="DllHelper.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="except.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="Filename.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="FormatTimeString.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="guid.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="..\StuffIO\Ioutil_FinishCopying.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="..\StuffIO\Ioutil_FinishCopyingW.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="..\StuffIO\Ioutil_IsSubstDrive.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="..\StuffIO\Ioutil_IsSubstDriveW.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="..\StuffIO\IoutilUNC.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="KLUtil.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="log.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="md5.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="ObjectName.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="operationInProgressManager.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="OsVersion.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="Registry.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="StdAfx.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="1" PrecompiledHeaderThrough="stdafx.h"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="1" PrecompiledHeaderThrough="stdafx.h" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="1"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="1" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="1" PrecompiledHeaderThrough="stdafx.h"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="1" PrecompiledHeaderThrough="stdafx.h" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="1"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="1" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="SubstHelper.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="SysInfo.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="SysTime.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="thread.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="ThreadPool.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="UnicodeConv.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="..\StuffIO\XErrors.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter Name="Header Files" Filter="h;hpp;hxx;hm;inl">
+			<File RelativePath="block.h">
+			</File>
+			<File RelativePath="Clipboard.h">
+			</File>
+			<File RelativePath="CrashHandler.h">
+			</File>
+			<File RelativePath="CRC32.h">
+			</File>
+			<File RelativePath="defs.h">
+			</File>
+			<File RelativePath="DllHelper.h">
+			</File>
+			<File RelativePath="except.h">
+			</File>
+			<File RelativePath="Filename.h">
+			</File>
+			<File RelativePath="FormatTimeString.h">
+			</File>
+			<File RelativePath="guid.h">
+			</File>
+			<File RelativePath="KLUtil.h">
+			</File>
+			<File RelativePath="log.h">
+			</File>
+			<File RelativePath="log_media.h">
+			</File>
+			<File RelativePath="md5.h">
+			</File>
+			<File RelativePath="ObjectName.h">
+			</File>
+			<File RelativePath="operationInProgressManager.h">
+			</File>
+			<File RelativePath="OsVersion.h">
+			</File>
+			<File RelativePath="polistorageblock.h">
+			</File>
+			<File RelativePath="Registry.h">
+			</File>
+			<File RelativePath="resource.h">
+			</File>
+			<File RelativePath="StdAfx.h">
+			</File>
+			<File RelativePath="SubstHelper.h">
+			</File>
+			<File RelativePath="SysInfo.h">
+			</File>
+			<File RelativePath="SysTime.h">
+			</File>
+			<File RelativePath="thread.h">
+			</File>
+			<File RelativePath="ThreadPool.h">
+			</File>
+			<File RelativePath="UnicodeConv.h">
+			</File>
+			<File RelativePath="ver_mod.h">
+			</File>
+		</Filter>
+		<Filter Name="Resource Files" Filter="ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe">
+			<File RelativePath="KLUtil.rc">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="" AdditionalIncludeDirectories=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="" AdditionalIncludeDirectories=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="" AdditionalIncludeDirectories=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="" AdditionalIncludeDirectories=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="" AdditionalIncludeDirectories=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="" AdditionalIncludeDirectories=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="" AdditionalIncludeDirectories=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="" AdditionalIncludeDirectories=""/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter Name="Inline Header Files">
+			<File RelativePath="inl\debug.h">
+			</File>
+			<File RelativePath="inl\PoliStorage.h">
+			</File>
+			<File RelativePath="inl\PoliType.h">
+			</File>
+			<File RelativePath="inl\smart_ptr.hpp">
+			</File>
+			<File RelativePath="inl\synchro.h">
+			</File>
+			<File RelativePath="inl\tmutil.h">
+			</File>
+		</Filter>
+		<Filter Name="Ext">
+			<File RelativePath="..\Service\sa.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debugport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Releaseport|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" UsePrecompiledHeader="0" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="..\Service\SA.H">
+			</File>
+		</Filter>
+		<File RelativePath="ReadMe.txt">
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

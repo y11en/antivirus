@@ -1,0 +1,499 @@
+// --edkmapi.c------------------------------------------------------------------
+// 
+//  Module containing MAPI utility functions.
+// 
+// Copyright (C) Microsoft Corp. 1986-1996.  All Rights Reserved.
+// -----------------------------------------------------------------------------
+
+#ifndef DEBUG
+#define CHK_HrMAPIGetFirstSRowSet(a,b,c,d)        NOERROR
+#define CHK_HrMAPIGetNextSRowSet(a,b,c,d)         NOERROR
+#define CHK_HrMAPICreateEntryList(a,b,c)          NOERROR
+#define CHK_HrMAPIAppendEntryList(a,b,c)          NOERROR
+#define CHK_HrMAPIDestroyEntryList(a)                NOERROR
+#define CHK_HrMAPIWriteStreamToFile(a,b)         NOERROR
+#define CHK_HrMAPIWriteFileToStream(a,b)         NOERROR
+#define CHK_HrMAPIWriteAttachmentToFile(a,b,c)  NOERROR
+#define CHK_HrMAPIGotoSRow(a,b,c)                 NOERROR
+#define CHK_HrMAPIGotoFirstSRow(a,b,c)            NOERROR
+#define CHK_HrMAPIGotoNextSRow(a,b,c)             NOERROR
+#define CHK_HrMAPIWriteStreamToMemory(a,b,c,d)     NOERROR
+#define CHK_HrMAPIWriteMemoryToStream(a,b,c,d)    NOERROR
+#define CHK_HrMAPISetStreamSize(a,b)              NOERROR
+
+#else
+
+//$--CHK_HrMAPIGetFirstSRowSet---------------------------------------------------
+//  Gets the first SRowSet from a table
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIGetFirstSRowSet(// RETURNS: return code
+    IN LPMAPITABLE  lpTable,            // pointer to table address variable
+    IN ULONG cRows,                     // count of number of rows in SRowSet
+    IN LPSPropTagArray rgPropTags,      // array of property tags
+    OUT LPSRowSet FAR *lppRows)         // pointer to address variable for
+                                        // SRowSet
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpTable))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(cRows == 0)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_READ_PTR(rgPropTags, sizeof(SPropTagArray)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppRows, sizeof(LPSRowSet)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrMAPIGetNextSRowSet----------------------------------------------------
+//  Gets the next SRowSet from a table
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIGetNextSRowSet(// RETURNS: return code
+    IN LPMAPITABLE lpTable,             // pointer to table
+    IN ULONG cRows,                     // count of number of rows in SRowSet
+    IN LPSPropTagArray rgPropTags,      // array of property tags
+    OUT LPSRowSet FAR *lppRows)         // pointer to address variable for
+                                        // SRowSet
+{
+    HRESULT hr  = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpTable))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(cRows == 0)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_READ_PTR(rgPropTags, sizeof(SPropTagArray)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppRows, sizeof(LPSRowSet)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrMAPICreateEntryList---------------------------------------------------
+//  Creates an ENTRYLIST. 
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPICreateEntryList(// RETURNS: return code
+    IN ULONG cbeid,                     // count of bytes in Entry ID
+    IN LPENTRYID lpeid,                 // pointer to Entry ID
+    OUT LPENTRYLIST FAR *lppEntryList)  // pointer to address variable of Entry
+                                        // list
+{
+    HRESULT hr = NOERROR;
+
+    if(cbeid == 0)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_READ_PTR(lpeid, cbeid))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppEntryList, sizeof(LPENTRYLIST)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrMAPIAppendEntryList---------------------------------------------------
+//  Appends to an ENTRYLIST.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIAppendEntryList(// RETURNS: return code
+    IN ULONG cbeid,                     // count of bytes in Entry ID
+    IN LPENTRYID lpeid,                 // pointer to Entry ID
+    OUT LPENTRYLIST FAR lpEntryList)    // pointer to address variable of Entry
+                                        // list
+{
+    HRESULT hr = NOERROR;
+
+    if(cbeid == 0)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_READ_PTR(lpeid, cbeid))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (lpEntryList != NULL))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! ((lpEntryList->cValues > 0) && (lpEntryList->lpbin != NULL)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrMAPIDestroyEntryList-----------------------------------------------------
+//  Frees an ENTRYLIST. 
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIDestroyEntryList(// RETURNS: return code
+    IN OUT LPENTRYLIST FAR *lppEntryList)// pointer to address variable of Entry
+                                         // list
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_WRITE_PTR(lppEntryList, sizeof(LPENTRYLIST)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrMAPIWriteStreamToFile------------------------------------------------
+//  Write stream to a file given a file handle.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIWriteStreamToFile(// RETURNS: return code
+    IN LPSTREAM lpStream,               // pointer to stream
+    OUT HANDLE hFile)                   // handle to file
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpStream))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(hFile == INVALID_HANDLE_VALUE)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(hFile == NULL)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+
+//$--CHK_HrMAPIWriteFileToStream------------------------------------------------
+//  Write file to a stream given a stream pointer.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIWriteFileToStream(// RETURNS: return code
+    IN HANDLE hFile,                    // Handle to file
+    IN LPSTREAM lpStream)               // Pointer to stream
+{
+    HRESULT hr = NOERROR;
+
+    if(hFile == INVALID_HANDLE_VALUE)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(hFile == NULL)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_IUNKNOWN_PTR(lpStream))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+
+//$--CHK_HrMAPIWriteAttachmentToFile-------------------------------------------
+//  Write the identified message attachment to a file.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIWriteAttachmentToFile(// RETURNS: return code
+    IN LPMESSAGE lpMessage,             // message containing the attachments
+    IN ULONG iAttach,                   // attachment identifier
+    OUT HANDLE hFile)                   // handle to file
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpMessage))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(hFile == INVALID_HANDLE_VALUE)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(hFile == NULL)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrMAPIGotoSRow----------------------------------------------------------
+//  Goto the specified SRow in an SRowSet.
+//------------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIGotoSRow(// RETURNS: return code
+    IN LPSRowSet FAR lpRows,            // pointer to SRowSet
+    IN ULONG ulRow,                     // index of SRow in SRowSet
+    OUT LPSRow *lppRow)                 // pointer to SRow
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_READ_PTR(lpRows, sizeof(SRowSet)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppRow, sizeof(LPSRow)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrMAPIGotoFirstSRow-----------------------------------------------------
+//  Goto the first SRow in an SRowSet.
+//------------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIGotoFirstSRow(// RETURNS: return code
+    IN LPSRowSet FAR lpRows,            // pointer to SRowSet
+    OUT ULONG *lpulRow,                 // index of SRow in SRowSet
+    OUT LPSRow *lppRow)                 // pointer to SRow
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_READ_PTR(lpRows, sizeof(SRowSet)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lpulRow, sizeof(ULONG)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppRow, sizeof(LPSRow)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrMAPIGotoNextSRow------------------------------------------------------
+//  Goto the next SRow in an SRowSet.
+//------------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIGotoNextSRow(// RETURNS: return code
+    IN LPSRowSet FAR lpRows,            // pointer to SRowSet
+    IN OUT ULONG *lpulRow,              // index of SRow in SRowSet
+    OUT LPSRow *lppRow)                 // pointer to SRow
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_READ_PTR(lpRows, sizeof(SRowSet)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lpulRow, sizeof(ULONG)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lppRow, sizeof(LPSRow)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrMAPIWriteStreamToMemory------------------------------------------------
+//  Reads a given number of bytes from a stream to a block of memory.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIWriteStreamToMemory(// RETURNS: return code
+    IN LPSTREAM lpStream,               // pointer to stream
+    IN ULONG cBytes,                    // count of bytes in memory
+    IN LPBYTE lpbBytes,                 // pointer to memory
+    OUT ULONG *lpcBytesRead)            // count of bytes read from stream
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpStream))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! (cBytes != 0))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lpbBytes, cBytes))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lpcBytesRead, sizeof(ULONG)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrMAPIWriteMemoryToStream-----------------------------------------------
+//  Writes a given number of bytes from a block of memory to a stream
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIWriteMemoryToStream(// RETURNS: return code
+    IN LPSTREAM lpStream,               // pointer to stream
+    IN ULONG cBytes,                    // count of bytes in memory
+    IN LPBYTE lpbBytes,                 // pointer to memory
+    OUT ULONG *lpcBytesWritten)         // count of bytes written from stream
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpStream))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(cBytes == 0)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_READ_PTR(lpbBytes, cBytes))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(! TEST_WRITE_PTR(lpcBytesWritten, sizeof(ULONG)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+
+//$--CHK_HrMAPISetStreamSize-----------------------------------------------------
+//  Sets the size of the given stream.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPISetStreamSize(// RETURNS: return code
+    IN LPSTREAM lpStream,               // pointer to stream
+    IN ULONG cBytes)                    // count of bytes in stream
+{
+    HRESULT hr = NOERROR;
+
+    if(! TEST_IUNKNOWN_PTR(lpStream))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if(cBytes == 0)
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+
+    return(hr);
+}
+#endif

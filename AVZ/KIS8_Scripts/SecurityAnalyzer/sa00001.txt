@@ -1,0 +1,41 @@
+// $AVZ1584
+//$ Основной скрипт исследования
+function Check : dword;
+var 
+ AVZLogDir : string; 
+begin 
+  Result := 0;
+  AVZLogDir := GetAVZDirectory + 'LOG\'; 
+  // Создание каталога для отчетов
+  CreateDirectory(AVZLogDir); 
+  // Программирование прогресс-индикатора
+  GlobalProgressAddMax(3500); 
+  // Антируткит (в KIS без нейтрализации !!)
+  SearchRootkit(false, false); 
+  GlobalProgressStep(500); 
+  // Проверка SPI/LSP
+  CheckSPI; 
+  GlobalProgressStep(250); 
+  // Антикейлоггер
+  SearchKeylogger;      
+  GlobalProgressStep(250); 
+  // Эвритическая проверка 
+  ExecuteSysChkEV; 
+  GlobalProgressStep(1000);
+  // Эвритическая проверка - ИПУ
+  ExecuteSysChkIPU; 
+  GlobalProgressStep(500); 
+  // Эвритическая проверка - поиск проблем
+  ExecuteWizard('TSW', 1, -1, false); 
+  GlobalProgressStep(500); 
+  // Основное исследование системы
+  ExecuteSysCheckEX(AVZLogDir+'kis_syscheck.htm', $FFFFFFFF, true, 1+4+8+16);
+  GlobalProgressStep(500); 
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+begin
+ // Заглушка
+ Result := 0; 
+end;

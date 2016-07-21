@@ -1,0 +1,5 @@
+// ***** Trojan-Dropper.Win32.Agent *****
+begin
+ AddEvAlarmByCLSID('C886256C-7A63-4213-AD2F-02AD3735DF06', AScriptName+'.cy', 'sysdrc.dll');
+ AddEvAlarmByCLSID('9EAC0186-5F5A-4362-B120-15C312CE012D', AScriptName+'.lr', 'tb.dll');
+end.

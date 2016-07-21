@@ -1,0 +1,119 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "all"=.\all\all.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name genalias
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name gendata
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name genkum
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name kumtocnv
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name gencase
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name gencasetbl
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "genalias"=.\genalias\genalias.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "gencase"=.\gencase\gencase.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "gencasetbl"=.\gencasetbl\gencasetbl.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "gendata"=.\gendata\gendata.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "genkum"=.\genkum\genkum.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "kumtocnv"=.\kumtocnv\kumtocnv.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

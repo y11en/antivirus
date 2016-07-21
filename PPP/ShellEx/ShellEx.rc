@@ -1,0 +1,116 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "ver_mod.h"
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_KAP_KAV_BITMAP      BITMAP  DISCARDABLE     "kav.bmp"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""ver_mod.h""\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_KAP_SHELLEX_SCAN_OBJECTS "Scan for viruses"
+    IDS_KAP_SHELLEX_FULL_SCAN "Scan My Computer for viruses"
+    IDS_KAP_SHELLEX_KAV_NOT_STARTED "Kaspersky Internet Security is not started."
+    IDS_KAP_SHELLEX_CAPTION "Kaspersky Internet Security"
+    IDS_GUIDLGS_BUTTON_YES_STR "Yes"
+    IDS_GUIDLGS_BUTTON_NO_STR "No"
+    IDS_SHELLEX_COULD_NOT_SCAN_NETWORK_DRIVE 
+                            "This version of Kaspersky Internet Security cannot scan network drives for viruses due to license restrictions."
+    IDS_SHELLEX_SCAN_NETWORK_DRIVE_WARNING 
+                            "This version of Kaspersky Internet Security cannot scan network drives for viruses due to license restrictions. Some objects will not be scanned."
+    IDS_SHELLEX_SCAN_NETWORK_DRIVE_WARNING_START_PROGRAM 
+                            "Kaspersky Internet Security is not started."
+    IDS_GUIDLGS_BUTTON_CANCEL_STR "Cancel"
+END
+
+#endif    // English resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_SHELLEX_MAIN_ICON   ICON    DISCARDABLE     "mainfram.ico"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

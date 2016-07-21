@@ -1,0 +1,4 @@
+// ***** TrojanDownloader.DomCom *****
+begin
+ AddEvAlarmByCLSID('031B6D43-CBC4-46A5-8E46-CF8B407C1A33',AScriptName,'');
+end.

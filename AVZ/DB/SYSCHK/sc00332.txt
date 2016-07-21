@@ -1,0 +1,5 @@
+// ***** Adware.BHO.VÑ *****
+begin
+ AddEvAlarmByCLSID('6E34D984-4054-45E3-8452-0159A2F0D232',AScriptName,'');
+ AddEvAlarmByCLSID('6E34D984-4054-45E3-8452-0159A2F0D232',AScriptName,'');
+end.

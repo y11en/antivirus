@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<WixLocalization xmlns="http://schemas.microsoft.com/wix/2003/11/localization" Codepage="1251">
+
+	<String Id="LANG">1033</String>	<!-- DO NOT LOCALIZE THIS VALUE! -->
+	<String Id="Localization">jp</String>  <!-- DO NOT LOCALIZE THIS VALUE! -->
+	<String Id="LoginImage">images\lgnkav.png</String>	<!-- DO NOT LOCALIZE THIS VALUE! -->
+	<!-- Common project information -->
+
+	<!-- Required only for Russian language!! -->
+	<String Id="ProductName_NOM">Kaspersky Anti-Virus 7.0 SOS</String>
+	<String Id="ProductName_GEN">Kaspersky Anti-Virus 7.0 SOS</String>
+	<String Id="ProductName_INS">Kaspersky Anti-Virus 7.0 SOS</String>
+	<!-- Required only for Russian language!! -->
+
+	<String Id="ProductName">Kaspersky Anti-Virus 7.0 SOS</String>
+	<String Id="ProductDesc">Kaspersky Anti-Virus 7.0 SOS</String>
+	<String Id="ProductManufacturer">Kaspersky Lab</String>
+	<String Id="ProductKeywords">Installer,MSI,Database</String>
+	<String Id="ProductHelpLink">http://www.kaspersky.com/support.asp</String>
+	<String Id="ProductUpdateLink">http://www.kaspersky.com/productupdates</String>
+	<String Id="ProductSummaryCodepage">1252</String>  <!-- DO NOT LOCALIZE THIS VALUE! -->
+	<String Id="DiskPrompt">Please insert disk labeled "Main"</String>
+	<String Id="ProductLicBuyLink"><![CDATA[http://www.kaspersky.com/aftertrial]]></String>
+	<String Id="ProductLicRenewLink"><![CDATA[http://www.kaspersky.com/advert/renew?prodren=15509&THRU&COUPON1=D30KAV&reseller=renewal]]></String>
+
+	<String Id="ProductStartMenuFolderName">Kaspersky Anti-Virus 7.0 SOS</String>
+  <!-- format 8.3!!! -->
+	<String Id="ProductStartMenuShortFolderName">KAVSOS7.0</String>
+  <!-- format 8.3!!! -->
+	<String Id="ProductShortcutShortName">KAVSOS7.0</String>
+	<String Id="ProductShortcutLongName">Kaspersky Anti-Virus 7.0 SOS</String>
+  <!-- format 8.3!!! -->
+	<String Id="UninstallShortcutShortName">Remove</String>
+	<String Id="UninstallShortcutLongName">Modify, Repair or Remove</String>
+  <!-- format 8.3!!! -->
+	<String Id="InternetShortcutShortName">KL</String>
+	<String Id="InternetShortcutLongName">Visit Kaspersky Lab on the Web</String>
+  <!-- format 8.3!!! -->
+	<String Id="HelpShortcutShortName">Help</String>
+	<String Id="HelpShortcutLongName">Kaspersky Anti-Virus Help</String>
+  <!-- format 8.3!!! -->
+	<String Id="LicenseShortcutShortName">License</String>
+	<String Id="LicenseShortcutLongName">End User License Agreement</String>
+  <!-- format 8.3!!! -->
+	<String Id="NotesShortcutShortName">Readme</String>
+	<String Id="NotesShortcutLongName">Release Notes</String>
+	
+	<String Id="UpdaterRegion">America</String>  <!-- DO NOT LOCALIZE THIS VALUE! -->
+	
+	<!-- Drivers names and descriptions -->
+
+	<String Id="AVPServiceDescription">Provides protection against computer viruses and another dangerous software.</String>
+	<String Id="AVPServiceDisplayName">Kaspersky Anti-Virus 7.0</String>
+	
+	<!-- Product features -->	
+	<String Id="WholeProductFeatureTitle"><![CDATA[Kaspersky Anti-Virus 7.0 SOS]]></String>
+	<String Id="WholeProductFeatureDesc"><![CDATA[Kaspersky Anti-Virus SOS is a complete solution for protecting your computer from any threats or dangerous programs.]]></String>
+	
+</WixLocalization>

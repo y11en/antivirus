@@ -1,0 +1,9 @@
+<Include>
+  <ComponentRef Id="kl1.sys" />
+  <ComponentRef Id="kl1.cat_X64" />
+  <ComponentRef Id="kl1.inf_X64" />
+  <ComponentRef Id="kl1.sys_X64" />
+  <ComponentRef Id="kl1.inf_X86" />
+  <ComponentRef Id="kl1.sys_X86" />
+  <ComponentRef Id="kl1.cat_X86" />
+</Include>

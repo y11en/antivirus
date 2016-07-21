@@ -1,0 +1,152 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "FSDrvLib"=.\FSDrvLib\FSDrvLib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/FSDrvLib", JNFBAAAA
+    .\fsdrvlib
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "FSSync"=.\FSSync\FSSync.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/FSSync", RRSDAAAA
+    .\fssync
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name FSDrvLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "_FSSync"=.\FSSync\_FSSync.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/FSSync", RRSDAAAA
+    .\fssync
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "hook"=.\hook.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/hook", XXZAAAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "nt"=.\nt\nt.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/nt", RYZAAAAA
+    .\nt
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "tsp"=.\tsp\tsp.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/tsp", XBLBAAAA
+    .\tsp
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "tsp9x"=.\tsp9x\tsp9x.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/tsp9x", ACLBAAAA
+    .\tsp9x
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "w9x"=.\w9x\w9x.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/w9x", ZYZAAAAA
+    .\w9x
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook", XXZAAAAA
+    .
+    end source code control
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

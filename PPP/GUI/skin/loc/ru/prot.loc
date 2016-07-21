@@ -1,0 +1,834 @@
+﻿[Global]
+$LinkMoreDetails        = "Подробно..."
+$LinkTechnicalSupport   = "Техподдержка"
+$LinkGetFullLicense     = "Купить лицензию"
+$LinkRenewLicense       = "Обновить лицензию"
+$LinkRestartComputer    = "Перезагрузить компьютер"
+$LinkRestartProduct     = "Перезапустить программу"
+$LinkTreatAll           = "Нейтрализовать все"
+$LinkDetails            = "Подробно..."
+$LinkActivate           = "Активировать"
+$LinkRetry              = "Повторить"
+$LinkSettings           = $Configure
+$LinkUpdateNow          = "Обновить сейчас"
+$LinkProtectionTurnOn   = "Возобновить защиту"
+$LinkRestartService     = "Перезапустить службу"
+$LinkSupport            = "Техподдержка"
+$LinkSendReport         = "Отправить отчет"
+$LinkServicesTurnOn     = "Возобновить все"
+$LinkServicesResume     = "Возобновить приостановленные"
+$LinkTrainNow           = "Мастер Обучения"
+$LinkScanMyComputer     = "Проверить Мой Компьютер"
+$LinkShowMessages       = "Показать все сообщения"
+$LinkLearnMore          = "Узнай больше об угрозах безопасности"
+$LinkSkip               = "Пропустить это сообщение"
+$LinkSomeSkipped        = "Показать пропущенные сообщения"
+$KeyExpBeforeActive     = "Срок действия этого ключа истекает до окончания срока действия активного ключа"
+$LicensingSubsystem     = "Лицензия"
+$UnknownApp             = "Неизвестное приложение"
+CanDeleteArchive        = "Вы действительно хотите полностью удалить файл архива?"
+
+[MainWindow.Protection]
+$UpdateInfoNormal   = "Сигнатуры актуальны"
+$ThreatInfoNormal   = "Все угрозы нейтрализованы"
+$ProductInfoNormal  = "Основные компоненты защиты включены"
+Home                = "Статус"
+Events              = "События"
+Threats             = "Обнаружено"
+
+[MainWindow.Protection_Filters]
+AllItems    = "Без группировок"
+ByTask      = "Группировка по задаче"
+ByApp       = "Группировка по приложению"
+
+[MainWindow.Protection.Tasks_SysSecurityWizard]
+Icon = "Анализ безопасности"
+
+[MainWindow.Protection.Tasks_AvzSecurityTweakerWizard]
+Icon = "Настройка веб-браузера"
+
+[s_MainWindowProtectionBannerText]
+#eProtStateNormal   = "Компьютер защищен"
+#eProtStateCrit     = "Безопасность под угрозой!"
+#eProtStateWarn     = "Безопасность под угрозой!"
+
+[s_ProdState]
+#ProdStateKeyTrial                  = "Пробная лицензия"
+#ProdStateProductNotActivated       = "Продукт не активирован"
+#ProdStateProductNotAutoRun         = "Отключена автозагрузка"
+#ProdStateProductNotProtected       = "Самозащита отключена"
+#ProdStateKeyAboutExpiration        = "Срок действия лицензии скоро истекает"
+#ProdStateKeyExpired                = "Срок действия лицензии истек"
+#ProdStateKeyWillBeExpired          = "Срок действия лицензии скоро истекает"
+#ProdStateKeyWillBeBlocked          = "Лицензионный ключ будет заблокирован"
+#ProdStateKeyTrialExpired           = "Срок действия пробной лицензии истекает"
+#ProdStateKeyBlocked                = "Ключ заблокирован"
+#ProdStateNoKeys                    = "Продукт не активирован"
+#ProdStateKeyInvalid                = "Некорректный лицензионный ключ"
+#ProdStateKeyLimited                = "Нарушено лицензионное соглашение"
+#ProdStateTasksNotRunning           = "Некоторые компоненты защиты не работают"
+#ProdStateTasksMalfunction          = "Невозможно включить все компоненты защиты"
+#ProdStateTasksDisabled             = "Некоторые компоненты защиты отключены"
+#ProdStateProtectionSafeMode        = "Компьютер работает в безопасном режиме"
+#ProdStateProtectionNotInstalled    = "Защита не установлена"
+#ProdStateBasesNotValid             = "Некорректные сигнатуры"
+#ProdStateBasesOutOfDate            = "Сигнатуры устарели"
+#ProdStateBasesNotActual            = "Сигнатуры неактуальны"
+#ProdStateUpdateNeedReboot          = "Требуется перезагрузка компьютера"
+#ProdStateBasesCorrupted            = "Сигнатуры повреждены"
+#ProdStateUpdateNotAuto             = "Автоматическое обновление отключено"
+#ProdStateMyComputerNotScanned      = "Полная проверка не проводилась"
+#ProdStateOnDemandTaskRunning       = "Выполняется задача"
+#ProdStateProtectionNotRunning      = "Защита не работает"
+#ProdStateProtectionDisabled        = "Защита отключена"
+#ProdStateThreatsUntreated          = "Обнаружено вредоносное ПО"
+#ProdStateThreatsNeedReboot         = "Требуется перезагрузка компьютера"
+default                             = "Мой компьютер защищен"
+
+[ProdState_Description]
+#ProdStateKeyTrial                  = "Внимание! Вы используете пробную версию " + $ProductName + ". До окончания ознакомительного периода осталось ХХ дней."
+#ProdStateProductNotActivated       = $ProductName + " не активирован. Обновления отключены."
+#ProdStateProductNotAutoRun         = "Автозапуск " + $ProductName + " при включении компьютера отключен. Для обеспечения полноценной защиты рекомендуется включить автозаруск."
+#ProdStateProductNotProtected       = "Самозащита блокирует попытки модификации " + $ProductName + ". В данный момент самозащита отключена. В случае вирусной атаки это может привести к нарушению работоспособности программы. Рекомендуется включить самозащиту."
+#ProdStateKeyAboutExpiration        = "Срок действия лицензионного ключа истекает через " + LicDaysTillExpiration + " " + switch(f_numdeclension(LicDaysTillExpiration), "DayForm") + ". Рекомендуется обновить лицензию или приобрести новую. В противном случае по окончании срока лицензии обновления и техническая поддержка будут недоступны."
+#ProdStateKeyExpired                = "Срок действия лицензионного ключа истек. Обновления защиты и техническая поддержка недоступны. Для возобновления защиты необходимо обновить лицензионный ключ."
+#ProdStateKeyWillBeExpired          = "Срок действия лицензионного ключа скоро истекает."
+#ProdStateKeyWillBeBlocked          = "Лицензионный ключ будет заблокирован."
+#ProdStateKeyTrialExpired           = "Срок действия пробной лицензии истек. Защита отключена. Для возобновления защиты необходимо приобрести коммерческую лицензию в интернет-магазине Лаборатории Касперского или у наших дилеров."
+#ProdStateKeyBlocked                = "Ваш лицензионный ключ занесен в черный список. Обновления отключены. Ключ заблокирован по причине нелегального использования " + $ProductName + " с этим лицензионным ключом. Если Вы являетесь законным владельцем лицензионного ключа, обратитесь, пожалуйста, в Службу Технической Поддержки Лаборатории Касперского."
+#ProdStateNoKeys                    = $ProductName + " не активирован. Для полноценной работы программы необходимо ее активировать с помощью кода активации. Если у Вас нет кода активации, обратитесь к дистрибьютору или в Службу Технической Поддержки Лаборатории Касперского."
+#ProdStateKeyInvalid                = "Некорректный лицензионный ключ. Защита отключена. Пожалуйста, обратитесь в Службу Технической Поддержки или к дистрибьютору."
+#ProdStateKeyLimited                = "Превышено количество комппьютеров, на которых может быть одновременно установлен " + $ProductName + ". Защита отключена. Для продолжения работы необходимо приобрести дополнительный лицензионный ключ."
+#ProdStateTasksNotRunning           = "Некоторые компоненты защиты отключены. " + $ProductName + " не может обеспечить полноценную защиту. Рекомендуется включить все компоненты защиты."
+#ProdStateTasksMalfunction          = "Некоторые компоненты защиты не запустились автоматически. " + $ProductName + " не может обеспечить полноценную защиту. Информацию об ошибках можно увидеть внутри компонент, отмеченных красным цветом. Если Вы не смогли самостоятельно разобраться в причине, то рекомендуется обратиться в Службу Технической Поддержки для решения этой проблемы."
+#ProdStateTasksDisabled             = "Некоторые компоненты защиты остановлены.  " + $ProductName + " не может обеспечить полноценную защиту. Рекомендуется включить все компоненты защиты".
+#ProdStateProtectionSafeMode        = "Некоторые компоненты защиты отключены для обеспечения нормальной работы в Безопасном Режиме. Для возобновления полноценной работы всех компонентов защиты необходимо перезагрузить компьютер в нормальном режиме."
+#ProdStateProtectionNotInstalled    = "Компоненты, обеспечивающие постоянную защиту, не установлены. Доступны только возможности проверки по требованию и обновление сигнатур. Для обеспечения полноценной защиты необходимо установить необходимые компоненты."
+#ProdStateBasesNotValid             = "Сигнатуры повреждены. Это могло произойти в результате некорректного обновления. Рекомендуется попробовать обновиться еще раз, или откатить обновление."
+#ProdStateBasesOutOfDate            = "Сигнатуры устарели. Для обеспечения полноценной защиты рекомендуется как можно скорее обновить сигнатуры."
+#ProdStateBasesNotActual            = "Сигнатуры неактуальны. Для обеспечения полноценной защиты рекомендуется как можно скорее обновить сигнатуры."
+#ProdStateUpdateNeedReboot          = "Для завершения установки обновленных сигнатур и программных модулей необходимо перезагрузить компьютер."
+#ProdStateBasesCorrupted            = "Сигнатуры некорректны. Это могло произойти в результате некорректного обновления. Рекомендуется попробовать обновиться еще раз, или откатить обновление."
+#ProdStateUpdateNotAuto             = "Невозможно завершить обновление. Проверьте настройку параметров обновления и настройки прокси-сервера."
+#ProdStateMyComputerNotScanned      = "Полная проверка компьютера не выполнялась. Рекомендуется провести полную проверку, чтобы убедиться в отсутствиии на компьютере вредоносного и нежелательного ПО."
+#ProdStateOnDemandTaskRunning       = "Выполняется " + format_struct(profile(ScanningTaskId), "ProfileName")
+#ProdStateProtectionNotRunning      = "Защита компьютера не работает. Компьютер подвержен риску заражения, повреждения или кражи информации. Рекомендуется возобновить защиту."
+#ProdStateProtectionDisabled        = "Защита компьютера отключена. Компьютер подвержен риску заражения, повреждения или кражи информации. Рекомендуется возобновить защиту."
+#ProdStateThreatsUntreated          = "На компьютере обнаружено вредоносное или нежелательное ПО. Рекомендуется нейтрализовать его."
+#ProdStateThreatsNeedReboot         = "Для завершения лечения обнаруженного вредоносного ПО требуется перезагузка компьютера. Пожалуйста, перезагрузите компьютер. После перезагрузки лечение будет завершено автоматически."
+default                             = "Все компоненты защиты включены и работают нормально. Сигнатуры обновлены " + datetime(AVService.BasesDate) + ". TODO(статистика)!!!."
+
+;-------------------------------- AvzTroubleshootWizard --------------------------------
+
+[AvzWizard_Progress]
+Label = "События:"
+
+[AvzWizard_ProgressVul]
+CurObject.Name = "Объект:"
+
+[s_AvzSeverity]
+0   = "Исправлено"
+1   = "Дополнительно"
+2   = "Рекомендуемые"
+3   = "Настоятельно рекомендуемые"
+
+[AvzTroubleshootWizard]
+@ = "Мастер восстановления системы"
+
+[AvzTroubleshootWizardPages]
+Welcome.Name    = "Добро пожаловать!"
+Welcome.Descr   = "Мастер восстановления системы готов к работе."
+Search.Name     = "Поиск проблем"
+Search.Descr    = "Подождите, идет проверка системы..."
+Problems.Name   = "Проверка завершена"
+Problems.Descr  = "Выберите проблемы, которые следует исправить."
+Fix.Name        = "Устранение неполадок"
+Fix.Descr       = "Подождите, идет восстановление системных настроек..."
+Finish.Name     = Troubles.size() ? "Устранение неполадок завершено" : "Проблем не обнаружено"
+Finish.Descr    = "Мастер готов к завершению работы."
+
+[AvzTroubleshootWizard_Welcome]
+Start.Name  = "Начать проверку"
+Start.Descr = "Поиск проблем, связанных с деятельностью вредоносного ПО"
+
+[AvzTroubleshootWizard_Problems]
+Fix.Name    = "Исправить"
+Fix.Descr   = "Вернуть выбранные настройки к исходным значениям."
+
+[AvzTroubleshootWizard_Problems_List]
+Trouble = "Проблема"
+SideEff = "Побочный эффект"
+
+[AvzTroubleshootWizard_Finish]
+Reboot.Name     = "Перезагрузить компьютер"
+Reboot.Descr    = "Внимание! Сохраните документы в открытых программах!"
+Exit.Name       = "&Готово"
+Exit.Descr      = "Завершить работу Мастера"
+
+;-------------------------------- AvzPrivacyCleanerWizard --------------------------------
+
+[AvzPrivacyCleanerWizard]
+@ = "Мастер чистки следов активности"
+
+[AvzPrivacyCleanerWizardPages]
+Welcome.Name    = "Добро пожаловать!"
+Welcome.Descr   = "Мастер чистки следов активности готов к работе."
+Search.Name     = "Поиск следов активности"
+Search.Descr    = "Подождите, идет проверка системы..."
+Problems.Name   = "Диагностика завершена"
+Problems.Descr  = "Обнаружены следы активности пользователя:"
+Fix.Name        = "Чистка следов"
+Fix.Descr       = "Подождите, идет удаление следов активности пользователя..."
+Finish.Name     = Troubles.size() ? "Чистка завершена" : "Следов активности пользователя не найдено"
+Finish.Descr    = "Мастер готов к завершению работы."
+
+[AvzPrivacyCleanerWizard_Welcome]
+Start.Name  = "Начать диагностику"
+Start.Descr = "Поиск следов активности пользователя"
+
+[AvzPrivacyCleanerWizard_Problems]
+Fix.Name    = "Очистить"
+Fix.Descr   = "Очистить выбранные пункты"
+
+[AvzPrivacyCleanerWizard_Problems_List]
+Trouble = "Проблема"
+SideEff = "Побочный эффект"
+
+[AvzPrivacyCleanerWizard_Finish]
+Reboot.Name     = "Перезагрузить компьютер"
+Reboot.Descr    = "Внимание! Сохраните документы в открытых программах!"
+Exit.Name       = "Выход"
+Exit.Descr      = "Завершение работы Мастера"
+
+;-------------------------------- AvzSecurityTweakerWizard --------------------------------
+
+[AvzSecurityTweakerWizard]
+@ = "Мастер настройки веб-браузера"
+
+[AvzSecurityTweakerWizardPages]
+Welcome.Name    = "Добро пожаловать!"
+Welcome.Descr   = "Мастер настройки веб-браузера готов к работе."
+Search.Name     = "Поиск уязвимостей"
+Search.Descr    = "Подождите, идет проверка системы..."
+Problems.Name   = "Диагностика завершена"
+Problems.Descr  = "Обнаружены уязвимости"
+Fix.Name        = "Исправление уязвимостей"
+Fix.Descr       = "Подождите, идет настройка веб-браузера..."
+Finish.Name     = Troubles.size() ? "Настройка завершена" : "Уязвимостей не обнаружено"
+Finish.Descr    = "Мастер готов к завершению работы."
+
+[AvzSecurityTweakerWizard_Welcome]
+Start.Name  = "Начать диагностику"
+Start.Descr = "Поиск уязвимостей в Microsoft Internet Explorer"
+
+[AvzSecurityTweakerWizard_Problems]
+Fix.Name    = "Исправить"
+Fix.Descr   = "Устранение выбранных уязвимостей"
+
+[AvzSecurityTweakerWizard_Problems_List]
+Trouble = "Проблема"
+SideEff = "Побочный эффект"
+
+[AvzSecurityTweakerWizard_Finish]
+Reboot.Name     = "Перезагрузить компьютер"
+Reboot.Descr    = "Внимание! Сохраните документы в открытых программах!"
+Exit.Name       = "Выход"
+Exit.Descr      = "Завершение работы Мастера"
+
+;-------------------------------- AvzSecurityAnalyzerWizard --------------------------------
+
+[Global]
+$AvzScriptUrl               = "http://avptool.virusinfo.info/ru/AVPTool_helpdesk.htm"
+AvzAlreadyRunning.caption   = "Один из AVZ визардов уже запущен"
+AvzAlreadyRunning           = "Закончите работу со всеми AVZ визардами прежде, чем запускать новый."
+
+[AvzSecurityAnalyzerWizard]
+@ = "Анализ безопасности"
+
+[AvzSecurityAnalyzerWizardPages]
+Welcome.Name        = "Добро пожаловать!"
+Welcome.Descr       = "Мастер анализа безопасности готов к работе."
+ScanVulnerab.Name   = "Анализ уязвимости приложений"
+ScanVulnerab.Descr  = "Подождите, идет проверка приложений..."
+Vulnerab.Name       = "Уязвимые приложения"
+Vulnerab.Descr      = "Анализ уязвимых приложений завершен."
+ScanTrouble.Name    = "Анализ безопасности"
+ScanTrouble.Descr   = "Подождите, идет проверка системы..."
+ScanSolution.Name   = "Поиск решения"
+ScanSolution.Descr  = "Подождите, идет поиск решения..."
+Solution.Name       = "Исправление"
+Solution.Descr      = "Мастер анализа безопасности закончил поиск решения."
+Fix.Name            = "Исправление"
+Fix.Descr           = "Подождите, идет исправление..."
+ScanTrouble2.Name   = "Анализ безопасности"
+ScanTrouble2.Descr  = "Подождите, идет проверка системы..."
+Script.Name         = "Безопасность системы под угрозой"
+Script.Descr        = "Редактирование и запуск скрипта для устранения проблем безопасности."
+RunScript.Name      = "Скрипт лечения"
+RunScript.Descr     = "Подождите, идет выполнение скрипта..."
+ScriptError.Name    = "Скрипт выполнен с ошибкой!"
+ScriptError.Descr   = "Исправьте ошибки в скрипте и попробуйте еще раз."
+Finish.Name         = DetectDanger > 1 ? "Скрипт выполнен" : "Угроз не обнаружено"
+Finish.Descr        = "Мастер готов к завершению работы."
+
+[AvzSecurityAnalyzerWizard_Welcome]
+Min.Name    = "Быстрый анализ"
+Min.Descr   = "Запуск диагностики безопасности компьютера"
+Max.Name    = "Полный анализ"
+Max.Descr   = "Запуск диагностики безопасности компьютера и поиска уязвимостей"
+
+[AvzSecurityAnalyzerWizard_Vulnerab]
+Rescan.Name     = "Повторное сканирование"
+Rescan.Descr    = "Повторный поиск уязвимых приложений"
+Next.Name       = "Анализ системы"
+Next.Descr      = "Запуск диагностики безопасности компьютера"
+
+[AvzSecurityAnalyzerWizard_Vulnerab_AppList]
+App     = "Приложение"
+Todo    = "Решение"
+
+[AvzSecurityAnalyzerWizard_Solution]
+Fix.Name    = "Исправить"
+Fix.Descr   = "Устранение выбранных уязвимостей"
+
+[AvzSecurityAnalyzerWizard_Solution_List]
+Trouble = "Проблема"
+SideEff = "Побочный эффект"
+
+[AvzSecurityAnalyzerWizard_Script]
+Web.Name    = "Получить скрипт лечения"
+Web.Descr   = "Посетите форум virusinfo.info и получите скрипт лечения."
+Fix.Name    = "Запустить скрипт"
+Fix.Descr   = "Начать процесс устранения проблем безопасности"
+
+[AvzSecurityAnalyzerWizard_Script_Info]
+Lable = "Введите текст скрипта или вставьте из буфера обмена:"
+
+[AvzSecurityAnalyzerWizard_ScriptError]
+Reedit.Name     = "Изменить скрипт"
+Reedit.Descr    = "Исправить ошибки в скрипте и запустить заново"
+
+[AvzSecurityAnalyzerWizard_Finish]
+Reboot.Name     = "Перезагрузить компьютер"
+Reboot.Descr    = "Внимание! Сохраните документы в открытых программах!"
+Rescan.Name     = "Повторный анализ системы"
+Rescan.Descr    = "Повторный анализ системы"
+Exit.Name       = "Выход"
+Exit.Descr      = "Завершение работы Мастера"
+
+;-------------------------------- AlertDialog --------------------------------
+
+[Global]
+$AlertDefault = " (recommended)"
+
+[s_AlertDialogCaption]
+oas
+mc
+wmuf
+pdm
+httpscan        = "Обнаружено: " + s_DetectType(DetectType)
+ods             = nActionID == 0xf0804 ? "Активное заражение" : "Обнаружено: " + s_DetectType(DetectType)
+antidial        = "Набор номера"
+antiphishing    = "Фишинг"
+hips            = "Запрос привилегии"
+avs             = "Лечение угрозы: " + s_DetectType(DetectType)
+
+[s_AlertDialogTrouble]
+oas             = "<b>" + sDescription + "</b> пытается получить доступ к вредоносному программному обеспечению." + if(nActionID == 0xf0804, "\nНеобходима специальная процедура лечения, <b>требующая обязательной перезагрузки компьютера</b>. Перед началом рекомендуется завершить все работающие приложения. Выполнить процедуру лечения?")
+ods             = "<b>" + sDescription + "</b> обнаружил вредоносное программное обеспечение." + if(nActionID == 0xf0804, "\nНеобходима специальная процедура лечения, <b>требующая обязательной перезагрузки компьютера</b>. Перед началом рекомендуется завершить все работающие приложения. Выполнить процедуру лечения?")
+mc              = "<b>" + sDescription + "</b> пытается получить письмо, содержащее вредоносное программное обеспечение."
+wmuf
+httpscan        = "Эта веб-страница или файл содержит вредоносное программное обеспечение."
+antiphishing    = "Эта веб-страница используется для кражи паролей или другой конфиденциальной информации."
+antidial        = "<b>" + sDescription + "</b> пытается осуществить скрытый набор номера."
+hips            = "<b>" + sDescription + "</b> пытается " + s_ActionV(Action) + " " + s_ObjectType(ObjectType) + "."
+pdm             = "<b>" + sDescription + "</b> ведет себя как " + ObjectName + "."
+avs             = "<b>" + sDescription + "</b> выполняет лечение вредоносного программного обеспечения."
+
+[AlertDialogT_Footer]
+ApplyToAll  = ApplyToAll & #APPLYTOALL_USE_SESSION ? "Запомнить <a f(\"Header1White\") onclick(iterate(bmask(ApplyToAll, #APPLYTOALL_SESSION)))>" + (ApplyToAll & #APPLYTOALL_SESSION ? "на сессию" : "навсегда ") + "</a>" : "Применить ко всем"
+Help        = "Справка"
+
+[AlertDialog_Descr]
+ObjectL = const(TaskType == "hips" ? s_ObjectType(ObjectType) + ":" : "Зараженный объект (" + s_DetectObjectTypes(ObjectType) + "):")
+Details = "Дополнительно..."
+
+[AlertDialog_Body_Action]
+Allow.Name          = "Разрешить" + $Def
+Allow.Descr         = "Действие будет разрешено"
+Deny.Name           = "Запретить" + $Def
+Deny.Descr          = "Действие будет запрещено"
+Disinfect.Name      = ActionsMask & #ACTION_DISINFECT ? "Лечить" + $Def : "Лечение невозможно"
+Disinfect.Descr     = ActionsMask & #ACTION_DISINFECT ? "Копия зараженного файла будет помещена в резервное хранилище" : "Файл не содержит полезной информации"
+Delete.Name         = "Удалить" + $Def
+Delete.Descr        = "Файл будет удален"
+DeleteArch.Name     = "Удалить архив" + $Def
+DeleteArch.Descr    = "Файл архива будет удален"
+Skip.Name           = "Пропустить" + $Def
+Skip.Descr          = "Не предпринимать никаких действий"
+Ok.Name             = "Ok" + $Def
+Ok.Descr            = "Действие будет выполнено"
+Cancel.Name         = "Отмена" + $Def
+Cancel.Descr        = "Не предпринимать никаких действий"
+Terminate.Name      = "Завершить" + $Def
+Terminate.Descr     = "Прервать выполнение"
+Quarantine.Name     = "Карантин" + $Def
+Quarantine.Descr    = "Поместить файл в Карантин"
+
+;-------------------------------- MalwareInfo --------------------------------
+
+[MalwareInfo]
+@ = "Описание вредоносного ПО"
+
+[MalwareInfo_Tab]
+Malware = "Вредонос"
+File    = "Файл"
+
+[MalwareInfo_Tab_Malware]
+Category.Name   = "Категория:"
+Type.Name		= "Тип:"
+
+[MalwareInfo_Tab_Malware_info]
+Text = "Полное описание вредоносного ПО: "
+
+[MalwareInfo_Tab_File]
+File.Name       = "Имя файла:"
+
+[MalwareInfo_Tab_File_Info1]
+Location.Name = "Путь:"
+Size.Name     = "Размер:"
+DiskSize.Name = "Размер на диске:"
+
+[MalwareInfo_Tab_File_Info2]
+Created.Name    = "Изменен:"
+Modified.Name   = "Создан:"
+
+[ProtectStatus_Header.StatusMenu.menu]
+StatusHide      = "Скрыть это сообщение"
+StatusShowAll   = "Показать все сообщения"
+
+[s_DetectObjectTypes]
+#ObjectFile         = "Файл"
+#ObjectLogSector    = "Логический сектор диска"
+#ObjectPhysSector   = "Физический сектор диска"
+#ObjectMemory       = "Память"
+#ObjectMail
+#ObjectMailMessage  = "Письмо"
+#ObjectMailBody     = "Тело письма"
+#ObjectMailAttach   = "Почтовое вложение"
+#ObjectRunProcess   = "Процесс в памяти"
+#ObjectRunModule    = "Модуль в памяти"
+#ObjectStartup      = "Объект автозапуска"
+#ObjectPhoneNumber  = "Телефонный номер"
+default             = "Объект " + @
+
+[s_DetectType]
+#DETYPE_VIRWARE         = "Вирус"
+#DETYPE_TROJWARE        = "Троянская программа"
+#DETYPE_MALWARE         = "Вредоносное ПО"
+#DETYPE_ADWARE          = "Рекламное ПО"
+#DETYPE_PORNWARE        = "Порно-звонилка"
+#DETYPE_RISKWARE        = "Нежелательное ПО"
+#DETYPE_XFILES
+#DETYPE_SOFTWARE        = "Известное ПО"
+#DETYPE_ATTACK          = "Сетевая атака"
+#DETYPE_REGISTRY        = "Доступ к реестру"
+#DETYPE_SUSPICACTION    = "Подозрительное действие"
+#DETYPE_VULNERABILITY   = "Уязвимость"
+#DETYPE_PHISHING        = "Фишинговый сайт"
+default                 = "Неизвестная угроза"
+
+[s_DetectTypeTip]
+#DETYPE_VIRWARE     = "К данной категории относятся программы, распространяющие свои копии по ресурсам локального компьютера с целью последующего запуска своего кода при каких-либо действиях пользователя и/или дальнейшего внедрения в другие ресурсы компьютера. В отличие от червей, вирусы не используют сетевых сервисов для проникновения на другие компьютеры. Копия вируса попадает на удалённые компьютеры только в том случае, если зараженный объект по каким-либо не зависящим от функционала вируса причинам оказывается активизированным на другом компьютере."
+#DETYPE_TROJWARE    = "В данную категорию входят программы, осуществляющие различные несанкционированные пользователем действия: сбор информации и ее передачу злоумышленнику, ее разрушение или злонамеренную модификацию, нарушение работоспособности компьютера, использование ресурсов компьютера в неблаговидных целях. Отдельные категории троянских программ наносят ущерб удаленным компьютерам и сетям, не нарушая работоспособность зараженного компьютера (например, троянские программы, разработанные для массированных DoS-атак на удалённые ресурсы сети)."
+#DETYPE_MALWARE     = "К вредоносному программному обеспечению относятся сетевые черви, классические файловые вирусы, троянские программы, хакерские утилиты и прочие программы, наносящие заведомый вред компьютеру, на котором они запускаются на выполнение, или другим компьютерам в сети."
+#DETYPE_ADWARE      = "Рекламное программное обеспечение (Adware, Advware, Spyware, Browser Hijackers) предназначено для показа рекламных сообщений — чаще всего, в виде графических баннеров — и перенаправления поисковых запросов на рекламные веб-страницы. За исключением показов рекламы, подобные программы, как правило, никак не проявляют своего присутствия в системе — отсутствует значок в системном трее, нет упоминаний об установленных файлах в меню программ. Зачастую у Adware-программ нет процедуры деинсталляции."
+#DETYPE_PORNWARE    = "К программам класса Pornware, по мнению экспертов «Лаборатории Касперского», относятся утилиты, так или иначе связанные с показом пользователям информации порнографического характера. На данный момент в классе выделяется три поведения: Porn-Dialer, Porn-Downloader и Porn-Tool. Дайлеры дозваниваются до порнографических телефонных служб, а даунлоадеры скачивают на пользовательский компьютер порнографические материалы. К последнему поведению класса Pornware относятся всевозможные утилиты, так или иначе связанные с поиском и показом порнографических материалов.
+#DETYPE_RISKWARE    = "К классу программ Riskware относятся легальные программы (некоторые из них свободно продаются и широко используются в легальных целях), которые, тем не менее, в руках злоумышленника способны причинить вред пользователю и его данным. В списке программ класса Riskware можно обнаружить легальные утилиты удаленного администрирования, программы-клиенты IRC, звонилки-дайлеры, скачиватели-даунлоадеры, мониторы любой активности, утилиты для работы с паролями, а также многочисленные интернет-серверы служб FTP, Web, Proxy и Telnet."
+
+[s_DetectGroup]
+#DETYPE_VIRWARE
+#DETYPE_TROJWARE
+#DETYPE_MALWARE     = "Вредоносное ПО (malware)"
+#DETYPE_ADWARE
+#DETYPE_PORNWARE
+#DETYPE_RISKWARE    = "Нежелательное ПО (riskware)"
+default             = "Неизвестное ПО"
+
+[s_DetectGroupTip]
+#DETYPE_VIRWARE
+#DETYPE_TROJWARE
+#DETYPE_MALWARE     = "К вредоносному программному обеспечению относятся сетевые черви, классические файловые вирусы, троянские программы, хакерские утилиты и прочие программы, наносящие заведомый вред компьютеру, на котором они запускаются на выполнение, или другим компьютерам в сети."
+#DETYPE_ADWARE
+#DETYPE_PORNWARE
+#DETYPE_RISKWARE    = "К классу программ Riskware относятся легальные программы (некоторые из них свободно продаются и широко используются в легальных целях), которые, тем не менее, в руках злоумышленника способны причинить вред пользователю и его данным."
+
+[s_DetectDanger]
+#DETDANGER_HIGH             = "Высокий"
+#DETDANGER_MEDIUM           = "Средний"
+#DETDANGER_LOW              = "Низкий"
+#DETDANGER_INFORMATIONAL    = "Информационный"
+default                     = if(@, "unk: " + @)
+
+[s_DetectSureTypeName]
+#DETYPE_VIRWARE = s_DetectType(DetectType) + " " + DetectName
+default         = s_DetectType(DetectType) + " " + DetectName + if(DetectType != #DETYPE_REGISTRY && TaskType != "pdm", " (modification)")
+
+[s_DetectObjectStatus]
+#OBJSTATUS_INFECTED
+#OBJSTATUS_SUSPICION
+#OBJSTATUS_NOTDISINFECTED           = "Обнаружено"
+#OBJSTATUS_UNKNOWN                  = "Не найдено"
+#OBJSTATUS_DISINFECTED              = "Вылечено"
+#OBJSTATUS_DELETED                  = "Удалено"
+#OBJSTATUS_QUARANTINED              = "Карантин"
+#OBJSTATUS_DELETED_ON_REBOOT        = "Будет удалено при перезагрузке компьютера"
+#OBJSTATUS_DISINFECTED_ON_REBOOT    = "Будет вылечено при перезагрузке компьютера"
+#OBJSTATUS_QUARANTINED_ON_REBOOT    = "Будет помещено в карантин при перезагрузке компьютера"
+#OBJSTATUS_ADDEDBYUSER              = "Added by user"
+#OBJSTATUS_ADDEDTOEXCLUDE           = "Добавлено в исключения"
+#OBJSTATUS_ALLOWED                  = "Разрешено"
+#OBJSTATUS_DENIED                   = "Запрещено"
+default                             = "unk: " + ObjectStatus
+
+[s_ProductKeyInvalid]
+#ekirWrongProduct           = "This license key is intended for another product."
+#ekirTrialAlredyUsed        = "This license key has already been used."
+#ekirKeyCreationDateInvalid
+#ekirKeyInstallDateInvalid  = "Incorrect license key activation date."
+#ekirTrialAlreadyInUse      = "This license key is already in use."
+#ekirInvalidBlacklist       = "File black.lst is missing or corrupted. Please run Updater to fix this problem."
+default                     = "Your license key is invalid. Please contact your dealer or local support service."
+
+[MainWindow.Protection.ProductInfo]
+KeyBlocked.Text             = "Лицензионный ключ занесен в черный список. Обновления отключены. Обратитесь к вашему дилеру или в Службу Технической Поддержки Лаборатории Касперского."
+KeyLimited.Text             = ""Превышено количество комппьютеров, на которых может быть одновременно установлен " + $ProductName + "."
+KeyTrialExpired.Text        = "Истек период ознакомительного использования " + $ProductName + ". Защита отключена."
+KeyExpired.Text             = "Истек срок действия лицензии."
+NoKeys.Text                 = $ProductName + " не активирован. Обновления отключены."
+ProductAdminPolicy.Text     = "Настройки контроллируются политикой безопасности. Обратитесь к администратору сети."
+ProductNotActivated.Text    = $ProductName + " не активирован. Обновления отключены."
+KeyAboutExpiration.Text     = "Срок действия лицензии истекает через " + LicInfo.DaysTillExpiration + " дней. Рекомендуется обновить лицензию."
+KeyWillBeBlocked.Text       = "Лицензионный ключ скомпроментирован. В ближайшее время защита будет отключена. Обратитесь к дилеру или в Службу Технической Поддержки Лаборатоии Касперского."
+TasksMalfunction.Text       = "Некоторые компоненты защиты не запустились." + if($IsNeedReboot, " Пожалуйста, перезагрузите компьютер.")
+ProtectionNotRunning.Text   = "Постоянная защита не работает."
+ProtectionSafeMode.Text     = "Система работает в Безопасном режиме. Некоторые компоненты защиты отключены."
+ProtectionDisabled.Text     = "Постоянная защита отключена."
+TasksDisabled.Text          = "Некоторые компоненты защиты отключены."
+TasksNotRunning.Text        = "Некоторые компоненты защиты не работают."
+KeyWillBeExpired.Text       = "Срок действия лицензии истекает через " + LicInfo.DaysTillExpiration + " дней. После этого, " + switch(LicInfo.KeyInfo.KeyType, "LicAction") + " будут отключены."
+UpdateRunning.Text          = "Выполняется обновление."
+ScanRunning.Text            = "Выполняется " + profiledesc(ScanningTask)
+MyComputerNotScanned.Text   = "Полная проверка не выполнялась."
+KeyTrial.Text               = "До окончания ознакомительного периода осталось " + LicInfo.DaysTillExpiration + " дней."
+ProductNotAutoRun.Text      = "Автозапуск " + $ProductName + " отключен."
+AntiSpamNeedTraining.Text   = "Анти-Спам: Требуется обучение."
+OnBatteriesScanOff.Text     = "Компьютер работает от батарей. Проверка по расписанию временно отключена."
+SomeSkipped.Text            = "Имеются скрытые сообщения."
+
+[MainWindow.Protection.ThreatInfo_Normal]
+Scanned.Name        = "Всего проверено:"
+Threats.Name        = "Обнаружено:"
+AttacksBlocked.Name = "Заблокировано атак:"
+
+[s_LicKeyType]
+#ektBeta        = "Ключ для бета-тестирования"
+#ektTrial       = "Пробная лицензия"
+#ektTest        = "Тестовый ключ (не для продажи)"
+#ektOEM         = "Ключ OEM"
+#ektCommercial  = "Коммерческий ключ"
+default         = "Неизвестный ключ"
+
+[MainWindow.Protection.ProductInfo_Normal]
+Version.Name        = "Версия:"
+VersionHotfix.Name  = "Hotfix:"
+LicenceOwner.Name   = "Владелец:"
+LicenceNumber.Name  = "Номер лицензии:"
+LicenceType.Name    = "Тип:"
+ExpirationDate.Name = "Дата окончания:"
+OSVersion.Name      = "Операционная система:"
+
+[Product_Events_ReportNavigator_Find]
+MatchCase   = "С учетом регистра"
+WholeWord   = "Только слова целиком"
+
+[Product_Events_Report]
+Time        = "Время"
+Application = "Приложение"
+Task        = "Подсистема"
+Verdict     = "Вердикт"
+Action      = "Действие"
+Object      = "Объект"
+Reason      = "Причина"
+
+[Product_Events_Report_Application]
+Path        = "Путь"
+Name        = "Имя"
+PID         = "PID процесса"
+CommandLine = "Параметры"
+
+[Product_Events_Report_Verdict]
+Descr           = "Описание"
+DetectType      = "Тип"
+DetectName      = "Название"
+DetectDanger    = "Опасность"
+Exact           = "Точность"
+
+[Product_Events_Report_Object]
+Type    = "Тип"
+Path    = "Путь"
+Name    = "Имя"
+Size    = "Размер"
+
+[Product_Scan_Statistics_List]
+Object          = "Объект"
+Time            = "Потрачено времени"
+Scaned          = "Проверено"
+Detected        = "Обнаружено"
+NotProcessed    = "Не обработано"
+Archived        = "Архивов"
+Packed          = "Запакованных"
+PswProtected    = "Запароленных"
+Corrupted       = "Поврежденных"
+ScanErrors      = "Ошибок"
+
+[PauseProtectionRequestDialog]
+@       = "Приостановка защиты"
+Text    = "Защита будет приостановлена. Возобновить защиту при выполнении условия:"
+
+[PauseProtectionRequestDialog_TimeButton]
+Name = "Через"
+
+[PauseProtectionRequestDialog_TimeButton_Time]
+60      = "1 минуту"
+180     = "3 минуты"
+300     = "5 минут"
+900     = "15 минут"
+1800    = "30 минут"
+3600    = "1 час"
+10800   = "3 часа"
+18000   = "5 часов"
+
+[Product_Threats_Report_Menu]
+Treat           = "Лечить"
+GotoToVulDesc   = "Перейти к описанию"
+AddToExclude    = "Добавить в исключения"
+GotoFile        = "Перейти к файлу"
+Discard         = "Удалить из списка"
+TreatAll        = "Лечить все"
+DiscardAll      = "Очистить список"
+QuarantineAdd   = "Добавить в карантин..."
+Restore         = "Восстановить"
+ViewOnWeb       = "Посмотреть на viruslist.com"
+
+[s_PasswordConfirmReason]
+default = "Для выполнения этой операции необходимо ввести пароль."
+
+[CheckProductPassword]
+@ = "Проверка пароля"
+
+[CheckProductPassword_Body_EditBlock]
+Pswd2CheckText  = "Пароль:"
+Pswd2Save       = "Запомнить пароль на эту сессию"
+
+[NewAppSniffer]
+@       = "Запущено новое приложение"
+Info    = "Пожалуйста, подождите, пока " + $ProductName + " его обнюхает ;-)"
+
+[PauseProtectionRequestDialog_Actions]
+Time.Descr      = "Защита будет возобновлена через ХХ сек."
+Reboot.Name     = "После перезагрузки"
+Reboot.Descr    = "Защита будет возобновлена после перезапуска компьютера"
+OnDemand.Name   = "Вручную"
+OnDemand.Descr  = "Защита будет не будет возобновлена автоматически"
+
+[MainWindow.Protection_WorkArea_Home]
+Tasks.Header            = "Задачи"
+HomeLeft.Group2.Header  = "Проверено (объектов/сек)"
+
+[Product_Threats_Navigator]
+CureAll.Name = "Лечить все"
+
+[Product_Threats_Navigator_Filter]
+Active      = "Активные"
+Quarantined = "Карантин"
+Disinfected = "Вылеченные"
+All         = "Все"
+
+[Product_Threats_Report]
+Status      = "Статус"
+Object      = "Объект"
+Detected    = "Обнаружено"
+row         = "Метка"
+
+[Product_Threats_Report_Footer]
+CureAll = "Cure all"
+AddToQB = "Add to quarantine..."
+
+[Product_Threats_Report_Object]
+Path    = "Путь"
+Name    = "Имя"
+
+[MainWindow.Protection_WorkArea]
+Home.Group2.Header = "Проверено объектов"
+
+[MainWindow.Protection_CommonStatistics_List]
+DetectType  = "Тип объекта"
+Treated     = "Обработано"
+Total       = "Всего"
+
+[s_CmnStatGroupName]
+1   = "Вредоносные программы"
+2   = "Нежелательные программы"
+3   = "Прочие"
+
+[s_ProductNotifyTextByTaskID]
+$NotifyAppName  = if(AppID, $AppName + ": ")
+#eTASK_SELFPROT = $NotifyAppName + s_Action(Action) + " нашего процесса. " + s_Verdict(Verdict) + ". "
+#eTASK_SCAN     = if($IsEventObjInfected, "В файле " + $ObjectText + " обнаружено " + s_RepDetectType(DetectType) + if(DetectName, " " + object(DetectName)) + "." + if(Verdict != #eDETECTED, " " + s_Verdict(Verdict) + ". "))
+#eTASK_FAV      = if($IsEventObjInfected, $NotifyAppName + "Получение доступа к файлу " + $ObjectText + ", содержащему " + s_RepDetectType(DetectType) + if(DetectName, " " + object(DetectName)) + "." + if(Verdict != #eDETECTED, " " + s_Verdict(Verdict) + ". "))
+#eTASK_MAV      = if($IsEventObjInfected, $NotifyAppName + "Принятие почтового сообщения, содержащего " + s_RepDetectType(DetectType) + if(DetectName, " " + object(DetectName)) + "." + if(Verdict != #eDETECTED, " " + s_Verdict(Verdict) + ". "))
+#eTASK_HTTP     = if($IsEventObjInfected, $NotifyAppName + "Загрузка объекта " + $ObjectText + ", содержащего " + s_RepDetectType(DetectType) + if(DetectName, " " + object(DetectName)) + ". " + s_Verdict(Verdict) + ". ")
+#eTASK_PC       = if(!$IsEventTask, s_ProductNotifyText_ParCtl(Verdict))
+#eTASK_AD       = if(!$IsEventTask, $NotifyAppName + "Автодозвон по номеру " + $ObjectText + ". " + s_Verdict(Verdict) + ".")
+#eTASK_AP       = if(!$IsEventTask, $NotifyAppName + "Открытие фишинг сайта " + $ObjectText + ". " + s_Verdict(Verdict) + ".")
+#eTASK_IDS      = if(!$IsEventTask, "Сетевая атака " + object(DetectName) + ": " + $ObjectText + ". Заблокировано.")
+#eTASK_HIPS     = if(!$IsEventTask, $NotifyAppName + s_Action(Action) + " " + $ObjectText + ". " + s_Verdict(Verdict) + ".")
+#eTASK_PDM      = if(!$IsEventTask, $NotifyAppName + "Поведение, похожее на " + object(DetectName) + ". " + s_Verdict(Verdict) + ".")
+
+[s_DetectBehaviour]
+100     = "Trojan-ArcBomb («бомбы» в архивах)"
+101     = "Backdoor (Удаленное администрирование)"
+102     = "Trojan"
+103     = "Trojan-AOL"
+104     = "Trojan-Clicker (интернет-кликеры)"
+105     = "Trojan-Downloader (доставка вредоносных программ)"
+106     = "Trojan-Dropper (инсталляторы вредоносных программ)"
+107     = "Trojan-MSN"
+108     = "Trojan-Notifier (оповещение об атаке)"
+109     = "Trojan-Proxy (прокси-сервер)"
+110     = "Trojan-PSW (воровство паролей)"
+111     = "Trojan-Spy (шпионаж)"
+112     = "Trojan-DDoS"
+114     = "Trojan-IM"
+115     = "RootKit (сокрытие присутствия)"
+116     = "Trojan-SMS"
+    
+200     = "Почтовые черви"
+201     = "Черви, использующие интернет-пейджеры"
+202     = "Черви в IRC-каналах"
+203     = "Сетевые черви Net-Worm"
+204     = "P2P-Worm (черви для файлообменных сетей)"
+205     = "Сетевые черви"
+206     = "Вирусы"
+300     = "Конструктор вирусов и троянских программ"
+301     = "DoS - сетевые атаки"
+302     = "Exploit (взлом удаленных компьютеров)"
+303     = "FileCryptor (скрытие от антивирусных программ)"
+304     = "Flooder (замусоривание сети)"
+305     = "HackTool (взлом удаленных компьютеров)"
+306     = "not-virus:Hoax (введение в заблуждение)"
+307     = "not-virus:BadJoke (злые шутки)"
+308     = "Nuker (фатальные сетевые атаки)"
+309     = "PolyCryptor (скрытие от антивирусных программ)"
+310     = "PolyEngine (полиморфные генераторы)"
+311     = "Sniffer"
+312     = "SpamTool"
+313     = "Spoofer"
+314     = "VirTool"
+315     = "Email-Flooder (замусоривание сети)"
+316     = "IM-Flooder (замусоривание сети)"
+317     = "SMS-Flooder (замусоривание сети)"
+400     = "not-a-virus:AdWare"
+500     = "not-a-virus:Porn-Dialer"
+501     = "not-a-virus:Porn-Downloader"
+502     = "not-a-virus:Porn-Tool"
+600     = "not-a-virus:Tool"
+601     = "not-a-virus:Client-IRC"
+602     = "not-a-virus:Dialer"
+603     = "not-a-virus:Downloader"
+604     = "not-a-virus:Monitor"
+605     = "not-a-virus:PSWTool"
+606     = "not-a-virus:RemoteAdmin"
+607     = "not-a-virus:Server-FTP"
+608     = "not-a-virus:Server-Proxy	= 608"
+609     = "not-a-virus:Server-Telnet"
+610     = "not-a-virus:Server-Web"
+611     = "not-a-virus:RiskTool"
+612     = "not-a-virus:NetTool"
+613     = "not-a-virus:Client-P2P"
+614     = "not-a-virus:Client-SMTP"
+615     = "not-a-virus:AdTool"
+616     = "not-a-virus:FraudTool"
+700     = "X-Files"
+default = "Неизвестный тип"
+
+[s_BehaviourDetails]
+100     = "Представляют собой архивы, специально оформленные таким образом, чтобы вызывать нештатное поведение архиваторов при попытке разархивировать данные — зависание или существенное замедление работы компьютера или заполнение диска большим количеством «пустых» данных. Особенно опасны «архивные бомбы» для файловых и почтовых серверов, если на сервере используется какая-либо система автоматической обработки входящей информации — «архивная бомба» может просто остановить работу сервера."
+101     = "Троянские программы этого класса являются утилитами удаленного администрирования компьютеров в сети. По своей функциональности они во многом напоминают различные системы администрирования, разрабатываемые и распространяемые фирмами-производителями программных продуктов."
+102     = "В данную категорию входят программы, осуществляющие различные несанкционированные пользователем действия: сбор информации и ее передачу злоумышленнику, ее разрушение или злонамеренную модификацию, нарушение работоспособности компьютера, использование ресурсов компьютера в неблаговидных целях."
+103     = "В данное время нет подробного описания для Trojan-AOL."
+104     = "Семейство троянских программ, основная функция которых — организация несанкционированных обращений к интернет-ресурсам (обычно к веб-страницам). Достигается это либо посылкой соответствующих команд браузеру, либо заменой системных файлов, в которых указаны «стандартные» адреса интернет-ресурсов (например, файл hosts в MS Windows)."
+105     = "Троянские программы этого класса предназначены для загрузки и установки на компьютер-жертву новых версий вредоносных программ, установки «троянцев» или рекламных систем. Загруженные из интернета программы затем либо запускаются на выполнение, либо регистрируются «троянцем» на автозагрузку в соответствии с возможностями операционной системы. Данные действия при этом происходят без ведома пользователя."
+106     = "Троянские программы этого класса написаны в целях скрытной инсталляции других программ и практически всегда используются для «подсовывания» на компьютер-жертву вирусов или других троянских программ. Данные троянцы обычно без каких-либо сообщений (либо с ложными сообщениями об ошибке в архиве или неверной версии операционной системы) сбрасывают на диск в какой-либо каталог (в корень диска C:, во временный каталог, в каталоги Windows) другие файлы и запускают их на выполнение."
+107     = "В данное время нет подробного описания для Trojan-MSN."
+108     = "Троянцы данного типа предназначены для сообщения своему «хозяину» о зараженном компьютере. При этом на адрес «хозяина» отправляется информация о компьютере, например, IP-адрес компьютера, номер открытого порта, адрес электронной почты и т. п. Отсылка осуществляется различными способами: электронным письмом, специально оформленным обращением к веб-странице «хозяина», ICQ-сообщением."
+109     = "Семейство троянских программ, скрытно осуществляющих анонимный доступ к различным интернет-ресурсам. Обычно используются для рассылки спама."
+110     = "Данное семейство объединяет троянские программы, «ворующие» различную информацию с зараженного компьютера, обычно — системные пароли (PSW — Password-Stealing-Ware). При запуске PSW-троянцы ищут сиcтемные файлы, хранящие различную конфиденциальную информацию (обычно номера телефонов и пароли доступа к интернету) и отсылают ее по указанному в коде «троянца» электронному адресу или адресам."
+111     = "Данные троянцы осуществляют электронный шпионаж за пользователем зараженного компьютера: вводимая с клавиатуры информация, снимки экрана, список активных приложений и действия пользователя с ними сохраняются в какой-либо файл на диске и периодически отправляются злоумышленнику. Троянские программы этого типа часто используются для кражи информации пользователей различных систем онлайновых платежей и банковских систем."
+112     = "В данное время нет подробного описания для Trojan-DDoS."
+114     = "В данное время нет подробного описания для Trojan-IM."
+115     = "Rootkit — программный код или техника, направленная на сокрытие присутствия в системе заданных объектов (процессов, файлов, ключей реестра и т.д.)."
+116     = "Данный тип программ заражает мобильные телефоны."
+200     = "К данной категории червей относятся те из них, которые для своего распространения используют электронную почту. При этом червь отсылает либо свою копию в виде вложения в электронное письмо, либо ссылку на свой файл, расположенный на каком-либо сетевом ресурсе (например, URL на зараженный файл, расположенный на взломанном или хакерском веб-сайте)."
+201     = "Известные компьютерные черви данного типа используют единственный способ распространения — рассылку на обнаруженные контакты (из контакт-листа) сообщений, содержащих URL на файл, расположенный на каком-либо веб-сервере. Данный прием практически полностью повторяет аналогичный способ рассылки, использующийся почтовыми червями."
+202     = "У данного типа червей, как и у почтовых червей, существуют два способа распространения червя по IRC-каналам, повторяющие способы, описанные выше. Первый заключается в отсылке URL-ссылки на копию червя. Второй способ — отсылка зараженного файла какому-либо пользователю сети. При этом атакуемый пользователь должен подтвердить прием файла, затем сохранить его на диск и открыть (запустить на выполнение)."
+203     = "Данное семейство червей объеденено по способу заражения удаленных компьютеров, например: копирование червя на сетевые ресурсы; проникновение червя на компьютер через уязвимости в операционных системах и приложениях; проникновение в сетевые ресурсы публичного использования; паразитирование на других вредоносных программах."
+204     = "Механизм работы большинства подобных червей достаточно прост — для внедрения в P2P-сеть червю достаточно скопировать себя в каталог обмена файлами, который обычно расположен на локальной машине. Всю остальную работу по распространению вируса P2P-сеть берет на себя — при поиске файлов в сети она сообщит удаленным пользователям о данном файле и предоставит весь необходимый сервис для скачивания файла с зараженного компьютера."
+205     = "К данной категории относятся программы, распространяющие свои копии по локальным и/или глобальным сетям с целью: проникновения на удаленные компьютеры; запуска своей копии на удаленном компьютере; дальнейшего распространения на другие компьютеры в сети."
+206     = "К данной категории относятся программы, распространяющие свои копии по ресурсам локального компьютера с целью: последующего запуска своего кода при каких-либо действиях пользователя; дальнейшего внедрения в другие ресурсы компьютера."
+300
+314     = "Конструкторы вирусов и троянских программ — это утилиты, предназначенные для изготовления новых компьютерных вирусов и «троянцев». Известны конструкторы вирусов для DOS, Windows и макро-вирусов. Они позволяют генерировать исходные тексты вирусов, объектные модули, и/или непосредственно зараженные файлы."
+301     = "Программы данного типа реализуют атаки на удаленные сервера, посылая на них многочисленные запросы, что приводит к отказу в обслуживании, если ресурсы атакуемого сервера недостаточны для обработки всех поступающих запросов (DoS = Denial of Service)."
+302
+305     = "Хакерские утилиты данного класса предназначены для проникновения в удаленные компьютеры с целью дальнейшего управления ими (используя методы троянских программ типа «backdoor») или для внедрения во взломанную систему других вредоносных программ."
+303
+309     = "Хакерские утилиты, использующиеся для шифрования других вредоносных программ с целью скрытия их содержимого от антивирусной проверки."
+304 
+315
+316
+317     = "Данные хакерские утилиты используются для «забивания мусором» (бесполезными сообщениями) каналов интернета — IRC-каналов, компьютерных пейджинговых сетей, электронной почты и т. д."
+306
+307     = "Данные программы не причиняют компьютеру какого-либо прямого вреда, однако выводят сообщения о том, что такой вред уже причинен, либо будет причинен при каких-либо условиях, либо предупреждают пользователя о несуществующей опасности. К «злым шуткам» относятся, например, программы, которые «пугают» пользователя сообщениями о форматировании диска (хотя никакого форматирования на самом деле не происходит), детектируют вирусы в незараженных файлах, выводят странные вирусоподобные сообщения и т. д. — в зависимости от чувства юмора автора такой программы."
+308     = "Утилиты, отправляющие специально оформленные запросы на атакуемые компьютеры в сети, в результате чего атакуемая система прекращает работу. Используют уязвимости в программном обеспечении и операционных системах, в результате чего сетевой запрос специального вида вызывает критическую ошибку в атакуемом приложении."
+310     = "Полиморфные генераторы не являются вирусами в прямом смысле этого слова, поскольку в их алгоритм не закладываются функции размножения, т. е. открытия, закрытия и записи в файлы, чтения и записи секторов и т. д. Главной функцией подобного рода программ является шифрование тела вируса и генерация соответствующего расшифровщика."
+311     = "В данное время нет подробного описания для Sniffer"
+312     = "В данное время нет подробного описания для SpamTool"
+313     = "В данное время нет подробного описания для Spoofer"
+314     = "Утилиты, предназначенные для облегчения написания компьютерных вирусов и для их изучения в хакерских целях."
+400     = "Рекламное программное обеспечение (Adware, Advware, Spyware, Browser Hijackers) предназначено для показа рекламных сообщений — чаще всего, в виде графических баннеров — и перенаправления поисковых запросов на рекламные веб-страницы."
+500
+501
+502     = "К программам класса Pornware, по мнению экспертов «Лаборатории Касперского», относятся утилиты, так или иначе связанные с показом пользователям информации порнографического характера."
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620     = "К классу программ Riskware относятся легальные программы (некоторые из них свободно продаются и широко используются в легальных целях), которые, тем не менее, в руках злоумышленника способны причинить вред пользователю и его данным."
+default = "В данное время нет подробного описания для этого семейства программ."

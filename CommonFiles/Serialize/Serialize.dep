@@ -1,0 +1,284 @@
+# Microsoft Developer Studio Generated Dependency File, included by Serialize.mak
+
+.\Deser.c : \
+	"..\CommonFiles\_avpio.h"\
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\Deser_W.c : \
+	"..\CommonFiles\_avpio.h"\
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\DeserH_W.c : \
+	"..\CommonFiles\_avpio.h"\
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\DeserHdr.c : \
+	"..\CommonFiles\_avpio.h"\
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\DeserMem.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\DeserR.c : \
+	"..\CommonFiles\_avpio.h"\
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\DeserR_W.c : \
+	"..\CommonFiles\_avpio.h"\
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\DeserSWM.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\DeserSWM_W.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\DesrMHdr.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\DesrMR.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\DesrMSWM.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\SeriaCst.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\SeriaCst_W.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\SeriaHdr.c : \
+	"..\CommonFiles\_avpio.h"\
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\SeriaInt.c : \
+	"..\CommonFiles\_avpio.h"\
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\Serial.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\Serial_W.c : \
+	"..\CommonFiles\_avpio.h"\
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\SerialW.c : \
+	"..\CommonFiles\_avpio.h"\
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\SerialW_W.c : \
+	"..\CommonFiles\_avpio.h"\
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\SeriaMem.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\SeriaSWM.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\SeriaSWM_W.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\SeriMCst.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\SeriMHdr.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\byteorder.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\SeriMSWM.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	
+
+.\SeriMW.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\KLDTDefs.h"\
+	"..\CommonFiles\KLDTSer.h"\
+	"..\CommonFiles\Property.h"\
+	"..\CommonFiles\Swm.h"\
+	

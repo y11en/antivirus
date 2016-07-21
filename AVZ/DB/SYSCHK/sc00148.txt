@@ -1,0 +1,4 @@
+// ***** Spy.MyLogo *****
+begin
+ AddEvAlarmByCLSID('EA4587EB-3106-448A-8B31-F1572E981765',AScriptName,'MyLogo.dll');
+end.

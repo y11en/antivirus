@@ -1,0 +1,1 @@
+copy O:\out_win32\release\pdm2rt.ppl E:\Common\to_wm\pdm2rt.ppl

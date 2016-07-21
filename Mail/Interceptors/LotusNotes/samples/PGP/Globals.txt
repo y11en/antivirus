@@ -1,0 +1,1051 @@
+Option Explicit
+%REM
++++++++ NOTE ++++++++++++++
+Library is covered by COPYRIGHT, 1998 for Process Stream Technologies, L.L.C..  
+Included code may not be used, copied or altered without the express, written 
+consent of Process Stream Technologies.
++++++++++++++++++++++++++++
+
+Library's purpose is to encapsulate core, reusable constants and routines useful in most every 
+implementation.  Many other libraries depend on the functionality of this library.  The most
+universal functionality embodied here is the logging functionality captured by sf_InitializeLog 
+and sint_RelayMessage.  Even this functionality uses core file-system functionality, so that 
+functionality is captured here as well with an easily portable implementation.
+
+----- suggested enhancement ------
+8/27/98 PR: Decompose generic string-handling functions into its own library.
+
+8/16/98 PR: Two changes to this library may be appropriate: (1) Decomposition of the 
+file system-handling code into its own lower-level library, and (2) application-specific 
+(implementation-specific) constants like sstr_APP_TITLE are better placed in an 
+application's main library with that library "Used" (included) into this library.
+
+----- revisions ----------
+8/27/98 Version 1.2.2, PR
+- added sstr_Repeat for efficient string-multiple concatenation
+
+8/18/98 Version 1.2.1, PR
+- created function telling whether a dynamic array's been initialized or not
+- documented "custom type" declarations masquerading as objects: LogInfo & RelayMessageInfo
+
+8/11/98 Version 1.2, PR
+- created custom type RelayMessageInfo
+- adjusted sint_RelayMessage
+     - to receive the custom type instead of the many parameters
+     - to allow much more caller-specified flexibility in how messages should be output
+- extended sf_InitializeLog to allow creation of any of the standard types of NotesLog output 
+  (Notes, mail, file, agent)
+- adjusted many prefixes to comply with Process Stream standards
+
+6/19/98 Version 1.1.3.1, PR
+- adjusted sstr_ReplaceSubstring to better loop through source string in terms of 
+  both efficiency and avoidance of undesirable recursion
+
+6/18/98 Version 1.1.3, PR
+- included sstr_ReplaceSubstring and made corresponding adjustment 
+  to sstr_PurgeBadFileCharacters
+- included constants sstr_PATH_SPECIFIER_WEB, sstr_NOTES_DB_EXTENSION_DEFAULT 
+  and mstr_NOTES_DB_EXTENSION_CORE
+- adjusted sf_InitializeLog to reflect changes to constants
+
+6/12/98 Version 1.1.2, PR
+- Clarified and included more commentary to the s_SillyBindScriptLibrary procedure.
+- Made slng_NULL into a true constant by using data-type suffix character.
+
+6/2/98 Version 1.1.1, PR
+Included s_SillyBindScriptLibrary to provide a regular way for a LotusScript scope 
+to "Use" a script library successfully when the first time it is referenced (function or 
+variable) is in a NotesTimer 'Alarm' event.  This function should be copied to the 
+library containing the procedure referred to in the Alarm event, and renamed.  It is 
+the renamed version that should be called.
+
+5/13/98 Version 1.1, PR
+Initial implementation of sint_GetSubdirectories to return next level only 
+of directories beneath a base path
+%END REM
+
+
+Public Class LogInfo
+%REM
+Purpose of "class" is to serve as a custom type to associate a given NotesLog 
+with its current type (Notes, mail, agent, file)
+
+'--------- revision history --------------
+8/17/98 PR: documented
+%END REM
+     Public lg As NotesLog
+     Public int_type As Integer
+End Class
+
+Public Class RelayMessageInfo
+%REM
+Purpose of "class" is to server as a custom type to describe, in detail and 
+in a structured way, a message to be sent to sint_RelayMessage
+%END REM
+     Public str_Context As String
+     Public str_Message As String
+     Public obj_lg As LogInfo
+     Public str_error As String
+     Public int_error As Integer
+     Public int_type As Integer
+End Class 'RelayMessageInfo
+
+'declare a global instance of a NotesLog so that all functions in the process 
+' may log messages to a generic, central place
+Public sobj_AppLog As LogInfo
+
+'~~~ Application globals ~~~~~~~~~
+Public Const sstr_APP_TITLE = "PGP Notes Plugin"
+Public Const sstr_LOGNM_MAIN = sstr_APP_TITLE & " Log.nsf"
+Public Const sstr_PRFLNM_PERSISTENTS = sstr_APP_TITLE & " Persistent Variables"   'example
+Public Const sstr_FLDNM_APP_PATH = "t_App_Path"  'example
+
+Public Const sstr_NOTHING = "", sstr_QUOTES = |"|, sstr_SPACE = " "
+Public Const sint_SUCCESS = False, sint_GENERAL_FAILURE = 1
+Public Const sstr_PATH_SPECIFIER = "\", sstr_PATH_SPECIFIER_WEB = "/"
+Public Const sstr_FLAG_TRUE = "-1", sstr_FLAG_FALSE = "0"
+Public Const sint_FORMULA_TRUE = 1
+Public Const slng_SUCCESS = 0&
+'pseudo constants are initialized in this library's "Initialize" event
+Public sstr_LINEFEED As String, sstr_TAB As String, sstr_CRLF As String
+Public Const sint_ERR_GENERIC_NOTES = 4000
+Public Const sstr_ERR_DOCUMENT_DELETED = "Notes error: Document has been deleted"
+Public Const sint_MB_ICONSTOP = 16, sint_MB_ICONEXCLAMATION = 48
+Public Const sint_MB_ICONINFORMATION = 64, sint_MB_OKCANCEL = 1, sint_MB_OK = 0
+'constant used in sint_RelayMessage to specify that message should be PRINTed
+Public Const sint_PRINT_TYPE = 128     'according to lsconst.lss, this bit is available
+Public Const sint_IDCANCEL = 2
+
+Public Const sstr_TYPENM_STRING = "String"
+Const mstr_TYPENAME_ARRAY = "( )"
+Public Const sstr_TYPENM_STRING_ARRAY = sstr_TYPENM_STRING & mstr_TYPENAME_ARRAY
+
+'~~~ NotesLog Types: referenced by sgf_InitializeLog ~~~~~~~~~
+Public Const sint_LOGTYP_NOTES = 1, sint_LOGTYP_AGENT = 2
+Public Const sint_LOGTYP_MAIL = 3, sint_LOGTYP_FILE = 4
+
+Const mstr_NOTES_DB_EXTENSION_CORE = ".ns"
+Public Const sstr_NOTES_DB_EXTENSION_DEFAULT = mstr_NOTES_DB_EXTENSION_CORE & "f"
+
+'~~~ globals used by ExtnFilenameValid & SplitExtnFilename ~~~~~~~~~
+'bitwise constants
+Public Const sint_PATHTYPE_ABSOLUTE = 1, sint_PATHTYPE_RELATIVE = 2, sint_PATHTYPE_AUTOCHOOSE = False
+Const mint_PATHTYPE_MASK = 3
+'bitwise constant used in SplitExtnFilename's vint_Flags parameter to bias 
+' it toward returning a filename when the last component of the path is 
+' ambiguous between being a filename or directory name
+Public Const sint_SPLIT_FILEBIAS = 4
+Public Const sint_INVALID_NAME = 2
+
+'~~~ global used by ExtnFilenameValid and VetDirectory ~~~~~~~~~~~
+Public Const sint_INVALID_SYNTAX_ABSOLUTE_PATH = 3
+
+'~~~ globals used by VetDirectory ~~~~~~~~~~
+Public Const sint_WORKDIR_TEST_EXISTENCE = 2
+Public Const sint_WORKDIR_FORCE_EXISTENCE = 4
+Public Const sint_NO_SUCH_DIRECTORY = 4
+Public Const sint_NORMAL_FILE = 5
+
+'~~~ globals used by CreateDirectory (in VetDirectory family) ~~~~~
+Public Const sint_INVALID_SYNTAX_NETWORK_PATH = 6
+Public Const sint_ROOT_PATH_UNAVAILABLE = 7
+
+'~~~ global used by ValidateFilename ~~~~~~~~
+Public Const sstr_BAD_CHARACTERS_FILE = |\/:*?"<>| & "|"
+'     if an absolute file, don't test the "absolute" prefix with this, because of the colon
+Public Const sstr_BAD_CHARACTERS_EXTN = |/:*?"<>| & "|"
+
+Public Const slng_NULL = 0&
+
+'constant to be used with sint_RelayMessage to force a LogError instead of LogAction
+Public Const sint_ERR_GENERIC = -1
+
+Const mint_PATH_SPECIFIER_LEN = Len( sstr_PATH_SPECIFIER)
+
+'~~~ constants for ValidateExtnFilename ~~~~~~~~~~~~~
+Const mstr_ANY_LETTER = "[a-zA-Z]"
+Const mstr_PATH_SPECIFIER_LOCAL = mstr_ANY_LETTER & ":\", mstr_PATH_SPECIFIER_NETWORK = "\\"
+Const mint_PATH_SPECIFIER_LOCAL_LEN = Len( mstr_PATH_SPECIFIER_LOCAL) - Len( mstr_ANY_LETTER) + 1
+Const mint_PATH_SPECIFIER_NETWORK_LEN = Len( mstr_PATH_SPECIFIER_NETWORK)
+
+Const mint_ATTR_NORMAL = 0, mint_ATTR_DIRECTORY = 16
+
+'~~~ constants for ValidateExtnFilename & TestDirectoryExistence ~~~~~~~~~~~~~
+Const mint_ERR_PATH_NOT_FOUND = 76
+
+
+Declare Public Function sint_ResolvePathType( rcstr_ExtendedFilename As String) As Integer
+Declare Public Function sf_ExtnFilenameValid( Byval vcstr_Filename As String, Byval vcint_PathType As Integer) As Integer
+Declare Public Function sint_RelayMessage( rcobj_MessageInfo As RelayMessageInfo) As Integer
+Declare Public Function sf_InitializeLog( Byval vcstr_Category As String, Byval vcint_Type As Integer, rcx_CreateParam As Variant, robj_lg As LogInfo) As Integer
+Declare Function int_TestExistenceDirectory( Byval vstr_Directory As String, rf_DirectoryExists) As Integer
+Declare Public Function sf_FilenameValid( Byval vcstr_Filename As String) As Integer
+Declare Public Function sint_WorkDirectory( Byval vstr_Directory As String, Byval vint_TASK As Integer) As Integer
+Declare Function int_CreateDirectory( Byval vstr_Directory As String) As Integer
+Declare Public Function sint_TestExistenceFile( Byval vcstr_Filename As String, rf_FileExists As Integer) As Integer
+Declare Public Function sstr_PurgeBadFileCharacters( Byval vcstr_Filename As String) As String
+Declare Public Function sint_GetSubdirectories( Byval vstr_BASE_PATH As String, rint_Levels As Integer, ravar_DirName As Variant) As Integer
+Declare Function avar_GetSubdirectoriesNextLevel( Byval vstr_BasePath) As Variant
+Declare Public Function sstr_ReplaceSubstring( Byval vcstr_WhatToReplace As String, Byval vcstr_Replacement As String, Byval vstr_String As String) As String
+Declare Function str_GetNotesLogFilename( Byval vcstr_LogFilename As String) As String
+Declare Function int_TestExistenceFile( Byval vcstr_Filename As String, rf_FileExists As Integer) As Integer
+Declare Public Function sint_SplitExtnFilename( Byval vcstr_ExtendedFilename As String, Byval vcint_Flags As Integer, rstr_Path As String, rstr_Filename As String) As Integer
+Declare Public Function sf_TestArrayInitialized( rcx_Array As Variant, rf_ArrayInitialized) As Integer
+Declare Public Function sstr_Repeat( Byval vcstr As String, Byval vcint_x As Integer) As String
+
+
+Public Function sf_ExtnFilenameValid( Byval vcstr_Filename As String, Byval vcint_PathType As Integer) As Integer
+%REM
+Function returns whether the extended filename (path + filename) passed in seems to be 
+an acceptable name.  It does not test whether the file exists currently or can exist in the 
+current environment (e.g. this computer might not have a "D:\" drive.
+%END REM
+     Const str_FILTER = "*[" & sstr_BAD_CHARACTERS_EXTN & "]*"
+     
+     Dim int_EffectivePathType As Integer
+     Dim str_CharTestPortion As String
+     
+     If vcint_PathType = sint_PATHTYPE_AUTOCHOOSE Then
+          int_EffectivePathType = sint_ResolvePathType( vcstr_Filename)
+     Else
+          int_EffectivePathType = vcint_PathType
+     End If
+     
+     If int_EffectivePathType = sint_PATHTYPE_ABSOLUTE Then
+          If Left$( vcstr_Filename, mint_PATH_SPECIFIER_NETWORK_LEN) = mstr_PATH_SPECIFIER_NETWORK Then
+               str_CharTestPortion = Mid$( vcstr_Filename, mint_PATH_SPECIFIER_NETWORK_LEN)
+          Else
+               str_CharTestPortion = Mid$( vcstr_Filename, mint_PATH_SPECIFIER_LOCAL_LEN)
+          End If
+     Else ' we're dealing with a relative path
+          'Relative-path syntax-compliance tests are three: Whether the filename contains an 
+          ' absolute-path specifier that is (1) local (letter-colon) or (2) network (double backslash) 
+          ' and whether (3) the first path specifier is followed *immediately* by another path specifier 
+          ' (actually this is a redundant test since we are now dealing only with backslashes). 
+          ' All these tests must return False for the filename to be declared a valid relative path.
+          If Instr( vcstr_Filename, mstr_PATH_SPECIFIER_LOCAL) Or Instr( vcstr_Filename, mstr_PATH_SPECIFIER_NETWORK) Or Mid$( vcstr_Filename, Instr( vcstr_Filename, sstr_PATH_SPECIFIER) + mint_PATH_SPECIFIER_LEN, mint_PATH_SPECIFIER_LEN) = sstr_PATH_SPECIFIER Then Exit Function
+          
+          str_CharTestPortion = vcstr_Filename
+     End If 'int_EffectivePathType = sint_PATHTYPE_ABSOLUTE
+     
+     If str_CharTestPortion Like str_FILTER Or Instr( vcstr_Filename, sstr_PATH_SPECIFIER & sstr_SPACE) Then Exit Function
+     
+     sf_ExtnFilenameValid = True
+End Function 'sf_ExtnFilenameValid(
+
+Public Function sint_ResolvePathType( rcstr_ExtendedFilename As String) As Integer
+%REM
+Purpose it to tell whether the filename string passed in uses an absolute or relative path.
+
+---- parameter & return ------
+rcstr_ExtendedFilename: the filename to be tested
+RETURN: sint_PATHTYPE_ABSOLUTE or sint_PATHTYPE_RELATIVE
+
+------ revision history ------------
+7/19/98 PR: "created"
+%END REM
+     Dim int_EffectivePathType As Integer
+     
+     If Left$( rcstr_ExtendedFilename, mint_PATH_SPECIFIER_LOCAL_LEN) Like mstr_PATH_SPECIFIER_LOCAL Or Left$( rcstr_ExtendedFilename, mint_PATH_SPECIFIER_NETWORK_LEN) = mstr_PATH_SPECIFIER_NETWORK Then
+          int_EffectivePathType = sint_PATHTYPE_ABSOLUTE
+     Else
+          int_EffectivePathType = sint_PATHTYPE_RELATIVE
+     End If
+     
+     sint_ResolvePathType = int_EffectivePathType
+End Function 'sint_ResolvePathType(
+
+Public Function sint_RelayMessage( rcobj_MessageInfo As RelayMessageInfo) As Integer
+%REM
+Purpose is to provide a consistent means for message output. Consistency is achieved in the following 
+ways: (1) the title of all message boxes is sstr_APP_TITLE, and (2) sharp distinctions are made among 
+the main message, error information and the context of the message (typically the context will be the name 
+or call-stack of the calling procedure), meaning that preparation is applied to the ultimate "message" 
+such that error and context information are set off from the main message in a conistent manner.
+
+The function relays a message to the devices specified by the caller in the RelayMessageInfo custom 
+type. If a LogInfo variable is included, the message is sent to its NotesLog. If any MessageBox-
+specific bits are set in the int_type member of rcobj_MessageInfo, the message is sent interactively 
+to the screen (unless the routine is running on the server, in which case the message outputs as a 
+Print to the server console). If the sint_PRINT_TYPE bit is set, the message outputs to the status bar 
+or, if running on the server, the server console.
+
+Often Notes will return the generic Notes "User-defined error" number 4000 or 4005 in 'Err', though it 
+will still load 'Error$' with a more useful message, probably taken from the API string table.  Meaning that 
+Error$ will not equal Error$( Err), as should be expected. This function accounts for this by having 
+separate parameters for Err and Error$, allowing ihe Error$( Err) calculation to be avoided altogether.
+
+----- parameters & return --------
+rcobj_MessageInfo: Custom object (functioning as a type) containing all the message 
+    and message-delivery information needed. The members include
+       str_Context     context of the message (typically the name or call-stack of the caller
+       str_Message   string message to which contextual and error information is appended
+       obj_lg              the LogInfo object with which the full message should be written
+       int_error           the number of the error being reported
+       str_error           the text of the error being reported
+       int_type           the type of message to display; use sint_PRINT_TYPE bit to print, 
+                               other bits in display of message box (sint_MB_ICONSTOP, etc.)
+RETURN: only meaningful if a message box with multiple buttons is shown; in this case the return is 
+    the return of the message box
+
+------ needed enhancements -----------
+8/2/98 PR: Need more robust handling of end-of-lne characters depending on the type of NotesLog. 
+     Currently str_CRLF is being used for all NotesLog types, but this is probably not applicable to all 
+     NotesLogs? It's possibly not correct for the type Agent. Basically, a custom type (object) is needed 
+     that has members for the NotesLog object and the *type* of the log (integer constants, perhaps). 
+     The type of the log would be set in sf_InitializeLog. Then this routine can be smart enough to 
+     replace str_CRLF dynamically, as necessary, with whatever is needed.
+
+----- revision history -------
+8/11/98 PR: Changed signature from multiple parameters to a single custom-type parameter. Added 
+     much documentation.
+%END REM
+     Const str_UNNEWLINE_BREAK = " / "
+     
+     Dim ss As New NotesSession
+     Dim str_Message As String, str_Context As String, str_FullLogMsg As String
+     Dim int_MessageBoxBits As Integer, f_PrintRequested As Integer
+     
+     With rcobj_MessageInfo
+          'If reporting an error, place the caller's message on the third line. Place a generic 
+          ' message on the first line and the actual error message and code on the second line.
+          str_Message = .str_Message
+          If .int_error Then
+               If str_Message <> sstr_NOTHING Then str_Message = sstr_CRLF & str_Message
+               str_Message = "An unanticipated error occurred, translated by Notes as " & sstr_CRLF & sstr_QUOTES & .str_error & |" (| & .int_error & ") " & str_Message
+          End If
+          
+          'place any context information provided by the caller in parentheses 
+          ' and on the last line of the ultimate message
+          str_Context = .str_Context
+          If str_Context <> sstr_NOTHING Then str_Context = sstr_CRLF & "(" & str_Context & ")"
+          
+          int_MessageBoxBits = (.int_type And (Not sint_PRINT_TYPE))
+          f_PrintRequested = (.int_type And sint_PRINT_TYPE) <> False
+          
+          If Not .obj_lg Is Nothing Then
+               'Formulate the message to be written to the NotesLog.  If the NotesLog is of Notes 
+               ' type, replace any linebreaks with a reasonable substitue, since no way exists to 
+               ' pass a linebreak to the logging function of a NotesLog of this type; the standard 
+               ' translation from CRLF to Chr$(0) for some reason does not occur with these 
+               ' methods, probably because it's implemented raw in the Notes API.
+               If .obj_lg.int_type = sint_LOGTYP_NOTES Then
+                    str_FullLogMsg = sstr_ReplaceSubstring( sstr_CRLF, str_UNNEWLINE_BREAK, str_Message & str_Context)
+               'If the NotesLog is of Mail, Agent or File type, prepend indentation tabs to lines 
+               ' following the first line of the message.  
+               Else
+                    str_FullLogMsg = sstr_ReplaceSubstring( sstr_CRLF, sstr_CRLF & sstr_TAB, str_Message & str_Context)
+               End If
+               
+               'Distinguish between Errors and Actions when using a log.
+               If .int_error Or .str_error <> sstr_NOTHING Then
+                    .obj_lg.lg.LogError .int_error, str_FullLogMsg
+               Else
+                    .obj_lg.lg.LogAction str_FullLogMsg
+               End If
+               
+               'if print was requested, condense message into one line
+               If f_PrintRequested Then Print sstr_ReplaceSubstring( sstr_CRLF, str_UNNEWLINE_BREAK, str_Message & str_Context)
+               
+               If int_MessageBoxBits And Not ss.IsOnServer Then sint_RelayMessage = Msgbox( str_Message & str_Context, int_MessageBoxBits, sstr_APP_TITLE)
+          Else 'no LogInfo object was passed in
+               If Not ss.IsOnServer Then
+                    If f_PrintRequested Then 
+                        'condense message into one line before printing
+                         Print sstr_ReplaceSubstring( sstr_CRLF, str_UNNEWLINE_BREAK, str_Message & str_Context)
+                         
+                         If int_MessageBoxBits Then sint_RelayMessage = Msgbox( str_Message & str_Context, int_MessageBoxBits, sstr_APP_TITLE)
+                    'if print type was not specified, default to showing a MessageBox
+                    Else
+                         sint_RelayMessage = Msgbox( str_Message & str_Context, int_MessageBoxBits, sstr_APP_TITLE)
+                    End If
+               Else 'we're running on the server
+                    'condense message into one line before printing
+                    Print sstr_ReplaceSubstring( sstr_CRLF, str_UNNEWLINE_BREAK, str_Message & str_Context)
+               End If 'ss.IsOnServer
+          End If 'Not rcobj_MessageInfo.lg Is Nothing
+     End With 'rcobj_MessageInfo
+End Function 'sint_RelayMessage(
+
+Public Function sf_InitializeLog( Byval vcstr_Category As String, Byval vcint_Type As Integer, rcx_CreateParam As Variant, robj_lg As LogInfo) As Integer
+%REM
+Purpose is to initialize a Notes log for the calling routine. If the NotesLog object passed in is nothing, 
+a new instance will be created for the routine to use, of the type specified in vcint_Type and initialized 
+with the parameters specified in rcx_CreateParam. Conversely, if a valid object is passed in, just the 
+category (ProgramName) will be reset on that log so that ensuing log entries will be categorized by 
+that name.
+
++ If the type is a "Notes" log and no filepath is passed in rcx_CreateParam, a default filename will be 
+supplied, based on sstr_APP_TITLE.
++ If the type is a "File" log, the OverwriteFile parameter of the NotesLog object is expected to be
+set by the caller as desired.  This routine does not concern itself with that.
+
+----- parameters & return -----------
+vcstr_Category: the string under which ensuing log messages will be categorized
+vcint_Type: The type of NotesLog to be created.  The possible values are 
+                       sint_LOGTYP_NOTES, sint_LOGTYP_MAIL, 
+                       sint_LOGTYP_AGENT, or sint_LOGTYP_FILE
+rcx_CreateParam: Information with which to initialize the associted type of NotesLog.  For Notes and File 
+                       NotesLog types, the extended filename (path + filename) of the associated database/file.  
+                       For the Mail NotesLog type, an array of strings with the first element being the subject of 
+                       the mail message to be sent, and follow-on elements to be the receivers of the message.
+robj_lg: the LogInfo object to use in this function, or create if it has not been instantiated yet
+
+------ revision history ----------------
+8/11/98 PR: fully created, finally; and all Henry's bitches taken care of!
+%END REM
+     Const str_NAME_CURR_ROUTINE = "sf_InitializeLog"
+     'In various situations Notes throws generic error codes which are found in 
+     ' LSXBERR.LSS.  One is 4000, another is the one below.  Why two, I don't 
+     ' know.  When one is thrown, Notes loads Error$ with a specific message.
+     Const int_ERR_GENERIC_NOTES2 = 4005
+     'Notes' "File not found" message starts with the following error text 
+     ' and then a full canonical path to the file, in parentheses.
+     Const str_ERR_FILE_NOT_FOUND = "Notes error: File does not exist"
+     
+     Dim ss As New NotesSession
+     Dim str_CreateParam As String, astr_Recipients() As String
+     Dim obj_MessageInfo As New RelayMessageInfo
+     Dim int_i As Integer
+     
+     '+++ either open log or adjust the categorization of messages, as necessary +++
+     'if log is already open, just change current category name
+     If Not robj_lg Is Nothing Then
+          robj_lg.lg.ProgramName = vcstr_Category
+     Else 'requested logging destination needs to be opened & initialized
+          Set robj_lg = New LogInfo
+          Set robj_lg.lg = New NotesLog( vcstr_Category)
+          robj_lg.int_type = vcint_Type
+          
+          Select Case vcint_Type
+          Case sint_LOGTYP_NOTES
+               str_CreateParam = str_GetNotesLogFilename( rcx_CreateParam)
+               On Error Goto err_InitializeLog
+               robj_lg.lg.OpenNotesLog ss.CurrentDatabase.Server, str_CreateParam
+               On Error Goto 0
+               
+          Case sint_LOGTYP_MAIL
+               'test for obvious problems with the creation parameter: improper type or incorrect array length
+               If Not Typename( rcx_CreateParam) <> sstr_TYPENM_STRING_ARRAY Then Goto err_InitializeLog
+               int_i = Ubound( rcx_CreateParam)
+               If int_i = False Then Goto err_InitializeLog
+               
+               'parse out message subject and recipients
+               str_CreateParam = rcx_CreateParam(0)
+               Redim astr_Recipients( int_i - 1)
+               For int_i = 1 To int_i
+                    astr_Recipients( int_i - 1) = rcx_CreateParam( int_i)
+               Next int_i
+               
+               On Error Goto err_InitializeLog
+               robj_lg.lg.OpenMailLog astr_Recipients(), str_CreateParam
+               On Error Goto 0
+               
+          Case sint_LOGTYP_AGENT
+               On Error Goto err_InitializeLog
+               robj_lg.lg.OpenAgentLog
+               On Error Goto 0
+               
+          Case sint_LOGTYP_FILE
+               On Error Goto err_InitializeLog
+               robj_lg.lg.OpenFileLog rcx_CreateParam
+               On Error Goto 0
+          End Select
+     End If 'rnlog_Log Is Nothing
+     
+     sf_InitializeLog = True
+     Exit Function
+     
+err_InitializeLog:
+     With obj_MessageInfo
+          .str_Context = str_NAME_CURR_ROUTINE
+          .int_type = sint_PRINT_TYPE
+          
+          If sint_LOGTYP_NOTES = vcint_Type And Left$( Error$, Len( str_ERR_FILE_NOT_FOUND)) = str_ERR_FILE_NOT_FOUND Then
+               .int_Error = Err
+               .str_Message = |Log file "| & str_CreateParam & |" was not found!|
+          'if we're dealing with a mail log, int_i will be null if there was a problem with the parmeter 
+          ' passed in to specify the mail message's subject and recipients
+          Elseif sint_LOGTYP_MAIL = vcint_Type And int_i = False Then
+               .int_Error = sint_ERR_GENERIC
+               .str_Message = "The Notes Mail Log cannot be initialized due to an improper creation parameter."
+          Else
+               .str_Error = Error$
+               .int_Error = Err
+          End If
+     End With 'obj_MessageInfo
+     
+     sint_RelayMessage obj_MessageInfo
+     Exit Function
+End Function 'sf_InitializeLog(
+
+Function int_TestExistenceDirectory( Byval vstr_Directory As String, rf_DirectoryExists) As Integer
+%REM
+PR: Function tells whether the path passed in corresponds to a directory that currently 
+exists.  Not public, the function assumes that the caller has passed an absolute path 
+specification without a trailing backslash.  If an error occurs, the function returns the 
+error code to the caller.  sint_SUCCESS is returned if no error occurs.
+%END REM
+     Dim f_CoreLocalDirTest As Integer
+     Dim str_DirReturn As String
+     
+     'If the path passed specifies only the "local" logical drive to be tested, 
+     ' append a backslash and set appropriate flag so rest of routine will 
+     ' treat this special case accordingly.  It is a special case because a drive
+     ' specification is *not* treated as a directory by the Dir$ function.
+     If Len( vstr_Directory) = mint_PATH_SPECIFIER_LOCAL_LEN - 1 Then
+          vstr_Directory = vstr_Directory & sstr_PATH_SPECIFIER
+          If vstr_Directory Like mstr_PATH_SPECIFIER_LOCAL Then f_CoreLocalDirTest = True
+     End If
+     
+     On Error Goto err_ValidateDirectory
+     On Error mint_ERR_PATH_NOT_FOUND Resume Next
+     str_DirReturn = Dir$( vstr_Directory, mint_ATTR_DIRECTORY)
+     
+     If Err Or str_DirReturn = sstr_NOTHING Then
+          rf_DirectoryExists = False
+          Err = False
+     Elseif f_CoreLocalDirTest Then
+          rf_DirectoryExists = True
+     'the file specification is valid, but still need to test that a normal file is not 
+     ' what's being specified (for some reason Dir still allows this possiblilty)
+     Else
+          rf_DirectoryExists = (Dir$( vstr_Directory, mint_ATTR_NORMAL) = sstr_NOTHING)
+     End If
+     On Error Goto 0
+     
+     int_TestExistenceDirectory = sint_SUCCESS
+     Exit Function
+     
+err_ValidateDirectory:
+     int_TestExistenceDirectory = Err
+     Exit Function
+End Function 'int_TestExistenceDirectory(
+
+Public Function sf_FilenameValid( Byval vcstr_Filename As String) As Integer
+%REM
+Function returns whether the filename passed in is an acceptable filename, 
+irrespective of whether it currently exists or not.
+
+'-------- parameters & return -----------
+vcstr_Filename: the proposed filename to be tested
+RETURN: True if the proposed filename is acceptable, False if not.
+
+'------- revision history --------------
+7/30/98 PR: created
+%END REM
+     Const str_FILTER = "*[" & sstr_BAD_CHARACTERS_FILE & "]*"
+     
+     If vcstr_Filename Like str_FILTER Then Exit Function
+     
+     If Left$( vcstr_Filename, Len( sstr_SPACE)) = sstr_SPACE Then Exit Function
+     
+     sf_FilenameValid = True
+End Function 'sf_FilenameValid(
+
+Public Function sint_WorkDirectory( Byval vstr_Directory As String, Byval vint_TASK As Integer) As Integer
+%REM
+Function is starting point for general directory work, that work specified by vint_TASK.  
+Function requires an absolute path to be passed in.
+The tasks available are (1) test whether a directory exists and (2) create the specified 
+directory.
+%END REM
+     Dim f_DirectoryExists As Integer, f_NormalFile As Integer
+     Dim int_error As Integer
+     
+     If sint_ResolvePathType( vstr_Directory) <> sint_PATHTYPE_ABSOLUTE Then
+          sint_WorkDirectory = sint_INVALID_SYNTAX_ABSOLUTE_PATH
+          Exit Function
+     End If
+     
+     'if necessary, remove trailing backslash
+     If Right$( vstr_Directory, mint_PATH_SPECIFIER_LEN) = sstr_PATH_SPECIFIER Then vstr_Directory = Left$( vstr_Directory, Len( vstr_Directory) - mint_PATH_SPECIFIER_LEN)
+     
+     'determine whether directory already exists
+     int_error = int_TestExistenceDirectory( vstr_Directory, f_DirectoryExists)
+     If int_error Then
+          sint_WorkDirectory = int_error
+          Exit Function
+     End If
+     
+     If Not f_DirectoryExists Then
+          Select Case vint_TASK
+          Case sint_WORKDIR_TEST_EXISTENCE
+               sint_WorkDirectory = sint_NO_SUCH_DIRECTORY
+               Exit Function
+               
+          Case sint_WORKDIR_FORCE_EXISTENCE
+               'make sure the "directory" doesn't specify a normal file
+               int_error = sint_TestExistenceFile( vstr_Directory, f_NormalFile)
+               If int_error Then
+                    sint_WorkDirectory = int_error
+                    Exit Function
+               Elseif f_NormalFile Then
+                    sint_WorkDirectory = sint_NORMAL_FILE
+                    Exit Function
+               End If
+               
+               sint_WorkDirectory = int_CreateDirectory( vstr_Directory)
+          End Select 'vint_TASK
+     End If 'f_DirectoryExists
+End Function 'sint_WorkDirectory(
+
+'passed directory is created, along with any yet-existing parent directories
+Function int_CreateDirectory( Byval vstr_Directory As String) As Integer
+     Dim f_DirectoryExists As Integer
+     Dim int_i As Integer, int_j As Integer, int_error As Integer
+     
+     'determine breakpoint of the root directory
+     If Left$( vstr_Directory, mint_PATH_SPECIFIER_NETWORK_LEN) = mstr_PATH_SPECIFIER_NETWORK Then
+          'in a network path, the root directory is the first 
+          ' specified directory after the server name
+          int_i = mint_PATH_SPECIFIER_NETWORK_LEN
+          For int_j = 1 To 2
+               int_i = Instr( int_i + mint_PATH_SPECIFIER_LEN, vstr_Directory, sstr_PATH_SPECIFIER)
+               If Not int_i Then
+                    int_CreateDirectory = sint_INVALID_SYNTAX_NETWORK_PATH
+                    Exit Function
+               End If
+          Next int_j
+     Else ' we're dealing with a locally-specified directory
+          int_i = mint_PATH_SPECIFIER_LOCAL_LEN
+     End If 'Left$( vstr_Directory, mint_PATH_SPECIFIER_NETWORK_LEN) = 
+     
+     'make sure root path exists
+     int_error = int_TestExistenceDirectory( Left$( vstr_Directory, int_i - 1), f_DirectoryExists)
+     If int_error Then
+          int_CreateDirectory = int_error
+          Exit Function
+     End If
+     If Not f_DirectoryExists Then
+          int_CreateDirectory = sint_ROOT_PATH_UNAVAILABLE
+          Exit Function
+     End If
+     
+     'Create target directory, node by node.  A backslash is appended 
+     ' to the directory to facilitate string manipulation.
+     vstr_Directory = vstr_Directory & sstr_PATH_SPECIFIER
+     Do
+          int_i = Instr( int_i + mint_PATH_SPECIFIER_LEN, vstr_Directory, sstr_PATH_SPECIFIER)
+          'if a further node on the directory has been found, process it
+          If int_i Then
+               int_error = int_TestExistenceDirectory( Left$( vstr_Directory, int_i - 1), f_DirectoryExists)
+               If int_error Then
+                    int_CreateDirectory = int_error
+                    Exit Function
+               End If
+               
+               'if the node doesn't exist, create it
+               If Not f_DirectoryExists Then
+                    On Error Goto err_CreateDirectory
+                    Mkdir Left$( vstr_Directory, int_i - 1)
+                    On Error Goto 0
+               End If 'Not f_DirectoryExists
+          Else 'directory has been fully created
+               Exit Do
+          End If 'int_i
+     Loop
+     
+     int_CreateDirectory = sint_SUCCESS
+     Exit Function
+     
+err_CreateDirectory:
+     int_CreateDirectory = Err
+     Exit Function
+End Function 'int_CreateDirectory(
+
+Public Function sint_TestExistenceFile( Byval vcstr_Filename As String, rf_FileExists As Integer) As Integer
+%REM
+Function tests whether the filename passed in actually exists on disk. Public, 
+the function does not assume the filename passed in is absolute.
+
+'--------- parameters & return -------------
+vcstr_Filename: the filename whose existence is to be tested
+rf_FileExists: Returns a flag to caller telling whether the file exists; True if it exists, else False.
+RETURN: sint_SUCCESS or the error number of any error encountered
+
+'------- revision history ----------------
+7/30/98 PR: created
+%END REM
+     Dim str_DirReturn As String
+     
+     If sint_ResolvePathType( vcstr_Filename) <> sint_PATHTYPE_ABSOLUTE Then
+          sint_TestExistenceFile = sint_INVALID_SYNTAX_ABSOLUTE_PATH
+          Exit Function
+     End If
+     
+     sint_TestExistenceFile = int_TestExistenceFile( vcstr_Filename, rf_FileExists)
+End Function 'sint_TestExistenceFile(
+
+Public Function sstr_PurgeBadFileCharacters( Byval vcstr_Filename As String) As String
+     Const str_REPLACEMENT = "-"
+     
+     Dim txt As String
+     Dim int_i As Integer, int_j As Integer
+     
+     If Len( vcstr_Filename) = 0 Then Exit Function
+     
+     'get rid of leading whitespace
+     For int_i = 1 To Len( vcstr_Filename)
+          txt = Mid$( vcstr_Filename, int_i, 1)
+          If txt = sstr_SPACE Or txt = sstr_TAB Then
+               int_j = int_j + 1
+          Else
+               Exit For
+          End If
+     Next int_i
+     If int_j Then vcstr_Filename = Right$( vcstr_Filename, Len( vcstr_Filename) - int_j)
+     
+     'replace "bad" characters with a good character
+     For int_i = 1 To Len( sstr_BAD_CHARACTERS_FILE)
+          txt = Mid$( sstr_BAD_CHARACTERS_FILE, int_i, 1)
+          
+          vcstr_Filename = sstr_ReplaceSubstring( txt, str_REPLACEMENT, vcstr_Filename)
+     Next int_i
+     
+     sstr_PurgeBadFileCharacters = vcstr_Filename
+End Function 'sstr_PurgeBadFileCharacters(
+
+Public Function sint_GetSubdirectories( Byval vstr_BASE_PATH As String, rint_Levels As Integer, ravar_DirName As Variant) As Integer
+%REM
+++++++++ current implementation ++++++++++++
+PR: Function return only the subdirectories immediately beneath vstr_BASE_PATH.  rint_Levels 
+is ignored.  The return is a variant array.
+
+++++++++ implementation envisioned, someday +++++++++
+PR: Function returns all the subdirectories beneath the given base path to the extent specified 
+by rint_Levels.  If rint_Levels equals sint_ALL_LEVELS, all subdirectories are returned.
+The return is a linked list describing location and directory name, location as an array of integers, 
+directory name as a string.  The number of levels *found* (not necessarily requested) is returned 
+in rint_Levels.
+%END REM
+     Dim int_error As Integer, int_i As Integer
+     
+     If sint_ResolvePathType( vstr_BASE_PATH) <> sint_PATHTYPE_ABSOLUTE Then
+          sint_GetSubdirectories = sint_INVALID_SYNTAX_ABSOLUTE_PATH
+          Exit Function
+     End If
+     
+     int_error =  sint_WorkDirectory( vstr_BASE_PATH, sint_WORKDIR_TEST_EXISTENCE)
+     If int_error Then
+          sint_GetSubdirectories = int_error
+          Exit Function
+     End If
+     
+     'next two lines will change once full vision is implemented
+     ravar_DirName = avar_GetSubdirectoriesNextLevel( vstr_BASE_PATH)
+     rint_Levels = 1
+     
+     sint_GetSubdirectories = sint_SUCCESS
+End Function 'sint_GetSubdirectories(
+
+Function avar_GetSubdirectoriesNextLevel( Byval vstr_BasePath) As Variant
+%REM
+PR: Function returns the subdirectoy names immediately beneath vstr_BasePath 
+in a variant array of strings.
+%END REM
+     Dim str_name As String, astr_DirName() As String
+     Dim int_i As Integer
+     
+     'if needed, add trailing backslash
+     If Right$( vstr_BasePath, mint_PATH_SPECIFIER_LEN) <> sstr_PATH_SPECIFIER Then vstr_BasePath = vstr_BasePath & sstr_PATH_SPECIFIER
+     
+     str_name = Dir$( vstr_BasePath, mint_ATTR_DIRECTORY)
+     'skips the "dot" files in DOS paths (QUESTION: will this work for UNIX?)
+     str_name = Dir$
+     str_name = Dir$
+     
+     Do
+          'bitwise operations need to be bounded by parentheses
+          If (Getfileattr( vstr_BasePath & str_name) And mint_ATTR_DIRECTORY) = mint_ATTR_DIRECTORY Then
+               Redim Preserve astr_DirName( int_i)
+               astr_DirName( int_i) = str_name
+               int_i = int_i + 1
+          End If
+          
+          str_name = Dir$
+     Loop Until str_name = sstr_NOTHING
+     
+     If int_i Then avar_GetSubdirectoriesNextLevel = astr_DirName()
+End Function 'avar_GetSubdirectoriesNextLevel(
+
+Public Function sstr_ReplaceSubstring( Byval vcstr_WhatToReplace As String, Byval vcstr_Replacement As String, Byval vstr_String As String) As String
+%REM
+Function replaces any instance of vcstr_WhatToReplace found in vstr_String 
+with vcstr_Replacement and returns the resulting string.
+
+-------- parameters & return -------------
+vcstr_WhatToReplace: the substring to be replaced within the target (substrate) string
+vcstr_Replacement: the substring replacement for vcstr_WhatToReplace within the target string
+vstr_String: the target (substrate) string wherein the replacement will occur
+RETURN: the resulting string within which all instances of vcstr_WhatToReplace have been 
+      replaced with vcstr_Replacement
+
+'-------- revision history -------------
+8/11/98 PR: created
+%END REM
+     'pseudo constants
+     Dim int_LEN_REPLACEMENT As Integer, int_LEN_WHAT_TO_REPLACE As Integer
+     int_LEN_REPLACEMENT = Len( vcstr_Replacement)
+     int_LEN_WHAT_TO_REPLACE = Len( vcstr_WhatToReplace)
+     
+     Dim int_j As Integer
+     
+     Do
+          int_j = Instr( int_j + 1, vstr_String, vcstr_WhatToReplace)
+          
+          If int_j Then
+               vstr_String = Left$( vstr_String, int_j - 1) & vcstr_Replacement & Right$( vstr_String, Len( vstr_String) - int_j + 1 - int_LEN_WHAT_TO_REPLACE)
+               int_j = int_j + int_LEN_REPLACEMENT
+          End If
+     Loop While int_j
+     
+     sstr_ReplaceSubstring = vstr_String
+End Function 'sstr_ReplaceSubstring(
+
+Function str_GetNotesLogFilename( Byval vcstr_LogFilename As String) As String
+%REM
+Purpose is to obtain the extended filename (path + filename) of the Notes log database 
+requested, explicitly or implicitly, via the vstr_LogName parameter. The request is implicit 
+if vstr_LogName is blank, in which case a default filename will be returned.
+
+'--------- parameters & return ------------------
+vstr_LogFilename: The filename of the Notes log database requested. If the parameter is 
+      blank, the default filename will be returned. If the parameter includes no discernable 
+      path, the path of the database running this code will be defaulted to. Because of this 
+      last case, there is no obvious way to specify a log database residing in the root of the 
+      Notes data directory. To accommodate this possibility the string in vstr_LogName may 
+      be prefaced by a single path specifier (backslash).
+RETURN: the extended filename to the log database
+
+'---------- revision history --------------
+7/29/98 PR: created
+%END REM
+     Dim ss As NotesSession
+     Dim str_Path As String, str_Filename As String, str_dmy As String
+     Dim int_error As Integer
+     
+     'if no filename was provided, set it to a default
+     If vcstr_LogFilename = sstr_NOTHING Then
+          str_Filename = sstr_LOGNM_MAIN
+     Else
+          sint_SplitExtnFilename vcstr_LogFilename, sint_SPLIT_FILEBIAS, str_Path, str_Filename
+     End If 'vcstr_LogFilename = sstr_NOTHING
+     
+     'add an extension to the filename as needed
+     If Instr( str_Filename, mstr_NOTES_DB_EXTENSION_CORE) = False Then str_Filename = str_Filename & sstr_NOTES_DB_EXTENSION_DEFAULT
+     
+     'if no path was specified in the filename, default to the path of the current database
+     If str_Path = sstr_NOTHING Then
+          Set ss = New NotesSession
+          sint_SplitExtnFilename ss.CurrentDatabase.FilePath, False, str_Path, str_dmy
+     'If the flag of a starting backslash was used, we know that the log database 
+     ' should reside in the Notes root directory. Since the path for all other cases 
+     ' has been set, we can now go ahead and get rid of the flag.
+     Elseif str_Path = sstr_PATH_SPECIFIER Then
+          str_Path = sstr_NOTHING
+     End If 'str_Path = sstr_NOTHING
+     
+     str_GetNotesLogFilename = str_Path & str_Filename
+End Function 'str_GetNotesLogFilename(
+
+Function int_TestExistenceFile( Byval vcstr_Filename As String, rf_FileExists As Integer) As Integer
+%REM
+Function tests whether the filename passed in currently exists. Not public, the function 
+assumes the filename passed in is absolute, not relative.
+
+--------- parameters & return -------------
+vcstr_Filename: the filename whose existence is to be tested
+rf_FileExists: Returns a flag to caller telling whether the file exists; True if it exists, else False.
+RETURN: sint_SUCCESS or the error number of any error encountered
+
+------- revision history ----------------
+7/30/98 PR: created
+%END REM
+     Dim str_DirReturn As String
+     
+     On Error Goto err_TestExistenceFile
+     On Error mint_ERR_PATH_NOT_FOUND Resume Next
+     str_DirReturn = Dir$( vcstr_Filename, mint_ATTR_NORMAL)
+     
+     rf_FileExists = (Err = False And str_DirReturn <> sstr_NOTHING)
+     Err = False
+     On Error Goto 0
+     
+     int_TestExistenceFile = sint_SUCCESS
+     Exit Function
+     
+err_TestExistenceFile:
+     int_TestExistenceFile = Err
+     Exit Function
+End Function 'int_TestExistenceFile(
+
+Public Function sint_SplitExtnFilename( Byval vcstr_ExtendedFilename As String, Byval vcint_Flags As Integer, rstr_Path As String, rstr_Filename As String) As Integer
+%REM
+Purpose is to split an extended filename into its path and filename components, 
+irrespective of whether the file specification is relative or absolute. 
+The returned path will include a trailing path specifier (backslash).
+
+-------- parameters & return -------------
+vcstr_ExtendedFilename: the extended filename (path + filename) to be broken 
+      into its component parts
+vcint_Flags: Bitwise integer specifying two attributes, presently: 
+      (1) The type of path passed in, if known. Three values are available: 
+            sint_PATHTYPE_AUTOCHOOSE (path type unknown, routine should resolve 
+            the type itself), sint_PATHTYPE_ABSOLUTE, or sint_PATHTYPE_RELATIVE
+      (2) Whether the routine should be biased toward returning a filename component 
+            if it's ambiguous as to whether the last component of the extended filename 
+            is the name of a directory or file. The default is to return a directory, but this 
+            can be reversed by including sint_SPLIT_FILEBIAS.
+rstr_Path: the path component included in vcstr_ExtendedFilename
+rstr_Filename: the filename component included in vcstr_ExtendedFilename
+RETURN: sint_SUCCESS or the error number of any error that occurred within the function
+
+-------- revision history -------------
+7/29/98 PR: created
+%END REM
+     Const str_DISTINCT_FILE_SPECIFIER = "."
+     
+     Dim int_EffectivePathType As Integer
+     Dim str_DirReturn As Integer
+     Dim int_i As Integer, int_j As Integer, int_error As Integer
+     Dim f_RealDirectoryFound As Integer
+     
+     If (vcint_Flags And mint_PATHTYPE_MASK) = sint_PATHTYPE_AUTOCHOOSE Then
+          int_EffectivePathType = sint_ResolvePathType( vcstr_ExtendedFilename)
+     Else
+          int_EffectivePathType = vcint_Flags
+     End If
+     
+     If Not sf_ExtnFilenameValid( vcstr_ExtendedFilename, int_EffectivePathType) Then
+          sint_SplitExtnFilename = sint_INVALID_NAME
+          Exit Function
+     End If
+     
+     'get position of last backslash in path
+     Do
+          int_i = int_j
+          int_j = Instr( int_j + mint_PATH_SPECIFIER_LEN, vcstr_ExtendedFilename, sstr_PATH_SPECIFIER)
+     Loop While int_j
+     If int_i Then int_i = int_i + mint_PATH_SPECIFIER_LEN - 1
+     
+     'if provided path & filename ends with a backslash (and so is only a path), short circuit
+     If int_i >= mint_PATH_SPECIFIER_LEN And int_i = Len( vcstr_ExtendedFilename) Then 
+          rstr_Path = vcstr_ExtendedFilename
+          rstr_Filename = sstr_NOTHING
+     Else 'the "filename" could specify both a path and a filename
+          If int_EffectivePathType = sint_PATHTYPE_ABSOLUTE Then
+               'Since we cannot tell just by the string itself whether a file or directory 
+               ' is being specified, we test to see if the string specifies a directory 
+               ' on the current computer. The result will be used just after the test.
+               int_error = int_TestExistenceDirectory( vcstr_ExtendedFilename, f_RealDirectoryFound)
+               If int_error Then
+                    sint_SplitExtnFilename = int_error
+                    Exit Function
+               End If
+          End If
+          
+          'if the extended filename string specifies a real directory on the current 
+          ' computer (test above), add on a trailing backslash
+          If f_RealDirectoryFound Then
+               rstr_Path = vcstr_ExtendedFilename & sstr_PATH_SPECIFIER
+               rstr_Filename = sstr_NOTHING
+          'Since we're dealing with a *relative* path type or an absolute extended filename 
+          ' that doesn't exist on the current machine, a syntactical assumption has to be 
+          ' made about what specifies a relative path and what specifies a distinct file. The 
+          ' assumption is that if the string following the last path specifier (backslash) contains 
+          ' a dot, a distinct file is being specified; otherwise a distinct path is being specified.
+          Else 'assume that the extended filename cannot just be a path
+               If (vcint_Flags And sint_SPLIT_FILEBIAS) Or Instr( int_i, vcstr_ExtendedFilename, str_DISTINCT_FILE_SPECIFIER) Then
+                    rstr_Path = Left$( vcstr_ExtendedFilename, int_i)
+                    rstr_Filename = Mid$( vcstr_ExtendedFilename, int_i + 1)
+               Else
+                    rstr_Path = vcstr_ExtendedFilename & sstr_PATH_SPECIFIER
+                    rstr_Filename = sstr_NOTHING
+               End If '(vcint_Flags And sint_SPLIT_
+          End If 'f_RealDirectoryFound
+     End If 'int_i >= mint_PATH_SPECIFIER_LEN And
+     
+     sint_SplitExtnFilename = sint_SUCCESS
+End Function 'sint_SplitExtnFilename(
+
+Public Function sf_TestArrayInitialized( rcx_Array As Variant, rf_ArrayInitialized) As Integer
+%REM
+Purpose is to provide a simple way to programmatically determine whether 
+a dynamic array has been initialized.
+
+-------- parameters & return ------------
+rcx_Array: The dynamic array to be tested for initialization.  Casting the array to a variant 
+      allows this function to handle any type of array.
+rf_ArrayInitialized: Output.  True if array is initialized, False if not.
+RETURN: True if function encountered no anticipated errors; False otherwise.
+
+-------- revision history -------------
+8/19/98 PR: created
+%END REM
+     Const int_ERR_UNINITIALIZED_DYNAMIC_ARRAY = 200
+     
+     Dim int_dmy As Integer
+     Dim obj_MessageInfo As RelayMessageInfo
+     
+     'use regular error handling on all errors except the one we need to trap to 
+     ' determine whether the dynamic array has been initialized
+     On Error Goto err_TestArrayInitialized
+     On Error int_ERR_UNINITIALIZED_DYNAMIC_ARRAY Resume Next
+     int_dmy = Ubound( rcx_Array)
+     
+     rf_ArrayInitialized = (Err = False)
+     'clear any error that may have been thrown to ensure no side-effects
+     Err = False
+     
+     sf_TestArrayInitialized = True
+     Exit Function
+     
+err_TestArrayInitialized:
+     Set obj_MessageInfo = New RelayMessageInfo
+     With obj_MessageInfo
+          .int_error = Err
+          .str_error = Error$
+          .str_Context = "sf_TestArrayInitialized"
+          Set .obj_lg = sobj_AppLog
+          .int_type = sint_PRINT_TYPE
+     End With
+     
+     sint_RelayMessage obj_MessageInfo
+     Exit Function
+End Function 'sf_TestArrayInitialized(
+
+Public Function sstr_Repeat( Byval vcstr As String, Byval vcint_x As Integer) As String
+%REM
+Purpose is to return a string comprised of the passed in string concatenated 
+to itself the specified number of times.  No overflow protection is provided.
+
+------ parameters & return -----------
+vcstr: the string with which the concatenation will be done
+vcint_x: the number of copies the concatenation should consist of
+RETURN: the concatenated string 
+
+------ revision history --------
+8/27/98 PR: created
+%END REM
+     Dim str_ As String
+     Dim int_base2max As Integer, int_i As Integer
+     
+     If vcint_x > 1 Then
+          'determine the closest base2 multiple less than the number of multiples required
+          int_base2max = Int( Log( vcint_x)/ Log( 2))
+          
+          'exponentially concatenate as far as possible
+          str_ = vcstr
+          For int_i = 1 To int_base2max
+               str_ = str_ & str_
+          Next int_i
+          
+          'add on whatever couldn't be added by exponential concatenation
+          For int_i = 1 To vcint_x - 2^int_base2max
+               str_ = str_ & vcstr
+          Next int_i
+     End If 'vcint_x > 1
+     
+     sstr_Repeat = str_
+End Function 'sstr_Repeat(

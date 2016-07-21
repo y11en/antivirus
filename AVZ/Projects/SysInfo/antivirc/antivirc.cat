@@ -1,0 +1,23 @@
+0=Системный файл
+1=Windows 2000 Professional Rus
+2=Windows 2000 Server Rus
+3=Windows 98
+4=Windows XP Professional Rus
+5=Windows XP SP1 Professional Rus
+6=Windows XP SP2 Professional Rus
+7=Office XP Rus
+8=Office 2000 Rus
+9=Visio
+10=Borland Delphi/BPL/DCP
+11=Microsoft Visual Studio
+12=Adobe
+13=Windows ME Rus
+14=Windows 95 Rus
+15=KAV ... - антивирусное ПО, Firewall, утилиты
+16=Архиваторы
+17=Office
+18=Windows 2003 Eng
+19=Novell
+20=XP Eng
+
+expand *.cab /f:*.* e:\w98

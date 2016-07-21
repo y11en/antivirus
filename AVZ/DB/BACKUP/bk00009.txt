@@ -1,0 +1,21 @@
+// ***** Параметры загрузки в SafeMode *****
+procedure AddBackUpData(ARoot, AName : string;Lines : TStrings);
+begin
+ Lines.Add('[-'+ ARoot + '\' + AName + ']');
+ ExpRegKeyEx(ARoot, AName, Lines);
+ Lines.Add('');
+end;
+
+var
+ Lines : TStrings;
+begin
+ Lines := TStringList.Create;
+ Lines.Add('REGEDIT4');
+ Lines.Add('');
+ AddBackUpData('HKEY_LOCAL_MACHINE', 'SYSTEM\CurrentControlSet\Control\SafeBoot', Lines);
+  
+ if SaveBackupDataSt(Lines, 'User_drv_and_svc.reg') then
+  AddToLog('$AVZ1236 $AVZ1235'); 
+ Lines.Free;
+end.
+

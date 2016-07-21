@@ -1,0 +1,4 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\environment]
+"ComponentsToDistribute"="INFO;CORE;KAV8Exec;RT;AVS;EMUI386;Updater;ADB;WAI386;BB;RM;BB2;AS;AP;PCDB;"

@@ -1,0 +1,121 @@
+#import "reg.idef"
+#import "posio_ps.idef"
+
+forward interface QB;
+typedef QB* hQB;
+
+forward interface QBRestorer;
+typedef QBRestorer* hQBRESTORER;
+
+
+
+
+[
+  version(1)
+  mnemonic(IID_QB)
+  id(35)
+  c_type_name(hQB)
+]
+interface QB {
+
+  // ------------------------------------
+    typedef tQWORD tOBJECT_ID;
+    typedef tDWORD tCOUNT_TYPE;
+
+
+  // ------------------------------------
+    const tCOUNT_TYPE cCOUNT_TOTAL = 0;
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Сохраняет содержимое объекта hObject в хранилище, после чего возвращает объект hSecIO с интерфейсом hPOSIO_SP для созданного объекта и идентификатор созданного объекта. Приложение должно закрыть полученный объект hSecIO после использования вызовом sysObjectClose.")
+    ]
+    method tERROR StoreObject( // Сохранить объект в хранилище
+      hOBJECT hObject, // Объект для сохранения в хранилище
+      tPID RestorerPID, // Идентификатор плагина
+      const cSerializable* pInfo,
+      hPOSIO_SP* phSecIO, // Объект, содержащий сохраненные данные
+      tOBJECT_ID* pObjectID // Получает идентификатор созданного в хранилище объекта
+    );
+
+    [
+      comment_ex("Восстанавливает объект по указанному либо оригинальному пути.")
+    ]
+    method tERROR RestoreObject( // Восстановить объект
+      tOBJECT_ID ObjectID, // Идентификатор объекта
+      const tWSTRING sRestoreFullName, // Полное имя для восстановления
+      tBOOL bReplaceExisting
+    );
+
+    [
+      comment_ex("Удаляет объект в хранилище по его идентификатору")
+    ]
+    method tERROR DeleteObject( // Удалить объект
+      tOBJECT_ID ObjectID // Идентификатор объекта
+    );
+
+    [
+      comment_ex("Получает объект hPOSIO_SP для доступа к сохраненным данным и свойствам по идентификатору объекта в хранилище. Приложение должно закрыть полученный объект hSecIO после использования вызовом sysObjectClose.")
+    ]
+    method tERROR GetObject( // Получить объект
+      hPOSIO_SP* phSecIO, // Получает объект
+      tOBJECT_ID ObjectID, // Идентификатор объекта
+      tBOOL bWriteAccess, // Доступ на запись
+      cSerializable* pInfo
+    );
+
+    [
+      comment_ex("Возвращает кол-во объектов указанного типа в хранилище.")
+    ]
+    method tERROR GetCount( // Получить кол-во объектов
+      tDWORD* pdwCount, // Кол-во
+      tCOUNT_TYPE CountType // Тип
+    );
+
+    [
+      comment_ex("Получает объект и/или его идентификатор объекта по его индексу(номеру). Приложение должно закрыть полученный объект hSecIO после использования вызовом sysObjectClose.")
+    ]
+    method tERROR GetObjectByIndex( // Получить объект и/или его идентификатор
+      hPOSIO_SP* phSecIO, // Получает объект
+      tOBJECT_ID* pObjectID, // Получает идентификатор объекта
+      tDWORD dwIndex, // Индекс
+      tBOOL bWriteAccess, // Доступ на запись
+      cSerializable* pInfo
+    );
+
+    [
+      comment_ex("Сохраняет cSerializable структуру в объекте")
+    ]
+    method tERROR UpdateObjectInfo( // Обновить информацию об объекте
+      tOBJECT_ID ObjectID, // Идентификатор объекта
+      const cSerializable* pInfo
+    );
+
+}
+
+
+[
+  version(1)
+  mnemonic(IID_QBRESTORER)
+  id(58013)
+  c_type_name(hQBRESTORER)
+]
+interface QBRestorer {
+
+  // ------------------------------------
+
+    [
+      comment_ex("Восстанавливает объект по исходному, либо указанному местоположению.")
+    ]
+    method tERROR RestoreObject( // Восстановить объект
+      hPOSIO_SP hSecIO, // Идентификатор объекта в хранилище QB
+      const tWSTRING sRestoreFullName, // Путь для восстановления
+      tBOOL bReplaceExisting
+    );
+    method tERROR StoreObject( hOBJECT hObject, hPOSIO_SP hSecIO );
+    method tERROR MakeObjectID( hOBJECT hObject, QB.tOBJECT_ID* pObjectID );
+
+}
+

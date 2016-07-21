@@ -1,0 +1,334 @@
+:TITLE AVZ - справка по работе с программой
+:BASE avz.hlp
+1 Обшие сведения
+2 О программе=t_about@avz.hlp>Main
+2 Лицензионное соглашение=t_lic@avz.hlp>Main
+2 Инсталляция и системные требования=t_install@avz.hlp>Main
+2 Структура папок программы=t_folders@avz.hlp>Main
+2 Техническая поддержка=t_support@avz.hlp>Main
+2 Назначение программы=avz_nazn@avz.hlp>Main
+1 Работа с программой
+2 Главное окно программы
+3 Главное окно программы=t_main_1@avz.hlp>Main
+3 Закладка 'Область поиска'=t_main_2@avz.hlp>Main
+3 Закладка 'Типы файлов'=t_main_3@avz.hlp>Main
+3 Закладка 'Параметры поиска'=t_main_4@avz.hlp>Main
+3 Группа 'Параметры лечения'=t_main_5@avz.hlp>Main
+3 Протокол=t_log@avz.hlp>Main
+1 Обновление баз=avz_avupdate@avz.hlp>Main
+2 Отложенное удаление файла=t_delaydel@avz.hlp>Main
+2 Профили настроек=t_profile@avz.hlp>Main
+1 Карантин
+2 Карантин и папка Infected=t_infected@avz.hlp>Main
+2 Автокарантин=t_autoquarantine@avz.hlp>Main
+2 Добавление в карантин по списку=t_qrsp@avz.hlp>Main
+1 Встроенные средства поиска
+2 Поиск данных в реестре=t_regsearch@avz.hlp>Main
+2 Поиск файлов на диске=t_filesearch@avz.hlp>Main
+2 Поиск Cookie по данным=t_cookies@avz.hlp>Main
+1 Встроенные утилиты
+2 Диспетчер процессов=t_process@avz.hlp>Main
+2 Диспетчер служб и драйверов=t_service@avz.hlp>Main
+2 Модули пространства ядра=t_kernelm@avz.hlp>Main
+2 Менеджер Winsock SPI (LSP, NSP, TSP)=t_LSP@avz.hlp>Main
+2 Открытые порты TCP/UDP=t_openports@avz.hlp>Main
+2 Менеджер автозапуска=t_Autorun@avz.hlp>Main
+2 Менеджер расширений IE=t_IEExt@avz.hlp>Main
+2 Менеджер расширений проводника=t_ExplorerExt@avz.hlp>Main
+2 Менеджер апплетов панели управления (CPL)=t_CPL@avz.hlp>Main
+2 Менеджер расширений системы печати=t_PrintExt@avz.hlp>Main
+2 Менеджер планировщика заданий (Task Scheduler)=t_TaskScheduler@avz.hlp>Main
+2 Менеджер внедренных dll=t_InjectedDll@avz.hlp>Main
+2 Менеджер протоколов и обработчиков=t_protokolmgr@avz.hlp>Main
+2 Менеджер Active Setup=t_Active_Setup@avz.hlp>Main
+2 Менеджер файла Hosts=t_HostsManager@avz.hlp>Main
+2 Общие ресурсы и сетевые сеансы=t_NetView@avz.hlp>Main
+1 Функции анализа и восстановления
+2 Исследование системы=sys_check@avz.hlp>Main
+2 Восстановление системы=sys_repair@avz.hlp>Main
+2 Стандартные скрипты=t_stdscripts@avz.hlp>Main
+2 Резервное копирование=t_Backup@avz.hlp>Main
+1 Подсистема AVZGuard
+2 О технологии=SystemGuard_Main@avz.hlp>Main
+2 Управление системой=SystemGuard_work@avz.hlp>Main
+2 AVZGuard и антируткит=SystemGuard_rootkit@avz.hlp>Main
+1 Подсистема AVZPM
+2 О технологии=avzpm_about@avz.hlp>Main
+2 Управление системой=avzpm_work@avz.hlp>Main
+1 Подсистема Boot Cleaner
+2 О технологии=avzbc_about@avz.hlp>Main
+1 Ревизор
+2 О технологии=rev_about@avz.hlp>Main
+2 Создание базы=rev_createdb@avz.hlp>Main
+2 Сравнение=rev_compare@avz.hlp>Main
+1 Категории вредоносных программ
+2 Вирусы=t_klass_vir@avz.hlp>Main
+2 AdWare=t_klass_adware@avz.hlp>Main
+2 Spy или SpyWare=t_klass_spy@avz.hlp>Main
+2 PornWare и Dialer=t_klass_pornware@avz.hlp>Main
+2 Hijacker=t_klass_hijacker@avz.hlp>Main
+2 RiskWare=t_klass_riskware@avz.hlp>Main
+1 Дополнительная информация
+2 Что такое RootKit=term_rootkit@avz.hlp>Main
+2 Эвристический анализатор AVZ=term_ha@avz.hlp>Main
+2 Local Service Provider (LSP/SPI)=term_lsp@avz.hlp>Main
+1 Параметры командной строки
+2 Параметры командной строки=t_cmdline@avz.hlp>Main
+2 Основные параметры=t_CommandLine@avz.hlp>Main
+2 Специализированные ключи=t_CommandLineSpec@avz.hlp>Main
+2 Коды возврата=t_ExitCode@avz.hlp>Main
+2 Примеры=t_CommandLineExamples@avz.hlp>Main
+1 Часто задаваемые вопросы (FAQ)
+2 Часто задаваемые вопросы (FAQ)=t_FAQ@avz.hlp>Main
+2 Что делать, если AVZ обнаружил подозрение на вирус или вредоносную программу ?=faq_1@avz.hlp>Main
+2 Что делать, если AVZ выдал подозрение на keylogger ?=faq_2@avz.hlp>Main
+2 Что делать, если AVZ выдал подозрение на RootKit ?=faq_3@avz.hlp>Main
+2 Что такое 'Порт TCP 5000' и как с ним бороться ?=faq_4@avz.hlp>Main
+2 Что делать, если после распаковки AVZ не может найти файл *.avz ?=faq_5@avz.hlp>Main
+2 AVZ удалил вредоносные программы, но стартовая страница и прочие настройки браузера по прежнему повреждены=faq_6@avz.hlp>Main
+2 Во время сканирования диска мой антивирусный монитор сообщил, что файл avz*.tmp заражен вирусом или является вредоносной программой=faq_7@avz.hlp>Main
+2 Что делать, если выдается сообщение "Ошибка загрузки драйвера - проверка прервана"=faq_8@avz.hlp>Main
+2 Что делать, если в ходе обновления баз возникает ошибка=faq_10@avz.hlp>Main
+2 Что делать, если в ходе загрузки архива с AVZ возникают ошибки=faq_11@avz.hlp>Main
+2 В ходе проверки AVZ в активное окно вводится текстовая строка с текстом "test"=faq_12@avz.hlp>Main
+2 Под Vista не работают некоторые функции AVZ=faq_13@avz.hlp>Main
+2 Особенности применения AVZ на Windows Server 2003=faq_14@avz.hlp>Main
+2 Что делать, если вредоносная программа блокирует запуск AVZ ?=Faq_15@avz.hlp>Main
+1 Скрипты управления
+2 Введение=script_intro@avz.hlp>Main
+2 Структура скрипта=script_base@avz.hlp>Main
+2 procedure Sleep=script_Sleep@avz.hlp>Main
+2 procedure ActivateWatchDog=script_ActivateWatchDog@avz.hlp>Main
+2 procedure SetupAVZ=script_SetupAVZ@avz.hlp>Main
+2 procedure RunScan=script_RunScan@avz.hlp>Main
+2 procedure ExitAVZ=script_ExitAVZ@avz.hlp>Main
+2 function GetSystemBootMode=script_GetSystemBootMode@avz.hlp>Main
+2 function GetEnvironmentVariable=script_GetEnvironmentVariable@avz.hlp>Main
+2 Информация о компьютере
+3 function GetComputerName=script_GetComputerName@avz.hlp>Main
+3 function GetComputerComments=script_GetComputerComments@avz.hlp>Main
+3 function IsNT=script_IsNT@avz.hlp>Main
+2 Взаимодействие с пользователем
+3 procedure ShowMessage=script_ShowMessage@avz.hlp>Main
+3 function InputBox=script_InputBox@avz.hlp>Main
+3 function MessageDLG=script_MessageDLG@avz.hlp>Main
+2 Автоматическое обновление
+3 function  ExecuteAVUpdate=script_ExecuteAVUpdate@avz.hlp>Main
+3 function  ExecuteAVUpdateEx=script_ExecuteAVUpdateEx@avz.hlp>Main
+2 Работа с протоколом
+3 procedure AddToLog=script_AddToLog@avz.hlp>Main
+3 procedure SaveLog=script_SaveLog@avz.hlp>Main
+3 procedure SaveCSVLog=script_SaveCSVLog@avz.hlp>Main
+3 function AddLineToTxtFile=script_AddLineToTxtFile@avz.hlp>Main
+2 Карантин и папка Infected
+3 procedure ExecuteAutoQuarantine=script_ExecuteAutoQuarantin@avz.hlp>Main
+3 function  CreateQurantineArchive=script_CreateQurantineArchi@avz.hlp>Main
+3 function  CreateInfectedArchive=script_CreateInfectedArchiv@avz.hlp>Main
+3 function QuarantineFile=script_QuarantineFile@avz.hlp>Main
+3 function  ClearQuarantine=script_clearquarantine@avz.hlp>Main
+2 Функции запроса информации о AVZ
+3 function GetAVZDirectory=script_GetAVZDirectory@avz.hlp>Main
+3 function  GetScanPath=script_GetScanPathstring@avz.hlp>Main
+3 function  GetAVZVersion=script_GetAVZVersion@avz.hlp>Main
+3 function  GetAVZVersionTxt=script_GetAVZVersionTxt@avz.hlp>Main
+3 function  GetAVZSvcName=script_GetAVZSvcName@avz.hlp>Main
+2 Интерфейс AVZ
+3 procedure UnLockInterface=script_UnLockInterface@avz.hlp>Main
+3 procedure LockInterface=script_LockInterface@avz.hlp>Main
+3 procedure SetStatusBarText=script_SetStatusBarText@avz.hlp>Main
+2 Управление AVZPM
+3 function  SetAVZPMStatus=script_SetAVZPMStatus@avz.hlp>Main
+3 function  GetAVZPMStatus=script_GetAVZPMStatus@avz.hlp>Main
+2 Управление AVZGuard
+3 function  SetAVZGuardStatus=script_SetAVZGuardStatus@avz.hlp>Main
+3 function  GetAVZGuardStatus=script_GetAVZGuardStatus@avz.hlp>Main
+2 Управление Boot Cleaner
+3 function  BC_Activate=script_BC_Activate@avz.hlp>Main
+3 function  BC_DeActivate=script_DeActivate@avz.hlp>Main
+3 function  BC_Execute=script_BC_Execute@avz.hlp>Main
+3 function  BC_Clear=script_BC_Clearboolean@avz.hlp>Main
+3 function  BC_LogFile=script_BC_LogFile@avz.hlp>Main
+3 function  BC_QrFile=script_BC_QrFile@avz.hlp>Main
+3 function  BC_QrSvc=script_BC_QrFile_2@avz.hlp>Main
+3 function  BC_DeleteFile=script_BC_DeleteFile@avz.hlp>Main
+3 function BC_CopyFile=script_BC_CopyFile@avz.hlp>Main
+3 function  BC_DeleteReg=script_DeleteReg@avz.hlp>Main
+3 function  BC_DeleteSvcReg=script_BC_DeleteSvcReg@avz.hlp>Main
+3 function  BC_DeleteSvc=script_BC_DeleteSvc@avz.hlp>Main
+3 function  BC_DisableSvc=script_BC_DisableSvc@avz.hlp>Main
+3 function  BC_ImportDeletedList=script_BC_ImportDeletedList@avz.hlp>Main
+3 function  BC_ImportQuarantineList=script_BC_ImportQuarantine@avz.hlp>Main
+3 function  BC_ImportALL=script_BC_ImportALL@avz.hlp>Main
+3 Типовые примеры=script_bcsamples@avz.hlp>Main
+2 Эвристическая проверка системы
+3 procedure SearchRootkit=script_SearchRootkit@avz.hlp>Main
+3 procedure SearchKeylogger=script_SearchKeylogger@avz.hlp>Main
+3 procedure ExecuteSysChkEV=script_ExecuteSysChkEV@avz.hlp>Main
+3 procedure ExecuteSysChkIPU=script_ExecuteSysChkIPU@avz.hlp>Main
+3 procedure ExecuteSysCheck=script_ExecuteSysCheck@avz.hlp>Main
+3 procedure ExecuteSysCheckEx=script_ExecuteSysCheckEx@avz.hlp>Main
+3 function ExecuteWizard=script_ExecuteWizard@avz.hlp>Main
+2 Эвристическая чистка системы
+3 function  ExecuteSysClean=script_ExecuteSysClean@avz.hlp>Main
+3 procedure SysCleanAddFile=script_SysCleanAddFile@avz.hlp>Main
+3 procedure SysCleanDelFilesList=script_SysCleanCleanFilesList@avz.hlp>Main
+2 Восстановление системы и стандартные скрипты
+3 function ExecuteRepair=script_ExecuteRepair@avz.hlp>Main
+3 function ExecuteStdScr=script_ExecuteStdScr@avz.hlp>Main
+2 Завершение работы и перезагрузка
+3 procedure ShutdownWindows=script_ShutdownWindows@avz.hlp>Main
+3 procedure RebootWindows=script_RebootWindows@avz.hlp>Main
+2 Использование AV анализатора в скрипте
+3 function  CheckFile=script_CheckFile@avz.hlp>Main
+3 function  GetLastCheckTxt=script_GetLastCheckTxt@avz.hlp>Main
+2 Работа с CLSID и BHO
+3 function  CLSIDExists=script_CLSIDExists@avz.hlp>Main
+3 function  CLSIDFileExists=script_CLSIDFileExists@avz.hlp>Main
+3 function  CLSIDFileName=script_CLSIDFileName@avz.hlp>Main
+3 procedure DelCLSID=script_DelCLSID@avz.hlp>Main
+3 function  BHOExists=script_BHOExists@avz.hlp>Main
+3 procedure DelBHO=script_DelBHO@avz.hlp>Main
+2 Работа со службами и драйверами
+3 function  ServiceExists=script_FunctionServiceExists@avz.hlp>Main
+3 function  ServiceAndFileExists=script_ServiceAndFileExists@avz.hlp>Main
+3 function  StartService=script_StartService@avz.hlp>Main
+3 function  StopService=script_StopService@avz.hlp>Main
+3 function  DeleteService=script_DeleteService@avz.hlp>Main
+3 function  GetServiceFile=script_GetServiceFile@avz.hlp>Main
+3 function GetServiceStart=script_GetServiceStart@avz.hlp>Main
+3 function SetServiceStart=script_SetServiceStart@avz.hlp>Main
+3 function GetServiceName=script_GetServiceName@avz.hlp>Main
+2 Работа с SPI/LSP
+3 procedure DelSPIByFileName=script_DelSPIByFileName@avz.hlp>Main
+3 procedure CheckSPI=Script_CheckSPI@avz.hlp>Main
+3 procedure AutoFixSPI=script_AutoFixSPI@avz.hlp>Main
+2 Работа с автозапуском и Winlogon
+3 procedure DelWinlogonNotifyByFileName=script_DelWinlogonNotifyByF@avz.hlp>Main
+3 procedure DelWinlogonNotifyByKeyName=script_DelWinlogonNotifyByK@avz.hlp>Main
+3 function DelAutorunByFileName=script_DelAutorunByFileName@avz.hlp>Main
+2 Работа с реестром
+3 function RegKeyExists=script_RegKeyExists@avz.hlp>Main
+3 procedure RegKeyDel=script_RegKeyDel@avz.hlp>Main
+3 procedure RegKeyCreate=script_RegKeyCreate@avz.hlp>Main
+3 function RegKeyParamExists=script_RegKeyParamExists@avz.hlp>Main
+3 procedure RegKeyParamDel=script_RegKeyParamDel@avz.hlp>Main
+3 function RegKeyStrParamRead=script_RegKeyStrParamRead@avz.hlp>Main
+3 function RegKeyIntParamRead=script_RegKeyIntParamRead@avz.hlp>Main
+3 procedure RegKeyStrParamWrite=script_RegKeyStrParamWrite@avz.hlp>Main
+3 procedure RegKeyIntParamWrite=script_RegKeyIntParamWrite@avz.hlp>Main
+3 procedure RegKeyBinParamWrite=script_RegKeyBinParamWrite@avz.hlp>Main
+3 function RegSearch=script_RegSearch@avz.hlp>Main
+3 function ExpRegKey=script_ExpRegKey@avz.hlp>Main
+3 function ExpRegKeyEx=script_ExpRegKeyEx@avz.hlp>Main
+3 function BackupRegKey=script_BackupRegKey@avz.hlp>Main
+3 function RegKeyEnumVal=script_RegKeyEnumVal@avz.hlp>Main
+3 function RegKeyEnumKey=script_RegKeyEnumKey@avz.hlp>Main
+3 Имена разделов=script_regrootnames@avz.hlp>Main
+2 Работа с INI файлами
+3 function INIStrParamRead=script_INIStrParamRead@avz.hlp>Main
+3 function INIStrParamWrite=script_INIStrParamWrite@avz.hlp>Main
+3 function INISectionExists=script_INISectionExists@avz.hlp>Main
+3 function INIEraseSection=script_INIEraseSection@avz.hlp>Main
+3 function INIEraseParam=script_INIEraseParam@avz.hlp>Main
+2 Работа с файлом Hosts
+3 function  GetHostsFileName=script_GetHostsFileName@avz.hlp>Main
+3 function  ClearHostsFile=script_ClearHostsFile@avz.hlp>Main
+2 Работа с файлами и папками
+3 function GetCurrentDirectory=script_GetCurrentDirectory@avz.hlp>Main
+3 function GetSystemDisk=script_GetSystemDisk@avz.hlp>Main
+3 function GetTempDirectoryPath=script_GetTempDirectoryPath@avz.hlp>Main
+3 function  NormalDir=script_NormalDir@avz.hlp>Main
+3 function  NormalFileName=script_NormalFileName@avz.hlp>Main
+3 function ExtractFileName=script_ExtractFileName@avz.hlp>Main
+3 function ExtractFilePath=script_ExtractFilePath@avz.hlp>Main
+3 function ExtractFileExt=script_ExtractFileExt@avz.hlp>Main
+3 function  DirectoryExists=script_DirectoryExists@avz.hlp>Main
+3 procedure CreateDirectory=script_CreateDirectory@avz.hlp>Main
+3 procedure DeleteDirectory=script_DeleteDirectory@avz.hlp>Main
+3 function  FileExists=script_FileExists@avz.hlp>Main
+3 function  GetFileSize=script_GetFileSize@avz.hlp>Main
+3 function  DeleteFile=script_DeleteFile@avz.hlp>Main
+3 function DeleteFileMask=script_DeleteFileMask@avz.hlp>Main
+3 function  CopyFile=script_CopyFile@avz.hlp>Main
+3 function  RenameFile=script_RenameFile@avz.hlp>Main
+3 function GetDriveType=script_GetDriveType@avz.hlp>Main
+3 Макросы, допустимые в именах файлов=script_FileNameMacros@avz.hlp>Main
+2 Работа с текстовыми файлами и списками строк
+3 Класс TStringList=script_TF@avz.hlp>Main
+3 Примеры=script_StringsExamples@avz.hlp>Main
+2 Поиск файла и папок
+3 Класс TFileSearch=script_FileSearch@avz.hlp>Main
+3 Примеры поиска=script_FS_example@avz.hlp>Main
+2 Работа с процессами
+3 function  ExecuteFile=script_ExecuteFile@avz.hlp>Main
+3 function  RefreshProcessList=script_RefreshProcessList@avz.hlp>Main
+3 function  GetProcessCount=script_GetProcessCount@avz.hlp>Main
+3 function  GetProcessName=script_GetProcessName@avz.hlp>Main
+3 function  GetProcessPID=script_GetProcessPID@avz.hlp>Main
+3 function  TerminateProcess=script_TerminateProcess@avz.hlp>Main
+3 function  TerminateProcessByName=script_TerminateProcessByName@avz.hlp>Main
+3 Пример=script_PL_sample@avz.hlp>Main
+2 Сигнатурный анализатор файла
+3 function  LoadFileToBuffer=script_LoadFileToBuffer@avz.hlp>Main
+3 function  LoadFileToBufferEx=script_LoadFileToBufferEx@avz.hlp>Main
+3 function  FreeBuffer=script_FreeBuffer@avz.hlp>Main
+3 function  GetBufferSize=script_GetBufferSize@avz.hlp>Main
+3 function  GetBufferByte=script_GetBufferByte@avz.hlp>Main
+3 function  GetBufferWord=script_GetBufferWord@avz.hlp>Main
+3 function  GetBufferDWord=script_GetBufferDWord@avz.hlp>Main
+3 function  GetBufferStr=script_GetBufferStr@avz.hlp>Main
+3 function  SearchSign=script_SearchSign@avz.hlp>Main
+3 Пример реализации сигнатурного искателя=script_SearchSignExample@avz.hlp>Main
+2 Работа с результатами исследования системы
+3 Работа с результатами исследования системы=script_sc@avz.hlp>Main
+3 function SC_INIT=script_SC_INIT@avz.hlp>Main
+3 function SC_FREE=script_SC_FREE@avz.hlp>Main
+3 function SC_SelectNode=script_SC_SelectNode@avz.hlp>Main
+3 function SC_GetItemsCount=script_SC_GetItemsCount@avz.hlp>Main
+3 function SC_GetParamVal=script_SC_GetItem@avz.hlp>Main
+3 function SC_GetTagName=script_SC_GetTagName@avz.hlp>Main
+3 function SC_SearchItem=script_SC_SearchItem@avz.hlp>Main
+2 Функции запроса статистики
+3 function  GetSuspCount=script_GetSuspCount@avz.hlp>Main
+3 function  GetDetectedCount=script_GetDetectedCount@avz.hlp>Main
+2 Обработка параметров командной строки
+3 function  GetParamCount=script_GetParamCount@avz.hlp>Main
+3 function  GetParamStr=script_GetParamStr@avz.hlp>Main
+3 function GetParamByName=script_GetParamByName@avz.hlp>Main
+3 Пример обработки параметров=script_GetParamExample@avz.hlp>Main
+2 Работа со строками
+3 function StringReplace=script_StringReplace@avz.hlp>Main
+3 function Pos=script_Pos@avz.hlp>Main
+3 procedure Insert=script_Insert@avz.hlp>Main
+3 procedure Delete=script_Delete@avz.hlp>Main
+3 function Copy=script_Copy@avz.hlp>Main
+3 function Length=script_Length@avz.hlp>Main
+3 function Trim=script_Trim@avz.hlp>Main
+3 function UpperСase=script_Uppercase@avz.hlp>Main
+3 function LowerСase=script_LowerСase@avz.hlp>Main
+3 function Chr=FunctionChr@avz.hlp>Main
+3 function Ord=script_Ord@avz.hlp>Main
+3 Преобразования в строку
+4 function IntToStr=script_IntToStr@avz.hlp>Main
+4 function FloatToStr=script_FloatToStr@avz.hlp>Main
+4 function DateToStr=script_DateToStr@avz.hlp>Main
+4 function TimeToStr=script_TimeToStr@avz.hlp>Main
+4 function DateTimeToStr=script_DateTimeToStr@avz.hlp>Main
+2 Передача оповещения администратору
+3 function  SendNetMessage=script_SendNetMessage@avz.hlp>Main
+3 function  SendSyslogMessage=script_SendSyslogMessage@avz.hlp>Main
+3 function  SendEmailMessage=script_SendEmailMessage@avz.hlp>Main
+2 Типовые примеры
+3 Параметры запуска=scr_demo_intro@avz.hlp>Main
+3 Сканирование компьютера=scr_demo1@avz.hlp>Main
+3 Блокировка сканирования по условию=scr_demo2@avz.hlp>Main
+3 Сканирование и автокарантин=scr_demo3@avz.hlp>Main
+3 Лечение заданных папок по условию=scr_demo4@avz.hlp>Main
+3 Автокарантин и сбор подозрительных файлов с ПК=scr_demo5@avz.hlp>Main
+3 Поиск файла на диске=scr_demo6@avz.hlp>Main
+3 Заготовка скрипта для сканирования сети=scr_demo7@avz.hlp>Main
+3 Обновление баз с протоколированием=scr_demo9@avz.hlp>Main
+3 Пример удаления троянской программы с известным именем=scr_demo8@avz.hlp>Main
+3 Поиск подозрительных объектов по именам=scr_demo10@avz.hlp>Main
+3 Блокировка повторного запуска скрипта в течение дня=scr_demo11@avz.hlp>Main
+3 Сканирование и отправка результатов по почте=scr_demo12@avz.hlp>Main

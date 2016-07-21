@@ -1,0 +1,46 @@
+import tSHORT 	 as s16		from "pr_types.h";
+import tINT 	 as  s32	from "pr_types.h";
+import tLONGLONG as s64		from "pr_types.h";
+import tCHAR	 as s8 		from "pr_types.h";
+import tWCHAR	 as u16		from "pr_types.h";
+import tWORD	 as u16		from "pr_types.h";
+import tDWORD	 as u32		from "pr_types.h";
+import tQWORD	 as u64		from "pr_types.h";
+import tBYTE	 as u8		from "pr_types.h";
+
+import tIID as tDWORD from "pr_types.h";
+
+typedef tIID InterfaceId;
+typedef tIID PluginId;
+typedef tIID ImplementationId;
+typedef tIID MessageId;
+typedef tIID MessageClassId;
+typedef tIID PropertyId;
+typedef tCHAR*	tSTRING;
+typedef tWCHAR*	tWSTRING;
+
+import tORIG_ID as tINT from "pr_types.h";
+import hOBJECT as void* from "pr_types.h";
+import tVOID as void from "pr_types.h";
+import tDATA as void* from "pr_types.h";
+import tBOOL as tINT from "pr_types.h";
+import tERROR as tDWORD from "pr_types.h";
+import tPTR as void* from "pr_types.h";
+import tDATETIME as tQWORD from "pr_types.h";
+import tBINARY /*as void**/ from "pr_types.h";
+
+
+import tCODEPAGE	from "pr_types.h";
+import tOS_ID       as tDWORD from "pr_types.h";
+import tVERSION     from "pr_types.h";
+import tVID as tIID	from "pr_types.h";
+import tPID as tIID from "pr_types.h";
+import tUINT as tDWORD from "pr_types.h";
+import tPROPID as tDWORD from "pr_types.h";
+
+const tDWORD cTRUE = 1;
+const tDWORD cFALSE = 0;
+const tVOID* NULL = 0;
+
+//#include "base.idl"
+

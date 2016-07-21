@@ -1,0 +1,26 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@ @abs_top_srcdir@/remote 
+
+Name = stubs
+Archive = $(Name).@ARCHIVE_EXT@
+Targets = $(Archive)
+
+Sources = \
+	remote_stub.cpp
+
+Includes = @abs_top_srcdir@/remote/unix @abs_top_srcdir@/remote/unix/rpc_headers @abs_top_srcdir@/thpoolimp
+
+Defines = FRAME_TRACE
+
+Libraries = \
+	rpc \
+	hashutil
+
+# unix section
+
+UnixLibraries = \
+	@ThreadsSupportLib@
+
+include @abs_top_builddir@/@OS@/Rules

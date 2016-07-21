@@ -1,0 +1,441 @@
+
+
+[
+  mnemonic(IID_OS)
+  id(12)
+  c_type_name(hOS)
+  comment_ex("Interface defines behavior of an object system. It responds for
+      - enumerate IO and Folder objects by creating Folder objects.
+      - create and delete IO and Folder objects
+    There are two possible ways to create or open IO object on OS. First is three steps protocol:
+      -- call ObjectCreate system method and get new IO (Folder) object
+      -- dictate properties of new object
+      -- call ObjectCreateDone system method and have working object
+    Second is using FolderCreate and IOCreate methods which must have the same behivior i.e. FolderCreate and IOCreate are wrappers for convenience.
+    Advise: when caller invokes ObjectCreateDone method OS object receives ChildDone notification and can do all necessary job to process it.")
+]
+interface OS { // object system interface
+
+  // ------------------------------------
+    const tOS_ID OS_TYPE_GENERIC = 1;
+
+
+  // ------------------------------------
+
+    [
+      id(130)
+      comment_ex("Interface version")
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      id(131)
+      comment_ex("Interface comment")
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+    prop pgOBJECT_OS_TYPE;
+    prop pgOBJECT_NAME;
+    prop pgOBJECT_AVAILABILITY; // Returns set of features availabe for the implementation. Must return set of ORed availability flags
+    prop pgOBJECT_BASED_ON; // base for this object
+    [ id(4096) ]  prop tDWORD pgNAME_MAX_LEN;
+    [ id(4097) ]  prop tBOOL pgNAME_CASE_SENSITIVE;
+    [ id(4098) ]  prop tWORD pgNAME_DELIMITER;
+    [ id(4099) ]  prop tBOOL pgFORMAT_MEDIA; // if TRUE object must format media i.e. make container empty
+    prop pgOBJECT_HASH; // Object hash
+    prop pgOBJECT_REOPEN_DATA; // Object reopen data
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("It responds for opening ObjPtr object by:
+          -- hString object holded folder name
+          -- hIO object's folder
+          -- another hObjPtr object (cloning) ")
+    ]
+    method tERROR PtrCreate( // opens ObjPtr object
+      hObjPtr* result,
+      hOBJECT name // name of the object to create pointer
+    );
+
+    [
+      comment_ex("It responds for opening IO object by:
+          -- hString: open object by name
+          -- hIO: object's name (cloning)
+          -- hObjPtr: open object by ptr")
+    ]
+    method tERROR IOCreate( // opens IO object
+      hIO* result,
+      hOBJECT name, // name of the object to open
+      tDWORD access_mode,
+      tDWORD open_mode
+    );
+    method tERROR Copy( // copies object inside OS
+      hOBJECT src_name, // source name
+      hOBJECT dst_name, // desination name
+      tBOOL overwrite // allow overwrite existing object
+    );
+
+    [
+      comment_ex("Renames/moves object by name inside single OS
+        Must move object through folders if nessesary")
+    ]
+    method tERROR Rename( // rename/move object by name inside OS
+      hOBJECT old_name, // object to be renamed
+      hOBJECT new_name, // target name
+      tBOOL overwrite // allow overwrite existing object
+    );
+
+    [
+      comment_ex("phisically deletes an entity on OS")
+    ]
+    method tERROR Delete( // phisically deletes an entity on OS
+      hOBJECT name // name of the object to delete
+    );
+
+
+  // ------------------------------------
+    [ id(4096) ]
+    message_cls pmc_OS_VOLUME { // сообщения о томах
+      [ id(4096) ]  message pm_OS_VOLUME_HASH; // сообщение о найденном томе
+      [ id(4097) ]  message pm_OS_VOLUME_SET_INCOMPLETE; // сообщение о том, что найденный набор томов не является полным
+    }
+
+}
+
+
+[
+  mnemonic(IID_OBJPTR)
+  id(11)
+  c_type_name(hObjPtr)
+  comment_ex(" Defines behavior of an object container/enumerator
+      Supplies object enumerate functionality on one level of hierarchy only.
+      For example: on logical drive object of this interface must enumerate objects in one folder.
+    
+      Also must support creating new IO object in the container. There are two ways to do it. First is three steps protocol:
+         -- ObjectCreate system method with folder object as parent
+         -- dictate all necessary properties for the new object
+         -- ObjectCreateDone
+       Second is CreateNew folder's method which is wrapper of above protocol.
+       Advise: when caller invokes ObjectCreateDone method folder object receives ChildDone notification and can do all necessary job to process it.")
+]
+interface ObjPtr { // Object Enumerator (Pointer to Object)
+
+  // ------------------------------------
+    typedef tDWORD tObjPtrState; // status of the object pointer
+
+
+  // ------------------------------------
+    const tDWORD fOPTR_AVAIL_MASK = 0x00000001L; // implementation supports navigation methods with mask
+    const tObjPtrState cObjPtrState_UNDEFINED = 0; // pointer is undefined
+    const tObjPtrState cObjPtrState_BEFORE = 1; // pointer in \"BEFORE_FIRST\" state
+    const tObjPtrState cObjPtrState_PTR = 2; // pointer in \"POINTER_TO_OBJ\" state
+    const tObjPtrState cObjPtrState_AFTER = 3; // pointer in \"AFTER_LAST\" state
+    const tDWORD fATTRIBUTE_READONLY = 0x00000001;
+    const tDWORD fATTRIBUTE_HIDDEN = 0x00000002;
+    const tDWORD fATTRIBUTE_SYSTEM = 0x00000004;
+    const tDWORD fATTRIBUTE_DIRECTORY = 0x00000010;
+    const tDWORD fATTRIBUTE_ARCHIVE = 0x00000020;
+    const tDWORD fATTRIBUTE_ENCRYPTED = 0x00000040;
+    const tDWORD fATTRIBUTE_NORMAL = 0x00000080;
+    const tDWORD fATTRIBUTE_TEMPORARY = 0x00000100;
+    const tDWORD fATTRIBUTE_SPARSE_FILE = 0x00000200;
+    const tDWORD fATTRIBUTE_REPARSE_POINT = 0x00000400;
+    const tDWORD fATTRIBUTE_COMPRESSED = 0x00000800;
+    const tDWORD fATTRIBUTE_OFFLINE = 0x00001000;
+    const tDWORD fATTRIBUTE_NOT_CONTENT_INDEXED = 0x00002000;
+
+
+  // ------------------------------------
+
+    [
+      id(130)
+      comment_ex("Interface version")
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      id(131)
+      comment_ex("Interface comment")
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+    prop pgOBJECT_ORIGIN; // Object origin
+    prop pgOBJECT_NAME;
+    prop pgOBJECT_PATH;
+    prop pgOBJECT_FULL_NAME; // object's full name in the parent OS
+    prop pgOBJECT_AVAILABILITY; // Returns set of features availabe for the implementation. Must return set of ORed availability flags
+    prop pgOBJECT_BASED_ON; // base for this object
+    [ id(4096) ]  prop tBOOL pgIS_FOLDER;
+    [ id(4097) ]  prop tSTRING pgMASK;
+    [ id(4098) ]  prop tObjPtrState pgOBJECT_PTR_STATE; // state of the object
+    prop pgOBJECT_SIZE; // Object size
+    prop pgOBJECT_SIZE_Q; // Object size Q
+    prop pgOBJECT_ATTRIBUTES; // attributes of the object. Depends on OS
+    prop pgOBJECT_HASH; // Object hash
+    prop pgOBJECT_REOPEN_DATA; // Object reopen data
+    [ id(4101) ]  prop tDATETIME pgOBJECT_CREATION_TIME;
+    [ id(4102) ]  prop tDATETIME pgOBJECT_LAST_WRITE_TIME;
+    [ id(4103) ]  prop tDATETIME pgOBJECT_LAST_ACCESS_TIME;
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Creates hIO or hObjEnum object current in enumeration.")
+    ]
+    method tERROR IOCreate( // creates object current in enumeration
+      hIO* result,
+      hSTRING name, // object to create in current folder
+      tDWORD access_mode, // open mode
+      tDWORD open_mode // attributes of the new object
+    );
+    method tERROR Copy( // copies the object pointed by the ptr
+      hOBJECT dst_name, // destination object
+      tBOOL overwrite // allow overwrite existing object
+    );
+    method tERROR Rename( // renames the object pointed by the ptr
+      hOBJECT new_name, // new name of the object
+      tBOOL overwrite // allow overwrite existing object
+    );
+
+    [
+      comment_ex("pointer must be advanced to the next object")
+    ]
+    method tERROR Delete(); // deletes object pointed by ptr
+
+    [
+      comment_ex("First call of Next method after Reset must return *FIRST* object in enumeration")
+    ]
+    method tERROR Reset( // Reinitializing of ObjEnum object
+      tBOOL to_root // goes to the root folder
+    );
+
+    [
+      comment_ex("Makes another ObjPtr object. New object must be as identical to source one as possible. Position must be the same")
+    ]
+    method tERROR Clone( // Makes another ObjPtr object
+      hObjPtr* result
+    );
+    method tERROR Next(); // Returns next IO object
+    method tERROR StepUp(); // Goes one level up
+    method tERROR StepDown(); // Goes one level up
+    method tERROR ChangeTo( // Changes folder for enumerating
+      hOBJECT name
+    );
+
+}
+
+
+[
+  mnemonic(IID_IO)
+  id(10)
+  c_type_name(hIO)
+  comment_ex("Defines behavior of input/output of an object
+    Important -- It is supposed several clients can use single IO object simultaneously. It has no internal current position. ")
+]
+interface IO { // input/output interface
+
+  // ------------------------------------
+    typedef tDWORD IO_SIZE_TYPE;
+
+
+  // ------------------------------------
+    const IO_SIZE_TYPE IO_SIZE_TYPE_EXPLICIT = 0;
+    const IO_SIZE_TYPE IO_SIZE_TYPE_APPROXIMATE = 1;
+    const IO_SIZE_TYPE IO_SIZE_TYPE_ESTIMATE = 2;
+    const tDWORD fACCESS_READ = 0x00000001L; // read access to the object
+    const tDWORD fACCESS_WRITE = 0x00000002L; // write access to the object
+    const tDWORD fACCESS_RW = 0x00000003L; // read/write access to the object. The same as (cOS_OMODE_READ | cOS_OMODE_WRITE)
+    const tDWORD fACCESS_NO_EXTEND_RAND = 0x00000004L; // object must not be able to extend randomly
+    const tDWORD fACCESS_NO_EXTEND = 0x00000008L; // object must not be able to extend
+    const tDWORD fACCESS_NO_TRUNCATE = 0x00000010L; // object cannot be truncated
+    const tDWORD fACCESS_NO_BUFFERING_READ = 0x00000020L; // client do not want (if possible) the object to be read buffered
+    const tDWORD fACCESS_NO_BUFFERING_WRITE = 0x00000040L; // client do not want (if possible) the object to be write buffered
+    const tDWORD fACCESS_NO_BUFFERING = 0x00000060L; // client do not want (if possible) the object to be read buffered
+    const tDWORD fACCESS_NO_CHANGE_MODE = 0x00000080L; // creater do not want the object to be reopened by set new pgACCESS_MODE property value
+    const tDWORD fACCESS_FORCE_READ = 0x00000100L; // ignore sharing/lock during read operation
+    const tDWORD mACCESS = 0x000001ffL; // mask to extract access mode flags
+    const tDWORD fOMODE_OPEN_IF_EXIST = 0x00000001L; // Creates a new object. Fails if the specified file already exists.
+    const tDWORD fOMODE_CREATE_IF_NOT_EXIST = 0x00000002L; // Create new object. Old object will be deleted
+    const tDWORD fOMODE_TRUNCATE = 0x00000004L; // Opens the existing object. Once opened, the object must be truncated to zero length. Access mode must be at least fACCESS_WRITE
+    const tDWORD fOMODE_FOLDER_AS_IO = 0x00000008L; // open as folder. If object with this name exists and represents a file method must return error
+    const tDWORD fOMODE_OPEN_ALWAYS = fOMODE_OPEN_IF_EXIST | fOMODE_CREATE_IF_NOT_EXIST; // open always behaviour
+    const tDWORD fOMODE_CREATE_ALWAYS = fOMODE_OPEN_IF_EXIST | fOMODE_CREATE_IF_NOT_EXIST | fOMODE_TRUNCATE; // create always behaviour
+    const tDWORD mOMODE_CREATION = 0x0000000fL; // open mode mask for creation/disposition flags
+
+    [
+      comment_ex("Subsequent open operations on the object will succeed only if read access is requested")
+    ]
+    const tDWORD fOMODE_SHARE_DENY_READ = 0x00000010L; // Subsequent open operations on the object will succeed only if read access is requested
+
+    [
+      comment_ex("Subsequent open operations on the object will succeed only if write access is requested")
+    ]
+    const tDWORD fOMODE_SHARE_DENY_WRITE = 0x00000020L; // Subsequent open operations on the object will succeed only if write access is requested
+
+    [
+      comment_ex("Subsequent open operations on the object will succeed only if read or write access is requested")
+    ]
+    const tDWORD fOMODE_SHARE_DENY_RW = 0x00000030L; // Subsequent open operations on the object will succeed only if read or write access is requested
+
+    [
+      comment_ex("Subsequent open operations on the object will succeed only if delete access is requested")
+    ]
+    const tDWORD fOMODE_SHARE_DENY_DELETE = 0x00000040L; // Subsequent open operations on the object will succeed only if delete access is requested
+    const tDWORD mOMODE_SHARE = 0x000000f0L; // open mode share mask
+    const tDWORD fOMODE_TEMPORARY = 0x00000100L; // object is temporary and must be deleted on close without any messages
+    const tDWORD fOMODE_FILE_NAME_PREPARSING = 0x00001000L; // file name will be preparsed by Windows
+    const tDWORD fAVAIL_READ = 0x00000001L; // read operation available
+    const tDWORD fAVAIL_WRITE = 0x00000002L; // write operation available
+    const tDWORD fAVAIL_EXTEND = 0x0000000cL; // both sequential and random extend operation available
+    const tDWORD fAVAIL_EXTEND_SEQ = 0x00000004L; // sequential extend operation available
+    const tDWORD fAVAIL_EXTEND_RAND = 0x00000008L; // random extend operation available
+    const tDWORD fAVAIL_TRUNCATE = 0x00000010L; // truncate operation available
+    const tDWORD fAVAIL_BUFFERING = 0x00000060L; // both read and write buffering available
+    const tDWORD fAVAIL_BUFFERING_READ = 0x00000020L; // read buffering available
+    const tDWORD fAVAIL_BUFFERING_WRITE = 0x00000040L; // write buffering available
+    const tDWORD fAVAIL_CHANGE_MODE = 0x00000080L; // change mode (reopen) operation available
+    const tDWORD fAVAIL_CREATE = 0x00000100L; // creation available
+    const tDWORD fAVAIL_SHARE = 0x00000200L; // sharing available
+    const tDWORD fAVAIL_DELETE_ON_CLOSE = 0x00000400L; // delete on close operation available
+
+
+  // ------------------------------------
+    error errIO_DELETE_ON_CLOSE_FAILED; // set if delete on close failed
+    error errIO_FOLDER_NOT_FILE; // object opened is a folder, not a file 
+    error errIO_BUFFERING; // buffering is not available for the object
+
+
+  // ------------------------------------
+
+    [
+      id(130)
+      comment_ex("Interface version")
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      id(131)
+      comment_ex("Interface comment")
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+    prop pgOBJECT_ORIGIN; // Object origin
+    prop pgOBJECT_NAME; // object's name
+    prop pgOBJECT_PATH; // object's path in the parent OS
+    prop pgOBJECT_FULL_NAME; // object's full name in the parent OS
+    prop pgOBJECT_OPEN_MODE; // current open mode for the object
+    prop pgOBJECT_ACCESS_MODE; // current access mode
+
+    [
+      id(4096)
+      comment_ex("объект должен быть удален из соответсвующей объектной сстемы во время закрытия")
+    ]
+    prop tBOOL pgOBJECT_DELETE_ON_CLOSE; // eng:delete on close//rus:удалить во время закрытия
+    prop pgOBJECT_AVAILABILITY; // Returns set of features availabe for the implementation. Must return set of ORed availability flags
+    prop pgOBJECT_BASED_ON; // base for this object
+    [ id(4100) ]  prop tBYTE pgOBJECT_FILL_CHAR; // fill character to extending object
+    prop pgOBJECT_HASH; // Object hash
+    prop pgOBJECT_REOPEN_DATA;
+    prop pgOBJECT_ATTRIBUTES; // attributes of the object. Depends on OS
+    [ id(4101) ]  prop tDATETIME pgOBJECT_CREATION_TIME;
+    [ id(4102) ]  prop tDATETIME pgOBJECT_LAST_WRITE_TIME;
+    [ id(4103) ]  prop tDATETIME pgOBJECT_LAST_ACCESS_TIME;
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("//eng:returns real count of bytes read")
+    ]
+    method tERROR SeekRead( // reads content of the object to the buffer
+      tDWORD* result,
+      tQWORD offset,
+      tPTR buffer,
+      tDWORD size
+    );
+
+    [
+      comment_ex("writes buffer to the object. Returns real count of bytes written")
+    ]
+    method tERROR SeekWrite( // writes buffer to the object
+      tDWORD* result,
+      tQWORD offset,
+      tPTR buffer,
+      tDWORD size
+    );
+
+    [
+      comment_ex("object returns size of requested type (see description of the \"type\" parameter. Some objects may return same value for all size types")
+    ]
+    method tERROR GetSize( // returns size of the requested type of the object
+      tQWORD* result,
+      IO_SIZE_TYPE type
+    );
+    method tERROR SetSize( // resizes the object
+      tQWORD new_size
+    );
+
+    [
+      comment_ex("Flush internal buffers.")
+    ]
+    method tERROR Flush(); // flush internal buffers
+
+
+  // ------------------------------------
+
+    [
+      id(3657433089)
+      comment_ex("параметр \"send_point\" в любом из этих сообщений может быть любого из трех типов: OS, ObjPtr или IO")
+    ]
+    message_cls pmc_IO { // класс сообщений связанных с деятельностью объектов OS, ObjPtr и IO
+
+      [
+        id(1)
+        comment_ex("Сообщение посылается в случае успешного удаления объекта в контейнере при закрытии объекта IO (ObjPtr), помеченного для удаления с помощью установки свойства pgOBJECT_DELETE_ON_CLOSE.")
+      ]
+      message pm_IO_DELETE_ON_CLOSE_SUCCEED; // удаление при закрытии прошло успешно
+
+      [
+        id(2)
+        comment_ex("Сообщение посылается в том случае, если удаление объекта в контейнере при закрытии объекта IO (ObjPtr), помеченного для удаления с помощью установки свойства pgOBJECT_DELETE_ON_CLOSE завершилось с ошибкой.")
+      ]
+      message pm_IO_DELETE_ON_CLOSE_FAILED; // удаление при закрытии завершилось с ошибкой
+
+      [
+        id(3)
+        comment_ex("Может быть послано от имени любого из объектов типа IO, ObjPtr или OS
+          Параметр \"context\" это объект типа hSTRING
+          
+          Обработчик сообщения может вернуть ошибку. Это означает, что обработку текущего объекта нужно прекратить с соответсвующим кодом ошибки (? errOBJECT_PASSWORD_PROTECTED ?)
+          Cледует учитывать ситуацию, когда ни одного обработчика сообщения не было. В этом случае kernel вернет warning errOK_NO_DECIDERS")
+      ]
+      message pm_IO_PASSWORD_REQUEST; // запрос пароля для доступа к физическому объекту
+
+      [
+        id(4096)
+        comment_ex("Сообщение посылается на закрытии объектов типа hIO и hOS, если случиться какая-либо ошибка
+          
+          Сообщение должно быть послано так, чтобы обрабатывающий его мог (через CALL_SYS_PorpertyGet) получить любую информацию, связанную с объектом. 
+          
+          Список ошибок, могущих быть вернутыми
+          	errLOCKED
+          	errACCESS_DENIED
+          	errNOT_ENOUGH_MEMORY
+          	errMEDIA_ERROR
+          	errOBJECT_WRITE")
+      ]
+      message pm_IO_CLOSE_ERROR; // ошибка при закрытии объектов типов hIO и hOS
+      [ id(4097) ]  message pm_IO_CREATE_FAILED; // ошибка при открытии объектов типов hIO и hOS
+
+      [
+        id(4098)
+        comment_ex("ошибка при переоткрытии объектов типа hIO
+          Переоткрытие может произойти при установке на объект свойства pgOBJECT_ACCESS_MODE")
+      ]
+      message pm_IO_REOPEN_FAILED; // ошибка при переоткрытии объектов типов hIO
+      [ id(4099) ]  message pm_IO_SET_ATTRIBUTES_FAILED; // ошибка при установке аттрибутов на объект типа hIO
+      [ id(4100) ]  message pm_IO_RESORE_ATTRIBUTES_FAILED; // ошибка возвращении аттрибутов в исходные на объект типа hIO
+    }
+
+}
+

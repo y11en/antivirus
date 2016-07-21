@@ -1,0 +1,26 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@
+
+Name = dtreg
+Plugin = $(Name).@PLUGIN_EXT@
+Metafile = @srcdir@/$(Name).@METAFILE_EXT@
+Targets = $(Plugin)
+
+Sources = \
+	dtreg.c \
+	plugin_dtreg.c \
+	dt_copy.cpp
+
+Libraries = \
+	serialize \
+	property \
+	swmanager \
+	hashutil
+
+# unix section
+
+VersionScript = @abs_top_srcdir@/unix/prague_plugin.ver
+
+include @abs_top_builddir@/@OS@/Rules

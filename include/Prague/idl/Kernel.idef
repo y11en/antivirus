@@ -1,0 +1,606 @@
+#import "loader.idef"
+#import "iface.idef"
+
+forward interface Root;
+typedef Root* hROOT;
+
+forward interface IFaceEnum;
+typedef IFaceEnum* hIFACE_ENUM;
+
+forward interface Tracer;
+typedef Tracer* hTRACER;
+
+forward interface MsgReceiver;
+typedef MsgReceiver* hMSG_RECEIVER;
+
+
+forward struct cSerDescriptor;
+forward struct cOutStream;
+
+
+[
+  version(0)
+  mnemonic(IID_ROOT)
+  id(2)
+  c_type_name(hROOT)
+  comment_ex("//rus:Интерфейс предоставляет базовые возможности ядра Праги, в дополнение к тем, которые определены в наборе системных методов
+      - Регистрация и разрегистрация интерфейсов
+      - Регистрация и разрегистрация идентификаторов свойств, определяемых пользователем
+      - Перебор модулей
+      - Регистрация экспортных функций, определяемых в модуле
+      - Импортирование функций, реализованных в дргих модулях
+      - Трассировка
+    //eng:Interface supplies common kernel facility in adition to System methods")
+]
+interface Root { // rus:корневой интерфейс ядра //eng:kernel root interface
+
+  // ------------------------------------
+    typedef tDWORD tFUP_ACTION; // rus:тип операции при вызове метода FreeUnusedPlugins
+    typedef tDWORD tSNS_ACTION; // rus:тип уведомления о событиях kernel'а
+    typedef tDWORD tSerializeCallback; // method which is called back from the kernel to control serialize/deserialize procces
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Если флаг установлен, то kernel'у и остальным клиентам доступен интерфейс IID_CRITICAL_SECTION")
+    ]
+    const tDWORD fPRAGUE_SYNC_CS_AVAIL = 0x00000001L; // rus:доступность интерфейса \"CriticalSection\"//eng:\"CriticalSection\" interface availability
+
+    [
+      comment_ex("//rus:Если флаг установлен, то kernel'у и остальным клиентам доступен интерфейс IID_SEMAPHORE")
+    ]
+    const tDWORD fPRAGUE_SYNC_SEMAPHORE_AVAIL = 0x00000002L; // rus:доступность интерфейса \"Semaphore\"//eng:\"Semaphore\" interface availability
+
+    [
+      comment_ex("Если флаг установлен, то kernel'у и остальным клиентам доступен интерфейс IID_MUTEX")
+    ]
+    const tDWORD fPRAGUE_SYNC_MUTEX_AVAIL = 0x00000004L; // rus:доступность интерфейса \"Mutex\"//eng:\"Mutex\" interface availability
+
+    [
+      comment_ex("Если флаг установлен, то kernel'у и остальным клиентам доступен интерфейс IID_CRITICAL_SECTION (1) - критическая секция с двумя уровнями доступа")
+    ]
+    const tDWORD fPRAGUE_SYNC_CS2L_AVAIL = 0x00000008L; // rus:доступность интерфейса \"CriticalSection с двумя уровнями доступа\"//eng:\"2 level CriticalSection\" interface availability
+    const tFUP_ACTION cFUP_SINGLE_ACTION = 0x00000000L; // rus:освободить плагины неиспользуемые на момент вызова
+    const tFUP_ACTION cFUP_PERMANENT = 0x00000001L; // rus:маркировать плагины как выгружаемые по мере освобождения объектов
+    const tDWORD cSNS_HEAP_SET = 0; // rus:уведомление об установке HEAP'а на объект
+    const tDWORD cSNS_CUSTOM_PROP_SET = 1; // rus:уведомление об установке CUSTOM_PROPERTY на объект
+    const tDWORD cSNS_CUSTOM_PROP_DELETE = 2; // rus:уведомление об удалении CUSTOM_PROPERTY
+    const tDWORD fSTREAM_PACK_INTEGRALS = 0x00000001; // pack tDWORDs, tQWORDs, etc values
+    const tDWORD fSTREAM_PACK_UC_STRINGS = 0x00000002; // pack UNICODE strings to UTF8
+    const tDWORD fSTREAM_PACK_DEFAULT = fSTREAM_PACK_INTEGRALS | fSTREAM_PACK_UC_STRINGS; // default pack flags
+
+
+  // ------------------------------------
+    error errPROPERTY_ALREADY_REGISTERED; // rus:идентификатор свойства уже зарегистрирован//eng:named property alredy registerd
+
+    [
+      comment_ex("//rus:Объект \"ROOT\" сздать нельзя. Его можно получить загрузив Прагу фунцией \"PragueLoadFunction\"
+        //eng:It is not possible to create ROOT object. You have to use PragueLoadFunction to get ROOT object")
+    ]
+    error errROOT_OBJECT_CANNOT_BE_CREATED; // ROOT object cannot be created
+
+
+  // ------------------------------------
+    prop pgOBJECT_NAME; // Имя объекта: \"Root object\"
+
+    [
+      id(4096)
+      comment_ex("//rus:Используется трэйсером во время инициализации. 
+        //eng:used for trace purpose. Tracer will check tis property on an initialization.")
+    ]
+    prop tFUNC_PTR pgOUTPUT_FUNC; // указатель на функцию вывода трассировочных строк//eng:pointer of the output function
+    [ id(4100) ]  prop tDWORD pgOBJECT_COUNT; // rus:количество объектов существующих в иерархии//eng:count of the created objects
+    [ id(4101) ]  prop tBOOL pgEXCEPTION_CATCHING_AVAILABLE; // rus:интерфейс обработки исключительных ситуаций доступен, если значение свойства \"cTRUE\"//eng:Exception handling interface is available if it is \"cTRUE\"
+
+    [
+      id(4102)
+      comment_ex("//rus:Если значение свойства не 0, то операционно-зависимая синхронизация доступна. 
+        Значение есть наложенные по \"ИЛИ\" константы:
+          - fPRAGUE_SYNC_CS_AVAIL
+          - fPRAGUE_SYNC_SEMAPHORE_AVAIL
+          - fPRAGUE_SYNC_MUTEX_AVAIL")
+    ]
+    prop tDWORD pgSYNCHRONIZATION_AVAILABLE; // Синхронизация доступна, если значение свойства не 0//eng:OS dependent synchronization supprot available if it is not 0. Set of the SYNC flags
+    [ id(4103) ]  prop tDWORD pgUNLOAD_UNUSED_DURING; // period when unused plugins will unloaded
+    [ id(4104) ]  prop tBOOL pgUNLOAD_UNUSED_FORCE; // switch on unloading unused plugins
+
+
+  // ------------------------------------
+    method tERROR RegisterIFace( // rus:Регистрация интерфейса//eng:Registers an interface
+      tIID iid, // rus:идентификатор интерфейса//eng:an interface identifier
+      tPID pid, // rus:идентификатор плагина//eng:a plugin identifier
+      tDWORD subtype, // rus:идентификатор подтипа интерфейса//eng:an interface subtype
+      tVERSION p_version, // rus:версия интерфейса//eng:an interface version
+      tVID vid, // rus:идентификатор разработчика интерфейса//eng:an interface vendor
+      const tVOID* internal_table, // rus:указатель на таблицу внутренних методов интерфейса//eng:pointer to the interface intermal method table
+      tDWORD internal_table_size, // rus:размер таблицы внутренних методов интерфейса//eng:interface intermal method table size
+      const tVOID* external_table, // rus:указатель на таблицу публичных методов интерфейса//eng:pointer to the interface public method table
+      tDWORD external_table_size, // rus:размер таблицы публичных методов//eng:interface public method table size
+      const tDATA* prop_table, // rus:таблица описателей свойств интерфейса//eng:interface property description table
+      tDWORD prop_table_size, // rus:число записей в таблице описателей свойств интерфейса//eng:record number of interface property description table
+      tDWORD memsize, // rus:размер памяти необходимый для объекта интерфеса//eng:size of memory required for the interface object
+      tDWORD flags // rus:флаги интерфейса//eng:interface flags
+    );
+    method tERROR UnregisterIFace( // rus:разрегистрация интерфейса//eng:Unregisters an interface
+      tIID iid, // rus:идентификатор интерфейса//eng:an interface identifier
+      tPID pid, // rus:идентификатор плагина//eng:a plugin identifier
+      tDWORD subtype, // rus:подтип интерфейса//eng:an interface subtype
+      tVID vid // rus:идентификатор разгаботчика реализации интерфейса//eng:a vendor identifier
+    );
+
+    [
+      comment_ex("//rus:создает объект загрузчика, определяемый параметром \"mfinder_pid\" и вызывает у него метод \"IntegrateModules\", передавая ему параметры \"param_pool\" и \"load_flags\", что приводит к интеграции модулей определяемых параметрами \"param_pool\" в систему.
+        
+        
+        //eng:forces loader (specified by parameter \"mfinder_pid\") to integrate modules indicated by \"param_pool\" parameter into the system. Loader must register interfaces and load native or prague plugins by flags \"load_flags\".")
+    ]
+    method tERROR FindPlugins( // rus:интегрирование модулей наденных указанным загрузчиком в систему//eng:integrate modules to the system by specific loader
+      tPID mfinder_pid, // rus:идентификатор плагина реализующего интерфейс загрузчика//eng:loader plugin id
+      const tVOID* param_pool, // rus:параметры для поиска модулей для загрузки//eng:input parameters (source to find plugins)
+      tDWORD param_pool_size, // rus:размер буфера параметров//eng:sizeof parameter buffer
+      tDWORD load_flag_set // rus:флаги для метода \"IntegrateModules\" загрузчика//eng:load flags (preload native or prague plugins for example)
+    );
+
+    [
+      comment_ex("//rus:Метод регистрирует имя пользовательского свойства и распределяет для него уникальный идентификатор.
+        Если параметр \"type\" не pTYPE_NOTHING, возвращаемое значение является идентификатором свойства данного типа.
+        Если параметр \"type\" pTYPE_NOTHING, то возвращаемый числовой идентификатор свойства может быть использован для генерации идентификатора свойства любого типа с помощью макроопределения \"mPROPERTY_MAKE_CUSTOM\" с разными константами определяющими тип свойства. Таким образом один и тот же уникальный идентификатор может быть использован для свойств разных типов. 
+        //eng:The method registers and allocate new unique property identifier. 
+        If parameter \"type\" is pTYPE_NOTHING method returns identifier of the property of the indicated type.
+        If parameter \"type\" is not \"pTYPE_NOTHING\" method returns identifier that can be used as propid parameter of \"mPROPERTY_MAKE_CUSTOM\" macro definition to generate property identifier of any type, i.e. the identifier can be used more than once but for properties with different types.")
+    ]
+    method tERROR RegisterCustomPropId( // rus:распределяет уникальный идентификатор для пользовательского свойства//eng:allocates unique property id
+      tDWORD* result,
+      tSTRING name, // rus:имя пользовательского свойства//eng:name of the custom property
+      tDWORD type // rus:тип свойства//eng:type of the custom property
+    );
+
+    [
+      comment_ex("//rus:метод разрегистрирует и освобождает ранее распределенный уникальный идентификатор сойства
+        //eng:The method unregisters and deallocate unique property identifier.")
+    ]
+    method tERROR UnregisterCustomPropId( // rus:освобождает уникальныйидентификатор свойсва//eng:deallocates unique property id
+      tSTRING name // rus:имя, по которому идентификатор был ранее зарегистрирован//eng:name of the early registered identifier
+    );
+
+    [
+      comment_ex("//rus:возвращает иденификатор пользовательского свойства, если он был ранее зарегистрирован
+        //eng:returns id of the named property identifier in case it was registered early")
+    ]
+    method tERROR GetCustomPropId( // rus:возвращает, ранее зарегистрированный, идентификатор свойства//eng:returns id of the registered named property identifier
+      tDWORD* result,
+      tSTRING name, // rus:имя ранее зарегистрированного идентификатора//eng:name of the property identifier to get
+      tDWORD type // rus:тип свойства, для которого необходимо получить идентификатор//eng:type of the property to get identifier
+    );
+
+    [
+      comment_ex("//rus:устанавливает уровень вывода трассировочных сообщений на вновь создаваемые и/или сущетвующие объекты определенного интерфейса или плагина
+        //eng:set trace level for all new or/and existing objects of specified interface or plugin")
+    ]
+    method tERROR TraceLevelSet( // rus:устанавливает уровень трассировки на определенный интерфейс или плагин//eng:set trace level by interface or/and plugin
+      tDWORD op, // code of operation -- who is affected by the method
+      tIID iid, // interface id to set level
+      tPID pid, // plugin id to set level
+      tDWORD subtype,
+      tDWORD vid,
+      tDWORD level, // maximum trace level for affected instances
+      tDWORD min_level // minimum trace level for affected instances
+    );
+    method tERROR GetTracer( // rus:возвращает текущий трасер//eng:returns current tracer
+      hTRACER* result
+    );
+
+    [
+      comment_ex("//rus:метод позволяет перебрать все модули интегрированные в системе, используя механизм cookie
+              tDWORD cookie = 0;
+              hPLUGIN plugin = NULL;
+              while( PR_SUCC(CALL_Root_GetPluginInstance(root,&plugin,&cookie,PID_ANY)) ) {
+                ...
+              }")
+    ]
+    method tERROR GetPluginInstance( // rus:поиск объект типа hMODULE по идентификатору плагина//eng:returns plugin by identifier
+      hPLUGIN* result,
+      tDATA* cookie, // rus:позиция для поиска следующего модуля//eng:position for get next module
+      tPID pid // rus:идентификатор плагина, который нужно найти
+    );
+
+    [
+      comment_ex("//rus:позволяет зарегистрировать интерфейс с указанием объекта hPLUGIN к которому относиться данный интерфейс. Возвращает объект hIFACE для зарегистрированного интерфейса")
+    ]
+    method tERROR RegisterIFaceEx( // rus:регистрация интерфейса с указанием плагина//eng:Registers an interface with plugin indication
+      hIFACE* result,
+      tIID iid, // rus:идентификатор интерфейса//eng:an interface identifier
+      tPID pid, // rus:идентификатор плагина//eng:a plugin identifier
+      tDWORD subtype, // rus:идентификатор подтипа интерфейса//eng:an interface subtype
+      tVERSION p_version, // rus:версия интерфейса//eng:an interface version
+      tVID vid, // rus:идентификатор разработчика интерфейса//eng:an interface vendor
+      const tVOID* internal_table, // rus:указатель на таблицу внутренних методов интерфейса//eng:pointer to the interface intermal method table
+      tDWORD internal_table_size, // rus:размер таблицы внутренних методов интерфейса//eng:interface intermal method table size
+      const tVOID* external_table, // rus:указатель на таблицу публичных методов интерфейса//eng:pointer to the interface public method table
+      tDWORD external_table_size, // rus:размер таблицы публичных методов//eng:interface public method table size
+      const tDATA* prop_table, // rus:таблица описателей свойств интерфейса//eng:interface property description table
+      tDWORD prop_table_size, // rus:число записей в таблице описателей свойств интерфейса//eng:record number of interface property description table
+      tDWORD memsize, // rus:размер памяти необходимый для объекта интерфеса//eng:size of memory required for the interface object
+      tDWORD flags, // rus:флаги интерфейса//eng:interface flags
+      tIID iid_compat, // rus:идентификатор интерфейса совместимого с данным//eng:interface id which is compatible with this interface
+      hPLUGIN implemented_module, // rus:плагин, в котором реализован данный интерфейс//eng:plugin implemented this interface
+      tDWORD implemented_index // rus:порядковый номер интерфейса в плагине//eng:index of the interface in the plugin
+    );
+    method tERROR RegisterExportTable( // rus:регистрирует таблицу экспортных функций плагина//eng:register export function table of the plugin
+      tDWORD* result,
+      const tEXPORT* ex_tbl, // pointer to an export table
+      tPID exporter_pid // plugin, which exports the table
+    );
+    method tERROR RegisterExportFunc( // rus:регистрирует экспортную функцию заданного плагина//eng:register export function of the plugin
+      const tFUNC_PTR func_ptr, // pointer to a function
+      tDWORD func_cls, // function class
+      tDWORD func_id, // function id (crc32 of the function name)
+      tPID exporter_pid // plugin exprorted the function
+    );
+    method tERROR RegisterExportFuncByName( // rus:регистрирует экспортную функцию для заданного плагина по имени//eng:register export function of the plugin by name
+      const tFUNC_PTR func_ptr, // pointer to a function
+      tDWORD func_cls, // function class
+      tSTRING func_name, // name of the function
+      tPID exporter_pid // plugin exprorted the function
+    );
+    method tERROR ResolveImportTable( // rus:разрешает таблицу ссылок на экспортные функции//eng:resolve table of references to the export functions
+      tDWORD* result,
+      const tIMPORT* imp_tbl, // import table to be resolved
+      tPID importer_pid // importer pid
+    );
+    method tERROR ResolveImportFunc( // rus:разрещает ссылку на экспортную функцию/eng:resolve reference to the export function
+      tFUNC_PTR* result,
+      tDWORD func_cls, // function class
+      tDWORD func_id, // function id (crc32 of the function name)
+      tPID importer_pid // importer pid
+    );
+    method tERROR ResolveImportFuncByName( // rus:разрещает ссылку на экспортную функцию по имени/eng:resolve reference to the export function by name
+      tFUNC_PTR* result,
+      tDWORD func_cls, // function class
+      const tSTRING func_name, // name of the function
+      tPID importer_pid // importer pid
+    );
+    method tERROR ReleaseImportTable( // rus:освобождает таблицу ссылок на экспортные функции//eng:releases table of the references
+      tDWORD* result,
+      const tIMPORT* imp_tbl, // import table to be released
+      tPID importer_pid // importer pid
+    );
+    method tERROR ReleaseImportFunc( // rus:освобождает ссылку на экспортную функцию//eng:releases reference to the export function
+      tDWORD func_cls, // function class
+      tDWORD func_id, // function id (crc32 of the function name)
+      tPID importer_pid // importer pid
+    );
+    method tERROR ReleaseImportFuncByName( // rus:освобождает ссылку на экспортную функцию по имени//eng:releases reference to the export function by name
+      tDWORD func_cls, // function class
+      const tSTRING func_name, // name of the function
+      tPID importer_pid // importer pid
+    );
+    method tERROR PluginUnloadNotification( // rus:информирование ядра Праги о выгрузке плагина из памяти//eng:outsiders notify root about plugin unloading
+      hPLUGIN plugin_unloaded // rus:плагин, предназначенный для выгрузки из памяти//eng:plugin which is unloaded
+    );
+    method tERROR PluginLoadNotification( // rus:информирование ядра Праги о загрузке плагина в память//eng:outsiders notify root about plugin loading
+      hPLUGIN plugin_loaded // rus:загружаемый в память плагин//eng:plugin which is loaded
+    );
+    method tERROR FreeUnusedPlugins( // forces unload unsued plugins
+      tPID* pid_array, // array of pids to unload
+      tDWORD pid_array_count, // count of elements in the \"pid_array\"
+      tFUP_ACTION action, // eng:type of action to perform
+      tDWORD during // unload plugins if unused period more ten or equal this parameter in milliseconds
+    );
+    method tERROR SetNotificationSink( // rus:установить функцию-приемник уведомления о событии kernel'a
+      tDWORD* p_id, // rus:идентификатор приемника уведомления
+      tSNS_ACTION type, // rus:тип события kernel'а
+      tFUNC_PTR func, // rus:приемник уведомлений
+      tPTR ctx // rus:контекст для функции нотификации
+    );
+    method tERROR FreeNotificationSink( // rus:снять функцию-приемник уведомления о событии kernel'a
+      tDWORD p_id // rus:идентификатор приемника
+    );
+
+    [
+      comment_ex("//rus:позволяет проверить/зарегистрировать список интерфейсов с поддержкой транзакций")
+    ]
+    method tERROR CheckIFace( // rus:проверка интерфейса//eng:Check an interface
+      tIID iid, // rus:идентификатор интерфейса//eng:an interface identifier
+      tPID pid, // rus:идентификатор плагина//eng:a plugin identifier
+      tDWORD subtype, // rus:идентификатор подтипа интерфейса//eng:an interface subtype
+      tVERSION p_version, // rus:версия интерфейса//eng:an interface version
+      tVID vid, // rus:идентификатор разработчика интерфейса//eng:an interface vendor
+      tDWORD flags, // rus:флаги интерфейса//eng:interface flags
+      hPLUGIN implemented_module // rus:плагин, в котором реализован данный интерфейс//eng:plugin implemented this interface
+    );
+    method tERROR SetKernelSyncObject( // force kernel to use synchronization object selected by iid, pid, and subtype
+      tIID iid, // synchronization object interface id
+      tDWORD pid, // synchronization object plugin id
+      tDWORD subtype // synchronization object subtype
+    );
+    method tERROR GetKernelSyncObject( // kernel used synchronization object
+      hOBJECT* sync_object // synchronization object used by kernel
+    );
+    method tERROR RegisterSerializableDescriptor( const cSerDescriptor* descriptor );
+    method tERROR UnregisterSerializableDescriptor( const cSerDescriptor* descriptor );
+    method tERROR FindSerializableDescriptor( cSerDescriptor** descriptor, tDWORD uniqueId );
+    method tERROR CreateSerializable( tDWORD unique_id, cSerializable** object );
+    method tERROR DestroySerializable( cSerializable* object );
+    method tERROR CopySerializable( cSerializable** dst, const cSerializable* src );
+    method tERROR StreamSerialize( // eng:serialize instanse of serializable structure
+      const cSerializable* object,
+      tDWORD ser_id, // serializable id has to be serialized
+      tBYTE* buffer,
+      tDWORD size,
+      tDWORD* output_size,
+      tDWORD flags
+    );
+    method tERROR StreamDeserialize( // eng:deserialize instance of serializable structure
+      cSerializable** object,
+      const tBYTE* buffer,
+      tDWORD size,
+      tDWORD* accepted_size
+    );
+    method tERROR RegSerialize( // eng:serialize instanse of serializable structure
+      const cSerializable* object,
+      tDWORD ser_id, // serializable id has to be serialized
+      hREGISTRY registry,
+      const tCHAR* path
+    );
+    method tERROR RegDeserialize( // eng:deserialize instance of serializable structure
+      cSerializable** object,
+      hREGISTRY registry,
+      const tCHAR* path,
+      tDWORD uniqueId
+    );
+    method tERROR LockKernel();
+    method tERROR UnlockKernel();
+    method tERROR LoadModule( // load module by name
+      hPLUGIN* plugin,
+      const tVOID* module_name, // module name
+      tDWORD name_size,
+      tCODEPAGE cp // module name codepage
+    );
+    method tERROR GetCustomPropName( // returns registered custom property name by identifier
+      tDWORD* out_size, // size of string to be returned
+      tPROPID prop_id,
+      tPTR buffer,
+      tDWORD size
+    );
+    method tERROR StreamSerializeField( // eng:serialize one field of serializable structure
+      const cSerializable* container,
+      const tVOID* field, // eng:filed to be serialized
+      cOutStream* stream,
+      tDWORD reserved // eng:reserved, must be 0
+    );
+    method tERROR RegSerializeField(
+      const cSerializable* container,
+      const tVOID* field,
+      hREGISTRY registry,
+      const tCHAR* path,
+      tDWORD reserved // eng:reserved, must be 0
+    );
+    method tERROR RegDeserializeField( // eng:deserialize one field of serializable structure
+      const cSerializable* container,
+      tVOID* field,
+      hREGISTRY registry,
+      const tCHAR* path,
+      tDWORD reserved // eng:reserved, must be 0
+    );
+    method tERROR RegSerializeEx( // eng:serialize instanse of serializable structure
+      const cSerializable* object,
+      tDWORD ser_id, // serializable id has to be serialized
+      hREGISTRY registry,
+      const tCHAR* path,
+      tSerializeCallback callback_func, // pointer to callback function to control serialize/deserialize process
+      tPTR callback_params // callback params
+    );
+    method tERROR RegDeserializeEx( // eng:deserialize instance of serializable structure
+      cSerializable** object,
+      hREGISTRY registry,
+      const tCHAR* path,
+      tDWORD uniqueId,
+      tSerializeCallback callback_func, // pointer to callback function to control serialize/deserialize process
+      tPTR callback_params // callback params
+    );
+    method tERROR CompareSerializable(
+      const cSerializable* str1,
+      const cSerializable* str2,
+      tDWORD ser_id,
+      tDWORD flags
+    );
+    method tERROR FindSerializableDescriptorByName( cSerDescriptor** descriptor, const tCHAR* name );
+    method tERROR AddRefSerializable( // increase reference count of serializable object
+      cSerializable* object
+    );
+
+
+  // ------------------------------------
+    [ id(805194133) ]
+    message_cls pmc_KERNEL { // rus:сообщения ядра \"Праги\"//eng:Prague kernel message class
+
+      [
+        id(3758919094)
+        comment_ex("//rus:не возможно создать объект интерфейса по причине отсутсвия зарегистрированного интерфейса")
+      ]
+      message pm_OBJECT_CREATE_FAILED_IFACE_NOT_FOUND; // интерфейс не зарегистрирован, объект создан быть не может
+      [ id(2395805260) ]  message pm_INTERFACE_REGISTERED; // rus:интерфейс зарегистрирован
+      [ id(2635922623) ]  message pm_INTERFACE_VERSION_CONFILCT; // интерфейс не может быть зарегистрирован, т.к. зарегистрирован интерфейс с версией и/или timestamp старше чем у регистрируемого
+      [ id(65792593) ]  message pm_OBJECT_CHILD_CLOSE_FAILED;
+      [ id(783295003) ]  message pm_OBJECT_PRECLOSE_FAILED;
+      [ id(3030306684) ]  message pm_OBJECT_CLOSE_FAILED;
+      [ id(1821051258) ]  message pm_INTERFACE_LOAD_ERROR;
+      [ id(511334774) ]  message pm_OBJECT_HAS_BEEN_CREATED;
+      [ id(3471655152) ]  message pm_OBJECT_HAS_BEEN_FREED;
+      [ id(1415893308) ]  message pm_OBJECT_IS_LOCKED_ON_CLOSE;
+    }
+
+}
+
+
+[
+  mnemonic(IID_IFACE_ENUM)
+  id(3)
+  c_type_name(hIFACE_ENUM)
+  comment_ex("Supplies facility to enumerate registered interfaces
+    Also possible to get shared properties of registered iterface")
+]
+interface IFaceEnum { // registered interface enumerator interface
+
+  // ------------------------------------
+
+    [
+      id(130)
+      comment_ex("Interface version")
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      id(131)
+      comment_ex("Interface comment")
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+    [ id(4096) ]  prop tIID pgPRESCRIBED_IID;
+    [ id(4097) ]  prop tPID pgPRESCRIBED_PID;
+    [ id(4098) ]  prop tVID pgPRESCRIBED_VID;
+    [ id(4099) ]  prop hOBJECT pgPRESCRIBED_OBJECT;
+    [ id(4105) ]  prop tDWORD pgPRESCRIBED_TYPE;
+    prop pgOBJECT_NAME;
+    [ id(4100) ]  prop hOBJECT pgPLUGIN; // plugin object which is implemented the interface
+    [ id(4101) ]  prop tDWORD pgINDEX; // index of the interface in the
+    [ id(4102) ]  prop tDWORD pgIFACE_FLAGS; // interface flags
+    [ id(4103) ]  prop tERROR pgIFACE_LOAD_ERR; // interface error during loading
+    [ id(4106) ]  prop tBINARY pgINCLUDE_INTERFACES; // array of structs {iid,pid} to include to iface enumerator
+    [ id(4107) ]  prop tBINARY pgEXCLUDE_INTERFACES; // array of structs {iid,pid} to exclude from iface enumerator
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Initialization of interface enumerator interface")
+    ]
+    method tERROR Init( // Initialization procedure
+      tIID iid,
+      tPID pid,
+      tVID vid,
+      hOBJECT object
+    );
+
+    [
+      comment_ex("Clone current enumerator.")
+    ]
+    method tERROR Clone( // Clone current enumerator
+      hIFACE_ENUM* result,
+      hOBJECT dad
+    );
+
+    [
+      comment_ex("Resets current position of enumerator")
+    ]
+    method tERROR Reset(); // Resets current position of enumerator
+
+    [
+      comment_ex("Advance current pointer to next matching position")
+    ]
+    method tERROR Next(); // Advance current pointer
+
+    [
+      comment_ex("Get static properties of current position(interface)")
+    ]
+    method tERROR GetIFaceProp( // Get static properties of current interface
+      tDWORD* result,
+      tPROPID prop_id,
+      tPTR buffer,
+      tDWORD size
+    );
+
+    [
+      comment_ex("Create instance of interface under current position")
+    ]
+    method tERROR ObjectCreate( // Create instance of current interface
+      hOBJECT* result,
+      hOBJECT parent
+    );
+
+    [
+      comment_ex("check is the current interface can create a new instance on parameter \"object\" base")
+    ]
+    method tERROR Recognize( // regonize the \"object\"
+      hOBJECT object,
+      tDWORD type // type to pass to Recognize internal method
+    );
+    method tERROR Load(); // load the interface and increment objects count
+    method tERROR Free(); // decrements objects count and unload the interface if possible
+
+}
+
+
+[
+  version(0)
+  mnemonic(IID_TRACER)
+  id(4)
+  c_type_name(hTRACER)
+  comment_ex("Interface to output debug/tracer information. To overwrite it just register interface with the same IID and PID but with newer version (2 at least) before Root::StartTrace call")
+]
+interface Tracer { // output debug/tracer information
+
+  // ------------------------------------
+    typedef tFUNC_PTR tOUTPUT_FUNC; // output function prototype
+
+
+  // ------------------------------------
+
+    [
+      id(4096)
+      comment_ex("used for trace purpose")
+    ]
+    prop tFUNC_PTR pgOUTPUT_FUNC; // ouput function pointer
+    [ id(4097) ]  prop tDWORD pgRESERVE_TRACE_BUFFER_SIZE; // reserve trace buffer size at least as indicated
+
+
+  // ------------------------------------
+    method tERROR Trace( // outputs one line to trace log
+      hOBJECT obj, // object issued output trace string
+      tTRACE_LEVEL level, // trace level requested
+      tSTRING format, // string to put in a trace log
+      ...
+    );
+    method tERROR TraceV( // outputs one line to trace log
+      hOBJECT obj, // object issued output trace string
+      tTRACE_LEVEL level, // trace level requested
+      tSTRING format, // string to put in a trace log
+      tVOID* arg_list // argument list
+    );
+    method tERROR Start( // starts tracing process
+      tDWORD* result
+    );
+    method tERROR Stop( tDWORD* result );
+    method tERROR IsRunning(); // returns if tracer in running mode
+
+    [
+      comment_ex("set trace level for all new or/and existing objects of specified interface or/and plugin")
+    ]
+    method tERROR TraceLevelSet( // set trace level by interface or/and by pid
+      tDWORD op, // code of operation -- who is affected by the method
+      tIID iid, // interface id to set level
+      tPID pid, // plugin id to set level
+      tDWORD subtype,
+      tVID vid,
+      tDWORD level, // maximum trace level for affected instances
+      tDWORD min_level // minimum trace level for affected instances
+    );
+
+}
+
+
+[
+  version(1)
+  mnemonic(IID_MSG_RECEIVER)
+  id(9)
+  c_type_name(hMSG_RECEIVER)
+]
+interface MsgReceiver { // special object for the registering as message receiver
+
+  // ------------------------------------
+    [ id(4096) ]  prop tFUNC_PTR pgRECEIVE_PROCEDURE; // message receve procedure
+    [ id(4097) ]  prop tPTR pgRECEIVE_CLIENT_ID; // client id
+
+}
+

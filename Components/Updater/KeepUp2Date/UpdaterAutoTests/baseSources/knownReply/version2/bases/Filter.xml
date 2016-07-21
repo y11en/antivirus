@@ -1,0 +1,14 @@
+<UpdateFiles UpdateDate="08112005 1050">
+  <UpdateSettings Name="Updater/update_date" Type="date" Value="08112005 1050" />
+  <UpdateSettings Name="Updater/av_records" Type="long" Value="163522" />
+
+  <FileDescription ComponentID="FILTER"
+         UpdateType="base"
+         RelativeSrvPath="bases/1"
+         LocalPath="%BaseFolder%"
+         Filename="Filter.avc"
+         FileDate="25052005 1307" />
+
+</UpdateFiles>
+
+;:1040eIhVHCys22KSANoi/QiQN3xaCyqj3y3phG6+Jy89Btc7l9xqZFfw+ayvcdxdinA8jMnwJneRQ9NqC/Fb2twg%%

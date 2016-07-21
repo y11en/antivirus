@@ -1,0 +1,9 @@
+<Include>
+  <ComponentRef Id="klbg.cat_X64" />
+  <ComponentRef Id="klbg.inf_X64" />
+  <ComponentRef Id="klbg.sys_X64" />
+
+  <ComponentRef Id="klbg.inf_X86" />
+  <ComponentRef Id="klbg.sys_X86" />
+  <ComponentRef Id="klbg.cat_X86" />
+</Include>

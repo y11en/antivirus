@@ -1,0 +1,153 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+#include "ver_mod.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_CONFIGURE           ICON    DISCARDABLE     "res\\config.ico"
+IDI_KAV                 ICON    DISCARDABLE     "res\\kav.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLG_PROGRESS DIALOGEX 0, 0, 196, 57
+STYLE DS_SYSMODAL | DS_MODALFRAME | WS_POPUP
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Cancel",IDCANCEL,157,36,32,14
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",PBS_SMOOTH | 
+                    WS_BORDER,7,36,143,14
+    LTEXT           "Static",IDC_PROGRESS_TEXT,7,21,182,10
+    LTEXT           "Processing action...",IDC_TEXT_PROCESSING,7,7,182,10
+END
+
+IDD_DLG_DUMMY DIALOG DISCARDABLE  0, 0, 1, 1
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DLG_PROGRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 189
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 50
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_ISNOTSPAM           BITMAP  DISCARDABLE     "res\\BtnGreen.bmp"
+IDB_ISSPAM              BITMAP  DISCARDABLE     "res\\BtnRed.bmp"
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "#include ""ver_mod.h""\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "Kaspersky Lab OutlookExpress plugin"
+    IDS_SPAMFOLDER          "Spam"
+    IDS_PROBSPAMFOLDER      "Probable spam"
+    IDS_ACT_LEAVEASIS       "Leave as is"
+    IDS_ACT_MOVETO          "Move to folder"
+    IDS_ACT_COPYTO          "Copy to folder"
+    IDS_ACT_DELETE          "Delete"
+    IDS_SETTINGS_WARNING    "You have changed the plugin settings. For the settings to take effect, you must restart OutlookExpress."
+    IDS_TB_SPAM             "Spam"
+    IDS_TB_NOTSPAM          "Not spam"
+    IDS_TB_CONFIG           "Configure"
+    IDS_WRONG_SETTINGS      "Please select correct mail folder."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SPAM_TOOLTIP        "Mark as spam"
+    IDS_PROB_TOOLTIP        "Mark as non-spam"
+    IDS_CONFIG_TOOLTIP      "Change plugin settings"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+

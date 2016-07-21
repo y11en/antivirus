@@ -1,0 +1,71 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Kaspersky Anti-Virus PPP\Settings\MC]
+"ProtectionLevel"=dword:00000003
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Kaspersky Anti-Virus PPP\Settings\MC\MailPlugins]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Kaspersky Anti-Virus PPP\Settings\MC\MailPlugins\40013]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Kaspersky Anti-Virus PPP\Settings\MC\MailPlugins\40013\ProcessParams1]
+"CodeAnalyzer"=dword:00000001
+"ScanPacked"=dword:00000001
+"ScanRemovable"=dword:00000001
+"ScanFixed"=dword:00000001
+"ScanNTFSStreams"=dword:00000001
+"UseIChecker"=dword:00000001
+"UseIStreams"=dword:00000001
+"SizeLimit"=dword:00000000
+"TimeLimit"=dword:00000000
+"ScanNetwork"=dword:00000000
+"ScanSFXArchived"=dword:00000001
+"ScanOLE"=dword:00000001
+"ExcludeByMask"=dword:00000000
+"ScanSectors"=dword:00000001
+"ScanMemory"=dword:00000001
+"ScanMailBases"=dword:00000001
+"ScanPlainMail"=dword:00000001
+"ScanType"=dword:00000001
+"ScanArchived"=dword:00000001
+"ScanStartUpObjects"=dword:00000001
+"ScanMail"=dword:00000001
+"ActionOnInfectedObject"=dword:00028000
+"ActionOnSuspiciousObject"=dword:00028000
+"ProtectionLevel"=dword:00000002
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Kaspersky Anti-Virus PPP\Settings\MC\MailPlugins\58042]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Kaspersky Anti-Virus PPP\Settings\MC\MBLs]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Kaspersky Anti-Virus PPP\Settings\MC\MBLs\TrafficMonitoring]
+"MailPartFilterList"="AntiVirus; IWorm"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Kaspersky Anti-Virus PPP\Settings\MC\MBLs\TrafficMonitoring\MailInterceptorLoaders]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Kaspersky Anti-Virus PPP\Settings\MC\MBLs\TrafficMonitoring\MailInterceptorLoaders\40012]
+"CheckSMTPTraffic"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Kaspersky Anti-Virus PPP\Settings\MC\MBLs\TrafficMonitoring\MailPartFilters]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Kaspersky Anti-Virus PPP\Settings\MC\MBLs\TrafficMonitoring\MailPartFilters\AntiVirus]
+"PID"=dword:00009c4d
+"process_params"="ProcessParams1"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Kaspersky Anti-Virus PPP\Settings\MC\MBLs\TrafficMonitoring\MailPartFilters\AntiVirus\0]
+"NextFilter"="IWorm"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Kaspersky Anti-Virus PPP\Settings\MC\MBLs\TrafficMonitoring\MailPartFilters\AntiVirus\1]
+"StopProcessing"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Kaspersky Anti-Virus PPP\Settings\MC\MBLs\TrafficMonitoring\MailPartFilters\AntiVirus\DEFAULT]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Kaspersky Anti-Virus PPP\Settings\MC\MBLs\TrafficMonitoring\MailPartFilters\AntiVirus\DEFAULT\source]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Kaspersky Anti-Virus PPP\Settings\MC\MBLs\TrafficMonitoring\MailPartFilters\IWorm]
+"PID"=dword:0000e2ba
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Kaspersky Anti-Virus PPP\Settings\MC\MBLs\TrafficMonitoring\MailPartFilters\IWorm\DEFAULT]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Kaspersky Anti-Virus PPP\Settings\MC\MBLs\TrafficMonitoring\MailPartFilters\IWorm\DEFAULT\source]
+"StopProcessing"=dword:00000001
+

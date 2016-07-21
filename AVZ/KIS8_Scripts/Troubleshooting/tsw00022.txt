@@ -1,0 +1,34 @@
+// $AVZ1523
+//$ Проводник - заблокирован доступ к сетевому окружению
+// Функция поиска проблемы                                                                          
+function Check : dword;
+begin
+ Result := 0;
+ // Блокировка
+ if RegKeyIntParamRead('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'NoNetHood') > 0 then begin
+   Result := 3;
+   exit;
+  end;
+ if RegKeyIntParamRead('HKLM', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'NoNetHood') > 0 then begin
+   Result := 3;
+   exit;
+  end;
+ if RegKeyIntParamRead('HKCU', 'software\microsoft\internet explorer\main', 'nonethood') > 0 then begin
+   Result := 3;
+   exit;
+  end;
+ if RegKeyIntParamRead('HKLM', 'software\microsoft\internet explorer\main', 'nonethood') > 0 then begin
+   Result := 3;
+   exit;
+  end;
+end;
+
+// Функция исправления проблемы                                                                          
+function Fix : dword;
+begin
+ RegKeyParamDel('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'NoNetHood');
+ RegKeyParamDel('HKCU', 'Software\microsoft\internet explorer\main', 'NoNetHood');
+ RegKeyParamDel('HKLM', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'NoNetHood');
+ RegKeyParamDel('HKLM', 'Software\microsoft\internet explorer\main', 'NoNetHood');
+ Result := 0;
+end;

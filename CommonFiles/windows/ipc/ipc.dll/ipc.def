@@ -1,0 +1,39 @@
+; ipc.def
+;
+; Interprocess communication library (IPC)
+;
+; Module definition file
+;
+; (C) 2003 Kaspersky Labs
+;
+; Author: Vyacheslav A. Batenin (Vyacheslav.Batenin@kaspersky.com)
+;
+
+LIBRARY      "klipc"
+; DESCRIPTION  'Interprocess Communication (IPC) Windows Dynamic Link Library'
+
+EXPORTS
+
+IPC_GetVersion					@1
+IPC_ServerStart					@4
+IPC_ServerStop					@5
+IPC_ServerWaitForConnection		@6
+IPC_Connect						@7
+IPC_CloseConnection				@8
+IPC_Recv						@9
+IPC_Send						@10
+
+IPC_SetEvents					@15
+IPC_GetEvents					@16
+IPC_ResetEvents					@17
+
+IPC_GetConnectionLastErr		@18
+
+; not implemented functions
+
+IPC_ServerDgStart				@11
+IPC_ServerDgStop				@12
+IPC_DgRecv						@13
+IPC_DgSend						@14
+IPC_Init						@2
+IPC_Done						@3

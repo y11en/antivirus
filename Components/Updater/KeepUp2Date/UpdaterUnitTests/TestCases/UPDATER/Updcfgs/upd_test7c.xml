@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<UpdaterSettingsSection>
+
+<sites_list>
+	<site2 url="ftp://tl-srv-w02" 	weight="20"			region="*,ab" />
+	<site2 url="ftp://tl-srv-w01" 	weight="3000"			region="ab" />
+	<site2 url="ftp://tl-srv-w03" 	weight="30"			region="*" />
+	<site2 url="ftp://tl-srv-w04" 	weight="40"			region="" />
+	<site2 url="ftp://tl-srv-w05" 	weight="50"			region="" />
+	<site2 url="ftp://tl-srv-w07" 	weight="70"			region="" />
+	<site2 url="ftp://tl-srv-w06" 	weight="60"			region="" />
+</sites_list>
+
+<UpdateFileDescription 	Filename="master.xml" RelativeSrvPath="index"> </UpdateFileDescription>
+
+</UpdaterSettingsSection>
+; 0XLSznpdI71fB300e7Uwj1jCdccMmwzxNVK+oXfkI1R1nqcB6qbC7X+4Us­­

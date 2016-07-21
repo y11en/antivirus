@@ -1,0 +1,5 @@
+// ***** AdvWare.Sidesearch *****
+begin
+ AddEvAlarmByCLSID('952EC978-4920-4F18-8237-91D69B54C580',AScriptName,'MyToolBar.DLL');
+ AddEvAlarmByCLSID('D6CA5D91-5EA2-4654-9B75-499267012611',AScriptName,'MyToolBar.DLL');
+end.

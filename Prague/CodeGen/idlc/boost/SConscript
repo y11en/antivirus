@@ -1,0 +1,20 @@
+Import("env")
+
+import os
+
+absroot = str(env.Dir('#boost'))
+dirlist = ['libs/filesystem/src', 'libs/program_options/src', 'libs/thread/src']
+
+cppfiles = []
+
+def collect_files(dirlist) :
+    cpps = []
+    
+    for dir in dirlist :
+    	cpps += [os.path.join(dir, e) for e in os.listdir(os.path.join(absroot, dir)) if os.path.splitext(e)[1] == '.cpp' ]
+    	
+    return cpps
+
+cppfiles = collect_files(dirlist)
+    
+env.Library(target = 'boost', source = cppfiles)

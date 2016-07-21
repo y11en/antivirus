@@ -1,0 +1,429 @@
+<h1 align=center>Таблицы схемы AVZ</h1>
+<p align=right>(C) Зайцев О.В., 2005<br>
+Дата генерации: 30.05.2007 15:17:31<br>
+База данных: VIRLAB</p>
+<h2>Таблица AVZS_FILES</h2>
+Описание: Файлы AV базы<br>
+Первичный ключ: PK_AVZS_FILES (AVZ_FILE)
+<br>Дата и время создания: 02.05.2007 8:42:40
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Код файла<td><b>AVZ_FILE<td>NUMBER<td align=center>22<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>2<td>Имя файла<td>FILE_NAME<td>VARCHAR2<td align=center>50<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>3<td>Описание файла<td>DESCR<td>VARCHAR2<td align=center>400<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>4<td>Код типа файла<td>FILE_TYPE<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>5<td>Фильтр для отбора записей<td>SQL_FILTER<td>VARCHAR2<td align=center>100<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZS_FILETYPE</h2>
+Описание: Типы файлов<br>
+Первичный ключ: PK_AVZS_FILETYPE (FILE_TYPE)
+<br>Дата и время создания: 02.05.2007 8:42:40
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Код типа файла<td><b>FILE_TYPE<td>NUMBER<td align=center>22<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>2<td>Описание типа файла<td>DESCR<td>VARCHAR2<td align=center>50<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZS_OSTYPE</h2>
+Описание: <br>
+Первичный ключ: PK_AVZS_OSTYPE (OS_TYPE)
+<br>Дата и время создания: 02.05.2007 8:42:40
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Код типа ОС<td><b>OS_TYPE<td>NUMBER<td align=center>22<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>2<td>Наименование<td>NAIM<td>VARCHAR2<td align=center>100<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZS_URLMON</h2>
+Описание: Режимы слежения за файлом по его URL<br>
+Первичный ключ: 
+<br>Дата и время создания: 02.05.2007 8:42:40
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Код режима<td>ID<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>2<td>Описание режима<td>MON_MODE<td>VARCHAR2<td align=center>100<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_CHANGES</h2>
+Описание: <br>
+Первичный ключ: 
+<br>Дата и время создания: 02.05.2007 8:42:40
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Дата и время добавления<td>ADD_DATE<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>2<td>Тип (0-предложение, 1-ошибка, 2-интерфейс)<td>TIP<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>3<td>Приоритет<td>PRIORITY<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>4<td>Описание<td>DESCR<td>VARCHAR2<td align=center>500<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>5<td>Признак того, что проблема решена<td>CLOSED<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>6<td>Версия AVZ, в которой решена проблема<td>AVZ_VER<td>NUMBER<td align=center>4<td>2<td>&nbsp<td>&nbsp;
+<tr><td align=center>7<td>Примечания (источник, уточнения)<td>PRIM<td>VARCHAR2<td align=center>500<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_EXTRACT</h2>
+Описание: Описание базы с DLL для распковки архивов<br>
+Первичный ключ: 
+<br>Дата и время создания: 02.05.2007 8:42:41
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Наименование<td>NAIM<td>VARCHAR2<td align=center>50<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>2<td>Имя файла<td>FILE_NAME<td>VARCHAR2<td align=center>50<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>3<td>Примечание<td>PRIM<td>VARCHAR2<td align=center>150<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>4<td>Имя файла базы, в который включается данная запись<td>AVZ_FILE<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_GOOD_CLSID</h2>
+Описание: <br>
+Первичный ключ: 
+<br>Дата и время создания: 02.05.2007 8:42:41
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>CLSID класса<td>CLSID<td>VARCHAR2<td align=center>36<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>2<td>Код ОС<td>OS_TYPE<td>NUMBER<td align=center>22<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>3<td>Имя файла<td>FILENAME<td>VARCHAR2<td align=center>150<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_GOOD_FILES</h2>
+Описание: База "чистых" объектов - главная таблица<br>
+Первичный ключ: 
+<br>Дата и время создания: 02.05.2007 8:42:42
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Код группы<td>GROUP_CODE<td>NUMBER<td align=center>5<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>2<td>Имя файла<td>FILENAME<td>VARCHAR2<td align=center>50<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>3<td>Размер файла<td>FILESIZE<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>4<td>Призна того, что это EXE файл<td>ISEXE<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>5<td>Признак того, что это PE файл<td>ISPE<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>6<td>Сигнатрура S1<td>S1<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>7<td>Сигнатрура S2<td>S2<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>8<td>Сигнатрура S3<td>S3<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>9<td>Сигнатрура S4<td>S4<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>10<td>CRC AVZ<td>SUMMCRC<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>11<td>MD5<td>MD5<td>VARCHAR2<td align=center>32<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>12<td>Дата добавление в базу<td>DATE_ADD<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>13<td>Дата файла<td>FILEDATE<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>14<td>Описание из копирайтов файла<td>FILEDESCRIPTION<td>VARCHAR2<td align=center>80<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>15<td>Версия файла<td>FILEVERSION<td>VARCHAR2<td align=center>50<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>16<td>Код файла AV базы, в которую должна быть включена запись<td>AVZ_FILE<td>NUMBER<td align=center>2<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_KERNELDRV</h2>
+Описание: Описание базы с DLL для распковки архивов<br>
+Первичный ключ: 
+<br>Дата и время создания: 02.05.2007 8:42:43
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Наименование<td>NAIM<td>VARCHAR2<td align=center>50<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>2<td>Имя файла<td>FILE_NAME<td>VARCHAR2<td align=center>50<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>3<td>Примечание<td>PRIM<td>VARCHAR2<td align=center>150<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>4<td>Код версии операционной системы, для которой предназначен драйвер<td>OS_VER<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>5<td>Имя файла базы, в который включается данная запись<td>AVZ_FILE<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>6<td>Имя ссылки для доступа к драйверу<td>LINK_NAME<td>VARCHAR2<td align=center>30<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_KEYLOGGER</h2>
+Описание: Настройки игнорирования антикейлоггера<br>
+Первичный ключ: 
+<br>Дата и время создания: 02.05.2007 8:42:43
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Имя файла<td>FILE_NAME<td>VARCHAR2<td align=center>50<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>2<td>Примечание<td>PRIM<td>VARCHAR2<td align=center>150<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>3<td>Код метоположения<td>DIRCODE<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_MAIN</h2>
+Описание: Главная база S сигнатур<br>
+Первичный ключ: 
+<br>Дата и время создания: 02.05.2007 8:42:43
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Наименование<td>NAIM<td>VARCHAR2<td align=center>100<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>2<td>Минимальный размер<td>SIZEMIN<td>NUMBER<td align=center>22<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>3<td>Максимальный размер<td>SIZEMAX<td>NUMBER<td align=center>22<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>4<td>Сигнатрура S1<td>S1<td>NUMBER<td align=center>22<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>5<td>Сигнатура S2<td>S2<td>NUMBER<td align=center>22<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>6<td>Сигнатура S3<td>S3<td>NUMBER<td align=center>22<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>7<td>Сигнатура S4<td>S4<td>NUMBER<td align=center>22<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>8<td>MD5 сумма<td>MD5<td>VARCHAR2<td align=center>32<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>9<td>Имя файла<td>FILENAME<td>VARCHAR2<td align=center>100<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>10<td>Дата и время добавления в коллекцию<td>DATE_ADD<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>11<td>Дата модификации<td>DATE_CHANGE<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>12<td>Признак полного сравнения<td>FULLCOMPARE<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>13<td>Номер скрипта<td>SCRIPT<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>14<td>Код файла AVZ<td>AVZ_FILE<td>NUMBER<td align=center>22<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>15<td>Счетчик статистики<td>STAT_CNT<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_MAIN_SCR</h2>
+Описание: Скрипты для лечения (к базе S)<br>
+Первичный ключ: PK_AVZT_MAIN_SCR (ID)
+<br>Дата и время создания: 02.05.2007 8:42:47
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Код<td><b>ID<td>NUMBER<td align=center>22<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>2<td>Наименование<td>NAIM<td>VARCHAR2<td align=center>100<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>3<td>Текст скрипта<td>SCRIPT<td>VARCHAR2<td align=center>4000<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>4<td>Дата добавления<td>DATE_ADD<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>5<td>Дата модификации<td>DATE_CHANGE<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>6<td>Признак<td>BETTAVER<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_MAIN_STAT</h2>
+Описание: Статистика изучения зловредов<br>
+Первичный ключ: 
+<br>Дата и время создания: 02.05.2007 8:42:47
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Дата (без времени !!)<td>DATE_OP<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>2<td>Наименование зловреда<td>NAIM<td>VARCHAR2<td align=center>50<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>3<td>Статистика - кол-во экземпляров<td>STAT_CNT<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>4<td>Статистика - кол-во уникальных разновидностей<td>STAT_VAR<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_NEURAL</h2>
+Описание: Настройки нейросимулятора<br>
+Первичный ключ: 
+<br>Дата и время создания: 02.05.2007 8:42:47
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Имя нейросети<td>NAIM<td>VARCHAR2<td align=center>50<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>2<td>Имя файла с профилем NNW<td>FILE_NAME<td>VARCHAR2<td align=center>50<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>3<td>Примечания<td>PRIM<td>VARCHAR2<td align=center>150<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_PORTS</h2>
+Описание: Настройки анализатора открытых портов<br>
+Первичный ключ: PK_AVZT_PORTS (PORT,IS_UDP)
+<br>Дата и время создания: 02.05.2007 8:42:47
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Порт<td><b>PORT<td>NUMBER<td align=center>22<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>2<td>Признак UDP (0-TCP, 1-UDP)<td><b>IS_UDP<td>NUMBER<td align=center>1<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>3<td>Комментарии<td>CMT<td>VARCHAR2<td align=center>150<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>4<td>Признак: системная служба<td>IS_SYS<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>5<td>Признак: серверная служба<td>IS_SERVER<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>6<td>Признак: троян<td>IS_TROJAN<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>7<td>Признак: Backdoor<td>IS_BACKDOOR<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>8<td>Признак: RiskWare<td>IS_RISKWARE<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>9<td>Признак: червяк<td>IS_WORM<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>10<td>Процесс, который прослушивает этот порт по умолчанию<td>DEF_PROC<td>VARCHAR2<td align=center>50<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_RESEACH_KEYLOGGER</h2>
+Описание: <br>
+Первичный ключ: 
+<br>Дата и время создания: 02.05.2007 8:42:48
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>URL дистрибутива<td>URL<td>VARCHAR2<td align=center>100<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>2<td>Признак того, что это кейлоггер<td>IS_KEYLOGGER<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>3<td>Описание<td>DESCR<td>VARCHAR2<td align=center>4000<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>4<td>Проткол AVZ<td>LOG<td>VARCHAR2<td align=center>4000<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>5<td>Признак наличия инсталлятора<td>IS_INST<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>6<td>Признак скрытной инсталляции<td>IS_HIDDEN_INST<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>7<td>Признак руткит-маскировки<td>IS_ROOTKIT<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>8<td>Примечания<td>PRIM<td>VARCHAR2<td align=center>4000<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>9<td>Имя файла<td>FNAME<td>VARCHAR2<td align=center>50<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>10<td>Наименование кейлоггера<td>NAIM<td>VARCHAR2<td align=center>100<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>11<td>Тип кейлоггера (1-ловушка, 2-циклический опрос, 3-драйвер-фильтр<td>TIP<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_ROOTKIT</h2>
+Описание: Настройки антируткита<br>
+Первичный ключ: 
+<br>Дата и время создания: 02.05.2007 8:42:48
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Идентификатор<td>ID<td>NUMBER<td align=center>22<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>2<td>Имя файл<td>NAIM<td>VARCHAR2<td align=center>50<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>3<td>Примечание<td>PRIM<td>VARCHAR2<td align=center>150<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_ROOTKIT_FN</h2>
+Описание: Правила проверки функций UserMode антируткита<br>
+Первичный ключ: 
+<br>Дата и время создания: 02.05.2007 8:42:48
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Идентификатор<td>ID<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>2<td>Имя функции<td>FN_NAIM<td>VARCHAR2<td align=center>50<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>3<td>Операция (0-проверять, 1-не проверять)<td>OP<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_ROOTKIT_PAR</h2>
+Описание: Параметры антируткита<br>
+Первичный ключ: 
+<br>Дата и время создания: 02.05.2007 8:42:48
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Наименование<td>NAIM<td>VARCHAR2<td align=center>50<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>2<td>Значение параметра<td>VAL<td>CLOB<td align=center>4000<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>3<td>Примечание<td>PRIM<td>VARCHAR2<td align=center>200<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_SCRIPT_CMD</h2>
+Описание: Команды скриптового языка<br>
+Первичный ключ: AVZT_SCRIPT_CMD_PK (ID)
+<br>Дата и время создания: 22.05.2007 17:14:28
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Идентификатор<td><b>ID<td>NUMBER<td align=center>22<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>2<td>Тип (0-процедура, 1-функция)<td>PRGTYPE<td>NUMBER<td align=center>1<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>3<td>Команда - полное ее определение<td>CMDTXT<td>VARCHAR2<td align=center>150<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>4<td>Комментарии<td>CMT<td>VARCHAR2<td align=center>150<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>5<td>Дата добавления<td>DATE_ADD<td>DATE<td align=center>7<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>6<td>Признак актуальности<td>ACTUAL<td>NUMBER<td align=center>1<td>&nbsp;<td>NOT NULL<td>&nbsp;
+</table>
+<h2>Таблица AVZT_SCRIPT_IPU</h2>
+Описание: Скрипты экристической проверки системы<br>
+Первичный ключ: PK_AVZT_SCRIPT_IPU (ID)
+<br>Дата и время создания: 28.05.2007 11:40:37
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Код (скрипты выполняются в порядке возрастания кода)<td><b>ID<td>NUMBER<td align=center>22<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>2<td>Наименование<td>NAIM<td>VARCHAR2<td align=center>100<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>3<td>Текст скрипта<td>SCRIPT<td>CLOB<td align=center>4000<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>4<td>Дата добавления<td>DATE_ADD<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>5<td>Дата модификации<td>DATE_CHANGE<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>6<td>Признак того, что это отладочная версия<td>BETTAVER<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_SCRIPT_REPAIR</h2>
+Описание: Скрипты восстановления системы<br>
+Первичный ключ: PK_AVZT_SCRIPT_REPAIR (ID)
+<br>Дата и время создания: 02.05.2007 8:42:48
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Код (скрипты выполняются в порядке возрастания кода)<td><b>ID<td>NUMBER<td align=center>22<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>2<td>Наименование<td>NAIM<td>VARCHAR2<td align=center>100<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>3<td>Текст скрипта<td>SCRIPT<td>CLOB<td align=center>4000<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>4<td>Дата добавления<td>DATE_ADD<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>5<td>Дата модификации<td>DATE_CHANGE<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>6<td>Признак того, что это отладочная версия<td>BETTAVER<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_SCRIPT_STDOP</h2>
+Описание: Скрипты для подсистемы "Стандартные скрипты"<br>
+Первичный ключ: PK_AVZT_SCRIPT_STDOP (ID)
+<br>Дата и время создания: 02.05.2007 8:42:48
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Код (скрипты выполняются в порядке возрастания кода)<td><b>ID<td>NUMBER<td align=center>22<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>2<td>Наименование<td>NAIM<td>VARCHAR2<td align=center>100<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>3<td>Текст скрипта<td>SCRIPT<td>CLOB<td align=center>4000<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>4<td>Дата добавления<td>DATE_ADD<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>5<td>Дата модификации<td>DATE_CHANGE<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>6<td>Признак того, что это отладочная версия<td>BETTAVER<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_SCRIPT_SYSCHECK</h2>
+Описание: Скрипты экристической проверки системы<br>
+Первичный ключ: PK_AVZT_SCRIPT_SYSCHECK (ID)
+<br>Дата и время создания: 02.05.2007 8:42:48
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Код (скрипты выполняются в порядке возрастания кода)<td><b>ID<td>NUMBER<td align=center>22<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>2<td>Наименование<td>NAIM<td>VARCHAR2<td align=center>100<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>3<td>Текст скрипта<td>SCRIPT<td>CLOB<td align=center>4000<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>4<td>Дата добавления<td>DATE_ADD<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>5<td>Дата модификации<td>DATE_CHANGE<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>6<td>Признак того, что это отладочная версия<td>BETTAVER<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_TOKENS</h2>
+Описание: Группы токенов сканера памяти<br>
+Первичный ключ: PK_AVZT_TOKENS (TG,TI)
+<br>Дата и время создания: 02.05.2007 8:42:48
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Код группы токенов<td><b>TG<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>2<td>Идентификатор токена<td><b>TI<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>3<td>Данные токена<td>DATA<td>VARCHAR2<td align=center>100<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>4<td>Примечание<td>PRIM<td>VARCHAR2<td align=center>50<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_TOKENS_ES</h2>
+Описание: Настройки экспертной системы<br>
+Первичный ключ: 
+<br>Дата и время создания: 02.05.2007 8:42:48
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Наименование правила<td>NAIM<td>VARCHAR2<td align=center>50<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>2<td>Минимальный размер для детекта<td>SMIN<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>3<td>Максимальный размер для детекта<td>SMAX<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>4<td>Главное условие детекта<td>MAINDETECT<td>VARCHAR2<td align=center>500<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>5<td>Доп. условие детекта<td>DOPDETECT<td>VARCHAR2<td align=center>500<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>6<td>Условие, блокирующее срабатывание<td>LOCKDETECT<td>VARCHAR2<td align=center>500<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>7<td>Примечание<td>PRIM<td>VARCHAR2<td align=center>100<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_TOKENS_GR</h2>
+Описание: Группы токенов сканера памяти<br>
+Первичный ключ: PK_AVZT_TOKENS_GR (GR)
+<br>Дата и время создания: 02.05.2007 8:42:48
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Код группы<td><b>GR<td>NUMBER<td align=center>22<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>2<td>Символическое имя группы<td>NAIM<td>VARCHAR2<td align=center>50<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>3<td>Описание<td>DESCR<td>VARCHAR2<td align=center>150<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_TOKENS_SCR</h2>
+Описание: Скрипты, анализирующие собранные токены<br>
+Первичный ключ: 
+<br>Дата и время создания: 02.05.2007 8:42:48
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Код<td>ID<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>2<td>Наименование скрипта<td>NAIM<td>VARCHAR2<td align=center>100<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>3<td>Текст скрипта<td>SCRIPT<td>CLOB<td align=center>4000<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>4<td>Дата и время добавления<td>DATE_ADD<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>5<td>Дата последней модификации<td>DATE_CHANGE<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>6<td>Признак того, что это отладочный вариант<td>BETTAVER<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_TRANSLATE</h2>
+Описание: База данных переводчика AVZ<br>
+Первичный ключ: 
+<br>Дата и время создания: 02.05.2007 8:42:48
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Русский текст<td>RUS_TXT<td>VARCHAR2<td align=center>500<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>2<td>Локализованный текст (перевод)<td>LOCAL_TXT<td>VARCHAR2<td align=center>500<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>3<td>Код источника<td>SRC_CODE<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>4<td>Имя файла-источника<td>SRC_FILE<td>VARCHAR2<td align=center>50<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>5<td>Поле X - уточнение места данной фразы в источнике<td>X1<td>VARCHAR2<td align=center>100<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>6<td>Поле X - уточнение места данной фразы в источнике<td>X2<td>VARCHAR2<td align=center>100<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_UPDATE</h2>
+Описание: <br>
+Первичный ключ: AVZT_UPDATE_PK (URL)
+<br>Дата и время создания: 02.05.2007 8:42:48
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Код<td>ID<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>2<td>URL загрузки<td><b>URL<td>VARCHAR2<td align=center>200<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>3<td>Приоритет использования<td>PR_LEVEL<td>NUMBER<td align=center>22<td>&nbsp;<td>NOT NULL<td>&nbsp;
+</table>
+<h2>Таблица AVZT_URL</h2>
+Описание: URL зловредов и чистых файлов подсистемы мониторинга<br>
+Первичный ключ: PK_AVZT_MALWARE_URL (ID)
+<br>Дата и время создания: 02.05.2007 8:42:48
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Идентификатор<td><b>ID<td>NUMBER<td align=center>22<td>&nbsp;<td>NOT NULL<td>&nbsp;
+<tr><td align=center>2<td>URL файла<td>URL<td>VARCHAR2<td align=center>500<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>3<td>Наименование MALWARE<td>NAIM<td>VARCHAR2<td align=center>500<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>4<td>Дата добавления<td>ADD_DATE<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>5<td>Дата последней проверки<td>LAST_CHECK<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>6<td>Дата файла, передаваемая в HTTP заголовках<td>FILE_DATE<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>7<td>Размер файла, байт<td>FILE_SIZE<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>8<td>Код типа автопроверки<td>AUTO_CHECK<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>9<td>Признак того, что ссылка является "плохой" - ошибка 404<td>BAD_LINK<td>NUMBER<td align=center>1<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>10<td>Последний код, полученный от сервера<td>LAST_RESP_CODE<td>NUMBER<td align=center>3<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>11<td>Реальный размер<td>REAL_FILE_SIZE<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>12<td>Сигнатура загружанного файла<td>REAL_SIGN<td>VARCHAR2<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>13<td>Кол-во обновлений, зафиксированных анализатором<td>UPD_CNT<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>14<td>Имя malware по последнему детекту AVZ<td>LAST_AVZ_DETECT<td>VARCHAR2<td align=center>50<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>15<td>Количество ссылок, зафиксированных в ходе анализа<td>REF_CNT<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>16<td>Тип URL<td>URL_TYPE<td>NUMBER<td align=center>1<td>&nbsp;<td>NOT NULL<td>&nbsp;
+</table>
+<h2>Таблица AVZT_URL_LOG</h2>
+Описание: Протоколы обновления URL<br>
+Первичный ключ: 
+<br>Дата и время создания: 02.05.2007 8:42:49
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Код<td>ID<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>2<td>Дата операции<td>DATE_OP<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>3<td>Код ответа HTTP<td>RESP_CODE<td>NUMBER<td align=center>3<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>4<td>Дата файла<td>FILE_DATE<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>5<td>Размера файла в байтах<td>FILE_SIZE<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>6<td>Примечания<td>PRIM<td>VARCHAR2<td align=center>100<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>
+<h2>Таблица AVZT_URL_SEARCH</h2>
+Описание: Протоколы охотника на URL<br>
+Первичный ключ: 
+<br>Дата и время создания: 02.05.2007 8:42:49
+<table border=1 cellspacing=0 width=100%>
+<tr><td align=center><b>№<td align=center><b>Наименование<td align=center><b>Имя поля<td align=center><b>Тип<td align=center><b>Width<td align=center><b>Dec<td align=center><b>Контроль<b><td align=center><b>Примечание
+<tr><td align=center>1<td>Дата операции<td>DATE_OP<td>DATE<td align=center>7<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>2<td>URL, его фрагмент или иной ключ поиска<td>URL<td>VARCHAR2<td align=center>200<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>3<td>Код поисковой системы<td>SEARCH_SYS<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>4<td>Кол-во найденных ссылок<td>FOUND_CNT<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+<tr><td align=center>5<td>Кол-во новых ссылок, добавленных в базу<td>ADD_CNT<td>NUMBER<td align=center>22<td>&nbsp;<td>&nbsp<td>&nbsp;
+</table>

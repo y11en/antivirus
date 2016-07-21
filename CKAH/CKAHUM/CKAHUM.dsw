@@ -1,0 +1,125 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "CKAHComm"=..\CKAHComm\CKAHComm.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Components/Windows/KAH/CKAHComm", PWUQAAAA
+    ..\ckahcomm
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "CKAHGEN"=..\TEST\CKAHGEN\CKAHGEN.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Components/Windows/KAH/Test/CKAHGEN", WPMQAAAA
+    ..\test\ckahgen
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "CKAHUM"=.\CKAHUM.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Components/Windows/KAH/CKAHUM", YIWJAAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name uzlib
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name CKAHComm
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name kl1lib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CKAHUMTESTUI2"=..\TEST\CKAHUMTESTUI2\CKAHUMTESTUI2.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Components/Windows/KAH/Test/CKAHUMTESTUI2", IQHLAAAA
+    ..\test\ckahumtestui2
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name CKAHUM
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "kl1lib"=..\..\..\..\Windows\Hook\kl1lib\kl1lib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "uzlib"=..\uzlib\uzlib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Components/Windows/KAH/uzlib", TGQQAAAA
+    ..\uzlib
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Components/Windows/KAH/CKAHUM", YIWJAAAA
+    .
+    end source code control
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

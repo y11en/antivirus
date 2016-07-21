@@ -1,0 +1,412 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+//#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+//#ifdef _WIN32
+
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+
+//#pragma code_page(1251)
+//#endif //_WIN32
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+//    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,1,0,1
+ PRODUCTVERSION 0,1,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Kaspersky Lab Ltd.\0"
+            VALUE "FileDescription", "Localization file\0"
+            VALUE "FileVersion", "0, 1, 0, 1\0"
+            VALUE "InternalName", "Russian\0"
+            VALUE "LegalCopyright", "Copyright © 1996-1998\0"
+            VALUE "OriginalFilename", "AVP_RU.DLL\0"
+            VALUE "ProductName", "AntiViral Toolkit Pro for Win32\0"
+            VALUE "ProductVersion", "0, 1, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDD_AVP32_DIALOG MENU DISCARDABLE
+BEGIN
+    POPUP "&Файл"
+    BEGIN
+        MENUITEM "Сохранить &настройки по умолчанию",
+                                                ID_FILE_SAVEPROFILEASDEFAULT
+        MENUITEM SEPARATOR
+        MENUITEM "&Загрузить настройки...",     ID_FILE_LOADPROFILE
+        MENUITEM "&Сохранить настройки...",     ID_FILE_SAVEPROFILE
+        MENUITEM SEPARATOR
+        MENUITEM "В&ыход",                      ID_APP_EXIT
+    END
+    POPUP "Поиск &вирусов"
+    BEGIN
+        MENUITEM "&Пуск",                       ID_SCAN_NOW
+        MENUITEM "Сто&п",                       ID_STOP
+    END
+    POPUP "Се&рвис"
+    BEGIN
+        MENUITEM "&Обновить базы",              ID_TOOLS_UPDATENOW
+        MENUITEM SEPARATOR
+        MENUITEM "&Настройки",                  ID_CUSTOMIZE
+        MENUITEM "&Поиск в отчете",             ID_FIND
+        MENUITEM "&Создать список вирусов",     ID_VIRLIST
+    END
+    POPUP "&Помощь"
+    BEGIN
+        MENUITEM "&Содержание",                 ID_DEFAULT_HELP
+        MENUITEM "AVP в сети &Интернет",        ID_HELP_AVPONTHEWEB
+        MENUITEM SEPARATOR
+        MENUITEM "&О программе AVP",            ID_HELP_ABOUTAVP32
+    END
+END
+
+IDR_POP_MENU MENU DISCARDABLE
+BEGIN
+    POPUP "Pop"
+    BEGIN
+        MENUITEM "&Отметить выделенное",             ID_POP_MARK
+        MENUITEM "&Снять отметку с выделенного",     ID_POP_UNMARK
+        MENUITEM SEPARATOR
+        MENUITEM "С&канировать выделенное",          ID_POP_SCAN
+    END
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    ID_FILE_SAVEPROFILEASDEFAULT   "Сохранить все настройки в профайл Default.prf"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    ID_FILE_LOADPROFILE     "Загрузить настройки из профайла"
+    ID_FILE_SAVEPROFILE     "Сохранить настройки в профайл"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    ID_APP_EXIT             "Выход из AVP32"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_NOTHING_FILES       "Не заданы объекты для сканирования. Пожалуйста, отметьте ""Файлы"" и/или ""Сектора"" на закладке ""Объекты""."
+    IDS_NOTHING_LOCATION    "Не задана область сканирования. Пожалуйста, отметьте диски на закладке ""Область""."
+    IDS_LIST_ONAME          "Объект"
+    IDS_LIST_RESULT         "Результат"
+    IDS_DISINF_OFILE        "Файл"
+    IDS_DISINF_OSECTOR      "Сектор"
+    IDS_DISINF_OMEM         "Память"
+    IDS_SCANPROC_SPAWN      "Процесс сканирования запущен"
+    IDS_SCANPROC_COMPLETE   "Процесс сканирования завершен"
+    IDS_SCANPROC_INCOMPLETE "Процесс сканирования не закончен"
+    IDS_SCANPROC_QUESTION   "Остановить процесс сканирования?"
+    IDS_ENTRY_FORMAT        "%s Точка входа #%d"
+    IDS_LOADBASE_FORMAT     "Загрузка базы %s %d%%"
+    IDS_INTERFACE_FAULT     "Ошибка в интерфейсе"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_KERNEL_FAULT        "Ошибка в программном ядре"
+    IDS_OBJ_CORRUPTED       "поврежден"
+    IDS_OBJ_IOERROR         "ошибка ввода/вывода"
+    IDS_OBJ_DISINF_FAILED   "удаление %s невозможно"
+    IDS_OBJ_ENCRYPTED       "зашифрован"
+    IDS_OBJ_OK              "в порядке"
+    IDS_OBJ_DISINFECTED     "вирус %s успешно удален"
+    IDS_OBJ_DELETED         "объект с вирусом %s уничтожен"
+    IDS_OBJ_INFECTED        "обнаружен вирус %s"
+    IDS_OBJ_PACKED          "упакован %s"
+    IDS_OBJ_ARCHIVE         "архив %s"
+    IDS_OBJ_WARNING         "похож на вариант вируса %s"
+    IDS_OBJ_SUSPICION       "подозрение на вирус типа %s"
+    IDS_OBJ_UNKNOWN         "%s неизвестный формат"
+    IDS_ERROR_FILE_OPEN     "Невозможно открыть файл %s"
+    IDS_ERROR_SET           "Неправильный файл конфигурации %s"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_ERROR_BASE          "Антивирусная база %s испорчена или устарела."
+    IDS_ERROR_KERNEL_PROC   "Отсутствует системная процедура %s"
+    IDS_ERROR_LINK          "Ошибка! Объектный код не подлинкован."
+    IDS_REPORT_CUT          "*** Ограничение размера файла отчета cut\x0d\x0a"
+    IDS_BOOT_SECTOR         "Загрузочный сектор диска  "
+    IDS_MBR_SECTOR          "Системный загрузчик HDD%d "
+    IDS_REPORT_BANNER       "   AVP32 проверяет %x  %X\x0d\x0a"
+    IDS_NEXT_CDROM          "Вставьте следующий CDROM диск..."
+    IDS_NEXT_FLOPPY         "Вставьте следующую дискету..."
+    IDS_BASES_LOADED        "Антивирусные базы загружены. Количество вирусов: %d"
+    IDS_BASES_NOT_LOADED    "Антивирусные базы загружены не полностью."
+    IDS_LOAD_PROFILE        "Загрузить настройки"
+    IDS_SAVE_PROFILE        "Сохранить настройки"
+    IDS_PROFILE_EXT         "Настройки для AVP (*.prf)|*.prf||"
+    IDS_TAB_LOCATION        " &Область  "
+    IDS_TAB_OBJECTS         " О&бъекты "
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_TAB_ACTIONS         " &Действия "
+    IDS_TAB_OPTIONS         " &Параметры "
+    IDS_TAB_STATISTICS      " &Статистика "
+    IDS_FLOPPY_DRIVE        "дисковод"
+    IDS_CDROM_DRIVE         "CDROM дисковод"
+    IDS_ADD_FOLDER          "&Добавить папку в список"
+    IDS_SCAN_NOW            "&Пуск"
+    IDS_STOP                "Сто&п"
+    IDS_ABOUT               "О программе AVP"
+    IDS_SUPPORT             "&Поддержка"
+    IDS_ACTION              "Действие"
+    IDS_DISINFECT_DIALOG    "Зараженный объект"
+    IDS_INFECTED_BY         "Заражен вирусом"
+    IDS_DISINFECT_R         "&Только отчет"
+    IDS_DISINFECT_D         "&Лечить"
+    IDS_DISINFECT_DEL       "&Удалить"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_COPYINFECTED        "&Копировать в отдельную папку"
+    IDS_APPLY_TOALL         "П&рименить ко всем зараженным объектам"
+    IDS_TAB1_LOCAL          "&Локальные диски"
+    IDS_TAB1_NETWORK        "С&етевые диски"
+    IDS_TAB1_FLOPPY         "Флопп&и дисководы"
+    IDS_TAB1_ADD_FOLDER     "Доб&авить папку"
+    IDS_TAB2_MEMORY         "П&амять"
+    IDS_TAB2_SECTORS        "Се&ктора"
+    IDS_TAB2_FILES          "Фа&йлы"
+    IDS_TAB2_PACKED         "&Упакованные объекты"
+    IDS_TAB2_EXTRACT        "Ар&хивы"
+    IDS_TAB2_MASK_FRAME     "Тип файлов"
+    IDS_TAB2_SMART          "Программы по фор&мату"
+    IDS_TAB2_PROGRAMS       "Программы по рас&ширению"
+    IDS_TAB2_ALLFILES       "Все фай&лы"
+    IDS_TAB2_USERDEF        "По маск&е"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_TAB3_PRIORITY_TEXT  "Приоритет сканирования"
+    IDS_TAB3_PRIORITY_LOW   "Низкий"
+    IDS_TAB3_PRIORITY_HIGH  "Высокий"
+    IDS_TAB3_WARNINGS       "Предупре&ждения"
+    IDS_TAB3_CA             "&Анализатор кода"
+    IDS_TAB3_REDUNDANT      "&Избыточное сканирование"
+    IDS_TAB3_SHOWOK         "Отчет о &чистых объектах"
+    IDS_TAB3_SHOWPACK       "Отчет об &упакованных объектах"
+    IDS_TAB3_SOUND          "&Звуковые эффекты"
+    IDS_TAB3_TRACK          "С&лежение за отчетом"
+    IDS_TAB3_REPORT         "Файл о&тчета"
+    IDS_TAB3_APPEND         "Добавит&ь"
+    IDS_TAB3_LIMIT          "О&граничение размера, Kb:"
+    IDS_TAB5_SCANNED_FRAME  "Проверено"
+    IDS_TAB5_FOUND_FRAME    "Найдено"
+    IDS_TAB5_STATIC_SECTORS "Секторов :"
+    IDS_TAB5_STATIC_FILES   "Файлов :"
+    IDS_TAB5_STATIC_FOLDERS "Папок :"
+    IDS_TAB5_STATIC_ARCHIVES "Архивов :"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_TAB5_STATIC_PACKED  "Упакованных :"
+    IDS_TAB5_STATIC_TIME    "Время проверки :"
+    IDS_TAB5_STATIC_VIRUSES "Известных вирусов :"
+    IDS_TAB5_STATIC_BODIES  "Тел вирусов :"
+    IDS_TAB5_STATIC_DISINFECTED "Вылеченных объектов :"
+    IDS_TAB5_STATIC_WARNINGS "Предупреждений :"
+    IDS_TAB5_STATIC_SUSPIC  "Подозрений на вирус :"
+    IDS_TAB5_STATIC_CORRUPTED "Испорченных объектов :"
+    IDS_TAB5_STATIC_IOERRORS "Ошибок ввода/вывода :"
+    IDS_TAB6_INFECTED_OBJ   "Зараженные объекты"
+    IDS_TAB6_SUSP_OBJ       "Подозрительные объекты"
+    IDS_TAB6_REPORTONLY     "Только о&тчет"
+    IDS_TAB6_DISINFECTDIALOG "&Запрос на лечение"
+    IDS_TAB6_DISINFECTAUTO  "&Лечить без запроса"
+    IDS_TAB6_DELETE         "&Удалять без запроса"
+    IDS_TAB6_COPYINFECTED   "&Копировать в отдельную папку"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_TAB6_COPYSUSPICIOUS "Коп&ировать в отдельную папку"
+    IDS_NAME                "Имя"
+    IDS_ORGANIZATION        "Фирма"
+    IDS_REGNUMBER           "Номер"
+    IDS_REGISTERINFO        "Регистрационные данные:"
+    IDS_SUPPORT_DLG         "Поддержка"
+    IDS_EXPIR_ALARM         "Ваша лицензия на AVP закончится %d/%m/%Y"
+    IDS_EXPIRIED            "Ваша лицензия на AVP закончилась %d/%m/%Y"
+    IDS_SET_OUTOFDATE       "Набор антивирусных баз устарел.\nОбновите базы AVP."
+    IDS_SHURE_DELETEALL     "Вы уверены в том, что Вы хотите УДАЛИТЬ ВСЕ зараженные объекты?"
+    IDS_NEEDTORESTART       "Вам необходимо перезапустить AVP32.EXE."
+    IDS_ASK_DELETE          "Лечение %s \nзараженного вирусом %s невозможно.\n\nУдалить этот объект?"
+    IDS_ASK_DELETE_ALL      "Удалять все объекты, лечение которых невозможно?"
+    IDS_ASK_DELETE_SKIP_ALL "Не удалять объекты, лечение которых невозможно?"
+    IDS_CURE_SECTOR         "Лечение секторов - рискованная операция.\nМы рекомендуем Вам сделать полную копию Вашего диска.\n\nПриступить к лечению прямо сейчас?"
+    IDS_MEMORY              "Системная память"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_REMOTE_LAUNCH       "Данная копия AVP® не лицензирована для запуска с удаленных дисков.\nAVP будет работать в демонстрационном режиме."
+    IDS_KEY_PLATHFORM_NT    "Данная копия AVP® не лицензирована для использования под Windows NT®.\nAVP будет работать в демонстрационном режиме."
+    IDS_KEY_PLATHFORM_95    "Данная копия AVP® не лицензирована для использования под Windows 95®.\nAVP будет работать в демонстрационном режиме."
+    IDS_ADMIN_RIGHTS        "Вы запустили AVP® под Windows NT® не имея прав Администратора.\nAVP не сможет проверять сектора дисков."
+    IDS_KEY_ABSENT          "Данная копия AVP® не имеет ключевого файла.\nAVP будет работать в демонстрационном режиме."
+    IDS_MIN_CAPTION         "AVP Поиск (%d%%)"
+    IDS_TAB5_STATIC_DELETED "Удалено :"
+    IDS_TAB5_STATIC_SPEED   "Скорость (Кб/сек) :"
+    IDS_ASK_REDUNDANT       "Избыточное сканирование замедляет процесс проверки \nв несколько раз, увеличивает вероятность ложных обнаружений. \nСм. руководство пользователя. \n\nНачать процесс проверки?"
+    IDS_LAST_UPDATE         "Последнее обновление:  %s,  %d вирусов."
+    IDS_FINDNEXT            "&Найти"
+    IDS_FIND                "Поиск в отчете"
+    IDS_CANCEL              "Отмена"
+    IDS_CASE                "&Учитывать регистр"
+    IDS_OBJ_DISKOUTOFSPACE  "нет места на диске"
+    IDS_OBJ_PROTECTED       "закрыт паролем"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_TAB2_MAILPLAIN      "Почтовые &текстовые форматы"
+    IDS_TAB2_MAILBASES      "Почтовые &базы данных"
+    IDS_AVP_URL             "http://www.avp.ru"
+    IDS_SELF_DISINFECTED    "AVP успешно вылечил себя от вируса: %s\n\n AVP будет перезагружен."
+    IDS_SELF_DISINFECTION_FAILED "AVP заражен вирусом: %s\n\n СБОЙ ПРИ ЛЕЧЕНИИ!!!"
+    IDS_NEED_REBOOT         "Инфицированные файлы на Вашем компьютере блокированы другими процессами.\n AVP не может открыть эти файлы для лечения.\n После перезагрузки системы инфицированные файлы будут заменены на вылеченные.\n\n\nПерезагрузить систему
+
+
+
+
+ сейчас?"
+    IDS_OBJ_LOCKED          "блокирован для записи другим процессом."
+    IDS_OBJ_NO_ACCESS       "доступ на чтение запрещен."
+    IDS_CUST_SINGLE_CLICK   "Выбор пути для сканирования по одиночному нажатию клавиши мыши."
+    IDS_CUST_NEXT_DISK_PROMPT "Вывод приглашения о проверке &следующего сменного диска."
+    IDS_CUST_REDUNDANT_MESSAGE "Вывод предупреждающего сообщения &избыточного сканирования."
+    IDS_CUST_DELETE_ALL_MESSAGE "Вывод сообщения об &удалении всех зараженных объектов."
+    IDS_CUST_STAT_AFTER_BEGIN "&Переключение на закладку статистики после начала сканирования."
+    IDS_CUST_STAT_AFTER_FINISH "Переключение на закладку &статистики после завершения сканирования."
+    IDS_CUST_POPUP_AFTER_FINISH "&Раскрывать окно AVP после окончания сканирования."
+    IDS_CUSTOMIZE_BTN       "&Настройки"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_CUSTOMIZE_DLG       "Настройки AVP"
+    IDS_CUST_OTHER_MESSAGES "&Другие предупреждающие сообщения."
+    IDS_REG_SECURITY_WEAK   "Внимание: Настройки безопасности для зоны '%s' слишком слабы"
+    IDS_REG_IE_OPTIONS      "Установки Internet Explorer"
+    IDS_REG_MACRO_PROTECTION_DISABLED "Внимание: Защита от макро вирусов выключена"
+    IDS_REG_W97_OPTIONS     "Установки MS Word 97"
+    IDS_REG_E97_OPTIONS     "Установки MS Excel 97"
+    IDS_REG_W2000_OPTIONS   "Установки MS Word 2000"
+    IDS_REG_E2000_OPTIONS   "Установки MS Excel 2000"
+    IDS_REG_PP97_OPTIONS    "Установки MS PowerPoint 97"
+    IDS_REG_PP2000_OPTIONS  "Установки MS PowerPoint 2000"
+END
+
+//#include "avp_dosr.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+//IDB_DAVID               BITMAP  DISCARDABLE     "res\\david1.bmp"
+//IDB_DAVID               BITMAP  DISCARDABLE     "..\\..\\pictures\\targru2.bmp"
+/////////////////////////////////////////////////////////////////////////////
+
+
+

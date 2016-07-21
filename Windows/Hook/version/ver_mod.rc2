@@ -1,0 +1,13 @@
+//
+// VER_MOD.RC2 - resources Microsoft Visual C++ does not edit directly
+//
+
+#ifndef APSTUDIO_INVOKED
+
+#include "ver_mod.h"             // module version definitions
+
+#endif //not APSTUDIO_INVOKED
+
+
+
+

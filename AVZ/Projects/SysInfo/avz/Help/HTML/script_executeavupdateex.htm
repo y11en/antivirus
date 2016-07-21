@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?script_executeavupdateex.htm"; }
+else { parent.quicksync('a15.12.2'); }
+//-->
+</script>
+   <title>function &nbsp;ExecuteAVUpdateEx</title>
+   <meta name="keywords" content="ExecuteAVUpdateEx,&#1042;&#1099;&#1087;&#1086;&#1083;&#1085;&#1077;&#1085;&#1080;&#1077; &#1086;&#1073;&#1085;&#1086;&#1074;&#1083;&#1077;&#1085;&#1080;&#1103; &#1073;&#1072;&#1079; &#1091;&#1090;&#1080;&#1083;&#1080;&#1090;&#1099;,URL &#1089;&#1077;&#1088;&#1074;&#1077;&#1088;&#1072;,URL &#1089;&#1077;&#1088;&#1074;&#1077;&#1088;&#1072; &#1089; &#1082;&#1086;&#1090;&#1086;&#1088;&#1086;&#1075;&#1086; &#1087;&#1088;&#1086;&#1074;&#1086;&#1076;&#1080;&#1090;&#1089;&#1103; &#1086;&#1073;&#1085;&#1086;&#1074;&#1083;&#1077;&#1085;&#1080;&#1077;,&#1072;&#1076;&#1088;&#1077;&#1089; &#1087;&#1088;&#1086;&#1082;&#1089;&#1080;-&#1089;&#1077;&#1088;&#1074;&#1077;&#1088;&#1072;,&#1087;&#1088;&#1086;&#1082;&#1089;&#1080;">
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+
+
+<body bgcolor="#FFFFFF">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">function&nbsp; ExecuteAVUpdateEx</span></p>
+
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="t_about.htm">Наверх</a>&nbsp;
+     <a href="script_executeavupdate.htm">Предыдущая</a>&nbsp;
+     <a href="script_addtolog.htm">Последующая</a>
+     </font><B>|</B>
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=717989"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=717989;t=109;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=18 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=717989"><img
+src="http://top.list.ru/counter?js=na;id=717989;t=109"
+border=0 height=18 width=88
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+    </td>
+  </tr>
+</table>
+<br>
+
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">function</span><span style="font-size: 12pt; font-family: 'Courier New';">  ExecuteAVUpdateEx</span><span style="font-size: 12pt; font-family: 'Courier New';">(AServerURL : string; AConnectMode : byte; ProxyServer, ProxyUser, ProxyPass : string)</span><span style="font-size: 12pt; font-family: 'Courier New';"> : boolean;</span></p>
+<p>&nbsp;</p>
+<p>Выполнение обновления баз утилиты AVZ через Интернет. Аналогична ExecuteAVUpdate, но проводит обновление согласно заданным параметрам с указанного URL, что в частности позволяет обновлять базы с сервера в локальной сети. </p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold; text-decoration: underline;">Параметры:</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">AServerURL</span> - URL сервера, с которого проводится обновление. Если вместо URL указать пустую строку, то в качестве источника обновления случайным образом берется один из стандартных URL (случайный выбор позволяет распределять нагрузку между источниками обновления).</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">AConnectMode</span> - код режима соединения:</p>
+<p>0 - соединение в соответствии с настройками Internet Explorer. В этом режиме параметры ProxyServer, ProxyUser, ProxyPass игнорируются;</p>
+<p>1 - прямое соединение. Оптимально для компьютера, имеющего прямой выход в Интернет. В этом режиме параметры ProxyServer, ProxyUser, ProxyPass игнорируются;</p>
+<p>2 - соединение через прокси сервер, не требующий авторизации. В этом режиме в обязательном порядке должен быть указан ProxyServer, через который будет вестись работа, параметры ProxyUser и ProxyPass игнорируются;</p>
+<p>3 - соединение через прокси сервер, требующий авторизации. Режим аналогичен режиму 2, но обязательно заполняются параметры ProxyUser, ProxyPass.</p>
+<p>4 - соединение через прокси сервер, требующий авторизации по протоколу NTLM. Режим аналогичен режиму 3.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">ProxyServer</span> - имя или IP адрес прокси-сервера, имеет смысл только в режимах 2 и 3.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">ProxyUser</span> - имя пользователя для авторизации на прокси сервере, имеет смысл только в режиме 3</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">ProxyPass</span> - пароль пользователя для авторизации на прокси сервере, имеет смысл только в режиме 3</p>
+<p>&nbsp;</p>
+<p><span style="text-decoration: underline;">Примеры:</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">if</span><span style="font-size: 12pt; font-family: 'Courier New';"> ExecuteAVUpdateEx(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'http:\\my_server.com\avz_av_update\', 0, '','',''</span><span style="font-size: 12pt; font-family: 'Courier New';">) </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">then</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  AddToLog(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">Обновление </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">AV </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">баз </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">по настройкам </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">IE) </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">успешно выполнено</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';">.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">if</span><span style="font-size: 12pt; font-family: 'Courier New';"> ExecuteAVUpdateEx(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'http:\\my_server.com\avz_av_update\', 1, '','',''</span><span style="font-size: 12pt; font-family: 'Courier New';">) </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">then</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  AddToLog(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">Обновление </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">AV </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">баз </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">прямое соединение</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">) </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">успешно выполнено</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';">.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">if</span><span style="font-size: 12pt; font-family: 'Courier New';"> ExecuteAVUpdateEx(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'http:\\my_server.com\avz_av_update\', 2, 'myproxy','',''</span><span style="font-size: 12pt; font-family: 'Courier New';">) </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">then</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  AddToLog(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">Обновление </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">AV </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">баз </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">Proxy сервер без авторизации</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">) </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">успешно выполнено</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';">.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">if</span><span style="font-size: 12pt; font-family: 'Courier New';"> ExecuteAVUpdateEx(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'http:\\my_server.com\avz_av_update\', 3, 'myproxy','Pupkin','TopSecretPasswd'</span><span style="font-size: 12pt; font-family: 'Courier New';">) </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">then</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  AddToLog(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">Обновление </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">AV </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">баз </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">Proxy сервер с авторизацией</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">) </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">успешно выполнено</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';">.</span></p>
+<p>&nbsp;</p>
+
+
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=717989;js='+js+a+';rand='+Math.random()+
+'" height=1 width=1/>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=717989"
+height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+
+</body>
+</html>

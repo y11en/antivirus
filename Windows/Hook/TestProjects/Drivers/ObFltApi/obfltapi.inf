@@ -1,0 +1,130 @@
+;;;
+;;; 
+;;;
+;;;
+;;; 
+;;;
+
+[Version]
+Signature   = "$Windows NT$"
+Class       = "ActivityMonitor"                         ;This is determined by the work this filter driver does
+ClassGuid   = {b86dff51-a31e-4bac-b3cf-e8cfe75c9fc2}
+Provider    = %KasperskyLab%
+DriverVer   = 02/18/2007,1.0.0.1
+CatalogFile = obfltapi.cat
+DriverPackageType=FileSystemFilter
+
+[Manufacturer]
+%KLName%=obfltapiModelSection,ntamd64
+
+[obfltapiModelSection]
+%obfltapiName%=DefaultInstall,obfltapi
+
+[obfltapiModelSection.ntamd64]
+%obfltapiName%=DefaultInstall,obfltapi
+
+[DestinationDirs]
+DefaultDestDir = 12
+obfltapi.DriverFiles = 12                        ;%windir%\system32\drivers
+
+[SourceDisksNames]
+1 = %Disk1%
+
+[SourceDisksFiles]
+obfltapi.sys = 1
+
+;;
+;; Default install sections
+;;
+
+[DefaultInstall]
+OptionDesc          = %obfltapiServiceDesc%
+CopyFiles           = obfltapi.DriverFiles
+
+[DefaultInstall.ntamd64]
+OptionDesc          = %obfltapiServiceDesc%
+CopyFiles           = obfltapi.DriverFiles
+
+[DefaultInstall.Services]
+AddService          = %obfltapiServiceName%,,obfltapi.Service
+
+[DefaultInstall.ntamd64.Services]
+AddService          = %obfltapiServiceName%,,obfltapi.Service
+
+;;
+;; Default uninstall sections
+;;
+
+[DefaultUninstall]
+DelFiles   = obfltapi.DriverFiles
+DelReg     = obfltapi.DelRegistry
+
+[DefaultUninstall.ntamd64]
+DelFiles   = obfltapi.DriverFiles
+DelReg     = obfltapi.DelRegistry
+
+[DefaultUninstall.Services]
+DelService = obfltapi
+
+[DefaultUninstall.ntamd64.Services]
+DelService = obfltapi
+
+;
+; Services Section
+;
+
+[obfltapi.Service]
+DisplayName      = %obfltapiServiceName%
+Description      = %obfltapiServiceDesc%
+ServiceBinary    = %12%\obfltapi.sys                 ;%windir%\system32\drivers\obfltapi.sys
+Dependencies     = %FltmgrServiceName%          ;FltMgr
+ServiceType      = 2                            ;SERVICE_FILE_SYSTEM_DRIVER
+StartType        = 1                            ;SERVICE_SYSTEM_START
+ErrorControl     = 1                            ;SERVICE_ERROR_NORMAL
+LoadOrderGroup   = "FSFilter Activity Monitor"
+AddReg           = obfltapi.AddRegistry
+
+;
+; Registry Modifications
+;
+
+[obfltapi.AddRegistry]
+HKR,%RegInstancesSubkeyName%,%RegDefaultInstanceValueName%,0x00000000,%DefaultInstance%
+HKR,%RegInstancesSubkeyName%"\"%Instance1.Name%,%RegAltitudeValueName%,0x00000000,%Instance1.Altitude%
+HKR,%RegInstancesSubkeyName%"\"%Instance1.Name%,%RegFlagsValueName%,0x00010001,%Instance1.Flags%
+
+[obfltapi.DelRegistry]
+;HKR,%RegInstancesSubkeyName%,%RegDefaultInstanceValueName%
+;HKR,%RegInstancesSubkeyName%"\"%Instance1.Name%,%RegAltitudeValueName%
+;HKR,%RegInstancesSubkeyName%"\"%Instance1.Name%,%RegFlagsValueName%
+
+;
+; Copy Files
+;
+
+[obfltapi.DriverFiles]
+obfltapi.sys
+
+;;
+;; String Section
+;;
+
+[Strings]
+KasperskyLab       = "Kaspersky Lab"
+obfltapiServiceDesc    = "obfltapi Minifilter"
+obfltapiServiceName    = "obfltapi"
+obfltapiDebugLevel     = "DebugLevel"
+FltmgrServiceName                   = "FltMgr"
+RegInstancesSubkeyName              = "Instances"
+RegDefaultInstanceValueName         = "DefaultInstance"
+RegAltitudeValueName                = "Altitude"
+RegFlagsValueName                   = "Flags"
+Disk1                               = "obfltapi Source"
+KLName             = "KL"
+obfltapiName           = "obfltapi"
+
+;Instances specific information.
+DefaultInstance      = "obfltapi"
+Instance1.Name       = "obfltapi"
+Instance1.Altitude   = "320400"
+Instance1.Flags      = 0x0

@@ -1,0 +1,1246 @@
+REGEDIT4
+
+;[HKEY_CLASSES_ROOT\CLSID\{063C2F2F-F310-4d3e-8BFF-0F1B919BFA3B}\InProcServer32]
+;@="o:\\out\\debug\\ap_wks.dll"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0]
+@="Kaspersky Anti-Virus 7.0 for Windows Workstations"
+"Configurator"="{063C2F2F-F310-4d3e-8BFF-0F1B919BFA3B}"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\antihacker]
+@="Anti-Hacker"
+"Configurator"="{063C2F2F-F310-4d3e-8BFF-0F1B919BFA3B}"
+"CID_ComponentID"="Connector"
+"CID_Version"="7.0.0.0"
+"CtrlButtons"=dword:0000000f
+"UniqueTask"=dword:00000001
+"SchedulerPages"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\antispam]
+@="Anti-Spam"
+"Configurator"="{063C2F2F-F310-4d3e-8BFF-0F1B919BFA3B}"
+"CID_ComponentID"="Connector"
+"CID_Version"="7.0.0.0"
+"CtrlButtons"=dword:0000000f
+"UniqueTask"=dword:00000001
+"SchedulerPages"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\antispy]
+@="Anti-Spy"
+"Configurator"="{063C2F2F-F310-4d3e-8BFF-0F1B919BFA3B}"
+"CID_ComponentID"="Connector"
+"CID_Version"="7.0.0.0"
+"CtrlButtons"=dword:0000000f
+"UniqueTask"=dword:00000001
+"SchedulerPages"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\oas]
+@="File Monitoring"
+"Configurator"="{063C2F2F-F310-4d3e-8BFF-0F1B919BFA3B}"
+"CID_ComponentID"="Connector"
+"CID_Version"="7.0.0.0"
+"CtrlButtons"=dword:0000000f
+"UniqueTask"=dword:00000001
+"SchedulerPages"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\ods]
+@="On-Demand Scanning"
+"Configurator"="{063C2F2F-F310-4d3e-8BFF-0F1B919BFA3B}"
+"CID_ComponentID"="Connector"
+"CID_Version"="7.0.0.0"
+"CtrlButtons"=dword:0000000f
+"UniqueTask"=dword:00000000
+"SchedulerPages"=dword:00001d79
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\mc]
+@="Mail Monitoring"
+"Configurator"="{063C2F2F-F310-4d3e-8BFF-0F1B919BFA3B}"
+"CID_ComponentID"="Connector"
+"CID_Version"="7.0.0.0"
+"CtrlButtons"=dword:0000000f
+"UniqueTask"=dword:00000001
+"SchedulerPages"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\sc]
+@="Script Monitoring"
+"Configurator"="{063C2F2F-F310-4d3e-8BFF-0F1B919BFA3B}"
+"CID_ComponentID"="Connector"
+"CID_Version"="7.0.0.0"
+"CtrlButtons"=dword:0000000f
+"UniqueTask"=dword:00000001
+"SchedulerPages"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\wm]
+@="Web Monitoring"
+"Configurator"="{063C2F2F-F310-4d3e-8BFF-0F1B919BFA3B}"
+"CID_ComponentID"="Connector"
+"CID_Version"="7.0.0.0"
+"CtrlButtons"=dword:0000000f
+"UniqueTask"=dword:00000001
+"SchedulerPages"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\bb]
+@="Behavior Blocking"
+"Configurator"="{063C2F2F-F310-4d3e-8BFF-0F1B919BFA3B}"
+"CID_ComponentID"="Connector"
+"CID_Version"="7.0.0.0"
+"CtrlButtons"=dword:0000000f
+"UniqueTask"=dword:00000001
+"SchedulerPages"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\bb2]
+@="Behavior Blocking for Vista"
+"Configurator"="{063C2F2F-F310-4d3e-8BFF-0F1B919BFA3B}"
+"CID_ComponentID"="Connector"
+"CID_Version"="7.0.0.0"
+"CtrlButtons"=dword:0000000f
+"UniqueTask"=dword:00000001
+"SchedulerPages"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\regguard2]
+@="Registry Guard"
+"Configurator"="{063C2F2F-F310-4d3e-8BFF-0F1B919BFA3B}"
+"CID_ComponentID"="Connector"
+"CID_Version"="7.0.0.0"
+"CtrlButtons"=dword:0000000f
+"UniqueTask"=dword:00000001
+"SchedulerPages"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\updater]
+@="Updater"
+"Configurator"="{063C2F2F-F310-4d3e-8BFF-0F1B919BFA3B}"
+"CID_ComponentID"="Connector"
+"CID_Version"="7.0.0.0"
+"CtrlButtons"=dword:0000000f
+"UniqueTask"=dword:00000000
+"SchedulerPages"=dword:00001579
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\rollback]
+@="Rollback AV bases"
+"Configurator"="{063C2F2F-F310-4d3e-8BFF-0F1B919BFA3B}"
+"CID_ComponentID"="Connector"
+"CID_Version"="7.0.0.0"
+"CtrlButtons"=dword:0000000f
+"UniqueTask"=dword:00000000
+"SchedulerPages"=dword:00001d79
+
+;[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\retran]
+;@="Retranslation"
+;"Configurator"="{063C2F2F-F310-4d3e-8BFF-0F1B919BFA3B}"
+;"CID_ComponentID"="Connector"
+;"CID_Version"="7.0.0.0"
+;"CtrlButtons"=dword:0000000f
+;"UniqueTask"=dword:00000001
+;"SchedulerPages"=dword:00001d79
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS7\7.0.0.0\Tasks\InstallKey]
+@="License key managering"
+"Configurator"="{063C2F2F-F310-4d3e-8BFF-0F1B919BFA3B}"
+"CID_ComponentID"="Connector"
+"CID_Version"="7.0.0.0"
+"CtrlButtons"=dword:00000001
+"UniqueTask"=dword:00000000
+"SchedulerPages"=dword:00000140
+
+; ----- plugin-specific settings -----
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\AdvDis]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\HTTP]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\IMAP]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\MailWasher]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\NNTP]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\POP3]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\SMTP]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Spamtest]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Scan_Quarantine]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Retranslation]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\RetranslationCfg]
+
+; - environment -
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\environment]
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\environment]
+"CompanyName"="Kaspersky Lab"
+"ProductType"="wks"
+;"ProductStatus"="release"
+;"ProductRoot"="o:\\out\\debug"
+"ProductFolder"="%ProductRoot%"
+;"Localization"="en"
+"Doc"="%ProductRoot%\\Doc"
+"HelpFile"="%Doc%\\context_wks.chm"
+"HideAIC"="1"
+
+; Behavior_Blocking2 must be visible to manage it from AK
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Behavior_Blocking2]
+"hidden"=dword:00000000
+
+; - special profile -
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\LicMgr]
+"enabled"=dword:00000001
+"admflags"=dword:00000007
+"type"="InstallKey"
+
+; - notification settings -
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings]
+"CheckTray"=dword:00000001
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0000]
+"CheckTray"=dword:00000001
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0000\Childs\0000]
+"CheckTray"=dword:00000001
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0000\Childs\0001]
+"CheckTray"=dword:00000001
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0000\Childs\0002]
+"CheckTray"=dword:00000001
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0000\Childs\0003]
+"CheckTray"=dword:00000001
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0000\Childs\0004]
+"CheckTray"=dword:00000000
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0000\Childs\0005]
+"CheckTray"=dword:00000000
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0001]
+"CheckTray"=dword:00000000
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0001\Childs\0000]
+"CheckTray"=dword:00000000
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0001\Childs\0001]
+"CheckTray"=dword:00000000
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0001\Childs\0002]
+"CheckTray"=dword:00000000
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0001\Childs\0003]
+"CheckTray"=dword:00000000
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0002]
+"CheckTray"=dword:00000001
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0002\Childs\0000]
+"CheckTray"=dword:00000001
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0002\Childs\0001]
+"CheckTray"=dword:00000000
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0002\Childs\0002]
+"CheckTray"=dword:00000001
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0002\Childs\0003]
+"CheckTray"=dword:00000000
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0002\Childs\0004]
+"CheckTray"=dword:00000000
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0002\Childs\0005]
+"CheckTray"=dword:00000001
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0002\Childs\0006]
+"CheckTray"=dword:00000001
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0002\Childs\0007]
+"CheckTray"=dword:00000001
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0003]
+"CheckTray"=dword:00000001
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0003\Childs\0000]
+"CheckTray"=dword:00000001
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0003\Childs\0001]
+"CheckTray"=dword:00000001
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0003\Childs\0002]
+"CheckTray"=dword:00000001
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0003\Childs\0003]
+"CheckTray"=dword:00000000
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0003\Childs\0004]
+"CheckTray"=dword:00000000
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0003\Childs\0005]
+"CheckTray"=dword:00000000
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0003\Childs\0006]
+"CheckTray"=dword:00000001
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0003\Childs\0007]
+"CheckTray"=dword:00000001
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\settings\def\NSettings\Childs\0003\Childs\0008]
+"CheckTray"=dword:00000001
+"CheckSound"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\AVService\settings\def]
+"UseActiveDisinfection"=dword:00000000
+
+; - assign new scan objects for 'Scan_Objects' profile -
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Scan_Objects\settings\ScanObjects]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Scan_Objects\settings\def\ScanObjects]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Scan_Objects\settings\ScanObjects\0000]
+"Enabled"=dword:00000001
+"Recursive"=dword:00000001
+"System"=dword:00000000
+"ObjectType"=dword:00000000
+"ScanObjects"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Scan_Objects\settings\ScanObjects\0001]
+"Enabled"=dword:00000000
+"Recursive"=dword:00000001
+"System"=dword:00000000
+"ObjectType"=dword:00000002
+"ScanObjects"="%personal%"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Scan_Objects\settings\ScanObjects\0002]
+"Enabled"=dword:00000000
+"Recursive"=dword:00000001
+"System"=dword:00000000
+"ObjectType"=dword:00000006
+"ScanObjects"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Scan_Objects\settings\ScanObjects\0003]
+"Enabled"=dword:00000000
+"Recursive"=dword:00000001
+"System"=dword:00000000
+"ObjectType"=dword:00000004
+"ScanObjects"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Scan_Objects\settings\ScanObjects\0004]
+"Enabled"=dword:00000000
+"Recursive"=dword:00000001
+"System"=dword:00000000
+"ObjectType"=dword:00000005
+"ScanObjects"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Scan_Objects\settings\ScanObjects\0005]
+"Enabled"=dword:00000000
+"Recursive"=dword:00000001
+"System"=dword:00000000
+"ObjectType"=dword:0000000b
+"ScanObjects"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Scan_Objects\settings\ScanObjects\0006]
+"Enabled"=dword:00000000
+"Recursive"=dword:00000001
+"System"=dword:00000000
+"ObjectType"=dword:0000000e
+"ScanObjects"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Scan_Objects\settings\ScanObjects\0007]
+"Enabled"=dword:00000000
+"Recursive"=dword:00000001
+"System"=dword:00000000
+"ObjectType"=dword:00000008
+"ScanObjects"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Scan_Objects\settings\ScanObjects\0008]
+"Enabled"=dword:00000000
+"Recursive"=dword:00000001
+"System"=dword:00000000
+"ObjectType"=dword:00000009
+"ScanObjects"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Scan_Objects\settings\ScanObjects\0009]
+"Enabled"=dword:00000000
+"Recursive"=dword:00000001
+"System"=dword:00000000
+"ObjectType"=dword:0000000a
+"ScanObjects"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Anti_Spam]
+"enabled"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Updater\settings\def]
+"UseInternalSources"=dword:00000000
+"AKServerUse"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\File_Monitoring\settings\def]
+"ScanAction"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Mail_Monitoring\settings\def]
+"ScanAction"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Web_Monitoring\profiles\httpscan\settings\def]
+"ScanAction"=dword:00000002
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Scan_Objects\settings]
+"ScanAction"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Scan_Critical_Areas\settings]
+"ScanAction"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Scan_My_Computer\settings]
+"ScanAction"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Scan_Startup\settings]
+"ScanAction"=dword:00000004
+
+; --------------------
+; - default settings -
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Anti_Hacker\profiles\AdBlocker]
+"enabled"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Behavior_Blocking\profiles\og]
+"enabled"=dword:00000000
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Behavior_Blocking\profiles\og\settings]
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Behavior_Blocking\profiles\og\settings]
+"UseVector"=dword:00000000
+"ActivityAsk"=dword:00000000
+"BlockMacro"=dword:00000001
+"TerminateScript"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Behavior_Blocking\profiles\og\settings\EventAnswers]
+"0000"=dword:00000002
+"0001"=dword:00000002
+"0002"=dword:00000002
+"0003"=dword:00000002
+"0004"=dword:00000002
+"0005"=dword:00000002
+"0006"=dword:00000002
+"0007"=dword:00000002
+"0008"=dword:00000002
+"0009"=dword:00000002
+"0010"=dword:00000002
+"0011"=dword:00000002
+"0012"=dword:00000002
+"0013"=dword:00000002
+"0014"=dword:00000002
+"0015"=dword:00000002
+"0016"=dword:00000002
+"0017"=dword:00000002
+"0018"=dword:00000002
+"0019"=dword:00000002
+"0020"=dword:00000002
+"0021"=dword:00000002
+"0022"=dword:00000002
+"0023"=dword:00000002
+"0024"=dword:00000002
+"0025"=dword:00000002
+"0026"=dword:00000002
+"0027"=dword:00000002
+"0028"=dword:00000002
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Behavior_Blocking\profiles\pdm\settings]
+"bRegMonitoring_Enabled"=dword:00000000
+"RegGroup_List_vcontent"=hex:73,74,72,6d,01,00,00,00,03,00,00,00,07,01,01,89,\
+  30,16,48,4f,53,54,53,20,46,69,6c,65,00,89,30,02,00,01,89,30,68,48,4b,4c,4d,\
+  5c,53,59,53,54,45,4d,5c,43,6f,6e,74,72,6f,6c,53,65,74,3f,3f,3f,5c,53,65,72,\
+  76,69,63,65,73,5c,54,63,70,69,70,5c,50,61,72,61,6d,65,74,65,72,73,00,89,30,\
+  1a,44,61,74,61,62,61,73,65,50,61,74,68,00,00,01,01,01,00,01,01,00,01,01,97,\
+  00,00,00,00,00,00,01,89,30,04,2a,00,8f,ff,ff,ff,7f,8f,ff,ff,ff,7f,89,30,02,\
+  00,89,30,02,00,89,30,02,00,00,01,01,89,30,1e,53,79,73,74,65,6d,20,53,74,61,\
+  72,74,75,70,00,89,30,02,00,47,89,30,56,48,4b,45,59,5f,43,4c,41,53,53,45,53,\
+  5f,52,4f,4f,54,5c,2a,66,69,6c,65,5c,73,68,65,6c,6c,5c,6f,70,65,6e,5c,63,6f,\
+  6d,6d,61,6e,64,00,89,30,04,2a,00,00,01,89,30,6e,48,4b,45,59,5f,43,4c,41,53,\
+  53,45,53,5f,52,4f,4f,54,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,2a,66,69,6c,\
+  65,5c,73,68,65,6c,6c,5c,6f,70,65,6e,5c,63,6f,6d,6d,61,6e,64,00,89,30,04,2a,\
+  00,00,01,89,30,58,48,4b,45,59,5f,43,4c,41,53,53,45,53,5f,52,4f,4f,54,5c,2a,\
+  66,69,6c,65,5c,73,68,65,6c,6c,5c,72,75,6e,61,73,5c,63,6f,6d,6d,61,6e,64,00,\
+  89,30,04,2a,00,00,01,89,30,70,48,4b,45,59,5f,43,4c,41,53,53,45,53,5f,52,4f,\
+  4f,54,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,2a,66,69,6c,65,5c,73,68,65,6c,\
+  6c,5c,72,75,6e,61,73,5c,63,6f,6d,6d,61,6e,64,00,89,30,04,2a,00,00,01,89,30,\
+  6e,2a,5c,53,6f,66,74,77,61,72,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,\
+  64,6f,77,73,20,4e,54,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,41,45,\
+  44,65,62,75,67,00,89,30,12,44,65,62,75,67,67,65,72,00,00,01,89,30,81,06,2a,\
+  5c,53,6f,66,74,77,61,72,65,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,63,\
+  72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,20,4e,54,5c,43,75,72,72,65,6e,74,\
+  56,65,72,73,69,6f,6e,5c,41,45,44,65,62,75,67,00,89,30,12,44,65,62,75,67,67,\
+  65,72,00,00,01,89,30,70,2a,5c,53,6f,66,74,77,61,72,65,5c,4d,69,63,72,6f,73,\
+  6f,66,74,5c,57,69,6e,64,6f,77,73,20,4e,54,5c,43,75,72,72,65,6e,74,56,65,72,\
+  73,69,6f,6e,5c,57,69,6e,6c,6f,67,6f,6e,00,89,30,0c,53,68,65,6c,6c,00,00,01,\
+  89,30,81,08,2a,5c,53,6f,66,74,77,61,72,65,5c,57,6f,77,36,34,33,32,4e,6f,64,\
+  65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,20,4e,54,5c,43,75,\
+  72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,57,69,6e,6c,6f,67,6f,6e,00,89,30,0c,\
+  53,68,65,6c,6c,00,00,01,89,30,70,2a,5c,53,6f,66,74,77,61,72,65,5c,4d,69,63,\
+  72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,20,4e,54,5c,43,75,72,72,65,6e,74,\
+  56,65,72,73,69,6f,6e,5c,57,69,6e,6c,6f,67,6f,6e,00,89,30,12,55,73,65,72,49,\
+  6e,69,74,00,00,01,89,30,81,08,2a,5c,53,6f,66,74,77,61,72,65,5c,57,6f,77,36,\
+  34,33,32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,\
+  20,4e,54,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,57,69,6e,6c,6f,67,\
+  6f,6e,00,89,30,12,55,73,65,72,49,6e,69,74,00,00,01,89,30,81,00,48,4b,4c,4d,\
+  5c,53,59,53,54,45,4d,5c,43,6f,6e,74,72,6f,6c,53,65,74,3f,3f,3f,5c,43,6f,6e,\
+  74,72,6f,6c,5c,53,61,66,65,42,6f,6f,74,5c,4e,65,74,77,6f,72,6b,5c,2a,5c,50,\
+  61,72,61,6d,65,74,65,72,73,00,89,30,16,53,65,72,76,69,63,65,44,6c,6c,00,00,\
+  01,89,30,81,02,2a,5c,53,4f,46,54,57,41,52,45,5c,4d,69,63,72,6f,73,6f,66,74,\
+  5c,57,69,6e,64,6f,77,73,20,4e,54,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,\
+  6e,5c,57,69,6e,6c,6f,67,6f,6e,5c,4e,6f,74,69,66,79,5c,2a,00,89,30,10,44,6c,\
+  6c,4e,61,6d,65,00,00,01,89,30,81,1a,2a,5c,53,4f,46,54,57,41,52,45,5c,57,6f,\
+  77,36,34,33,32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,\
+  77,73,20,4e,54,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,57,69,6e,6c,\
+  6f,67,6f,6e,5c,4e,6f,74,69,66,79,5c,2a,00,89,30,10,44,6c,6c,4e,61,6d,65,00,\
+  00,01,89,30,64,2a,5c,53,6f,66,74,77,61,72,65,5c,4d,69,63,72,6f,73,6f,66,74,\
+  5c,57,69,6e,64,6f,77,73,2a,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,\
+  52,75,6e,2a,00,89,30,04,2a,00,00,01,89,30,7c,2a,5c,53,6f,66,74,77,61,72,65,\
+  5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,\
+  6e,64,6f,77,73,2a,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,52,75,6e,\
+  2a,00,89,30,04,2a,00,00,01,89,30,4e,48,4b,43,55,5c,53,6f,66,74,77,61,72,65,\
+  5c,4d,69,72,61,62,69,6c,69,73,5c,49,43,51,5c,41,67,65,6e,74,5c,41,70,70,73,\
+  00,89,30,04,2a,00,00,01,89,30,7c,48,4b,4c,4d,5c,53,6f,66,74,77,61,72,65,5c,\
+  4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,5c,43,75,72,72,65,6e,74,\
+  56,65,72,73,69,6f,6e,5c,41,70,70,20,50,61,74,68,73,5c,49,43,51,2a,00,89,30,\
+  0a,50,61,74,68,00,00,01,89,30,81,14,48,4b,4c,4d,5c,53,6f,66,74,77,61,72,65,\
+  5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,\
+  6e,64,6f,77,73,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,41,70,70,20,\
+  50,61,74,68,73,5c,49,43,51,2a,00,89,30,0a,50,61,74,68,00,00,01,89,30,78,48,\
+  4b,4c,4d,5c,53,6f,66,74,77,61,72,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,41,63,\
+  74,69,76,65,20,53,65,74,75,70,5c,49,6e,73,74,61,6c,6c,65,64,20,43,6f,6d,70,\
+  6f,6e,65,6e,74,73,5c,2a,00,89,30,12,53,74,75,62,50,61,74,68,00,00,01,89,30,\
+  81,10,48,4b,4c,4d,5c,53,6f,66,74,77,61,72,65,5c,57,6f,77,36,34,33,32,4e,6f,\
+  64,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,41,63,74,69,76,65,20,53,65,74,75,70,\
+  5c,49,6e,73,74,61,6c,6c,65,64,20,43,6f,6d,70,6f,6e,65,6e,74,73,5c,2a,00,89,\
+  30,12,53,74,75,62,50,61,74,68,00,00,01,89,30,76,48,4b,4c,4d,5c,53,6f,66,74,\
+  77,61,72,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,20,4e,54,\
+  5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,57,4f,57,5c,42,4f,4f,54,00,\
+  89,30,04,2a,00,00,01,89,30,81,0e,48,4b,4c,4d,5c,53,6f,66,74,77,61,72,65,5c,\
+  57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,\
+  64,6f,77,73,20,4e,54,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,57,4f,\
+  57,5c,42,4f,4f,54,00,89,30,04,2a,00,00,01,89,30,81,08,48,4b,4c,4d,5c,53,6f,\
+  66,74,77,61,72,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,20,\
+  4e,54,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,57,4f,57,5c,4e,6f,6e,\
+  57,69,6e,64,6f,77,73,41,70,70,00,89,30,04,2a,00,00,01,89,30,81,20,48,4b,4c,\
+  4d,5c,53,6f,66,74,77,61,72,65,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,\
+  63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,20,4e,54,5c,43,75,72,72,65,6e,\
+  74,56,65,72,73,69,6f,6e,5c,57,4f,57,5c,4e,6f,6e,57,69,6e,64,6f,77,73,41,70,\
+  70,00,89,30,04,2a,00,00,01,89,30,7e,48,4b,4c,4d,5c,53,6f,66,74,77,61,72,65,\
+  5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,20,4e,54,5c,43,75,72,\
+  72,65,6e,74,56,65,72,73,69,6f,6e,5c,57,4f,57,5c,53,74,61,6e,64,61,72,64,00,\
+  89,30,04,2a,00,00,01,89,30,81,16,48,4b,4c,4d,5c,53,6f,66,74,77,61,72,65,5c,\
+  57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,\
+  64,6f,77,73,20,4e,54,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,57,4f,\
+  57,5c,53,74,61,6e,64,61,72,64,00,89,30,04,2a,00,00,01,89,30,74,48,4b,4c,4d,\
+  5c,53,6f,66,74,77,61,72,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,\
+  77,73,20,4e,54,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,44,72,69,76,\
+  65,72,73,00,89,30,04,2a,00,00,01,89,30,81,0c,48,4b,4c,4d,5c,53,6f,66,74,77,\
+  61,72,65,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,74,\
+  5c,57,69,6e,64,6f,77,73,20,4e,54,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,\
+  6e,5c,44,72,69,76,65,72,73,00,89,30,04,2a,00,00,01,89,30,78,48,4b,4c,4d,5c,\
+  53,6f,66,74,77,61,72,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,\
+  73,20,4e,54,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,44,72,69,76,65,\
+  72,73,33,32,00,89,30,04,2a,00,00,01,89,30,81,10,48,4b,4c,4d,5c,53,6f,66,74,\
+  77,61,72,65,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,\
+  74,5c,57,69,6e,64,6f,77,73,20,4e,54,5c,43,75,72,72,65,6e,74,56,65,72,73,69,\
+  6f,6e,5c,44,72,69,76,65,72,73,33,32,00,89,30,04,2a,00,00,01,89,30,74,48,4b,\
+  4c,4d,5c,53,6f,66,74,77,61,72,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,\
+  64,6f,77,73,20,4e,54,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,57,69,\
+  6e,64,6f,77,73,00,89,30,1a,41,70,70,49,6e,69,74,5f,44,4c,4c,73,00,00,01,89,\
+  30,81,0c,48,4b,4c,4d,5c,53,6f,66,74,77,61,72,65,5c,57,6f,77,36,34,33,32,4e,\
+  6f,64,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,20,4e,54,5c,\
+  43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,57,69,6e,64,6f,77,73,00,89,30,\
+  1a,41,70,70,49,6e,69,74,5f,44,4c,4c,73,00,00,01,89,30,81,10,2a,5c,53,4f,46,\
+  54,57,41,52,45,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,5c,43,\
+  75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,53,68,65,6c,6c,53,65,72,76,69,63,\
+  65,4f,62,6a,65,63,74,44,65,6c,61,79,4c,6f,61,64,00,89,30,04,2a,00,00,01,89,\
+  30,81,28,2a,5c,53,4f,46,54,57,41,52,45,5c,57,6f,77,36,34,33,32,4e,6f,64,65,\
+  5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,5c,43,75,72,72,65,6e,\
+  74,56,65,72,73,69,6f,6e,5c,53,68,65,6c,6c,53,65,72,76,69,63,65,4f,62,6a,65,\
+  63,74,44,65,6c,61,79,4c,6f,61,64,00,89,30,04,2a,00,00,01,89,30,6c,48,4b,4c,\
+  4d,5c,73,79,73,74,65,6d,5c,63,75,72,72,65,6e,74,63,6f,6e,74,72,6f,6c,73,65,\
+  74,5c,63,6f,6e,74,72,6f,6c,5c,53,65,73,73,69,6f,6e,20,4d,61,6e,61,67,65,72,\
+  00,89,30,18,42,6f,6f,74,45,78,65,63,75,74,65,00,00,01,89,30,4e,48,4b,4c,4d,\
+  5c,53,4f,46,54,57,41,52,45,5c,4d,69,63,72,6f,73,6f,66,74,5c,56,42,41,5c,4d,\
+  6f,6e,69,74,6f,72,73,5c,2a,00,89,30,0c,43,4c,53,49,44,00,00,01,89,30,66,48,\
+  4b,4c,4d,5c,53,4f,46,54,57,41,52,45,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,\
+  4d,69,63,72,6f,73,6f,66,74,5c,56,42,41,5c,4d,6f,6e,69,74,6f,72,73,5c,2a,00,\
+  89,30,0c,43,4c,53,49,44,00,00,01,89,30,30,2a,5c,43,6f,6e,74,72,6f,6c,20,50,\
+  61,6e,65,6c,5c,44,65,73,6b,74,6f,70,00,89,30,1a,53,43,52,4e,53,41,56,45,2e,\
+  45,58,45,00,00,01,89,30,81,12,2a,5c,53,4f,46,54,57,41,52,45,5c,4d,69,63,72,\
+  6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,5c,43,75,72,72,65,6e,74,56,65,72,73,\
+  69,6f,6e,5c,45,78,70,6c,6f,72,65,72,5c,53,68,61,72,65,64,54,61,73,6b,53,63,\
+  68,65,64,75,6c,65,72,00,89,30,04,2a,00,00,01,89,30,81,2a,2a,5c,53,4f,46,54,\
+  57,41,52,45,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,\
+  74,5c,57,69,6e,64,6f,77,73,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,\
+  45,78,70,6c,6f,72,65,72,5c,53,68,61,72,65,64,54,61,73,6b,53,63,68,65,64,75,\
+  6c,65,72,00,89,30,04,2a,00,00,01,89,30,81,0e,2a,5c,53,4f,46,54,57,41,52,45,\
+  5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,5c,43,75,72,72,65,6e,\
+  74,56,65,72,73,69,6f,6e,5c,45,78,70,6c,6f,72,65,72,5c,53,68,65,6c,6c,45,78,\
+  65,63,75,74,65,48,6f,6f,6b,73,00,89,30,04,2a,00,00,01,89,30,81,26,2a,5c,53,\
+  4f,46,54,57,41,52,45,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,63,72,6f,\
+  73,6f,66,74,5c,57,69,6e,64,6f,77,73,5c,43,75,72,72,65,6e,74,56,65,72,73,69,\
+  6f,6e,5c,45,78,70,6c,6f,72,65,72,5c,53,68,65,6c,6c,45,78,65,63,75,74,65,48,\
+  6f,6f,6b,73,00,89,30,04,2a,00,00,01,89,30,6e,2a,5c,53,6f,66,74,77,61,72,65,\
+  5c,50,6f,6c,69,63,69,65,73,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,\
+  77,73,5c,53,79,73,74,65,6d,5c,53,63,72,69,70,74,73,5c,2a,00,89,30,04,2a,00,\
+  00,01,89,30,81,06,2a,5c,53,6f,66,74,77,61,72,65,5c,57,6f,77,36,34,33,32,4e,\
+  6f,64,65,5c,50,6f,6c,69,63,69,65,73,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,\
+  6e,64,6f,77,73,5c,53,79,73,74,65,6d,5c,53,63,72,69,70,74,73,5c,2a,00,89,30,\
+  04,2a,00,00,01,89,30,81,04,2a,5c,53,6f,66,74,77,61,72,65,5c,4d,69,63,72,6f,\
+  73,6f,66,74,5c,57,69,6e,64,6f,77,73,5c,43,75,72,72,65,6e,74,56,65,72,73,69,\
+  6f,6e,5c,70,6f,6c,69,63,69,65,73,5c,45,78,70,6c,6f,72,65,72,5c,52,75,6e,00,\
+  89,30,04,2a,00,00,01,89,30,81,1c,2a,5c,53,6f,66,74,77,61,72,65,5c,57,6f,77,\
+  36,34,33,32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,\
+  73,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,70,6f,6c,69,63,69,65,73,\
+  5c,45,78,70,6c,6f,72,65,72,5c,52,75,6e,00,89,30,04,2a,00,00,01,89,30,81,3a,\
+  48,4b,4c,4d,5c,53,59,53,54,45,4d,5c,43,75,72,72,65,6e,74,43,6f,6e,74,72,6f,\
+  6c,53,65,74,5c,53,65,72,76,69,63,65,73,5c,57,69,6e,53,6f,63,6b,32,5c,50,61,\
+  72,61,6d,65,74,65,72,73,5c,50,72,6f,74,6f,63,6f,6c,5f,43,61,74,61,6c,6f,67,\
+  39,5c,43,61,74,61,6c,6f,67,5f,45,6e,74,72,69,65,73,00,89,30,04,2a,00,01,01,\
+  89,30,70,2a,5c,53,4f,46,54,57,41,52,45,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,\
+  69,6e,64,6f,77,73,20,4e,54,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,\
+  57,69,6e,6c,6f,67,6f,6e,00,89,30,10,54,61,73,6b,6d,61,6e,00,00,01,89,30,81,\
+  08,2a,5c,53,4f,46,54,57,41,52,45,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,\
+  69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,20,4e,54,5c,43,75,72,72,65,\
+  6e,74,56,65,72,73,69,6f,6e,5c,57,69,6e,6c,6f,67,6f,6e,00,89,30,10,54,61,73,\
+  6b,6d,61,6e,00,00,01,89,30,78,2a,5c,53,6f,66,74,77,61,72,65,5c,4d,69,63,72,\
+  6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,5c,43,75,72,72,65,6e,74,56,65,72,73,\
+  69,6f,6e,5c,50,6f,6c,69,63,69,65,73,5c,53,79,73,74,65,6d,00,89,30,0c,53,68,\
+  65,6c,6c,00,00,01,89,30,81,10,2a,5c,53,6f,66,74,77,61,72,65,5c,57,6f,77,36,\
+  34,33,32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,\
+  5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,50,6f,6c,69,63,69,65,73,5c,\
+  53,79,73,74,65,6d,00,89,30,0c,53,68,65,6c,6c,00,00,01,89,30,81,12,48,4b,4c,\
+  4d,5c,53,6f,66,74,77,61,72,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,\
+  6f,77,73,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,53,68,65,6c,6c,20,\
+  45,78,74,65,6e,73,69,6f,6e,73,5c,41,70,70,72,6f,76,65,64,00,89,30,04,2a,00,\
+  00,01,89,30,81,2a,48,4b,4c,4d,5c,53,6f,66,74,77,61,72,65,5c,57,6f,77,36,34,\
+  33,32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,5c,\
+  43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,53,68,65,6c,6c,20,45,78,74,65,\
+  6e,73,69,6f,6e,73,5c,41,70,70,72,6f,76,65,64,00,89,30,04,2a,00,00,01,89,30,\
+  4e,2a,5c,53,6f,66,74,77,61,72,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,43,6f,6d,\
+  6d,61,6e,64,20,50,72,6f,63,65,73,73,6f,72,00,89,30,10,41,75,74,6f,52,75,6e,\
+  00,00,01,89,30,66,2a,5c,53,6f,66,74,77,61,72,65,5c,57,6f,77,36,34,33,32,4e,\
+  6f,64,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,43,6f,6d,6d,61,6e,64,20,50,72,6f,\
+  63,65,73,73,6f,72,00,89,30,10,41,75,74,6f,52,75,6e,00,00,01,89,30,81,0c,48,\
+  4b,43,55,5c,53,6f,66,74,77,61,72,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,\
+  6e,64,6f,77,73,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,45,78,70,6c,\
+  6f,72,65,72,5c,46,69,6c,65,45,78,74,73,5c,2e,65,78,65,00,89,30,04,2a,00,00,\
+  01,89,30,68,48,4b,4c,4d,5c,53,79,73,74,65,6d,5c,43,75,72,72,65,6e,74,43,6f,\
+  6e,74,72,6f,6c,53,65,74,5c,43,6f,6e,74,72,6f,6c,5c,4d,50,52,53,65,72,76,69,\
+  63,65,73,5c,2a,00,89,30,10,44,4c,4c,4e,61,6d,65,00,00,01,89,30,81,16,48,4b,\
+  4c,4d,5c,53,4f,46,54,57,41,52,45,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,\
+  64,6f,77,73,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,45,78,70,6c,6f,\
+  72,65,72,5c,55,73,65,72,20,53,68,65,6c,6c,20,46,6f,6c,64,65,72,73,00,89,30,\
+  1e,43,6f,6d,6d,6f,6e,20,53,74,61,72,74,75,70,00,00,01,89,30,81,2e,48,4b,4c,\
+  4d,5c,53,4f,46,54,57,41,52,45,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,\
+  63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,5c,43,75,72,72,65,6e,74,56,65,\
+  72,73,69,6f,6e,5c,45,78,70,6c,6f,72,65,72,5c,55,73,65,72,20,53,68,65,6c,6c,\
+  20,46,6f,6c,64,65,72,73,00,89,30,1e,43,6f,6d,6d,6f,6e,20,53,74,61,72,74,75,\
+  70,00,00,01,89,30,81,26,48,4b,45,59,5f,55,53,45,52,53,5c,2a,5c,53,4f,46,54,\
+  57,41,52,45,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,5c,43,75,\
+  72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,45,78,70,6c,6f,72,65,72,5c,55,73,65,\
+  72,20,53,68,65,6c,6c,20,46,6f,6c,64,65,72,73,00,89,30,10,53,74,61,72,74,75,\
+  70,00,00,01,89,30,81,3e,48,4b,45,59,5f,55,53,45,52,53,5c,2a,5c,53,4f,46,54,\
+  57,41,52,45,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,\
+  74,5c,57,69,6e,64,6f,77,73,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,\
+  45,78,70,6c,6f,72,65,72,5c,55,73,65,72,20,53,68,65,6c,6c,20,46,6f,6c,64,65,\
+  72,73,00,89,30,10,53,74,61,72,74,75,70,00,00,01,89,30,7c,48,4b,4c,4d,5c,53,\
+  59,53,54,45,4d,5c,43,6f,6e,74,72,6f,6c,53,65,74,3f,3f,3f,5c,43,6f,6e,74,72,\
+  6f,6c,5c,53,65,73,73,69,6f,6e,20,4d,61,6e,61,67,65,72,5c,45,6e,76,69,72,6f,\
+  6e,6d,65,6e,74,00,89,30,10,43,6f,6d,53,70,65,63,00,00,01,89,30,76,48,4b,43,\
+  55,5c,53,6f,66,74,77,61,72,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,\
+  6f,77,73,20,4e,54,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,57,69,6e,\
+  6c,6f,67,6f,6e,00,89,30,10,47,69,6e,61,44,4c,4c,00,00,01,89,30,74,48,4b,4c,\
+  4d,5c,53,59,53,54,45,4d,5c,43,6f,6e,74,72,6f,6c,53,65,74,3f,3f,3f,5c,43,6f,\
+  6e,74,72,6f,6c,5c,42,6f,6f,74,56,65,72,69,66,69,63,61,74,69,6f,6e,50,72,6f,\
+  67,72,61,6d,00,89,30,14,49,6d,61,67,65,50,61,74,68,00,00,01,89,30,6e,48,4b,\
+  4c,4d,5c,53,59,53,54,45,4d,5c,43,6f,6e,74,72,6f,6c,53,65,74,3f,3f,3f,5c,43,\
+  6f,6e,74,72,6f,6c,5c,56,69,72,74,75,61,6c,44,65,76,69,63,65,44,72,69,76,65,\
+  72,73,00,89,30,08,56,44,44,00,00,01,89,30,56,48,4b,4c,4d,5c,53,59,53,54,45,\
+  4d,5c,43,6f,6e,74,72,6f,6c,53,65,74,3f,3f,3f,5c,43,6f,6e,74,72,6f,6c,5c,53,\
+  61,66,65,42,6f,6f,74,00,89,30,1e,41,6c,74,65,72,6e,61,74,65,53,68,65,6c,6c,\
+  00,00,01,89,30,6a,48,4b,4c,4d,5c,53,59,53,54,45,4d,5c,43,6f,6e,74,72,6f,6c,\
+  53,65,74,3f,3f,3f,5c,43,6f,6e,74,72,6f,6c,5c,53,61,66,65,42,6f,6f,74,5c,4d,\
+  69,6e,69,6d,61,6c,5c,2a,00,89,30,14,49,6d,61,67,65,50,61,74,68,00,00,01,89,\
+  30,6a,48,4b,4c,4d,5c,53,59,53,54,45,4d,5c,43,6f,6e,74,72,6f,6c,53,65,74,3f,\
+  3f,3f,5c,43,6f,6e,74,72,6f,6c,5c,53,61,66,65,42,6f,6f,74,5c,4e,65,74,77,6f,\
+  72,6b,5c,2a,00,89,30,14,49,6d,61,67,65,50,61,74,68,00,00,01,89,30,81,00,48,\
+  4b,4c,4d,5c,53,59,53,54,45,4d,5c,43,6f,6e,74,72,6f,6c,53,65,74,3f,3f,3f,5c,\
+  43,6f,6e,74,72,6f,6c,5c,53,61,66,65,42,6f,6f,74,5c,4d,69,6e,69,6d,61,6c,5c,\
+  2a,5c,50,61,72,61,6d,65,74,65,72,73,00,89,30,16,53,65,72,76,69,63,65,44,6c,\
+  6c,00,00,01,89,30,74,48,4b,43,55,5c,53,6f,66,74,77,61,72,65,5c,4d,69,63,72,\
+  6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,20,4e,54,5c,43,75,72,72,65,6e,74,56,\
+  65,72,73,69,6f,6e,5c,57,69,6e,64,6f,77,73,00,89,30,0a,6c,6f,61,64,00,00,01,\
+  89,30,74,48,4b,43,55,5c,53,6f,66,74,77,61,72,65,5c,4d,69,63,72,6f,73,6f,66,\
+  74,5c,57,69,6e,64,6f,77,73,20,4e,54,5c,43,75,72,72,65,6e,74,56,65,72,73,69,\
+  6f,6e,5c,57,69,6e,64,6f,77,73,00,89,30,08,72,75,6e,00,00,01,01,01,00,01,01,\
+  00,01,01,7b,16,00,00,00,00,00,01,89,30,04,2a,00,8f,ff,ff,ff,7f,8f,ff,ff,ff,\
+  7f,89,30,02,00,89,30,02,00,89,30,02,00,00,01,01,89,30,24,49,6e,74,65,72,6e,\
+  65,74,20,53,65,63,75,72,69,74,79,00,89,30,02,00,0c,89,30,81,22,2a,5c,53,4f,\
+  46,54,57,41,52,45,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,5c,\
+  43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,49,6e,74,65,72,6e,65,74,20,53,\
+  65,74,74,69,6e,67,73,5c,54,65,6d,70,6c,61,74,65,50,6f,6c,69,63,69,65,73,5c,\
+  2a,00,89,30,04,2a,00,00,01,89,30,81,3a,2a,5c,53,4f,46,54,57,41,52,45,5c,57,\
+  6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,\
+  6f,77,73,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,49,6e,74,65,72,6e,\
+  65,74,20,53,65,74,74,69,6e,67,73,5c,54,65,6d,70,6c,61,74,65,50,6f,6c,69,63,\
+  69,65,73,5c,2a,00,89,30,04,2a,00,00,01,89,30,81,10,2a,5c,53,4f,46,54,57,41,\
+  52,45,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,5c,43,75,72,72,\
+  65,6e,74,56,65,72,73,69,6f,6e,5c,49,6e,74,65,72,6e,65,74,20,53,65,74,74,69,\
+  6e,67,73,5c,5a,6f,6e,65,4d,61,70,5c,2a,00,89,30,04,2a,00,00,01,89,30,81,28,\
+  2a,5c,53,4f,46,54,57,41,52,45,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,\
+  63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,5c,43,75,72,72,65,6e,74,56,65,\
+  72,73,69,6f,6e,5c,49,6e,74,65,72,6e,65,74,20,53,65,74,74,69,6e,67,73,5c,5a,\
+  6f,6e,65,4d,61,70,5c,2a,00,89,30,04,2a,00,00,01,89,30,81,0c,2a,5c,53,4f,46,\
+  54,57,41,52,45,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,5c,43,\
+  75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,49,6e,74,65,72,6e,65,74,20,53,65,\
+  74,74,69,6e,67,73,5c,5a,6f,6e,65,73,5c,2a,00,89,30,04,2a,00,00,01,89,30,81,\
+  24,2a,5c,53,4f,46,54,57,41,52,45,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,\
+  69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,5c,43,75,72,72,65,6e,74,56,\
+  65,72,73,69,6f,6e,5c,49,6e,74,65,72,6e,65,74,20,53,65,74,74,69,6e,67,73,5c,\
+  5a,6f,6e,65,73,5c,2a,00,89,30,04,2a,00,00,01,89,30,81,3a,48,4b,4c,4d,5c,53,\
+  6f,66,74,77,61,72,65,5c,50,6f,6c,69,63,69,65,73,5c,4d,69,63,72,6f,73,6f,66,\
+  74,5c,57,69,6e,64,6f,77,73,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,\
+  49,6e,74,65,72,6e,65,74,20,53,65,74,74,69,6e,67,73,5c,54,65,6d,70,6c,61,74,\
+  65,50,6f,6c,69,63,69,65,73,5c,2a,00,89,30,04,2a,00,00,01,89,30,81,52,48,4b,\
+  4c,4d,5c,53,6f,66,74,77,61,72,65,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,50,\
+  6f,6c,69,63,69,65,73,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,\
+  5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,49,6e,74,65,72,6e,65,74,20,\
+  53,65,74,74,69,6e,67,73,5c,54,65,6d,70,6c,61,74,65,50,6f,6c,69,63,69,65,73,\
+  5c,2a,00,89,30,04,2a,00,00,01,89,30,81,28,48,4b,4c,4d,5c,53,6f,66,74,77,61,\
+  72,65,5c,50,6f,6c,69,63,69,65,73,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,\
+  64,6f,77,73,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,49,6e,74,65,72,\
+  6e,65,74,20,53,65,74,74,69,6e,67,73,5c,5a,6f,6e,65,4d,61,70,5c,2a,00,89,30,\
+  04,2a,00,00,01,89,30,81,40,48,4b,4c,4d,5c,53,6f,66,74,77,61,72,65,5c,57,6f,\
+  77,36,34,33,32,4e,6f,64,65,5c,50,6f,6c,69,63,69,65,73,5c,4d,69,63,72,6f,73,\
+  6f,66,74,5c,57,69,6e,64,6f,77,73,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,\
+  6e,5c,49,6e,74,65,72,6e,65,74,20,53,65,74,74,69,6e,67,73,5c,5a,6f,6e,65,4d,\
+  61,70,5c,2a,00,89,30,04,2a,00,00,01,89,30,81,24,48,4b,4c,4d,5c,53,6f,66,74,\
+  77,61,72,65,5c,50,6f,6c,69,63,69,65,73,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,\
+  69,6e,64,6f,77,73,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,49,6e,74,\
+  65,72,6e,65,74,20,53,65,74,74,69,6e,67,73,5c,5a,6f,6e,65,73,5c,2a,00,89,30,\
+  04,2a,00,00,01,89,30,81,3c,48,4b,4c,4d,5c,53,6f,66,74,77,61,72,65,5c,57,6f,\
+  77,36,34,33,32,4e,6f,64,65,5c,50,6f,6c,69,63,69,65,73,5c,4d,69,63,72,6f,73,\
+  6f,66,74,5c,57,69,6e,64,6f,77,73,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,\
+  6e,5c,49,6e,74,65,72,6e,65,74,20,53,65,74,74,69,6e,67,73,5c,5a,6f,6e,65,73,\
+  5c,2a,00,89,30,04,2a,00,00,01,01,01,00,01,01,00,01,01,53,1b,00,00,00,00,00,\
+  01,89,30,04,2a,00,8f,ff,ff,ff,7f,8f,ff,ff,ff,7f,89,30,02,00,89,30,02,00,89,\
+  30,02,00,00,01,01,89,30,36,49,6e,74,65,72,6e,65,74,20,45,78,70,6c,6f,72,65,\
+  72,20,53,65,74,74,69,6e,67,73,00,89,30,02,00,1e,89,30,7c,2a,5c,53,4f,46,54,\
+  57,41,52,45,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,5c,43,75,\
+  72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,55,52,4c,5c,44,65,66,61,75,6c,74,50,\
+  72,65,66,69,78,00,89,30,04,2a,00,00,01,89,30,81,14,2a,5c,53,4f,46,54,57,41,\
+  52,45,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,\
+  57,69,6e,64,6f,77,73,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,55,52,\
+  4c,5c,44,65,66,61,75,6c,74,50,72,65,66,69,78,00,89,30,04,2a,00,00,01,89,30,\
+  72,2a,5c,53,4f,46,54,57,41,52,45,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,\
+  64,6f,77,73,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,55,52,4c,5c,50,\
+  72,65,66,69,78,65,73,00,89,30,04,2a,00,00,01,89,30,81,0a,2a,5c,53,4f,46,54,\
+  57,41,52,45,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,\
+  74,5c,57,69,6e,64,6f,77,73,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,\
+  55,52,4c,5c,50,72,65,66,69,78,65,73,00,89,30,04,2a,00,00,01,89,30,62,2a,5c,\
+  53,4f,46,54,57,41,52,45,5c,4d,69,63,72,6f,73,6f,66,74,5c,49,6e,74,65,72,6e,\
+  65,74,20,45,78,70,6c,6f,72,65,72,5c,41,62,6f,75,74,55,52,4c,73,00,89,30,04,\
+  2a,00,00,01,89,30,7a,2a,5c,53,4f,46,54,57,41,52,45,5c,57,6f,77,36,34,33,32,\
+  4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,49,6e,74,65,72,6e,65,74,20,45,\
+  78,70,6c,6f,72,65,72,5c,41,62,6f,75,74,55,52,4c,73,00,89,30,04,2a,00,00,01,\
+  89,30,5c,2a,5c,53,4f,46,54,57,41,52,45,5c,4d,69,63,72,6f,73,6f,66,74,5c,49,\
+  6e,74,65,72,6e,65,74,20,45,78,70,6c,6f,72,65,72,5c,53,65,61,72,63,68,00,89,\
+  30,20,53,65,61,72,63,68,41,73,73,69,73,74,61,6e,74,00,00,01,89,30,74,2a,5c,\
+  53,4f,46,54,57,41,52,45,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,63,72,\
+  6f,73,6f,66,74,5c,49,6e,74,65,72,6e,65,74,20,45,78,70,6c,6f,72,65,72,5c,53,\
+  65,61,72,63,68,00,89,30,20,53,65,61,72,63,68,41,73,73,69,73,74,61,6e,74,00,\
+  00,01,89,30,5c,2a,5c,53,4f,46,54,57,41,52,45,5c,4d,69,63,72,6f,73,6f,66,74,\
+  5c,49,6e,74,65,72,6e,65,74,20,45,78,70,6c,6f,72,65,72,5c,53,65,61,72,63,68,\
+  00,89,30,20,43,75,73,74,6f,6d,69,7a,65,53,65,61,72,63,68,00,00,01,89,30,74,\
+  2a,5c,53,4f,46,54,57,41,52,45,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,\
+  63,72,6f,73,6f,66,74,5c,49,6e,74,65,72,6e,65,74,20,45,78,70,6c,6f,72,65,72,\
+  5c,53,65,61,72,63,68,00,89,30,20,43,75,73,74,6f,6d,69,7a,65,53,65,61,72,63,\
+  68,00,00,01,89,30,58,2a,5c,53,4f,46,54,57,41,52,45,5c,4d,69,63,72,6f,73,6f,\
+  66,74,5c,49,6e,74,65,72,6e,65,74,20,45,78,70,6c,6f,72,65,72,5c,4d,61,69,6e,\
+  00,89,30,22,44,65,66,61,75,6c,74,5f,50,61,67,65,5f,55,52,4c,00,00,01,89,30,\
+  70,2a,5c,53,4f,46,54,57,41,52,45,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,\
+  69,63,72,6f,73,6f,66,74,5c,49,6e,74,65,72,6e,65,74,20,45,78,70,6c,6f,72,65,\
+  72,5c,4d,61,69,6e,00,89,30,22,44,65,66,61,75,6c,74,5f,50,61,67,65,5f,55,52,\
+  4c,00,00,01,89,30,58,2a,5c,53,4f,46,54,57,41,52,45,5c,4d,69,63,72,6f,73,6f,\
+  66,74,5c,49,6e,74,65,72,6e,65,74,20,45,78,70,6c,6f,72,65,72,5c,4d,61,69,6e,\
+  00,89,30,26,44,65,66,61,75,6c,74,5f,53,65,61,72,63,68,5f,55,52,4c,00,00,01,\
+  89,30,70,2a,5c,53,4f,46,54,57,41,52,45,5c,57,6f,77,36,34,33,32,4e,6f,64,65,\
+  5c,4d,69,63,72,6f,73,6f,66,74,5c,49,6e,74,65,72,6e,65,74,20,45,78,70,6c,6f,\
+  72,65,72,5c,4d,61,69,6e,00,89,30,26,44,65,66,61,75,6c,74,5f,53,65,61,72,63,\
+  68,5f,55,52,4c,00,00,01,89,30,58,2a,5c,53,4f,46,54,57,41,52,45,5c,4d,69,63,\
+  72,6f,73,6f,66,74,5c,49,6e,74,65,72,6e,65,74,20,45,78,70,6c,6f,72,65,72,5c,\
+  4d,61,69,6e,00,89,30,18,53,65,61,72,63,68,20,50,61,67,65,00,00,01,89,30,70,\
+  2a,5c,53,4f,46,54,57,41,52,45,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,\
+  63,72,6f,73,6f,66,74,5c,49,6e,74,65,72,6e,65,74,20,45,78,70,6c,6f,72,65,72,\
+  5c,4d,61,69,6e,00,89,30,18,53,65,61,72,63,68,20,50,61,67,65,00,00,01,89,30,\
+  58,2a,5c,53,4f,46,54,57,41,52,45,5c,4d,69,63,72,6f,73,6f,66,74,5c,49,6e,74,\
+  65,72,6e,65,74,20,45,78,70,6c,6f,72,65,72,5c,4d,61,69,6e,00,89,30,16,53,74,\
+  61,72,74,20,50,61,67,65,00,00,01,89,30,70,2a,5c,53,4f,46,54,57,41,52,45,5c,\
+  57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,49,6e,74,\
+  65,72,6e,65,74,20,45,78,70,6c,6f,72,65,72,5c,4d,61,69,6e,00,89,30,16,53,74,\
+  61,72,74,20,50,61,67,65,00,00,01,89,30,58,2a,5c,53,4f,46,54,57,41,52,45,5c,\
+  4d,69,63,72,6f,73,6f,66,74,5c,49,6e,74,65,72,6e,65,74,20,45,78,70,6c,6f,72,\
+  65,72,5c,4d,61,69,6e,00,89,30,16,53,65,61,72,63,68,20,42,61,72,00,00,01,89,\
+  30,70,2a,5c,53,4f,46,54,57,41,52,45,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,\
+  4d,69,63,72,6f,73,6f,66,74,5c,49,6e,74,65,72,6e,65,74,20,45,78,70,6c,6f,72,\
+  65,72,5c,4d,61,69,6e,00,89,30,16,53,65,61,72,63,68,20,42,61,72,00,00,01,89,\
+  30,72,48,4b,43,55,5c,53,6f,66,74,77,61,72,65,5c,4d,69,63,72,6f,73,6f,66,74,\
+  5c,49,6e,74,65,72,6e,65,74,20,45,78,70,6c,6f,72,65,72,5c,55,52,4c,53,65,61,\
+  72,63,68,48,6f,6f,6b,73,00,89,30,04,2a,00,00,01,89,30,68,48,4b,43,55,5c,53,\
+  6f,66,74,77,61,72,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,49,6e,74,65,72,6e,65,\
+  74,20,45,78,70,6c,6f,72,65,72,5c,53,65,61,72,63,68,55,52,4c,00,89,30,04,2a,\
+  00,00,01,89,30,81,00,48,4b,4c,4d,5c,53,4f,46,54,57,41,52,45,5c,4d,69,63,72,\
+  6f,73,6f,66,74,5c,49,6e,74,65,72,6e,65,74,20,45,78,70,6c,6f,72,65,72,5c,4d,\
+  61,69,6e,5c,46,65,61,74,75,72,65,43,6f,6e,74,72,6f,6c,5c,2a,00,89,30,04,2a,\
+  00,00,01,89,30,81,18,48,4b,4c,4d,5c,53,4f,46,54,57,41,52,45,5c,57,6f,77,36,\
+  34,33,32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,49,6e,74,65,72,6e,65,\
+  74,20,45,78,70,6c,6f,72,65,72,5c,4d,61,69,6e,5c,46,65,61,74,75,72,65,43,6f,\
+  6e,74,72,6f,6c,5c,2a,00,89,30,04,2a,00,00,01,89,30,81,16,48,4b,4c,4d,5c,53,\
+  6f,66,74,77,61,72,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,\
+  5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,49,6e,74,65,72,6e,65,74,20,\
+  53,65,74,74,69,6e,67,73,5c,53,61,66,65,53,69,74,65,73,00,89,30,04,2a,00,00,\
+  01,89,30,81,2e,48,4b,4c,4d,5c,53,6f,66,74,77,61,72,65,5c,57,6f,77,36,34,33,\
+  32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,5c,43,\
+  75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,49,6e,74,65,72,6e,65,74,20,53,65,\
+  74,74,69,6e,67,73,5c,53,61,66,65,53,69,74,65,73,00,89,30,04,2a,00,00,01,89,\
+  30,5c,2a,5c,53,6f,66,74,77,61,72,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,49,6e,\
+  74,65,72,6e,65,74,20,45,78,70,6c,6f,72,65,72,5c,53,74,79,6c,65,73,00,89,30,\
+  24,55,73,65,20,4d,79,20,53,74,79,6c,65,73,68,65,65,74,00,00,01,89,30,74,2a,\
+  5c,53,6f,66,74,77,61,72,65,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,63,\
+  72,6f,73,6f,66,74,5c,49,6e,74,65,72,6e,65,74,20,45,78,70,6c,6f,72,65,72,5c,\
+  53,74,79,6c,65,73,00,89,30,24,55,73,65,20,4d,79,20,53,74,79,6c,65,73,68,65,\
+  65,74,00,00,01,89,30,5c,2a,5c,53,6f,66,74,77,61,72,65,5c,4d,69,63,72,6f,73,\
+  6f,66,74,5c,49,6e,74,65,72,6e,65,74,20,45,78,70,6c,6f,72,65,72,5c,53,74,79,\
+  6c,65,73,00,89,30,20,55,73,65,72,20,53,74,79,6c,65,73,68,65,65,74,00,00,01,\
+  89,30,74,2a,5c,53,6f,66,74,77,61,72,65,5c,57,6f,77,36,34,33,32,4e,6f,64,65,\
+  5c,4d,69,63,72,6f,73,6f,66,74,5c,49,6e,74,65,72,6e,65,74,20,45,78,70,6c,6f,\
+  72,65,72,5c,53,74,79,6c,65,73,00,89,30,20,55,73,65,72,20,53,74,79,6c,65,73,\
+  68,65,65,74,00,00,01,01,01,00,01,01,00,01,01,65,24,00,00,00,00,00,01,89,30,\
+  04,2a,00,8f,ff,ff,ff,7f,8f,ff,ff,ff,7f,89,30,02,00,89,30,02,00,89,30,02,00,\
+  00,01,01,89,30,34,49,6e,74,65,72,6e,65,74,20,45,78,70,6c,6f,72,65,72,20,50,\
+  6c,75,67,69,6e,73,00,89,30,02,00,06,89,30,81,1c,2a,5c,53,4f,46,54,57,41,52,\
+  45,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,5c,43,75,72,72,65,\
+  6e,74,56,65,72,73,69,6f,6e,5c,45,78,70,6c,6f,72,65,72,5c,42,72,6f,77,73,65,\
+  72,20,48,65,6c,70,65,72,20,4f,62,6a,65,63,74,73,5c,2a,00,89,30,04,2a,00,00,\
+  01,89,30,81,34,2a,5c,53,4f,46,54,57,41,52,45,5c,57,6f,77,36,34,33,32,4e,6f,\
+  64,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,5c,43,75,72,72,\
+  65,6e,74,56,65,72,73,69,6f,6e,5c,45,78,70,6c,6f,72,65,72,5c,42,72,6f,77,73,\
+  65,72,20,48,65,6c,70,65,72,20,4f,62,6a,65,63,74,73,5c,2a,00,89,30,04,2a,00,\
+  00,01,89,30,62,2a,5c,53,4f,46,54,57,41,52,45,5c,4d,69,63,72,6f,73,6f,66,74,\
+  5c,49,6e,74,65,72,6e,65,74,20,45,78,70,6c,6f,72,65,72,5c,54,6f,6f,6c,62,61,\
+  72,5c,2a,00,89,30,04,2a,00,00,01,89,30,7a,2a,5c,53,4f,46,54,57,41,52,45,5c,\
+  57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,49,6e,74,\
+  65,72,6e,65,74,20,45,78,70,6c,6f,72,65,72,5c,54,6f,6f,6c,62,61,72,5c,2a,00,\
+  89,30,04,2a,00,00,01,89,30,62,2a,5c,53,4f,46,54,57,41,52,45,5c,4d,69,63,72,\
+  6f,73,6f,66,74,5c,49,6e,74,65,72,6e,65,74,20,45,78,70,6c,6f,72,65,72,5c,4d,\
+  65,6e,75,45,78,74,5c,2a,00,89,30,04,2a,00,00,01,89,30,7a,2a,5c,53,4f,46,54,\
+  57,41,52,45,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,\
+  74,5c,49,6e,74,65,72,6e,65,74,20,45,78,70,6c,6f,72,65,72,5c,4d,65,6e,75,45,\
+  78,74,5c,2a,00,89,30,04,2a,00,00,01,01,01,00,01,01,00,01,01,77,26,00,00,00,\
+  00,00,01,89,30,04,2a,00,8f,ff,ff,ff,7f,8f,ff,ff,ff,7f,89,30,02,00,89,30,02,\
+  00,89,30,02,00,00,01,01,89,30,20,53,79,73,74,65,6d,20,53,65,63,75,72,69,74,\
+  79,00,89,30,02,00,0a,89,30,7c,2a,5c,53,4f,46,54,57,41,52,45,5c,4d,69,63,72,\
+  6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,5c,43,75,72,72,65,6e,74,76,65,72,73,\
+  69,6f,6e,5c,50,6f,6c,69,63,69,65,73,5c,45,78,70,6c,6f,72,65,72,00,89,30,04,\
+  2a,00,00,01,89,30,81,14,2a,5c,53,4f,46,54,57,41,52,45,5c,57,6f,77,36,34,33,\
+  32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,5c,43,\
+  75,72,72,65,6e,74,76,65,72,73,69,6f,6e,5c,50,6f,6c,69,63,69,65,73,5c,45,78,\
+  70,6c,6f,72,65,72,00,89,30,04,2a,00,00,01,89,30,78,2a,5c,53,6f,66,74,77,61,\
+  72,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,5c,43,75,72,72,\
+  65,6e,74,56,65,72,73,69,6f,6e,5c,50,6f,6c,69,63,69,65,73,5c,53,79,73,74,65,\
+  6d,00,89,30,04,2a,00,00,01,89,30,81,10,2a,5c,53,6f,66,74,77,61,72,65,5c,57,\
+  6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,\
+  6f,77,73,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,50,6f,6c,69,63,69,\
+  65,73,5c,53,79,73,74,65,6d,00,89,30,04,2a,00,00,01,89,30,81,08,48,4b,4c,4d,\
+  5c,53,59,53,54,45,4d,5c,43,6f,6e,74,72,6f,6c,53,65,74,3f,3f,3f,5c,43,6f,6e,\
+  74,72,6f,6c,5c,53,65,73,73,69,6f,6e,20,4d,61,6e,61,67,65,72,5c,4d,65,6d,6f,\
+  72,79,20,4d,61,6e,61,67,65,6d,65,6e,74,00,89,30,2e,45,6e,66,6f,72,63,65,57,\
+  72,69,74,65,50,72,6f,74,65,63,74,69,6f,6e,00,00,01,89,30,76,48,4b,4c,4d,5c,\
+  53,4f,46,54,57,41,52,45,5c,4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,\
+  73,20,4e,54,5c,43,75,72,72,65,6e,74,56,65,72,73,69,6f,6e,5c,57,69,6e,6c,6f,\
+  67,6f,6e,00,89,30,16,53,46,43,44,69,73,61,62,6c,65,00,00,01,89,30,81,0e,48,\
+  4b,4c,4d,5c,53,4f,46,54,57,41,52,45,5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,\
+  4d,69,63,72,6f,73,6f,66,74,5c,57,69,6e,64,6f,77,73,20,4e,54,5c,43,75,72,72,\
+  65,6e,74,56,65,72,73,69,6f,6e,5c,57,69,6e,6c,6f,67,6f,6e,00,89,30,16,53,46,\
+  43,44,69,73,61,62,6c,65,00,00,01,89,30,48,2a,5c,53,6f,66,74,77,61,72,65,5c,\
+  4d,69,63,72,6f,73,6f,66,74,5c,44,72,69,76,65,72,20,53,69,67,6e,69,6e,67,00,\
+  89,30,0e,50,6f,6c,69,63,79,00,00,01,89,30,60,2a,5c,53,6f,66,74,77,61,72,65,\
+  5c,57,6f,77,36,34,33,32,4e,6f,64,65,5c,4d,69,63,72,6f,73,6f,66,74,5c,44,72,\
+  69,76,65,72,20,53,69,67,6e,69,6e,67,00,89,30,0e,50,6f,6c,69,63,79,00,00,01,\
+  89,30,81,1a,48,4b,4c,4d,5c,53,59,53,54,45,4d,5c,43,6f,6e,74,72,6f,6c,53,65,\
+  74,3f,3f,3f,5c,53,65,72,76,69,63,65,73,5c,53,68,61,72,65,64,41,63,63,65,73,\
+  73,5c,50,61,72,61,6d,65,74,65,72,73,5c,46,69,72,65,77,61,6c,6c,50,6f,6c,69,\
+  63,79,5c,2a,20,00,89,30,04,2a,00,00,01,01,01,00,01,01,00,01,01,ca,29,00,00,\
+  00,00,00,01,89,30,04,2a,00,8f,ff,ff,ff,7f,8f,ff,ff,ff,7f,89,30,02,00,89,30,\
+  02,00,89,30,02,00,00,01,01,89,30,20,53,79,73,74,65,6d,20,53,65,72,76,69,63,\
+  65,73,00,89,30,02,00,03,89,30,4a,48,4b,4c,4d,5c,53,79,73,74,65,6d,5c,43,6f,\
+  6e,74,72,6f,6c,53,65,74,3f,3f,3f,5c,53,65,72,76,69,63,65,73,5c,2a,00,89,30,\
+  14,49,6d,61,67,65,50,61,74,68,00,00,01,89,30,60,48,4b,4c,4d,5c,53,79,73,74,\
+  65,6d,5c,43,6f,6e,74,72,6f,6c,53,65,74,3f,3f,3f,5c,53,65,72,76,69,63,65,73,\
+  5c,2a,5c,50,61,72,61,6d,65,74,65,72,73,00,89,30,16,53,65,72,76,69,63,65,44,\
+  6c,6c,00,00,01,89,30,52,48,4b,4c,4d,5c,53,79,73,74,65,6d,5c,43,6f,6e,74,72,\
+  6f,6c,53,65,74,3f,3f,3f,5c,53,65,72,76,69,63,65,73,5c,56,58,44,5c,2a,00,89,\
+  30,14,53,74,61,74,69,63,56,78,44,00,00,01,01,01,00,01,01,00,01,01,c5,2a,00,\
+  00,00,00,00,01,89,30,04,2a,00,8f,ff,ff,ff,7f,8f,ff,ff,ff,7f,89,30,02,00,89,\
+  30,02,00,89,30,02,00,00
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Behavior_Blocking\profiles\pdm\settings\Set]
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Behavior_Blocking\profiles\pdm\settings\Set\0000]
+"SetType"=dword:00000001
+"bEnabled"=dword:00000001
+"Action"=dword:00000003
+"bLog"=dword:00000001
+"bQuarantine"=dword:00000001
+"bAutoRollback"=dword:00000000
+"Timeout"=dword:00000014
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Behavior_Blocking\profiles\pdm\settings\Set\0001]
+"SetType"=dword:00000002
+"bEnabled"=dword:00000000
+"Action"=dword:00000000
+"bLog"=dword:00000001
+"bQuarantine"=dword:00000000
+"bAutoRollback"=dword:00000000
+"Timeout"=dword:00000014
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Behavior_Blocking\profiles\pdm\settings\Set\0002]
+"SetType"=dword:00000003
+"bEnabled"=dword:00000000
+"Action"=dword:00000000
+"bLog"=dword:00000001
+"bQuarantine"=dword:00000000
+"bAutoRollback"=dword:00000000
+"Timeout"=dword:00000014
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Behavior_Blocking\profiles\pdm\settings\Set\0003]
+"SetType"=dword:00000004
+"bEnabled"=dword:00000001
+"Action"=dword:00000003
+"bLog"=dword:00000001
+"bQuarantine"=dword:00000001
+"bAutoRollback"=dword:00000000
+"Timeout"=dword:00000014
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Behavior_Blocking\profiles\pdm\settings\Set\0004]
+"SetType"=dword:00000005
+"bEnabled"=dword:00000000
+"Action"=dword:00000000
+"bLog"=dword:00000001
+"bQuarantine"=dword:00000000
+"bAutoRollback"=dword:00000000
+"Timeout"=dword:00000014
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Behavior_Blocking\profiles\pdm\settings\Set\0005]
+"SetType"=dword:00000006
+"bEnabled"=dword:00000001
+"Action"=dword:00000002
+"bLog"=dword:00000001
+"bQuarantine"=dword:00000000
+"bAutoRollback"=dword:00000000
+"Timeout"=dword:00000014
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Behavior_Blocking\profiles\pdm\settings\Set\0006]
+"SetType"=dword:00000007
+"bEnabled"=dword:00000001
+"Action"=dword:00000000
+"bLog"=dword:00000001
+"bQuarantine"=dword:00000000
+"bAutoRollback"=dword:00000000
+"Timeout"=dword:00000014
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Behavior_Blocking\profiles\pdm\settings\Set\0007]
+"SetType"=dword:00000008
+"bEnabled"=dword:00000000
+"Action"=dword:00000000
+"bLog"=dword:00000001
+"bQuarantine"=dword:00000000
+"bAutoRollback"=dword:00000000
+"Timeout"=dword:00000014
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Behavior_Blocking\profiles\pdm\settings\Set\0008]
+"SetType"=dword:00000009
+"bEnabled"=dword:00000000
+"Action"=dword:00000002
+"bLog"=dword:00000001
+"bQuarantine"=dword:00000000
+"bAutoRollback"=dword:00000000
+"Timeout"=dword:00000014
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Anti_Hacker\profiles\fw]
+"enabled"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\Anti_Hacker\profiles\fw\settings]
+"ProtectionLevel"=dword:00000003
+"PortRules_vcontent"=hex:73,74,72,6d,01,00,00,00,03,00,00,00,4c,3a,00,00,00,89,\
+  30,32,49,43,4d,50,20,54,79,70,65,20,30,20,28,45,63,68,6f,20,52,65,70,6c,79,\
+  29,00,01,00,00,00,00,00,01,01,00,00,00,00,10,00,62,00,00,00,89,30,26,49,43,\
+  4d,50,20,54,79,70,65,20,38,20,28,45,63,68,6f,29,00,01,00,00,00,00,00,01,02,\
+  00,00,00,00,10,08,94,00,00,00,89,30,3a,49,43,4d,50,20,54,79,70,65,20,31,31,\
+  20,28,54,69,6d,65,20,45,78,63,65,65,64,65,64,29,00,01,00,00,00,00,00,01,01,\
+  00,00,00,00,10,0b,ba,00,00,00,89,30,22,4f,74,68,65,72,20,49,43,4d,50,20,54,\
+  79,70,65,73,00,01,01,00,00,00,00,01,03,00,00,00,00,00,ff,f4,00,00,00,89,30,\
+  2a,44,48,43,50,20,43,6c,69,65,6e,74,20,41,63,74,69,76,69,74,79,00,01,00,00,\
+  00,00,00,11,03,02,43,00,43,00,23,02,23,02,00,02,44,00,44,00,22,02,22,02,00,\
+  0a,ff,29,01,00,00,89,30,38,57,69,6e,64,6f,77,73,20,22,44,43,4f,4d,20,52,50,\
+  43,22,20,41,63,74,69,76,69,74,79,00,01,01,00,00,00,00,11,01,00,00,01,87,00,\
+  87,00,00,08,ff,5e,01,00,00,89,30,38,57,69,6e,64,6f,77,73,20,22,44,43,4f,4d,\
+  20,52,50,43,22,20,41,63,74,69,76,69,74,79,00,01,01,00,00,00,00,06,04,00,00,\
+  01,87,00,87,00,00,08,ff,9f,01,00,00,89,30,50,57,69,6e,64,6f,77,73,20,22,4e,\
+  65,74,42,49,4f,53,20,4e,61,6d,65,20,53,65,72,76,69,63,65,22,20,41,63,74,69,\
+  76,69,74,79,00,01,01,00,00,00,00,11,03,00,00,01,89,00,89,00,00,08,ff,e4,01,\
+  00,00,89,30,58,57,69,6e,64,6f,77,73,20,22,4e,65,74,42,49,4f,53,20,44,61,74,\
+  61,67,72,61,6d,20,53,65,72,76,69,63,65,22,20,41,63,74,69,76,69,74,79,00,01,\
+  01,00,00,00,00,11,03,00,00,01,8a,00,8a,00,00,08,ff,28,02,00,00,89,30,56,57,\
+  69,6e,64,6f,77,73,20,22,4e,65,74,42,49,4f,53,20,53,65,73,73,69,6f,6e,20,53,\
+  65,72,76,69,63,65,22,20,41,63,74,69,76,69,74,79,00,01,01,00,00,00,00,06,04,\
+  00,00,01,8b,00,8b,00,00,08,ff,69,02,00,00,89,30,50,57,69,6e,64,6f,77,73,20,\
+  22,53,65,72,76,65,72,20,4d,65,73,73,61,67,65,20,42,6c,6f,63,6b,22,20,41,63,\
+  74,69,76,69,74,79,00,01,01,00,00,00,00,11,03,00,00,01,bd,01,bd,01,00,08,ff,\
+  aa,02,00,00,89,30,50,57,69,6e,64,6f,77,73,20,22,53,65,72,76,65,72,20,4d,65,\
+  73,73,61,67,65,20,42,6c,6f,63,6b,22,20,41,63,74,69,76,69,74,79,00,01,01,00,\
+  00,00,00,06,04,00,00,01,bd,01,bd,01,00,08,ff,f3,02,00,00,89,30,40,4c,6f,63,\
+  61,6c,68,6f,73,74,20,4c,6f,6f,70,62,61,63,6b,20,55,44,50,20,41,63,74,69,76,\
+  69,74,79,00,00,00,00,00,00,00,11,03,00,01,89,30,02,00,89,30,02,00,87,f8,80,\
+  80,01,87,f8,80,80,01,00,00,00,00,01,ff,3c,03,00,00,89,30,40,4c,6f,63,61,6c,\
+  68,6f,73,74,20,4c,6f,6f,70,62,61,63,6b,20,54,43,50,20,41,63,74,69,76,69,74,\
+  79,00,00,00,00,00,00,00,06,03,00,01,89,30,02,00,89,30,02,00,87,f8,80,80,01,\
+  87,f8,80,80,01,00,00,00,00,01,ff,6f,03,00,00,89,30,2c,50,50,54,50,20,43,6f,\
+  6e,74,72,6f,6c,20,41,63,74,69,76,69,74,79,00,00,00,00,00,00,00,06,05,01,bb,\
+  06,bb,06,00,01,00,04,ff,ff,00,0a,ff,ae,03,00,00,89,30,44,4d,61,6c,69,63,69,\
+  6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,4e,65,74,53,6b,79,22,20,50,6f,72,\
+  74,73,00,00,01,00,00,00,00,06,04,00,00,02,52,00,52,00,99,02,99,02,00,08,ff,\
+  f2,03,00,00,89,30,46,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,\
+  20,22,50,61,64,6f,62,6f,74,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,\
+  00,00,03,71,00,71,00,fb,0b,fb,0b,f9,07,f9,07,00,08,ff,2d,04,00,00,89,30,44,\
+  4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,46,61,72,6e,61,\
+  7a,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,01,85,00,85,00,00,\
+  08,ff,67,04,00,00,89,30,42,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,\
+  72,65,20,22,4b,72,61,73,73,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,\
+  00,00,01,c8,01,c8,01,00,08,ff,a7,04,00,00,89,30,4e,4d,61,6c,69,63,69,6f,75,\
+  73,20,53,6f,66,74,77,61,72,65,20,22,42,61,63,6b,64,6f,6f,72,2e,6a,72,22,20,\
+  50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,01,09,03,09,03,00,08,ff,f1,\
+  04,00,00,89,30,42,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,\
+  22,53,6f,62,69,67,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,05,\
+  e3,03,e3,03,e4,03,e4,03,e5,03,e5,03,e6,03,e6,03,e7,03,e7,03,00,08,ff,34,05,\
+  00,00,89,30,44,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,\
+  44,75,6d,61,72,75,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,03,\
+  e9,03,e9,03,eb,08,eb,08,10,27,10,27,00,08,ff,6e,05,00,00,89,30,42,4d,61,6c,\
+  69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,52,61,6e,6b,79,22,20,50,\
+  6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,01,01,04,a0,13,00,08,ff,a8,05,\
+  00,00,89,30,42,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,\
+  4b,69,70,69,73,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,01,05,\
+  04,05,04,00,08,ff,fb,05,00,00,89,30,44,4d,61,6c,69,63,69,6f,75,73,20,53,6f,\
+  66,74,77,61,72,65,20,22,4d,79,44,6f,6f,6d,22,20,50,6f,72,74,73,00,00,01,00,\
+  00,00,00,06,04,00,00,07,0a,04,0a,04,12,04,12,04,38,04,38,04,37,0c,7e,0c,2e,\
+  15,2e,15,30,15,30,15,60,27,60,27,00,08,ff,39,06,00,00,89,30,4a,4d,61,6c,69,\
+  63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,57,61,72,68,6f,6d,65,2e,61,\
+  22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,01,0b,04,0b,04,00,08,\
+  ff,75,06,00,00,89,30,46,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,\
+  65,20,22,42,75,67,62,65,61,72,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,\
+  04,00,00,01,38,04,38,04,00,08,ff,cf,06,00,00,89,30,42,4d,61,6c,69,63,69,6f,\
+  75,73,20,53,6f,66,74,77,61,72,65,20,22,42,61,67,6c,65,22,20,50,6f,72,74,73,\
+  00,00,01,00,00,00,00,06,04,00,00,09,38,04,38,04,d2,04,d2,04,e7,09,e7,09,fc,\
+  09,fc,09,b9,0a,b9,0a,8f,12,8f,12,79,1a,79,1a,a2,22,a2,22,4b,23,4b,23,00,08,\
+  ff,09,07,00,00,89,30,42,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,\
+  65,20,22,4f,72,69,6f,6e,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,\
+  00,01,7e,04,7e,04,00,08,ff,44,07,00,00,89,30,44,4d,61,6c,69,63,69,6f,75,73,\
+  20,53,6f,66,74,77,61,72,65,20,22,50,6c,65,78,75,73,22,20,50,6f,72,74,73,00,\
+  00,01,00,00,00,00,06,04,00,00,01,e2,04,e2,04,00,08,ff,7e,07,00,00,89,30,42,\
+  4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,42,6f,66,72,61,\
+  22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,01,67,06,67,06,00,08,\
+  ff,ba,07,00,00,89,30,46,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,\
+  65,20,22,42,69,66,72,6f,73,65,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,\
+  04,00,00,01,b3,07,b3,07,00,08,ff,f5,07,00,00,89,30,44,4d,61,6c,69,63,69,6f,\
+  75,73,20,53,6f,66,74,77,61,72,65,20,22,53,6b,79,62,61,67,22,20,50,6f,72,74,\
+  73,00,00,01,00,00,00,00,06,04,00,00,01,29,09,29,09,00,08,ff,30,08,00,00,89,\
+  30,44,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,56,65,73,\
+  73,65,72,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,01,ce,0a,ce,\
+  0a,00,08,ff,6b,08,00,00,89,30,44,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,\
+  77,61,72,65,20,22,42,72,61,64,6f,72,22,20,50,6f,72,74,73,00,00,01,00,00,00,\
+  00,06,04,00,00,01,ad,0b,ad,0b,00,08,ff,a6,08,00,00,89,30,44,4d,61,6c,69,63,\
+  69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,4d,69,6d,61,69,6c,22,20,50,6f,\
+  72,74,73,00,00,01,00,00,00,00,06,04,00,00,01,b8,0b,b8,0b,00,08,ff,df,08,00,\
+  00,89,30,40,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,44,\
+  65,6c,66,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,01,7b,0c,7b,\
+  0c,00,08,ff,1c,09,00,00,89,30,48,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,\
+  77,61,72,65,20,22,4f,70,74,69,78,50,72,6f,22,20,50,6f,72,74,73,00,00,01,00,\
+  00,00,00,06,04,00,00,01,52,0d,52,0d,00,08,ff,58,09,00,00,89,30,46,4d,61,6c,\
+  69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,42,75,73,74,65,72,73,22,\
+  20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,01,6e,0f,6e,0f,00,08,ff,\
+  94,09,00,00,89,30,46,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,\
+  20,22,4c,6f,76,65,73,61,6e,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,\
+  00,00,01,5c,11,5c,11,00,08,ff,d9,09,00,00,89,30,58,4d,61,6c,69,63,69,6f,75,\
+  73,20,53,6f,66,74,77,61,72,65,20,22,42,61,63,6b,64,6f,6f,72,2e,69,77,2f,4e,\
+  61,69,6c,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,01,d7,11,d7,\
+  11,00,08,ff,15,0a,00,00,89,30,46,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,\
+  77,61,72,65,20,22,54,65,74,74,6f,6e,61,22,20,50,6f,72,74,73,00,00,01,00,00,\
+  00,00,06,04,00,00,01,89,13,89,13,00,08,ff,4d,0a,00,00,89,30,3e,4d,61,6c,69,\
+  63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,4a,69,78,22,20,50,6f,72,74,\
+  73,00,00,01,00,00,00,00,06,04,00,00,01,9d,15,9d,15,00,08,ff,8c,0a,00,00,89,\
+  30,44,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,53,61,73,\
+  73,65,72,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,02,b2,15,b2,\
+  15,0c,27,0c,27,00,08,ff,ce,0a,00,00,89,30,52,4d,61,6c,69,63,69,6f,75,73,20,\
+  53,6f,66,74,77,61,72,65,20,22,53,79,73,62,75,67,2f,4d,69,6d,61,69,6c,22,20,\
+  50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,01,b3,15,b3,15,00,08,ff,0a,\
+  0b,00,00,89,30,46,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,\
+  22,4c,6f,76,47,61,74,65,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,\
+  00,01,70,17,70,17,00,08,ff,46,0b,00,00,89,30,46,4d,61,6c,69,63,69,6f,75,73,\
+  20,53,6f,66,74,77,61,72,65,20,22,47,6c,61,63,65,2e,61,22,20,50,6f,72,74,73,\
+  00,00,01,00,00,00,00,06,04,00,00,01,da,1c,da,1c,00,08,ff,81,0b,00,00,89,30,\
+  44,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,47,5f,44,6f,\
+  6f,72,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,01,ca,1d,ca,1d,\
+  00,08,ff,c5,0b,00,00,89,30,46,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,\
+  61,72,65,20,22,5a,65,62,72,6f,78,79,22,20,50,6f,72,74,73,00,00,01,00,00,00,\
+  00,06,04,00,00,03,c9,1f,c9,1f,4c,5a,4c,5a,60,d3,60,d3,00,08,ff,fe,0b,00,00,\
+  89,30,40,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,5a,61,\
+  66,69,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,01,f5,1f,f5,1f,\
+  00,08,ff,39,0c,00,00,89,30,44,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,\
+  61,72,65,20,22,42,6f,7a,6f,72,69,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,\
+  06,04,00,00,01,92,21,92,21,00,08,ff,77,0c,00,00,89,30,42,4d,61,6c,69,63,69,\
+  6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,4d,79,74,6f,62,22,20,50,6f,72,74,\
+  73,00,00,01,00,00,00,00,06,04,00,00,02,b8,22,b8,22,35,82,35,82,00,08,ff,b6,\
+  0c,00,00,89,30,44,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,\
+  22,44,61,62,62,65,72,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,\
+  02,07,23,07,23,aa,26,aa,26,00,08,ff,f5,0c,00,00,89,30,4c,4d,61,6c,69,63,69,\
+  6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,4d,69,74,67,6c,69,65,64,65,72,22,\
+  20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,01,6d,2b,6d,2b,00,08,ff,\
+  30,0d,00,00,89,30,44,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,\
+  20,22,44,69,70,4e,65,74,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,\
+  00,01,f8,2d,f8,2d,00,08,ff,74,0d,00,00,89,30,4e,4d,61,6c,69,63,69,6f,75,73,\
+  20,53,6f,66,74,77,61,72,65,20,22,4c,61,74,69,6e,75,73,2e,73,76,72,22,20,50,\
+  6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,02,37,2e,37,2e,77,73,77,73,00,\
+  08,ff,af,0d,00,00,89,30,44,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,\
+  72,65,20,22,4e,65,74,42,75,73,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,\
+  04,00,00,01,39,30,39,30,00,08,ff,f3,0d,00,00,89,30,4e,4d,61,6c,69,63,69,6f,\
+  75,73,20,53,6f,66,74,77,61,72,65,20,22,42,61,63,6b,64,6f,6f,72,2e,71,72,22,\
+  20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,02,ad,32,ad,32,af,32,af,\
+  32,00,08,ff,2f,0e,00,00,89,30,46,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,\
+  77,61,72,65,20,22,48,61,78,64,6f,6f,72,22,20,50,6f,72,74,73,00,00,01,00,00,\
+  00,00,06,04,00,00,01,15,41,15,41,00,08,ff,69,0e,00,00,89,30,42,4d,61,6c,69,\
+  63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,4b,75,61,6e,67,22,20,50,6f,\
+  72,74,73,00,00,01,00,00,00,00,06,04,00,00,01,94,43,94,43,00,08,ff,a6,0e,00,\
+  00,89,30,48,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,58,\
+  43,6f,6e,74,72,6f,6c,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,\
+  01,a1,46,a1,46,00,08,ff,e1,0e,00,00,89,30,44,4d,61,6c,69,63,69,6f,75,73,20,\
+  53,6f,66,74,77,61,72,65,20,22,52,75,78,2e,33,30,22,20,50,6f,72,74,73,00,00,\
+  01,00,00,00,00,06,04,00,00,01,ce,56,ce,56,00,08,ff,1e,0f,00,00,89,30,48,4d,\
+  61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,53,75,62,53,65,76,\
+  65,6e,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,01,ee,6a,ee,6a,\
+  00,08,ff,67,0f,00,00,89,30,58,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,\
+  61,72,65,20,22,53,6d,61,6c,6c,2e,61,2f,53,6d,61,6c,6c,2e,61,64,22,20,50,6f,\
+  72,74,73,00,00,01,00,00,00,00,06,04,00,00,02,19,6e,19,6e,58,af,58,af,00,08,\
+  ff,a7,0f,00,00,89,30,4e,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,\
+  65,20,22,42,61,63,6b,4f,72,69,66,69,63,65,22,20,50,6f,72,74,73,00,00,01,00,\
+  00,00,00,06,04,00,00,01,69,7a,69,7a,00,08,ff,e3,0f,00,00,89,30,46,4d,61,6c,\
+  69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,54,61,6e,61,74,6f,73,22,\
+  20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,01,ba,8f,ba,8f,00,08,ff,\
+  22,10,00,00,89,30,4c,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,\
+  20,22,4d,69,74,67,6c,69,65,64,65,72,22,20,50,6f,72,74,73,00,00,01,00,00,00,\
+  00,06,04,00,00,01,3f,9c,3f,9c,00,08,ff,5f,10,00,00,89,30,48,4d,61,6c,69,63,\
+  69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,41,75,74,6f,6f,74,65,72,22,20,\
+  50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,01,ad,de,ad,de,00,08,ff,9a,\
+  10,00,00,89,30,44,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,\
+  22,41,67,6f,62,6f,74,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,06,04,00,00,\
+  01,e2,ff,e2,ff,00,08,ff,d6,10,00,00,89,30,3e,4d,61,6c,69,63,69,6f,75,73,20,\
+  53,6f,66,74,77,61,72,65,20,22,47,73,74,22,20,50,6f,72,74,73,00,00,01,00,00,\
+  00,00,11,01,00,00,02,17,04,17,04,00,08,00,08,00,08,ff,12,11,00,00,89,30,46,\
+  4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,53,63,61,6c,70,\
+  65,72,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,11,01,00,00,01,d1,07,d1,07,\
+  00,08,ff,4a,11,00,00,89,30,3e,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,\
+  61,72,65,20,22,4f,73,66,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,11,01,00,\
+  00,01,e9,0b,e9,0b,00,08,ff,86,11,00,00,89,30,46,4d,61,6c,69,63,69,6f,75,73,\
+  20,53,6f,66,74,77,61,72,65,20,22,48,75,70,69,67,6f,6e,22,20,50,6f,72,74,73,\
+  00,00,01,00,00,00,00,11,01,00,00,01,76,20,76,20,00,08,ff,c0,11,00,00,89,30,\
+  42,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,22,53,6f,62,69,\
+  67,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,11,01,00,00,01,26,23,26,23,00,\
+  08,ff,08,12,00,00,89,30,56,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,\
+  72,65,20,22,53,6d,61,6c,6c,2e,61,2f,53,6d,61,6c,6c,2e,62,22,20,50,6f,72,74,\
+  73,00,00,01,00,00,00,00,11,01,00,00,02,39,30,39,30,60,bf,60,bf,00,08,ff,46,\
+  12,00,00,89,30,42,4d,61,6c,69,63,69,6f,75,73,20,53,6f,66,74,77,61,72,65,20,\
+  22,4e,65,74,73,6f,22,20,50,6f,72,74,73,00,00,01,00,00,00,00,11,01,00,00,02,\
+  ef,84,ef,84,f1,84,f1,84,00,08,ff
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\TrafficMonitor\settings\def]
+"DecodeSSL"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\TrafficMonitor\settings\def\Ports\0000]
+"Enabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\TrafficMonitor\settings\def\Ports\0001]
+"Enabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\TrafficMonitor\settings\def\Ports\0002]
+"Enabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\TrafficMonitor\settings\def\Ports\0003]
+"Enabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\TrafficMonitor\settings\def\Ports\0004]
+"Enabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\TrafficMonitor\settings\def\Ports\0005]
+"Enabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\TrafficMonitor\settings\def\Ports\0006]
+"Enabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\TrafficMonitor\settings\def\Ports\0007]
+"Enabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\TrafficMonitor\settings\def\Ports\0008]
+"Enabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\TrafficMonitor\settings\def\Ports\0009]
+"Enabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\TrafficMonitor\settings\def\Ports\0010]
+"Enabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\TrafficMonitor\settings\def\Ports\0011]
+"Enabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\TrafficMonitor\settings\def\Ports\0012]
+"Enabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\TrafficMonitor\settings\def\Ports\0013]
+"Enabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\TrafficMonitor\settings\def\Ports\0014]
+"Enabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\TrafficMonitor\settings\def\Ports\0015]
+"Enabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\TrafficMonitor\settings\def\Ports\0016]
+"Enabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\TrafficMonitor\settings\def\Ports\0017]
+"Enabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\TrafficMonitor\settings\def\Ports\0018]
+"Enabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\TrafficMonitor\settings\def\Ports\0019]
+"Enabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp7\profiles\TrafficMonitor\settings\def\Ports\0020]
+"Enabled"=dword:00000001

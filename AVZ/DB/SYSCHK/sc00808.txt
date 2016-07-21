@@ -1,0 +1,14 @@
+// ***** Проверка ключа Winlogon *****
+var
+ S : string;
+begin
+ S := Trim(RegKeyStrParamRead('HKEY_LOCAL_MACHINE', 'Software\Microsoft\Windows NT\CurrentVersion\Winlogon', 'Shell'));
+ if S = '' then exit;
+ S := LowerCase(S);
+ if (S = 'explorer.exe') then exit;
+ if pos('explorer.exe', S) = 1 then begin
+  AddToLog('$AVZ0519 "'+S+'"');
+  exit;
+ end;
+ AddToLog('$AVZ0518: "'+S+'"');
+end.

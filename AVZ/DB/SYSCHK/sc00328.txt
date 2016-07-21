@@ -1,0 +1,4 @@
+// ***** Dialer.DialerOffline *****
+begin       
+ AddEvAlarmByCLSID('CEB29DA4-7AFA-4F24-B3CD-17351D590DF0',AScriptName,'');
+end.

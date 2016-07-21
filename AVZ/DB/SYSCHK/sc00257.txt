@@ -1,0 +1,4 @@
+// ***** AdvWare.FlashTrack *****
+begin
+ AddEvAlarmByCLSID('7371F073-AC0F-4b80-BB2F-96A488CEFB32', AScriptName, 'Flt.DLL');
+end.

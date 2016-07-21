@@ -1,0 +1,147 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_MAIN DIALOG DISCARDABLE  0, 0, 540, 388
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT_URL,10,18,237,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_DST,10,42,237,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_GUID,10,128,237,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_COMPANY,10,154,237,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NAME,10,180,237,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_COUNTRY,10,206,237,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CITY,10,232,237,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ADDR,10,258,237,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PHN,10,284,237,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_FAX,10,310,237,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_MAIL,10,336,237,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_WWW,10,362,237,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Start",ID_START,270,14,50,14
+    DEFPUSHBUTTON   "Cancel",ID_CANCEL,429,14,50,14
+    PUSHBUTTON      "Stop",ID_STOP,323,14,50,14
+    LTEXT           "URL to connect",IDC_STATIC,10,8,53,8
+    LTEXT           "GUID",IDC_STATIC,10,117,144,8
+    LTEXT           "Name",IDC_STATIC,10,169,144,8
+    LTEXT           "Company",IDC_STATIC,10,143,144,8
+    LTEXT           "Country",IDC_STATIC,10,195,144,8
+    LTEXT           "City",IDC_STATIC,10,221,144,8
+    LTEXT           "Address",IDC_STATIC,10,247,144,8
+    LTEXT           "Telephone",IDC_STATIC,10,273,144,8
+    LTEXT           "Fax",IDC_STATIC,10,299,144,8
+    LTEXT           "E-Mail",IDC_STATIC,10,325,144,8
+    LTEXT           "WWW",IDC_STATIC,10,351,144,8
+    LTEXT           "Operation Log",IDC_STATIC,254,117,118,8
+    LTEXT           "Destination Folder",IDC_STATIC,10,32,99,8
+    EDITTEXT        IDC_EDIT_AGENT,10,66,237,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Agent Name",IDC_STATIC,10,56,53,8
+    PUSHBUTTON      "Clear",ID_CLR,376,14,50,14
+    EDITTEXT        IDC_EDIT_PID,10,91,88,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Application Id",IDC_STATIC,10,80,53,8
+    PUSHBUTTON      "Dumb",IDC_BTN_TEST,483,15,50,14,NOT WS_VISIBLE
+    LISTBOX         IDC_LIST_LOG,254,127,279,248,LBS_NOINTEGRALHEIGHT | 
+                    LBS_NOSEL | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_PVER,159,91,88,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Application Version",IDC_STATIC,159,80,87,8
+    EDITTEXT        IDC_PROXY_URL,270,66,237,12,ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "Use Proxy Server",IDC_CHECK_PROXY,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,436,42,71,10
+    LTEXT           "Proxy URL",IDC_STATIC,270,56,35,8
+    EDITTEXT        IDC_PROXY_USERNAME,270,91,88,12,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    LTEXT           "User Name",IDC_STATIC,270,80,36,8
+    EDITTEXT        IDC_PROXY_PASSWORD,419,91,88,12,ES_PASSWORD | 
+                    ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Password",IDC_STATIC,419,80,32,8
+    CONTROL         "Use IE Settings",IDC_CHECK_IE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,270,42,65,10
+    CONTROL         "Auto Auth",IDC_CHECK_AUTH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,362,42,47,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOG_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 533
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 381
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

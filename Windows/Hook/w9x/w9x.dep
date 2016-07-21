@@ -1,0 +1,45 @@
+# Microsoft Developer Studio Generated Dependency File, included by w9x.mak
+
+.\VXDHOOK.C : \
+	"..\..\..\commonfiles\avp_data.h"\
+	"..\..\..\commonfiles\avpcomid.h"\
+	"..\..\..\commonfiles\avprptid.h"\
+	"..\..\..\commonfiles\hook\avpgcom.h"\
+	"..\..\..\commonfiles\hook\hookspec.h"\
+	"..\..\..\commonfiles\hook\klmc_api.h"\
+	"..\..\..\commonfiles\hook\klpf_api.h"\
+	"..\..\..\commonfiles\hook\pidexternalapi.h"\
+	"..\..\..\commonfiles\property.h"\
+	"..\client.c"\
+	"..\COMMON.C"\
+	"..\debug.c"\
+	"..\debug.h"\
+	"..\defs.h"\
+	"..\filter.h"\
+	"..\InvThread.c"\
+	"..\ioctl.c"\
+	"..\logging.c"\
+	"..\MemMap.c"\
+	"..\NameCache.c"\
+	"..\osspec.c"\
+	"..\osspec.h"\
+	"..\PPage.c"\
+	"..\Security.c"\
+	"..\structures.h"\
+	"..\TSPv2.h"\
+	"..\Vxdcommn.cpp"\
+	".\firewall.c"\
+	".\i21.c"\
+	".\ifs.c"\
+	".\io.c"\
+	".\ios.c"\
+	".\LLDiskIO.c"\
+	".\r3.c"\
+	".\registry.c"\
+	".\vxdhook.h"\
+	
+
+.\WINS.CPP : \
+	"..\..\..\commonfiles\hook\avpgcom.h"\
+	".\wins.h"\
+	

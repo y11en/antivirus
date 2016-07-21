@@ -1,0 +1,9 @@
+LIB
+TARGET ungif-local
+
+CSRC dgif_lib.c ARGS -DHAVE_FCNTL_H
+CSRC egif_lib.c
+CSRC gif_err.c
+CSRC gifalloc.c
+CSRC qprintf.c ARGS -DHAVE_STDARG_H
+CSRC quantize.c

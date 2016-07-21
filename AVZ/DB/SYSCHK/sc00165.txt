@@ -1,0 +1,4 @@
+// ***** Spy.StopPopUp *****
+begin
+ AddEvAlarmByCLSID('00000273-8230-4DD4-BE4F-6889D1E74167','Spy.StopPopUp (KAV: AdWare.BiSpy)','host.dll');
+end.

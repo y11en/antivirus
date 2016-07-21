@@ -1,0 +1,50 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@ @srcdir@/../IOCache @includedir@/Stuff @includedir@/DupMem @srcdir@/../pagememorymanager @srcdir@/emulator
+
+Name = basework
+Archive = $(Name).@ARCHIVE_EXT@
+Targets = $(Archive)
+
+EmulatorSources = \
+	cmd_alu.cpp \
+	cmd_mov.cpp \
+	cmd_bits.cpp \
+	cmd_flags.cpp \
+	cmd_stack.cpp \
+	cmd_calljump.cpp \
+	cmd_string.cpp \
+	i386regs.cpp \
+	i386cpu.cpp \
+	i386commands.cpp \
+	i386exception.cpp \
+	i386disasm.cpp \
+	symboltable.cpp \
+	emulator.cpp \
+	wrappers.cpp \
+	coffexception.cpp \
+	elfparser.cpp \
+	elfbases.cpp
+
+Sources =\
+	SpcAlloc.cpp \
+	StdAfx.cpp \
+	Avpmem.cpp \
+	BaseAPI.cpp \
+	Basework.cpp \
+	Clink.cpp \
+	dupmem_unix.cpp \
+	ImgSect.c \
+	_printf.cpp \
+	suballoc.cpp \
+	Sq_u.cpp \
+	_carray.cpp \
+	CalcSum.cpp \
+	FileIO.cpp \
+	pagememorymanager.cpp \
+	@Emulator@
+
+Includes = @srcdir@ @srcdir@/..
+
+include @abs_top_builddir@/unix/Rules

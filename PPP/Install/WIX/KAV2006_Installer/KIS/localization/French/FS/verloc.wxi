@@ -1,0 +1,5 @@
+<Include>
+	<?define SkinLoc_Component_fr_Guid="{40F0DE06-30A0-4378-B07E-98BCC498C0B5}" ?>
+	<?define SkinLoc_Component_images_Guid="{BF571DD8-2EEE-49E3-993C-58BB494B19D0}" ?>
+	<?define retr_dat_fr_Guid="{8C7BFCD7-F2F6-4044-B706-9C8D3AC3C21A}" ?>
+</Include>

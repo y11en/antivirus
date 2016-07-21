@@ -1,0 +1,314 @@
+﻿[Global]
+$SystemWatch            = "System Watch"
+$SysWatch               = $SystemWatch
+$Hips                   = "Hips"
+$Pdm                    = "Proactive Defense"
+$Source                 = "Source"
+$Target                 = "Destination"
+$Protocol               = "Protocol"
+CantCloseActiveNetStat  = "You cannot close the dialog until NetDetails task is running.\nPress the 'Stop' button and then close the dialog."
+ErrResolvingIp.caption  = "Cannot resolve IP address"
+ErrResolvingIp          = "Cannot resolve computer IP address, possibly due to incorrectly specified computer name."
+#warnFLT_DEV_ERR        = 0x1bf8d001
+
+[s_ResGroupName]
+KLRoot                      = "All resources"
+KLSystemData                = "System data"
+KLPrivateData               = "Private data"
+KLPublicData                = "Public data"
+KLStartupRegKeys            = "Startup registry keys"
+KLInternetSecRegKeys        = "Internet security registry keys"
+KLPrivateUserFiles          = "User files"
+KLSystemFiles               = "System files"
+KLSystemSecRegKeys          = "System security registry keys"
+KLSystemServicesRegKeys     = "System Services registry keys"
+KLStartUpFolders            = "StartUp Folders"
+KLIESettingsRegKeys         = "Internet Explorer Settings"
+KLIEPlugInsRegKeys          = "Internet Explorer Plugins"
+KLExplorerSettingsRegKeys   = "Explorer Settings"
+KLDevices                   = "Devices"
+KLDevicesUSB                = "USB devices"
+KLUSBOther                  = "Other"
+KLUSBReserved               = "Reserved"
+KLUSBAudio                  = "Audio"
+KLUSBCommunication          = "Communication"
+KLUSBHumanInt               = "Data entry"
+KLUSBMonitor                = "Monitor"
+KLUSBPhisicalInt            = "PhisicalInt"
+KLUSBPower                  = "Power"
+KLUSBPrinter                = "Printer"
+KLUSBStorage                = "Storage"
+KLUSBHub                    = "Hub"
+KLUSBVendorSpec             = "VendorSpec"
+KLDevicesBluetooth          = "Bluetooth devices"
+KLBLTStd                    = "Std"
+KLBLTJabra                  = "Jabra"
+KLBLTBluesoleil             = "Bluesoleil"
+<empty>                     = "Unknown"
+default                     = @
+
+[s_AppGroupName]
+KLAppRoot           = "All programms"
+KLAppTrusted        = "Trusted"
+KLAppSecurity       = "Security"
+KLAppRestrictedLow  = "Low Restricted"
+KLAppRestrictedHi   = "Hi Restricted"
+KLAppUntrusted      = "Untrusted"
+default             = @
+
+[s_AppRule]
+#HIPS_FLAG_ALLOW    = "Allow"
+#HIPS_FLAG_DENY     = "Deny"
+#HIPS_FLAG_ASK      = "Ask"
+#HIPS_FLAG_BYAPP    = "By the application rule"
+#HIPS_FLAG_INHERIT  = "Inherit"
+#HIPS_FLAG_LOG      = "Log"
+
+[s_NetDirection]
+#wsIn           = "in"
+#wsOut          = "out"
+#wsInOut        = "in/out"
+#wsInStream     = "in (stream)"
+#wsOutStream    = "out (stream)"
+
+[s_NetSeverity]
+#znAll          = "All networks"
+#znUntrusted    = "Public network"
+#znNetBIOS      = "Local"
+#znTrusted      = "Trusted network"
+
+[s_NetSeverityGroup]
+#znAll          = "Rules for all networks"
+#znUntrusted    = "Rules for public networks"
+#znNetBIOS      = "Rules for local networks"
+#znTrusted      = "Rules for trusted networks"
+
+[f_NetConnected]
+ret = @ ? "Connected" : "Disconnected"
+
+[s_NetType]
+6       = "Wireline network (Ethernet)"
+23      = s_RasDeviceType(RasDeviceType)
+71      = "Wireless network (WiFi)"
+131     = "Tunnel"
+default = "Other"
+
+[s_RasDeviceType]
+modem   = "Modem"
+vpn     = "VPN"
+PPPoE   = "PPPoE"
+default = "Other"
+
+[MainWindow.Hips]
+Home    = "Status"
+Events  = "Events"
+Rules   = "Rules"
+
+[MainWindow.Hips_Filters]
+AllItems    = "Do not group"
+ByApp       = "Group by application"
+
+[MainWindow.Hips_WorkArea_Rules_Selector]
+ResourcesCb = "Resources"
+RulesCb     = "Rules for applications"
+PacketsCb   = "Rules for network packets"
+DevicesCb   = "Devices"
+NetworksCb  = "Zones && Networks"
+
+[MainWindow.Hips_WorkArea_Rules_Rules]
+Name = "Application"
+
+[MainWindow.Hips_WorkArea_Rules_Packets]
+Service = "Web service"
+Action  = "Permit"
+Area    = "Address"
+
+[MainWindow.Hips_WorkArea_Rules_Devices]
+Name    = "Name"
+Action  = "Activity"
+
+[MainWindow.Hips_WorkArea_Rules_Networks]
+Name        = "Name"
+Status      = "Status"
+Severity    = "Zone"
+
+[Hips_ResListAddMenu]
+File        = "File or folder"
+Registry    = "Registry key"
+WebService  = "Web service"
+IpRange     = "IP address(es)"
+
+[Hips_GroupNameEdit]
+@ = "Edit resource group name"
+
+[Hips_AppGroupNameEdit]
+@ = "Edit application group name"
+
+[HipsRuleColumn.Menu]
+Inherit = "Inherit"
+Allow   = "Allow"
+Ask     = "Prompt for action"
+Deny    = "Deny"
+
+[NetworkSeverityMenu]
+Trusted     = "Trusted"
+Local       = "Local"
+Untrusted   = "Public"
+Separator
+Stealth     = "Stealth mode"
+
+;---------- WebServiceEdit ------------
+
+[WebServiceEdit]
+@                   = "Web service"
+Name.Name           = "Name:"
+Protocol.Name       = "Protocol:"
+Direction.Name      = "Direction:"
+IcmpType.Name       = "ICMP type:"
+IcmpCode.Name       = "ICMP code:"
+RemotePorts.Name    = "Remote ports:"
+LocalPorts.Name     = "Local ports:"
+
+[IpRangeEdit]
+@           = "IP addresses"
+Name.Name   = "Name:"
+LocalAddrs  = "Local addresses"
+RemoteAddrs = "Remote addresses"
+
+;---------- AddressEdit ------------
+
+[AddressEdit]
+@           = "IP address or DNS name"
+@.Example   = "Example: kaspersky.com, 1.2.3.4(/8), 1234::cdef(/32)"
+
+[IpEdit]
+@           = "IP address"
+@.Example   = "Example: 1.2.3.4(/8), 1234::cdef(/32)"
+
+[ResolveIp]
+@       = "Resolving IP address"
+Text    = "Resolving IP address. Please wait..."
+
+[PacketRuleEdit]
+@               = "Packet rule"
+Group.Name      = "Group:"
+Service.Name    = "Service:"
+Address.Name    = "Addresses:"
+
+[PacketRuleEdit_Address]
+Any = "Any address"
+
+;---------- AppRulesEdit ------------
+
+[AppRulesEdit]
+@ = "Edit application rule"
+
+[AppRulesEdit_Tab]
+Files       = "Files and registry keys"
+Permissions = "Permissions"
+
+[AppRulesEdit_Tab_Files]
+Name    = "Resource"
+Read    = "Read"
+Write   = "Write"
+Remove  = "Delete"
+Enum    = "Enum"
+
+[AppRulesEdit_Tab_Permissions]
+Name    = "Resource"
+Allow   = "Permission"
+
+[HipsAppRuleMenu]
+Inherit = "Inherit"
+Allow   = "Allow"
+Deny    = "Deny"
+Ask     = "Ask"
+Log     = "Log"
+
+;---------- SnifferStatistic ------------
+
+[SnifferStatistic]
+@ = "Sniffer Statistic"
+
+[SnifferStatistic_Filter]
+RunFilter = "Apply"
+
+[SnifferStatistic_Splitter_Frames]
+TimeOffset  = "Time"
+Source      = $Source
+Target      = $Target
+Etype       = "Type"
+Protocol    = $Protocol
+
+[MainWindow.Hips_WorkArea_Home]
+Tasks.Header = "Tasks"
+
+[MainWindow.Hips_WorkArea.Tasks.Body]
+SnifferLog = "Network packages sniffer"
+
+;---------- AdapterEdit ------------
+
+[AdapterEdit]
+@ = "Network adapter"
+
+[AdapterEdit_Tab]
+General = "Main"
+
+[AdapterEdit_Tab_General]
+NewNetwork = "New connections"
+
+[AdapterEdit_Tab_General_Info]
+Type.Name   = "Type:"
+Status.Name = "Status:"
+
+[AdapterEdit_Tab_General_NewNetwork]
+Legend      = "Perform the following actions if computer is connected to the unknown network through this adapter:"
+Ask         = "Prompt for action"
+AssignTo    = "Automatically place unknown networks to the zone:"
+
+;---------- NetworkEdit ------------
+
+[NetworkEdit]
+@       = "Zone"
+Area    = "Zone area"
+
+[NetworkEdit_Tab]
+General = "Main"
+
+[NetworkEdit_Tab_General]
+Type.Name       = "Type:"
+Status.Name     = "Status:"
+Created.Name    = "Created:"
+Name.Name       = "Name:"
+Severity.Name   = "Group:"
+Area            = "Scope"
+
+[NetworkEdit_Tab_General_Area]
+Whole   = "All computers available through the adapter"
+Subnets = "Only computers belonging to the specified networks:"
+
+;---------- NewNetwork ------------
+
+[NewNetwork]
+@.Caption = "New network"
+
+[NewNetwork_Descr]
+Adapter.Name    = "Adapter:"
+Type.Name       = "Type:"
+Network.Name    = "Name:"
+
+[NewNetwork_Body_Actions]
+Public.Name     = "Public network" + $Def
+Public.Descr    = "Block external access to computer"
+Local.Name      = "Local network" + $Def
+Local.Descr     = "Allow access to files and printers"
+Trusted.Name    = "Trusted network" + $Def
+Trusted.Descr   = "Allow any network activity"
+
+[MainWindow.Hips_WorkArea]
+Home.Group2.Header = "System performance"
+
+[s_HipsError]
+#warnFLT_DEV_ERR    = "Rules for devices will not be applied"
+def                 = s_SystemError(@)
+

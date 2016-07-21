@@ -1,0 +1,6 @@
+// ***** —брос настроек SPI/LSP и TCP/IP (XP+) *****
+begin
+ BackupRegKey('HKEY_LOCAL_MACHINE', 'SYSTEM\CurrentControlSet\Services\WinSock2\Parameters', 'SPI15');
+ ExecuteFile('netsh int ip reset name=ipreset.log', '', 0, 20000, true);
+ ExecuteFile('netsh winsock reset catalog name=ipreset1.log', '', 0, 20000, true); 
+end.

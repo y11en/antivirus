@@ -1,0 +1,7 @@
+# try to kill sys file from sys folder
+# do not use on real system - only by emulator
+# that is whay this functionality in separeted function
+
+KILL_SYS_FILES_MULT NOT_TO_CLEAR
+
+#etalon_verdict 100 KillSystemFiles

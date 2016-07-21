@@ -1,0 +1,32 @@
+// --------------------------------------------------------------------------------
+// AVP Prague stamp begin( Interface header,  )
+// -------- Tuesday,  02 April 2002,  16:30 --------
+// File Name   -- i_ifenum.h
+// Copyright (c) Kaspersky Labs. 1996-2002.
+// -------------------------------------------
+
+
+import "prague.h";
+import "i_ifenum.h";
+
+typedef rpcOBJECT	rpcIFACE_ENUM;
+
+// --------------------------------------------------------------------------------
+// AVP Prague stamp begin( Interface function forward declarations,  )
+
+[ uuid (837ABF89-2344-4294-B4C0-33DA2C2EA48A),
+  version(1.0),
+  pointer_default(unique)
+]
+interface rpc_ifenum {
+  tERROR IFaceEnum_Init         ( rpcIFACE_ENUM _this, tIID iid, tPID pid, tVID vid, rpcOBJECT object ); // -- Initialization procedure;
+  tERROR IFaceEnum_Clone        ( rpcIFACE_ENUM _this, rpcIFACE_ENUM* result, rpcOBJECT dad );     // -- Clone current enumerator;
+  tERROR IFaceEnum_Reset        ( rpcIFACE_ENUM _this );                  // -- Resets current position of enumerator;
+  tERROR IFaceEnum_Next         ( rpcIFACE_ENUM _this );                  // -- Advance current pointer;
+  tERROR IFaceEnum_GetIFaceProp ( rpcIFACE_ENUM _this, [mout] tDWORD* result, tPROPID prop_id, [mout,size_is(size)] tCHAR* buffer, tDWORD size ); // -- Get static properties of current interface;
+  tERROR IFaceEnum_ObjectCreate ( rpcIFACE_ENUM _this, [mout] rpcOBJECT* result, rpcOBJECT parent );  // -- Create instance of current interface;
+  tERROR IFaceEnum_Recognize    ( rpcIFACE_ENUM _this, rpcOBJECT object, tDWORD type );  // -- regonize the "object";
+  tERROR IFaceEnum_Load         ( rpcIFACE_ENUM _this );                  // -- load the interface and increment objects count;
+  tERROR IFaceEnum_Free         ( rpcIFACE_ENUM _this );                  // -- decrements objects count and unload the interface if possible;
+}
+// AVP Prague stamp end

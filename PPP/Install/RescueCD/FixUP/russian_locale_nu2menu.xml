@@ -1,0 +1,10 @@
+<!-- Nu2Menu entry for russian_locale -->
+<NU2MENU>
+<MENU ID="Settings">
+ <MITEM TYPE="ITEM"
+ DISABLED="@Not(@FileExists(@GetWinDir()\system32\intl.cpl))"
+ CMD="RUN"
+ FUNC="rundll32.exe shell32.dll,Control_RunDLL @GetWinDir()\system32\intl.cpl">
+ Keyboard and Locale</MITEM>
+</MENU>
+</NU2MENU>

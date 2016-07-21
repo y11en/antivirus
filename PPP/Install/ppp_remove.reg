@@ -1,0 +1,10 @@
+REGEDIT4
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8]
+[-HKEY_CURRENT_USER\Software\KasperskyLab\protected\avp8]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Components\34\Connectors\KAVFS8]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Components\34\Connectors\KAVWKS8]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Components\34\Products\KAVFS8]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\Components\34\Products\KAVWKS8]

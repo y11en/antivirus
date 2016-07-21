@@ -1,0 +1,26 @@
+Action	Condition	Sequence	ISComments	ISAttributes
+s72	S255	I2	S255	I4
+InstallUISequence	Action
+AppSearch		25	AppSearch	
+CCPSearch	CCP_TEST	250	CCPSearch	
+CheckAppVersion	Not Installed Or REINSTALL="ALL"	37		
+CostFinalize		550	CostFinalize	
+CostInitialize		400	CostInitialize	
+Error_APPNOTFOUND	Not CONSOLEDIR And Not Installed	31		
+Error_APPVERSION	INVALIDVERSION	38		
+ExecuteAction		850	ExecuteAction	
+FileCost		450	FileCost	
+FindApp		39		
+FindRelatedProducts		150	FindRelatedProducts	
+Fix_REINSTALL	Not Installed	537		
+ISInitAllUsers	VersionNT And NOT Installed	575	ISInitAllUsers	
+IsolateComponents		500	IsolateComponents	
+LaunchConditions		50	LaunchConditions	
+MaintenanceWelcome	Installed And Not RESUME And Not Preselected And Not PATCH	700	Maintenance Welcome	
+MigrateFeatureStates		600	MigrateFeatureStates	
+ResolveSource	Not Installed	525	ResolveSource	
+RMCCPSearch	Not CCP_SUCCESS And CCP_TEST	300	RMCCPSearch	
+Set_INSTALLDIR	Not Installed	43		
+SetupProgress		800	SetupProgress	
+UnloadApp	AppRunning	41		
+ValidateProductID		350	ValidateProductID	

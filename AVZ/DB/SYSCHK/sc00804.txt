@@ -1,0 +1,8 @@
+// ***** Проверка ключа AppInit_DLLs *****
+var
+ S : string;
+begin
+ S := Trim(RegKeyStrParamRead('HKEY_LOCAL_MACHINE', 'Software\Microsoft\Windows NT\CurrentVersion\Windows', 'AppInit_DLLs'));
+ if S = '' then exit;
+ AddToLog('$AVZ0734: "'+S+'"');
+end.

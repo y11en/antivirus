@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<job>
+	<runtime>
+		<description>This script performs patching of VC 2005 projects</description>
+		<named 
+			name="src" 
+			helpstring="a VC 2005 project file to be patched" 
+			type="string"
+			required="true" />
+		<named
+			name="dst" 
+			helpstring="a new VC 2005 project file name" 
+			type="string" 
+			required="false" />
+		<named 
+			name="overwrite" 
+			helpstring="overwrite the file if exists" 
+			type="boolean"
+			required="false" />
+		<example>Example:
+fconfig.wsf /src:c:\foo.vsproj /dst:c:\foo_new.vcproj</example>
+	</runtime>
+
+<script language="JScript">
+<![CDATA[
+var g_source = "";
+var g_config_names = null;
+
+var args = WScript.Arguments;
+
+if ( !args.Named.Exists("src") ) {
+	args.ShowUsage();
+	WScript.Quit(1);
+}
+
+g_source = args.Named.Item( "src" );
+var dest = g_source;
+if ( args.Named.Exists("dst") )
+	dest = args.Named.Item( "dst" );
+
+var fsObj = new ActiveXObject( "Scripting.FileSystemObject" );
+        
+if ( !fsObj.FileExists(g_source) ) {
+	WScript.Echo( "\t\t\tERROR! File \"" + g_source + "\" doesn't exist!");
+	WScript.Quit( 1 );
+}
+
+var xml = new ActiveXObject ( "msxml2.DOMDocument.5.0" );
+xml.async = false;
+xml.resolveExternals = false;
+xml.load( g_source );
+
+if ( xml.parseError.errorCode != 0 ) {
+	var err = xml.parseError;
+	WScript.Echo( "\t\t\tERROR! Can't parse the XML file: " + err.reason );
+	WScript.Quit( 1 );
+} 
+
+var confs = xml.getElementsByTagName( "Configuration" );
+var g_conf_names = new Array();
+for ( var i = 0;  i < confs.length; i++ ) {
+	var name = confs.item(i).getAttribute( "Name" );
+	g_conf_names.push( name );
+}
+
+var changed = false;
+var files = xml.getElementsByTagName( "File" );
+for( var k=0; k < files.length; ++k ) {
+	var file = files.item(k);
+	var file_name = file.getAttribute( "RelativePath" );
+
+	WScript.Echo( "\t\tfile - \"" + file_name );
+	
+	var fconfigs = file.getElementsByTagName( "FileConfiguration" );
+	for( var m = fconfigs.length-1; m >= 0; --m ) {
+		var found = false;
+		var conf = fconfigs.item(m);
+		var conf_name = conf.getAttribute( "Name" );
+		for( var j=0; j < g_conf_names.length; ++j ) {
+			if ( conf_name == g_conf_names[j] ) {
+				found = true;
+				break;
+			}
+		}
+		var msg = "";
+		if ( found )
+			msg = "fconfig - "
+		else if ( null != file.removeChild(conf) ) {
+			changed = true;
+			if ( fsObj.FileExists(dest) && !args.Named.Item("overwrite") ) {
+				WScript.Echo( "\tERROR! File \"" + dest + "\" already exists!");
+				WScript.Quit(1);
+			}
+			msg = "DELETED - ";
+		}
+		else
+			msg = "CANTDEL - ";
+		WScript.Echo( "\t\t\t" + msg + "\"" + conf_name + "\"" );
+	}
+}
+
+if ( !changed )
+	WScript.Echo( "\tFile \"" + dest + "\" is correct!" );
+else if ( 0 != xml.save(dest) )
+	WScript.Echo( "\tFile \"" + dest + "\" successfully saved!" );
+else
+	WScript.Echo( "\tFile \"" + dest + "\" did't saved!" );
+
+]]>
+</script>
+</job>
+
+

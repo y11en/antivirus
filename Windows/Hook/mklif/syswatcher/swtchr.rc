@@ -1,0 +1,11 @@
+#include <windows.h>
+#include <ntverp.h>
+
+#define VER_FILETYPE                VFT_APP
+#define VER_FILESUBTYPE             VFT2_UNKNOWN
+#define VER_FILEDESCRIPTION_STR     "system watcher sampler"
+#define VER_INTERNALNAME_STR        "swtchr.exe"
+#define VER_ORIGINALFILENAME_STR    "swtchr.exe"
+
+#include "common.ver"
+

@@ -1,0 +1,24 @@
+// $AVZ1509
+//$ Блокировка диспетчера задач
+// Функция поиска проблемы                                                                          
+function Check : dword;
+begin
+ Result := 0;
+ // Блокировка TaskMgr
+ if RegKeyIntParamRead('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Policies\System', 'DisableTaskMgr') > 0 then begin
+   Result := 3;
+   exit;
+  end;
+ if RegKeyIntParamRead('HKLM', 'Software\Microsoft\Windows\CurrentVersion\Policies\System', 'DisableTaskMgr') > 0 then begin
+   Result := 3;
+   exit;
+  end;
+end;
+
+// Функция исправления проблемы                                                                          
+function Fix : dword;
+begin
+ RegKeyParamDel('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Policies\System', 'DisableTaskMgr');
+ RegKeyParamDel('HKLM', 'Software\Microsoft\Windows\CurrentVersion\Policies\System', 'DisableTaskMgr');
+ Result := 0;
+end;

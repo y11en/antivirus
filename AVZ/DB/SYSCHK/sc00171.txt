@@ -1,0 +1,5 @@
+// ***** Spy.WebHancer *****
+begin
+ AddEvAlarmByCLSID('1D6711C8-7154-40BB-8380-3DEA45B69CBF',AScriptName,'WebP2PInstaller.dll');
+ AddEvAlarmByCLSID('C900B400-CDFE-11D3-976A-00E02913A9E0',AScriptName,'whiehlpr.dll');
+end.

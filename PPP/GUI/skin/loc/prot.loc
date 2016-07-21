@@ -1,0 +1,310 @@
+[Global]
+#eProtStateNormal   = 0
+#eProtStateWarn     = 1
+#eProtStateCrit     = 2
+
+#eUpdateNotAuto          = 0x01
+#eUpdateRunning          = 0x02
+#eUpdateError            = 0x04
+#eBasesNotActual         = 0x08
+#eBasesNotValid          = 0x10
+#eBasesOutOfDate         = 0x20
+#eUpdateNeedReboot       = 0x40
+#eUpdateCompleted        = 0x80
+#eBasesCorrupted         = 0x100
+
+#eVulnerabilityDetected  = 0x01
+#ePheashingDetected      = 0x02
+#eAttackBlocked          = 0x04
+#eAllTreated             = 0x08
+#eAntiSpamNeedTraining   = 0x10
+#eThreatsUntreated       = 0x20
+#eThreatsNeedReboot      = 0x40
+
+#eOnBatteriesScanOff     = 0x01
+#eScanRunning            = 0x02
+#eMyComputerNotScanned   = 0x04
+#eTasksNotRunning        = 0x08
+#eTasksDisabled          = 0x10
+#eTasksMalfunction       = 0x20
+#eProtectionNotRunnig    = 0x40
+#eProtectionDisabled     = 0x80
+#eProtectionSafeMode     = 0x100
+#eProtectionNotInstalled = 0x200
+
+; Product states
+#ProdStateProductNews             = 1
+#ProdStateProductNotAutoRun       = 2
+#ProdStateProductNotActivated     = 3
+#ProdStateProductAdminPolicy      = 4
+#ProdStateProductNotProtected     = 6
+#ProdStateTasksDisabledByPolicy   = 7
+#ProdStateKeyTrial                = 10
+#ProdStateKeyWillBeExpired        = 11
+#ProdStateKeyWillBeBlocked        = 12
+#ProdStateKeyAboutExpiration      = 13
+#ProdStateKeyExpired              = 14
+#ProdStateKeyTrialExpired         = 15
+#ProdStateKeyBlocked              = 16
+#ProdStateNoKeys                  = 17
+#ProdStateKeyInvalid              = 18
+#ProdStateKeyLimited              = 19
+#ProdStateOnDemandTaskRunning     = 21
+#ProdStateMyComputerNotScanned    = 22
+#ProdStateTasksNotRunning         = 23
+#ProdStateTasksDisabled           = 24
+#ProdStateTasksMalfunction        = 25
+#ProdStateProtectionNotRunning    = 26
+#ProdStateProtectionDisabled      = 27
+#ProdStateProtectionSafeMode      = 28
+#ProdStateProtectionNotInstalled  = 29
+#ProdStateUpdateNotAuto           = 30
+#ProdStateBasesNotActual          = 33
+#ProdStateBasesNotValid           = 34
+#ProdStateBasesOutOfDate          = 35
+#ProdStateUpdateNeedReboot        = 36
+#ProdStateBasesCorrupted          = 38
+#ProdStateVulnerabilityDetected   = 40
+#ProdStateAttackBlocked           = 42
+#ProdStateAllTreated              = 43
+#ProdStateAntiSpamNeedTraining    = 44
+#ProdStateThreatsUntreated        = 45
+#ProdStateThreatsNeedReboot       = 46
+#ProdStateSomeSkipped             = 0xFFFFFFFF
+#ProdStateAllOk                   = 0
+
+; ePasswordConfirmReason
+#pwdc_OpenWindow       = 0
+#pwdc_SaveSettings     = 1
+#pwdc_StopTask         = 2
+#pwdc_Exit             = 3
+#pwdc_StopService      = 4
+#pwdc_Activate         = 5
+#pwdc_SaveStateAndSettings = 6
+
+[s_TrayProductStateList]
+#ProdStateOnDemandTaskRunning
+#ProdStateProtectionDisabled
+
+[s_ProductStateList]
+#ProdStateKeyBlocked
+#ProdStateKeyInvalid
+#ProdStateKeyLimited
+#ProdStateKeyTrialExpired
+#ProdStateKeyExpired
+#ProdStateNoKeys
+#ProdStateThreatsNeedReboot
+#ProdStateUpdateNeedReboot
+#ProdStateThreatsUntreated
+#ProdStateProductNotActivated
+#ProdStateBasesCorrupted
+#ProdStateBasesNotValid
+#ProdStateBasesNotActual
+#ProdStateBasesOutOfDate
+#ProdStateKeyAboutExpiration
+#ProdStateKeyWillBeBlocked
+#ProdStateTasksMalfunction
+#ProdStateProtectionNotRunning
+#ProdStateProtectionDisabled
+#ProdStateTasksDisabled
+#ProdStateTasksNotRunning
+#ProdStateKeyWillBeExpired
+#ProdStateMyComputerNotScanned
+#ProdStateKeyTrial
+#ProdStateOnDemandTaskRunning
+
+[s_ProductLinkText]
+#ProdStateKeyBlocked = $LinkTechnicalSupport
+#ProdStateKeyInvalid = LicInfo.InvalidReason == #ekirInvalidBlacklist ? $LinkUpdateNow : $LinkMoreDetails
+#ProdStateKeyLimited = 
+#ProdStateKeyTrialExpired = 
+#ProdStateKeyExpired = 
+#ProdStateNoKeys = $LinkActivate
+#ProdStateThreatsNeedReboot = 
+#ProdStateUpdateNeedReboot = $LinkRestartComputer
+#ProdStateThreatsUntreated = $LinkTreatAll
+#ProdStateProductNotActivated = $LinkActivate
+#ProdStateBasesCorrupted = 
+#ProdStateBasesNotValid = 
+#ProdStateBasesNotActual = 
+#ProdStateBasesOutOfDate = $LinkUpdateNow
+#ProdStateKeyAboutExpiration = $LinkMoreDetails
+#ProdStateKeyWillBeBlocked = $LinkRenewLicense
+#ProdStateTasksMalfunction = $LinkSupport
+#ProdStateProtectionNotRunning = $LinkProtectionTurnOn
+#ProdStateProtectionDisabled = $LinkProtectionTurnOn
+#ProdStateTasksDisabled = $LinkServicesTurnOn
+#ProdStateTasksNotRunning = $LinkServicesResume
+#ProdStateKeyWillBeExpired = LicInfo.KeyInfo.KeyType == #ektTrial ? $LinkGetFullLicense : $LinkRenewLicense
+#ProdStateMyComputerNotScanned = $LinkScanMyComputer
+#ProdStateOnDemandTaskRunning = $LinkDetails
+#ProdStateKeyTrial = $LinkActivate
+
+[s_ProductLinkClick]
+#ProdStateKeyBlocked = url("www.kaspersky.com/support")
+#ProdStateKeyInvalid = LicInfo.InvalidReason == #ekirInvalidBlacklist ? f_StartUpdater() : window("MyAccount")
+#ProdStateKeyLimited = activate()
+#ProdStateKeyTrialExpired = activate()
+#ProdStateKeyExpired = activate()
+#ProdStateNoKeys = activate()
+#ProdStateThreatsNeedReboot = f_RestartOs()
+#ProdStateUpdateNeedReboot = f_RestartOs()
+#ProdStateThreatsUntreated = threatsNeutralize()
+#ProdStateProductNotActivated = activate()
+#ProdStateBasesCorrupted = f_StartUpdater()
+#ProdStateBasesNotValid = f_StartUpdater()
+#ProdStateBasesNotActual = f_StartUpdater()
+#ProdStateBasesOutOfDate = f_StartUpdater()
+#ProdStateKeyAboutExpiration = LicInfo.KeyInfo.KeyType == #ektTrial ? url(settings.LicBuyLink) : url(settings.LicRenewLink)
+#ProdStateKeyWillBeBlocked = url(settings.LicRenewLink)
+#ProdStateTasksMalfunction = url("www.kaspersky.com/support")
+#ProdStateProtectionNotRunning = enable(1, "Protection")
+#ProdStateProtectionDisabled = enable(1, "Protection")
+#ProdStateTasksDisabled = enable(1, "Protection")
+#ProdStateTasksNotRunning = enable(1, "Protection")
+#ProdStateKeyWillBeExpired = LicInfo.KeyInfo.KeyType == #ektTrial ? url(settings.LicBuyLink) : url(settings.LicRenewLink)
+#ProdStateOnDemandTaskRunning = window(profile(ScanningTaskId).type == "updater" ? "MainWindow:Update:Events" : "MainWindow:Scan:Events")
+#ProdStateMyComputerNotScanned = f_StartScanMyComputer()
+#ProdStateVulnerabilityDetected = window("MainWindow:Hips:Threats")
+#ProdStateAttackBlocked = f_SendMail("support@kaspersky.com")
+#ProdStateKeyTrial = url(settings.LicBuyLink)
+#ProdStateAntiSpamNeedTraining = window("OutlookPlugun.TrainingWizard")
+
+[s_ProdStateSeverity]
+#ProdStateKeyBlocked
+#ProdStateKeyInvalid
+#ProdStateKeyLimited
+#ProdStateKeyTrialExpired
+#ProdStateKeyExpired
+#ProdStateNoKeys
+#ProdStateThreatsNeedReboot
+#ProdStateProductNotActivated
+#ProdStateBasesCorrupted
+#ProdStateBasesNotValid
+#ProdStateBasesNotActual
+#ProdStateKeyAboutExpiration
+#ProdStateThreatsUntreated
+#ProdStateTasksMalfunction         = #eProtStateCrit
+#ProdStateUpdateNeedReboot
+#ProdStateBasesOutOfDate
+#ProdStateKeyWillBeBlocked
+#ProdStateProtectionNotRunning
+#ProdStateProtectionDisabled
+#ProdStateTasksDisabled
+#ProdStateTasksNotRunning
+#ProdStateKeyWillBeExpired
+#ProdStateMyComputerNotScanned
+#ProdStateKeyTrial
+#ProdStateProductNotAutoRun        = #eProtStateWarn
+default                            = #eProtStateNormal
+
+[s_NotifySeverity2ProdStateSeverity]
+#eNotifySeverityCritical
+#eNotifySeverityError         = #eProtStateCrit
+#eNotifySeverityImportant     = #eProtStateWarn
+def                           = #eProtStateNormal
+
+[s_MainWindowProtectionBannerBg]
+#eProtStateNormal   = "MainWindowProtectionBanner"
+#eProtStateWarn     = "MainWindowProtectionBannerWarn"
+#eProtStateCrit     = "MainWindowProtectionBannerCrit"
+
+[s_MainWindowProtectionBannerBgHl]
+#eProtStateNormal   = "MainWindowProtectionBannerHl"    
+#eProtStateWarn     = "MainWindowProtectionBannerWarnHl"
+#eProtStateCrit     = "MainWindowProtectionBannerCritHl"
+
+[s_MainWindowProtectionLight]
+#eProtStateNormal   = "Lights,4,4,4,4,4,5"
+#eProtStateWarn     = "Lights,2,2,2,2,2,3"
+#eProtStateCrit     = "Lights,0,0,0,0,0,1"
+
+[s_MainWindowProtectionBannerFGFont]
+#eProtStateNormal   = "ProtBannerNormFg"
+#eProtStateWarn     = "ProtBannerWarnFg"
+#eProtStateCrit     = "ProtBannerCritFg"
+
+[s_MainWindowProtectionBannerBGFont]
+#eProtStateNormal   = "ProtBannerNormBg"
+#eProtStateWarn     = "ProtBannerWarnBg"
+#eProtStateCrit     = "ProtBannerCritBg"
+
+[s_NotifyWindowHeader]
+#eProtStateCrit     = "DlgFooterRed"
+#eProtStateWarn     = "DlgFooterYellow"
+#eProtStateNormal   = "DlgFooter"
+
+[s_NotifyWindowBorder]
+#eProtStateCrit     = "WindowRedBorder"
+#eProtStateWarn     = "WindowYellowBorder"
+#eProtStateNormal   = "WindowGreenBorder"
+
+[s_NotifyWindowBannerFGFont]
+#eProtStateNormal
+#eProtStateCrit     = "Header1White"
+#eProtStateWarn     = "Header1"
+
+[s_NotifyWindowBannerBGFont]
+#eProtStateNormal
+#eProtStateCrit     = "Header1"
+#eProtStateWarn     = "Header1White"
+
+[s_MainProtStatusFont]
+#eProtStateCrit     = "MainProtStatusCrit"
+#eProtStateWarn     = "MainProtStatusWarn"
+def                 = "MainProtStatusNormal"
+
+[s_DetectObjectStatusIcon]
+#OBJSTATUS_DISINFECTED
+#OBJSTATUS_DELETED
+#OBJSTATUS_ALLOWED
+#OBJSTATUS_QUARANTINED            = "ok"
+#OBJSTATUS_UNKNOWN
+#OBJSTATUS_INFECTED
+#OBJSTATUS_SUSPICION
+#OBJSTATUS_DELETED_ON_REBOOT
+#OBJSTATUS_DISINFECTED_ON_REBOOT
+#OBJSTATUS_QUARANTINED_ON_REBOOT
+#OBJSTATUS_ADDEDBYUSER
+#OBJSTATUS_DENIED
+#OBJSTATUS_ADDEDTOEXCLUDE         = "warning"
+default                           = "error"
+
+[s_AlertNotificationSound]
+#DETDANGER_HIGH   = "infected.wav"
+#DETDANGER_MEDIUM = "1-08.wav"
+default           = "1-06.wav"
+
+[s_ProductNotificationSound]
+#eNotifySeverityCritical
+#eNotifySeverityError       = EventID(s_CriticalNotificationSound)
+#eNotifySeverityImportant   = "1-08.wav"
+def                         = "1-06.wav"
+
+[s_CriticalNotificationSound]
+1
+2   = "infected.wav"
+def = "1-08.wav"
+
+[Global]
+$ProductNotificationText     = $IsVerdictProductStatusId ? s_ProdState($Verdict2ProductStatusId) : s_ProductNotifyTextByTaskID(TaskID)
+$ProductNotificationLinkText = $IsVerdictProductStatusId ? s_ProductLinkText($Verdict2ProductStatusId) : $LinkDetails
+$ProductNotificationLink     = ($IsVerdictProductStatusId ? s_ProductLinkClick($Verdict2ProductStatusId) : window("MainWindow:" + ($IsEventObjInfected ? "Protection:Threats" : (s_TaskID2MainWindowGroup(TaskID) + ":Events")))); close()
+
+[s_TaskID2MainWindowGroup]
+#eTASK_FAV
+#eTASK_MAV
+#eTASK_HTTP	         = "Antivirus"
+#eTASK_AP
+#eTASK_AD
+#eTASK_IDS	         = "OnlineSecurity"
+#eTASK_AB
+#eTASK_AS
+#eTASK_PC	         = "ContentFilter"
+#eTASK_HIPS
+#eTASK_SW
+#eTASK_PDM           = "Hips"
+#eTASK_SCAN          = "Scan"
+#eTASK_UPDATER
+#eTASK_ROLLBACK      = "Update"
+def                  = "Protection"

@@ -1,0 +1,177 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "IUpdater"=.\Client\IUpdater\IUpdater.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    IUpdater
+    .\client\iupdater
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name slib_core
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Property"=..\..\..\CommonFiles\Property\Property.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/Property"
+    ..\..\commonfiles\property
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "SWManager"=..\..\..\CommonFiles\SWManager\SWManager.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/SWManager"
+    ..\..\commonfiles\swmanager
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Property
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "WinSign"=..\..\..\CommonFiles\Sign\WinSign.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/Sign", LBDAAAAA
+    ..\..\commonfiles\sign
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "core"=.\Client\core\core.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    core
+    .\client\core
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name dskm
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name klcsftb
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name WinSign
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name diffs_vc6
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "diffs_vc6"=..\..\..\COMMONFILES\DIFFS\diffs_vc6.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name lzmalib_vc6
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "dskm"=..\..\..\CommonFiles\Dskm\dskm.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/dskm", PFNPBAAA
+    ..\..\commonfiles\dskm
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name SWManager
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "klcsftb"="..\..\..\CS AdminKit\development2\kca\ft\ftbridge\klcsftb.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "lzmalib_vc6"=..\..\..\EXTERNAL\LZMALIB\lzmalib_vc6.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+    begin source code control
+    Perforce Project
+    .
+    end source code control
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

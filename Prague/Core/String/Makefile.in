@@ -1,0 +1,25 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@
+
+Name = string
+Plugin = $(Name).@PLUGIN_EXT@
+Metafile = @srcdir@/$(Name).@METAFILE_EXT@
+Targets = $(Plugin)
+
+Sources = \
+	compare.c \
+	pstring.c \
+	codec.cpp \
+	ansi_unix.cpp \
+	oem_unix.cpp \
+	widechar_unix.cpp \
+	plugin_string.cpp
+
+# unix section
+
+VersionScript = @abs_top_srcdir@/unix/prague_plugin.ver
+
+include @abs_top_builddir@/@OS@/Rules
+

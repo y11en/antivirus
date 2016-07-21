@@ -1,0 +1,4 @@
+# create regestry value by zw-function (with different size of value name and strlen(valuename))
+# must to cause - strange key verdikt
+
+CREATE_STRANGE_KEY NOT_TO_CLEAR

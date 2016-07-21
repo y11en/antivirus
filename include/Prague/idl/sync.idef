@@ -1,0 +1,132 @@
+#import "sync.idef"
+
+forward interface Mutex;
+typedef Mutex* hMUTEX;
+
+forward interface Semaphore;
+typedef Semaphore* hSEMAPHORE;
+
+forward interface CriticalSection;
+typedef CriticalSection* hCRITICAL_SECTION;
+
+forward interface Event;
+typedef Event* hSYNC_EVENT;
+
+
+
+[
+  version(0)
+  mnemonic(IID_MUTEX)
+  id(14)
+  c_type_name(hMUTEX)
+]
+interface Mutex { // Mutex behaviour
+
+  // ------------------------------------
+    const tDWORD cSYNC_INFINITE = -1;
+
+
+  // ------------------------------------
+    prop pgOBJECT_NAME; // Object name
+    [ id(4096) ]  prop tBOOL pgJUST_OPEN; // do not try to create synchronization object
+    [ id(4097) ]  prop tBOOL pgINITIAL_OWNER; // mutex owned by caller on initialization
+    [ id(4098) ]  prop tDWORD pgLAST_OS_ERROR; // last native os error
+    [ id(4101) ]  prop tBOOL pgGLOBAL; // cTRUE if object to be created in global namespace
+
+
+  // ------------------------------------
+    method tERROR Lock( // locks synchronization object
+      tDWORD timeout // Timeout to lock the object
+    );
+    method tERROR Release(); // unlocks synchronization object
+
+}
+
+
+[
+  version(0)
+  mnemonic(IID_SEMAPHORE)
+  id(15)
+  c_type_name(hSEMAPHORE)
+]
+interface Semaphore : Mutex { // Semaphore behaviour
+
+  // ------------------------------------
+    [ id(4097) ]  prop tDWORD pgBAND_WIDTH; // maximum semaphore count
+    [ id(4099) ]  prop tDWORD pgINITIAL_COUNT; // initial semaphore count
+    [ id(4100) ]  prop tDWORD pgCURRENT_COUNT; // current band width
+
+
+  // ------------------------------------
+    method tERROR ReleaseEx( // unlocks synchronization object by indicated count
+      tDWORD count // count increment amount
+    );
+
+}
+
+
+[
+  version(0)
+  mnemonic(IID_CRITICAL_SECTION)
+  id(17)
+  c_type_name(hCRITICAL_SECTION)
+]
+interface CriticalSection { // Critical section behaviour
+
+  // ------------------------------------
+    typedef tDWORD tSHARE_LEVEL; // type of share level
+
+
+  // ------------------------------------
+    const tSHARE_LEVEL SHARE_LEVEL_ERROR = -1;
+    const tSHARE_LEVEL SHARE_LEVEL_READ = 0; // count of threads can simulationly get access with this level
+    const tSHARE_LEVEL SHARE_LEVEL_WRITE = 1; // only one thread at once can successfully get this level of access or extend SHARE_LEVEL_READ to this value
+
+
+  // ------------------------------------
+    [ id(4098) ]  prop tDWORD pgLAST_OS_ERROR; // last native os error
+    [ id(4099) ]  prop tBOOL pgSHARE_LEVEL_SUPPORT; // TRUE if implementation supports SHARE LEVEL parameters
+
+
+  // ------------------------------------
+    method tERROR Enter( // locks synchronization object
+      tSHARE_LEVEL level // share level
+    );
+    method tERROR Leave( // unlocks synchronization object
+      tSHARE_LEVEL* prev_level // previous level
+    );
+    method tERROR TryEnter( // try enter critical section, but do not block a calling thread
+      tSHARE_LEVEL level // share level
+    );
+
+}
+
+
+[
+  version(0)
+  mnemonic(IID_EVENT)
+  id(18)
+  c_type_name(hSYNC_EVENT)
+]
+interface Event { // Event behaviour
+
+  // ------------------------------------
+    prop pgOBJECT_NAME; // Object name
+    [ id(4096) ]  prop tBOOL pgJUST_OPEN; // do not try to create synchronization object
+    [ id(4097) ]  prop tBOOL pgMANUAL_RESET; // if TRUE event is manual reset
+    [ id(4098) ]  prop tDWORD pgLAST_OS_ERROR; // last native os error
+    [ id(4099) ]  prop tBOOL pgINITIAL_STATE; // initial state of the object
+    [ id(4101) ]  prop tBOOL pgGLOBAL; // cTRUE if object to be created in global namespace
+
+
+  // ------------------------------------
+    method tERROR Wait( // wait for event to be signaled
+      tDWORD timeout // Timeout to lock the object
+    );
+    method tERROR SetState( // unlocks synchronization object
+      tBOOL signaled // state to be set on a object
+    );
+    method tERROR Pulse(); // pulse event for manual reset events
+
+}
+

@@ -1,0 +1,110 @@
+# Microsoft Developer Studio Generated Dependency File, included by resip.mak
+
+.\ipresolver.cpp : \
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\Include\iface\i_ipresolver.h"\
+	"..\Include\IFace\i_methodinfo.h"\
+	"..\include\iface\i_mutex.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_string.h"\
+	"..\Include\iface\i_threadpool.h"\
+	"..\Include\IFace\i_tracer.h"\
+	"..\Include\plugin\p_resip.h"\
+	"..\Include\pr_compl.h"\
+	"..\Include\pr_cpp.h"\
+	"..\INCLUDE\PR_ERR.H"\
+	"..\INCLUDE\PR_IID.H"\
+	"..\INCLUDE\Pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\INCLUDE\Pr_obj.h"\
+	"..\INCLUDE\PR_PID.H"\
+	"..\INCLUDE\Pr_prop.h"\
+	"..\INCLUDE\Pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\Include\pr_serializable.h"\
+	"..\INCLUDE\Pr_sys.h"\
+	"..\INCLUDE\Pr_types.h"\
+	"..\Include\pr_vector.h"\
+	"..\INCLUDE\PR_VID.H"\
+	"..\INCLUDE\Pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	"..\Include\structs\s_ipresolver.h"\
+	".\DefList.h"\
+	".\resip_imp.h"\
+	
+
+.\plugin_resip.cpp : \
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\Include\IFace\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\Include\IFace\i_tracer.h"\
+	"..\Include\pr_compl.h"\
+	"..\INCLUDE\PR_ERR.H"\
+	"..\INCLUDE\PR_IID.H"\
+	"..\INCLUDE\Pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\INCLUDE\Pr_obj.h"\
+	"..\INCLUDE\PR_PID.H"\
+	"..\INCLUDE\Pr_prop.h"\
+	"..\INCLUDE\Pr_reg.h"\
+	"..\INCLUDE\Pr_sys.h"\
+	"..\INCLUDE\Pr_types.h"\
+	"..\INCLUDE\PR_VID.H"\
+	"..\INCLUDE\Pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	
+
+.\resip_imp.cpp : \
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\Include\iface\i_ipresolver.h"\
+	"..\Include\IFace\i_methodinfo.h"\
+	"..\include\iface\i_mutex.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_string.h"\
+	"..\Include\iface\i_threadpool.h"\
+	"..\Include\IFace\i_tracer.h"\
+	"..\Include\plugin\p_resip.h"\
+	"..\Include\pr_compl.h"\
+	"..\Include\pr_cpp.h"\
+	"..\INCLUDE\PR_ERR.H"\
+	"..\INCLUDE\PR_IID.H"\
+	"..\INCLUDE\Pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\INCLUDE\Pr_obj.h"\
+	"..\INCLUDE\PR_PID.H"\
+	"..\INCLUDE\Pr_prop.h"\
+	"..\INCLUDE\Pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\Include\pr_serializable.h"\
+	"..\INCLUDE\Pr_sys.h"\
+	"..\INCLUDE\Pr_types.h"\
+	"..\Include\pr_vector.h"\
+	"..\INCLUDE\PR_VID.H"\
+	"..\INCLUDE\Pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	"..\Include\structs\s_ipresolver.h"\
+	".\DefList.h"\
+	".\resip_imp.h"\
+	
+
+.\resip.rc : \
+	"..\..\CommonFiles\Version\ver_itoa.h"\
+	"..\..\CommonFiles\Version\ver_kl.h"\
+	"..\..\CommonFiles\Version\ver_product.h"\
+	".\VER_MOD.H"\
+	

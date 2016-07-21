@@ -1,0 +1,9 @@
+LIB
+TARGET gsg2
+
+CSRC binary_handler.c
+CSRC binary_handler1.c
+CSRC image.c
+CSRC image-gif.c
+CSRC image-jpeg.c
+CSRC image-png.c

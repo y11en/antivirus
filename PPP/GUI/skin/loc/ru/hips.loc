@@ -1,0 +1,342 @@
+﻿[Global]
+$SystemWatch            = "Системный страж"
+$SysWatch               = $SystemWatch
+$Hips                   = "Фильтрация активности приложений"
+$Pdm                    = "Проактивная защита"
+$Source                 = "Источник"
+$Target                 = "Назначение"
+$Protocol               = "Протокол"
+$BrowseForExecutable    = "Выбор исполняемого модуля"
+CantCloseActiveNetStat  = "Окно можно закрыть только после остановки задачи."
+ErrResolvingIp.caption  = "Невозможно определить IP адрес"
+ErrResolvingIp          = "Невозможно определить IP адрес компьютера. Возможно, неправильно задано имя."
+#warnFLT_DEV_ERR        = 0x1bf8d001
+
+[s_ResGroupName]
+KLRoot                      = "Все ресурсы"
+KLSystemData                = "Система"
+KLPrivateData               = "Личные данные"
+KLPublicData                = "Публичные данные"
+KLStartupRegKeys            = "Ключи автозапуска"
+KLInternetSecRegKeys        = "Безопасность Интернет"
+KLPrivateUserFiles          = "Файлы пользователя"
+KLSystemFiles               = "Системные файлы"
+KLSystemSecRegKeys          = "Настройки безопасности"
+KLSystemServicesRegKeys     = "Службы"
+KLStartUpFolders            = "Папки автозапуска"
+KLIESettingsRegKeys         = "Настройки Internet Explorer"
+KLIEPlugInsRegKeys          = "Плагины Internet Explorer"
+KLExplorerSettingsRegKeys   = "Настройки Проводника"
+KLDevices                   = "Устройства"
+KLDevicesUSB                = "USB устройства"
+KLUSBOther                  = "Другие"
+KLUSBReserved               = "Зарезервировано"
+KLUSBAudio                  = "Звук"
+KLUSBCommunication          = "Связь"
+KLUSBHumanInt               = "Ввод данных"
+KLUSBMonitor                = "Монитор"
+KLUSBPhisicalInt            = "PhisicalInt"
+KLUSBPower                  = "Питание"
+KLUSBPrinter                = "Принтер"
+KLUSBStorage                = "Накопитель"
+KLUSBHub                    = "Хаб"
+KLUSBVendorSpec             = "VendorSpec"
+KLDevicesBluetooth          = "Bluetooth устройства"
+KLBLTStd                    = "Std"
+KLBLTJabra                  = "Jabra"
+KLBLTBluesoleil             = "Bluesoleil"
+<empty>                     = "Неизвестно"
+default                     = @
+
+[s_AppGroupName]
+KLAppRoot           = "Все программы"
+KLAppTrusted        = "Доверенные"
+KLAppSecurity       = "Безопасность"
+KLAppRestrictedLow  = "Слабые ограничения"
+KLAppRestrictedHi   = "Сильные ограничения"
+KLAppUntrusted      = "Недоверенные"
+default             = @
+
+[s_AppRule]
+#HIPS_FLAG_ALLOW    = "Разрешить"
+#HIPS_FLAG_DENY     = "Запретить"
+#HIPS_FLAG_ASK      = "Спросить"
+#HIPS_FLAG_BYAPP    = "По правилу приложения"
+#HIPS_FLAG_INHERIT  = "Наследовать"
+#HIPS_FLAG_LOG      = "Логгировать"
+
+[s_NetDirection]
+#wsIn           = "Вход."
+#wsOut          = "Исх."
+#wsInOut        = "Вход/Исх"
+#wsInStream     = "Вход. (поток)"
+#wsOutStream    = "Исх. (поток)"
+
+[s_NetSeverity]
+#znAll          = "Все сети"
+#znUntrusted    = "Публичная сеть"
+#znNetBIOS      = "Локальная сеть"
+#znTrusted      = "Доверенная сеть"
+
+[s_NetSeverityGroup]
+#znAll          = "Правила для всех сетей"
+#znUntrusted    = "Правила для публичных сетей"
+#znNetBIOS      = "Правила для локальных сетей"
+#znTrusted      = "Правила для доверенных сетей"
+
+[f_NetConnected]
+ret = @ ? "Подключено" : "Отключено"
+
+[s_NetType]
+6       = "Проводная сеть (Ethernet)"
+23      = s_RasDeviceType(RasDeviceType)
+71      = "Беспроводная сеть (WiFi)"
+131     = "Туннель"
+default = "Другое"
+
+[s_RasDeviceType]
+modem   = "Модем"
+vpn     = "VPN"
+PPPoE   = "PPPoE"
+default = "Другое"
+
+[MainWindow.Hips]
+Home    = "Статус"
+Events  = "События"
+Rules   = "Правила"
+
+[MainWindow.Hips_WorkArea_Rules_Selector]
+RulesCb     = "Правила для программ"
+ResourcesCb = "Ресурсы"
+DevicesCb   = "Устройства"
+NetworksCb  = "Сети и зоны"
+PacketsCb   = "Правила для сетевых пакетов"
+
+[MainWindow.Hips_WorkArea_Rules_Rules]
+Name = "Программа"
+
+[MainWindow.Hips_WorkArea_Rules_Packets]
+Service = "Веб-сервис"
+Action  = "Разрешение"
+Area    = "Адрес"
+
+[MainWindow.Hips_WorkArea_Rules_Devices]
+Name    = "Имя"
+Action  = "Активность"
+
+[MainWindow.Hips_WorkArea_Rules_Networks]
+Name        = "Имя"
+Status      = "Статус"
+Severity    = "Зона"
+
+[MainWindow.Hips_Filters]
+AllItems    = "Без группировок"
+ByApp       = "Группировка по приложению"
+
+[Hips_ResListAddMenu]
+File        = "Файл или папка"
+Registry    = "Ключ реестра"
+WebService  = "Веб-сервис"
+IpRange     = "IP адрес(а)"
+
+[Hips_GroupNameEdit]
+@ = "Название группы ресурсов"
+
+[Hips_AppGroupNameEdit]
+@ = "Название группы программ"
+
+[HipsRuleColumn.Menu]
+Inherit = "Наследовать"
+Allow   = "Разрешить"
+Ask     = "Запрос действия"
+Deny    = "Запретить"
+
+[NetworkSeverityMenu]
+Trusted     = "Доверенная"
+Local       = "Локальная сеть"
+Untrusted   = "Публичная"
+Separator
+Stealth     = "Невидимость"
+
+;---------- WebServiceEdit ------------
+
+[WebServiceEdit]
+@                   = "Веб-сервис"
+Name.Name           = "Название:"
+Protocol.Name       = "Протокол:"
+Direction.Name      = "Направление:"
+IcmpType.Name       = "ICMP тип:"
+IcmpCode.Name       = "ICMP код:"
+RemotePorts.Name    = "Удаленные порты:"
+LocalPorts.Name     = "Локальные порты:"
+
+[IpRangeEdit]
+@           = "IP адреса"
+Name.Name   = "Имя:"
+LocalAddrs  = "Локальные адреса"
+RemoteAddrs = "Удаленные адреса"
+
+;---------- AddressEdit ------------
+
+[AddressEdit]
+@           = "IP адрес или DNS имя"
+@.Example   = "Например: kaspersky.ru, 1.2.3.4(/8), 1234::cdef(/32)"
+
+[IpEdit]
+@           = "IP адрес"
+@.Example   = "Например: 1.2.3.4(/8), 1234::cdef(/32)"
+
+[ResolveIp]
+@       = "Resolving IP address"
+Text    = "Resolving IP address. Please wait..."
+
+[PacketRuleEdit]
+@               = "Пакетное правило"
+Group.Name      = "Группа:"
+Service.Name    = "Сервис:"
+Address.Name    = "Адреса:"
+
+[PacketRuleEdit_Address]
+Any = "Любой адрес"
+
+;---------- AppRulesEdit ------------
+
+[AppRulesEdit]
+@ = IsAppGroup ? "Правилa для группы программ" : "Правилa для программы"
+
+[AppRulesEdit_Tab]
+Image   = "Файл"
+Runtime = "Рантайм"
+Rules   = "Правила"
+
+[AppRulesEdit_Tab_Image]
+File.Name       = "Путь:"
+Version.Name    = "Версия:"
+Vendor.Name     = "Производитель:"
+Product.Name    = "Продукт:"
+Created.Name    = "Изменен:"
+Modified.Name   = "Создан:"
+
+[AppRulesEdit_Tab_Runtime]
+Pid.Name    = "ID процесса:"
+User.Name   = "Пользователь:"
+
+[AppRulesEdit_Tab_Rules_Select]
+Files   = "Файлы, системный реестр"
+Permiss = "Привилегии"
+
+[AppRulesEdit_Tab_Rules_Files]
+Name    = "Ресурс"
+Read    = "Чтение"
+Write   = "Запись"
+Remove  = "Удаление"
+Enum    = "Enum"
+
+[AppRulesEdit_Tab_Rules_Permiss]
+Name    = "Ресурс"
+Allow   = "Разрешение"
+
+;---------- SnifferStatistic ------------
+
+[SnifferStatistic]
+@ = "Статистика сниффера"
+
+[SnifferStatistic_Filter]
+RunFilter = "Применить"
+
+[SnifferStatistic_Splitter_Frames]
+TimeOffset  = "Время"
+Source      = $Source
+Target      = $Target
+Etype       = "Тип"
+Protocol    = $Protocol
+
+[MainWindow.Hips_WorkArea_Home]
+Tasks.Header = "Задачи"
+
+[MainWindow.Hips_WorkArea.Tasks.Body]
+SnifferLog = "Сниффер сетевых пакетов"
+
+;---------- AdapterEdit ------------
+
+[AdapterEdit]
+@ = "Сетевой адаптер"
+
+[AdapterEdit_Tab]
+General = "Основное"
+
+[AdapterEdit_Tab_General]
+NewNetwork = "Новые соединения"
+
+[AdapterEdit_Tab_General_Info]
+Type.Name   = "Тип:"
+Status.Name = "Статус:"
+
+[AdapterEdit_Tab_General_NewNetwork]
+Legend      = "Когда компьютер подключается к неизвестной сети через этот адаптер, выполнить следующие действия:"
+Ask         = "Запрос действия"
+AssignTo    = "Автоматически помещать неизвестные сети в зону:"
+
+;---------- NetworkEdit ------------
+
+[NetworkEdit]
+@ = "Зона"
+
+[NetworkEdit_Tab]
+General         = "Основное"
+ZoneAddresses   = "Адреса"
+
+[NetworkEdit_Tab_General]
+Type.Name       = "Тип:"
+Status.Name     = "Статус:"
+Created.Name    = "Создана:"
+Name.Name       = "Название:"
+Severity.Name   = "Группа:"
+Area            = "Область действия"
+
+[NetworkEdit_Tab_General_Area]
+Whole   = "Все компьютеры, доступные через адаптер"
+Subnets = "Только компьютеры, находящиеся в указанных сетях:"
+
+;---------- NewNetwork ------------
+
+[NewNetwork]
+@.Caption = "Новая сеть"
+
+[NewNetwork_Descr]
+Adapter.Name    = "Адаптер:"
+Type.Name       = "Тип:"
+Network.Name    = "Название:"
+
+[NewNetwork_Body_Actions]
+Public.Name     = "Публичная сеть" + $Def
+Public.Descr    = "Запретить доступ к компьютеру извне"
+Local.Name      = "Локальная сеть" + $Def
+Local.Descr     = "Разрешить доступ к файлам и принтерам"
+Trusted.Name    = "Доверенная сеть" + $Def
+Trusted.Descr   = "Разрешить любаю сетевую активность"
+
+[MainWindow.Hips_WorkArea]
+Home.Group2.Header = "Производительность системы"
+
+[s_HipsError]
+#warnFLT_DEV_ERR    = "Правила для устройств не будут использоваться"
+def                 = s_SystemError(@)
+
+[MainWindow.SystemWatch.Hips]
+Descr           = "Права доступа " + vAppList.size() + " приложений:"
+LocRes.Name     = "на локальные ресурсы:"
+Devices.Name    = "на устройства:"
+NetRes.Name     = "на сетевые ресурсы:"
+ExecPlace.Name  = "на изменение среды исполнения:"
+
+[MainWindow.SystemWatch.pdm]
+Descr = "Анализ поведения приложений в системе"
+
+[MainWindow.SystemWatch.SysWatch]
+Descr = "Сбор детальной информации о работе приложений"
+
+[s_HipsSubSystemState]
+#ehsssAllow = "разрешить"
+#ehsssDeny  = "блокировать"
+#ehsssApp   = "согласно правилам"

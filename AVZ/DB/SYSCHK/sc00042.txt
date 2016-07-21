@@ -1,0 +1,4 @@
+// ***** AdvWare.BHO.Buscabar.a *****
+begin                   
+ AddEvAlarmByCLSID('79A002FB-C126-462D-B4A7-81D6B42D1666',AScriptName,'acrbat.DLL');
+end.

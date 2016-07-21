@@ -1,0 +1,10 @@
+// ***** AdvWare.Toolbar.Azesearch *****
+var
+ S : string;
+begin
+ S := 'azesearch*.ocx';
+ AddEvAlarmByCLSID('FFF5092F-7172-4018-827B-FA5868FB0478',AScriptName,S);
+ AddEvAlarmByCLSID('12345678-0000-0010-8000-00aaff6d2ea4',AScriptName,S);
+ AddEvAlarmByCLSID('da7ff3f8-08be-4cac-bc00-94d91c6ae7f4',AScriptName,S);
+ AddEvAlarmByCLSID('a19ef336-01d4-48e6-926a-fe7e1c747aed',AScriptName,S);
+end.

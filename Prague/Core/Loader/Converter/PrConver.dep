@@ -1,0 +1,60 @@
+# Microsoft Developer Studio Generated Dependency File, included by PrConver.mak
+
+..\..\Kernel\output.c : \
+	"..\..\Include\iface\e_clsid.h"\
+	"..\..\Include\iface\e_ktrace.h"\
+	"..\..\Include\iface\i_heap.h"\
+	"..\..\Include\iface\i_iface.h"\
+	"..\..\Include\iface\i_ifenum.h"\
+	"..\..\Include\iface\i_impex.h"\
+	"..\..\Include\iface\i_methodinfo.h"\
+	"..\..\Include\iface\i_plugin.h"\
+	"..\..\Include\iface\i_receiv.h"\
+	"..\..\Include\iface\i_tracer.h"\
+	"..\..\Include\iface\impexhlp.h"\
+	"..\..\Include\pr_compl.h"\
+	"..\..\Include\pr_d_err.h"\
+	"..\..\Include\pr_d_iid.h"\
+	"..\..\Include\pr_d_pg.h"\
+	"..\..\Include\pr_d_pid.h"\
+	"..\..\Include\pr_err.h"\
+	"..\..\Include\pr_iid.h"\
+	"..\..\Include\pr_int.h"\
+	"..\..\Include\pr_msg.h"\
+	"..\..\Include\pr_obj.h"\
+	"..\..\Include\pr_pid.h"\
+	"..\..\Include\pr_prop.h"\
+	"..\..\Include\pr_reg.h"\
+	"..\..\Include\pr_sys.h"\
+	"..\..\Include\pr_types.h"\
+	"..\..\Include\pr_vid.h"\
+	"..\..\Include\pr_vtbl.h"\
+	"..\..\Include\prague.h"\
+	
+
+.\PrConver.c : \
+	"..\..\..\CommonFiles\stuff\get_opt.h"\
+	"..\..\Include\iface\i_heap.h"\
+	"..\..\Include\iface\i_iface.h"\
+	"..\..\Include\iface\i_ifenum.h"\
+	"..\..\Include\iface\i_impex.h"\
+	"..\..\Include\iface\i_methodinfo.h"\
+	"..\..\Include\iface\i_plugin.h"\
+	"..\..\Include\iface\i_receiv.h"\
+	"..\..\Include\iface\i_tracer.h"\
+	"..\..\Include\pr_compl.h"\
+	"..\..\Include\pr_err.h"\
+	"..\..\Include\pr_iid.h"\
+	"..\..\Include\pr_int.h"\
+	"..\..\Include\pr_msg.h"\
+	"..\..\Include\pr_obj.h"\
+	"..\..\Include\pr_pid.h"\
+	"..\..\Include\pr_prop.h"\
+	"..\..\Include\pr_reg.h"\
+	"..\..\Include\pr_sys.h"\
+	"..\..\Include\pr_types.h"\
+	"..\..\Include\pr_vid.h"\
+	"..\..\Include\pr_vtbl.h"\
+	"..\..\Include\prague.h"\
+	"..\PrFormat.h"\
+	

@@ -1,0 +1,49 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@ @srcdir@/signlib.unix @srcdir@/../Stuff
+
+Name = sign
+Archive = $(Name).@ARCHIVE_EXT@
+Targets = $(Archive)
+
+Sources = \
+	A_chfile.c \
+	C_mem.c \
+	C_urand.c \
+	my_strl.c \
+	n_constr.c \
+	n_sha.c \
+	n_shnor.c \
+	n_signsh.c \
+	s_buflen.c \
+	s_chbuf.c \
+	s_check.c \
+	s_chfile.c \
+	s_chfres.c \
+	s_chres.c \
+	s_cnot.c \
+	s_crpriv.c \
+	s_except.c \
+	s_fnguid.c \
+	s_fnstr.c \
+	s_hash.c \
+	s_klok.c \
+	s_lnfile.c \
+	s_lnot.c \
+	s_putn.c \
+	s_sgnfil.c \
+	s_sgnmem.c \
+	s_sifile.c \
+	s_sign.c \
+	s_spkey.c \
+	s_strver.c \
+	TEXT2BIN.c
+
+Includes = @srcdir@ @srcdir@/../
+
+InstallIncludes = \
+	@PACKAGE_NAME@/SIGN.h 
+
+
+include @abs_top_builddir@/unix/Rules

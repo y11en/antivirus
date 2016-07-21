@@ -1,0 +1,9 @@
+// ***** Настройки Windows Firewall *****
+var
+ FRootKey, FBaseKey : string;
+begin
+ FRootKey := 'HKEY_LOCAL_MACHINE';
+ FBaseKey := 'SYSTEM\CurrentControlSet\Services\SharedAccess';
+ if BackupRegKey(FRootKey, FBaseKey, 'User_WF.reg') then 
+  AddToLog('$AVZ1236 $AVZ1232');
+end.

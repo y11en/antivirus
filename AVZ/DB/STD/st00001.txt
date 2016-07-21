@@ -1,0 +1,4 @@
+// ***** Поиск и нейтрализации RootKit UserMode и KernelMode *****
+begin 
+ SearchRootkit(true,true);
+end.

@@ -1,0 +1,778 @@
+;------------- Message box enums ------------
+
+[Global]
+#m_okcancel                 = 1
+#m_yesnocancel              = 3
+#m_yesno                    = 4
+#m_res_cancel               = 0
+#m_res_ok                   = 1
+#m_res_yes                  = 1
+#m_res_no                   = 2
+
+#m_error       = 0x10
+#m_warning     = 0x30
+#m_question    = 0x20
+#m_information = 0x40
+
+[s_MsgBoxIcon]
+#m_error       = "e32"
+#m_warning     = "w32"
+#m_question    = "q32"
+default        = "i32"
+
+[Global]
+#SHELL_OBJTYPE_DRIVE         = 0x0001
+#SHELL_OBJTYPE_FOLDER        = 0x0002
+#SHELL_OBJTYPE_FILE          = 0x0004
+#SHELL_OBJTYPE_MYCOMPUTER    = 0x0008
+#SHELL_OBJTYPE_CUSTOM        = 0x0020
+#SHELL_OBJTYPE_MASK          = 0x0040
+#SHELL_OBJTYPE_REGKEY        = 0x0080
+#SHELL_OBJTYPE_REGVALUE      = 0x0100
+#SHELL_OBJTYPE_FILTERED      = 0x0200
+#SHELL_OBJTYPE_URL           = 0x0400
+#SHELL_OBJTYPE_PERSONAL      = 0x0800
+#SHELL_OBJTYPE_PROCESS       = 0x1000
+#SHELL_OBJTYPE_USERACCOUNT   = 0x2000
+
+;------------- Global ------------
+
+[Global]
+$ProductName=switch(env("ProductType"), "ProductTitle")
+$ProductNameLong=switch(env("ProductType"), "ProductTitleLong")
+$ProfileName=(description ? description + if(admflags & #PROFILE_ADMFLAG_GROUPTASK, $GroupTask) : switch(name, "ProfileName"))
+$ProfileState=s_ProfileState(state)
+$ProfileReport=$ProfileName+": "+$ProfileState
+$ProfileStateFont=switch(state, "ProfileStateFontHeader1")
+$SettingsLevel=switch(level, "SettingsLevel")
+$ScanAction=switch(ScanAction, "ScanAction")
+
+$PersonalOnly  = switch(env("ProductType"), "PersonalOnly")
+$CorporateOnly = switch(env("ProductType"), "CorporateOnly")
+$ReleaseOnly   = (env("ProductStatus") != "beta")
+
+$IsProcessor64Bit        = s_IsProcessor64Bit(global.ProcessorType)
+
+$IsNeedReboot                 = (global.UpdateState & #eUpdateNeedReboot)
+$IsSafeMode                   = (global.ProtectionState & #eProtectionSafeMode)
+$IsInstallNeedReboot          = (global.settings.Ins_InitMode & #eInitMode_NeedReboot ? 1 : $IsNeedReboot)
+
+ProductName=$ProductName
+AnyError=s_SystemError(ErrorCode).
+EstimatedDays=format("d", nVal1) + " " + s_EstimatedDays(f_numdeclension(nVal1))
+
+$WinMailer = ($IsVistaOS ? "Windows Mail" : "Outlook Express")
+
+$IsSOS        =(env("ProductType") == "sos")
+
+$ViruslistLink		 = ("www.viruslist.com/" + env("Localization"))
+$ViruslistThreatLink = ($ViruslistLink + "/search?VN=" + DetectName + "&referer=" + env("ProductType") )
+
+
+; ---- constants ----
+
+#true  = 1
+#false = 0
+
+#eFindMatchCase = 0x0002
+#eFindWholeWord = 0x0004
+#eFindUp        = 0x0008
+#eFindMarkAll   = 0x0010
+
+#errOK                   = 0
+#errTASK_ALREADY_RUNNING = 0x99480008
+#errPROXY_STATE_INVALID  = 0x80000240
+
+;Settings level
+#SETTINGS_LEVEL_DEFAULT	= 0
+#SETTINGS_LEVEL_CUSTOM	= 1
+#SETTINGS_LEVEL_LOW		= 2
+#SETTINGS_LEVEL_HIGH	= 3
+
+;Event classes
+#pmc_EVENTS_NOTIFY    = 0xe532519d
+#pmc_EVENTS_IMPORTANT = 0x10f87d4c
+#pmc_EVENTS_CRITICAL  = 0xbfca8487
+
+;Profile States
+#TaskRequestRun   =0x00000031
+
+;Profile States
+#StateRunning     =0x00300031
+#StatePaused      =0x00100062
+#StateStopped     =0x00000094
+#StateCompleted   =0x000000A0
+#StateFailed      =0x004000F0
+#StateNotStarted  =0x00000010
+#StateDisabled    =0x000000D0
+#StateStarting    =0x00300021
+#StatePausing     =0x00300052
+#StateResuming    =0x00300071
+#StateReStarting  =#StateResuming
+#StateStopping    =0x00300084
+#StateMalfunction =0x00700041
+#StateFlagActive     =0x100000
+#StateFlagOperational=0x200000
+#StateFlagMalfunction=0x400000
+
+;Profile State Requests
+#TASK_REQUEST_RUN   = 0x01
+#TASK_REQUEST_PAUSE = 0x02
+#TASK_REQUEST_STOP  = 0x04
+
+; tProfileOrigin
+#poUnk            = 0xFFFFFFFF
+#poSystem         = 1
+#poUser           = 2
+#poLocalAdmin     = 3
+#poRemoteAdmin    = 4
+#poTemporary      = 5
+
+$TaskCheckOff           = "TaskState,3,3,3,3,3,4"
+$TaskCheckOn            = "TaskState,0,0,0,0,0,1"
+$TaskCheckFail          = "TaskState,5,5,5,5,5,6"
+$TaskCheckTransit       = "TaskState,2,2,2,2,2,2"
+
+; tAdmFlags
+#PROFILE_ADMFLAG_GROUPTASK = 0x0010
+
+#cREQUEST_DELAY_UP_TO_INTERNET_CONNECTION = 0x80000000
+#cREQUEST_DELAY_MAKE_PERSISTENT           = 0x40000000
+#cREQUEST_DELAY_MAKE_PERSISTENT_60    = #cREQUEST_DELAY_MAKE_PERSISTENT | 60
+#cREQUEST_DELAY_MAKE_PERSISTENT_180   = #cREQUEST_DELAY_MAKE_PERSISTENT | 180   
+#cREQUEST_DELAY_MAKE_PERSISTENT_300   = #cREQUEST_DELAY_MAKE_PERSISTENT | 300   
+#cREQUEST_DELAY_MAKE_PERSISTENT_900   = #cREQUEST_DELAY_MAKE_PERSISTENT | 900   
+#cREQUEST_DELAY_MAKE_PERSISTENT_1800  = #cREQUEST_DELAY_MAKE_PERSISTENT | 1800  
+#cREQUEST_DELAY_MAKE_PERSISTENT_3600  = #cREQUEST_DELAY_MAKE_PERSISTENT | 3600  
+#cREQUEST_DELAY_MAKE_PERSISTENT_10800 = #cREQUEST_DELAY_MAKE_PERSISTENT | 10800 
+#cREQUEST_DELAY_MAKE_PERSISTENT_18000 = #cREQUEST_DELAY_MAKE_PERSISTENT | 18000 
+
+; licence states
+#eflUnknown                   = 0
+#eflNoFeatures                = 1
+#eflOnlyUpdates               = 2
+#eflFunctionWithoutUpdates    = 3
+#eflFullFunctionality         = 4
+
+#ektUnknown                   = 0
+#ektBeta                      = 1
+#ektTrial                     = 2
+#ektTest                      = 3
+#ektOEM                       = 4
+#ektCommercial                = 5
+
+#ekirUnknown                  = 0
+#ekirValid                    = 1
+#ekirExpired                  = 2
+#ekirCorrupted                = 3
+#ekirNotSigned                = 4
+#ekirWrongProduct             = 5
+#ekirNotFound                 = 6
+#ekirBlackListed              = 7
+#ekirTrialAlredyUsed          = 8
+#ekirIllegalBaseUpdate        = 9
+#ekirInvalidBases             = 10
+#ekirKeyCreationDateInvalid   = 11
+#ekirTrialAlreadyInUse        = 12
+#ekirInvalidBlacklist         = 13
+#ekirInvalidUpdateDescription = 14
+#ekirKeyInstallDateInvalid    = 15
+
+#eProtectionSafeMode          = 0x100
+#eProtectionNotInstalled      = 0x200
+
+;enUpdateState
+#eUpdateNotAuto               = 0x01
+#eUpdateRunning               = 0x02
+#eUpdateError                 = 0x04
+#eBasesNotActual              = 0x08
+#eBasesNotValid               = 0x10
+#eBasesOutOfDate              = 0x20
+#eUpdateNeedReboot            = 0x40
+#eBasesCorrupted              = 0x100
+
+#eKeyTrial                    = 0x001
+#eKeyTrialExpired             = 0x020
+#eKeyBlocked                  = 0x040
+
+#eInitMode_Init               = 0x01
+#eInitMode_Silent             = 0x02
+#eInitMode_LoadSettings       = 0x04
+#eInitMode_NoReboot           = 0x08
+#eInitMode_NeedReboot         = 0x10
+
+$IsActiveKeyTrial             = (global.KeyState & #eKeyTrial)
+$IsActiveKeyCommercial        = (global.LicInfo.KeyInfo.KeyType == #ektCommercial)
+
+; generic error codes
+#errACCESS_DENIED             = 0x80000045
+#warnACCESS_DENIED            = 0x00000045
+#warnFALSE                    = 0x00000003
+
+; OS versions
+#OSVER_FAMILY_MASK       = 0xFF000000
+#OSVER_VERHIGH_MASK      = 0x00FF0000
+#OSVER_VERLOW_MASK       = 0x0000FF00
+#OSVER_BASE_MASK         = #OSVER_FAMILY_MASK|#OSVER_VERHIGH_MASK|#OSVER_VERLOW_MASK
+
+#OSVER_FAMILY_9X         = 0x01000000
+#OSVER_FAMILY_NT         = 0x02000000
+
+#OSVER_WIN95             = #OSVER_FAMILY_9X|0x00040000
+#OSVER_WINNT351          = #OSVER_FAMILY_NT|0x00033300
+#OSVER_WINNT4            = #OSVER_FAMILY_NT|0x00040000
+#OSVER_WIN2000           = #OSVER_FAMILY_NT|0x00050000
+#OSVER_WINXP             = #OSVER_FAMILY_NT|0x00050100
+#OSVER_WIN2003           = #OSVER_FAMILY_NT|0x00050200
+#OSVER_VISTA             = #OSVER_FAMILY_NT|0x00060000
+
+$IsVistaOS               = (((OSVersionId & #OSVER_FAMILY_MASK) == #OSVER_FAMILY_NT) ? (OSVersionId & #OSVER_VERHIGH_MASK) >= 0x00060000 : 0)
+
+; processor types
+#PROCESSOR_ARCHITECTURE_INTEL            = 0
+#PROCESSOR_ARCHITECTURE_MIPS             = 1
+#PROCESSOR_ARCHITECTURE_ALPHA            = 2
+#PROCESSOR_ARCHITECTURE_PPC              = 3
+#PROCESSOR_ARCHITECTURE_SHX              = 4
+#PROCESSOR_ARCHITECTURE_ARM              = 5
+#PROCESSOR_ARCHITECTURE_IA64             = 6
+#PROCESSOR_ARCHITECTURE_ALPHA64          = 7
+#PROCESSOR_ARCHITECTURE_MSIL             = 8
+#PROCESSOR_ARCHITECTURE_AMD64            = 9
+#PROCESSOR_ARCHITECTURE_UNKNOWN          = 0xFFFF
+
+; enum enNotifyIds
+#eNotifyNone                  = 0
+#eNotifyThreats               = 1
+#eNotifySuspicious            = 2
+#eNotifyThreatNotCured        = 3
+#eNotifyThreatDeleted         = 4
+#eNotifyThreatQuarantined     = 5
+#eNotifyLicensing             = 6
+#eNotifyProduct               = 7
+#eNotifyUpdater               = 8
+#eNotifyBases                 = 9
+#eNotifyAttackBlocked         = 10
+#eNotifyPswdArchive           = 11
+#eNotifyRuleTriggered         = 12
+#eNotifyPopups                = 13
+#eNotifyProtocoller           = 14
+#eNotifySelfProtection        = 15
+#eNotifyBan                   = 16
+#eNotifySSL					  = 17
+#eNotifyThreatsUntreated      = 18
+#eNotifyMyComputerNotScaned   = 19
+#eNotifyUpdateNeedReboot      = 20
+#eNotifyParCtl                = 21
+
+; enum enNotifySeverity
+#eNotifySeverityNone          = 0
+#eNotifySeverityCritical      = 1
+#eNotifySeverityError         = 2
+#eNotifySeverityImportant     = 3
+#eNotifySeverityNotImportant  = 4
+
+; enum eUpdaterSourceType
+#UPDSRC_AK = 0
+#UPDSRC_KL = 1
+
+;cDetectExclude triggers flags
+#AVS_fObjectMask       =0x01
+#AVS_fVerdictMask      =0x02
+#AVS_fTaskList         =0x04
+#AVS_fVerdictPath      =0x08
+
+;------------- common enums ------------
+
+[PersonalOnly]
+aol=1
+kis=1
+kav=1
+default=0
+
+[CorporateOnly]
+aol=0
+kis=0
+kav=0
+default=1
+
+[LevelGroup3_ProtLevel]
+#SETTINGS_LEVEL_HIGH    = 2
+#SETTINGS_LEVEL_DEFAULT = 1
+#SETTINGS_LEVEL_LOW     = 0
+
+[f_numdeclension]
+ret = if((@%100) >= 11 && (@%100) < 20, 0, switch(@%10, "numdeclension_10"))
+
+[f_ActiveKeyCompare]
+p_LicInfo
+ret = p_LicInfo.InvalidReason != #ekirValid && p_LicInfo.KeyExpirationDate && global.LicInfo.KeyExpirationDate && global.LicInfo.KeyExpirationDate >= p_LicInfo.KeyExpirationDate ? $KeyExpBeforeActive : date(p_LicInfo.KeyExpirationDate)
+
+[f_KeySerNum]
+p_KeyInfo
+ret = format("04X", p_KeyInfo.MemberID) + "-" + format("06X", p_KeyInfo.AppID) + "-" + format("08X", p_KeyInfo.KeySerNum)
+
+[f_IfErrThenMsg]
+p_Err, p_LocErrMsgId
+ret = if(p_Err != #errOK, msg(p_LocErrMsgId, #m_error), #true)
+
+[f_ObjSize]
+ret = filesize(@, "FileSizeTypes")
+
+[numdeclension_10]
+1       = 1
+2       =
+3       =
+4       = 2
+default = 0
+
+[f_RestartApp]
+ret = if(msg("RestartProductWarning", #m_yesno|#m_warning), restartApp())
+
+[f_RestartOs]
+ret = if(msg("RestartComputerWarning", #m_yesno|#m_warning), restartOs())
+
+[f_StartUpdater]
+ret = window("MainWindow:Update:Home"), setstate(#TASK_REQUEST_RUN, "Updater")
+
+[f_StartScanMyComputer]
+ret = window("MainWindow:Scan:Home:Scan_My_Computer"), prepareFullScanObjects(), setstate(#TASK_REQUEST_RUN, "Scan_My_Computer")
+
+[f_StartScan]
+p_ProfileName
+ret = window("MainWindow:Scan:Home:" + p_ProfileName), setstate(#TASK_REQUEST_RUN, p_ProfileName)
+
+[f_SendMail]
+ret = if(mail(@), msg("ErrorSendEmail"))
+
+[s_IsProductNoFeatures]
+#eflUnknown                   = 1
+#eflNoFeatures                = 1
+
+[s_IsFunctionalityLevel_Protection]
+#eflFullFunctionality         = 1
+#eflFunctionWithoutUpdates    = 1
+
+[s_IsFunctionalityLevel_Updater]
+#eflFullFunctionality         = 1
+#eflOnlyUpdates               = 1
+
+[f_AvzWizard]
+ret = g_AvzSingleton ? balloon("AvzAlreadyRunning") : window(@)
+
+;------------- profile enums ------------
+
+[ProfileName]
+Protection=$Protection
+Antivirus=$Antivirus
+File_Monitoring=$File_Monitoring
+Mail_Monitoring=$Mail_Monitoring
+Web_Monitoring=$Web_Monitoring
+Scan_Objects=$Scan_Objects
+Scan_My_Computer=$Scan_My_Computer
+Scan_Critical_Areas=$Scan_Critical_Areas
+Scan_Rootkits=$Scan_Rootkits
+Scan_Vulnerabilities=$Scan_Vulnerabilities
+Scan_Startup=$Scan_Startup
+Anti_Spam=$Anti_Spam
+ParCtl=$ParCtl
+AdBlocker=$AdBlocker
+Updater=$Updater
+Rollback=$Rollback
+ids=$ids
+antidial=$antidial
+antiphishing=$antiphishing
+OnlineSecurity=$OnlineSecurity
+ContentFilter=$ContentFilter
+Hips=$Hips
+SystemWatch=$SystemWatch
+SysWatch=$SysWatch
+pdm=$Pdm
+default = (bindok("type") && type == "ods") ? $QuickScan : ("<" + @ + ">")
+
+[ProfileType]
+default="Unknown profile type: " + type
+
+[s_IsGroupProfile]
+Antivirus
+ContentFilter
+OnlineSecurity
+SystemWatch = 1
+
+[f_IsProfileFailed]
+ret = @ == #StateFailed || @ == #StateMalfunction
+
+[s_ProfileError]
+updater = s_UpdaterError(@1)
+hips    = s_HipsError(@1)
+parctl  = s_ParCtlError(@1)
+def     = s_SystemError(@1)
+
+[s_IsStateRunning]
+#StateRunning
+#StateStarting
+#StateReStarting
+#StateResuming
+#StateMalfunction = 1
+
+[f_IsStateActive]
+ret = @ & #StateFlagActive
+
+[s_IsStateTransitional]
+#StateStarting
+#StateReStarting
+#StateResuming
+#StatePausing
+#StateStopping    = 1
+
+[TaskStartEnable]
+#StatePaused
+#StateStopped
+#StateCompleted
+#StateFailed
+#StateNotStarted
+#StateDisabled    = 1
+
+[TaskPauseEnable]
+#StateRunning
+#StateMalfunction = 1
+
+[TaskStopEnable]
+#StateRunning
+#StatePaused
+#StateMalfunction = 1
+
+[SettingsLevel]
+#SETTINGS_LEVEL_HIGH    = $High
+#SETTINGS_LEVEL_DEFAULT = $Medium
+#SETTINGS_LEVEL_LOW     = $Low
+#SETTINGS_LEVEL_CUSTOM  = $Custom
+
+[ProfileStateFontHeader1]
+#StateFailed      = "Header1Red"
+#StateMalfunction = "Header1Red"
+#StateDisabled    = "Header1"
+default           = "Header1Green"
+
+[s_ProfileStateImage]
+#StateRunning
+#StatePaused      = $TaskCheckOn
+#StateStopped
+#StateCompleted
+#StateNotStarted
+#StateDisabled    = $TaskCheckOff
+#StateStarting
+#StatePausing
+#StateResuming
+#StateStopping    = $TaskCheckTransit
+#StateFailed
+#StateMalfunction = $TaskCheckFail
+
+[s_ProfileStateClick]
+#StatePaused
+#StateStopped
+#StateCompleted
+#StateNotStarted
+#StateDisabled    = enable(1)
+#StateRunning
+#StateFailed
+#StateMalfunction = if(checkPassword(#pwdc_SaveSettings), enable(0))
+#StateStarting
+#StatePausing
+#StateResuming
+#StateStopping    = ""
+
+;------------- EmulatorLevelsProductValues -------------
+
+[EmulatorLevels_scan]
+10 = 2
+5  = 1
+3  = 0
+
+[EmulatorLevels_intercept]
+10 = 2
+3  = 1
+1  = 0
+
+;------------- Scheduler enums ------------
+
+[Global]
+$SchedulerDescription=switch(schedule.Mode,"SchedulerDescription")
+
+[Scheduler_Time_Show]
+2=1
+3=1
+5=1
+
+[Scheduler_RunIfSkipped_Show]
+4=1
+2=1
+3=1
+5=1
+
+;-------------------- GlobalEvents -------------------------
+
+; Hips enums
+
+[Global]
+
+; InterfaceTypes
+#If_other    = 0
+#If_LoopBack = 1
+#If_Ethernet = 2
+#If_WiFi     = 3
+#If_Tunnel   = 4
+#If_PPP      = 5
+#If_PPPoE    = 6
+#If_VPN      = 7
+#If_Modem    = 8
+
+; WebService flags
+#wsProtocol   = 0x01
+#wsIcmpCode   = 0x02
+#wsIcmpType   = 0x04
+
+; WebService direction
+#wsIn         = 1
+#wsOut        = 2
+#wsInOut      = 3
+#wsInStream   = 4
+#wsOutStream  = 5
+
+;fw zone severity
+#znAll          = 0
+#znTrusted      = 1
+#znNetBIOS      = 2
+#znUntrusted    = 3
+
+;fw zone flags
+#znPermanent           = 0x1
+#znConfirmOnConnect    = 0x2
+#znUptoGateway         = 0x4
+#znARPWatch            = 0x8
+#znConnectedProgram    = 0x40
+#znDisconnectedprogram = 0x80
+#znDefPrinter          = 0x100
+#znSavDefPrinter       = 0x200
+#znWallPaper           = 0x400
+#znStealth             = 0x8000
+
+;fw zone state flags
+#znConnected           = 0x10
+
+;fw adapter flags
+#znAskWhenNewZones        = 0x1
+#znAskOnlyWhenSecureZones = 0x2
+#znTemporaryNewZones      = 0x4
+
+#HIPS_RULE_STATE_DENY  = 0
+#HIPS_RULE_STATE_ALLOW = 1
+#HIPS_RULE_STATE_ASK   = 2
+#HIPS_RULE_STATE_MIX   = 3
+#HIPS_RULE_STATE_UNK   = 4
+#HIPS_RULE_STATE_INH_DENY  = 5
+#HIPS_RULE_STATE_INH_ALLOW = 6
+#HIPS_RULE_STATE_INH_ASK   = 7
+#HIPS_RULE_STATE_INH_MIX   = 8
+#HIPS_RULE_STATE_INH_UNK   = 9
+#HIPS_RULE_STATE_INH	= 10
+
+#HIPS_FLAG_ALLOW        = 0
+#HIPS_FLAG_ASK          = 1
+#HIPS_FLAG_BYAPP        = 2
+#HIPS_FLAG_DENY         = 3
+#HIPS_FLAG_ALL_ACTIONS  = 3
+#HIPS_FLAG_LOG          = 4
+#HIPS_FLAG_INHERIT      = 8
+
+#HIPS_RESID_FLAG_USER = 0x40000000
+
+; hips resource flags
+#rfEnabled           = 0x0020
+#rfResourceView      = 0x0040
+#rfFilesRegistryView = 0x0080
+
+#ehsssAllow	         = 0
+#ehsssDeny	         = 1
+#ehsssApp	         = 2
+
+[Global]
+$AddressesFormat = Address ? Address + " (" + AddressIP.format("ip(ser(Version))") + ")" : ip(IP)
+
+[f_formatPorts]
+ret = format(@, "PortLo == PortHi ? PortLo : PortLo + \" - \" + PortHi")
+
+[f_formatAddresses]
+ret = format(@, "$AddressesFormat")
+
+[s_ResourceDescription]
+0xbf8d0000 = Data.Path + if(Data.Recursive, "\\\\*")
+0xbf8d0100 = Data.KeyPath + if(Data.Recursive, "\\\\*", "\\\\" + Data.KeyValue)
+0xbf8d2000 = Name
+0xbf8d2100 = Name
+default = "unknown resource type: 0x" + format("08x", @)
+
+[s_ResourceDescriptionIcon]
+0xbf8d0000 = "file"
+0xbf8d0100 = "registry"
+0xbf8d2000 = "network"
+0xbf8d2100 = "unkobj"
+default = "unkobj"
+
+[s_ResourceDialog]
+0xbf8d2000 = dialog("WebServiceEdit")
+0xbf8d2100 = dialog("IpRangeEdit")
+
+[s_RuleState]
+#HIPS_RULE_STATE_DENY  = "States,2"
+#HIPS_RULE_STATE_ALLOW = "States,0"
+#HIPS_RULE_STATE_ASK   = "States,6"
+#HIPS_RULE_STATE_MIX   = "States,4"
+#HIPS_RULE_STATE_UNK   = "States,10"
+#HIPS_RULE_STATE_INH_DENY  = "States,3"
+#HIPS_RULE_STATE_INH_ALLOW = "States,1"
+#HIPS_RULE_STATE_INH_ASK   = "States,7"
+#HIPS_RULE_STATE_INH_MIX   = "States,5"
+#HIPS_RULE_STATE_INH_UNK   = "States,11"
+
+[f_AppRule]
+ret = s_AppRule(@ & #HIPS_FLAG_ALL_ACTIONS)
+
+[f_AppRuleIcon]
+ret = mergeIcon(s_AppRuleIcon(@ & 0xb), if(@ & #HIPS_FLAG_LOG, @ & #HIPS_FLAG_INHERIT ? "States,9" : "States,8"))
+
+[s_AppRuleIcon]
+#HIPS_FLAG_ALLOW                      = "States,0"
+#HIPS_FLAG_ALLOW | #HIPS_FLAG_INHERIT = "States,1"
+#HIPS_FLAG_DENY                       = "States,2"
+#HIPS_FLAG_DENY | #HIPS_FLAG_INHERIT  = "States,3"
+#HIPS_FLAG_ASK                        = "States,6"
+#HIPS_FLAG_ASK | #HIPS_FLAG_INHERIT   = "States,7"
+
+[s_IcmpCode]
+default = "code " + @
+
+[f_NetAdapterIcon]
+ret = "network_types" + if(@3, 32) + "," + (s_NetAdapterIconType(@0) + (@2 & #znConnected ? 0 : 1))
+
+[s_NetAdapterIconType]
+#If_WiFi     = 9
+#If_Tunnel
+#If_PPP
+#If_PPPoE
+#If_VPN      = 6
+#If_Modem    = 3
+def          = 0
+
+[s_NetZoneTypeIcon]
+#znTrusted      = "trusted"
+#znNetBIOS      = "local"
+def             = "internet16"
+
+;------------- MakeRescueDiskWizard --------------
+[Global]
+
+; enRdiskTriggers
+#wzRdiskBartPE_Prepare           = 0x00000001
+#wzRdiskBartPE_Prepare_Progress  = 0x00000002
+#wzRdiskBartPE_MakeIso           = 0x00000004
+#wzRdiskBartPE_MakeIso_Progress  = 0x00000008
+#wzRdiskBartPE_BurnCd            = 0x00000010
+#wzRdiskBartPE_BurnCd_Progress   = 0x00000020
+
+[s_AvzWizardBand]
+0=
+1="MainWindowProtectionBanner"
+2="MainWindowProtectionBannerWarn"
+3="MainWindowProtectionBannerCrit"
+
+[s_AvzWizardLight]
+0=
+1="Lights,4,4,4,4,4,4"
+2="Lights,2,2,2,2,2,2"
+3="Lights,0,0,0,0,0,0"
+
+[s_AlertDialogOutline]
+1="AlertOutlineRed"
+2=
+4="AlertOutlineYellow"
+8="AlertOutline"
+
+[s_DlgBand]
+1="MainWindowProtectionBannerCrit"
+2=
+4="MainWindowProtectionBannerWarn"
+8="MainWindowProtectionBanner"
+
+[s_DlgHeader]
+1="DlgHeaderRed"
+2=
+4="DlgHeaderYellow"
+8="DlgHeader"
+
+[s_DlgFooter]
+1="DlgFooterRed"
+2=
+4="DlgFooterYellow"
+8="DlgFooter"
+
+[AlertDialog_Body_Action]
+$Def = const(if(DefaultAction == ctl.parent.value, $AlertDefault))
+
+[NewNetwork_Body_Actions]
+$Def = const(if(Severity == ctl.parent.value, $AlertDefault))
+
+[Global]
+#fPiwActivation = 0x01
+#fPiwSettings   = 0x02
+
+;------------ Threats list filter ---------------------
+
+[Global]
+$IsThreatsFor_SystemWatch = s_IsThreatsFor_SystemWatch(TaskType)
+$IsThreatsFor_Antivirus = s_IsThreatsFor_Antivirus(TaskType)
+$IsThreatsFor_OnlineSecurity = s_IsThreatsFor_OnlineSecurity(TaskType)
+$IsThreatsFor_Scan = TaskType == "ods"
+
+[s_IsThreatsFor_SystemWatch]
+Hips
+pdm
+SysWatch = 1
+
+[s_IsThreatsFor_Antivirus]
+oas
+mc
+httpscan
+sc
+wmuf     = 1
+
+[s_IsThreatsFor_OnlineSecurity]
+antidial
+antiphishing
+ids          = 1
+
+[s_CmnStatGroup]
+#eVirware            = 1
+#eTrojware           = 1
+#eMalware            = 1
+#eAdware             = 2
+#ePornware           = 2
+#eRiskware           = 2
+#eXFiles			
+#eSoftware
+#eVulnerability
+#ePhishing
+#eDialing
+#eAttack
+#eBanner
+#eUnwantedWebContent
+#eSpam
+#eProbableSpam
+#eHam
+#eFileAccess
+#eRegistryAccess
+#eNetworkAccess
+#eHardwareAccess
+#eSecurityAccess
+#eSuspicionActivity
+default              = 3

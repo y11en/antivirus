@@ -1,0 +1,7 @@
+; OutlookAddin.def : Declares the module parameters.
+EXPORTS
+	ExchEntryPoint      @1 PRIVATE
+	DllCanUnloadNow     PRIVATE
+	DllGetClassObject   PRIVATE
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer	PRIVATE

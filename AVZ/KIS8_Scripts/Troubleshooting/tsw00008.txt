@@ -1,0 +1,24 @@
+// $AVZ1508
+//$ Блокировка редактора реестра
+// Функция поиска проблемы                                                                          
+function Check : dword;
+begin
+ Result := 0;
+ // Блокировка regedit.exe
+ if RegKeyIntParamRead('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Policies\System', 'DisableRegistryTools') > 0 then begin
+   Result := 3;
+   exit;
+  end;
+ if RegKeyIntParamRead('HKLM', 'Software\Microsoft\Windows\CurrentVersion\Policies\System', 'DisableRegistryTools') > 0 then begin
+   Result := 3;
+   exit;
+  end;
+end;
+
+// Функция исправления проблемы                                                                          
+function Fix : dword;
+begin
+ RegKeyParamDel('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Policies\System', 'DisableRegistryTools');
+ RegKeyParamDel('HKLM', 'Software\Microsoft\Windows\CurrentVersion\Policies\System', 'DisableRegistryTools');
+ Result := 0;
+end;

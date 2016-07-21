@@ -1,0 +1,8 @@
+<Include>
+  <ComponentRef Id="ckahcomm.dll" />
+  <ComponentRef Id="ckahrule.dll" />
+  <ComponentRef Id="ckahum.dll" />
+  <?ifdef ADVANCED_FEATURES ?>
+    <ComponentRef Id="ckahstat.dll" />
+  <?endif ?>
+</Include>

@@ -1,0 +1,32 @@
+// ***** Параметры запуска файлов *****
+procedure AddBackUpData(ARoot, AName : string;Lines : TStrings);
+begin
+ Lines.Add('[-'+ ARoot + '\' + AName + ']');
+ ExpRegKeyEx(ARoot, AName, Lines);
+ Lines.Add('');
+end;
+
+var
+ Lines : TStrings;
+begin
+ Lines := TStringList.Create;
+ Lines.Add('REGEDIT4');
+ Lines.Add('');
+ AddBackUpData('HKEY_CLASSES_ROOT', '.com', Lines);
+ AddBackUpData('HKEY_CLASSES_ROOT', '.dll', Lines);
+ AddBackUpData('HKEY_CLASSES_ROOT', '.exe', Lines);
+ AddBackUpData('HKEY_CLASSES_ROOT', '.ocx', Lines);
+ AddBackUpData('HKEY_CLASSES_ROOT', '.reg', Lines);
+ AddBackUpData('HKEY_CLASSES_ROOT', '.pif', Lines);
+ AddBackUpData('HKEY_CLASSES_ROOT', '.scr', Lines);
+ AddBackUpData('HKEY_CLASSES_ROOT', '.lnk', Lines);
+ AddBackUpData('HKEY_CLASSES_ROOT', '.inf', Lines);
+ AddBackUpData('HKEY_CLASSES_ROOT', 'exefile', Lines);
+ AddBackUpData('HKEY_CLASSES_ROOT', 'comfile', Lines);
+ AddBackUpData('HKEY_CLASSES_ROOT', 'cmdfile', Lines);
+ AddBackUpData('HKEY_CLASSES_ROOT', 'piffile', Lines);
+ AddBackUpData('HKEY_CLASSES_ROOT', 'regfile', Lines);
+ if SaveBackupDataSt(Lines, 'User_RunFiles.reg') then 
+  AddToLog('$AVZ1236 $AVZ1233');
+ Lines.Free;
+end.

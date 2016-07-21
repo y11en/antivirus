@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioProject ProjectType="Visual C++" Version="7.00" Name="filemap" SccProjectName="&quot;$/Release/KLAVA/klava/kernel/filemap&quot;, FWLIAAAA" SccAuxPath="" SccLocalPath="." SccProvider="MSSCCI:Microsoft Visual SourceSafe">
+	<Platforms>
+		<Platform Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration Name="Release|Win32" OutputDirectory=".\..\..\..\Out\Vc7Release" IntermediateDirectory=".\Vc7Release" ConfigurationType="2" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="FALSE" CharacterSet="2">
+			<Tool Name="VCCLCompilerTool" InlineFunctionExpansion="1" OptimizeForProcessor="1" AdditionalIncludeDirectories="..\include,..\..\..\Prague/include,..\..\..\Prague\include,..\..\..\CommonFiles,..\..\.." PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS;_USRDLL;klavlib_EXPORTS;C_STYLE_PROP;_PRAGUE_TRACE_FRAME_;_USE_32BIT_TIME_T" StringPooling="TRUE" ExceptionHandling="TRUE" RuntimeLibrary="2" EnableFunctionLevelLinking="TRUE" PrecompiledHeaderFile=".\Release/filemap.pch" AssemblerListingLocation=".\Vc7Release/" ObjectFile=".\Vc7Release/" ProgramDataBaseFileName="$(OutDir)\$(TargetName).pdb" WarningLevel="3" SuppressStartupBanner="TRUE" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCLinkerTool" IgnoreImportLibrary="TRUE" AdditionalOptions="/MACHINE:I386 /ALIGN:4096" OutputFile="$(OutDir)/filemap.ppl" LinkIncremental="1" SuppressStartupBanner="TRUE" AdditionalLibraryDirectories="$(OutDir)" IgnoreDefaultLibraryNames="kernel32.lib user32.lib advapi32.lib" GenerateDebugInformation="TRUE" ProgramDatabaseFile=".\..\..\..\Out\Release/filemap.pdb" GenerateMapFile="TRUE" MapFileName=".\Release/filemap.map" EntryPointSymbol="DllMain" ImportLibrary=".\..\..\..\Out\Release/filemap.lib" GenerateManifest="-1"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="NDEBUG" MkTypLibCompatible="TRUE" SuppressStartupBanner="TRUE" TargetEnvironment="1" TypeLibraryName=".\..\..\..\Out\Release/filemap.tlb"/>
+			<Tool Name="VCPostBuildEventTool" Description="Postbuild..." CommandLine=""/>
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1049"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+		</Configuration>
+		<Configuration Name="Debug|Win32" OutputDirectory=".\..\..\..\Out\Debug" IntermediateDirectory=".\Debug" ConfigurationType="2" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="FALSE" CharacterSet="2">
+			<Tool Name="VCCLCompilerTool" Optimization="0" OptimizeForProcessor="1" AdditionalIncludeDirectories="..\include,..\..\..\Prague\include,..\..\..\CommonFiles,..\..\.." PreprocessorDefinitions="_USRDLL;klavlib_EXPORTS;C_STYLE_PROP;WIN32;_DEBUG;_WINDOWS;_PRAGUE_TRACE_;_USE_32BIT_TIME_T" BasicRuntimeChecks="3" RuntimeLibrary="3" PrecompiledHeaderFile=".\Debug/filemap.pch" AssemblerListingLocation=".\Debug/" ObjectFile=".\Debug/" ProgramDataBaseFileName=".\Debug/" WarningLevel="3" SuppressStartupBanner="TRUE" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCLinkerTool" IgnoreImportLibrary="TRUE" AdditionalOptions="/MACHINE:I386" OutputFile="..\..\..\Out\Debug/filemap.ppl" LinkIncremental="1" SuppressStartupBanner="TRUE" AdditionalLibraryDirectories="..\..\..\Out\Debug" GenerateDebugInformation="TRUE" ProgramDatabaseFile=".\..\..\..\Out\Debug/filemap.pdb" GenerateMapFile="TRUE" MapFileName=".\Debug/filemap.map" ImportLibrary=".\..\..\..\Out\Debug/filemap.lib" GenerateManifest="-1"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="_DEBUG" MkTypLibCompatible="TRUE" SuppressStartupBanner="TRUE" TargetEnvironment="1" TypeLibraryName=".\..\..\..\Out\Debug/filemap.tlb"/>
+			<Tool Name="VCPostBuildEventTool"/>
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1049"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+		</Configuration>
+	</Configurations>
+	<Files>
+		<Filter Name="Source Files" Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
+			<File RelativePath="..\include\errors.cpp">
+			</File>
+			<File RelativePath=".\filemap.cpp">
+			</File>
+			<File RelativePath="..\include\filemapping.cpp">
+			</File>
+			<File RelativePath=".\plugin_filemapping.cpp">
+			</File>
+		</Filter>
+		<Filter Name="Header Files" Filter="h;hpp;hxx;hm;inl">
+			<File RelativePath="..\include\filemapping.h">
+			</File>
+		</Filter>
+		<Filter Name="Resource Files" Filter="ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe">
+			<File RelativePath=".\filemap.rc">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCResourceCompilerTool" AdditionalIncludeDirectories="..\..\..\CommonFiles;$(NoInherit)"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

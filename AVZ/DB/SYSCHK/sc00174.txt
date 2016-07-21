@@ -1,0 +1,8 @@
+// ***** Spy.WishBoneToolbar *****
+begin
+ AddEvAlarmByCLSID('86F4AD51-EE90-409D-944B-FDB0C939B41C',AScriptName,'MCont.dll');
+ AddEvAlarmByCLSID('3AA90BC2-58C0-4F4D-A87C-2C6F3D3CD5FE',AScriptName,'MInst.dll');
+ AddEvAlarmByCLSID('87B1E57C-FF70-4C69-9CE8-57CB8F67ABA8',AScriptName,'WBM.dll');
+ AddEvAlarmByCLSID('C331BD6E-06AB-41A0-B95F-D7CA379ACEAA',AScriptName,'WBM.dll');
+ AddEvAlarmByCLSID('EAA87376-C391-494E-9DA2-2BD9C798E54F',AScriptName,'WBMXPCol.dll');
+end.

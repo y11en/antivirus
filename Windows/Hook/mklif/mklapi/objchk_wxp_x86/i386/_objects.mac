@@ -1,0 +1,16 @@
+
+
+386_OBJECTS=\
+ $(OBJ_PATH)\$O\mklapi.obj \
+
+
+
+
+
+# lowercased
+BASEDIR=c:\winddk\6001.17120
+OBJECT_ROOT=c:\winddk\6001.17120
+MAKEDIR_LOWERCASE=c:\projects\windows\hook\mklif\mklapi
+OBJ_PATH=c:\projects\windows\hook\mklif\mklapi
+CONCURRENT_MIDL=0
+CONCURRENT_MANIFEST_BUILD=0

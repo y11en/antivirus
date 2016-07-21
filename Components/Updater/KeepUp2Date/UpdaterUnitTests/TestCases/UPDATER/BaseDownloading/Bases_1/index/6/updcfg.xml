@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+
+<UpdaterSettingsSection>
+
+<sites_list>
+<site2 url="http://dnl-ru1.kaspersky-labs.com" 	diff_url="diffs"	weight="100000"	region="am,az,by,ge,kg,kz,md,ru,tj,tm,ua,uz"> </site2>
+<site2 url="ftp://dnl-ru1.kaspersky-labs.com" 	diff_url="diffs"	weight="50000"	region="am,az,by,ge,kg,kz,md,ru,tj,tm,ua,uz"> </site2>
+<site2 url="http://dnl-ru2.kaspersky-labs.com" 	diff_url="diffs"	weight="1"	region="am,az,by,ge,kg,kz,md,ru,tj,tm,ua,uz"> </site2>
+<site2 url="ftp://dnl-ru2.kaspersky-labs.com" 	diff_url="diffs"	weight="1"	region="am,az,by,ge,kg,kz,md,ru,tj,tm,ua,uz"> </site2>
+<site2 url="http://dnl-ru5.kaspersky-labs.com" 	diff_url="diffs"	weight="1"	region="am,az,by,ge,kg,kz,md,ru,tj,tm,ua,uz"> </site2>
+<site2 url="ftp://dnl-ru5.kaspersky-labs.com" 	diff_url="diffs"	weight="1"	region="am,az,by,ge,kg,kz,md,ru,tj,tm,ua,uz"> </site2>
+
+<site2 url="http://dnl-eu1.kaspersky-labs.com" 	diff_url="diffs"	weight="100000"	region="fr,de,pl,es,tr,it,ro,gb,uk,at,nl,be,lt,cs,lv,bg,ee,cz,gr,hu"> </site2>
+<site2 url="ftp://dnl-eu1.kaspersky-labs.com" 	diff_url="diffs"	weight="50000"	region="fr,de,pl,es,tr,it,ro,gb,uk,at,nl,be,lt,cs,lv,bg,ee,cz,gr,hu"> </site2>
+<site2 url="http://dnl-eu2.kaspersky-labs.com" 	diff_url="diffs"	weight="300000"	region="fr,de,pl,es,tr,it,ro,gb,uk,at,nl,be,lt,cs,lv,bg,ee,cz,gr,hu"> </site2>
+<site2 url="ftp://dnl-eu2.kaspersky-labs.com" 	diff_url="diffs"	weight="150000"	region="fr,de,pl,es,tr,it,ro,gb,uk,at,nl,be,lt,cs,lv,bg,ee,cz,gr,hu"> </site2>
+<site2 url="http://dnl-eu3.kaspersky-labs.com" 	diff_url="diffs"	weight="200000"	region="fr,de,pl,es,tr,it,ro,gb,uk,at,nl,be,lt,cs,lv,bg,ee,cz,gr,hu"> </site2>
+<site2 url="ftp://dnl-eu3.kaspersky-labs.com" 	diff_url="diffs"	weight="100000"	region="fr,de,pl,es,tr,it,ro,gb,uk,at,nl,be,lt,cs,lv,bg,ee,cz,gr,hu"> </site2>
+<site2 url="http://dnl-eu4.kaspersky-labs.com" 	diff_url="diffs"	weight="300000"	region="fr,de,pl,es,tr,it,ro,gb,uk,at,nl,be,lt,cs,lv,bg,ee,cz,gr,hu"> </site2>
+<site2 url="ftp://dnl-eu4.kaspersky-labs.com" 	diff_url="diffs"	weight="150000"	region="fr,de,pl,es,tr,it,ro,gb,uk,at,nl,be,lt,cs,lv,bg,ee,cz,gr,hu"> </site2>
+<site2 url="http://dnl-eu5.kaspersky-labs.com" 	diff_url="diffs"	weight="300000"	region="fr,de,pl,es,tr,it,ro,gb,uk,at,nl,be,lt,cs,lv,bg,ee,cz,gr,hu"> </site2>
+<site2 url="ftp://dnl-eu5.kaspersky-labs.com" 	diff_url="diffs"	weight="1"	region="fr,de,pl,es,tr,it,ro,gb,uk,at,nl,be,lt,cs,lv,bg,ee,cz,gr,hu"> </site2>
+
+<site2 url="http://dnl-us3.kaspersky-labs.com" 	diff_url="diffs"	weight="300000"	region="us,ca,mx,ar,br,cl,cn,tw,hk,th"> </site2>
+<site2 url="ftp://dnl-us3.kaspersky-labs.com" 	diff_url="diffs"	weight="1"	region="us,ca,mx,ar,br,cl,cn,tw,hk,th"> </site2>
+
+<site2 url="http://dnl-jp1.kaspersky-labs.com" 	diff_url=""		weight="500"	region="jp"> </site2>
+<site2 url="http://dnl-jp2.kaspersky-labs.com" 	diff_url=""		weight="100"	region="jp"> </site2>
+<site2 url="http://dnl-jp3.kaspersky-labs.com" 	diff_url=""		weight="500"	region="jp"> </site2>
+<site2 url="http://dnl-jp4.kaspersky-labs.com" 	diff_url=""		weight="500"	region="jp"> </site2>
+
+<site2 url="http://dnl-kr1.kaspersky-labs.com" 	diff_url=""		weight="500"	region="kr"> </site2>
+<site2 url="ftp://dnl-kr1.kaspersky-labs.com" 	diff_url=""		weight="1"	region="kr"> </site2>
+
+<site2 url="http://dnl-eu1.kaspersky-labs.com" 	diff_url="diffs"	weight="100"	region="*"> </site2>
+<site2 url="ftp://dnl-eu1.kaspersky-labs.com" 	diff_url="diffs"	weight="50"	region="*"> </site2>
+<site2 url="http://dnl-eu2.kaspersky-labs.com" 	diff_url="diffs"	weight="300000"	region="*"> </site2>
+<site2 url="ftp://dnl-eu2.kaspersky-labs.com" 	diff_url="diffs"	weight="150000"	region="*"> </site2>
+<site2 url="http://dnl-eu3.kaspersky-labs.com" 	diff_url="diffs"	weight="200"	region="*"> </site2>
+<site2 url="ftp://dnl-eu3.kaspersky-labs.com" 	diff_url="diffs"	weight="100"	region="*"> </site2>
+<site2 url="http://dnl-eu4.kaspersky-labs.com" 	diff_url="diffs"	weight="300000"	region="*"> </site2>
+<site2 url="ftp://dnl-eu4.kaspersky-labs.com" 	diff_url="diffs"	weight="150000"	region="*"> </site2>
+<site2 url="http://dnl-eu5.kaspersky-labs.com" 	diff_url="diffs"	weight="300000"	region="*"> </site2>
+<site2 url="ftp://dnl-eu5.kaspersky-labs.com" 	diff_url="diffs"	weight="1"	region="*"> </site2>
+<site2 url="http://dnl-us3.kaspersky-labs.com" 	diff_url="diffs"	weight="300000"	region="*"> </site2>
+<site2 url="ftp://dnl-us3.kaspersky-labs.com" 	diff_url="diffs"	weight="1"	region="*"> </site2>
+<site2 url="http://dnl-ru1.kaspersky-labs.com" 	diff_url="diffs"	weight="100"	region="*"> </site2>
+<site2 url="ftp://dnl-ru1.kaspersky-labs.com" 	diff_url="diffs"	weight="50"	region="*"> </site2>
+<site2 url="http://dnl-ru2.kaspersky-labs.com" 	diff_url="diffs"	weight="10"	region="*"> </site2>
+<site2 url="ftp://dnl-ru2.kaspersky-labs.com" 	diff_url="diffs"	weight="5"	region="*"> </site2>
+<site2 url="http://dnl-ru5.kaspersky-labs.com" 	diff_url="diffs"	weight="1"	region="*"> </site2>
+<site2 url="ftp://dnl-ru5.kaspersky-labs.com" 	diff_url="diffs"	weight="1"	region="*"> </site2>
+</sites_list>
+
+<UpdatePeriod SuccPeriod="120" FailPeriod="1" />
+hacked
+</UpdaterSettingsSection>
+
+
+;:10KOPofc8dD6fbtXCDlIxM+aLANpyJe0Gq05JcWr9PrQEQb5w9Xmwmnz0URIY3NBPHlMjAvjlUN2A/4BsL+c+YGZ%%
+; 0XLSznpdI71fB300e7Uwj1+pp6PiyQIRFm+9Hd+Ki6ivnEJXIwHw5rnFyD­­

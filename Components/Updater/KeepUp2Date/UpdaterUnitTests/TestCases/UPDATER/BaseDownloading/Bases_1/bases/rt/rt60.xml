@@ -1,0 +1,2275 @@
+<UpdateFiles
+	UpdateDate="14122006 1327">
+	<FileDescription
+		ComponentID="INDEX50"
+		UpdateType="desc"
+		RelativeSrvPath="index"
+		Filename="master.xml"
+		FileSize="1610"
+		FileDate="14122006 1627"
+		FileSign="0XLSznpdI71fB300e7Uwj1qocFiH0bnZMxEwam+jcCUEhGgPn5eaJFqAfI" />
+	<FileDescription
+		ComponentID="INDEX60"
+		UpdateType="base"
+		RelativeSrvPath="index/6"
+		LocalPath="%BaseFolder%\index\6"
+		Filename="u0607g.xml"
+		FileSize="6313"
+		FileDate="14122006 1626"
+		MD5="qy5EOtDNzy+xdnTO2MZITw==" />
+	<FileDescription
+		ComponentID="INDEX60"
+		UpdateType="base"
+		RelativeSrvPath="index/6b"
+		LocalPath="%BaseFolder%\index\6b"
+		Filename="u0607g.xml"
+		FileSize="6343"
+		FileDate="14122006 1627"
+		MD5="gt9ye2VnA1/+3MWEIslMHg==" />
+	<FileDescription
+		ComponentID="AHI386"
+		UpdateType="base"
+		RelativeSrvPath="bases/ids/i386"
+		LocalPath="%BaseFolder%\bases\ids\i386"
+		Filename="ah-i386-0607g.xml"
+		FileSize="2106"
+		FileDate="14122006 1429"
+		MD5="zl8YGLPcFA07ilk/cvDHdA==" />
+	<FileDescription
+		ComponentID="ADB,AP"
+		UpdateType="base"
+		RelativeSrvPath="bases/aspy"
+		LocalPath="%BaseFolder%\bases\aspy"
+		Filename="aspy-0607g.xml"
+		FileSize="1223"
+		FileDate="14122006 1539"
+		MD5="CSGD2dAjBBRZk9Z40tqRpg==" />
+	<FileDescription
+		ComponentID="ADB"
+		UpdateType="base"
+		RelativeSrvPath="bases/aspy"
+		LocalPath="%BaseFolder%\bases\aspy"
+		Filename="adblock.txt"
+		FileSize="24459"
+		FileDate="31102006 1123"
+		MD5="f7O8LMaoy185zs1lGjfPZQ==" />
+	<FileDescription
+		ComponentID="AP"
+		UpdateType="base"
+		RelativeSrvPath="bases/aspy"
+		LocalPath="%BaseFolder%\bases\aspy"
+		Filename="aphish.dat"
+		FileSize="49828"
+		FileDate="14122006 1539"
+		MD5="M4HyRkd5vNncTkkDTa9onw==" />
+	<FileDescription
+		ComponentID="BB,RM"
+		UpdateType="base"
+		RelativeSrvPath="bases/pdm"
+		LocalPath="%BaseFolder%\bases\pdm"
+		Filename="pdm-0607g.xml"
+		FileSize="1220"
+		FileDate="14122006 0039"
+		MD5="+SUlujLHyVBfQ5OegCkuEQ==" />
+	<FileDescription
+		ComponentID="BB"
+		UpdateType="base"
+		RelativeSrvPath="bases/pdm"
+		LocalPath="%BaseFolder%\bases\pdm"
+		Filename="pdmkl.dat"
+		FileSize="868"
+		FileDate="14122006 0038"
+		MD5="9/0FkF/yxQ19vzfa9rwVHA==" />
+	<FileDescription
+		ComponentID="RM"
+		UpdateType="base"
+		RelativeSrvPath="bases/pdm"
+		LocalPath="%BaseFolder%\bases\pdm"
+		Filename="regmonitor.ini"
+		FileSize="9186"
+		FileDate="04102006 0042"
+		MD5="uKBDKqoEApTESJ/lkAYGHQ==" />
+	<FileDescription
+		ComponentID="AS"
+		UpdateType="base"
+		RelativeSrvPath="bases/as/kis"
+		LocalPath="%BaseFolder%\bases\as\kis"
+		Filename="as-0607g.xml"
+		FileSize="904"
+		FileDate="14122006 1516"
+		MD5="ufSWb542QKS/pwgYwPJ99w==" />
+	<FileDescription
+		ComponentID="AS"
+		UpdateType="base"
+		RelativeSrvPath="bases/as/kis"
+		LocalPath="%BaseFolder%\bases\as\kis"
+		Filename="cfbase-s.gsg"
+		FileSize="269960"
+		FileDate="14122006 1516"
+		MD5="iQm/6YjteNoiw01AbvC08w==" />
+	<FileDescription
+		ComponentID="AS"
+		UpdateType="base"
+		RelativeSrvPath="bases/as/kis"
+		LocalPath="%BaseFolder%\bases\as\kis"
+		Filename="profiles.pdb"
+		FileSize="172639"
+		FileDate="14122006 1346"
+		MD5="13vzrWpeMj7klYExrE7brQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="av-i386-0607g.xml"
+		FileSize="37808"
+		FileDate="14122006 1516"
+		MD5="abmwH5HUMuRaxoCQ/UIW3g==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="avcmhk4.dll"
+		FileSize="21568"
+		FileDate="25052005 1307"
+		MD5="Kg5lA4wp5SP+LQPjuX/U6w==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="avp.klb"
+		FileSize="18616"
+		FileDate="14122006 1515"
+		MD5="m20HRM6MlfigLI8I2djojQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="avp.set"
+		FileSize="2412"
+		FileDate="01122006 2338"
+		MD5="IgO9udRZWf4D5rRf66FaPw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="avp.vnd"
+		FileSize="11705"
+		FileDate="24112006 1858"
+		MD5="5qdORxGf9KBkPB5A48N/Dg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="avp_ext.klb"
+		FileSize="18438"
+		FileDate="14122006 1515"
+		MD5="Ua6Zya5LES4zT9l8J+Guog==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="avp_ext.set"
+		FileSize="2522"
+		FileDate="01122006 2338"
+		MD5="SufIb1jO6XzqF/slRC4JjQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="avp_std.klb"
+		FileSize="17605"
+		FileDate="14122006 1515"
+		MD5="R5ebGADV0wil29eCoRefiA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="avp_x.set"
+		FileSize="2522"
+		FileDate="01122006 2338"
+		MD5="tW/UE5vYO/tZHLwZfYDafQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base001.avc"
+		FileSize="49639"
+		FileDate="19082006 1215"
+		MD5="1DWUlqvdBtdcFV0IGSeYuQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base002.avc"
+		FileSize="47961"
+		FileDate="18072006 1530"
+		MD5="56D0Rr19VW4x0Fu7yQZiTQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base003.avc"
+		FileSize="47712"
+		FileDate="13112006 1935"
+		MD5="Oc07GJAZi5dSldlOTAdYzg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base004.avc"
+		FileSize="49151"
+		FileDate="06082006 0124"
+		MD5="D+fOI8PoJl0anpvLCQuS2w==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base005.avc"
+		FileSize="49611"
+		FileDate="30112006 0850"
+		MD5="Yvy5vELmto1XnWZ369sbrQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base006.avc"
+		FileSize="48771"
+		FileDate="28102006 2142"
+		MD5="XFbM16ng59cImQGBiV8r4Q==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base007.avc"
+		FileSize="48673"
+		FileDate="21072006 0045"
+		MD5="RRZKqZLG2r01Onkvd9zCrw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base008.avc"
+		FileSize="49012"
+		FileDate="07082006 0141"
+		MD5="mfCvhQHkodFes0lL8+c76Q==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base009.avc"
+		FileSize="48528"
+		FileDate="22082006 0156"
+		MD5="iVDZxhY4++3/ZO5i9X9zcA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base010.avc"
+		FileSize="48592"
+		FileDate="09082006 0005"
+		MD5="VOVKP0RV6dZoF+0+ut8Yog==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base011.avc"
+		FileSize="49009"
+		FileDate="23072006 0154"
+		MD5="Iatdz+YTETrXMNvt2rnO8A==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base012.avc"
+		FileSize="48653"
+		FileDate="23072006 0154"
+		MD5="Lovq6gBY+wUjTmeGjPH9jg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base013.avc"
+		FileSize="48753"
+		FileDate="19082006 0057"
+		MD5="COd8Bhvs+eLuNp52aDxRIg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base014.avc"
+		FileSize="48197"
+		FileDate="24112006 0954"
+		MD5="xHvRLdIk1+qY3uN0skrdNQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base015.avc"
+		FileSize="48206"
+		FileDate="28102006 0039"
+		MD5="36g28gsntFljmCk8wc6Kwg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base016.avc"
+		FileSize="48346"
+		FileDate="05082006 0336"
+		MD5="XhFHr+ZYPdeYQ4lUKXeCLw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base017.avc"
+		FileSize="48517"
+		FileDate="27082006 0227"
+		MD5="vkJnX240/RgblP1kn0KD/g==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base018.avc"
+		FileSize="48818"
+		FileDate="06082006 0124"
+		MD5="cJQ7431A6UrQgKQilE4Vaw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base019.avc"
+		FileSize="49125"
+		FileDate="27092006 1954"
+		MD5="XmsGmPM+TDp4VECX/TKicw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base020.avc"
+		FileSize="49693"
+		FileDate="12082006 0104"
+		MD5="ERWNkz9Im2JrOhJ1cjebrg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base021.avc"
+		FileSize="49034"
+		FileDate="12082006 0104"
+		MD5="TA5dDZqTy10eyOi+NsnHuQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base022.avc"
+		FileSize="49343"
+		FileDate="14122006 0151"
+		MD5="ERH6ZZgK/RgpE3ZYJ3ru4Q==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base023.avc"
+		FileSize="49822"
+		FileDate="12082006 2308"
+		MD5="/HRGMQeNI+8eWNN2xjHDzw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base024.avc"
+		FileSize="49634"
+		FileDate="14102006 0535"
+		MD5="ErdA0mMp8XbMuXWsyt2ehg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base025.avc"
+		FileSize="49381"
+		FileDate="13082006 2214"
+		MD5="z4cNNlxjMBlI07T39r4Leg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base026.avc"
+		FileSize="49517"
+		FileDate="13082006 2214"
+		MD5="Lh+cDuxzdFlwysJgWdDBxw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base027.avc"
+		FileSize="50070"
+		FileDate="13082006 2214"
+		MD5="w4POowfhJKT6nNgsNbQFmg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base028.avc"
+		FileSize="49631"
+		FileDate="15082006 0007"
+		MD5="zuRjxjcCJM0LHHbh3ddIDw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base029.avc"
+		FileSize="49228"
+		FileDate="01112006 0302"
+		MD5="uVPwE8QXBqJ4XduFy7Pgng==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base030.avc"
+		FileSize="49428"
+		FileDate="01102006 0844"
+		MD5="eoIEOArEoFPxIqExD0EXgA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base031.avc"
+		FileSize="49449"
+		FileDate="15082006 2259"
+		MD5="wm1PcZiK01rLdB8IAQr10g==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base032.avc"
+		FileSize="49618"
+		FileDate="08122006 0313"
+		MD5="dltBtcE0yG+WEfGeONs5ug==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base033.avc"
+		FileSize="49438"
+		FileDate="15082006 2259"
+		MD5="siRQea1aisg1Hl6YuN2Imw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base034.avc"
+		FileSize="50263"
+		FileDate="24112006 0727"
+		MD5="Z4FSvqNuBxk7JmyJLoelTA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base035.avc"
+		FileSize="46909"
+		FileDate="02122006 1101"
+		MD5="HdHmHfaL4cj4UbXs6b/7XQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base036.avc"
+		FileSize="8285"
+		FileDate="21072006 1920"
+		MD5="+G+HJJUpIX7N6j2Oh/yHaA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base037.avc"
+		FileSize="49247"
+		FileDate="28092006 0230"
+		MD5="yPX4xPBYuXWAj3HrOPs5Bg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base038.avc"
+		FileSize="47682"
+		FileDate="21072006 1920"
+		MD5="kO/ij5xsaHRcWJINNvy8VA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base039.avc"
+		FileSize="49898"
+		FileDate="24082006 0010"
+		MD5="pnyU7eQLENHfwf2HqxEMHQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base040.avc"
+		FileSize="49690"
+		FileDate="10112006 2044"
+		MD5="yR6cC40JpdyyFQd7ezOVCA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base041.avc"
+		FileSize="49788"
+		FileDate="30062006 0205"
+		MD5="jNTdYmrh5qAkFyATGpeY8g==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base042.avc"
+		FileSize="49864"
+		FileDate="23092006 0054"
+		MD5="YZbdKsdibi7QTlXavH6uUg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base043.avc"
+		FileSize="49663"
+		FileDate="23092006 1429"
+		MD5="kQb4wyob/LaHHSTrsRBfug==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base044.avc"
+		FileSize="49690"
+		FileDate="26092006 1129"
+		MD5="8zK0W9DcOBc76DHDxeTfeA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base045.avc"
+		FileSize="49617"
+		FileDate="28092006 0101"
+		MD5="HmGS/uq1U4apmGHJZlExhw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base046.avc"
+		FileSize="49412"
+		FileDate="28092006 1209"
+		MD5="V5pcJR06L/z3/RxU/eOYng==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base047.avc"
+		FileSize="49911"
+		FileDate="28092006 1258"
+		MD5="ckLCkiFb6gG59hsSRYpBXw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base048.avc"
+		FileSize="49864"
+		FileDate="17102006 2046"
+		MD5="mnOvtczrG6YCkDg4Pfl6oQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base049.avc"
+		FileSize="49867"
+		FileDate="31102006 1914"
+		MD5="+xfLOwEza7/7/7HH2XvjfA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base050.avc"
+		FileSize="49438"
+		FileDate="29092006 0020"
+		MD5="d3r73J5TpkrXSFNumIFzUQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base051.avc"
+		FileSize="50760"
+		FileDate="28082006 0102"
+		MD5="JHZisqGMpGbK28fZYxaRFg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base052.avc"
+		FileSize="49844"
+		FileDate="17102006 0146"
+		MD5="G64f/6j/YDl5eISyL9XbMA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base053.avc"
+		FileSize="49658"
+		FileDate="29092006 0020"
+		MD5="ImfXDBmvO6fJYSQlk2zrdg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base054.avc"
+		FileSize="49849"
+		FileDate="19082006 1215"
+		MD5="0EJEu47Wo2VgK7+RAaUOeQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base055.avc"
+		FileSize="49393"
+		FileDate="29092006 0101"
+		MD5="//DU757LnAH6i83fO6foRQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base056.avc"
+		FileSize="49751"
+		FileDate="13102006 2224"
+		MD5="tmwXWYMrVHOZcT32KPfKfA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base057.avc"
+		FileSize="49226"
+		FileDate="22112006 1339"
+		MD5="msd0sg+sEkFN2RmI+tD7+g==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base058.avc"
+		FileSize="49564"
+		FileDate="29092006 1701"
+		MD5="MRA/yXXaxqiGXPo7PCvH+w==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base059.avc"
+		FileSize="49167"
+		FileDate="08102006 0149"
+		MD5="EzmLxa8WFAC5DFZKjtMhvQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base060.avc"
+		FileSize="49492"
+		FileDate="20072006 0119"
+		MD5="r1WCAqMvUHBseFpzPlJjYQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base061.avc"
+		FileSize="49752"
+		FileDate="17102006 0146"
+		MD5="cti83e5NPrHTo0mA1doGwg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base062.avc"
+		FileSize="49566"
+		FileDate="29092006 0101"
+		MD5="lcLWSdGDXlWgbTjg5oYoCg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base063.avc"
+		FileSize="49564"
+		FileDate="29092006 2102"
+		MD5="DgFNrYKJvjDXIR6rcwXTUg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base064.avc"
+		FileSize="49881"
+		FileDate="29092006 2353"
+		MD5="no8FEWjMq6GuhBXVdx9LBw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base065.avc"
+		FileSize="50038"
+		FileDate="30092006 0500"
+		MD5="Y3oOJBlYOdlW1VGERvKmPg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base066.avc"
+		FileSize="50024"
+		FileDate="07122006 2243"
+		MD5="0nDR70qb6sk3St7h55lBKA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base067.avc"
+		FileSize="49604"
+		FileDate="18102006 0619"
+		MD5="jh3o33Jdt3Y2T0mJOO9IZw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base068.avc"
+		FileSize="49674"
+		FileDate="16112006 1112"
+		MD5="CFlll81faiKdVErY8m5h8A==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base069.avc"
+		FileSize="49871"
+		FileDate="01102006 0044"
+		MD5="q46WkYtFpZl1XnpWwG5PFw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base070.avc"
+		FileSize="49897"
+		FileDate="18102006 0223"
+		MD5="JyylkDH0xusuudrIp90srQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base071.avc"
+		FileSize="50019"
+		FileDate="31102006 0048"
+		MD5="SHLz4dUTkEcwTaj7cLEkog==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base072.avc"
+		FileSize="49928"
+		FileDate="14112006 1147"
+		MD5="FgmP/U5EmI4xW1gNl+897g==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base073.avc"
+		FileSize="49564"
+		FileDate="02102006 1151"
+		MD5="bkNLUZAwRn/JFKTWILxzHA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base074.avc"
+		FileSize="49904"
+		FileDate="25072006 0202"
+		MD5="OuWK7B4gxI1BnYU3rvVYug==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base075.avc"
+		FileSize="49967"
+		FileDate="28092006 0102"
+		MD5="cHEiKvVZvbtdc7Xls06B4A==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base076.avc"
+		FileSize="49288"
+		FileDate="21102006 0438"
+		MD5="rQlQRk3RTHseROvGsePqvQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base077.avc"
+		FileSize="49462"
+		FileDate="13072006 0158"
+		MD5="VAMFjpU++fv3Rjta2QWp1w==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base078.avc"
+		FileSize="50182"
+		FileDate="03102006 2218"
+		MD5="3mwXDKxlVjnsuYoN5goyxw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base079.avc"
+		FileSize="49506"
+		FileDate="04102006 0129"
+		MD5="um0T57PEI//FXXZHrcVCTQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base080.avc"
+		FileSize="48915"
+		FileDate="09122006 0307"
+		MD5="wAokG6gIxcDywl9JPVltkA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base081.avc"
+		FileSize="50505"
+		FileDate="13112006 2252"
+		MD5="WoE0BhVLeMBpLPQaL89g/Q==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base082.avc"
+		FileSize="49694"
+		FileDate="27102006 0920"
+		MD5="D1QccuSdwYFoAhSk4+saUQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base083.avc"
+		FileSize="49749"
+		FileDate="21102006 1017"
+		MD5="F93dI8enEgioYzTpObGBRw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base084.avc"
+		FileSize="49642"
+		FileDate="21102006 2332"
+		MD5="0hNyf26/c+UlxZZC1oic/Q==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base085.avc"
+		FileSize="49023"
+		FileDate="22102006 0221"
+		MD5="v7mb1K6Q/kQtwh6PCP03EA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base086.avc"
+		FileSize="49242"
+		FileDate="22102006 0221"
+		MD5="Sk88n3vfaM4OpiZfCHJH4Q==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base087.avc"
+		FileSize="49458"
+		FileDate="21102006 2028"
+		MD5="E35xOESJMTz5essSa88hEA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base088.avc"
+		FileSize="49070"
+		FileDate="22102006 0513"
+		MD5="oRam0Pl98BTalWVyxqIvnA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base089.avc"
+		FileSize="49558"
+		FileDate="22102006 0513"
+		MD5="6x/M6RIRFW78eBzma6vuTg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base090.avc"
+		FileSize="48323"
+		FileDate="21102006 2332"
+		MD5="U/vTVgjsV/eOpMAoNZALRg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base091.avc"
+		FileSize="48671"
+		FileDate="22102006 0801"
+		MD5="iPCcSpZt+lb6xJLSbXSCcA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base092.avc"
+		FileSize="41182"
+		FileDate="30112006 0230"
+		MD5="d+1h2i56uFnSDChywJNEMg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base093.avc"
+		FileSize="48975"
+		FileDate="21102006 0438"
+		MD5="yvb7umvyohJ/4h1IDovrRQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base094.avc"
+		FileSize="49840"
+		FileDate="18092006 2310"
+		MD5="Y0mvmOu3wDAPzxvv1v1T7Q==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base095.avc"
+		FileSize="48294"
+		FileDate="30072006 2352"
+		MD5="hd/Ip+aYalFLzMo9MoApdw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base096.avc"
+		FileSize="49842"
+		FileDate="30072006 2352"
+		MD5="kPyUmAyN2Q67gDyHMbY/HQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base097.avc"
+		FileSize="49572"
+		FileDate="22102006 2306"
+		MD5="aYlI0ZU5GUR2/ykgyyzCcA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base098.avc"
+		FileSize="50500"
+		FileDate="28092006 0230"
+		MD5="C9WUCVodU/oh+17nRRR3cg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base099.avc"
+		FileSize="49202"
+		FileDate="17112006 2235"
+		MD5="V+X73DkDoYIGHIM3H7nBoQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base100.avc"
+		FileSize="49824"
+		FileDate="23102006 0201"
+		MD5="DvL4r4VVEkuPPFz6WTRBPg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base101.avc"
+		FileSize="49063"
+		FileDate="27102006 0207"
+		MD5="a78RxyLKqFShusVEtoBFIA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base102.avc"
+		FileSize="49883"
+		FileDate="28102006 1854"
+		MD5="ViZDApxFAPD7Gd/2jrP/3Q==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base103.avc"
+		FileSize="49310"
+		FileDate="24102006 0826"
+		MD5="x5/1PIL63C4+C9ybDyPRzg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base104.avc"
+		FileSize="49877"
+		FileDate="23102006 0201"
+		MD5="QpsFIO83THm1yzQvf223MA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base105.avc"
+		FileSize="49451"
+		FileDate="04122006 2000"
+		MD5="Gm3AIQcKiD7icFOfbNe4rQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base106.avc"
+		FileSize="49416"
+		FileDate="28102006 0459"
+		MD5="/tF648Sy72UWzsSzSjsyVA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base107.avc"
+		FileSize="49945"
+		FileDate="08122006 0050"
+		MD5="OqVRhic2A1/XUJycYQdKGA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base108.avc"
+		FileSize="49808"
+		FileDate="30102006 2157"
+		MD5="v7IOY6mp5v+nN6n53G1F7Q==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base109.avc"
+		FileSize="50467"
+		FileDate="21112006 2124"
+		MD5="rjrsX85SXOHgYgBrkP0Itw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base110.avc"
+		FileSize="49600"
+		FileDate="09112006 0954"
+		MD5="TWrkQQfS2CDmOKnfPSB2Rw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base111.avc"
+		FileSize="49734"
+		FileDate="22112006 2013"
+		MD5="4e8BsoCxHdocQS0FRuEkyg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base112.avc"
+		FileSize="49867"
+		FileDate="11122006 2042"
+		MD5="WOWtsGLQjAqE/q0hRMCVZw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base113.avc"
+		FileSize="49941"
+		FileDate="13122006 0117"
+		MD5="ZUN1wQB9QxTRlgy7w0MkTA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base114.avc"
+		FileSize="49715"
+		FileDate="13122006 1938"
+		MD5="QMkxWiqwITmN0b8/avgORw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base115.avc"
+		FileSize="49572"
+		FileDate="13122006 2144"
+		MD5="TAV91e5XUmj3vEvKWNnUcQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base116.avc"
+		FileSize="50037"
+		FileDate="06122006 0324"
+		MD5="h7pcs8Bc/5PAaqzT7Dmj0g==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base117.avc"
+		FileSize="49687"
+		FileDate="30112006 0542"
+		MD5="6WTjzu2B3lHxTTT1z3jI9g==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base118.avc"
+		FileSize="49832"
+		FileDate="06122006 2258"
+		MD5="IzGGWLSqssqT1BDbWq9Q8g==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base119.avc"
+		FileSize="50449"
+		FileDate="01122006 1625"
+		MD5="ixbwrvQ+OoH/bCMEHOAiYQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base120.avc"
+		FileSize="50376"
+		FileDate="01122006 2337"
+		MD5="Re1fCY4M7bTRLXNttKDg4A==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base121.avc"
+		FileSize="41985"
+		FileDate="01122006 2337"
+		MD5="bA1UxLgnU056kYyKmIdNvQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base122.avc"
+		FileSize="50695"
+		FileDate="12122006 2309"
+		MD5="O4z5NMYh2jSRRX1J1uEEPw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="base999.avc"
+		FileSize="5197"
+		FileDate="23072006 0154"
+		MD5="y3m5Jr2SpB9CrwCSfHc3zw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="black.lst"
+		FileSize="155924"
+		FileDate="12122006 1103"
+		MD5="z7CbfIQqwinYYDjm0ZXXOg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="ca.avc"
+		FileSize="74924"
+		FileDate="08112006 1500"
+		MD5="Rsw0bJLSjoa9r9osjDNqtg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="daily-ex.avc"
+		FileSize="2917"
+		FileDate="14122006 1514"
+		MD5="FFJaGWyeCiFSgG+UoP92oQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="daily.avc"
+		FileSize="50762"
+		FileDate="14122006 1514"
+		MD5="g9ltu7EWqGdzL/quMiwB+w==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="eicar.avc"
+		FileSize="1588"
+		FileDate="17082006 1435"
+		MD5="kb+yg0ur7QSQaCd1j3G/nQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="engine.cfg"
+		FileSize="12023"
+		FileDate="30082005 1547"
+		MD5="cUEEWIvHiAdAisGNv3ivnw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="engine.dt"
+		FileSize="12023"
+		FileDate="30082005 1547"
+		MD5="cUEEWIvHiAdAisGNv3ivnw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="ext001.avc"
+		FileSize="48747"
+		FileDate="18112006 2336"
+		MD5="LYHAWs+txnr1+PuSBf8lzA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="ext002.avc"
+		FileSize="47823"
+		FileDate="13122006 2144"
+		MD5="rkbx4yXreFWiiowbsL46/g==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="ext003.avc"
+		FileSize="47751"
+		FileDate="30112006 0231"
+		MD5="d9ZJWJ9KiTLF3fFCISeosA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="ext004.avc"
+		FileSize="47658"
+		FileDate="05122006 0216"
+		MD5="IQOhnmGf9fjqQFsvceJxKA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="ext005.avc"
+		FileSize="49641"
+		FileDate="14122006 0151"
+		MD5="udoty7vuViXK7fPaY5zlQA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="ext006.avc"
+		FileSize="49571"
+		FileDate="16112006 0802"
+		MD5="Jxy4vojK+5lLYQs6SysIxg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="ext007.avc"
+		FileSize="43501"
+		FileDate="11122006 1849"
+		MD5="SGAGSrfnLYi4gvLuXzkMxg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="ext999.avc"
+		FileSize="13604"
+		FileDate="22092006 2210"
+		MD5="OSx3c2eG5i+OQZr6CvgzBg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="fa.avc"
+		FileSize="28400"
+		FileDate="11122006 1849"
+		MD5="L5fIB6JrVHW3KDEx0Xmrpg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="gen001.avc"
+		FileSize="29848"
+		FileDate="05082006 0112"
+		MD5="hrvvpXLElmqtP57AzO602Q==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="gen002.avc"
+		FileSize="38329"
+		FileDate="22092006 1540"
+		MD5="jrBr7553d4zetORsbtcrJw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="gen003.avc"
+		FileSize="31606"
+		FileDate="19072006 0009"
+		MD5="EfmdZGPKg3MvesquRwYLvg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="gen004.avc"
+		FileSize="40931"
+		FileDate="03082006 2327"
+		MD5="DyXD01vpbHt7CaOknDL6Eg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="gen005.avc"
+		FileSize="16907"
+		FileDate="11122006 1849"
+		MD5="TtBkQnxpH03rEsHuqvPX2A==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="gen999.avc"
+		FileSize="32020"
+		FileDate="03082006 2327"
+		MD5="DOVADZoZRcGZNo+vRzhFGw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="kavset.xml"
+		FileSize="61325"
+		FileDate="14122006 1515"
+		MD5="4Uu9+gFjVijnCgnWMpLTTw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="kernel.avc"
+		FileSize="12355"
+		FileDate="23072006 0154"
+		MD5="cmbWWatKaHH/AMotMcNZ1A==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="krn001.avc"
+		FileSize="66072"
+		FileDate="23072006 0154"
+		MD5="U7K2Rl+5BUSk1PcBh4PNlw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="krn002.avc"
+		FileSize="38483"
+		FileDate="23072006 0154"
+		MD5="vU2laQyHXL+WPxXKdj1ScA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="krn003.avc"
+		FileSize="8307"
+		FileDate="06102006 2012"
+		MD5="ylXpBP+M1TEJ2AJcMPGb3A==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="krn004.avc"
+		FileSize="12862"
+		FileDate="26102006 1930"
+		MD5="R/wnKTyzBzsrEzvYtd4UQg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="krndos.avc"
+		FileSize="5023"
+		FileDate="23072006 0154"
+		MD5="wyxAIp37eT2fpCQDI/cF9Q==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="krnengn.avc"
+		FileSize="29245"
+		FileDate="21072006 1825"
+		MD5="YkGOplYWwXzC3fEI7d2TjQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="krnexe.avc"
+		FileSize="31931"
+		FileDate="23072006 1948"
+		MD5="ZuRjYYfKCoeoSk+NJPHSkw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="krnexe32.avc"
+		FileSize="79023"
+		FileDate="01082006 1355"
+		MD5="tHZ5a5tLLwS6mfhpM+ntLg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="krnjava.avc"
+		FileSize="36733"
+		FileDate="23072006 0154"
+		MD5="+IZEqtObTBybgh7FeeDQ2g==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="krnmacro.avc"
+		FileSize="89962"
+		FileDate="24072006 1337"
+		MD5="7hwKjWURy9EtflmmWZax2g==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="krnunp.avc"
+		FileSize="110729"
+		FileDate="12122006 0251"
+		MD5="3YOm5IQMc+kro2akS/vMvw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="mail.avc"
+		FileSize="13350"
+		FileDate="05082006 0158"
+		MD5="+Yo1yoUBFiPR4QpvxPAOcQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="ocr.avc"
+		FileSize="11441"
+		FileDate="03082006 0130"
+		MD5="z46rsCoZLLPtVnn5jvgtsQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="smart.avc"
+		FileSize="6447"
+		FileDate="07112006 2247"
+		MD5="gZ9NPB+Jwe62jxC6fNRl8g==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="startup.ini"
+		FileSize="7551"
+		FileDate="01102006 0044"
+		MD5="3nRr+s/yTdE2HeXIxYi42Q==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp000.avc"
+		FileSize="16942"
+		FileDate="12122006 1748"
+		MD5="c7B2LWPENIIBSodFCb5fDg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp001.avc"
+		FileSize="46355"
+		FileDate="16102006 2010"
+		MD5="jFpiQaWFjDX79QUoTVBBAA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp002.avc"
+		FileSize="69890"
+		FileDate="11112006 2359"
+		MD5="vnKmkgYZ3x0BeJ/Nq3Z+Mw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp003.avc"
+		FileSize="52756"
+		FileDate="13122006 0117"
+		MD5="RhXiRARXgPVL6EzcpC/sGg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp004.avc"
+		FileSize="25997"
+		FileDate="22102006 1953"
+		MD5="sKeQaNCAqPnl9QLZrvNpFw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp005.avc"
+		FileSize="53388"
+		FileDate="24092006 1513"
+		MD5="VR+M1Z0Gjv+s2Lc3COA0/w==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp006.avc"
+		FileSize="55296"
+		FileDate="09122006 0417"
+		MD5="/dtN+GzYWwNm8Y6AYAwlUg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp007.avc"
+		FileSize="75720"
+		FileDate="24092006 2153"
+		MD5="yVaSNSedpaXUt5yL70T/hw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp008.avc"
+		FileSize="53108"
+		FileDate="24092006 1320"
+		MD5="1/e5GWpnCcMZk4QsmOw9Pg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp009.avc"
+		FileSize="48880"
+		FileDate="19112006 0243"
+		MD5="h5jvPoQU+7JNt2lw9goTYg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp010.avc"
+		FileSize="65750"
+		FileDate="10102006 0153"
+		MD5="qt8WlSJLuOScQ/qNsSBKhA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp011.avc"
+		FileSize="52926"
+		FileDate="28072006 0125"
+		MD5="dmV3iWc1z2krTEkV0jt5rg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp012.avc"
+		FileSize="33721"
+		FileDate="23092006 1220"
+		MD5="g3KKG9/5hD+sqcpIU1B5fA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp013.avc"
+		FileSize="48979"
+		FileDate="22092006 1541"
+		MD5="YRmBKrrcrGUmrtSlaPTS5A==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp014.avc"
+		FileSize="55201"
+		FileDate="03122006 0009"
+		MD5="8tG/7RoTVytyHAu5gQjlwA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp015.avc"
+		FileSize="58253"
+		FileDate="20092006 1555"
+		MD5="2FTjBYJSqlEGoGkO6j6elA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp016.avc"
+		FileSize="60480"
+		FileDate="28072006 0125"
+		MD5="Ay+8VSwamSVbQwJuGME3jA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp017.avc"
+		FileSize="31471"
+		FileDate="19092006 1830"
+		MD5="uf4lSh55XSciI02foRv8YA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp018.avc"
+		FileSize="42407"
+		FileDate="01092006 0057"
+		MD5="TzoIS9Qpsiv4gI5oI3WsWw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp019.avc"
+		FileSize="56601"
+		FileDate="16112006 2059"
+		MD5="p4upfc47y88/4TcwzpvqGw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp020.avc"
+		FileSize="33630"
+		FileDate="04122006 2304"
+		MD5="5b4lY6jbhHbYmmWSXuI1ag==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp021.avc"
+		FileSize="23739"
+		FileDate="30082006 2315"
+		MD5="wZqkK9wmspkox3t+dMlSCg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp022.avc"
+		FileSize="44887"
+		FileDate="30082006 2315"
+		MD5="nqQ7zUHocuk8hevqn0O0qA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp023.avc"
+		FileSize="67430"
+		FileDate="01112006 0009"
+		MD5="AQ5TYFWb6lxPJKFqZPs2vA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp024.avc"
+		FileSize="31188"
+		FileDate="29082006 2147"
+		MD5="Hkgyvh2omGgHhZdZnXEzkw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp025.avc"
+		FileSize="36539"
+		FileDate="15112006 1938"
+		MD5="RaBvnYaC2dJSQOWf9jKF4w==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp026.avc"
+		FileSize="38831"
+		FileDate="02122006 2050"
+		MD5="rJ74bd3COt+hIET6I2Spmw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp027.avc"
+		FileSize="47469"
+		FileDate="02122006 0244"
+		MD5="sBK3qYuW9FOGYaXRB1I2nA==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp028.avc"
+		FileSize="42297"
+		FileDate="26082006 0628"
+		MD5="LYrLjtjNC1P4GklZfoZopw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp029.avc"
+		FileSize="18982"
+		FileDate="24082006 0011"
+		MD5="gwu9/HsIiC5XLpcWWSDfOw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp030.avc"
+		FileSize="51655"
+		FileDate="14102006 0536"
+		MD5="vLO8mKuQ97CRruC1XO2h+Q==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp031.avc"
+		FileSize="40768"
+		FileDate="01122006 2337"
+		MD5="TaoKXDtspklvIY/s1ZFKrg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp032.avc"
+		FileSize="43721"
+		FileDate="12122006 1951"
+		MD5="ZuGOPA7CjwrT5szZhDMqAw==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp033.avc"
+		FileSize="46129"
+		FileDate="29102006 0247"
+		MD5="gkrQ+ccH9YH+vBwuKsSQjg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp034.avc"
+		FileSize="48030"
+		FileDate="14122006 0511"
+		MD5="GdJAheed2y4xBp2VCHX8Bg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp035.avc"
+		FileSize="50855"
+		FileDate="14122006 0511"
+		MD5="medLv0QO12bUGa+6Reqi1w==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="unp036.avc"
+		FileSize="6511"
+		FileDate="11122006 1849"
+		MD5="BO8+aTNIffzOggy4UGD0tQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/avc/i386"
+		LocalPath="%BaseFolder%\bases\av\avc\i386"
+		Filename="verdicts.ini"
+		FileSize="2539"
+		FileDate="09112006 1834"
+		MD5="pT5A4l/QE+0Xd+nBE2tuNQ==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/blst"
+		LocalPath="%BaseFolder%\bases\blst"
+		Filename="black.lst"
+		FileSize="155924"
+		FileDate="12122006 1103"
+		MD5="z7CbfIQqwinYYDjm0ZXXOg==" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		RelativeSrvPath="bases/blst"
+		LocalPath="%BaseFolder%\bases\blst"
+		Filename="blst-0607g.xml"
+		FileSize="930"
+		FileDate="12122006 1103"
+		MD5="uUryHuEJ4eJdYb2QwBOAZg==" />
+	<FileDescription
+		ComponentID="Updater"
+		UpdateType="base"
+		RelativeSrvPath="bases/upd"
+		LocalPath="%BaseFolder%\bases\upd"
+		Filename="aol-updcfg.xml"
+		FileSize="2036"
+		FileDate="05122006 1208"
+		MD5="Vgg7xNJj8LPK+Vp1F/adcA==" />
+	<FileDescription
+		ComponentID="Updater"
+		UpdateType="base"
+		RelativeSrvPath="bases/upd"
+		LocalPath="%BaseFolder%\bases\upd"
+		Filename="upd-0607g.xml"
+		FileSize="883"
+		FileDate="22112006 1339"
+		MD5="b3y7humpw2liDB8qZzCWdw==" />
+	<FileDescription
+		ComponentID="Updater"
+		UpdateType="base"
+		RelativeSrvPath="bases/upd"
+		LocalPath="%BaseFolder%\bases\upd"
+		Filename="updcfg.xml"
+		FileSize="8680"
+		FileDate="22112006 1338"
+		MD5="kGgJiUA1THwYIOV5fa7rPA==" />
+	<FileDescription
+		ComponentID="Updater"
+		UpdateType="base"
+		RelativeSrvPath="bases/upd"
+		LocalPath="%BaseFolder%\bases\upd"
+		Filename="xsp-updcfg.xml"
+		FileSize="10185"
+		FileDate="11062006 2140"
+		MD5="A9uhyvVA93W3kOanRg5/XQ==" />
+	<FileDescription
+		ComponentID="WM"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/klava/webav"
+		LocalPath="%BaseFolder%\bases\av\klava\webav"
+		Filename="webav.kfb"
+		FileSize="476656"
+		FileDate="14122006 0453"
+		MD5="h2pBUSiSChmRDlXBiJeShw==" />
+	<FileDescription
+		ComponentID="WM"
+		UpdateType="base"
+		RelativeSrvPath="bases/av/klava/webav"
+		LocalPath="%BaseFolder%\bases\av\klava\webav"
+		Filename="wm-0607g.xml"
+		FileSize="854"
+		FileDate="14122006 0453"
+		MD5="8HWz0K5TJBfeEWko9IQdBg==" />
+	<FileDescription
+		ComponentID="RT"
+		UpdateType="base"
+		RelativeSrvPath="bases/rt"
+		LocalPath="%BaseFolder%\bases\rt"
+		Filename="rt-0607g.xml"
+		FileSize="962"
+		FileDate="10112006 1233"
+		MD5="0Nm7qhTd5BGlm17ACp1Cdw==" />
+	<FileDescription
+		ComponentID="RT"
+		UpdateType="base"
+		LocalizationSet6="default"
+		RelativeSrvPath="bases/rt/en"
+		LocalPath="%BaseFolder%\bases\rt\en"
+		Filename="retr.dat"
+		FileSize="754"
+		FileDate="04102006 0743"
+		MD5="g4FEwGA1wr9f6U5BFSJq6g==" />
+	<FileDescription
+		ComponentID="RT"
+		UpdateType="base"
+		LocalizationSet6="ru"
+		RelativeSrvPath="bases/rt/ru"
+		LocalPath="%BaseFolder%\bases\rt\ru"
+		Filename="retr.dat"
+		FileSize="1364"
+		FileDate="01102006 1640"
+		MD5="ZFJoA5ur/uyBYfbyq6WKqg==" />
+	<FileDescription
+		ComponentID="RT"
+		UpdateType="base"
+		LocalizationSet6="de"
+		RelativeSrvPath="bases/rt/de"
+		LocalPath="%BaseFolder%\bases\rt\de"
+		Filename="retr.dat"
+		FileSize="809"
+		FileDate="01102006 1140"
+		MD5="Fu8fnG7IzKNy1j3Z7rPOEw==" />
+	<FileDescription
+		ComponentID="RT"
+		UpdateType="base"
+		LocalizationSet6="fr"
+		RelativeSrvPath="bases/rt/fr"
+		LocalPath="%BaseFolder%\bases\rt\fr"
+		Filename="retr.dat"
+		FileSize="903"
+		FileDate="10112006 1232"
+		MD5="ytfHPDy6pKh0NGE0QTAnWw==" />
+	<FileDescription
+		ComponentID="KAV2006EXEC"
+		UpdateType="base"
+		RelativeSrvPath="AutoPatches/kav6"
+		LocalPath="%BaseFolder%\AutoPatches\kav6"
+		Filename="baseinstaller.ppl"
+		FileSize="32881"
+		FileDate="03082006 1833"
+		MD5="EDIDtZoaYQKdSL3zKzMDhA==" />
+	<FileDescription
+		ComponentID="KAV2006EXEC"
+		UpdateType="base"
+		RelativeSrvPath="AutoPatches/kav6"
+		LocalPath="%BaseFolder%\AutoPatches\kav6"
+		Filename="bl.ppl"
+		FileSize="102502"
+		FileDate="19072006 1239"
+		MD5="CMRJvxSsbx4cenG4lKmjmw==" />
+	<FileDescription
+		ComponentID="KAV2006EXEC"
+		UpdateType="base"
+		RelativeSrvPath="AutoPatches/kav6"
+		LocalPath="%BaseFolder%\AutoPatches\kav6"
+		Filename="crpthlpr.ppl"
+		FileSize="45164"
+		FileDate="07112006 1632"
+		MD5="hsakaq10xoqkxPrG5IIDdg==" />
+	<FileDescription
+		ComponentID="KAV2006EXEC"
+		UpdateType="base"
+		RelativeSrvPath="AutoPatches/kav6"
+		LocalPath="%BaseFolder%\AutoPatches\kav6"
+		Filename="execinstaller.ppl"
+		FileSize="32881"
+		FileDate="03082006 1836"
+		MD5="dqoG/VbBzu1YQwKsgVbWEQ==" />
+	<FileDescription
+		ComponentID="KAV2006EXEC"
+		UpdateType="base"
+		RelativeSrvPath="AutoPatches/kav6"
+		LocalPath="%BaseFolder%\AutoPatches\kav6"
+		Filename="fssync.dll"
+		FileSize="36906"
+		FileDate="14122006 1544"
+		MD5="QHb4zQHt2DbhBUOrYMZVZQ==" />
+	<FileDescription
+		ComponentID="KAV2006EXEC"
+		UpdateType="base"
+		RelativeSrvPath="AutoPatches/kav6"
+		LocalPath="%BaseFolder%\AutoPatches\kav6"
+		Filename="httpanlz.ppl"
+		FileSize="203372"
+		FileDate="26052006 1338"
+		MD5="6R+Khf8oEbaPC2f5kIB+SA==" />
+	<FileDescription
+		ComponentID="KAV2006EXEC"
+		UpdateType="base"
+		RelativeSrvPath="AutoPatches/kav6"
+		LocalPath="%BaseFolder%\AutoPatches\kav6"
+		Filename="ichk2.ppl"
+		FileSize="32873"
+		FileDate="10042006 1629"
+		MD5="rEoQD7FvJOKsq5u0yi13QQ==" />
+	<FileDescription
+		ComponentID="KAV2006EXEC"
+		UpdateType="base"
+		RelativeSrvPath="AutoPatches/kav6"
+		LocalPath="%BaseFolder%\AutoPatches\kav6"
+		Filename="imapprotocoller.ppl"
+		FileSize="65651"
+		FileDate="07072006 1937"
+		MD5="QYT+DPs6zqnb64gMGIkuJw==" />
+	<FileDescription
+		ComponentID="KAV2006EXEC"
+		UpdateType="base"
+		RelativeSrvPath="AutoPatches/kav6"
+		LocalPath="%BaseFolder%\AutoPatches\kav6"
+		Filename="kav6-0607g.xml"
+		FileSize="4403"
+		FileDate="14122006 1544"
+		MD5="59SMluPTPY98G6+IMr680g==" />
+	<FileDescription
+		ComponentID="KAV2006EXEC"
+		UpdateType="base"
+		RelativeSrvPath="AutoPatches/kav6"
+		LocalPath="%BaseFolder%\AutoPatches\kav6"
+		Filename="klif.sys"
+		FileSize="162064"
+		FileDate="04082006 1500"
+		MD5="kiEJicwdBvmXuWKNjksYGQ==" />
+	<FileDescription
+		ComponentID="KAV2006EXEC"
+		UpdateType="base"
+		RelativeSrvPath="AutoPatches/kav6"
+		LocalPath="%BaseFolder%\AutoPatches\kav6"
+		Filename="lic60.ppl"
+		FileSize="163945"
+		FileDate="18052006 2021"
+		MD5="E+4ocUGkp2o6gd3P79DAMQ==" />
+	<FileDescription
+		ComponentID="KAV2006EXEC"
+		UpdateType="base"
+		RelativeSrvPath="AutoPatches/kav6"
+		LocalPath="%BaseFolder%\AutoPatches\kav6"
+		Filename="mdb.ppl"
+		FileSize="41063"
+		FileDate="25052006 1852"
+		MD5="zuZC/jUx2sPzfFMBEMcgEw==" />
+	<FileDescription
+		ComponentID="KAV2006EXEC"
+		UpdateType="base"
+		RelativeSrvPath="AutoPatches/kav6"
+		LocalPath="%BaseFolder%\AutoPatches\kav6"
+		Filename="oas.ppl"
+		FileSize="45159"
+		FileDate="10042006 1701"
+		MD5="S1/LVGU5whOb1cerauVykw==" />
+	<FileDescription
+		ComponentID="KAV2006EXEC"
+		UpdateType="base"
+		RelativeSrvPath="AutoPatches/kav6"
+		LocalPath="%BaseFolder%\AutoPatches\kav6"
+		Filename="pop3protocoller.ppl"
+		FileSize="41075"
+		FileDate="07072006 1937"
+		MD5="4UN2HxMduwtvwXKvh7G2oA==" />
+	<FileDescription
+		ComponentID="KAV2006EXEC"
+		UpdateType="base"
+		RelativeSrvPath="AutoPatches/kav6"
+		LocalPath="%BaseFolder%\AutoPatches\kav6"
+		Filename="prloader.dll"
+		FileSize="282732"
+		FileDate="07112006 1633"
+		MD5="Uw3FSbgbMnxksVlUnlHN2g==" />
+	<FileDescription
+		ComponentID="KAV2006EXEC"
+		UpdateType="base"
+		RelativeSrvPath="AutoPatches/kav6"
+		LocalPath="%BaseFolder%\AutoPatches\kav6"
+		Filename="trainsupport.ppl"
+		FileSize="41072"
+		FileDate="14122006 1544"
+		MD5="AONT4WTAerjQ46RuF02g+A==" />
+	<FileDescription
+		ComponentID="KAV2006EXEC"
+		UpdateType="base"
+		RelativeSrvPath="AutoPatches/kav6"
+		LocalPath="%BaseFolder%\AutoPatches\kav6"
+		Filename="updater2005.ppl"
+		FileSize="196719"
+		FileDate="19072006 1239"
+		MD5="3JTVA4vyjXFYV4aWJmLdgQ==" />
+</UpdateFiles>
+; 0XLSznpdI71fB300e7Uwj1ekytpGbS9bwceO4ar3t8zJnA0nh6GQRKbqh4нн

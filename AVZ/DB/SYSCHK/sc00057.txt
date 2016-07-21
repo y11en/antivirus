@@ -1,0 +1,5 @@
+// ***** AdvWare.StickyPops *****
+begin
+ AddEvAlarmByCLSID('D7CD08F0-D691-11D8-9669-0800200C9A66',AScriptName,'ConfuSearch.DLL');
+ AddEvAlarmByCLSID('53F76059-D692-11D8-9669-0800200C9A66',AScriptName,'ConfuSearch.DLL');
+end.

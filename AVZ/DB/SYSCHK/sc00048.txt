@@ -1,0 +1,4 @@
+// ***** AdvWare.IPInsight *****
+begin
+ AddEvAlarmByCLSID('000004CC-E4FF-4F2C-BC30-DBEF0B983BC9',AScriptName,'IPInsigh.DLL');
+end.

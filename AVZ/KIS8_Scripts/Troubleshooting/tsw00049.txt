@@ -1,0 +1,24 @@
+// $AVZ1559
+//$ Отключить режим ограниченного запуска программ
+// Функция поиска проблемы
+function Check : dword;
+var
+ Lines : TStrings;
+begin
+ Result := 0;
+ if RegKeyExists('HKCU','software\microsoft\windows\currentverson\policies\explorer\restrictrun') then begin
+  Lines := TStringList.Create;
+  RegKeyEnumVal('HKCU', 'software\microsoft\windows\currentverson\policies\explorer\restrictrun', Lines);
+  if Lines.Count > 0 then 
+   Result := 3;
+  Lines.Free;
+ end;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+begin
+ RegKeyDel('HKCU','software\microsoft\windows\currentverson\policies\explorer\restrictrun');
+ Result := 0;
+end;
+

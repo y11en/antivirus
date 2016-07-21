@@ -1,0 +1,20 @@
+<Include>
+  <ComponentRef Id="klim5.cat_X86" />
+  <ComponentRef Id="klim5.inf_X86" />
+  <ComponentRef Id="klim5_m.inf_X86" />
+  <ComponentRef Id="klim5.sys_X86" />
+  <ComponentRef Id="klim5.cat_X64" />
+  <ComponentRef Id="klim5.inf_X64" />
+  <ComponentRef Id="klim5_m.inf_X64" />
+  <ComponentRef Id="klim5.sys_X64" />
+  <ComponentRef Id="klim6.cat_X64" />
+  <ComponentRef Id="klim6.inf_X64" />
+  <ComponentRef Id="klim6.sys_X64" />
+  <ComponentRef Id="netcfg.exe" />
+  <ComponentRef Id="netcfg.dll" />
+  <ComponentRef Id="klim6.inf" />
+  <ComponentRef Id="klim6.sys" />
+  <ComponentRef Id="klim6.cat" />
+  <ComponentRef Id="netcfg.exe_X86" />
+  <ComponentRef Id="netcfg.dll_X86" />
+</Include>

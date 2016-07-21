@@ -1,0 +1,168 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "#include ""afxres.rc""  // Standard components\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Klix AppWizard\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "KlixApw\0"
+            VALUE "LegalCopyright", "Copyright © 2003\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "KlixApw.DLL\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Klix Apw\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PANE1 DIALOG DISCARDABLE  0, 0, 303, 197
+STYLE DS_CONTROL | WS_CHILD | WS_TABSTOP
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Base driver",IDC_STATIC,17,33,36,8
+    CONTROL         "KLICK",IDC_CLICK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    25,46,36,10
+    CONTROL         "KLIN",IDC_KLIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,
+                    59,32,10
+    LTEXT           "Plugin description",IDC_STATIC,17,12,56,8
+    EDITTEXT        IDC_PLUGIN_DESCRIPTION,79,10,216,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEMPLATE
+//
+
+NEWPROJ.INF             TEMPLATE DISCARDABLE    "template\\newproj.inf"
+CONFIRM.INF             TEMPLATE DISCARDABLE    "template\\confirm.inf"
+PRECOMP.H               TEMPLATE DISCARDABLE    "Template\\precomp.h"
+G_PRECOMP.H             TEMPLATE DISCARDABLE    "Template\\g_precomp.h"
+HANDLERS.H              TEMPLATE DISCARDABLE    "Template\\handlers.h"
+HANDLERS.C              TEMPLATE DISCARDABLE    "Template\\handlers.c"
+PROJ9X.DSP              TEMPLATE DISCARDABLE    "Template\\proj9x.dsp"
+PROJNT.DSP              TEMPLATE DISCARDABLE    "Template\\projnt.dsp"
+MAIN9X.C                TEMPLATE DISCARDABLE    "Template\\Main9x.c"
+MAINNT.C                TEMPLATE DISCARDABLE    "Template\\MainNT.c"
+POSTBUILDNT.CMD         TEMPLATE DISCARDABLE    "Template\\PostBuildNt.cmd"
+PREBUILD9X.CMD          TEMPLATE DISCARDABLE    "Template\\PreBuild9x.cmd"
+POSTBUILD9X.CMD         TEMPLATE DISCARDABLE    "Template\\PostBuild9x.cmd"
+ROOT9X.VRC              TEMPLATE DISCARDABLE    "Template\\root9x.VRC"
+ROOT9X.DEF              TEMPLATE DISCARDABLE    "Template\\root9x.DEF"
+install9x.reg           TEMPLATE DISCARDABLE    "Template\\install9x.reg"
+installnt.inf           TEMPLATE DISCARDABLE    "Template\\installnt.inf"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APPWIZARD           ICON    DISCARDABLE     "res\\appwizard.ico"
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+#include "afxres.rc"  // Standard components
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

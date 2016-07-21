@@ -1,0 +1,5 @@
+// ***** Spy.BetterInternet *****
+begin
+ AddEvAlarmByCLSID('000006B1-19B5-414A-849F-2A3C64AE6939',AScriptName,'bi.dll');
+ AddEvAlarmByCLSID('00000049-8F91-4D9C-9573-F016E7626484',AScriptName,'ceres.dll');
+end.

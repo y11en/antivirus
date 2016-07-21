@@ -1,0 +1,42 @@
+<UpdateFiles
+	UpdateDate="27012006 1825">
+
+	<FileDescription
+	 ApplicationID="Workstation"
+	 UpdateType="patch"
+	 LocalPath="c:/%Program%/%Relative%/Patches"
+	 RelativeSrvPath="AutoPatches/windows/"  
+	 Filename="kav5.0.205patch_winwks_upd.exe"
+	 ToAppVersion="5.0.205"
+	 UpdateObligation="optional"
+	 Comment="for KasperskyAV for Windows Workstations"
+	 FileSign="0XLSznpdI71fB300e7Uwj1qetOIlJ7QHy/46WXOUgSeW8RBd6q57XqlXCQ"
+	 FileSize="724627"
+	 FileDate="20062005 1739">
+		<FromAppVersion Version="5.0.200"/>
+		<FromAppVersion Version="5.0.201"/>
+		<FromAppVersion Version="5.0.202"/>
+		<FromAppVersion Version="5.0.203"/>
+		<FromAppVersion Version="5.0.204"/>
+		<OS Name="Windows"/>
+	</FileDescription>
+
+        <FileDescription
+	 ApplicationID="Workstation"
+	 UpdateType="patch"
+	 LocalPath="%Unknown%/Patches"
+	 RelativeSrvPath="AutoPatches/windows/"
+	 Filename="patch_all_wks_5.0.225[7]_to_228.exe"
+	 ToAppVersion="5.0.228"
+	 UpdateObligation="mandatory"
+	 Comment="Patch designed for versions 5.0.225, 5.0.227. Application Kaspersky Anti-Virus 5.0 for Windows Workstations will be restarted."
+	 FileSign="0XLSznpdI71fB300e7Uwj10hiiq98Vh+1YJ+rVtA1mI8UO/h8/cBQit2Rr"
+	 FileSize="612382"
+	 FileDate="26012006 1626">
+		<FromAppVersion Version="5.0.225"/>
+		<FromAppVersion Version="5.0.227"/>
+		<OS Name="Windows"/>
+		<RestartExecute/>
+	</FileDescription>
+        
+</UpdateFiles>

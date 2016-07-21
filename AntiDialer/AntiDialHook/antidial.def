@@ -1,0 +1,10 @@
+; antidial.def : Declares the module parameters.
+
+LIBRARY      "adialhk.dll"
+
+EXPORTS
+;		DllCanUnloadNow     PRIVATE
+;		DllGetClassObject   PRIVATE
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer	PRIVATE
+

@@ -1,0 +1,19 @@
+<UpdateFiles 
+  UpdateDate="01012006 0105">
+
+  <FileDescription
+         UpdateType="blst"
+         ServerFolder="/"
+         LocalPath="%BaseFolder%"
+         Filename="base.avc"
+         IssuePeriodDays="10000"
+         FileDate="01012006 0100" />
+
+  <FileDescription
+         UpdateType="REGISTRY"
+         Filename="base.pbv"
+         Body="S0xyZwEIAABLTHN3AACtrQEAAAD8AwAAAQAAAAEAABRqAQABACAAAcqt61S2tj/ePVajDPBRpndpQ3+6lJo5YAwo7LJaDTABAB4JCAAAAAEAAAl4dRLyDQo7OjEwcVI1NEVJTmdvNDZScHVRWTB5aC83c0lZSU5ENGpMdkpPa1FkaFpHYTAwdEExT3U4dml1Tm56MHF3MUcvc2VENEdWM3ZvelFIQ210MEdITVFqRnZpcnMlJQ=="  />
+
+</UpdateFiles>
+
+;:10KCG5bcjExlexI6pOSrXBm53/EIrdWSROu/SpBjY3eKTt73sUfxK5LHZHG34Ntm1zuArvUkiBULJ2AFy4iz6r7C%%

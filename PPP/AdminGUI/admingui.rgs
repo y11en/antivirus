@@ -1,0 +1,29 @@
+HKCR
+{
+	AVPADMINGUI.Controller.1 = s 'AVPADMINGUI'
+	{
+		CLSID = s '{2B6AC467-A90A-423d-B137-6D75DA41889D}'
+	}
+	AVPADMINGUI.Controller = s 'AVPADMINGUI'
+	{
+		CLSID = s '{2B6AC467-A90A-423d-B137-6D75DA41889D}'
+		CurVer = s 'AVPADMINGUI.Controller.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {2B6AC467-A90A-423d-B137-6D75DA41889D} = s 'AVPADMINGUI'
+		{
+			ProgID = s 'AVPADMINGUI.Controller.1'
+			VersionIndependentProgID = s 'AVPADMINGUI.Controller'
+			ForceRemove 'Programmable'
+			LocalServer32 = s 'Ph33rrrr Sephiroth'
+
+			'Implemented Categories'
+			{
+				{7DD95801-9882-11CF-9FA9-00AA006C42C4}
+			}
+			
+			'TypeLib' = s '{10713811-01EA-4d50-A453-098826188CDC}'
+		}
+	}
+}

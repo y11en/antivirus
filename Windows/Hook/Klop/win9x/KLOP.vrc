@@ -1,0 +1,22 @@
+CompanyName	=	"Kaspersky Labs" 
+FileDescription =	"KLOP"
+FileVersion	=	"1.0.0.6" 
+InternalName	=	"KLOP"
+LegalCopyright	= 	"Copyright \251 2006, KL"
+OriginalFilename= 	"KLOP.vxd"
+ProductName	=	"KLOP"
+ProductVersion	= 	"1.0.0.1"
+Translation	=	0x409, 0x4E4
+
+// Binary fields
+
+dwFileVersionMS		= 0x00010000 
+dwFileVersionLS		= 0x00000006  
+dwProductVersionMS  	= 0x00010000 
+dwProductVersionLS  	= 0x00000001
+dwFileFlagsMask		= 0
+dwFileFlags		= 0
+dwFileOS		= 0
+dwFileSubtype		= 0
+dwFileDateMS		= 0
+dwFileDateLS		= 0

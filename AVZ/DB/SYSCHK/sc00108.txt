@@ -1,0 +1,9 @@
+// ***** TrojanDownloader.Small *****
+begin
+ AddEvAlarmByCLSID('CC110316-5BE7-4AAA-AEDD-1A5B147BE34C','TrojanDownloader.Small.ft','DialerAutoLoader.dll');
+ AddEvAlarmByCLSID('2048B51E-8D74-4762-82CE-B48CF545EEEA','TrojanDownloader.Small.fy','cax.dll, sc.dll');
+ AddEvAlarmByCLSID('00000000-CDDC-0704-0B53-2C8830E9FAEC','TrojanDownloader.Small.lz','ieloader.dll');
+ AddEvAlarmByCLSID('12589FA1-C456-11CE-BF01-00AA1055595A','TrojanDownloader.Small.pv','whistlesilent.exe');
+ AddEvAlarmByCLSID('A0EB6CA1-B26C-475D-A342-9257C5420A0D','TrojanDownloader.Small.vd, AdWare.SearchFast','srchfstsigned.dll');
+ AddEvAlarmByCLSID('11212111-2121-1311-1141-115611111222',AScriptName,'update.exe');
+end.

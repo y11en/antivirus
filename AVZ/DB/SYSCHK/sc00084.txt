@@ -1,0 +1,4 @@
+// ***** Dialer.SexGate *****
+begin
+ AddEvAlarmByCLSID('F57D17AE-CE37-4BC8-B232-EA57747BE5E7',AScriptName,'EPlugin.ocx');
+end.

@@ -1,0 +1,108 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDD_MCOE_DIALOG_TRAINING_WZ0 "Мастер обучения Анти-Спама"
+    IDD_MCOE_DIALOG_TRAINING_WZ1 "Мастер обучения Анти-Спама"
+    IDD_MCOE_DIALOG_TRAINING_WZ3 "Мастер обучения Анти-Спама"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+	IDC_MCOE_MAINCAPTION "Мастер обучения Анти-Спама"
+    IDC_MCOE_STATIC_CAPTION_WZ0 "Добро пожаловать в Мастер обучения"
+    IDC_MCOE_STATIC_SUBCAPTION_WZ0 
+                            "Он поможет Анти-Спаму определить, какие письма в вашем почтовом ящике являются полезными, а какие - спамом. На основе обучения входящие письма будут проверяться на предмет спама."
+    IDC_MCOE_STATIC_PRESS_NEXT "Чтобы начать работу Мастера, нажмите на кнопку ""Далее""."
+    IDC_MCOE_STATIC_CAPTION_WZ1 "Полезная почта"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_MCOE_STATIC_SUBCAPTION_WZ1 
+                            "Выберите, пожалуйста, папки, содержащие полезную почту."
+    IDC_MCOE_CHECK_INCLUDE_SUBFOLDERS "Включая подпапки"
+    IDC_MCOE_BUTTON_CLEAR   "Удалить все"
+    IDC_MCOE_STATIC_CAPTION_WZ2 "Нежелательная почта"
+    IDC_MCOE_STATIC_SUBCAPTION_WZ2 
+                            "Выберите, пожалуйста, папки, содержащие спам."
+    IDC_MCOE_STATIC_CAPTION_WZ3 "Процесс обучения Анти-Спама"
+    IDC_MCOE_STATIC_SUBCAPTION_WZ3 
+                            "Пожалуйста, подождите, пока Мастер завершит обучение..."
+    IDC_MCOE_STATIC_NOW_PROCCESSING "Текущий объект:"
+    IDC_MCOE_STATIC_TIME_LEFT "Время окончания:"
+    IDC_MCOE_STATIC_FOLDERS "Папки:"
+    IDC_MCOE_STATIC_STATUS  "Статус:"
+END
+
+#endif    // Neutral (Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""resource.h""\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+

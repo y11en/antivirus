@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioProject ProjectType="Visual C++" Version="8,00" Name="png" ProjectGUID="{FDF37ABB-CD2E-4599-B55A-C4B96431CFA0}" SccProjectName="Perforce Project" SccLocalPath="..\..\.." SccProvider="MSSCCI:Perforce SCM" Keyword="MFCProj">
+	<Platforms>
+		<Platform Name="Win32"/>
+		<Platform Name="x64"/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="Debug|Win32" OutputDirectory="..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\temp_$(PlatformName)\$(ConfigurationName)\CommonFiles\COMMON\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="2" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TypeLibraryName="$(OutDir)\$(TargetName).tlb"/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="..\zlib" PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" RuntimeLibrary="3" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="1" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" Culture="2057"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" OutputFile="$(OutDir)\$(ProjectName).lib" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Debug|x64" OutputDirectory="..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\temp_$(PlatformName)\$(ConfigurationName)\CommonFiles\COMMON\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="2" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb"/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="..\zlib" PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE" RuntimeLibrary="3" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" Culture="2057"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" OutputFile="$(OutDir)\$(ProjectName).lib" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Release|Win32" OutputDirectory="..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\temp_$(PlatformName)\$(ConfigurationName)\CommonFiles\COMMON\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="2" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TypeLibraryName="$(OutDir)\$(TargetName).tlb"/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" AdditionalIncludeDirectories="..\zlib" PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" StringPooling="true" RuntimeLibrary="2" EnableFunctionLevelLinking="true" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" Culture="2057"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" OutputFile="$(OutDir)\$(ProjectName).lib" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Release|x64" OutputDirectory="..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\temp_$(PlatformName)\$(ConfigurationName)\CommonFiles\COMMON\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="2" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb"/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" AdditionalIncludeDirectories="..\zlib" PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE" StringPooling="true" RuntimeLibrary="2" EnableFunctionLevelLinking="true" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" Culture="2057"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" OutputFile="$(OutDir)\$(ProjectName).lib" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter Name="Source Files" Filter="cpp;c;cxx;rc;def;r;odl;hpj;bat;for;f90">
+			<File RelativePath="Png.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="Pngerror.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="pngget.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="Pngmem.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="Pngpread.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="Pngread.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="Pngrio.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="Pngrtran.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="Pngrutil.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="pngset.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="Pngtest.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="Pngtrans.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="Pngwio.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="Pngwrite.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="Pngwtran.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="Pngwutil.c">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter Name="Header Files" Filter="h;hpp;hxx;hm;inl;fi;fd">
+			<File RelativePath="png.h">
+			</File>
+			<File RelativePath="pngconf.h">
+			</File>
+		</Filter>
+		<Filter Name="Resource Files" Filter="ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe">
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

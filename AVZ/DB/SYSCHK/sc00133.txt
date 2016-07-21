@@ -1,0 +1,7 @@
+// ***** Spy.Ezula *****
+begin
+ AddEvAlarmByCLSID('BD419ACD-B41C-49D9-8ADF-CCA159052515',AScriptName,'bmeb.dll');
+ AddEvAlarmByCLSID('0AAF602E-72A1-45FE-BAB1-06971E07EAA2',AScriptName,'bmeb.dll');
+ AddEvAlarmByCLSID('C03351A4-6755-11D4-8A73-0050DA2EE1BE',AScriptName,'ezStD.dll');
+ AddEvAlarmByCLSID('423BD222-52BE-471A-BE01-75FCCEB3D48F','Spy.Ezula.aa','winenc32.dll');
+end.

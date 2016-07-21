@@ -1,0 +1,72 @@
+forward interface CryptoHelper;
+typedef CryptoHelper* hCRYPTOHELPER;
+
+
+forward struct cSerString;
+
+
+[
+  mnemonic(IID_CRYPTOHELPER)
+  id(65001)
+  c_type_name(hCRYPTOHELPER)
+]
+interface CryptoHelper {
+
+  // ------------------------------------
+    const tDWORD PSWD_DECRYPT = 1;
+    const tDWORD PSWD_SIMPLE = 2;
+    const tDWORD PSWD_RECRYPT = 4;
+    const tDWORD CRHLP_PERSISTENT_DATA_ID = 10000; // ѕол€, имеющие data_id начина€ с этого, доступны в любой версии продукта
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Interface version")
+      id(130)
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      comment_ex("Interface comment")
+      id(131)
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+    [ id(4096) ]  prop tSTRING pgPRODUCT_VERSION;
+
+
+  // ------------------------------------
+    method tERROR Encode(
+      tDWORD* result,
+      const tBYTE* pDecodedData,
+      tDWORD nDataSize,
+      tBYTE* pEncodedBuffer,
+      tDWORD nBufferSize
+    );
+    method tERROR Decode(
+      tDWORD* result,
+      const tBYTE* pEncodedData,
+      tDWORD nDataSize,
+      tBYTE* pDecodedBuffer,
+      tDWORD nBufferSize
+    );
+    method tERROR CryptPassword( cSerString* password, tDWORD flags );
+    method tERROR IsMSTrusted( const tWCHAR* file_name );
+    method tERROR StoreData(
+      tDWORD data_id,
+      tPTR p_data,
+      tDWORD size
+    );
+    method tERROR GetData(
+      tDWORD data_id,
+      tPTR p_data,
+      tDWORD* size
+    );
+    method tERROR GetOldData( // ¬озвращает значение пол€ дл€ старой версии продукта, если такое существует
+      tDWORD data_id,
+      tPTR p_data,
+      tDWORD* size
+    );
+
+}
+

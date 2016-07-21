@@ -1,0 +1,23 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@
+
+Name = deflate
+Plugin = $(Name).@PLUGIN_EXT@
+Metafile = @srcdir@/$(Name)_trans.@METAFILE_EXT@
+Targets = $(Plugin)
+
+Sources = \
+	adler32.c \
+	deflate.c \
+	deflate_t.c \
+	plugin_deflate.c \
+	trees.c \
+	zutil.c 
+
+# unix section
+
+VersionScript = @abs_top_srcdir@/unix/prague_plugin.ver
+
+include @abs_top_builddir@/@OS@/Rules

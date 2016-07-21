@@ -1,0 +1,31 @@
+var
+ AVZLogDir : string;
+begin
+ // Формирование имени рабочей папки
+ AVZLogDir := GetAVZDirectory + 'LOG\';
+ CreateDirectory(AVZLogDir);
+ // Настройка прогресса                                                 
+ GlobalProgressAddMax(3500);
+ // Антируткит
+ SearchRootkit(true, true);
+ GlobalProgressStep(500);
+ // **** Эвристические проверки (в AVZ проходят на стадии RUN) ***         
+ //Проверка SPI/LSP                                                                                                                                                
+ CheckSPI;
+ GlobalProgressStep(250);     
+ //Поиск кейлоггеров и внедренных DLL                                                                                                         
+ SearchKeylogger;     
+ GlobalProgressStep(250);     
+ //Выполнение эвристической проверки системы
+ ExecuteSysChkEV;
+ GlobalProgressStep(1000);     
+ //Выполнение эвристической проверки системы - ИПУ                     
+ ExecuteSysChkIPU;
+ GlobalProgressStep(500);     
+ // Эвритическая проверка - поиск проблем
+ ExecuteWizard('TSW', 1, -1, false); 
+ GlobalProgressStep(500); 
+ // ***** Выполнение исследования системы ****           
+ ExecuteSysCheckEX(AVZLogDir+'avptool_syscheck.htm', $FFFFFFFF, true, 1+2+16+32);
+ GlobalProgressStep(500);     
+end.

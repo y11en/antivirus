@@ -1,0 +1,19 @@
+// $AVZ1521
+//$ Internet Explorer - заблокирован доступ к настройкам браузера
+// Функция поиска проблемы
+function Check : dword;
+var
+ X : integer;
+begin
+ Result := 0;
+ X := RegKeyIntParamRead('HKCU', 'Software\Policies\Microsoft\Internet Explorer\Restrictions', 'NoBrowserOptions');
+ if X > 0 then
+  Result := 3;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+begin
+ RegKeyParamDel('HKCU','Software\Policies\Microsoft\Internet Explorer\Restrictions', 'NoBrowserOptions');
+ Result := 0;
+end;

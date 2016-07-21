@@ -1,0 +1,256 @@
+#////////////////////////////////////////////////////////////////////
+#//
+#//  ENGINE.MAK
+#//  AVP 3.0 Engine makefile
+#//  Project AVP
+#//  Alexey de Mont de Rique [graf@avp.ru], Kaspersky Labs. 1999
+#//  Copyright (c) Kaspersky Labs.
+#//
+#////////////////////////////////////////////////////////////////////
+!IF "$(OS)" == "Windows_NT"
+NULL=
+!ELSE 
+NULL=nul
+!ENDIF 
+
+OUTDIR_OBJ=\
+\!read.me\avp_engine_package.txt \
+\avp32\avpfpi.dsw \
+\avp32\tsigner.bat \
+\avp32\pagememorymanager\pagememorymanager.cpp \
+\avp32\pagememorymanager\dummyguard.h \
+\avp32\pagememorymanager\pagememorymanager.h \
+\avp32\pagememorymanager\winguard.cpp \
+\avp32\pagememorymanager\guardedpmm.h \
+\avp32\pagememorymanager\posixguard.h \
+\avp32\pagememorymanager\posixguard.cpp \
+\avp32\pagememorymanager\winguard.h \
+\avp32\bases\dlink3.h \
+\avp32\bases\fakename.h \
+\avp32\bases\method.h \
+\avp32\bases\pack3.h \
+\avp32\bases\retcode3.h \
+\avp32\bases\sizes.h \
+\avp32\bases\types.h \
+\avp32\bases\format\records.h \
+\avp32\bases\format\base.h \
+\avp32\bases\format\typedef.h \
+\avp32\basework\spcalloc.h \
+\avp32\basework\spcalloc.cpp \
+"\avp32\avp engine\avp engine.dsp"  \
+"\avp32\avp engine\engine.mak" \
+"\avp32\avp engine\engine.rtf" \
+"\avp32\avp engine\readme.txt" \
+\avp32\avp_iocl.h \
+\avp32\fn.h \
+\avp32\obj16.h \
+\avp32\basework\_printf.cpp \
+\avp32\basework\_printf.h \
+\avp32\basework\baseapi.cpp \
+\avp32\basework\basework.cpp \
+\avp32\basework\basework.dsp \
+\avp32\basework\basework.h \
+\avp32\basework\dupmemory.cpp \
+\avp32\basework\dupinstance.cpp \
+\avp32\basework\suballoc.cpp \
+\avp32\basework\clink.cpp \
+\avp32\basework\clink.h \
+\avp32\basework\imgsect.c \
+\avp32\basework\stdafx.cpp \
+\avp32\basework\stdafx.h \
+\avp32\basework\workarea.h \
+\avp32\avpbase\avpbase.cpp \
+\avp32\avpbase\avpbase.def \
+\avp32\avpbase\avpbase.dsp \
+\avp32\avpbase\avpbase.h \
+\avp32\avpbase\ntfsstream.h \
+\avp32\avpbase\avpbase.rc \
+\avp32\avpbase\resource.h \
+\avp32\avpbase\stdafx.cpp \
+\avp32\avpbase\stdafx.h \
+\avp32\avpbase\res\avpbase.rc2 \
+\avp32\memhlp\cruntime.h \
+\avp32\memhlp\memcpy.c \
+\avp32\memhlp\memhlp.dsp \
+\avp32\memhlp\memset.c \
+\avp32\memhlp\strcat.c \
+\avp32\memhlp\strcmp.c \
+\avp32\memhlp\strlen.c \
+\avp32\memhlp\strncpy.c \
+\avp32\dbcleanup\dbcleanup.dsp \
+\avp32\dbcleanup\dbcleanup.cpp \
+\avp32\dbcleanup\dbcleanup.h \
+\avp32\dbcleanup\DirIterators9x.cpp \
+\avp32\dbcleanup\DirIteratorsNT.cpp \
+\avp32\dbcleanup\dbcleanupWin32 \
+\avp32\dbcleanup\dbcleanupWin9x \
+\avp32\dbcleanup\dbcleanupWinNT \
+\avp32\debug\avp_io32.dll \
+\avp32\debug\avp_iont.dll \
+\avp32\debug\avpfpi.dll \
+\avp32\debug\avpfpi.pdb \
+\avp32\debug\fm4av.dll \
+\avp32\debug\fpirun.exe \
+\avp32\release\release.txt \
+\avp32\release\avp_io.vxd \
+\avp32\release\avp_io32.dll \
+\avp32\release\avp_iont.dll \
+\avp32\release\avpfpi.dll \
+\avp32\release\avpfpi.map \
+"\avp32\avp95\avp95 vxd.dsp" \
+\avp32\avp95\avp95.cpp \
+\avp32\avp95\avp95.def \
+\avp32\avp95\avp95.h \
+\avp32\avp95\avp95.rc \
+\avp32\avp95\avp95.rc2 \
+\avp32\avp95\avp95api.cpp \
+\avp32\avp95\avp95api.h \
+\avp32\avp95\avp95ctl.h \
+\avp32\avp95\avpfpi.cpp \
+\avp32\avp95\avpsign.cpp \
+\avp32\avp95\file_io.c \
+\avp32\avp95\file_io.h \
+\avp32\avp95\resource.h \
+\avp32\avp95\stdafx.cpp \
+\avp32\avp95\stdafx.h \
+\avp32\avp95\vxdio.cpp \
+\avp32\fsavp\fsavp.cpp \
+\avp32\fsavp\fsavp.h \
+\avp32\fsavp\fsavp.ini \
+\avp32\fsavp\fsavp.rc \
+\avp32\fsavp\fsavp.rc2 \
+\avp32\fsavp\fsavpdev.cpp \
+\avp32\fsavp\fsavpdev.h \
+\avp32\fsavp\fsbase.cpp \
+\avp32\fsavp\fsbase.h \
+\avp32\fsavp\function.h \
+\avp32\fsavp\gksupp.cpp \
+\avp32\fsavp\messages.ini \
+\avp32\fsavp\readme.txt \
+\avp32\fsavp\resource.h \
+\avp32\fsavp\sysio.cpp \
+\avp32\fsavp\sysio.h \
+\avp32\fsavp\syssign.cpp \
+\avp32\fsavp\msglog.h \
+\avp32\fpi\fpiapi.h \
+\avp32\fpi\fpi_ids.h \
+\avp32\fpi\avp_cs.h \
+"\avp32\avp_io\avp_io vxd.dsp" \
+\avp32\avp_io\avp_io.cpp \
+\avp32\avp_io\avp_io.def \
+\avp32\avp_io\avp_io.h \
+\avp32\avp_io\avp_io.rc \
+\avp32\avp_io\avp_io.rc2 \
+\avp32\avp_io\avp_io32.c \
+\avp32\avp_io\avp_io32.def \
+\avp32\avp_io\avp_io32.dsp \
+\avp32\avp_io\avp_io32.h \
+\avp32\avp_io\avp_io32.rc \
+\avp32\avp_io\avp_io32.rc2 \
+\avp32\avp_io\avp_iont.c \
+\avp32\avp_io\avp_iont.def \
+\avp32\avp_io\avp_iont.dsp \
+\avp32\avp_io\avp_iont.rc \
+\avp32\avp_io\avp_iont.rc2 \
+\avp32\avp_io\c_vxdio.cpp \
+\avp32\avp_io\ntllio.c \
+\avp32\avp_io\resource.h \
+\avp32\avpfpi\avpfpi.cpp \
+\avp32\avpfpi\avpfpi.dsp \
+\avp32\avpfpi\avpfpi.h \
+\avp32\avpfpi\avpfpi.rc \
+\avp32\avpfpi\avp-fpi-dll-spec.doc \
+\avp32\avpfpi\readme.txt \
+\avp32\avpfpi\stdafx.cpp \
+\avp32\avpfpi\stdafx.h \
+\avp32\scanapi\avp_dll.h \
+\avp32\scanapi\avp_msg.h \
+\avp32\scanapi\avpioctl.h \
+\avp32\scanapi\avpmem.h \
+\avp32\scanapi\baseapi.h \
+\avp32\scanapi\retflags.h \
+\avp32\scanapi\scanobj.h \
+\avp32\scanapi\types.h \
+\avp32\scanapi\defines.h \
+\avp32\iocache\fileio.cpp \
+\avp32\iocache\tfiledata.h \
+\commonfiles\byteorder.h \
+\commonfiles\_avpio.h \
+\commonfiles\serialize\kldtser.h \
+\commonfiles\serialize\kldtdefs.h \
+\commonfiles\avp_data.h \
+\commonfiles\property\property.h \
+\commonfiles\swmanager\swm.h \
+\commonfiles\avpcomid.h \
+\commonfiles\avpvndid.h \
+\commonfiles\dupmem\dupmem.h \
+\commonfiles\dupmem\dupmem.cpp \
+\commonfiles\release\chkesp.obj \
+\out\release\kldtser.lib \
+\out\release\property.lib \
+\out\release\sign.lib \
+\out\release\swm.lib \
+\commonfiles\releasedll\fsdrvlib.lib \
+\out\debug\kldtser.lib \
+\out\debug\property.lib \
+\out\debug\sign.lib \
+\out\debug\swm.lib \
+\commonfiles\debugdll\fsdrvlib.lib \
+\commonfiles\sign\a_chfile.c \
+\commonfiles\sign\c_mem.c \
+\commonfiles\sign\c_urand.c \
+\commonfiles\sign\ct_defs.h \
+\commonfiles\sign\ct_fio.h \
+\commonfiles\sign\ct_funcs.h \
+\commonfiles\sign\ct_strct.h \
+\commonfiles\sign\ct_sup_d.h \
+\commonfiles\sign\ct_supp.h \
+\commonfiles\sign\ct_typs.h \
+\commonfiles\sign\sign.h \
+\commonfiles\sign\sign_lib.h \
+\commonfiles\stuff\_carray.cpp \
+\commonfiles\stuff\_carray.h \
+\commonfiles\stuff\calcsum.c \
+\commonfiles\stuff\calcsum.h \
+\commonfiles\stuff\sq_s.cpp \
+\commonfiles\stuff\sq_u.cpp \
+\commonfiles\stuff\stdafx.h \
+\commonfiles\stuff\loadvxd.c \
+\commonfiles\stuff\dprintf.h \
+\commonfiles\stuff\dprintf.c \
+\commonfiles\avpport.h \
+\commonfiles\version\ver_avp.h \
+\commonfiles\version\ver_avpw.h \
+\commonfiles\version\ver_df.h \
+\commonfiles\version\ver_itoa.h \
+\commonfiles\version\ver_kl.h \
+\commonfiles\version\ver_kl.ver \
+\commonfiles\fileformat\coff.h \
+\windows\hook\hook\avpgcom.h \
+\windows\hook\hook\fsdrvlib.h \
+
+TSP=\
+..\release\tsp.sys \
+..\release\tsp.vxd \
+
+
+#//////////////////////////////////////////////////
+#// Main target
+#//
+
+TARGET=..\Release\avp_e.zip
+
+$(TARGET): $(TSP) $(OUTDIR_OBJ) 
+	!WZZIP  -uP -ybc $(TARGET) $**
+
+COPY=copy
+
+..\release\tsp.sys: ..\..\Windows\hook\Release\tsp.sys 
+	$(COPY) $** $@ 
+
+..\release\tsp.vxd: ..\..\Windows\hook\Release9x\tsp.vxd 
+	$(COPY) $** $@ 
+
+CLEAN :
+	-@erase $(TARGET)
+

@@ -1,0 +1,18 @@
+// $AVZ1526
+//$ Задано сообщение, выводимое в ходе загрузки
+// Функция поиска проблемы
+function Check : dword;
+begin
+ Result := 0;
+ if not(isNt) then exit;
+ if Trim(RegKeyStrParamRead('HKLM', 'SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon', 'LegalNoticeText'))<>'' then 
+  Result := 2;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+begin
+ RegKeyParamDel('HKLM', 'SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon', 'LegalNoticeCaption');
+ RegKeyParamDel('HKLM', 'SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon', 'LegalNoticeText');
+ Result := 0;
+end;

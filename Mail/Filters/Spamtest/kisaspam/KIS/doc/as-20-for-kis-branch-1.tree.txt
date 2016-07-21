@@ -1,0 +1,664 @@
+Folder PATH listing for volume New Volume
+Volume serial number is 002D0073 06AA:B0BF
+F:.
+|   as-20-for-kis-branch-1.tree.txt
+|   
++---client-filter
+|   +---common
+|   |       LogFile.cpp
+|   |       
+|   +---include
+|   |       apversion.h
+|   |       Critsect.h
+|   |       LogFile.h
+|   |       Progress.h
+|   |       progress.rh
+|   |       SpamFilter.h
+|   |       SpamTestCFG.h
+|   |       
+|   +---librules
+|   |       actions.cpp
+|   |       actions.h
+|   |       commhdr.h
+|   |       envelope.cpp
+|   |       envelope.h
+|   |       ExpatUtilsExt.cpp
+|   |       ExpatUtilsExt.h
+|   |       interpreter.cpp
+|   |       interpreter.h
+|   |       librules.dsp
+|   |       librules.dsw
+|   |       librules.link.h
+|   |       librules_kis.dsp
+|   |       librules_kis.dsw
+|   |       logger.cpp
+|   |       MainInterpreter.cpp
+|   |       MainInterpreter.h
+|   |       parse.cpp
+|   |       parse.h
+|   |       profile.cpp
+|   |       profile.h
+|   |       ProfileCompile.cpp
+|   |       ProfileCompile.h
+|   |       profile_db.cpp
+|   |       profile_db.h
+|   |       profile_db_impl.h
+|   |       readme.txt
+|   |       samples.cpp
+|   |       samples.h
+|   |       XmlFilesPool.cpp
+|   |       XmlFilesPool.h
+|   |       
+|   +---PluginOLOE
+|   |       idStr.h
+|   |       
+|   \---SpamTest
+|           CFilterDll.h
+|           CSigDB.h
+|           SpamTest.h
+|           
++---Filtration
+|   +---API
+|   |       categories.h
+|   |       cfdata.h
+|   |       filter.h
+|   |       message.h
+|   |       relevant.h
+|   |       
+|   +---letters
+|   |       letters.h
+|   |       
+|   +---patterns
+|   |       clingproc.h
+|   |       
+|   +---signatures
+|   |       sigdb.h
+|   |       
+|   \---stopdict
+|           stopdict.h
+|           
++---gnu
+|   |   _db1.h
+|   |   _expat.h
+|   |   
+|   +---db-1.85
+|   |   \---include
+|   |           cdefs.h
+|   |           db.h
+|   |           
+|   +---expat-1.95.2
+|   |   \---lib
+|   |           expat.h
+|   |           
+|   +---jpeg
+|   |       jcapimin.c
+|   |       jcapistd.c
+|   |       jccoefct.c
+|   |       jccolor.c
+|   |       jcdctmgr.c
+|   |       jchuff.c
+|   |       jchuff.h
+|   |       jcinit.c
+|   |       jcmainct.c
+|   |       jcmarker.c
+|   |       jcmaster.c
+|   |       jcomapi.c
+|   |       jconfig.h
+|   |       jcparam.c
+|   |       jcphuff.c
+|   |       jcprepct.c
+|   |       jcsample.c
+|   |       jctrans.c
+|   |       jdapimin.c
+|   |       jdapistd.c
+|   |       jdatadst.c
+|   |       jdatasrc.c
+|   |       jdcoefct.c
+|   |       jdcolor.c
+|   |       jdct.h
+|   |       jddctmgr.c
+|   |       jdhuff.c
+|   |       jdhuff.h
+|   |       jdinput.c
+|   |       jdmainct.c
+|   |       jdmarker.c
+|   |       jdmaster.c
+|   |       jdmerge.c
+|   |       jdphuff.c
+|   |       jdpostct.c
+|   |       jdsample.c
+|   |       jdtrans.c
+|   |       jerror.c
+|   |       jerror.h
+|   |       jfdctflt.c
+|   |       jfdctfst.c
+|   |       jfdctint.c
+|   |       jidctflt.c
+|   |       jidctfst.c
+|   |       jidctint.c
+|   |       jidctred.c
+|   |       jinclude.h
+|   |       jmemansi.c
+|   |       jmemmgr.c
+|   |       jmemsys.h
+|   |       jmorecfg.h
+|   |       jpeg.dsp
+|   |       jpegint.h
+|   |       jpeglib.h
+|   |       jquant1.c
+|   |       jquant2.c
+|   |       jutils.c
+|   |       jversion.h
+|   |       libjpeg.dsp
+|   |       libjpeg.dsw
+|   |       libjpeg_kis.dsp
+|   |       README
+|   |       
+|   +---libnet
+|   |       cdefs.h
+|   |       nameser.h
+|   |       nameser_compat.h
+|   |       
+|   +---md5a
+|   |       md5a.c
+|   |       md5a.dsp
+|   |       md5a.h
+|   |       md5a_kis.dsp
+|   |       
+|   \---regex
+|       |   cclass.h
+|       |   cname.h
+|       |   COPYRIGHT
+|       |   engine.c
+|       |   Makefile.inc
+|       |   regcomp.c
+|       |   regerror.c
+|       |   regex.3
+|       |   regex.dsp
+|       |   regex.dsw
+|       |   regex.h
+|       |   regex2.h
+|       |   regexec.c
+|       |   regexp.h
+|       |   regex_kis.dsp
+|       |   regfree.c
+|       |   re_format.7
+|       |   utils.h
+|       |   WHATSNEW
+|       |   
+|       \---sys
+|               cdefs.h
+|               
++---kis
+|       common.h
+|       DataBase.cpp
+|       DataBase.h
+|       kisaspam.dsp
+|       kisaspam.dsw
+|       KIS_FACE.H
+|       Message_Info.h
+|       readme.txt
+|       SpamFilter.cpp
+|       SpamFilter.h
+|       
++---lib
+|   \---pcommon
+|           convert.cpp
+|           Dos2Uni.cpp
+|           getopt.c
+|           Iso2Uni.cpp
+|           Koi2Uni.cpp
+|           koi8_ctype.c
+|           Lat12Uni.cpp
+|           Lat12Uni_cyr.cpp
+|           libmimeparser_kis.dsp
+|           Mac2Uni.cpp
+|           Makefile.gmk
+|           Makefile.mak
+|           nix_types.c
+|           pcommon.dsp
+|           pcommon.link.gmk
+|           pcommon.mak
+|           pcommon_kis.dsp
+|           readme
+|           StdPch.h
+|           strptime.c
+|           Win2Uni.cpp
+|           
++---libmorph
+|       LexID.h
+|       Morph.h
+|       
++---MIMEParser
+|       ChangeLog
+|       libmimeparser.dsp
+|       libmimeparser_kis.dsp
+|       MIMEParser.cpp
+|       MIMEParser.hpp
+|       MIMEParser.link.h
+|       test_mime.dsp
+|       test_parser.cpp
+|       
++---smtp-filter
+|   +---adc
+|   |       adc.h
+|   |       
+|   +---common
+|   |       config.h
+|   |       ip_extractor.h
+|   |       list_db.h
+|   |       logger.h
+|   |       merge.h
+|   |       
+|   +---contrib
+|   |   \---libpatricia
+|   |           patricia.h
+|   |           
+|   +---filter-config
+|   |   \---xmlfiles
+|   |           keywords.h
+|   |           XMLFiles.h
+|   |           
+|   +---libgsg2
+|   |       binary_handler.c
+|   |       binary_handler1.c
+|   |       file2gsg.c
+|   |       file2gsg.dsp
+|   |       gsg.h
+|   |       image-gif.c
+|   |       image-jpeg.c
+|   |       image.c
+|   |       libgsg2.dsp
+|   |       libgsg2.dsw
+|   |       libgsg2.link.h
+|   |       libgsg2_kis.dsp
+|   |       Makefile
+|   |       
+|   +---libsigs
+|   |       checksigdb.c
+|   |       checksigdb.dsp
+|   |       dumpsigdb.c
+|   |       dumpsigdb.dsp
+|   |       findsig.c
+|   |       findsig.dsp
+|   |       libsigs.c
+|   |       libsigs.dsp
+|   |       libsigs.dsw
+|   |       libsigs.h
+|   |       libsigs.link.h
+|   |       libsigs_kis.dsp
+|   |       Makefile
+|   |       mksigdb.c
+|   |       mksigdb.dsp
+|   |       testsigdb.c
+|   |       testsigdb.dsp
+|   |       updatesigdb.c
+|   |       updatesigdb.dsp
+|   |       
+|   +---paths
+|   |       paths.h
+|   |       
+|   \---ungif
+|           dev2gif.c
+|           dgif_lib.c
+|           egif_lib.c
+|           getarg.c
+|           getarg.h
+|           gif2rgb.c
+|           gifalloc.c
+|           gif_err.c
+|           gif_font.c
+|           gif_lib.h
+|           gif_lib_private.h
+|           Makefile
+|           qprintf.c
+|           quantize.c
+|           ungif.dsp
+|           ungif.dsw
+|           ungif.link.h
+|           ungif_kis.dsp
+|           
++---STL
+|   +---lib
+|   |       stlport_vc6_debug_staticx.lib
+|   |       stlport_vc6_staticx.lib
+|   |       vssver.scc
+|   |       
+|   \---stlport
+|       |   algorithm
+|       |   bitset
+|       |   cassert
+|       |   cctype
+|       |   cerrno
+|       |   cfloat
+|       |   climits
+|       |   clocale
+|       |   cmath
+|       |   complex
+|       |   csetjmp
+|       |   csignal
+|       |   cstdarg
+|       |   cstddef
+|       |   cstdio
+|       |   cstdlib
+|       |   cstring
+|       |   ctime
+|       |   ctype.h
+|       |   cwchar
+|       |   cwctype
+|       |   deque
+|       |   exception
+|       |   exception.h
+|       |   export
+|       |   export.sun
+|       |   fstream
+|       |   fstream.h
+|       |   functional
+|       |   hash_map
+|       |   hash_set
+|       |   iomanip
+|       |   iomanip.h
+|       |   ios
+|       |   ios.h
+|       |   iosfwd
+|       |   iostream
+|       |   iostream.h
+|       |   istream
+|       |   istream.h
+|       |   iterator
+|       |   limits
+|       |   list
+|       |   locale
+|       |   locale.h
+|       |   map
+|       |   math.h
+|       |   mem.h
+|       |   memory
+|       |   mmemory.h
+|       |   new
+|       |   new.h
+|       |   numeric
+|       |   ostream
+|       |   ostream.h
+|       |   pthread.h
+|       |   pthread_alloc
+|       |   queue
+|       |   rlocks.h
+|       |   rope
+|       |   set
+|       |   setjmp.h
+|       |   signal.h
+|       |   slist
+|       |   sstream
+|       |   stack
+|       |   stdarg.h
+|       |   stddef.h
+|       |   stdexcept
+|       |   stdio.h
+|       |   stdiostream.h
+|       |   stdio_streambuf
+|       |   stdlib.h
+|       |   stl_user_config.h
+|       |   streambuf
+|       |   streambuf.h
+|       |   string
+|       |   string.h
+|       |   strstream
+|       |   strstream.h
+|       |   time.h
+|       |   typeinfo
+|       |   typeinfo.h
+|       |   utility
+|       |   valarray
+|       |   vector
+|       |   vssver.scc
+|       |   wchar.h
+|       |   wctype.h
+|       |   
+|       +---config
+|       |   |   stlcomp.h
+|       |   |   stl_apcc.h
+|       |   |   stl_apple.h
+|       |   |   stl_as400.h
+|       |   |   stl_bc.h
+|       |   |   stl_como.h
+|       |   |   stl_confix.h
+|       |   |   stl_cray.h
+|       |   |   stl_dec.h
+|       |   |   stl_dec_vms.h
+|       |   |   stl_dm.h
+|       |   |   stl_fujitsu.h
+|       |   |   stl_gcc.h
+|       |   |   stl_hpacc.h
+|       |   |   stl_ibm.h
+|       |   |   stl_icc.h
+|       |   |   stl_intel.h
+|       |   |   stl_kai.h
+|       |   |   stl_mlc.h
+|       |   |   stl_msvc.h
+|       |   |   stl_mwerks.h
+|       |   |   stl_mycomp.h
+|       |   |   stl_sco.h
+|       |   |   stl_select_lib.h
+|       |   |   stl_sgi.h
+|       |   |   stl_solaris.h
+|       |   |   stl_sunpro.h
+|       |   |   stl_symantec.h
+|       |   |   stl_watcom.h
+|       |   |   stl_wince.h
+|       |   |   vc_select_lib.h
+|       |   |   vssver.scc
+|       |   |   _epilog.h
+|       |   |   _msvc_warnings_off.h
+|       |   |   _prolog.h
+|       |   |   
+|       |   \---new_compiler
+|       |           configure
+|       |           configure.in
+|       |           README
+|       |           stlconf.h.in
+|       |           unconfigure
+|       |           vssver.scc
+|       |           
+|       +---stl
+|       |   |   char_traits.h
+|       |   |   concept_checks.h
+|       |   |   c_locale.h
+|       |   |   msl_string.h
+|       |   |   type_traits.h
+|       |   |   vssver.scc
+|       |   |   _abbrevs.h
+|       |   |   _algo.c
+|       |   |   _algo.h
+|       |   |   _algobase.c
+|       |   |   _algobase.h
+|       |   |   _alloc.c
+|       |   |   _alloc.h
+|       |   |   _alloc_old.h
+|       |   |   _auto_ptr.h
+|       |   |   _bitset.c
+|       |   |   _bitset.h
+|       |   |   _bvector.h
+|       |   |   _check_config.h
+|       |   |   _cmath.h
+|       |   |   _codecvt.h
+|       |   |   _collate.h
+|       |   |   _complex.c
+|       |   |   _complex.h
+|       |   |   _config.h
+|       |   |   _config_compat.h
+|       |   |   _config_compat_post.h
+|       |   |   _construct.h
+|       |   |   _ctraits_fns.h
+|       |   |   _ctype.h
+|       |   |   _cwchar.h
+|       |   |   _deque.c
+|       |   |   _deque.h
+|       |   |   _epilog.h
+|       |   |   _exception.h
+|       |   |   _fstream.c
+|       |   |   _fstream.h
+|       |   |   _function.h
+|       |   |   _function_adaptors.h
+|       |   |   _function_base.h
+|       |   |   _hashtable.c
+|       |   |   _hashtable.h
+|       |   |   _hash_fun.h
+|       |   |   _hash_map.h
+|       |   |   _hash_set.h
+|       |   |   _heap.c
+|       |   |   _heap.h
+|       |   |   _ios.c
+|       |   |   _ios.h
+|       |   |   _iosfwd.h
+|       |   |   _ios_base.h
+|       |   |   _istream.c
+|       |   |   _istream.h
+|       |   |   _istreambuf_iterator.h
+|       |   |   _iterator.h
+|       |   |   _iterator_base.h
+|       |   |   _iterator_old.h
+|       |   |   _limits.c
+|       |   |   _limits.h
+|       |   |   _list.c
+|       |   |   _list.h
+|       |   |   _locale.h
+|       |   |   _map.h
+|       |   |   _messages_facets.h
+|       |   |   _monetary.c
+|       |   |   _monetary.h
+|       |   |   _new.h
+|       |   |   _null_stream.h
+|       |   |   _numeric.c
+|       |   |   _numeric.h
+|       |   |   _numpunct.h
+|       |   |   _num_get.c
+|       |   |   _num_get.h
+|       |   |   _num_put.c
+|       |   |   _num_put.h
+|       |   |   _ostream.c
+|       |   |   _ostream.h
+|       |   |   _ostreambuf_iterator.h
+|       |   |   _pair.h
+|       |   |   _prolog.h
+|       |   |   _pthread_alloc.c
+|       |   |   _pthread_alloc.h
+|       |   |   _ptrs_specialize.h
+|       |   |   _queue.h
+|       |   |   _range_errors.h
+|       |   |   _raw_storage_iter.h
+|       |   |   _relops.h
+|       |   |   _relops_cont.h
+|       |   |   _relops_hash_cont.h
+|       |   |   _relops_template.h
+|       |   |   _rope.c
+|       |   |   _rope.h
+|       |   |   _set.h
+|       |   |   _site_config.h
+|       |   |   _slist.c
+|       |   |   _slist.h
+|       |   |   _slist_base.c
+|       |   |   _slist_base.h
+|       |   |   _sparc_atomic.h
+|       |   |   _sstream.c
+|       |   |   _sstream.h
+|       |   |   _stack.h
+|       |   |   _stdio_file.h
+|       |   |   _streambuf.c
+|       |   |   _streambuf.h
+|       |   |   _streambuf_iterator.h
+|       |   |   _stream_iterator.h
+|       |   |   _string.c
+|       |   |   _string.h
+|       |   |   _string_fwd.c
+|       |   |   _string_fwd.h
+|       |   |   _string_hash.h
+|       |   |   _string_io.c
+|       |   |   _string_io.h
+|       |   |   _strstream.h
+|       |   |   _tempbuf.c
+|       |   |   _tempbuf.h
+|       |   |   _threads.c
+|       |   |   _threads.h
+|       |   |   _time_facets.c
+|       |   |   _time_facets.h
+|       |   |   _tree.c
+|       |   |   _tree.h
+|       |   |   _uninitialized.h
+|       |   |   _valarray.c
+|       |   |   _valarray.h
+|       |   |   _vector.c
+|       |   |   _vector.h
+|       |   |   
+|       |   +---debug
+|       |   |       vssver.scc
+|       |   |       _debug.c
+|       |   |       _debug.h
+|       |   |       _deque.h
+|       |   |       _hashtable.h
+|       |   |       _iterator.h
+|       |   |       _list.h
+|       |   |       _relops_cont.h
+|       |   |       _relops_hash_cont.h
+|       |   |       _slist.h
+|       |   |       _string.h
+|       |   |       _tree.h
+|       |   |       _vector.h
+|       |   |       
+|       |   \---wrappers
+|       |           vssver.scc
+|       |           _deque.h
+|       |           _hash_map.h
+|       |           _hash_set.h
+|       |           _list.h
+|       |           _map.h
+|       |           _mmap.h
+|       |           _set.h
+|       |           _slist.h
+|       |           _vector.h
+|       |           
+|       \---using
+|           |   cstring
+|           |   export
+|           |   fstream
+|           |   iomanip
+|           |   ios
+|           |   iosfwd
+|           |   iostream
+|           |   istream
+|           |   locale
+|           |   ostream
+|           |   sstream
+|           |   streambuf
+|           |   strstream
+|           |   vssver.scc
+|           |   
+|           \---h
+|                   fstream.h
+|                   iomanip.h
+|                   iostream.h
+|                   ostream.h
+|                   streambuf.h
+|                   strstream.h
+|                   vssver.scc
+|                   
++---ZTools
+|   +---ExpatUtils
+|   |       ExpatUtils.h
+|   |       XMLStruct.h
+|   |       XMLTag.h
+|   |       
+|   \---ZUtils
+|           EString.h
+|           
+\---_include
+        CodePages.h
+        Cp2Uni.h
+        koi8_ctype.h
+        language.h
+        nix_types.h
+        ntoh.h
+        wintypes.h
+        _time.h
+        _unistd.h
+        

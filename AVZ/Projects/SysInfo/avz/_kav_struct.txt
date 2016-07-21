@@ -1,0 +1,47 @@
+// Информация о BHO
+ TBHOInfo = record
+  RegKey          : string;  // Ключ реестра
+  CLSID           : string;  // CLSID
+  BinFile         : string;  // Бинарный файл (полное имя)
+  Descr           : string;  // Описание
+  LegalCopyright  : string;  // Копирайты
+  CheckResult     : integer; // Результат проверки по базе безопасных программ
+  BHOType         : integer; // Код типа BHO (1-BHO, 2-Toolbar, 3- IE Extention)
+ end;
+
+
+#pragma pack(1)
+// Информация о BHO 
+typedef struct _BHO_INFO_ITEM
+        {
+        
+	wchar_t* RegKey;         // Ключ реестра
+	wchar_t* CLSID;          // CLSID
+	wchar_t* BinFile;        // Бинарный файл (полное имя)
+	wchar_t* Descr;          // Описание
+	wchar_t* LegalCopyright; // Копирайты
+	DWORD  CheckResult;      // Идентификатор процесса
+	DWORD  BHOType;          // Код типа BHO (1-BHO, 2-Toolbar, 3- IE Extention)
+} BHO_INFO_ITEM;
+#pragma pack()
+
+Ссылка из wchar_t* ведет естественно на строку в буфере, строки помещаются 
+в буфер "с хвоста"
+
+
+
+struct cBHOItem; // forward declaration
+struct cBHOItem
+        {
+ cBHOItem* m_NextItem;         // Адрес следующего элемента в списке (или NULL)
+ wchar_t*  m_szRegKey;         // Ключ реестра
+ wchar_t*  m_szCLSID;          // CLSID
+ wchar_t*  m_szBinFile;        // Бинарный файл (полное имя)
+ wchar_t*  m_szDescr;          // Описание
+ wchar_t*  m_szLegalCopyright; // Копирайты
+ DWORD     m_dwCheckResult;    // Идентификатор процесса
+ DWORD     m_dwBHOType;        // Код типа BHO (1-BHO, 2-Toolbar, 3- IE Extention)
+};
+
+AVZ_GetSomeInfo(wchar_t* szScript, &pRecords);
+AVZ_FreeItem(pRecords);

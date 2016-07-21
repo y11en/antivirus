@@ -1,0 +1,4 @@
+// ***** Trojan.StartPage.aah *****
+begin
+ AddEvAlarmByCLSID('E5A2678F-DA83-4D2E-BA85-6236E90098FA',AScriptName,'richfind.dll');
+end.

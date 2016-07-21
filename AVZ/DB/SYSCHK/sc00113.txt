@@ -1,0 +1,5 @@
+// ***** TrojanSpy.Briss *****
+begin
+ AddEvAlarmByCLSID('9C691A33-7DDA-4C2F-BE4C-C176083F35CF','TrojanSpy.Briss.f','bridge.dll');
+ AddEvAlarmByCLSID('80BB7465-A638-43B5-9827-8E8FE38DFCC1','TrojanSpy.Briss.k','jao.dll');
+end.

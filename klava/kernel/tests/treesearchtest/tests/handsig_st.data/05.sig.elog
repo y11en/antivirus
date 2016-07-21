@@ -1,0 +1,18 @@
+Adding signatures from file "05.sig".
+Saving the static tree to file "05.sig.st".
+Hash level: 16Hash table size: 64[Kb]
+Cleaning the tree.
+Loading a static tree from file "05.sig.st".
+Scanning file "05.sig"
+   0/10; off=0x00000009; id=5
+   1/10; off=0x00000040; id=5
+   2/10; off=0x000000BB; id=5
+   3/10; off=0x000000DC; id=5
+   4/10; off=0x000000FD; id=5
+   5/10; off=0x0000011E; id=5
+   6/10; off=0x0000013F; id=5
+   7/10; off=0x00000160; id=5
+   8/10; off=0x00000181; id=5
+   9/10; off=0x000001A2; id=5
+Total :
+id=5(10)

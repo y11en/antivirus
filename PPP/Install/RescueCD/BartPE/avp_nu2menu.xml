@@ -1,0 +1,9 @@
+<!-- Kaspersky Internet Security-->
+<NU2MENU>
+	<MENU ID="Programs">
+		<MITEM TYPE="POPUP" DISABLED="@Not(@FileExists(@GetProgramDrive()\Programs\avp\*.*))" MENUID="avp">Kaspersky Internet Security</MITEM>
+	</MENU>
+	<MENU ID="avp">
+		<MITEM TYPE="ITEM" CMD="RUN" FUNC="@GetProgramDrive()\Programs\avp\avp.exe -gui -bl">Start</MITEM>
+	</MENU>
+</NU2MENU>

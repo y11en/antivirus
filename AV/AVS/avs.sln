@@ -1,0 +1,108 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "avs", "avs.vcproj", "{496A5944-2707-4031-93C4-428906AC65D6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3578942A-366F-4A2E-A563-743C78565B69} = {3578942A-366F-4A2E-A563-743C78565B69}
+		{81300B2C-D185-4760-9953-9760D3F07A25} = {81300B2C-D185-4760-9953-9760D3F07A25}
+		{879CD9FC-356A-4851-BECA-91E630ED86AC} = {879CD9FC-356A-4851-BECA-91E630ED86AC}
+		{C7C7D83C-5401-4F08-ABD6-950A8A894236} = {C7C7D83C-5401-4F08-ABD6-950A8A894236}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "Test\Test.vcproj", "{EF2EEE76-0A85-47FA-9692-3260C5BE6720}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "klavdbg", "..\..\klava\kernel\klavdbg\klavdbg.vcproj", "{C7C7D83C-5401-4F08-ABD6-950A8A894236}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "klavprlib", "..\..\klava\kernel\klavprlib\klavprlib.vcproj", "{81300B2C-D185-4760-9953-9760D3F07A25}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "klavsyslib", "..\..\klava\kernel\klavsyslib\klavsyslib.vcproj", "{879CD9FC-356A-4851-BECA-91E630ED86AC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "odstest", "..\ODS\odstest\odstest.vcproj", "{E7C58BED-52DF-4F71-9518-79354D5AD3E0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "klavcorelib", "..\..\klava\kernel\klavcorelib\klavcorelib.vcproj", "{3578942A-366F-4A2E-A563-743C78565B69}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 8
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = avs.vcproj
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = ..\\..\\klava\\kernel\\klavdbg\\klavdbg.vcproj
+		SccLocalPath2 = ..\\..\\klava\\kernel\\klavdbg
+		SccProjectUniqueName3 = ..\\..\\klava\\kernel\\klavprlib\\klavprlib.vcproj
+		SccLocalPath3 = ..\\..\\klava\\kernel
+		SccProjectFilePathRelativizedFromConnection3 = klavprlib\\
+		SccProjectUniqueName4 = ..\\..\\klava\\kernel\\klavsyslib\\klavsyslib.vcproj
+		SccLocalPath4 = ..\\..\\klava\\kernel\\klavsyslib
+		SccProjectUniqueName5 = Test\\Test.vcproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = Test\\
+		SccProjectUniqueName6 = ..\\ODS\\odstest\\odstest.vcproj
+		SccLocalPath6 = ..\\ODS\\odstest
+		SccProjectUniqueName7 = ..\\..\\klava\\kernel\\klavcorelib\\klavcorelib.vcproj
+		SccLocalPath7 = ..\\..\\klava\\kernel\\klavcorelib
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{496A5944-2707-4031-93C4-428906AC65D6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{496A5944-2707-4031-93C4-428906AC65D6}.Debug|Win32.Build.0 = Debug|Win32
+		{496A5944-2707-4031-93C4-428906AC65D6}.Debug|x64.ActiveCfg = Debug|x64
+		{496A5944-2707-4031-93C4-428906AC65D6}.Debug|x64.Build.0 = Debug|x64
+		{496A5944-2707-4031-93C4-428906AC65D6}.Release|Win32.ActiveCfg = Release|Win32
+		{496A5944-2707-4031-93C4-428906AC65D6}.Release|Win32.Build.0 = Release|Win32
+		{496A5944-2707-4031-93C4-428906AC65D6}.Release|x64.ActiveCfg = Release|x64
+		{496A5944-2707-4031-93C4-428906AC65D6}.Release|x64.Build.0 = Release|x64
+		{EF2EEE76-0A85-47FA-9692-3260C5BE6720}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EF2EEE76-0A85-47FA-9692-3260C5BE6720}.Debug|Win32.Build.0 = Debug|Win32
+		{EF2EEE76-0A85-47FA-9692-3260C5BE6720}.Debug|x64.ActiveCfg = Debug|Win32
+		{EF2EEE76-0A85-47FA-9692-3260C5BE6720}.Release|Win32.ActiveCfg = Release|Win32
+		{EF2EEE76-0A85-47FA-9692-3260C5BE6720}.Release|Win32.Build.0 = Release|Win32
+		{EF2EEE76-0A85-47FA-9692-3260C5BE6720}.Release|x64.ActiveCfg = Release|Win32
+		{C7C7D83C-5401-4F08-ABD6-950A8A894236}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C7C7D83C-5401-4F08-ABD6-950A8A894236}.Debug|Win32.Build.0 = Debug|Win32
+		{C7C7D83C-5401-4F08-ABD6-950A8A894236}.Debug|x64.ActiveCfg = Debug|x64
+		{C7C7D83C-5401-4F08-ABD6-950A8A894236}.Debug|x64.Build.0 = Debug|x64
+		{C7C7D83C-5401-4F08-ABD6-950A8A894236}.Release|Win32.ActiveCfg = Release|Win32
+		{C7C7D83C-5401-4F08-ABD6-950A8A894236}.Release|Win32.Build.0 = Release|Win32
+		{C7C7D83C-5401-4F08-ABD6-950A8A894236}.Release|x64.ActiveCfg = Release|x64
+		{C7C7D83C-5401-4F08-ABD6-950A8A894236}.Release|x64.Build.0 = Release|x64
+		{81300B2C-D185-4760-9953-9760D3F07A25}.Debug|Win32.ActiveCfg = Debug|Win32
+		{81300B2C-D185-4760-9953-9760D3F07A25}.Debug|Win32.Build.0 = Debug|Win32
+		{81300B2C-D185-4760-9953-9760D3F07A25}.Debug|x64.ActiveCfg = Debug|Win32
+		{81300B2C-D185-4760-9953-9760D3F07A25}.Release|Win32.ActiveCfg = Release|Win32
+		{81300B2C-D185-4760-9953-9760D3F07A25}.Release|Win32.Build.0 = Release|Win32
+		{81300B2C-D185-4760-9953-9760D3F07A25}.Release|x64.ActiveCfg = Release|Win32
+		{879CD9FC-356A-4851-BECA-91E630ED86AC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{879CD9FC-356A-4851-BECA-91E630ED86AC}.Debug|Win32.Build.0 = Debug|Win32
+		{879CD9FC-356A-4851-BECA-91E630ED86AC}.Debug|x64.ActiveCfg = Debug|x64
+		{879CD9FC-356A-4851-BECA-91E630ED86AC}.Debug|x64.Build.0 = Debug|x64
+		{879CD9FC-356A-4851-BECA-91E630ED86AC}.Release|Win32.ActiveCfg = Release|Win32
+		{879CD9FC-356A-4851-BECA-91E630ED86AC}.Release|Win32.Build.0 = Release|Win32
+		{879CD9FC-356A-4851-BECA-91E630ED86AC}.Release|x64.ActiveCfg = Release|x64
+		{879CD9FC-356A-4851-BECA-91E630ED86AC}.Release|x64.Build.0 = Release|x64
+		{E7C58BED-52DF-4F71-9518-79354D5AD3E0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E7C58BED-52DF-4F71-9518-79354D5AD3E0}.Debug|Win32.Build.0 = Debug|Win32
+		{E7C58BED-52DF-4F71-9518-79354D5AD3E0}.Debug|x64.ActiveCfg = Debug|x64
+		{E7C58BED-52DF-4F71-9518-79354D5AD3E0}.Debug|x64.Build.0 = Debug|x64
+		{E7C58BED-52DF-4F71-9518-79354D5AD3E0}.Release|Win32.ActiveCfg = Release|Win32
+		{E7C58BED-52DF-4F71-9518-79354D5AD3E0}.Release|Win32.Build.0 = Release|Win32
+		{E7C58BED-52DF-4F71-9518-79354D5AD3E0}.Release|x64.ActiveCfg = Release|x64
+		{E7C58BED-52DF-4F71-9518-79354D5AD3E0}.Release|x64.Build.0 = Release|x64
+		{3578942A-366F-4A2E-A563-743C78565B69}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3578942A-366F-4A2E-A563-743C78565B69}.Debug|Win32.Build.0 = Debug|Win32
+		{3578942A-366F-4A2E-A563-743C78565B69}.Debug|x64.ActiveCfg = Debug|x64
+		{3578942A-366F-4A2E-A563-743C78565B69}.Debug|x64.Build.0 = Debug|x64
+		{3578942A-366F-4A2E-A563-743C78565B69}.Release|Win32.ActiveCfg = Release|Win32
+		{3578942A-366F-4A2E-A563-743C78565B69}.Release|Win32.Build.0 = Release|Win32
+		{3578942A-366F-4A2E-A563-743C78565B69}.Release|x64.ActiveCfg = Release|x64
+		{3578942A-366F-4A2E-A563-743C78565B69}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,49 @@
+forward interface TmClient;
+typedef TmClient* hTM_CLIENT;
+
+
+
+[
+  mnemonic(IID_TM_CLIENT)
+  id(45)
+  c_type_name(hTM_CLIENT)
+]
+interface TmClient { // client of TaskManager
+
+  // ------------------------------------
+    error errDONT_WANT_TO_PROCESS; // client do not want to process this request, valid for both OpenRequest and ProcessRequest
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Interface version")
+      id(130)
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      comment_ex("Interface comment")
+      id(131)
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+
+
+  // ------------------------------------
+    method tERROR OpenRequest( // open request
+      tDWORD request_id,
+      tDWORD request_type, // request type
+      cSerializable* params // request parameters
+    );
+    method tERROR ProcessRequest( // open request
+      tDWORD request_id,
+      tDWORD request_type, // request type
+      cSerializable* params // request parameters
+    );
+    method tERROR CloseRequest( // close request by id
+      tDWORD request_id
+    );
+    method tERROR Exit( tDWORD cause );
+
+}
+

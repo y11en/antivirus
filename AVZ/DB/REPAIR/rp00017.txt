@@ -1,0 +1,6 @@
+// ***** Разблокировка редактора реестра *****
+begin
+ RegKeyParamDel('HKEY_CURRENT_USER', 'Software\Microsoft\Windows\CurrentVersion\Policies\System', 'DisableRegistryTools');
+ RegKeyParamDel('HKEY_LOCAL_MACHINE', 'Software\Microsoft\Windows\CurrentVersion\Policies\System', 'DisableRegistryTools');
+end.
+  

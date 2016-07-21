@@ -1,0 +1,11 @@
+// ***** Очистка списка игнорирования утилиты HijackThis *****
+var
+ i : integer;
+begin
+ RegKeyParamDel('HKEY_LOCAL_MACHINE', 'SOFTWARE\Soeperman Enterprises Ltd.\HijackThis\', 'IgnoreNum');
+ for i := 0 to 100 do
+  RegKeyParamDel('HKEY_LOCAL_MACHINE', 'SOFTWARE\Soeperman Enterprises Ltd.\HijackThis\', 'Ignore'+inttostr(i));
+ RegKeyParamDel('HKEY_LOCAL_MACHINE', 'SOFTWARE\TrendMicro\HijackThis', 'IgnoreNum');
+ for i := 0 to 100 do
+  RegKeyParamDel('HKEY_LOCAL_MACHINE', 'SOFTWARE\TrendMicro\HijackThis\', 'Ignore'+inttostr(i));
+end. 

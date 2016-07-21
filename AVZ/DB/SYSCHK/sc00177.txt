@@ -1,0 +1,4 @@
+// ***** Pornware.Downloder.TibSystems *****
+begin
+ AddEvAlarmByCLSID('1E89F686-B78D-4C85-9EFC-3474516E3FE2',AScriptName,'');
+end.

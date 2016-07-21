@@ -1,0 +1,319 @@
+﻿;------------- Credits --------------
+[Credits]
+1 =Credits.ProjectManager
+2 =Credits.ProductManager
+3 =Credits.Development
+4 =Credits.InnovativeTechnologies
+5 =Credits.CommonComponents
+6 =Credits.Design
+7 =Credits.TestManager
+8 =Credits.Testers
+9 =Credits.TechWriters
+10=Credits.Localization
+11=Credits.CertificationManager
+12=Credits.Marketing
+13=Credits.VirusAnalysts
+14=Credits.SpecialThanks
+15=Credits.VerySpecialThanks
+16=Credits.IllBeBack
+
+[Credits.ProjectManager]
+$cap=Менеджер проекта
+0 =f(CreditsGroup) mg(,15)$cap:
+1 =f(Credits)Тимур Амирханов
+
+[Credits.ProductManager]
+$cap=Менеджеры по продукту
+0 =f(CreditsGroup) mg(,15)$cap:
+1 =f(Credits)Алексей Калгин
+2 =f(Credits)Василий Бушмарин
+
+[Credits.Development]
+$cap=Разработка
+0 =f(CreditsGroup) mg(,15)$cap:
+1 =f(Credits)Константин Воронков
+2 =f(Credits)Сергей Добровольский
+3 =f(Credits)Леонид Кудрявцев
+4 =f(Credits)Яков Карныгин
+5 =f(Credits)Николай Лебедев
+6 =f(Credits)Борис Мелех
+7 =f(Credits)Евгений Рощин
+8 =f(Credits)Андрей Рубин
+9 =f(Credits)Олег Федько
+
+[Credits.InnovativeTechnologies]
+$cap=Инновационные технологии
+0 =f(CreditsGroup) mg(,15)$cap:
+1 =f(Credits)Вячеслав Батенин 
+2 =f(Credits)Сергей Белов
+3 =f(Credits)Андрей Герасимов
+4 =f(Credits)Николай Гребенников
+5 =f(Credits)Андрей Груздев
+6 =f(Credits)Денис Гущин
+7 =f(Credits)Алексей Де-Мондерик
+8 =f(Credits)Виталий Денисов
+9 =f(Credits)Андрей Духвалов
+10=f(Credits)Павел Межуев
+11=f(Credits)Роман Михалевский 
+12=f(Credits)Алексей Монастырский
+13=f(Credits)Павел Нечаев
+14=f(Credits)Михаил Павлющик
+15=f(Credits)Андрей Собко
+16=f(Credits)Никита Швецов
+17=f(Credits)Максим Юданов
+
+[Credits.CommonComponents]
+$cap=Общие компоненты
+0 =f(CreditsGroup) mg(,15)$cap:
+1 =f(Credits)Олег Быков
+2 =f(Credits)Андрей Гужов
+3 =f(Credits)Владислав Овчарик
+4 =f(Credits)Дмитрий Петровичев
+
+[Credits.Design]
+$cap=Дизайн
+0 =f(CreditsGroup) mg(,15)$cap:
+1 =f(Credits)Александр Шлычков
+2 =f(Credits)Надежда Киржацкая
+
+[Credits.TestManager]
+$cap=Менеджер по тестированию
+0 =f(CreditsGroup) mg(,15)$cap:
+1 =f(Credits)Наталья Земцова
+
+[Credits.Testers]
+$cap=Тестирование
+0 =f(CreditsGroup) mg(,15)$cap:
+1 =f(Credits)Андрей Акентьев
+2 =f(Credits)Денис Аксенов
+3 =f(Credits)Татьяна Алексеева 
+4 =f(Credits)Игорь Беляев
+5 =f(Credits)Владимир Бочков
+6 =f(Credits)Алексей Горин
+7 =f(Credits)Кирилл Загороднов
+8 =f(Credits)Ренат Имаметдинов
+9 =f(Credits)Иван Куликов
+10=f(Credits)Денис Морозов
+11=f(Credits)Олег Немов
+12=f(Credits)Виталий Слободский 
+13=f(Credits)Елена Трубникова
+14=f(Credits)Сергей Халтурцев
+15=f(Credits)Николай Чекунов 
+16=f(Credits)Егор Чехиевский
+17=f(Credits)Андрей Широков
+
+[Credits.VirusAnalysts]
+$cap=Вирусные аналитики
+0 =f(CreditsGroup) mg(,15)$cap:
+1 =f(Credits)Евгений Азаров
+2 =f(Credits)Сергей Ануфриенко
+3 =f(Credits)Вадим Богданов
+4 =f(Credits)Сергей Богуковский
+5 =f(Credits)Дмитрий Главацких
+6 =f(Credits)Александр Гостев
+7 =f(Credits)Павел Зеленский
+8 =f(Credits)Алексей Маланов
+9 =f(Credits)Юрий Машевский
+10=f(Credits)Денис Назаров
+11=f(Credits)Алексей Романенко
+12=f(Credits)Константин Сапронов
+13=f(Credits)Дмитрий Швецов
+14=f(Credits)Станислав Шевченко
+
+[Credits.TechWriters]
+$cap=Документация
+0 =f(CreditsGroup) mg(,15)$cap:
+1 =f(Credits)Ольга Вешнякова
+2 =f(Credits)Наталья Воронова
+3 =f(Credits)Татьяна Родионова
+4 =f(Credits)Ирина Рыбникова
+
+[Credits.Localization]
+$cap=Локализация
+0 =f(CreditsGroup) mg(,15)$cap:
+1 =f(Credits)Наталия Волкова
+2 =f(Credits)Елена Галкина
+3 =f(Credits)Елена Ковакина 
+4 =f(Credits)Алена Кудинова
+5 =f(Credits)Мария Чернышова
+
+[Credits.CertificationManager]
+$cap=Менеджер по сертификации
+0 =f(CreditsGroup) mg(,15)$cap:
+1 =f(Credits)Алексей Таль
+
+[Credits.Marketing]
+$cap=Маркетинг
+0 =f(CreditsGroup) mg(,15)$cap:
+1 =f(Credits)Вениамин Левцов
+2 =f(Credits)Даниил Капцан
+
+[Credits.SpecialThanks]
+$cap=Благодарности
+0  =f(CreditsGroup) mg(,15)$cap:
+1  =f(Credits)a.m.SASH
+2  =f(Credits)ACIK
+3  =f(Credits)aintrust
+4  =f(Credits)Alex_Berzoy
+5  =f(Credits)Alex_R
+6  =f(Credits)ANDYBOND
+7  =f(Credits)Anmaef
+8  =f(Credits)anna21
+9  =f(Credits)ares
+10 =f(Credits)Autopsy
+11 =f(Credits)AZЪ
+12 =f(Credits)bamsic
+13 =f(Credits)benighted
+14 =f(Credits)Benny0583
+15 =f(Credits)bildos
+16 =f(Credits)biomexanik
+17 =f(Credits)BORODA
+18 =f(Credits)br34ch
+19 =f(Credits)CauSe
+20 =f(Credits)cepreu_s
+21 =f(Credits)clauderenaud
+22 =f(Credits)dah145
+23 =f(Credits)darcorn
+24 =f(Credits)dawgg
+25 =f(Credits)Defenestration
+26 =f(Credits)delamer
+27 =f(Credits)Destiny
+28 =f(Credits)dicht
+29 =f(Credits)Direwolf
+30 =f(Credits)Dmitry Perets
+31 =f(Credits)Don Pelotas
+32 =f(Credits)DonKid
+33 =f(Credits)doty
+34 =f(Credits)Dr.De@th
+35 =f(Credits)Edik
+36 =f(Credits)Ego1st
+37 =f(Credits)elhell
+38 =f(Credits)eugenesea
+39 =f(Credits)Ezh
+40 =f(Credits)Fighter
+41 =f(Credits)fp_post
+42 =f(Credits)gahbmwM5
+43 =f(Credits)Galileo 39
+44 =f(Credits)gbereg
+45 =f(Credits)GenKuk
+46 =f(Credits)Geser
+47 =f(Credits)hermital
+48 =f(Credits)Igor503
+49 =f(Credits)ingvar1972
+50 =f(Credits)ip1
+51 =f(Credits)JanRei
+52 =f(Credits)JohnH
+53 =f(Credits)joker_power
+54 =f(Credits)jraduga
+55 =f(Credits)Julian
+56 =f(Credits)Kapral
+57 =f(Credits)Kilauea
+58 =f(Credits)KIS Tester
+59 =f(Credits)klanka
+60 =f(Credits)kobra
+61 =f(Credits)Kokunov
+62 =f(Credits)Leo Max
+63 =f(Credits)Lexus911
+64 =f(Credits)lucianbara
+65 =f(Credits)Man in White
+66 =f(Credits)Maranz
+67 =f(Credits)Maratka
+68 =f(Credits)Marik
+69 =f(Credits)Михаил Будняцкий
+70 =f(Credits)Mirza aka ANTIVIRUS
+71 =f(Credits)Misha
+72 =f(Credits)MiStr
+73 =f(Credits)Netherlands
+74 =f(Credits)nick9860
+75 =f(Credits)NickGolovko
+76 =f(Credits)norwegian
+77 =f(Credits)noVel
+78 =f(Credits)Oldjim
+79 =f(Credits)olegk
+80 =f(Credits)p2u
+81 =f(Credits)PDN
+82 =f(Credits)petrili
+83 =f(Credits)Pipkin
+84 =f(Credits)plesser
+85 =f(Credits)Priester1970
+86 =f(Credits)RadarpSP
+87 =f(Credits)radioelectron
+88 =f(Credits)recoder
+89 =f(Credits)redmikl
+90 =f(Credits)Reload
+91 =f(Credits)ren
+92 =f(Credits)Rinat Salihov
+93 =f(Credits)RobertHerter
+94 =f(Credits)root
+95 =f(Credits)Sanja
+96 =f(Credits)saso
+97 =f(Credits)Serega_I
+98 =f(Credits)sereja6
+99 =f(Credits)Sergei S.
+100=f(Credits)Sergey
+101=f(Credits)SGear
+102=f(Credits)Shark
+103=f(Credits)Sjoeii
+104=f(Credits)Smasher
+105=f(Credits)softwareguy
+106=f(Credits)SSK
+107=f(Credits)Storm
+108=f(Credits)storm119
+109=f(Credits)Surfer
+110=f(Credits)Ta2i4
+111=f(Credits)tahoma
+112=f(Credits)tareq
+113=f(Credits)TheUntouchable
+114=f(Credits)tigerone
+115=f(Credits)TonyW
+116=f(Credits)TwinBit
+117=f(Credits)Umnik
+118=f(Credits)Valery_Dnepr
+119=f(Credits)Vasiljev
+120=f(Credits)vee
+121=f(Credits)ves777
+122=f(Credits)Vishnyakov
+123=f(Credits)vpv
+124=f(Credits)Whizard
+125=f(Credits)ZERRo
+126=f(Credits)Zhura
+127=f(Credits)zwelch82
+
+
+[Credits.VerySpecialThanks]
+$cap=Отдельное спасибо
+0 =f(CreditsGroup) mg(,15)$cap:
+1 =f(Credits)Евгений Касперский
+2 =f(Credits)v($(LicInfo.KeyInfo.CustomerInfo))
+
+[Credits.IllBeBack]
+0 =
+1 =
+2 =
+3 =
+4 =
+5 =
+6 =
+7 =
+8 =
+9 =
+10=
+11=
+12=
+13=
+14=
+15=
+16=
+17=f(CreditsGroup) Антивирус Касперского,
+18=f(CreditsGroup) продолжение следует в 8.0
+19=
+20=
+21=
+22=
+23=
+24=
+25=
+26=
+27=
+28=
+29=

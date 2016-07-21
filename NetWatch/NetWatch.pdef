@@ -1,0 +1,85 @@
+#import "ProductCore/idl/task.idef"
+
+forward interface NetWatch;
+typedef NetWatch* hNETWATCH;
+
+[
+  version(1)
+  mnemonic(IID_NETWATCH)
+  c_type_name(hNETWATCH)
+]
+interface NetWatch : Task {
+  method tERROR Dummy( tDWORD param1 );
+}
+
+
+[
+  mnemonic(PID_NETWATCH)
+  version(1)
+  codepage(ansi)
+]
+component NetWatchImpl {
+
+  [
+    comment("Network Watcher")
+    version(1)
+    includes( <Prague/iface/i_reg.h>, <ProductCore/iface/i_task.h> )
+    output_source_file(NetWatch)
+  ]
+  implementation NetWatcher : NetWatch
+  {
+
+    // ------------------------------------
+
+      [
+        access(read,write)
+        member_ref(m_tm)
+      ]
+      prop hOBJECT pgTASK_TM; // task manager object
+
+      [
+        access(read)
+        member_ref(m_task_state)
+      ]
+      prop tDWORD pgTASK_STATE;
+
+      [
+        access(read)
+        member_ref(m_task_session_id)
+      ]
+      prop tDWORD pgTASK_SESSION_ID;
+
+      [
+        access(read)
+        member_ref(m_task_id)
+      ]
+      prop tDWORD pgTASK_ID;
+
+      [
+        access(read)
+        member_ref(m_task_persistent_storage)
+      ]
+      prop hOBJECT pgTASK_PERSISTENT_STORAGE;
+
+      [
+        access(read)
+        member_ref(m_task_parent_id)
+      ]
+      prop tDWORD pgTASK_PARENT_ID;
+
+      [
+        comment_ex("Interface compatibility")
+        shared(true)
+      ]
+      add prop tIID pgINTERFACE_COMPATIBILITY = 23; // Interface compatibility
+
+
+    // ------------------------------------
+      sysmeth ObjectInitDone;
+      sysmeth ObjectPreClose;
+      sysmeth ObjectClose;
+      sysmeth MsgReceive;
+  }
+
+}
+

@@ -1,0 +1,6 @@
+# try to stop AV service by using specified command line params
+
+CREATE_PROCESS @AV_SERV_COMM_LINE@ NOT_TO_CLEAR
+
+#etalon_verdict 70 AntiAV
+#etalon_verdict 30 KillService

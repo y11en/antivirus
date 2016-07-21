@@ -1,0 +1,87 @@
+#import "os.idef"
+
+
+
+[
+  mnemonic(IID_SEQIO)
+  id(64000)
+  c_type_name(hSEQ_IO)
+  comment_ex("Supplies facility sequential input/output on ordinary IO object
+    Object of the interface must have current position")
+]
+interface SeqIO : IO { // Sequential input/output interface
+
+  // ------------------------------------
+    const tDWORD cSEEK_SET = 0;
+    const tDWORD cSEEK_CUR = 1;
+    const tDWORD cSEEK_END = 2;
+    const tDWORD cSEEK_FORWARD = 1;
+    const tDWORD cSEEK_BACK = 3;
+    const tINT cORDER_DIRECT = 1;
+    const tINT cORDER_BACK = -1;
+    const tINT cORDER_REVERSE = 0;
+
+
+  // ------------------------------------
+    [ id(8193) ]  prop tSBYTE pgBYTE_ORDER;
+    [ id(8194) ]  prop tSBYTE pgBUFFER_ORDER;
+    [ id(8195) ]  prop tDWORD pgBUFFER_SIZE;
+
+    [
+      comment_ex("Interface compatibility")
+      id(135)
+    ]
+    prop tIID pgINTERFACE_COMPATIBILITY; // Interface compatibility
+
+
+  // ------------------------------------
+    method tERROR Read(
+      tDWORD* result,
+      tPTR buffer,
+      tDWORD count
+    );
+    method tERROR ReadByte( tBYTE* result );
+    method tERROR ReadWord( tWORD* result );
+    method tERROR ReadDword( tDWORD* result );
+    method tERROR ReadQword( tQWORD* result );
+    method tERROR Write(
+      tDWORD* result,
+      tPTR buffer,
+      tDWORD count
+    );
+
+    [
+      comment_ex("Writes byte to stream, return error if stream is read-only or position out of stream")
+    ]
+    method tERROR WriteByte( // Writes byte to stream
+      tVOID* result,
+      tBYTE value
+    );
+    method tERROR WriteWord( tVOID* result, tWORD value );
+    method tERROR WriteDword( tVOID* result, tDWORD value );
+    method tERROR WriteQword( tVOID* result, tQWORD value );
+    method tERROR Seek(
+      tQWORD* result,
+      tQWORD offset,
+      tDWORD origin
+    );
+    method tERROR SeekSet( tQWORD* result, tQWORD offset );
+    method tERROR SeekForward( tQWORD* result, tQWORD offset );
+    method tERROR SeekBack( tQWORD* result, tQWORD offset );
+    method tERROR SeekEnd( tQWORD* result, tQWORD offset );
+
+    [
+      comment_ex("Set file size according current position. Operation not possible if region or stream reversing active. In this case file size will be unchanged.")
+    ]
+    method tERROR SetSizeByPos( // Set file size according current position
+      tQWORD* result
+    );
+    method tERROR IsNotEOF( tBOOL* result );
+    method tERROR RegionSet(
+      tVOID* result,
+      tQWORD start,
+      tQWORD end
+    );
+
+}
+

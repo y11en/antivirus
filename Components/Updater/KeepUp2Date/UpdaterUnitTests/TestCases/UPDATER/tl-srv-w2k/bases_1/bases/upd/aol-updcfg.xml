@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<UpdaterSettingsSection>
+
+<sites_list>
+
+<site2 url="http://avs1.kaspersky-labs.com" 	diff_url="diffs"	weight="1" 	region="*" />
+<site2 url="http://avs2.kaspersky-labs.com" 	diff_url="diffs"	weight="1" 	region="*" />
+<site2 url="ftp://avs1.kaspersky-labs.com" 	diff_url="diffs"	weight="1" 	region="*" />
+<site2 url="ftp://avs2.kaspersky-labs.com" 	diff_url="diffs"	weight="1" 	region="*" />
+
+</sites_list>
+
+<UpdatePeriod SuccPeriod="120" FailPeriod="5" />
+
+</UpdaterSettingsSection>
+; 0XLSznpdI71fB300e7Uwj1USFOA73FluW2z0clAwBqciC49qFRTNwUOhS6нн

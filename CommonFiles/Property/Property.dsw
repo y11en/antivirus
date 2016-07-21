@@ -1,0 +1,99 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "KeyViewer"=..\WinDev\KeyShell\KeyViewer\KeyViewer.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/KeyShell/KeyViewer", ZQEAAAAA
+    ..\windev\keyshell\keyviewer
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Property
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Property"=.\Property.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Property", UVBAAAAA
+    .\property
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "hashutil"=..\COMMONFILES\hashutil\hashutil.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/hashutil", GCOBAAAA
+    ..\COMMONFILES\hashutil
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "m_utils"=.\m_utils\m_utils.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Property/m_utils", VGLBAAAA
+    .\m_utils
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "test"=.\test\test.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Property
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

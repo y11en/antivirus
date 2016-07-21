@@ -1,0 +1,523 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\IGuard.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_WARNING_NO_FILTERS DIALOGEX 0, 0, 233, 64
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Warning"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,176,43,50,14
+    LTEXT           "You dont have filters. Use context menu or 'insert' button",
+                    IDC_STATIC,7,7,219,14
+    CONTROL         "Don't show this message next time",IDC_CHECK_DONTSHOW,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,29,124,10
+END
+
+IDD_DIALOG_INFO DIALOG DISCARDABLE  0, 0, 360, 286
+STYLE DS_3DLOOK | DS_CONTROL | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         3013,IDC_STATIC_BMP,"Static",SS_BITMAP,5,1,143,286
+    CONTROL         "List1",IDC_LIST_KEYSINFO,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,157,1,202,120
+    EDITTEXT        IDC_EDIT_SUPPORTINFO,165,139,135,88,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+END
+
+IDD_DIALOG_INFOFORUSER DIALOG DISCARDABLE  0, 0, 288, 207
+STYLE DS_3DLOOK | DS_CONTROL | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT_ADDITIONAL_INFO,0,0,287,206,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+END
+
+IDD_DIALOG_APPID DIALOG DISCARDABLE  0, 0, 186, 94
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ID"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,73,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,73,50,14
+    EDITTEXT        IDC_EDIT_APPID,69,30,40,14,ES_AUTOHSCROLL | ES_NUMBER
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOG_WARNING_NO_FILTERS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 226
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 57
+    END
+
+    IDD_DIALOG_APPID, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_CONFIG DIALOG DISCARDABLE  0, 0, 333, 255
+STYLE DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_THICKFRAME
+CAPTION "Kaspersky Guard Technology (Demo)"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Hide",IDOK,280,238,50,14
+    CONTROL         "Tab1",IDC_TAB_MAIN,"SysTabControl32",0x0,4,3,326,230
+END
+
+IDD_DIALOG_FILTERS DIALOG DISCARDABLE  0, 0, 186, 94
+STYLE DS_3DLOOK | DS_CONTROL | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_LIST_FILTERS,"SysListView32",LVS_LIST | 
+                    WS_BORDER | WS_TABSTOP,0,0,185,94
+END
+
+IDD_DIALOG_FILTER DIALOG DISCARDABLE  0, 0, 394, 294
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Filter property"
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_COMBO_PROCESS,62,7,197,363,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "top",IDC_RADIO_POS_TOP,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,60,26,26,10
+    CONTROL         "bottom",IDC_RADIO_POS_BOTTOM,"Button",
+                    BS_AUTORADIOBUTTON,92,26,37,10
+    CONTROL         "after current",IDC_RADIO_POS_AFTER,"Button",
+                    BS_AUTORADIOBUTTON,135,26,54,10
+    COMBOBOX        IDC_COMBO_HOOKID,7,52,125,307,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_FUNC_MJ,134,52,125,307,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_FUNC_MI,261,52,125,307,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "default",IDC_RADIO_FILTER_TYPE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,17,81,37,10
+    CONTROL         "popup",IDC_RADIO10,"Button",BS_AUTORADIOBUTTON,60,81,37,
+                    10
+    CONTROL         "Info",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,103,81,37,
+                    10
+    CONTROL         "Notify",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,146,81,37,10
+    CONTROL         "Use cache",IDC_CHECK_USE_CACHE,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,16,94,67,10
+    CONTROL         "Save to cache",IDC_CHECK_SAVE2CACHE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,95,94,67,10
+    CONTROL         "Drop cache (item)",IDC_CHECK_DROP_CACHE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,107,71,10
+    CONTROL         "Reset cache (all)",IDC_CHECK_RESET_CACHE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,95,107,67,10
+    CONTROL         "Process name cacheable",IDC_CHECK_PROCESSNAME_CACHEABLE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,126,96,10
+    CONTROL         "Don't pass event to lower priority app",
+                    IDC_CHECK_DONTPASS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    16,139,132,10
+    CONTROL         "Log this event",IDC_CHECK_LOGTHIS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,153,61,10
+    CONTROL         "'Touch' filter",IDC_CHECK_TOUCH_FILTER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,168,54,10
+    CONTROL         "Use 'user logging'",IDC_CHECK_USERGLOG,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,91,153,71,10
+    CONTROL         "Try to locate next filter",
+                    IDC_CHECK_TRYTOLOCATENEXTFILTER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,91,168,85,10
+    LTEXT           "Default verdict: ",IDC_STATIC,202,94,51,8
+    CONTROL         "Default answer (skip)",IDC_RADIO_VERDICT,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,202,107,82,10
+    CONTROL         "Pass",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,299,107,31,
+                    10
+    CONTROL         "Deny",IDC_RADIO6,"Button",BS_AUTORADIOBUTTON,202,122,33,
+                    10
+    LTEXT           "Request window life time:",IDC_STATIC,202,135,81,8
+    EDITTEXT        IDC_EDIT_EXPTIME,293,158,40,14,ES_AUTOHSCROLL
+    CONTROL         "List1",IDC_LIST_PARAMETERS,"SysListView32",LVS_LIST | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,7,201,380,55
+    DEFPUSHBUTTON   "OK",IDOK,7,273,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,337,273,50,14
+    CONTROL         "Pre",IDC_CHECK_PROCESSING_TYPE,"Button",BS_AUTO3STATE | 
+                    BS_PUSHLIKE | WS_TABSTOP,351,7,36,12
+    EDITTEXT        IDC_EDIT_REQUEST_TIMELIFE,293,135,62,14,ES_AUTOHSCROLL
+    LTEXT           "Process: ",IDC_STATIC,7,7,30,8
+    LTEXT           "Processing type",IDC_STATIC_PROCESSING_TYPE,285,7,51,8
+    GROUPBOX        "Filters flags",IDC_STATIC,7,69,380,115
+    LTEXT           "Other parameters: ",IDC_STATIC,7,190,59,8
+    LTEXT           "Filter position: ",IDC_STATIC_ADD_POS,7,26,46,8
+    GROUPBOX        "Verdict property",IDC_STATIC,196,81,182,72
+    CONTROL         "All Mj",IDC_CHECK_ALL_MJ,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,134,40,33,10
+    CONTROL         "All Mi",IDC_CHECK_ALL_MI,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,261,40,33,10
+    LTEXT           "Filter will expire after (in min):  ",IDC_STATIC,196,
+                    161,94,8
+    LTEXT           "...",IDC_STATIC_HOOKID,91,40,41,8
+    LTEXT           "...",IDC_STATIC_MJ,218,40,41,8
+    LTEXT           "...",IDC_STATIC_MI,345,40,41,8
+    LTEXT           "Filter name:",IDC_STATIC,69,261,37,8
+    EDITTEXT        IDC_EDIT_FILTER_NAME,124,261,190,14,ES_AUTOHSCROLL
+    CONTROL         "DbgBreak",IDC_CHECK_DBG_BREAK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,133,126,48,10
+END
+
+IDD_DIALOG_PARAMETER DIALOG DISCARDABLE  0, 0, 313, 132
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Single parameter"
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_COMBO_PARAMETER_ID,26,7,112,118,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_OP_TYPE,206,7,100,118,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_VALUE,7,26,22,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_WORD,40,26,40,14,ES_AUTOHSCROLL
+    CONTROL         "IPAddress1",IDC_IPADDRESS4,"SysIPAddress32",WS_TABSTOP,
+                    89,26,100,15
+    EDITTEXT        IDC_EDIT_BYTE,195,26,40,14,ES_AUTOHSCROLL
+    CONTROL         "Cacheble",IDC_CHECK_CACHABLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,47,46,10
+    CONTROL         "Invers operation result",IDC_CHECK_INVERSE_OP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,64,85,10
+    CONTROL         "Calc CacheID in upper case",IDC_CHECK_CALC_CACHID_UPREG,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,81,105,10
+    CONTROL         "Must exist",IDC_CHECK_MUST_EXIST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,119,47,47,10
+    CONTROL         "Save param in lower case",IDC_CHECK_LOWERCASE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,209,81,97,10
+    DEFPUSHBUTTON   "OK",IDOK,7,111,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,256,111,50,14
+    LTEXT           "Id: ",IDC_STATIC,7,7,11,8
+    LTEXT           "Operation type: ",IDC_STATIC,143,7,51,8
+    EDITTEXT        IDC_EDIT_OFFSET_HI,243,26,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_OFFSET_LO,266,26,40,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_CLIENT_PROPERTY DIALOG DISCARDABLE  0, 0, 254, 174
+STYLE DS_3DLOOK | DS_CENTER | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Log filename: ",IDC_STATIC,3,3,45,8
+    EDITTEXT        IDC_EDIT_LOG_PLACE,55,3,198,14,ES_AUTOHSCROLL
+    LTEXT           "Flags: ",IDC_STATIC,3,33,22,8
+    CONTROL         "Load filters on system startup",IDC_CHECK_SAVE_FILTERS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,3,47,107,10
+    CONTROL         "Use driver's cache",IDC_CHECK_USING_DRIVER_CACHE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,3,60,75,10
+    CONTROL         "Use 'Blue screen request'",
+                    IDC_CHECK_USE_BLUE_SCREEN_REQ,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,3,99,96,10
+    CONTROL         "Save filters",IDC_CHECK_CLIENT_POPUP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,3,86,51,10
+    CONTROL         "Allow deadlock caching",IDC_CHECK_ALLOW_CACHE_DEADLOCK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,3,73,91,10
+    CONTROL         "Without watchdog",IDC_CHECK_WITHOUT_WATCHDOG,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,3,112,74,10
+    CONTROL         "Don't use cascade processing",
+                    IDC_CHECK_WITHOUT_CASCADE_PROCESSING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,3,125,111,10
+    PUSHBUTTON      "Apply",IDC_BUTTON_APPLY,204,158,50,14,WS_DISABLED
+    EDITTEXT        IDC_EDIT_CACHE_SIZE,51,142,46,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    LTEXT           "Cache size",IDC_STATIC,3,142,36,8
+END
+
+IDD_DIALOG_EVENTINFO DIALOG DISCARDABLE  0, 0, 440, 249
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Event info"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,387,232,50,14
+    LTEXT           "Interceptor: ",IDC_STATIC,3,3,39,8
+    LTEXT           "...",IDC_STATIC_INTERCEPT_INFO,60,3,377,8
+    LTEXT           "Filter ID: ",IDC_STATIC,3,24,29,8
+    LTEXT           "...",IDC_STATIC_FILTER_ID,56,24,136,8
+    CONTROL         "List1",IDC_LIST_PARAMS,"SysListView32",LVS_LIST | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,3,41,434,184
+END
+
+IDD_DIALOG_SHOW_HEX_INFO DIALOG DISCARDABLE  0, 0, 363, 233
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Ok",IDOK,306,212,50,14
+    EDITTEXT        IDC_EDIT_HEXINFO,7,7,349,200,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER | WS_VSCROLL | WS_HSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOG_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 330
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 252
+    END
+
+    IDD_DIALOG_FILTER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 387
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 287
+    END
+
+    IDD_DIALOG_PARAMETER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 306
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 125
+    END
+
+    IDD_DIALOG_EVENTINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 437
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 246
+    END
+
+    IDD_DIALOG_SHOW_HEX_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 356
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 226
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,12,10,0
+ PRODUCTVERSION 2,12,10,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "DEMO\0"
+            VALUE "CompanyName", "Kaspersky Lab\0"
+            VALUE "FileDescription", "IGuard DLL\0"
+            VALUE "FileVersion", "2, 12, 10, 0\0"
+            VALUE "InternalName", "IGuard\0"
+            VALUE "LegalCopyright", "Copyright (C) 2001-2002\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "IGuard.DLL\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "IGuard Dynamic Link Library\0"
+            VALUE "ProductVersion", "2, 12, 10, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_POPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "Change filter",               IDMI_CHANGE_FILTER
+        MENUITEM SEPARATOR
+        MENUITEM "Add new filter",              IDMI_ADD_NEW_FILTER
+        MENUITEM "Delete current filter(s)",    IDMI_DEL_SELECTED_FILTER
+        MENUITEM SEPARATOR
+        MENUITEM "Enable(disable) filter",      IDMI_ENABLE_FILTER
+        MENUITEM SEPARATOR
+        MENUITEM "Refresh",                     IDMI_REFRESH
+    END
+END
+
+IDR_MENU_PARAMETERS MENU DISCARDABLE 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "Add new parameter",           IDMI_ADDNEW_PARAMETER
+        MENUITEM SEPARATOR
+        MENUITEM "Delete current parameter",    IDMI_DEL_CURRENT_PARAMETER
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_KL           BITMAP  DISCARDABLE     "res\\KL89X21.BMP"
+IDB_BITMAP_KLIM         BITMAP  DISCARDABLE     "res\\kav.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR_FILTERS ACCELERATORS DISCARDABLE 
+BEGIN
+    "I",            IDA_CHANGE_APPID,       VIRTKEY, SHIFT, ALT, NOINVERT
+    VK_DELETE,      IDA_DEL,                VIRTKEY, NOINVERT
+    VK_INSERT,      IDA_INSERT,             VIRTKEY, NOINVERT
+    VK_INSERT,      IDA_INSERT_CTRL,        VIRTKEY, CONTROL, NOINVERT
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\IGuard.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

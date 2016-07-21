@@ -1,0 +1,4 @@
+// ***** Adware.Werqn *****
+begin
+ AddEvAlarmByCLSID('CF021F40-3E14-23A5-CBA2-717765723548', 'Adware.Werqn', 'wer*.dll');
+end.

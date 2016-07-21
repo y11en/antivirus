@@ -1,0 +1,550 @@
+<?xml version="1.0"?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+
+  <?include "ver.wxi" ?>
+  <?include "guids.wxi" ?>
+  <?include "products.wxi" ?>
+
+  <Fragment Id="FeaturesFragmentId">
+		<Feature Id="WholeProductFeature" 
+			Title="$(loc.ProductName_NOM)" Description="$(loc.wholeProductFeatureDesc)" 
+			Display="expand" Level="1" AllowAdvertise="no" InstallDefault="local" Absent="disallow"
+			ConfigurableDirectory="INSTALLDIR">
+
+			<ComponentRef Id="MainRootComponent" />
+
+      <?ifdef BASE_FEATURES ?>
+      <ComponentRef Id="MainRootOtherOS"/>
+			<ComponentRef Id="MainRootXPX64"/>
+			<ComponentRef Id="MainRootVista"/>
+			<ComponentRef Id="MainRootVistaX64"/>
+			<?endif?>
+			<ComponentRef Id="AppDataAVPDirComponent" />
+			<ComponentRef Id="AppReportDirComponent" />
+			<ComponentRef Id="AppQuarantineDirComponent" />
+			<ComponentRef Id="AppBackupDirComponent" />
+			<ComponentRef Id="AppPdmHistDirComponent" />
+			<ComponentRef Id="AppDataUpdateDistributionDirComponent" />
+			<ComponentRef Id="ProductMenuFolderComponent" />
+			
+			<ComponentRef Id="Microsoft.VC80.CRT.manifest"	/>	
+			<ComponentRef Id="msvcm80.dll" />
+			<ComponentRef Id="msvcp80.dll" />
+			<ComponentRef Id="msvcr80.dll" />
+			<ComponentRef Id="Microsoft.VC80.CRT.manifest_X64" />
+			<ComponentRef Id="msvcm80.dll_X64" />
+			<ComponentRef Id="msvcp80.dll_X64" />
+			<ComponentRef Id="msvcr80.dll_X64" />
+			<ComponentRef Id="dbghelp.dll" />
+			<!--Can be removed after Vista Logo test confirmed-->
+			<!--<ComponentRef Id="SelfRegModules.dll" />-->
+
+			<?include "$(env.temp_path)/gui_skins_refs.wxi" ?>
+			<?include "$(env.temp_path)/gui_skins_refs_loc.wxi" ?>
+
+			<Feature Id="AVScannerAndCoreFeature" 
+				Title="$(loc.AVScannerAndCoreFeatureTitle)" Description="$(loc.AVScannerAndCoreFeatureDesc)" 
+				Level="1" AllowAdvertise="no" InstallDefault="local" Absent="disallow" >
+
+				<ComponentRef Id="BasesCORE" />
+				<ComponentRef Id="DskmCORE" />
+				<ComponentRef Id="DataCORE" />
+				<?include "$(env.temp_path)/retr_dat_refs_loc.wxi" ?>
+
+				<ComponentRef Id="BasesAVS" />
+
+				<ComponentRef Id="BasesAVZ" />
+
+				<ComponentRef Id="PathEnvVar" />
+				<?if ($(env.product_type) = FS) ?>
+				<ComponentRef Id="MSExclusions" />
+				<?endif ?>
+
+<!--				<ComponentRef Id="context.chm" /> -->
+				<ComponentRef Id="license.txt" />
+				<ComponentRef Id="kl.url" />
+				<?if ($(env.localization_short_name) = jp) And ($(env.product_type) = KAV Or $(env.product_type) = KIS)?>
+				<ComponentRef Id="userreg.url" />
+				<?endif ?>
+				<ComponentRef Id="UninstallShortcut" />
+        <?ifdef CORPORATE_FEATURES ?>
+        <ComponentRef Id="uninstall.kpd"/>
+				<?endif ?>
+
+				<ComponentRef Id="Arj.ppl" />
+				<ComponentRef Id="ArjPack.ppl" />
+				<ComponentRef Id="avlib.ppl" />
+				<ComponentRef Id="avp.com" />
+				<ComponentRef Id="avp.exe" />
+				<ComponentRef Id="avp3info.ppl" />
+				<ComponentRef Id="avpgs.ppl" />
+				<ComponentRef Id="avpgui.ppl" />
+				<ComponentRef Id="avpgui.tlb" />
+				<ComponentRef Id="avs.ppl" />
+				<ComponentRef Id="avspm.ppl" />
+				<ComponentRef Id="base64.ppl" />
+				<ComponentRef Id="base64p.ppl" />
+				<ComponentRef Id="basegui.ppl" />
+				<ComponentRef Id="basegui.ppl_X64" />
+				<ComponentRef Id="bl.ppl" />
+				<ComponentRef Id="btdisk.ppl" />
+				<ComponentRef Id="btimages.ppl" />
+				<ComponentRef Id="buffer.ppl" />
+				<ComponentRef Id="CAB.ppl" />
+				<ComponentRef Id="clldr.dll" />
+				<ComponentRef Id="crpthlpr.ppl" />
+				<ComponentRef Id="deflate.ppl" />
+				<ComponentRef Id="diffs.dll" />
+				<ComponentRef Id="DMAP.ppl" />
+				<ComponentRef Id="dtreg.ppl" />
+				<ComponentRef Id="Explode.ppl" />
+				<ComponentRef Id="filemap.ppl" />
+				<ComponentRef Id="FsDrvPlg.ppl" />
+				<ComponentRef Id="fssync.dll" />
+				<ComponentRef Id="ushata.dll" />
+        <?ifdef BASE_FEATURES ?>
+        <ComponentRef Id="fssync.dll_X64" />
+				<?endif?>
+				<ComponentRef Id="GetSI.dll" />
+				<ComponentRef Id="HASHMD5.ppl" />
+				<ComponentRef Id="hips.ppl" />
+				<ComponentRef Id="syswatch.ppl" />
+				<ComponentRef Id="netwatch.ppl" />
+				<ComponentRef Id="propmap.ppl" />
+				<ComponentRef Id="ichk2.ppl" />
+				<ComponentRef Id="iChkSA.ppl" />
+				<ComponentRef Id="Inflate.ppl" />
+				<ComponentRef Id="inifile.ppl" />
+				<ComponentRef Id="iwgen.ppl" />
+				<ComponentRef Id="lha.ppl"/>
+				<ComponentRef Id="libola.dll" />
+				<ComponentRef Id="lic.ppl" />
+        <?ifdef CORPORATE_FEATURES ?>
+        <ComponentRef Id="licmgr.ppl"/>
+				<?endif ?>
+				<ComponentRef Id="Load46St.dll" />
+				<ComponentRef Id="MailMsg.ppl" />
+				<ComponentRef Id="MAPIEDK.dll" />
+				<ComponentRef Id="mdb.ppl" />
+				<ComponentRef Id="MDMAP.ppl" />
+				<ComponentRef Id="MemModSc.ppl" />
+				<ComponentRef Id="MemScan.ppl" />
+				<ComponentRef Id="minizip.ppl" />
+				<ComponentRef Id="mkavio.ppl" />
+				<ComponentRef Id="msoe.ppl" />
+				<ComponentRef Id="ndetect.ppl" />
+				<ComponentRef Id="nfio.ppl" />
+				<ComponentRef Id="nfio.ppl_X64" />
+				<ComponentRef Id="NTFSstrm.ppl" />
+				<ComponentRef Id="ods.ppl" />
+				<ComponentRef Id="params.ppl" />
+				<ComponentRef Id="params.ppl_X64" />
+				<ComponentRef Id="passdmap.ppl" />
+				<ComponentRef Id="PrKernel.ppl" />
+				<ComponentRef Id="prKernel.ppl_X64" />
+				<ComponentRef Id="prloader.dll" />
+				<ComponentRef Id="prLoader.dll_X64" />
+				<ComponentRef Id="procmon.ppl" />
+				<ComponentRef Id="prremote.dll" />
+				<ComponentRef Id="prremote.dll_X64" />
+				<ComponentRef Id="prseqio.ppl" />
+				<ComponentRef Id="PrUpdate.ppl" />
+				<ComponentRef Id="PrUtil.ppl" />
+				<ComponentRef Id="pxstub.ppl" />
+				<ComponentRef Id="pxstub.ppl_X64" />
+				<ComponentRef Id="qb.ppl" />
+				<ComponentRef Id="rar.ppl" />
+				<ComponentRef Id="regmap.ppl" />
+				<ComponentRef Id="report.ppl" />
+				<ComponentRef Id="reportdb.ppl" />
+				<?if not $(env.product_type) = SOS ?>
+				<ComponentRef Id="rescuecd.zip" />
+				<ComponentRef Id="rescue32.exe" />
+				<?endif?>
+				<ComponentRef Id="resip.ppl" />
+				<ComponentRef Id="schedule.ppl" />
+				<ComponentRef Id="SFDB.ppl" />
+				<ComponentRef Id="shellex.dll" />
+				<ComponentRef Id="ShellEx.dll_X64" />
+				<ComponentRef Id="stat.ppl" />
+				<ComponentRef Id="StdComp.ppl" />
+				<ComponentRef Id="StEnum2.ppl" />
+				<ComponentRef Id="stored.ppl" />
+				<ComponentRef Id="SuperIO.ppl" />
+				<ComponentRef Id="TempFile.ppl" />
+				<ComponentRef Id="Tempfile.ppl_X64" />
+				<ComponentRef Id="thpimpl.ppl" />
+				<ComponentRef Id="timer.ppl" />
+				<ComponentRef Id="tm.ppl" />
+				<ComponentRef Id="UnArj.ppl" />
+				<ComponentRef Id="UniArc.ppl" />
+				<ComponentRef Id="UnLZX.ppl" />
+				<ComponentRef Id="Unreduce.ppl" />
+				<ComponentRef Id="UNSHRINK.ppl" />
+				<ComponentRef Id="UnStored.ppl" />
+				<ComponentRef Id="updater.dll" />
+				<ComponentRef Id="vmarea.ppl" />
+				<ComponentRef Id="vkbd.dll" />
+				<ComponentRef Id="vkbd.dll_X64" />
+				<ComponentRef Id="WDiskIO.ppl" />
+				<ComponentRef Id="WinReg.ppl" />
+				<ComponentRef Id="WinReg.ppl_X64" />
+				<ComponentRef Id="netdtls.ppl" />
+        <?if not ($(env.product_type) = SOS) ?>
+        <ComponentRef Id="wmihlpr.ppl" />
+				<ComponentRef Id="wmi64.exe_X64" />
+				<?endif?>
+				<ComponentRef Id="xorio.ppl" />
+        <ComponentRef Id="advdis.ppl" />
+        <!-- AVZ -->
+        <ComponentRef Id="avzkrnl.dll" />
+        <ComponentRef Id="avzscan.ppl" />
+      </Feature>
+      <!-- /AVScannerAndCoreFeature -->
+
+      <?if not ($(env.product_type) = SOS) ?>
+
+      <?ifdef BASE_FEATURES ?>
+      <Feature Id="SystemWatchFeature" 
+          Title="$(loc.SystemWatchFeatureTitle)" Description="$(loc.SystemWatchFeatureDesc)" 
+          Level="1" AllowAdvertise="no">
+
+        <?ifdef BASE_FEATURES ?>
+        <Feature Id="ProactiveDefenseFeature" 
+          Title="$(loc.ProactiveDefenseFeatureTitle)" Description="$(loc.ProactiveDefenseFeatureDesc)" 
+          Level="1" AllowAdvertise="no">
+          <ComponentRef Id="SystemWatch" />
+
+          <?include "_klogon.wxi" ?>
+          <?include "_klif.wxi" ?>
+
+          <ComponentRef Id="BasesPDM" />
+          <ComponentRef Id="BasesHIPS" />
+
+          <ComponentRef Id="pdm2rt.ppl" />
+          <ComponentRef Id="msdll.txt" />
+          <ComponentRef Id="klscav.dll" />
+          <ComponentRef Id="klscav.dll_X64" />
+          <ComponentRef Id="scrchpg.dll" />
+          <ComponentRef Id="Scrchpg.dll_X64" />
+          <ComponentRef Id="r3hook.dll" />
+          <ComponentRef Id="r3hook.dll_X64" />
+          <ComponentRef Id="miscr3.dll" />
+
+        </Feature>
+        <!-- /ProactiveDefenseFeature -->
+        <?endif ?>
+
+        <?ifdef ADVANCED_FEATURES ?>
+        <Feature Id="FirewallFeature" 
+          Title="$(loc.FirewallFeatureTitle)" Description="$(loc.FirewallFeatureDesc)" 
+          Level="3" AllowAdvertise="no">
+          <ComponentRef Id="SystemWatch" />
+
+          <?include "_klogon.wxi" ?>
+          <?include "_klif.wxi" ?>
+          <?include "_klfltdev.wxi" ?>
+          <?include "_klbg.wxi" ?>
+          <?include "_kl1.wxi" ?>
+          <?include "_klop.wxi" ?>
+          <?include "_klim.wxi" ?>
+          <?include "_ahbases.wxi" ?>
+          <?include "_ckah.wxi" ?>
+
+          <ComponentRef Id="wmifw.exe" />
+
+        </Feature>
+        <!-- /FirewallFeature -->
+        <?endif ?>
+
+      </Feature>
+      <!-- /SystemWatchFeature -->
+      <?endif ?>
+
+
+      <Feature Id="MalwareProtectionFeature" 
+					  Title="$(loc.MalwareProtectionFeatureTitle)" Description="$(loc.MalwareProtectionFeatureDesc)" 
+    				Level="1" AllowAdvertise="no">
+
+        <Feature Id="FileAntiVirusFeature" 
+					  Title="$(loc.FileAntiVirusFeatureTitle)" Description="$(loc.FileAntiVirusFeatureDesc)" 
+					  Level="1" AllowAdvertise="no">
+            <ComponentRef Id="Antivirus" />
+
+            <?include "_klogon.wxi" ?>
+            <?include "_klif.wxi" ?>
+
+            <ComponentRef Id="oas.ppl" />
+					  <ComponentRef Id="wmiav.exe" />
+					  <ComponentRef Id="wmias.exe" />
+				  </Feature>
+          <!-- /FileAntiVirusFeature -->
+
+          <?ifdef BASE_FEATURES ?>
+          <Feature Id="MailAntiVirusFeature" 
+					  Title="$(loc.MailAntiVirusFeatureTitle)" Description="$(loc.MailAntiVirusFeatureDesc)" 
+					  Level="1" AllowAdvertise="no">
+            <ComponentRef Id="Antivirus" />
+
+            <?include "_klif.wxi" ?>
+            <?include "_klfltdev.wxi" ?>
+            <?include "_klbg.wxi" ?>
+            <?include "_kl1.wxi" ?>
+            <?include "_klop.wxi" ?>
+            <?include "_klim.wxi" ?>
+	        <?include "_ahbases.wxi" ?>
+            <?include "_ckah.wxi" ?>
+
+            <ComponentRef Id="TrafMon2.ppl" />
+					  <ComponentRef Id="IMAPprtc.ppl" />					
+					  <ComponentRef Id="NNTPprtc.ppl" />
+					  <ComponentRef Id="POP3prtc.ppl" />
+					  <ComponentRef Id="SMTPprtc.ppl" />
+					  <ComponentRef Id="maildisp.ppl" />
+					  <ComponentRef Id="ComStmIO.ppl" />
+					  <ComponentRef Id="mcou.dll" />
+					  <ComponentRef Id="mc.ppl" />
+					  <ComponentRef Id="kav.bav" />
+
+          </Feature>
+          <!-- /MailAntiVirusFeature -->
+          <?endif ?>
+
+          <?ifdef BASE_FEATURES ?>
+          <Feature Id="WebAntiVirusFeature" 
+					  Title="$(loc.WebAntiVirusFeatureTitle)" Description="$(loc.WebAntiVirusFeatureDesc)" 
+					  Level="1" AllowAdvertise="no">
+            <ComponentRef Id="Antivirus" />
+
+            <?include "_klif.wxi" ?>
+            <?include "_klfltdev.wxi" ?>
+            <?include "_klbg.wxi" ?>
+            <?include "_kl1.wxi" ?>
+            <?include "_klop.wxi" ?>
+            <?include "_klim.wxi" ?>
+            <?include "_ahbases.wxi" ?>
+            <?include "_ckah.wxi" ?>
+
+            <ComponentRef Id="BasesWAI386" />
+
+            <ComponentRef Id="TrafMon2.ppl" />
+					  <ComponentRef Id="httpscan.ppl" />
+					  <ComponentRef Id="httpanlz.ppl" />
+					  <ComponentRef Id="sc.ppl" />
+					  <ComponentRef Id="klscav.dll" />
+					  <ComponentRef Id="klscav.dll_X64" />
+					  <ComponentRef Id="SCIEPlgn.dll" />
+					  <ComponentRef Id="SCIEPlgn.dll_X64" />
+					  <ComponentRef Id="scrchpg.dll" />
+					  <ComponentRef Id="Scrchpg.dll_X64" />
+					  <ComponentRef Id="r3hook.dll" />
+					  <ComponentRef Id="r3hook.dll_X64" />
+            <?ifdef PERSONAL_ADVANCED_FEATURES ?>
+            <ComponentRef Id="urlflt.ppl" />
+					  <?endif ?>
+
+          </Feature>
+          <!-- /WebAntiVirusFeature -->
+          <?endif ?>
+        </Feature>
+        <!-- /MalwareProtectionFeature -->
+      
+
+        <?ifdef ADVANCED_FEATURES ?>
+        <Feature Id="OnlineSecurityFeature" 
+					  Title="$(loc.OnlineSecurityFeatureTitle)" Description="$(loc.OnlineSecurityFeatureDesc)" 
+    				Level="1" AllowAdvertise="no">
+
+          <?ifdef ADVANCED_FEATURES ?>
+          <Feature Id="IntrusionShieldFeature" 
+					  Title="$(loc.IntrusionShieldFeatureTitle)" Description="$(loc.IntrusionShieldFeatureDesc)" 
+					  Level="3" AllowAdvertise="no">
+            <ComponentRef Id="OnlineSecurity" />
+
+            <?include "_klif.wxi" ?>
+            <?include "_klfltdev.wxi" ?>
+            <?include "_klbg.wxi" ?>
+            <?include "_kl1.wxi" ?>
+            <?include "_klop.wxi" ?>
+            <?include "_klim.wxi" ?>
+            <?include "_ahbases.wxi" ?>
+            <?include "_ckah.wxi" ?>
+
+            <ComponentRef Id="ahids.ppl" />
+
+          </Feature>
+          <!-- /IntrusionShieldFeature -->
+          <?endif ?>
+
+          <?ifdef ADVANCED_FEATURES ?>
+          <Feature Id="AntiPhishingFeature" 
+					  Title="$(loc.AntiPhishingFeatureTitle)" Description="$(loc.AntiPhishingFeatureDesc)" 
+					  Level="3" AllowAdvertise="no">
+            <ComponentRef Id="OnlineSecurity" />
+
+            <?include "_klif.wxi" ?>
+            <?include "_klfltdev.wxi" ?>
+            <?include "_klbg.wxi" ?>
+            <?include "_kl1.wxi" ?>
+            <?include "_klop.wxi" ?>
+            <?include "_klim.wxi" ?>
+            <?include "_ahbases.wxi" ?>
+            <?include "_ckah.wxi" ?>
+
+            <ComponentRef Id="BasesASPY" />
+            <ComponentRef Id="BasesAP" />
+
+            <ComponentRef Id="aphish.ppl" />
+            <ComponentRef Id="aphisht.ppl" />
+            <ComponentRef Id="httpanlz.ppl" />
+            <ComponentRef Id="TrafMon2.ppl" />
+
+          </Feature>
+          <!-- /AntiPhishingFeature -->
+          <?endif ?>
+
+          <?ifdef ADVANCED_FEATURES ?>
+          <Feature Id="AntiDialerFeature" 
+					  Title="$(loc.AntiDialerFeatureTitle)" Description="$(loc.AntiDialerFeatureDesc)" 
+					  Level="3" AllowAdvertise="no">
+            <ComponentRef Id="OnlineSecurity" />
+
+            <ComponentRef Id="adialhk.dll" />
+            <ComponentRef Id="adialhk.dll_X64" />
+            <ComponentRef Id="adialtsk.ppl" />
+            <ComponentRef Id="r3hook.dll" />
+            <ComponentRef Id="r3hook.dll_X64" />
+
+          </Feature>
+          <!-- /AntiDialerFeature -->
+          <?endif ?>
+
+        </Feature>
+        <!-- /OnlineSecurityFeature -->
+        <?endif ?>
+
+        <?ifdef ADVANCED_FEATURES ?>
+        <Feature Id="ContentFilteringFeature" 
+					  Title="$(loc.ContentFilteringFeatureTitle)" Description="$(loc.ContentFilteringFeatureDesc)" 
+    				Level="1" AllowAdvertise="no">
+
+          <?ifdef ADVANCED_FEATURES ?>
+          <Feature Id="AntiSpamFeature" 
+					  Title="$(loc.AntiSpamFeatureTitle)" Description="$(loc.AntiSpamFeatureDesc)" 
+						  Level="3" AllowAdvertise="no">
+            <ComponentRef Id="ContentFilter" />
+
+            <?include "_klif.wxi" ?>
+            <?include "_klfltdev.wxi" ?>
+            <?include "_klbg.wxi" ?>
+            <?include "_kl1.wxi" ?>
+            <?include "_klop.wxi" ?>
+            <?include "_klim.wxi" ?>
+            <?include "_ahbases.wxi" ?>
+            <?include "_ckah.wxi" ?>
+
+            <ComponentRef Id="BasesAS" />
+            <ComponentRef Id="antispam.sfdb" />
+
+            <ComponentRef Id="antispam.ppl" />
+            <ComponentRef Id="cfdata3.dll" />
+            <ComponentRef Id="cfilter3.dll" />
+            <ComponentRef Id="spamtst.ppl" />																
+            <ComponentRef Id="maildisp.ppl" />
+            <ComponentRef Id="mcouas.dll" />
+            <ComponentRef Id="IMAPprtc.ppl" />
+            <ComponentRef Id="oeas.dll" />
+            <ComponentRef Id="oeas.dll_X64" />
+            <ComponentRef Id="POP3prtc.ppl" />
+            <ComponentRef Id="SMTPprtc.ppl" />
+            <ComponentRef Id="TrafMon2.ppl" />
+            <ComponentRef Id="TrainSup.ppl" />
+            <ComponentRef Id="r3hook.dll" />
+            <ComponentRef Id="r3hook.dll_X64" />
+            <ComponentRef Id="ComStmIO.ppl" />
+            <ComponentRef Id="ComStmIO.ppl_X64" />
+            <ComponentRef Id="kav.tbp" />
+
+          </Feature>
+          <!-- /AntiSpamFeature -->
+          <?endif ?>
+
+          <?ifdef ADVANCED_FEATURES ?>
+          <Feature Id="AntiBannerFeature" 
+					  Title="$(loc.AntiBannerFeatureTitle)" Description="$(loc.AntiBannerFeatureDesc)" 
+					  Level="3" AllowAdvertise="no">
+            <ComponentRef Id="ContentFilter" />
+
+            <?include "_klif.wxi" ?>
+            <?include "_klfltdev.wxi" ?>
+            <?include "_klbg.wxi" ?>
+            <?include "_kl1.wxi" ?>
+            <?include "_klop.wxi" ?>
+            <?include "_klim.wxi" ?>
+            <?include "_ahbases.wxi" ?>
+            <?include "_ckah.wxi" ?>
+
+            <ComponentRef Id="BasesASPY" />
+            <ComponentRef Id="BasesADB" />
+
+            <ComponentRef Id="aphish.ppl" />
+            <ComponentRef Id="httpanlz.ppl" />
+            <ComponentRef Id="klscav.dll" />
+            <ComponentRef Id="klscav.dll_X64" />
+            <ComponentRef Id="scrchpg.dll" />
+            <ComponentRef Id="Scrchpg.dll_X64" />
+            <ComponentRef Id="TrafMon2.ppl" />
+
+          </Feature>
+          <!-- /AntiBannerFeature -->
+          <?endif ?>
+
+          <?ifdef PERSONAL_ADVANCED_FEATURES ?>
+          <Feature Id="ParentalControlFeature" 
+					  Title="$(loc.ParentalControlFeatureTitle)" Description="$(loc.ParentalControlFeatureDesc)" 
+					  Level="3" AllowAdvertise="no">
+            <ComponentRef Id="ContentFilter" />
+
+            <?include "_klif.wxi" ?>
+            <?include "_klfltdev.wxi" ?>
+            <?include "_klbg.wxi" ?>
+            <?include "_kl1.wxi" ?>
+            <?include "_klop.wxi" ?>
+            <?include "_klim.wxi" ?>
+            <?include "_ahbases.wxi" ?>
+            <?include "_ckah.wxi" ?>
+
+            <ComponentRef Id="BasesPCDB" />
+
+            <ComponentRef Id="httpanlz.ppl" />
+            <ComponentRef Id="ProxyDet.ppl" />
+            <ComponentRef Id="PrTransp.ppl" />
+            <ComponentRef Id="TrafMon2.ppl" />
+            <ComponentRef Id="urlflt.ppl" />
+
+          </Feature>
+          <!-- /ParentalControlFeature -->
+          <?endif ?>
+
+        </Feature>
+      <!-- /ContentFilteringFeature -->
+      <?endif ?>
+
+      <?endif?>
+      <!-- not SOS -->
+
+      <?ifdef CORPORATE_FEATURES ?>
+      <Feature Id="AdminKitConnector" Title="$(loc.AdminKitConnectorTitle)" Description="$(loc.AdminKitConnectorDesc)" 
+				Level="1" AllowAdvertise="no"  
+				ConfigurableDirectory="INSTALLDIR">
+
+        <ComponentRef Id="AVPCon.dll" />
+        
+      </Feature>
+      <!-- AdminKitConnector -->
+      <?endif ?>
+    </Feature>
+  </Fragment>
+</Wix>
+

@@ -1,0 +1,6 @@
+// ***** Adware.SmartPops *****
+begin
+ AddEvAlarmByCLSID('D5C778F1-CF13-4E70-ADF0-45A953E7CB8B',AScriptName,'NE.dll');
+ AddEvAlarmByCLSID('e088829b-528a-706c-a10f-58a2a04b2a00',AScriptName,'uoxgpbklby.dll');
+ AddEvAlarmByCLSID('E79061BA-B6E7-4A9D-A07C-C3CB561013B4', AScriptName, '');
+end.

@@ -1,0 +1,7 @@
+// ***** AdvWare.ToolBar.HotSearchBar *****
+begin
+ AddEvAlarmByCLSID('99802379-7362-40E2-9D28-8A3B9AF880B7',AScriptName,'win*32.dll');
+ AddEvAlarmByCLSID('82F55658-CA6D-4754-B313-5DCAAFA0BB42',AScriptName,'Win*32.DLL');
+ AddEvAlarmByCLSID('22B720C7-5FA6-40A8-9F8F-8584BF669690',AScriptName,'Win*32.DLL');
+ AddEvAlarmByCLSID('486145B0-37D1-428B-B3E1-26D26F690C79',AScriptName,'Win*32.DLL');
+end.

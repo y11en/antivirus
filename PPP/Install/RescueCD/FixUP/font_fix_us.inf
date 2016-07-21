@@ -1,0 +1,28 @@
+;  font_fix_us.inf
+;  v3 plug-in INF file for PE Builder Font trouble FIX
+;  Created by Victor Baskakov (Russian Federation)
+;  Make WinPE not wars;-)
+;  08.01.2004 2:11 (local; GMT+3) 
+
+[Version]
+Signature= "$Windows NT$"
+
+[PEBuilder]
+Name="Font trouble FIX part 3 (LOCALE=US)"
+Enable=1
+
+
+[Software.AddReg]
+; LOCALE=US
+;
+0x4, "Microsoft\Windows NT\CurrentVersion\FontMapper", "DEFAULT", 0x00000000
+
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Courier 10,12,15 (VGA res)", "COURE.FON"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "MS Sans Serif 8,10,12,14,18,24 (VGA res)", "SSERIFE.FON"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "MS Serif 8,10,12,14,18,24 (VGA res)", "SERIFE.FON"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Small Fonts (VGA res)", "SMALLE.FON"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Symbol 8,10,12,14,18,24 (VGA res)", "SYMBOLE.FON"
+
+0x1, "Microsoft\Windows NT\CurrentVersion\GRE_Initialize", "FIXEDFON.FON", "vgafix.fon"
+0x1, "Microsoft\Windows NT\CurrentVersion\GRE_Initialize", "FONTS.FON", "vgasys.fon"
+0x1, "Microsoft\Windows NT\CurrentVersion\GRE_Initialize", "OEMFONT.FON", "vgaoem.fon"

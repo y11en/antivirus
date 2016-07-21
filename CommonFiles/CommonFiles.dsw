@@ -1,0 +1,317 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "All"=.\All.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name _Sql
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name DataTreeUtils
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name hashutil
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ipc
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name licpolicy
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name m_utils
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Property
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Serialize
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name SWManager
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Win32Utils
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name WinAVPIO
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name WinSign
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name klsys
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name dskm
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "DataTreeUtils"=.\DataTreeUtils\DataTreeUtils.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/DataTreeUtils", 
+    .\datatreeutils
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Property"=.\Property\Property.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/Property", 
+    .\property
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "SWManager"=.\SWManager\SWManager.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/SWManager", 
+    .\swmanager
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Serialize"=.\Serialize\Serialize.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/Serialize", 
+    .\serialize
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name DataTreeUtils
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name SWManager
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Win32Utils"=.\windows\Win32Utils\Win32Utils.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/windows/Win32Utils", 
+    .\windows\win32utils
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "WinAVPIO"=.\windows\WinAVPIO\WinAVPIO.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/Windows/WinAVPIO", SCBAAAAA
+    .\windows\winavpio
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "WinSign"=.\Sign\WinSign.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/Sign", LBDAAAAA
+    .\sign
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "_Sql"=.\Sql\sql\_Sql.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/Sql/sql", 
+    .\sql\sql
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "dskm"=.\dskm\dskm.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/dskm", PFNPBAAA
+    .\dskm
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "hashutil"=.\hashutil\hashutil.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/hashutil", GCOBAAAA
+    .\hashutil
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "ipc"=.\windows\ipc\ipc.dll\ipc.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/windows/ipc/ipc.dll", XBJHAAAA
+    .\windows\ipc\ipc.dll
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "kldirobj"=.\kldirobj\kldirobj.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/kldirobj", JKFXCAAA
+    .\kldirobj
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "klsys"=.\klsys\klsys.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/klsys", RPBMAAAA
+    .\klsys
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "licpolicy"=.\Licensing\build\win32\licpolicy\licpolicy.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/Licensing/build/win32/licpolicy", MLBIAAAA
+    .\licensing\build\win32\licpolicy
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "m_utils"=.\m_utils\m_utils.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/m_utils", EBIJAAAA
+    .\m_utils
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

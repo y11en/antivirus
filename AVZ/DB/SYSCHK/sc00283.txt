@@ -1,0 +1,4 @@
+// ***** Trojan.Win32.TalkStocks.a *****
+begin
+ AddEvAlarmByCLSID('A3852FBD-AC5C-88C0-3AEC-B8B0AD7EE3A9', AScriptName, 'rpuxgbdz.dll');
+end.

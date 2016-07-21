@@ -1,0 +1,4 @@
+// ***** Adware.AdHelper *****
+begin
+ AddEvAlarmByCLSID('81A99149-F047-4090-8AAD-D11FF4EFB734',AScriptName,'dae.dll');
+end.

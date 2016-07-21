@@ -1,0 +1,62 @@
+// --------------------------------------------------------------------------------
+// AVP Prague stamp begin( Interface header,  )
+// -------- Tuesday,  31 August 2004,  10:35 --------
+// File Name   -- rpc_licensing.idl
+// Copyright (c) Kaspersky Labs. 1996-2004.
+// -------------------------------------------
+// AVP Prague stamp end
+
+
+#include "rpc_declare.h"
+import "prague.h";
+import "i_licensing.h";
+import "i_cryptohelper.h";
+
+typedef rpcOBJECT   rpcLICENSING;
+// --------------------------------------------------------------------------------
+// AVP Prague stamp begin( Interface comment,  )
+// LIC interface implementation
+// Short comments -- 
+// AVP Prague stamp end
+
+
+// --------------------------------------------------------------------------------
+// AVP Prague stamp begin( Interface function forward declarations,  )
+[ uuid (8B1FD61D-B8A5-4578-9262-E8A4ACF7DF32),
+  version(1.0),
+  pointer_default(unique)
+]
+interface rpc_licensing {
+	tERROR LIC_GetActiveKeyInfo( rpcLICENSING _this, rpcSER(pResult) );
+	tERROR LIC_GetInstalledKeysInfo( rpcLICENSING _this, rpcSER(pResult) );
+	tERROR LIC_RevokeActiveKey( rpcLICENSING _this );
+	tERROR LIC_RevokeKey( rpcLICENSING _this, rpcSER(pKeySerialNumber) );
+	tERROR LIC_CheckKeyFile( rpcLICENSING _this, [in, string] const wchar_t* szKeyFileName, [in] tDWORD dwKeyAddMode, rpcSER(pResult) );
+	tERROR LIC_CheckActiveKey( rpcLICENSING _this, rpcSER(pResult) );
+	tERROR LIC_AddKey( rpcLICENSING _this, [in, string] const wchar_t* szFileName, [in] tDWORD dwKeyAddMode );
+	tERROR LIC_AddOnlineKey( rpcLICENSING _this, rpcSER(pUserData), [in] tDWORD dwKeyAddMode, rpcSER(pResult) );
+	tERROR LIC_StopOnlineLoadKey( rpcLICENSING _this );
+}
+// AVP Prague stamp end
+
+typedef rpcOBJECT   rpcCRYPTOHELPER;
+// --------------------------------------------------------------------------------
+// AVP Prague stamp begin( Interface comment,  )
+// DATACODEC interface implementation
+// Short comments -- 
+// AVP Prague stamp end
+
+
+// --------------------------------------------------------------------------------
+// AVP Prague stamp begin( Interface function forward declarations,  )
+[ uuid (191B7A49-C1FD-4E48-8479-0F4A604CD76B),
+  version(1.0),
+  pointer_default(unique)
+]
+interface rpc_cryptohelper {
+	tERROR CRYPTOHELPER_Encode( rpcCRYPTOHELPER _this, [mout] tDWORD* result, [in,size_is(nDataSize)] const tBYTE* pDecodedData, [in] tDWORD nDataSize, [mout,size_is(nBufferSize)] tBYTE* pEncodedBuffer, [in] tDWORD nBufferSize );
+	tERROR CRYPTOHELPER_Decode( rpcCRYPTOHELPER _this, [mout] tDWORD* result, [in,size_is(nDataSize)] const tBYTE* pEncodedData, [in] tDWORD nDataSize, [mout,size_is(nBufferSize)] tBYTE* pDecodedBuffer, [in] tDWORD nBufferSize );
+	tERROR CRYPTOHELPER_CryptPassword( rpcCRYPTOHELPER _this, rpcSER(password), [in] tDWORD flags );
+	tERROR CRYPTOHELPER_IsMSTrusted( rpcCRYPTOHELPER _this, [in, string] const wchar_t* file_name );
+}
+// AVP Prague stamp end

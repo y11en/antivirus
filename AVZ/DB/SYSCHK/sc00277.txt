@@ -1,0 +1,4 @@
+// ***** Trojan.Win32.Favadd.g *****
+begin
+ AddEvAlarmByCLSID('72FF22A1-8BF1-11D5-9A3D-000021506A27', AScriptName, 'Short.dll');
+end.

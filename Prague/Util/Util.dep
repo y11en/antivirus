@@ -1,0 +1,174 @@
+# Microsoft Developer Studio Generated Dependency File, included by Util.mak
+
+.\list.c : \
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\Include\IFace\i_list.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\list.h"\
+	
+
+.\lru.c : \
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\Include\IFace\i_lru.h"\
+	"..\Include\IFace\i_lrustg.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\lru.h"\
+	
+
+.\ltree.c : \
+	"..\Include\IFace\i_compar.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\Include\IFace\i_ltree.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\ltree.h"\
+	
+
+.\stack.c : \
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\Include\IFace\i_stack.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\stack.h"\
+	
+
+.\Tree.c : \
+	"..\Include\IFace\i_compar.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\Include\IFace\i_list.h"\
+	"..\Include\IFace\i_lru.h"\
+	"..\Include\IFace\i_ltree.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\Include\IFace\i_stack.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\Include\IFace\i_tree.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\list.h"\
+	".\lru.h"\
+	".\ltree.h"\
+	".\stack.h"\
+	".\TREE.H"\
+	
+
+.\Util.rc : \
+	"..\..\CommonFiles\Version\ver_av50.h"\
+	"..\..\CommonFiles\Version\ver_itoa.h"\
+	"..\..\CommonFiles\Version\ver_kl.h"\
+	".\ver_mod.h"\
+	

@@ -1,0 +1,4 @@
+// ***** AdvWare.SearchSquire *****
+begin
+ AddEvAlarmByCLSID('907CA0E5-CE84-11D6-9508-02608CDD2846', AScriptName, 'SearchSquire*.DLL');
+end.

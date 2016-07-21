@@ -1,0 +1,17 @@
+// $AVZ1560
+//$ Проводник - включить отображение расширений для файлов известных системе типов
+// Функция поиска проблемы
+function Check : dword;
+begin
+ Result := 0;
+ if RegKeyIntParamRead('HKCU','Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', 'HideFileExt') > 0 then
+  Result := 1;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+begin
+ RegKeyIntParamWrite('HKCU','Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', 'HideFileExt', 0);
+ Result := 0;
+end;
+

@@ -1,0 +1,798 @@
+ERROR_APPRUNNING	Fermez la console d'administration avant de poursuivre l'installation.
+ERROR_APPVERSION	Cette version de l'application n'est pas compatible avec la version de la console d'administration installée sur l'ordinateur. Veuillez mettre à la console d'administration à jour.
+ERROR_NOTINSTALLED	La console d'administration n'est pas installée.	
+REGVALUE_ANTIHACKER_TASK	Anti-Hacker
+REGVALUE_ANTISPAM_TASK	Anti-Spam
+REGVALUE_ANTISPY_TASK	Anti-Escroc
+REGVALUE_BB_TASK	Défense proactive
+REGVALUE_INSTALLKEY_TASK	Installation de la clé de licence
+REGVALUE_MC_TASK	Antivirus Courrier
+REGVALUE_OAS_TASK	Antivirus Fichiers
+REGVALUE_ODS_TASK	Recherche de virus
+REGVALUE_PRODUCTNAME_FS	Kaspersky Anti-Virus 6.0 for Windows Servers
+REGVALUE_PRODUCTNAME_WKS	Kaspersky Anti-Virus 6.0 for Windows Workstations
+REGVALUE_RETRAN_TASK	Copie des mises à jour
+REGVALUE_ROLLBACK_TASK	Remise à l'état antérieur à la mise à jour
+REGVALUE_SC_TASK	Analyse des scripts
+REGVALUE_UPDATER_TASK	Mise à jour
+REGVALUE_WM_TASK	Antivirus Internet
+COMPANY_NAME	Kaspersky Lab	
+DN_AlwaysInstall	Toujours installer	
+FEATURE_MAIN	Principaux composants	
+IDPROP_ARPCOMMENTS	La protection globale de votre ordinateur!	
+IDPROP_ARPCONTACT	Service d'assistance technique	
+IDPROP_ARPHELPLINK	http://www.kaspersky.ru/support.asp
+IDPROP_ARPHELPTELEPHONE	+7-495-797-8700	
+IDPROP_ARPURLINFOABOUT	http://www.kaspersky.com/fr	
+IDPROP_ARPURLUPDATEINFO	http://www.kaspersky.ru/updates.asp	
+IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR	Les paramètres couleur de votre système ne sont pas adaptés à l'exécution de [ProductName].	
+IDPROP_EXPRESS_LAUNCH_CONDITION_OS	Le système d'exploitation n'est pas adapté à l'exécution de [ProductName].	
+IDPROP_EXPRESS_LAUNCH_CONDITION_PROCESSOR	Le processeur n'est pas adapté à l'exécution de [ProductName].	
+IDPROP_EXPRESS_LAUNCH_CONDITION_RAM	Il manque de mémoire vive pour l'exécution de [ProductName].	
+IDPROP_EXPRESS_LAUNCH_CONDITION_SCREEN	La résolution de l'écran n'est pas adaptée à l'exécution de [ProductName].	
+IDPROP_SETUPTYPE_COMPACT	Minimal(e)	
+IDPROP_SETUPTYPE_COMPACT_DESC	Seuls les composants indispensables à l'exécution de l'application sont installés	
+IDPROP_SETUPTYPE_CUSTOM	Custom	Personnalisée
+IDPROP_SETUPTYPE_CUSTOM_DESC	Seuls les composants sélectionnés sont installés	
+IDPROP_SETUPTYPE_TYPICAL	Par défaut	
+IDPROP_SETUPTYPE_TYPICAL_DESC	Tous les composants de l'application sont installés	
+IDS__AgreeToLicense_0	{&Tahoma8}Je n'accepte pas les termes &de ce contrat de licence	
+IDS__AgreeToLicense_1	{&Tahoma8}&J'accepte les termes de ce contrat de licence	
+IDS__DatabaseFolder_0	[ProductName] - InstallShield Wizard	
+IDS__DatabaseFolder_1	Annuler	
+IDS__DatabaseFolder_10	Installer la base de données de [ProductName] dans :	
+IDS__DatabaseFolder_11	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__DatabaseFolder_12	<ISProductFolder>\Redist\Language Independent\OS Independent\DestIcon.ibd	
+IDS__DatabaseFolder_2	InstallShield	
+IDS__DatabaseFolder_3	{&MSSWhiteSerif8}InstallShield	
+IDS__DatabaseFolder_4	Cliquez sur Suivant pour installer la base dans ce répertoire ou sur Modifier pour l' installer dans un autre répertoire.	
+IDS__DatabaseFolder_5	{&MSSansBold8}Répertoire de base de données	
+IDS__DatabaseFolder_6	< &Précédent	
+IDS__DatabaseFolder_7	&Suivant >	
+IDS__DatabaseFolder_8	&Modifier...	
+IDS__DatabaseFolder_9	[DATABASEDIR]	
+IDS__DestinationFolder_0	Installshield wizard de [ProductName]	
+IDS__DestinationFolder_1	{&Tahoma8}Annuler	
+IDS__DestinationFolder_10	{&Tahoma8}Installer [ProductName] dans:	
+IDS__DestinationFolder_11	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__DestinationFolder_12	<ISProductFolder>\Redist\Language Independent\OS Independent\DestIcon.ibd	
+IDS__DestinationFolder_2	{&Tahoma8}InstallShield	
+IDS__DestinationFolder_3	{&MSSWhiteSerif8}InstallShield	
+IDS__DestinationFolder_4	{&Tahoma8}Cliquez sur Suivant pour installer l'application dans ce répertoire ou sur Modifier pour l' installer dans un autre répertoire.	
+IDS__DestinationFolder_5	{&MSSansBold8}Répertoire d'installation de l'application	
+IDS__DestinationFolder_6	{&Tahoma8}< &Précédent	
+IDS__DestinationFolder_7	{&Tahoma8}&Suivant >	
+IDS__DestinationFolder_8	{&Tahoma8}&Modifier...	
+IDS__DestinationFolder_9	{&Tahoma8}[INSTALLDIR]	
+IDS__DisplayName_Custom	Personnalisé(e)	
+IDS__DisplayName_Minimal	Minimale	
+IDS__DisplayName_Typical	Par défaut	
+IDS__IsAdminInstallBrowse_0	Installshield Wizard de [ProductName]	
+IDS__IsAdminInstallBrowse_1	{&MSSWhiteSerif8}InstallShield	
+IDS__IsAdminInstallBrowse_10	{&Tahoma8}OK	
+IDS__IsAdminInstallBrowse_11	{&Tahoma8}	
+IDS__IsAdminInstallBrowse_12	{&Tahoma8}&Nom de répertoire:	
+IDS__IsAdminInstallBrowse_13	Répertoire parent|	
+IDS__IsAdminInstallBrowse_14	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsAdminInstallBrowse_15	<ISProductFolder>\Redist\Language Independent\OS Independent\New.ibd	
+IDS__IsAdminInstallBrowse_16	<ISProductFolder>\Redist\Language Independent\OS Independent\Up.ibd	
+IDS__IsAdminInstallBrowse_2	{&Tahoma8}InstallShield	
+IDS__IsAdminInstallBrowse_3	{&Tahoma8}Annuler	
+IDS__IsAdminInstallBrowse_4	{&Tahoma8}	
+IDS__IsAdminInstallBrowse_5	{&Tahoma8}&Rechercher dans:	
+IDS__IsAdminInstallBrowse_6	{&Tahoma8}Indiquez le répertoire cible à utiliser.	
+IDS__IsAdminInstallBrowse_7	{&MSSansBold8}Modification du répertoire cible	
+IDS__IsAdminInstallBrowse_8	{&Tahoma8}	
+IDS__IsAdminInstallBrowse_9	Créer nouveau répertoire|	
+IDS__IsAdminInstallPoint_0	Installshield Wizard de [ProductName]	
+IDS__IsAdminInstallPoint_1	{&Tahoma8}< &Précédent	
+IDS__IsAdminInstallPoint_10	{&Tahoma8}&Répertoire de réseau:	
+IDS__IsAdminInstallPoint_11	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsAdminInstallPoint_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsAdminInstallPoint_3	{&Tahoma8}InstallShield	
+IDS__IsAdminInstallPoint_4	{&Tahoma8}&Modifier...	
+IDS__IsAdminInstallPoint_5	{&Tahoma8}Annuler	
+IDS__IsAdminInstallPoint_6	{&Tahoma8}Veuillez spécifier un emplacement réseau pour l'image serveur de l'application.	
+IDS__IsAdminInstallPoint_7	{&Tahoma8}Veuillez saisir un emplacement réseau ou cliquer sur Modifier pour rechercher un emplacement. Cliquez sur Installer pour créer une image serveur de [ProductName] à l'emplacement réseau spécifié ou cliquez sur Annuler pour quitter l'assistant.	
+IDS__IsAdminInstallPoint_8	{&MSSansBold8}Emplacement réseau	
+IDS__IsAdminInstallPoint_9	{&Tahoma8}&Installer	
+IDS__IsAdminInstallPointWelcome_0	Installshield Wizard de [ProductName]	
+IDS__IsAdminInstallPointWelcome_1	{&Tahoma8}< &Précédent	
+IDS__IsAdminInstallPointWelcome_2	{&Tahoma8}Annuler	
+IDS__IsAdminInstallPointWelcome_3	{&Tahoma8}&Suivant >	
+IDS__IsAdminInstallPointWelcome_4	{&VerdanaBold14}Bienvenue dans le programme d'installation de [ProductName]	
+IDS__IsAdminInstallPointWelcome_5	{&Tahoma8}Le progamme d'installation va créer une image serveur de [ProductName] dans le répertoire de réseau indiqué. Cliquez sur Suivant pour continuer.	
+IDS__IsAdminInstallPointWelcome_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsBitmapDlg_0	Installshield Wizard de [ProductName]	
+IDS__IsBitmapDlg_1	{&Tahoma8}< &Précédent	
+IDS__IsBitmapDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsBitmapDlg_3	{&Tahoma8}InstallShield	
+IDS__IsBitmapDlg_4	{&Tahoma8}Annuler	
+IDS__IsBitmapDlg_5	{&Tahoma8}&Suivant >	
+IDS__IsBitmapDlg_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsBrowseFolderDlg_0	Installshield Wizard de [ProductName]	
+IDS__IsBrowseFolderDlg_1	{&MSSWhiteSerif8}InstallShield	
+IDS__IsBrowseFolderDlg_10	{&Tahoma8}OK	
+IDS__IsBrowseFolderDlg_11	{&Tahoma8}	
+IDS__IsBrowseFolderDlg_12	{&Tahoma8}&Nom de répertoire:	
+IDS__IsBrowseFolderDlg_13	Répertoire parent|	
+IDS__IsBrowseFolderDlg_14	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsBrowseFolderDlg_15	<ISProductFolder>\Redist\Language Independent\OS Independent\New.ibd	
+IDS__IsBrowseFolderDlg_16	<ISProductFolder>\Redist\Language Independent\OS Independent\Up.ibd	
+IDS__IsBrowseFolderDlg_2	{&Tahoma8}InstallShield	
+IDS__IsBrowseFolderDlg_3	{&Tahoma8}Annuler	
+IDS__IsBrowseFolderDlg_4	{&Tahoma8}	
+IDS__IsBrowseFolderDlg_5	{&Tahoma8}&Rechercher dans:	
+IDS__IsBrowseFolderDlg_6	{&Tahoma8}Indiquez le répertoire cible à utiliser.	
+IDS__IsBrowseFolderDlg_7	{&MSSansBold8}Modification du répertoire cible	
+IDS__IsBrowseFolderDlg_8	{&Tahoma8}	
+IDS__IsBrowseFolderDlg_9	Créer nouveau répertoire|	
+IDS__IsCancelDlg_0	Installshield Wizard de [ProductName]	
+IDS__IsCancelDlg_1	{&Tahoma8}Icône d'information|	
+IDS__IsCancelDlg_2	{&Tahoma8}InstallShield	
+IDS__IsCancelDlg_3	{&Tahoma8}Etes-vous certain de vouloir annuler l'installation?	
+IDS__IsCancelDlg_4	{&Tahoma8}Annuler l'installation de [ProductName]?	
+IDS__IsCancelDlg_5	{&MSSansBold8}Annuler l'installation	
+IDS__IsCancelDlg_6	{&Tahoma8}&Non	
+IDS__IsCancelDlg_7	{&Tahoma8}Afin de poursuivre l'installation de [ProductName], cliquez sur Reprendre. Pour quitter le programme d'installation, cliquez sur Quitter.	
+IDS__IsCancelDlg_8	{&Tahoma8}&Oui	
+IDS__IsCancelDlg_9	<ISProductFolder>\Redist\Language Independent\OS Independent\WarningIcon.ibd	
+IDS__IsCustomSelectionDlg_0	Installshield Wizard de [ProductName]	
+IDS__IsCustomSelectionDlg_1	{&Tahoma8}< &Précédent	
+IDS__IsCustomSelectionDlg_10	Description de la fonction:	
+IDS__IsCustomSelectionDlg_11	{&Tahoma8}&Suivant >	
+IDS__IsCustomSelectionDlg_12	{&Tahoma8}Taille de la fonction	
+IDS__IsCustomSelectionDlg_13	{&Tahoma8}&?	
+IDS__IsCustomSelectionDlg_14	{&Tahoma8}Description multiligne de l'élément actuellement installé	
+IDS__IsCustomSelectionDlg_15	{&Tahoma8}Description de la fonction	
+IDS__IsCustomSelectionDlg_16	{&Tahoma8}&Modifier...	
+IDS__IsCustomSelectionDlg_17	{&Tahoma8}<chemin sélectionné de la fonction>	
+IDS__IsCustomSelectionDlg_18	{&Tahoma8}Installer sur:	
+IDS__IsCustomSelectionDlg_19	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsCustomSelectionDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsCustomSelectionDlg_3	{&Tahoma8}InstallShield	
+IDS__IsCustomSelectionDlg_4	{&Tahoma8}Annuler	
+IDS__IsCustomSelectionDlg_5	{&Tahoma8}&Espace	
+IDS__IsCustomSelectionDlg_6	{&Tahoma8}Sélectionnez les composants de l'application que vous souhaitez installer.	
+IDS__IsCustomSelectionDlg_7	{&Tahoma8}Sélectionnez un des types d'installation ci-dessous.	
+IDS__IsCustomSelectionDlg_8	{&MSSansBold8}Installation personnalisée	
+IDS__IsCustomSelectionDlg_9	{&Tahoma8}Description multiligne de l'élément actuellement installé	
+IDS__IsDatabaseLocation_1	InstallShield	
+IDS__IsDatabaseLocation_10	[DATABASEDIR]	
+IDS__IsDatabaseLocation_11	Installer la base de données de l'application sur :	
+IDS__IsDatabaseLocation_12	{&MSSWhiteSerif8}InstallShield	
+IDS__IsDatabaseLocation_13	[ProductName] - InstallShield Wizard	
+IDS__IsDatabaseLocation_2	2	
+IDS__IsDatabaseLocation_3	Annuler	
+IDS__IsDatabaseLocation_4	4	
+IDS__IsDatabaseLocation_5	Cliquez sur Suivant pour installer la base de données de l'application dans ce répertoire ou sur Modifier pour l'installer dans un autre répertoire.	
+IDS__IsDatabaseLocation_6	{&MSSansBold8}Répertoire cible de la base de données	
+IDS__IsDatabaseLocation_7	< &Précédent	
+IDS__IsDatabaseLocation_8	&Suivant >	
+IDS__IsDatabaseLocation_9	&Modifier...	
+IDS__IsDiskSpaceDlg_0	Installshield Wizard de [ProductName]	
+IDS__IsDiskSpaceDlg_1	{&MSSWhiteSerif8}InstallShield	
+IDS__IsDiskSpaceDlg_10	{&Tahoma8}&OK	
+IDS__IsDiskSpaceDlg_11	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsDiskSpaceDlg_2	{&Tahoma8}InstallShield	
+IDS__IsDiskSpaceDlg_3	{&Tahoma8}Nettoyage du &disque	
+IDS__IsDiskSpaceDlg_4	{&Tahoma8}L'espace disque requis pour l'installation dépasse l'espace disque disponible.	
+IDS__IsDiskSpaceDlg_5	{&Tahoma8}L'espace disponible sur les volumes mis en évidence est insuffisant pour permettre l'installation des fonctions sélectionnées. Libérez de l'espace sur ces volumes, désélectionnez certaines fonctions ou choisissez un autre emplacement cible.	
+IDS__IsDiskSpaceDlg_6	{&MSSansBold8}Espace disque insuffisant	
+IDS__IsDiskSpaceDlg_7	{&Tahoma8}&Quitter	
+IDS__IsDiskSpaceDlg_8	{&Tahoma8}Supprimez les fichiers inutiles à l'aide de la fonction de nettoyage du disque.	
+IDS__IsDiskSpaceDlg_9	{&Tahoma8}{120}{70}{70}{70}{70}	
+IDS__IsErrorDlg_0	Informations sur le programme d'installation de [ProductName]	
+IDS__IsErrorDlg_1	{&Tahoma8}A&bandonner	
+IDS__IsErrorDlg_2	{&Tahoma8}&Annuler	
+IDS__IsErrorDlg_3	{&Tahoma8}<error text goes here><error text goes here><error text goes here><error text goes here><error text goes here><error text goes here><error text goes here><error text goes here><error text goes here><error text goes here><error text goes here>	
+IDS__IsErrorDlg_4	{&Tahoma8}&Ignorer	
+IDS__IsErrorDlg_5	{&Tahoma8}&Non	
+IDS__IsErrorDlg_6	{&Tahoma8}&OK	
+IDS__IsErrorDlg_7	{&Tahoma8}&Réessayer	
+IDS__IsErrorDlg_8	{&Tahoma8}&Oui	
+IDS__IsErrorDlg_9	<ISProductFolder>\Redist\Language Independent\OS Independent\WarningIcon.ibd	
+IDS__IsExitDialog_0	Installshield Wizard de [ProductName]	
+IDS__IsExitDialog_1	{&Tahoma8}< &Précédent	
+IDS__IsExitDialog_2	{&Tahoma8}Annuler	
+IDS__IsExitDialog_3	{&Tahoma8}&Terminer	
+IDS__IsExitDialog_4	{&TahomaBold10}Le programme d'installation a terminé	
+IDS__IsExitDialog_5	{&Tahoma8}[ProductName] a bien été installée. Cliquez sur Terminer pour quitter le programme d'installation.	
+IDS__IsExitDialog_6	{&Tahoma8}[ProductName] a bien été supprimé. Cliquez sur Terminer pour quitter le programme d'installation.	
+IDS__IsExitDialog_7	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsExitDialog_8	Ouvrir le fichier Readme	
+IDS__IsExitDialog_9	Lancer l'application	
+IDS__IsExitDialog_Update_0	[ProductName] - Assistant InstallShield	
+IDS__IsExitDialog_Update_1	 < &Précédent	
+IDS__IsExitDialog_Update_2	Annuler	
+IDS__IsExitDialog_Update_3	&Terminer	
+IDS__IsExitDialog_Update_4	Le programme a terminé l'installation de [ProductName].	
+IDS__IsExitDialog_Update_5	Il se peut que certains fichiers aient été mis à jour depuis l'achat de votre copie de [ProductName].	
+IDS__IsExitDialog_Update_6	Votre connexion Internet vous permet de vérifier si vous disposez des mises à jour les plus récentes.	
+IDS__IsExitDialog_Update_7	&Oui, vérifier les mises à jour du programme une fois l'installation terminée.	
+IDS__IsFatalError_0	Installshield Wizard de [ProductName]	
+IDS__IsFatalError_1	{&Tahoma8}< &Précédent	
+IDS__IsFatalError_10	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsFatalError_2	{&Tahoma8}Annuler	
+IDS__IsFatalError_3	{&Tahoma8}&Terminer	
+IDS__IsFatalError_4	{&Tahoma8}Le système n'a pas été modifié. Pour terminer l'installation de l'application ultérieurement, veuillez relancer l'installation.	
+IDS__IsFatalError_5	{&Tahoma8}Cliquez sur Terminer pour quitter le programme d'installation.	
+IDS__IsFatalError_6	{&Tahoma8}Vous pouvez conserver les éléments installés existant sur votre système pour poursuivre l'installation ultérieurement ou restaurer l'état de votre système avant l'installation.	
+IDS__IsFatalError_7	{&Tahoma8}Cliquez sur Restaurer ou sur Poursuivre ultérieurement pour quitter le programme d'installation.	
+IDS__IsFatalError_8	{&TahomaBold10}Le programme d'installation a terminé	
+IDS__IsFatalError_9	{&Tahoma8}Le programme d'installation a été interrompu avant la fin de l'installation de [ProductName].	
+IDS__IsFeatureDetailsDlg_0	Installshield Wizard de [ProductName]	
+IDS__IsFeatureDetailsDlg_1	{&MSSWhiteSerif8}InstallShield	
+IDS__IsFeatureDetailsDlg_10	{&Tahoma8}Supprimez les fichiers inutiles à l'aide de la fonction de nettoyage du disque.	
+IDS__IsFeatureDetailsDlg_11	{&Tahoma8}Installer sur:	
+IDS__IsFeatureDetailsDlg_12	{&Tahoma8}Espace disque total requis:	
+IDS__IsFeatureDetailsDlg_13	{&Tahoma8}{120}{70}{70}{70}{70}	
+IDS__IsFeatureDetailsDlg_14	{&Tahoma8}OK	
+IDS__IsFeatureDetailsDlg_15	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsFeatureDetailsDlg_2	{&Tahoma8}InstallShield	
+IDS__IsFeatureDetailsDlg_3	{&Tahoma8}&Modifier...	
+IDS__IsFeatureDetailsDlg_4	{&Tahoma8}Annuler	
+IDS__IsFeatureDetailsDlg_5	{&Tahoma8}Nettoyage du &disque	
+IDS__IsFeatureDetailsDlg_6	{&Tahoma8}Espace disque requis pour l'installation des fonctions sélectionnées.	
+IDS__IsFeatureDetailsDlg_7	{&Tahoma8}Les volumes surlignés n'ont pas assez d'espace disque disponible pour les fonctions actuellement sélectionnées. Vous pouvez supprimer les fichiers des volumes surlignés, choisir d'installer moins de fonctions sur les lecteurs locaux ou sélectionner d'autres lecteurs cible.	
+IDS__IsFeatureDetailsDlg_8	{&MSSansBold8}Espace disque	requis
+IDS__IsFeatureDetailsDlg_9	{&Tahoma8}	
+IDS__IsFilesInUse_0	Installshield Wizard de [ProductName]	
+IDS__IsFilesInUse_1	{&MSSWhiteSerif8}InstallShield	
+IDS__IsFilesInUse_10	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsFilesInUse_2	{&Tahoma8}InstallShield	
+IDS__IsFilesInUse_3	{&Tahoma8}Des fichiers qui doivent absolument être actualisés sont en cours d'utilisation.	
+IDS__IsFilesInUse_4	{&Tahoma8}Les programmes suivants utilisent des fichiers devant absolument être mis à jour au cours de cette installation. Veuillez fermer ces programmes et cliquer sur Réessayer pour reprendre l'installation.	
+IDS__IsFilesInUse_5	{&MSSansBold8}Fichiers en cours d'utilisation	
+IDS__IsFilesInUse_6	{&Tahoma8}&Quitter	
+IDS__IsFilesInUse_7	{&Tahoma8}&Ignorer	
+IDS__IsFilesInUse_8	{&Tahoma8}&Réessayer	
+IDS__IsFilesInUse_9	{&Tahoma8}	
+IDS__IsInitDlg_0	Installshield Wizard de [ProductName]	
+IDS__IsInitDlg_1	{&Tahoma8}	
+IDS__IsInitDlg_2	{&Tahoma8}	
+IDS__IsInitDlg_3	{&Tahoma8}< &Précédent	
+IDS__IsInitDlg_4	{&Tahoma8}Annuler	
+IDS__IsInitDlg_5	{&Tahoma8}&Suivant >	
+IDS__IsInitDlg_6	{&VerdanaBold14}Bienvenue dans le programme d'installation de [ProductName]	
+IDS__IsInitDlg_7	{&Tahoma8}Veuillez attendre que l'InstallShield(R) soit prêt pour vous guider à travers le processus d'installation	
+IDS__IsInitDlg_8	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsLicenseDlg_0	Installshield Wizard de [ProductName]	
+IDS__IsLicenseDlg_1	{&Tahoma8}< &Précédent	
+IDS__IsLicenseDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsLicenseDlg_3	{&Tahoma8}InstallShield	
+IDS__IsLicenseDlg_4	{&Tahoma8}Annuler	
+IDS__IsLicenseDlg_5	{&Tahoma8}Présentation du contrat de licence.	
+IDS__IsLicenseDlg_6	{&Tahoma8}Cliquez sur Accepter pour accepter les termes de ce contrat, ou cliquez sur Refuser pour quitter l'assistant.	
+IDS__IsLicenseDlg_7	{&MSSansBold8}Contrat de licence	
+IDS__IsLicenseDlg_8	{&Tahoma8}&Suivant >	
+IDS__IsLicenseDlg_9	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsLicenseDlg_EULA	<ISProductFolder>\Redist\0409\Eula.rtf	
+IDS__IsMaintenanceDlg_0	Installshield Wizard de [ProductName]	
+IDS__IsMaintenanceDlg_1	{&Tahoma8}< &Précédent	
+IDS__IsMaintenanceDlg_10	{&MSSansBold8}S&upprimer	
+IDS__IsMaintenanceDlg_11	{&Tahoma8}	
+IDS__IsMaintenanceDlg_12	{&Tahoma8}Modification des composants de l'application à installer: sélection du type d'installation des composants.	
+IDS__IsMaintenanceDlg_13	{&Tahoma8}Correction d'erreurs dans l'application: ajout des fichiers manquants et rectification des fichiers corrompus, des liens et des enregistrements de la base de registres.
+IDS__IsMaintenanceDlg_14	{&Tahoma8}Suppression de [ProductName].	
+IDS__IsMaintenanceDlg_15	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsMaintenanceDlg_16	<ISProductFolder>\Redist\Language Independent\OS Independent\RemoveIco.ibd	
+IDS__IsMaintenanceDlg_17	<ISProductFolder>\Redist\Language Independent\OS Independent\ReinstIco.ibd	
+IDS__IsMaintenanceDlg_18	<ISProductFolder>\Redist\Language Independent\OS Independent\CustomSetupIco.ibd	
+IDS__IsMaintenanceDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsMaintenanceDlg_3	{&Tahoma8}InstallShield	
+IDS__IsMaintenanceDlg_4	{&Tahoma8}Annuler	
+IDS__IsMaintenanceDlg_5	{&Tahoma8}Modification, réparation ou suppression de l'application.	
+IDS__IsMaintenanceDlg_6	{&MSSansBold8}Entretien de l'application	
+IDS__IsMaintenanceDlg_7	{&Tahoma8}&Suivant >	
+IDS__IsMaintenanceDlg_8	{&MSSansBold8}&Modifier	
+IDS__IsMaintenanceDlg_9	{&MSSansBold8}&Réparer	
+IDS__IsMaintenanceWelcome_0	Installshield Wizard de [ProductName]	
+IDS__IsMaintenanceWelcome_1	{&Tahoma8}< &Précédent	
+IDS__IsMaintenanceWelcome_2	{&Tahoma8}Annuler	
+IDS__IsMaintenanceWelcome_3	{&Tahoma8}&Suivant >	
+IDS__IsMaintenanceWelcome_4	{&TahomaBold10}Bienvenue dans le programme d'installation/de suppression de [ProductName]	
+IDS__IsMaintenanceWelcome_5	{&Tahoma8}Le programme d'installation/de suppression vous permettra de modifier, de réparer ou de supprimer [ProductName]. Pour continuer, cliquez sur Suivant.	
+IDS__IsMaintenanceWelcome_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsPatchDlg_0	Correctif pour [ProductName] - InstallShield Wizard	
+IDS__IsPatchDlg_1	{&TahomaBold10}Bienvenue dans le correctif pour [ProductName]	
+IDS__IsPatchDlg_2	Le programme d'installation/de suppression va installer le correctif pour [ProductName] sur votre ordinateur. Cliquez sur  Mettre à jour pour continuer.	
+IDS__IsPatchDlg_3	Annuler	
+IDS__IsPatchDlg_4	< &Précédent	
+IDS__IsPatchDlg_5	Mise à jo&ur >	
+IDS__IsPatchDlg_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsProgressDlg_0	Installshield Wizard de [ProductName]	
+IDS__IsProgressDlg_1	Opération terminée	
+IDS__IsProgressDlg_10	{&Tahoma8}(masqué)sec.	
+IDS__IsProgressDlg_11	{&Tahoma8}Etat:	
+IDS__IsProgressDlg_12	{&Tahoma8}&Suivant >	
+IDS__IsProgressDlg_13	{&Tahoma8}(masqué)	
+IDS__IsProgressDlg_14	{&Tahoma8}(masqué)Temps restant estimé:	
+IDS__IsProgressDlg_15	{&MSSansBold8}Suppression de  [ProductName]	
+IDS__IsProgressDlg_16	{&Tahoma8}Suppression des composants sélectionnés de l'application.	
+IDS__IsProgressDlg_17	{&Tahoma8}Veuillez attendre la fin de la suppression de [ProductName]. L'opération peut durer quelques minutes...	
+IDS__IsProgressDlg_18	<ISProductFolder>\Redist\Language Independent\OS Independent\SetupIcon.ibd	
+IDS__IsProgressDlg_19	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsProgressDlg_2	{&Tahoma8}	
+IDS__IsProgressDlg_3	{&Tahoma8}< &Précédent	
+IDS__IsProgressDlg_4	{&MSSWhiteSerif8}InstallShield	
+IDS__IsProgressDlg_5	{&Tahoma8}InstallShield	
+IDS__IsProgressDlg_6	{&Tahoma8}Annuler	
+IDS__IsProgressDlg_7	{&Tahoma8}L'installation des composants sélectionnés de l'application est en cours.	
+IDS__IsProgressDlg_8	{&Tahoma8}Veuillez attendre la fin de l'installation de [ProductName]. L'opération peut durer quelques minutes...	
+IDS__IsProgressDlg_9	{&MSSansBold8}Installation de [ProductName]	
+IDS__IsReadmeDlg_0	{&MSSansBold8}Informations Lisez-moi	
+IDS__IsReadmeDlg_1	Présentation des informatins du fichier Readme.	
+IDS__IsReadmeDlg_2	[ProductName] - InstallShield Wizard	
+IDS__IsReadmeDlg_3	< &Précédent	
+IDS__IsReadmeDlg_4	&Suivant >	
+IDS__IsReadmeDlg_5	&Annuler	
+IDS__IsReadmeDlg_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsReadmeDlg_7	InstallShield	
+IDS__IsReadmeDlg_8	{&MSSWhiteSerif8}InstallShield	
+IDS__IsRegisterUserDlg_0	Installshield Wizard de [ProductName]	
+IDS__IsRegisterUserDlg_1	{&Tahoma8}< &Précédent	
+IDS__IsRegisterUserDlg_10	{50}	
+IDS__IsRegisterUserDlg_11	{&Tahoma8}Nom d'&utilisateur:	
+IDS__IsRegisterUserDlg_12	{&Tahoma8}&Suivant >	
+IDS__IsRegisterUserDlg_13	{&Tahoma8}Installer ce programme pour:	
+IDS__IsRegisterUserDlg_14	{&Tahoma8}&Tous les utilisateur du système	
+IDS__IsRegisterUserDlg_15	{&Tahoma8}Utilisateur défini([USERNAME])	
+IDS__IsRegisterUserDlg_16	{&Tahoma8}	
+IDS__IsRegisterUserDlg_17	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsRegisterUserDlg_18	&Numéro de série :	
+IDS__IsRegisterUserDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsRegisterUserDlg_3	{&Tahoma8}InstallShield	
+IDS__IsRegisterUserDlg_4	{&Tahoma8}Annuler	
+IDS__IsRegisterUserDlg_5	{80}	
+IDS__IsRegisterUserDlg_6	{&Tahoma8}&Organisation:	
+IDS__IsRegisterUserDlg_7	{&Tahoma8}Saisie de renseignements sur l'utilisateur.	
+IDS__IsRegisterUserDlg_8	{&Tahoma8}Veuillez saisir votre nom et celui de votre entreprise.	
+IDS__IsRegisterUserDlg_9	{&MSSansBold8}Informations client	
+IDS__IsReinstallDlg_0	Installshield Wizard de [ProductName]	
+IDS__IsReinstallDlg_1	{&Tahoma8}< &Précédent	
+IDS__IsReinstallDlg_10	{&Tahoma8}&Terminer	
+IDS__IsReinstallDlg_11	{&Tahoma8}	
+IDS__IsReinstallDlg_12	{&Tahoma8}Remplacer tous les fichiers dont les versions diffèrent de la version requise par le programme et toutes les entrées de registre et raccourcis requis par l'application.	
+IDS__IsReinstallDlg_13	{&Tahoma8}Ne remplacer que les fichiers programme et entrées de registre manquants pour les fonctions installées.	
+IDS__IsReinstallDlg_14	{&Tahoma8}Remplacer tous les fichiers, entrées de registre et raccourcis requis par l'application.	
+IDS__IsReinstallDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsReinstallDlg_3	{&Tahoma8}InstallShield	
+IDS__IsReinstallDlg_4	{&Tahoma8}Annuler	
+IDS__IsReinstallDlg_5	{&Tahoma8}Sélectionnez la manière dont vous souhaitez réinstaller les éléments de l'application.	
+IDS__IsReinstallDlg_6	{&MSSansBold8}Mode Réinstallation	
+IDS__IsReinstallDlg_7	{&Tahoma8}&Suivant >	
+IDS__IsReinstallDlg_8	{&Tahoma8}N&ormal(e)	
+IDS__IsReinstallDlg_9	{&Tahoma8}&Minimal(e)	
+IDS__IsResumeDlg_0	Installshield Wizard de [ProductName]	
+IDS__IsResumeDlg_1	{&Tahoma8}< &Précédent	
+IDS__IsResumeDlg_2	{&Tahoma8}Annuler	
+IDS__IsResumeDlg_3	{&Tahoma8}&Suivant >	
+IDS__IsResumeDlg_4	{&Tahoma8}Le programme  va terminer l'installation de [ProductName] sur votre ordinateur. Cliquez sur Suivant afin de poursuivre.	
+IDS__IsResumeDlg_5	{&Tahoma8}Le programme va terminer l'installation interrompue de [ProductName] sur votre ordinateur. Cliquez sur Suivant afin de poursuivre.	
+IDS__IsResumeDlg_6	{&TahomaBold10}Poursuite de l'installation de [ProductName]	
+IDS__IsResumeDlg_7	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsSetupTypeMinDlg_0	Installshield Wizard de [ProductName]	
+IDS__IsSetupTypeMinDlg_1	{&Tahoma8}< &Précédent	
+IDS__IsSetupTypeMinDlg_10	{&Tahoma8}&Suivant >	
+IDS__IsSetupTypeMinDlg_11	{&MSSansBold8}Installatio&n standard	
+IDS__IsSetupTypeMinDlg_12	{&MSSansBold8}Installation personnalisé&e	
+IDS__IsSetupTypeMinDlg_13	{&Tahoma8}	
+IDS__IsSetupTypeMinDlg_14	<ISProductFolder>\Redist\Language Independent\OS Independent\CustomSetupIco.ibd	
+IDS__IsSetupTypeMinDlg_15	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsSetupTypeMinDlg_16	<ISProductFolder>\Redist\Language Independent\OS Independent\CompleteSetupIco.ibd	
+IDS__IsSetupTypeMinDlg_17	<ISProductFolder>\Redist\Language Independent\OS Independent\DestIcon.ibd	
+IDS__IsSetupTypeMinDlg_18	{&Tahoma8}Installation des fonctions minimales	
+IDS__IsSetupTypeMinDlg_19	<ISProductFolder>\Redist\Language Independent\OS Independent\CustomSetupIco.ibd	
+IDS__IsSetupTypeMinDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsSetupTypeMinDlg_20	{&MSSansBold8}&Minimal(e)	
+IDS__IsSetupTypeMinDlg_21	<ISProductFolder>\Redist\Language Independent\OS Independent\CustomSetupIco.ibd	
+IDS__IsSetupTypeMinDlg_22	<ISProductFolder>\Redist\Language Independent\OS Independent\CompleteSetupIco.ibd	
+IDS__IsSetupTypeMinDlg_23	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsSetupTypeMinDlg_24	{&MSSansBold8}Par &défaut	
+IDS__IsSetupTypeMinDlg_3	{&Tahoma8}InstallShield	
+IDS__IsSetupTypeMinDlg_4	{&Tahoma8}Annuler	
+IDS__IsSetupTypeMinDlg_5	{&Tahoma8}Installation de tous les composants de l'application.	
+IDS__IsSetupTypeMinDlg_6	{&Tahoma8}Sélection des composants de l'application et du répertoire dans lequel ils seront installés.	
+IDS__IsSetupTypeMinDlg_7	{&Tahoma8}Sélection du type d'installation souhaité.	
+IDS__IsSetupTypeMinDlg_8	{&Tahoma8}Sélectionnez le type d'installation.	
+IDS__IsSetupTypeMinDlg_9	{&MSSansBold8}Type d'installation	
+IDS__IsStartCopyDlg_0	Installshield Wizard de [ProductName]	
+IDS__IsStartCopyDlg_1	{&Tahoma8}< &Précédent	
+IDS__IsStartCopyDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsStartCopyDlg_3	{&Tahoma8}InstallShield	
+IDS__IsStartCopyDlg_4	{&Tahoma8}Annuler	
+IDS__IsStartCopyDlg_5	{&Tahoma8}Toutes les informations nécessaires à l'installation sont réunies.	
+IDS__IsStartCopyDlg_6	{&Tahoma8}Cliquez sur Suivant afin de poursuivre.	
+IDS__IsStartCopyDlg_7	{&Tahoma8}Si vous souhaitez consulter ou modifier les paramètres d'installation, cliquez sur Précédent. Cliquez sur Annuler pour quitter le programme d'installation.	
+IDS__IsStartCopyDlg_8	{&MSSansBold8}Prêt pour l'installation	
+IDS__IsStartCopyDlg_9	{&Tahoma8}&Suivant >	
+IDS__IsUserExit_0	Installshield Wizard de [ProductName]	
+IDS__IsUserExit_1	{&Tahoma8}< &Précédent	
+IDS__IsUserExit_10	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsUserExit_2	{&Tahoma8}Annuler	
+IDS__IsUserExit_3	{&Tahoma8}&Terminer	
+IDS__IsUserExit_4	{&Tahoma8}Aucune modification n'a été apportée au système. Pour installer ce programme ultérieurement, veuillez relancer l'installation.	
+IDS__IsUserExit_5	{&Tahoma8}Cliquez sur Terminer pour quitter le programme.	
+IDS__IsUserExit_6	{&Tahoma8}Vous pouvez conserver les éléments installés existant sur votre système pour poursuivre l'installation ultérieurement ou restaurer l'état de votre système avant l'installation.	
+IDS__IsUserExit_7	{&Tahoma8}Cliquez sur Restaurer ou sur Poursuivre ultérieurement pour quitter le programme.	
+IDS__IsUserExit_8	{&TahomaBold10}Le programme d'installation a terminé	
+IDS__IsUserExit_9	{&Tahoma8}Le programme d'installation a été interrompu avant la fin de l'installation de [ProductName].	
+IDS__IsVerifyReadyDlg_0	Installshield Wizard de [ProductName]	
+IDS__IsVerifyReadyDlg_1	{&Tahoma8}< &Précédent	
+IDS__IsVerifyReadyDlg_10	{&MSSansBold8}La réparation de l'application peut commencer	
+IDS__IsVerifyReadyDlg_11	{&MSSansBold8}L'installation de l'application peut commencer	
+IDS__IsVerifyReadyDlg_12	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsVerifyReadyDlg_13	Numéro de série : [SERIALNUMBER]	
+IDS__IsVerifyReadyDlg_13X	Numéro de série : [ISX_SERIALNUM]	
+IDS__IsVerifyReadyDlg_14	Société: [COMPANYNAME]	
+IDS__IsVerifyReadyDlg_15	Nom d'utilisateur: [USERNAME]	
+IDS__IsVerifyReadyDlg_16	Informations utilisateur :	
+IDS__IsVerifyReadyDlg_17	[INSTALLDIR]	
+IDS__IsVerifyReadyDlg_18	Répertoire cible :	
+IDS__IsVerifyReadyDlg_19	[SelectedSetupType]	
+IDS__IsVerifyReadyDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsVerifyReadyDlg_20	Type d'installation:	
+IDS__IsVerifyReadyDlg_21	Configuration actuelle:	
+IDS__IsVerifyReadyDlg_3	{&Tahoma8}InstallShield	
+IDS__IsVerifyReadyDlg_4	{&Tahoma8}Annuler	
+IDS__IsVerifyReadyDlg_5	{&Tahoma8}Le programme est prêt à procéder à l'installation.	
+IDS__IsVerifyReadyDlg_6	{&Tahoma8}Cliquez sur Installer pour lancer l'installation.	
+IDS__IsVerifyReadyDlg_7	{&Tahoma8}Si vous souhaitez consulter ou modifier les paramètres d'installation, cliquez sur Précédent. Cliquez sur Annuler pour quitter le programme d'installation.	
+IDS__IsVerifyReadyDlg_8	{&MSSansBold8}La modification du programme peut commencer	
+IDS__IsVerifyReadyDlg_9	{&Tahoma8}&Installer	
+IDS__IsVerifyRemoveAllDlg_0	Installshield Wizard de [ProductName]	
+IDS__IsVerifyRemoveAllDlg_1	{&Tahoma8}< &Précédent	
+IDS__IsVerifyRemoveAllDlg_10	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS__IsVerifyRemoveAllDlg_2	{&MSSWhiteSerif8}InstallShield	
+IDS__IsVerifyRemoveAllDlg_3	{&Tahoma8}InstallShield	
+IDS__IsVerifyRemoveAllDlg_4	{&Tahoma8}Annuler	
+IDS__IsVerifyRemoveAllDlg_5	{&Tahoma8}Vous avez décidé de supprimer le programme.	
+IDS__IsVerifyRemoveAllDlg_6	{&Tahoma8}Cliquez sur Supprimer pour supprimer [ProductName]. L'application ne sera plus accessible.	
+IDS__IsVerifyRemoveAllDlg_7	{&Tahoma8}Si vous souhaitez consulter les paramètres ou les modifier, cliquez sur Précédent.	
+IDS__IsVerifyRemoveAllDlg_8	{&MSSansBold8}Suppression de l'application	
+IDS__IsVerifyRemoveAllDlg_9	{&Tahoma8}&Supprimer	
+IDS__IsWelcomeDlg_0	Installshield Wizard de [ProductName]	
+IDS__IsWelcomeDlg_1	{&Tahoma8}< &Précédent	
+IDS__IsWelcomeDlg_2	{&Tahoma8}Annuler	
+IDS__IsWelcomeDlg_3	{&Tahoma8}&Suivant >	
+IDS__IsWelcomeDlg_4	{&TahomaBold10}Bienvenue dans le programme d'installation/de suppression de [ProductName]	
+IDS__IsWelcomeDlg_5	{&Tahoma8}Ce programme va installer [ProductName] sur votre ordinateur. Cliquez sur Suivant afin de poursuivre.	
+IDS__IsWelcomeDlg_6	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBitmap.ibd	
+IDS__IsWelcomeDlg_7	ATTENTION : Ce programme est protégé par la loi du copyright et les conventions internationales.	
+IDS__SetupTips_0	Installshield Wizard de [ProductName]	
+IDS__TargetReq_DESC_COLOR	Les paramètres couleur de votre système ne sont pas adaptés à l'exécution de [ProductName].	
+IDS__TargetReq_DESC_OS	Le système d'exploitation n'est pas adapté à l'exécution de [ProductName].	
+IDS__TargetReq_DESC_PROCESSOR	Le processeur n'est pas adapté à l'exécution de [ProductName].	
+IDS__TargetReq_DESC_RAM	Il manque de mémoire vive pour l'exécution de [ProductName].	
+IDS__TargetReq_DESC_RESOLUTION	La résolution de l'écran n'est pas adaptée à l'exécution de [ProductName].	
+IDS_ACTIONTEXT_1	Publication des renseignements relatif au programme...	
+IDS_ACTIONTEXT_10	Calcul de l'espace disque requis...	
+IDS_ACTIONTEXT_100	Type de contenu MIME : [1] ; extension : [2]	
+IDS_ACTIONTEXT_101	Annulation de l'inscription des identificateurs de programme...	
+IDS_ACTIONTEXT_102	Numéro d'identification du logiciel: [1]	
+IDS_ACTIONTEXT_103	Annulation de l'enregistrement des bibliothèques de type...	
+IDS_ACTIONTEXT_104	Numéro d'identification des bibliothèques: [1]	
+IDS_ACTIONTEXT_105	Mise à jour des chaînes d'environnement...	
+IDS_ACTIONTEXT_106	Nom : [1] ; valeur : [2] ; action : [3]	
+IDS_ACTIONTEXT_107	Enregistrement des valeurs dans les fichiers INI...	
+IDS_ACTIONTEXT_108	Fichier : [1] ; section : [2] ; clé : [3] ; valeur : [4]	
+IDS_ACTIONTEXT_109	Enregistrement des paramètres de la base de registres système...	
+IDS_ACTIONTEXT_11	Création des répertoires...	
+IDS_ACTIONTEXT_110	Clé : [1] ; nom : [2] ; valeur : [3]	
+IDS_ACTIONTEXT_111	Enregistrement des applications et des composants COM+...	
+IDS_ACTIONTEXT_112	AppId: [1]{{, AppType: [2], Users: [3], RSN: [4]}}	
+IDS_ACTIONTEXT_113	Annulation de l'enregistrement des applications et des composants COM+...	
+IDS_ACTIONTEXT_114	AppId: [1]{{, AppType: [2]}}	
+IDS_ACTIONTEXT_115	Recherche d'application associées...	
+IDS_ACTIONTEXT_116	Application trouvée : [1]	
+IDS_ACTIONTEXT_117	Migration d'état de propriétés à partir d'applications associées...	
+IDS_ACTIONTEXT_118	Application : [1]	
+IDS_ACTIONTEXT_119	Suppression d'applications...	
+IDS_ACTIONTEXT_12	Répertoire : [1]	
+IDS_ACTIONTEXT_120	Application : [1] ; Ligne de commande : [2]	
+IDS_ACTIONTEXT_121	Installation du répertoire système...	
+IDS_ACTIONTEXT_122	Fichier : [1],  Dépendences : [2]	
+IDS_ACTIONTEXT_123	Création de IIS Virtual Roots...	
+IDS_ACTIONTEXT_124	Suppression de IIS Virtual Roots...	
+IDS_ACTIONTEXT_13	Création des raccourcis...	
+IDS_ACTIONTEXT_14	Raccourci : [1]	
+IDS_ACTIONTEXT_15	Suppression des services...	
+IDS_ACTIONTEXT_16	Service : [1]	
+IDS_ACTIONTEXT_17	Création des fichiers en double...	
+IDS_ACTIONTEXT_18	Fichier : [1] ; répertoire : [9] ; taille : [6]	
+IDS_ACTIONTEXT_19	Calcul de l'espace disque requis...	
+IDS_ACTIONTEXT_2	Allocation d'espace pour le registre...	
+IDS_ACTIONTEXT_20	Génération de scripts pour les macros...	
+IDS_ACTIONTEXT_21	[1]	
+IDS_ACTIONTEXT_22	Copie des fichiers d'installation en réseau...	
+IDS_ACTIONTEXT_23	Fichier : [1] ; répertoire : [9] ; taille : [6]	
+IDS_ACTIONTEXT_24	Copie des nouveaux fichiers...	
+IDS_ACTIONTEXT_25	File: [1],  Directory: [9],  Size: [6]	
+IDS_ACTIONTEXT_26	Installation des composants ODBC...	
+IDS_ACTIONTEXT_27	Installation de nouveaux services...	
+IDS_ACTIONTEXT_28	Service : [2]	
+IDS_ACTIONTEXT_29	Vérification de l'installation...	
+IDS_ACTIONTEXT_3	Espace libre : [1]	
+IDS_ACTIONTEXT_30	Evaluation des conditions de lancement...	
+IDS_ACTIONTEXT_31	Déplacement de fichiers...	
+IDS_ACTIONTEXT_32	Fichier : [1],  Répertoire : [9],  Taille : [6]	
+IDS_ACTIONTEXT_33	Actualisation des fichiers...	
+IDS_ACTIONTEXT_34	Fichier : [1] ; répertoire : [2] ; taille : [3]	
+IDS_ACTIONTEXT_35	Actualisation de l'enregistrement des composants...	
+IDS_ACTIONTEXT_36	Publication des composants qualifiés...	
+IDS_ACTIONTEXT_37	Identificateur du composant : [1] ; qualificateur : [2]	
+IDS_ACTIONTEXT_38	Publication des composants du logiciel...	
+IDS_ACTIONTEXT_39	Composant : [1]	
+IDS_ACTIONTEXT_4	Recherche des applications déjà installées...	
+IDS_ACTIONTEXT_40	Publication des informations sur le logiciel...	
+IDS_ACTIONTEXT_41	Enregistrement des serveurs de classes...	
+IDS_ACTIONTEXT_42	Numéro d'identification de classe : [1]	
+IDS_ACTIONTEXT_43	Enregistrement des serveurs d'extension...	
+IDS_ACTIONTEXT_44	Extension : [1]	
+IDS_ACTIONTEXT_45	Enregistrement des polices...	
+IDS_ACTIONTEXT_46	Police : [1]	
+IDS_ACTIONTEXT_47	Enregistrement MIME...	
+IDS_ACTIONTEXT_48	Type de contenu MIME : [1] ; extension : [2]	
+IDS_ACTIONTEXT_49	Enregistrement du logiciel...	
+IDS_ACTIONTEXT_5	Propriété : [1] ; signature : [2]	
+IDS_ACTIONTEXT_50	[1]	
+IDS_ACTIONTEXT_51	Annulation de l'inscription des identificateurs de programme...	
+IDS_ACTIONTEXT_52	Numéro d'identification de l'application: [1]	
+IDS_ACTIONTEXT_53	Enregistrement des bibliothèques des types...	
+IDS_ACTIONTEXT_54	Numéro d'identification de la bibliothèque: [1]	
+IDS_ACTIONTEXT_55	Enregistrement des utilisateurs...	
+IDS_ACTIONTEXT_56	[1]	
+IDS_ACTIONTEXT_57	Suppression des fichiers en double...	
+IDS_ACTIONTEXT_58	Fichier : [1] ; répertoire : [9]	
+IDS_ACTIONTEXT_59	Mise à jour des chaînes d'environnement...	
+IDS_ACTIONTEXT_6	Liaison des fichiers exécutables...	
+IDS_ACTIONTEXT_60	Nom : [1] ; valeur : [2] ; action : [3]	
+IDS_ACTIONTEXT_61	Suppression des fichiers...	
+IDS_ACTIONTEXT_62	File: [1], Directory: [9]	
+IDS_ACTIONTEXT_63	Suppression des répertoires...	
+IDS_ACTIONTEXT_64	Répertoire : [1]	
+IDS_ACTIONTEXT_65	Suppression des entrées des fichiers INI...	
+IDS_ACTIONTEXT_66	Fichier : [1] ; section : [2] ; clé : [3] ; valeur : [4]	
+IDS_ACTIONTEXT_67	Suppression des composants ODBC...	
+IDS_ACTIONTEXT_68	Suppression des paramètres de la base de registres système...	
+IDS_ACTIONTEXT_69	Clé : [1] ; nom : [2]	
+IDS_ACTIONTEXT_7	Fichier : [1]	
+IDS_ACTIONTEXT_70	Suppression des raccourcis...	
+IDS_ACTIONTEXT_71	Raccourci : [1]	
+IDS_ACTIONTEXT_72	Recherche de logiciels qualifiés...	
+IDS_ACTIONTEXT_73	Annulation de l'action :	
+IDS_ACTIONTEXT_74	[1]	
+IDS_ACTIONTEXT_75	Suppression des fichiers temporaires...	
+IDS_ACTIONTEXT_76	Fichier : [1]	
+IDS_ACTIONTEXT_77	Enregistrement des modules...	
+IDS_ACTIONTEXT_78	Fichier : [1] ; répertoire : [2]	
+IDS_ACTIONTEXT_79	Annulation de l'enregistrement des modules...	
+IDS_ACTIONTEXT_8	Recherche de logiciels qualifiés...	
+IDS_ACTIONTEXT_80	Fichier : [1] ; répertoire : [2]	
+IDS_ACTIONTEXT_81	Initialisation des répertoires ODBC...	
+IDS_ACTIONTEXT_82	Lancement des services...	
+IDS_ACTIONTEXT_83	Service : [1]	
+IDS_ACTIONTEXT_84	Arrêt des services	
+IDS_ACTIONTEXT_85	Service : [1]	
+IDS_ACTIONTEXT_86	Suppression des fichiers déplacés...	
+IDS_ACTIONTEXT_87	Fichier : [1] ; répertoire : [9]	
+IDS_ACTIONTEXT_88	Annulation de la publication des composants qualifiés...	
+IDS_ACTIONTEXT_89	Identificateur du composant : [1] ; qualificateur : [2]	
+IDS_ACTIONTEXT_9	Calcul de l'espace disque requis...	
+IDS_ACTIONTEXT_90	Annulation de la publication des composants du logiciel...	
+IDS_ACTIONTEXT_91	Composant : [1]	
+IDS_ACTIONTEXT_92	Annulation de la publication des informations sur le logiciel...	
+IDS_ACTIONTEXT_93	Annulation de l'enregistrement des serveurs de classe...	
+IDS_ACTIONTEXT_94	Numéro d'identification de classe : [1]	
+IDS_ACTIONTEXT_95	Annulation de l'enregistrement des serveurs d'extensions...	
+IDS_ACTIONTEXT_96	Extension : [1]	
+IDS_ACTIONTEXT_97	Annulation de l'enregistrement des policies...	
+IDS_ACTIONTEXT_98	Police : [1]	
+IDS_ACTIONTEXT_99	Annulation de l'enregistrement MIME...	
+IDS_ERROR_0	{{Erreur fatale : }}	
+IDS_ERROR_1	{{Erreur [1]. }}	
+IDS_ERROR_10	=== Début de l'écriture dans le journal : [Date]  [Time] ===	
+IDS_ERROR_100	Impossible de supprimer le raccourci [2]. Vérifiez que le fichier de raccourcis existe et que vous êtes autorisé à y accéder.	
+IDS_ERROR_101	Impossible d'enregistrer la bibliothèque des types pour le fichier [2]. Contactez le service d'assistance technique.	
+IDS_ERROR_102	Impossible d'annuler l'enregistrement de la bibliothèque des types pour le fichier [2]. Contactez le service d'assistance technique.	
+IDS_ERROR_103	Impossible de mettre à jour le fichier INI [2][3]. Vérifiez que ce fichier existe et que vous êtes autorisé à y accéder.	
+IDS_ERROR_104	Impossible de planifier le remplacement du fichier [3] par [2] au redémarrage. Vérifiez si vous jouissez de privilèges d'accès en écriture au fichier [3].	
+IDS_ERROR_105	Erreur lors de la suppression du gestionnaire de pilotes ODBC. Erreur ODBC [2] : [3]. Contactez le service d'assistance technique.	
+IDS_ERROR_106	Erreur lors de l'installation du gestionnaire de pilotes ODBC. Erreur ODBC [2] : [3]. Contactez le service d'assistance  technique.	
+IDS_ERROR_107	Erreur lors de la suppression du pilote ODBC: [4]. Erreur ODBC [2] : [3]. Vérifiez si vous disposez des privilèges suffisants pour supprimer des pilotes ODBC.	
+IDS_ERROR_108	Erreur lors de l'installation du pilote ODBC [4]. Erreur ODBC [2] : [3]. Vérifiez que le fichier [4] existe et que vous êtes autorisé à y accéder.	
+IDS_ERROR_109	Erreur lors de la configuration de la source de données ODBC [4]. Erreur ODBC [2] : [3]. Vérifiez que le fichier [4] existe et que vous êtes autorisé à y accéder.	
+IDS_ERROR_11	=== Fin de l'écriture dans le journal : [Date]  [Time] ===	
+IDS_ERROR_110	Erreur lors du lancement du service "[2]" ([3]).  Vérifiez si vous jouissez des privilèges suffisants pour l'exécution des services système.	
+IDS_ERROR_111	Impossible d'arrêter le service "[2]" ([3]).  Vérifiez si vous jouissez de privilèges suffisants pour arrêter les services système.	
+IDS_ERROR_112	Impossible de supprimer le service "[2]" ([3]).  Vérifiez si vous jouissez de privilèges suffisants pour supprimer les services système.	
+IDS_ERROR_113	Impossible d'installer le service "[2]" ([3]). Vérifiez si vous jouissez de privilèges suffisants pour installer des services système.	
+IDS_ERROR_114	Impossible d'actualiser la variable d'environnement "[2]".  Vérifiez si vous jouissez des privilèges suffisants pur modifier les variables d'environnement.	
+IDS_ERROR_115	Vous ne disposez pas des privilèges suffisants pour exécuter cette installation pour tous les utilisateurs de cet ordinateur. Ouvrez une session en tant qu'administrateur, puis réessayez d'exécuter cette installation.	
+IDS_ERROR_116	Impossible de définir la sécurité du fichier "[3]". Erreur : [2]. Vérifiez si vous disposez des privilèges suffisants pour modifier les permissions sur ce fichier.	
+IDS_ERROR_117	Les services COM+ 1.0 ne sont pas installés sur cet ordinateur. Ils sont indispensables à l'installation.  Ils sont disponibles sur Windows 2000.	
+IDS_ERROR_118	Une erreur s'est produite lors de l'enregistrement de l'application COM+.  Contactez le service d'assistance technique pour obtenir de plus amples informations.	
+IDS_ERROR_119	Une erreur s'est produite lors de l'annulation de l'enregistrement de l'application COM+.  Contactez le service d'assistance technique pour obtenir de plus amples informations.	
+IDS_ERROR_12	Début de l'action [Time] : [1].	
+IDS_ERROR_120	Suppression en cours des versions antérieures de cette application...	
+IDS_ERROR_121	Suppression des versions antérieures de cette application en cours de préparation...	
+IDS_ERROR_122	Erreur lors de l'application du programme correctif au fichier [2]. Il a sans doute été mis à jour de manière différente et ne peut plus être modifié par ce programme correctif. Pour obtenir des informations complémentaires, contactez le revendeur de votre programme correctif. {{Erreur système : [3]}}	
+IDS_ERROR_123	[2] ne parvient pas à installer un des logiciels requis. Contactez le service d'assistance technique.  {{erreur système: [3].}}	
+IDS_ERROR_124	Impossible de supprimer la version antérieure de [2]. Contactez le service d'assistance technique.  {{Erreur système: [3].}}	
+IDS_ERROR_125	Impossible de modifier la description pour le service '[2]' ([3]).	
+IDS_ERROR_126	Le service Windows Installer ne peut pas mettre à jour le fichier système [2] car le fichier est protégé par Microsoft Windows. Vous devrez peut-être mettre à jour votre système d'exploitation pour que le programme fonctionne correctement. {{Version : [3], Version protégée du système d'exploitation : [4]}}	
+IDS_ERROR_127	Le service Windows Installer ne parvient pas à actualiser le fichier système protégé [2]. {{Version : [3], version protégée du système d'exploitation : [4], erreur SFP : [5]}}	
+IDS_ERROR_128	Cette installation requiert Internet Information Server 4.0 ou suivante pour la configuration de IIS Virtual Roots. Vérifiez si vous avez IIS 4.0 ou suivante.	
+IDS_ERROR_129	Ce programme d'installation requiert les privilèges d'administrateur pour configurer IIS Virtual Roots.	
+IDS_ERROR_13	Fin de l'action [Time] : [1]. Valeur renvoyée : [2].	
+IDS_ERROR_14	Durée restante : {[1] minute(s) }{[2] secondes}	
+IDS_ERROR_15	Mémoire insuffisante. Fermez les autres applications avant de réessayer.	
+IDS_ERROR_16	Le programme d'installation ne répond pas.	
+IDS_ERROR_17	Le programme d'installation s'est arrêté prématurément.	
+IDS_ERROR_18	Configuration de [ProductName] en cours	
+IDS_ERROR_19	Collecte des informations requises en cours...	
+IDS_ERROR_2	Avertissement [1]. 	
+IDS_ERROR_20	Installation de {[ProductName] }terminée.	
+IDS_ERROR_21	Échec de l'installation de {[ProductName]}.	
+IDS_ERROR_22	Erreur lors de la lecture du fichier [2].{{ Erreur système [3].}} Vérifiez que ce fichier existe et que vous êtes autorisé à y accéder.	
+IDS_ERROR_23	Impossible de créer le fichier [2]. Un répertoire du même nom existe déjà. Annulez l'installation et essayez d'installer à un autre emplacement.	
+IDS_ERROR_24	Insérez le disque : [2]	
+IDS_ERROR_25	Le programme d'installation ne dispose pas des privilèges suffisants pour accéder au répertoire [2]. Impossible de poursuivre l'installation. Ouvrez une session en tant qu'administrateur ou contactez votre administrateur système.	
+IDS_ERROR_26	Erreur lors de l'écriture dans le fichier [2]. Vérifiez que vous êtes autorisé à accéder à ce répertoire.	
+IDS_ERROR_27	Erreur lors de la lecture du fichier [2]. {{ Erreur système [3].}}Vérifiez que ce fichier existe et que vous êtes autorisé à y accéder.	
+IDS_ERROR_28	Le fichier est ouvert en mode exclusif dans une autre application [2]. Fermez toutes les autres applications, puis cliquez sur Réessayer.	
+IDS_ERROR_29	Espace disque insuffisant pour installer le fichier [2]. Libérez de l'espace et cliquez sur Réessayer, ou cliquez sur Annuler pour quitter le programme d'installation.	
+IDS_ERROR_3	Informations [1]. 	
+IDS_ERROR_30	Fichier source [2] introuvable. Vérifiez que ce fichier existe et que vous êtes autorisé à y accéder.	
+IDS_ERROR_31	Erreur lors de la lecture du fichier [3].{{ Erreur système [2].}} Vérifiez que ce fichier existe et que vous êtes autorisé à y accéder.	
+IDS_ERROR_32	Erreur lors de l'écriture dans le fichier [3]. {{ Erreur système [2].}} Vérifiez que vous êtes autorisé à accéder à ce répertoire.	
+IDS_ERROR_33	Fichier source introuvable{{(cabinet)}} : [2]. Vérifiez que ce fichier existe et que vous êtes autorisé à y accéder.	
+IDS_ERROR_34	Impossible de créer le répertoire [2]. Un répertoire du même nom existe déjà. Renommez ce répertoire ou supprimez-le et cliquez sur Réessayer, ou cliquez sur Annuler pour quitter le programme d'installation.	
+IDS_ERROR_35	Volume [2] non disponible actuellement. Sélectionnez-en un autre.	
+IDS_ERROR_36	Chemin d'accès spécifié, [2], non disponible.	
+IDS_ERROR_37	Impossible d'écrire dans le répertoire spécifié : [2].	
+IDS_ERROR_38	Erreur au niveau du réseau lors de la tentative de lecture du fichier [2]	
+IDS_ERROR_39	Erreur lors de la tentative de création du répertoire [2]	
+IDS_ERROR_4	Erreur interne [1]. [2]{, [3]}{, [4]}	
+IDS_ERROR_40	Erreur au niveau du réseau lors de la tentative de création du répertoire [2]	
+IDS_ERROR_41	Erreur au niveau du réseau lors de la tentative d'ouverture du fichier CAB source [2]	
+IDS_ERROR_42	Chemin d'accès spécifié, [2], trop long.	
+IDS_ERROR_43	Le programme d'installation ne dispose pas des privilèges suffisants pour modifier ce fichier: [2].	
+IDS_ERROR_44	Une partie du chemin d'accès au répertoire [2] n'est pas valide. Soit il est vide, soit il dépasse la longueur maximale autorisée par le système.	
+IDS_ERROR_45	Le chemin d'accès au répertoire [2] contient des mots non valides.	
+IDS_ERROR_46	Le chemin d'accès au répertoire [2] contient un caractère non valide.	
+IDS_ERROR_47	Le nom de fichier court [2] n'est pas valide.	
+IDS_ERROR_48	Erreur lors de l'obtention des informations sur la sécurité du fichier [3] GetLastError : [2]	
+IDS_ERROR_49	Lecteur [2] non valide.	
+IDS_ERROR_5	{{Disque saturé : }}	
+IDS_ERROR_50	Impossible de créer la clé [2].{{ Erreur système [3].}} Vérifiez si vous jouissez des privilèges suffisants pour cette clé ou contactez le service d'assistance technique. 	
+IDS_ERROR_51	Impossible d'ouvrir la clé [2].{{ Erreur système [3].}} Vérifiez si vous jouissez des privilèges suffisants pour cette clé ou contactez le service d'assistance technique. 	
+IDS_ERROR_52	Impossible de supprimer la valeur [2] de la clé [3].{{ Erreur système [4].}} Vérifiez si vous jouissez de privilèges suffisants pour accéder à cette clé ou contactez le service d'assistance technique. 	
+IDS_ERROR_53	Impossible de supprimer la clé [2].{{ Erreur système [3].}} Vérifiez si vous jouissez des privilèges suffisants pour cette clé ou contactez le service d'assistance technique. 	
+IDS_ERROR_54	Impossible de lire la valeur [2] de la clé [3].{{ Erreur système [4].}} Vérifiez si vous jouissez de privilèges suffisants pour accéder à cette clé ou contactez le service d'assistance technique. 	
+IDS_ERROR_55	Impossible d'enregistrer la valeur [2] dans la clé [3].{{ Erreur système [4].}} Vérifiez si vous jouissez des privilèges suffisants pour cette clé ou contactez le service d'assistance technique.	
+IDS_ERROR_56	Impossible d'obtenir le nom des valeurs de la clé [2].{{ Erreur système [3].}} Vérifiez si vous jouissez des privilèges suffisants suffisants pour cette clé ou contactez le service d'assistance technique.	
+IDS_ERROR_57	Impossible d'obtenir le nom des sous rubriques de la clé [2].{{ Erreur système [3].}} Vérifiez si vous jouissez des privilèges suffisants suffisants pour cette clé ou contactez le service d'assistance technique.	
+IDS_ERROR_58	Impossible de lire les informations sur la sécurité de la clé [2].{{ Erreur système [3].}} Vérifiez si vous jouissez des privilèges suffisants pour cette clé ou contactez le service d'assistance technique.	
+IDS_ERROR_59	Impossible d'augmenter la taille du registre. L'installation de cette application requiert [2] Ko d'espace disponible dans le registre pour permettre l'installation de cette application.	
+IDS_ERROR_6	Action [Time] : [1]. [2]	
+IDS_ERROR_60	Une autre installation est en cours. Vous devez la terminer avant de poursuivre cette installation.	
+IDS_ERROR_61	Erreur d'accès aux données protégées. Vérifiez si le programme d'installation est correctement configuré puis, recommencez.	
+IDS_ERROR_62	L'utilisateur [2] a déjà lancé l'installation de [3]. Il devra réexécuter cette installation avant de pouvoir utiliser le produit. L'installation en cours va se poursuivre.	
+IDS_ERROR_63	L'utilisateur [2] a déjà lancé l'installation de [3]. Il devra réexécuter cette installation avant de pouvoir utiliser le produit.	
+IDS_ERROR_64	Espace disque insuffisant : volume : [2] ; espace requis : [3] Ko ; espace disponible : [4] Ko. Libérez de l'espace sur le disque, puis réessayez.	
+IDS_ERROR_65	Etes-vous certain de vouloir annuler l'installation?	
+IDS_ERROR_66	Le fichier [2][3] est actuellement utilisé{ par le processus suivant : Nom : [4] ; identificateur : [5] ; titre de la fenêtre : [6]. Fermez cette application, puis réessayez.	
+IDS_ERROR_67	Le logiciel [2] est déjà installé. Impossible d'installer ce logiciel car il est incompatible avec celui déjà installé.	
+IDS_ERROR_68	Espace disque insuffisant : volume : [2] ; espace requis : [3] Ko ; espace disponible : [4] Ko. Si la fonction de restauration est désactivée, l'espace est suffisant. Cliquez sur Annuler pour quitter, sur Réessayer pour vérifier à nouveau la quantité d'espace disponible ou sur Ignorer pour continuer sans la fonction de restauration.	
+IDS_ERROR_69	Impossible de se connecter à [2] via le réseau.	
+IDS_ERROR_7	[ProductName]	
+IDS_ERROR_70	Fermez les applications suivantes avant de poursuivre l'installation :	
+IDS_ERROR_71	Impossible de trouver des logiciels installés compatibles pour l'installation de cette application.	
+IDS_ERROR_72	Clé [2] non valide. Vérifiez que vous avez entré la clé appropriée.	
+IDS_ERROR_73	Le programme d'installation doit redémarrer votre système avant que la configuration de [2] puisse continuer. Cliquez sur Oui pour redémarrer maintenant, ou sur Non si vous voulez redémarrer manuellement plus tard.	
+IDS_ERROR_74	Vous devez redémarrer votre système pour que les modifications apportées à la configuration de [2] prennent effet. Cliquez sur Oui pour redémarrer maintenant, ou sur Non si vous voulez redémarrer manuellement plus tard.	
+IDS_ERROR_75	L'installation de [2] est suspendue. Vous devez annuler les modifications apportée par cette installation pour continuer. Voulez-vous annuler les modifications ?	
+IDS_ERROR_76	Une installation de ce produit est déjà en cours. Vous devez annuler les modifications apportées par cette installation pour continuer. Voulez-vous annuler les modifications ?	
+IDS_ERROR_77	Package d'installation pour le produit [2] introuvable. Réessayez d'exécuter Windows Installer avec un package d'installation valide [3].	
+IDS_ERROR_78	L'installation a réussi.	
+IDS_ERROR_79	L'installation n'a pas été exécutée.	
+IDS_ERROR_8	{[2]}{, [3]}{, [4]}	
+IDS_ERROR_80	Application: [2] -- [3]	
+IDS_ERROR_81	Vous pouvez restaurer l'état antérieur du système ou poursuivre l'installation plus tard. Voulez-vous restaurer votre système ?	
+IDS_ERROR_82	Une erreur est survenue lors de l'écriture sur le disque des informations concernant l'installation. Vérifiez que l'espace disponible sur le disque est suffisant et cliquez sur Réessayer, ou cliquez sur Annuler pour mettre fin à l'installation.	
+IDS_ERROR_83	Impossible de trouver un ou plusieurs des fichiers requis pour restaurer l'état antérieur de votre ordinateur. Impossible de procéder à la restauration.	
+IDS_ERROR_84	Chemin d'accès [2] non valide. Entrez un chemin d'accès valide.	
+IDS_ERROR_85	Mémoire insuffisante. Fermez les autres applications avant de réessayer.	
+IDS_ERROR_86	Le lecteur [2] est vide. Insérez un disque et cliquez sur Réessayer, ou cliquez sur Annuler pour revenir au volume sélectionné précédemment.	
+IDS_ERROR_87	Le lecteur [2] est vide. Insérez un disque et cliquez sur Réessayer, ou cliquez sur Annuler pour revenir dans la boîte de dialogue de sélection de l'emplacement et sélectionner un autre volume.	
+IDS_ERROR_88	Répertoire [2] inexistant. Entrez le chemin d'accès d'un répertoire existant.	
+IDS_ERROR_89	Vous ne jouissez pas de privilèges d'accès en lecture pour ce répertoire.	
+IDS_ERROR_9	Type de message : [1] ; argument : [2]	
+IDS_ERROR_90	Impossible de trouver un répertoire de destination valide pour l'installation.	
+IDS_ERROR_91	Erreur pendant la tentative de lecture de la base de données d'installation source : [2].	
+IDS_ERROR_92	Planification du redémarrage : Le fichier [2] est renommé [3]. Pour achever l'opération, votre système doit être redémarré.	
+IDS_ERROR_93	Planification du redémarrage : Suppression du fichier [2]. Pour achever l'opération, votre système doit être redémarré.	
+IDS_ERROR_94	Impossible d'enregistrer le module [2].  HRESULT [3].  Contactez le service d'assistance technique.	
+IDS_ERROR_95	Impossible d'annuler l'enregistrement du module [2].  HRESULT [3].  Contactez le service d'assistance technique.	
+IDS_ERROR_96	Erreur de mise en cache du paquet [2]. Erreur: [3]. Contactez le service d'assistance technique.	
+IDS_ERROR_97	Impossible d'enregistrer la police [2].  Vérifiez si vous jouissez des privilèges d'installation de polices et si le système prend cette police en charge.	
+IDS_ERROR_98	Impossible d'annuler l'enregistrement de la police  [2]. Vérifiez si vous jouissez des privilèges de suppression des polices.	
+IDS_ERROR_99	Impossible de créer le raccourci [2]. Vérifiez que le répertoire de destination existe et que vous êtes autorisé à y accéder.	
+IDS_ERROR_SN_INVALID	Le numéro de série est incorrect.	
+IDS_ISSCRIPT_VERSION_MISSING	Le moteur InstallScript ne se trouve pas sur cet ordinateur. S'il est disponible, veuillez exécuter ISScript.msi ou veuillez contacter le service d'assistance technique.	
+IDS_ISSCRIPT_VERSION_OLD	Le moteur InstallScript de cet ordinateur est antérieur à la version requise pour cette installation. Si possible, veuillez installer la dernière version de ISScript.msi ou veuillez contacter le service d'assistance technique.	
+IDS_PRODUCT_DEFAULT_1	Nom de l'application SYSTEM_GENERATED	
+IDS_SetupTips_1	{&Tahoma8}OK	
+IDS_SetupTips_10	{&Tahoma8}La fonction sera installée lors de la première utilisation. (Disponible uniquement si la fonction prend en charge cette option.)		 	
+IDS_SetupTips_11	{&Tahoma8}La fonction sera installée pour être exécutée à partir du réseau. (Disponible uniquement si la fonction prend en charge cette option.)	
+IDS_SetupTips_12	{&Tahoma8}Cette icône indique que...	
+IDS_SetupTips_13	<ISProductFolder>\Redist\Language Independent\OS Independent\IsDialogBanner.ibd	
+IDS_SetupTips_14	<ISProductFolder>\Redist\Language Independent\OS Independent\NetworkInstall.ico	
+IDS_SetupTips_15	<ISProductFolder>\Redist\Language Independent\OS Independent\Install.ico	
+IDS_SetupTips_16	<ISProductFolder>\Redist\Language Independent\OS Independent\InstallFirstUse.ico	
+IDS_SetupTips_17	<ISProductFolder>\Redist\Language Independent\OS Independent\InstallPartial.ico	
+IDS_SetupTips_18	<ISProductFolder>\Redist\Language Independent\OS Independent\DontInstall.ico	
+IDS_SetupTips_19	<ISProductFolder>\Redist\Language Independent\OS Independent\InstallStateMenu.ico	
+IDS_SetupTips_2	{&MSSWhiteSerif8}InstallShield	
+IDS_SetupTips_3	{&Tahoma8}InstallShield	
+IDS_SetupTips_4	{&Tahoma8}L'installation personnalisée vous permet d'installer certains composants de l'application.	
+IDS_SetupTips_5	{&MSSansBold8}Conseils pour l'installation personnalisée	
+IDS_SetupTips_6	{&Tahoma8}La fonction ne sera pas installée.	
+IDS_SetupTips_7	{&Tahoma8}Certains sous-composants seront installés sur le disque dur local.	
+IDS_SetupTips_8	{&Tahoma8}La fonction sera installée dans son intégralité sur le disque dur local.		
+IDS_SetupTips_9	{&Tahoma8}L'icône située en regard d'une fonction en détermine le mode d'installation. Cliquez sur cette icône pour afficher les options d'installation disponibles.	
+IDS_STANDARD_USE_SETUPEXE	Cette installation ne peut être effectuée en lançant directement le logiciel MSI ; vous devez exécuter setup.exe.	
+IDS_UITEXT_0	octets	
+IDS_UITEXT_1	Go	
+IDS_UITEXT_10	La fonction ne sera pas installée.	
+IDS_UITEXT_11	Cette fonction sera installée lorsque ce sera requis.	
+IDS_UITEXT_12	Cette fonction sera installée pour être exécutée depuis le CD.	
+IDS_UITEXT_13	Cette fonction sera installée sur le disque dur local.	
+IDS_UITEXT_14	Cette fonction sera installée pour être exécutée depuis le réseau.	
+IDS_UITEXT_15	Cette fonction ne sera plus disponible.	
+IDS_UITEXT_16	Cette fonction sera installée au moment requis.	
+IDS_UITEXT_17	Cette fonction sera disponible pour être exécutée depuis le CD.	
+IDS_UITEXT_18	Cette fonction sera installée sur votre disque dur local.	
+IDS_UITEXT_19	Cette fonction sera disponible pour être exécutée depuis le réseau.	
+IDS_UITEXT_2	ko	
+IDS_UITEXT_20	Cette fonction sera entièrement désinstallée et vous ne pourrez pas l'exécuter depuis le CD.	
+IDS_UITEXT_21	Cette fonction était exécutée depuis le CD mais sera installée lorsque ce sera requis.	
+IDS_UITEXT_22	Cette fonction sera toujours exécutée depuis le CD.	
+IDS_UITEXT_23	Cette fonction était exécutée depuis le CD mais sera installée sur le disque dur local.	
+IDS_UITEXT_24	Cette fonction libère [1] de votre disque dur.	
+IDS_UITEXT_25	Cette fonction nécessite [1] d'espace disque.	
+IDS_UITEXT_26	La compilation pour cette fonction exige...	
+IDS_UITEXT_27	Cette fonction sera entièrement supprimée.	
+IDS_UITEXT_28	Cette fonction sera supprimée de votre disque dur local mais sera installée lorsque ce sera requis.	
+IDS_UITEXT_29	Cette fonction sera supprimée de votre disque dur local mais pourra toujours être exécutée depuis votre CD.	
+IDS_UITEXT_3	Mo	
+IDS_UITEXT_30	Cette fonction restera sur votre disque dur local.	
+IDS_UITEXT_31	Cette fonction sera supprimée de votre disque dur local mais pourra toujours être exécutée depuis le réseau.	
+IDS_UITEXT_32	Cette fonction sera entièrement désinstallée et vous ne pourrez pas l'exécuter depuis le réseau.	
+IDS_UITEXT_33	Cette fonction était exécutée depuis le réseau mais sera installée lorsque ce sera requis.	
+IDS_UITEXT_34	Cette fonction était exécutée depuis le réseau mais sera installée sur le disque dur local.	
+IDS_UITEXT_35	Cette fonction sera toujours exécutée depuis le réseau.	
+IDS_UITEXT_36	Cette fonction libère [1] de votre disque dur. Vous avez sélectionné [2] de [3] sous-fonctions. Les sous-fonctions libèrent [4] de votre disque dur.	
+IDS_UITEXT_37	Cette fonction libère [1] de votre disque dur. Vous avez sélectionné [2] de [3] sous-fonctions. Les sous-fonctions requièrent [4] de votre disque dur.	
+IDS_UITEXT_38	Cette fonction requiert [1] de votre disque dur. Vous avez sélectionné [2] de [3] sous-fonctions. Les sous-fonctions libèrent [4] de votre disque dur.	
+IDS_UITEXT_39	Cette fonction requiert [1] de votre disque dur. Vous avez sélectionné [2] de [3] sous-fonctions. Les sous-fonctions requièrent [4] de votre disque dur.	
+IDS_UITEXT_4	Cette fonction ne sera pas installée.	
+IDS_UITEXT_40	Temps restant: {[1] min }[2] sec	
+IDS_UITEXT_41	Disponibilité	
+IDS_UITEXT_42	Différences	
+IDS_UITEXT_43	Requis	
+IDS_UITEXT_44	Taille du disque	
+IDS_UITEXT_45	Volume	
+IDS_UITEXT_46	Cette fonction et toutes ses sous-fonctions seront installées pour être exécutées depuis le réseau.	
+IDS_UITEXT_47	Cette fonction et toutes ses sous-fonctions seront installées pour être exécutées depuis le CD.	
+IDS_UITEXT_48	Cette fonction et toutes ses sous-fonctions seront installées pour être exécutées depuis le disque dur local.	
+IDS_UITEXT_5	Cette fonction sera installée au moment nécessaire.	
+IDS_UITEXT_6	Cette fonction sera installée pour être exécutée depuis le CD.	
+IDS_UITEXT_7	Cette fonction sera installée sur le disque dur local.	
+IDS_UITEXT_8	Cette fonction sera installée pour être exécutée depuis le réseau.	
+IDS_UITEXT_9	Fldr|Nouveau répertoire	
+SIS_AUTHOR	Kaspersky Lab	
+SIS_SUBJECT	Module externe d'administration de Kaspersky Anti-Virus 6.0	
+

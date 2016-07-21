@@ -1,0 +1,10 @@
+LIBRARY      debwatch
+
+DESCRIPTION 'Debug Custom Watcher DLL'
+
+VERSION      1.0
+
+HEAPSIZE     0x10000 0x1000
+
+EXPORTS      RecognizeFormat @1
+			 format_vatype

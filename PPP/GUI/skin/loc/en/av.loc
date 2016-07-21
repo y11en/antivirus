@@ -1,0 +1,202 @@
+﻿[Global]
+$Antivirus           = "Malware protection"
+$AntivirusDesc       = "Protection against viruses and spyware"
+$File_Monitoring     = "File Anti-Virus"
+$Mail_Monitoring     = "Mail Anti-Virus"
+$Web_Monitoring      = "Web Anti-Virus"
+
+[MainWindow.Antivirus]
+Home        = "Status"
+Events      = "Events"
+Statistics  = "Statistics"
+
+[MainWindow.Antivirus_Filters]
+AllItems  = "Do not group"
+ByTask    = "Group by task"
+ByApp     = "Group by application"
+ByVerdict = "Group by verdict"
+
+[AV_Home_Tasks]
+Header = "Tasks"
+
+[MainWindow.Antivirus_WorkArea_Tasks_AvzTroubleshootWizard]
+Icon    = "Post-infection system restore"
+
+[MainWindow.Antivirus_WorkArea_Tasks_RescueDiskWizard]
+Icon    = "Rescue disk"
+
+;-------------------------------- AvzTroubleshootWizard --------------------------------
+
+[FileMonSettings_Tab]
+Scope       = "General"
+Performance = "Performance"
+Additional  = "Additional"
+
+[FileMonSettings_Tab_Scope]
+FileTypesGroup  = "File types"
+Area            = "Protection scope"
+
+[FileMonSettings_Tab_Scope_FileTypesGroup]
+All         = "Scan a&ll files"
+Infectable  = "Scan programs and documents (b&y content)"
+Predefined  = "Scan programs and documents (by <a FileTypesExtension onclick(help(1063))>&extension</a>)"
+
+[FileMonSettings_Tab_Performance]
+FirstTimeCheck  = "Scan methods"
+FileTypesGroup  = "Optimization"
+
+[FileMonSettings_Tab_Performance_FirstTimeCheck]
+Sign    = "Signature analysis"
+Online  = "&Online scan"
+Heur    = "&Heuristic analysis"
+
+[FileMonSettings_Tab_Performance_FileTypesGroup]
+CheckNew = "Scan only &new and changed files"
+
+[FileMonSettings_Tab_Additional]
+ScanMode = "Scan mode"
+
+[FileMonSettings_Tab_Additional_ScanMode]
+CheckModeSmart  = "Sma&rt mode"
+CheckModeAll    = "On access and &modification"
+CheckModeOpen   = "On &access"
+CheckModeExec   = "On &execution"
+
+[MalwareSettingsWindow.Threats]
+Check1  = "Check"
+Radio1  = "Radio"
+
+[CompoundFilesGroup]
+@           = "Compound files"
+Archive     = "Scan" + if(ScanUnchangedObjects, " <a Unchanged_ScanArchived onclick(iterate(ForUnchangedObjects.ScanArchived))>" + (ForUnchangedObjects.ScanArchived ? $NewAll) + "</a>") + " &archives"
+SFX         = "Scan" + if(ScanUnchangedObjects, " <a Unchanged_ScanSFXArchived onclick(iterate(ForUnchangedObjects.ScanSFXArchived))>" + (ForUnchangedObjects.ScanSFXArchived ? $NewAll) + "</a>") + " &installation packages"
+OLE         = "Scan" + if(ScanUnchangedObjects, " <a Unchanged_ScanOLE onclick(iterate(ForUnchangedObjects.ScanOLE))>" + (ForUnchangedObjects.ScanOLE ? $NewAll) + "</a>") + " e&mbedded OLE objects"
+Mail        = "Parse email &formats"
+AskPwd      = "Scan &password-protected archives"
+Advanced    = "&Advanced..."
+
+[MainWindow.Antivirus_WorkArea_Home]
+Tasks.Header            = "Tasks"
+Antivirus.Group2.Header = "Scan statistics"
+
+[MainWindow.Antivirus.Mail_Monitoring]
+Level.Name          = "Security level:"
+OnDetection.Name    = "On detection:"
+
+[MainWindow.Antivirus.File_Monitoring]
+Level.Name          = "Security level:"
+OnDetection.Name    = "On detection:"
+
+[MainWindow.Antivirus.Web_Monitoring]
+Level.Name          = "Security level:"
+OnDetection.Name    = "On detection:"
+
+[WebMonSettings]
+@ = "Dialog"
+
+[WebMonSettings_Tab]
+Scope       = "General"
+Performance = "Performance"
+
+[WebMonSettings_Tab_Scope]
+Traffic         = "Scan HTTP traffic"
+Scripts         = "Block dangerous scripts in Microsoft Internet Explorer"
+TrustedSites    = "Trusted URLs"
+
+[WebMonSettings_Tab_Performance]
+Methods		= "Scan methods"
+CompoundFiles	= "Compound files"
+
+[WebMonSettings_Tab_Performance_Methods]
+QuickScan   	= "Use &streaming scan (limited set of databases)"
+FullScan    	= "Use &buffering scan (standard set of databases)"
+Heur            = "Heuristic analysis"
+HeurParams      = "Heuristic depth"
+
+[WebMonSettings_Tab_Performance_CompoundFiles]
+Archive         = "Do not scan &archives"
+SkipSizeCheck   = "Do not process archives &larger than"
+SkipSizeLabel   = "MB"
+
+[MailMonSettings_Tab]
+Scope       = "General"
+Performance = "Performance"
+Filter      = "Attachment filter"
+
+[MailMonSettings_Tab_Scope]
+Directions  = "Protection scope"
+Plugins     = "Connectivity"
+
+[MailMonSettings_Tab_Scope_Directions]
+All         = "Incoming and outgoing email"
+Incoming    = "Incoming email only"
+
+[MailMonSettings_Tab_Scope_Plugins]
+Traffic                 = "POP3/SMTP/NMTP/IMAP traffic"
+ClientOutlook           = "Microsoft Office Outlook"
+ClientOutlookExpress    = "Microsoft Outlook Express"
+ClientEudora            = "Eudora"
+ClientThunderbird       = "Thunderbird"
+ClientTheBat            = "The Bat!"
+
+[MailMonSettings_Tab_Performance]
+Methods		= "Scan methods"
+CompoundFiles	= "Compound files"
+
+[MailMonSettings_Tab_Performance_Methods]
+Heur            = "Heuristic analysis"
+
+[MailMonSettings_Tab_Performance_CompoundFiles] 
+Archive         = "Do not scan attached &archives"
+SkipSizeCheck   = "Do not process archives &larger than"
+SkipSizeLabel   = "MB"
+
+[MailMonSettings_Tab_Filter]
+Skip    = "Disable filtration"
+Rename  = "Rename selected attachment types"
+Delete  = "Delete selected attachment types"
+
+[MailAttachmentFilter_Edit]
+@           = "Input file name mask"
+@.Example   = "Example: *.exe"
+
+[WebTrustedSites_Edit]
+@           = "Edit URL address mask"
+@.Example   = "Example: http://www.kaspersky.com/*"
+
+[CompoundFilesSettings]
+@ = "Compound files"
+
+[CompoundFilesSettings_Body]
+BackgroundScan  = "Background scan"
+SizeLimit       = "Size limit"
+
+[CompoundFilesSettings_Body_BackgroundScan]
+PostponeSizeCheck   = "Extract compound files in &background"
+Descr               = "When you access compound files such as archives, they can be extracted and checked in backrgound"
+Label2              = "Minimum file size:"
+PostponeSizeLabel   = "MB"
+Label1              = "Compound files sized less than this value will be scanned immediately"
+
+[CompoundFilesSettings_Body_SizeLimit]
+SkipSizeCheck   = "Do not unpack compound files larger than"
+Descr           = "This setting is not applied to files, extracted from archives"
+Label2          = "Maximum file size:"
+SkipSizeLabel   = "MB"
+Label1          = "Compound files sized larger than this value will not be scanned"
+
+[MainWindow.Antivirus.SysPerf]
+Chart = "Label"
+
+[MainWindow.Antivirus.SysPerf_Legend]
+LegendText1 = "Files"
+LegendText2 = "Email"
+LegendText3 = "Web traffic"
+
+[MainWindow.Antivirus.SysPerf_Chart]
+line1   = "Files"
+line2   = "Email"
+line3   = "Web"
+
+[MainWindow.Antivirus_WorkArea]
+Home.Group2.Header = "Objects scanned"

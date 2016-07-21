@@ -1,0 +1,768 @@
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Folder: "O:\commonfiles"
+	File "O:\commonfiles\All.dsp"
+		Converting "All.dsp"
+		Patching   "All.vcproj"
+			Conf - Unicode Release|Win32
+				INFO! configuration is renamed to 'ReleaseUS|Win32'
+			Conf - ReleaseDll|Win32
+				INFO! configuration is renamed to 'Release|Win32'
+			Conf - Debug|Win32
+				INFO! configuration is renamed to 'DebugS|Win32'
+			Conf - Release|Win32
+				INFO! configuration is renamed to 'ReleaseS|Win32'
+			Conf - Unicode DebugDll|Win32
+				INFO! configuration is renamed to 'DebugU|Win32'
+			Conf - Unicode ReleaseDll|Win32
+				INFO! configuration is renamed to 'ReleaseU|Win32'
+			Conf - DebugDll|Win32
+				INFO! configuration is renamed to 'Debug|Win32'
+			Conf - Unicode Debug|Win32
+				INFO! configuration is renamed to 'DebugUS|Win32'
+		Add x64 to "All.vcproj"
+
+	File "O:\commonfiles\_CommonFiles.dsp"
+		Converting "_CommonFiles.dsp"
+		Patching   "_CommonFiles.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+		Add x64 to "_CommonFiles.vcproj"
+
+	File "O:\commonfiles\_CommonFiles_NoUnicode.dsp"
+		Converting "_CommonFiles_NoUnicode.dsp"
+		Patching   "_CommonFiles_NoUnicode.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+		Add x64 to "_CommonFiles_NoUnicode.vcproj"
+
+	File "O:\commonfiles\_CommonFiles_NoUnicode_Static.dsp"
+		Converting "_CommonFiles_NoUnicode_Static.dsp"
+		Patching   "_CommonFiles_NoUnicode_Static.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+		Add x64 to "_CommonFiles_NoUnicode_Static.vcproj"
+
+	File "O:\commonfiles\_klsys.dsp"
+		Converting "_klsys.dsp"
+		Patching   "_klsys.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+		Add x64 to "_klsys.vcproj"
+
+	File "O:\commonfiles\_licensing.dsp"
+		Converting "_licensing.dsp"
+		Patching   "_licensing.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+		Add x64 to "_licensing.vcproj"
+
+	File "O:\commonfiles\_Serialize.dsp"
+		Converting "_Serialize.dsp"
+		Patching   "_Serialize.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+		Add x64 to "_Serialize.vcproj"
+
+	File "O:\commonfiles\_Sign.dsp"
+		Converting "_Sign.dsp"
+		Patching   "_Sign.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+		Add x64 to "_Sign.vcproj"
+
+Folder: "O:\commonfiles\CCClient"
+Folder: "O:\commonfiles\CfgPages"
+Folder: "O:\commonfiles\datatreeutils"
+	File "O:\commonfiles\datatreeutils\DataTreeUtils.dsp"
+		Converting "DataTreeUtils.dsp"
+		Patching   "DataTreeUtils.vcproj"
+			Conf - Unicode DebugDll|Win32
+				INFO! configuration is renamed to 'DebugU|Win32'
+			Conf - Release|Win32
+				INFO! configuration is renamed to 'ReleaseS|Win32'
+			Conf - Unicode Debug|Win32
+				INFO! configuration is renamed to 'DebugUS|Win32'
+			Conf - DebugDll|Win32
+				INFO! configuration is renamed to 'Debug|Win32'
+			Conf - ReleaseDll|Win32
+				INFO! configuration is renamed to 'Release|Win32'
+			Conf - Unicode Release|Win32
+				INFO! configuration is renamed to 'ReleaseUS|Win32'
+			Conf - Debug|Win32
+				INFO! configuration is renamed to 'DebugS|Win32'
+			Conf - Unicode ReleaseDll|Win32
+				INFO! configuration is renamed to 'ReleaseU|Win32'
+		Add x64 to "DataTreeUtils.vcproj"
+
+Folder: "O:\commonfiles\Debug"
+Folder: "O:\commonfiles\DebugDJGPP"
+Folder: "O:\commonfiles\DebugDll"
+Folder: "O:\commonfiles\DebugDll\hidden"
+Folder: "O:\commonfiles\Dskm"
+	File "O:\commonfiles\Dskm\dskm.dsp"
+		Converting "dskm.dsp"
+		Patching   "dskm.vcproj"
+			Conf - ReleaseDll|Win32
+				INFO! configuration is renamed to 'Release|Win32'
+			Conf - DebugDll|Win32
+				INFO! configuration is renamed to 'Debug|Win32'
+			Conf - Debug|Win32
+				INFO! configuration is renamed to 'DebugS|Win32'
+			Conf - Release|Win32
+				INFO! configuration is renamed to 'ReleaseS|Win32'
+		Add x64 to "dskm.vcproj"
+
+Folder: "O:\commonfiles\Dskm\cpp_wrap"
+Folder: "O:\commonfiles\Dskm\Gost"
+Folder: "O:\commonfiles\Dskm\Gost\debug"
+Folder: "O:\commonfiles\Dskm\Gost\Release"
+Folder: "O:\commonfiles\Dskm\test"
+Folder: "O:\commonfiles\Dskm\test\build"
+Folder: "O:\commonfiles\Dskm\test\build\win32"
+	File "O:\commonfiles\Dskm\test\build\win32\DskmTest.dsp"
+		Converting "DskmTest.dsp"
+		Patching   "DskmTest.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+		Add x64 to "DskmTest.vcproj"
+
+Folder: "O:\commonfiles\Dskm\test\data"
+Folder: "O:\commonfiles\Dskm\test\src"
+Folder: "O:\commonfiles\Dskm\unix"
+Folder: "O:\commonfiles\DupMem"
+Folder: "O:\commonfiles\FileFormat"
+Folder: "O:\commonfiles\hashutil"
+	File "O:\commonfiles\hashutil\hashutil.dsp"
+		Converting "hashutil.dsp"
+		Patching   "hashutil.vcproj"
+			Conf - DebugDll|Win32
+				INFO! configuration is renamed to 'Debug|Win32'
+			Conf - Debug|Win32
+				INFO! configuration is renamed to 'DebugS|Win32'
+			Conf - ReleaseDll|Win32
+				INFO! configuration is renamed to 'Release|Win32'
+			Conf - Release|Win32
+				INFO! configuration is renamed to 'ReleaseS|Win32'
+		Add x64 to "hashutil.vcproj"
+
+Folder: "O:\commonfiles\hashutil\unix"
+Folder: "O:\commonfiles\Hook"
+Folder: "O:\commonfiles\IOCache"
+Folder: "O:\commonfiles\ipc"
+Folder: "O:\commonfiles\kavssi"
+Folder: "O:\commonfiles\kldirobj"
+	File "O:\commonfiles\kldirobj\kldirobj.dsp"
+		Converting "kldirobj.dsp"
+		Patching   "kldirobj.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+		Add x64 to "kldirobj.vcproj"
+
+Folder: "O:\commonfiles\klsys"
+	File "O:\commonfiles\klsys\klsys.dsp"
+		Converting "klsys.dsp"
+		Patching   "klsys.vcproj"
+			Conf - DebugDll|Win32
+				INFO! configuration is renamed to 'Debug|Win32'
+			Conf - Release|Win32
+				INFO! configuration is renamed to 'ReleaseS|Win32'
+			Conf - ReleaseDll|Win32
+				INFO! configuration is renamed to 'Release|Win32'
+			Conf - Debug|Win32
+				INFO! configuration is renamed to 'DebugS|Win32'
+		Add x64 to "klsys.vcproj"
+
+Folder: "O:\commonfiles\klsys\direnum"
+Folder: "O:\commonfiles\klsys\errors"
+Folder: "O:\commonfiles\klsys\filemapping"
+Folder: "O:\commonfiles\klsys\guards"
+Folder: "O:\commonfiles\klsys\memorymanager"
+Folder: "O:\commonfiles\klsys\unix"
+Folder: "O:\commonfiles\klsys\virtualmemory"
+Folder: "O:\commonfiles\klsys\virtualmemory\test"
+	File "O:\commonfiles\klsys\virtualmemory\test\virtualmemory_test.dsp"
+		Converting "virtualmemory_test.dsp"
+		Patching   "virtualmemory_test.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+		Add x64 to "virtualmemory_test.vcproj"
+
+Folder: "O:\commonfiles\klsys\_obsolete"
+Folder: "O:\commonfiles\kulib"
+	File "O:\commonfiles\kulib\kulib.dsp"
+		Converting "kulib.dsp"
+		Patching   "kulib.vcproj"
+			Conf - Release|Win32
+				INFO! 'RuntimeLibrary' option is changed from 'Multi-threaded Release Static' to 'Multi-threaded Release Dll'
+			Conf - Debug|Win32
+				INFO! 'RuntimeLibrary' option is changed from 'Multi-threaded Debug Static' to 'Multi-threaded Debug Dll'
+		Add x64 to "kulib.vcproj"
+
+Folder: "O:\commonfiles\kulib\data"
+Folder: "O:\commonfiles\kulib\src"
+Folder: "O:\commonfiles\kulib\tests"
+Folder: "O:\commonfiles\kulib\tests\kuconv_test"
+	File "O:\commonfiles\kulib\tests\kuconv_test\kuconv_test.dsp"
+		Converting "kuconv_test.dsp"
+		Patching   "kuconv_test.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+		Add x64 to "kuconv_test.vcproj"
+
+Folder: "O:\commonfiles\kulib\tests\kuhash_test"
+	File "O:\commonfiles\kulib\tests\kuhash_test\kuhash_test.dsp"
+		Converting "kuhash_test.dsp"
+		Patching   "kuhash_test.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+		Add x64 to "kuhash_test.vcproj"
+
+Folder: "O:\commonfiles\kulib\tools"
+Folder: "O:\commonfiles\kulib\tools\all"
+	File "O:\commonfiles\kulib\tools\all\all.dsp"
+		Converting "all.dsp"
+		Patching   "all.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+		Add x64 to "all.vcproj"
+
+Folder: "O:\commonfiles\kulib\tools\genalias"
+	File "O:\commonfiles\kulib\tools\genalias\genalias.dsp"
+		Converting "genalias.dsp"
+		Patching   "genalias.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+		Add x64 to "genalias.vcproj"
+
+Folder: "O:\commonfiles\kulib\tools\gencase"
+	File "O:\commonfiles\kulib\tools\gencase\gencase.dsp"
+		Converting "gencase.dsp"
+		Patching   "gencase.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+		Add x64 to "gencase.vcproj"
+
+Folder: "O:\commonfiles\kulib\tools\gencasetbl"
+	File "O:\commonfiles\kulib\tools\gencasetbl\gencasetbl.dsp"
+		Converting "gencasetbl.dsp"
+		Patching   "gencasetbl.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+		Add x64 to "gencasetbl.vcproj"
+
+Folder: "O:\commonfiles\kulib\tools\gendata"
+	File "O:\commonfiles\kulib\tools\gendata\gendata.dsp"
+		Converting "gendata.dsp"
+		Patching   "gendata.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+		Add x64 to "gendata.vcproj"
+
+Folder: "O:\commonfiles\kulib\tools\genkum"
+	File "O:\commonfiles\kulib\tools\genkum\genkum.dsp"
+		Converting "genkum.dsp"
+		Patching   "genkum.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+		Add x64 to "genkum.vcproj"
+
+Folder: "O:\commonfiles\kulib\tools\kumtocnv"
+	File "O:\commonfiles\kulib\tools\kumtocnv\kumtocnv.dsp"
+		Converting "kumtocnv.dsp"
+		Patching   "kumtocnv.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+		Add x64 to "kumtocnv.vcproj"
+
+Folder: "O:\commonfiles\kulib\tools\_genml"
+	File "O:\commonfiles\kulib\tools\_genml\genml.dsp"
+		Converting "genml.dsp"
+		Patching   "genml.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+		Add x64 to "genml.vcproj"
+
+Folder: "O:\commonfiles\Licensing"
+Folder: "O:\commonfiles\Licensing\build"
+Folder: "O:\commonfiles\Licensing\build\novell"
+Folder: "O:\commonfiles\Licensing\build\novell\licpolicy"
+Folder: "O:\commonfiles\Licensing\build\unix"
+Folder: "O:\commonfiles\Licensing\build\win32"
+Folder: "O:\commonfiles\Licensing\build\win32\licpolicy"
+	File "O:\commonfiles\Licensing\build\win32\licpolicy\licpolicy.dsp"
+		Converting "licpolicy.dsp"
+		Patching   "licpolicy.vcproj"
+			Conf - Unicode Release|Win32
+				INFO! configuration is renamed to 'ReleaseUS|Win32'
+			Conf - DebugDll|Win32
+				INFO! configuration is renamed to 'Debug|Win32'
+			Conf - Unicode Debug|Win32
+				INFO! configuration is renamed to 'DebugUS|Win32'
+			Conf - Unicode ReleaseDll|Win32
+				INFO! configuration is renamed to 'ReleaseU|Win32'
+			Conf - Unicode DebugDll|Win32
+				INFO! configuration is renamed to 'DebugU|Win32'
+			Conf - ReleaseDll|Win32
+				INFO! configuration is renamed to 'Release|Win32'
+			Conf - Debug|Win32
+				INFO! configuration is renamed to 'DebugS|Win32'
+			Conf - Release|Win32
+				INFO! configuration is renamed to 'ReleaseS|Win32'
+		Add x64 to "licpolicy.vcproj"
+
+Folder: "O:\commonfiles\Licensing\build\win32\licpolicy_no_xml"
+	File "O:\commonfiles\Licensing\build\win32\licpolicy_no_xml\licpolicy_no_xml.dsp"
+		Converting "licpolicy_no_xml.dsp"
+		Patching   "licpolicy_no_xml.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+		Add x64 to "licpolicy_no_xml.vcproj"
+
+Folder: "O:\commonfiles\Licensing\doc"
+Folder: "O:\commonfiles\Licensing\include"
+Folder: "O:\commonfiles\Licensing\src"
+Folder: "O:\commonfiles\Licensing\tests"
+Folder: "O:\commonfiles\Licensing\tests\build"
+Folder: "O:\commonfiles\Licensing\tests\build\novell"
+Folder: "O:\commonfiles\Licensing\tests\build\novell\lictool"
+Folder: "O:\commonfiles\Licensing\tests\build\unix"
+Folder: "O:\commonfiles\Licensing\tests\build\win32"
+Folder: "O:\commonfiles\Licensing\tests\build\win32\DumpLicStorage"
+	File "O:\commonfiles\Licensing\tests\build\win32\DumpLicStorage\DumpLicStorage.dsp"
+		Converting "DumpLicStorage.dsp"
+		Patching   "DumpLicStorage.vcproj"
+			Conf - Debug|Win32
+			Conf - Unicode Debug|Win32
+			Conf - Unicode Release|Win32
+		Add x64 to "DumpLicStorage.vcproj"
+
+Folder: "O:\commonfiles\Licensing\tests\build\win32\lictool"
+	File "O:\commonfiles\Licensing\tests\build\win32\lictool\lictool.dsp"
+		Converting "lictool.dsp"
+		Patching   "lictool.vcproj"
+			Conf - Unicode ReleaseDll|Win32
+			Conf - Unicode DebugDll|Win32
+			Conf - DebugDll|Win32
+			Conf - Unicode Debug|Win32
+			Conf - ReleaseDll|Win32
+			Conf - Release|Win32
+			Conf - Debug|Win32
+			Conf - Unicode Release|Win32
+		Add x64 to "lictool.vcproj"
+
+Folder: "O:\commonfiles\Licensing\tests\include"
+Folder: "O:\commonfiles\Licensing\tests\src"
+Folder: "O:\commonfiles\Licensing\tests\test data"
+Folder: "O:\commonfiles\Licensing\tests\test data\antispam"
+Folder: "O:\commonfiles\Licensing\tests\test data\Corporate suite"
+Folder: "O:\commonfiles\Licensing\tests\test data\ISAV"
+Folder: "O:\commonfiles\Licensing\tests\test data\KAV for Exchange"
+Folder: "O:\commonfiles\Licensing\tests\test data\novell"
+Folder: "O:\commonfiles\Licensing\tests\test data\Personal 4.6"
+Folder: "O:\commonfiles\Licensing\tests\test data\samba"
+Folder: "O:\commonfiles\Licensing\tests\test data\samba\problem keys"
+Folder: "O:\commonfiles\Licensing\tests\test data\smtp-gateway"
+Folder: "O:\commonfiles\Licensing\tests\test data\wks50"
+Folder: "O:\commonfiles\Licensing\tests\test data\workstation"
+Folder: "O:\commonfiles\Licensing2"
+Folder: "O:\commonfiles\Licensing2\build"
+Folder: "O:\commonfiles\Licensing2\build\scripts"
+Folder: "O:\commonfiles\Licensing2\build\win32"
+	File "O:\commonfiles\Licensing2\build\win32\licensing.dsp"
+		Converting "licensing.dsp"
+		Patching   "licensing.vcproj"
+			Conf - Unicode ReleaseDll|Win32
+				INFO! configuration is renamed to 'ReleaseU|Win32'
+			Conf - Unicode Debug|Win32
+				INFO! configuration is renamed to 'DebugUS|Win32'
+			Conf - Debug|Win32
+				INFO! configuration is renamed to 'DebugS|Win32'
+			Conf - Unicode Release|Win32
+				INFO! configuration is renamed to 'ReleaseUS|Win32'
+			Conf - ReleaseDll|Win32
+				INFO! configuration is renamed to 'Release|Win32'
+			Conf - DebugDll|Win32
+				INFO! configuration is renamed to 'Debug|Win32'
+			Conf - Unicode DebugDll|Win32
+				INFO! configuration is renamed to 'DebugU|Win32'
+			Conf - Release|Win32
+				INFO! configuration is renamed to 'ReleaseS|Win32'
+		Add x64 to "licensing.vcproj"
+
+Folder: "O:\commonfiles\Licensing2\diagrams"
+Folder: "O:\commonfiles\Licensing2\doc"
+Folder: "O:\commonfiles\Licensing2\include"
+Folder: "O:\commonfiles\Licensing2\include\utility"
+Folder: "O:\commonfiles\Licensing2\src"
+Folder: "O:\commonfiles\Licensing2\test"
+Folder: "O:\commonfiles\Licensing2\test\api"
+Folder: "O:\commonfiles\Licensing2\test\api\build"
+Folder: "O:\commonfiles\Licensing2\test\api\build\win32"
+	File "O:\commonfiles\Licensing2\test\api\build\win32\LicensingTestApi.dsp"
+		Converting "LicensingTestApi.dsp"
+		Patching   "LicensingTestApi.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+		Add x64 to "LicensingTestApi.vcproj"
+
+Folder: "O:\commonfiles\Licensing2\test\api\build\win32\win32"
+	File "O:\commonfiles\Licensing2\test\api\build\win32\win32\LicensingTestApi.dsp"
+		Converting "LicensingTestApi.dsp"
+		Patching   "LicensingTestApi.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+		Add x64 to "LicensingTestApi.vcproj"
+
+Folder: "O:\commonfiles\Licensing2\test\api\include"
+Folder: "O:\commonfiles\Licensing2\test\api\src"
+Folder: "O:\commonfiles\Licensing2\test\func"
+Folder: "O:\commonfiles\Licensing2\test\func\build"
+Folder: "O:\commonfiles\Licensing2\test\func\build\win32"
+	File "O:\commonfiles\Licensing2\test\func\build\win32\LicensingTest.dsp"
+		Converting "LicensingTest.dsp"
+		Patching   "LicensingTest.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+		Add x64 to "LicensingTest.vcproj"
+
+Folder: "O:\commonfiles\Licensing2\test\func\src"
+Folder: "O:\commonfiles\Licensing2\test\unit"
+Folder: "O:\commonfiles\Licensing2\test\unit\build"
+Folder: "O:\commonfiles\Licensing2\test\unit\build\win32"
+	File "O:\commonfiles\Licensing2\test\unit\build\win32\LicensingTest.dsp"
+		Converting "LicensingTest.dsp"
+		Patching   "LicensingTest.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+		Add x64 to "LicensingTest.vcproj"
+
+	File "O:\commonfiles\Licensing2\test\unit\build\win32\licutest.dsp"
+		Converting "licutest.dsp"
+		Patching   "licutest.vcproj"
+			Conf - DebugDll|Win32
+			Conf - ReleaseDll|Win32
+		Add x64 to "licutest.vcproj"
+
+Folder: "O:\commonfiles\Licensing2\test\unit\data"
+Folder: "O:\commonfiles\Licensing2\test\unit\data\bases1"
+Folder: "O:\commonfiles\Licensing2\test\unit\data\bases2"
+Folder: "O:\commonfiles\Licensing2\test\unit\data\bases3"
+Folder: "O:\commonfiles\Licensing2\test\unit\data\bases4"
+Folder: "O:\commonfiles\Licensing2\test\unit\data\licenses"
+Folder: "O:\commonfiles\Licensing2\test\unit\src"
+Folder: "O:\commonfiles\Licensing2\test\utils"
+Folder: "O:\commonfiles\Licensing2\test\utils\key_asm"
+	File "O:\commonfiles\Licensing2\test\utils\key_asm\key_asm.dsp"
+		Converting "key_asm.dsp"
+		Patching   "key_asm.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+		Add x64 to "key_asm.vcproj"
+
+Folder: "O:\commonfiles\LoadKeys"
+Folder: "O:\commonfiles\m_utils"
+	File "O:\commonfiles\m_utils\m_utils.dsp"
+		Converting "m_utils.dsp"
+		Patching   "m_utils.vcproj"
+			Conf - Debug|Win32
+				INFO! configuration is renamed to 'DebugS|Win32'
+			Conf - Release|Win32
+				INFO! configuration is renamed to 'ReleaseS|Win32'
+			Conf - DebugDll|Win32
+				INFO! configuration is renamed to 'Debug|Win32'
+			Conf - ReleaseDll|Win32
+				INFO! configuration is renamed to 'Release|Win32'
+		Add x64 to "m_utils.vcproj"
+
+Folder: "O:\commonfiles\port"
+Folder: "O:\commonfiles\project_converter"
+Folder: "O:\commonfiles\project_converter\reconf"
+Folder: "O:\commonfiles\project_converter\reconf\bin"
+Folder: "O:\commonfiles\project_converter\reconf\bin\Debug"
+Folder: "O:\commonfiles\project_converter\reconf\obj"
+Folder: "O:\commonfiles\project_converter\reconf\obj\Debug"
+Folder: "O:\commonfiles\project_converter\reconf\obj\Debug\Refactor"
+Folder: "O:\commonfiles\project_converter\reconf\obj\Debug\TempPE"
+Folder: "O:\commonfiles\project_converter\reconf\obj\Release"
+Folder: "O:\commonfiles\project_converter\reconf\obj\Release\Refactor"
+Folder: "O:\commonfiles\project_converter\reconf\obj\Release\TempPE"
+Folder: "O:\commonfiles\project_converter\reconf\Properties"
+Folder: "O:\commonfiles\property"
+	File "O:\commonfiles\property\Property.dsp"
+		Converting "Property.dsp"
+		Patching   "Property.vcproj"
+			Conf - Unicode Debug|Win32
+				INFO! configuration is renamed to 'DebugUS|Win32'
+			Conf - Unicode DebugDll|Win32
+				INFO! configuration is renamed to 'DebugU|Win32'
+			Conf - Debug|Win32
+				INFO! configuration is renamed to 'DebugS|Win32'
+			Conf - DebugDll|Win32
+				INFO! configuration is renamed to 'Debug|Win32'
+			Conf - Release|Win32
+				INFO! configuration is renamed to 'ReleaseS|Win32'
+			Conf - Unicode Release|Win32
+				INFO! configuration is renamed to 'ReleaseUS|Win32'
+			Conf - ReleaseDll|Win32
+				INFO! configuration is renamed to 'Release|Win32'
+			Conf - Unicode ReleaseDll|Win32
+				INFO! configuration is renamed to 'ReleaseU|Win32'
+		Add x64 to "Property.vcproj"
+
+Folder: "O:\commonfiles\property\compat"
+Folder: "O:\commonfiles\property\unix"
+Folder: "O:\commonfiles\property\wrapper"
+	File "O:\commonfiles\property\wrapper\Wrapper.dsp"
+		Converting "Wrapper.dsp"
+		Patching   "Wrapper.vcproj"
+			Conf - Debug|Win32
+				INFO! 'RuntimeLibrary' option is changed from 'Multi-threaded Debug Static' to 'Multi-threaded Debug Dll'
+			Conf - Release|Win32
+				INFO! 'RuntimeLibrary' option is changed from 'Multi-threaded Release Static' to 'Multi-threaded Release Dll'
+		Add x64 to "Wrapper.vcproj"
+
+Folder: "O:\commonfiles\Release"
+Folder: "O:\commonfiles\ReleaseDJGPP"
+Folder: "O:\commonfiles\ReleaseDll"
+Folder: "O:\commonfiles\ReleaseUDll"
+Folder: "O:\commonfiles\ReleaseUOMDll"
+Folder: "O:\commonfiles\Res"
+Folder: "O:\commonfiles\Res\ComponentIcons"
+Folder: "O:\commonfiles\Res\KAV"
+Folder: "O:\commonfiles\serialize"
+	File "O:\commonfiles\serialize\Serialize.dsp"
+		Converting "Serialize.dsp"
+		Patching   "Serialize.vcproj"
+			Conf - ReleaseDll|Win32
+				INFO! configuration is renamed to 'Release|Win32'
+			Conf - Unicode DebugDll|Win32
+				INFO! configuration is renamed to 'DebugU|Win32'
+			Conf - Release|Win32
+				INFO! configuration is renamed to 'ReleaseS|Win32'
+			Conf - Debug|Win32
+				INFO! configuration is renamed to 'DebugS|Win32'
+			Conf - Unicode ReleaseDll|Win32
+				INFO! configuration is renamed to 'ReleaseU|Win32'
+			Conf - DebugDll|Win32
+				INFO! configuration is renamed to 'Debug|Win32'
+			Conf - Unicode Debug|Win32
+				INFO! configuration is renamed to 'DebugUS|Win32'
+			Conf - Unicode Release|Win32
+				INFO! configuration is renamed to 'ReleaseUS|Win32'
+		Add x64 to "Serialize.vcproj"
+
+Folder: "O:\commonfiles\serialize\unix"
+Folder: "O:\commonfiles\Service"
+Folder: "O:\commonfiles\sign"
+	File "O:\commonfiles\sign\WinSign.dsp"
+		Converting "WinSign.dsp"
+		Patching   "WinSign.vcproj"
+			Conf - DebugDll With Debug Key|Win32
+				WARNING! suspicious configuration, point2 with 'RuntimeLibrary' == Multi-threaded Debug Dll
+			Conf - Debug|Win32
+				INFO! configuration is renamed to 'DebugS|Win32'
+			Conf - Debug With Debug Key|Win32
+				WARNING! suspicious configuration, point2 with 'RuntimeLibrary' == Multi-threaded Debug Static
+			Conf - Novell_Release|Win32
+				WARNING! suspicious configuration, point2 with 'RuntimeLibrary' == Multi-threaded Release Static
+			Conf - DebugDll|Win32
+				INFO! configuration is renamed to 'Debug|Win32'
+			Conf - Release|Win32
+				INFO! configuration is renamed to 'ReleaseS|Win32'
+			Conf - ReleaseDll|Win32
+				INFO! configuration is renamed to 'Release|Win32'
+		Add x64 to "WinSign.vcproj"
+
+Folder: "O:\commonfiles\sign\objs"
+Folder: "O:\commonfiles\sign\signlib.unix"
+Folder: "O:\commonfiles\sign\src"
+Folder: "O:\commonfiles\sign\src\unix"
+Folder: "O:\commonfiles\sign\unix"
+Folder: "O:\commonfiles\Sql"
+Folder: "O:\commonfiles\Sql\sql"
+	File "O:\commonfiles\Sql\sql\_Sql.dsp"
+		Converting "_Sql.dsp"
+		Patching   "_Sql.vcproj"
+			Conf - Release|Win32
+				INFO! configuration is renamed to 'ReleaseS|Win32'
+			Conf - DebugDLL|Win32
+				INFO! configuration is renamed to 'Debug|Win32'
+			Conf - Debug|Win32
+				INFO! configuration is renamed to 'DebugS|Win32'
+			Conf - ReleaseDLL|Win32
+				INFO! configuration is renamed to 'Release|Win32'
+		Add x64 to "_Sql.vcproj"
+
+Folder: "O:\commonfiles\Stuff"
+Folder: "O:\commonfiles\Stuff\NewStuff"
+Folder: "O:\commonfiles\StuffIO"
+Folder: "O:\commonfiles\StuffMFC"
+Folder: "O:\commonfiles\StuffMFC\bcmenu"
+Folder: "O:\commonfiles\swmanager"
+	File "O:\commonfiles\swmanager\SWManager.dsp"
+		Converting "SWManager.dsp"
+		Patching   "SWManager.vcproj"
+			Conf - Debug|Win32
+				INFO! configuration is renamed to 'DebugS|Win32'
+			Conf - Release|Win32
+				INFO! configuration is renamed to 'ReleaseS|Win32'
+			Conf - ReleaseDll|Win32
+				INFO! configuration is renamed to 'Release|Win32'
+			Conf - DebugDll|Win32
+				INFO! configuration is renamed to 'Debug|Win32'
+			Conf - Unicode DebugDll|Win32
+				INFO! configuration is renamed to 'DebugU|Win32'
+			Conf - Unicode Release|Win32
+				INFO! configuration is renamed to 'ReleaseUS|Win32'
+			Conf - Unicode ReleaseDll|Win32
+				INFO! configuration is renamed to 'ReleaseU|Win32'
+			Conf - Unicode Debug|Win32
+				INFO! configuration is renamed to 'DebugUS|Win32'
+		Add x64 to "SWManager.vcproj"
+
+Folder: "O:\commonfiles\swmanager\unix"
+Folder: "O:\commonfiles\unix"
+Folder: "O:\commonfiles\unix\libcompat"
+Folder: "O:\commonfiles\Utils"
+Folder: "O:\commonfiles\Utils\misc"
+Folder: "O:\commonfiles\Utils\msi_support"
+Folder: "O:\commonfiles\Utils\msi_support\common"
+Folder: "O:\commonfiles\Utils\msi_support\msi_misc"
+	File "O:\commonfiles\Utils\msi_support\msi_misc\msi_misc.dsp"
+		Converting "msi_misc.dsp"
+		Patching   "msi_misc.vcproj"
+			Conf - Debug|Win32
+				INFO! 'RuntimeLibrary' option is changed from 'Multi-threaded Debug Static' to 'Multi-threaded Debug Dll'
+			Conf - Release|Win32
+				INFO! 'RuntimeLibrary' option is changed from 'Multi-threaded Release Static' to 'Multi-threaded Release Dll'
+		Add x64 to "msi_misc.vcproj"
+
+Folder: "O:\commonfiles\Utils\msi_support\msi_scm"
+	File "O:\commonfiles\Utils\msi_support\msi_scm\msi_scm.dsp"
+		Converting "msi_scm.dsp"
+		Patching   "msi_scm.vcproj"
+			Conf - Release|Win32
+				INFO! 'RuntimeLibrary' option is changed from 'Multi-threaded Release Static' to 'Multi-threaded Release Dll'
+			Conf - Debug|Win32
+				INFO! 'RuntimeLibrary' option is changed from 'Multi-threaded Debug Static' to 'Multi-threaded Debug Dll'
+		Add x64 to "msi_scm.vcproj"
+
+Folder: "O:\commonfiles\Utils\msi_support\test"
+	File "O:\commonfiles\Utils\msi_support\test\test.dsp"
+		Converting "test.dsp"
+		Patching   "test.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+		Add x64 to "test.vcproj"
+
+Folder: "O:\commonfiles\Utils\prague"
+Folder: "O:\commonfiles\Version"
+Folder: "O:\commonfiles\windows"
+Folder: "O:\commonfiles\windows\ipc"
+Folder: "O:\commonfiles\windows\ipc\ipc.dll"
+	File "O:\commonfiles\windows\ipc\ipc.dll\ipc.dsp"
+		Converting "ipc.dsp"
+		Patching   "ipc.vcproj"
+			Conf - ReleaseDll|Win32
+				INFO! configuration is renamed to 'Release|Win32'
+			Conf - DebugDll|Win32
+				INFO! configuration is renamed to 'Debug|Win32'
+			Conf - Release|Win32
+				INFO! configuration is renamed to 'ReleaseS|Win32'
+			Conf - Debug|Win32
+				INFO! configuration is renamed to 'DebugS|Win32'
+		Add x64 to "ipc.vcproj"
+
+Folder: "O:\commonfiles\windows\ipc\ipc.dll.client.test"
+	File "O:\commonfiles\windows\ipc\ipc.dll.client.test\Client.dsp"
+		Converting "Client.dsp"
+		Patching   "Client.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+		Add x64 to "Client.vcproj"
+
+Folder: "O:\commonfiles\windows\ipc\ipc.dll.server.test"
+	File "O:\commonfiles\windows\ipc\ipc.dll.server.test\Server.dsp"
+		Converting "Server.dsp"
+		Patching   "Server.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+		Add x64 to "Server.vcproj"
+
+Folder: "O:\commonfiles\windows\ipc\ipc_old.dll"
+	File "O:\commonfiles\windows\ipc\ipc_old.dll\ipc.dsp"
+		Converting "ipc.dsp"
+		Patching   "ipc.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+		Add x64 to "ipc.vcproj"
+
+Folder: "O:\commonfiles\windows\win32utils"
+	File "O:\commonfiles\windows\win32utils\Win32Utils.dsp"
+		Converting "Win32Utils.dsp"
+		Patching   "Win32Utils.vcproj"
+			Conf - Unicode ReleaseDll|Win32
+				INFO! configuration is renamed to 'ReleaseU|Win32'
+			Conf - Unicode Debug|Win32
+				INFO! configuration is renamed to 'DebugUS|Win32'
+			Conf - ReleaseDll|Win32
+				INFO! configuration is renamed to 'Release|Win32'
+			Conf - Debug|Win32
+				INFO! configuration is renamed to 'DebugS|Win32'
+			Conf - DebugDll|Win32
+				INFO! configuration is renamed to 'Debug|Win32'
+			Conf - Unicode Release|Win32
+				INFO! configuration is renamed to 'ReleaseUS|Win32'
+			Conf - Release|Win32
+				INFO! configuration is renamed to 'ReleaseS|Win32'
+			Conf - Unicode DebugDll|Win32
+				INFO! configuration is renamed to 'DebugU|Win32'
+		Add x64 to "Win32Utils.vcproj"
+
+Folder: "O:\commonfiles\windows\WinAVPFF"
+	File "O:\commonfiles\windows\WinAVPFF\WinAvpFF.dsp"
+		Converting "WinAvpFF.dsp"
+		Patching   "WinAvpFF.vcproj"
+			Conf - Release|Win32
+				INFO! configuration is renamed to 'ReleaseS|Win32'
+			Conf - DebugDll|Win32
+				INFO! configuration is renamed to 'Debug|Win32'
+			Conf - ReleaseDll|Win32
+				INFO! configuration is renamed to 'Release|Win32'
+			Conf - Debug|Win32
+				INFO! configuration is renamed to 'DebugS|Win32'
+		Add x64 to "WinAvpFF.vcproj"
+
+Folder: "O:\commonfiles\windows\winavpio"
+	File "O:\commonfiles\windows\winavpio\WinAVPIO.dsp"
+		Converting "WinAVPIO.dsp"
+		Patching   "WinAVPIO.vcproj"
+			Conf - UnicodeOnMbcs Release|Win32
+				WARNING! suspicious configuration, point2 with 'RuntimeLibrary' == Multi-threaded Release Static
+			Conf - Unicode DebugDll|Win32
+				INFO! configuration is renamed to 'DebugU|Win32'
+			Conf - Debug|Win32
+				INFO! configuration is renamed to 'DebugS|Win32'
+			Conf - DebugDll|Win32
+				INFO! configuration is renamed to 'Debug|Win32'
+			Conf - Unicode Release|Win32
+				INFO! configuration is renamed to 'ReleaseUS|Win32'
+			Conf - Unicode ReleaseDll|Win32
+				INFO! configuration is renamed to 'ReleaseU|Win32'
+			Conf - Release|Win32
+				INFO! configuration is renamed to 'ReleaseS|Win32'
+			Conf - UnicodeOnMbcs ReleaseDll|Win32
+				WARNING! suspicious configuration, point2 with 'RuntimeLibrary' == Multi-threaded Release Dll
+			Conf - UnicodeOnMbcs DebugDll|Win32
+				WARNING! suspicious configuration, point2 with 'RuntimeLibrary' == Multi-threaded Debug Dll
+			Conf - Unicode Debug|Win32
+				INFO! configuration is renamed to 'DebugUS|Win32'
+			Conf - UnicodeOnMbcs Debug|Win32
+				WARNING! suspicious configuration, point2 with 'RuntimeLibrary' == Multi-threaded Debug Static
+			Conf - ReleaseDll|Win32
+				INFO! configuration is renamed to 'Release|Win32'
+		Add x64 to "WinAVPIO.vcproj"
+
+Folder: "O:\commonfiles\_UpgradeReport_Files"

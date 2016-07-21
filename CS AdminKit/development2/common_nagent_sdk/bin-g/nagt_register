@@ -1,0 +1,4 @@
+#!/bin/bash
+# mkdir -p ./var/db/kl/adminkit
+# ./agtsrv -regserver -n "1103" -v "1.0.0.0" -tl 5
+./klnagent -regserver -server andkaz.avp.ru -tl 4

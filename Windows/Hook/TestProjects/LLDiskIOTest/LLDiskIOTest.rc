@@ -1,0 +1,438 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\LLDiskIOTest.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\LLDiskIOTest.ico"
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About LLDiskIOTest"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "LLDiskIOTest Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2002",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_LLDISKIOTEST_DIALOG DIALOGEX 0, 0, 426, 306
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "LLDiskIOTest"
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_COMBO_LETTER,57,7,48,176,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Get partition info",IDC_BUTTON_GETPARTITIONINFO,129,7,
+                    116,14
+    EDITTEXT        IDC_EDIT_CYLINDERS,82,39,96,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_MEDIA_TYPE,82,59,54,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_TRAKS_PER_CYLINDER,82,79,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_SECTORS_PER_TRACKS,82,99,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_BYTES_PER_SECTOR,82,119,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_STARTINGOFFSET,309,39,69,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_PARTITION_LENGTH,309,59,69,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_HIDDEN_SECTORS,309,78,69,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_HIDDEN_PARTITION_NUMBER,309,99,69,14,
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_HIDDEN_PARTITION_TYPE,309,119,69,14,
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_HIDDEN_BOOT_INDICATOR,309,139,69,14,
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_HIDDEN_RECOGNIZED_PARTITION,309,159,69,14,
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_HIDDEN_REWRITE_PARTITITON,309,179,69,14,
+                    ES_AUTOHSCROLL | ES_READONLY
+    DEFPUSHBUTTON   "Exit",IDOK,369,285,50,14
+    LTEXT           "Drive letter",IDC_STATIC,7,7,35,8
+    LTEXT           "Cylinders",IDC_STATIC,7,39,29,8
+    LTEXT           "Media Type",IDC_STATIC,7,59,38,8
+    LTEXT           "Tracks Per Cylinder",IDC_STATIC,7,79,62,8
+    LTEXT           "Sectors Per Track",IDC_STATIC,7,99,58,8
+    LTEXT           "Bytes Per Sector",IDC_STATIC,7,119,54,8
+    LTEXT           "Starting Offset",IDC_STATIC,235,39,46,8
+    LTEXT           "Partition length",IDC_STATIC,235,59,48,8
+    LTEXT           "Hidden Sectors",IDC_STATIC,235,79,50,8
+    LTEXT           "Partition Number",IDC_STATIC,235,99,53,8
+    LTEXT           "Partition Type",IDC_STATIC,235,119,44,8
+    LTEXT           "Boot Indicator",IDC_STATIC,235,139,45,8
+    LTEXT           "Recognized Partition",IDC_STATIC,235,159,66,8
+    LTEXT           "Rewrite Partition",IDC_STATIC,235,179,52,8
+    EDITTEXT        IDC_EDIT_READ_THIS_SECTOR,7,189,76,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Read this sector",IDC_BUTTON_READ_THIS_SECTOR,93,189,68,
+                    14
+    COMBOBOX        IDC_COMBO_DEVICE_TYPE,259,7,160,332,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,3
+ PRODUCTVERSION 1,0,0,3
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "LLDiskIOTest MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 3\0"
+            VALUE "InternalName", "LLDiskIOTest\0"
+            VALUE "LegalCopyright", "Copyright (C) 2002\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "LLDiskIOTest.EXE\0"
+            VALUE "ProductName", "LLDiskIOTest Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 3\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_LLDISKIOTEST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 419
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 299
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_LLDISKIOTEST_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO_DEVICE_TYPE, 0x403, 17, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4542, 0x5045, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 19, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4443, 0x525f, 0x4d4f, 
+"\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 31, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4443, 0x525f, 0x4d4f, 
+0x465f, 0x4c49, 0x5f45, 0x5953, 0x5453, 0x4d45, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 23, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4f43, 0x544e, 0x4f52, 
+0x4c4c, 0x5245, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 21, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4144, 0x4154, 0x494c, 
+0x4b4e, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 16, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4644, 0x0053, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 17, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4944, 0x4b53, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 29, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4944, 0x4b53, 0x465f, 
+0x4c49, 0x5f45, 0x5953, 0x5453, 0x4d45, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 24, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4946, 0x454c, 0x535f, 
+0x5359, 0x4554, 0x004d, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 24, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4e49, 0x4f50, 0x5452, 
+0x505f, 0x524f, 0x0054, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 21, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x454b, 0x4259, 0x414f, 
+0x4452, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 21, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x414d, 0x4c49, 0x4c53, 
+0x544f, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 20, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x494d, 0x4944, 0x495f, 
+0x004e, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 21, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x494d, 0x4944, 0x4f5f, 
+0x5455, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 18, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4f4d, 0x5355, 0x0045, 
+
+    IDC_COMBO_DEVICE_TYPE, 0x403, 31, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x554d, 0x544c, 0x5f49, 
+0x4e55, 0x5f43, 0x5250, 0x564f, 0x4449, 0x5245, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 23, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x414e, 0x454d, 0x5f44, 
+0x4950, 0x4550, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 20, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x454e, 0x5754, 0x524f, 
+0x004b, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 28, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x454e, 0x5754, 0x524f, 
+0x5f4b, 0x5242, 0x574f, 0x4553, 0x0052, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 32, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x454e, 0x5754, 0x524f, 
+0x5f4b, 0x4946, 0x454c, 0x535f, 0x5359, 0x4554, 0x004d, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 17, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x554e, 0x4c4c, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 26, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4150, 0x4152, 0x4c4c, 
+0x4c45, 0x505f, 0x524f, 0x0054, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 29, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4850, 0x5359, 0x4349, 
+0x4c41, 0x4e5f, 0x5445, 0x4143, 0x4452, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 20, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x5250, 0x4e49, 0x4554, 
+0x0052, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 20, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4353, 0x4e41, 0x454e, 
+0x0052, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 30, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4553, 0x4952, 0x4c41, 
+0x4d5f, 0x554f, 0x4553, 0x505f, 0x524f, 0x0054, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 24, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4553, 0x4952, 0x4c41, 
+0x505f, 0x524f, 0x0054, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 19, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4353, 0x4552, 0x4e45, 
+"\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 18, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4f53, 0x4e55, 0x0044, 
+
+    IDC_COMBO_DEVICE_TYPE, 0x403, 20, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x5453, 0x4552, 0x4d41, 
+0x0053, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 17, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4154, 0x4550, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 29, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4154, 0x4550, 0x465f, 
+0x4c49, 0x5f45, 0x5953, 0x5453, 0x4d45, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 22, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x5254, 0x4e41, 0x5053, 
+0x524f, 0x0054, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 20, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4e55, 0x4e4b, 0x574f, 
+0x004e, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 18, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4956, 0x4544, 0x004f, 
+
+    IDC_COMBO_DEVICE_TYPE, 0x403, 25, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4956, 0x5452, 0x4155, 
+0x5f4c, 0x4944, 0x4b53, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 20, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4157, 0x4556, 0x495f, 
+0x004e, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 21, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4157, 0x4556, 0x4f5f, 
+0x5455, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 22, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x3038, 0x3234, 0x505f, 
+0x524f, 0x0054, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 31, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x454e, 0x5754, 0x524f, 
+0x5f4b, 0x4552, 0x4944, 0x4552, 0x5443, 0x524f, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 20, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4142, 0x5454, 0x5245, 
+0x0059, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 25, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x5542, 0x5f53, 0x5845, 
+0x4554, 0x444e, 0x5245, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 18, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4f4d, 0x4544, 0x004d, 
+
+    IDC_COMBO_DEVICE_TYPE, 0x403, 16, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4456, 0x004d, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 25, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x414d, 0x5353, 0x535f, 
+0x4f54, 0x4152, 0x4547, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 16, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4d53, 0x0042, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 15, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x534b, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 20, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4843, 0x4e41, 0x4547, 
+0x0052, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 22, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4d53, 0x5241, 0x4354, 
+0x5241, 0x0044, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 17, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4341, 0x4950, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 16, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x5644, 0x0044, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 29, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x5546, 0x4c4c, 0x4353, 
+0x4552, 0x4e45, 0x565f, 0x4449, 0x4f45, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 28, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4644, 0x5f53, 0x4946, 
+0x454c, 0x535f, 0x5359, 0x4554, 0x004d, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 23, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4644, 0x5f53, 0x4f56, 
+0x554c, 0x454d, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 20, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4553, 0x4552, 0x554e, 
+0x004d, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 20, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4554, 0x4d52, 0x5253, 
+0x0056, 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 17, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x534b, 0x4345, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 17, 0
+0x4946, 0x454c, 0x445f, 0x5645, 0x4349, 0x5f45, 0x4946, 0x5350, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About LLDiskIOTest..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\LLDiskIOTest.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,506 @@
+
+
+[
+  mnemonic(IID_STRING)
+  id(100)
+  c_type_name(hSTRING)
+  comment_ex("Interface implements string operations")
+]
+interface String { // String operations
+
+  // ------------------------------------
+    typedef tDWORD tSTR_RANGE;
+    typedef tDWORD tSTR_CASE;
+    typedef tINT tSTR_COMPARE;
+    typedef tDWORD tSYMBOL;
+
+
+  // ------------------------------------
+    const tDWORD cSTRING_Z = 0x00010000; // string is zero terminated
+    const tDWORD cSTRING_LINE = 0x00020000; // string is \"\r\n\" terminated
+    const tDWORD cSTRING_BLEN = 0x00030000; // string is byte prefixed
+    const tDWORD cSTRING_WLEN = 0x00040000; // string is word prefixed
+    const tDWORD cSTRING_DLEN = 0x00050000; // string is dword prefixed
+    const tDWORD cSTRING_CONTENT_ONLY = 0x00000000; // string without any prefix and terminated elements
+    const tDWORD mSTRING_PR_FORMAT = 0x00030000; // mask for prefix part of format field
+    const tDWORD mSTRING_TERM_FORMAT = cSTRING_Z|cSTRING_LINE; // mask for postfix part of format field
+    const tDWORD mSTRING_FORMAT = 0x00070000; // mask for string format
+    const tDWORD fSTRING_BYTES = 0x00000000;
+    const tDWORD fSTRING_SYMBOLS = 0x10000000;
+    const tDWORD fSTRING_F_EMPTY = 0x20000000;
+    const tDWORD mSTRING_UNITS = 0x20000000;
+    const tDWORD fSTRING_COMPARE_CASE_SENSITIVE = 0x00000000;
+    const tDWORD fSTRING_COMPARE_LEN_SENSITIVE = 0x01000000;
+    const tDWORD fSTRING_COMPARE_UPPER = 0x02000000;
+    const tDWORD fSTRING_COMPARE_LOWER = 0x04000000;
+    const tDWORD fSTRING_COMPARE_SLASH_SENSITIVE = 0x00000000;
+    const tDWORD fSTRING_COMPARE_SLASH_INSENSITIVE = 0x08000000;
+    const tDWORD fSTRING_COMPARE_CASE_INSENSITIVE = fSTRING_COMPARE_UPPER | fSTRING_COMPARE_LOWER;
+    const tDWORD mSTRING_COMPARE = 0x0f000000;
+    const tSTR_CASE cSTRING_TO_UPPER = 0x01000000;
+    const tSTR_CASE cSTRING_TO_LOWER = 0x02000000;
+    const tDWORD fSTRING_FIND_FORWARD = 0x00000000;
+    const tDWORD fSTRING_FIND_BACKWARD = 0x00100000;
+    const tDWORD fSTRING_INNER = 0x00000000;
+    const tDWORD fSTRING_LEFT = 0x00010000;
+    const tDWORD fSTRING_RIGHT = 0x00020000;
+    const tDWORD fSTRING_OUTER = fSTRING_LEFT|fSTRING_RIGHT;
+    const tWORD cSTRING_WHOLE_LENGTH = -1;
+    const tWORD cSTRING_EMPTY_LENGTH = -2;
+    const tSTR_RANGE cSTRING_WHOLE = STR_RANGE(0,cSTRING_WHOLE_LENGTH);
+    const tSTR_RANGE cSTRING_EMPTY = STR_RANGE(cSTRING_EMPTY_LENGTH,0);
+    const tSTR_COMPARE cSTRING_COMP_LT = -1;
+    const tSTR_COMPARE cSTRING_COMP_EQ = 0;
+    const tSTR_COMPARE cSTRING_COMP_GT = +1;
+    const tSTR_COMPARE cSTRING_COMP_UNDEF = 2;
+
+
+  // ------------------------------------
+    error errSTR_OUT_OF_RANGE; // range is out of string content
+
+
+  // ------------------------------------
+
+    [
+      id(130)
+      comment_ex("Interface version")
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      id(131)
+      comment_ex("Interface comment")
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+    prop pgOBJECT_CODEPAGE;
+    prop pgOBJECT_LCID;
+    prop pgOBJECT_NAME; // string content
+    prop pgOBJECT_FULL_NAME; // string content
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Save string content to object's property")
+    ]
+    method tERROR ExportToProp( // saves string content to object's property
+      tDWORD* result,
+      tSTR_RANGE range,
+      hOBJECT to,
+      tPROPID to_propid
+    );
+
+    [
+      comment_ex("Saves string content to another string. It is analog of CopyTo functionality")
+    ]
+    method tERROR ExportToStr( // saves string content to another string
+      tDWORD* result,
+      tSTR_RANGE range,
+      hSTRING to
+    );
+
+    [
+      comment_ex("Saves content of string to target buffer. ")
+    ]
+    method tERROR ExportToBuff( // saves content of string to target buffer
+      tDWORD* result,
+      tSTR_RANGE range,
+      tPTR to,
+      tDWORD length,
+      tCODEPAGE cp,
+      tDWORD flags
+    );
+
+    [
+      comment_ex("Saves content of string to target sequential IO object")
+    ]
+    method tERROR ExportToSeq( // saves contents of string to target sequential IO object
+      tDWORD* result,
+      tSTR_RANGE range,
+      hSEQ_IO to
+    );
+
+    [
+      comment_ex("Load string from object's property")
+    ]
+    method tERROR ImportFromProp( // Loads string from object's property
+      tDWORD* result,
+      hOBJECT p_from,
+      tPROPID propid
+    );
+
+    [
+      comment_ex("Receives content from source string ( \"from\" parameter ) to itself")
+    ]
+    method tERROR ImportFromStr( // loads contents from source string
+      tDWORD* result,
+      hSTRING p_from,
+      tSTR_RANGE range
+    );
+
+    [
+      comment_ex("Loads content from source buffer ( \"from\" parameter ) to string object")
+    ]
+    method tERROR ImportFromBuff( // loads content of the source buffer to itself
+      tDWORD* result,
+      tPTR p_from,
+      tDWORD length,
+      tCODEPAGE cp,
+      tDWORD flags
+    );
+
+    [
+      comment_ex("Loads content from the source sequential IO object")
+    ]
+    method tERROR ImportFromSeq( // loads content from the source sequential IO object
+      tDWORD* result,
+      hSEQ_IO p_from
+    );
+
+    [
+      comment_ex("concatenates string and object property")
+    ]
+    method tERROR AddFromProp( // adds content from object property
+      tDWORD* result,
+      hOBJECT p_from,
+      tPROPID propid
+    );
+
+    [
+      comment_ex("concatenates two strings")
+    ]
+    method tERROR AddFromStr( // concatenates two strings
+      tDWORD* result,
+      hSTRING p_from,
+      tSTR_RANGE range
+    );
+
+    [
+      comment_ex("concatenates own and buffer content")
+    ]
+    method tERROR AddFromBuff( // adds content from buffer
+      tDWORD* result,
+      tPTR p_from,
+      tDWORD length,
+      tCODEPAGE cp,
+      tDWORD flags
+    );
+    method tERROR AddFromSeq( tDWORD* result, hSEQ_IO p_from );
+
+    [
+      comment_ex("Clears string content and refill string with the indicated symbol.")
+    ]
+    method tERROR Fill( // refill string with the indicated symbol
+      tVOID* result,
+      tSTR_RANGE range,
+      tSYMBOL symbol,
+      tCODEPAGE cp
+    );
+
+    [
+      comment_ex("Length of content of the string in symbols")
+    ]
+    method tERROR Length( // returns current length of the string in symbols
+      tDWORD* result
+    );
+
+    [
+      comment_ex("(sub)string length for format defined by \"code_page\" and \"flags\" parameters, i.e. size of output buffer to put (sub)string in requested format")
+    ]
+    method tERROR LengthEx( // returns size of the (sub)string in bytes or in symbols
+      tDWORD* result,
+      tSTR_RANGE range,
+      tCODEPAGE cp,
+      tDWORD flags // format of the string to calulate length
+    );
+
+    [
+      comment_ex("Returns current string code page")
+    ]
+    method tERROR GetCP( // returns current codepage
+      tCODEPAGE* result
+    );
+
+    [
+      comment_ex("Sets default code page for the string")
+    ]
+    method tERROR SetCP( // sets default code page for the string
+      tVOID* result,
+      tCODEPAGE cp
+    );
+
+    [
+      comment_ex("Compares the string with another one.")
+    ]
+    method tERROR Compare( // compares the string with another one
+      tSTR_RANGE range,
+      hSTRING other,
+      tSTR_RANGE other_range,
+      tDWORD flags
+    );
+
+    [
+      comment_ex("compares string with buffer")
+    ]
+    method tERROR CompareBuff( // compares string with buffer
+      tSTR_RANGE range,
+      tPTR buffer,
+      tDWORD size,
+      tCODEPAGE cp,
+      tDWORD flags
+    );
+
+    [
+      comment_ex("Compares the string with another one.")
+    ]
+    method tERROR Compare2( // compares the string with another one
+      tSTR_COMPARE* result,
+      tSTR_RANGE range,
+      hSTRING other,
+      tSTR_RANGE other_range,
+      tDWORD flags
+    );
+
+    [
+      comment_ex("compares string with buffer")
+    ]
+    method tERROR CompareBuff2( // compares string with buffer
+      tSTR_COMPARE* result,
+      tSTR_RANGE range,
+      tPTR buffer,
+      tDWORD size,
+      tCODEPAGE cp,
+      tDWORD flags
+    );
+
+    [
+      comment_ex("finds substring")
+    ]
+    method tERROR Find( // finds substring
+      tSTR_RANGE* result,
+      tSTR_RANGE range,
+      hSTRING other,
+      tSTR_RANGE other_range,
+      tDWORD flags
+    );
+
+    [
+      comment_ex("Finds substring given as buffer")
+    ]
+    method tERROR FindBuff( // finds substring given as buffer
+      tSTR_RANGE* result,
+      tSTR_RANGE range,
+      tPTR buffer,
+      tDWORD size,
+      tCODEPAGE cp,
+      tDWORD flags
+    );
+
+    [
+      comment_ex("Finds one of symbols belonged to \"symbol_set\"")
+    ]
+    method tERROR FindOneOf( // finds first symbol in string belonged to \"symbol_set\"
+      tSTR_RANGE* result,
+      tSTR_RANGE range,
+      hSTRING symbol_set,
+      tDWORD flags
+    );
+
+    [
+      comment_ex("Finds one of symbols belonged to \"symbol_set\"")
+    ]
+    method tERROR FindOneOfBuff( // finds one of symbols belonged to \"symbol_set\"
+      tSTR_RANGE* result,
+      tSTR_RANGE range,
+      tPTR symbol_set,
+      tDWORD size,
+      tCODEPAGE cp,
+      tDWORD flags
+    );
+
+    [
+      comment_ex("Returns a symbol from inside the string indicated by begining of range and index in it")
+    ]
+    method tERROR Symbol( // returns a symbol indicated by range and index
+      tSYMBOL* result,
+      tSTR_RANGE range,
+      tDWORD index, // index of the symbol in range
+      tCODEPAGE cp, // return symbol codepage
+      tDWORD flags
+    );
+
+    [
+      comment_ex("Advance the range to next symbol and then return it.")
+    ]
+    method tERROR Next( // advance the range to next symbol and then return it
+      tSYMBOL* result,
+      tSTR_RANGE* range, // pointer to the range to advance
+      tCODEPAGE cp // return symbol code page
+    );
+
+    [
+      comment_ex("Return the symbol and then advance the range to next symbol.")
+    ]
+    method tERROR NextEx( // return the symbol and then advance the range
+      tSYMBOL* result,
+      tSTR_RANGE* range, // pointer to the range to advance
+      tCODEPAGE cp // return symbol code page
+    );
+
+    [
+      comment_ex("Moves range back to the previous symbol and then return it")
+    ]
+    method tERROR Prev( // moves range back and then returns symbol
+      tSYMBOL* result,
+      tSTR_RANGE* range, // range to move back
+      tCODEPAGE cp // return symbol code page
+    );
+
+    [
+      comment_ex("Returns the symbol and then moves range back")
+    ]
+    method tERROR PrevEx( // returns the symbol and then moves range back
+      tSYMBOL* result,
+      tSTR_RANGE* range, // range to move back
+      tCODEPAGE cp // return symbol code page
+    );
+
+    [
+      comment_ex("Returns range for \"count\" left symbols of the string")
+    ]
+    method tERROR Left( // returns range for \"count\" left symbols of the string
+      tSTR_RANGE* result,
+      tSTR_RANGE range,
+      tDWORD count
+    );
+
+    [
+      comment_ex("Returns range for \"count\" symbols begins with \"begin\"")
+    ]
+    method tERROR Mid( // returns range for \"count\" symbols begins with \"begin\"
+      tSTR_RANGE* result,
+      tSTR_RANGE range,
+      tDWORD begin,
+      tDWORD count
+    );
+
+    [
+      comment_ex("Returns range for \"count\" right symbols of the string")
+    ]
+    method tERROR Right( // returns range for \"count\" right symbols of the string
+      tSTR_RANGE* result,
+      tSTR_RANGE range,
+      tDWORD count
+    );
+
+    [
+      comment_ex("Converts whole string to given case")
+    ]
+    method tERROR ChangeCase( // converts whole string to given case
+      tVOID* result,
+      tSTR_CASE case_code
+    );
+
+    [
+      comment_ex("Converts substring to given case.")
+    ]
+    method tERROR ChangeCaseEx( // converts substring to given case
+      tVOID* result,
+      tSTR_RANGE range,
+      tSTR_CASE case_code
+    );
+
+    [
+      comment_ex("removes from left/right/both edges of string
+        all symbols belonged to SYMBOL_SET string
+        area depends on FLAGS parameter and must one of
+          fSTRING_LEFT   -- trim from left      
+          fSTRING_RIGHT  -- trim from right     
+          fSTRING_OUTER  -- trim from both sides")
+    ]
+    method tERROR Trim( // removes from left/right/both edges of string all symbols belonged to \"symbol_set\" string
+      tVOID* result,
+      hSTRING symbol_set,
+      tDWORD flags
+    );
+
+    [
+      comment_ex("removes from left/right/both edges of string
+        all symbols belonged to \"symbol_set\"
+        what to trim depends on \"flags\" parameter and must one of
+          fSTRING_LEFT   -- trim from left      
+          fSTRING_RIGHT  -- trim from right     
+          fSTRING_OUTER  -- trim from both sides")
+    ]
+    method tERROR TrimBuff( // removes from left/right/both edges of string all symbols belonged to \"symbol_set\"
+      tVOID* result,
+      tPTR symbol_set,
+      tDWORD size,
+      tCODEPAGE cp,
+      tDWORD flags
+    );
+
+    [
+      comment_ex("removes/leaves substring pointed by range
+        cutting area depends on \"falgs\" parameter and must one of
+          fSTRING_INNER  -- cut inner space
+          fSTRING_OUTER  -- cut edges")
+    ]
+    method tERROR Cut( // removes/leaves substring pointed by range
+      tVOID* result,
+      tSTR_RANGE range,
+      tDWORD flags
+    );
+
+    [
+      comment_ex("Replaces substring with the new value")
+    ]
+    method tERROR Replace( // replaces substring with the new value
+      tVOID* result,
+      tSTR_RANGE range,
+      hSTRING repl,
+      tSTR_RANGE repl_range,
+      tSTR_RANGE* out_range
+    );
+
+    [
+      comment_ex("Replaces substring with the new value")
+    ]
+    method tERROR ReplaceBuff( // replaces substring with the new value
+      tVOID* result,
+      tSTR_RANGE range,
+      tPTR buffer,
+      tDWORD size,
+      tCODEPAGE cp,
+      tSTR_RANGE* out_range
+    );
+    method tERROR Reserve( // reserve space for at least number of symbols
+      tDWORD number, // space must be reserved for at least number of symbols
+      tCODEPAGE cp
+    );
+    method tERROR ProveLastSlash(); // check if last symbol in string is slash and add it if not
+
+    [
+      comment_ex("Finds one of symbols belonged to \"symbol_set\"")
+    ]
+    method tERROR FindOneNotOfBuff( // finds one of symbols belonged to \"symbol_set\"
+      tSTR_RANGE* result,
+      tSTR_RANGE range,
+      tPTR symbol_set,
+      tDWORD size,
+      tCODEPAGE cp,
+      tDWORD flags
+    );
+    method tERROR Format( // make formatted string
+      tCODEPAGE format_cp,
+      const tVOID* format_str,
+      ...
+    );
+    method tERROR VFormat(
+      tCODEPAGE format_cp,
+      const tVOID* format_str,
+      tVOID* args
+    );
+
+}
+

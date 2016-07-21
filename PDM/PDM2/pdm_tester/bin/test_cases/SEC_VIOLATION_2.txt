@@ -1,0 +1,7 @@
+# swith off microsoft firewall
+
+# FIREWALL_SWITCH_OFF NOT_TO_CLEAR
+
+CREATE_REG_DWORD_VALUE @DISABLE_FW_KEY@ EnableFirewall 0 NOT_TO_CLEAR
+
+#etalon_verdict 100 SecurityViolation

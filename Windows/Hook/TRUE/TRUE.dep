@@ -1,0 +1,200 @@
+# Microsoft Developer Studio Generated Dependency File, included by TRUE.mak
+
+.\Protocols\ARP.c : \
+	"..\..\..\..\CommonFiles\Hook\avpgcom.h"\
+	"..\..\..\..\CommonFiles\Hook\hookspec.h"\
+	"..\..\..\..\commonfiles\Hook\NETID.h"\
+	".\Common.h"\
+	".\defs.h"\
+	".\FilterEvent.h"\
+	".\NetParser.h"\
+	".\Protocols\ARP.h"\
+	".\Protocols\Eth.h"\
+	".\StdAfx.h"\
+	".\types.h"\
+	"C:\Work\DDK\2k\inc\basetsd.h"\
+	"C:\Work\DDK\2k\inc\bugcodes.h"\
+	"C:\Work\DDK\2k\inc\ddk\ntddk.h"\
+	"C:\Work\DDK\2k\inc\guiddef.h"\
+	"C:\Work\DDK\2k\inc\ntdef.h"\
+	"C:\Work\DDK\2k\inc\ntiologc.h"\
+	"C:\Work\DDK\2k\inc\ntstatus.h"\
+	"c:\work\ddk\nt40\inc\warning.h"\
+	
+
+.\Protocols\Eth.c : \
+	"..\..\..\..\CommonFiles\Hook\avpgcom.h"\
+	"..\..\..\..\CommonFiles\Hook\hookspec.h"\
+	"..\..\..\..\commonfiles\Hook\NETID.h"\
+	".\Common.h"\
+	".\defs.h"\
+	".\FilterEvent.h"\
+	".\NetParser.h"\
+	".\Protocols\Eth.h"\
+	".\StdAfx.h"\
+	".\types.h"\
+	"C:\Work\DDK\2k\inc\basetsd.h"\
+	"C:\Work\DDK\2k\inc\bugcodes.h"\
+	"C:\Work\DDK\2k\inc\ddk\ntddk.h"\
+	"C:\Work\DDK\2k\inc\guiddef.h"\
+	"C:\Work\DDK\2k\inc\ntdef.h"\
+	"C:\Work\DDK\2k\inc\ntiologc.h"\
+	"C:\Work\DDK\2k\inc\ntstatus.h"\
+	"c:\work\ddk\nt40\inc\warning.h"\
+	
+
+.\Protocols\Icmp.c : \
+	"..\..\..\..\CommonFiles\Hook\avpgcom.h"\
+	"..\..\..\..\CommonFiles\Hook\hookspec.h"\
+	"..\..\..\..\commonfiles\Hook\NETID.h"\
+	".\Common.h"\
+	".\defs.h"\
+	".\FilterEvent.h"\
+	".\NetParser.h"\
+	".\Protocols\icmp.h"\
+	".\StdAfx.h"\
+	".\types.h"\
+	"C:\Work\DDK\2k\inc\basetsd.h"\
+	"C:\Work\DDK\2k\inc\bugcodes.h"\
+	"C:\Work\DDK\2k\inc\ddk\ntddk.h"\
+	"C:\Work\DDK\2k\inc\guiddef.h"\
+	"C:\Work\DDK\2k\inc\ntdef.h"\
+	"C:\Work\DDK\2k\inc\ntiologc.h"\
+	"C:\Work\DDK\2k\inc\ntstatus.h"\
+	"c:\work\ddk\nt40\inc\warning.h"\
+	
+
+.\Protocols\IPv4.c : \
+	"..\..\..\..\CommonFiles\Hook\avpgcom.h"\
+	"..\..\..\..\CommonFiles\Hook\hookspec.h"\
+	"..\..\..\..\commonfiles\Hook\NETID.h"\
+	".\Common.h"\
+	".\defs.h"\
+	".\FilterEvent.h"\
+	".\NetParser.h"\
+	".\Protocols\IPv4.h"\
+	".\StdAfx.h"\
+	".\types.h"\
+	"C:\Work\DDK\2k\inc\basetsd.h"\
+	"C:\Work\DDK\2k\inc\bugcodes.h"\
+	"C:\Work\DDK\2k\inc\ddk\ntddk.h"\
+	"C:\Work\DDK\2k\inc\guiddef.h"\
+	"C:\Work\DDK\2k\inc\ntdef.h"\
+	"C:\Work\DDK\2k\inc\ntiologc.h"\
+	"C:\Work\DDK\2k\inc\ntstatus.h"\
+	"c:\work\ddk\nt40\inc\warning.h"\
+	
+
+.\Protocols\Tcp.c : \
+	"..\..\..\..\CommonFiles\Hook\avpgcom.h"\
+	"..\..\..\..\CommonFiles\Hook\hookspec.h"\
+	"..\..\..\..\commonfiles\Hook\NETID.h"\
+	".\Common.h"\
+	".\defs.h"\
+	".\FilterEvent.h"\
+	".\NetParser.h"\
+	".\Protocols\Tcp.h"\
+	".\StdAfx.h"\
+	".\types.h"\
+	"C:\Work\DDK\2k\inc\basetsd.h"\
+	"C:\Work\DDK\2k\inc\bugcodes.h"\
+	"C:\Work\DDK\2k\inc\ddk\ntddk.h"\
+	"C:\Work\DDK\2k\inc\guiddef.h"\
+	"C:\Work\DDK\2k\inc\ntdef.h"\
+	"C:\Work\DDK\2k\inc\ntiologc.h"\
+	"C:\Work\DDK\2k\inc\ntstatus.h"\
+	"c:\work\ddk\nt40\inc\warning.h"\
+	
+
+.\Protocols\Udp.c : \
+	"..\..\..\..\CommonFiles\Hook\avpgcom.h"\
+	"..\..\..\..\CommonFiles\Hook\hookspec.h"\
+	"..\..\..\..\commonfiles\Hook\NETID.h"\
+	".\Common.h"\
+	".\defs.h"\
+	".\FilterEvent.h"\
+	".\NetParser.h"\
+	".\Protocols\Udp.h"\
+	".\StdAfx.h"\
+	".\types.h"\
+	"C:\Work\DDK\2k\inc\basetsd.h"\
+	"C:\Work\DDK\2k\inc\bugcodes.h"\
+	"C:\Work\DDK\2k\inc\ddk\ntddk.h"\
+	"C:\Work\DDK\2k\inc\guiddef.h"\
+	"C:\Work\DDK\2k\inc\ntdef.h"\
+	"C:\Work\DDK\2k\inc\ntiologc.h"\
+	"C:\Work\DDK\2k\inc\ntstatus.h"\
+	"c:\work\ddk\nt40\inc\warning.h"\
+	
+
+.\FilterEvent.c : \
+	"..\..\..\..\CommonFiles\Hook\avpgcom.h"\
+	"..\..\..\..\CommonFiles\Hook\hookspec.h"\
+	"..\..\..\..\commonfiles\Hook\NETID.h"\
+	"..\..\..\..\commonfiles\Hook\PIDExternalAPI.H"\
+	".\Common.h"\
+	".\defs.h"\
+	".\ErrCodes.h"\
+	".\FilterEvent.h"\
+	".\NetParser.h"\
+	".\NtBased.h"\
+	".\ParseTables.h"\
+	".\Protocols\ARP.h"\
+	".\Protocols\Eth.h"\
+	".\Protocols\icmp.h"\
+	".\Protocols\IPv4.h"\
+	".\Protocols\Tcp.h"\
+	".\Protocols\Udp.h"\
+	".\StdAfx.h"\
+	".\types.h"\
+	"C:\Work\DDK\2k\inc\basetsd.h"\
+	"C:\Work\DDK\2k\inc\bugcodes.h"\
+	"C:\Work\DDK\2k\inc\ddk\ntddk.h"\
+	"C:\Work\DDK\2k\inc\guiddef.h"\
+	"C:\Work\DDK\2k\inc\ntdef.h"\
+	"C:\Work\DDK\2k\inc\ntiologc.h"\
+	"C:\Work\DDK\2k\inc\ntstatus.h"\
+	"c:\work\ddk\nt40\inc\warning.h"\
+	
+
+.\NtBased.c : \
+	"..\..\..\..\CommonFiles\Hook\avpgcom.h"\
+	"..\..\..\..\CommonFiles\Hook\hookspec.h"\
+	"..\..\..\..\commonfiles\Hook\NETID.h"\
+	"..\..\..\..\commonfiles\Hook\PIDExternalAPI.H"\
+	".\Common.h"\
+	".\defs.h"\
+	".\FilterEvent.h"\
+	".\NetParser.h"\
+	".\NtBased.h"\
+	".\StdAfx.h"\
+	".\types.h"\
+	"C:\Work\DDK\2k\inc\basetsd.h"\
+	"C:\Work\DDK\2k\inc\bugcodes.h"\
+	"C:\Work\DDK\2k\inc\ddk\ntddk.h"\
+	"C:\Work\DDK\2k\inc\guiddef.h"\
+	"C:\Work\DDK\2k\inc\ntdef.h"\
+	"C:\Work\DDK\2k\inc\ntiologc.h"\
+	"C:\Work\DDK\2k\inc\ntstatus.h"\
+	"c:\work\ddk\nt40\inc\warning.h"\
+	
+
+.\StdAfx.c : \
+	"..\..\..\..\CommonFiles\Hook\avpgcom.h"\
+	"..\..\..\..\CommonFiles\Hook\hookspec.h"\
+	"..\..\..\..\commonfiles\Hook\NETID.h"\
+	".\Common.h"\
+	".\defs.h"\
+	".\FilterEvent.h"\
+	".\NetParser.h"\
+	".\StdAfx.h"\
+	".\types.h"\
+	"C:\Work\DDK\2k\inc\basetsd.h"\
+	"C:\Work\DDK\2k\inc\bugcodes.h"\
+	"C:\Work\DDK\2k\inc\ddk\ntddk.h"\
+	"C:\Work\DDK\2k\inc\guiddef.h"\
+	"C:\Work\DDK\2k\inc\ntdef.h"\
+	"C:\Work\DDK\2k\inc\ntiologc.h"\
+	"C:\Work\DDK\2k\inc\ntstatus.h"\
+	"c:\work\ddk\nt40\inc\warning.h"\
+	

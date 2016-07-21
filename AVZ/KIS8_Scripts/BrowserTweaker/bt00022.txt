@@ -1,0 +1,19 @@
+// $AVZ1563
+//$ Internet Explorer - заблокирована возможность выбора каталога для сохранения файлов
+// Функция поиска проблемы
+function Check : dword;
+var
+ X : integer;
+begin
+ Result := 0;
+ X := RegKeyIntParamRead('HKCU', 'Software\Policies\Microsoft\Internet Explorer\Restrictions', 'noselectdownloaddir');
+ if X > 0 then
+  Result := 3;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+begin
+ RegKeyParamDel('HKCU','Software\Policies\Microsoft\Internet Explorer\Restrictions', 'noselectdownloaddir');
+ Result := 0;
+end;

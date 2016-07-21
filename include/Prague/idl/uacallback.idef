@@ -1,0 +1,96 @@
+forward interface UniArchiverCallback;
+typedef UniArchiverCallback* hUNIARCCALLBACK;
+
+
+
+[
+  version(0)
+  mnemonic(IID_UNIARCHIVERCALLBACK)
+  id(63006)
+  c_type_name(hUNIARCCALLBACK)
+  comment_ex("Для сборки архива, после его изменения, используется UniArchiverCallBack интерфейс, который реализован в универсальном архиваторе. Этот интерфейс служит для обратной связи между мини архиватором и универсальным архиватором и позволяет мини архиватору получить информацию о новых, удаленных и измененных объектах в обрабатываемом архиве.
+    
+    Пример работы с функциями дополнительного интерфейса:
+    
+    // Enumerate все файлы
+    while ( errOK == CALL_ObjEnum_Next(hOwnEnum) )
+    {
+    //Check in list of opened and modified (deleted) objects
+    //If present in modified list 
+    	if(FindObjectInList(ChangedTable))
+    	{
+    	//Pack it according to previously used pack algo (or just stored)
+    		bChanged=cTRUE;
+    		break;
+    	}
+    //Else if present in deleted list
+    	if(FindObjectInList(DeletedTable))
+    	{
+    	//Continue
+    	}
+    //Else 
+    	//create DMAP IO to read unpacked data
+    //Write Got IO to tmp file
+    
+    loc_endofWhile:
+    	if(io)
+    	{
+    		CALL_SYS_ObjectClose( io );
+    		io = NULL;
+    	}
+    }	//end of while
+    
+    //if new files present pack it and write to tmp file
+    if(GetFirtsNewObject())
+    {
+    	GetNewObjectIo()
+    }
+    
+    Эта функция напоминает функцию RebuilZIP (см. описание создания разархиватора ZIP) по своим функциональным возможностям.")
+]
+interface UniArchiverCallback { // Интерфейс связи с Uni Archiver для получения доступа к некоторым внутренним спискам
+
+  // ------------------------------------
+
+    [
+      comment_ex("Используется при енумерации новых файлов в архивах")
+    ]
+    typedef tDWORD hNEWOBJECT; // Хэндл нового объекта
+
+
+  // ------------------------------------
+    const tDWORD cCHANGED_OBJECT = 2; // dwTable in FindObjectInList
+    const tDWORD cDELETED_OBJECT = 3; // dwTable in FindObjectInList
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Эта ф-ция позволяет по идентификатору файла найти его в списке измененных или удаленных файлов. Этот список ведется в UniArchiver. В каком списке искать задается параметром dwTable ")
+    ]
+    method tERROR FindObjectInList( // Найти элемент в списке
+      hOBJECT* result,
+      tDWORD dwTable, // Определят список, в котором производится поиск
+      tQWORD qwObjectId // Идентификатор файла для поиска
+    );
+
+    [
+      comment_ex("Возвращаемое значение есть хэндл нового файла. С помощью этого хэндла можно получить объект пита hIO (т.е. собсвенно новый файл).")
+    ]
+    method tERROR GetFirstNewObject( // Получить первый элемент в списке новых объектов
+      hNEWOBJECT* result
+    );
+
+    [
+      comment_ex("Выходной параметр является одновременно и выходным параметром. Т.е. для успешного поиска файла нужно передать в выходном параметре указатель на предыдущий hNEWOBJECT. Если вместо этого будет передан NULL, то ф-ция вернет ошибку")
+    ]
+    method tERROR GetNextNewObject( // Получить следующий элемент в списке новых объектов
+      hNEWOBJECT* result
+    );
+    method tERROR GetNewObjectIo( // Получить объект типа hIO для нового файла
+      hOBJECT* result,
+      hNEWOBJECT node // Хэндл нового объакта, для которго надо получть hIO
+    );
+
+}
+

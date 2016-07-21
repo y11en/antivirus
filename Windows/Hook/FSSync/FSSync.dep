@@ -1,0 +1,13 @@
+# Microsoft Developer Studio Generated Dependency File, included by FSSync.mak
+
+.\FSSync.cpp : \
+	"..\..\..\commonfiles\hook\avpgcom.h"\
+	"..\..\..\commonfiles\hook\fsdrvlib.h"\
+	"..\..\..\commonfiles\hook\fssync.h"\
+	"..\..\..\commonfiles\hook\idriver.h"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	"c:\dxsdk\include\basetsd.h"\
+	

@@ -1,0 +1,4 @@
+// ***** Dialer.DialXS *****
+begin
+ AddEvAlarmByCLSID('841A9192-5690-11D4-A258-0040954A01BE',AScriptName,'');
+end.

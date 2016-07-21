@@ -1,0 +1,125 @@
+REGEDIT4
+
+; ----------------------------------------------------------------
+; Remove unnecessary profiles
+; ----------------------------------------------------------------
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\lic]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\retran]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Retranslation]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\File_Monitoring]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Anti_Hacker]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Web_Monitoring]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Behavior_Blocking]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Mail_Monitoring]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Anti_Spam]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Anti_Spy]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\AntiPhishingService]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\MailWasher]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\POP3]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\SMTP]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\IMAP]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\NNTP]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\HTTP]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Spamtest]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Startup]
+
+; ----------------------------------------------------------------
+; Environment
+; ----------------------------------------------------------------
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\environment]
+"EulaFile"="%Doc%\\license.txt"
+"DSKM"="%DataRoot%\\Dskm"
+"BaseFolder"="%Bases%"
+"DataFolder"="%Data%"
+"ProductFolder"="%ProductRoot%"
+"Doc"="%ProductRoot%\\Doc"
+"Skin"="%ProductRoot%\\Skin"
+"Backup"="%DataRoot%\\Backup"
+"Bases"="%DataRoot%\\Bases"
+"Data"="%DataRoot%\\Data"
+"DataRoot"="%ramdrv%\\Documents and Settings\\Application Data\\avp"
+"HelpFile"="%Doc%\\context.chm"
+"Localization"="en"
+"ProductName"="Kaspersky Anti-Virus"
+"ProductRoot"="%SystemDrive%\\Programs\\avp"
+"ProductType"="kav"
+"Quarantine"="%DataRoot%\\Quarantine"
+"Report"="%DataRoot%\\Report"
+"Components"="CORE;RTP"
+"UpdateRoot"="index/u0607g.xml"
+"UpdateConfig"="updcfg.xml"
+"WithoutSysShell"="1"
+"Temp"="%tmp%"
+
+; todo:
+; values, should be inherited from installed product
+; CompanyName
+; ProductName
+; Localization
+; ProductVersion
+; ProductStatus
+; ProductType
+; UserEMail
+; UserInfoName
+; UserInfoOrg
+
+; ----------------------------------------------------------------
+; Product settings
+; ----------------------------------------------------------------
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def]
+"FullReport"=dword:00000000
+
+; ----------------------------------------------------------------
+; Scan Objects
+; ----------------------------------------------------------------
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Objects\settings\def\ScanObjects]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_My_Computer\settings\def\ScanObjects]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_My_Computer\settings\def\ScanObjects\0000]
+"Enabled"=dword:00000001
+"System"=dword:00000001
+"ObjectType"=dword:00000004
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_My_Computer\settings\def\ScanObjects\0001]
+"Enabled"=dword:00000001
+"System"=dword:00000001
+"ObjectType"=dword:00000005
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_My_Computer\settings\def\ScanObjects\0002]
+"Enabled"=dword:00000001
+"System"=dword:00000001
+"ObjectType"=dword:0000000E
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_My_Computer\settings\def\ScanObjects\0003]
+"Enabled"=dword:00000001
+"System"=dword:00000001
+"ObjectType"=dword:00000009
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_My_Computer\settings\def\ScanObjects\0004]
+"Enabled"=dword:00000001
+"System"=dword:00000001
+"ObjectType"=dword:00000008
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_My_Computer\settings\def\ScanObjects\0005]
+"Enabled"=dword:00000000
+"System"=dword:00000001
+"ObjectType"=dword:0000000A
+
+; ----------------------------------------------------------------
+; Trace
+; ----------------------------------------------------------------
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\Trace\Default]
+"TraceConsoleEnable"=dword:00000000
+"TraceDebugEnable"=dword:00000000
+"TraceFileEnable"=dword:00000000
+
+; ----------------------------------------------------------------
+; Updater
+; ----------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Updater\settings\BLSettings]
+"UpdateExecutables"=dword:00000000
+"UpdateAH"=dword:00000000
+"RescanQuarantineAfterUpdate"=dword:00000000
+"unique"=dword:00228a00
+"Version"=dword:00000001

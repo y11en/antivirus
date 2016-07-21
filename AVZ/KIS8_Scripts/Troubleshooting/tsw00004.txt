@@ -1,0 +1,43 @@
+// $AVZ1504
+//$ Нарушение ассоциации BAT файлов
+// Функция поиска проблемы                                                                          
+function Check : dword;
+var
+ S : string;
+begin
+ Result := 0;
+ // Тяжелая ошибка 1 - зловредом удален ключ '.bat' или 'batfile\shell\open\command'
+ if not(RegKeyExists('HKEY_CLASSES_ROOT','.bat')) or
+    not(RegKeyExists('HKEY_CLASSES_ROOT','batfile\shell\open\command')) then begin
+     Result := 3;
+     exit;
+    end;
+ // Тяжелая ошибка 2 - ключ '.bat' ведет не на тип batfile
+ if UpperCase(RegKeyStrParamRead('HKEY_CLASSES_ROOT','.bat', '')) <> 'BATFILE' then begin
+     Result := 3;
+     exit;
+    end;
+ // Тяжелая ошибка 3 - ключ 'batfile' содержит подмененныы ключ запуска (часто меняется троянами)                                                                                       
+ S := Trim(RegKeyStrParamRead('HKEY_CLASSES_ROOT', 'batfile\shell\open\command', ''));
+ // Пераметры запуска удалены                                                                   
+ if S = '' then begin
+  Result := 3;
+  exit;
+ end;
+ // Параметры запуска не совпадают со стандартными                                                                                                           
+ S := StringReplace(S, '  ', ' ');
+ if not((S = '"%1" %*') or (S = '%1 %*')) then begin             
+  Result := 3;
+  exit;
+ end;
+end;
+
+// Функция исправления проблемы                                                                          
+function Fix : dword;
+begin
+ RegKeyCreate('HKEY_CLASSES_ROOT', '.bat');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', '.bat', '', 'batfile');
+ RegKeyCreate('HKEY_CLASSES_ROOT', 'batfile\shell\open\command');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', 'batfile\shell\open\command', '', '"%1" %*');
+ Result := 0;
+end;

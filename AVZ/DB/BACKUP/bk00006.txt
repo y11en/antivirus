@@ -1,0 +1,21 @@
+// ***** Настройки рабочего стола *****
+procedure AddBackUpData(ARoot, AName : string;Lines : TStrings);
+begin
+ Lines.Add('[-'+ ARoot + '\' + AName + ']');
+ ExpRegKeyEx(ARoot, AName, Lines);
+ Lines.Add('');
+end;
+
+var
+ Lines : TStrings;
+begin
+ Lines := TStringList.Create;
+ Lines.Add('REGEDIT4');
+ Lines.Add('');
+ AddBackUpData('HKEY_CURRENT_USER', 'Control Panel\Desktop', Lines);
+ AddBackUpData('HKEY_CURRENT_USER', 'Software\Microsoft\Internet Explorer\Desktop', Lines);
+  
+ if SaveBackupDataSt(Lines, 'User_Desktop.reg') then
+  AddToLog('$AVZ1236 $AVZ1231'); 
+ Lines.Free;
+end.

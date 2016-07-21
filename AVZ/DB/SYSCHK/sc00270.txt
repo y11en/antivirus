@@ -1,0 +1,5 @@
+// ***** Trojan-Downloader.Win32.Agent.ex *****
+begin
+ AddEvAlarmByCLSID('38601801-2FF5-4A62-95DA-D2007161C1B4', AScriptName, 'jabber.ocx');
+ AddEvAlarmByCLSID('79849612-A98F-45B8-95E9-4D13C7B6B35C', AScriptName, 'jabber.ocx');
+end.

@@ -1,0 +1,74 @@
+#import "types.idl"
+
+interface StdBase {
+	[ id(0x20) ] optional prop tDWORD pgNATIVE_ERR;
+
+	[ id(0x40) ] optional prop tSTRING pgOBJECT_NAME;
+	[ id(0x40) ] optional prop tCODEPAGE pgOBJECT_NAME_CP;
+	[ id(0x41) ] optional prop tSTRING pgOBJECT_FULL_NAME;
+	[ id(0x41) ] optional prop tCODEPAGE pgOBJECT_FULL_NAME_CP;
+	[ id(0x42) ] optional prop tSTRING pgOBJECT_COMPLETE_NAME;
+	[ id(0x42) ] optional prop tCODEPAGE pgOBJECT_COMPLETE_NAME_CP;
+	[ id(0x43) ] optional prop tSTRING pgOBJECT_ALT_NAME;
+	[ id(0x43) ] optional prop tCODEPAGE pgOBJECT_ALT_NAME_CP;
+	[ id(0x44) ] optional prop tSTRING pgOBJECT_PATH;
+	[ id(0x44) ] optional prop tCODEPAGE pgOBJECT_PATH_CP;
+	[ id(0x45) ] optional prop tDWORD pgOBJECT_SIZE;
+	[ id(0x45) ] optional prop tQWORD pgOBJECT_SIZE_Q;
+	[ id(0x46) ] optional prop tBINARY pgOBJECT_SIGNATURE;
+	[ id(0x47) ] optional prop tORIG_ID pgOBJECT_SUPPORTED;
+	[ id(0x48) ] optional prop tORIG_ID pgOBJECT_ORIGIN;
+	[ id(0x49) ] optional prop tOS_ID pgOBJECT_OS_TYPE;
+	[ id(0x4a) ] optional prop tDWORD pgOBJECT_OPEN_MODE;
+	[ id(0x4b) ] optional prop tBOOL pgOBJECT_NEW;
+	[ id(0x4c) ] optional prop tCODEPAGE pgOBJECT_CODEPAGE;
+	[ id(0x4d) ] optional prop tDWORD pgOBJECT_LCID;
+	[ id(0x4e) ] optional prop tDWORD pgOBJECT_ACCESS_MODE;
+	[ id(0x4f) ] optional prop tDWORD pgOBJECT_USAGE_COUNT;
+	[ id(0x50) ] optional prop tDWORD pgOBJECT_COMPRESSED_SIZE;
+	[ id(0x51) ] optional prop hOBJECT pgOBJECT_HEAP;
+	[ id(0x52) ] optional prop tDWORD pgOBJECT_AVAILABILITY;
+	[ id(0x53) ] optional prop hOBJECT pgOBJECT_BASED_ON;
+	[ id(0x54) ] optional prop tDWORD pgOBJECT_ATTRIBUTES;
+	[ id(0x55) ] optional prop tQWORD pgOBJECT_HASH;
+	[ id(0x56) ] optional prop tBINARY pgOBJECT_REOPEN_DATA;  // applicable for OS, ObjPtr & IO objects: unique name and/or state of the object used for reopen it at the same state
+	[ id(0x57) ] optional prop hOBJECT pgOBJECT_INHERITABLE_HEAP;
+	[ id(0x58) ] optional prop hOBJECT pgOBJECT_NATIVE_IO;
+	[ id(0x59) ] optional prop tBOOL pgOBJECT_PROP_SYNCHRONIZED;
+	[ id(0x5a) ] optional prop tBOOL pgOBJECT_MEM_SYNCHRONIZED;
+	[ id(0x60) ] optional prop tSTRING pgOBJECT_NATIVE_PATH;
+
+	/*
+	[ id(0x80) ] optional prop tIID pgINTERFACE_ID;
+	[ id(0x81) ] optional prop tDWORD pgINTERFACE_SUBTYPE;
+	[ id(0x82) ] optional prop tVERSION pgINTERFACE_VERSION;
+	[ id(0x85) ] optional prop tDWORD pgINTERFACE_REVISION;
+	[ id(0x83) ] optional prop tSTRING pgINTERFACE_COMMENT;
+	[ id(0x83) ] optional prop tCODEPAGE pgINTERFACE_COMMENT_CP;
+	[ id(0x84) ] optional prop tIID pgINTERFACE_SUPPORTED;
+	[ id(0x86) ] optional prop tDWORD pgINTERFACE_FLAGS;
+	[ id(0x87) ] optional prop tIID pgINTERFACE_COMPATIBILITY;
+	[ id(0x88) ] optional prop tCODEPAGE pgINTERFACE_CODEPAGE;
+	[ id(0x89) ] optional prop tIID psINTERFACE_COMPATIBILITY_BASE;
+
+	[ id(0xa1) ] optional prop tVID pgVENDOR_ID;
+	[ id(0xa2) ] optional prop tSTRING pgVENDOR_NAME;
+	[ id(0xa2) ] optional prop tCODEPAGE pgVENDOR_NAME_CP;
+	[ id(0xa3) ] optional prop tSTRING pgVENDOR_COMMENT;
+	[ id(0xa3) ] optional prop tCODEPAGE pgVENDOR_COMMENT_CP;
+
+	[ id(0xc0) ] optional prop tPID pgPLUGIN_ID;
+	[ id(0xc1) ] optional prop tVERSION pgPLUGIN_VERSION;
+	[ id(0xc2) ] optional prop tSTRING pgPLUGIN_NAME;
+	[ id(0xc2) ] optional prop tCODEPAGE pgPLUGIN_NAME_CP;
+	[ id(0xc3) ] optional prop tSTRING pgPLUGIN_COMMENT;
+	[ id(0xc3) ] optional prop tCODEPAGE pgPLUGIN_COMMENT_CP;
+	[ id(0xc4) ] optional prop hOBJECT pgPLUGIN_HANDLE;
+	[ id(0xc5) ] optional prop tCODEPAGE pgPLUGIN_CODEPAGE;
+	[ id(0xc6) ] optional prop tDWORD pgPLUGIN_EXPORT_COUNT;
+
+	[ id(0xe3) ] optional prop tUINT pgTRACE_LEVEL;
+	[ id(0xe4) ] optional prop tUINT pgTRACE_LEVEL_MIN;
+	[ id(0xe5) ] optional prop hOBJECT pgTRACE_OBJ;
+	*/
+}

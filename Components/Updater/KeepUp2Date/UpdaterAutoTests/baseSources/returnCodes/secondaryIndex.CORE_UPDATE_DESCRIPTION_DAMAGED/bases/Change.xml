@@ -1,0 +1,43 @@
+asdasteFiles UpdateDate="08112005 1050">
+  <UpdateSettings Name="Updater/update_date" Type="date" Value="08112005 1050" />
+  <UpdateSettings Name="Updater/av_records" Type="long" Value="163522" />
+
+  <FileDescription ComponentID="MATCH"
+         UpdateType="base"
+         RelativeSrvPath="bases/1"
+         LocalPath="%BaseFolder%"
+         Filename="Change.avc"
+         FileSign="0XLSznpdI71fB300e7Uwj1Bf7BE3bwG7wGG56TdWq23AaoG8TvIGPaqAt8"
+         FileSize="71"
+         FileDate="25052005 1307" />
+
+  <FileDescription ComponentID="MATCH"
+         UpdateType="base"
+         RelativeSrvPath="bases/1"
+         LocalPath="%BaseFolder%"
+         Filename="Remove.avc"
+         FileSign="0XLSznpdI71fB300e7Uwj1u/rOeJJy88QcZAoUFmsV4aVPQBZ+BH9Eb4xP"
+         FileSize="71"
+         FileDate="25052005 1307" />
+
+  <FileDescription ComponentID="MATCH"
+         UpdateType="base"
+         RelativeSrvPath="bases/1"
+         LocalPath="%BaseFolder%"
+         Filename="Non_Change.avc"
+         FileSign="0XLSznpdI71fB300e7Uwj1u/rOeJJy88QcZAoUFmsV4aVPQBZ+BH9Eb4xP"
+         FileSize="71"
+         FileDate="25052005 1307" />
+
+  <FileDescription ComponentID="FILTER"
+         UpdateType="base"
+         RelativeSrvPath="bases/1"
+         LocalPath="%BaseFolder%"
+         Filename="Filter.avc"
+         FileSign="0XLSznpdI71fB300e7Uwj1vPtR+IA/1EB9Wj3I7Xf7gKphJcQLEhmQ1lUn"
+         FileSize="71"
+         FileDate="25052005 1307" />
+
+</UpdateFiles>
+
+;:10a1WgHAtFegtzZe9lQFzkq31q5tmlCTy4eGy+jhfDL0OW7wYNi37aSbqhoP2qhnHUeCdajZzKnyfoMtrehSdi/H%%

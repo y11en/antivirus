@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?term_lsp.htm"; }
+else { parent.quicksync('a12.3'); }
+//-->
+</script>
+   <title>Local Service Provider (LSP/SPI)</title>
+   <meta name="keywords" content="LSP,SPI,Local Service Provider,NSP,Namespace Provider,TSP,Transport Service Provider">
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+
+
+<body bgcolor="#FFFFFF">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Local Service Provider (LSP/</span><span style="font-size: 12pt; font-weight: bold;">SPI</span><span style="font-size: 12pt; font-weight: bold;">)</span></p>
+
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="t_about.htm">Наверх</a>&nbsp;
+     <a href="term_ha.htm">Предыдущая</a>&nbsp;
+     <a href="t_cmdline.htm">Последующая</a>
+     </font><B>|</B>
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=717989"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=717989;t=109;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=18 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=717989"><img
+src="http://top.list.ru/counter?js=na;id=717989;t=109"
+border=0 height=18 width=88
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+    </td>
+  </tr>
+</table>
+<br>
+
+<p style="margin: 0px 0px 0px 24px;">Мне часто задавали вопросы, связанные с функционированием сети, понятиями SPI, LSP, NSP … поэтому я решил создать этот раздел справочной системы и подробно расписать базовую теорию и то, как вредоносные программы могут повредить работу Winsock.</p>
+<p style="margin: 0px 0px 0px 24px;">Условно схема работы Winsock отображена на рисунке:</p>
+<p style="text-align: center; margin: 0px 0px 0px 24px;"><img src="clip0004.jpg" width="550" height="324" border="0" alt="clip0004"> </p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;">Winsock 2 имеет как бы две "зеркальные стороны" - Winsock API и Winsock SPI. Winsock API предназначен для реализации архитектуры открытых систем Windows (WOSA), обладающей стандартными API интерфейсами между Winsock и использующими его приложениями. SPI - это интерфейс между Winsock и поставщиками служб Winsock. </p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;">Поставщики услуг SPI бывают двух типов:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Поставщик пространства имен (Namespace Provider, NSP). Задача поставщика пространства имен&nbsp; - независимое от протокола разрешение имен, т.е. преобразование дружественного имени в зависимый от протокола адрес. Классическим примером может являться DNS, который преобразует дружественное для пользователя имя www.z-oleg.com в IP адрес сервера, на котором размещен данный сайт;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Поставщик транспорта (Transport Service Provider, TSP). TSP - это службы, предоставляющие функции установления связи, передачи данных, управления потоком, обработки ошибок и т.п. Поставщики транспортной службы бывают двух видов - базовые и многоуровневые. Базовые (Base) поставщики реализуют конкретные&nbsp; детали сетевого транспортного протокола (типа TCP/IP), включая базовые сетевые функции протокола, такие как отправка и получение данных по сети. Многоуровневые (Layered) поставщики реализуют только высокоуровневые функции связи нуждаются в базовом поставщике для фактического обмена по сети;</td></tr></table></div><p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;">Как видно из рисунка, поставщиков NSP и TSP может быть несколько (если точнее - то практически неограниченно много). Еще более интересно то, что список используемых LSP и TSP хранится в специальной базе данных (которая размещена в реестре). Более того, в Winsock API есть функции, которые позволяют программе не только получать списки LSP и TSP, но и регистрировать своих поставщиков.</p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;">С точки зрения физической реализации провайдер SPI является обычной DLL, разработанной по определенному стандарту - в частности, эта DLL обязана экспортировать ряд функций для взаимодействия с Winsock. </p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;">С одной стороны, хранение списка поставщиков и их параметров в базе данных и наличие функции для управления этой базой является очень грамотным шагом - любое приложение может инсталлировать свои провайдеры SPI, расширяя возможности Winsock. При этом прикладной программе совершенно не обязательно знать с том, какие конкретно провайдеры SPI и как именно обеспечивают разрешение имен и обмен по сети. Получается универсальная система, и многие программы используют эти возможности - при помощи AVZ нетрудно исследовать настройки SPI и посмотреть, какие провайдеры там зарегистрированы - в списке провайдеров можно обнаружить Firewall, антивирусы, разнообразные антишпионские программы, утилиты для борьбы с рекламой, учета трафика и т.п. </p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;">Однако теперь давайте посмотрим на SPI глазами разработчика вирусов и SpyWare/AdWare программ. Получается, что установив 2-3 провайдера&nbsp; можно взять под контроль весть обмен компьютера с сетью. При помощи своего поставщика пространства имен вредоносная программа может отслеживать запросы на разрешение имени (собственно для шпионажа) и вмешиваться в этот процесс. Упрощенно говоря, к примеру вы запрашиваете адрес сайта www.yandex.ru, а "вражеский" NSP выдаст вместо этого IP адрес скажем адрес www.никому не известный поисковик.com Аналогичные "безобразия" можно устраивать на уровне поставщика транспорта - SpyWare чаще всего устанавливают свои Layered Service Providers - LSP. Получается, что открытость и универсальность SPI Winsock становится его уязвимым местом - создатели вредоносного ПО знают это и активно используют. Примеров очень много - Spy.NewDotNet (not-a-virus:AdWare.NewDotNet), Spy.SAHAgent, Spy.WebHancer, Trojan.Riler, Adware.SpywareNuker, Backdoor.Kika … - список можно продолжать достаточно долго. Кроме вмешательства в работу Winsock выполнение backdoor-компоненты в виде SPI имеет множество преимуществ - скрытный запуск, отсутствие видимого процесса.</p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;">Возможность установки вредоносной в качестве SPI провайдера - это еще только половина проблемы. Оказывается, что у Winsock есть очень неприятная особенность - любое повреждение базы данных в реестре с описанием поставщиков SPI приводит к сбоям в работе Winsock (конкретный вид сбоев зависит от характера повреждения, однако все ошибки для пользователя обычно сводятся к двум - компьютер перестает "видеть Интернет" и возникают проблемы при работе с локальной сетью - если проанализировать приведенную в начале данного раздела схему, то такие ошибки понятны и закономерны). Причин повреждения настроек SPI может быть очень много, наиболее характерные:</p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Удаление DLL, являющейся провайдером SPI без отмены ее регистрации в базе провайдеров SPI (DLL может быть удалена вручную, антивирусным сканером, анти-шпионской программой, штатным деинсталлятором - способ удаления не важен);</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Повреждение базы в реестре в ходе инсталляции/деинсталляции SPI провайдеров, либо в результате&nbsp; ручной "чистки" реестра. </td></tr></table></div><p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;">При обнаружении ошибки Winsock в частности в вся система Windows в целом не принимают никаких мер по ее ликвидации и не выдают никаких диагностических сообщений. Важно отметить, что переустановка системы "поверх" имеющейся не приводит к исправлению настройки SPI. </p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;">Как видно из приведенного мной описания, термин LSP встретился пару раз - я вообще заострил на нем внимание из-за утилиты LSP Fix и кочующего по описаниям троянских и SpyWare программ термина "LSP" - его применение во многих случая не совсем корректно. Причем тенденции "исправления" терминологии постепенно появляются - в последних описаниях вирусов они начинают давать более корректные и конкретные термины типа "…Registers a Windows sockets SPI hook in the LSP chain named…". Поэтому "лечить" и восстанавливать необходимо именно настройки SPI, а не LSP …</p>
+<p style="margin: 0px 0px 0px 36px;">&nbsp;</p>
+
+
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=717989;js='+js+a+';rand='+Math.random()+
+'" height=1 width=1/>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=717989"
+height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+
+</body>
+</html>

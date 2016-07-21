@@ -1,0 +1,31 @@
+// ***** Файл с подозрительным именем *****
+procedure CheckSuspFile(AName : string);
+begin
+ AddEvAlarmByName('%System32%\'+AName, AScriptName, AName);
+ AddEvAlarmByName('%WinDir%\'+AName,AScriptName, AName);  
+end;
+
+begin
+ CheckSuspFile('kernel32.exe');
+ CheckSuspFile('kernel32.sys');
+ CheckSuspFile('iexplorer.exe');
+ CheckSuspFile('bitdefender.exe');
+
+ AddEvAlarmByName('%System32%\system32.dll',AScriptName+',$AVZ0127 Adware.ClearSearch','system32.dll');
+ AddEvAlarmByName('%System32%\param32.dll',AScriptName+',$AVZ0127 Adware.GloboSearch','system32.dll');
+ AddEvAlarmByName('%System32%\explorer.exe',AScriptName,'explorer.exe');
+ AddEvAlarmByName('%System32%\iexplore.exe',AScriptName,'iexplore.exe');
+ AddEvAlarmByName('%System32%\bikini.exe',AScriptName+' Trojan.Win32.LowZones.dt','bikini.exe');
+ AddEvAlarmByName('%System32%\ntos.exe',AScriptName+' Trojan.Win32.Banker','ntos.exe');
+ AddEvAlarmByName('%System32%\vxgame*.exe',AScriptName+' (Trojan.Linage)','vxgame*.exe');
+ AddEvAlarmByName('%System32%\server.exe',AScriptName,'server.exe');
+ AddEvAlarmByName('%System32%\cssrss.exe',AScriptName,'cssrss.exe');
+ AddEvAlarmByName('%System32%\rsvp32_2.dll',AScriptName,'rsvp32_2.dll');
+ AddEvAlarmByName('%System32%\ntos.exe',AScriptName,'ntos.exe'); 
+ AddEvAlarmByName('%WinDir%\nail.exe',AScriptName,'Adware.BetterInternet');
+ AddEvAlarmByName('%WinDir%\services.exe',AScriptName,'services.exe');
+ AddEvAlarmByName('%WinDir%\svchost.exe',AScriptName,'svchost.exe');
+ AddEvAlarmByName('%WinDir%\winlogon.exe',AScriptName,'winlogon.exe'); 
+ AddEvAlarmByName('%WinDir%\winlogon.exe',AScriptName,'winlogon.exe'); 
+ AddEvAlarmByName('%SysDisk%\Program Files\NetMeeting\rav*.exe', AScriptName, 'rav*.exe'); 
+end.

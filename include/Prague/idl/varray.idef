@@ -1,0 +1,102 @@
+#import "buffer.idef"
+
+forward interface VArray;
+typedef VArray* hVARRAY;
+
+
+
+
+[
+  version(1)
+  mnemonic(IID_VARRAY)
+  id(64019)
+  c_type_name(hVARRAY)
+  comment_ex("Virtual array - adding functionality of Basic dynamic arrays")
+]
+interface VArray { // Virtual Array
+
+  // ------------------------------------
+    typedef tDWORD tVARRAY_INDEX;
+
+
+  // ------------------------------------
+    error errELEMENT_NOT_PRESENT;
+    error errELEMENT_LOCKED;
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Copies to buffer value of array element. If buffer larger than element value, errEOF will returened, if buffer smaller than element, errBUFFER_TOO_SMALL will returned. Method fails if element locked")
+    ]
+    method tERROR ElemGet( // Copies to buffer value of element
+      tUINT* result,
+      tVARRAY_INDEX index,
+      tPTR buffer,
+      tUINT size
+    );
+
+    [
+      comment_ex("Set value of given element, before value setting value will be resized to accept whole buffer. Method fails if element locked")
+    ]
+    method tERROR ElemSet( // Set value of given element
+      tUINT* result,
+      tVARRAY_INDEX index,
+      tPTR buffer,
+      tUINT size
+    );
+
+    [
+      comment_ex("Add given buffer to the end of element value, element value will be resized to acceps addition. Method fails if element locked")
+    ]
+    method tERROR ElemAdd( // Add given buffer to the end of element value
+      tUINT* result,
+      tVARRAY_INDEX index,
+      tPTR buffer,
+      tUINT size
+    );
+
+    [
+      comment_ex("return size of given element")
+    ]
+    method tERROR ElemSize( tUINT* result, tVARRAY_INDEX index );
+    method tERROR ElemResize( // Set new size of element value
+      tUINT* result,
+      tVARRAY_INDEX index,
+      tUINT newsize
+    );
+    method tERROR ElemLock( // Locks element and return pointer to it's buffer
+      tPTR* result,
+      tVARRAY_INDEX index
+    );
+    method tERROR ElemAddLock( // Locks element and return pointer to it's buffer
+      tPTR* result,
+      tVARRAY_INDEX index,
+      tUINT size
+    );
+    method tERROR ElemUnlock( // Unlocks element locked by ElemLock
+      tVARRAY_INDEX index
+    );
+    method tERROR ElemGetFirst( // Return index of first present element of array
+      tVARRAY_INDEX* result
+    );
+    method tERROR ElemGetLast( // Return index of last present element of array
+      tVARRAY_INDEX* result
+    );
+    method tERROR ElemGetFree( // Get unused index in array
+      tVARRAY_INDEX* result
+    );
+    method tERROR ElemGetCount( // Return element count of array
+      tVARRAY_INDEX* result
+    );
+
+    [
+      comment_ex("Represents given element as hBUFFER object. Element will locked util closing corresponding hBUFFER object")
+    ]
+    method tERROR ElemOpen( // Represents given element as hBUFFER object. 
+      hBUFFER* result,
+      tVARRAY_INDEX index
+    );
+
+}
+

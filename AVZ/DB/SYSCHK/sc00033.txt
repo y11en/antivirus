@@ -1,0 +1,4 @@
+// ***** AdvWare.Toolbar.Tubby.a *****
+begin
+ AddEvAlarmByCLSID('9EAC0102-5E61-2312-BC2D-414456544F4E',AScriptName,'');
+end.

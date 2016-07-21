@@ -1,0 +1,4 @@
+// ***** TrojanDownloader.Keenval *****
+begin
+ AddEvAlarmByCLSID('4FC95EDD-4796-4966-9049-29649C80111D',AScriptName,'IncFindBHO150.dll');
+end.

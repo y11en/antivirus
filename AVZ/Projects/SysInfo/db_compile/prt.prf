@@ -1,0 +1,4 @@
+DBFile=prt.avz
+DBSrcPath=..\..\..\KIS8_Scripts\PrivacyTweaker
+LogFile=prt.log
+RusLangFile=..\..\..\..\PPP\GUI\skin\loc\ru\avzkrnl.loc 

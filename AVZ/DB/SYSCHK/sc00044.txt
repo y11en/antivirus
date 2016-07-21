@@ -1,0 +1,4 @@
+// ***** AdvWare.BHO.MoneyGainer *****
+begin                   
+ AddEvAlarmByCLSID('2559D0B1-AF60-4BD5-965D-0E51383A6367',AScriptName,'bookmark.DLL');
+end.

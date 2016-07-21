@@ -1,0 +1,10 @@
+-1;AVS;Malware-Signaturen;Signaturen von Viren und anderer Malware
+-1;AH;Anti-Hacker-Angriffssignaturen;Beschreibungen typischer Netzwerkangriffe
+-1;AS;Anti-Spam-Signaturen;Beispiele für Spam-Nachrichten
+-1;ADB;Anti-Banner-Signaturen;URL-Masken für Anti-Banner-Komponente
+-1;AP;Anti-Phishing-Signaturen;Liste mit Phishing-Seiten
+-1;WM;Quick-Scan-Signaturen für Web-Anti-Virus;Signaturen für Quick-Scan
+-1;RM;Kritische Systemregistrierungswerte;Proaktiver Schutz: kritische Systemregistrierungsschlüssel und -werte
+-1;BB;Signaturen für gefährliche Aktivität;Signaturen für gefährliche und verdächtige Aktivität zur Analyse des Anwendungsverhaltens
+-1;KAV2006EXEC;Binäre Module für Version 6.0;Binäre Module für Version 6.0
+; 0XLSznpdI71fB300e7Uwj1PWqUXD/dojGHY2DocZcAgMdVje/z7NXwkkBF��

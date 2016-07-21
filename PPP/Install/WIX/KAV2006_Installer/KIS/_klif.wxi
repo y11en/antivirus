@@ -1,0 +1,19 @@
+<Include>
+  <ComponentRef Id="mklif.cat_X64" />
+  <ComponentRef Id="mklif.inf_X64" />
+  <ComponentRef Id="mklif.sys_X64" />
+  <ComponentRef Id="drvins64.exe" />
+
+  <ComponentRef Id="mklif.inf_X86" />
+  <ComponentRef Id="mklif.sys_X86" />
+  <ComponentRef Id="mklif.cat_X86" />
+
+  <ComponentRef Id="mklif.inf_W2K" />
+  <ComponentRef Id="mklif.sys_W2K" />
+  <ComponentRef Id="mklif.cat_W2K" />
+
+  <ComponentRef Id="drvins32.exe_X86" />
+  <ComponentRef Id="drvins32.exe_W2K" />
+
+  <ComponentRef Id="Ins_RtpDrvInstalled" />
+</Include>

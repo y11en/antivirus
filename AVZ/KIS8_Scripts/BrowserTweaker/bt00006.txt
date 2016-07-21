@@ -1,0 +1,99 @@
+// $AVZ1491
+//$ Модифицированы префиксы протоколов
+// Функция поиска проблемы
+function Check : dword;
+var
+ KeyName : string;
+begin
+ Result := 0;
+ KeyName := 'Software\Microsoft\Windows\CurrentVersion\URL\Prefixes';
+ // Тяжелая ошибка  - подмена ключа в HKLM
+ if Trim(RegKeyStrParamRead('HKLM', KeyName, 'ftp')) <> 'ftp://' then begin
+  Result := 3;
+  exit;
+ end;
+ if RegKeyParamExists('HKLM', KeyName, 'gopher') then
+  if Trim(RegKeyStrParamRead('HKLM', KeyName, 'gopher')) <> 'gopher://' then begin
+   Result := 3;
+   exit;
+  end;
+ if RegKeyParamExists('HKLM', KeyName, 'home') then
+  if Trim(RegKeyStrParamRead('HKLM', KeyName, 'home')) <> 'http://' then begin
+   Result := 3;
+   exit;
+  end;
+ if RegKeyParamExists('HKLM', KeyName, 'mosaic') then
+  if Trim(RegKeyStrParamRead('HKLM', KeyName, 'mosaic')) <> 'http://' then begin
+   Result := 3;
+   exit;
+  end;
+ if Trim(RegKeyStrParamRead('HKLM', KeyName, 'www')) <> 'http://' then begin
+  Result := 3;
+  exit;
+ end;
+ // Тяжелая ошибка  - подмена ключа в HKCU
+ if RegKeyExists('HKCU', 'Software\Microsoft\Windows\CurrentVersion\URL') then begin
+  if Trim(RegKeyStrParamRead('HKCU', KeyName, 'ftp')) <> 'ftp://' then begin
+   Result := 3;
+   exit;
+  end;
+  if Trim(RegKeyStrParamRead('HKCU', KeyName, 'gopher')) <> 'gopher://' then begin
+   Result := 3;
+   exit;
+  end;
+  if Trim(RegKeyStrParamRead('HKCU', KeyName, 'home')) <> 'http://' then begin
+   Result := 3;
+   exit;
+  end;
+  if Trim(RegKeyStrParamRead('HKCU', KeyName, 'mosaic')) <> 'http://' then begin
+   Result := 3;
+   exit;
+  end;
+  if Trim(RegKeyStrParamRead('HKCU', KeyName, 'www')) <> 'http://' then begin
+   Result := 3;
+   exit;
+  end;
+ end;
+ // Подмена DefaultPrefix
+ if RegKeyParamExists('HKLM', 'Software\Microsoft\Windows\CurrentVersion\URL\DefaultPrefix', '') then
+  if Trim(RegKeyStrParamRead('HKLM', 'Software\Microsoft\Windows\CurrentVersion\URL\DefaultPrefix', '')) <> 'http://' then begin
+   Result := 3;
+   exit;
+  end;
+ if RegKeyParamExists('HKCU', 'Software\Microsoft\Windows\CurrentVersion\URL\DefaultPrefix', '') then
+  if Trim(RegKeyStrParamRead('HKCU', 'Software\Microsoft\Windows\CurrentVersion\URL\DefaultPrefix', '')) <> 'http://' then begin
+   Result := 3;
+   exit;
+  end;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+var
+ S, KeyName : string;
+begin
+ S := 'Software\Microsoft\Windows\CurrentVersion\URL\Prefixes';
+ KeyName := 'HKEY_LOCAL_MACHINE';
+ RegKeyCreate(KeyName, 'Software\Microsoft\Windows\CurrentVersion\URL\DefaultPrefix');
+ RegKeyStrParamWrite(KeyName, 'Software\Microsoft\Windows\CurrentVersion\URL\DefaultPrefix', '', 'http://');
+ RegKeyDel(KeyName, S);
+ RegKeyCreate(KeyName, S);
+ RegKeyStrParamWrite(KeyName, S, 'ftp', 'ftp://');
+ RegKeyStrParamWrite(KeyName, S, 'gopher', 'gopher://');
+ RegKeyStrParamWrite(KeyName, S, 'home', 'http://');
+ RegKeyStrParamWrite(KeyName, S, 'mosaic', 'http://');
+ RegKeyStrParamWrite(KeyName, S, 'www', 'http://');
+ if RegKeyExists('HKCU', 'Software\Microsoft\Windows\CurrentVersion\URL') then begin
+  KeyName := 'HKEY_CURRENT_USER';
+  RegKeyCreate(KeyName, 'Software\Microsoft\Windows\CurrentVersion\URL\DefaultPrefix');
+  RegKeyStrParamWrite(KeyName, 'Software\Microsoft\Windows\CurrentVersion\URL\DefaultPrefix', '', 'http://');
+  RegKeyDel(KeyName, S);
+  RegKeyCreate(KeyName, S);
+  RegKeyStrParamWrite(KeyName, S, 'ftp', 'ftp://');
+  RegKeyStrParamWrite(KeyName, S, 'gopher', 'gopher://');
+  RegKeyStrParamWrite(KeyName, S, 'home', 'http://');
+  RegKeyStrParamWrite(KeyName, S, 'mosaic', 'http://');
+  RegKeyStrParamWrite(KeyName, S, 'www', 'http://');
+ end;
+ Result := 0;
+end;

@@ -1,0 +1,9 @@
+// ***** Настройки SPI/LSP *****
+var
+ FRootKey, FBaseKey : string;
+begin
+ FRootKey := 'HKEY_LOCAL_MACHINE';
+ FBaseKey := 'SYSTEM\CurrentControlSet\Services\WinSock2\Parameters';
+ BackupRegKey(FRootKey, FBaseKey, 'User_SPI.reg');
+ AddToLog('$AVZ1236 $AVZ0465');
+end.

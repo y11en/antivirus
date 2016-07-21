@@ -1,0 +1,4 @@
+// ***** Trojan.Win32.Delf.gh *****
+begin       
+ AddEvAlarmByCLSID('4E7BD74F-2B8D-469E-DCF7-F96DA086B434',AScriptName,'instafin.dll');
+end.

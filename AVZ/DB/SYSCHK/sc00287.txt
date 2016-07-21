@@ -1,0 +1,4 @@
+// ***** Dialer.Creazione *****
+begin
+ AddEvAlarmByCLSID('042EEA26-2402-4E5A-B5BB-0FB445A5526E', AScriptName, 'win98*.ocx');
+end.

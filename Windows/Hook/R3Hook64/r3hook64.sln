@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "r3hook64", "r3hook64.vcproj", "{7CE7883D-E95F-48A6-92ED-53C56F1FCCE7}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectUniqueName0 = r3hook64.vcproj
+		SccLocalPath0 = .
+		SccLocalPath1 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CE7883D-E95F-48A6-92ED-53C56F1FCCE7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7CE7883D-E95F-48A6-92ED-53C56F1FCCE7}.Debug|Win32.Build.0 = Debug|Win32
+		{7CE7883D-E95F-48A6-92ED-53C56F1FCCE7}.Debug|x64.ActiveCfg = Debug|x64
+		{7CE7883D-E95F-48A6-92ED-53C56F1FCCE7}.Debug|x64.Build.0 = Debug|x64
+		{7CE7883D-E95F-48A6-92ED-53C56F1FCCE7}.Release|Win32.ActiveCfg = Release|Win32
+		{7CE7883D-E95F-48A6-92ED-53C56F1FCCE7}.Release|Win32.Build.0 = Release|Win32
+		{7CE7883D-E95F-48A6-92ED-53C56F1FCCE7}.Release|x64.ActiveCfg = Release|x64
+		{7CE7883D-E95F-48A6-92ED-53C56F1FCCE7}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

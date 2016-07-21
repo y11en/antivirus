@@ -1,0 +1,4 @@
+// ***** AdvWare.Getup.c *****
+begin
+ AddEvAlarmByCLSID('F4A645D0-D4D5-439E-9DBC-B31BBD9CB890',AScriptName,'BPV2s.dll');
+end.

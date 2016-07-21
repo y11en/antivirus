@@ -1,0 +1,77 @@
+// --------------------------------------------------------------------------------
+// AVP Prague stamp begin( Interface header,  )
+// -------- Wednesday,  15 October 2003,  19:27 --------
+// File Name   -- rpc_gui.idl
+// Copyright (c) Kaspersky Labs. 1996-2003.
+// -------------------------------------------
+// AVP Prague stamp end
+
+
+#include "rpc_declare.h"
+import "prague.h";
+//import "i_task.h";
+//import "i_mailtask.h";
+//import "i_processmonitor.h";
+
+typedef rpcOBJECT	rpcTASK;
+// --------------------------------------------------------------------------------
+// AVP Prague stamp begin( Interface comment,  )
+// GUI interface implementation
+// Short comments -- 
+// AVP Prague stamp end
+
+
+// --------------------------------------------------------------------------------
+// AVP Prague stamp begin( Interface function forward declarations,  )
+[ uuid (984ED3D4-138C-4A87-BA99-0FC4D09DAED3),
+  version(1.0),
+  pointer_default(unique)
+]
+interface rpc_task {
+	tERROR Task_SetSettings		( rpcTASK _this, rpcSER(settings) );		// -- ;
+	tERROR Task_GetSettings		( rpcTASK _this, rpcSER(settings) );		// -- ;
+	tERROR Task_AskAction			( rpcTASK _this, tDWORD actionId, rpcSER(askinfo) );		// -- ;
+	tERROR Task_SetState			( rpcTASK _this, tDWORD state );		// -- ;
+	tERROR Task_GetStatistics	( rpcTASK _this, rpcSER(statistics) );		// -- ;
+}
+
+[ uuid (E774AF84-A7F1-4e78-807E-F0A6D493554D),
+  version(1.0),
+  pointer_default(unique)
+]
+interface rpc_mctask {
+	tERROR MailTask_SetSettings		( rpcTASK _this, rpcSER(settings) );		// -- ;
+	tERROR MailTask_GetSettings		( rpcTASK _this, rpcSER(settings) );		// -- ;
+	tERROR MailTask_AskAction			( rpcTASK _this, tDWORD actionId, rpcSER(askinfo) );		// -- ;
+	tERROR MailTask_SetState			( rpcTASK _this, tDWORD state );		// -- ;
+	tERROR MailTask_GetStatistics	( rpcTASK _this, rpcSER(statistics) );		// -- ;
+	tERROR MailTask_Process       ( rpcTASK _this, rpcOBJECT p_hTopIO, [mout] tDWORD* p_hTotalPrimaryAction, [string] tSTRING p_szMailTaskName, tDWORD p_dwTimeOut ); // -- Функция процессирования. Используется перехватчиком. Реентерабельна!;
+}
+
+// AVP Prague stamp end
+
+//typedef rpcOBJECT   rpcPROCESSMONITOR;
+// --------------------------------------------------------------------------------
+// AVP Prague stamp begin( Interface comment,  )
+// DATACODEC interface implementation
+// Short comments -- 
+// AVP Prague stamp end
+
+
+// --------------------------------------------------------------------------------
+// AVP Prague stamp begin( Interface function forward declarations,  )
+[ uuid (911B7D49-C1FD-4E48-8479-0F1A694CD86C),
+  version(1.0),
+  pointer_default(unique)
+]
+interface rpc_processmonitor {
+	tERROR ProcessMonitor_SetSettings		( rpcTASK _this, rpcSER(settings) );
+	tERROR ProcessMonitor_GetSettings		( rpcTASK _this, rpcSER(settings) );
+	tERROR ProcessMonitor_AskAction			( rpcTASK _this, tDWORD actionId, rpcSER(askinfo) );
+	tERROR ProcessMonitor_SetState			( rpcTASK _this, tDWORD state );
+	tERROR ProcessMonitor_GetStatistics		( rpcTASK _this, rpcSER(statistics) );
+	tERROR ProcessMonitor_CalcObjectHash	( rpcTASK _this, rpcOBJECT object, [out] tQWORD* hash );
+	tERROR ProcessMonitor_GetProcessInfo	( rpcTASK _this, rpcSER(info) );
+	tERROR ProcessMonitor_IsProcessTrusted	( rpcTASK _this, rpcSER(data), [out] tBOOL* result );
+}
+// AVP Prague stamp end

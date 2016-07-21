@@ -1,0 +1,5 @@
+# Microsoft Developer Studio Generated Dependency File, included by icheckersa.mak
+
+".\icheckersa_res.rc" : \
+	".\ver_mod.h"\
+	

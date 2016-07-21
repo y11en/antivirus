@@ -1,0 +1,162 @@
+forward interface ThreadPool;
+typedef ThreadPool* hTHREADPOOL;
+
+
+
+[
+  mnemonic(IID_THREADPOOL)
+  id(61010)
+  c_type_name(hTHREADPOOL)
+  comment_ex("объект создающий и управляющий пулом потоков и назначаемых заданий
+    доступные варианты использования:
+    1. добавление задний на основном потоке,  обработка в контексте потока
+    2. добавление задний на основном потоке,  обработка в контексте потока, завершение задания на основнов потоке
+    3. выполнение с таймаутом для каждого существующего потока
+    
+    есть механизм создания контекста потоков и контекста заданий
+    
+    прим: возможно расширение - использование пула как контейнера заданий")
+]
+interface ThreadPool { // пул потоков/очередь заданий
+
+  // ------------------------------------
+    typedef tDWORD tTaskId; // тип уникального идентификатора задания
+    typedef tDWORD tThreadPriority; // тип приоритетов потоков
+    typedef tDWORD tThreadState; // тип состояний потоков
+    typedef tDWORD tThreadCallType; // тип вызова callback-функции
+
+    [
+      comment_ex("тип callback-функции. используется для определения ф-ии взаимодействия с потоком")
+    ]
+    typedef tDWORD tThreadCallback; // typedef tERROR (pr_call* tThreadCallback)(tThreadCallType CallType, tPTR pCommonThreadContext, tPTR* ppThreadContext);
+
+    [
+      comment_ex("тип callback-функции. используется для определения ф-ии взаимодействия с заданием")
+    ]
+    typedef tDWORD tThreadTaskCallback; // typedef tERROR (pr_call* tThreadTaskCallback)(tThreadCallType CallType, tPTR pThreadContext, tPTR* ppTaskContext, tPTR pTaskData, tDWORD TaskDataLen);
+    typedef tDWORD tThreadTaskEnum;
+
+
+  // ------------------------------------
+    const tThreadState TP_THREADSTATE_THREAD_NOTFOUND = 0; // задание или поток не найдены
+    const tThreadState TP_THREADSTATE_THREAD_STARTING = 1; // состояние потока - старт (базовая инициализация)
+    const tThreadState TP_THREADSTATE_THREAD_BEFORE_INIT_ = 2; // состояние потока - перед вызовом callback-функции (TP_CBTYPE_THREAD_INIT_CONTEXT)
+    const tThreadState TP_THREADSTATE_THREAD_INITING = 3; // состояние потока - поток создает/иницилизирует потоковый контекст (в обработке TP_CBTYPE_THREAD_INIT_CONTEXT)
+    const tThreadState TP_THREADSTATE_THREAD_AFTER_INIT = 4; // состояние потока - после вызовал callback-функцию (TP_CBTYPE_THREAD_INIT_CONTEXT)
+    const tThreadState TP_THREADSTATE_TASK_WAITING_THREAD = 5; // состояние потока - ожидание задания
+    const tThreadState TP_THREADSTATE_TASK_BEFORE_INIT = 6; // состояние потока - поток получил задание, перед вызовом callback-функции (TP_CBTYPE_TASK_INIT_CONTEXT)
+    const tThreadState TP_THREADSTATE_TASK_INITFAILED = 7; // состояние потока - инициализация заданием своего контектста завершилась с ошибкой. поток пропускает обработку задания
+    const tThreadState TP_THREADSTATE_TASK_PROCESSING_INIT = 8; // состояние потока - задание инициализирует свой контекст (в обработке TP_CBTYPE_TASK_INIT_CONTEXT)
+    const tThreadState TP_THREADSTATE_TASK_AFTER_INIT = 9; // состояние потока - перед выполнением задания, после вызова callback-функции (TP_CBTYPE_TASK_INIT_CONTEXT)
+    const tThreadState TP_THREADSTATE_TASK_PROCESSING = 10; // состояние потока - поток выполняет задание (TP_CBTYPE_TASK_PROCESS)
+    const tThreadState TP_THREADSTATE_TASK_BEFORE_DONE = 11; // состояние потока - поток выполнил задание. перед очисткой контекста и задания (TP_CBTYPE_TASK_DONE_CONTEXT)
+    const tThreadState TP_THREADSTATE_TASK_AFTER_DONE = 12; // состояние потока - поток освободил контекст и задание (TP_CBTYPE_TASK_DONE_CONTEXT). перед ожиданием нового задания
+    const tThreadState TP_THREADSTATE_THREAD_BEFORE_STOP = 13; // состояние потока - завершение работы (остановка пула или освобождение не используемых ресурсов)
+    const tThreadState TP_THREADSTATE_THREAD_STOPPING = 14; // состояние потока - вызов callback-функции для освобождения поточного контекста (TP_CBTYPE_THREAD_DONE_CONTEXT)
+    const tThreadState TP_THREADSTATE_THREAD_STOPPED = 15; // состояние потока - поток остановлен
+    const tThreadPriority TP_THREADPRIORITY_IDLE = 0;
+    const tThreadPriority TP_THREADPRIORITY_LOWEST = 1;
+    const tThreadPriority TP_THREADPRIORITY_BELOW_NORMAL = 2;
+    const tThreadPriority TP_THREADPRIORITY_NORMAL = 3;
+    const tThreadPriority TP_THREADPRIORITY_ABOVE_NORMAL = 4;
+    const tThreadPriority TP_THREADPRIORITY_TIME_CRITICAL = 5;
+    const tThreadCallType TP_CBTYPE_THREAD_INIT_CONTEXT = 0; // вызов инициализация контекста для потока. При возврате ошибки из инициализации базового потока пул считается не созданным
+    const tThreadCallType TP_CBTYPE_THREAD_DONE_CONTEXT = 1; // освобождение контекста потока
+    const tThreadCallType TP_CBTYPE_TASK_INIT_CONTEXT = 2; // инициализация контекста задания для потока
+    const tThreadCallType TP_CBTYPE_TASK_PROCESS = 3; // выполнение задания
+    const tThreadCallType TP_CBTYPE_TASK_DONE_CONTEXT = 4; // освобождение контекста задания
+    const tThreadCallType TP_CBTYPE_THREAD_YIELD = 5; // пустой цикл поточной функции
+    const tThreadTaskEnum TP_ENUM_START = 0; // начать перебор
+    const tThreadTaskEnum TP_ENUM_NEXT = 1; // следующая задача
+    const tThreadTaskEnum TP_ENUM_ABORT = 2; // прекратить перебор
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Interface version")
+      id(130)
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      comment_ex("Interface comment")
+      id(131)
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+    [ id(4096) ]  prop tDWORD pgTP_MIN_THREADS; // минимальное число потоков в пуле
+    [ id(4097) ]  prop tDWORD pgTP_MAX_THREADS; // максимальное число потоков в пуле
+    [ id(4098) ]  prop tThreadPriority pgTP_DEFAULT_THREAD_PRIORITY; // приоритет потока по умолчанию. после обработки задания поток должен восстановить свой приоритет на текущий по умолчанию
+    [ id(4099) ]  prop tBOOL pgTP_ALLOW_TERMINATING; // разрешено ли принудительное завершение потоков при удалении пула (см. TP_TERMINATE_TIMEOUT)
+    [ id(4100) ]  prop tDWORD pgTP_TERMINATE_TIMEOUT; // таймаут в мс. при ожидании завершении потока перед принудительным завершением
+    [ id(4101) ]  prop tDWORD pgTP_YIELD_TIMEOUT; // таймаут в мс. одного пустого цикла поточной функции
+    [ id(4102) ]  prop tDWORD pgTP_TASK_QUEUE_MAX_LEN; // максимальное число задания для пула
+    [ id(4103) ]  prop tDWORD pgTP_MAX_IDLE_COUNT; // максимальное число пустых циклов для потока. при первышении поток может освобождать связанные ресурсы
+    [ id(4104) ]  prop tThreadCallback pgTP_THREAD_CALLBACK; // адрес функции для создания/освобождения поточного контекста. при инициализации используются данные TP_THREAD_CALLBACK_CONTEXT
+    [ id(4105) ]  prop tPTR pgTP_THREAD_CALLBACK_CONTEXT; // данные для создания/освобождения поточного контекста
+    [ id(4106) ]  prop tBOOL pgTP_INVISIBLE_FLAG; // allow thread to be invisible in interceptor (default true)
+    [ id(4107) ]  prop tBOOL pgTP_DELAYED_DONE; // режим обработки TP_CBTYPE_TASK_DONE_CONTEXT
+    [ id(4108) ]  prop tBOOL pgTP_QUICK_DONE; // разрешение быстрого выхода
+    [ id(4109) ]  prop tBOOL pgTP_QUICK_EXECUTE; // не сихронизируемое выполнение задачи
+    [ id(4110) ]  prop tSTRING pgTP_NAME; // Thread Pool name, will be used as name of the waiting thread
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("при обработке задания будет вызвана callback-функция с параметром CallType
+        1. TP_CBTYPE_TASK_INIT_CONTEXT
+        2. TP_CBTYPE_TASK_PROCESS
+        3. TP_CBTYPE_TASK_DONE_CONTEXT
+        
+        если установлен флаг pgTP_DELAYED_DONE то вызов с TP_CBTYPE_TASK_DONE_CONTEXT будет отложен до запроса клиента")
+    ]
+    method tERROR AddTask( // Добавление задачи в очередь
+      tTaskId* pTaskId, // возвращаемое значение - идентификатор задачи
+      tThreadTaskCallback cbTaskCallback, // адрес callback-функции
+      tPTR pTaskData, // адрес буфера данных для задачи
+      tDWORD DataLen, // длина буфера данных
+      tDWORD TaskPriority // приоритет задачи
+    );
+    method tERROR GetThreadState( // возвращает статус потока/задачи
+      tThreadState* pState, // возвращаемое значение - текщий статус выполнения задачи
+      tTaskId TaskId // идентификатор задачи
+    );
+    method tERROR GetThreadContext( // получить контекст задания
+      tTaskId TaskId, // идентификатор задачи
+      tPTR* ppTaskContext, // возвращаемое занчание - ** с контекстом
+      tPTR* ppTaskData, // возвращаемое занчание - ** с данными задачи
+      tDWORD* pTaskDataLen, // возвращаемое занчание - * на размер блока данных задачи
+      tThreadState* pState // возвращаемое занчание - * текущее состояние потока/задачи
+    );
+    method tERROR ReleaseThreadContext( // освободить контекст задачи
+      tTaskId TaskId // идентификатор задачи
+    );
+    method tERROR WaitForTaskDone( // дождаться выполнения указанного задания
+      tTaskId TaskId // идентификатор задачи
+    );
+    method tERROR SetThreadPriorityByTask( // изменить приоритет потока для указанной задачи
+      tTaskId TaskId, // идентификатор задачи
+      tThreadPriority ThreadPriority // приоритет потока
+    );
+    method tERROR RemoveTaskFromQueue( // удалить задачу из очереди
+      tTaskId TaskId // идентификатор задачи
+    );
+    method tERROR WaitTaskDonenotify( // дождатся выполнения задачи
+      tDWORD Timeout // время ожидания завершения задачи
+    );
+    method tERROR CreateSeparateThread( // создание потока для индивидуального задания
+      tThreadTaskCallback cbSeparateFunc,
+      tDWORD SeparateData
+    );
+    method tERROR EnumTaskContext(
+      tThreadTaskEnum EnumMode,
+      tTaskId* pTaskId,
+      tPTR* ppTaskContext,
+      tPTR* ppTaskData,
+      tDWORD* pTaskDatalen,
+      tThreadState* pState
+    );
+
+}
+

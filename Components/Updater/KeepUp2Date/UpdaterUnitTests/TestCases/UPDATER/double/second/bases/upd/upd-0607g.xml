@@ -1,0 +1,17 @@
+<UpdateFiles
+	UpdateDate="12122006 1306">
+	<FileDescription
+		ComponentID="Updater"
+		UpdateType="base"
+		LocalPath="%DataFolder%"
+		Filename="updcfg.xml"
+		FileSize="5359" />
+	<Registry
+		ComponentID="CORE"
+		UpdateType="REGISTRY"
+		LocalPath="%DSKM%"
+		Body="S0xyZwENAABLTHN3AACtrQEAAAD8AwAAAQAAAAEAABRqAQABACAAlUC8tdMbPhiPhPVtqtKWG5n1HaHZlBOYVIjjolYQ4oEBAB4JDQAAAAEAAAngUuAXDQo7OjEwS0hWK3BFTlFxUFIyZTdJNVJCNUdhL3pycVVtNWxRYWxiYk5qRUJuUHV5WGkzL2pBL2lDek9SVHpHTS9hY2dTTmRUL0FIYm1ldDgxdEtqY1dxMzFvSk0lJQ=="
+		Filename="upd-0607g.krg" />
+</UpdateFiles>
+;:104H5jfZ402wAKg5TW3oxoDXRX4PuFwkIZyLc3G5em2nPqJtUnlHi5DIErGgGpAsrNsQThgdI3rKl97QJodNWlB9%%
+; 0XLSznpdI71fB300e7Uwj13JEY8RHj+FPphk7o7crgVOqkJ41mWHyuQrcW­­

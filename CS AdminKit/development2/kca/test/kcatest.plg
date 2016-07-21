@@ -1,0 +1,50 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: kcatest - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\SHIYAF~1\LOCALS~1\Temp\RSPAFE3.tmp" with contents
+[
+/nologo /G5 /MDd /W3 /Gm /GX /ZI /Od /I "../../include" /I "../../gsoap" /I "../../tst/kltester/" /I "../../gsoap/std" /I "../../include/stlport/stlport" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "UNICODE" /D "_UNICODE" /D "_USRDLL" /D "_STLP_NEW_PLATFORM_SDK" /D "_STLP_DEBUG" /Fp"..\..\bin\debug\kca\test/kcatest.pch" /YX /Fo"..\..\bin\debug\kca\test/" /Fd"..\..\bin\debug\kca\test/" /FD /GZ /c 
+"O:\CS AdminKit\development2\KCA\test\pres\pres_test3.cpp"
+"O:\CS AdminKit\development2\KCA\test\kcatest.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\SHIYAF~1\LOCALS~1\Temp\RSPAFE3.tmp" 
+Creating temporary file "C:\DOCUME~1\SHIYAF~1\LOCALS~1\Temp\RSPAFE4.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib stlport_stld50.lib /nologo /dll /incremental:yes /pdb:"..\..\bin\dlld/kcatest.pdb" /debug /machine:I386 /out:"..\..\bin\dlld/kcatest.dll" /implib:"..\..\bin\dlld/kcatest.lib" /pdbtype:sept /libpath:"O:\CommonFiles\DebugDll\\" /libpath:"../../lib/debug" 
+"\CS AdminKit\development2\bin\debug\kca\test\prci_main.obj"
+"\CS AdminKit\development2\bin\debug\kca\test\prci_testing.obj"
+"\CS AdminKit\development2\bin\debug\kca\test\nameconvertor.obj"
+"\CS AdminKit\development2\bin\debug\kca\test\prss_main.obj"
+"\CS AdminKit\development2\bin\debug\kca\test\test_prss.obj"
+"\CS AdminKit\development2\bin\debug\kca\test\testing.obj"
+"\CS AdminKit\development2\bin\debug\kca\test\pres_main.obj"
+"\CS AdminKit\development2\bin\debug\kca\test\pres_test.obj"
+"\CS AdminKit\development2\bin\debug\kca\test\pres_test2.obj"
+"\CS AdminKit\development2\bin\debug\kca\test\pres_test3.obj"
+"\CS AdminKit\development2\bin\debug\kca\test\prts_main.obj"
+"\CS AdminKit\development2\bin\debug\kca\test\prts_test.obj"
+"\CS AdminKit\development2\bin\debug\kca\test\jrnl_test.obj"
+"\CS AdminKit\development2\bin\debug\kca\test\kcatest.obj"
+"\CS AdminKit\development2\bin\dlld\klcskca.lib"
+"\CS AdminKit\development2\bin\dlld\klcsstd.lib"
+"\CS AdminKit\development2\bin\dlld\klcstr.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\SHIYAF~1\LOCALS~1\Temp\RSPAFE4.tmp"
+<h3>Output Window</h3>
+Compiling...
+pres_test3.cpp
+kcatest.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+kcatest.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

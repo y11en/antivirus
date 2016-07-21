@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mklapi", "mklapi.vcproj", "{431C575B-07E0-4A34-850B-FA8A897B2AF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		DebugS|Win32 = DebugS|Win32
+		Release|Win32 = Release|Win32
+		ReleaseS|Win32 = ReleaseS|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{431C575B-07E0-4A34-850B-FA8A897B2AF1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{431C575B-07E0-4A34-850B-FA8A897B2AF1}.Debug|Win32.Build.0 = Debug|Win32
+		{431C575B-07E0-4A34-850B-FA8A897B2AF1}.DebugS|Win32.ActiveCfg = DebugS|Win32
+		{431C575B-07E0-4A34-850B-FA8A897B2AF1}.DebugS|Win32.Build.0 = DebugS|Win32
+		{431C575B-07E0-4A34-850B-FA8A897B2AF1}.Release|Win32.ActiveCfg = Release|Win32
+		{431C575B-07E0-4A34-850B-FA8A897B2AF1}.Release|Win32.Build.0 = Release|Win32
+		{431C575B-07E0-4A34-850B-FA8A897B2AF1}.ReleaseS|Win32.ActiveCfg = ReleaseS|Win32
+		{431C575B-07E0-4A34-850B-FA8A897B2AF1}.ReleaseS|Win32.Build.0 = ReleaseS|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,85 @@
+# $Id: Makefile.in,v 1.3 2003/10/06 15:16:46 cat Exp $
+
+CC = @CC@
+CXX = @CXX@
+CXXCPP = @CXXCPP@
+top_srcdir=@top_srcdir@
+
+LDFLAGS = @LDFLAGS@
+KAVUPDATER_LIBS=@KAVUPDATER_LIBS@
+LIBS = @LIBS@
+CPPFLAGS = @CPPFLAGS@
+CXXFLAGS=@CXXFLAGS@
+CFLAGS = @CFLAGS@
+DEFS = @DEFS@
+AR=@AR@ cr
+RANLIB=@RANLIB@
+LIB_COMMON_PREFIX=@LIB_COMMON_PREFIX@
+
+mkinstalldirs = $(SHELL) ./config/mkinstalldirs
+SIGNER=ntlmsigner
+
+LIB_DIR=$(top_srcdir)/lib
+
+INCLUDES = @INCLUDES@ -I.
+
+COMPILE  = @$(CC) $(DEFS) $(INCLUDES) $(CFLAGS) -o $@
+CXXCOMPILE =@$(CXX) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CXXFLAGS) -o $@
+LINK=@$(CC) $(LDFLAGS)
+CXXLINK = $(CXX) $(LDFLAGS)
+
+LIB_CORE_OBJS = ../core/NetFac.o ../core/NetFacHTTP.o ../core/proxyDetector.o \
+		../core/update_info.o \
+		../core/updater.o ../core/updater_diffs.o ../core/updater_rollback.o \
+		../core/upd_description.o ../core/upd_download.o \
+		../core/upd_supp.o \
+		../include/cfg_updater.o ../include/updateSchedule.o\
+		../include/callback_iface.o ../include/log_iface.o ../include/stringParser.o \
+		../net/netCore.o ../net/netFTP.o ../net/netSMB_common.o \
+		../net/netTransfer.o ../net/proxyAuthorizationMethodList.o \
+		../net/stdSocket.o  \
+		../core/diffs/apdiftb.o ../core/diffs/bindiff.o ../core/diffs/calcsum.o \
+		../core/diffs/crc32.o ../core/diffs/LzmaDecode.o ../core/diffs/md5.o ../core/diffs/sq_s.o \
+		../core/diffs/sq_u.o \
+		../helper/base64.o ../helper/fileInfo.o ../helper/indexFileXMLParser.o \
+		../helper/licensing.o ../helper/local_file.o \
+		../helper/map_wrapper.o ../helper/sitesFileXMLParser.o ../helper/sites_info.o \
+		../helper/sourceDescription.o ../helper/string.o ../helper/strptime.o \
+		../helper/UpdaterLAXImplementation.o ../helper/updaterStaff.o \
+		../helper/update_transaction.o ../helper/PrimaryIndexXMLParser.o \
+		../helper/regionDetection.o \
+		../../IniFile/IniFile.o ../../IniFile/IniBasedRollback.o \
+		../../ProxyDetector/proxyDetector.o
+
+all:$(LIB_DIR)/libkavupdcore.a
+
+
+$(LIB_DIR)/libkavupdcore.a:$(LIB_CORE_OBJS)
+	@echo "Linking $@"
+	$(AR) $@ $(LIB_CORE_OBJS)
+	$(RANLIB) $@
+#	$(AR) tmp_lib.a $(LIB_CORE_OBJS)
+#	mkdir -p tmp;						\
+#	cd tmp;								\
+#	for lib in $(LIBS); do				\
+#		ar x ../$$lib;						\
+#		ar q ../tmp_lib.a `ar t ../$$lib`;	\
+#		rm -f `ar t ../$$lib`;				\
+#	done
+#	rm -rf tmp
+#	mv tmp_lib.a $@ 
+#	$(RANLIB) $@
+
+clean:
+	rm -rf $(LIB_DIR)/libkavupdcore.a $(LIB_CORE_OBJS)
+
+distclean: clean
+	rm -f Makefile
+
+.c.o:
+	@echo "Compiling $<"
+	$(COMPILE) -c $<
+
+.cpp.o:
+	@echo "Compiling $<"
+	$(CXXCOMPILE) -c $<

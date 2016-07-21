@@ -1,0 +1,66 @@
+// This file will be processed by the MIDL tool to
+// produce the type library (avpgui.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+#include "basegui.idl"
+
+/////////////////////////////////////////////////////////////////////////////////////
+// IGUIController
+
+const long COMGUI_PRODUCTSTATUS_PROTECTIONNOTRUNNING  = 0x00000001;
+const long COMGUI_PRODUCTSTATUS_ACTIVATENEED          = 0x00000002;
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+[
+	object,
+	uuid(1EFD6E33-39C2-43cd-A8D8-BD2E77B8A8B9),
+	dual,
+	helpstring("IGUIController Interface"),
+	pointer_default(unique),
+	oleautomation
+]
+interface IGUIController : IDispatch
+{
+	[helpstring("method GetItem")] HRESULT GetItem([in]BSTR strName, [in, defaultvalue(TRUE)]VARIANT_BOOL bExact, [out, retval]IDispatch **pItem);
+	[helpstring("method GetLastBalloonText")] HRESULT GetLastBalloonText([out, retval] BSTR *pVal);
+	[helpstring("method DoCommand")] HRESULT DoCommand([in] BSTR pVal);
+	[helpstring("method GetProductStatus")] HRESULT GetProductStatus([out, retval] unsigned long *pStatus);
+};
+
+/////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+
+[
+	uuid(77AD65E0-49D1-4172-9846-2AD244E84622),
+	version(1.0),
+	helpstring("avpgui 1.0 Type Library")
+]
+library GUIATLLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(854ABBFD-518C-4FE3-AB60-DBF67ADF9C08),
+		helpstring("CGUIItem Class")
+	]
+	coclass CGUIItem
+	{
+		[default] interface ICGUIItem;
+	};
+
+	[
+		uuid(5C22A002-0259-4488-8E90-91DFF4E2E436),
+		helpstring("AVPGUIController")
+	]
+	coclass CGUIController
+	{
+		[default] interface IGUIController;
+	};
+};
+
+/////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////

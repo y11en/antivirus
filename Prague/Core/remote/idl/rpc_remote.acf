@@ -1,0 +1,11 @@
+[explicit_handle]
+interface rpc_manager
+{
+
+}
+
+[explicit_handle]
+interface rpc_library
+{
+
+}

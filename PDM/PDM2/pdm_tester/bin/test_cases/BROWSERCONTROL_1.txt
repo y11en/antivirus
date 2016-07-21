@@ -1,0 +1,4 @@
+# create IE process and send data to him through DDE
+
+CP_IE NOT_TO_CLEAR
+DDE_SEND_TO_IE NOT_TO_CLEAR

@@ -1,0 +1,25 @@
+hijackthis "chm::/"
+"DPF" ms-its ".chm"
+O16 - DPF ".chm"
+
+O16 - DPF promo.dollarrevenue.com/
+
+O16 - DPF "http" sex ".exe"
+
+
+O16 - DPF: {00B71CFB-6864-4346-A978-C0A14556272C} (Checkers Class) - http://messenger.zone.msn.com/binary/msgrchkr.cab
+O16 - DPF: {166B1BCA-3F9C-11CF-8075-444553540000} (Shockwave ActiveX Control) - http://download.macromedia.com/pub/shockwave/cabs/director/sw.cab
+O16 - DPF: {2B36F775-8CF5-4489-B454-2D1B80984CF2} (FXPluginCtl Object) - http://www.powerflasher.de/plugin/powerres.cab
+O16 - DPF: {41F17733-B041-4099-A042-B518BB6A408C} - http://a1540.g.akamai.net/7/1540/52/20030530/qtinstall.info.apple.com/bonnie/us/win/QuickTimeInstaller.exe
+O16 - DPF: {8E0D4DE5-3180-4024-A327-4DFAD1796A8D} (MessengerStatsClient Class) - http://messenger.zone.msn.com/binary/MessengerStatsClient.cab
+O16 - DPF: {D27CDB6E-AE6D-11CF-96B8-444553540000} (Shockwave Flash Object) - http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab
+O16 - DPF: {F58E1CEF-A068-4C15-BA5E-587CAF3EE8C6} (MSN Chat Control 4.5) - http://fdl.msn.com/public/chat/msnchat45.cab
+O16 - DPF: {F6BF0D00-0B2A-4A75-BF7B-F385591623AF} (Solitaire Showdown Class) - http://messenger.zone.msn.com/binary/SolitaireShowdown.cab
+
+--------------------------------------------------------------------------------
+http://www.google.ru/search?q=O16+-+DPF+dollarrevenue.com&num=100&hl=ru&lr=&pwst=1&filter=0
+
+]:[URLViewer]
+<quote><blockquote><blockquote>
+[23:38:46 859]:[URLViewer]http://home.comcast.net/~jack.kissner/nintendo1.exe
+[23:38:46 890]:[URLViewer]http://softech-ltd.com/index.exe

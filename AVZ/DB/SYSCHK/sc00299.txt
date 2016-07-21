@@ -1,0 +1,4 @@
+// ***** AdvWare.ToolBar.ISearch *****
+begin
+ AddEvAlarmByName('%Windows%\isrvs\desktop.exe',AScriptName,'');
+end.

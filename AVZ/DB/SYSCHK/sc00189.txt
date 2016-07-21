@@ -1,0 +1,4 @@
+// ***** AdvWare.Giga *****
+begin
+ AddEvAlarmByCLSID('C1EA1782-8E6E-4EA4-9800-B68DE41F1A26','AdvWare.Giga (GigaSearch)','gigasoft.dll');
+end.

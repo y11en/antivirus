@@ -1,0 +1,4 @@
+// ***** Trojan-Spy.Win32.Spung *****
+begin
+ AddEvAlarmByCLSID('BCF96FB4-5F1B-497B-AECC-910304A55011', AScriptName, 'neti.dll');
+end.

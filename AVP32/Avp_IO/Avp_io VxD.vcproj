@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioProject ProjectType="Visual C++" Version="8,00" Name="Avp_io VxD" ProjectGUID="{8F611A7D-2E79-492B-9F32-F9FEB673C613}" SccProjectName="&quot;$/AVP32/Avp_IO&quot;, ZHDAAAAA" SccLocalPath="." SccProvider="MSSCCI:Perforce SCM">
+	<Platforms>
+		<Platform Name="Win32"/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="Debug|Win32" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\avp32\$(ProjectName)" ConfigurationType="1" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="_DEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="1" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" AdditionalOptions="/Gs " Optimization="0" AdditionalIncludeDirectories="..\..\CommonFiles,..\vtoolsd\include,$(VTOOLSD)\include" PreprocessorDefinitions="DEBUG;_DEBUG;_X86_;IS_32;WIN40;WANTVXDWRAPS;ALT_INIT_SEG;WIN40_OR_LATER;WFW311_OR_LATER;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" MinimalRebuild="true" RuntimeLibrary="1" StructMemberAlignment="1" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1049" AdditionalIncludeDirectories="..\..\CommonFiles"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalOptions="/IGNORE:4078,4039,4070,4075" AdditionalDependencies="icrtms.obj clms4d.lib daamsd.lib ndms95d.lib rtmsd.lib ntmsd.lib wr0ms.lib wr1ms.lib wr2ms.lib wr3ms.lib chkesp.obj" OutputFile="$(OutDir)\$(ProjectName).vxd" LinkIncremental="2" SuppressStartupBanner="true" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="false" IgnoreAllDefaultLibraries="true" ModuleDefinitionFile=".\Avp_io.def" GenerateDebugInformation="true" ProgramDatabaseFile="$(OutDir)\$(TargetName).pdb" BaseAddress="" ImportLibrary="" MergeSections=".rsrc=_IDATA"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool" Description="Finalizing..." CommandLine="PostBuild.cmd DEBUG $(TargetPath) $(TargetName)"/>
+		</Configuration>
+		<Configuration Name="Release|Win32" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\avp32\$(ProjectName)" ConfigurationType="1" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="NDEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="1" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" AdditionalOptions="/Gs " Optimization="4" AdditionalIncludeDirectories="..\..\CommonFiles,..\vtoolsd\include,$(VTOOLSD)\include" PreprocessorDefinitions="NDEBUG;_X86_;IS_32;WIN40;WANTVXDWRAPS;ALT_INIT_SEG;WIN40_OR_LATER;WFW311_OR_LATER;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" RuntimeLibrary="0" StructMemberAlignment="1" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1049" AdditionalIncludeDirectories="..\..\CommonFiles"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalOptions="/IGNORE:4078,4039,4070" AdditionalDependencies="icrtms.obj clms4.lib daams.lib ndms95.lib rtms.lib ntms.lib wr0ms.lib wr1ms.lib wr2ms.lib wr3ms.lib" OutputFile="$(OutDir)\$(ProjectName).vxd" LinkIncremental="1" SuppressStartupBanner="true" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="false" IgnoreAllDefaultLibraries="true" ModuleDefinitionFile=".\Avp_io.def" GenerateDebugInformation="true" ProgramDatabaseFile="$(OutDir)\$(TargetName).pdb" BaseAddress="" ImportLibrary="" MergeSections=".rsrc=_IDATA"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool" Description="Finalizing..." CommandLine="PostBuild.cmd RELEASE $(TargetPath) $(TargetName)"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter Name="Source Files" Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
+			<File RelativePath="Avp_io.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="Avp_io.def">
+				<FileConfiguration Name="Debug|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCCustomBuildTool"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCCustomBuildTool"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="C_vxdio.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter Name="Header Files" Filter="h;hpp;hxx;hm;inl">
+			<File RelativePath="..\..\CommonFiles\_avpio.h">
+			</File>
+			<File RelativePath="Avp_io.h">
+			</File>
+			<File RelativePath="..\Avp_iocl.h">
+			</File>
+			<File RelativePath="..\..\CommonFiles\Version\ver_avp.h">
+			</File>
+		</Filter>
+		<Filter Name="Resource Files" Filter="ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe">
+			<File RelativePath="Avp_io.rc">
+				<FileConfiguration Name="Debug|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="" AdditionalIncludeDirectories=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="" AdditionalIncludeDirectories=""/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="Avp_io.rc2">
+			</File>
+		</Filter>
+		<File RelativePath="Avp_io VxD.dep">
+		</File>
+		<File RelativePath="Avp_io VxD.mak">
+		</File>
+		<File RelativePath="PostBuild.cmd">
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

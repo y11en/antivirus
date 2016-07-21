@@ -1,0 +1,131 @@
+# Microsoft Developer Studio Generated Dependency File, included by btdisk.mak
+
+.\io.cpp : \
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_io.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_objptr.h"\
+	"..\include\iface\i_os.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\iface\i_receiv.h"\
+	"..\include\iface\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_string.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_oid.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\include\prague.h"\
+	".\btdiskimp.h"\
+	{$(INCLUDE)}"plugin\p_btdisk.h"\
+	
+
+.\objptr.cpp : \
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_io.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_objptr.h"\
+	"..\include\iface\i_os.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\iface\i_receiv.h"\
+	"..\include\iface\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_string.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_oid.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\include\prague.h"\
+	".\btdiskimp.h"\
+	{$(INCLUDE)}"plugin\p_btdisk.h"\
+	
+
+.\os.cpp : \
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_io.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_objptr.h"\
+	"..\include\iface\i_os.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\iface\i_receiv.h"\
+	"..\include\iface\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_string.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_oid.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\include\prague.h"\
+	".\btdiskimp.h"\
+	{$(INCLUDE)}"plugin\p_btdisk.h"\
+	
+
+.\plugin_btdisk.cpp : \
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\iface\i_receiv.h"\
+	"..\include\iface\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\include\prague.h"\
+	
+
+.\template.rc : \
+	"..\..\CommonFiles\version\ver_product.h"\
+	".\VER_MOD.H"\
+	

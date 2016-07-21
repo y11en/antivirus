@@ -1,0 +1,5 @@
+// ***** Adware.FreeScratchCards *****
+begin       
+ AddEvAlarmByCLSID('9B2424C0-847B-11D7-A590-00402B262826',AScriptName,'');
+ AddEvAlarmByCLSID('9B2424C1-847B-11D7-A590-00402B262826',AScriptName,'');
+end.

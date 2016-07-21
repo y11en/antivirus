@@ -1,0 +1,4 @@
+// ***** AdvWare.Hengbang *****
+begin
+ AddEvAlarmByCLSID('D4D5C535-BA95-4327-870D-A33826FDD17A',AScriptName,'GOGOBM.DLL');
+end.

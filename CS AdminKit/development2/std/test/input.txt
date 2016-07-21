@@ -1,0 +1,8 @@
+
+//! \brief	Файл, в который kltester2 будет писать отчёт
+LogFile "$std_test.log";
+
+//! \brief	Файл, в который будут выдаваться трейсы
+TraceFile "$std_test.txt" level 4;
+
+Run Test "STDCONV" From "stdtest.dll";

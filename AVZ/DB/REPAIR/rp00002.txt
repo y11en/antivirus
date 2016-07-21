@@ -1,0 +1,28 @@
+// ***** —брос настроек префиксов протоколов Internet Explorer на стандартные *****
+var
+ S, KeyName : string;
+begin
+ S := 'Software\Microsoft\Windows\CurrentVersion\URL\Prefixes';
+ KeyName := 'HKEY_LOCAL_MACHINE';
+ RegKeyCreate(KeyName, 'Software\Microsoft\Windows\CurrentVersion\URL\DefaultPrefix');
+ BackupRegKey(KeyName, 'Software\Microsoft\Windows\CurrentVersion\URL\','repair_IEPrefix_hklm');
+ RegKeyStrParamWrite(KeyName, 'Software\Microsoft\Windows\CurrentVersion\URL\DefaultPrefix', '', 'http://');
+ RegKeyDel(KeyName, S);
+ RegKeyCreate(KeyName, S);
+ RegKeyStrParamWrite(KeyName, S, 'ftp', 'ftp://');
+ RegKeyStrParamWrite(KeyName, S, 'gopher', 'gopher://');
+ RegKeyStrParamWrite(KeyName, S, 'home', 'http://');
+ RegKeyStrParamWrite(KeyName, S, 'mosaic', 'http://');
+ RegKeyStrParamWrite(KeyName, S, 'www', 'http://'); 
+ KeyName := 'HKEY_CURRENT_USER';
+ BackupRegKey(KeyName, 'Software\Microsoft\Windows\CurrentVersion\URL\','repair_IEPrefix_hkcu');
+ RegKeyCreate(KeyName, 'Software\Microsoft\Windows\CurrentVersion\URL\DefaultPrefix');
+ RegKeyStrParamWrite(KeyName, 'Software\Microsoft\Windows\CurrentVersion\URL\DefaultPrefix', '', 'http://');
+ RegKeyDel(KeyName, S);
+ RegKeyCreate(KeyName, S);
+ RegKeyStrParamWrite(KeyName, S, 'ftp', 'ftp://');
+ RegKeyStrParamWrite(KeyName, S, 'gopher', 'gopher://');
+ RegKeyStrParamWrite(KeyName, S, 'home', 'http://');
+ RegKeyStrParamWrite(KeyName, S, 'mosaic', 'http://');
+ RegKeyStrParamWrite(KeyName, S, 'www', 'http://'); 
+end.

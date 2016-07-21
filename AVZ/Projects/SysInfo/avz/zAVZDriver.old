@@ -1,0 +1,414 @@
+unit zAVZDriver;
+
+interface
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, winsvc, StdCtrls, ntdll;
+type
+
+ TAVZDriver = class
+  private
+    FEnabled: boolean;
+    FLoaded: boolean;
+    FDriverPath: string;
+    ServiceAPILoaded : boolean;
+    procedure SetEnabled(const Value: boolean);
+    procedure SetDriverPath(const Value: string);
+  public
+   DriverLinkName : string;
+   constructor Create;
+   function CheckDriverEnabled : boolean;
+   function InstallDriver   : boolean;
+   function LoadDriver      : boolean;
+   function UnLoadDriver    : boolean;
+   function UnInstallDriver : boolean;
+   function CallDriver_GET_KESDT_PTR: dword;
+   function CallDriver_GET_SDT_PTR : dword;
+   function CallDriver_GET_SDT_COUNT: dword;
+   function CallDriver_GET_SDT_ENTRY(N: dword): dword;
+   function CallDriver_SET_SDT_ENTRY(N, NewPtr: dword): boolean;
+   function CallDriver_DELETE_FILE(AFileName : string): boolean;
+   function CallDriver_READ_MEMORY(Buf : pointer; MemAdd : DWord; MemSize : word): boolean;
+   function CallDriver_WRITE_MEMORY(Buf : pointer; MemAdd : DWord; MemSize : word): boolean;
+   function CallDriver_GET_CPU_176REG : dword;
+   function CallDriver_IOCTL_Z_SETTRUSTEDPID : boolean;
+  published
+   Property Enabled : boolean read FEnabled write SetEnabled;
+   Property Loaded  : boolean read FLoaded;
+   Property DriverPath : string read FDriverPath write SetDriverPath;
+ end;
+
+implementation
+
+{ TAVZDriver }
+
+function TAVZDriver.CallDriver_GET_KESDT_PTR: dword;
+var
+ hDriver : THandle;
+ BytesReturned : Cardinal;
+ IOCode, dw : DWord;
+ Res        : boolean;
+begin
+ Result := 0;
+ if not(Loaded) then exit;
+ // Открываем драйвер
+ hDriver := CreateFile(PChar(DriverLinkName),GENERIC_READ, 0, nil, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL,0);
+ if hDriver = INVALID_HANDLE_VALUE then exit;
+ dw := 0;
+ IOCode := CTL_CODE($022,$800,0,0);
+ Res := DeviceIoControl(hDriver, IOCode,
+                        @dw, sizeof(dw),
+                        @dw, sizeof(dw),
+                        BytesReturned, nil);
+ if not(Res) then Result := 0
+  else Result := dw;
+ CloseHandle(hDriver);
+end;
+
+function TAVZDriver.CallDriver_GET_SDT_PTR: dword;
+var
+ hDriver : THandle;
+ BytesReturned : Cardinal;
+ IOCode, dw : DWord;
+ Res        : boolean;
+begin
+ Result := 0;
+ if not(Loaded) then exit;
+ // Открываем драйвер
+ hDriver := CreateFile(PChar(DriverLinkName),GENERIC_READ, 0, nil, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL,0);
+ if hDriver = INVALID_HANDLE_VALUE then exit;
+ dw := 0;
+ IOCode := CTL_CODE($022,$801,0,0);
+ Res := DeviceIoControl(hDriver, IOCode,
+                        @dw, sizeof(dw),
+                        @dw, sizeof(dw),
+                        BytesReturned, nil);
+ if not(Res) then Result := 0
+  else Result := dw;
+ CloseHandle(hDriver);
+end;
+
+function TAVZDriver.CallDriver_GET_SDT_COUNT: dword;
+var
+ hDriver : THandle;
+ BytesReturned : Cardinal;
+ IOCode, dw : DWord;
+ Res        : boolean;
+begin
+ Result := 0;
+ if not(Loaded) then exit;
+ // Открываем драйвер
+ hDriver := CreateFile(PChar(DriverLinkName),GENERIC_READ, 0, nil, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL,0);
+ if hDriver = INVALID_HANDLE_VALUE then exit;
+ dw := 0;
+ IOCode := CTL_CODE($022,$802,0,0);
+ Res := DeviceIoControl(hDriver, IOCode,
+                        @dw, sizeof(dw),
+                        @dw, sizeof(dw),
+                        BytesReturned, nil);
+ if not(Res) then Result := 0
+  else Result := dw;
+ CloseHandle(hDriver);
+end;
+
+function TAVZDriver.CallDriver_GET_SDT_ENTRY(N : dword): dword;
+var
+ hDriver : THandle;
+ BytesReturned : Cardinal;
+ IOCode, dw : DWord;
+ Res        : boolean;
+begin
+ Result := 0;
+ if not(Loaded) then exit;
+ // Открываем драйвер
+ hDriver := CreateFile(PChar(DriverLinkName),GENERIC_READ, 0, nil, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL,0);
+ if hDriver = INVALID_HANDLE_VALUE then exit;
+ dw := 0;
+ IOCode := CTL_CODE($022,$803,0,0);
+ Res := DeviceIoControl(hDriver, IOCode,
+                        @N, sizeof(N),
+                        @dw, sizeof(dw),
+                        BytesReturned, nil);
+ if not(Res) then Result := 0
+  else Result := dw;
+ CloseHandle(hDriver);
+end;
+
+function TAVZDriver.CallDriver_SET_SDT_ENTRY(N, NewPtr : dword): boolean;
+var
+ hDriver : THandle;
+ BytesReturned : Cardinal;
+ InpBuf, OutBuf : array[0..100] of byte;
+ IOCode, dw : DWord;
+ Res        : boolean;
+begin
+ Result := false;
+ if not(Loaded) then exit;
+ // Открываем драйвер
+ hDriver := CreateFile(PChar(DriverLinkName),GENERIC_READ, 0, nil, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL,0);
+ if hDriver = INVALID_HANDLE_VALUE then exit;
+ ZeroMemory(@InpBuf, sizeof(InpBuf));
+ ZeroMemory(@OutBuf, sizeof(OutBuf));
+ CopyMemory(@InpBuf[0], @N, 4);
+ CopyMemory(@InpBuf[4], @NewPtr, 4);
+ IOCode := CTL_CODE($022,$804,0,0);
+ Result := DeviceIoControl(hDriver, IOCode,
+                        @InpBuf, sizeof(InpBuf),
+                        @OutBuf, sizeof(OutBuf),
+                        BytesReturned, nil);
+ CloseHandle(hDriver);
+end;
+
+function TAVZDriver.CheckDriverEnabled: boolean;
+begin
+ Result := IsNT and FEnabled and ServiceAPILoaded;
+end;
+
+constructor TAVZDriver.Create;
+begin
+ FLoaded   := false;
+ FEnabled  := true;
+ ServiceAPILoaded := LoadServiceManagerAPI;
+ DriverLinkName := '\\.\\AvzKernelDeviceLink';
+end;
+
+function TAVZDriver.InstallDriver: boolean;
+var
+ SCManagerHandle, SCHandle : THandle;
+begin
+ Result := false;
+ if not(CheckDriverEnabled) then exit;
+ // 1. Подключение к менеджеру сервисов
+ SCManagerHandle := zOpenSCManager(nil, nil, SC_MANAGER_ALL_ACCESS);
+ if SCManagerHandle = NULL then exit;
+ // 2. Создание
+ SCHandle := zCreateService(SCManagerHandle, 'AVZ', 'AVZ Kernel Driver',
+               SERVICE_START or SERVICE_STOP or SERVICE_ALL_ACCESS,
+               SERVICE_KERNEL_DRIVER, SERVICE_DEMAND_START,
+               SERVICE_ERROR_NORMAL, PChar(DriverPath+'avz.sys'),
+               nil, nil, nil, nil, nil);
+ Result := (SCHandle <> 0);
+ // 3. Отключение от менеджера сервисов
+ zCloseServiceHandle(SCHandle);
+ zCloseServiceHandle(SCManagerHandle);
+end;
+
+function TAVZDriver.LoadDriver: boolean;
+var
+ SCManagerHandle, SCHandle : THandle;
+ pcAgr : PChar;
+ err   : integer;
+begin
+ Result := false;
+ if not(CheckDriverEnabled) then exit;
+ // 1. Подключение к менеджеру сервисов
+ SCManagerHandle := zOpenSCManager(nil, nil, SC_MANAGER_ALL_ACCESS);
+ if SCManagerHandle = NULL then exit;
+ // 2. Создание
+ SCHandle := zOpenService(SCManagerHandle, 'AVZ',
+                         SERVICE_START or
+                         SERVICE_STOP or
+                         SERVICE_ALL_ACCESS);
+ pcAgr := nil;
+ Result := zStartService(SCHandle, 0, pcAgr);
+ err    := GetLastError;
+ // Проверим причину ошибки - может быть, сервис драйвер уже запущен
+ if not(Result) and (err = ERROR_SERVICE_ALREADY_RUNNING) then
+  Result := true;
+ FLoaded := Result;
+ // 3. Отключение от менеджера сервисов
+ zCloseServiceHandle(SCHandle);
+ zCloseServiceHandle(SCManagerHandle);
+end;
+
+procedure TAVZDriver.SetDriverPath(const Value: string);
+begin
+  FDriverPath := Value;
+end;
+
+procedure TAVZDriver.SetEnabled(const Value: boolean);
+begin
+  FEnabled := Value;
+end;
+
+function TAVZDriver.UnInstallDriver: boolean;
+var
+ SCManagerHandle, SCHandle : THandle;
+begin
+ Result := false;
+ if not(CheckDriverEnabled) then exit;
+ // 1. Подключение к менеджеру сервисов
+ SCManagerHandle := zOpenSCManager(nil, nil, SC_MANAGER_ALL_ACCESS);
+ if SCManagerHandle = NULL then exit;
+ // 2. Открытие
+ SCHandle := zOpenService(SCManagerHandle, 'AVZ',
+                         SERVICE_START or
+                         SERVICE_STOP or
+                         SERVICE_ALL_ACCESS);
+ // 3. Удаление
+ Result  := zDeleteService(SCHandle);
+ FLoaded := false;
+ // 4. Отключение от менеджера сервисов
+ zCloseServiceHandle(SCHandle);
+ zCloseServiceHandle(SCManagerHandle);
+end;
+
+function TAVZDriver.UnLoadDriver: boolean;
+var
+ SCManagerHandle, SCHandle : THandle;
+ ServiceStatus             : TServiceStatus;
+begin
+ Result := false;
+ if not(CheckDriverEnabled) then exit;
+ // 1. Подключение к менеджеру сервисов
+ SCManagerHandle := zOpenSCManager(nil, nil, SC_MANAGER_ALL_ACCESS);
+ if SCManagerHandle = NULL then exit;
+ // 2. Открытие
+ SCHandle := zOpenService(SCManagerHandle, 'AVZ',
+                         SERVICE_START or
+                         SERVICE_STOP or
+                         SERVICE_ALL_ACCESS);
+ // 3. Остановка
+ Result  := zControlService(SCHandle, SERVICE_CONTROL_STOP, ServiceStatus);
+ FLoaded := false;
+ // 4. Отключение от менеджера сервисов
+ zCloseServiceHandle(SCHandle);
+ zCloseServiceHandle(SCManagerHandle);
+end;
+
+function TAVZDriver.CallDriver_DELETE_FILE(AFileName : string): boolean;
+var
+ hDriver : THandle;
+ BytesReturned : Cardinal;
+ InpBuf, OutBuf : array[0..500] of byte;
+ IOCode, dw : DWord;
+ Res        : boolean;
+begin
+ Result := false;
+ if not(Loaded) then exit;
+ // Открываем драйвер
+ hDriver := CreateFile(PChar(DriverLinkName),GENERIC_READ, 0, nil, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL,0);
+ if hDriver = INVALID_HANDLE_VALUE then exit;
+ ZeroMemory(@InpBuf, sizeof(InpBuf));
+ ZeroMemory(@OutBuf, sizeof(OutBuf));
+ StringToWideChar(AFileName, @InpBuf, sizeof(InpBuf));
+ IOCode := CTL_CODE($022,$805,0,0);
+ Result := DeviceIoControl(hDriver, IOCode,
+                        @InpBuf, length(AFileName)*2,
+                        @dw, 4,
+                        BytesReturned, nil);
+ CloseHandle(hDriver);
+ MessageDlg(inttohex(dw, 6), mtInformation, [mbOk], 0);
+end;
+
+function TAVZDriver.CallDriver_READ_MEMORY(Buf: pointer;
+  MemAdd : DWord; MemSize: word): boolean;
+var
+ hDriver : THandle;
+ BytesReturned : Cardinal;
+ InpBuf, OutBuf : array[0..500000] of byte;
+ IOCode, dw : DWord;
+ Res        : boolean;
+begin
+ Result := false;
+ if not(Loaded) then exit;
+ if MemSize > SizeOf(OutBuf) then exit;
+ // Открываем драйвер
+ hDriver := CreateFile(PChar(DriverLinkName),GENERIC_READ, 0, nil, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL,0);
+ if hDriver = INVALID_HANDLE_VALUE then exit;
+ ZeroMemory(@InpBuf, sizeof(InpBuf));
+ ZeroMemory(@OutBuf, sizeof(OutBuf));
+ dw := MemAdd;  CopyMemory(@InpBuf[0], @dw, 4);
+ dw := MemSize; CopyMemory(@InpBuf[4], @dw, 4);
+ IOCode := CTL_CODE($022,$806,0,0);
+ Result := DeviceIoControl(hDriver, IOCode,
+                        @InpBuf, 10,
+                        @OutBuf, sizeof(OutBuf),
+                        BytesReturned, nil);
+ if Result then
+  CopyMemory(Buf, @OutBuf, BytesReturned);
+ CloseHandle(hDriver);
+end;
+
+function TAVZDriver.CallDriver_WRITE_MEMORY(Buf: pointer; MemAdd: DWord;
+  MemSize: word): boolean;
+var
+ hDriver : THandle;
+ BytesReturned : Cardinal;
+ InpBuf, OutBuf : array[0..500] of byte;
+ IOCode, dw : DWord;
+ Res        : boolean;
+begin
+ Result := false;
+ if not(Loaded) then exit;
+ if MemSize > SizeOf(OutBuf) then exit;
+ // Открываем драйвер
+ hDriver := CreateFile(PChar(DriverLinkName),GENERIC_READ, 0, nil, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL,0);
+ if hDriver = INVALID_HANDLE_VALUE then exit;
+ ZeroMemory(@InpBuf, sizeof(InpBuf));
+ ZeroMemory(@OutBuf, sizeof(OutBuf));
+ dw := MemAdd;  CopyMemory(@InpBuf[0], @dw, 4);
+ dw := MemSize; CopyMemory(@InpBuf[4], @dw, 4);
+ CopyMemory(@InpBuf[8], Buf, MemSize);
+ IOCode := CTL_CODE($022,$807,0,0);
+ Result := DeviceIoControl(hDriver, IOCode,
+                        @InpBuf, 8+MemSize,
+                        @OutBuf, sizeof(OutBuf),
+                        BytesReturned, nil);
+ CloseHandle(hDriver);
+end;
+
+function TAVZDriver.CallDriver_GET_CPU_176REG: dword;
+var
+ hDriver : THandle;
+ BytesReturned : Cardinal;
+ IOCode, dw : DWord;
+ Res        : boolean;
+begin
+ Result := 0;
+ if not(Loaded) then exit;
+ // Открываем драйвер
+ hDriver := CreateFile(PChar(DriverLinkName),GENERIC_READ, 0, nil, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL,0);
+ if hDriver = INVALID_HANDLE_VALUE then exit;
+ dw := 0;
+ IOCode := CTL_CODE($022,$808,0,0);
+ Res := DeviceIoControl(hDriver, IOCode,
+                        @dw, sizeof(dw),
+                        @dw, sizeof(dw),
+                        BytesReturned, nil);
+ if not(Res) then Result := 0
+  else Result := dw;
+ CloseHandle(hDriver);
+end;
+
+function TAVZDriver.CallDriver_IOCTL_Z_SETTRUSTEDPID: boolean;
+var
+ hDriver : THandle;
+ BytesReturned : Cardinal;
+ InpBuf, OutBuf : array[0..500] of byte;
+ IOCode, dw, X, X1, X2 : DWord;
+ Res        : boolean;
+begin
+ Result := false;
+ if not(Loaded) then exit;
+ // Открываем драйвер
+ hDriver := CreateFile(PChar(DriverLinkName),GENERIC_READ, 0, nil, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL,0);
+ if hDriver = INVALID_HANDLE_VALUE then exit;
+ ZeroMemory(@InpBuf, sizeof(InpBuf));
+ ZeroMemory(@OutBuf, sizeof(OutBuf));
+ dw := GetCurrentProcessId;  CopyMemory(@InpBuf[0], @dw, 4);
+ X1 := random(1500) + 1;
+ X2 := random(1500) + 1;
+ X  := (X1+X2+5)*X2;
+ dw := X;  CopyMemory(@InpBuf[4], @dw, 4);
+ dw := X1; CopyMemory(@InpBuf[8], @dw, 4);
+ dw := X2; CopyMemory(@InpBuf[12], @dw, 4);
+ IOCode := CTL_CODE($022,$809,0,0);
+ Result := DeviceIoControl(hDriver, IOCode,
+                        @InpBuf, 16,
+                        @OutBuf, sizeof(OutBuf),
+                        BytesReturned, nil);
+ CloseHandle(hDriver);
+end;
+
+end.

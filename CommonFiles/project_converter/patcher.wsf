@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<job>
+	<runtime>
+		<description>This script performs patching of VC 2005 projects</description>
+		<named 
+			name="src" 
+			helpstring="a VC 2005 project file to be patched" 
+			type="string"
+			required="true" />
+		<named
+			name="dst" 
+			helpstring="a new VC 2005 project file name" 
+			type="string" 
+			required="false" />
+		<named
+			name="outdir" 
+			helpstring="an absolute path to a directory with out_* and temp_* directories"
+			type="string" 
+			required="false" />
+		<named 
+			name="overwrite" 
+			helpstring="overwrite the file if exists" 
+			type="boolean"
+			required="false" />
+		<named 
+			name="correct" 
+			helpstring="correct a project name according to file name"
+			type="boolean" 
+			required="false" />
+		<example>Example:
+patcher.wsf /src:c:\foo.vsproj /dst:c:\foo_new.vcproj /outdir:c:\</example>
+	</runtime>
+
+<script language="JScript">
+<![CDATA[
+var g_source = "";
+var g_short_source = "";
+var g_dynamic_runtime = true;
+var g_regExpDll = /DebugDll|ReleaseDll|Debug Dll|Release Dll/ig;
+var g_config_names = null;
+
+function getRTLName( opt ) {
+  switch( opt ) {
+    case "0" : return "Multi-threaded Release Static";
+    case "1" : return "Multi-threaded Debug Static";
+    case "2" : return "Multi-threaded Release Dll";
+    case "3" : return "Multi-threaded Debug Dll";
+    case "4" : return "Single-threaded Release Static";
+    case "5" : return "Single-threaded Debug Static";
+    case "6" : return "Single-threaded Release Dll";
+    case "7" : return "Single-threaded Debug Dll";
+    default  : return opt;
+  }
+}
+
+
+function isRTLStatic( opt ) {
+  switch( opt ) {
+    case "0" : /* "Multi-threaded Release Static";  */
+    case "1" : /* "Multi-threaded Debug Static";    */
+    case "4" : /* "Single-threaded Release Static"; */
+    case "5" : /* "Single-threaded Debug Static";   */ return true;
+    default  : return false;
+  }
+}
+
+
+function isRTLDynamic( opt ) {
+  switch( opt ) {
+    case "2" : /* "Multi-threaded Release Dll";  */
+    case "3" : /* "Multi-threaded Debug Dll";    */
+    case "6" : /* "Single-threaded Release Dll"; */
+    case "7" : /* "Single-threaded Debug Dll";   */ return true;
+    default  : return false;
+  }
+}
+
+
+function susp_warn( name, rtl, pnt ) {
+	var warn = "\t\t\t\tWARNING! suspicious configuration, point" + pnt + " ";
+	if ( rtl )
+		warn = warn + "with 'RuntimeLibrary' == " + getRTLName(rtl);
+	else
+		warn = warn + "(\"VCCLCompilerTool\" is not used)";
+	WScript.Echo( warn );
+}
+
+function to_bool( val ) {
+	if ( (val == null) || (val == "false") || (val == "0") )
+		return false;
+	if ( (val == "true") || (val == "1") )
+		return true;
+	return true;
+}
+
+
+function setConfigurationName( conf, compilerTool ) {
+	var isExecutable = conf.getAttribute ( "ConfigurationType" ) == "1";
+	if ( isExecutable )
+		return;
+
+	var name = conf.getAttribute ( "Name" );
+
+	var runTime = null;
+	if ( compilerTool ) 
+	  runTime = compilerTool.getAttribute ( "RuntimeLibrary" ); 
+
+	var isStatic = false;
+	if ( name.match(g_regExpDll) )
+		isStatic = false;
+	else if ( name.match(/DebugS|ReleaseS/i) )
+		isStatic = true;
+	else if ( name.match(/Release_SMR/i) )
+		isStatic = true;
+	else if ( name.match(/Release_SSR/i) )
+		isStatic = true;
+	else if ( name.match(/Debug_SMD/i) )
+		isStatic = true;
+	else if ( name.match(/Debug_SSD/i) )
+		isStatic = true;
+	else if ( name.match(/Release_DMR/i) )
+		isStatic = false;
+	else if ( name.match(/Release_DSR/i) )
+		isStatic = false;
+	else if ( name.match(/Debug_DMD/i) )
+		isStatic = false;
+	else if ( name.match(/Debug_DSD/i) )
+		isStatic = false;
+	else if ( name.match(/Debug|Release/i) )
+		isStatic = g_dynamic_runtime ? false : true;
+	else {
+		susp_warn( name, runTime, "1" );
+		return false;
+	}
+	
+	var warning = null;
+	if ( runTime ) {
+		if ( (!isStatic && isRTLStatic(runTime)) || (isStatic && isRTLDynamic(runTime)) )
+			warning =  "\t\t\t\tWARNING! wrong 'RuntimeLibrary' == " + getRTLName(runTime);
+	}
+
+	var idx = name.indexOf( "|" );
+	var plaform = name.substr( idx+1 );
+	var oldName = name;
+	name = name.substr( 0, idx );
+
+	var confName = "";
+	var rtl = "-1";
+	
+	if ( isStatic ) {
+		switch ( name.toLowerCase() ) {
+			case "debug"                         : rtl = "1"; confName = "DebugS";                  break;
+			case "debugs"                        : rtl = "1"; confName = "DebugS";                  break;
+			case "debugdll"                      : rtl = "3"; confName = "Debug";                   break;
+			case "debug dll"                     : rtl = "3"; confName = "Debug";                   break;
+			case "debug mbcs"                    : rtl = "1"; confName = "DebugS MBCS";             break;
+			case "debug_smd"                     : rtl = "1"; confName = "Debug_SMD";               break;
+			case "debug_ssd"                     : rtl = "1"; confName = "Debug_SSD";               break;
+			case "debug_dmd"                     : rtl = "3"; confName = "Debug_DMD";               break;
+			case "unicode debug"                 : rtl = "1"; confName = "DebugUS";                 break;
+			case "debug unicode"                 : rtl = "1"; confName = "DebugUS";                 break;
+			case "unicode debugdll"              : rtl = "3"; confName = "DebugU";                  break;
+			case "unicode debug dll"             : rtl = "3"; confName = "DebugU";                  break;
+			case "debug unicode dll"             : rtl = "3"; confName = "DebugU";                  break;
+			case "unicode debug mindependency"   : rtl = "1"; confName = "DebugUS MinDependency";   break;
+			case "release"                       : rtl = "0"; confName = "ReleaseS";                break;
+			case "releases"                      : rtl = "0"; confName = "ReleaseS";                break;
+			case "releasedll"                    : rtl = "2"; confName = "Release";                 break;
+			case "release dll"                   : rtl = "2"; confName = "Release";                 break;
+			case "release_smr"                   : rtl = "0"; confName = "Release_SMR";             break;
+			case "release_dmr"                   : rtl = "2"; confName = "Release_DMR";             break;
+			case "release_ssr"                   : rtl = "0"; confName = "Release_SSR";             break;
+			case "release mbcs"                  : rtl = "0"; confName = "ReleaseS MBCS";           break;
+			case "releasewithtrace"              : rtl = "0"; confName = "ReleaseS WithTrace";      break;
+			case "release minsize"               : rtl = "0"; confName = "ReleaseS MinSize";        break;
+			case "release mindependency"         : rtl = "0"; confName = "ReleaseS MinDependency";  break;
+			case "unicode release"               : rtl = "0"; confName = "ReleaseUS";               break;
+			case "release unicode"               : rtl = "0"; confName = "ReleaseUS";               break;
+			case "unicode releasedll"            : rtl = "2"; confName = "ReleaseU";                break;
+			case "unicode release dll"           : rtl = "2"; confName = "ReleaseU";                break;
+			case "release unicode dll"           : rtl = "2"; confName = "ReleaseU";                break;
+			case "unicode release minsize"       : rtl = "1"; confName = "DebugUS MinSize";         break;
+			case "unicode release mindependency" : rtl = "0"; confName = "ReleaseUS MinDependency"; break;
+			case "unicode release minsize"       : rtl = "0"; confName = "ReleaseUS MinSize";       break;
+			default                              : susp_warn( oldName, runTime, "2" );              return false;	
+		}
+	}
+	else {
+		switch ( name.toLowerCase() ) {
+			case "debug"                         : rtl = "3"; confName = "Debug";                  break;
+			case "debugs"                        : rtl = "1"; confName = "DebugS";                 break;
+			case "debugdll"                      : rtl = "3"; confName = "Debug";                  break;
+			case "debug dll"                     : rtl = "3"; confName = "Debug";                  break;
+			case "debug mbcs"                    : rtl = "3"; confName = "Debug MBCS";             break;
+			case "debug_smd"                     : rtl = "1"; confName = "Debug_SMD";              break;
+			case "debug_ssd"                     : rtl = "1"; confName = "Debug_SSD";              break;
+			case "debug_dmd"                     : rtl = "3"; confName = "Debug_DMD";              break;
+			case "unicode debug"                 : rtl = "3"; confName = "DebugU";                 break;
+			case "debug unicode"                 : rtl = "3"; confName = "DebugU";                 break;
+			case "unicode debugdll"              : rtl = "3"; confName = "DebugU";                 break;
+			case "unicode debug dll"             : rtl = "3"; confName = "DebugU";                 break;
+			case "debug unicode dll"             : rtl = "3"; confName = "DebugU";                 break;
+			case "unicode debug mindependency"   : rtl = "3"; confName = "DebugU MinDependency";   break;
+			case "release"                       : rtl = "2"; confName = "Release";                break;
+			case "releases"                      : rtl = "0"; confName = "ReleaseS";               break;
+			case "releasedll"                    : rtl = "2"; confName = "Release";                break;
+			case "release dll"                   : rtl = "2"; confName = "Release";                break;
+			case "release_smr"                   : rtl = "0"; confName = "Release_SMR";            break;
+			case "release_dmr"                   : rtl = "2"; confName = "Release_DMR";            break;
+			case "release_ssr"                   : rtl = "0"; confName = "Release_SSR";            break;
+			case "release mbcs"                  : rtl = "2"; confName = "Release MBCS";           break;
+			case "releasewithtrace"              : rtl = "2"; confName = "Release WithTrace";      break;
+			case "release mindependency"         : rtl = "2"; confName = "Release MinDependency";  break;
+			case "release minsize"               : rtl = "2"; confName = "Release MinSize";        break;
+			case "unicode release"               : rtl = "2"; confName = "ReleaseU";               break;
+			case "release unicode"               : rtl = "2"; confName = "ReleaseU";               break;
+			case "unicode releasedll"            : rtl = "2"; confName = "ReleaseU";               break;
+			case "unicode release dll"           : rtl = "2"; confName = "ReleaseU";               break;
+			case "release unicode dll"           : rtl = "2"; confName = "ReleaseU";               break;
+			case "unicode release minsize"       : rtl = "3"; confName = "DebugU MinSize";         break;
+			case "unicode release mindependency" : rtl = "2"; confName = "ReleaseU MinDependency"; break;
+			case "unicode release minsize"       : rtl = "2"; confName = "ReleaseU MinSize";       break;
+			default                              : susp_warn( oldName, runTime, "2" );return false;	
+		}
+	}
+	
+	var changed = false;
+	if ( compilerTool && (runTime != rtl) ) {
+		changed = true;
+		compilerTool.setAttribute ( "RuntimeLibrary", rtl );
+		var from   = getRTLName(runTime);
+		var to     = getRTLName(rtl);
+		var output = "\t\t\t\tINFO! 'RuntimeLibrary' option is changed from '" + from + "' to '" + to + "'";
+		WScript.Echo( output );
+	}
+	else if ( warning )
+		WScript.Echo( warning );
+		
+	if ( confName != name ) {
+		changed = true;
+		conf.setAttribute ( "Name", confName + "|" + plaform );
+		var output = "\t\t\t\tINFO! configuration is renamed to '" + confName  + "|" + plaform + "'";
+		WScript.Echo( output );
+	}
+}
+
+function patchConfiguration( conf, path, projectPath ) {
+	var postBuild = null;
+	var customBuild = null;
+	var tools = conf.getElementsByTagName ( "Tool" ); 
+	var compilerTool = null;
+	WScript.Echo( "\t\t\tConf - " + conf.getAttribute("Name") );
+	for ( var i=0; i< tools.length; i++ ) {
+		var def = null;
+		//var ext = null;
+		var tool = tools.item(i);
+		var name = tool.getAttribute( "Name" );
+		switch ( name ) {
+			case "VCMIDLTool":
+				tool.setAttribute ( "TypeLibraryName", "$(OutDir)\\$(TargetName).tlb" );
+				break;
+			case "VCCLCompilerTool":
+				compilerTool = tool;
+//				tool.setAttribute ( "PrecompiledHeaderFile", "$(IntDir)\\$(TargetName).pch" );
+//				tool.setAttribute ( "AssemblerListingLocation", "$(IntDir)\\" );
+//				tool.setAttribute ( "ObjectFile", "$(IntDir)\\" );
+//				tool.setAttribute ( "ProgramDataBaseFileName", "$(IntDir)\\" );
+
+				tool.removeAttribute("PrecompiledHeaderFile"); // <inherit from parent or project defaults>
+				tool.removeAttribute("AssemblerListingLocation"); // <inherit from parent or project defaults>
+				tool.removeAttribute("ObjectFile"); // <inherit from parent or project defaults>
+				tool.removeAttribute("ProgramDataBaseFileName"); // <inherit from parent or project defaults>
+
+				tool.setAttribute ( "BrowseInformation", "1" );
+				//tool.setAttribute ( "DebugInformationFormat", "3" );
+				tool.setAttribute ( "CompileAs", "0" );
+				def = tool.getAttribute( "PreprocessorDefinitions" );
+				var no_sec = /_CRT_SECURE_NO_DEPRECATE/ig
+				if ( !def.match(no_sec) )
+					def = def + ";_CRT_SECURE_NO_DEPRECATE";
+				//var no_wspr = /_CRT_NON_CONFORMING_SWPRINTFS/ig
+				//if ( !def.match(no_wspr) )
+				//	def = def + ";_CRT_NON_CONFORMING_SWPRINTFS";
+				tool.setAttribute ( "PreprocessorDefinitions", def );
+				break;
+			case "VCLinkerTool":  	
+				//ext = fsObj.GetExtensionName ( tool.getAttribute ( "OutputFile" ) );
+
+//				tool.setAttribute ( "OutputFile", "$(OutDir)\\$(ProjectName)." + ext );
+				tool.removeAttribute("OutputFile"); // <inherit from parent or project defaults>
+
+				tool.setAttribute ( "AdditionalLibraryDirectories", "$(OutDir)" );
+
+				var libs = tool.getAttribute( "AdditionalDependencies" );
+				if ( libs ) {
+					var re0 = /kldtser.lib/i;
+					var re1 = /swm.lib/i;
+					libs = libs.replace( re0, "serialize.lib" );
+					libs = libs.replace( re1, "swmanager.lib" );
+					tool.setAttribute( "AdditionalDependencies", libs );
+				}
+				tool.setAttribute ( "GenerateManifest", "false" );
+				tool.setAttribute ( "GenerateDebugInformation", "true" );
+//				tool.setAttribute ( "ProgramDatabaseFile", "$(OutDir)\\$(TargetName).pdb" );
+				tool.removeAttribute("ProgramDatabaseFile"); // <inherit from parent or project defaults>				
+				tool.setAttribute ( "BaseAddress", "" );
+				var addOpts = tool.getAttribute ( "AdditionalOptions" );
+				if ( addOpts != null ) {
+					var regExp = /\/IGNORE:6004/g;
+					addOpts = addOpts.replace ( regExp, "" ); 
+					tool.setAttribute ( "AdditionalOptions", addOpts );
+				}
+//				tool.setAttribute ( "ImportLibrary", "" );
+				tool.removeAttribute("ImportLibrary"); // <inherit from parent or project defaults>
+//				var mapFile = tool.getAttribute( "MapFileName" );
+//				if ( mapFile != null ) {
+//					tool.setAttribute( "MapFileName", "$(OutDir)\\$(TargetName).map" );
+//				}
+				tool.removeAttribute("MapFileName"); // <inherit from parent or project defaults>
+				if ( to_bool(tool.getAttribute("IgnoreAllDefaultLibraries")) )
+					tool.setAttribute( "GenerateManifest", "false" );
+				else
+					tool.setAttribute( "GenerateManifest", "true" );
+				break;
+			case "VCLibrarianTool":  	
+				//ext = fsObj.GetExtensionName ( tool.getAttribute ( "OutputFile" ) );
+
+//				tool.setAttribute ( "OutputFile", "$(OutDir)\\$(ProjectName)." + ext );
+				tool.removeAttribute("OutputFile"); // <inherit from parent or project defaults>
+
+				break;
+			case "VCBscMakeTool":
+//	 			tool.setAttribute ( "OutputFile", "$(IntDir)\\$(TargetName).bsc" );
+				tool.removeAttribute("OutputFile"); // <inherit from parent or project defaults>				
+	 			break;
+			case "VCPostBuildEventTool":
+				postBuild = tool;
+				break;				
+			case "VCCustomBuildTool": 
+				customBuild = tool;
+				break;
+		}	
+	}
+	setConfigurationName ( conf, compilerTool );
+	//if ( compilerTool != null ) {
+	  conf.setAttribute ( "OutputDirectory", path + "out_$(PlatformName)\\$(ConfigurationName)" );
+	  conf.setAttribute ( "IntermediateDirectory", path + "temp_$(PlatformName)\\$(ConfigurationName)\\"+projectPath +"$(ProjectName)" );
+	//}
+
+	if ( customBuild == null )
+		return;
+
+	if ( postBuild == null ) {
+ 		custumBuild.setAttribute ( "Name", "VCPostBuildEventTool" );
+		return;
+	}
+	if ( customBuild.getAttribute("Description") != null ) {
+		var description = postBuild.getAttribute ( "Description" );
+		if ( description != null  )
+			description = description + ";" + customBuild.getAttribute ( "Description" );
+		else
+			description = customBuild.getAttribute ( "Description" );
+		postBuild.setAttribute ( "Description", description );
+	}
+
+	if ( customBuild.getAttribute ( "CommandLine" ) != null ) {
+
+		var commandLine = postBuild.getAttribute ( "CommandLine" );
+		if ( commandLine != null ) {
+			commandLine = commandLine + "\n" + customBuild.getAttribute ( "CommandLine" );	
+		}
+		else {
+			commandLine = customBuild.getAttribute ( "CommandLine" );	
+		}
+		var regExp = /copy/i;
+		var begin = commandLine.search ( regExp );
+		if ( begin != -1 ) {
+			regExp = /\n/i;
+			var end	= commandLine.search ( regExp );
+			if ( end != -1 )
+				commandLine = commandLine.substr ( 0, begin ) + commandLine.substr ( end + 1 );
+			
+		}
+		if ( commandLine.length > 0 ) {
+			postBuild.setAttribute ( "CommandLine", commandLine );
+		}
+		else {
+			if ( postBuild.getAttribute ( "CommandLine" ) != null )	{
+				postBuild.setAttribute ( "CommandLine", "" );
+			}
+			if ( postBuild.getAttribute ( "Description" ) != null )	{
+				postBuild.setAttribute ( "Description", "" );		
+			}	
+		}
+	}
+	customBuild.parentNode.removeChild ( customBuild );
+}
+
+
+var args = WScript.Arguments;
+
+if ( !args.Named.Exists ( "src" ) ) { //|| !args.Named.Exists ( "outdir" )) {
+	args.ShowUsage ();
+	WScript.Quit (1);
+}
+
+g_source = args.Named.Item ( "src" );
+var dest = g_source;
+if ( args.Named.Exists ( "dst" ) ) {
+	dest = args.Named.Item ( "dst" );
+}
+
+var fsObj = new ActiveXObject ( "Scripting.FileSystemObject" );
+        
+g_short_source = fsObj.GetFileName( g_source );
+
+var path = fsObj.GetDriveName ( g_source ) + "\\";
+if ( args.Named.Exists ( "outdir" ) ) {
+	path = args.Named.Item ( "outdir" );
+}
+
+if ( !fsObj.FileExists ( g_source ) ) {
+	WScript.Echo( "\t\t\tERROR! File \"" + g_source + "\" doesn't exist!");
+	WScript.Quit ( 1 );
+}
+
+if ( fsObj.FileExists ( dest ) && !args.Named.Item ( "overwrite" ) ) {
+	WScript.Echo( "\t\t\tERROR! File \"" + dest + "\" already exists!");
+	WScript.Quit (1);
+}
+
+var dirName = fsObj.GetParentFolderName ( fsObj.GetAbsolutePathName ( g_source ) );
+
+var pathName = fsObj.GetAbsolutePathName ( path );
+
+if ( pathName == null ) {
+	WScript.Echo( "\t\t\tERROR! Path \"" + path + "\" doesn't exist!");
+	WScript.Quit (1);
+}
+
+
+if ( fsObj.GetDriveName ( dirName ) != fsObj.GetDriveName ( pathName ) ) {
+	WScript.Echo( "\t\t\tERROR! Can't make relative path to another drive!");
+	WScript.Quit (1);
+}
+
+var pSlices = pathName.split ( "\\" );
+var dnSlices = dirName.split ( "\\" );
+var i = 0;
+
+while ( pSlices [i] == dnSlices[i] ) {
+	i++; 
+}
+
+var j = i;
+path = "";
+for ( ; i < dnSlices.length;i++ ) {
+	path = path + "..\\";
+}
+i = j;
+for ( ; i < pSlices.length;i++ ) {
+	if ( pSlices [j] != "" )
+		path = path + pSlices [i] + "\\";
+}
+
+i = j;
+dirName = fsObj.GetParentFolderName ( dirName );
+dnSlices = dirName.split ( "\\" );
+i = 0;
+
+while ( i < pSlices.length && i < dnSlices.length && pSlices [i] == dnSlices[i] ) {
+	i++; 
+}
+
+var projectPath = "";
+for ( ; i < dnSlices.length;i++ ) {
+	projectPath = projectPath + dnSlices [i] + "\\";
+}
+                              
+var xml = new ActiveXObject ( "msxml2.DOMDocument.5.0" );
+xml.async = false;
+xml.resolveExternals = false;
+xml.load( g_source );
+
+if ( xml.parseError.errorCode != 0 ) {
+	var err = xml.parseError;
+	WScript.Echo( "\t\t\tERROR! Can't parse the XML file: " + err.reason );
+	WScript.Quit( 1 );
+} 
+
+if ( args.Named.Exists("correct") && args.Named.Item("correct") ) {
+	var newProjectName = fsObj.GetBaseName ( dest );
+	xml.documentElement.setAttribute ( "Name", newProjectName );
+}
+
+var rootelem = xml.documentElement;
+rootelem.setAttribute("SccProjectName", "Perforce Project");
+rootelem.setAttribute("SccProvider", "MSSCCI:Perforce SCM");
+
+var confs = xml.getElementsByTagName( "Configuration" );
+for ( var i = 0;  i < confs.length; i++ ) {
+	var conf = confs.item(i).getAttribute( "Name" );
+	if ( conf.match(g_regExpDll) ) {
+		g_dynamic_runtime = false;
+		break;
+	}
+}
+
+for ( var i = 0; i < confs.length; i++ )
+	patchConfiguration( confs.item(i), path, projectPath );
+
+xml.save( dest );
+
+]]>
+</script>
+</job>
+
+

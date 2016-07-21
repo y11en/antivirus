@@ -1,0 +1,4 @@
+// ***** AdvWare.MediaBack *****
+begin
+ AddEvAlarmByCLSID('41943050-65CC-454B-81E4-9C8A9D7CBAEA', AScriptName, 'localsplnet.dll');
+end.

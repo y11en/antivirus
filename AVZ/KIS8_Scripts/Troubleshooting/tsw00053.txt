@@ -1,0 +1,24 @@
+// $AVZ1566
+//$ Рабочий стол - заблокировано отображение иконки Мой компьютер
+// Функция поиска проблемы                                                                          
+function Check : dword;
+begin
+ Result := 0;
+ // Блокировка
+ if RegKeyIntParamRead('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Policies\NonEnum', '{20D04FE0-3AEA-1069-A2D8-08002B30309D}') > 0 then begin
+   Result := 3;
+   exit;
+  end;
+ if RegKeyIntParamRead('HKLM', 'Software\Microsoft\Windows\CurrentVersion\Policies\NonEnum', '{20D04FE0-3AEA-1069-A2D8-08002B30309D}') > 0 then begin
+   Result := 3;
+   exit;
+  end;
+end;
+
+// Функция исправления проблемы                                                                          
+function Fix : dword;
+begin
+ RegKeyParamDel('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Policies\NonEnum', '{20D04FE0-3AEA-1069-A2D8-08002B30309D}');
+ RegKeyParamDel('HKLM', 'Software\Microsoft\Windows\CurrentVersion\Policies\NonEnum', '{20D04FE0-3AEA-1069-A2D8-08002B30309D}');
+ Result := 0;
+end;

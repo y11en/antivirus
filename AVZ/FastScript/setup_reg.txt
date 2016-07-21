@@ -1,0 +1,134 @@
+    Installing full version of FastScript after the trial install.
+
+ATTENTION! Follow these instructions if you want to install registered files 
+over the trial version of FastScript. 
+
+Delphi 4.0
+
+1. Copy fs_iinterpreter.pas and fs_iilparser.pas to FastScript\Source folder.
+2. Run Delphi 4.
+3. Select menu item Component->Install Packages. Choose "FastScript 1.0" and press 
+"Remove" button. Close the window.
+4. Select menu item File->Open Project. Open the file fs4.dpk from 
+FastScript\Source folder.
+5. Press "Compile" button.
+6. Select menu item File->Open Project. Open the file dclfs4.dpk from 
+FastScript\Source folder.
+7. Press "Compile" button and then "Install" button.
+8. Close Delphi 4. Choose "No" when Delphi asks to save changes.
+9. Copy fs4.bpl file from FastScript\Source to Windows\System32 (or
+Windows\System for Windows 9x/Me).
+
+Delphi 5.0
+
+1. Copy fs_iinterpreter.pas and fs_iilparser.pas to FastScript\Source folder.
+2. Run Delphi 5.
+3. Select menu item Component->Install Packages. Choose "FastScript 1.0" and press 
+"Remove" button. Close the window.
+4. Select menu item File->Open Project. Open the file fs5.dpk from 
+FastScript\Source folder.
+5. Press "Compile" button.
+6. Select menu item File->Open Project. Open the file dclfs5.dpk from 
+FastScript\Source folder.
+7. Press "Compile" button and then "Install" button.
+8. Close Delphi 5. Choose "No" when Delphi asks to save changes.
+9. Copy fs5.bpl file from Delphi5\Projects\Bpl to Windows\System32 (or
+Windows\System for Windows 9x/Me).
+
+Delphi 6.0
+
+1. Copy fs_iinterpreter.pas and fs_iilparser.pas to FastScript\Source folder.
+2. Run Delphi 6.
+3. Select menu item Component->Install Packages. Choose "FastScript 1.0" and press 
+"Remove" button. Close the window.
+4. Select menu item File->Open Project. Open the file fs6.dpk from 
+FastScript\Source folder.
+5. Press "Compile" button.
+6. Select menu item File->Open Project. Open the file dclfs6.dpk from 
+FastScript\Source folder.
+7. Press "Compile" button and then "Install" button.
+8. Close Delphi 6. Choose "No" when Delphi asks to save changes.
+9. Copy fs6.bpl file from Delphi6\Projects\Bpl to Windows\System32 (or
+Windows\System for Windows 9x/Me).
+
+Delphi 7.0
+
+1. Copy fs_iinterpreter.pas and fs_iilparser.pas to FastScript\Source folder.
+2. Run Delphi 7.
+3. Select menu item Component->Install Packages. Choose "FastScript 1.0" and press 
+"Remove" button. Close the window.
+4. Select menu item File->Open Project. Open the file fs7.dpk from 
+FastScript\Source folder.
+5. Press "Compile" button.
+6. Select menu item File->Open Project. Open the file dclfs7.dpk from 
+FastScript\Source folder.
+7. Press "Compile" button and then "Install" button.
+8. Close Delphi 7. Choose "No" when Delphi asks to save changes.
+9. Copy fs7.bpl file from Delphi6\Projects\Bpl to Windows\System32 (or
+Windows\System for Windows 9x/Me).
+
+C++ Builder 4.0
+
+1. Copy fs_iinterpreter.pas and fs_iilparser.pas to FastScript\Source folder.
+2. Run C++Builder 4.
+3. Select menu item Component->Install Packages. Choose "FastScript 1.0" and press 
+"Remove" button. Close the window.
+4. Select menu item File->Open Project. Open the file fs4.bpk from 
+FastScript\Source folder.
+5. Press "Compile" button and then "Install" button.
+6. Close C++Builder 4. Choose "No" when Builder asks to save changes.
+
+
+C++ Builder 5.0
+
+1. Copy fs_iinterpreter.pas and fs_iilparser.pas to FastScript\Source folder.
+2. Run C++Builder 5.
+3. Select menu item Component->Install Packages. Choose "FastScript 1.0" and press 
+"Remove" button. Close the window.
+4. Select menu item File->Open Project. Open the file fs5.bpk from 
+FastScript\Source folder.
+5. Press "Compile" button and then "Install" button.
+6. Close C++Builder 5. Choose "No" when Builder asks to save changes.
+
+C++ Builder 6.0
+
+1. Copy fs_iinterpreter.pas and fs_iilparser.pas to FastScript\Source folder.
+2. Run C++Builder 6.
+3. Select menu item Component->Install Packages. Choose "FastScript 1.0" and press 
+"Remove" button. Close the window.
+4. Select menu item File->Open Project. Open the file fs6.bpk from 
+FastScript\Source folder.
+5. Press "Compile" button and then "Install" button.
+6. Close C++Builder 6. Choose "No" when Builder asks to save changes.
+
+Delphi 6.0 CLX
+
+1. Copy fs_iinterpreter.pas and fs_iilparser.pas to FastScript\Source folder.
+2. Run Delphi 6.
+3. Select menu item Component->Install Packages. Choose "FastScript 1.0" and press 
+"Remove" button. Close the window.
+4. Select menu item File->Open Project. Open the file fsx.dpk from 
+FastScript\Source folder.
+5. Press "Compile" button.
+6. Select menu item File->Open Project. Open the file dclfsx.dpk from 
+FastScript\Source folder.
+7. Press "Compile" button and then "Install" button.
+8. Close Delphi 6. Choose "No" when Delphi asks to save changes.
+9. Copy fs6.bpl file from Delphi6\Projects\Bpl to Windows\System32 (or
+Windows\System for Windows 9x/Me).
+
+Delphi 7.0 CLX
+
+1. Copy fs_iinterpreter.pas and fs_iilparser.pas to FastScript\Source folder.
+2. Run Delphi 7.
+3. Select menu item Component->Install Packages. Choose "FastScript 1.0" and press 
+"Remove" button. Close the window.
+4. Select menu item File->Open Project. Open the file fsx.dpk from 
+FastScript\Source folder.
+5. Press "Compile" button.
+6. Select menu item File->Open Project. Open the file dclfsx.dpk from 
+FastScript\Source folder.
+7. Press "Compile" button and then "Install" button.
+8. Close Delphi 7. Choose "No" when Delphi asks to save changes.
+9. Copy fs7.bpl file from Delphi7\Projects\Bpl to Windows\System32 (or
+Windows\System for Windows 9x/Me).

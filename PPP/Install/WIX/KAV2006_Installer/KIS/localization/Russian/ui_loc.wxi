@@ -1,0 +1,7 @@
+<Include>
+  <?define Localization = "ru" ?>
+  <?define Language = "1049" ?>
+  <?define Codepage = "1251" ?>
+  <?define UpdaterRegion = "Russia" ?>
+  <?define MainDlgBrandingWidth = "270" ?>
+</Include>

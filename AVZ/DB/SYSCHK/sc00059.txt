@@ -1,0 +1,5 @@
+// ***** AdvWare.Adstart *****
+begin
+ AddEvAlarmByCLSID('6B8C17EE-D954-416F-8267-D2469F446386',AScriptName,'SWin32.DLL');
+ AddEvAlarmByCLSID('9473DDCA-1E6B-40EA-8AB4-9F83DE967D99',AScriptName,'SWin32.DLL');
+end.

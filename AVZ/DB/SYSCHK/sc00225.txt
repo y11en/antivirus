@@ -1,0 +1,8 @@
+// ***** Backdoor.Agent *****
+var
+ S : string;
+ i : integer;
+begin
+ for i := 7000 to 9000 do
+  AddEvAlarmByCLSID('CF021F40-3E14-23A5-CBA2-71717765'+IntToStr(i),'Backdoor.Agent.ah','qwe'+IntToStr(i)+'.dll');
+end.

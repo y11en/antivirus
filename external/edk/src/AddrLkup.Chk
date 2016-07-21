@@ -1,0 +1,175 @@
+// --addrlkup.chk---------------------------------------------------------------
+//
+//  Functions used in address mapping.
+// 
+// Copyright (C) Microsoft Corp. 1986-1996.  All Rights Reserved.
+// -----------------------------------------------------------------------------
+
+#ifndef DEBUG
+
+#define CHK_HrFindExchangeGlobalAddressList(a,b,c)   NOERROR
+#define CHK_HrGWResolveAddressW(a,b,c,d,e)     NOERROR
+#define CHK_HrGWResolveAddressA(a,b,c,d,e)     NOERROR
+#define CHK_HrCheckForTypeW(a,b,c)              NOERROR
+#define CHK_HrCheckForTypeA(a,b,c)              NOERROR
+#define CHK_HrGWResolveProxyW(a,b,c,d,e,f)     NOERROR
+#define CHK_HrGWResolveProxyA(a,b,c,d,e,f)     NOERROR
+
+#else
+
+//$--CHK_HrFindExchangeGlobalAddressList---------------------------------------------
+// Returns the entry ID of the global address list container in the address
+// book.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrFindExchangeGlobalAddressList( // RETURNS: return code
+    IN LPADRBOOK  lpAdrBook,            // address book pointer
+    OUT ULONG *lpcbeid,                 // pointer to count of bytes in entry ID
+    OUT LPENTRYID *lppeid)              // pointer to entry ID pointer
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_IUNKNOWN_PTR(lpAdrBook) ||
+        !TEST_WRITE_PTR(lpcbeid, sizeof(ULONG)) ||
+        !TEST_WRITE_PTR(lppeid, sizeof(LPENTRYID)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+    
+    return(hr);
+}
+
+//$--CHK_HrGWResolveAddress@---------------------------------------------------
+// Returns the entry ID for the recipient identified by a given address.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrGWResolveAddressW( // RETURNS: return code
+    IN LPABCONT lpGalABCont,        // pointer to GAL container
+    IN LPCWSTR lpszAddress,         // pointer to proxy address
+    OUT BOOL *lpfMapiRecip,         // MAPI recipient
+    OUT ULONG *lpcbEntryID,         // count of bytes in entry ID
+    OUT LPENTRYID *lppEntryID)      // pointer to entry ID
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_IUNKNOWN_PTR(lpGalABCont) ||
+        !TEST_STRINGW_PTR(lpszAddress) ||
+        !TEST_WRITE_PTR(lpfMapiRecip, sizeof(BOOL *)) ||
+        !TEST_WRITE_PTR(lpcbEntryID, sizeof(ULONG *)) ||
+        !TEST_WRITE_PTR(lppEntryID, sizeof(LPENTRYID *)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+__inline static HRESULT CHK_HrGWResolveAddressA( // RETURNS: return code
+    IN LPABCONT lpGalABCont,        // pointer to GAL container
+    IN LPCSTR lpszAddress,          // pointer to proxy address
+    OUT BOOL *lpfMapiRecip,         // MAPI recipient
+    OUT ULONG *lpcbEntryID,         // count of bytes in entry ID
+    OUT LPENTRYID *lppEntryID)      // pointer to entry ID
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_IUNKNOWN_PTR(lpGalABCont) ||
+        !TEST_STRINGA_PTR(lpszAddress) ||
+        !TEST_WRITE_PTR(lpfMapiRecip, sizeof(BOOL *)) ||
+        !TEST_WRITE_PTR(lpcbEntryID, sizeof(ULONG *)) ||
+        !TEST_WRITE_PTR(lppEntryID, sizeof(LPENTRYID *)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+
+//$--CHK_HrCheckForType@--------------------------------------------------------
+//  Check if the passed in string has the requested address type. If so, return
+//  the address value, otherwise fail.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrCheckForTypeW( // RETURNS: return code
+    IN  LPCWSTR  lpszAddrType,    // pointer to address type
+    IN  LPCWSTR  lpszProxy,       // pointer to proxy address
+    OUT LPWSTR * lppszAddress)    // pointer to address pointer
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_STRINGW_PTR(lpszAddrType) ||
+        !TEST_STRINGW_PTR(lpszProxy) ||
+        !TEST_WRITE_PTR(lppszAddress, sizeof(LPWSTR)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+__inline static HRESULT CHK_HrCheckForTypeA( // RETURNS: return code
+    IN  LPCSTR  lpszAddrType,    // pointer to address type
+    IN  LPCSTR  lpszProxy,       // pointer to proxy address
+    OUT LPSTR * lppszAddress)    // pointer to address pointer
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_STRINGA_PTR(lpszAddrType) ||
+        !TEST_STRINGA_PTR(lpszProxy) ||
+        !TEST_WRITE_PTR(lppszAddress, sizeof(LPSTR)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+
+//$--CHK_HrGWResolveProxy------------------------------------------------------
+// Returns the address of a specified type for the recipient identified by
+// a given entry ID.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrGWResolveProxyW( // RETURNS: return code
+    IN  LPADRBOOK   lpAdrBook,      // pointer to address book
+    IN  ULONG       cbeid,          // count of bytes in the entry ID
+    IN  LPENTRYID   lpeid,          // pointer to the entry ID
+    IN  LPCWSTR     lpszAddrType,   // pointer to the address type
+    OUT BOOL *      lpfMapiRecip,   // MAPI recipient
+    OUT LPWSTR *    lppszAddress)   // pointer to the address pointer
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_IUNKNOWN_PTR(lpAdrBook) ||
+        !TEST_READ_PTR(lpeid, cbeid) ||
+        !TEST_STRINGW_PTR(lpszAddrType) ||
+        !TEST_WRITE_PTR(lpfMapiRecip, sizeof(BOOL *)) ||
+        !TEST_WRITE_PTR(lppszAddress, sizeof(LPWSTR)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+__inline static HRESULT CHK_HrGWResolveProxyA( // RETURNS: return code
+    IN  LPADRBOOK   lpAdrBook,      // pointer to address book
+    IN  ULONG       cbeid,          // count of bytes in the entry ID
+    IN  LPENTRYID   lpeid,          // pointer to the entry ID
+    IN  LPCSTR      lpszAddrType,   // pointer to the address type
+    OUT BOOL *      lpfMapiRecip,   // MAPI recipient
+    OUT LPSTR *     lppszAddress)   // pointer to the address pointer
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_IUNKNOWN_PTR(lpAdrBook) ||
+        !TEST_READ_PTR(lpeid, cbeid) ||
+        !TEST_STRINGA_PTR(lpszAddrType) ||
+        !TEST_WRITE_PTR(lpfMapiRecip, sizeof(BOOL *)) ||
+        !TEST_WRITE_PTR(lppszAddress, sizeof(LPSTR)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+
+#endif /*DEBUG*/

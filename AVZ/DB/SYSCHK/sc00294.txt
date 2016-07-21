@@ -1,0 +1,4 @@
+// ***** AdvWare.RedSwoosh *****
+begin
+ AddEvAlarmByCLSID('FF0C042C-98E9-4C36-B2EC-E21FDFDCEF75', AScriptName, 'RSInstaller.dll');
+end.

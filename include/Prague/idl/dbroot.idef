@@ -1,0 +1,143 @@
+forward interface DBROOT;
+typedef DBROOT* hDBROOT;
+
+
+forward struct tFIELD_ID;
+
+
+[
+  version(0)
+  mnemonic(IID_DBROOT)
+  id(64017)
+  c_type_name(hDBROOT)
+]
+interface DBROOT { // Hidden root database interface
+
+  // ------------------------------------
+    typedef tDWORD tPOSITION;
+    typedef tVOID tRECORD;
+
+
+  // ------------------------------------
+    method tERROR Create( tPOSITION* result );
+    method tERROR Insert(
+      tPOSITION* result,
+      tRECORD* what,
+      tPOSITION parent,
+      tFIELD_ID field_id,
+      tRECORD* where,
+      tDWORD mode
+    );
+    method tERROR Remove( tVOID* result, tRECORD* what );
+    method tERROR Delete( tVOID* result, tRECORD* what );
+    method tERROR Step(
+      tPOSITION* result,
+      tPOSITION record,
+      tDWORD mode
+    );
+    method tERROR Find(
+      tPOSITION* result,
+      tPOSITION record,
+      tPTR buffer,
+      tDWORD count,
+      tDWORD mode
+    );
+    method tERROR Connect(
+      tVOID* result,
+      tRECORD* record,
+      hDBROOT connect_root,
+      tPOSITION connect_record
+    );
+    method tERROR Disconnect( tVOID* result, tRECORD* parent );
+    method tERROR Decrement( tVOID* result, tPOSITION record );
+    method tERROR Update(
+      tVOID* result,
+      tRECORD* parent,
+      tRECORD* update
+    );
+    method tERROR CompareSet(
+      tVOID* result,
+      tRECORD* record,
+      tDWORD subtype,
+      tDWORD p_method
+    );
+    method tERROR FieldSeekRead(
+      tDWORD* result,
+      tRECORD* record,
+      tFIELD_ID field,
+      tDWORD offset,
+      tPTR buffer,
+      tDWORD count
+    );
+    method tERROR FieldSeekWrite(
+      tDWORD* result,
+      tRECORD* record,
+      tFIELD_ID field,
+      tDWORD offset,
+      tPTR buffer,
+      tDWORD count
+    );
+    method tERROR FieldSize(
+      tDWORD* result,
+      tRECORD* record,
+      tFIELD_ID field
+    );
+    method tERROR FieldResize(
+      tDWORD* result,
+      tRECORD* record,
+      tFIELD_ID field,
+      tDWORD size
+    );
+    method tERROR FieldOpen(
+      tVOID* result,
+      tRECORD* record,
+      tFIELD_ID field_id,
+      tDWORD mode
+    );
+    method tERROR FieldClose(
+      tVOID* result,
+      tRECORD* record,
+      tFIELD_ID field_id
+    );
+    method tERROR FieldGet(
+      tDWORD* result,
+      tRECORD* record,
+      tFIELD_ID field,
+      tPTR buffer,
+      tDWORD count
+    );
+    method tERROR FieldSet(
+      tDWORD* result,
+      tRECORD* record,
+      tFIELD_ID field,
+      tPTR buffer,
+      tDWORD count
+    );
+    method tERROR FieldAdd(
+      tVOID* result,
+      tRECORD* record,
+      tFIELD_ID field
+    );
+    method tERROR FieldRemove(
+      tVOID* result,
+      tRECORD* record,
+      tFIELD_ID field
+    );
+    method tERROR RecordIndex( tFIELD_ID* result, tRECORD* record );
+    method tERROR RecordFields(
+      tDWORD* result,
+      tRECORD* record,
+      tFIELD_ID* fields,
+      tDWORD size
+    );
+    method tERROR Load(
+      tVOID* result,
+      tRECORD* record,
+      tPOSITION position
+    );
+    method tERROR Unload( tVOID* result, tRECORD* record );
+    method tERROR Lock( tVOID* result );
+    method tERROR Unlock( tVOID* result );
+
+}
+

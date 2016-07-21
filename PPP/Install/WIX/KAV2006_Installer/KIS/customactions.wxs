@@ -1,0 +1,911 @@
+<?xml version="1.0" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<Fragment Id="ServerCustomAction">
+
+		<?include "ver.wxi" ?>
+    <?include "guids.wxi" ?>
+    <?include "products.wxi" ?>
+		<?include "selfdef.wxi"?>
+    
+		<CustomAction Id="SetKLSETUPDIR" BinaryKey="msi_misc.dll" DllEntry="SetSetupDir" Execute="immediate" />
+		<CustomAction Id="SetKLSETUPLOG" Property="KLSETUPLOG" Value="[KLSETUPDIR]setup.log" />
+		<CustomAction Id="SetAVPSETUPREP" Property="AVPSETUPREP" Value="[KLSETUPDIR]avpsetup.rep" />
+
+		<CustomAction Id="SetCurrentTime" BinaryKey="msi_misc.dll" DllEntry="SetCurrentTime"
+			Execute="deferred" Return="ignore" HideTarget="yes" Impersonate="no"/>
+		<!--<CustomAction Id="GetDocumentsFolder" BinaryKey="msi_misc.dll" DllEntry="GetDocumentsFolder"
+			Execute="immediate" Return="ignore"/>-->
+
+		<CustomAction Id="Fix_REINSTALL" Property="REINSTALL" Value="{}" />
+		<CustomAction Id="SetINSTALLDIR" BinaryKey="msi_misc.dll" DllEntry="SetINSTALLDIR"
+			Execute="immediate" Return="ignore"/>
+		<CustomAction Id="SetFeaturesState" BinaryKey="msi_misc.dll" DllEntry="SetFeaturesState"
+			Execute="immediate" Return="ignore"/>
+		<CustomAction Id="SetFeaturesStateUISetProp" BinaryKey="msi_misc.dll" DllEntry="SetFeaturesStateSetProp" Execute="immediate"/>
+		<CustomAction Id="SetFeaturesStateUI" BinaryKey="msi_misc.dll" DllEntry="SetFeaturesStateUI"
+			Execute="immediate" Return="ignore"/>
+
+		<CustomAction Id="SetProductMenuFolderSetProp" Property="SetProductMenuFolder" Value="[ProgramMenuFolder]$(loc.ProductName_NOM)"/>
+		<CustomAction Id="SetProductMenuFolder" BinaryKey="msi_misc.dll" DllEntry="SetProductMenuFolder" Execute="immediate"/>
+
+		<CustomAction Id="GetSettingsVersion" BinaryKey="msi_misc.dll" DllEntry="GetSettingsVersion"
+			Execute="immediate" Return="ignore"/>
+		
+		<CustomAction Id="SetOSFORUPDATER" BinaryKey="msi_misc.dll" DllEntry="SetOS4Updater"
+			Execute="immediate" Return="ignore"/>
+		<CustomAction Id="SetSUPPORTDIRProp" Property="SUPPORTDIR" Value="[TempFolder][ProductCode]\" />
+		<CustomAction Id="$(var.InitProtectionProperty)" BinaryKey="msi_misc.dll" DllEntry="$(var.InitProtectionProperty)" Execute="immediate" Return="ignore"/>
+
+		<CustomAction Id="SetAllowServiceStop" BinaryKey="msi_misc.dll" DllEntry="SetAllowServiceStop" Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="RbSetAllowServiceStop" BinaryKey="msi_misc.dll" DllEntry="RbSetAllowServiceStop" Execute="rollback" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="SetNotAllowServiceStop" BinaryKey="msi_misc.dll" DllEntry="RbSetAllowServiceStop" Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="SetAllowServiceStopAVP6" BinaryKey="msi_misc.dll" DllEntry="SetAllowServiceStopAVP6" Execute="deferred" Return="ignore" Impersonate="no"/>
+
+		<CustomAction Id="UnloadAppSetProp" Property="UnloadApp" Value="Exe=[INSTALLDIR]avp.exe|Cmd=-e -nsp|Dir=[INSTALLDIR]|Wait=1" HideTarget="yes" />
+		<CustomAction Id="UnloadAppAVP6SetProp" Property="UnloadApp" Value="Exe=[AVP6INSTALLDIR]avp.exe|Cmd=-e -nsp|Dir=[AVP6INSTALLDIR]|Wait=1" HideTarget="yes" />
+		<CustomAction Id="UnloadApp" BinaryKey="msi_misc.dll" DllEntry="UnloadApp" Execute="deferred" Impersonate="no" Return="ignore" />
+		<!--<CustomAction Id="UnloadApp" FileKey="avp.exe" ExeCommand="-e" Execute="deferred" Return="ignore" Impersonate="no"/>-->
+		<CustomAction Id="FindApp" BinaryKey="msi_misc.dll" DllEntry="FindApp" Execute="immediate"/>
+
+		<CustomAction Id="SelfUnreg6_r3hook.dll" Directory="SystemFolder"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /z &quot;[AVP6INSTALLDIR]r3hook.dll&quot;" Execute="deferred" Return="ignore" Impersonate="no"></CustomAction>
+		<CustomAction Id="SelfUnreg6_r3hook.dll_X64" Directory="System64Folder"	 ExeCommand="&quot;[System64Folder]msiexec.exe&quot; /z &quot;[AVP6INSTALLDIR]X64\r3hook.dll&quot;" Execute="deferred" Return="ignore" Impersonate="no"></CustomAction>
+
+		<CustomAction Id="SetDeinstall" BinaryKey="msi_misc.dll" DllEntry="SetDeinstall" Execute="deferred" Impersonate="no" Return="ignore" />
+		<CustomAction Id="RbSetDeinstall" BinaryKey="msi_misc.dll" DllEntry="RemoveDeinstall" Execute="rollback" Impersonate="no" Return="ignore" />
+
+		<CustomAction Id="ErrorKAVAppFoundSet"   Property="CAERROR" Value="$(loc.AppFound)"/>
+		<CustomAction Id="ErrorKAVAppFoundWrite" BinaryKey="msi_misc.dll" DllEntry="ReportCAError" Execute="immediate"/>
+		<CustomAction Id="ErrorKAVAppFoundShow" Error="$(loc.AppFound)" />
+
+		<CustomAction Id="ErrorNewKAVAppFoundSet"   Property="CAERROR" Value="$(loc.NewAppFound)"/>
+		<CustomAction Id="ErrorNewKAVAppFoundWrite" BinaryKey="msi_misc.dll" DllEntry="ReportCAError" Execute="immediate"/>
+		<CustomAction Id="ErrorNewKAVAppFoundShow" Error="$(loc.NewAppFound)" />
+
+		<!--<CustomAction Id="CkeckIDSBaseCompatibility" BinaryKey="msi_misc.dll" DllEntry="CkeckIDSBaseCompatibility" Execute="immediate"/>-->
+		<CustomAction Id="SetADDLOCAL" Property="ADDLOCAL" Value="[ADDLOCALPROP]" />
+		<CustomAction Id="SetREMOVE" Property="REMOVE" Value="[REMOVEPROP]" />
+		<CustomAction Id="SetREINSTALLProp" BinaryKey="msi_misc.dll" DllEntry="SetREINSTALLProp" Execute="immediate"/>
+		<CustomAction Id="SetREINSTALL" Property="REINSTALL" Value="[REINSTALLPROP]" />
+		<?ifndef CORPORATE_FEATURES ?>
+		<CustomAction Id="SetListCompetitorsSoftwareProp" Property="CLEANERDATA" Value="Sections=OnlydetectAV,OnlydetectFW,OnlydetectAS,OnlydetectNet|Property=AVFOUND" />
+		<?endif ?>
+		<?if ($(env.product_type) = WKS Or $(env.product_type) = FS) ?>
+		<CustomAction Id="SetListCompetitorsSoftwareProp" Property="CLEANERDATA" Value="Sections=Antivirus,Firewall,Antispam,Network,OnlydetectAV,OnlydetectFW,OnlydetectAS,OnlydetectNet|Property=AVFOUND" />
+		<?endif ?>
+		<CustomAction Id="ListCompetitorsSoftware" BinaryKey="msi_misc.dll" DllEntry="ListCompetitorsSoftware"
+			Execute="immediate" Return="ignore"/>
+    <?ifndef CORPORATE_FEATURES ?>
+    <CustomAction Id="SetListKLSoftwarePropNormal" Property="CLEANERDATA" Value="Sections=Kaspersky,Antivirus,Firewall,Antispam,Network|Property=KLAVFOUND" />
+		<CustomAction Id="SetListKLSoftwarePropSilent" Property="CLEANERDATA" Value="Sections=Silent,Antivirus,Firewall,Antispam,Network|Property=KLAVFOUND" />
+		<?endif ?>
+		<?if ($(env.product_type) = WKS Or $(env.product_type) = FS)?>
+		<CustomAction Id="SetListKLSoftwarePropNormal" Property="CLEANERDATA" Value="Sections=Kaspersky|Property=KLAVFOUND" />
+		<CustomAction Id="SetListKLSoftwarePropSilent" Property="CLEANERDATA" Value="Sections=Silent|Property=KLAVFOUND" />
+		<?endif ?>
+		<CustomAction Id="ListKLSoftware" BinaryKey="msi_misc.dll" DllEntry="ListCompetitorsSoftware"
+			Execute="immediate" Return="ignore"/>
+
+		<CustomAction Id="ErrorRebootPendingSet"   Property="CAERROR" Value="$(loc.IDS_Condition_NeedReboot)"/>
+		<CustomAction Id="ErrorRebootPendingWrite" BinaryKey="msi_misc.dll" DllEntry="ReportCAError" Execute="immediate"/>
+		<CustomAction Id="ErrorRebootPendingShow"  Error="$(loc.IDS_Condition_NeedReboot)"/>
+
+		<CustomAction Id="ErrorAdminUserSet" Property="CAERROR" Value="$(loc.IDS_Condition_Admin)" />
+		<CustomAction Id="ErrorAdminUserWrite" BinaryKey="msi_misc.dll" DllEntry="ReportCAError" Execute="immediate"/>
+		<CustomAction Id="ErrorAdminUserShow" Error="$(loc.IDS_Condition_Admin)"/>
+
+		<CustomAction Id="CheckRegistryPermissions" BinaryKey="msi_misc.dll" DllEntry="CheckRegistryPermissions" Execute="immediate" Return="ignore"/>
+		<CustomAction Id="ErrorRegPermissionsSet" Error="$(loc.IDS_Condition_RegPermissions)"/>
+		<CustomAction Id="ErrorRegPermissionsWrite" Error="$(loc.IDS_Condition_RegPermissions)"/>
+		<CustomAction Id="ErrorRegPermissionsShow" Error="$(loc.IDS_Condition_RegPermissions)"/>
+
+		<CustomAction Id="ErrorKAVRunningSet"   Property="CAERROR" Value="$(loc.IDS_Condition_NeedUnloadApp)"/>
+		<CustomAction Id="ErrorKAVRunningWrite" BinaryKey="msi_misc.dll" DllEntry="ReportCAError" Execute="immediate"/>
+		<CustomAction Id="ErrorKAVRunningShow"  Error="$(loc.IDS_Condition_NeedUnloadApp)"/>
+
+		<CustomAction Id="ErrorInsuffitentMemory512Set"   Property="CAERROR" Value="$(loc.IDS_Condition_Need512MB)"/>
+		<CustomAction Id="ErrorInsuffitentMemory512Write" BinaryKey="msi_misc.dll" DllEntry="ReportCAError" Execute="immediate"/>
+		<CustomAction Id="ErrorInsuffitentMemory512Show"  Error="$(loc.IDS_Condition_Need512MB)"/>
+		
+		<CustomAction Id="ErrorInsuffitentMemory128Set"   Property="CAERROR" Value="$(loc.IDS_Condition_Need128MB)"/>
+		<CustomAction Id="ErrorInsuffitentMemory128Write" BinaryKey="msi_misc.dll" DllEntry="ReportCAError" Execute="immediate"/>
+		<CustomAction Id="ErrorInsuffitentMemory128Show"  Error="$(loc.IDS_Condition_Need128MB)"/>
+
+		<CustomAction Id="ErrorIncompatibleOSSet" Property="CAERROR" Value="$(loc.IDS_Condition_WrongOS)" />
+		<CustomAction Id="ErrorIncompatibleOSWrite" BinaryKey="msi_misc.dll" DllEntry="ReportCAError" Execute="immediate"/>
+		<CustomAction Id="ErrorIncompatibleOSShow" Error="$(loc.IDS_Condition_WrongOS)" />
+
+		<CustomAction Id="Error2KSP4RequiredSet" Property="CAERROR" Value="$(loc.IDS_Condition_Need2KSP4)" />
+		<CustomAction Id="Error2KSP4RequiredWrite" BinaryKey="msi_misc.dll" DllEntry="ReportCAError" Execute="immediate"/>
+		<CustomAction Id="Error2KSP4RequiredShow" Error="$(loc.IDS_Condition_Need2KSP4)" />
+
+		<CustomAction Id="ErrorIE5RequiredSet" Property="CAERROR" Value="$(loc.IDS_Condition_NeedIE5)" />
+		<CustomAction Id="ErrorIE5RequiredWrite" BinaryKey="msi_misc.dll" DllEntry="ReportCAError" Execute="immediate"/>
+		<CustomAction Id="ErrorIE5RequiredShow" Error="$(loc.IDS_Condition_NeedIE5)" />
+
+		<CustomAction Id="ErrorVCRuntimeRequiredSet" Property="CAERROR" Value="$(loc.IDS_Condition_NeedVCRuntime)" />
+		<CustomAction Id="ErrorVCRuntimeRequiredWrite" BinaryKey="msi_misc.dll" DllEntry="ReportCAError" Execute="immediate"/>
+		<CustomAction Id="ErrorVCRuntimeRequiredShow" Error="$(loc.IDS_Condition_NeedVCRuntime)" />
+
+		<CustomAction Id="ErrorIncompatibleAppFoundSet" Property="CAERROR" Value="$(loc.IDS_FoundProductsDlg_Text)" />
+		<CustomAction Id="ErrorIncompatibleAppFoundWrite" BinaryKey="msi_misc.dll" DllEntry="ReportCAError" Execute="immediate"/>
+		<CustomAction Id="ErrorIncompatibleAppFoundShow" Error="$(loc.IDS_FoundProductsDlg_Text)" />
+
+		<CustomAction Id="ErrorInvalidUninstallPasswdSet"   Property="CAERROR" Value="$(loc.MsgInvalidUninstallPasswd)"/>
+		<CustomAction Id="ErrorInvalidUninstallPasswdWrite" BinaryKey="msi_misc.dll" DllEntry="ReportCAError" Execute="immediate"/>
+		<CustomAction Id="ErrorInvalidUninstallPasswdShow"  Error="$(loc.MsgInvalidUninstallPasswd)"/>
+
+		<CustomAction Id="VerifyInstallDir" BinaryKey="msi_misc.dll" DllEntry="VerifyInstallDir" Execute="immediate"/>
+		<CustomAction Id="ErrorInstallDirSet"   Property="CAERROR" Value="$(loc.VerifyInstallDirError)"/>
+		<CustomAction Id="ErrorInstallDirWrite" BinaryKey="msi_misc.dll" DllEntry="ReportCAError" Execute="immediate"/>
+		<CustomAction Id="ErrorInstallDirShow" Error="$(loc.VerifyInstallDirError)" />
+
+		<CustomAction Id="ErrorAppRunningShow" Error="$(loc.IDS_Condition_NeedUnloadApp)" />
+
+		<CustomAction Id="ClearListCompetitorsSoftware" BinaryKey="msi_misc.dll" DllEntry="ClearListCompetitorsSoftware"
+			Execute="immediate" Return="ignore"/>
+		<CustomAction Id="UninstallCompetitorsSoftware" BinaryKey="msi_misc.dll" DllEntry="UninstallCompetitorsSoftware"
+			Execute="immediate" Return="ignore"/>
+		<CustomAction Id="RunCleaner" BinaryKey="msi_misc.dll" DllEntry="RunCleaner"
+			Execute="immediate" Return="ignore"/>
+		<CustomAction Id="SetUninstallIncompatibleDriversProp" Property="CLEANERDATA" Value="Sections=Drivers|Property=DRIVERSFOUND" />
+		<CustomAction Id="UninstallIncompatibleDrivers" BinaryKey="msi_misc.dll" DllEntry="UninstallCompetitorsSoftware"
+			Execute="immediate" Return="ignore"/>
+		<CustomAction Id="CheckUpgrade" BinaryKey="msi_misc.dll" DllEntry="CheckUpgrade" Execute="immediate"
+			Return="ignore"/>
+		<!--<CustomAction Id="EnableStartAfterReboot" BinaryKey="msi_misc.dll" DllEntry="EnableStartAfterReboot"
+			Execute="immediate" Return="ignore"/>-->
+		
+		<CustomAction Id="DetectWFW" BinaryKey="msi_misc.dll" DllEntry="WFwIsEnabled" Execute="immediate"/>
+		<CustomAction Id="RbDisableWFW" BinaryKey="msi_misc.dll" DllEntry="WFwEnable" Execute="rollback" Impersonate="no"/>
+		<CustomAction Id="DisableWFW" BinaryKey="msi_misc.dll" DllEntry="WFwDisable" Execute="deferred" Impersonate="no"/>
+		<CustomAction Id="RbEnableWFW" BinaryKey="msi_misc.dll" DllEntry="WFwDisable" Execute="rollback"  Impersonate="no"/>
+		<CustomAction Id="EnableWFW" BinaryKey="msi_misc.dll" DllEntry="WFwEnable" Execute="deferred" Impersonate="no"/>
+		<CustomAction Id="DisableAntiHacker" BinaryKey="msi_misc.dll" DllEntry="DisableAntiHacker" Execute="deferred" Impersonate="no"/>
+		<CustomAction Id="CheckObjectsToSave" BinaryKey="msi_misc.dll" DllEntry="CheckObjectsToSave" Execute="immediate"/>
+		<CustomAction Id="SetInstalledFeaturesProp" BinaryKey="msi_misc.dll" DllEntry="SetInstalledFeaturesProp"
+			Execute="immediate"/>
+		<CustomAction Id="RunARPWizard" Property="RUNDLLID" ExeCommand="shell32.dll,Control_RunDLL appwiz.cpl" Execute="immediate" Return="asyncNoWait"/>
+		<!--<CustomAction Id="PrepareMSExclReg" BinaryKey="msi_misc.dll" DllEntry="PrepareMSExclReg" Execute="immediate"
+			Return="ignore" HideTarget="yes"/>-->
+
+		<CustomAction Id="SetIsKAVUnPasswd" BinaryKey="msi_misc.dll" DllEntry="SetIsKAVUnPasswd" Execute="immediate" />
+		<CustomAction Id="CheckKAVUnPasswd" BinaryKey="msi_misc.dll" DllEntry="CheckKAVUnPasswd" Execute="immediate" />
+		<CustomAction Id="InitKAVUnPasswd"  BinaryKey="msi_misc.dll" DllEntry="InitKAVUnPasswd" Execute="immediate" />
+
+    <?if not ($(env.product_type) = SOS) ?>
+    <!-- custom actions for install/uninstall/rollback KLIF driver NT/2K/XP X86-platform -->
+    <CustomAction Id="UninstallServiceKlifSysSetProp" Property="UninstallServiceKlifSys" Value="Name=klif"
+        HideTarget="yes" />
+    <CustomAction Id="UninstallServiceKlifSys" BinaryKey="msi_misc.dll" DllEntry="UnregisterDriver"
+			Execute="deferred" Return="ignore" HideTarget="yes" Impersonate="no"/>
+    <CustomAction Id="StartServiceKlifSysSetProp" Property="StartServiceKlifSys" Value="Name=klif"
+        HideTarget="yes" />
+    <CustomAction Id="StartServiceKlifSys" BinaryKey="msi_misc.dll" DllEntry="StartDriver" Execute="deferred"
+			Return="ignore" HideTarget="yes" Impersonate="no"/>
+		<CustomAction Id="RbUninstallServiceKlifSysSetProp" Property="RbUninstallServiceKlifSys" Value="Name=klif"
+			HideTarget="yes" />
+		<CustomAction Id="RbUninstallServiceKlifSys" BinaryKey="msi_misc.dll" DllEntry="UnregisterDriver"
+			Execute="rollback" Return="ignore" HideTarget="yes" Impersonate="no"/>
+		<?endif?>
+
+    <?if not ($(env.product_type) = SOS) ?>
+        <!-- custom actions for install/uninstall/rollback MKLIF driver XP/VISTA X86-platform -->
+        <CustomAction Id="InstallDriverMKlifX86" FileKey="drvins32.exe_X86" ExeCommand="install klif &quot;[KLIFX86DIR]klif.inf&quot; &quot;[KLIFX86DIR]klif.cat&quot; klif.cat"
+            Execute="deferred" Return="ignore" Impersonate="no"/>
+        <CustomAction Id="RollbackDriverMKlifX86" FileKey="drvins32.exe_X86" ExeCommand="uninstall klif &quot;[KLIFX86DIR]klif.inf&quot; klif.cat klif.cat"
+            Execute="rollback" Return="ignore" Impersonate="no"/>
+        <CustomAction Id="UninstallDriverMKlifX86" FileKey="drvins32.exe_X86" ExeCommand="uninstall klif &quot;[KLIFX86DIR]klif.inf&quot; klif.cat klif.cat"
+            Execute="deferred" Return="ignore" Impersonate="no"/>
+    <?endif?>
+
+    <?if not ($(env.product_type) = SOS) ?>
+        <!-- custom actions for install/uninstall/rollback MKLIF driver W2K X86-platform -->
+        <CustomAction Id="InstallDriverMKlifW2K" FileKey="drvins32.exe_W2K" ExeCommand="install klif &quot;[KLIFW2KDIR]klif.inf&quot; &quot;[KLIFW2KDIR]klif.cat&quot; klif.cat"
+            Execute="deferred" Return="ignore" Impersonate="no"/>
+        <CustomAction Id="RollbackDriverMKlifW2K" FileKey="drvins32.exe_W2K" ExeCommand="uninstall klif &quot;[KLIFW2KDIR]klif.inf&quot; klif.cat klif.cat"
+            Execute="rollback" Return="ignore" Impersonate="no"/>
+        <CustomAction Id="UninstallDriverMKlifW2K" FileKey="drvins32.exe_W2K" ExeCommand="uninstall klif &quot;[KLIFW2KDIR]klif.inf&quot; klif.cat klif.cat"
+            Execute="deferred" Return="ignore" Impersonate="no"/>
+    <?endif?>
+
+    <?if not ($(env.product_type) = SOS) ?>
+    <!-- custom actions for install/uninstall/rollback MKLIF driver XP/VISTA X64-platform -->
+		<CustomAction Id="InstallDriverMKlifX64" FileKey="drvins64.exe" ExeCommand="install klif &quot;[KLIFX64DIR]klif.inf&quot; &quot;[KLIFX64DIR]klif.cat&quot; klif.cat"
+				Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="RollbackDriverMKlifX64" FileKey="drvins64.exe" ExeCommand="uninstall klif &quot;[KLIFX64DIR]klif.inf&quot; klif.cat klif.cat"
+				Execute="rollback" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="UninstallDriverMKlifX64" FileKey="drvins64.exe" ExeCommand="uninstall klif &quot;[KLIFX64DIR]klif.inf&quot; klif.cat klif.cat"
+				Execute="deferred" Return="ignore" Impersonate="no"/>
+
+		<CustomAction Id="InstallDriverMKlifX86TempSetProp" Property="InstallDriverMKlifX86Temp" Value="Exe=[SUPPORTDIR]drvins32.exe|Cmd=install klif &quot;[SUPPORTDIR]klif.inf&quot; &quot;[SUPPORTDIR]klif.cat&quot; klif.cat|Wait=1"/>
+		<CustomAction Id="InstallDriverMKlifX86Temp" BinaryKey="msi_misc.dll" DllEntry="ExecDeferred" Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="RollbackDriverMKlifX86TempSetProp" Property="RollbackDriverMKlifX86Temp" Value="Exe=[SUPPORTDIR]drvins32.exe|Cmd=uninstall klif &quot;[SUPPORTDIR]klif.inf&quot; klif.cat klif.cat|Wait=1"/>
+		<CustomAction Id="RollbackDriverMKlifX86Temp" BinaryKey="msi_misc.dll" DllEntry="ExecDeferred" Execute="rollback" Return="ignore" Impersonate="no"/>
+
+		<CustomAction Id="InstallDriverMKlifW2KTempSetProp" Property="InstallDriverMKlifW2KTemp" Value="Exe=[SUPPORTDIR]drvins32.exe|Cmd=install klif &quot;[SUPPORTDIR]klif.inf&quot; &quot;[SUPPORTDIR]klif.cat&quot; klif.cat|Wait=1"/>
+		<CustomAction Id="InstallDriverMKlifW2KTemp" BinaryKey="msi_misc.dll" DllEntry="ExecDeferred" Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="RollbackDriverMKlifW2KTempSetProp" Property="RollbackDriverMKlifW2KTemp" Value="Exe=[SUPPORTDIR]drvins32.exe|Cmd=uninstall klif &quot;[SUPPORTDIR]klif.inf&quot; klif.cat klif.cat|Wait=1"/>
+		<CustomAction Id="RollbackDriverMKlifW2KTemp" BinaryKey="msi_misc.dll" DllEntry="ExecDeferred" Execute="rollback" Return="ignore" Impersonate="no"/>
+
+		<CustomAction Id="InstallDriverMKlifX64TempSetProp" Property="InstallDriverMKlifX64Temp" Value="Exe=[SUPPORTDIR]drvins64.exe|Cmd=install klif &quot;[SUPPORTDIR]klif.inf&quot; &quot;[SUPPORTDIR]klif.cat&quot; klif.cat|Wait=1"/>
+		<CustomAction Id="InstallDriverMKlifX64Temp" BinaryKey="msi_misc.dll" DllEntry="ExecDeferred" Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="RollbackDriverMKlifX64TempSetProp" Property="RollbackDriverMKlifX64Temp" Value="Exe=[SUPPORTDIR]drvins64.exe|Cmd=uninstall klif &quot;[SUPPORTDIR]klif.inf&quot; klif.cat klif.cat|Wait=1"/>
+		<CustomAction Id="RollbackDriverMKlifX64Temp" BinaryKey="msi_misc.dll" DllEntry="ExecDeferred" Execute="rollback" Return="ignore" Impersonate="no"/>
+		<?endif?>
+
+    <?if not ($(env.product_type) = SOS) ?>
+    <!-- custom actions for install/uninstall KLFLTDEV driver 2k/XP X86-platform -->
+    <CustomAction Id="PrepareKlFltDevSysInstallString2kXp" Property="KlFltDevSysInstallString" Value="Name=klfltdev|Path=[SystemDriversDir]klfltdev.sys|ServiceType=kernelDriver|StartType=boot|StartOnInstall=yes|ErrorControl=normal|DisplayName=$(loc.KlFltDevDriverDisplayName)|Description=$(loc.KlFltDevDriverDesc)|KLSETUPLOG=[KLSETUPLOG]|AVPSETUPREP=[AVPSETUPREP]|CAERROR=$(loc.IDS_CAERROR_InstallServiceKlFltDevSys)"
+			HideTarget="yes" />
+    <CustomAction Id="InstallServiceKlFltDevSysSetProp" Property="InstallServiceKlFltDevSys" Value="[KlFltDevSysInstallString]"
+			HideTarget="yes" />
+    <CustomAction Id="InstallServiceKlFltDevSys" BinaryKey="msi_misc.dll" DllEntry="RegisterDriver" Execute="deferred"
+			Return="check" HideTarget="yes" Impersonate="no"/>
+    <CustomAction Id="RepairServiceKlFltDevSysSetProp" Property="RepairServiceKlFltDevSys" Value="[KlFltDevSysInstallString]"
+			HideTarget="yes" />
+    <CustomAction Id="RepairServiceKlFltDevSys" BinaryKey="msi_misc.dll" DllEntry="RegisterDriver" Execute="deferred"
+			Return="ignore" HideTarget="yes" Impersonate="no"/>
+
+    <CustomAction Id="UninstallServiceKlFltDevSysSetProp" Property="UninstallServiceKlFltDevSys" Value="Name=klfltdev"
+			HideTarget="yes" />
+    <CustomAction Id="UninstallServiceKlFltDevSys" BinaryKey="msi_misc.dll" DllEntry="UnregisterDriver"
+			Execute="deferred" Return="ignore" HideTarget="yes" Impersonate="no"/>
+    <CustomAction Id="RbUninstallServiceKlFltDevSysSetProp" Property="RbUninstallServiceKlFltDevSys" Value="Name=klfltdev"
+			HideTarget="yes" />
+    <CustomAction Id="RbUninstallServiceKlFltDevSys" BinaryKey="msi_misc.dll" DllEntry="UnregisterDriver"
+			Execute="rollback" Return="ignore" HideTarget="yes" Impersonate="no"/>
+    <?endif?>
+
+    <?if not ($(env.product_type) = SOS) ?>
+    <!-- custom actions for install/uninstall/rollback KLFLTDEV driver 2K X86-platform -->
+    <CustomAction Id="InstallDriverKlFltDevW2K" FileKey="drvins32.exe_X86" ExeCommand="install klfltdev &quot;[KLIFW2KDIR]klfltdev.inf&quot; &quot;[KLIFW2KDIR]klfltdev.cat&quot; klfltdev.cat"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+    <CustomAction Id="RollbackDriverKlFltDevW2K" FileKey="drvins32.exe_X86" ExeCommand="uninstall klfltdev &quot;[KLIFW2KDIR]klfltdev.inf&quot; klfltdev.cat klfltdev.cat"
+			Execute="rollback" Return="ignore" Impersonate="no"/>
+    <CustomAction Id="UninstallDriverKlFltDevW2K" FileKey="drvins32.exe_X86" ExeCommand="uninstall klfltdev &quot;[KLIFW2KDIR]klfltdev.inf&quot; klfltdev.cat klfltdev.cat"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+    <?endif?>
+
+    <?if not ($(env.product_type) = SOS) ?>
+    <!-- custom actions for install/uninstall/rollback KLFLTDEV driver XP/VISTA X86-platform -->
+    <CustomAction Id="InstallDriverKlFltDevX86" FileKey="drvins32.exe_X86" ExeCommand="install klfltdev &quot;[KLIFX86DIR]klfltdev.inf&quot; &quot;[KLIFX86DIR]klfltdev.cat&quot; klfltdev.cat"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+    <CustomAction Id="RollbackDriverKlFltDevX86" FileKey="drvins32.exe_X86" ExeCommand="uninstall klfltdev &quot;[KLIFX86DIR]klfltdev.inf&quot; klfltdev.cat klfltdev.cat"
+			Execute="rollback" Return="ignore" Impersonate="no"/>
+    <CustomAction Id="UninstallDriverKlFltDevX86" FileKey="drvins32.exe_X86" ExeCommand="uninstall klfltdev &quot;[KLIFX86DIR]klfltdev.inf&quot; klfltdev.cat klfltdev.cat"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+    <?endif?>
+
+    <?if not ($(env.product_type) = SOS) ?>
+    <!-- custom actions for install/uninstall/rollback KLFLTDEV driver XP/VISTA X64-platform -->
+    <CustomAction Id="InstallDriverKlFltDevX64" FileKey="drvins64.exe" ExeCommand="install klfltdev &quot;[KLIFX64DIR]klfltdev.inf&quot; &quot;[KLIFX64DIR]klfltdev.cat&quot; klfltdev.cat"
+			Execute="deferred" Impersonate="no"/>
+    <CustomAction Id="RollbackDriverKlFltDevX64" FileKey="drvins64.exe" ExeCommand="uninstall klfltdev &quot;[KLIFX64DIR]klfltdev.inf&quot; klfltdev.cat klfltdev.cat"
+			Execute="rollback" Return="ignore" Impersonate="no"/>
+    <CustomAction Id="UninstallDriverKlFltDevX64" FileKey="drvins64.exe" ExeCommand="uninstall klfltdev &quot;[KLIFX64DIR]klfltdev.inf&quot; klfltdev.cat klfltdev.cat"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+    <?endif?>
+
+    <?if not ($(env.product_type) = SOS) ?>
+    <!-- custom actions for install/uninstall KLBG driver 2K/XP/VISTA X86-platform -->
+    <CustomAction Id="PrepareKlBgSysInstallString2kXp" Property="KlBgSysInstallString" Value="Name=klbg|Path=[SystemDriversDir]klbg.sys|ServiceType=kernelDriver|StartType=boot|StartOnInstall=yes|ErrorControl=normal|DisplayName=$(loc.KlBgDriverDisplayName)|Description=$(loc.KlBgDriverDesc)|KLSETUPLOG=[KLSETUPLOG]|AVPSETUPREP=[AVPSETUPREP]|CAERROR=$(loc.IDS_CAERROR_InstallServiceKlBgSys)"
+			HideTarget="yes" />
+    <CustomAction Id="InstallServiceKlBgSysSetProp" Property="InstallServiceKlBgSys" Value="[KlBgSysInstallString]"
+			HideTarget="yes" />
+    <CustomAction Id="InstallServiceKlBgSys" BinaryKey="msi_misc.dll" DllEntry="RegisterDriver" Execute="deferred"
+			Return="check" HideTarget="yes" Impersonate="no"/>
+    <CustomAction Id="RepairServiceKlBgSysSetProp" Property="RepairServiceKlBgSys" Value="[KlBgSysInstallString]"
+			HideTarget="yes" />
+    <CustomAction Id="RepairServiceKlBgSys" BinaryKey="msi_misc.dll" DllEntry="RegisterDriver" Execute="deferred"
+			Return="ignore" HideTarget="yes" Impersonate="no"/>
+
+    <CustomAction Id="UninstallServiceKlBgSysSetProp" Property="UninstallServiceKlBgSys" Value="Name=klbg"
+			HideTarget="yes" />
+    <CustomAction Id="UninstallServiceKlBgSys" BinaryKey="msi_misc.dll" DllEntry="UnregisterDriver"
+			Execute="deferred" Return="ignore" HideTarget="yes" Impersonate="no"/>
+    <CustomAction Id="RbUninstallServiceKlBgSysSetProp" Property="RbUninstallServiceKlBgSys" Value="Name=klbg"
+			HideTarget="yes" />
+    <CustomAction Id="RbUninstallServiceKlBgSys" BinaryKey="msi_misc.dll" DllEntry="UnregisterDriver"
+			Execute="rollback" Return="ignore" HideTarget="yes" Impersonate="no"/>
+    <?endif?>
+
+    <?if not ($(env.product_type) = SOS) ?>
+    <!-- custom actions for install/uninstall/rollback KLBG driver VISTA X86-platform -->
+    <CustomAction Id="InstallDriverKlBgX86" FileKey="drvins32.exe_X86" ExeCommand="install klbg &quot;[KLIFX86DIR]klbg.inf&quot; &quot;[KLIFX86DIR]klbg.cat&quot; klbg.cat"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+    <CustomAction Id="RollbackDriverKlBgX86" FileKey="drvins32.exe_X86" ExeCommand="uninstall klbg &quot;[KLIFX86DIR]klbg.inf&quot; klbg.cat klbg.cat"
+			Execute="rollback" Return="ignore" Impersonate="no"/>
+    <CustomAction Id="UninstallDriverKlBgX86" FileKey="drvins32.exe_X86" ExeCommand="uninstall klbg &quot;[KLIFX86DIR]klbg.inf&quot; klbg.cat klbg.cat"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+    <?endif?>
+
+    <?if not ($(env.product_type) = SOS) ?>
+    <!-- custom actions for install/uninstall/rollback KLBG driver XP/VISTA X64-platform -->
+    <CustomAction Id="InstallDriverKlBgX64" FileKey="drvins64.exe" ExeCommand="install klbg &quot;[KLIFX64DIR]klbg.inf&quot; &quot;[KLIFX64DIR]klbg.cat&quot; klbg.cat"
+			Execute="deferred" Impersonate="no"/>
+    <CustomAction Id="RollbackDriverKlBgX64" FileKey="drvins64.exe" ExeCommand="uninstall klbg &quot;[KLIFX64DIR]klbg.inf&quot; klbg.cat klbg.cat"
+			Execute="rollback" Return="ignore" Impersonate="no"/>
+    <CustomAction Id="UninstallDriverKlBgX64" FileKey="drvins64.exe" ExeCommand="uninstall klbg &quot;[KLIFX64DIR]klbg.inf&quot; klbg.cat klbg.cat"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+    <?endif?>
+
+    <?if not ($(env.product_type) = SOS) ?>
+    <!-- custom actions for install/uninstall KL1 driver NT/2K/XP X86-platform -->
+		<CustomAction Id="PrepareKl1SysInstallStringNT" Property="Kl1SysInstallString" Value="Name=kl1|Path=System32\Drivers\kl1.sys|ServiceType=kernelDriver|StartType=system|StartOnInstall=yes|ErrorControl=normal|DisplayName=$(loc.Kl1DriverDisplayName)|Description=$(loc.Kl1DriverDesc)|KLSETUPLOG=[KLSETUPLOG]|AVPSETUPREP=[AVPSETUPREP]|CAERROR=$(loc.IDS_CAERROR_InstallServiceKl1Sys)"
+			HideTarget="yes" />
+		<CustomAction Id="PrepareKl1SysInstallString2k" Property="Kl1SysInstallString" Value="Name=kl1|Path=[SystemDriversDir]kl1.sys|ServiceType=kernelDriver|StartType=boot|StartOnInstall=yes|ErrorControl=normal|DisplayName=$(loc.Kl1DriverDisplayName)|Description=$(loc.Kl1DriverDesc)|KLSETUPLOG=[KLSETUPLOG]|AVPSETUPREP=[AVPSETUPREP]|CAERROR=$(loc.IDS_CAERROR_InstallServiceKl1Sys)"
+			HideTarget="yes" />
+		<CustomAction Id="InstallServiceKl1SysSetProp" Property="InstallServiceKl1Sys" Value="[Kl1SysInstallString]"
+			HideTarget="yes" />
+		<CustomAction Id="InstallServiceKl1Sys" BinaryKey="msi_misc.dll" DllEntry="RegisterDriver" Execute="deferred"
+			Return="check" HideTarget="yes" Impersonate="no"/>
+		<CustomAction Id="RepairServiceKl1SysSetProp" Property="RepairServiceKl1Sys" Value="[Kl1SysInstallString]"
+			HideTarget="yes" />
+		<CustomAction Id="RepairServiceKl1Sys" BinaryKey="msi_misc.dll" DllEntry="RegisterDriver" Execute="deferred"
+			Return="ignore" HideTarget="yes" Impersonate="no"/>
+		
+		<CustomAction Id="UninstallServiceKl1SysSetProp" Property="UninstallServiceKl1Sys" Value="Name=kl1"
+			HideTarget="yes" />
+		<CustomAction Id="UninstallServiceKl1Sys" BinaryKey="msi_misc.dll" DllEntry="UnregisterDriver"
+			Execute="deferred" Return="ignore" HideTarget="yes" Impersonate="no"/>
+		<CustomAction Id="RbUninstallServiceKl1SysSetProp" Property="RbUninstallServiceKl1Sys" Value="Name=kl1"
+			HideTarget="yes" />
+		<CustomAction Id="RbUninstallServiceKl1Sys" BinaryKey="msi_misc.dll" DllEntry="UnregisterDriver"
+			Execute="rollback" Return="ignore" HideTarget="yes" Impersonate="no"/>
+		<?endif?>
+
+    <?if not ($(env.product_type) = SOS) ?>
+    <!-- custom actions for install/uninstall/rollback KL1 driver VISTA X86-platform -->
+		<CustomAction Id="InstallDriverKl1X86" FileKey="drvins32.exe_X86" ExeCommand="install kl1 &quot;[KLIFX86DIR]kl1.inf&quot; &quot;[KLIFX86DIR]kl1.cat&quot; kl1.cat"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="RollbackDriverKl1X86" FileKey="drvins32.exe_X86" ExeCommand="uninstall kl1 &quot;[KLIFX86DIR]kl1.inf&quot; kl1.cat kl1.cat"
+			Execute="rollback" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="UninstallDriverKl1X86" FileKey="drvins32.exe_X86" ExeCommand="uninstall kl1 &quot;[KLIFX86DIR]kl1.inf&quot; kl1.cat kl1.cat"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+		<?endif?>
+
+    <?if not ($(env.product_type) = SOS) ?>
+    <!-- custom actions for install/uninstall/rollback KL1 driver XP/VISTA X64-platform -->
+		<CustomAction Id="InstallDriverKl1X64" FileKey="drvins64.exe" ExeCommand="install kl1 &quot;[KLIFX64DIR]kl1.inf&quot; &quot;[KLIFX64DIR]kl1.cat&quot; kl1.cat"
+			Execute="deferred" Impersonate="no"/>
+		<CustomAction Id="RollbackDriverKl1X64" FileKey="drvins64.exe" ExeCommand="uninstall kl1 &quot;[KLIFX64DIR]kl1.inf&quot; kl1.cat kl1.cat"
+			Execute="rollback" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="UninstallDriverKl1X64" FileKey="drvins64.exe" ExeCommand="uninstall kl1 &quot;[KLIFX64DIR]kl1.inf&quot; kl1.cat kl1.cat"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+		<?endif?>
+
+    <?ifdef BASE_FEATURES ?>
+    <!-- custom actions for install/uninstall/rollback KLIM5 driver XP X86-platform -->
+		<CustomAction Id="InstallDriverKlim5X86" FileKey="netcfg.exe_X86" ExeCommand="-g klim5 -l &quot;[KLIMX86DIR]klim5.inf&quot; -t &quot;[KLIMX86DIR]klim5.cat&quot; -z klim5.cat -i"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="InstallDriverKlim5_mX86" FileKey="netcfg.exe_X86" ExeCommand="-g klim5_m -l &quot;[KLIMX86DIR]klim5_m.inf&quot; -c s -n kl_klim5 -i"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="RollbackDriverKlim5X86" FileKey="netcfg.exe_X86" ExeCommand="-g klim5 -n kl_klim5 -u"
+			Execute="rollback" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="RollbackDriverKlim5_mX86" FileKey="netcfg.exe_X86" ExeCommand="-g klim5_m -t &quot;[KLIMX86DIR]klim5.cat&quot; -z klim5.cat -d klim5 -u"
+			Execute="rollback" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="UninstallDriverKlim5X86" FileKey="netcfg.exe_X86" ExeCommand="-g klim5 -n kl_klim5 -u"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="UninstallDriverKlim5_mX86" FileKey="netcfg.exe_X86" ExeCommand="-g klim5_m -t &quot;[KLIMX86DIR]klim5.cat&quot; -z klim5.cat -u"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="UninstallServiceKlim5X86" FileKey="netcfg.exe_X86" ExeCommand="-d klim5 -u"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+
+		<CustomAction Id="UninstallDriverKlim5X86_MajUpgr" FileKey="netcfg.exe_X86" ExeCommand="-g klim5 -n kl_klim5 -u"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="UninstallDriverKlim5_mX86_MajUpgr" FileKey="netcfg.exe_X86" ExeCommand="-g klim5_m -z klim5.cat -u"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+		<?endif ?>
+
+    <?ifdef BASE_FEATURES ?>
+    <!-- custom actions for install/uninstall/rollback KLIM5 driver XP X64-platform -->
+		<CustomAction Id="InstallDriverKlim5X64" FileKey="netcfg.exe" ExeCommand="-g klim5 -l &quot;[KLIMX64DIR]klim5.inf&quot; -t &quot;[KLIMX64DIR]klim5.cat&quot; -z klim5.cat -i"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="InstallDriverKlim5_mX64" FileKey="netcfg.exe" ExeCommand="-g klim5_m -l &quot;[KLIMX64DIR]klim5_m.inf&quot; -c s -n kl_klim5 -i"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="RollbackDriverKlim5X64" FileKey="netcfg.exe" ExeCommand="-g klim5 -n kl_klim5 -u"
+			Execute="rollback" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="RollbackDriverKlim5_mX64" FileKey="netcfg.exe" ExeCommand="-g klim5_m -t &quot;[KLIMX64DIR]klim5.cat&quot; -z klim5.cat -d klim5 -u"
+			Execute="rollback" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="UninstallDriverKlim5X64" FileKey="netcfg.exe" ExeCommand="-g klim5 -n kl_klim5 -u"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="UninstallDriverKlim5_mX64" FileKey="netcfg.exe" ExeCommand="-g klim5_m -t &quot;[KLIMX64DIR]klim5.cat&quot; -z klim5.cat -u"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="UninstallServiceKlim5X64" FileKey="netcfg.exe" ExeCommand="-d klim5 -u"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+		
+		<CustomAction Id="UninstallDriverKlim5X64_MajUpgr" FileKey="netcfg.exe" ExeCommand="-g klim5 -n kl_klim5 -u"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="UninstallDriverKlim5_mX64_MajUpgr" FileKey="netcfg.exe" ExeCommand="-g klim5_m -z klim5.cat -u"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+		<?endif ?>
+
+    <?ifdef BASE_FEATURES ?>
+    <!-- custom actions for install/uninstall/rollback KLIM6 driver VISTA X86-platform -->
+		<CustomAction Id="InstallDriverKlim6X86" FileKey="netcfg.exe_X86" ExeCommand="-g klim6 -l &quot;[KLIMX86DIR]klim6.inf&quot; -t &quot;[KLIMX86DIR]klim6.cat&quot; -z klim6.cat -c s -n kl_klim6 -i"
+			Execute="deferred" Impersonate="no"/>
+		<CustomAction Id="RollbackDriverKlim6X86" FileKey="netcfg.exe_X86" ExeCommand="-g klim6 -t &quot;[KLIMX86DIR]klim6.cat&quot; -z klim6.cat -n kl_klim6 -u"
+			Execute="rollback" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="UninstallDriverKlim6X86" FileKey="netcfg.exe_X86" ExeCommand="-g klim6 -t &quot;[KLIMX86DIR]klim6.cat&quot; -z klim6.cat -n kl_klim6 -u"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="UninstallDriverKlim6X86_MajUpgr" FileKey="netcfg.exe_X86" ExeCommand="-g klim6 -z klim6.cat -n kl_klim6 -u"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+		<?endif ?>
+
+    <?ifdef BASE_FEATURES ?>
+    <!-- custom actions for install/uninstall/rollback KLIM6 driver VISTA X64-platform -->
+		<CustomAction Id="InstallDriverKlim6X64" FileKey="netcfg.exe" ExeCommand="-g klim6 -l &quot;[KLIMX64DIR]klim6.inf&quot; -t &quot;[KLIMX64DIR]klim6.cat&quot; -z klim6.cat -c s -n kl_klim6 -i"
+			Execute="deferred" Impersonate="no"/>
+		<CustomAction Id="RollbackDriverKlim6X64" FileKey="netcfg.exe" ExeCommand="-g klim6 -t &quot;[KLIMX64DIR]klim6.cat&quot; -z klim6.cat -n kl_klim6 -u"
+			Execute="rollback" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="UninstallDriverKlim6X64" FileKey="netcfg.exe" ExeCommand="-g klim6 -t &quot;[KLIMX64DIR]klim6.cat&quot; -z klim6.cat -n kl_klim6 -u"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="UninstallDriverKlim6X64_MajUpgr" FileKey="netcfg.exe" ExeCommand="-g klim6 -z klim6.cat -n kl_klim6 -u"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+		<?endif ?>
+
+    <?ifdef BASE_FEATURES ?>
+    <CustomAction Id="InstallKlopX64" FileKey="drvins64.exe" ExeCommand="install klop &quot;[KLIFX64DIR]klopx64.inf&quot;"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="RollbackKlopX64" FileKey="drvins64.exe" ExeCommand="uninstall klop &quot;[KLIFX64DIR]klopx64.inf&quot;"
+			Execute="rollback" Return="asyncNoWait" Impersonate="no"/>
+		<CustomAction Id="UninstallKlopX64" FileKey="drvins64.exe" ExeCommand="uninstall klop &quot;[KLIFX64DIR]klopx64.inf&quot;"
+			Execute="deferred" Return="asyncNoWait" Impersonate="no"/>
+		<?endif ?>
+
+    <?if not ($(env.product_type) = SOS) ?>
+    <CustomAction Id="InstallSystem64Files" FileKey="drvins64.exe" ExeCommand="install klogon &quot;[KLIFX64DIR]system64.inf&quot;"
+			Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="RollbackSystem64Files" FileKey="drvins64.exe" ExeCommand="uninstall klogon &quot;[KLIFX64DIR]system64.inf&quot;"
+			Execute="rollback" Return="asyncNoWait" Impersonate="no"/>
+		<CustomAction Id="UninstallSystem64Files" FileKey="drvins64.exe" ExeCommand="uninstall klogon &quot;[KLIFX64DIR]system64.inf&quot;"
+			Execute="deferred" Return="asyncNoWait" Impersonate="no"/>
+		<?endif?>
+
+    <?ifdef BASE_FEATURES ?>
+    <CustomAction Id="CKAHUM_ReloadSetProp" Property="CKAHUM_Reload" Value="Dir=[INSTALLDIR]|Bases=[CommonAppDataBasesDir]ckah.set|Reg=$(var.HKLM_PRODUCT)\CKAHUM|KLSETUPLOG=[KLSETUPLOG]|AVPSETUPREP=[AVPSETUPREP]|CAERROR=$(loc.IDS_CAERROR_CKAHUM_Reload)" HideTarget="yes" />
+		<CustomAction Id="CKAHUM_Reload" BinaryKey="msi_misc.dll" DllEntry="CKAHUM_Reload" Execute="deferred" Return="check" HideTarget="yes" Impersonate="no"/>
+		<CustomAction Id="RbCKAHUM_ReloadSetProp" Property="RbCKAHUM_Reload" Value="Dir=[INSTALLDIR]|Reg=$(var.HKLM_PRODUCT)\CKAHUM" HideTarget="yes" />
+		<CustomAction Id="RbCKAHUM_Reload" BinaryKey="msi_misc.dll" DllEntry="CKAHUM_Uninstall" Execute="rollback" Return="ignore" HideTarget="yes" Impersonate="no"/>
+		<CustomAction Id="CKAHUM_UninstallSetProp" Property="CKAHUM_Uninstall" Value="Dir=[INSTALLDIR]|Reg=$(var.HKLM_PRODUCT)\CKAHUM" HideTarget="yes" />
+		<CustomAction Id="CKAHUM_Uninstall" BinaryKey="msi_misc.dll" DllEntry="CKAHUM_Uninstall" Execute="deferred" Return="ignore" HideTarget="yes" Impersonate="no"/>
+		<?endif?>
+
+		<CustomAction Id="UnloadConnector" BinaryKey="msi_misc.dll" DllEntry="UnloadConnector" Execute="deferred"
+			Return="ignore" HideTarget="yes" Impersonate="no"/>
+		<CustomAction Id="ForceReloadConnector" BinaryKey="msi_misc.dll" DllEntry="SetConnInstalled" Execute="deferred"
+			Return="ignore" HideTarget="yes" Impersonate="no"/>
+
+		<CustomAction Id="SelfRegModulesOnRebootInit" BinaryKey="msi_misc.dll" DllEntry="SelfRegOnRebootInit" Execute="immediate" 
+				Return="check" HideTarget="yes"/>
+
+		<CustomAction Id="SelfRegModulesOnRebootRunSetProp" Property="SelfRegModulesOnRebootRun" Value="SelfRegApp=[SystemFolder]regsvr32.exe|SelfRegList=[SELFREGLIST]"
+				HideTarget="yes" />
+		<CustomAction Id="SelfRegModulesOnRebootRun" BinaryKey="msi_misc.dll" DllEntry="SelfRegOnRebootRun" Execute="deferred"  
+					Return="check" HideTarget="yes" Impersonate="no" />
+
+		<CustomAction Id="InSelfReg_avpgui.ppl" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /y &quot;[#avpgui.ppl]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="RbSelfReg_avpgui.ppl" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /z &quot;[#avpgui.ppl]&quot;" Execute="rollback" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="UnSelfReg_avpgui.ppl" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /z &quot;[#avpgui.ppl]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		
+		<CustomAction Id="InSelfReg_shellex.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /y &quot;[#shellex.dll]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="RbSelfReg_shellex.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /z &quot;[#shellex.dll]&quot;" Execute="rollback" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="UnSelfReg_shellex.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /z &quot;[#shellex.dll]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		
+		<CustomAction Id="InSelfReg_ShellEx.dll_X64" Directory="INSTALLDIR"	 ExeCommand="&quot;[WindowsFolder]System32\msiexec.exe&quot; /y &quot;[#ShellEx.dll_X64]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="RbSelfReg_ShellEx.dll_X64" Directory="INSTALLDIR"	 ExeCommand="&quot;[WindowsFolder]System32\msiexec.exe&quot; /z &quot;[#ShellEx.dll_X64]&quot;" Execute="rollback" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="UnSelfReg_ShellEx.dll_X64" Directory="INSTALLDIR"	 ExeCommand="&quot;[WindowsFolder]System32\msiexec.exe&quot; /z &quot;[#ShellEx.dll_X64]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+
+    <?ifdef BASE_FEATURES ?>
+		<CustomAction Id="InSelfReg_klscav.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /y &quot;[#klscav.dll]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="RbSelfReg_klscav.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /z &quot;[#klscav.dll]&quot;" Execute="rollback" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="UnSelfReg_klscav.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /z &quot;[#klscav.dll]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		
+		<CustomAction Id="InSelfReg_klscav.dll_X64" Directory="INSTALLDIR"	 ExeCommand="&quot;[WindowsFolder]System32\msiexec.exe&quot; /y &quot;[#klscav.dll_X64]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="RbSelfReg_klscav.dll_X64" Directory="INSTALLDIR"	 ExeCommand="&quot;[WindowsFolder]System32\msiexec.exe&quot; /z &quot;[#klscav.dll_X64]&quot;" Execute="rollback" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="UnSelfReg_klscav.dll_X64" Directory="INSTALLDIR"	 ExeCommand="&quot;[WindowsFolder]System32\msiexec.exe&quot; /z &quot;[#klscav.dll_X64]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		
+		<CustomAction Id="InSelfReg_mcou.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /y &quot;[#mcou.dll]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="RbSelfReg_mcou.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /z &quot;[#mcou.dll]&quot;" Execute="rollback" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="UnSelfReg_mcou.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /z &quot;[#mcou.dll]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		
+		<CustomAction Id="InSelfReg_miscr3.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /y &quot;[#miscr3.dll]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="RbSelfReg_miscr3.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /z &quot;[#miscr3.dll]&quot;" Execute="rollback" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="UnSelfReg_miscr3.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /z &quot;[#miscr3.dll]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		
+		<CustomAction Id="InSelfReg_r3hook.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /y &quot;[#r3hook.dll]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="RbSelfReg_r3hook.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /z &quot;[#r3hook.dll]&quot;" Execute="rollback" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="UnSelfReg_r3hook.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /z &quot;[#r3hook.dll]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		
+		<CustomAction Id="InSelfReg_r3hook.dll_X64" Directory="INSTALLDIR"	 ExeCommand="&quot;[WindowsFolder]System32\msiexec.exe&quot; /y &quot;[#r3hook.dll_X64]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="RbSelfReg_r3hook.dll_X64" Directory="INSTALLDIR"	 ExeCommand="&quot;[WindowsFolder]System32\msiexec.exe&quot; /z &quot;[#r3hook.dll_X64]&quot;" Execute="rollback" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="UnSelfReg_r3hook.dll_X64" Directory="INSTALLDIR"	 ExeCommand="&quot;[WindowsFolder]System32\msiexec.exe&quot; /z &quot;[#r3hook.dll_X64]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		
+		<CustomAction Id="InSelfReg_SCIEPlgn.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /y &quot;[#SCIEPlgn.dll]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="RbSelfReg_SCIEPlgn.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /z &quot;[#SCIEPlgn.dll]&quot;" Execute="rollback" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="UnSelfReg_SCIEPlgn.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /z &quot;[#SCIEPlgn.dll]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		
+		<CustomAction Id="InSelfReg_SCIEPlgn.dll_X64" Directory="INSTALLDIR"	 ExeCommand="&quot;[WindowsFolder]System32\msiexec.exe&quot; /y &quot;[#SCIEPlgn.dll_X64]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="RbSelfReg_SCIEPlgn.dll_X64" Directory="INSTALLDIR"	 ExeCommand="&quot;[WindowsFolder]System32\msiexec.exe&quot; /z &quot;[#SCIEPlgn.dll_X64]&quot;" Execute="rollback" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="UnSelfReg_SCIEPlgn.dll_X64" Directory="INSTALLDIR"	 ExeCommand="&quot;[WindowsFolder]System32\msiexec.exe&quot; /z &quot;[#SCIEPlgn.dll_X64]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		
+		<CustomAction Id="InSelfReg_scrchpg.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /y &quot;[#scrchpg.dll]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="RbSelfReg_scrchpg.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /z &quot;[#scrchpg.dll]&quot;" Execute="rollback" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="UnSelfReg_scrchpg.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /z &quot;[#scrchpg.dll]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		
+		<CustomAction Id="InSelfReg_Scrchpg.dll_X64" Directory="INSTALLDIR"	 ExeCommand="&quot;[WindowsFolder]System32\msiexec.exe&quot; /y &quot;[#Scrchpg.dll_X64]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="RbSelfReg_Scrchpg.dll_X64" Directory="INSTALLDIR"	 ExeCommand="&quot;[WindowsFolder]System32\msiexec.exe&quot; /z &quot;[#Scrchpg.dll_X64]&quot;" Execute="rollback" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="UnSelfReg_Scrchpg.dll_X64" Directory="INSTALLDIR"	 ExeCommand="&quot;[WindowsFolder]System32\msiexec.exe&quot; /z &quot;[#Scrchpg.dll_X64]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		<?endif?>
+
+    <?ifdef ADVANCED_FEATURES ?>
+    <CustomAction Id="InSelfReg_adialhk.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /y &quot;[#adialhk.dll]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="RbSelfReg_adialhk.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /z &quot;[#adialhk.dll]&quot;" Execute="rollback" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="UnSelfReg_adialhk.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /z &quot;[#adialhk.dll]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		
+		<CustomAction Id="InSelfReg_adialhk.dll_X64" Directory="INSTALLDIR"	 ExeCommand="&quot;[WindowsFolder]System32\msiexec.exe&quot; /y &quot;[#adialhk.dll_X64]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="RbSelfReg_adialhk.dll_X64" Directory="INSTALLDIR"	 ExeCommand="&quot;[WindowsFolder]System32\msiexec.exe&quot; /z &quot;[#adialhk.dll_X64]&quot;" Execute="rollback" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="UnSelfReg_adialhk.dll_X64" Directory="INSTALLDIR"	 ExeCommand="&quot;[WindowsFolder]System32\msiexec.exe&quot; /z &quot;[#adialhk.dll_X64]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+
+		<CustomAction Id="InSelfReg_mcouas.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /y &quot;[#mcouas.dll]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="RbSelfReg_mcouas.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /z &quot;[#mcouas.dll]&quot;" Execute="rollback" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="UnSelfReg_mcouas.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /z &quot;[#mcouas.dll]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		
+		<CustomAction Id="InSelfReg_oeas.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /y &quot;[#oeas.dll]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="RbSelfReg_oeas.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /z &quot;[#oeas.dll]&quot;" Execute="rollback" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="UnSelfReg_oeas.dll" Directory="INSTALLDIR"	 ExeCommand="&quot;[SystemFolder]msiexec.exe&quot; /z &quot;[#oeas.dll]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		
+		<CustomAction Id="InSelfReg_oeas.dll_X64" Directory="INSTALLDIR"	 ExeCommand="&quot;[WindowsFolder]System32\msiexec.exe&quot; /y &quot;[#oeas.dll_X64]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="RbSelfReg_oeas.dll_X64" Directory="INSTALLDIR"	 ExeCommand="&quot;[WindowsFolder]System32\msiexec.exe&quot; /z &quot;[#oeas.dll_X64]&quot;" Execute="rollback" Impersonate="no" Return="ignore"></CustomAction>
+		<CustomAction Id="UnSelfReg_oeas.dll_X64" Directory="INSTALLDIR"	 ExeCommand="&quot;[WindowsFolder]System32\msiexec.exe&quot; /z &quot;[#oeas.dll_X64]&quot;" Execute="deferred" Impersonate="no" Return="ignore"></CustomAction>
+		<?endif ?>
+
+		<!--<CustomAction Id="StartServiceKl1SysSetProp" Property="StartServiceKl1Sys" Value="Name=kl1" HideTarget="yes" />
+		<CustomAction Id="StartServiceKl1Sys" BinaryKey="msi_misc.dll" DllEntry="StartDriver" Execute="deferred" Return="ignore" HideTarget="yes" />-->
+
+		<CustomAction Id="SetServiceDACLSetProp" Property="SetServiceDACL" Value="Name=AVP" HideTarget="yes" />
+		<CustomAction Id="SetServiceDACL" BinaryKey="msi_misc.dll" DllEntry="SetServiceDACL" Execute="deferred"
+			Return="ignore" HideTarget="yes" Impersonate="no" />
+		<CustomAction Id="SetServiceRestartSetProp" Property="SetServiceRestart" Value="Name=AVP" HideTarget="yes" />
+		<CustomAction Id="SetServiceRestart" BinaryKey="msi_misc.dll" DllEntry="SetServiceRestart" Execute="deferred"
+			Return="ignore" HideTarget="yes" Impersonate="no" />
+
+		<CustomAction Id="WriteRegistryValuesCA" BinaryKey="msi_misc.dll" DllEntry="WriteRegistryValuesCA"
+			Execute="deferred" Return="ignore" HideTarget="yes" Impersonate="no"/>
+		<!--<CustomAction Id="EnableAutoUpdateCA" BinaryKey="msi_misc.dll" DllEntry="EnableAutoUpdateCA" Execute="deferred"
+			Return="check" HideTarget="yes" />-->
+		<CustomAction Id="EnableFullScanCA" BinaryKey="msi_misc.dll" DllEntry="EnableFullScanCA" Execute="deferred"
+			Return="check" HideTarget="yes" Impersonate="no"/>
+		<CustomAction Id="EnableTraceToFileCA" BinaryKey="msi_misc.dll" DllEntry="EnableTraceToFileCA"
+			Execute="deferred" Return="check" HideTarget="yes" Impersonate="no"/>
+		<CustomAction Id="EnableTraceToDebugOutputCA" BinaryKey="msi_misc.dll" DllEntry="EnableTraceToDebugOutputCA"
+			Execute="deferred" Return="check" HideTarget="yes" Impersonate="no"/>
+		<?if ($(env.product_type) = FS) ?>
+		<CustomAction Id="SetNumberofProcessors" BinaryKey="msi_misc.dll" DllEntry="SetNumberofProcessors"
+			Execute="deferred" Return="check" HideTarget="yes" Impersonate="no"/>
+		<?endif ?>
+
+		<CustomAction Id="WriteRegInstalledFeaturesSetProp" Property="WriteRegInstalledFeatures" Value="[INSTALLEDFEATURES]" />
+		<CustomAction Id="WriteRegInstalledFeatures" BinaryKey="msi_misc.dll" DllEntry="WriteRegInstalledFeatures"
+			Execute="deferred" Return="ignore" HideTarget="no" Impersonate="no"/>
+
+		<!--<CustomAction Id="CheckSelfProtectionStatus" BinaryKey="msi_misc.dll" DllEntry="CheckSelfProtectionStatus"
+			Execute="deferred" Return="ignore" HideTarget="yes" Impersonate="no"/>-->
+
+		<CustomAction Id="PrepareMKlifSysX86" Property="Extract" Value="Cab=mklifx86.cab|Dir=[SUPPORTDIR]" HideTarget="yes" />
+		<CustomAction Id="PrepareMKlifSysW2K" Property="Extract" Value="Cab=mklifw2k.cab|Dir=[SUPPORTDIR]" HideTarget="yes" />
+		<CustomAction Id="PrepareMKlifSysX64" Property="Extract" Value="Cab=mklifx64.cab|Dir=[SUPPORTDIR]" HideTarget="yes" />
+		<CustomAction Id="PrepareMKlifSys" BinaryKey="msi_misc.dll" DllEntry="Extract" Execute="immediate" Return="ignore" />
+
+		<!--<CustomAction Id="RemoveProtectionFilesSetProp" Property="RemoveProtectionFiles" Value="InstallDir=[INSTALLDIR]|DriversDir=[SystemDriversDir]"
+			HideTarget="yes" />
+		<CustomAction Id="RemoveProtectionFiles" BinaryKey="msi_misc.dll" DllEntry="RemoveProtectionFiles"
+			Execute="deferred" Return="ignore" HideTarget="yes" Impersonate="no"/>-->
+		<CustomAction Id="RbRemoveProtectionFilesSetProp" Property="RbRemoveProtectionFiles" Value="InstallDir=[SUPPORTDIR]|DriversDir=[SystemDriversDir]"
+			HideTarget="yes" />
+		<CustomAction Id="RbRemoveProtectionFiles" BinaryKey="msi_misc.dll" DllEntry="RemoveProtectionFiles"
+			Execute="rollback" Return="ignore" HideTarget="yes" Impersonate="no"/>
+
+		<!-- custom actions for install/uninstall/rollback self-protection -->
+
+		<CustomAction Id="$(var.RbFileProtectionDef)" BinaryKey="msi_misc.dll" DllEntry="$(var.RbFileProtectionDef)" Execute="rollback" Return="ignore" HideTarget="yes" Impersonate="no"/>
+		<CustomAction Id="$(var.EnableFileProtectionDef)SetProp" Property="$(var.EnableFileProtectionDef)" Value="[INSTALLDIR]" HideTarget="yes"/>
+		<CustomAction Id="$(var.EnableFileProtectionDef)" BinaryKey="msi_misc.dll" DllEntry="$(var.EnableFileProtectionDef)" Execute="deferred" Return="ignore" HideTarget="yes" Impersonate="no"/>
+		<CustomAction Id="$(var.EnableFileProtectionImm)" BinaryKey="msi_misc.dll" DllEntry="$(var.EnableFileProtectionImm)" Execute="immediate" Return="ignore" HideTarget="yes" Impersonate="no"/>
+		
+		<CustomAction Id="$(var.EnableFullProtectionDef)SetProp" Property="$(var.EnableFullProtectionDef)" Value="[INSTALLDIR]" HideTarget="yes"/>
+		<CustomAction Id="$(var.EnableFullProtectionDef)" BinaryKey="msi_misc.dll" DllEntry="$(var.EnableFullProtectionDef)" Execute="deferred" Return="ignore" HideTarget="yes" Impersonate="no"/>
+		<CustomAction Id="$(var.RbFullProtectionDef)" BinaryKey="msi_misc.dll" DllEntry="$(var.RbFullProtectionDef)" Execute="rollback" Return="ignore" HideTarget="yes" Impersonate="no"/>
+		<CustomAction Id="$(var.DisableProtectionDef)" BinaryKey="msi_misc.dll" DllEntry="$(var.DisableProtectionDef)" Execute="deferred"  Return="ignore" HideTarget="yes" Impersonate="no"/>
+
+		<CustomAction Id="$(var.DisableFidboxDef)" BinaryKey="msi_misc.dll" DllEntry="$(var.DisableFidboxDef)" Execute="deferred" Return="ignore" HideTarget="yes" Impersonate="no"/>
+
+		<CustomAction Id="UninstallAHSetProp" Property="UninstallAH" Value="Name=[INSTALLDIR]wmihlpr.ppl"
+			HideTarget="yes" />
+		<CustomAction Id="UninstallAH" BinaryKey="msi_misc.dll" DllEntry="UninstallAH" Execute="deferred"
+			Return="ignore" HideTarget="yes" Impersonate="no"/>
+
+		<CustomAction Id="CleanRegFlag_BatPluginSetProp" Property="CleanRegFlag_BatPlugin" Value="Name=[INSTALLDIR]kav.bav"
+			HideTarget="yes" />
+		<CustomAction Id="CleanRegFlag_BatPlugin" BinaryKey="msi_misc.dll" DllEntry="CleanRegFlag_BatPlugin" Execute="deferred"
+			Return="ignore" HideTarget="yes" Impersonate="no"/>
+		<CustomAction Id="CleanRegFlag_BatASSetProp" Property="CleanRegFlag_BatAS" Value="Name=[INSTALLDIR]kav.tbp"
+			HideTarget="yes" />
+		<CustomAction Id="CleanRegFlag_BatAS" BinaryKey="msi_misc.dll" DllEntry="CleanRegFlag_BatPlugin" Execute="deferred"
+			Return="ignore" HideTarget="yes" Impersonate="no"/>
+
+		<CustomAction Id="Register_BatPluginSetProp" Property="Register_BatPlugin" Value="Name=[INSTALLDIR]kav.bav"
+			HideTarget="yes" />
+		<CustomAction Id="Register_BatPlugin" BinaryKey="msi_misc.dll" DllEntry="Register_BatPlugin" Execute="deferred"
+			Return="ignore" HideTarget="yes" Impersonate="no"/>
+		<CustomAction Id="Register_BatASSetProp" Property="Register_BatAS" Value="Name=[INSTALLDIR]kav.tbp"
+			HideTarget="yes" />
+		<CustomAction Id="Register_BatAS" BinaryKey="msi_misc.dll" DllEntry="Register_BatPlugin" Execute="deferred"
+			Return="ignore" HideTarget="yes" Impersonate="no"/>
+
+		<CustomAction Id="Unregister_BatPluginSetProp" Property="Unregister_BatPlugin" Value="Name=[INSTALLDIR]kav.bav"
+			HideTarget="yes" />
+		<CustomAction Id="Unregister_BatPlugin" BinaryKey="msi_misc.dll" DllEntry="Unregister_BatPlugin"
+			Execute="deferred" Return="ignore" HideTarget="yes" Impersonate="no"/>
+		<CustomAction Id="Unregister_BatASSetProp" Property="Unegister_BatAS" Value="Name=[INSTALLDIR]kav.tbp"
+			HideTarget="yes" />
+		<CustomAction Id="Unegister_BatAS" BinaryKey="msi_misc.dll" DllEntry="Unregister_BatPlugin" Execute="deferred"
+			Return="ignore" HideTarget="yes" Impersonate="no"/>
+
+		<CustomAction Id="RbUnregister_BatPluginSetProp" Property="RbUnregister_BatPlugin" Value="Name=[INSTALLDIR]kav.bav"
+			HideTarget="yes" />
+		<CustomAction Id="RbUnregister_BatPlugin" BinaryKey="msi_misc.dll" DllEntry="Unregister_BatPlugin"
+			Execute="rollback" Return="ignore" HideTarget="yes" Impersonate="no"/>
+		<CustomAction Id="RbUnregister_BatASSetProp" Property="RbUnegister_BatAS" Value="Name=[INSTALLDIR]kav.tbp"
+			HideTarget="yes" />
+		<CustomAction Id="RbUnregister_BatAS" BinaryKey="msi_misc.dll" DllEntry="Unregister_BatPlugin"
+			Execute="rollback" Return="ignore" HideTarget="yes" Impersonate="no"/>
+
+		<!-- custom actions for register/unregister/start/stop application -->
+		<!--<CustomAction Id="RegisterAppSrv" FileKey="avp.exe" ExeCommand="-i" Execute="deferred" />
+		<CustomAction Id="UnregisterAppSrv" FileKey="avp.exe" ExeCommand="-u" Execute="deferred" />-->
+		<!--<CustomAction Id="StopApp" FileKey="avp.exe" ExeCommand="-e" Execute="immediate" />-->
+		<!--<CustomAction Id="ProductInitialize" FileKey="avp.exe" ExeCommand="-init" Return="ignore"/>-->
+
+		<CustomAction Id="ProductDeinitializeSetProp" Property="ProductDeinitialize" Value="Exe=[INSTALLDIR]avp.exe|Cmd=-u -nsp|Dir=[INSTALLDIR]|Wait=1" HideTarget="yes" />
+		<CustomAction Id="ProductDeinitialize" BinaryKey="msi_misc.dll" DllEntry="ExecDeferred" Execute="deferred" Return="ignore" Impersonate="no"/>
+		<!--<CustomAction Id="ProductDeinitialize" FileKey="avp.exe" ExeCommand="-u" Execute="deferred" Return="ignore" Impersonate="no"/>-->
+
+		<CustomAction Id="RunAppSetProp" Property="Exec" Value="Exe=[INSTALLDIR]avp.exe|Dir=[INSTALLDIR]|Wait=0" HideTarget="yes" />
+		<CustomAction Id="RunApp" BinaryKey="msi_misc.dll" DllEntry="ExecImmediate" Execute="immediate" Return="ignore" />
+
+		<CustomAction Id="RunPIWAndWaitSetProp" Property="Exec" Value="Exe=[INSTALLDIR]avp.exe|Dir=[INSTALLDIR]|Wait=1" HideTarget="yes" />
+		<CustomAction Id="RunPIWAndWait" BinaryKey="msi_misc.dll" DllEntry="ExecImmediate" Execute="immediate" Return="ignore" />
+
+		<CustomAction Id="CheckRebootPending" BinaryKey="msi_misc.dll" DllEntry="CheckRebootPending" Execute="immediate"
+				Return="ignore"/>
+		<CustomAction Id="EnableRebootPending" BinaryKey="msi_misc.dll" DllEntry="EnableRebootPending"
+				Execute="immediate" Return="ignore"/>
+		<CustomAction Id="RbEnableRebootPending" BinaryKey="msi_misc.dll" DllEntry="EnableRebootPending"
+				Execute="rollback" Return="ignore" Impersonate="no"/>
+
+		<CustomAction Id="SetIsUninstall" Property="IsUninstall" Value="1"/>
+
+		<CustomAction Id="SetRebootNeeded" Property="RebootNeeded" Value="1" HideTarget="yes" />
+
+		<CustomAction Id="SetRebootSuppress" Property="REBOOT" Value="S" HideTarget="yes"/>
+
+		<CustomAction Id="SetPIWInitModeInit"				Property="PIWInitModeInit"				Value="1" />
+		<CustomAction Id="SetPIWInitModeSilent"				Property="PIWInitModeSilent"			Value="1" />
+		<CustomAction Id="SetPIWInitModeLoadSettings"		Property="PIWInitModeLoadSettings"		Value="1" />
+		<CustomAction Id="SetPIWInitModeNoReboot"			Property="PIWInitModeNoReboot"			Value="1" />
+		<CustomAction Id="SetPIWInitModeExpressInstall"		Property="PIWInitModeExpressInstall"	Value="1" />
+		<CustomAction Id="SetPIWInitModeUpgrade"			Property="PIWInitModeUpgrade"			Value="1" />
+		<CustomAction Id="SetPIWInitModeUseRegLic"			Property="PIWInitModeUseRegLic"			Value="1" />
+
+		<CustomAction Id="SetPIWInitModeSetProp" BinaryKey="msi_misc.dll" DllEntry="SetPIWInitModeSetProp" Execute="immediate"
+				Return="ignore" HideTarget="yes"/>
+		<CustomAction Id="SetPIWInitMode" BinaryKey="msi_misc.dll" DllEntry="SetPIWInitMode" Execute="deferred"
+				Return="ignore" HideTarget="yes" Impersonate="no"/>
+		<CustomAction Id="SetUpdateState" BinaryKey="msi_misc.dll" DllEntry="SetUpdateState" Execute="deferred"
+				Return="ignore" Impersonate="no"/>
+
+		<CustomAction Id="SetARPNOREMOVE" Property="ARPNOREMOVE" Value="1" HideTarget="yes" />
+		<CustomAction Id="SetARPINSTALLLOCATION" Property="ARPINSTALLLOCATION" Value="[INSTALLDIR]" HideTarget="yes" />
+
+		<!--<CustomAction Id="RemoveExtraFilesFoldersSetProp" Property="RemoveExtraFilesFolders" Value="Path=[WindowsFolder]"
+			HideTarget="yes" />
+		<CustomAction Id="RemoveExtraFilesFolders" BinaryKey="msi_misc.dll" DllEntry="RemoveExtraFilesFolders"
+			Execute="deferred" HideTarget="yes" Return="ignore" Impersonate="no"/>-->
+
+		<!--<CustomAction Id="SaveAVBasesSetProp" Property="SaveAVBases" Value="Src=[CommonAppDataBasesDir]|Target=[CommonAppDataAVPDir]Temp\Bases\|Temp=[CommonAppDataAVPDir]Temp\" HideTarget="yes" />
+		<CustomAction Id="SaveAVBases" BinaryKey="msi_misc.dll" DllEntry="SaveAVBases" Execute="deferred" HideTarget="yes" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="SaveDSKMBasesSetProp" Property="SaveDSKMBases" Value="Src=[CommonAppDataDskmDir]|Target=[CommonAppDataAVPDir]Temp\Dskm\|Temp=[CommonAppDataAVPDir]Temp\" HideTarget="yes" />
+		<CustomAction Id="SaveDSKMBases" BinaryKey="msi_misc.dll" DllEntry="SaveAVBases" Execute="deferred" HideTarget="yes" Return="ignore" Impersonate="no"/>-->
+
+		<CustomAction Id="SaveASBasesSetProp" Property="SaveASBases" Value="Data=[CommonAppDataDataDir]|Temp=[CommonAppDataAVPDir]Temp\" HideTarget="yes" />
+		<CustomAction Id="SaveASBases" BinaryKey="msi_misc.dll" DllEntry="SaveASBases" Execute="deferred" HideTarget="yes" Return="ignore" Impersonate="no"/>
+
+		<!--<CustomAction Id="RestoreAVBasesSetProp" Property="RestoreAVBases" Value="Src=[CommonAppDataAVPDir]Temp\Bases\|Target=[CommonAppDataBasesDir]" HideTarget="yes" />
+		<CustomAction Id="RestoreAVBases" BinaryKey="msi_misc.dll" DllEntry="RestoreAVBases" Execute="deferred" HideTarget="yes" Impersonate="no"/>
+		<CustomAction Id="RestoreDSKMBasesSetProp" Property="RestoreDSKMBases" Value="Src=[CommonAppDataAVPDir]Temp\Dskm\|Target=[CommonAppDataDskmDir]" HideTarget="yes" />
+		<CustomAction Id="RestoreDSKMBases" BinaryKey="msi_misc.dll" DllEntry="RestoreAVBases" Execute="deferred" HideTarget="yes" Impersonate="no"/>-->
+
+		<CustomAction Id="RestoreASBasesVer6SetProp" Property="RestoreASBasesVer6" Value="Src=[SAVEDASBASESVER6INSTALLED]|Dst=[CommonAppDataDataDir]antispam.sfdb" HideTarget="yes" />
+		<CustomAction Id="RestoreASBasesVer6" BinaryKey="msi_misc.dll" DllEntry="RestoreASBases" Execute="deferred" HideTarget="yes" Impersonate="no"/>
+
+		<CustomAction Id="RestoreASBasesSetProp" Property="RestoreASBases" Value="Src=[SAVEDASBASESINSTALLED]|Dst=[CommonAppDataDataDir]antispam.sfdb" HideTarget="yes" />
+		<CustomAction Id="RestoreASBases" BinaryKey="msi_misc.dll" DllEntry="RestoreASBases" Execute="deferred" HideTarget="yes" Impersonate="no"/>
+
+		<CustomAction Id="DeleteAVBasesSetProp" Property="DeleteAVBases" Value="[CommonAppDataBasesDir]" HideTarget="yes" />
+		<CustomAction Id="DeleteAVBases" BinaryKey="msi_misc.dll" DllEntry="DeleteFolder" Execute="deferred" HideTarget="yes" Return="ignore" Impersonate="no"/>
+
+		<CustomAction Id="DeleteDataSetProp" Property="DeleteData" Value="[CommonAppDataDataDir]" HideTarget="yes" />
+		<CustomAction Id="DeleteData" BinaryKey="msi_misc.dll" DllEntry="DeleteFolder" Execute="deferred" HideTarget="yes" Return="ignore" Impersonate="no"/>
+
+		<CustomAction Id="DeletePemsSetProp" Property="DeletePems" Value="[CommonAppDataDataDir]*.pem" HideTarget="yes" />
+		<CustomAction Id="DeletePems"  BinaryKey="msi_misc.dll" DllEntry="RemoveFiles" Execute="deferred" Return="check" HideTarget="yes" />
+
+		<CustomAction Id="DeleteDSKMBasesSetProp" Property="DeleteDSKMBases" Value="[CommonAppDataDskmDir]" HideTarget="yes" />
+		<CustomAction Id="DeleteDSKMBases" BinaryKey="msi_misc.dll" DllEntry="DeleteFolder" Execute="deferred" HideTarget="yes" Return="ignore" Impersonate="no"/>
+
+		<CustomAction Id="DeleteReportsSetProp" Property="DeleteReports" Value="[CommonAppDataReportDir]*.*" HideTarget="yes" />
+		<CustomAction Id="DeleteReports"  BinaryKey="msi_misc.dll" DllEntry="RemoveFiles" Execute="deferred" Return="check" HideTarget="yes" Impersonate="no"/>
+
+		<CustomAction Id="DeleteReportSetProp" Property="DeleteReport" Value="[CommonAppDataReportDir]" HideTarget="yes" />
+		<CustomAction Id="DeleteReport" BinaryKey="msi_misc.dll" DllEntry="DeleteFolder" Execute="deferred" HideTarget="yes" Return="ignore" Impersonate="no"/>
+
+		<CustomAction Id="DeletePdmHistSetProp" Property="DeletePdmHist" Value="[CommonAppDataPdmHistDir]" HideTarget="yes" />
+		<CustomAction Id="DeletePdmHist" BinaryKey="msi_misc.dll" DllEntry="DeleteFolder" Execute="deferred" HideTarget="yes" Return="ignore" Impersonate="no"/>
+
+		<CustomAction Id="DeleteQuarantineSetProp" Property="DeleteQuarantine" Value="[CommonAppDataQuarantineDir]" HideTarget="yes" />
+		<CustomAction Id="DeleteQuarantine" BinaryKey="msi_misc.dll" DllEntry="DeleteFolder" Execute="deferred" HideTarget="yes" Return="ignore" Impersonate="no"/>
+
+		<CustomAction Id="DeleteBackupSetProp" Property="DeleteBackup" Value="[CommonAppDataBackupDir]" HideTarget="yes" />
+		<CustomAction Id="DeleteBackup" BinaryKey="msi_misc.dll" DllEntry="DeleteFolder" Execute="deferred" HideTarget="yes" Return="ignore" Impersonate="no"/>
+
+		<CustomAction Id="DeleteTempSetProp" Property="DeleteTemp" Value="[CommonAppDataAVPDir]Temp" HideTarget="yes" />
+		<CustomAction Id="DeleteTemp" BinaryKey="msi_misc.dll" DllEntry="DeleteFolder" Execute="deferred" HideTarget="yes" Return="ignore" Impersonate="no"/>
+		
+		<CustomAction Id="DeleteKLDirSetProp" Property="DeleteKLDir" Value="[CommonAppDataAVPDir]" HideTarget="yes" />
+		<CustomAction Id="DeleteKLDir" BinaryKey="msi_misc.dll" DllEntry="DeleteFolder" Execute="deferred" HideTarget="yes" Return="ignore" Impersonate="no"/>
+
+		<CustomAction Id="RbCreateFoldersSetProp" Property="RbCreateFolders" Value="[INSTALLDIR]" HideTarget="yes" />
+		<CustomAction Id="RbCreateFolders" BinaryKey="msi_misc.dll" DllEntry="RbCreateFolders" Execute="rollback"  HideTarget="yes" Return="ignore" Impersonate="no"/>
+
+		<CustomAction Id="RemoveFilesX64SetProp" Property="RemoveFilesX64" Value="Name=klogon.dll" />
+		<CustomAction Id="RemoveFilesX64" BinaryKey="msi_misc.dll" DllEntry="RemoveFilesX64" Execute="deferred" Return="ignore" Impersonate="no"/>
+
+		<CustomAction Id="RemoveUpdaterList" BinaryKey="msi_misc.dll" DllEntry="RemoveUpdaterList" Execute="deferred" Return="ignore" Impersonate="no"/>
+
+		<CustomAction Id="RbPrDatSetProp"  Property="RbPrDat" Value="[CommonAppDataKLDir]~PR*.dat" HideTarget="yes" />
+		<CustomAction Id="RbPrDat"  BinaryKey="msi_misc.dll" DllEntry="RemoveFiles" Execute="rollback"   Return="check" Impersonate="no" HideTarget="yes" />
+
+		<CustomAction Id="RemovePrDatSetProp"  Property="RemovePrDat" Value="[CommonAppDataKLDir]~PR*.dat" HideTarget="yes" />
+		<CustomAction Id="RemovePrDat"  BinaryKey="msi_misc.dll" DllEntry="RemoveFiles" Execute="deferred" Return="check" Impersonate="no" HideTarget="yes" />
+
+		<!--<CustomAction Id="RemoveFileOnRebootSetProp" Property="RemoveFileOnReboot" Value="Name=[WindowsFolder]klogon.dll" />
+		<CustomAction Id="RemoveFileOnReboot" BinaryKey="msi_misc.dll" DllEntry="RemoveFileOnReboot" Execute="deferred" Return="ignore" Impersonate="no"/>-->
+
+		<CustomAction Id="DeleteSetupFiles1SetProp"  Property="DeleteSetupFiles1" Value="[CommonAppDataFolder]$(var.SetupFilesFolderName)\$(var.SetupFilesProductFolderName)\$(env.localization_name)" HideTarget="yes" />
+		<CustomAction Id="DeleteSetupFiles1" BinaryKey="msi_misc.dll" DllEntry="DeleteFolder" Execute="deferred" Return="check" Impersonate="no" HideTarget="yes" />
+
+		<CustomAction Id="DeleteSetupFiles2SetProp"  Property="DeleteSetupFiles2" Value="[CommonAppDataFolder]$(var.SetupFilesFolderName)\$(var.SetupFilesProductFolderName)" HideTarget="yes" />
+		<CustomAction Id="DeleteSetupFiles2" BinaryKey="msi_misc.dll" DllEntry="DeleteEmptyFolder" Execute="deferred" Return="check" Impersonate="no" HideTarget="yes" />
+
+		<CustomAction Id="DeleteSetupFiles3SetProp"  Property="DeleteSetupFiles3" Value="[CommonAppDataFolder]$(var.SetupFilesFolderName)" HideTarget="yes" />
+		<CustomAction Id="DeleteSetupFiles3" BinaryKey="msi_misc.dll" DllEntry="DeleteEmptyFolder" Execute="deferred" Return="check" Impersonate="no" HideTarget="yes" />
+
+		<CustomAction Id="DeleteLicenseInfoSetProp" Property="DeleteLicenseInfo" Value="ProductType=$(var.ProductType)"
+			HideTarget="yes" />
+		<CustomAction Id="DeleteLicenseInfo" BinaryKey="msi_misc.dll" DllEntry="DeleteLicenseInfo" Execute="deferred"
+			HideTarget="yes" Return="ignore" Impersonate="no"/>
+
+		<CustomAction Id="ExportSettings" FileKey="avp.exe" ExeCommand="-hidden -nsp -bl export protection &quot;[CommonAppDataDataDir]avp.cfg&quot;"
+			Execute="deferred" Impersonate="no" Return="ignore" />
+		<CustomAction Id="SaveSettingsSetProp" Property="SaveSettings" Value="Data=[CommonAppDataDataDir]|Temp=[CommonAppDataAVPDir]Temp\"
+			HideTarget="yes" />
+		<CustomAction Id="SaveSettings" BinaryKey="msi_misc.dll" DllEntry="SaveSettings" Execute="deferred"  
+			HideTarget="yes" Impersonate="no" Return="ignore" />
+		<CustomAction Id="RestoreSettingsSetProp" Property="RestoreSettings" Value="Data=[CommonAppDataDataDir]|SrcFile=[SETTINGSINSTALLED]"
+			HideTarget="yes" />
+		<CustomAction Id="RestoreSettings" BinaryKey="msi_misc.dll" DllEntry="RestoreSettings" Execute="deferred"
+			HideTarget="yes" Impersonate="no"/>
+
+		<CustomAction Id="RestoreDNSCacheSetProp" Property="RestoreDNSCache" Value="Name=[INSTALLDIR]basegui.ppl"
+			HideTarget="yes" />
+		<CustomAction Id="RestoreDNSCache" BinaryKey="msi_misc.dll" DllEntry="RestoreDNSCache" Execute="deferred"
+			Return="ignore" HideTarget="yes" Impersonate="no"/>
+
+		<CustomAction Id="AVP6UpgradeSettings" BinaryKey="msi_misc.dll" DllEntry="AVP6UpgradeSettings" Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="AVP6UpgradeQSetProp" Property="AVP6UpgradeQ" Value="Src=[CommonAppDataKLDir]AVP6\Quarantine\|Dst=[CommonAppDataQuarantineDir]" HideTarget="yes"/>
+		<CustomAction Id="AVP6UpgradeQ" BinaryKey="msi_misc.dll" DllEntry="AVP6UpgradeQB" Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="AVP6UpgradeBSetProp" Property="AVP6UpgradeB" Value="Src=[CommonAppDataKLDir]AVP6\Backup\|Dst=[CommonAppDataBackupDir]" HideTarget="yes"/>
+		<CustomAction Id="AVP6UpgradeB" BinaryKey="msi_misc.dll" DllEntry="AVP6UpgradeQB" Execute="deferred" Return="ignore" Impersonate="no"/>
+		<CustomAction Id="AVP6UpgradeASSetProp" Property="AVP6UpgradeAS" Value="Src=[CommonAppDataKLDir]AVP6\Data\antispam.sfdb|Dst=[CommonAppDataDataDir]antispam.sfdb" HideTarget="yes"/>
+		<CustomAction Id="AVP6UpgradeAS" BinaryKey="msi_misc.dll" DllEntry="AVP6UpgradeAS" Execute="deferred" Return="ignore" Impersonate="no"/>
+
+		<CustomAction Id="SetAppTasksSetProp" Property="SetAppTasks" Value="Components=[COMPONENTSFIELD]" HideTarget="yes" />
+		<CustomAction Id="SetAppTasks" BinaryKey="msi_misc.dll" DllEntry="SetAppTasks" Execute="deferred" Return="ignore" Impersonate="no"/>
+		<!--
+		<CustomAction Id="HideTaskScanMyComputer" BinaryKey="msi_misc.dll" DllEntry="HideTaskScanMyComputer" Execute="deferred"
+			Return="ignore" Impersonate="no"/>
+		<CustomAction Id="HideTaskScanStartup" BinaryKey="msi_misc.dll" DllEntry="HideTaskScanStartup" Execute="deferred"
+			Return="ignore" Impersonate="no"/>
+		<CustomAction Id="HideTaskScanCritical" BinaryKey="msi_misc.dll" DllEntry="HideTaskScanCritical" Execute="deferred"
+			Return="ignore" Impersonate="no"/>
+		<CustomAction Id="HideTaskUpdater" BinaryKey="msi_misc.dll" DllEntry="HideTaskUpdater" Execute="deferred"
+			Return="ignore" Impersonate="no"/>
+		<CustomAction Id="HideTaskRetranslation" BinaryKey="msi_misc.dll" DllEntry="HideTaskRetranslation" Execute="deferred"
+			Return="ignore" Impersonate="no"/>
+		-->
+
+		<!--<CustomAction Id="SetSAVEAVBASES" Property="SAVEAVBASES" Value="1" />-->
+		<CustomAction Id="SetSAVELICENSE" Property="SAVELICENSE" Value="1" />
+		<CustomAction Id="Fix_USESAVEDASBASES" Property="USESAVEDASBASES" Value="{}" />
+		<CustomAction Id="Fix_USESAVEDSETTINGS" Property="USESAVEDSETTINGS" Value="{}" />
+		<!--<CustomAction Id="SetSAVEQUARANTINE" Property="SAVEQUARANTINE" Value="1" />
+		<CustomAction Id="SetSAVEBACKUP" Property="SAVEBACKUP" Value="1" />-->
+
+		<CustomAction Id="RemAUKLAVPSetProp" Property="RemAUKLAVP" Value="Key=$(var.HKLM_PRODUCT)" HideTarget="yes" />
+		<CustomAction Id="RemAUKLAVP" BinaryKey="msi_misc.dll" DllEntry="RemoveAllUsersRegKey" Execute="deferred" Return="check" HideTarget="yes" />
+		<CustomAction Id="RemAUKLSetProp" Property="RemAUKL" Value="Key=Software\KasperskyLab|IfEmpty=Yes" HideTarget="yes" />
+		<CustomAction Id="RemAUKL" BinaryKey="msi_misc.dll" DllEntry="RemoveAllUsersRegKey" Execute="deferred" Return="check" HideTarget="yes" />
+
+		<!--<CustomAction Id="SetSetupResultSetProp" Property="SetSetupResult" Value="Name=[SOURCEDIR]setup.log" HideTarget="yes" />-->
+		<CustomAction Id="SetSetupResultSuccess" BinaryKey="msi_misc.dll" DllEntry="SetSetupResultSuccess" Return="ignore" />
+		<!--<CustomAction Id="WriteZombieSetProp" Property="WriteZombie" Value="InstallDir=[SOURCEDIR]|SetupLog=[SOURCEDIR]setup.log" HideTarget="yes" />-->
+		<CustomAction Id="WriteZombie" BinaryKey="msi_misc.dll" DllEntry="WriteZombie" Return="ignore"/>
+
+		<CustomAction Id="PrepareNagentResetSetProp" Property="OutBinFile" Value="Dir=[TempFolder]|File=nagrest.exe|Key=nagrest.exe" HideTarget="yes"/>
+		<CustomAction Id="PrepareNagentReset" BinaryKey="msi_misc.dll" DllEntry="OutBinFile" Execute="immediate" Return="ignore" />
+		<CustomAction Id="StartNagentResetSetProp" Property="Exec" Value="Exe=[TempFolder]nagrest.exe|Dir=[TempFolder]|Wait=0" HideTarget="yes" />
+		<CustomAction Id="StartNagentReset" BinaryKey="msi_misc.dll" DllEntry="ExecImmediate" Execute="immediate" Return="ignore" />
+
+		<CustomAction Id="CopyLicenseFromSourceSetProp" Property="CopyLicenseFromSource" Value="Src=[KLSETUPDIR]|Target=[SUPPORTDIR]"
+			HideTarget="yes" />
+		<CustomAction Id="CopyLicenseFromSource" BinaryKey="msi_misc.dll" DllEntry="AddLicenseFile" Execute="deferred"
+			HideTarget="yes" Return="ignore" Impersonate="yes"/>
+		<CustomAction Id="AddLicenseSetProp" Property="AddLicense" Value="Src=[SUPPORTDIR]|Target=[INSTALLDIR]"
+			HideTarget="yes" />
+		<CustomAction Id="AddLicense" BinaryKey="msi_misc.dll" DllEntry="AddLicenseFile" Execute="deferred"
+			HideTarget="yes" Return="ignore" Impersonate="no"/>
+
+		<CustomAction Id="CopyInstallCfgFromSourceSetProp" Property="CopyInstallCfgFromSource" Value="Src=[KLSETUPDIR]|Target=[SUPPORTDIR]|Name=install.cfg"
+			HideTarget="yes" />
+		<CustomAction Id="CopyInstallCfgFromSource" BinaryKey="msi_misc.dll" DllEntry="CopyFileFromSource" Execute="deferred"
+			HideTarget="yes" Return="ignore" Impersonate="yes"/>
+		<CustomAction Id="AddInstallCfgSetProp" Property="AddInstallCfg" Value="Src=[SUPPORTDIR]|Target=[INSTALLDIR]||Name=install.cfg"
+			HideTarget="yes" />
+		<CustomAction Id="AddInstallCfg" BinaryKey="msi_misc.dll" DllEntry="CopyFileFromSource" Execute="deferred"
+			HideTarget="yes" Return="ignore" Impersonate="no"/>
+
+		<CustomAction Id="CopySetupRegFromSourceSetProp" Property="CopySetupRegFromSource" Value="Src=[KLSETUPDIR]|Target=[SUPPORTDIR]|Name=setup.reg"
+			HideTarget="yes" />
+		<CustomAction Id="CopySetupRegFromSource" BinaryKey="msi_misc.dll" DllEntry="CopyFileFromSource" Execute="deferred"
+			HideTarget="yes" Return="ignore" Impersonate="yes"/>
+		<CustomAction Id="ImportSetupRegSetProp" Property="ImportSetupReg" Value="Exe=[WindowsFolder]regedit.exe|Cmd=/s &quot;[SUPPORTDIR]setup.reg&quot;|Dir=[SUPPORTDIR]|Wait=1|Name=setup.reg"
+			HideTarget="yes" />
+		<CustomAction Id="ImportSetupReg" BinaryKey="msi_misc.dll" DllEntry="ImportReg" Execute="deferred"
+			HideTarget="yes" Return="ignore" Impersonate="no"/>
+
+		<!--<CustomAction Id="RunNotepad" Directory="INSTALLDIR" ExeCommand="[WindowsFolder]notepad [WindowsFolder]wininit.ini"
+			Return="check"   Execute="immediate" />-->
+
+		<CustomAction Id="SystemRestart" BinaryKey="msi_misc.dll" DllEntry="SystemRestart" Execute="immediate"
+			HideTarget="yes" />
+
+		<CustomAction Id="SetupFilesCleanup" BinaryKey="msi_misc.dll" DllEntry="SetupFilesCleanup" Execute="immediate"
+			HideTarget="yes" />
+
+		<!--<CustomAction Id="AddEnvironmentVar" BinaryKey="msi_misc.dll" DllEntry="AddEnvironmentVar" Execute="deferred"
+			HideTarget="yes" Return="ignore"/>
+			
+		<CustomAction Id="AddMSExclusions" BinaryKey="msi_misc.dll" DllEntry="AddMSExclusions" Execute="deferred"
+			HideTarget="yes" Return="ignore"/>-->
+
+		<Binary Id="msi_misc.dll"  src="$(env.data_path)\Binary\msi_misc.dll" />
+		<Binary Id="UpgradeW.dll"  src="$(env.data_path)\Binary\UpgradeW.dll" />
+		<?if ($(env.product_type) = WKS Or $(env.product_type) = FS) ?>
+		<Binary Id="nagrest.exe"   src="$(env.data_path)\Binary\nagrest.exe" />
+		<?endif?>
+
+		<?include "$(env.temp_path)/cleanapi_files.wxi" ?>
+
+	</Fragment>
+</Wix>

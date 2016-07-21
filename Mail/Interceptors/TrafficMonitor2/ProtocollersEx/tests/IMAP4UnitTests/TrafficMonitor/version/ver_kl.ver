@@ -1,0 +1,113 @@
+/////////////////////////////////////////////////////////////////////
+//
+//  VER_KL.VER
+//  Kaspersky Labs product Version resource template
+//  General purpose
+//  Alexey de Mont de Rique [graf@avp.ru], Kaspersky Labs Inc. 1999
+//  Copyright (c) Kaspersky Labs Inc.
+//
+/////////////////////////////////////////////////////////////////////
+
+#ifndef __VER_KL_VER
+#define __VER_KL_VER
+
+#include "winver.h"
+#include "windows.h"
+
+#include "ver_kl.h"
+
+#ifndef VER_FILEVERSION
+#include "ver_avp.h"
+#endif
+
+#ifndef VER_FILEOS
+#define VER_FILEOS        VOS_NT_WINDOWS32
+#endif
+
+#ifndef VER_FILESUBTYPE
+#if VER_FILETYPE==VFT_DRV
+#define VER_FILESUBTYPE   VFT2_DRV_SYSTEM
+#else
+#define VER_FILESUBTYPE   VFT2_UNKNOWN
+#endif
+#endif//VER_FILESUBTYPE
+
+#ifndef VER_FILEFLAGSMASK
+#define VER_FILEFLAGSMASK     VS_FFI_FILEFLAGSMASK
+#endif
+
+#ifndef VER_VERSION_UNICODE_LANG
+#define VER_VERSION_UNICODE_LANG "040904B0"   /* LANG_ENGLISH/SUBLANG_ENGLISH_US, Unicode CP */
+#endif
+
+#ifndef VER_VERSION_ANSI_LANG
+#define VER_VERSION_ANSI_LANG    "040904E4"   /* LANG_ENGLISH/SUBLANG_ENGLISH_US, Ansi CP */ 
+#endif
+
+#ifndef VER_VERSION_TRANSLATION
+#define VER_VERSION_TRANSLATION  0x409, 0x4B0 /* LANG_ENGLISH/SUBLANG_ENGLISH_US, Unicode CP */
+#endif
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION                        VER_FILEVERSION
+ PRODUCTVERSION                     VER_PRODUCTVERSION
+ FILEFLAGSMASK                      VER_FILEFLAGSMASK
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#elif defined DEBUG
+ FILEFLAGS 0x1L
+#elif defined DBG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS                              VER_FILEOS          
+ FILETYPE                            VER_FILETYPE        
+ FILESUBTYPE                         VER_FILESUBTYPE     
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+#ifdef USE_ANSI_CP
+       BLOCK VER_VERSION_ANSI_LANG
+#else
+       BLOCK VER_VERSION_UNICODE_LANG
+#endif
+        BEGIN
+            VALUE "CompanyName",     VER_COMPANYNAME_STR "\0"
+            VALUE "LegalCopyright",  VER_LEGALCOPYRIGHT_STR "\0"
+            VALUE "LegalTrademarks", VER_LEGALTRADEMARKS_STR "\0"
+            VALUE "ProductName",     VER_PRODUCTNAME_STR "\0"
+            VALUE "ProductVersion",  VER_PRODUCTVERSION_STR "\0"
+            VALUE "FileVersion",     VER_FILEVERSION_STR "\0"
+#ifdef VER_COMMENTS_STR
+            VALUE "Comments", VER_COMMENTS_STR "\0"
+#endif
+
+#ifdef VER_FILEDESCRIPTION_STR
+            VALUE "FileDescription", VER_FILEDESCRIPTION_STR "\0"
+#endif
+
+#ifdef VER_INTERNALNAME_STR
+            VALUE "InternalName",    VER_INTERNALNAME_STR "\0"
+#endif
+
+#ifdef VER_ORIGINALFILENAME_STR
+            VALUE "OriginalFilename",VER_ORIGINALFILENAME_STR "\0"
+#endif
+
+#ifdef VER_SPECIALBUILD_STR
+            VALUE "SpecialBuild", VER_SPECIALBUILD_STR "\0"
+#endif
+
+#ifdef VER_PRIVATEBUILD_STR
+            VALUE "PrivateBuild", VER_PRIVATEBUILD_STR "\0"
+#endif
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", VER_VERSION_TRANSLATION
+    END
+END
+
+#endif//__VER_KL_VER

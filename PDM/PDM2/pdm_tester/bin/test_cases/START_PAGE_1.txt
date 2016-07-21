@@ -1,0 +1,7 @@
+# charnge IE start page in registry
+
+# CH_IE_START_PAGE NOT_TO_CLEAR
+
+CREATE_REG_STR_VALUE @IE_START_PAGE_KEY@ 'start Page' 'http://www.kaspersky.com' NOT_TO_CLEAR
+
+#etalon_verdict 100 IEStartPage

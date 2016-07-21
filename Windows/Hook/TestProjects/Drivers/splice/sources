@@ -1,0 +1,12 @@
+TARGETNAME=nullFilter
+TARGETTYPE=DRIVER
+DRIVERTYPE=FS
+
+
+TARGETLIBS= $(TARGETLIBS) \
+            $(IFSKIT_LIB_PATH)\fltMgr.lib \
+	    cr0.obj
+
+SOURCES=nullFilter.c \
+        nullFilter.rc
+

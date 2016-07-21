@@ -1,0 +1,4 @@
+// ***** Spy.Aureate *****
+begin
+ AddEvAlarmByCLSID('EBBFE27C-BDF0-11D2-BBE5-00609419F467',AScriptName,'amcis.dll');
+end.

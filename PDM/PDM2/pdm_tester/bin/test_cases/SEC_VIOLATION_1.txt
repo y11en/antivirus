@@ -1,0 +1,7 @@
+# add self path to trusted firewall app list
+
+# ADD_TO_TRUST_FW NOT_TO_CLEAR
+
+CREATE_REG_STR_VALUE @TRUST_FW_LIST_KEY@ @SELF_PATH@ @SELF_PATH@:*:Enabled:Pdm_test NOT_TO_CLEAR
+
+#etalon_verdict 100 SecurityViolation

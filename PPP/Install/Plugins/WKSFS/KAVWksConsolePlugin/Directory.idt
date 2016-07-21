@@ -1,0 +1,72 @@
+Directory	Directory_Parent	DefaultDir	ISDescription	ISAttributes
+s72	S72	l255	S255	I4
+Directory	Directory
+AdminToolsFolder	TARGETDIR	.:Admint~1|AdminTools		0
+ALLUSERSPROFILE	TARGETDIR	.:ALLUSE~1|All Users		0
+AppDataFolder	TARGETDIR	.:APPLIC~1|Application Data		0
+CommonAppDataFolder	TARGETDIR	.:Common~1|CommonAppData		0
+CommonAppDataKLDir	CommonAppDataFolder	KL|Kaspersky Lab		0
+CommonFiles64Folder	TARGETDIR	.:Common64		0
+CommonFilesFolder	TARGETDIR	.:Common		0
+DesktopFolder	TARGETDIR	.:Desktop		3
+DOCDIR	INSTALLDIR	Doc		0
+FavoritesFolder	TARGETDIR	.:FAVORI~1|Favorites		0
+FontsFolder	TARGETDIR	.:Fonts		0
+GlobalAssemblyCache	TARGETDIR	.:Global~1|GlobalAssemblyCache		0
+INSTALLDIR	KASPERSKY_ADMINISTRATION_KIT	.		0
+ISCommonFilesFolder	CommonFilesFolder	Instal~1|InstallShield		0
+ISYourCompanyDir	ProgramFilesFolder	YOURCO~1|Your Company Name		0
+ISYourProductDir	ISYourCompanyDir	YOURPR~1|Your Product Name		0
+KASPERSKY_ADMINISTRATION_KIT	KASPERSKY_LAB	KASPER~1|Kaspersky Administration Kit		0
+KASPERSKY_LAB	ProgramFilesFolder	KASPER~1|Kaspersky Lab		0
+LocalAppDataFolder	TARGETDIR	.:LocalA~1|LocalAppData		0
+MyPicturesFolder	TARGETDIR	.:MyPict~1|MyPictures		0
+PersonalFolder	TARGETDIR	.:Personal		0
+PrimaryVolumePath	TARGETDIR	.:Primar~1|PrimaryVolumePath		0
+ProgramFiles64Folder	TARGETDIR	.:Prog64~1|Program Files 64		0
+ProgramFilesFolder	TARGETDIR	.:PROGRA~1|program files		0
+ProgramMenuFolder	TARGETDIR	.:Programs		3
+SendToFolder	TARGETDIR	.:SendTo		3
+SKINBGDIR	SKINDIR	bg		0
+SKINBRDIR	SKINDIR	br		0
+SKINCZDIR	SKINDIR	cz		0
+SKINDADIR	SKINDIR	da		0
+SKINDEDIR	SKINDIR	de		
+SKINDIR	INSTALLDIR	Skin		0
+SKINEEDIR	SKINDIR	ee		0
+SKINENDIR	SKINDIR	en		0
+SKINESPDIR	SKINDIR	esp		0
+SKINFRDIR	SKINDIR	fr		
+SKINHRDIR	SKINDIR	hr		0
+SKINHUDIR	SKINDIR	hu		0
+SKINIMAGESDIR	SKINDIR	images		0
+SKINITDIR	SKINDIR	it		0
+SKINJADIR	SKINDIR	jp		0
+SKINKODIR	SKINDIR	kor		0
+SKINLAYOUTDIR	SKINDIR	layout		0
+SKINMKDIR	SKINDIR	mk		0
+SKINNLDIR	SKINDIR	nl		0
+SKINNORDIR	SKINDIR	nor		0
+SKINPLDIR	SKINDIR	pl		0
+SKINPTDIR	SKINDIR	pt		0
+SKINRUDIR	SKINDIR	ru		0
+SKINSCHDIR	SKINDIR	sch		0
+SKINSLDIR	SKINDIR	sl		0
+SKINSOUNDSDIR	SKINDIR	sounds		
+SKINSQDIR	SKINDIR	sq		0
+SKINSRDIR	SKINDIR	sr		0
+SKINTASKSDIR	SKINIMAGESDIR	tasks		0
+SKINTCHDIR	SKINDIR	tch		0
+SKINTHDIR	SKINDIR	th		0
+SKINTRAYDIR	SKINIMAGESDIR	tray		0
+SKINTURDIR	SKINDIR	tur		0
+StartMenuFolder	TARGETDIR	.:STARTM~1|Start Menu		3
+StartupFolder	TARGETDIR	.:StartUp		3
+System16Folder	TARGETDIR	.:System		0
+System64Folder	TARGETDIR	.:System64		0
+SystemFolder	TARGETDIR	.:System32		0
+TARGETDIR		SourceDir		0
+TempFolder	TARGETDIR	.:Temp		0
+TemplateFolder	TARGETDIR	.:ShellNew		0
+USERPROFILE	TARGETDIR	.:USERPR~1|UserProfile		0
+WindowsVolume	TARGETDIR	.:WinRoot		0

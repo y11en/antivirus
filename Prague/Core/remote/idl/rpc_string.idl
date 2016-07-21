@@ -1,0 +1,36 @@
+
+import "prague.h";
+import "i_string.h";
+
+typedef rpcOBJECT	rpcSTRING;
+
+
+[ uuid (F5FAD51D-176A-4a92-BDC0-60B0D2C1141B),
+  version(1.0),
+  pointer_default(unique)
+]
+interface rpc_string {
+	// --------------------------------------------------------------------------------
+	// Methods to get string value
+	tERROR String_ExportToProp   ( rpcSTRING _this, [mout] tDWORD* result, tSTR_RANGE range, rpcOBJECT to, tPROPID to_propid ); // -- saves string content to object's property;
+	tERROR String_ExportToStr    ( rpcSTRING _this, [mout] tDWORD* result, tSTR_RANGE range, rpcSTRING to ); // -- saves string content to another string;
+	tERROR String_ExportToBuff   ( rpcSTRING _this, [mout] tDWORD* result, tSTR_RANGE range, [mout,size_is(length)] tCHAR* to, tDWORD length, tCODEPAGE cp, tDWORD flags ); // -- saves content of string to target buffer;
+
+	// --------------------------------------------------------------------------------
+	// Methods to put string value
+	tERROR String_ImportFromProp ( rpcSTRING _this, [mout] tDWORD* result, rpcOBJECT from, tPROPID propid ); // -- Loads string from object's property;
+	tERROR String_ImportFromStr  ( rpcSTRING _this, [mout] tDWORD* result, rpcSTRING from, tSTR_RANGE range ); // -- loads contents from source string;
+	tERROR String_ImportFromBuff ( rpcSTRING _this, [mout] tDWORD* result, [in,size_is(length)] tCHAR* from, tDWORD length, tCODEPAGE cp, tDWORD flags ); // -- loads content of the source buffer to itself;
+
+	// --------------------------------------------------------------------------------
+	// Miscelanous methods
+	tERROR String_Length         ( rpcSTRING _this, [mout] tDWORD* result );                             // -- returns current length of the string in symbols;
+	tERROR String_LengthEx       ( rpcSTRING _this, [mout] tDWORD* result, tSTR_RANGE range, tCODEPAGE cp, tDWORD flags ); // -- returns size of the (sub)string in bytes or in symbols;
+	tERROR String_GetCP          ( rpcSTRING _this, [mout] tCODEPAGE* result );                             // -- returns current codepage;
+	tERROR String_SetCP          ( rpcSTRING _this, tCODEPAGE cp );               // -- sets default code page for the string;
+}
+// AVP Prague stamp end( String, interface function forward declarations )
+// --------------------------------------------------------------------------------
+
+
+

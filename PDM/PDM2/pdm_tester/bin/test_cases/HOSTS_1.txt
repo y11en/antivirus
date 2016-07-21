@@ -1,0 +1,8 @@
+# add to host file anti-AV record
+
+# CHANGE_HOSTS NOT_TO_CLEAR
+
+ADD_BUFF_TO_FILE_END @SYSTEM_FOLDER@\drivers\etc\hosts '@\r\n@127.0.0.1       .avp.' NOT_TO_CLEAR
+
+#etalon_verdict 70 AntiAV
+#etalon_verdict 30 HostsAdded

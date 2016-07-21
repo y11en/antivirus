@@ -1,0 +1,21 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@ @srcdir@/../Hash_API/MD5
+
+Name = hashmd5
+Plugin = $(Name).@PLUGIN_EXT@
+Metafile = @srcdir@/hash_md5.@METAFILE_EXT@
+Targets = $(Plugin)
+
+Sources = \
+	hash.c \
+	plugin_hash_md5.c \
+	hash_md5.c \
+	md5.cpp
+
+# unix section 
+
+VersionScript = @abs_top_srcdir@/unix/prague_plugin.ver
+
+include @abs_top_builddir@/@OS@/Rules

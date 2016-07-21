@@ -1,0 +1,11 @@
+#include <windows.h>
+#include <ntverp.h>
+
+#define VER_FILETYPE                VFT_APP
+#define VER_FILESUBTYPE             VFT2_UNKNOWN
+#define VER_FILEDESCRIPTION_STR     "Check volume access"
+#define VER_INTERNALNAME_STR        "volumeaccess.exe"
+#define VER_ORIGINALFILENAME_STR    "volumeaccess.exe"
+
+#include "common.ver"
+

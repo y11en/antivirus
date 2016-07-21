@@ -1,0 +1,116 @@
+# Microsoft Developer Studio Generated Dependency File, included by AvpMgr.mak
+
+.\engine.c : \
+	"..\Avp1\engine.h"\
+	"..\Avp1\plugin_avp1.h"\
+	"..\Include\IFace\e_avpmgr.h"\
+	"..\Include\IFace\e_clsid.h"\
+	"..\Include\IFace\e_ktime.h"\
+	"..\Include\IFace\e_ktrace.h"\
+	"..\Include\IFace\e_loader.h"\
+	"..\Include\IFace\i_buffer.h"\
+	"..\include\iface\i_converter.h"\
+	"..\Include\IFace\i_engine.h"\
+	"..\include\iface\i_hashct.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_ichecker2.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_io.h"\
+	"..\Include\IFace\i_list.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_minarc.h"\
+	"..\Include\IFace\i_objptr.h"\
+	"..\INCLUDE\IFACE\i_os.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\iface\i_posio.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_seqio.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_sfdb.h"\
+	"..\include\iface\i_string.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\iface\i_uacall.h"\
+	"..\Include\IFace\impexhlp.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\Include\pr_oid.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	"..\ISLite\IChecker2\ichecker2.h"\
+	"..\Wrappers\DMAP\dmap.h"\
+	"..\Wrappers\DMAP\plugin_dmap.h"\
+	".\engine.h"\
+	".\plugin_avpmgr.h"\
+	".\static.h"\
+	
+
+.\plugin_avpmgr.c : \
+	"..\Include\IFace\e_avpmgr.h"\
+	"..\Include\IFace\e_clsid.h"\
+	"..\Include\IFace\e_ktime.h"\
+	"..\Include\IFace\e_ktrace.h"\
+	"..\Include\IFace\e_loader.h"\
+	"..\Include\IFace\i_engine.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_io.h"\
+	"..\Include\IFace\i_list.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_minarc.h"\
+	"..\Include\IFace\i_objptr.h"\
+	"..\INCLUDE\IFACE\i_os.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_seqio.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_string.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\Include\IFace\i_tree.h"\
+	"..\include\iface\i_uacall.h"\
+	"..\Include\IFace\impexhlp.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	"..\UniArc\os.h"\
+	".\engine.h"\
+	".\plugin_avpmgr.h"\
+	".\static.h"\
+	
+
+.\AvpMgr.rc : \
+	"..\..\CommonFiles\Version\ver_av50.h"\
+	"..\..\CommonFiles\Version\ver_itoa.h"\
+	"..\..\CommonFiles\Version\ver_kl.h"\
+	".\ver_mod.h"\
+	

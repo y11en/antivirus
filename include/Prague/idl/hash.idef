@@ -1,0 +1,41 @@
+forward interface Hash;
+typedef Hash* hHASH;
+
+
+
+[
+  version(1)
+  mnemonic(IID_HASH)
+  id(58004)
+  c_type_name(hHASH)
+]
+interface Hash { // Calculates hash for data
+
+  // ------------------------------------
+
+    [
+      id(4096)
+      comment_ex("Используется для \"досчета\" хеша от некоторого начального значения.")
+    ]
+    prop tBINARY pgHASH_INIT_VALUE; // Начальное значение хеша
+
+    [
+      id(4097)
+      comment_ex("Указывается в БИТАХ")
+    ]
+    prop tDWORD pgHASH_SIZE; // Размер хеша
+
+
+  // ------------------------------------
+    method tERROR Reset(); // Подготовить объект для подсчета нового хэша
+    method tERROR Update( // Обсчитать очередной блок данных
+      tBYTE* pData, // Указатель на очередной блок данных
+      tDWORD dwSize // Размер данных
+    );
+    method tERROR GetHash( // Взять значание хеша для обработанных данных
+      tBYTE* pHash, // Буфер для помещения хеша
+      tDWORD dwSize // Размер буфера адресуемого параметром pHash
+    );
+
+}
+

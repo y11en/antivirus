@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <link uin="idj28r6egxl7ttqegz41i2t.linkidi5hmheibr88lzeibral40">
+        <participant role="Supplier" referencedUin="design:view:::id1cex6eibjqafceibk1lfq"/>
+        <participant role="Client" referencedUin="design:view:::idj28r6egxl7ttqegz41i2t"/>
+        <property name="$metaclass" value="Dependency Link"/>
+        <property name="@stereotype" value="use"/>
+    </link>
+    <view uin="idj28r6egxl7ttqegz41i2t">
+        <property name="$metaclass" value="Class Diagram"/>
+        <property name="@__options" value="option.detail"/>
+        <property name="@stereotype" value="layer"/>
+        <reference df-class-name="reference" referencedUin="&lt;oiref:cpp#Class#ActivationError:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="60,270,195,206"/>
+        </reference>
+        <reference df-class-name="reference18" referencedUin="&lt;oiref:cpp#Class#ActivationFactory:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="60,20,181,190"/>
+            <reference referencedUin="MemberLink#&lt;oiref:cpp#Member#ActivationFactory#m_instance:oiref&gt;">
+                <property name="sourceAnchor" value="217,242"/>
+                <property name="bendpoints" value="217,295,313,295,313,199"/>
+                <property name="targetAnchor" value="260,199"/>
+                <property name="bounds_setted_by_user" value="true"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference3" referencedUin="&lt;oiref:cpp#Class#Request:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="340,20,167,238"/>
+        </reference>
+        <reference df-class-name="reference11" referencedUin="&lt;oiref:cpp#Class#Response:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="310,310,189,158"/>
+        </reference>
+        <reference df-class-name="reference27" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::ActivationError:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="10,590,240,210"/>
+            <property name="bounds_setted_by_user" value="true"/>
+        </reference>
+        <reference df-class-name="reference28" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::ActivationFactory:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="10,10,242,200"/>
+            <property name="bounds_setted_by_user" value="true"/>
+            <reference referencedUin="MemberLink#&lt;oiref:cpp#Member#OnlineActivation::ActivationFactory#lnkRequest:oiref&gt;">
+                <property name="sourceAnchor" value="131,210"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="131,290"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference32" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::Request:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="10,290,242,280"/>
+            <property name="bounds_setted_by_user" value="true"/>
+            <reference referencedUin="MemberLink#&lt;oiref:cpp#Member#OnlineActivation::Request#lnkResponse:oiref&gt;">
+                <property name="sourceAnchor" value="252,490"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="362,490"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference33" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::Response:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="362,410,250,210"/>
+            <property name="bounds_setted_by_user" value="true"/>
+        </reference>
+        <reference df-class-name="reference34" referencedUin="&lt;oiref:cpp#Class#OnlineActivation::RequestObserver:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="362,10,250,377"/>
+            <property name="bounds_setted_by_user" value="true"/>
+        </reference>
+    </view>
+</nodeSet>

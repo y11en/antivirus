@@ -1,0 +1,4 @@
+// ***** AdvWare.MetaDirect.Navi *****
+begin
+ AddEvAlarmByCLSID('3E422F49-1566-40D3-B43D-077EF739AC32',AScriptName,'NaviHelper.dll');
+end.

@@ -1,0 +1,168 @@
+#import "os.idef"
+#import "rgnmgr.idef"
+
+forward interface RegionMgr;
+typedef RegionMgr* hREGIONMGR;
+
+forward interface KLAVSearchManager;
+typedef KLAVSearchManager* hKLAVSEARCHMANAGER;
+
+forward interface KLAVRegionSearcher;
+typedef KLAVRegionSearcher* hKLAVREGIONSEARCHER;
+
+
+forward struct REGION_INFO;
+forward struct REGION_MAPPING;
+forward struct KLAV_CONTEXT_TYPE;
+forward struct tKLRET;
+
+
+[
+  mnemonic(IID_REGIONMGR)
+  id(42002)
+  c_type_name(hREGIONMGR)
+  comment_ex("Defines behavior of input/output of an object
+    Important -- It is supposed several clients can use single IO object simultaneously. It has no internal current position. ")
+]
+interface RegionMgr : IO { // input/output interface
+
+  // ------------------------------------
+    const tDWORD REGION_TYPE_INVALID = 0;
+    const RegionManager.hREGION REGION_HANDLE_INVALID = 0;
+    const tDWORD RM_F_MEM_REGION = 0x40000000;
+    const tDWORD RM_F_UNKNOWN_ID = 0x20000000;
+    const tDWORD RM_F_MAP_WRITE = 0x2;
+    const tDWORD RM_F_USER_MASK = 0xFFFF;
+    const tDWORD RM_F_SYSTEM_MASK = 0xFFFF0000;
+    const tDWORD RM_F_SCAN = 0x1;
+
+
+  // ------------------------------------
+    [ id(4104) ]  prop hOBJECT pgOBJECT_IO;
+    [ id(4105) ]  prop tDWORD pgREGION_RESERVE_SIZE;
+
+
+  // ------------------------------------
+    method tERROR RegisterIORegion( REGION_INFO* rgnParams, RegionManager.hREGION* res );
+    method tERROR RegisterMemoryRegion(
+      REGION_INFO* rgnParams,
+      tPTR rgnData,
+      RegionManager.hREGION* res
+    );
+    method tERROR UnregisterRegion( RegionManager.hREGION hRegion );
+    method tERROR GetRegionInfo( RegionManager.hREGION hRegion, REGION_INFO* pInfo );
+    method tERROR FindRegion(
+      tDWORD type,
+      tDWORD p_id,
+      RegionManager.hREGION hPrev,
+      RegionManager.hREGION hParent,
+      tDWORD flags,
+      REGION_INFO* pInfo,
+      RegionManager.hREGION* res
+    );
+    method tERROR SetRegionFlags(
+      RegionManager.hREGION hRegion,
+      tDWORD flagsToSet,
+      tDWORD flagsToClear
+    );
+    method tERROR MapRegion(
+      RegionManager.hREGION hRegion,
+      tDWORD mapFlags,
+      REGION_MAPPING* pMapInfo
+    );
+    method tERROR UnmapRegion( hREGIONMAPPING hMap );
+    method tERROR FlushRegion( hREGIONMAPPING hMap );
+
+}
+
+
+[
+  mnemonic(IID_KLAVSEARCHMANAGER)
+  id(42008)
+  c_type_name(hKLAVSEARCHMANAGER)
+]
+interface KLAVSearchManager {
+
+  // ------------------------------------
+
+    [
+      comment_ex("Interface version")
+      id(130)
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      comment_ex("Interface comment")
+      id(131)
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+    [ id(4096) ]  prop tINT pgKLAV_COMPONENT_ORDER;
+    [ id(4097) ]  prop tDWORD pgKLAV_COMPONENT_FLAGS;
+    [ id(4098) ]  prop tUINT pgKLAV_COMPONENT_FRAGMENT_ID;
+
+
+  // ------------------------------------
+    method tERROR Load( KLAV_CONTEXT_TYPE KLAV_CONTEXT );
+    method tERROR Unload( KLAV_CONTEXT_TYPE KLAV_CONTEXT );
+    method tERROR InitContextData( KLAV_CONTEXT_TYPE KLAV_CONTEXT );
+    method tERROR InitInstance( KLAV_CONTEXT_TYPE KLAV_CONTEXT );
+    method tERROR DeinitInstance( KLAV_CONTEXT_TYPE KLAV_CONTEXT );
+    method tERROR ActivateInstance( KLAV_CONTEXT_TYPE KLAV_CONTEXT );
+    method tERROR DeactivateInstance( KLAV_CONTEXT_TYPE KLAV_CONTEXT );
+    method tERROR SearchSignatures(
+      KLAV_CONTEXT_TYPE KLAV_CONTEXT,
+      hREGIONMGR hRgnMgr,
+      tKLRET* pResult
+    );
+
+}
+
+
+[
+  mnemonic(IID_KLAVREGIONSEARCHER)
+  id(42009)
+  c_type_name(hKLAVREGIONSEARCHER)
+]
+interface KLAVRegionSearcher {
+
+  // ------------------------------------
+    typedef tPTR hSEARCHSTATE;
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Interface version")
+      id(130)
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      comment_ex("Interface comment")
+      id(131)
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+    [ id(4096) ]  prop tINT pgKLAV_COMPONENT_ORDER;
+    [ id(4097) ]  prop tDWORD pgKLAV_COMPONENT_FLAGS;
+    [ id(4098) ]  prop tUINT pgKLAV_COMPONENT_FRAGMENT_ID;
+
+
+  // ------------------------------------
+    method tERROR Load( KLAV_CONTEXT_TYPE KLAV_CONTEXT );
+    method tERROR Unload( KLAV_CONTEXT_TYPE KLAV_CONTEXT );
+    method tERROR InitContextData( KLAV_CONTEXT_TYPE KLAV_CONTEXT );
+    method tERROR InitInstance( KLAV_CONTEXT_TYPE KLAV_CONTEXT );
+    method tERROR DeinitInstance( KLAV_CONTEXT_TYPE KLAV_CONTEXT );
+    method tERROR ActivateInstance( KLAV_CONTEXT_TYPE KLAV_CONTEXT );
+    method tERROR DeactivateInstance( KLAV_CONTEXT_TYPE KLAV_CONTEXT );
+    method tERROR BeginSearch( KLAV_CONTEXT_TYPE KLAV_CONTEXT, hSEARCHSTATE* pSearchState );
+    method tERROR EndSearch( hSEARCHSTATE hState );
+    method tERROR SearchRegionData(
+      hSEARCHSTATE hState,
+      REGION_INFO* rgnInfo,
+      REGION_MAPPING* rgnData,
+      tKLRET* pResult
+    );
+
+}
+

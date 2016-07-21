@@ -1,0 +1,15 @@
+// ***** Скрипт сбора информации для раздела "Помогите" virusinfo.info *****
+var
+ AVZLogDir : string;
+begin
+ // Формирование имени рабочей папки
+ AVZLogDir := GetAVZDirectory + 'LOG\';
+ CreateDirectory(AVZLogDir);
+ // Настройка AVZ
+ SetupAVZ('EvLevel=3'); // Эвристика на максимум 
+ SetupAVZ('ExtEvCheck=Y'); // Расширенный анализ включен
+ // Запуск сканирования
+ RunScan;
+ // Выполнение исследования системы
+ ExecuteSysCheck(AVZLogDir+'virusinfo_syscheck.htm');
+end.

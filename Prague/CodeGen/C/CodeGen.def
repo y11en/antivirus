@@ -1,0 +1,9 @@
+; SrcGen.def : Declares the module parameters.
+
+LIBRARY      "CodeGen_C.DLL"
+
+EXPORTS
+	DllCanUnloadNow     PRIVATE ;@1 
+	DllGetClassObject   PRIVATE ;@2 
+	DllRegisterServer   PRIVATE ;@3 
+	DllUnregisterServer	PRIVATE ;@4 

@@ -1,0 +1,7 @@
+// ***** Email-Worm.Win32.Warezov *****
+begin
+ AddEvAlarmByName('%System32%\e1.dll','Warezov.gen','e1.dll');
+ AddEvAlarmByName('%System32%\audmgr32.dll','Warezov.gen','audmgr32.dll');
+ AddEvAlarmByName('%System32%\conmgr32.dll','Warezov.gen','conmgr32.dll');
+ AddEvAlarmByName('%System32%\confcon.dll','Warezov.gen','confcon.dll');
+end. 

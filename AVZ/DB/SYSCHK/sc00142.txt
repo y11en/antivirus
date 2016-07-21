@@ -1,0 +1,4 @@
+// ***** Spy.InPop *****
+begin
+ AddEvAlarmByCLSID('532217E3-860C-4EEE-8BBD-3F342DCD9AE9',AScriptName,'InPop.ocx');
+end.

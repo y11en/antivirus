@@ -1,0 +1,5 @@
+// ***** AdvWare.Toolbar.Ucmore *****
+begin
+ AddEvAlarmByCLSID('44BE0690-5429-47F0-85BB-3FFD8020233E', AScriptName, 'UCMTSAIE.DLL');
+ AddEvAlarmByCLSID('2B7C7387-ED5E-465a-B24B-60179E42539A', AScriptName, 'IUCMORE.DLL');
+end.

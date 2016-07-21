@@ -1,0 +1,44 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@ @abs_top_srcdir@/remote @abs_top_srcdir@/remote/pr_client @abs_top_srcdir@/remote/pr_server @abs_top_srcdir@/remote/unix/rpc_proxies @abs_top_srcdir@/remote/unix/rpc_stubs
+
+Name = rpc
+Plugin = $(Name).@PLUGIN_EXT@
+Metafile = @srcdir@/$(Name).@METAFILE_EXT@
+Targets = $(Plugin)
+
+Proxies = \
+	buffer_proxy.cpp
+
+Stubs = \
+	buffer_stub.cpp 
+
+Client = \
+	buffer_c.cpp \
+
+Server = \
+	buffer_s.cpp \
+
+Sources = \
+	$(Proxies) \
+	$(Stubs) \
+	$(Client) \
+	$(Server) \
+	plugin.cpp
+
+
+Includes = @abs_top_srcdir@/remote/unix @abs_top_srcdir@/remote/unix/rpc_headers @abs_top_srcdir@/thpoolimp
+
+Libraries = \
+	hashutil \
+	remote
+
+# unix section
+
+UnixLibraries = \
+	@ThreadsSupportLib@
+
+VersionScript = @abs_top_srcdir@/unix/prague_plugin.ver
+
+include @abs_top_builddir@/@OS@/Rules

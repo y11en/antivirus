@@ -1,0 +1,100 @@
+[Product]								
+Name=KAVFS7
+LocalizedName=Kaspersky Anti-Virus 7.0 for Windows Servers
+RegKey=KAVFS7
+AdaptedProduct = 1
+									
+[Setup]
+UseWrapper=1
+ExecutableRelPath=EXEC
+Params=/s /v"/qn AKINSTALL=1"
+Executable=SETUP.EXE
+RebootDelegated = 1
+RebootAllowed=1
+ConfigFile=installer.ini
+
+[SetupProcessResult]
+Wait=1
+DescriptionFile=avpsetup.rep
+ 
+[SetupProcessResult_SuccessCodes]
+0=Deinstallation wurde erfolgreich abgeschlossen.
+3010=Um die Deinstallation abzuschließen, ist der Neustart des Computers erforderlich.
+ 
+[SetupProcessResult_ErrorCodes]
+13=Ungültige Daten. 
+87=Ein Parameter ist inkorrekt. 
+120=Diese Funktion steht für diese Plattform nicht zur Verfügung. Sie ist nur für Windows 2000 und Windows XP mit Windows-Installer Version 2.0 verfügbar. 
+1259=Dieser Fehlercode tritt nur bei Verwendung von Windows-Installer Version 2.0 und Windows XP oder höher auf. Wenn Windows-Installer ein Produkt erkennt, das mit dem vorhandenen Betriebssystem inkompatibel sein kann, zeigt er einen Dialog an, der den Benutzer informiert und anfragt, ob die Installation trotzdem versucht werden soll. Dieser Fehlercode wird zurückgegeben, wenn der Benutzer wählt, dass die Installation nicht versucht werden soll. 
+1601=Kein Zugriff auf Windows-Installationsdienst. Wenden Sie sich an den Administrator Ihrer Firma, um die Registrierung des Windows-Installationsdiensts zu prüfen. 
+1602=Deinstallation wurde vom Benutzer abgebrochen. 
+1603=Während der Deinstallation ist ein fataler Fehler aufgetreten. 
+1604=Die Deinstallation wurde angehalten, jedoch nicht abgeschlossen. 
+1605=Diese Aktion ist nur für installierte Produkte zulässig. 
+1606=ID der Funktion ist nicht registriert. 
+1607=ID der Komponente ist nicht registriert. 
+1608=Unbekannte Eigenschaft. 
+1609=Das Modul ist nicht verfügbar.
+1610=Die Einstellungsdaten für dieses Produkt sind beschädigt. Wenden Sie sich an den Administrator Ihrer Firma. 
+1611=Der Qualifier der Komponente fehlt. 
+1612=Die Ressource mit den Installationsdateien für dieses Produkt ist nicht verfügbar. Prüfen Sie, ob die Ressource vorhanden ist und Zugriff darauf besteht. 
+1613=Dieses Installationspaket kann von Windows-Installationsdienst nicht bearbeitet werden. Es ist erforderlich, ein Windows-Updatepaket zu installieren, das eine aktualisierte Version des Windows-Installationsdiensts enthält. 
+1614=Das Produkt wurde aus dem System gelöscht. 
+1615=Unzulässiger oder nicht unterstützte Syntax der SQL-Anfrage. 
+1616=Eintragsfeld fehlt. 
+1618=Es wurde bereits eine andere Kopie des Deinstallationsprozesses gestartet. Beenden Sie die bereits begonnene Deinstallation, bevor die neue gestartet wird.
+1619=Das Installationspaket kann nicht geöffnet werden. Prüfen Sie, ob das Paket vorhanden ist und Zugriff darauf besteht, oder wenden Sie sich an den Hersteller des Pakets, um festzustellen, ob dieses Paket das korrekte Reparaturpaket für diesen Windows-Installationsdienst ist.
+1620=Dieses Installationspaket kann nicht geöffnet werden. Wenden Sie sich an den Hersteller des Programms, um die Korrektheit dieses Windows-Installationspakets sicherzustellen. 
+1621=Beim Start der Benutzeroberfläche des Windows-Installationsdiensts ist ein Fehler aufgetreten. Wenden Sie sich an den Administrator Ihrer Firma. 
+1622=Fehler beim Öffnen der Datei mit dem Installationsbericht. Prüfen Sie, ob diese Berichtsdatei und Rechte zum Schreiben in den Bericht vorhanden sind. 
+1623=Die Sprache dieses Installationspakets wird im System nicht unterstützt. 
+1624=Fehler beim Übernehmen von Umformungen. Prüfen Sie die Korrektheit der Pfade der vorliegenden Umformungen. 
+1625=Die Deinstallation wurde aufgrund der Systemrichtlinie verboten. Wenden Sie sich an den Systemadministrator. 
+1626=Funktion kann nicht ausgeführt werden. 
+1627=Fehler beim Ausführen einer Funktion. 
+1628=Eine unzulässige oder unbekannte Tabelle wurde angegeben. 
+1629=Die erhaltenen Daten sind von einem ungültigen Typ. 
+1630=Daten dieses Typs werden nicht unterstützt. 
+1631=Fehler beim Start des Windows-Installationsdiensts. Wenden Sie sich an den Administrator Ihrer Firma. 
+1632=Der temporäre Ordner ist überfüllt oder es besteht kein Zugriff darauf. Prüfen Sie, ob der temporäre Ordner vorhanden ist und Zugriff darauf besteht. 
+1633=Dieses Installationspaket wird im System nicht unterstützt. Wenden Sie sich an den Hersteller des Produkts. 
+1634=Die Komponente wird auf diesem Computer nicht verwendet. 
+1635=Dieses Reparaturpaket konnte nicht geöffnet werden. Prüfen Sie, ob das Paket vorhanden ist und Zugriff darauf besteht, oder wenden Sie sich an den Hersteller des Pakets, um festzustellen, ob dieses Paket ein korrektes Windows-Reparaturpaket ist. 
+1636=Dieses Reparaturpaket konnte nicht geöffnet werden. Wenden Sie sich an den Hersteller des Programms, um Korrektheit dieses Windows-Installationspakets sicherzustellen. 
+1637=Dieses Reparaturpaket kann mit dem vorhandenen Windows-Installationsdienst nicht bearbeitet werden. Es ist erforderlich, ein Windows-Updatepaket zu installieren, das eine neue Version des Windows-Installationsdiensts enthält. 
+1638=Es ist bereits eine andere Version dieses Produkts installiert. Die Installation kann nicht fortgesetzt werden. Zum Anpassen der Konfiguration oder zum Löschen der vorhandenen Version des Produkts verwenden Sie das Symbol «Programme ändern und löschen» in der Systemsteuerung. 
+1639=Unzulässiges Befehlszeilenargument. Benutzen Sie für Informationen zur Verwendung der Befehlszeile die Hilfe von Windows Installer SDK. 
+1640=Für diesen Client ist die Deinstallation aus einer Terminalserver-Sitzung nicht erlaubt. 
+1641=Der Installer hat den Systemneustart veranlasst. Dieser Fehlercode wird von Windows-Installer Version 1.0 nicht benutzt. 
+1642=Der Installer kann das Update nicht installieren, weil das zu aktualisierende Programm fehlt oder das Update für einen andere Programmversion vorgesehen ist. Vergewissern Sie sich, dass das zu aktualisierende Programm auf dem Computer vorhanden ist und der Pfad für das Update richtig angegeben wurde. Dieser Fehlercode wird von Windows-Installer Version 1.0 nicht benutzt.
+1643=Das Reparaturpaket wird durch die Systemrichtlinie verboten. Dieser Fehlercode wird von Windows-Installer Version 2.0 oder höher benutzt. 
+1644=Eine oder mehrere Anpassungen werden durch die Systemrichtlinie verboten. Dieser Fehlercode wird von Windows-Installer Version 2.0 oder höher benutzt. 
+1645=Der Windows-Installer verbietet die Installation von einer Remote Desktop Web Connection. Verwenden Sie Remote Desktop Web Connection im Abschnitt Terminal Services der Plattform SDK, um nähere Informationen zu erhalten. 
+
+[SetupProcessResult_WarningCodes]
+ 
+[SetupMainResult]
+File=setup.log
+Section=ResponseResult
+Value=ResultCode
+DescriptionFile=avpsetup.rep
+ 
+[SetupMainResult_SuccessCodes]
+0=Deinstallation wurde erfolgreich abgeschlossen.
+ 
+[SetupMainResult_ErrorCodes]
+100=Während der Deinstallation ist ein fataler Fehler aufgetreten.
+
+[SetupMainResult_WarningCodes]
+50=Während der Deinstallation erfolgte eine Warnung.
+
+[SetupRestart]
+File=setup.log
+Section=ResponseResult
+Value=RebootZombieFile
+
+[Version]								
+VerMajor=6								
+VerMinor=0								
+VerBuild=0								
+VerPatch=0								

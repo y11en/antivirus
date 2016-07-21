@@ -1,0 +1,4 @@
+// ***** AdvWare.Toolbar.Neon *****
+begin
+ AddEvAlarmByCLSID('11F1CEE9-4314-4993-A1E1-94C309C04371',AScriptName,'');
+end.

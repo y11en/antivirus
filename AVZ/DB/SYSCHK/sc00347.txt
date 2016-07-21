@@ -1,0 +1,6 @@
+// ***** Hijacker.Xupiter *****
+begin
+ AddEvAlarmByCLSID('2662BDD7-05D6-408F-B241-FF98FACE6054',AScriptName,'');
+ AddEvAlarmByCLSID('6E6DD93E-1FC3-4F43-8AFB-1B7B90C9D3EB',AScriptName,'');
+ AddEvAlarmByCLSID('57E69D5A-6539-4D7D-9637-775DE8A385B4',AScriptName,'');
+end.

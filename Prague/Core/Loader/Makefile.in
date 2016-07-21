@@ -1,0 +1,67 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@ @srcdir@/unix @top_srcdir@/String
+
+Name = loader
+Plugin = $(Name).@SHARED_EXT@
+Metafile = @srcdir@/Loader.@METAFILE_EXT@
+Targets = $(Plugin) 
+
+Sources = \
+	csect_2l.c \
+	csection.c \
+	dbgout.c \
+	env_strings.cpp \
+	heap.cpp \
+	fm_folder.cpp \
+	fm_str_plist.cpp \
+	loader.cpp \
+	memmgr.c \
+	mod_load.cpp \
+	mutex.c \
+	ploader.c \
+	plugin.cpp \
+	semaphore.c \
+	scheck.cpp \
+	scheck_list.cpp \
+	signchk.c \
+	str_val.cpp \
+	syncevent.c \
+	trace.c \
+	compare.c \
+	pstring.c \
+	codec.cpp \
+	ansi_unix.cpp \
+	oem_unix.cpp \
+	widechar_unix.cpp \
+	plugin_string.cpp
+
+Includes = @srcdir@ @srcdir@/unix
+
+Defines = ITS_LOADER NOT_VERIFY LATE_CHECK NEW_SIGN_LIB
+
+Deps = ../metadata/metadata
+
+Libraries = \
+	hashutil \
+	sign \
+	klsys \
+	metadata \
+	dskm \
+	crypt \
+	property \
+	serialize \
+	swmanager \
+	compatutils 
+
+# unix section
+
+UnixLibraries = \
+	@LibC@ \
+	@DynamicLibrariesSupportLib@ \
+	@ThreadsSupportLib@
+
+VersionScript = @srcdir@/unix/prague_loader.ver
+
+include @abs_top_builddir@/@OS@/Rules

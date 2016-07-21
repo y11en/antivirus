@@ -1,0 +1,6 @@
+// ***** Dialer.MasterDialer *****
+begin
+ AddEvAlarmByCLSID('E9C87343-0E63-4ACA-9B76-B155333EE67A',AScriptName,'');
+ AddEvAlarmByCLSID('8699D723-6DC6-47D3-B55C-489BA006B917',AScriptName,'');
+ AddEvAlarmByCLSID('788A7678-38D7-4EEC-9D20-67A86D21A7FD',AScriptName,'');
+end.

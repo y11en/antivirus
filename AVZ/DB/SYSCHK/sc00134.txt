@@ -1,0 +1,4 @@
+// ***** Spy.FlashTrack *****
+begin
+ AddEvAlarmByCLSID('665ACD90-4541-4836-9FE4-062386BB8F05',AScriptName,'Flt.dll');
+end.

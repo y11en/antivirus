@@ -1,0 +1,4 @@
+// ***** Spy.7Search *****
+begin
+ AddEvAlarmByCLSID('2D6A91CF-37C6-4EB2-A8D8-F65F1DB14ECE',AScriptName,'BrowserAccelerator.dll');
+end.

@@ -1,0 +1,11 @@
+[explicit_handle]
+interface rpc_avs
+{
+
+}
+
+[explicit_handle]
+interface rpc_avstreats
+{
+
+}

@@ -1,0 +1,24 @@
+//
+// AVPM.RC2 - resources Microsoft Visual C++ does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Add manually edited resources here...
+
+#define VER_FILETYPE              VFT_APP
+#define VER_COMMENTS_STR         "Alexey de Mont de Rique [graf@avp.ru]"
+#define VER_FILEDESCRIPTION_STR  "AVP Monitor shell"
+#define VER_INTERNALNAME_STR     "AVPM"
+#define VER_ORIGINALFILENAME_STR "AVPM.EXE"
+
+#include <Version\ver_avp.h>
+#include <Version\ver_kl.ver>
+
+/////////////////////////////////////////////////////////////////////////////
+
+

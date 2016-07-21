@@ -1,0 +1,20 @@
+//
+// AVP_IONT.RC2 - resources Microsoft Visual C++ does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Add manually edited resources here...
+
+#define VER_FILETYPE              VFT_DLL
+#define VER_FILEDESCRIPTION_STR  "Low level I/O driver (Win NT/2000)"
+#define VER_INTERNALNAME_STR     "AVP_IONT"
+#define VER_ORIGINALFILENAME_STR "AVP_IONT.DLL"
+
+#include <Version\ver_product.h>
+
+/////////////////////////////////////////////////////////////////////////////

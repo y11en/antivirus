@@ -1,0 +1,128 @@
+<UpdateFiles 
+	UpdateDate="08112005 1100">
+
+    <!-- duplicate file MATCH, in DIFFERENT SOURCE folders -->
+	<FileDescription 
+		ComponentID="MATCH"
+		UpdateType="base" 
+		RelativeSrvPath="path1/"
+		LocalPath="%BaseFolder%" 
+		Filename="File1.txt" 
+		FileSize="74"
+		FileDate="08112005 1050" />
+
+	<FileDescription 
+		ComponentID="MATCH"
+		UpdateType="base" 
+		RelativeSrvPath="path2/"
+		LocalPath="%BaseFolder%" 
+		Filename="File1.txt" 
+		FileSize="74"
+		FileDate="08112005 1050" />
+
+
+    <!-- duplicate file MATCH/FILTER, in DIFFERENT SOURCE folders -->
+	<FileDescription 
+		ComponentID="MATCH"
+		UpdateType="base" 
+		RelativeSrvPath="path1/"
+		LocalPath="%BaseFolder%" 
+		Filename="File2.txt" 
+		FileSize="74"
+		FileDate="08112005 1050" />
+
+	<FileDescription 
+		ComponentID="FILTER"
+		UpdateType="base" 
+		RelativeSrvPath="path2/"
+		LocalPath="%BaseFolder%" 
+		Filename="File2.txt" 
+		FileSize="74"
+		FileDate="08112005 1050" />
+
+
+    <!-- duplicate file FILTER/FILTER, in DIFFERENT SOURCE folders -->
+	<FileDescription 
+		ComponentID="FILTER"
+		UpdateType="base" 
+		RelativeSrvPath="path1/"
+		LocalPath="%BaseFolder%" 
+		Filename="File3.txt" 
+		FileSize="74"
+		FileDate="08112005 1050" />
+
+	<FileDescription 
+		ComponentID="FILTER"
+		UpdateType="base" 
+		RelativeSrvPath="path2/"
+		LocalPath="%BaseFolder%" 
+		Filename="File3.txt" 
+		FileSize="74"
+		FileDate="08112005 1050" />
+
+
+
+    <!-- same file MATCH/MATCH, in SAME SOURCE olders -->
+	<FileDescription 
+		ComponentID="MATCH"
+		UpdateType="base" 
+		RelativeSrvPath="path1/"
+		LocalPath="%BaseFolder%" 
+		Filename="File4.txt" 
+		FileSize="74"
+		FileDate="08112005 1050" />
+
+	<FileDescription 
+		ComponentID="MATCH"
+		UpdateType="base" 
+		RelativeSrvPath="path1/"
+		LocalPath="%BaseFolder%" 
+		Filename="File4.txt" 
+		FileSize="74"
+		FileDate="08112005 1050" />
+
+
+    <!-- same file MATCH/FILTER, in SAME SOURCE olders -->
+	<FileDescription 
+		ComponentID="MATCH"
+		UpdateType="base" 
+		RelativeSrvPath="path1/"
+		LocalPath="%BaseFolder%" 
+		Filename="File5.txt" 
+		FileSize="74"
+		FileDate="08112005 1050" />
+
+	<FileDescription 
+		ComponentID="FILTER"
+		UpdateType="base" 
+		RelativeSrvPath="path1/"
+		LocalPath="%BaseFolder%" 
+		Filename="File5.txt" 
+		FileSize="74"
+		FileDate="08112005 1050" />
+
+
+    <!-- same file FILTER/FILTER, in SAME SOURCE olders -->
+	<FileDescription 
+		ComponentID="FILTER"
+		UpdateType="base" 
+		RelativeSrvPath="path1/"
+		LocalPath="%BaseFolder%" 
+		Filename="File6.txt" 
+		FileSize="74"
+		FileDate="08112005 1050" />
+
+	<FileDescription 
+		ComponentID="FILTER"
+		UpdateType="base" 
+		RelativeSrvPath="path1/"
+		LocalPath="%BaseFolder%" 
+		Filename="File6.txt" 
+		FileSize="74"
+		FileDate="08112005 1050" />
+
+
+
+</UpdateFiles>
+
+;:1048MT3jLQPeC5nc5p4A1fIrUSrzw5BFIEJUZxnF7hrZ2UrdvSKVUq4iJ0vUnsmh5DYUKBY0tNXJsjrhqivqjI3q%%

@@ -1,0 +1,5 @@
+// ***** Разблокировка диспетчера задач *****
+begin
+ RegKeyParamDel('HKEY_CURRENT_USER', 'Software\Microsoft\Windows\CurrentVersion\Policies\System', 'DisableTaskMgr');
+ RegKeyParamDel('HKEY_LOCAL_MACHINE', 'Software\Microsoft\Windows\CurrentVersion\Policies\System', 'DisableTaskMgr');
+end.

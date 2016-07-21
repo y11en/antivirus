@@ -1,0 +1,53 @@
+// $AVZ1557
+//$ Меню Пуск - заблокированы элементы
+// Функция поиска проблемы
+function CheckParam(AParamName : string) : dword;
+begin
+ Result := 0;
+ // Блокировка
+ if RegKeyIntParamRead('HKCU', 'software\microsoft\windows\currentversion\policies\explorer', AParamName) > 0 then begin
+   Result := 3;
+   exit;
+  end;
+ if Result = 0 then 
+  if RegKeyIntParamRead('HKLM', 'software\microsoft\windows\currentversion\policies\explorer', AParamName) > 0 then begin
+   Result := 3;
+   exit;
+  end;
+end;
+
+function Check : dword;
+var
+ S : string;
+ X : dword;
+begin
+ Result := 0;
+ S := 'nostartmenumymusic,nostartmenupinnedlist,startmenulogoff,nousernameinstartmenu,nostartmenusubfolders,nostartmenumfuprogramslist,nostartmenupinnedlist,';
+ while pos(',', S) > 0 do begin
+  X := CheckParam( copy(S, 1, pos(',', S)-1) );
+  if X > Result then
+   Result := X;
+  delete(S, 1, pos(',', S));
+ end;
+end;
+
+// Функция исправления проблемы
+function FixParam(AParamName : string) : dword;
+begin
+ RegKeyParamDel('HKCU', 'software\microsoft\windows\currentversion\policies\explorer', AParamName);
+ RegKeyParamDel('HKLM', 'software\microsoft\windows\currentversion\policies\explorer', AParamName);
+ Result := 0;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+var
+ S : string;
+begin
+ Result := 0;
+ S := 'nostartmenumymusic,nostartmenupinnedlist,startmenulogoff,nousernameinstartmenu,nostartmenusubfolders,nostartmenumfuprogramslist,nostartmenupinnedlist,';
+ while pos(',', S) > 0 do begin
+  FixParam( copy(S, 1, pos(',', S)-1) );
+  delete(S, 1, pos(',', S));
+ end;
+end;

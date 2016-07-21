@@ -1,0 +1,25 @@
+; *** This is product section ***
+[ProductInfo]
+
+; path to place bases
+BaseFolder=out/bases
+
+;   * path where Updater searches for sites.xml additional source file, *
+;    * also this path is used to store rollback inforamtion *
+;    * This parameter is also used as relative root path for retranslation in case retranslation_dir specifies relative path *
+Folder=out/bases
+
+;   * if LocalPath tag (which specifies the target location for the file) is absent *
+;     * then the UpdateRoot specifies default location for the component file *
+;     * the variable is obligatory *
+;   * primary index is stored here in this location *
+UpdateRoot=out/bases
+
+
+;   * Language Identifier *
+LocID=1
+;   * Product identifier for filtering in update mode (if not specified filtering by product identifier is not performed) *
+ProdName=
+;   * Application update operation filter (if not specified filtering by application identifier is not performed) *
+Application=
+;   * Product version update operation filter (if not specified filtering by product version is not performed) *

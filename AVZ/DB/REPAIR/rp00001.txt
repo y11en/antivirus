@@ -1,0 +1,29 @@
+// ***** Восстановление параметров запуска .exe, .com, .pif файлов *****
+begin
+ RegKeyCreate('HKEY_CLASSES_ROOT', '.exe');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', '.exe', '', 'exefile');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', '.exe', 'Content Type', 'application/x-msdownload');
+ RegKeyCreate('HKEY_CLASSES_ROOT', 'exefile\shell\open\command');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', 'exefile\shell\open\command', '', '"%1" %*');
+ RegKeyCreate('HKEY_CLASSES_ROOT', 'exefile\shell\runas\command');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', 'exefile\shell\runas\command', '', '"%1" %*');
+ RegKeyCreate('HKEY_CLASSES_ROOT', '.com');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', '.com', '', 'comfile');
+ RegKeyCreate('HKEY_CLASSES_ROOT', 'comfile\shell\open\command');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', 'comfile\shell\open\command', '', '"%1" %*');
+ RegKeyCreate('HKEY_CLASSES_ROOT', '.pif');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', '.pif', '', 'piffile');
+ RegKeyCreate('HKEY_CLASSES_ROOT', 'piffile\shell\open\command');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', 'piffile\shell\open\command', '', '"%1" %*');
+ RegKeyCreate('HKEY_CLASSES_ROOT', '.lnk');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', '.lnk', '', 'lnkfile');
+ RegKeyCreate('HKEY_CLASSES_ROOT', '.bat');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', '.bat', '', 'batfile');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', 'batfile\shell\open\command', '', '"%1" %*');
+ RegKeyCreate('HKEY_CLASSES_ROOT', '.reg');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', '.reg', '', 'regfile');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', 'regfile\shell\open\command', '', 'regedit.exe "%1"');
+ RegKeyCreate('HKEY_CLASSES_ROOT', '.scr');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', '.scr', '', 'scrfile');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', 'scrfile\shell\open\command', '', '"%1" /S');
+end.

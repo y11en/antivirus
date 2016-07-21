@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioProject ProjectType="Visual C++" Version="8.00" Name="InsLic" SccProjectName="Perforce Project" SccLocalPath="." SccProvider="MSSCCI:Perforce SCM">
+	<Platforms>
+		<Platform Name="Win32"/>
+		<Platform Name="x64"/></Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="Release|Win32" OutputDirectory="..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\Licensing60\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="NDEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="1" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="1" InlineFunctionExpansion="1" AdditionalIncludeDirectories="../../../Prague,../../../Prague/Include,../../Include,../../../CommonFiles,../../../CommonFiles/Licensing/Include" PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;INSLIC_EXPORTS;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" StringPooling="true" RuntimeLibrary="2" EnableFunctionLevelLinking="true" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="licpolicy.lib property.lib serialize.lib swmanager.lib sign.lib win32utils.lib winavpio.lib" LinkIncremental="1" SuppressStartupBanner="true" AdditionalLibraryDirectories="$(OutDir)" ModuleDefinitionFile=".\inslic.def" GenerateDebugInformation="true" OptimizeReferences="2" TargetMachine="1" GenerateManifest="true" BaseAddress=""/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Debug|Win32" OutputDirectory="..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\Licensing60\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="_DEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="1" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="../../../Prague,../../../Prague/Include,../../Include,../../../CommonFiles,../../../CommonFiles/Licensing/Include" PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;INSLIC_EXPORTS;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" MinimalRebuild="true" BasicRuntimeChecks="3" RuntimeLibrary="3" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="4" CompileAs="0" UsePrecompiledHeader="2"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="licpolicy.lib property.lib serialize.lib swmanager.lib sign.lib win32utils.lib winavpio.lib" LinkIncremental="2" SuppressStartupBanner="true" AdditionalLibraryDirectories="$(OutDir)" ModuleDefinitionFile=".\inslic.def" GenerateDebugInformation="true" TargetMachine="1" GenerateManifest="true" BaseAddress=""/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Release|x64" OutputDirectory="..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\Licensing60\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="NDEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="1" InlineFunctionExpansion="1" AdditionalIncludeDirectories="../../../Prague,../../../Prague/Include,../../Include,../../../CommonFiles,../../../CommonFiles/Licensing/Include" PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;INSLIC_EXPORTS;_CRT_SECURE_NO_DEPRECATE" StringPooling="true" RuntimeLibrary="2" EnableFunctionLevelLinking="true" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="licpolicy.lib property.lib serialize.lib swmanager.lib sign.lib win32utils.lib winavpio.lib" LinkIncremental="1" SuppressStartupBanner="true" AdditionalLibraryDirectories="$(OutDir)" ModuleDefinitionFile=".\inslic.def" GenerateDebugInformation="true" OptimizeReferences="2" TargetMachine="17" GenerateManifest="true" BaseAddress=""/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration><Configuration Name="Debug|x64" OutputDirectory="..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\Licensing60\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="_DEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="../../../Prague,../../../Prague/Include,../../Include,../../../CommonFiles,../../../CommonFiles/Licensing/Include" PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;INSLIC_EXPORTS;_CRT_SECURE_NO_DEPRECATE" MinimalRebuild="true" BasicRuntimeChecks="3" RuntimeLibrary="3" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1049"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="licpolicy.lib property.lib serialize.lib swmanager.lib sign.lib win32utils.lib winavpio.lib" LinkIncremental="2" SuppressStartupBanner="true" AdditionalLibraryDirectories="$(OutDir)" ModuleDefinitionFile=".\inslic.def" GenerateDebugInformation="true" TargetMachine="17" GenerateManifest="true" BaseAddress=""/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration></Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter Name="Source Files" Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
+			<File RelativePath="DllMain.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="inslic.def">
+				<FileConfiguration Name="Release|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCCustomBuildTool"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64" ExcludedFromBuild="true">
+					<Tool Name="VCCustomBuildTool"/>
+				</FileConfiguration></File>
+			<File RelativePath="lic.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+		</Filter>
+		<Filter Name="Header Files" Filter="h;hpp;hxx;hm;inl">
+		</Filter>
+		<Filter Name="Resource Files" Filter="ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe">
+		</Filter>
+	</Files>
+</VisualStudioProject>

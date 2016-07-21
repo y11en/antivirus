@@ -1,0 +1,4 @@
+// ***** Spy.PowerStrip *****
+begin
+ AddEvAlarmByCLSID('669695BC-A811-4A9D-8CDF-BA8C795F261C',AScriptName,'PowrStrp.dll');
+end.

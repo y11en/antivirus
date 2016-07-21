@@ -1,0 +1,23 @@
+// ***** Настройки Internet Explorer *****
+procedure AddBackUpData(ARoot, AName : string;Lines : TStrings);
+begin
+ Lines.Add('[-'+ ARoot + '\' + AName + ']');
+ ExpRegKeyEx(ARoot, AName, Lines);
+ Lines.Add('');
+end;
+
+var
+ Lines : TStrings;
+begin
+ Lines := TStringList.Create;
+ Lines.Add('REGEDIT4');
+ Lines.Add('');
+ AddBackUpData('HKEY_LOCAL_MACHINE', 'Software\Microsoft\Windows\CurrentVersion\URL', Lines);
+ AddBackUpData('HKEY_CURRENT_USER', 'Software\Microsoft\Windows\CurrentVersion\URL', Lines);
+ AddBackUpData('HKEY_LOCAL_MACHINE', 'Software\Microsoft\Internet Explorer\Main', Lines);
+ AddBackUpData('HKEY_CURRENT_USER', 'Software\Microsoft\Internet Explorer\Main', Lines);
+  
+ if SaveBackupDataSt(Lines, 'User_IE.reg') then
+  AddToLog('$AVZ1236 $AVZ1229'); 
+ Lines.Free;
+end.

@@ -1,0 +1,45 @@
+// $AVZ1546
+//$ Internet Explorer - удалить Cookies
+// Функция поиска проблемы
+function Check : dword;
+var
+ S : string;
+ FS : TFileSearch;
+begin
+ Result := 0;
+ S := Trim(RegKeyStrParamRead('HKCU','Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders','Cookies'));
+ if S <> '' then begin
+  S := NormalDir(S);
+  if DirectoryExists(S) then begin
+   FS := TFileSearch.Create(nil);
+   FS.FindFirst(S + '*@*.txt');
+   if FS.Found then
+    Result := 1;
+   FS.Free;
+  end;
+ end;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+var
+ S : string;
+ FS : TFileSearch;
+begin
+ Result := 0;
+ S := Trim(RegKeyStrParamRead('HKCU','Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders','Cookies'));
+ if S <> '' then begin
+  S := NormalDir(S);
+  if DirectoryExists(S) then begin
+   FS := TFileSearch.Create(nil);
+   FS.FindFirst(S + '*@*.txt');
+   while FS.Found do begin
+    // Удаление найденных файлов *.TXT
+    if not(FS.IsDir) then
+     DeleteFile(S + FS.FileName);
+    FS.FindNext;
+   end;
+   FS.Free;
+  end;
+ end;
+end;

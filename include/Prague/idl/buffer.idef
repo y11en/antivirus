@@ -1,0 +1,54 @@
+#import "os.idef"
+
+forward interface Buffer;
+typedef Buffer* hBUFFER;
+
+
+
+[
+  version(0)
+  mnemonic(IID_BUFFER)
+  id(1)
+  c_type_name(hBUFFER)
+  comment_ex("//rus:Интерфейс предоставляет методы работы с регионом памяти, такие как блокирование разблокирование, получение указателя на память. 
+    Интерфейс совместим с интерфейсом \"IO\", т.е. содержит все его методы и свойства. Это позволяет использовать объект интерфейса как с объект интерфейса \"IO\" в любом контексте, где используется \"IO\".  
+    Объект интерфейса поддерживает внутренний счетчик блокировок, и если он не 0, то метды \"SeekWrite\", \"SetSize\", \"AddLock\" и \"SizeLock\" возвращают ошибку \"errOBJECT_IS_LOCKED\".")
+]
+interface Buffer : IO { // интерфейс доступа к региону памяти//eng:\"piece of memory\" interface
+
+  // ------------------------------------
+
+    [
+      comment_ex("//rus:Указывает на совместимость данного интерфейса с интерфейсом \"IO\"//eng:Shows compatibility of the interface with \"IO\" interface")
+      id(135)
+    ]
+    prop tIID pgINTERFACE_COMPATIBILITY; // rus:указание интерфейса, совместимого с данным//eng:Interface compatibility
+    [ id(4101) ]  prop tDWORD pgLOCK_COUNT; // count of object locks
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("//rus:регион памяти не может быть переписан методом \"SeekWrite\" и размер его не может быть изменен пока объект заблокирован
+        //eng:Memory cannot be overwritten while object is locked")
+    ]
+    method tERROR Lock( // rus:фиксирует регион памяти и возвращает указатель на него//eng:lock memory and get access to it
+      tPTR* result
+    );
+    method tERROR AddLock( // rus:добавляет указанный размер к региону и возвращает указатель на добавленную память//eng:add some space to the object and returns pointer to the added space
+      tPTR* result,
+      tDWORD size_to_add // rus:размер памяти, которую необходимо добавить к региону//eng:memory size to add
+    );
+    method tERROR SizeLock( // rus:перераспределяет регион с новым размером, фиксирует его и вохвращает указатель на содержимое//eng:set size of the buffer, lock it and returns pointer to the content
+      tPTR* result,
+      tDWORD size // rus:новый требуемый размер региона памяти
+    );
+
+    [
+      comment_ex("//rus:Разблокирует регион и возвращает счетчик блокировок. Если сетчик равен 0, то возможно писать в регион методом \"SeekWrite\" и перераспределять регион
+        //eng:Unlocks memory and returns lock count. If lock count is zero client can reallock attached memory and use SeekWrite method to write to memory region.")
+    ]
+    method tERROR Unlock(); // rus:разблокирует регион//eng:unlock memory
+
+}
+

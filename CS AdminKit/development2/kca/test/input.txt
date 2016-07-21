@@ -1,0 +1,8 @@
+
+//! \brief	Файл, в который kltester2 будет писать отчёт
+LogFile "$kca_test.log";
+
+//! \brief	Файл, в который будут выдаваться трейсы
+TraceFile "$kca_test.txt" level 4;
+
+Run	Test "PRSS_Policy" From "kcatest.dll";

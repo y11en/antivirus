@@ -1,0 +1,8 @@
+// ***** AdvWare.ToolBar.GigatechSuperBar *****
+begin
+ AddEvAlarmByCLSID('136A9D1D-1F4B-43D4-8359-6F2382449255',AScriptName,'SuperBar.dll');
+ AddEvAlarmByCLSID('49C3014F-03ED-4634-9FB2-2881F2C7A057',AScriptName,'SuperBar.dll');
+ AddEvAlarmByCLSID('4A78B949-B1AC-42AB-AFB4-F428554057AD',AScriptName,'SuperBar.dll');
+ AddEvAlarmByCLSID('4F9D4163-23F0-42E1-AFDA-4C1A6F8607E7',AScriptName,'SuperBar.dll');
+ AddEvAlarmByCLSID('CF1E49B3-24A6-4B17-94BE-C25102E3BF04',AScriptName,'SuperBar.dll');
+end.

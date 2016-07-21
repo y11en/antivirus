@@ -1,0 +1,17 @@
+// $AVZ1535
+//$ Включить очистку файла подкачки в ходе перезагрузки
+// Функция поиска проблемы
+function Check : dword;
+begin
+ Result := 0;
+ if RegKeyIntParamRead('HKLM','SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management', 'ClearPageFileAtShutdown') = 0 then
+  Result := 1;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+begin
+ RegKeyIntParamWrite('HKLM','SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management', 'ClearPageFileAtShutdown', 1);
+ Result := 0;
+end;
+

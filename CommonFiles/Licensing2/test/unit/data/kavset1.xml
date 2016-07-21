@@ -1,0 +1,42 @@
+<UpdateFiles 
+	UpdateSeqNumber="111111" 
+	UpdateDate="15072005 1259">
+	<UpdateSettings 
+		Name="Updater/update_date" 
+		Type="date" 
+		Value="15072005 1259" />
+	<UpdateSettings 
+		Name="Updater/av_records" 
+		Type="long" 
+		Value="139554" />
+	<FileDescription 
+		ComponentID="AVS" 
+		UpdateType="base" 
+		RelativeSrvPath="bases/av/avc/i386" 
+		Filename="avcmhk4.dll" 
+		LoadingOrder="120" 
+		LocalPath="%BaseFolder%" 
+		FileSign="0XLSznpdI71fB300e7Uwj1X0urcZqq7UQAijs7XwwsteJi/4UZeMWWsvFJ" 
+		FileSize="21568" 
+		FileDate="25052005 1307" />
+	<FileDescription 
+		ComponentID="AVS" 
+		UpdateType="base" 
+		RelativeSrvPath="bases/av/avc/i386" 
+		Filename="avp.klb" 
+		LoadingOrder="126" 
+		LocalPath="%BaseFolder%" 
+		FileSign="0XLSznpdI71fB300e7Uwj1A/rN8utrUmjBjP/4FOy7Ze0u5PZQ/rPHy9sE" 
+		FileSize="11489" 
+		FileDate="15072005 1259" />
+	<FileDescription 
+		ComponentID="AVS" 
+		UpdateType="blst" 
+		RelativeSrvPath="bases/av/avc/i386" 
+		Filename="blackjack.lst" 
+		LoadingOrder="121" 
+		LocalPath="%BaseFolder%" 
+		FileSign="0XLSznpdI71fB300e7Uwj1cMwzGc9qoZISR9v7G/uOpYRF1YKNoY/Szeue" 
+		FileSize="36840" 
+		FileDate="14072005 1546" />
+</UpdateFiles>

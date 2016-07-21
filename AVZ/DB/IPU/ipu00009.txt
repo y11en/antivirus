@@ -1,0 +1,11 @@
+// ***** Автоматический вход в систему *****
+var
+ X : string;
+begin
+ X := Trim(RegKeyStrParamRead('HKEY_LOCAL_MACHINE', 'SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon', 'AutoAdminLogon'));
+ if X = '1' then begin
+  AddToLog('>> $AVZ1211');
+  AddSyscheckMenu('$AVZ1210',
+                  'RegKeyStrParamWrite(''HKEY_LOCAL_MACHINE'', ''SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon'',''AutoAdminLogon'', ''0'');', 1);
+ end;
+end.

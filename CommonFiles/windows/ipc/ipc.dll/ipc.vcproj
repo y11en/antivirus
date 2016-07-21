@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8,00"
+	Name="klipc"
+	ProjectGUID="{0A6D823E-2668-4C10-B4D9-E9F4B0C34FDB}"
+	RootNamespace="ipc"
+	SccProjectName="SAK"
+	SccAuxPath="SAK"
+	SccLocalPath="SAK"
+	SccProvider="SAK"
+	Keyword="Win32Proj">
+	<Platforms>
+		<Platform Name="Win32"/>
+		<Platform Name="x64"/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="Release|Win32" OutputDirectory="..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\windows\ipc\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="NDEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="1" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" AdditionalIncludeDirectories="..\..\..,..\..\..\CommonFiles" PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;IPC_EXPORTS;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" StringPooling="true" RuntimeLibrary="2" EnableFunctionLevelLinking="true" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1033" AdditionalIncludeDirectories="..\..\..\"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="rpcrt4.lib" OutputFile="$(OutDir)\$(ProjectName).dll" LinkIncremental="1" SuppressStartupBanner="true" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" ModuleDefinitionFile=".\ipc.def" GenerateDebugInformation="true" ProgramDatabaseFile="$(OutDir)\$(TargetName).pdb" OptimizeReferences="2" EnableCOMDATFolding="2" ImportLibrary="" TargetMachine="1"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool" Description="Signing and copying $(InputPath) to CommonFiles/ReleaseDll" CommandLine="&#xA;copy &quot;$(TargetPath)&quot; ..\..\..\ReleaseDll&#xA;"/>
+		</Configuration>
+		<Configuration Name="Release|x64" OutputDirectory="..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\windows\ipc\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="NDEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" AdditionalIncludeDirectories="..\..\..,..\..\..\CommonFiles" PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;IPC_EXPORTS;_CRT_SECURE_NO_DEPRECATE" StringPooling="true" RuntimeLibrary="2" EnableFunctionLevelLinking="true" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1033" AdditionalIncludeDirectories="..\..\..\"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="rpcrt4.lib" OutputFile="$(OutDir)\$(ProjectName).dll" LinkIncremental="1" SuppressStartupBanner="true" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" ModuleDefinitionFile=".\ipc.def" GenerateDebugInformation="true" ProgramDatabaseFile="$(OutDir)\$(TargetName).pdb" OptimizeReferences="2" EnableCOMDATFolding="2" ImportLibrary="" TargetMachine="17"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool" Description="Signing and copying $(InputPath) to CommonFiles/ReleaseDll" CommandLine="&#xA;copy &quot;$(InputPath)&quot; ..\..\..\ReleaseDll&#xA;"/>
+		</Configuration>
+		<Configuration Name="Debug|Win32" OutputDirectory="..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\windows\ipc\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="_DEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="1" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="..\..\..,..\..\..\CommonFiles" PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;IPC_EXPORTS;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" BasicRuntimeChecks="3" RuntimeLibrary="3" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1033" AdditionalIncludeDirectories="..\..\..\"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="rpcrt4.lib" OutputFile="$(OutDir)\$(ProjectName).dll" LinkIncremental="1" SuppressStartupBanner="true" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" ModuleDefinitionFile=".\ipc.def" GenerateDebugInformation="true" ProgramDatabaseFile="$(OutDir)\$(TargetName).pdb" ImportLibrary="" TargetMachine="1"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Debug|x64" OutputDirectory="..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\windows\ipc\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="_DEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="..\..\..,..\..\..\CommonFiles" PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;IPC_EXPORTS;_CRT_SECURE_NO_DEPRECATE" BasicRuntimeChecks="3" RuntimeLibrary="3" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1033" AdditionalIncludeDirectories="..\..\..\"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="rpcrt4.lib" OutputFile="$(OutDir)\$(ProjectName).dll" LinkIncremental="1" SuppressStartupBanner="true" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" ModuleDefinitionFile=".\ipc.def" GenerateDebugInformation="true" ProgramDatabaseFile="$(OutDir)\$(TargetName).pdb" ImportLibrary="" TargetMachine="17"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="ReleaseS|Win32" OutputDirectory="..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\windows\ipc\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="NDEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="1" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" AdditionalIncludeDirectories="..\..\..,..\..\..\CommonFiles" PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;IPC_EXPORTS;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" StringPooling="true" RuntimeLibrary="0" EnableFunctionLevelLinking="true" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1033" AdditionalIncludeDirectories="..\..\..\"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="rpcrt4.lib" OutputFile="$(OutDir)\$(ProjectName).dll" LinkIncremental="1" SuppressStartupBanner="true" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" ModuleDefinitionFile=".\ipc.def" GenerateDebugInformation="true" ProgramDatabaseFile="$(OutDir)\$(TargetName).pdb" OptimizeReferences="2" EnableCOMDATFolding="2" ImportLibrary="" TargetMachine="1"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool" Description="Signing and copying $(InputPath) to CommonFiles/Release" CommandLine="&#xA;copy &quot;$(TargetPath)&quot; ..\..\..\Release&#xA;"/>
+		</Configuration>
+		<Configuration Name="ReleaseS|x64" OutputDirectory="..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\windows\ipc\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="NDEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" AdditionalIncludeDirectories="..\..\..,..\..\..\CommonFiles" PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;IPC_EXPORTS;_CRT_SECURE_NO_DEPRECATE" StringPooling="true" RuntimeLibrary="0" EnableFunctionLevelLinking="true" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1033" AdditionalIncludeDirectories="..\..\..\"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="rpcrt4.lib" OutputFile="$(OutDir)\$(ProjectName).dll" LinkIncremental="1" SuppressStartupBanner="true" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" ModuleDefinitionFile=".\ipc.def" GenerateDebugInformation="true" ProgramDatabaseFile="$(OutDir)\$(TargetName).pdb" OptimizeReferences="2" EnableCOMDATFolding="2" ImportLibrary="" TargetMachine="17"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool" Description="Signing and copying $(InputPath) to CommonFiles/Release" CommandLine="&#xA;copy &quot;$(InputPath)&quot; ..\..\..\Release&#xA;"/>
+		</Configuration>
+		<Configuration Name="DebugS|Win32" OutputDirectory="..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\windows\ipc\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="_DEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="1" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="..\..\..,..\..\..\CommonFiles" PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;IPC_EXPORTS;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" BasicRuntimeChecks="3" RuntimeLibrary="1" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1033" AdditionalIncludeDirectories="..\..\..\"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="rpcrt4.lib" OutputFile="$(OutDir)\$(ProjectName).dll" LinkIncremental="1" SuppressStartupBanner="true" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" ModuleDefinitionFile=".\ipc.def" GenerateDebugInformation="true" ProgramDatabaseFile="$(OutDir)\$(TargetName).pdb" ImportLibrary="" TargetMachine="1"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="DebugS|x64" OutputDirectory="..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\commonfiles\windows\ipc\$(ProjectName)" ConfigurationType="2" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCCustomBuildTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" PreprocessorDefinitions="_DEBUG" MkTypLibCompatible="true" SuppressStartupBanner="true" TargetEnvironment="3" TypeLibraryName="$(OutDir)\$(TargetName).tlb" HeaderFileName=""/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="..\..\..,..\..\..\CommonFiles" PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;IPC_EXPORTS;_CRT_SECURE_NO_DEPRECATE" BasicRuntimeChecks="3" RuntimeLibrary="1" PrecompiledHeaderFile="$(IntDir)\$(TargetName).pch" AssemblerListingLocation="$(IntDir)\" ObjectFile="$(IntDir)\" ProgramDataBaseFileName="$(IntDir)\" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1033" AdditionalIncludeDirectories="..\..\..\"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLinkerTool" AdditionalDependencies="rpcrt4.lib" OutputFile="$(OutDir)\$(ProjectName).dll" LinkIncremental="1" SuppressStartupBanner="true" AdditionalLibraryDirectories="$(OutDir)" GenerateManifest="true" ModuleDefinitionFile=".\ipc.def" GenerateDebugInformation="true" ProgramDatabaseFile="$(OutDir)\$(TargetName).pdb" ImportLibrary="" TargetMachine="17"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCManifestTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true" OutputFile="$(IntDir)\$(TargetName).bsc"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCAppVerifierTool"/>
+			<Tool Name="VCWebDeploymentTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter Name="Source Files" Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
+			<File RelativePath="channel.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="ReleaseDll|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="DebugDll|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="ReleaseDll|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="DebugDll|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="dllmain.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="ReleaseDll|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="DebugDll|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="ReleaseDll|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="DebugDll|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="ipc.def">
+				<FileConfiguration Name="Release|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCCustomBuildTool"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64" ExcludedFromBuild="true">
+					<Tool Name="VCCustomBuildTool"/>
+				</FileConfiguration>
+				<FileConfiguration Name="ReleaseDll|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCCustomBuildTool"/>
+				</FileConfiguration>
+				<FileConfiguration Name="ReleaseDll|x64" ExcludedFromBuild="true">
+					<Tool Name="VCCustomBuildTool"/>
+				</FileConfiguration>
+			</File>
+			<File RelativePath="runtime.cpp">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="ReleaseDll|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="DebugDll|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="ReleaseDll|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+				<FileConfiguration Name="DebugDll|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter Name="Header Files" Filter="h;hpp;hxx;hm;inl">
+			<File RelativePath="ipc_impl.h">
+			</File>
+			<File RelativePath="version.h">
+			</File>
+			<Filter Name="Public">
+				<File RelativePath="..\ipc.h">
+				</File>
+				<File RelativePath="..\ipc_def.h">
+				</File>
+				<File RelativePath="..\ipc_err.h">
+				</File>
+				<File RelativePath="..\load_ipc.cpp">
+					<FileConfiguration Name="Release|Win32" ExcludedFromBuild="true">
+						<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+					</FileConfiguration>
+					<FileConfiguration Name="Release|x64" ExcludedFromBuild="true">
+						<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+					</FileConfiguration>
+					<FileConfiguration Name="Debug|Win32" ExcludedFromBuild="true">
+						<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+					</FileConfiguration>
+					<FileConfiguration Name="Debug|x64" ExcludedFromBuild="true">
+						<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+					</FileConfiguration>
+					<FileConfiguration Name="ReleaseS|Win32" ExcludedFromBuild="true">
+						<Tool Name="VCCLCompilerTool"/>
+					</FileConfiguration>
+					<FileConfiguration Name="DebugS|Win32" ExcludedFromBuild="true">
+						<Tool Name="VCCLCompilerTool"/>
+					</FileConfiguration>
+					<FileConfiguration Name="ReleaseDll|Win32" ExcludedFromBuild="true">
+						<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+					</FileConfiguration>
+					<FileConfiguration Name="DebugDll|Win32" ExcludedFromBuild="true">
+						<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+					</FileConfiguration>
+					<FileConfiguration Name="ReleaseDll|x64" ExcludedFromBuild="true">
+						<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+					</FileConfiguration>
+					<FileConfiguration Name="DebugDll|x64" ExcludedFromBuild="true">
+						<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+					</FileConfiguration>
+				</File>
+				<File RelativePath="..\load_ipc.h">
+				</File>
+			</Filter>
+		</Filter>
+		<Filter Name="Resource Files" Filter="ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe">
+			<File RelativePath="ipc.rc">
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="" AdditionalIncludeDirectories=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|x64">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="" AdditionalIncludeDirectories=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="" AdditionalIncludeDirectories=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="" AdditionalIncludeDirectories=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="ReleaseDll|Win32">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="" AdditionalIncludeDirectories=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="DebugDll|Win32">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="" AdditionalIncludeDirectories=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="ReleaseDll|x64">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="" AdditionalIncludeDirectories=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="DebugDll|x64">
+					<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="" AdditionalIncludeDirectories=""/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

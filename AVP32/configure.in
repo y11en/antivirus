@@ -1,0 +1,24 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_INIT(commonfiles,VERSION)
+AC_PREREQ(2.52)
+AC_CONFIG_SRCDIR([$srcdir/Makefile.in])
+AC_CONFIG_AUX_DIR([$srcdir/unix])
+
+AC_MSG_RESULT(***********************************************)
+AC_MSG_RESULT(*              configuring AVP32              *)
+AC_MSG_RESULT(***********************************************)
+
+AC_PROG_INSTALL
+
+AC_CANONICAL_SYSTEM
+
+AC_PREFIX_DEFAULT(/usr/local/kl)
+
+OutputFiles="Makefile"
+
+AC_CONFIG_SUBDIRS([BaseWork])
+
+AC_OUTPUT($OutputFiles)
+

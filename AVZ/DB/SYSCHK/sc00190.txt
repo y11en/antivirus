@@ -1,0 +1,4 @@
+// ***** AdvWare.ILookup *****
+begin
+ AddEvAlarmByCLSID('41D13E9A-BB94-402A-8502-AFA78526B63D',AScriptName,'winsrm32.dll');
+end.

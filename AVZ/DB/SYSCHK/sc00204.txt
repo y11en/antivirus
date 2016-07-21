@@ -1,0 +1,6 @@
+// ***** AdvWare.Toolbar.Ilookup *****
+begin
+ AddEvAlarmByCLSID('6EF3AE25-5A7D-40C2-9B44-9ED0068621C0',AScriptName,'winenc32.dll');
+ AddEvAlarmByCLSID('1D022C27-3771-4D1D-B1B7-1953E271C6CA',AScriptName,'winsps32.dll');
+ AddEvAlarmByCLSID('4B8F38C7-62FC-4762-B9A0-27E63F768167',AScriptName,'winsrm32.dll');
+end.

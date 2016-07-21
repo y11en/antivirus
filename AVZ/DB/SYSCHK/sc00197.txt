@@ -1,0 +1,6 @@
+// ***** AdvWare.RideMark *****
+begin
+ AddEvAlarmByCLSID('ABD45F35-2E4C-44C0-A075-6EF1DE75398E',AScriptName,'csa.dll');
+ AddEvAlarmByCLSID('D319662B-D5BF-4538-ADF3-8D3E36362608',AScriptName,'x0ff.dll');
+ AddEvAlarmByCLSID('AC109D01-32D6-4EB5-8300-D3C5EBAC7C83',AScriptName,'x2ff.dll');
+end.

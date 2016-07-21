@@ -1,0 +1,17 @@
+; AvpBase.def : Declares the module parameters for the DLL.
+
+LIBRARY      "AVPBASE"
+DESCRIPTION  'AVPBASE Windows Dynamic Link Library'
+
+EXPORTS
+	AVP_LoadBase
+	AVP_UnloadBase
+	AVP_ProcessObject
+	AVP_CancelProcessObject
+	AVP_RegisterCallback
+	AVP_SetCallbackNames
+	AVP_CheckFileIntegrity
+	AVP_RegisterCallbackPtr
+	AVP_AddMask
+	AVP_AddExcludeMask
+	AVP_SetTempPath

@@ -1,0 +1,146 @@
+﻿[Global]
+$Updater                                = "Обновление"
+$Rollback                               = "Откат обновления"
+$BasesStatus                            = ((global.UpdateState & #eBasesCorrupted) ? "сигнатуры повреждены" : ((global.UpdateState & #eBasesNotValid) ? "сигнатуры частично повреждены" : ((global.UpdateState & #eBasesOutOfDate) ? "сигнатуры неактуальны" : ((global.UpdateState & #eBasesNotActual) ? "сигнатуры устарели" : ((global.UpdateState & #eUpdateNeedReboot) ? "требуется перезагрузка" : "сигнатуры актуальны")))))
+$UpdateSourceKL                         = "Серверы обновлений Лаборатории Касперского"
+$UpdateSourceAK                         = "Kaspersky Administration Kit"
+$UpdateSourceMainAdministrationServer   = "Сервер администрирования"
+$UpdateSourceNetworkAgent               = "Сетевой агент"
+UpdateStopConfirm                       = "Вы действительно хотите остановить обновление?"
+NoUpdateSourcesSelected.caption         = "Не выбран источник обновления"
+NoUpdateSourcesSelected                 = "Выберите хотя бы один источник обновления"
+
+[BasesStatus_Corrupted]
+1
+default
+
+[MainWindow.Update]
+Home        = "Статус"
+Events      = "События"
+Statistics  = "Статистика"
+
+[MainWindow.Update_Filters]
+AllItems = "Без группировок"
+
+[MainWindow.Update_Updater]
+BasesDate.Name      = "Дата сигнатур:"
+RecordsCount.Name   = "Количество сигнатур:"
+Status.Name         = "Статус:"
+Settings.Name       = "Настройки:"
+Scheduler.Name      = "Расписание:"
+RollbackDescr       = "В случае загрузки поврежденных обновлений можно сделать откат к состоянию, соответствующему предыдущему обновлению."
+
+[UpdaterSettings]
+@ = "Настройка обновления"
+
+[UpdaterSettings_Tab]
+Source      = "Источник"
+Additional  = "Дополнительно"
+Account     = "Учетная запись"
+
+[UpdaterSettings_Tab_Source]
+Proxy  = "Прокси сервер..."
+Region = "Регион"
+
+[UpdaterSettings_Tab_Source_List]
+Name = "Label"
+
+[UpdaterSettings_Tab_Source_Region]
+RegionAuto      = "Определять автоматически"
+RegionManual    = "Выбрать из списка"
+
+[UpdaterSettings_Tab_Additional]
+DuringUpdate    = "Во время обновления"
+AfterUpdate     = "После обновления"
+
+[UpdaterSettings_Tab_Additional_DuringUpdate]
+SignAndModules  = "Обновлять программные модули и сигнатуры"
+SignOnly        = "Обновлять только сигнатуры"
+
+[UpdaterSettings_Tab_Additional_AfterUpdate]
+Quarantine  = "Проверить файлы в Карантине"
+UseRetr     = "Копировать обновления в папку"
+
+[s_UpdaterError]
+#errUPDATER_NO_ERROR                            = TaskID == eTASK_UPDATER ? "Обновление завершено" : "Откат завершен"
+#errTASK_ALREADY_RUNNING                        = "Невозможен запуск двух задач одновременно"
+#errUPDATER_FailedToCreateFolder                = "Невозможно создать папку"
+#errUPDATER_NotEnoughPermissions                = "Недостаточно прав для выполнения файловой операции"
+#errUPDATER_NoSuchFileOrDirectory               = "Не найден файл или папка"
+#errUPDATER_NO_SOURCE_FILE                      = "Набор файлов обновлений поврежден"
+#errUPDATER_URLS_EXHAUSTED                      = "Не указан ни один источник обновлений"
+#errUPDATER_NOTHING_TO_UPDATE                   = "Базы не требуют обновления"
+#errUPDATER_NotAllComponentsAreUpdated          = "Обновлены не все компоненты"
+#errUPDATER_ComponentRejectedByProduct          = "Ошибка проверки загруженного компонента"
+#errUPDATER_WRONG_KEY                           = "Ошибка проверки ключа"
+#errUPDATER_ADMKIT_FAILURE                      = "Ошибка получения параметров обновления"
+#errUPDATER_INVALID_SIGNATURE                   = "Набор файлов обновлений поврежден"
+#errUPDATER_GenericFileOperationFailure         = "Ошибка при работе с файлами"
+#errUPDATER_CANCELLED                           = "Операция отменена пользователем"
+#errUPDATER_CURRENT_VERSION_NEWER               = "Database are up-to-date"
+#errUPDATER_NO_RESERVED_UPDATE_DESCRIPTION      = "Отсутствуют файлы для операции отката"
+#errUPDATER_UPDATE_DESCRIPTION_DAMAGED          = "Индексный файл поврежден или отсутствует"
+#errUPDATER_INTERNAL_ERROR                      = "Ошибка работы компонента обновления"
+#errUPDATER_DOWNLOAD_ERROR                      = "Сетевая ошибка при закачке файлов обновлений"
+#errUPDATER_REMOTE_HOST_CLOSED_CONNECTION       = "Соединение разорвано"
+#errUPDATER_DOWNLOAD_TIMEOUT                    = "Истекло время ожидания сетевой операции"
+#errUPDATER_FTP_AUTH_ERROR                      = "Ошибка аутентификации на FTP-сервере"
+#errUPDATER_PROXY_AUTH_ERROR                    = "Ошибка аутентификации на прокси-сервере "
+#errUPDATER_CANT_RESOLVE_NAME                   = "Не найден источник обновлений"
+#errUPDATER_CANT_CONNECT_ADM_SERVER             = "Ошибка соединения с Сервером администрирования"
+#errUPDATER_RETRANSLATION_SUCCESSFUL            = "Задача копирования обновлений успешно завершена"
+#errUPDATER_NO_OPERATION_REQUESTED              = "Ошибка работы компонента обновления"
+#errUPDATER_UpdateSuccessfulRetranslationFailed = "Обновление завершено успешно, а копирование обновлений завершено с ошибкой"
+#errUPDATER_CANT_CONNECT_INET_SERVER            = "Ошибка при подключении к источнику обновлений"
+#errUPDATER_SERVER_AUTH_ERROR                   = "Ошибка аутентификации на сервере обновлений "
+#errUPDATER_BASE_CHECK_FAILED                   = "Ошибка при проверке набора файлов обновлений"
+#errUPDATER_CANT_CONNECT_TO_PROXY               = "Ошибка при подключении к прокси-серверу"
+#errUPDATER_CANT_RESOLVE_PROXY                  = "Не найден прокси-сервер"
+#errUPDATER_AK_WrongReceiverId                  = "Ошибка регистрации в Агенте администрирования"
+#errUPDATER_AK_ServerBusy                       = "Сервер перегружен и не может обслужить запрос"
+#errUPDATER_AK_ConnectionError                  = "Невозможно установить соединение, физическая ошибка"
+#errUPDATER_AK_ConnectionNagentError            = "Невозможно установить соединение, физическая ошибка"
+#errUPDATER_AK_ConnectionServerError            = "Невозможно установить соединение, физическая ошибка"
+#errUPDATER_AK_CannotConnectToServer            = "Невозможно установить соединение, неизвестная ошибка"
+#errUPDATER_AK_WrongArguments                   = "Ошибка получения файла, неверный аргумент для транспорта"
+#errUPDATER_AK_ErrorInOperation                 = "Ошибка получения файла"
+#errUPDATER_AK_UnknownError                     = "Ошибка транспорта"
+#errUPDATER_SOURCE_SELECTED                     = "Выбран источник обновлений"
+#errUPDATER_ADMIN_KIT_SOURCE_SELECTED           = "Выбран источник обновлений"
+#errUPDATER_PROXY_SERVER_SELECTED               = "Используется прокси-сервер"
+default                                         = s_SystemError(@)
+
+[MainWindow.Update_WorkArea_Events_Report]
+Time    = "Time"
+Event   = "Event"
+Object  = "Object"
+row     = "Label"
+
+[MainWindow.Update_WorkArea_Home]
+Speed.Header = "Скорость загрузки (КБ/сек)"
+
+[ProxyAuthDialog]
+@           = "Прокси сервер"
+Login.Name  = "Имя пользователя"
+Pswd.Name   = "Пароль"
+Save        = "Запомнить имя пользователя и пароль"
+
+[UpdaterProgressWindow_Body_All_Info]
+UpdateSize.Name     = "Размер:"
+TransferRate.Name   = "Скорость:"
+TransferRate.Val    = filesize(Speed*1024, "FileSizeTypes") + "/s"
+
+[UpdaterProgressWindow_Body_TopInfo_Active]
+Downloading.Name    = "Загрузка:"
+Location.Name       = "Расположение:"
+
+[UpdaterProgressWindow]
+Footer.Cancel = f_IsStateActive(state) ? "Отмена" : "Закрыть"
+
+[MainWindow.Update_Updater_DoUpdate]
+Start.Name  = "Обновить"
+Stop.Name   = "Стоп"
+
+[MainWindow.Update_Updater_DoRollback]
+Start.Name  = "Откат"
+Stop.Name   = "Стоп"

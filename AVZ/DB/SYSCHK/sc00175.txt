@@ -1,0 +1,4 @@
+// ***** Spy.XLocator *****
+begin
+ AddEvAlarmByCLSID('121AC498-3F3A-4C39-9BEA-CFC4EA809FDF',AScriptName,'xlocator.ocx');
+end.

@@ -1,0 +1,5 @@
+// ***** AdvWare.Toolbar.ISearch *****
+begin
+ AddEvAlarmByCLSID('5124376D-C964-4817-B40E-CBD36195116E',AScriptName,'toolbar.dll');
+ AddEvAlarmByCLSID('BBBE1C1A-89F7-4AF6-ABD1-F8FBCFA47408',AScriptName,'toolbar.dll');
+end.

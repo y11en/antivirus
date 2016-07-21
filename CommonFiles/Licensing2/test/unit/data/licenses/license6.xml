@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<KeyRoot>
+	<KeyInfo>
+		<Description>Kaspersky Lab key file for Licensing-lib tests</Description>
+		<Version>6</Version>
+		<ProdDate>2005-08-16</ProdDate>
+		<SerialNumber>0001-000002-00000721</SerialNumber>
+		<LicenseType>1</LicenseType>
+		<IsTrial>1</IsTrial>
+		<LifeSpan>365</LifeSpan>
+		<ExpDate>2005-09-30</ExpDate>
+		<LicenseCount>1</LicenseCount>
+		<License>
+			<ObjectId>1</ObjectId>
+			<Count>1</Count>
+		</License>
+		<License>
+			<ObjectId>2</ObjectId>
+			<Count>2</Count>
+		</License>
+		<ProductInfo>
+			<MarketSector>1</MarketSector>
+			<SalesChannel>1</SalesChannel>
+			<Localization>1</Localization>
+			<Package>1</Package>
+		</ProductInfo>
+		<LicenseObjectInfo>
+			<Id>1000</Id>
+			<Type>product</Type>
+			<Name>KIS 2007</Name>
+			<Version>393216</Version>
+			<Platform>WIN_WORKSTATION</Platform>
+			<Platform>WIN_PERSONAL</Platform>
+			<Restriction>
+				<Id>1</Id>
+				<Name>Experation Analyse</Name>
+				<Value>5</Value>
+				<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+				<Condition>
+					<Expression><![CDATA[1]]></Expression>
+					<Notify>1</Notify>
+				</Condition>
+				<DefaultNotify>1</DefaultNotify>
+			</Restriction>
+			<LicenseObjectInfo>
+				<Id>1100</Id>
+				<Type>component</Type>
+				<Name>KIS 2007</Name>
+				<Version>393216</Version>
+				<Platform>WIN_WORKSTATION</Platform>
+				<Platform>WIN_PERSONAL</Platform>
+				<Restriction>
+					<Id>1100</Id>
+					<Name>Expration Analyse</Name>
+					<Value>100</Value>
+					<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+					<Condition>
+						<Expression><![CDATA[%CURRENT_VALUE% < %VALUE%*0.6]]></Expression>
+						<Notify>11</Notify>
+					</Condition>
+					<Condition>
+						<Expression><![CDATA[%CURRENT_VALUE% < %VALUE%*0.7]]></Expression>
+						<Notify>12</Notify>
+					</Condition>
+					<Condition>
+						<Expression><![CDATA[%CURRENT_VALUE% < %VALUE%*0.8]]></Expression>
+						<Notify>13</Notify>
+					</Condition>
+					<DefaultNotify>10</DefaultNotify>
+				</Restriction>
+			</LicenseObjectInfo>
+			<LicenseObjectInfo>
+				<Id>1200</Id>
+				<Type>application</Type>
+				<Name>KIS 2007</Name>
+				<Version>393216</Version>
+				<Platform>WIN_PERSONAL</Platform>
+				<Platform>3</Platform>
+				<Restriction>
+					<Id>1</Id>
+					<Name>Expration Analyse</Name>
+					<Value>5</Value>
+					<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+					<Condition>
+						<Expression><![CDATA[1]]></Expression>
+						<Notify>1</Notify>
+					</Condition>
+					<DefaultNotify>1</DefaultNotify>
+				</Restriction>
+				<LicenseObjectInfo>
+					<Id>1210</Id>
+					<Type>component</Type>
+					<Name>KIS 2007</Name>
+					<Version>393216</Version>
+					<Platform>WIN_WORKSTATION</Platform>
+					<Platform>WIN_PERSONAL</Platform>
+					<Restriction>
+						<Id>1234</Id>
+						<Name>Expration Analyse</Name>
+						<Value>5</Value>
+						<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+						<Condition>
+							<Expression><![CDATA[%CURRENT_VALUE% < 50]]></Expression>
+							<Notify>1</Notify>
+						</Condition>
+						<DefaultNotify>0</DefaultNotify>
+				</Restriction>
+				</LicenseObjectInfo>
+				<LicenseObjectInfo>
+					<Id>1220</Id>
+					<Type>component</Type>
+					<Name>KIS 2007</Name>
+					<Version>393216</Version>
+					<Platform>WIN_WORKSTATION</Platform>
+					<Platform>WIN_PERSONAL</Platform>
+						<Restriction>
+							<Id>1220</Id>
+							<Name>Expration Analyse</Name>
+							<Value>100</Value>
+							<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+							<Condition>
+								<Expression><![CDATA[%CURRENT_VALUE% < %VALUE%*0.6]]></Expression>
+								<Notify>1</Notify>
+							</Condition>
+							<Condition>
+								<Expression><![CDATA[%CURRENT_VALUE% < %VALUE%*0.7]]></Expression>
+								<Notify>2</Notify>
+							</Condition>
+							<Condition>
+								<Expression><![CDATA[%CURRENT_VALUE% < %VALUE%*0.8]]></Expression>
+								<Notify>3</Notify>
+							</Condition>
+							<DefaultNotify>10</DefaultNotify>
+						</Restriction>
+				</LicenseObjectInfo>
+				<LicenseObjectInfo>
+					<Id>1230</Id>
+					<Type>component</Type>
+					<Name>KIS 2007</Name>
+					<Version>393216</Version>
+					<Platform>WIN_WORKSTATION</Platform>
+					<Platform>WIN_PERSONAL</Platform>
+					<Restriction>
+						<Id>1230</Id>
+						<Name>Expration Analyse</Name>
+						<Value>100</Value>
+						<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+						<Condition>
+							<Expression><![CDATA[%CURRENT_VALUE% < %VALUE%]]></Expression>
+							<Notify>1</Notify>
+						</Condition>
+						<DefaultNotify>0</DefaultNotify>
+					</Restriction>
+				</LicenseObjectInfo>
+				<LicenseObjectInfo>
+					<Id>1240</Id>
+					<Type>component</Type>
+					<Name>KIS 2007</Name>
+					<Version>393216</Version>
+					<Platform>WIN_WORKSTATION</Platform>
+					<Platform>WIN_PERSONAL</Platform>
+					<Restriction>
+						<Id>1</Id>
+						<Name>Expration Analyse</Name>
+						<Value>5</Value>
+						<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+						<Condition>
+							<Expression><![CDATA[1]]></Expression>
+							<Notify>1</Notify>
+						</Condition>
+						<DefaultNotify>1</DefaultNotify>
+					</Restriction>
+				</LicenseObjectInfo>
+			</LicenseObjectInfo>
+			<LicenseObjectInfo>
+				<Id>1300</Id>
+				<Type>application</Type>
+				<Name>KIS 2007</Name>
+				<Version>393216</Version>
+				<Platform>WIN_WORKSTATION</Platform>
+				<Platform>WIN_PERSONAL</Platform>
+				<Restriction>
+					<Id>1</Id>
+					<Name>Expration Analyse</Name>
+					<Value>5</Value>
+					<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+					<Condition>
+						<Expression><![CDATA[1]]></Expression>
+						<Notify>1</Notify>
+					</Condition>
+					<DefaultNotify>1</DefaultNotify>
+				</Restriction>
+				<LicenseObjectInfo>
+					<Id>1310</Id>
+					<Type>component</Type>
+					<Name>KIS 2007</Name>
+					<Version>393216</Version>
+					<Platform>WIN_WORKSTATION</Platform>
+					<Platform>WIN_PERSONAL</Platform>
+					<Restriction>
+						<Id>1311</Id>
+						<Name>Expration Analyse</Name>
+						<Value>100</Value>
+						<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+						<Condition>
+							<Expression><![CDATA[%CURRENT_VALUE% < %VALUE%*0.6]]></Expression>
+							<Notify>1311</Notify>
+						</Condition>
+						<DefaultNotify>13110</DefaultNotify>
+					</Restriction>
+					<Restriction>
+						<Id>1312</Id>
+						<Name>Expration Analyse</Name>
+						<Value>100</Value>
+						<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+						<Condition>
+							<Expression><![CDATA[%CURRENT_VALUE% < %VALUE%*0.7]]></Expression>
+							<Notify>1312</Notify>
+						</Condition>
+						<DefaultNotify>13120</DefaultNotify>
+					</Restriction>
+					<Restriction>
+						<Id>1313</Id>
+						<Name>Expration Analyse</Name>
+						<Value>100</Value>
+						<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+						<Condition>
+							<Expression><![CDATA[%CURRENT_VALUE% < %VALUE%*0.8]]></Expression>
+							<Notify>1313</Notify>
+						</Condition>
+						<DefaultNotify>13130</DefaultNotify>
+					</Restriction>
+				</LicenseObjectInfo>
+				<LicenseObjectInfo>
+					<Id>1320</Id>
+					<Type>component</Type>
+					<Name>KIS 2007</Name>
+					<Version>393216</Version>
+					<Platform>WIN_WORKSTATION</Platform>
+					<Platform>WIN_PERSONAL</Platform>
+					<Restriction>
+						<Id>1</Id>
+						<Name>Expration Analyse</Name>
+						<Value>5</Value>
+						<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+						<Condition>
+							<Expression><![CDATA[1]]></Expression>
+							<Notify>1</Notify>
+						</Condition>
+						<DefaultNotify>1</DefaultNotify>
+					</Restriction>
+				</LicenseObjectInfo>
+				<LicenseObjectInfo>
+					<Id>1330</Id>
+					<Type>component</Type>
+					<Name>KIS 2007</Name>
+					<Version>393216</Version>
+					<Platform>WIN_WORKSTATION</Platform>
+					<Platform>WIN_PERSONAL</Platform>
+					<Restriction>
+						<Id>1</Id>
+						<Name>Expration Analyse</Name>
+						<Value>5</Value>
+						<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+						<Condition>
+							<Expression><![CDATA[1]]></Expression>
+							<Notify>1</Notify>
+						</Condition>
+						<DefaultNotify>1</DefaultNotify>
+					</Restriction>
+				</LicenseObjectInfo>
+				<LicenseObjectInfo>
+					<Id>1340</Id>
+					<Type>component</Type>
+					<Name>KIS 2007</Name>
+					<Version>393216</Version>
+					<Platform>WIN_WORKSTATION</Platform>
+					<Platform>WIN_PERSONAL</Platform>
+					<Restriction>
+						<Id>1</Id>
+						<Name>Expration Analyse</Name>
+						<Value>5</Value>
+						<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+						<Condition>
+							<Expression><![CDATA[1]]></Expression>
+							<Notify>1</Notify>
+						</Condition>
+						<DefaultNotify>1</DefaultNotify>
+					</Restriction>
+				</LicenseObjectInfo>
+			</LicenseObjectInfo>
+			<LicenseObjectInfo>
+				<Id>1400</Id>
+				<Type>application</Type>
+				<Name>KIS 2007</Name>
+				<Version>393216</Version>
+				<Platform>WIN_WORKSTATION</Platform>
+				<Platform>WIN_PERSONAL</Platform>
+				<Restriction>
+					<Id>1</Id>
+					<Name>Expration Analyse</Name>
+					<Value>5</Value>
+					<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+					<Condition>
+						<Expression><![CDATA[1]]></Expression>
+						<Notify>1</Notify>
+					</Condition>
+					<DefaultNotify>1</DefaultNotify>
+				</Restriction>
+				<LicenseObjectInfo>
+					<Id>1410</Id>
+					<Type>component</Type>
+					<Name>KIS 2007</Name>
+					<Version>393216</Version>
+					<Platform>WIN_WORKSTATION</Platform>
+					<Platform>WIN_PERSONAL</Platform>
+					<Restriction>
+						<Id>1</Id>
+						<Name>Expration Analyse</Name>
+						<Value>5</Value>
+						<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+						<Condition>
+							<Expression><![CDATA[1]]></Expression>
+							<Notify>1</Notify>
+						</Condition>
+						<DefaultNotify>1</DefaultNotify>
+					</Restriction>
+				</LicenseObjectInfo>
+				<LicenseObjectInfo>
+					<Id>1420</Id>
+					<Type>application</Type>
+					<Name>KIS 2007</Name>
+					<Version>393216</Version>
+					<Platform>WIN_WORKSTATION</Platform>
+					<Platform>WIN_PERSONAL</Platform>
+					<Restriction>
+						<Id>1</Id>
+						<Name>Expration Analyse</Name>
+						<Value>5</Value>
+						<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+						<Condition>
+							<Expression><![CDATA[1]]></Expression>
+							<Notify>1</Notify>
+						</Condition>
+						<DefaultNotify>1</DefaultNotify>
+					</Restriction>
+					<LicenseObjectInfo>
+						<Id>14210</Id>
+						<Type>application</Type>
+						<Name>KIS 2007</Name>
+						<Version>393216</Version>
+						<Platform>WIN_WORKSTATION</Platform>
+						<Platform>WIN_PERSONAL</Platform>
+						<Restriction>
+							<Id>1</Id>
+							<Name>Expration Analyse</Name>
+							<Value>5</Value>
+							<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+							<Condition>
+								<Expression><![CDATA[1]]></Expression>
+								<Notify>1</Notify>
+							</Condition>
+							<DefaultNotify>1</DefaultNotify>
+						</Restriction>
+						<LicenseObjectInfo>
+							<Id>14211</Id>
+							<Type>component</Type>
+							<Name>KIS 2007</Name>
+							<Version>393216</Version>
+							<Platform>WIN_WORKSTATION</Platform>
+							<Platform>WIN_PERSONAL</Platform>
+							<Restriction>
+								<Id>1</Id>
+								<Name>Expration Analyse</Name>
+								<Value>5</Value>
+								<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+								<Condition>
+									<Expression><![CDATA[1]]></Expression>
+									<Notify>1</Notify>
+								</Condition>
+								<DefaultNotify>1</DefaultNotify>
+							</Restriction>
+						</LicenseObjectInfo>
+						<LicenseObjectInfo>
+							<Id>14212</Id>
+							<Type>application</Type>
+							<Name>KIS 2007</Name>
+							<Version>393216</Version>
+							<Platform>WIN_WORKSTATION</Platform>
+							<Platform>WIN_PERSONAL</Platform>
+							<Restriction>
+								<Id>1</Id>
+								<Name>Expration Analyse</Name>
+								<Value>5</Value>
+								<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+								<Condition>
+									<Expression><![CDATA[1]]></Expression>
+									<Notify>1</Notify>
+								</Condition>
+								<DefaultNotify>1</DefaultNotify>
+							</Restriction>
+						</LicenseObjectInfo>
+	 				</LicenseObjectInfo>
+				</LicenseObjectInfo>
+			</LicenseObjectInfo>
+			<LicenseObjectInfo>
+				<Id>1500</Id>
+				<Type>component</Type>
+				<Name>KIS 2007</Name>
+				<Version>393216</Version>
+				<Platform>WIN_WORKSTATION</Platform>
+				<Platform>WIN_PERSONAL</Platform>
+				<Restriction>
+					<Id>1500</Id>
+					<Name>Experation Analyse</Name>
+					<Value>100</Value>
+					<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+					<Condition>
+						<Expression><![CDATA[%CURRENT_VALUE% < %VALUE%]]></Expression>
+						<Notify>151</Notify>
+					</Condition>
+					<Condition>
+						<Expression><![CDATA[%CURRENT_VALUE% > %VALUE%]]></Expression>
+						<Notify>152</Notify>
+					</Condition>
+					<Condition>
+						<Expression><![CDATA[%CURRENT_VALUE% = %VALUE%]]></Expression>
+						<Notify>153</Notify>
+					</Condition>
+					<DefaultNotify>150</DefaultNotify>
+				</Restriction>
+			</LicenseObjectInfo>
+			<LicenseObjectInfo>
+				<Id>1600</Id>
+				<Type>component</Type>
+				<Name>KIS 2007</Name>
+				<Version>393216</Version>
+				<Platform>WIN_WORKSTATION</Platform>
+				<Platform>WIN_PERSONAL</Platform>
+				<Restriction>
+					<Id>1610</Id>
+					<Name>Experation Analyse</Name>
+					<Value>100</Value>
+					<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+					<Condition>
+						<Expression><![CDATA[!%BAD_BLST%]]></Expression>
+						<Notify>1611</Notify>
+					</Condition>
+					<Condition>
+						<Expression><![CDATA[%BAD_BLST%]]></Expression>
+						<Notify>1612</Notify>
+					</Condition>
+					<DefaultNotify>1610</DefaultNotify>
+				</Restriction>
+				<Restriction>
+					<Id>1620</Id>
+					<Name>Experation Analyse</Name>
+					<Value>100</Value>
+					<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+					<Condition>
+						<Expression><![CDATA[!%INVALID_AV_BASES%]]></Expression>
+						<Notify>1621</Notify>
+					</Condition>
+					<Condition>
+						<Expression><![CDATA[%INVALID_AV_BASES%]]></Expression>
+						<Notify>1622</Notify>
+					</Condition>
+					<DefaultNotify>1620</DefaultNotify>
+				</Restriction>
+				<Restriction>
+					<Id>1630</Id>
+					<Name>Experation Analyse</Name>
+					<Value>100</Value>
+					<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+					<Condition>
+						<Expression><![CDATA[!%SN_BLSTED%]]></Expression>
+						<Notify>1631</Notify>
+					</Condition>
+					<Condition>
+						<Expression><![CDATA[%SN_BLSTED%]]></Expression>
+						<Notify>1632</Notify>
+					</Condition>
+					<DefaultNotify>1630</DefaultNotify>
+				</Restriction>
+				<Restriction>
+					<Id>1640</Id>
+					<Name>Experation Analyse</Name>
+					<Value>1</Value>
+					<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+					<Condition>
+						<Expression><![CDATA[%AV_BASES_UPDATE_DATE% + %CURRENT_VALUE% > %CURRENT_DATE%]]></Expression>
+						<Notify>1641</Notify>
+					</Condition>
+					<Condition>
+						<Expression><![CDATA[%AV_BASES_UPDATE_DATE% < %CURRENT_DATE%]]></Expression>
+						<Notify>1642</Notify>
+					</Condition>
+					<DefaultNotify>1640</DefaultNotify>
+				</Restriction>
+				<Restriction>
+					<Id>1650</Id>
+					<Name>Experation Analyse</Name>
+					<Value>1</Value>
+					<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+					<Condition>
+						<Expression><![CDATA[%LICENSE_EXPIRATION_DATE% > %CURRENT_DATE% + %CURRENT_VALUE%]]></Expression>
+						<Notify>1651</Notify>
+					</Condition>
+					<DefaultNotify>1650</DefaultNotify>
+				</Restriction>
+			</LicenseObjectInfo>
+			<LicenseObjectInfo>
+				<Id>1700</Id>
+				<Type>component</Type>
+				<Name>KIS 2007</Name>
+				<Version>393216</Version>
+				<Platform>WIN_WORKSTATION</Platform>
+				<Platform>WIN_PERSONAL</Platform>
+				<Restriction>
+					<Id>1700</Id>
+					<Name>Experation Analyse</Name>
+					<Value>10</Value>
+					<AdditiveCondition><![CDATA[1]]></AdditiveCondition>
+					<Condition>
+						<Expression><![CDATA[%VALUE% >= %CURRENT_VALUE%]]></Expression>
+						<Notify>171</Notify>
+					</Condition>
+					<Condition>
+						<Expression><![CDATA[%VALUE% + %CURRENT_VALUE% = (%VALUE%*2 + 1)/1 & %VALUE% + 1 <= %CURRENT_VALUE%]]></Expression>
+						<Notify>172</Notify>
+					</Condition>
+					<Condition>
+						<Expression><![CDATA[%VALUE% + %CURRENT_VALUE% = (%VALUE%)*2 + 1 | %VALUE% + 1 <= %CURRENT_VALUE%]]></Expression>
+						<Notify>173</Notify>
+					</Condition>
+					<DefaultNotify>170</DefaultNotify>
+				</Restriction>
+			</LicenseObjectInfo>
+		</LicenseObjectInfo>
+		<HasSupport></HasSupport>
+		<LicenseInfo><![CDATA[KeyLicenseInfo]]></LicenseInfo>
+		<SupportInfo><![CDATA[KeySupportInfo]]></SupportInfo>
+		<PLPosName>KeyPLPosName</PLPosName>
+		<PLPos>1</PLPos>
+		<ProductId>1</ProductId>
+		<ProductVersion>1</ProductVersion>
+		<MarketSector>1</MarketSector>
+		<SalesChannel>1</SalesChannel>
+		<DistributorInfo>
+			<ContactInfo>
+				<Name>Tester-distributor</Name>
+				<Country>Russia</Country>
+				<City>Moscow</City>
+				<Address>125363, Москва, ул.Героев Панфиловцев, 10</Address>
+				<Phone>7978700</Phone>
+				<Fax>7978700</Fax>
+				<Email>Egor.Chekhievsky@kaspersky.com</Email>
+				<WWW>http://www.kaspersky.ru</WWW>
+			</ContactInfo>
+			<SupportInfo>
+				<Phone>7978700</Phone>
+				<Fax>7978700</Fax>
+				<Email>Egor.Chekhievsky@kaspersky.com</Email>
+				<WWW>http://www.kaspersky.ru</WWW>
+			</SupportInfo>
+		</DistributorInfo>
+		<ResellerInfo>
+			<ContactInfo>
+				<Name>Tester-reseller</Name>
+				<Country>Russia</Country>
+				<City>Moscow</City>
+				<Address>125363, Москва, ул.Героев Панфиловцев, 10</Address>
+				<Phone>7978700</Phone>
+				<Fax>7978700</Fax>
+				<Email>Egor.Chekhievsky@kaspersky.com</Email>
+				<WWW>http://www.kaspersky.ru</WWW>
+			</ContactInfo>
+			<SupportInfo>
+				<Phone>7978700</Phone>
+				<Fax>7978700</Fax>
+				<Email>Egor.Chekhievsky@kaspersky.com</Email>
+				<WWW>http://www.kaspersky.ru</WWW>
+			</SupportInfo>
+		</ResellerInfo>
+		<LocalOfficeInfo>
+			<ContactInfo>
+				<Name>Tester-localoffice</Name>
+				<Country>Russia</Country>
+				<City>Moscow</City>
+				<Address>125363, Москва, ул.Героев Панфиловцев, 10</Address>
+				<Phone>7978700</Phone>
+				<Fax>7978700</Fax>
+				<Email>Egor.Chekhievsky@kaspersky.com</Email>
+				<WWW>http://www.kaspersky.ru</WWW>
+			</ContactInfo>
+			<SupportInfo>
+				<Phone>7978700</Phone>
+				<Fax>7978700</Fax>
+				<Email>Egor.Chekhievsky@kaspersky.com</Email>
+				<WWW>http://www.kaspersky.ru</WWW>
+			</SupportInfo>
+		</LocalOfficeInfo>
+		<HQInfo>
+			<ContactInfo>
+				<Name>Tester-HQ</Name>
+				<Country>Russia</Country>
+				<City>Moscow</City>
+				<Address>125363, Москва, ул.Героев Панфиловцев, 10</Address>
+				<Phone>7978700</Phone>
+				<Fax>7978700</Fax>
+				<Email>Egor.Chekhievsky@kaspersky.com</Email>
+				<WWW>http://www.kaspersky.ru</WWW>
+			</ContactInfo>
+			<SupportInfo>
+				<Phone>7978700</Phone>
+				<Fax>7978700</Fax>
+				<Email>Egor.Chekhievsky@kaspersky.com</Email>
+				<WWW>http://www.kaspersky.ru</WWW>
+			</SupportInfo>
+		</HQInfo>
+		<SupportCenterInfo>
+			<ContactInfo>
+				<Name>Tester-supportcenter</Name>
+				<Country>Russia</Country>
+				<City>Moscow</City>
+				<Address>125363, Москва, ул.Героев Панфиловцев, 10</Address>
+				<Phone>7978700</Phone>
+				<Fax>7978700</Fax>
+				<Email>Egor.Chekhievsky@kaspersky.com</Email>
+				<WWW>http://www.kaspersky.ru</WWW>
+			</ContactInfo>
+			<SupportInfo>
+				<Phone>7978700</Phone>
+				<Fax>7978700</Fax>
+				<Email>Egor.Chekhievsky@kaspersky.com</Email>
+				<WWW>http://www.kaspersky.ru</WWW>
+			</SupportInfo>
+		</SupportCenterInfo>
+		<ParthnerId>1</ParthnerId>
+		<ParthnerName>Name</ParthnerName>
+		<CompanyName>Name</CompanyName>
+		<Customer>
+			<CompanyName>User</CompanyName>
+			<Name>Name</Name>
+			<Country>Country</Country>
+			<City>City</City>
+			<Address>Address</Address>
+			<Phone>Phone</Phone>
+			<Fax>Fax</Fax>
+			<Email>Email</Email>
+			<WWW>WWW</WWW>
+		</Customer>
+		<RequestGuid>KeyRequestGuid</RequestGuid>
+		<ParentGuid>KeyParentGuid</ParentGuid>
+		<ParentKey>1</ParentKey>
+		<KeyCategory>1</KeyCategory>
+	</KeyInfo>
+	<ComponentLevel>
+		<ComponentId>1</ComponentId>
+		<Level>1</Level>
+	</ComponentLevel>
+	<ComponentLevel>
+		<ComponentId>2</ComponentId>
+		<Level>2</Level>
+	</ComponentLevel>
+</KeyRoot>

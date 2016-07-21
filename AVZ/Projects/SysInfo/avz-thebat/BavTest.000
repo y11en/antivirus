@@ -1,0 +1,336 @@
+library BavTest;
+
+uses
+  SysUtils,
+  ActiveX,
+  Classes;
+
+{$E BAV}
+
+{$R *.res}
+
+const
+     AVC_Suspicious       =  2;
+     AVC_VirusFound       =  1;
+     AVC_OK               =  0;
+     AVC_NotSupported     = -1;
+     AVC_CantBeCured      = -2;
+     AVC_CantCure         = -2;
+     AVC_Error            = -3;
+     AVC_BufferTooSmall   = -4;
+
+     cMaxMsgSize          = 1024;
+
+
+function BAV_Initialize: Integer; stdcall;
+begin
+  Result := AVC_OK;
+end;
+
+function BAV_Uninitialize: Integer; stdcall;
+begin
+  Result := AVC_OK;
+end;
+
+
+function MakeStr(ABuf: PChar; ABufSize: Integer; const S: String): Integer;
+  // This function is for internal use, so no need to export it
+begin
+  if (ABuf = nil) or (ABufSize <= 0) then Result := Length(S) else
+    if ABufSize < Length(S) then
+    begin
+      Result := ABufSize;
+      StrLCopy(ABuf, PChar(S), ABufSize);
+    end else
+    begin
+      Result := Length(S);
+      StrCopy(ABuf, PChar(S));
+    end;
+end;
+
+function BAV_GetName(ABuf: PChar; ABufSize: Integer): Integer; stdcall;
+begin
+  Result := MakeStr(ABuf, ABufSize, 'Sample Virus Checker (testing only)');
+end;
+
+function BAV_GetVersion(ABuf: PChar; ABufSize: Integer): Integer; stdcall;
+begin
+  Result := MakeStr(ABuf, ABufSize, '1.0');
+end;
+
+function BAV_SetCfgData(const AData; ADataSize: Integer): Integer; stdcall;
+begin
+  Result := AVC_NotSupported;
+end;
+
+function BAV_GetCfgData(var AData; var ADataSize: Integer): Integer; stdcall;
+begin
+  Result := AVC_NotSupported;
+end;
+
+function BAV_GetStatus: Integer; stdcall;
+begin
+  Result := AVC_OK;
+end;
+
+function BAV_Setup: Integer; stdcall;
+begin
+  Result := AVC_NotSupported;
+end;
+
+function BAV_MemoryChecking: Integer; stdcall;
+begin
+  Result := AVC_NotSupported;
+end;
+
+function BAV_FileChecking: Integer; stdcall;
+begin
+  Result := AVC_OK;
+end;
+
+function BAV_StreamChecking: Integer; stdcall;
+begin
+  Result := AVC_NotSupported;
+end;
+
+function BAV_CheckMemory(var Data; DataSize: Integer; Msg: PChar): Integer; stdcall;
+begin
+  Result := AVC_NotSupported;
+end;
+
+function BAV_CureMemory(var Data; var DataSize: Integer; Msg: PChar): Integer; stdcall;
+begin
+  Result := AVC_NotSupported;
+end;
+
+function BAV_CheckStream(InStream: IStream; Msg: PChar): Integer; stdcall;
+
+  function DoFind(const S: String): Boolean;
+    var B: PChar;
+        BS, I, J, XB, InStreamSize: Integer;
+        NB: Int64;
+  begin
+    Result := False;
+//    InStream._AddRef;
+    B := nil; BS := 0;
+    try
+      InStream.Seek(0, STREAM_SEEK_END, NB);
+      BS := NB;
+      InStreamSize := NB;
+      InStream.Seek(0, STREAM_SEEK_SET, NB);
+      if BS >= Length(S) then
+      begin
+        if BS > 16384 then BS := 16384;
+        GetMem(B, BS+1);
+        XB := 0; J := 1;
+        while (J > 0) do
+        begin
+          InStream.Seek(0, STREAM_SEEK_CUR, NB);
+          J := InStreamSize-NB;
+          if J > BS-XB then J := BS - XB;
+          if J > 0 then
+          begin
+            InStream.Read(@B[XB], J, @NB);
+            for I := XB to XB+J-1 do
+              if B[I] = #0 then B[I] := #1;
+            B[XB+J] := #0;
+            if StrPos(B, PChar(S)) <> nil then
+            begin
+              Result := True;
+              Break;
+            end;
+            Move(B[XB+J-Length(S)], B[0], Length(S));
+            XB := Length(S);
+          end;
+        end;
+      end;
+    finally
+      FreeMem(B);
+    end;
+  end;
+
+begin
+  Result := AVC_OK;
+  if DoFind('abracadabra') then
+  begin
+    Result := AVC_VirusFound;
+    StrCopy(Msg, 'AbraCadabra.3.0')
+  end else
+  if DoFind('abracracadabra') then
+  begin
+    Result := AVC_VirusFound;
+    StrCopy(Msg, 'AbraCraCadabra.1.0')
+  end else
+  if DoFind('abraquakazyabra') then
+  begin
+    Result := AVC_Suspicious;
+    StrCopy(Msg, 'AbraQuakaZyabra.2.1')
+  end;
+end;
+
+function BAV_CureStream(InStream, OutStream: IStream; Msg: PChar): Integer; stdcall;
+
+  function DoFind(const S: String; DoCure: Boolean): Boolean;
+    var B, XP: PChar;
+        BS, I, J, P, XB, InStreamSize: Integer;
+        XS: String;
+        NB, N1, N2: Int64;
+        BB: Cardinal;
+  begin
+    Result := False;
+    B := nil; BS := 0;
+    try
+      InStream.Seek(0, STREAM_SEEK_END, NB);
+      BS := NB;
+      InStreamSize := NB;
+      InStream.Seek(0, STREAM_SEEK_SET, NB);
+      if BS > Length(S) then
+      begin
+        if BS > 16384 then BS := 16384;
+        GetMem(B, BS+1);
+        XB := 0; J := 1;
+        while (J > 0) do
+        begin
+          InStream.Seek(0, STREAM_SEEK_CUR, NB);
+          P := NB;
+          J := InStreamSize-P;
+          if J > BS-XB then J := BS - XB;
+          if J > 0 then
+          begin
+            InStream.Read(@B[XB], J, @BB);
+            for I := XB to XB+J-1 do
+              if B[I] = #0 then B[I] := #1;
+            B[XB+J] := #0;
+            XP := StrPos(B, PChar(S));
+            if XP <> nil then
+            begin
+              if DoCure then
+              begin
+                if Result then
+                begin
+                  InStream.Seek(P, STREAM_SEEK_SET, NB);
+                  InStream.CopyTo(OutStream, Integer(XP-B)-XB, N1, N2);
+                end else
+                begin
+                  InStream.Seek(0, STREAM_SEEK_SET, NB);
+                  InStream.CopyTo(OutStream, P+Integer(XP-B)-XB, N1, N2);
+                end;
+                XS := StringOfChar('#', Length(S));
+                OutStream.Write(@XS[1], Length(S), @N1);
+                InStream.Seek(P+Integer(XP-B)-XB+Length(S), STREAM_SEEK_SET, NB);
+                Result := True;
+                XB := 0;
+                Continue;
+              end else
+              begin
+                Result := True;
+                Break;
+              end;
+            end else
+            if Result then
+            begin
+              InStream.Seek(P, STREAM_SEEK_SET, NB);
+              InStream.Read(@B[XB], J, @NB);
+              OutStream.Write(@B[XB], J, @NB);
+            end;
+            Move(B[XB+J-Length(S)], B[0], Length(S));
+            XB := Length(S);
+          end;
+        end;
+      end;
+    finally
+      FreeMem(B);
+    end;
+  end;
+
+begin
+  Result := AVC_OK;
+  if DoFind('abracracadabra', False) then
+  begin
+    Result := AVC_CantCure;
+    StrCopy(Msg, 'AbraCraCadabra.1.0')
+  end else
+  if DoFind('abraquakazyabra', False) then
+  begin
+    Result := AVC_CantCure;
+    StrCopy(Msg, 'AbraQuakaZyabra.2.1')
+  end else
+  if DoFind('abracadabra', True) then
+  begin
+    Result := AVC_VirusFound;
+    StrCopy(Msg, 'AbraCadabra.3.0')
+  end;
+end;
+
+function BAV_CheckFile(AFileName: PChar; Msg: PChar): Integer; stdcall;
+  var F: TStream;
+      X: IStream;
+begin
+  Result := AVC_Error;
+  F := nil;
+  try
+    F := TFileStream.Create(String(AFileName), fmOpenRead or fmShareDenyNone);
+    try
+      X := TStreamAdapter.Create(F, soReference);
+      Result := BAV_CheckStream(X, Msg);
+    except
+      Result := AVC_Error;
+    end;
+  finally
+    F.Free;
+  end;
+end;
+
+function BAV_CureFile(AFileName: PChar; Msg: PChar): Integer; stdcall;
+  var F: TStream;
+      X, XO: IStream;
+      M: TMemoryStream;
+begin
+  Result := AVC_Error;
+  F := nil;
+  try
+    F := TFileStream.Create(String(AFileName), fmOpenRead or fmShareDenyNone);
+    M := TMemoryStream.Create;
+    try
+      X := TStreamAdapter.Create(F, soReference);
+      XO := TStreamAdapter.Create(M, soReference);
+      Result := BAV_CureStream(X, XO, Msg);
+      if (Result <> AVC_Error) and (Result <> AVC_OK) then
+      begin
+        F.Free; F := nil;
+        M.SaveToFile(AFileName);
+      end;
+    except
+      Result := AVC_Error;
+    end;
+  finally
+    M.Free;
+    F.Free;
+  end;
+end;
+
+
+// Note that function names are case-sensitive!
+
+exports
+  BAV_Initialize,
+  BAV_Uninitialize,
+  BAV_GetName,
+  BAV_GetVersion,
+  BAV_SetCfgData,
+  BAV_GetCfgData,
+  BAV_GetStatus,
+  BAV_Setup,
+  BAV_MemoryChecking,
+  BAV_FileChecking,
+  BAV_StreamChecking,
+  BAV_CheckFile,
+  BAV_CureFile,
+  BAV_CheckMemory,
+  BAV_CureMemory,
+  BAV_CheckStream,
+  BAV_CureStream;
+
+begin
+
+end.

@@ -1,0 +1,39 @@
+TARGETNAME = klfltdev
+TARGETTYPE = DRIVER
+
+!IFNDEF TARGETPATH
+!IF "$(W2K)" == "_w2k"
+TARGETPATH=..\..\..\out\klfltdev\$(DDKBUILDENV)_w2k
+!ELSE
+TARGETPATH=..\..\..\out\klfltdev\$(DDKBUILDENV)
+!ENDIF
+!ENDIF
+
+LINKER_FLAGS=/NOLOGO
+PDBPATH=$(TARGETPATH)
+TARGETLIBS =  $(DDK_LIB_PATH)\wdmsec.lib
+
+!IF "$(W2K)" == "_w2k"
+C_DEFINES= $(C_DEFINES)  -DWIN2K=1
+!ENDIF
+
+
+C_DEFINES= $(C_DEFINES)  -DCLASS_UPPER=1 -DIOCTL_INTERFACE=1
+
+INCLUDES=..\..\..\CommonFiles
+
+SOURCES= filter.c \
+	 devlist.c \
+	 devrul.c \
+	 klfltdev.rc	 
+
+!IF "$(W2K)" == "_w2k"
+RUN_WPP=$(SOURCES) -km -gen:{km-w2k.tpl}*.tmh -func:DoTraceEx(LEVEL,FLAGS,MSG,...)
+!ELSE
+RUN_WPP= $(SOURCES) -km -func:DoTraceEx(LEVEL,FLAGS,MSG,...)
+!ENDIF
+
+
+
+
+

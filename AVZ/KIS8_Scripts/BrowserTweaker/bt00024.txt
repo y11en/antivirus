@@ -1,0 +1,23 @@
+// $AVZ1567
+//$ Internet Explorer - очистить стартовую страницу
+// Функция поиска проблемы
+function Check : dword;
+var
+ S : String;
+begin
+ Result := 0;
+ S := LowerCase(Trim(RegKeyStrParamRead('HKCU', 'software\microsoft\internet explorer\main', 'start page')));
+ if (S <> '') and (S <> 'about:blank') then
+  Result := 2;
+ S := LowerCase(Trim(RegKeyStrParamRead('HKLM', 'software\microsoft\internet explorer\main', 'start page')));
+ if (S <> '') and (S <> 'about:blank') then
+  Result := 2;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+begin
+ RegKeyStrParamWrite('HKCU', 'software\microsoft\internet explorer\main', 'start page', 'about:blank');
+ RegKeyStrParamWrite('HKLM', 'software\microsoft\internet explorer\main', 'start page', 'about:blank');
+ Result := 0;
+end;

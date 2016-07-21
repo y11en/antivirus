@@ -1,0 +1,50 @@
+forward interface Compare;
+typedef Compare* hCOMPARE;
+
+
+
+[
+  mnemonic(IID_COMPARE)
+  id(64001)
+  c_type_name(hCOMPARE)
+  comment_ex("Used as user defined interface in TREE and HDB interfaces for sorting and searching. May be implemented as static ( witout any settings or as normal interface")
+]
+interface Compare { // compare interface
+
+  // ------------------------------------
+    const tINT cCOMPARE_LESS = -1;
+    const tINT cCOMPARE_EQUIL = 0;
+    const tINT cCOMPARE_GREATER = 1;
+
+
+  // ------------------------------------
+
+    [
+      id(130)
+      comment_ex("Interface version")
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      id(131)
+      comment_ex("Interface comment")
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+    [ id(4096) ]  prop tBINARY pgCOMPARE_SETTINGS;
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("compare two raw data blocks. ")
+    ]
+    method tERROR Compare( // Compare two raw data blocks
+      tINT* result,
+      tPTR data1,
+      tDWORD size1,
+      tPTR data2,
+      tDWORD size2
+    );
+
+}
+

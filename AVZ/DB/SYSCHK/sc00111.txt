@@ -1,0 +1,4 @@
+// ***** TrojanDownloader.Tibser *****
+begin
+ AddEvAlarmByCLSID('C1C2AC28-5E4B-4228-B7A0-05E986FFCE14',AScriptName,'tl4000.dll');
+end.

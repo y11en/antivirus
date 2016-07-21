@@ -1,0 +1,22 @@
+// Скрипт сбора информации для раздела "Помогите" virusinfo.info
+var
+ AVZLogDir : string;
+begin
+ // Формирование имени рабочей папки
+ AVZLogDir := GetAVZDirectory + 'LOG\';
+ CreateDirectory(AVZLogDir);
+ // Настройка AVZ
+ SetupAVZ('UseQuarantine=Y');     // Включить карантин
+ SetupAVZ('UseInfected=Y');       // Копировать в Infected удаляемые в ходе лечения файлы
+ SetupAVZ('DelVir=Y');            // Разрешить лечение
+ SetupAVZ('AntiRootKitSystem=Y'); // Включить антируткит
+ SetupAVZ('SCAN='+GetSystemDisk+':\');  // Сканировать системный диск 
+ // Запуск сканирования
+ RunScan;
+ // Сохранение карантина
+ CreateQurantineArchive(AVZLogDir+'virusinfo_cure.zip');          
+ // Выполнение исследования системы
+ ExecuteSysCheck(AVZLogDir+'virusinfo_syscheck.htm');
+ // Завершение работы AVZ 
+ ExitAVZ;
+end.

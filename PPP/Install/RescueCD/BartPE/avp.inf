@@ -1,0 +1,40 @@
+;avp.inf
+;PE Builder v3 plug-in INF file for Kaspersky Internet Security
+;Created by Kaspersky Lab
+;http://www.kaspersky.com
+
+[Version]
+Signature="$Windows NT$"
+
+[PEBuilder]
+Name="Kaspersky Internet Security"
+Enable=1
+Help="avp.htm"
+
+[WinntDirectories]
+a="Programs\avp",2
+b="Programs\avp\Temp\Bases",2
+c="Programs\avp\Temp\Dskm",2
+d="Programs\avp\Temp\Data",2
+e="Programs\avp\Temp\Data\en",2
+f="Programs\avp\Temp\Data\%Localization%"
+
+[SourceDisksFolders]
+%ProductRoot%=a
+%DataRoot%\Bases=b
+%DataRoot%\Dskm=c
+%DataRoot%\Data\en=e
+%DataRoot%\Data\%Localization%=f
+
+[SourceDisksFiles]
+%SystemRoot%\system32\drivers\klif.sys=2,,6
+autorun_avpinstall.cmd=2,,1
+avp.reg=a,,1
+%DataRoot%\Data\u0607g.xml=d,,6
+%DataRoot%\Data\updcfg.xml=d,,6
+devcon.exe=2,,6
+iresol.inf=20,,6
+msports.inf=20,,0
+
+[Append]
+nu2menu.xml, avp_nu2menu.xml

@@ -1,0 +1,71 @@
+  [D]=<AVP_DC_KEY, AVP_APID_GLOBAL, avpt_nothing, 0> 
+    [D]=<AVP_PID_KEYINFO_ID, AVP_APID_GLOBAL, avpt_nothing, 0> 
+      [D]=<AVP_PID_KEYDESCRIPTION_ID, AVP_DC_KEY, avpt_str, 0> V=Kaspersky lab key file 
+      [D]=<AVP_PID_KEYVERSION_ID, AVP_DC_KEY, avpt_dword, 0> V=4 
+      [D]=<AVP_PID_KEYPRODDATE_ID, AVP_DC_KEY, avpt_date, 0> V=30 ט‏כÿ 2003 ד. 
+      [D]=<AVP_PID_KEYSERIALNUMBER_ID, AVP_DC_KEY, avpt_dword, 1> C=3 [0]=689 [1]=107 [2]=345268 
+      [D]=<25, AVP_DC_KEY, avpt_dword, 0> V=3 
+      [D]=<AVP_PID_KEYISTRIAL_ID, AVP_DC_KEY, avpt_nothing, 0> 
+      [D]=<AVP_PID_KEYLIFESPAN_ID, AVP_DC_KEY, avpt_dword, 0> V=30 
+      [D]=<AVP_PID_KEYEXPDATE_ID, AVP_DC_KEY, avpt_date, 0> V=28 םמÿבנÿ 2003 ד. 
+      [D]=<AVP_PID_KEYLICENCECOUNT_ID, AVP_DC_KEY, avpt_dword, 0> V=1 
+      [D]=<26, AVP_DC_KEY, avpt_dword, 0> V=0 
+        [D]=<1, 8, avpt_dword, 0> V=1 
+      [D]=<AVP_PID_KEYLICENCEINFO_ID, AVP_DC_KEY, avpt_str, 0> V=This personal key is licensed to: Dmitry Petrovichev, company Kaspersky Lab 
+      [D]=<AVP_PID_KEYSUPPORTINFO_ID, AVP_DC_KEY, avpt_str, 0> V=Kaspersky Labs
+
+Address:
+   10, Geroyev Panfilovtsev street, 
+   123363, Moscow, Russia,
+   Kaspersky Labs
+Phone:
+   +7(095)797-8700 - Sales Dept (30 channels)
+   +7(095)948-8350 - Sales Dept
+   +7(095)948-4331 - Sales Dept
+   +7(095)797-8707 - Technical Support (30 channels)
+   +7(095)495-0300 - Technical Support
+   +7(095)948-5650 - Marketing Dept
+Fax:
+   +7(095)948-4331
+E-mail:
+   mailto:sales@kaspersky.com    - Sales Dept
+   mailto:support@kaspersky.com  - Technical Support
+   mailto:info@kaspersky.com     - Marketing Dept
+   mailto:newvirus@kaspersky.com - Antiviral Lab
+WWW:
+   http://www.kaspersky.com
+  
+      [D]=<AVP_PID_KEYPLPOS_ID, AVP_DC_KEY, avpt_dword, 0> V=107 
+      [D]=<AVP_PID_KEYPLPOSNAME_ID, AVP_DC_KEY, avpt_str, 0> V=Kaspersky Anti-Virus Personal Pro Trial 1 month 
+      [D]=<27, AVP_DC_KEY, avpt_dword, 0> V=8 
+      [D]=<28, AVP_DC_KEY, avpt_str, 0> V=4 
+      [D]=<29, AVP_DC_KEY, avpt_dword, 0> V=1 
+      [D]=<30, AVP_DC_KEY, avpt_dword, 0> V=7 
+      [D]=<31, AVP_DC_KEY, avpt_dword, 0> V=261 
+      [D]=<32, AVP_DC_KEY, avpt_str, 0> V=Kaspersky Lab 
+      [D]=<21, AVP_DC_KEY, avpt_str, 0> V=Kaspersky Lab 
+      [D]=<22, AVP_DC_KEY, avpt_nothing, 0> 
+        [D]=<1, 1, avpt_str, 0> V=Kaspersky Lab 
+        [D]=<2, 1, avpt_str, 0> V=Dmitry Petrovichev 
+        [D]=<3, 1, avpt_str, 0> V= 
+        [D]=<4, 1, avpt_str, 0> V= 
+        [D]=<5, 1, avpt_str, 0> V= 
+        [D]=<6, 1, avpt_str, 0> V= 
+        [D]=<7, 1, avpt_str, 0> V= 
+        [D]=<8, 1, avpt_str, 0> V= 
+        [D]=<9, 1, avpt_str, 0> V= 
+      [D]=<23, AVP_DC_KEY, avpt_str, 0> V=20E430AD-0C37-43B2-B4E3-0503D96F3DB8 
+      [D]=<24, AVP_DC_KEY, avpt_str, 0> V= 
+    [D]=<AVP_APID_MONITOR_WIN_95, AVP_APID_GLOBAL, avpt_dword, 0> V=30 
+    [D]=<AVP_APID_MONITOR_WIN_NTWS, AVP_APID_GLOBAL, avpt_dword, 0> V=30 
+    [D]=<AVP_APID_SCANNER_DOS_32, AVP_APID_GLOBAL, avpt_dword, 0> V=30 
+    [D]=<AVP_APID_SCANNER_WIN_95, AVP_APID_GLOBAL, avpt_dword, 0> V=30 
+    [D]=<AVP_APID_SCANNER_WIN_NTWS, AVP_APID_GLOBAL, avpt_dword, 0> V=30 
+    [D]=<AVP_APID_CONTROLCENTER, AVP_APID_GLOBAL, avpt_dword, 0> V=20 
+    [D]=<AVP_APID_INSPECTOR, AVP_APID_GLOBAL, avpt_dword, 0> V=30 
+    [D]=<AVP_APID_UPDATOR, AVP_APID_GLOBAL, avpt_dword, 0> V=30 
+    [D]=<AVP_APID_OFFICEGUARD, AVP_APID_GLOBAL, avpt_dword, 0> V=30 
+    [D]=<AVP_APID_OFFICEMONITOR, AVP_APID_GLOBAL, avpt_dword, 0> V=30 
+    [D]=<AVP_APID_OFFICEMAILCHECKER, AVP_APID_GLOBAL, avpt_dword, 0> V=30 
+    [D]=<51, AVP_APID_GLOBAL, avpt_dword, 0> V=30 
+    [D]=<52, AVP_APID_GLOBAL, avpt_dword, 0> V=30 

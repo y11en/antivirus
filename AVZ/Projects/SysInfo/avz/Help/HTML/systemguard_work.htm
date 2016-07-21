@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?systemguard_work.htm"; }
+else { parent.quicksync('a7.2'); }
+//-->
+</script>
+   <title>&#1059;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1077; &#1089;&#1080;&#1089;&#1090;&#1077;&#1084;&#1086;&#1081;</title>
+   <meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+
+
+<body bgcolor="#FFFFFF">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Управление системой</span></p>
+
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="t_about.htm">Наверх</a>&nbsp;
+     <a href="systemguard_main.htm">Предыдущая</a>&nbsp;
+     <a href="systemguard_rootkit.htm">Последующая</a>
+     </font><B>|</B>
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=717989"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=717989;t=109;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=18 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=717989"><img
+src="http://top.list.ru/counter?js=na;id=717989;t=109"
+border=0 height=18 width=88
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+    </td>
+  </tr>
+</table>
+<br>
+
+<p>Управление системой AVZ Guard производится из главного меню. </p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Включение AVZGuard</span></p>
+<p>Пункт меню "AVZGuard\Включить AVZGuard"&nbsp; включает систему. По результатам активации выводится диалоговое окно с сообщением о успешном включении или о ошибке. После включения системы пункт меню "Включить AVZGuard" становится неактивным.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Запуск доверенных приложений</span></p>
+<p>Пункт меню "AVZGuard\Запустить приложение как доверенное" производит запуск указанного приложения в качестве доверенного. На доверенное приложение не распространяется действие AVZGuard и драйвер защищает доверенное приложение от удаления или модификации. Запуск приложения производится из специализированного окна.</p>
+<p><img src="avz_guard1.jpg" width="631" height="143" border="0" alt="avz_guard1"></p>
+<p>Если запускаемое приложение находится в системной папке или путь к нему задано в строке PATH, то допускается указывать только имя исполняемого файла. Поле "командная строка" позволяет указать командную строку запускаемого приложения (необязательно к заполнению). Кнопка в правой части поля "Приложение" позволяет вызвать стандартный диалог выбора файла.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Отключение AVZGuard</span></p>
+<p>Пункт меню "AVZGuard\Отключить AVZGuard" производит отключение системы AVZGuard. Перед отключением выводится запрос подтверждения операции отключения. После выключения AVZGuard все работающие приложения вновь получают полный контроль над системой, драйвер выгружается. </p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Добавление работающего процесса в список доверенных</span></p>
+<p>В AVZGuard предусмотрена возможность добавления работающего процесса в список доверенных. Выполнять данную операцию не рекомендуется, т.к. запущенный до включения AVZ Guard процесс может содержать троянские потоки или руткит-перехватчики. Тем не менее в случае необходимости данная операция выполняется из диспетчера процессов AVZ - при включенном AVZ Guard всплывающее меню таблицы процессов содержит подпункт "AVZGuard - считать процесс доверенным".</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Включение </span><span style="font-weight: bold;">AVZ Guard </span><span style="font-weight: bold;">при запуске </span><span style="font-weight: bold;">AVZ</span></p>
+<p>Если в проверяемой системе работает противодействующее работе AVZ вредоносное приложение, то включение&nbsp; AVZGuard рекомендуется осуществить при помощи ключа командной строки "AG=Y". Данный ключ анализируется непосредственно в момент запуска AVZ, до инициализации его рабочих окон.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Управление из скриптов</span></p>
+<p>Для управления подсистемой AVZGuard из скриптов предусмотрены функции <a href="script_setavzguardstatus.htm">SetAVZGuardStatus</a> и <a href="script_getavzguardstatus.htm">GetAVZGuardStatus</a></p>
+<p>&nbsp;</p>
+
+
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=717989;js='+js+a+';rand='+Math.random()+
+'" height=1 width=1/>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=717989"
+height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+
+</body>
+</html>

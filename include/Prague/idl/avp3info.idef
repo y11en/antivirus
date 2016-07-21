@@ -1,0 +1,34 @@
+forward interface AVP3Info;
+typedef AVP3Info* hAVP3INFO;
+
+
+
+
+[
+  mnemonic(IID_AVP3INFO)
+  id(38011)
+  c_type_name(hAVP3INFO)
+]
+interface AVP3Info {
+
+  // ------------------------------------
+
+    [
+      comment_ex("Interface version")
+      id(130)
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      comment_ex("Interface comment")
+      id(131)
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+
+
+  // ------------------------------------
+    method tERROR GetBaseFileInfo( hOBJECT hObj, cSerializable* pInfo );
+    method tERROR GetBasesInfo( hSTRING hBasesPath, cSerializable* pInfo );
+
+}
+

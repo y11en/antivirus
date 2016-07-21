@@ -1,0 +1,113 @@
+﻿[Global]
+$Scan_Objects           = "Scan selected objects"
+$Scan_My_Computer       = "Full Scan"
+$Scan_Critical_Areas    = "Quick Scan"
+$Scan_Rootkits          = "Rootkit Scan"
+$Scan_Vulnerabilities   = "Vulnerability Scan"
+$Scan_Startup           = "Startup Scan"
+$QuickScan              = "Quick Scan"
+$NewAll                 = "only new" : "all"
+$Scan                   = "Scan"
+AskResumeScan           = "Task \"" + $ProfileName + "\" was interrupted. Do you want to resume the scan?\nTo restart the scan from the beginning, select \"No\"."
+AskUpdateBeforeFullScan = $BasesOutOfDate + " Do you want to update them now?"
+DeleteItemsConfirm      = "Are you sure you want to delete the selected item(s)?"
+ScanStopConfirm         = "Are you sure you want to stop scan?"
+
+[ScanObjectName]
+#OBJECT_TYPE_MEMORY                 = "System memory"
+#OBJECT_TYPE_STARTUP                = "Startup objects"
+#OBJECT_TYPE_MAIL                   = "E-mail databases"
+#OBJECT_TYPE_ALL_DRIVES             = "All drives"
+#OBJECT_TYPE_ALL_REMOVABLE_DRIVES   = "All removable drives"
+#OBJECT_TYPE_ALL_FIXED_DRIVES       = "All hard drives"
+#OBJECT_TYPE_ALL_NETWORK_DRIVES     = "All network drives"
+#OBJECT_TYPE_BOOT_SECTORS           = "Disk boot sectors"
+#OBJECT_TYPE_QUARANTINE             = "Quarantine objects"
+#OBJECT_TYPE_SYSTEM_RESTORE         = "System Backup storage"
+default                             = getDisplayName(ObjectType == #OBJECT_TYPE_MY_COMPUTER ? "%mycomputer%" : ScanObjects)
+
+[ScanGroup_Body_Active]
+NowScanningLable    = "Now scanning:"
+Stop.Name           = "Stop"
+
+[MainWindow.Scan]
+Home        = "Home"
+Events      = "Events"
+Statistics  = "Statistics"
+
+[MainWindow.Scan_Filters]
+AllItems  = "Do not group"
+ByVerdict = "Group by verdict"
+
+[ScanDialog_EventLog]
+Time    = "Time"
+Object  = "Object"
+Status  = "Status"
+Reason  = "Reason"
+
+[ScanSettings.Optimization_FileTypesGroup]
+CheckNew = "Scan only &new and changed files"
+
+[ScanSettings_Tab]
+Scope       = "Scope"
+Additional  = "Additional"
+Account     = "Account"
+
+[ScanSettings_Tab_Scope]
+FileTypesGroup  = "File types"
+FileTypesGroup1 = "Optimization"
+
+[ScanSettings_Tab_Scope_FileTypesGroup]
+All         = "Scan a&ll files"
+Infectable  = "Scan programs and documents (b&y content)"
+Predefined  = "Scan programs and documents (by <a FileTypesExtension onclick(help(1063))>&extension</a>)"
+
+[ScanSettings_Tab_Scope_FileTypesGroup1]
+CheckNew = "Scan only &new and changed files"
+
+[ScanSettings_Tab_Additional]
+Methods     = "Methods"
+Tecnologies = "Tecnologies"
+
+[ScanSettings_Tab_Additional_Methods]
+Sign            = "Signature analysis"
+Heur            = "Heuristic analysis"
+Vulnerability   = "Vulnerability signature scan"
+Rootkit         = "Rootkit scan"
+RootkitDeep     = "Deep rootkit scan"
+
+[ScanSettings_Tab_Additional_Tecnologies]
+Swift   = "&Use i&Swift technology"
+Check   = "Use &iChecker technology"
+
+[ScanGroup_Body_Inactive]
+Level.Name          = "Scan depth:"
+OnDetection.Name    = "On detection:"
+Scheduler.Name      = "Schedule:"
+Start.Name          = "Start now!"
+
+[ScanProgressWindow_Body_All_Info]
+Scanned.Name    = "Scanned:"
+Detected.Name   = "Detected:"
+
+[ScanProgressWindow_Body_All]
+Details = "More details..."
+
+[ScanProgressWindow_Body_TopInfo_Active]
+Object.Name = "Now scanning:"
+
+;------------- Password request Dialog -----------
+
+[PasswordRequestDialog]
+@       = "Please enter password"
+SkipAll = "Skip"
+Skip    = "Cancel"
+Ok      = "OK"
+
+[PasswordRequestDialog_Body]
+Archive.Name    = "Archive:"
+Password.Name   = "Password:"
+
+[ScanProgressWindow]
+Footer.Cancel = f_IsStateActive(state) ? "&Cancel" : "&Close"
+

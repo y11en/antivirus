@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioProject ProjectType="Visual C++" Version="8.00" Name="_m_utils" SccProjectName="&quot;$/Prague/kernel&quot;, SFABAAAA" SccLocalPath="." Keyword="MakeFileProj">
+	<Platforms>
+		<Platform Name="Win32"/>
+		<Platform Name="x64"/></Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="Debug|Win32" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\prague\$(ProjectName)" ConfigurationType="0" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool Name="VCNMakeTool" BuildCommandLine="NMAKE /f ..\..\CommonFiles\_msdev_make.mak TARGET=&quot;m_utils - Win32 DebugDll&quot; DSW=&quot;..\..\CommonFiles\CommonFiles&quot;" ReBuildCommandLine="NMAKE /f ..\..\CommonFiles\_msdev_make.mak TARGET=&quot;m_utils - Win32 DebugDll&quot; DSW=&quot;..\..\CommonFiles\CommonFiles&quot; REBUILD=/REBUILD" CleanCommandLine="" Output="Dummy" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged=""/>
+		</Configuration>
+		<Configuration Name="Release|Win32" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\prague\$(ProjectName)" ConfigurationType="0" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool Name="VCNMakeTool" BuildCommandLine="NMAKE /f ..\..\CommonFiles\_msdev_make.mak TARGET=&quot;m_utils - Win32 ReleaseDll&quot; DSW=&quot;..\..\CommonFiles\CommonFiles&quot;" ReBuildCommandLine="NMAKE /f ..\..\CommonFiles\_msdev_make.mak TARGET=&quot;m_utils - Win32 ReleaseDll&quot; DSW=&quot;..\..\CommonFiles\CommonFiles&quot; REBUILD=/REBUILD" CleanCommandLine="" Output="Dummy" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged=""/>
+		</Configuration>
+		<Configuration Name="Debug|x64" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\prague\$(ProjectName)" ConfigurationType="0" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool Name="VCNMakeTool" BuildCommandLine="NMAKE /f ..\..\CommonFiles\_msdev_make.mak TARGET=&quot;m_utils - Win32 DebugDll&quot; DSW=&quot;..\..\CommonFiles\CommonFiles&quot;" ReBuildCommandLine="NMAKE /f ..\..\CommonFiles\_msdev_make.mak TARGET=&quot;m_utils - Win32 DebugDll&quot; DSW=&quot;..\..\CommonFiles\CommonFiles&quot; REBUILD=/REBUILD" CleanCommandLine="" Output="Dummy" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged=""/>
+		</Configuration><Configuration Name="Release|x64" OutputDirectory="..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\temp_$(PlatformName)\$(ConfigurationName)\prague\$(ProjectName)" ConfigurationType="0" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool Name="VCNMakeTool" BuildCommandLine="NMAKE /f ..\..\CommonFiles\_msdev_make.mak TARGET=&quot;m_utils - Win32 ReleaseDll&quot; DSW=&quot;..\..\CommonFiles\CommonFiles&quot;" ReBuildCommandLine="NMAKE /f ..\..\CommonFiles\_msdev_make.mak TARGET=&quot;m_utils - Win32 ReleaseDll&quot; DSW=&quot;..\..\CommonFiles\CommonFiles&quot; REBUILD=/REBUILD" CleanCommandLine="" Output="Dummy" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged=""/>
+		</Configuration></Configurations>
+	<References>
+	</References>
+	<Files>
+	</Files>
+</VisualStudioProject>

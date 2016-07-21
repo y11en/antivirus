@@ -1,0 +1,5 @@
+// ***** Spy.WindTangent *****
+begin
+ AddEvAlarmByCLSID('A62FA99E-922E-4ECA-A1D9-B54EF294A3CC',AScriptName,'wtisa.dll');
+ AddEvAlarmByCLSID('FA13A9FA-CA9B-11D2-9780-00104B242EA3',AScriptName,'');
+end.

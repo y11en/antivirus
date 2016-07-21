@@ -1,0 +1,35 @@
+forward interface Token;
+typedef Token* hTOKEN;
+
+
+
+
+[
+  mnemonic(IID_TOKEN)
+  id(99)
+  c_type_name(hTOKEN)
+]
+interface Token {
+
+  // ------------------------------------
+
+    [
+      comment_ex("Interface version")
+      id(130)
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      comment_ex("Interface comment")
+      id(131)
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+
+
+  // ------------------------------------
+    method tERROR Impersonate( tDWORD type );
+    method tERROR Revert();
+    method tERROR Logon( hSTRING account, hSTRING password );
+
+}
+

@@ -1,0 +1,1193 @@
+WATCOM Linker Version 10.6
+Copyright by WATCOM International Corp. 1985, 1996. All rights reserved.
+Created on:       98/12/11 14:03:20
+Executable Image: hello.exe
+creating a DOS/4G executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0002:00000000        00004e50
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE                          0001:00000000   00000010
+_TEXT                  CODE                          0001:00000010   00013bb5
+_NULL                  BEGDATA        DGROUP         0002:00000000   00000004
+_AFTERNULL             BEGDATA        DGROUP         0002:00000004   00000000
+CONST                  DATA           DGROUP         0002:00000004   00000a80
+CONST2                 DATA           DGROUP         0002:00000a84   00001160
+_DATA                  DATA           DGROUP         0002:00001be4   00000c48
+XIB                    DATA           DGROUP         0002:0000282c   00000000
+XI                     DATA           DGROUP         0002:0000282c   000000b4
+XIE                    DATA           DGROUP         0002:000028e0   00000000
+TIB                    DATA           DGROUP         0002:000028e0   00000000
+TI                     DATA           DGROUP         0002:000028e0   00000000
+TIE                    DATA           DGROUP         0002:000028e0   00000000
+YIB                    DATA           DGROUP         0002:000028e0   00000000
+YI                     DATA           DGROUP         0002:000028e0   0000000c
+YIE                    DATA           DGROUP         0002:000028ec   00000000
+DATA                   DATA           DGROUP         0002:000028ec   00000000
+_BSS                   BSS            DGROUP         0002:000028ec   0000055c
+STACK                  STACK          DGROUP         0002:00002e50   00002000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: wat.d32\HELLO.OBJ(C:\lang\avp\avp32.dos\shell\tv32.src\hello.cpp)
+0001:00000010+ near THelloApp::THelloApp()
+0001:00000054+ void near THelloApp::greetingBox()
+0001:0000023c+ void near THelloApp::fileBox()
+0001:000002d4+ void near THelloApp::handleEvent( TEvent near & )
+0001:0000032c+ TMenuBar near * near THelloApp::initMenuBar( TRect )
+0001:000004b0+ TStatusLine near * near THelloApp::initStatusLine( TRect )
+0001:000005a4  main
+0001:000005d8+ near THelloApp::~THelloApp()
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(tcollect)
+0001:00000674* near TNSCollection::TNSCollection( int, int )
+0001:000006b0  near TNSCollection::TNSCollection()
+0001:000006e4  near TNSCollection::~TNSCollection()
+0001:00000738  void near TNSCollection::shutDown()
+0001:0000076c  void near * near TNSCollection::at( int )
+0001:0000079c+ void near TNSCollection::atRemove( int )
+0001:000007e8* void near TNSCollection::atFree( int )
+0001:00000818  void near TNSCollection::atInsert( int, void near * )
+0001:00000884* void near TNSCollection::atPut( int, void near * )
+0001:000008b4+ void near TNSCollection::remove( void near * )
+0001:000008d8* void near TNSCollection::removeAll()
+0001:000008e4+ void near TNSCollection::error( int, int )
+0001:000008f8* void near * near TNSCollection::firstThat( Boolean (near *)(), void near * )
+0001:00000938* void near * near TNSCollection::lastThat( Boolean (near *)(), void near * )
+0001:0000097c* void near TNSCollection::forEach( void (near *)(), void near * )
+0001:000009ac* void near TNSCollection::free( void near * )
+0001:000009d4+ void near TNSCollection::freeAll()
+0001:00000a04  void near TNSCollection::freeItem( void near * )
+0001:00000a14  int near TNSCollection::indexOf( void near * )
+0001:00000a4c  int near TNSCollection::insert( void near * )
+0001:00000a68* void near TNSCollection::pack()
+0001:00000a94  void near TNSCollection::setLimit( int )
+0001:00000b18  near TCollection::~TCollection()
+Module: C:\lang\WATCOM\lib386\plib3s.lib(vfun_err)
+0001:00000bc7  __wcpp_2_undef_vfun_
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(tprogram)
+0001:00001360+ void near TProgram::suspend()
+0001:0000135c+ void near TProgram::resume()
+0001:00000bf0  near TProgInit::TProgInit( TStatusLine near * (near *)( ), TMenuBar near * (near *)( ), TDeskTop near * (near *)( ))
+0001:00000c0c  near TProgram::TProgram()
+0001:00000d50  near TProgram::~TProgram()
+0001:00000da4  void near TProgram::shutDown()
+0001:00001334+ Boolean near hasMouse( TView near *, void near * )
+0001:00000dd0  void near TProgram::getEvent( TEvent near & )
+0001:00000e68  TPalette near & near TProgram::getPalette() const
+0001:00000f08  void near TProgram::handleEvent( TEvent near & )
+0001:00000f8c  void near TProgram::idle()
+0001:00000fcc  TDeskTop near * near TProgram::initDeskTop( TRect )
+0001:00000ff4  TMenuBar near * near TProgram::initMenuBar( TRect )
+0001:00001024  void near TProgram::initScreen()
+0001:0000109c  TStatusLine near * near TProgram::initStatusLine( TRect )
+0001:000011f4  void near TProgram::outOfMemory()
+0001:000011f8  void near TProgram::putEvent( TEvent near & )
+0001:0000120c  void near TProgram::run()
+0001:0000121c* void near TProgram::setScreenMode( short unsigned )
+0002:000028fc+ TStatusLine near * near TProgram::statusLine
+0002:00002900+ TMenuBar near * near TProgram::menuBar
+0002:00002904  TDeskTop near * near TProgram::deskTop
+0002:00002908  TProgram near * near TProgram::application
+0002:0000290c+ int near TProgram::appPalette
+0002:00002910+ TEvent near TProgram::pending
+0001:000012b8* TView near * near TProgram::validView( TView near * )
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(tapplica)
+0001:000013d0  near TApplication::TApplication()
+0001:00001420  near TApplication::~TApplication()
+0001:00001470  void near TApplication::suspend()
+0002:0000291c+ TMouse near TEventQueue::mouse
+0001:00001480  void near TApplication::resume()
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(tobject)
+0001:00001490  near TObject::~TObject()
+0001:000014cc  void near TObject::shutDown()
+Module: C:\lang\WATCOM\lib386\plib3s.lib(opnew)
+0001:000014d0  void near * near operator new( int unsigned )
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(tdialog)
+0001:00001524  near TDialog::TDialog( TRect const near &, char const near * )
+0001:00001570  TPalette near & near TDialog::getPalette() const
+0001:000015f8  void near TDialog::handleEvent( TEvent near & )
+0001:00001690  Boolean near TDialog::valid( short unsigned )
+0001:000016b0  near TDialog::~TDialog()
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(tstatict)
+0001:000016fc  near TStaticText::TStaticText( TRect const near &, char const near * )
+0001:00001728  near TStaticText::~TStaticText()
+0001:0000177c+ void near TStaticText::draw()
+0001:0000193c+ TPalette near & near TStaticText::getPalette() const
+0001:00001974  void near TStaticText::getText( char near * )
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(tgroup)
+0001:000019b0  near TGroup::TGroup( TRect const near & )
+0001:00001a1c  near TGroup::~TGroup()
+0001:00001a68  void near TGroup::shutDown()
+0001:00001ad0+ void near doCalcChange( TView near *, void near * )
+0001:00001b00  void near TGroup::changeBounds( TRect const near & )
+0001:00001ba4+ void near addSubviewDataSize( TView near *, void near * )
+0001:00001bbc  int unsigned near TGroup::dataSize()
+0001:00001be4  void near TGroup::remove( TView near * )
+0001:00001c30  void near TGroup::draw()
+0001:00001cc8  void near TGroup::drawSubViews( TView near *, TView near * )
+0001:00001cf0  void near TGroup::endModal( short unsigned )
+0001:00001d14  void near TGroup::eventError( TEvent near & )
+0001:00001d30  short unsigned near TGroup::execute()
+0001:00001d8c  short unsigned near TGroup::execView( TView near * )
+0001:00001e70  TView near * near TGroup::first()
+0001:00001e84+ TView near * near TGroup::firstMatch( short unsigned, short unsigned )
+0001:00001ec4+ void near TGroup::freeBuffer()
+0001:00001eec+ void near TGroup::getBuffer()
+0001:00001f1c  void near TGroup::getData( void near * )
+0001:00001fcc  void near TGroup::handleEvent( TEvent near & )
+0001:00002064  void near TGroup::insert( TView near * )
+0001:00002084+ void near TGroup::insertBefore( TView near *, TView near * )
+0001:00002118  void near TGroup::insertView( TView near *, TView near * )
+0001:00002164  void near TGroup::lock()
+0001:0000217c+ void near TGroup::redraw()
+0001:00002198  void near TGroup::resetCurrent()
+0001:000021b8  void near TGroup::resetCursor()
+0001:000021d0  void near TGroup::selectNext( Boolean )
+0001:0000221c* void near TGroup::selectView( TView near *, Boolean )
+0001:0000223c+ void near TGroup::focusView( TView near *, Boolean )
+0001:00002268  void near TGroup::setCurrent( TView near *, TView::selectMode )
+0001:000022fc  void near TGroup::setData( void near * )
+0001:00002384  void near TGroup::setState( short unsigned, Boolean )
+0001:0000242c  void near TGroup::unlock()
+0001:00002450+ Boolean near isInvalid( TView near *, void near * )
+0001:00002470  Boolean near TGroup::valid( short unsigned )
+0002:00002934  TView near * near TheTopView
+0001:0000248c  short unsigned near TGroup::getHelpCtx()
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(tbutton)
+0001:000024bc  near TButton::TButton( TRect const near &, char const near *, short unsigned, short unsigned )
+0001:00002524+ near TButton::~TButton()
+0001:00002578+ void near TButton::draw()
+0001:00002588+ void near TButton::drawTitle( TDrawBuffer near &, int, int, short unsigned, Boolean )
+0001:00002628+ void near TButton::drawState( Boolean )
+0001:00002854+ TPalette near & near TButton::getPalette() const
+0001:0000288c+ void near TButton::handleEvent( TEvent near & )
+0001:00002ae4+ void near TButton::makeDefault( Boolean )
+0001:00002b28+ void near TButton::setState( short unsigned, Boolean )
+0001:00002b70+ void near TButton::press()
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(tfildlg)
+0001:00002bd4  near TFileDialog::TFileDialog( char const near *, char const near *, char const near *, short unsigned, char unsigned )
+0001:00003078+ near TFileDialog::~TFileDialog()
+0001:000030d0+ void near TFileDialog::shutDown()
+0001:0000317c  void near TFileDialog::getFileName( char near * )
+0001:00003384+ void near TFileDialog::handleEvent( TEvent near & )
+0001:000033d4+ void near TFileDialog::readDirectory()
+0001:00003424+ void near TFileDialog::setData( void near * )
+0001:0000346c+ void near TFileDialog::getData( void near * )
+0001:00003480+ Boolean near TFileDialog::checkDirectory( char const near * )
+0001:000034b8+ Boolean near TFileDialog::valid( short unsigned )
+0001:00003704  near TFileCollection::~TFileCollection()
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(printf)
+0001:000038ca  printf
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(tview)
+0001:0000398c  near TView::TView( TRect const near & )
+0001:000039e4  near TView::~TView()
+0001:00003a30* void near TView::blockCursor()
+0001:00003a44  void near TView::calcBounds( TRect near &, TPoint )
+0001:00003bb4  void near TView::changeBounds( TRect const near & )
+0001:00003bd4  void near TView::clearEvent( TEvent near & )
+0001:00003be8  Boolean near TView::commandEnabled( short unsigned )
+0001:00003c0c  int unsigned near TView::dataSize()
+0001:00003c10  void near TView::disableCommands( TCommandSet near & )
+0001:00003c60* void near TView::disableCommand( short unsigned )
+0001:00003c9c+ void near TView::moveGrow( TPoint, TPoint, TRect near &, TPoint, TPoint, char unsigned )
+0001:00003e24+ void near TView::change( char unsigned, TPoint, TPoint near &, TPoint near & )
+0001:00003e70  void near TView::dragView( TEvent near &, char unsigned, TRect near &, TPoint, TPoint )
+0001:00004198  void near TView::draw()
+0001:000041f4+ void near TView::drawCursor()
+0001:00004208+ void near TView::drawHide( TView near * )
+0001:00004234+ void near TView::drawShow( TView near * )
+0001:0000425c+ void near TView::drawUnderRect( TRect near &, TView near * )
+0001:0000430c+ void near TView::drawUnderView( Boolean, TView near * )
+0001:00004350  void near TView::drawView()
+0001:00004378  void near TView::enableCommands( TCommandSet near & )
+0001:000043d4* void near TView::enableCommand( short unsigned )
+0001:00004414  void near TView::endModal( short unsigned )
+0001:00004444* Boolean near TView::eventAvail()
+0001:0000447c  TRect near TView::getBounds()
+0001:000044d0  short unsigned near TView::execute()
+0001:000044d8  TRect near TView::getClipRect()
+0001:0000459c  short unsigned near TView::getColor( short unsigned )
+0001:000045e0  void near TView::getCommands( TCommandSet near & )
+0001:000045f8  void near TView::getData( void near * )
+0001:000045fc  void near TView::getEvent( TEvent near & )
+0001:00004618  TRect near TView::getExtent()
+0001:00004640  short unsigned near TView::getHelpCtx()
+0001:00004658  TPalette near & near TView::getPalette() const
+0001:00004690  Boolean near TView::getState( short unsigned )
+0001:000046a8* void near TView::growTo( short, short )
+0001:000046fc  void near TView::handleEvent( TEvent near & )
+0001:0000473c  void near TView::hide()
+0001:00004754* void near TView::hideCursor()
+0001:00004768+ void near TView::keyEvent( TEvent near & )
+0001:00004788  void near TView::locate( TRect near & )
+0001:000048e8+ void near TView::makeFirst()
+0001:00004908* TPoint near TView::makeGlobal( TPoint )
+0001:00004968  TPoint near TView::makeLocal( TPoint )
+0001:000049c8  Boolean near TView::mouseEvent( TEvent near &, short unsigned )
+0001:000049f8  Boolean near TView::mouseInView( TPoint )
+0001:00004a5c  void near TView::moveTo( short, short )
+0001:00004aa4  TView near * near TView::nextView()
+0001:00004ab8* void near TView::normalCursor()
+0001:00004acc  TView near * near TView::prev()
+0001:00004ae0* TView near * near TView::prevView()
+0001:00004b08  void near TView::putEvent( TEvent near & )
+0001:00004b24  void near TView::putInFrontOf( TView near * )
+0001:00004c00  void near TView::select()
+0001:00004c2c  void near TView::setBounds( TRect const near & )
+0001:00004c64  void near TView::setCommands( TCommandSet near & )
+0001:00004cac  void near TView::setCursor( short, short )
+0001:00004ccc  void near TView::setData( void near * )
+0001:00004cd0  void near TView::setState( short unsigned, Boolean )
+0001:00004dc8  void near TView::show()
+0001:00004de0  void near TView::showCursor()
+0001:00004df4  void near TView::sizeLimits( TPoint near &, TPoint near & )
+0001:00004e30  TView near * near TView::TopView()
+0001:00004e54  Boolean near TView::valid( short unsigned )
+0001:00004e58  Boolean near TView::containsMouse( TEvent near & )
+0002:00001cac  TPoint near shadowSize
+0002:00001cb4  char unsigned near shadowAttr
+0002:00001cb5  char unsigned near TView::errorAttr
+0002:00002949  Boolean near TView::showMarkers
+0002:0000294a  Boolean near TView::commandSetChanged
+0002:0000294c+ TCommandSet near TView::curCommandSet
+0001:00004e80  void near TView::shutDown()
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(tmnuview)
+0001:00004eb0  near TMenuItem::TMenuItem( char const near *, short unsigned, short unsigned, short unsigned, char near *, TMenuItem near * )
+0001:00004f1c* near TMenuItem::TMenuItem( char const near *, short unsigned, TMenu near *, short unsigned, TMenuItem near * )
+0001:00004f6c+ near TMenuItem::~TMenuItem()
+0001:00004fa8  near TMenu::~TMenu()
+0001:00004fd8+ void near TMenuView::trackMouse( TEvent near & )
+0001:00005058+ void near TMenuView::nextItem()
+0001:00005074+ void near TMenuView::prevItem()
+0001:0000509c+ void near TMenuView::trackKey( Boolean )
+0001:000050cc+ Boolean near TMenuView::mouseInOwner( TEvent near & )
+0001:00005148+ Boolean near TMenuView::mouseInMenus( TEvent near & )
+0001:00005174+ TMenuView near * near TMenuView::topMenu()
+0001:00005184  short unsigned near TMenuView::execute()
+0001:0000569c+ TMenuItem near * near TMenuView::findItem( char )
+0001:00005708  TRect near TMenuView::getItemRect( TMenuItem near * )
+0001:0000572c  short unsigned near TMenuView::getHelpCtx()
+0001:00005760  TPalette near & near TMenuView::getPalette() const
+0001:00005798+ char unsigned near TMenuView::updateMenu( TMenu near * )
+0001:00005814+ void near TMenuView::do_a_select( TEvent near & )
+0001:00005870  void near TMenuView::handleEvent( TEvent near & )
+0001:00005964+ TMenuItem near * near TMenuView::findHotKey( TMenuItem near *, short unsigned )
+0001:000059c4+ TMenuItem near * near TMenuView::hotKey( short unsigned )
+0001:000059e0+ TMenuView near * near TMenuView::newSubView( TRect const near &, TMenu near *, TMenuView near * )
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(menu)
+0001:00005a04  near TSubMenu::TSubMenu( char const near *, short unsigned, short unsigned )
+0001:00005a28  TSubMenu near & near operator +( TSubMenu near &, TMenuItem near & )
+0001:00005a70  TSubMenu near & near operator +( TSubMenu near &, TSubMenu near & )
+0001:00005a88  TStatusDef near & near operator +( TStatusDef near &, TStatusItem near & )
+0001:00005ac0* TStatusDef near & near operator +( TStatusDef near &, TStatusDef near & )
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(tmenubar)
+0001:00005ad8  near TMenuBar::TMenuBar( TRect const near &, TMenu near * )
+0001:00005b20  near TMenuBar::TMenuBar( TRect const near &, TSubMenu near & )
+0001:00005b80+ near TMenuBar::~TMenuBar()
+0001:00005be4+ void near TMenuBar::draw()
+0001:00005d64+ TRect near TMenuBar::getItemRect( TMenuItem near * )
+0001:00005de4  near TMenuView::~TMenuView()
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(tstatusl)
+0001:00005e30  near TStatusLine::TStatusLine( TRect const near &, TStatusDef near & )
+0001:00005e6c+ void near TStatusLine::disposeItems( TStatusItem near * )
+0001:00005e88+ near TStatusLine::~TStatusLine()
+0001:00005ef8+ void near TStatusLine::draw()
+0001:00005f08+ void near TStatusLine::drawSelect( TStatusItem near * )
+0001:0000615c+ void near TStatusLine::findItems()
+0001:00006188+ TPalette near & near TStatusLine::getPalette() const
+0001:000061c0+ TStatusItem near * near TStatusLine::itemMouseIsIn( TPoint )
+0001:00006210+ void near TStatusLine::handleEvent( TEvent near & )
+0001:00006364+ char const near * near TStatusLine::hint( short unsigned )
+0001:0000636c  void near TStatusLine::update()
+Module: C:\lang\WATCOM\lib386\plib3s.lib(undefed)
+0001:000063ac  __wcpp_2_undefed_cdtor_
+Module: C:\lang\WATCOM\lib386\plib3s.lib(dtorarst)
+0001:000063bc  __wcpp_2_dtor_array_store_
+Module: C:\lang\WATCOM\lib386\plib3s.lib(opdelarr)
+0001:000063e8  void near operator delete []( void near * )
+Module: C:\lang\WATCOM\lib386\plib3s.lib(opdel)
+0001:000063f8  void near operator delete( void near * )
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(cstrt386)
+0001:00000003* ___begtext
+0002:00000000* __nullarea
+0002:000028e0* _start_TI
+0002:000028e0* _end_TI
+0002:00001cd8* __GDAptr
+0002:00001cdc* __D16Infoseg
+0002:00001cde* __x386_zero_base_selector
+0001:0000640c  _cstart_
+0001:0000669d  __exit
+0001:000066a0  __do_exit_with_msg__
+0001:000066d8  __GETDS
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(argcv386)
+0002:00001ce0  _argc
+0002:00001ce4  _argv
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(memmove)
+0001:000066e2  memmove
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(exit)
+0001:00006734+ __null_int23_exit
+0001:00006735  exit
+0001:0000674f* _exit
+0002:00001ce8+ __atexit
+0002:00001cec+ __int23_exit
+0002:00001cf0+ __FPE_handler_exit
+Module: C:\lang\WATCOM\lib386\plib3s.lib(opnewarr)
+0001:00006768  void near * near operator new []( int unsigned )
+Module: C:\lang\WATCOM\lib386\plib3s.lib(prwdata)
+0002:00001cf4  _wint_pure_error_flag
+0002:00001cf6  _wint_undef_vfun_flag
+0002:00001cf8  _wint_module_init
+Module: C:\lang\WATCOM\lib386\plib3s.lib(fatalerr)
+0001:00006778  __wcpp_2_fatal_runtime_error_
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(tscreen)
+0001:000067c0  void near TScreen::resume()
+0001:000067fc  near TScreen::~TScreen()
+0001:00006808  short unsigned near TDisplay::getCursorType()
+0001:0000682c  void near TDisplay::setCursorType( short unsigned )
+0001:00006850+ void near TDisplay::clearScreen( char unsigned, char unsigned )
+0001:0000688c+ short unsigned near TDisplay::getRows()
+0001:000068c8+ short unsigned near TDisplay::getCols()
+0001:000068e8+ short unsigned near TDisplay::getCrtMode()
+0001:00006908+ void near TDisplay::setCrtMode( short unsigned )
+0001:00006960+ short unsigned near TScreen::fixCrtMode( short unsigned )
+0001:00006968+ void near TScreen::setCrtData()
+0001:00006a08  near TScreen::TScreen()
+0001:00006a30  void near TScreen::suspend()
+0001:00006a64+ void near TScreen::clearScreen()
+0002:0000297c+ short unsigned near * near TDisplay::equipment
+0002:00002980+ char unsigned near * near TDisplay::crtInfo
+0002:00002984+ char unsigned near * near TDisplay::crtRows
+0002:00002988+ short unsigned near TScreen::startupCursor
+0002:0000298a  short unsigned near TScreen::screenMode
+0002:0000298c  char unsigned near TScreen::screenWidth
+0002:00001cfc+ short unsigned near TScreen::startupMode
+0002:0000298d  char unsigned near TScreen::screenHeight
+0002:0000298e+ Boolean near TScreen::hiResScreen
+0002:0000298f+ Boolean near TScreen::checkSnow
+0002:00002990  char unsigned near * near TScreen::screenBuffer
+0002:00002994+ short unsigned near TScreen::cursorLines
+0001:00006a80  void near TScreen::setVideoMode( short unsigned )
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(tevent)
+0001:00006aac+ long unsigned near getTicks()
+0001:00006ab8  near TEventQueue::TEventQueue()
+0001:00006ac4  void near TEventQueue::resume()
+0001:00006b5c  void near TEventQueue::suspend()
+0001:00006b64  near TEventQueue::~TEventQueue()
+0001:00006b70  void near TEventQueue::getMouseEvent( TEvent near & )
+0001:00006cc4+ void near TEventQueue::getMouseState( TEvent near & )
+0001:00006d3c+ void far mouseInt( int, int, int, int )
+0002:00002998+ TEvent near TEventQueue::eventQueue[]
+0002:00002a58+ Boolean near TEventQueue::mouseIntFlag
+0002:00002a5c+ short unsigned near * near TEventQueue::Ticks
+0002:00002a60+ short unsigned near TEventQueue::eventCount
+0002:00002a62+ Boolean near TEventQueue::mouseEvents
+0002:00002a63+ Boolean near TEventQueue::mouseReverse
+0002:00002a64+ short unsigned near TEventQueue::autoTicks
+0002:00002a66+ short unsigned near TEventQueue::autoDelay
+0002:00002a68+ MouseEventType near TEventQueue::lastMouse
+0002:00002a74+ MouseEventType near TEventQueue::curMouse
+0002:00001d00+ TEvent near * near TEventQueue::eventQHead
+0002:00001d04+ TEvent near * near TEventQueue::eventQTail
+0002:00001d08+ short unsigned near TEventQueue::doubleDelay
+0002:00001d0a+ short unsigned near TEventQueue::repeatDelay
+0002:00002a80+ MouseEventType near TEventQueue::downMouse
+0002:00002a8a+ short unsigned near TEventQueue::downTicks
+0001:00006df0  void near TEvent::getKeyEvent()
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(grp)
+0001:00006eb4* TView near * near TGroup::at( short )
+0001:00006ed0  TView near * near TGroup::firstThat( Boolean (near *)(), void near * )
+0001:00006f00  void near TGroup::forEach( void (near *)(), void near * )
+0001:00006f30* short near TGroup::indexOf( TView near * )
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(palette)
+0001:00006f60  near TPalette::TPalette( char const near *, short unsigned )
+0001:00006fa0  near TPalette::TPalette( TPalette const near & )
+0001:00006fdc  near TPalette::~TPalette()
+0001:00006ff0* TPalette near & near TPalette::operator =( TPalette const near & )
+0001:0000704c  char near & near TPalette::operator []( int ) const
+Module: C:\lang\WATCOM\lib386\plib3s.lib(stablcl)
+0001:0000707c  __wcpp_2_lcl_register_
+0002:0000286e* rt_init __based("XI") __wcpp_2_data_stab_init_lcl_
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(tvtext2)
+0001:0000708c  char near getAltChar( short unsigned )
+0001:000070d0  short unsigned near getAltCode( char )
+0002:00001d4c* char const near * near TEditWindow::clipboardTitle
+0002:00001d50* char const near * near TEditWindow::untitled
+0002:00001d54  char const near * near TFileList::tooManyFiles
+0002:00001d58  char const near * near TProgram::exitText
+0002:00001d5c  char const near * near MsgBoxText::yesText
+0002:00001d60  char const near * near MsgBoxText::noText
+0002:00001d64  char const near * near MsgBoxText::okText
+0002:00001d68  char const near * near MsgBoxText::cancelText
+0002:00001d6c  char const near * near MsgBoxText::warningText
+0002:00001d70  char const near * near MsgBoxText::errorText
+0002:00001d74  char const near * near MsgBoxText::informationText
+0002:00001d78  char const near * near MsgBoxText::confirmText
+0002:00001d7c* char const near * near TChDirDialog::changeDirTitle
+0002:00001d80* char const near * near TChDirDialog::dirNameText
+0002:00001d84* char const near * near TChDirDialog::dirTreeText
+0002:00001d88* char const near * near TChDirDialog::okText
+0002:00001d8c* char const near * near TChDirDialog::chdirText
+0002:00001d90* char const near * near TChDirDialog::revertText
+0002:00001d94* char const near * near TChDirDialog::helpText
+0002:00001d98* char const near * near TChDirDialog::drivesText
+0002:00001d9c* char const near * near TChDirDialog::invalidText
+0002:00001da0  char const near * near TFileDialog::filesText
+0002:00001da4  char const near * near TFileDialog::openText
+0002:00001da8  char const near * near TFileDialog::okText
+0002:00001dac  char const near * near TFileDialog::replaceText
+0002:00001db0  char const near * near TFileDialog::clearText
+0002:00001db4  char const near * near TFileDialog::cancelText
+0002:00001db8  char const near * near TFileDialog::helpText
+0002:00001dbc  char const near * near TFileDialog::invalidDriveText
+0002:00001dc0  char const near * near TFileDialog::invalidFileText
+0002:00001dc4  char const near * near TFileInfoPane::pmText
+0002:00001dc8  char const near * near TFileInfoPane::amText
+0002:00001dcc  char const near * const near TFileInfoPane::months[]
+0002:00001e00  char const near * const near TSystemError::errorString[]
+0002:00001190  char const near TDeskTop::defaultBkgrnd
+0002:00001e60  char const near * near TSystemError::sRetryOrCancel
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(misc)
+0001:00007144  void near * near message( TView near *, short unsigned, short unsigned, void near * )
+0001:00007190  Boolean near lowMemory()
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(tdesktop)
+0001:00007198+ near TDeskInit::TDeskInit( TBackground near * (near *)( ))
+0001:000071a4  near TDeskTop::TDeskTop( TRect const near & )
+0001:00007228+ void near TDeskTop::shutDown()
+0001:00007240+ void near doCount( TView near *, void near * )
+0001:00007268+ void near doCascade( TView near *, void near * )
+0001:000072d4* void near TDeskTop::cascade( TRect const near & )
+0001:00007374+ void near TDeskTop::handleEvent( TEvent near & )
+0001:000073d4+ TBackground near * near TDeskTop::initBackground( TRect )
+0001:000073f8+ short near iSqr( short )
+0001:00007460+ void near mostEqualDivisors( short, short near &, short near & )
+0001:000074cc+ void near doCountTileable( TView near *, void near * )
+0001:000074f0+ int near dividerLoc( int, int, int, int )
+0001:0000750c+ TRect near calcTileRect( short, TRect const near & )
+0001:0000765c+ void near doTile( TView near *, void near * )
+0001:000076ac* void near TDeskTop::tile( TRect const near & )
+0001:00007778+ void near TDeskTop::tileError()
+0001:0000777c+ near TDeskTop::~TDeskTop()
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(tmouse)
+0001:000077c4+ near THWMouse::THWMouse()
+0001:000077d0  void near THWMouse::resume()
+0001:0000782c+ near THWMouse::~THWMouse()
+0001:00007838  void near THWMouse::suspend()
+0001:00007874  void near THWMouse::show()
+0001:000078a0  void near THWMouse::hide()
+0001:000078c8  void near THWMouse::setRange( short unsigned, short unsigned )
+0001:0000792c  void near THWMouse::getEvent( MouseEventType near & )
+0001:00007970  void near THWMouse::registerHandler( int unsigned, void (near *)())
+0001:000079d0  near TMouse::TMouse()
+0002:00002aa0  char unsigned near THWMouse::buttonCount
+0002:00002aa1+ Boolean near THWMouse::handlerInstalled
+0002:00002aa2+ Boolean near THWMouse::noMouse
+0001:000079e8  near TMouse::~TMouse()
+Module: C:\lang\WATCOM\lib386\plib3s.lib(moddtorr)
+0002:000028e0  ___wcpp_2_data_module_dtor_ref_
+Module: C:\lang\WATCOM\lib386\plib3s.lib(stabmod)
+0001:000079fc+ __wcpp_2_module_dtor_
+0001:00007a5d  __wcpp_2_mod_register_
+0002:00002874* rt_init __based("XI") __wcpp_2_data_stab_init_mod_
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(syserr)
+0001:00007a70  near TSystemError::TSystemError()
+0001:00007a7c  near TSystemError::~TSystemError()
+0001:00007c28  void near TSystemError::resume()
+0001:00007d4c  void near TSystemError::suspend()
+0001:00007e6c+ short unsigned near TSystemError::selectKey()
+0002:00002aa4  Boolean near TSystemError::ctrlBreakHit
+0002:00002aa5+ Boolean near TSystemError::saveCtrlBreak
+0002:00002aa6* Boolean near TSystemError::sysErrActive
+0002:00002aa7* Boolean near TSystemError::inIDE
+0002:00001e84+ short (near * near TSystemError::sysErrorFunc)( short, char unsigned )
+0002:00001e88+ short unsigned near TSystemError::sysColorAttr
+0002:00001e8a+ short unsigned near TSystemError::sysMonoAttr
+0001:00007ec4+ short near TSystemError::sysErr( short, char unsigned )
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(histlist)
+0001:00008020+ void near * near HistRec::operator new( int unsigned, HistRec near * )
+0001:00008028* void near * near HistRec::operator new( int unsigned )
+0001:00008030+ void near advanceStringPointer()
+0001:00008078+ void near deleteString()
+0001:000080a8+ void near insertString( char unsigned, char const near * )
+0001:00008178+ void near startId( char unsigned )
+0001:0000818c  short unsigned near historyCount( char unsigned )
+0001:000081b8  void near historyAdd( char unsigned, char const near * )
+0001:00008210  char const near * near historyStr( char unsigned, int )
+0001:00008250+ void near clearHistory()
+0001:000082b8  void near initHistory()
+0002:00001e8c+ short unsigned near historySize
+0001:000082d4  void near doneHistory()
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(nmalloc)
+0001:000082e3  malloc
+0001:000082f1  _nmalloc
+0002:00001e90  __nheapbeg
+0002:00001e94  __MiniHeapRover
+0002:00001e98  __LargestSizeB4MiniHeapRover
+Module: C:\lang\WATCOM\lib386\plib3s.lib(cppdata)
+0002:00002ad8  _wint_thread_data
+0002:00002af8  __wcpp_2_data_catch_completed_
+0002:00002afc  __wcpp_2_data_dtreg_vfptrs_
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(twindow)
+0001:000083e4  near TWindowInit::TWindowInit( TFrame near * (near *)( ))
+0001:000083f0  near TWindow::TWindow( TRect const near &, char const near *, short )
+0001:000084a8  near TWindow::~TWindow()
+0001:000084fc  void near TWindow::close()
+0001:00008534  void near TWindow::shutDown()
+0001:0000854c+ TPalette near & near TWindow::getPalette() const
+0001:000085f0  char const near * near TWindow::getTitle( short )
+0001:000085f8  void near TWindow::handleEvent( TEvent near & )
+0001:00008774  TFrame near * near TWindow::initFrame( TRect )
+0001:00008790  void near TWindow::setState( short unsigned, Boolean )
+0001:00008864  TScrollBar near * near TWindow::standardScrollBar( short unsigned )
+0001:00008920  void near TWindow::sizeLimits( TPoint near &, TPoint near & )
+0001:00008944  void near TWindow::zoom()
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(newstr)
+0001:000089c8  char near * near newStr( char const near * )
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(drivers)
+0001:00008a18  void near TDrawBuffer::moveBuf( short unsigned, void const near *, short unsigned, short unsigned )
+0001:00008a8c  void near TDrawBuffer::moveChar( short unsigned, char, short unsigned, short unsigned )
+0001:00008b50  void near TDrawBuffer::moveCStr( short unsigned, char const near *, short unsigned )
+0001:00008ba4  void near TDrawBuffer::moveStr( short unsigned, char const near *, short unsigned )
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(TVWRITE2)
+0001:00008bdc+ void near TView::writeViewRec1( short, short, TView near *, int )
+0001:00008e84+ void near TView::writeViewRec2( short, short, TView near *, int )
+0001:00008f40+ void near TView::writeView( short, short, short, void const near * )
+0001:00008fb8  void near TView::writeBuf( short, short, short, short, void const near * )
+0001:0000900c* void near TView::writeChar( short, short, char, char unsigned, short )
+0001:000090c4  void near TView::writeLine( short, short, short, short, void const near * )
+0001:00009114* void near TView::writeStr( short, short, char const near *, char unsigned )
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(TVCURSR2)
+0001:000091c8  void near TView::resetCursor()
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(TGRMV2)
+0001:000092f8  void near TGroup::removeView( TView near * )
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(tcmdset)
+0001:0000933c  near TCommandSet::TCommandSet()
+0001:00009350  near TCommandSet::TCommandSet( TCommandSet const near & )
+0001:0000936c  Boolean near TCommandSet::has( int )
+0001:00009398  void near TCommandSet::disableCmd( int )
+0001:000093c0  void near TCommandSet::enableCmd( TCommandSet const near & )
+0001:000093d8  void near TCommandSet::disableCmd( TCommandSet const near & )
+0001:000093f4  void near TCommandSet::enableCmd( int )
+0001:0000941c+ TCommandSet near & near TCommandSet::operator &=( TCommandSet const near & )
+0001:00009438+ TCommandSet near & near TCommandSet::operator |=( TCommandSet const near & )
+0001:00009454  TCommandSet near operator &( TCommandSet const near &, TCommandSet const near & )
+0001:00009490* TCommandSet near operator |( TCommandSet const near &, TCommandSet const near & )
+0001:000094cc  Boolean near TCommandSet::isEmpty()
+0002:00001ed8+ int near TCommandSet::masks[]
+0001:000094ec  int near operator ==( TCommandSet const near &, TCommandSet const near & )
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(new)
+0001:00009524+ near TBufListEntry::TBufListEntry( void near * near & )
+0001:00009550+ near TBufListEntry::~TBufListEntry()
+0001:00009584+ void near * near TBufListEntry::operator new( int unsigned, int unsigned )
+0001:00009598* void near * near TBufListEntry::operator new( int unsigned )
+0001:0000959c+ void near TBufListEntry::operator delete( void near * )
+0001:000095ac* Boolean near TBufListEntry::freeHead()
+0001:000095d8+ near TVMemMgr::TVMemMgr()
+0001:000095f4+ void near TVMemMgr::resizeSafetyPool( int unsigned )
+0001:0000963c  int near TVMemMgr::safetyPoolExhausted()
+0001:00009658  void near TVMemMgr::allocateDiscardable( void near * near &, int unsigned )
+0002:00002b2c+ TBufListEntry near * near TBufListEntry::bufList
+0002:00002b30+ void near * near TVMemMgr::safetyPool
+0002:00002b34+ int unsigned near TVMemMgr::safetyPoolSize
+0002:00002b38+ int near TVMemMgr::inited
+0002:00002b3c+ TVMemMgr near memMgr
+0001:00009698  void near TVMemMgr::freeDiscardable( void near * )
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(drivers2)
+0001:000096b8  short unsigned near ctrlToArrow( short unsigned )
+0001:0000970c  int near cstrlen( char const near * )
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(tvtext1)
+0002:00001f1c  char unsigned const near specialChars[]
+0002:00001f24* char const near * near TRadioButtons::button
+0002:00001f28  char const near * near TMenuBox::frameChars
+0002:00001f2c  char const near TFrame::initFrame[]
+0002:00001f40  char near TFrame::frameChars[]
+0002:00001f64  char const near * near TFrame::closeIcon
+0002:00001f68  char const near * near TFrame::zoomIcon
+0002:00001f6c  char const near * near TFrame::unZoomIcon
+0002:00001f70  char const near * near TFrame::dragIcon
+0002:00001f74  char const near * near THistory::icon
+0002:00001f78* char const near * near TMonoSelector::button
+0002:00001f7c* char const near * near TMonoSelector::normal
+0002:00001f80* char const near * near TMonoSelector::highlight
+0002:00001f84* char const near * near TMonoSelector::underline
+0002:00001f88* char const near * near TMonoSelector::inverse
+0002:00001f8c* char const near * near TColorDialog::colors
+0002:00001f90* char const near * near TColorDialog::groupText
+0002:00001f94* char const near * near TColorDialog::itemText
+0002:00001f98* char const near * near TColorDialog::forText
+0002:00001f9c* char const near * near TColorDialog::bakText
+0002:00001fa0* char const near * near TColorDialog::textText
+0002:00001fa4* char const near * near TColorDialog::colorText
+0002:00001fa8* char const near * near TColorDialog::okText
+0002:00001fac* char const near * near TColorDialog::cancelText
+0002:00001fb0  char const near * near TStatusLine::hintSeparator
+0002:00001fb4* char const near * near TCheckBoxes::button
+0002:00001fb8  char near TScrollBar::vChars[]
+0002:00001fc0  char near TScrollBar::hChars[]
+0002:00001fc8  char const near * near TButton::shadows
+0002:00001fcc  char const near * near TButton::markers
+0002:00001fd0* char const near * near TDirListBox::pathDir
+0002:00001fd4* char const near * near TDirListBox::firstDir
+0002:000012b0* char const near TIndicator::dragFrame
+0002:000012b1* char const near TIndicator::normalFrame
+0002:000012b2* char const near TColorSelector::icon
+0002:000012b3  char const near TInputLine::rightArrow
+0002:000012b4  char const near TInputLine::leftArrow
+0002:00001fd8* char const near * near TDirListBox::middleDir
+0002:00001fdc* char const near * near TDirListBox::lastDir
+0002:00001fe0* char const near * near TDirListBox::drives
+0002:00001fe4* char const near * near TDirListBox::graphics
+0002:00001fe8* char const near * near TFileEditor::backupExt
+0001:00009730  void near TDisplay::updateIntlChars()
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(tinputli)
+0001:00009748  char near hotKey( char const near * )
+0001:00009780  near TInputLine::TInputLine( TRect const near &, int )
+0001:000097e0  near TInputLine::~TInputLine()
+0001:00009834+ Boolean near TInputLine::canScroll( int )
+0001:0000986c  int unsigned near TInputLine::dataSize()
+0001:00009878  void near TInputLine::draw()
+0001:00009a24  void near TInputLine::getData( void near * )
+0001:00009a54  TPalette near & near TInputLine::getPalette() const
+0001:00009a8c+ int near TInputLine::mouseDelta( TEvent near & )
+0001:00009ae0+ int near TInputLine::mousePos( TEvent near & )
+0001:00009b50+ void near TInputLine::deleteSelect()
+0001:00009b8c  void near TInputLine::handleEvent( TEvent near & )
+0001:00009ec4  void near TInputLine::selectAll( Boolean )
+0001:00009f24  void near TInputLine::setData( void near * )
+0001:00009f70  void near TInputLine::setState( short unsigned, Boolean )
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(toupper)
+0001:00009fb5* _toupper
+0001:00009fc3  toupper
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(stddlg)
+0001:00009fe4  char unsigned near getShiftState()
+0001:00009fec  near TFileInputLine::TFileInputLine( TRect const near &, short )
+0001:0000a010+ void near TFileInputLine::handleEvent( TEvent near & )
+0001:0000a0f4  near TSortedListBox::TSortedListBox( TRect const near &, short unsigned, TScrollBar near * )
+0001:0000a158  void near TSortedListBox::handleEvent( TEvent near & )
+0001:0000a38c+ void near * near TSortedListBox::getKey( char const near * )
+0001:0000a394  void near TSortedListBox::newList( TSortedCollection near * )
+0001:0000a3c0  near TFileInfoPane::TFileInfoPane( TRect const near & )
+0001:0000a3dc+ void near TFileInfoPane::draw()
+0001:0000a7a4+ TPalette near & near TFileInfoPane::getPalette() const
+0001:0000a7dc+ void near TFileInfoPane::handleEvent( TEvent near & )
+0001:0000a8b8+ near TFileInfoPane::~TFileInfoPane()
+0001:0000a870  near TSortedListBox::~TSortedListBox()
+0001:0000a828+ near TFileInputLine::~TFileInputLine()
+0002:00002b50+ char near & near shiftKeys
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(tlabel)
+0001:0000a904  near TLabel::TLabel( TRect const near &, char const near *, TView near * )
+0001:0000a934+ void near TLabel::shutDown()
+0001:0000a94c+ void near TLabel::draw()
+0001:0000aa04+ TPalette near & near TLabel::getPalette() const
+0001:0000aa3c+ void near TLabel::handleEvent( TEvent near & )
+0001:0000aaf8+ near TLabel::~TLabel()
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(thistory)
+0001:0000ab44  near THistory::THistory( TRect const near &, TInputLine near *, short unsigned )
+0001:0000ab74+ void near THistory::shutDown()
+0001:0000ab8c+ void near THistory::draw()
+0001:0000abec+ TPalette near & near THistory::getPalette() const
+0001:0000ac24+ void near THistory::handleEvent( TEvent near & )
+0001:0000ae60+ THistoryWindow near * near THistory::initHistoryWindow( TRect const near & )
+0001:0000ae94+ near THistory::~THistory()
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(tscrlbar)
+0001:0000aee0  near TScrollBar::TScrollBar( TRect const near & )
+0001:0000af58+ void near TScrollBar::draw()
+0001:0000af74+ void near TScrollBar::drawPos( short )
+0001:0000b090+ TPalette near & near TScrollBar::getPalette() const
+0001:0000b0c8+ short near TScrollBar::getPos()
+0001:0000b120+ short near TScrollBar::getSize()
+0001:0000b150+ short near TScrollBar::getPartCode()
+0001:0000b1f4+ void near TScrollBar::handleEvent( TEvent near & )
+0001:0000b58c+ void near TScrollBar::scrollDraw()
+0001:0000b5a4+ short near TScrollBar::scrollStep( short )
+0001:0000b5c4  void near TScrollBar::setParams( short, short, short, short, short )
+0001:0000b664  void near TScrollBar::setRange( short, short )
+0001:0000b690  void near TScrollBar::setStep( short, short )
+0001:0000b6bc  void near TScrollBar::setValue( short )
+0001:0000b6e4+ near TScrollBar::~TScrollBar()
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(tfillist)
+0001:0000c1c8+ int near TFileCollection::indexOf( TSearchRec near * )
+0001:0000c1b4+ int near TFileCollection::insert( TSearchRec near * )
+0001:0000c1a4+ void near TFileCollection::freeItem( void near * )
+0001:0000c190+ void near TFileList::newList( TFileCollection near * )
+0001:0000b72c  near TFileList::TFileList( TRect const near &, TScrollBar near * )
+0001:0000b74c+ near TFileList::~TFileList()
+0001:0000b7d8+ void near TFileList::focusItem( short )
+0001:0000b81c+ void near TFileList::getData( void near * )
+0001:0000b820+ void near TFileList::setData( void near * )
+0001:0000b824+ int unsigned near TFileList::dataSize()
+0001:0000b828+ void near * near TFileList::getKey( char const near * )
+0001:0000b884+ void near TFileList::getText( char near *, short, short )
+0001:0000b904+ void near TFileList::handleEvent( TEvent near & )
+0001:0000b948  void near TFileList::readDirectory( char const near *, char const near * )
+0001:0000b9bc+ void near * near DirSearchRec::operator new( int unsigned )
+0001:0000b9e8  void near TFileList::readDirectory( char const near * )
+0001:0000bf44  void near fexpand( char near * )
+0001:0000c170+ near TSortedCollection::~TSortedCollection()
+0001:0000c150+ near TNSSortedCollection::~TNSSortedCollection()
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(istable)
+0002:00001728  _IsTable
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(OS2HANDL)
+0001:0000c1dc  int near fnsplit( char const near *, char near *, char near *, char near *, char near * )
+0001:0000c34c  void near fnmerge( char near *, char const near *, char const near *, char const near *, char const near * )
+0001:0000c36c  int near getdisk()
+0001:0000c384  int near getcurdir( int, char near * )
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(tdircoll)
+0001:0000c434+ Boolean near driveValid( char )
+0001:0000c464  Boolean near isDir( char const near * )
+0001:0000c490  Boolean near pathValid( char const near * )
+0001:0000c504  Boolean near validFileName( char const near * )
+0001:0000c5f0  void near getCurDir( char near * )
+0001:0000c62c  Boolean near isWild( char const near * )
+0001:0000c644+ near TDirCollection::~TDirCollection()
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(msgbox)
+0001:0000c774+ short unsigned near messageBoxRect( TRect const near &, char const near *, short unsigned )
+0001:0000c930* short unsigned near messageBoxRect( TRect const near &, short unsigned, char const near *, ... )
+0001:0000ca20  short unsigned near messageBox( char const near *, short unsigned )
+0001:0000ca48* short unsigned near messageBox( short unsigned, char const near *, ... )
+0001:0000cab4* short unsigned near inputBox( char const near *, char const near *, char near *, char unsigned )
+0001:0000cb94+ short unsigned near inputBoxRect( TRect const near &, char const near *, char const near *, char near *, char unsigned )
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(iob)
+0002:00002044  __iob
+0002:0000224c* __tmpfnext
+0002:0000224d* _fmode
+0002:00002dd0  __ClosedStreams
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(fprtf)
+0001:0000cdde  __fprtf
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(tpoint)
+0001:0000ce78  TPoint near operator -( TPoint const near &, TPoint const near & )
+0001:0000ceac  TPoint near operator +( TPoint const near &, TPoint const near & )
+0001:0000cee0  int near operator ==( TPoint const near &, TPoint const near & )
+0001:0000cf04  int near operator !=( TPoint const near &, TPoint const near & )
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(TVEXPSD2)
+0001:0000cf28+ int near TView::exposedRec1( short, short, TView near * )
+0001:0000cfec+ int near TView::exposedRec2( short, short, TView near * )
+0001:0000d0a4  Boolean near TView::exposed()
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(mapcolor)
+0001:0000d0f0  char unsigned near TView::mapColor( char unsigned )
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(tmenubox)
+0001:0000d260  near TMenuBox::TMenuBox( TRect const near &, TMenu near *, TMenuView near * )
+0001:0000d2b8+ void near TMenuBox::frameLine( TDrawBuffer near &, short )
+0001:0000d340+ void near TMenuBox::draw()
+0001:0000d540+ TRect near TMenuBox::getItemRect( TMenuItem near * )
+0001:0000d58c+ near TMenuBox::~TMenuBox()
+Module: C:\lang\WATCOM\lib386\plib3s.lib(stabadt)
+0001:0000d5d4  __wcpp_2_dtor_array_
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(nfree)
+0001:0000d616  free
+0001:0000d624  _nfree
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(cmain386)
+0001:0000d682  __CMain
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(inirt386)
+0001:0000d6dc  __InitRtns
+0001:0000d727  __FiniRtns
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(seg386)
+0000:00001234  __DOSseg__
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(crwd386)
+0002:00002268  _psp
+0002:00002293  _osmajor
+0002:00002294  _osminor
+0002:0000228a  _Extender
+0002:0000228b  _ExtenderSubtype
+0002:0000228c  __X32VM
+0002:0000226c* __x386_stacklow
+0002:00002260  _LpCmdLine
+0002:00002264  _LpPgmName
+0002:00002258  _dynend
+0002:0000225c  _curbrk
+0002:0000226c  _STACKLOW
+0002:00002270  _STACKTOP
+0002:00002274  __ASTACKSIZ
+0002:00002278  __ASTACKPTR
+0002:0000227c* _cbyte
+0002:00002280* _cbyte2
+0002:00002284  _child
+0002:0000228d  _Envptr
+0002:00002291  _Envseg
+0002:00002288  __no87
+0002:00002295  __FPE_handler
+0002:00002295  ___FPE_handler
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(initargv)
+0001:0000d777  __Init_Argv
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(enterdb)
+0001:0000d920  __EnterWVIDEO
+0002:0000229c+ __WD_Present
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(xmsg)
+0001:0000d94b  __exit_with_msg
+0001:0000d958  __fatal_runtime_error
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(int386)
+0001:0000d986  int386
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(fprintf)
+0001:0000d9b4  fprintf
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(abort)
+0001:0000d9d9  abort
+0001:0000d9df+ __terminate
+0002:000022a0+ __abort
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(tbkgrnd)
+0001:0000d9f8  near TBackground::TBackground( TRect const near &, char )
+0001:0000da1c+ void near TBackground::draw()
+0001:0000da78+ TPalette near & near TBackground::getPalette() const
+0001:0000dab0+ near TBackground::~TBackground()
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(intx386)
+0001:0000daf7  int386x
+Module: C:\lang\WATCOM\lib386\plib3s.lib(stabdtor)
+0001:0000dd11  __wcpp_2_destruct_internal_
+0001:0000dd19  __wcpp_2_destruct_all_
+0001:0000dd24* __wcpp_2_destruct_after_all_
+0001:0000dd2f* __wcpp_2_destruct_
+0001:0000dd44* __wcpp_2_destruct_after_
+Module: C:\lang\WATCOM\lib386\plib3s.lib(stabreg)
+0001:0000dd48  __wcpp_2_base_register_
+0001:0000dd6d* __wcpp_2_base_deregister_
+0001:0000dd7b* __wcpp_2_base_deregister_2_
+0001:0000dd8b  __wcpp_2_internal_deregister_
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(d_getvec)
+0001:0000dd96  _dos_getvect
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(d_setvec)
+0001:0000ddca  _dos_setvect
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(SWAPST2)
+0001:0000de00  void near TSystemError::swapStatusLine( TDrawBuffer near & )
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(cmp386)
+0001:0000de50  strcmp
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(memalloc)
+0001:0000defc  __MemAllocator
+0001:0000dfa4  __MemFree
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(grownear)
+0001:0000e0f0+ __FreeDPMIBlocks
+0001:0000e14e* __ReAllocDPMIBlock
+0001:0000e2dc+ __LastFree
+0001:0000e4c8  __ExpandDGROUP
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(nmemneed)
+0001:0000e699  __nmemneed
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(heapmod)
+0002:00002de8* __fheap_clean
+0002:00002de9  __nheap_clean
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(tframe)
+0001:0000e6a0  near TFrame::TFrame( TRect const near & )
+0001:0000e6c0+ void near TFrame::draw()
+0001:0000ea34+ TPalette near & near TFrame::getPalette() const
+0001:0000ea6c+ void near TFrame::dragWindow( TEvent near &, char unsigned )
+0001:0000eaf0+ void near TFrame::handleEvent( TEvent near & )
+0001:0000ec00+ void near TFrame::setState( short unsigned, Boolean )
+0001:0000ec2c+ near TFrame::~TFrame()
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(strncpy)
+0001:0000ec73  strncpy
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(tlistbox)
+0001:0000eca4  near TListBox::TListBox( TRect const near &, short unsigned, TScrollBar near * )
+0001:0000ece0  near TListBox::~TListBox()
+0001:0000ed2c  int unsigned near TListBox::dataSize()
+0001:0000ed34  void near TListBox::getData( void near * )
+0001:0000ed4c  void near TListBox::getText( char near *, short, short )
+0001:0000ed98  void near TListBox::newList( TCollection near * )
+0001:0000ee0c  void near TListBox::setData( void near * )
+0001:0000ee3c  near TListViewer::~TListViewer()
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(strnicmp)
+0001:0000ee83  strnicmp
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(tlstview)
+0001:0000eeec  near TListViewer::TListViewer( TRect const near &, short unsigned, TScrollBar near *, TScrollBar near * )
+0001:0000ef98  void near TListViewer::changeBounds( TRect const near & )
+0001:0000efac  void near TListViewer::draw()
+0001:0000f33c  void near TListViewer::focusItem( short )
+0001:0000f3d8  void near TListViewer::focusItemNum( short )
+0001:0000f424  TPalette near & near TListViewer::getPalette() const
+0001:0000f45c  void near TListViewer::getText( char near *, short, short )
+0001:0000f464  Boolean near TListViewer::isSelected( short )
+0001:0000f474  void near TListViewer::handleEvent( TEvent near & )
+0001:0000f85c  void near TListViewer::selectItem( short )
+0001:0000f874  void near TListViewer::setRange( short )
+0001:0000f8cc  void near TListViewer::setState( short unsigned, Boolean )
+0001:0000f94c  void near TListViewer::shutDown()
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(tsortcol)
+0001:0000f968  int near TNSSortedCollection::indexOf( void near * )
+0001:0000f9d8  int near TNSSortedCollection::insert( void near * )
+0001:0000fa28  void near * near TNSSortedCollection::keyOf( void near * )
+0001:0000fa30  Boolean near TNSSortedCollection::search( void near *, int near & )
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(ltoa)
+0001:0000faed  ultoa
+0001:0000fb3d  ltoa
+0001:0000fb72* _ltoa
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(itoa)
+0001:0000fbb1+ utoa
+0001:0000fc03  itoa
+0001:0000fc38* _itoa
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(thistwin)
+0001:0000fc58+ near THistInit::THistInit( TListViewer near * (near *)())
+0001:0000fc64  near THistoryWindow::THistoryWindow( TRect const near &, short unsigned )
+0001:0000fd08+ TPalette near & near THistoryWindow::getPalette() const
+0001:0000fd40  void near THistoryWindow::getSelection( char near * )
+0001:0000fd64+ TListViewer near * near THistoryWindow::initViewer( TRect, TWindow near *, short unsigned )
+0001:0000fdb8+ near THistoryWindow::~THistoryWindow()
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(strupr)
+0001:0000fdff* _strupr
+0001:0000fe0d  strupr
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(find386)
+0001:0000fe2c  _dos_findfirst
+0001:0000fe59  _dos_findnext
+0001:0000fe79  _dos_findclose
+Module: C:\lang\WATCOM\lib386\plib3s.lib(pure_err)
+0001:0000fec2  __wcpp_2_pure_error_
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(tfilecol)
+0001:0000fee8  int near TFileCollection::compare( void near *, void near * )
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(splitpat)
+0001:0000ffbc  _splitpath
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(drive386)
+0001:0001005a  _dos_getdrive
+0001:00010072  _dos_setdrive
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(gtcwd)
+0001:00010090  getcwd
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(ddisk386)
+0001:00010134  _dos_getdiskfree
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(stat)
+0001:0001016b* _stat
+0001:0001017e  stat
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(strpbrk)
+0001:00010322  strpbrk
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(vsprintf)
+0001:0001038e  vsprintf
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(stinit)
+0002:00002e04  __OpenStreams
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(fputc)
+0001:000103b6  fputc
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(ioalloc)
+0001:00010484  __ioalloc
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(prtf)
+0001:00010504  __prtf
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(flush)
+0001:00010fd8  __flush
+Module: C:\lang\WATCOM\lib386\plib3s.lib(stabarr)
+0001:000110da  __wcpp_2_arr_register_
+0002:000028c8* rt_init __based("XI") __wcpp_2_data_stab_init_arr_
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(stack386)
+0001:00011113  stackavail
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(cinit)
+0001:0001111c  __CommonInit
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(___argc)
+0002:00002e08  ___Argc
+0002:00002e0c  ___Argv
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(segread)
+0001:00011127  segread
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(intxa386)
+0001:00011152  __int386x_
+0001:000111af* _DoINTR_
+Module: C:\lang\WATCOM\lib386\plib3s.lib(stabtrav)
+0001:00011530+ __wcpp_2_stab_entry_
+0001:00011564  __wcpp_2_stab_trav_init_
+0001:00011592  __wcpp_2_stab_trav_comp_
+0001:0001159b  __wcpp_2_stab_trav_next_
+0001:00011629  __wcpp_2_stab_trav_move_
+Module: C:\lang\WATCOM\lib386\plib3s.lib(stabthrw)
+0001:000116e8  __wcpp_2_corrupted_stack_
+0001:00011cd0* __wcpp_2_rethrow_
+0001:00011d09+ __wcpp_2_catch_done_
+0001:00011d47* __wcpp_2_throw_
+0001:00011d60* __wcpp_2_throw_zero_
+0002:000028ce+ ___wcpp_2_data_init_longjmp_
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(minreal)
+0002:00002e10  __minreal
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(heapen)
+0001:00011e7d* _heapenable
+0002:000022f0  __heap_enabled
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(sbrk386)
+0001:00011e8d* sbrk
+0001:00011f4f  __brk
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(amblksiz)
+0002:000022f4  _amblksiz
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib(FRMLINE2)
+0001:00012014  void near TFrame::frameLine( TDrawBuffer near &, short, short, char unsigned )
+Module: c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib(thstview)
+0001:00012190  near THistoryViewer::THistoryViewer( TRect const near &, TScrollBar near *, TScrollBar near *, short unsigned )
+0001:00012214+ TPalette near & near THistoryViewer::getPalette() const
+0001:0001224c+ void near THistoryViewer::getText( char near *, short, short )
+0001:00012290+ void near THistoryViewer::handleEvent( TEvent near & )
+0001:00012300+ int near THistoryViewer::historyWidth()
+0001:0001235c+ near THistoryViewer::~THistoryViewer()
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(error386)
+0001:000123a4  __doserror_
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(stricmp)
+0001:000123b7* _stricmp
+0001:000123b7* strcmpi
+0001:000123cc  stricmp
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(seterrno)
+0001:0001240d* __set_EDOM
+0001:00012418* __set_ERANGE
+0001:0001241c  __set_EINVAL
+0001:0001242c  __set_errno
+0001:00012438  __set_doserrno
+0001:0001243f* __FPE_exception_
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(chdir)
+0001:0001244a  chdir
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(tolower)
+0001:0001246c* _tolower
+0001:0001247a  tolower
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(d2ttime)
+0001:0001248c  _d2ttime
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(strchr)
+0001:00012500  strchr
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(bits)
+0001:0001251e  __setbits
+0002:00001ba8  _Bits
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(initfile)
+0001:0001255f  __InitFiles
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(ioexit)
+0001:000125d4  __full_io_exit
+0001:000125e3* fcloseall
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(chktty)
+0001:00012649  __chktty
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(noefgfmt)
+0002:00002308  __EFG_printf
+0002:0000230c* __EFG_scanf
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(qwrit)
+0001:0001268c  __qwrite
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(lseek)
+0001:00012705* _lseek
+0001:0001271f  lseek
+Module: C:\lang\WATCOM\lib386\plib3s.lib(tssize)
+0001:0001278c  __wcpp_2_ts_size_
+Module: C:\lang\WATCOM\lib386\plib3s.lib(bittest)
+0001:000127cc  __wcpp_2_bit_test_
+Module: C:\lang\WATCOM\lib386\plib3s.lib(callterm)
+0001:000127ec  __wcpp_2_call_terminate_
+Module: C:\lang\WATCOM\lib386\plib3s.lib(tsequiv)
+0001:000127fe  __wcpp_2_ts_equiv_
+Module: C:\lang\WATCOM\lib386\plib3s.lib(callunex)
+0001:00012848  __wcpp_2_call_unexpected_
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(stjmp386)
+0001:0001284e* _setjmp
+0001:00012883  longjmp
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(set386)
+0001:000128f0  memset
+Module: C:\lang\WATCOM\lib386\plib3s.lib(allocexc)
+0001:00012934  __wcpp_2_alloc_exc_
+0001:00012a72  __wcpp_2_free_exc_
+0001:00012aa0  __wcpp_2_pop_exc_
+0001:00012aaf  __wcpp_2_push_exc_
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(ljmphdl)
+0002:00002318  __longjmp_handler
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(errno)
+0001:00012ac5  __get_errno_ptr
+0001:00012acb  __get_doserrno_ptr
+0002:00002e1c+ _doserrno
+0002:00002e20+ errno
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(dosret)
+0001:00012ad1* _dosret0
+0001:00012aeb+ _dosretax
+0001:00012b08  __set_errno_dos
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(mktime)
+0001:00012b78  mktime
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(allocfp)
+0001:00012cd0* __allocfp
+0001:00012d73+ __freefp
+0001:00012daa  __purgefp
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(fclose)
+0001:00012dc8* fclose
+0001:00012df5  __shutdown_stream
+0001:00012e2b+ __MkTmpFile
+0001:00012ea4+ __doclose
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(isatt)
+0001:00012f4b  isatty
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(iomode)
+0001:00012f67  __IOMode
+0001:00012fbd  __SetIOMode
+0002:00002330+ __NFiles
+0002:00002334+ __init_mode
+0002:00002384+ _iomode
+Module: C:\lang\WATCOM\lib386\plib3s.lib(termnate)
+0001:00012fd4  void near terminate()
+Module: C:\lang\WATCOM\lib386\plib3s.lib(unexpect)
+0001:00013018  void near unexpected()
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(__stos)
+0001:00013050  __STOSB
+0001:00013087* __STOSD
+Module: C:\lang\WATCOM\lib386\plib3s.lib(areaexc)
+0002:00002388  __EXC_AREA
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(timeutil)
+0001:000130f4  __leapyear
+0001:0001325a  __isindst
+0002:00001bb0  __diyr
+0002:00001bca  __dilyr
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(gmtime)
+0001:00013561  __brktime
+0001:000136a1+ _gmtime
+0001:000136c4* gmtime
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(tzset)
+0002:00002788  __start_dst
+0002:000027ac  __end_dst
+0002:000027d0  timezone
+0002:000027d4  __dst_adjust
+0002:000027d8+ daylight
+0001:000136d7* tryOSTimeZone
+0001:000136d8  tzset
+0001:0001393a+ __parse_tz
+0002:0000281a* tzname
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(gtpid)
+0001:000139dc  getpid
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(ftell)
+0001:000139e2  ftell
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(_clse)
+0001:00013a16  __close
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(remove)
+0001:00013a4b  remove
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(getenv)
+0001:00013a59  getenv
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(tell)
+0001:00013ab4  tell
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(unlnk)
+0001:00013ac6  unlink
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(environ)
+0002:00002824  environ
+0002:00002828+ __env_mask
+Module: C:\lang\WATCOM\lib386\dos\clib3s.lib(setenvp)
+0001:00013ae8  __setenvp
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tv.lib
+c:\lang\avp\avp32.dos\shell\tvlibwat.d32\tvasm.lib
+C:\lang\WATCOM\lib386\dos\clib3s.lib
+C:\lang\WATCOM\lib386\plib3s.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  2000 (8192.)
+Memory size:  00018a15 (100885.)
+Entry point address: 0001:0000640c
+Link time: 00:02.16

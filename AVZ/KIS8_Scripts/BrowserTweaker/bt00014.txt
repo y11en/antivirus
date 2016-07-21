@@ -1,0 +1,19 @@
+// $AVZ1534
+//$ Internet Explorer - отключить отправку отчетов об ошибках
+// Функция поиска проблемы
+function Check : dword;
+var
+ X : integer;
+begin
+ Result := 0;
+ X := RegKeyIntParamRead('HKCU', 'Software\Microsoft\Internet Explorer\Main', 'IEWatsonDisabled');
+ if X <> 1 then
+  Result := 1;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+begin
+ RegKeyIntParamWrite('HKCU','Software\Microsoft\Internet Explorer\Main', 'IEWatsonDisabled', 1);
+ Result := 0;
+end;

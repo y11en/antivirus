@@ -1,0 +1,560 @@
+﻿[Global]
+ErrDifferPswrds.caption         = "Пароли не совпадают"
+ErrDifferPswrds                 = "Введите одинаковый пароль в оба поля."
+ErrNoPasswordEntered.caption    = "Не указан пароль"
+ErrNoPasswordEntered            = "Введите пароль или снимите флажок \"Включить защиту паролем\""
+ErrPswrdWrong.caption           = "Неправильный пароль"
+ErrPswrdWrong                   = "Попробуйте еще раз."
+ErrProxyHostIsMissing.caption   = "Пустой адрес"
+ErrProxyHostIsMissing           = "Укажите символьное имя прокси-сервера или IP-адрес."
+SendTroublesErrorDescr          = s_SendTroublesErrorDescr(OperationCode)
+CantCloseTroublesDlg            = "Невозможно закрыть диалог до окончания отсылки пакета"
+
+;------------- Scheduler -----------
+
+[SchedulerView]
+$ScheduleSettings   = "Настройки расписания"
+@                   = "Расписание: " + $ProfileName
+Time                = "Врем&я"
+RunIfSkipped        = "Запускать пропущенные задачи"
+
+[SchedulerView_Type]
+AtSpecTime          = "В указанное время"
+AtAppStartup        = "При запуске приложения"
+AfterEveryUpdate    = "После обновления"
+Minutely            = "Минуты"
+Hours               = "Часы"
+Days                = "Дни"
+Weeks               = "Недели"
+Monthly             = "Месяцы"
+
+[SchedulerView_Minutely]
+MinuteEvery = "Каждые"
+MinuteLalel = "&минут"
+
+[SchedulerView_Hourly]
+HourEvery   = "Каждые"
+HourLalel   = "&часов"
+
+[SchedulerView_Daily]
+DayRadio    = "Каждые"
+DayLalel    = "&дней"
+Weekday     = "По &будням"
+Holiday     = "По &выходным"
+
+[SchedulerView_Weekly]
+WeekDay0Text    = "&Пн"
+WeekDay1Text    = "&Вт"
+WeekDay2Text    = "С&р"
+WeekDay3Text    = "&Чт"
+WeekDay4Text    = "П&т"
+WeekDay5Text    = "С&б"
+WeekDay6Text    = "В&с"
+
+[SchedulerView_Monthly]
+MonthEvery  = "Каждый"
+MonthLalel  = "день месяца"
+
+[SchedulerView_AtStartup]
+AtStartup       = "Запуск через"
+AtStartupLalel  = "минут"
+
+[SchedulerView_Once]
+DateText = "Дата:"
+
+; Scheduler switches
+
+[Global]
+$SchedulerExactTime = if(schedule.UseTime, " at " + timeshort(schedule.Time))
+$SchedulerWeekDays  = if(schedule.WeekDay6, "Вс ") + if(schedule.WeekDay0, "Пн ") + if(schedule.WeekDay1, "Вт ") + if(schedule.WeekDay2, "Ср ") + if(schedule.WeekDay3, "Чт ") + if(schedule.WeekDay4, "Пт ") + if(schedule.WeekDay5, "Сб ")
+
+[SchedulerEvery]
+0   = "&Каждые " + schedule.DaysCount + " дней"
+1   = "По &будням"
+2   = "По &выходным"
+
+[SchedulerType]
+0       = "Каждые " + schedule.MinutesCount + " &минут"
+1       = "Каждые " + schedule.HoursCount + " &часов"
+2       = switch(schedule.Every,"SchedulerEvery") + $SchedulerExactTime
+3       = $SchedulerWeekDays + $SchedulerExactTime
+4       = "О&днократно в " + datetime_notz(schedule.Time)
+5       = "Каждый " + schedule.DaysCount + " день м&есяца" + $SchedulerExactTime
+6       = "При &запуске приложения"
+7       = "После каждого &обновления"
+default = "Не определено"
+
+[SchedulerEveryNoPrefix]
+0   = "Каждые " + schedule.DaysCount + " дней"
+1   = "По будням"
+2   = "По выходным"
+
+[SchedulerTypeNoPrefix]
+0       = "Каждые " + schedule.MinutesCount + " минут"
+1       = "Каждые " + schedule.HoursCount + " часов"
+2       = switch(schedule.Every,"SchedulerEvery") + $SchedulerExactTime
+3       = $SchedulerWeekDays + $SchedulerExactTime
+4       = "Однократно в " + datetime_notz(schedule.Time)
+5       = "Каждый " + schedule.DaysCount + " день месяца" + $SchedulerExactTime
+6       = "При запуске приложения"
+7       = "После каждого обновления"
+default = "Не определено"
+
+[SchedulerDescription]
+0       = "Вручную"
+1       = switch(schedule.Type,"SchedulerTypeNoPrefix")
+2       = "Автоматически"
+default = "Unknown mode"
+
+[HeuristicParams]
+LevelLow    = "поверхностный"
+LevelMed    = "средний"
+LevelHigh   = "глубокий"
+
+[PauseTaskGroup]
+@           = "Приостановка задачи"
+SheduleBtn  = "&Расписание..."
+Schedule    = "По &расписанию"
+AppStart    = "При &запуске программы..."
+AppStartBtn = "&Обзор..."
+
+[PauseTaskScheduleSettings]
+@ = "Приостановка задачи"
+
+[PauseTaskScheduleSettings_Body]
+FromLabel   = "Приостановить в"
+ToLabel     = "Возобновить в"
+
+[PauseTaskAppSettings]
+@ = "Программы"
+
+[ScanAction]
+#SCAN_ACTION_REPORT     = "Разрешать"
+#SCAN_ACTION_ASKUSER    = "Запрос действия"
+#SCAN_ACTION_DETECT     = "Запрещать"
+#SCAN_ACTION_POSTPONE   = "Запрос по окончании"
+#SCAN_ACTION_DISINFECT  = if(!TryDelete && !TryDisinfect, "Блокировать") + if(TryDisinfect, "Лечить") + if(TryDelete, TryDisinfect ? " или удалять" : "Удалять")
+#SCAN_ACTION_ASKDETECT  = "Запрос действия"
+
+[ScanActionMenu]
+AskFinish       = "Запрос по окончании"
+AskDetect       = "Запрос действия"
+DontAsk         = "Без запроса"
+TryDisinfect    = "Лечить"
+TryDelete       = TryDisinfect ? "Удалять, если лечение невозможно" : "Удалять"
+
+[WmActionMenu]
+Ask     = "Запрос действия"
+Block   = "Запрещать загрузку"
+Allow   = "Разрешать загрузку"
+
+[Firewall_Networks]
+Text = "Описание правила (для редактирования щелкните мышью подчеркнутые элементы):"
+
+[Firewall_Networks_NetList]
+Network     = "Зона"
+Severity    = "Статус"
+Stealthed   = "Невидимость"
+Desc        = "Описание"
+
+[FwZoneSeverity]
+#Fw_znTrusted   = "Доверенная"
+#Fw_znNetBIOS   = "Локальная сеть"
+#Fw_znUntrusted = "Интернет"
+
+;-------------------------------- OptionsWindow --------------------------------
+
+[OptionsWindow]
+@ = "Параметры"
+
+[OptionsWindow_Navigator_Btns]
+General         = "Общие"
+Threats         = "Угрозы"
+Exclusions      = "Исключения"
+Proxy           = "Прокси-сервер"
+Traffic         = "Проверка трафика"
+Notifications   = "Звуки и уведомления"
+Reports         = "Отчеты"
+Appearance      = "Вид"
+Feedback        = "Обратная связь"
+TroubleShooting = "Устранение проблем"
+
+[OptionsWindow_Navigator_WorkArea_General]
+Caption = "Основные настройки " + $ProductName
+
+[OptionsWindow_Navigator_WorkArea_General_Body]
+EnableProt      = "Включить постоянную защиту"
+RunOnStartup    = "Запускать " + $ProductName + "\nпри включении компьютера"
+AdvDis          = "Применять технологию активного лечения"
+Pswd            = "Самозащита"
+Performance     = "Совместимость"
+
+[OptionsWindow_Navigator_WorkArea_General_Body_Pswd]
+SelfProt        = "Включить самозащиту"
+ServiceControl  = "Отключить возможность внешнего управления\nсистемной службой"
+Pswd            = "Включить защиту паролем"
+
+[OptionsWindow_Navigator_WorkArea_General_Body_Performance]
+Battery = "Не запускать поиск вирусов по расписанию\nпри работе от батарей"
+Abs     = "Уступать ресурсы другим программам"
+
+[OptionsWindow_Navigator_WorkArea_Threats]
+Caption = "Категории вредоносного и потенциально нежелательного ПО"
+
+[OptionsWindow_Navigator_WorkArea_Exclusions]
+Caption = "Правила исключений позволяют разрешать конфликты совместимости"
+
+[OptionsWindow_Navigator_WorkArea_Exclusions_Body]
+RuleLabel = "Описание правила:"
+
+[OptionsWindow_Navigator_WorkArea_Exclusions_Body_List]
+Object  = "Объект"
+Threat  = "Вердикт"
+
+[OptionsWindow_Navigator_WorkArea_Notifications]
+Caption = "Настройка взаимодействия " + $ProductName + " с пользователем"
+
+[OptionsWindow_Navigator_WorkArea_Notifications_Body_List]
+Event   = "Событие"
+Ballon  = "Экран"
+Sound   = "Звук"
+Email   = "E-mail"
+
+[OptionsWindow_Navigator_WorkArea_Proxy]
+Caption = "Если вы используете прокси-сервер,\nукажите его параметры"
+
+[OptionsWindow_Navigator_WorkArea_Proxy_Body]
+UseProxy = "&Использовать прокси-сервер"
+
+[OptionsWindow_Navigator_WorkArea_Proxy_Body_Settings]
+Auto    = "Определять параметры &автоматически"
+Manual  = "Использовать &указанные параметры"
+UseAuth = "А&утентификация на прокси-сервере"
+Bypass  = "Не использовать прокси-сервер для &локальных адресов"
+
+[OptionsWindow_Navigator_WorkArea_Proxy_Body_Settings_Address]
+AddressLabel    = "Адрес:"
+Sep             = ":"
+
+[OptionsWindow_Navigator_WorkArea_Proxy_Body_Settings_Port]
+PortLabel = "Порт:"
+
+[OptionsWindow_Navigator_WorkArea_Proxy_Body_Settings_Login]
+LoginLabel = "Имя пользователя:"
+
+[OptionsWindow_Navigator_WorkArea_Proxy_Body_Settings_Pass]
+PassLabel = "Пароль:"
+
+[OptionsWindow_Navigator_WorkArea_Traffic]
+Caption = "Параметры защиты сетевого трафика от вирусов, спама и нежелательного контента"
+
+[OptionsWindow_Navigator_WorkArea_Traffic_Body]
+Ports   = "Сетевые порты"
+Crypted = "Шифрованные соединения"
+
+[OptionsWindow_Navigator_WorkArea_Traffic_Body_Ports]
+All     = "Защищать все сетевые порты"
+Custom  = "Защищать только выбранные порты"
+Select  = "Выбор..."
+
+[OptionsWindow_Navigator_WorkArea_Traffic_Body_Crypted]
+ChkAll  = "Проверять все шифрованные соединения"
+Ask     = "Запрос перед проверкой"
+ChkNon  = "Не проверять шифрованные соединения"
+
+[OptionsWindow_Navigator_WorkArea_Reports]
+Caption = "Управление отчетами и занимаемым ими местом диске"
+
+[OptionsWindow_Navigator_WorkArea_Reports_Body]
+EventLog    = "События"
+Statistics  = "Статистика"
+OldItems    = "Старые записи"
+
+[OptionsWindow_Navigator_WorkArea_Reports_Body_EventLog]
+Period      = "Ограничение по времени"
+PeriodLable = "дней"
+Size        = "Ограничение по размеру"
+SizeLable   = "МБ"
+
+[OptionsWindow_Navigator_WorkArea_Reports_Body_Statistics]
+Period      = "Ограничение по времени"
+PeriodLable = "дней"
+Size        = "Ограничение по размеру"
+SizeLable   = "МБ"
+
+[OptionsWindow_Navigator_WorkArea_Reports_Body_OldItems]
+Archive = "Архивировать в"
+Delete  = "Удалять"
+
+[OptionsWindow_Navigator_WorkArea_Appearance]
+Caption = "Настройка внешнего вида " + $ProductName
+
+[OptionsWindow_Navigator_WorkArea_Appearance_Body]
+Tray    = "Анимация иконки в панели задач"
+Skin    = "Папка с описанием скина"
+
+[OptionsWindow_Navigator_WorkArea_Appearance_Body_Tray]
+Tray            = "Анимация при выполнении проверки"
+Transparency    = "Использовать &полупрозрачные окна"
+News            = "Уведомление о новостях"
+Login           = "Показывать иконку на экране приветствия Windows"
+
+[OptionsWindow_Navigator_WorkArea_Appearance_Body_Skin]
+Enable = "Использовать альтернативные скины"
+
+[OptionsWindow_Navigator_WorkArea_Feedback]
+Caption = "Kaspersky Security Network - система сбора статистики"
+
+[OptionsWindow_Navigator_WorkArea_Feedback_Body]
+Desc    = "Kaspersky Security Network - система, автоматически отправляющая в Лабораторию Касперского информацию о заражениях и других проблемах, возникающих у наших пользователей. Это позволяет более оперативно реагировать на возникающие угрозы, а также постоянно улучшать наши продукты и услуги.\n\nЛаборатория Касперского гарантирует, что Kaspersky Security Network не собирает и не пересылает никакую информацию личного характера."
+Ksn     = "Я согласен участвовать в Kaspersky Security Network"
+
+[OptionsWindow_Navigator_WorkArea_TroubleShooting]
+Caption = "Используйте эту страницу при возникновении проблем с работой " + $ProductName
+
+[OptionsWindow_Navigator_WorkArea_TroubleShooting_Body]
+Info    = "Информация о продукте"
+Trace   = "Трассировка"
+Collect = "Загрузка результатов трассировки на сервер ЛК"
+
+[OptionsWindow_Navigator_WorkArea_TroubleShooting_Body_Trace]
+Label       = "По умолчанию используйте 500 уровень."
+StateLabel  = "Статус:"
+State       = tracer_state() ? "Трассировка включена" : "Трассировка выключена"
+LevelLabel  = "Уровень:"
+OnOff       = tracer_state() ? "Выключить" : "Включить"
+
+[OptionsWindow_Navigator_WorkArea_TroubleShooting_Body_Trace_Level]
+lvl100  = "Низкий (100)"
+lvl200  = "Средний (200)"
+lvl300  = "Средний (300)"
+lvl400  = "Высокий (400)"
+lvl500  = "Высокий (500)"
+lvl600  = "Максимум (600)"
+
+[OptionsWindow_Navigator_WorkArea_TroubleShooting_Body_Collect]
+Send    = "Загрузить..."
+Label   = has_traces() ? "Результаты готовы к загрузке" : "Результаты не готовы"
+
+[OptionsWindow_Navigator_WorkArea_Threats_List_row]
+Malicious   = "Вредоносные программы"
+Unwanted    = "Нежелательные программы"
+Packers     = "Упаковщики"
+
+[OptionsWindow_Navigator_WorkArea_Threats_List_row_Malicious]
+Viruses     = "Вирусы, черви"
+Trojans     = "Троянские программы"
+Malicious   = "Вредоносные утилиты"
+
+[OptionsWindow_Navigator_WorkArea_Threats_List_row_Malicious_Viruses]
+Email-Worm  = "Email-Worm"
+IM-Worm     = "IM-Worm"
+IRC-Worm    = "IRC-Worm"
+Net-Worm    = "Net-Worm"
+P2P-Worm    = "P2P-Worm"
+Worm        = "Worm"
+Virus       = "Virus"
+
+[OptionsWindow_Navigator_WorkArea_Threats_List_row_Malicious_Trojans]
+Trojan-ArcBomb      = "Trojan-ArcBomb"
+Backdoor            = "Backdoor"
+Trojan              = "Trojan"
+Trojan-AOL          = "Trojan-AOL"
+Trojan-Clicker      = "Trojan-Clicker"
+Trojan-Downloader   = "Trojan-Downloader"
+Trojan-Dropper      = "Trojan-Dropper"
+Trojan-Notifier     = "Trojan-Notifier"
+Trojan-Proxy        = "Trojan-Proxy"
+Trojan-PSW          = "Trojan-PSW"
+Trojan-Spy          = "Trojan-Spy"
+Trojan-DDoS         = "Trojan-DDoS"
+Trojan-IM           = "Trojan-IM"
+RootKit             = "RootKit"
+Trojan-SMS          = "Trojan-SMS"
+
+[OptionsWindow_Navigator_WorkArea_Threats_List_row_Malicious_Malicious]
+Constructor         = "Constructor"
+DoS                 = "DoS"
+Exploit             = "Exploit"
+FileCryptor         = "FileCryptor"
+Flooder             = "Flooder"
+HackTool            = "HackTool"
+not-virus:Hoax      = "not-virus:Hoax"
+not-virus:BadJoke   = "not-virus:BadJoke"
+Nuker               = "Nuker"
+PolyCryptor         = "PolyCryptor"
+PolyEngine          = "PolyEngine"
+Sniffer             = "Sniffer"
+SpamTool            = "SpamTool"
+Spoofer             = "Spoofer"
+VirTool             = "VirTool"
+Email-Flooder       = "Email-Flooder"
+IM-Flooder          = "IM-Flooder"
+SMS-Flooder         = "SMS-Flooder"
+
+[OptionsWindow_Navigator_WorkArea_Threats_List_row_Unwanted]
+AdWare      = "Рекламные программы (adware)"
+PornWare    = "Pornware"
+RiskWare    = "Riskware"
+
+[OptionsWindow_Navigator_WorkArea_Threats_List_row_Unwanted_PornWare]
+not-a-virus:Porn-Dialer     = "Porn-Dialer"
+not-a-virus:Porn-Downloader = "Porn-Downloader"
+not-a-virus:Porn-Tool       = "Porn-Tool"
+
+[OptionsWindow_Navigator_WorkArea_Threats_List_row_Unwanted_RiskWare]
+not-a-virus:Tool            = "Tool"
+not-a-virus:Client-IRC      = "Client-IRC"
+not-a-virus:Dialer          = "Dialer"
+not-a-virus:Downloader      = "Downloader"
+not-a-virus:Monitor         = "Monitor"
+not-a-virus:PSWTool         = "PSWTool"
+not-a-virus:RemoteAdmin     = "RemoteAdmin"
+not-a-virus:Server-FTP      = "Server-FTP"
+not-a-virus:Server-Proxy    = "Server-Proxy"
+not-a-virus:Server-Telnet   = "Server-Telnet"
+not-a-virus:Server-Web      = "Server-Web"
+not-a-virus:RiskTool        = "RiskTool"
+not-a-virus:NetTool         = "NetTool"
+not-a-virus:Client-P2P      = "Client-P2P"
+not-a-virus:Client-SMTP     = "Client-SMTP"
+not-a-virus:AdTool          = "AdTool"
+not-a-virus:FraudTool       = "FraudTool"
+
+[OptionsWindow_Navigator_WorkArea_Threats_List_row_Packers]
+Suspic  = "Подозрительные упаковщики"
+Multi   = "Многократно упакованные объекты"
+Grey    = "'Серые' упаковщики"
+
+[TrafficMonitor_Ports]
+@ = "Сетевые порты"
+
+[TrafficMonitor_Ports_Body]
+Info = "Информация"
+
+[TrafficMonitor_Ports_Body_Info]
+Text = "Для применения этих настроек необходимо перезапустить веб-браузер и другие сетевые программы"
+
+[TrafficMonitor_Ports_Body_List]
+Desc    = "Описание"
+Port    = "Порт"
+
+[TrafficMonitor_PortEdit]
+@           = "Сетевой порт"
+PortLabel   = "Порт:"
+DescLabel   = "Описание:"
+
+[Global]
+$ExclusionMasksDescr_Object     = if(Triggers & #AVS_fObjectMask, "Объект: <a ExclusionObjectEdit onclick(dialog(\"ExclusionObjectEdit\")) onok(if(!Object.Mask, balloon(\"ObjectNotSpecified\")))>" + (Object.Mask ? Object.Mask : "<b>выберите объект...</b>") + "</a>\n")
+$ExclusionMasksDescr_Verdict    = if(Triggers & #AVS_fVerdictMask, "Вердикт: <a ExclusionVerdictEdit onclick(dialog(\"ExclusionVerdictEdit\")) onok(if(!VerdictMask, balloon(\"VerdictNotSpecified\")))>" + (VerdictMask ? VerdictMask + if(Triggers & #AVS_fVerdictPath, " " + VerdictPath.Mask) : "<b>введите имя вердикта...</b>") + "</a>\n")
+$ExclusionMasksDescr_Components = "Компонент защиты: <a AnyTaskList onclick(iterate(bmask(Triggers, #AVS_fTaskList)))>" + (Triggers & #AVS_fTaskList ? "выбранный" : "любой") + "</a> " + if(Triggers & #AVS_fTaskList, " <a ExclusionTasksEdit onclick(dialog(\"ExclusionTasksEdit\"))>" + (size(TaskList) ? "tasks" : "<b>выберите компонент...</b>") + "</a>")
+$ExclusionMasksDescr            = "Объект не будет проверяться при выполнении следующих условий:\n" + $ExclusionMasksDescr_Object + $ExclusionMasksDescr_Verdict + $ExclusionMasksDescr_Components
+ObjectNotSpecified.caption      = "Объект не указан"
+ObjectNotSpecified              = "Введите точное имя или маску имени объекта"
+VerdictNotSpecified.caption     = "Вердикт не указан"
+VerdictNotSpecified             = "Введите точное имя или маску вердикта"
+AdressNotSpecified.caption      = "Адрес не указан"
+AdressNotSpecified              = "Введите точный адрес или маску"
+WordNotSpecified.caption        = "Фраза не указана"
+WordNotSpecified                = "Введите фразу или маску"
+
+
+[ExclusionEdit]
+@           = "Правило исключения"
+PropLabel   = "Свойства:"
+NameLabel   = "Комментарий:"
+RuleLabel   = "Описание правила (щелкните подчеркнутые элементы для редактирования):
+
+[ExclusionEdit_PropList.items]
+ObjectMask  = "Объект"
+VerdictMask = "Вердикт"
+
+[ExclusionObjectEdit]
+@       = "Имя объекта"
+Text    = "Введите имя файла, папки, или маску имени объекта:"
+Recurse = "Включая вложенные папки"
+
+[ExclusionVerdictEdit]
+@               = "Вердикт"
+Text            = "Введите имя или маску имени вердикта из Вирусной Энциклопедии:"
+VerdictObject   = "Дополнительные параметры"
+
+[ExclusionTasksEdit]
+@ = "Компоненты защиты"
+
+[RunAsGroup_PwdGroup]
+PwdLbl = "Пароль:"
+
+;-------------------------------- PasswordEdit --------------------------------
+
+[PasswordEdit]
+@       = "Защита паролем"
+Pswd    = "Пароль"
+Sett    = "Область действия"
+
+[PasswordEdit_Pswd]
+OldPswdText     = "&Старый пароль:"
+NewPswdText     = "&Новый пароль:"
+ConfPswdText    = "&Подтверждение пароля:"
+
+[PasswordEdit_Sett]
+@                   = "Область действия"
+All                 = "&Любые действия (кроме уведомлений об опасных событиях)"
+Selected            = "&Выбранные действия"
+WhenSaveSetting     = "&Настройка"
+WhenExitApp         = "Вы&грузка программы"
+WhenStopProtection  = "&Отключение или приостановка компонентов защиты"
+
+[SendTroublesDialog]
+@ = "Загрузка результатов трассировки на серверы ЛК"
+
+[SendTroublesDialog_Body_List]
+Size        = "Размер"
+PackSize    = "Трафик"
+Path        = "Файл"
+
+[SendTroublesDialog_Body_Footer]
+Send = "Загрузить"
+
+[s_SendTroublesDialog_Header_Name]
+1   = "Сбой при предыдущем запуске программы"
+0   = "Загрузка разультатов трассировки на FTP-сервер Лаборатории Касперского"
+
+[s_SendTroublesDialog_Header_Descr]
+1   = "Информация о состоянии программы на момент сбоя готова к загрузке."
+0   = "Файлы с результатами трассировки готовы к загрузке."
+
+[s_SendTroublesDialog_Header_Help]
+1   = "Отсылка этой информации в Лабораторию Касперского поможет нам устранить подобные ошибки в будущих версиях программ. В случае повторенния ситуации рекомендуется обратиться в Службу Технической Поддержки."
+0   = "Файлы перед отправкой будут упакованы."
+
+
+[s_SendTroublesDialog_SysInfo]
+1   = "Информация о системе"
+0   = @1
+
+[s_SetTroubles_SendState]
+1       = "Подготовка данных"
+2       = "Формирование пакета"
+3       = "Отправка пакета в ЛК"
+default = ""
+
+[s_SendTroublesErrorDescr]
+0       = ""
+1       = "Сбой при формировании пакета"
+2       = "Сбой при подготовке файла с информацией о системе"
+3       = "Сбой при подготовке результатов трассировки"
+4       = "Сбой при загрузке пакетов на FTP-сервер Лаборатории Касперского " + strVal1
+default = "Неопределенная ошибка при отправке пакета"
+
+[SchedulerDlg_Body]
+Schedule = "Расписание"
+
+[SchedulerDlg_Body_Schedule]
+Auto    = "Автоматически"
+Manual  = "Вручную"
+Fixed   = "По расписанию"
+
+[OptionsWindow_Navigator_WorkArea_TroubleShooting_Body_Info]
+Location.Name   = "Location:"
+Version.Name    = "Version:"

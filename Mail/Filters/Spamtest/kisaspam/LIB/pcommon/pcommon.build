@@ -1,0 +1,12 @@
+LIB
+TARGET pcommon
+
+CXXSRC convert.cpp
+CXXSRC Dos2Uni.cpp
+CXXSRC Iso2Uni.cpp
+CXXSRC Koi2Uni.cpp
+CXXSRC Lat12Uni.cpp
+CXXSRC Lat12Uni_cyr.cpp
+CXXSRC Mac2Uni.cpp
+CXXSRC Win2Uni.cpp
+CSRC koi8_ctype.c 

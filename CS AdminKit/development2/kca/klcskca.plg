@@ -1,0 +1,67 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: klcskca - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\SHIYAF~1\LOCALS~1\Temp\RSP233F.tmp" with contents
+[
+/nologo /G5 /MDd /W3 /Gm /GX /ZI /Od /I "../include" /I "../gsoap" /I "../gsoap/std" /I "../../../CommonFiles" /I "../include/stlport/stlport" /I "../openssl/inc32" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_UNICODE" /D "UNICODE" /D "_USRDLL" /D "KLCSTR_EXPORTS" /D "_STLP_NEW_PLATFORM_SDK" /D "_STLP_DEBUG" /D "USE_BOOST_THREADS" /D "BOOST_ALL_NO_LIB" /FR"..\bin\debug\kca/" /Fp"..\bin\debug\kca/klcskca.pch" /YX /Fo"..\bin\debug\kca/" /Fd"..\bin\debug\kca/" /FD /GZ /c 
+"O:\CS AdminKit\development2\KCA\jrnl\journalimpl.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\SHIYAF~1\LOCALS~1\Temp\RSP233F.tmp" 
+Creating temporary file "C:\DOCUME~1\SHIYAF~1\LOCALS~1\Temp\RSP2340.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib stlport_stld50.lib /nologo /dll /incremental:yes /pdb:"..\bin\dlld/klcskca.pdb" /debug /machine:I386 /out:"..\bin\dlld/klcskca.dll" /implib:"..\bin\dlld/klcskca.lib" /pdbtype:sept /libpath:"O:\CommonFiles\DebugDll\\" /libpath:"../lib/debug" 
+"\CS AdminKit\development2\bin\debug\kca\componentproxy.obj"
+"\CS AdminKit\development2\bin\debug\kca\proxybase.obj"
+"\CS AdminKit\development2\bin\debug\kca\wintermprefix.obj"
+"\CS AdminKit\development2\bin\debug\kca\cmp_helpers.obj"
+"\CS AdminKit\development2\bin\debug\kca\componentinstance.obj"
+"\CS AdminKit\development2\bin\debug\kca\prci_auth.obj"
+"\CS AdminKit\development2\bin\debug\kca\prci_inprocess.obj"
+"\CS AdminKit\development2\bin\debug\kca\sink.obj"
+"\CS AdminKit\development2\bin\debug\kca\soapapi.obj"
+"\CS AdminKit\development2\bin\debug\kca\taskdata.obj"
+"\CS AdminKit\development2\bin\debug\kca\TEXT2BIN.OBJ"
+"\CS AdminKit\development2\bin\debug\kca\eventsstorage.obj"
+"\CS AdminKit\development2\bin\debug\kca\eventsstorageserver.obj"
+"\CS AdminKit\development2\bin\debug\kca\policy.obj"
+"\CS AdminKit\development2\bin\debug\kca\prespersistenteventlist.obj"
+"\CS AdminKit\development2\bin\debug\kca\pressubscriptionlist.obj"
+"\CS AdminKit\development2\bin\debug\kca\distr_pol.obj"
+"\CS AdminKit\development2\bin\debug\kca\helpers.obj"
+"\CS AdminKit\development2\bin\debug\kca\nameconvertor.obj"
+"\CS AdminKit\development2\bin\debug\kca\ops_pol.obj"
+"\CS AdminKit\development2\bin\debug\kca\paths.obj"
+"\CS AdminKit\development2\bin\debug\kca\profiles.obj"
+"\CS AdminKit\development2\bin\debug\kca\settingsstorage.obj"
+"\CS AdminKit\development2\bin\debug\kca\ss_bulkmodeimp.obj"
+"\CS AdminKit\development2\bin\debug\kca\ss_props.obj"
+"\CS AdminKit\development2\bin\debug\kca\ss_sync.obj"
+"\CS AdminKit\development2\bin\debug\kca\store.obj"
+"\CS AdminKit\development2\bin\debug\kca\ts_smart_rw.obj"
+"\CS AdminKit\development2\bin\debug\kca\taskinfo.obj"
+"\CS AdminKit\development2\bin\debug\kca\tasksstorage.obj"
+"\CS AdminKit\development2\bin\debug\kca\taskstorageserver.obj"
+"\CS AdminKit\development2\bin\debug\kca\common.obj"
+"\CS AdminKit\development2\bin\debug\kca\journalimpl.obj"
+"\CS AdminKit\development2\bin\debug\kca\journaltextimpl.obj"
+"\CS AdminKit\development2\bin\dlld\klcsstd.lib"
+"\CS AdminKit\development2\bin\dlld\klcstr.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\SHIYAF~1\LOCALS~1\Temp\RSP2340.tmp"
+<h3>Output Window</h3>
+Compiling...
+journalimpl.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+klcskca.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

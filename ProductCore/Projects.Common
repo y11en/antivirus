@@ -1,0 +1,7 @@
+PROJECTS+= \
+	QB \
+	tm2 \
+	REPORT \
+	Scheduler \
+	basegui \
+	basegui/unigui

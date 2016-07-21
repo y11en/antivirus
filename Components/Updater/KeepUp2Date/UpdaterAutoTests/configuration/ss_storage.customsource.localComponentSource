@@ -1,0 +1,51 @@
+; *** This is general section ***
+[ProductInfo]
+
+Folder=out/installation
+BaseFolder=out/bases
+UpdateRoot=out/updateRoot
+DataFolder=out/defaultlocalpath
+DSKM=out/DSKM
+
+;   * Language Identifier *
+LocID=1
+;   * Product Name *
+OsName=Windows
+OsVersion=5.0
+
+;   * download AH only to reduce download size and time *
+components=MATCH,OPTIONAL1,OPTIONAL2,OPTIONAL3,OPTIONAL4
+;   * optional component set *
+optionalComponents=OPTIONAL1,OPTIONAL2,OPTIONAL3,OPTIONAL4
+
+[Updater]
+primaryIndexFileName=master.xml
+primaryIndexRelativeUrlPath=index
+primaryIndexLocalPath=
+
+temporary_dir=out/tmp
+retranslation_dir=out/retranslation
+
+self_region=<default>
+
+
+log_level=10
+connect_tmo=20
+
+;  ** Proxy Settings **
+proxy_url=proxy.avp.ru
+proxy_port=8080
+proxy_authorisation=1
+proxy_ntlm_access_token=1
+
+
+;  ** Parameters for update mode **
+update_bases=1
+apply_urgent_updates=0
+automatically_apply_available_updates=0
+
+
+;  ** Source specification **
+master_asrv_update=0
+asrv_update=0
+

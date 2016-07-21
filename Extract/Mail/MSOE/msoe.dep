@@ -1,0 +1,311 @@
+# Microsoft Developer Studio Generated Dependency File, included by msoe.mak
+
+.\hook.cpp : \
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	".\hook.h"\
+	
+
+.\msoe.cpp : \
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\Hash\MD5\plugin_hash_md5.h"\
+	"..\include\iface\i_hash.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_io.h"\
+	"..\include\iface\i_mailmsg.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\Include\IFace\i_objptr.h"\
+	"..\INCLUDE\IFACE\i_os.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_seqio.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_string.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\Include\plugin\p_win32_nfio.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\Include\pr_oid.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	"..\NFIO\win32_io.h"\
+	".\buff_prm.h"\
+	".\hook.h"\
+	".\msoe.h"\
+	".\msoe_base.h"\
+	".\msoeAPI.h"\
+	".\MSOEAPI\FolderInfo.h"\
+	".\MSOEAPI\FolderTableSchema.h"\
+	".\MSOEAPI\IDatabase.h"\
+	".\MSOEAPI\IDatabaseExtension.h"\
+	".\MSOEAPI\IDatabaseSession.h"\
+	".\MSOEAPI\IMimeMessageW.h"\
+	".\MSOEAPI\IVirtualStream.h"\
+	".\MSOEAPI\MessageInfo.h"\
+	".\MSOEAPI\MessageTableSchema.h"\
+	".\MSOEAPI\PropSym.h"\
+	".\plugin_msoe.h"\
+	
+
+.\msoe_base.cpp : \
+	"..\Include\IFace\i_buffer.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_io.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\Include\IFace\i_objptr.h"\
+	"..\INCLUDE\IFACE\i_os.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_seqio.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_string.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\Include\pr_oid.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\buff_prm.h"\
+	".\msoe_base.h"\
+	
+
+.\msoe_io.cpp : \
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_io.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\Include\IFace\i_objptr.h"\
+	"..\INCLUDE\IFACE\i_os.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_seqio.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_string.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\Include\pr_oid.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\buff_prm.h"\
+	".\msoe_base.h"\
+	".\msoe_io.h"\
+	".\plugin_msoe.h"\
+	
+
+.\msoe_objptr.cpp : \
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_io.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\Include\IFace\i_objptr.h"\
+	"..\INCLUDE\IFACE\i_os.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_seqio.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_string.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\Include\pr_oid.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\buff_prm.h"\
+	".\msoe_base.h"\
+	".\msoe_objptr.h"\
+	".\plugin_msoe.h"\
+	
+
+.\msoe_os.cpp : \
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_io.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\Include\IFace\i_objptr.h"\
+	"..\INCLUDE\IFACE\i_os.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_seqio.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_string.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\Include\pr_oid.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\buff_prm.h"\
+	".\msoe_base.h"\
+	".\msoe_os.h"\
+	".\plugin_msoe.h"\
+	
+
+.\plugin_msoe.cpp : \
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_io.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\Include\IFace\i_objptr.h"\
+	"..\INCLUDE\IFACE\i_os.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_seqio.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_string.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\Include\pr_oid.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\buff_prm.h"\
+	".\msoe_base.h"\
+	".\msoe_io.h"\
+	".\msoe_objptr.h"\
+	".\msoe_os.h"\
+	".\plugin_msoe.h"\
+	
+
+.\stream.cpp : \
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_io.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	
+
+.\msoe.rc : \
+	"..\..\CommonFiles\Version\ver_av50.h"\
+	"..\..\CommonFiles\Version\ver_itoa.h"\
+	"..\..\CommonFiles\Version\ver_kl.h"\
+	

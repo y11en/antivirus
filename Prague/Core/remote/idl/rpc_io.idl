@@ -1,0 +1,39 @@
+// --------------------------------------------------------------------------------
+// AVP Prague stamp begin( Interface header,  )
+// -------- Monday,  07 October 2002,  13:16 --------
+// File Name   -- i_io.h
+// Copyright (c) Kaspersky Labs. 1996-2002.
+// -------------------------------------------
+// AVP Prague stamp end
+
+
+
+import "prague.h";
+import "i_io.h";
+
+typedef rpcOBJECT	rpcIO;
+
+// --------------------------------------------------------------------------------
+// AVP Prague stamp begin( Interface comment,  )
+// IO interface implementation
+// Short comments -- input/output interface
+//    Defines behavior of input/output of an object
+//    Important -- It is supposed several clients can use single IO object simultaneously. It has no internal current position.
+// AVP Prague stamp end
+
+
+
+// --------------------------------------------------------------------------------
+// AVP Prague stamp begin( Interface function forward declarations,  )
+[ uuid (837B99A4-BC3E-42ba-8520-3D7DDE3A4195),
+  version(1.0),
+  pointer_default(unique)
+]
+interface rpc_io {
+	tERROR IO_SeekRead  ( rpcIO _this, [mout] tDWORD* result, tQWORD offset, [mout,size_is(size)] tCHAR* buffer, tDWORD size ); // -- reads content of the object to the buffer;
+	tERROR IO_SeekWrite ( rpcIO _this, [mout] tDWORD* result, tQWORD offset, [in,size_is(size)]  tCHAR* buffer, tDWORD size ); // -- writes buffer to the object;
+	tERROR IO_GetSize   ( rpcIO _this, [mout] tQWORD* result, IO_SIZE_TYPE type );                       // -- returns size of the requested type of the object;
+	tERROR IO_SetSize   ( rpcIO _this, tQWORD new_size );                                                // -- resizes the object;
+	tERROR IO_Flush     ( rpcIO _this );                                                                 // -- flush internal buffers;
+}
+// AVP Prague stamp end

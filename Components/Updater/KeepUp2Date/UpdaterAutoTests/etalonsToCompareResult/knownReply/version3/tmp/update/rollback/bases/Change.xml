@@ -1,0 +1,49 @@
+<UpdateFiles UpdateDate="08112005 1200">
+  <UpdateSettings Name="Updater/update_date" Type="date" Value="08112005 1050" />
+  <UpdateSettings Name="Updater/av_records" Type="long" Value="163522" />
+
+  <FileDescription ComponentID="MATCH"
+         UpdateType="base"
+         RelativeSrvPath="bases/1"
+         LocalPath="%BaseFolder%"
+         Filename="Change.avc"
+         FileDate="25052005 1307" />
+
+  <FileDescription ComponentID="MATCH"
+         UpdateType="base"
+         RelativeSrvPath="bases/1"
+         LocalPath="%BaseFolder%"
+         Filename="ChangeWithSQZECompression.sqz"
+         FileDate="25052005 1307" />
+
+  <FileDescription ComponentID="MATCH"
+         UpdateType="base"
+         ServerFolder="1/"
+         LocalPath="%BaseFolder%"
+         Filename="Add.avc"
+         FileDate="25052005 1307" />
+
+  <FileDescription ComponentID="MATCH"
+         UpdateType="base"
+         RelativeSrvPath="bases/1"
+         LocalPath="%BaseFolder%"
+         Filename="Non_Change.avc" />
+
+  <FileDescription ComponentID="FILTER"
+         UpdateType="base"
+         RelativeSrvPath="bases/1"
+         LocalPath="%BaseFolder%"
+         Filename="Filter.avc"
+         FileDate="25052005 1307" />
+
+  <FileDescription
+         UpdateType="base"
+         RelativeSrvPath="bases/1"
+         LocalPath="%BaseFolder%"
+         Filename="md5.avc"
+         MD5="PXxDdanI/bfDFPE8vSoBuw=="
+         FileDate="25052005 1307" />
+
+</UpdateFiles>
+
+;:10KUQTvWKokeYEOjMtc9VtyU0Qjhw3mpJUDqVXbLd90znRqk7cLs+gM97qC63trPtdAusglJBsJv15Aei8UzEs5o%%

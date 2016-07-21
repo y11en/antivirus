@@ -1,0 +1,39 @@
+// $AVZ1569
+//$ Удалить файлы журналов Windows
+// Функция поиска проблемы
+function Check : dword;
+var
+ S : string;
+ FS : TFileSearch;
+begin
+ Result := 0;
+ S := NormalDir('%System32%\wbem\Logs');
+ if DirectoryExists(S) then begin
+  FS := TFileSearch.Create(nil);
+  FS.FindFirst(S + '*.lo*');
+  if FS.Found then
+   Result := 2;
+  FS.Free;
+ end;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+var
+ S : string;
+ FS : TFileSearch;
+begin
+ Result := 0;
+ S := NormalDir('%System32%\wbem\Logs');
+ if DirectoryExists(S) then begin
+  FS := TFileSearch.Create(nil);
+  FS.FindFirst(S + '*.lo*');
+  while FS.Found do begin
+   // Удаление найденных файлов *.LO* (журналы системы)
+   if not(FS.IsDir) then
+     DeleteFile(S + FS.FileName);
+   FS.FindNext;
+  end;
+  FS.Free;
+ end;
+end;

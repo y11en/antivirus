@@ -1,0 +1,4 @@
+// ***** AdvWare.ClearSearch *****
+begin
+ AddEvAlarmByCLSID('00000000-0000-0000-0000-000000000221', AScriptName, 'CSIE.DLL');
+end.

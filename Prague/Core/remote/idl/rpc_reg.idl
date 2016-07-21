@@ -1,0 +1,31 @@
+import "prague.h";
+import "i_reg.h";
+
+typedef rpcOBJECT	rpcREGISTRY;
+
+[ uuid (A765678D-3015-4e87-8C45-B12EF3D5C3F3),
+  version(1.0),
+  pointer_default(unique)
+]
+interface rpc_registry {
+	tERROR Registry_OpenKey             ( rpcREGISTRY _this, [mout] tRegKey* result, tRegKey key, [in,string] const tCHAR* szSubKeyName, tBOOL bCreateIfNotExist ); // -- if parametr bCreateIfNotExist is cTRUE and key was really created method must return errKEY_NOT_EXISTS warning;
+	tERROR Registry_OpenKeyByIndex      ( rpcREGISTRY _this, [mout] tRegKey* result, tRegKey key, tDWORD index, tBOOL bClosePrev ); // -- if parametr bCreateIfNotExist is cTRUE and key was really created method must return errKEY_NOT_EXISTS warning;
+	tERROR Registry_OpenNextKey         ( rpcREGISTRY _this, [mout] tRegKey* result, tRegKey key, tBOOL bClosePrev ); // -- opens next key on the same level;
+	tERROR Registry_CloseKey            ( rpcREGISTRY _this, tRegKey key ); // -- closes the key;
+	tERROR Registry_GetKeyName          ( rpcREGISTRY _this, [mout] tDWORD* result, tRegKey key, [in,size_is(size)] tCHAR* name_buff, tDWORD size, tBOOL bFullName ); // -- returns name of the key;
+	tERROR Registry_GetKeyNameByIndex   ( rpcREGISTRY _this, [mout] tDWORD* result, tRegKey key, tDWORD index, [mout,size_is(size)] tCHAR* name_buff, tDWORD size, tBOOL bFullName ); // -- returns name of the subkey by index;
+	tERROR Registry_GetValue            ( rpcREGISTRY _this, [mout] tDWORD* result, tRegKey key, [in,string] const tCHAR* szValueName, [mout]tTYPE_ID* type, tPTR pValue, tDWORD size ); // -- gets key value, returns byte length of the value put in the buffer;
+	tERROR Registry_GetValueByIndex     ( rpcREGISTRY _this, [mout] tDWORD* result, tRegKey key, tDWORD index, [mout]tTYPE_ID* type, tPTR pValue, tDWORD size ); // -- gets key value, returns byte length of the value put in the buffer;
+	tERROR Registry_GetValueNameByIndex ( rpcREGISTRY _this, [mout] tDWORD* result, tRegKey key, tDWORD index, [mout,size_is(size)] tCHAR* name_buff, tDWORD size ); // -- gets key name, returns byte length of the name put in the buffer;
+	tERROR Registry_SetValue            ( rpcREGISTRY _this, tRegKey key, [in,string] const tCHAR* szValueName, tTYPE_ID type, tPTR pValue, tDWORD size, tBOOL bCreateIfNotExist ); // -- set key value. Creates key if it is not exist and parameter bCreateIfNotExist is true. Returns warning errKEY_NOT_EXISTS in this case;
+	tERROR Registry_SetValueByIndex     ( rpcREGISTRY _this, tRegKey key, tDWORD index, tTYPE_ID type, tPTR pValue, tDWORD size, tBOOL bCreateIfNotExist ); // -- set key value, creates key if it is not exist and return warning errKEY_NOT_EXISTS in this case;
+	tERROR Registry_GetKeyCount         ( rpcREGISTRY _this, [mout] tDWORD* result, tRegKey key ); // -- gets subkey count;
+	tERROR Registry_GetValueCount       ( rpcREGISTRY _this, [mout] tDWORD* result, tRegKey key ); // -- gets subkey count;
+	tERROR Registry_DeleteKey           ( rpcREGISTRY _this, tRegKey key, [in,string] const tCHAR* szSubKeyName ); // -- deletes the key;
+	tERROR Registry_DeleteKeyByInd      ( rpcREGISTRY _this, tRegKey key, tDWORD index ); // -- deletes the key;
+	tERROR Registry_DeleteValue         ( rpcREGISTRY _this, tRegKey key, [in,string] const tCHAR* szValueName ); // -- deletes the key value;
+	tERROR Registry_DeleteValueByInd    ( rpcREGISTRY _this, tRegKey key, tDWORD index ); // -- deletes the key value;
+	tERROR Registry_Clean               ( rpcREGISTRY _this );            // -- clean the object contained registry data from the root key;
+}
+
+

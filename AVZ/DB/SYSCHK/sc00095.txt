@@ -1,0 +1,14 @@
+// ***** TrojanDownloader.WinTrim *****
+begin
+ AddEvAlarmByCLSID('B3A5878E-5B4C-4D12-9156-4D7FD8D0AF6C','TrojanDownloader.WinTrim.bj','one2oneSvc.dll');
+ AddEvAlarmByCLSID('B843DA96-2B2D-447E-90AB-B92929AA11AF',AScriptName+', Dialer.E-Group','');
+ AddEvAlarmByCLSID('946B0485-8F8C-4C35-A6E7-D2115E3B0B4F',AScriptName,'');
+ AddEvAlarmByCLSID('4A6FA2EB-F381-4503-87D0-BE4CC57DEB8E',AScriptName,'');
+ AddEvAlarmByCLSID('093F9CF8-0DE1-491C-95D5-5EC257BD4CA3','TrojanDownloader.WinTrim.ah','dtc32.dll');
+ AddEvAlarmByCLSID('14325268-79E0-4D2A-89A4-FFFC6E22741E','TrojanDownloader.WinTrim.ax','LiveService_3.dll');
+ AddEvAlarmByCLSID('EEECA057-AD0F-44A7-8BE5-8634CEDBDBD1','TrojanDownloader.WinTrim.bb','netpe32.dll');
+ AddEvAlarmByCLSID('94F5DCB7-816C-4B94-A2C1-856C6E323C5B','TrojanDownloader.WinTrim.bk','eglivecam_1027.dll');
+ AddEvAlarmByCLSID('2A91CEB1-37F5-424C-997C-4C38A3677CD8','TrojanDownloader.WinTrim.bo','LiveService_2.dll');
+ AddEvAlarmByCLSID('0594AF7E-573B-40DF-8165-E47AB2EAEFE8','TrojanDownloader.WinTrim.by, Trojan.p2e','eglivecam_1028.dll');
+ AddEvAlarmByCLSID('486E48B5-ABF2-42BB-A327-2679DF3FB822','TrojanDownloader.WinTrim.w','ia.dll');
+end.

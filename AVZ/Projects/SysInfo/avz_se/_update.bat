@@ -1,0 +1,1 @@
+C:\upx124w\upx.exe -9 avz_se.exe

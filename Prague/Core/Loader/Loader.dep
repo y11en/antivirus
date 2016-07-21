@@ -1,0 +1,1049 @@
+# Microsoft Developer Studio Generated Dependency File, included by Loader.mak
+
+.\csect_2l.c : \
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\include\iface\i_csect.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\ShareExclusiveResource.h"\
+	
+
+.\csection.c : \
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\include\iface\i_csect.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\csection.h"\
+	
+
+.\cthread.c : \
+	"..\..\CommonFiles\_avpio.h"\
+	"..\..\CommonFiles\avp_data.h"\
+	"..\..\CommonFiles\AVPComID.h"\
+	"..\..\CommonFiles\AVPPort.h"\
+	"..\..\commonfiles\property\property.h"\
+	"..\..\commonfiles\serialize\kldtdefs.h"\
+	"..\..\commonfiles\serialize\kldtser.h"\
+	"..\..\commonfiles\swmanager\swm.h"\
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\..\windows\hook\hook\fssync.h"\
+	"..\CodeGen\AVPPveID.h"\
+	"..\include\iface\i_csect.h"\
+	"..\include\iface\i_event.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\Include\iface\i_loader.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_mutex.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_semaph.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_loadr.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\csect_2l.h"\
+	".\csection.h"\
+	".\iface.h"\
+	".\loader.h"\
+	".\mod_load.h"\
+	".\mutex.h"\
+	".\plugin.h"\
+	".\plugin_win32loader.h"\
+	".\prop_util.h"\
+	".\semaphore.h"\
+	".\ShareExclusiveResource.h"\
+	".\syncevent.h"\
+	".\WHeap.h"\
+	
+
+.\dbgout.c : \
+	"..\..\CommonFiles\_avpio.h"\
+	"..\..\CommonFiles\avp_data.h"\
+	"..\..\CommonFiles\AVPComID.h"\
+	"..\..\CommonFiles\AVPPort.h"\
+	"..\..\commonfiles\property\property.h"\
+	"..\..\commonfiles\serialize\kldtdefs.h"\
+	"..\..\commonfiles\serialize\kldtser.h"\
+	"..\..\commonfiles\swmanager\swm.h"\
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\..\windows\hook\hook\fssync.h"\
+	"..\CodeGen\AVPPveID.h"\
+	"..\Include\IFace\e_clsid.h"\
+	"..\Include\IFace\e_ktrace.h"\
+	"..\Include\IFace\e_loader.h"\
+	"..\include\iface\i_csect.h"\
+	"..\include\iface\i_event.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\Include\iface\i_loader.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_mutex.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_semaph.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\Include\IFace\impexhlp.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_loadr.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\csect_2l.h"\
+	".\csection.h"\
+	".\iface.h"\
+	".\loader.h"\
+	".\mod_load.h"\
+	".\mutex.h"\
+	".\plugin.h"\
+	".\plugin_win32loader.h"\
+	".\prop_util.h"\
+	".\semaphore.h"\
+	".\ShareExclusiveResource.h"\
+	".\syncevent.h"\
+	".\WHeap.h"\
+	
+
+!IF  "$(CFG)" == "Loader - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "Loader - Win32 Debug"
+
+!ENDIF 
+
+.\fm_folder.c : \
+	"..\..\CommonFiles\_avpio.h"\
+	"..\..\CommonFiles\avp_data.h"\
+	"..\..\CommonFiles\AVPComID.h"\
+	"..\..\CommonFiles\AVPPort.h"\
+	"..\..\commonfiles\property\property.h"\
+	"..\..\commonfiles\serialize\kldtdefs.h"\
+	"..\..\commonfiles\serialize\kldtser.h"\
+	"..\..\commonfiles\swmanager\swm.h"\
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\..\windows\hook\hook\fssync.h"\
+	"..\CodeGen\AVPPveID.h"\
+	"..\include\iface\i_csect.h"\
+	"..\include\iface\i_event.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\Include\iface\i_loader.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_mutex.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_semaph.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_loadr.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\csect_2l.h"\
+	".\csection.h"\
+	".\iface.h"\
+	".\loader.h"\
+	".\mod_load.h"\
+	".\mutex.h"\
+	".\plugin.h"\
+	".\plugin_win32loader.h"\
+	".\prop_util.h"\
+	".\semaphore.h"\
+	".\ShareExclusiveResource.h"\
+	".\syncevent.h"\
+	".\WHeap.h"\
+	
+
+.\fm_str_plist.c : \
+	"..\..\CommonFiles\_avpio.h"\
+	"..\..\CommonFiles\avp_data.h"\
+	"..\..\CommonFiles\AVPComID.h"\
+	"..\..\CommonFiles\AVPPort.h"\
+	"..\..\commonfiles\property\property.h"\
+	"..\..\commonfiles\serialize\kldtdefs.h"\
+	"..\..\commonfiles\serialize\kldtser.h"\
+	"..\..\commonfiles\swmanager\swm.h"\
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\..\windows\hook\hook\fssync.h"\
+	"..\CodeGen\AVPPveID.h"\
+	"..\include\iface\i_csect.h"\
+	"..\include\iface\i_event.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\Include\iface\i_loader.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_mutex.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_semaph.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_loadr.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\csect_2l.h"\
+	".\csection.h"\
+	".\iface.h"\
+	".\loader.h"\
+	".\mod_load.h"\
+	".\mutex.h"\
+	".\plugin.h"\
+	".\plugin_win32loader.h"\
+	".\prop_util.h"\
+	".\semaphore.h"\
+	".\ShareExclusiveResource.h"\
+	".\syncevent.h"\
+	".\WHeap.h"\
+	
+
+.\loader.c : \
+	"..\..\CommonFiles\_avpio.h"\
+	"..\..\CommonFiles\avp_data.h"\
+	"..\..\CommonFiles\AVPComID.h"\
+	"..\..\CommonFiles\AVPPort.h"\
+	"..\..\commonfiles\property\property.h"\
+	"..\..\commonfiles\serialize\kldtdefs.h"\
+	"..\..\commonfiles\serialize\kldtser.h"\
+	"..\..\commonfiles\swmanager\swm.h"\
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\..\windows\hook\hook\fssync.h"\
+	"..\CodeGen\AVPPveID.h"\
+	"..\include\iface\i_csect.h"\
+	"..\include\iface\i_event.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\Include\iface\i_loader.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_mutex.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_semaph.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_loadr.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\csect_2l.h"\
+	".\csection.h"\
+	".\iface.h"\
+	".\loader.h"\
+	".\mod_load.h"\
+	".\mutex.h"\
+	".\plugin.h"\
+	".\plugin_win32loader.h"\
+	".\prop_util.h"\
+	".\semaphore.h"\
+	".\ShareExclusiveResource.h"\
+	".\syncevent.h"\
+	".\WHeap.h"\
+	
+
+.\mod_load.c : \
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\include\iface\i_csect.h"\
+	"..\include\iface\i_event.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\Include\iface\i_loader.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_mutex.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\include\iface\i_semaph.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\Include\plugin\p_win32loader.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\mod_load.h"\
+	".\PrFormat.h"\
+	
+
+.\mutex.c : \
+	"..\..\CommonFiles\_avpio.h"\
+	"..\..\CommonFiles\avp_data.h"\
+	"..\..\CommonFiles\AVPComID.h"\
+	"..\..\CommonFiles\AVPPort.h"\
+	"..\..\commonfiles\property\property.h"\
+	"..\..\commonfiles\serialize\kldtdefs.h"\
+	"..\..\commonfiles\serialize\kldtser.h"\
+	"..\..\CommonFiles\Service\SA.H"\
+	"..\..\commonfiles\swmanager\swm.h"\
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\..\windows\hook\hook\fssync.h"\
+	"..\CodeGen\AVPPveID.h"\
+	"..\include\iface\i_csect.h"\
+	"..\include\iface\i_event.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\Include\iface\i_loader.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_mutex.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_semaph.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_loadr.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\csect_2l.h"\
+	".\csection.h"\
+	".\iface.h"\
+	".\loader.h"\
+	".\mod_load.h"\
+	".\mutex.h"\
+	".\plugin.h"\
+	".\plugin_win32loader.h"\
+	".\prop_util.h"\
+	".\semaphore.h"\
+	".\ShareExclusiveResource.h"\
+	".\syncevent.h"\
+	".\WHeap.h"\
+	
+
+.\ploader.c : \
+	"..\..\CommonFiles\_avpio.h"\
+	"..\..\CommonFiles\avp_data.h"\
+	"..\..\CommonFiles\AVPComID.h"\
+	"..\..\CommonFiles\AVPPort.h"\
+	"..\..\commonfiles\property\property.h"\
+	"..\..\commonfiles\serialize\kldtdefs.h"\
+	"..\..\commonfiles\serialize\kldtser.h"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\commonfiles\swmanager\swm.h"\
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\..\windows\hook\hook\fssync.h"\
+	"..\CodeGen\AVPPveID.h"\
+	"..\CodeGen\PrDbgInfo\PrDbgInfo.h"\
+	"..\Include\IFace\e_clsid.h"\
+	"..\Include\IFace\e_ktime.h"\
+	"..\Include\IFace\e_loader.h"\
+	"..\include\iface\i_csect.h"\
+	"..\include\iface\i_event.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\Include\iface\i_loader.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_mutex.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_semaph.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\Include\IFace\impexhlp.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_loadr.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	"..\wheapgrd\plugin_wheapgrd.h"\
+	".\csect_2l.h"\
+	".\csection.h"\
+	".\iface.h"\
+	".\loader.h"\
+	".\mod_load.h"\
+	".\mutex.h"\
+	".\plugin.h"\
+	".\plugin_win32loader.h"\
+	".\PrFormat.h"\
+	".\prop_util.h"\
+	".\semaphore.h"\
+	".\ShareExclusiveResource.h"\
+	".\syncevent.h"\
+	".\WHeap.h"\
+	
+
+.\plugin.cpp : \
+	"..\..\CommonFiles\_avpio.h"\
+	"..\..\CommonFiles\avp_data.h"\
+	"..\..\CommonFiles\AVPComID.h"\
+	"..\..\CommonFiles\AVPPort.h"\
+	"..\..\commonfiles\property\property.h"\
+	"..\..\commonfiles\serialize\kldtdefs.h"\
+	"..\..\commonfiles\serialize\kldtser.h"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\CommonFiles\Stuff\cpointer.h"\
+	"..\..\commonfiles\swmanager\swm.h"\
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\..\windows\hook\hook\fssync.h"\
+	"..\CodeGen\AVPPveID.h"\
+	"..\CodeGen\IFaceInfo.h"\
+	"..\Include\IFace\e_clsid.h"\
+	"..\Include\IFace\e_ktime.h"\
+	"..\Include\IFace\e_ktrace.h"\
+	"..\include\iface\i_csect.h"\
+	"..\include\iface\i_event.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\Include\iface\i_loader.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_mutex.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_semaph.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\Include\IFace\impexhlp.h"\
+	"..\Include\plugin\p_win32loader.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_loadr.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\csect_2l.h"\
+	".\csection.h"\
+	".\iface.h"\
+	".\loader.h"\
+	".\mod_load.h"\
+	".\mutex.h"\
+	".\plugin.h"\
+	".\plugin_win32loader.h"\
+	".\prop_util.h"\
+	".\semaphore.h"\
+	".\ShareExclusiveResource.h"\
+	".\syncevent.h"\
+	".\WHeap.h"\
+	
+
+.\pprot.c : \
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\ex_data.inc"\
+	
+
+..\CodeGen\PrDbgInfo\PrDbgInfo.cpp : \
+	"..\..\commonfiles\stuff\memmanag.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\CodeGen\PrDbgInfo\dbghelp.h"\
+	"..\CodeGen\PrDbgInfo\PrDbgInfo.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	
+
+.\prop_util.c : \
+	"..\..\CommonFiles\avp_data.h"\
+	"..\..\commonfiles\property\property.h"\
+	".\prop_util.h"\
+	
+
+..\..\CommonFiles\Service\SA.CPP : \
+	"..\..\CommonFiles\Service\SA.H"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	
+
+.\semaphore.c : \
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_mutex.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_semaph.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\semaphore.h"\
+	
+
+.\ShareExclusiveResource.cpp : \
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\include\iface\i_csect.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\ShareExclusiveResource.h"\
+	
+
+.\signchk.c : \
+	"..\..\CommonFiles\_avpio.h"\
+	"..\..\CommonFiles\avp_data.h"\
+	"..\..\CommonFiles\AVPComID.h"\
+	"..\..\CommonFiles\AVPPort.h"\
+	"..\..\commonfiles\property\property.h"\
+	"..\..\commonfiles\serialize\kldtdefs.h"\
+	"..\..\commonfiles\serialize\kldtser.h"\
+	"..\..\CommonFiles\Sign\SIGN.H"\
+	"..\..\commonfiles\swmanager\swm.h"\
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\..\windows\hook\hook\fssync.h"\
+	"..\CodeGen\AVPPveID.h"\
+	"..\Include\IFace\e_clsid.h"\
+	"..\Include\IFace\e_ktime.h"\
+	"..\Include\IFace\e_loader.h"\
+	"..\include\iface\i_csect.h"\
+	"..\include\iface\i_event.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_io.h"\
+	"..\Include\iface\i_loader.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_mutex.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_semaph.h"\
+	"..\include\iface\i_seqio.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_string.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\Include\IFace\impexhlp.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_loadr.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\csect_2l.h"\
+	".\csection.h"\
+	".\iface.h"\
+	".\loader.h"\
+	".\mod_load.h"\
+	".\mutex.h"\
+	".\plugin.h"\
+	".\plugin_win32loader.h"\
+	".\prop_util.h"\
+	".\semaphore.h"\
+	".\ShareExclusiveResource.h"\
+	".\syncevent.h"\
+	".\WHeap.h"\
+	
+
+.\syncevent.c : \
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\include\iface\i_event.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_mutex.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\syncevent.h"\
+	
+
+.\trace.c : \
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	
+
+.\WHeap.c : \
+	"..\..\CommonFiles\_avpio.h"\
+	"..\..\CommonFiles\avp_data.h"\
+	"..\..\CommonFiles\AVPComID.h"\
+	"..\..\CommonFiles\AVPPort.h"\
+	"..\..\commonfiles\property\property.h"\
+	"..\..\commonfiles\serialize\kldtdefs.h"\
+	"..\..\commonfiles\serialize\kldtser.h"\
+	"..\..\commonfiles\swmanager\swm.h"\
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\..\windows\hook\hook\fssync.h"\
+	"..\CodeGen\AVPPveID.h"\
+	"..\CodeGen\PrDbgInfo\PrDbgInfo.h"\
+	"..\include\iface\i_csect.h"\
+	"..\include\iface\i_event.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\Include\IFace\i_list.h"\
+	"..\Include\iface\i_loader.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\include\iface\i_mutex.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_semaph.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_loadr.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\csect_2l.h"\
+	".\csection.h"\
+	".\iface.h"\
+	".\loader.h"\
+	".\mod_load.h"\
+	".\mutex.h"\
+	".\plugin.h"\
+	".\plugin_win32loader.h"\
+	".\prop_util.h"\
+	".\semaphore.h"\
+	".\ShareExclusiveResource.h"\
+	".\syncevent.h"\
+	".\WHeap.h"\
+	

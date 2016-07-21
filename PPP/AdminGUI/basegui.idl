@@ -1,0 +1,41 @@
+// This file will be processed by the MIDL tool to
+// produce the type library (avpgui.tlb) and marshalling code.
+
+/////////////////////////////////////////////////////////////////////////////////////
+// ICGUIItem
+
+[
+	object,
+	uuid(09899249-4B52-4ACE-808D-F761D51BD5E5),
+	dual,
+	helpstring("ICGUIItem Interface"),
+	pointer_default(unique)
+]
+interface ICGUIItem : IDispatch
+{
+	[propget, id(1), helpstring("property X")] HRESULT X([out, retval] long *pVal);
+	[propget, id(2), helpstring("property Y")] HRESULT Y([out, retval] long *pVal);
+	[propget, id(3), helpstring("property Width")] HRESULT Width([out, retval] long *pVal);
+	[propget, id(4), helpstring("property Height")] HRESULT Height([out, retval] long *pVal);
+	[propget, id(5), helpstring("property Text")] HRESULT Text([out, retval] BSTR *pVal);
+	[propget, id(6), helpstring("property Icon")] HRESULT Icon([out, retval] BSTR *pVal);
+	[propget, id(7), helpstring("property ToolTip")] HRESULT ToolTip([out, retval] BSTR *pVal);
+	[propget, id(8), helpstring("property Enable")] HRESULT Enable([out, retval] VARIANT_BOOL *pVal);
+	[propget, id(9), helpstring("property Check")] HRESULT Check([out, retval] long *pVal);
+	[propget, id(10), helpstring("property Hide")] HRESULT Hide([out, retval] VARIANT_BOOL *pVal);
+	[propget, id(11), helpstring("property ValueInteger")] HRESULT ValueInteger([out, retval] long *pVal);
+	[propget, id(12), helpstring("property Id")] HRESULT Id([out, retval] BSTR *pVal);
+	[propget, id(13), helpstring("property Pos")] HRESULT Pos([out, retval] long *pVal);
+
+	[id(1001), helpstring("method GetItem")] HRESULT GetItem([in]BSTR vId, [out, retval]IDispatch **pItem);
+	[id(1002), helpstring("method GetItemByIdx")] HRESULT GetItemByIdx([in]long vId, [out, retval]IDispatch **pItem);
+	[id(1003), helpstring("method GetCount")] HRESULT GetCount([out, retval]long *pCount);
+	[id(1004), helpstring("method Click")] HRESULT Click();
+	[id(1005), helpstring("method Select")] HRESULT Select();
+	[id(1006), helpstring("method SetCheck")] HRESULT SetCheck([in] long newVal);
+	[id(1007), helpstring("method SetValueInteger")] HRESULT SetValueInteger([in] long newVal);
+	[id(1008), helpstring("method SetValueString")] HRESULT SetValueString([in] BSTR newVal);
+};
+
+/////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////

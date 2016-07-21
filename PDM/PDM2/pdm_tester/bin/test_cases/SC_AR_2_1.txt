@@ -1,0 +1,13 @@
+# create in autorun registry key path to self in dest folder and copy self to dest folder
+
+# CREATE_ARRV_SELF_TO_DF NOT_TO_CLEAR
+# SC_TO_DF NOT_TO_CLEAR NOT_TO_CLEAR
+
+CREATE_REG_STR_VALUE @AR_REG_KEY@ @SELF_NAME@ @LOCAL_TEST_FOLDER@\@SELF_NAME@ NOT_TO_CLEAR
+EX_COPY_FILE @SELF_PATH@ @LOCAL_TEST_FOLDER@ NOT_TO_CLEAR
+
+#etalon_verdict 100 SelfCopyAutoRun
+#etalon_verdict 80 OnSelfCopyNot2Temp
+#etalon_verdict 50 Installer
+#etalon_verdict 50 OnInstallNotSelf
+#etalon_verdict 50 SelfCopy

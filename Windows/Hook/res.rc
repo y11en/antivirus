@@ -1,0 +1,357 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_REQUEST_DLG DIALOG DISCARDABLE  0, 0, 231, 167
+STYLE DS_SYSMODAL | DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | 
+    WS_CAPTION
+CAPTION "Warning!"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Yes",IDC_PASS,9,66,50,14
+    DEFPUSHBUTTON   "&No",IDC_DISCARD,63,66,50,14
+    PUSHBUTTON      "&Kill Process",IDC_KILL,117,66,50,14
+    PUSHBUTTON      "Advanced &>>",IDC_APPLY_FOR,171,66,50,14
+    CONTROL         "&This time only",IDC_APPL_THISTIME,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,18,98,86,13
+    CONTROL         "&Always",IDC_APPL_ALWAYS,"Button",BS_AUTORADIOBUTTON,18,
+                    112,85,13
+    CONTROL         "&For",IDC_APPL_TIMED,"Button",BS_AUTORADIOBUTTON,18,126,
+                    30,13
+    EDITTEXT        IDC_APPL_TIME,47,126,29,12,ES_AUTOHSCROLL
+    CONTROL         "For this process only",IDC_APPL_PRC_THIS,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,126,95,96,12
+    CONTROL         "For all processes",IDC_APPL_PRC_ALL,"Button",
+                    BS_AUTORADIOBUTTON,126,105,96,12
+    CONTROL         "For this object only",IDC_APPL_OBJ_THIS,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,126,119,96,12
+    CONTROL         "For all objects",IDC_APPL_OBJ_ALL,"Button",
+                    BS_AUTORADIOBUTTON,126,129,96,12
+    CONTROL         "&Write to log",IDC_APPL_LOG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,91,142,49,12
+    CTEXT           "Allow this action?",IDC_STATIC,9,53,213,8,
+                    SS_CENTERIMAGE
+    LTEXT           "",IDC_PROCESS_MSG,9,9,213,9
+    CTEXT           "0:00",IDC_TIMEOUT,9,44,213,8
+    LTEXT           "minutes",IDC_STATIC,80,126,26,13,SS_CENTERIMAGE
+    LTEXT           "",IDC_FUNC_MSG,9,20,213,9
+    LTEXT           "",IDC_OBJ_MSG,9,32,213,9
+    GROUPBOX        "Apply answer",IDC_STATIC,9,87,213,70
+END
+
+IDD_MAINDLG DIALOG DISCARDABLE  0, 0, 306, 194
+STYLE DS_CENTER | WS_CHILD | WS_BORDER
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&<<",IDC_PREV,8,173,26,14
+    PUSHBUTTON      "&>>",IDC_NEXT,274,173,26,14
+    EDITTEXT        IDC_FILEMASKEDIT,8,20,292,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROCESSMASKEDIT,8,46,292,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_FNLIST,8,70,292,74,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_MAJFNLIST,8,84,292,120,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_MINFNLIST,8,99,292,65,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Check Parameter",IDC_CHECKPARAM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,28,114,69,12
+    COMBOBOX        IDC_PARAM_NAME,102,114,103,65,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_PARAM_OPER,210,114,27,45,CBS_DROPDOWNLIST | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_PARAM_VALUE,242,114,35,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Deny this operaion by default",IDC_SKIPBOX,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,134,111,11
+    CONTROL         "Show prompt for this action",IDC_SHOWPROMPT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,27,150,108,10
+    CONTROL         "Write to log",IDC_WRITETOLOG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,161,150,131,10
+    EDITTEXT        IDC_TIMEOUT,151,134,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "&Add new",IDC_ADDFLT,97,173,50,14
+    PUSHBUTTON      "&Delete",IDC_DELFLT,157,173,50,14
+    CTEXT           "Action",IDC_STATIC,8,61,292,8
+    CTEXT           "&File/key name mask",IDC_STATIC,8,10,292,8,
+                    SS_CENTERIMAGE
+    CTEXT           "Process name mask",IDC_STATIC,8,35,292,8,SS_CENTERIMAGE
+    CTEXT           "Event Filters",IDC_STATIC,8,1,292,8,SS_CENTERIMAGE
+    LTEXT           "Request timeout (in sec)",IDC_TOUTTXT,195,135,95,11,
+                    SS_CENTERIMAGE
+    CTEXT           "",IDC_EXPIRATION_DATE,8,164,292,8
+    GROUPBOX        "If event occured",IDC_STATIC,8,126,292,36
+END
+
+IDD_DIALOG1 DIALOG DISCARDABLE  0, 0, 303, 180
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | 
+    WS_MINIMIZEBOX | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,246,7,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_REQUEST_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 9
+        RIGHTMARGIN, 222
+        TOPMARGIN, 9
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_MAINDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 8
+        RIGHTMARGIN, 300
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 186
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 296
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 172
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,12,10,0
+ PRODUCTVERSION 2,12,10,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x9L
+#else
+ FILEFLAGS 0x8L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Kaspersky Lab\0"
+            VALUE "FileDescription", "AVP Guard\0"
+            VALUE "FileVersion", "2, 12, 10, 0\0"
+            VALUE "InternalName", "avpg\0"
+            VALUE "LegalCopyright", "\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "avpg.exe\0"
+            VALUE "PrivateBuild", "1\0"
+            VALUE "ProductName", "avpg\0"
+            VALUE "ProductVersion", "2, 12, 10, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x419, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON    DISCARDABLE     "icon1.ico"
+IDI_ICON2               ICON    DISCARDABLE     "icon2.ico"
+IDI_ICON3               ICON    DISCARDABLE     "icon3.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "TRAY"
+    BEGIN
+        MENUITEM "&Show",                       TRAY_SHOW
+        MENUITEM "&Exit",                       TRAY_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DUMP_DLG_CAPT       "Configuration"
+    IDS_MAIN_DLG_CAPT       "Advanced mode"
+    IDS_CFG_DLG_CAPT        "AVP Guard"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DUMPDLG DIALOG DISCARDABLE  0, 0, 306, 193
+STYLE WS_CHILD | WS_VISIBLE | WS_BORDER
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Deny write to executable files",IDC_WRITE_EXE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,11,108,10
+    CONTROL         "Show prompt for this operaion",IDC_WRITE_EXE_PROMPT,
+                    "Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,21,
+                    22,109,10
+    CONTROL         "Deny delete executable files",IDC_DEL_EXE,"Button",
+                    BS_AUTOCHECKBOX,155,11,138,10
+    CONTROL         "Show prompt for this operaion",IDC_DEL_EXE_PROMPT,
+                    "Button",BS_AUTOCHECKBOX | WS_DISABLED,165,22,117,10
+    CONTROL         "Deny rename executable files",IDC_RENAME_EXE,"Button",
+                    BS_AUTOCHECKBOX,84,37,138,10
+    CONTROL         "Show prompt for this operaion",IDC_RENAME_EXE_PROMPT,
+                    "Button",BS_AUTOCHECKBOX | WS_DISABLED,94,47,122,10
+    CONTROL         "Deny write to Master boot record",IDC_MBR_WRITE,"Button",
+                    BS_AUTOCHECKBOX,12,78,138,10
+    CONTROL         "Show prompt for this operaion",IDC_MBR_WRITE_PROMPT,
+                    "Button",BS_AUTOCHECKBOX | WS_DISABLED,21,88,138,10
+    CONTROL         "Deny write to Boot records",IDC_WRITE_BOOT,"Button",
+                    BS_AUTOCHECKBOX,155,78,138,10
+    CONTROL         "Show prompt for this operaion",IDC_WRITE_BOOT_PROMPT,
+                    "Button",BS_AUTOCHECKBOX | WS_DISABLED,165,88,124,10
+    CONTROL         "Deny format operation",IDC_FORMAT_HDD,"Button",
+                    BS_AUTOCHECKBOX,83,102,138,10
+    CONTROL         "Show prompt for this operaion",IDC_FORMAT_HDD_PROMPT,
+                    "Button",BS_AUTOCHECKBOX | WS_DISABLED,92,112,118,10
+    CONTROL         "Deny creation 'autostart' record",IDC_REG_WRITE,"Button",
+                    BS_AUTOCHECKBOX,12,145,118,10
+    CONTROL         "Show prompt for this operaion",IDC_REG_WRITE_PROMPT,
+                    "Button",BS_AUTOCHECKBOX | WS_DISABLED,21,156,118,10
+    CONTROL         "Deny creation new services/drivers",IDC_REG_CREATE,
+                    "Button",BS_AUTOCHECKBOX,155,145,144,10
+    CONTROL         "Show prompt for this operaion",IDC_REG_PROMPT,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED,165,155,118,10
+    CONTROL         "Enable advanced settings mode",IDC_ADV_MODE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,18,176,182,10
+    GROUPBOX        " File operations ",IDC_STATIC,7,2,292,62
+    GROUPBOX        " Registry operations",IDC_STATIC,7,135,292,36
+    GROUPBOX        " Direct Disk access ",IDC_STATIC,7,69,292,62
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DUMPDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 186
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

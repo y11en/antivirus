@@ -1,0 +1,36 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@ @srcdir@/base
+
+Name = rar
+Plugin = $(Name).@PLUGIN_EXT@
+Metafile = @srcdir@/$(Name).@METAFILE_EXT@
+Targets = $(Plugin)
+
+Sources = \
+	main.c \
+	rar.c \
+	cblock.c \
+	common.c \
+	crc.c \
+	input.c \
+	mem.c \
+	model.c \
+	mtree.c \
+	pack20.c \
+	rarvm.c \
+	stdflt.c \
+	suballoc.c \
+	unpack15.c \
+	unpack20.c \
+	unpack29.c \
+	sha1.c \
+	rijndael.c \
+	crypt.c
+
+# unix section
+
+VersionScript = @abs_top_srcdir@/unix/prague_plugin.ver
+
+include @abs_top_builddir@/@OS@/Rules

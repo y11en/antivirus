@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="Windows-1252" ?>
+<WixLocalization xmlns="http://schemas.microsoft.com/wix/2003/11/localization">
+        <String Id="MainDlgBrandingWidth">270</String>
+	<!-- Common UIText table localization -->
+	<String Id="bytes"> Octet</String>
+	<String Id="GB"> Go</String>
+	<String Id="KB"> Ko</String>
+	<String Id="MB"> Mo</String>
+	<String Id="MenuAbsent">Le composant sera inaccessible</String>
+	<String Id="MenuAdvertise">Le composant pourra être installé lors de la première utilisation</String>
+	<String Id="MenuAllCD">Le composant sera exécuté depuis le cédérom</String>
+	<String Id="MenuAllLocal">Le composant sera complètement installé</String>
+	<String Id="MenuAllNetwork">Le composant sera exécuté via le réseau</String>
+	<String Id="MenuCD">Le composant sera exécuté depuis le cédérom</String>
+	<String Id="MenuLocal">Le composant sera installé sur un disque dur local</String>
+	<String Id="MenuNetwork">Le composant sera exécuté via le réseau</String>
+	<String Id="ScriptInProgress">Recueil des informations demandées...</String>
+	<String Id="SelAbsentAbsent">Le composant ne sera pas supprimé</String>
+	<String Id="SelAbsentAdvertise">Le composant pourra être installé lors de la première utilisation</String>
+	<String Id="SelAbsentCD">Le composant sera exécuté depuis le cédérom</String>
+	<String Id="SelAbsentLocal">Le composant sera installé sur un disque dur local</String>
+	<String Id="SelAbsentNetwork">Le composant sera exécuté via le réseau</String>
+	<String Id="SelAdvertiseAbsent">Le composant sera inaccessible</String>
+	<String Id="SelAdvertiseAdvertise">Le composant pourra être installé lors de la première utilisation.</String>
+	<String Id="SelAdvertiseCD">Le composant sera exécuté depuis le cédérom.</String>
+	<String Id="SelAdvertiseLocal">Le composant sera installé sur un disque dur local.</String>
+	<String Id="SelAdvertiseNetwork">Le composant sera exécuté via le réseau.</String>
+	<String Id="SelCDAbsent">Le composant sera complètement supprimé. Vous ne pourrez pas l'exécuter depuis le cédérom.</String>
+	<String Id="SelCDAdvertise">Le lancement du composant depuis le cédérom sera remplacé par une installation à la demande.</String>
+	<String Id="SelCDCD">La possibilité d'exécuter le composant depuis le cédérom demeure.</String>
+	<String Id="SelCDLocal">Le lancement du composant depuis le cédérom sera remplacé par l'installation sur le disque dur local.</String>
+	<String Id="SelChildCostNeg">Le composant libère [1] sur le disque dur.</String>
+	<String Id="SelChildCostPos">L'installation du composant sur le disque dur requiert [1].</String>
+	<String Id="SelCostPending">Calcul de l'espace sur le disque pour le composant...</String>
+	<String Id="SelLocalAbsent">Le composant sera complètement supprimé de l'ordinateur.</String>
+	<String Id="SelLocalAdvertise">Le composant sera supprimé du disque dur mais vous pourrez l'installer quand vous en aurez besoin.</String>
+	<String Id="SelLocalCD">Le composant sera supprimé du disque dur local mais vous pourrez continuer à le lancer depuis le cédérom.</String>
+	<String Id="SelLocalLocal">Le composant sera conservé sur le disque dur local.</String>
+	<String Id="SelLocalNetwork">Le composant sera supprimé du disque dur local mais vous pourrez continuer à le lancer via le réseau.</String>
+	<String Id="SelNetworkAbsent">Le composant sera complètement supprimé et vous ne pourrez plus le lancer via le réseau.</String>
+	<String Id="SelNetworkAdvertise">Le lancement du composant via le réseau sera remplacé par son installation à la demande.</String>
+	<String Id="SelNetworkLocal">Le lancement du composant via le réseau sera remplacé par son installation sur le disque dur local.</String>
+	<String Id="SelNetworkNetwork">Il sera toujours possible d'exécuter le composant via le réseau/</String>
+	<String Id="SelParentCostNegNeg">Le programme va libérer [1] sur le disque dur. [2] composants sur [3] ont été sélectionnés. Ils vont libérer [4] sur le disque dur.</String>
+	<String Id="SelParentCostNegPos">Le programme va libérer [1] sur le disque dur. [2] composants sur [3] ont été sélectionnés. Leur installation requiert [4] sur le disque dur.</String>
+	<String Id="SelParentCostPosNeg">L'installation du composant requiert [1] sur le disque dur. [2] sous-composants sur [3] ont été sélectionnés. Ils vont libérer [4] sur le disque dur.</String>
+	<String Id="SelParentCostPosPos">L'installation du composant requiert [1] sur le disque dur. [2] sous-composants sur [3] ont été sélectionnés. Leur installation requiert [4] sur le disque dur.</String>
+	<String Id="TimeRemaining">Temps restant : {[1] m}{[2] s}</String>
+	<String Id="VolumeCostAvailable">Disponible</String>
+	<String Id="VolumeCostDifference">Différence</String>
+	<String Id="VolumeCostRequired">Requis</String>
+	<String Id="VolumeCostSize">Taille du disque</String>
+	<String Id="VolumeCostVolume">Disque</String>
+	
+	<!-- ActionText Table localization -->
+	<String Id="IDS_ACTIONTEXT_Advertising"><![CDATA[Publicité pour l'application...]]></String>
+	<String Id="IDS_ACTIONTEXT_ComputingSpace"><![CDATA[Calcul de l'espace disponible sur le disque...]]></String>
+	<String Id="IDS_ACTIONTEXT_ContentTypeExtension2"><![CDATA[Type de contenu MIME : [1], Extension : [2]]]></String>
+	<String Id="IDS_ACTIONTEXT_UnregisteringProgramIds"><![CDATA[Annulation de l'enregistrement des identificateurs du programme...]]></String>
+	<String Id="IDS_ACTIONTEXT_ProgID"><![CDATA[Code du programme : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_UnregTypeLibs"><![CDATA[Annulation de l'enregistrement des types de bibliothèque...]]></String>
+	<String Id="IDS_ACTIONTEXT_Libid2"><![CDATA[Code de bibliothèque : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_EnvironmentStrings"><![CDATA[Actualisation des environnements variables...]]></String>
+	<String Id="IDS_ACTIONTEXT_NameValueAction"><![CDATA[Nom : [1], Valeur : [2], Action : [3]]]></String>
+	<String Id="IDS_ACTIONTEXT_WritingINI"><![CDATA[Ecriture de la valeur des fichiers INI...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileSectionKeyValue2"><![CDATA[Fichier : [1],  Section : [2],  Clé : [3], Valeur : [4]]]></String>
+	<String Id="IDS_ACTIONTEXT_WritingRegistry"><![CDATA[Ecriture des valeurs de la base de registres système...]]></String>
+	<String Id="IDS_ACTIONTEXT_CreatingFolders"><![CDATA[Création de répertoires...]]></String>
+	<String Id="IDS_ACTIONTEXT_KeyNameValue"><![CDATA[Clé : [1], Nom : [2], Valeur : [3]]]></String>
+	<String Id="IDS_ACTIONTEXT_RegisteringComPlus"><![CDATA[Enregistrement des applications et des composants COM+...]]></String>
+	<String Id="IDS_ACTIONTEXT_AppIdAppTypeRSN"><![CDATA[Code d'applicaiton: [1]{{, Type : [2], Utilisateurs : [3], RSN: [4]}}]]></String>
+	<String Id="IDS_ACTIONTEXT_UnregisteringComPlus"><![CDATA[Annulation de l'enregistrement des applications et des composants COM+...]]></String>
+	<String Id="IDS_ACTIONTEXT_AppId"><![CDATA[Code d'application : [1]{{, Type : [2]}}]]></String>
+	<String Id="IDS_ACTIONTEXT_SearchForRelated"><![CDATA[Recherche des applications connexes...]]></String>
+	<String Id="IDS_ACTIONTEXT_FoundApp"><![CDATA[Application : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_MigratingFeatureStates"><![CDATA[Transfert des propriétés des applications connexes...]]></String>
+	<String Id="IDS_ACTIONTEXT_Application"><![CDATA[Application : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RemoveApps"><![CDATA[Suppression des applications...]]></String>
+	<String Id="IDS_ACTIONTEXT_Folder"><![CDATA[Répertoire : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_AppCommandLine"><![CDATA[Application : [1], Ligne de commande : [2]]]></String>
+	<String Id="IDS_ACTIONTEXT_InstallingSystemCatalog"><![CDATA[Installation du répertoire système...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileDependencies"><![CDATA[Fichier : [1],  Dépendances : [2]]]></String>
+	<String Id="IDS_ACTIONTEXT_CreatingIISRoots"><![CDATA[Création des racines virtuelles IIS...]]></String>
+	<String Id="IDS_ACTIONTEXT_RemovingIISRoots"><![CDATA[Suppression des racines virtuelles IIS...]]></String>
+	<String Id="IDS_ACTIONTEXT_CreatingShortcuts"><![CDATA[Création de raccourcis...]]></String>
+	<String Id="IDS_ACTIONTEXT_Shortcut"><![CDATA[Raccourci : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_DeletingServices"><![CDATA[Suppression des services...]]></String>
+	<String Id="IDS_ACTIONTEXT_Service"><![CDATA[Service : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_CreatingDuplicate"><![CDATA[Création des copies des fichiers...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileDirectorySize"><![CDATA[Fichier : [1],  Répertoire : [9],  Taille : [6]]]></String>
+	<String Id="IDS_ACTIONTEXT_ComputingSpace2"><![CDATA[Calcul de l'espace disponibe sur le disque...]]></String>
+	<String Id="IDS_ACTIONTEXT_AllocatingRegistry"><![CDATA[Attribution de la mémoire pour le registre...]]></String>
+	<String Id="IDS_ACTIONTEXT_GeneratingScript"><![CDATA[Création d'un script pour l'action ...]]></String>
+	<String Id="IDS_ACTIONTEXT_1"><![CDATA[[1]]]></String>
+	<String Id="IDS_ACTIONTEXT_CopyingNetworkFiles"><![CDATA[Copie des fichiers dans le réseau...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileDirSize"><![CDATA[Fichier : [1], Répertoire : [9], Taille : [6]]]></String>
+	<String Id="IDS_ACTIONTEXT_CopyingNewFiles"><![CDATA[Copie de nouveaux fichiers...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileDirSize2"><![CDATA[Fichier : [1],  Répertoire : [9],  Taille : [6]]]></String>
+	<String Id="IDS_ACTIONTEXT_InstallODBC"><![CDATA[Installation de composants ODBC...]]></String>
+	<String Id="IDS_ACTIONTEXT_InstallServices"><![CDATA[Installation de nouveaux services...]]></String>
+	<String Id="IDS_ACTIONTEXT_Service2"><![CDATA[Service : [2]]]></String>
+	<String Id="IDS_ACTIONTEXT_Validating"><![CDATA[Validation de l'installation...]]></String>
+	<String Id="IDS_ACTIONTEXT_FreeSpace"><![CDATA[Espace disponible : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_EvaluateLaunchConditions"><![CDATA[Evaluation des conditions de lancement...]]></String>
+	<String Id="IDS_ACTIONTEXT_MovingFiles"><![CDATA[Déplacement de fichiers...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileDirSize3"><![CDATA[Fichier : [1],  Répertoire : [9],  Taille : [6]]]></String>
+	<String Id="IDS_ACTIONTEXT_PatchingFiles"><![CDATA[Actualisation des fichiers...]]></String>	
+	<String Id="IDS_ACTIONTEXT_FileDirSize4"><![CDATA[Fichier : [1],  Répertoire : [2],  Taille : [3]]]></String>
+	<String Id="IDS_ACTIONTEXT_UpdateComponentRegistration"><![CDATA[Actualisation de l'enregistrement des composants...]]></String>
+	<String Id="IDS_ACTIONTEXT_PublishingQualifiedComponents"><![CDATA[Publication des composants qualifiés...]]></String>
+	<String Id="IDS_ACTIONTEXT_ComponentIDQualifier"><![CDATA[Code du composant : [1], Identificateur : [2]]]></String>
+	<String Id="IDS_ACTIONTEXT_PublishProductFeatures"><![CDATA[Publication des composants du logiciel...]]></String>
+	<String Id="IDS_ACTIONTEXT_FeatureColon"><![CDATA[Composant : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_SearchInstalled"><![CDATA[Recherche des applications installées...]]></String>
+	<String Id="IDS_ACTIONTEXT_PublishProductInfo"><![CDATA[Publication des informations relatives au programme...]]></String>
+	<String Id="IDS_ACTIONTEXT_RegisterClassServer"><![CDATA[Enregistrement des serveurs de classes...]]></String>
+	<String Id="IDS_ACTIONTEXT_ClassId"><![CDATA[Code de classe : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RegisterExtensionServers"><![CDATA[Enregistrement des serveurs d'extensions...]]></String>
+	<String Id="IDS_ACTIONTEXT_Extension2"><![CDATA[Extension : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RegisterFonts"><![CDATA[Enregistrement des polices de caractères...]]></String>
+	<String Id="IDS_ACTIONTEXT_Font"><![CDATA[Police de caractères : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RegisterMimeInfo"><![CDATA[Enregistrement des informations MIME...]]></String>
+	<String Id="IDS_ACTIONTEXT_ContentTypeExtension"><![CDATA[Type de contenu MIME: [1], Extension : [2]]]></String>
+	<String Id="IDS_ACTIONTEXT_RegisteringProduct"><![CDATA[Enregistrement du programme...]]></String>
+	<String Id="IDS_ACTIONTEXT_PropertySignature"><![CDATA[Propriété : [1], Signature : [2]]]></String>
+	<String Id="IDS_ACTIONTEXT_1b"><![CDATA[[1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RegisteringProgIdentifiers"><![CDATA[Enregistrement des identificateurs du programme...]]></String>
+	<String Id="IDS_ACTIONTEXT_ProgID2"><![CDATA[Code du programme : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RegisterTypeLibs"><![CDATA[Enregistrement des types de bibliothèque...]]></String>
+	<String Id="IDS_ACTIONTEXT_LibId"><![CDATA[Code de bibliothèque : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RegUser"><![CDATA[Enregistrement des utilisateurs...]]></String>
+	<String Id="IDS_ACTIONTEXT_1c"><![CDATA[[1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RemovingDuplicates"><![CDATA[Suppression des copies de fichier...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileDir"><![CDATA[Fichier : [1], Répertoire : [9]]]></String>
+	<String Id="IDS_ACTIONTEXT_UpdateEnvironmentStrings"><![CDATA[Actualisation des environnements variables...]]></String>
+	<String Id="IDS_ACTIONTEXT_BindingExes"><![CDATA[Liaison des modules exécutables...]]></String>
+	<String Id="IDS_ACTIONTEXT_NameValueAction2"><![CDATA[Nom : [1], Valeur : [2], Action : [3]]]></String>
+	<String Id="IDS_ACTIONTEXT_RemovingFiles"><![CDATA[Suppression de fichiers...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileDir2"><![CDATA[Fichier : [1], Répertoire : [9]]]></String>
+	<String Id="IDS_ACTIONTEXT_RemovingFolders"><![CDATA[Suppression de répertoires...]]></String>
+	<String Id="IDS_ACTIONTEXT_Folder1"><![CDATA[Répertoire : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RemovingIni"><![CDATA[Suppression d'enregistrements dans les fichiers INI...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileSectionKeyValue"><![CDATA[Fichier : [1],  Section : [2],  Clé : [3], Valeur : [4]]]></String>
+	<String Id="IDS_ACTIONTEXT_RemovingODBC"><![CDATA[Suppression de composants ODBC...]]></String>
+	<String Id="IDS_ACTIONTEXT_RemovingRegistry"><![CDATA[Suppression d'enregistrements dans la base de registres système...]]></String>
+	<String Id="IDS_ACTIONTEXT_KeyName"><![CDATA[Clé : [1], Nom : [2]]]></String>
+	<String Id="IDS_ACTIONTEXT_File"><![CDATA[Fichier : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RemovingShortcuts"><![CDATA[Suppression de raccourcis...]]></String>
+	<String Id="IDS_ACTIONTEXT_Shortcut1"><![CDATA[Raccourci : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_SearchingQualifyingProducts"><![CDATA[Recherche de produits qualifiés...]]></String>
+	<String Id="IDS_ACTIONTEXT_RollingBack"><![CDATA[Annulation de l'action :]]></String>
+	<String Id="IDS_ACTIONTEXT_1d"><![CDATA[[1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RemovingBackup"><![CDATA[Suppression des copies de sauvegarde des fichiers...]]></String>
+	<String Id="IDS_ACTIONTEXT_File2"><![CDATA[Fichier : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RegisteringModules"><![CDATA[Enregistrement des modules...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileFolder"><![CDATA[Fichier : [1], Répertoire : [2]]]></String>
+	<String Id="IDS_ACTIONTEXT_UnregisterModules"><![CDATA[Annulation de l'enregistrement des modules...]]></String>
+	<String Id="IDS_ACTIONTEXT_SearchingQualifyingProducts2"><![CDATA[Recherche de produits qualifiés...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileFolder2"><![CDATA[Fichier : [1], Répertoire : [2]]]></String>
+	<String Id="IDS_ACTIONTEXT_InitializeODBCDirs"><![CDATA[Initialisation des répertoires ODBC...]]></String>
+	<String Id="IDS_ACTIONTEXT_StartingServices"><![CDATA[Lancement des services...]]></String>
+	<String Id="IDS_ACTIONTEXT_Service3"><![CDATA[Service : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_StoppingServices"><![CDATA[Arrêt des services...]]></String>
+	<String Id="IDS_ACTIONTEXT_Service4"><![CDATA[Service : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RemovingMoved"><![CDATA[Suppression des fichiers déplacés...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileDir3"><![CDATA[Fichier : [1], Répertoire : [9]]]></String>
+	<String Id="IDS_ACTIONTEXT_UnpublishQualified"><![CDATA[Annulation de la publication des composants qualifiés...]]></String>
+	<String Id="IDS_ACTIONTEXT_ComponentIdQualifier2"><![CDATA[Code de composant : [1], Descripteur : [2]]]></String>
+	<String Id="IDS_ACTIONTEXT_ComputingSpace3"><![CDATA[Calcul de l'espace disponible sur le disque...]]></String>
+	<String Id="IDS_ACTIONTEXT_UnpublishProductFeatures"><![CDATA[Annulation de la publication des composants du programme...]]></String>
+	<String Id="IDS_ACTIONTEXT_Feature"><![CDATA[Composant : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_UnpublishingProductInfo"><![CDATA[Annulation de la publication des informations relatives au programme...]]></String>
+	<String Id="IDS_ACTIONTEXT_UnregisterClassServers"><![CDATA[Annulation de l'enregistrement des serveurs de classe...]]></String>
+	<String Id="IDS_ACTIONTEXT_ClsID"><![CDATA[Code de classe : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_UnregisterExtensionServers"><![CDATA[Annulation de l'enregistrement des serveurs d'extensions...]]></String>
+	<String Id="IDS_ACTIONTEXT_Extension"><![CDATA[Extension : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_UnregisteringFonts"><![CDATA[Annulation de l'enregistrement des polices de caractères...]]></String>
+	<String Id="IDS_ACTIONTEXT_Font2"><![CDATA[Police de caractères : [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_UnregisteringMimeInfo"><![CDATA[Annulation de l'enregistrement des informations MIME...]]></String>
+	<String Id="IDS_ACTIONTEXT_UninstallCompetitorsSoftware"><![CDATA[Suppression des logiciels incompatibles. Veuillez patienter...]]></String>
+	
+	<String Id="IDS_ACTIONTEXT_UnregisteringDrivers"><![CDATA[Annulation de l'enregistrement des pilotes]]></String>
+	<String Id="IDS_ACTIONTEXT_DisablingWFW"><![CDATA[Désactivation du pare-feu Microsoft Windows]]></String>
+	<String Id="IDS_ACTIONTEXT_RemovingProtection"><![CDATA[Suppression de la protection]]></String>
+	<String Id="IDS_ACTIONTEXT_ProductDeinitialize"><![CDATA[Annulation de l'enregistrement du logiciel]]></String>
+	<String Id="IDS_ACTIONTEXT_UnregisterPlugins"><![CDATA[Annulation de l'enregistrement des plug-ins]]></String>
+	<String Id="IDS_ACTIONTEXT_SavingObjects"><![CDATA[Enregistrement des objets]]></String>
+	<String Id="IDS_ACTIONTEXT_RegisteringDrivers"><![CDATA[Enregistrement des pilotes...]]></String>
+	<String Id="IDS_ACTIONTEXT_EnablingOptions"><![CDATA[Activation des paramètres]]></String>
+	<String Id="IDS_ACTIONTEXT_ConfiguringServices"><![CDATA[Configuration des services...]]></String>
+	<String Id="IDS_ACTIONTEXT_InstallingProtection"><![CDATA[Installation de la protection]]></String>
+	<String Id="IDS_ACTIONTEXT_SchedulingRebootOperation"><![CDATA[Programmation du redémarrage]]></String>
+	<String Id="IDS_ACTIONTEXT_ImportingRegistryValues"><![CDATA[Importation des valeurs de la base de registres systeme]]></String>
+	
+	<String Id="IDS_ACTIONTEXT_InstallInitialize"><![CDATA[Préparation de l'installation]]></String>
+	
+	<!-- Error Table localization-->
+	<String Id="IDS_ERROR_0"><![CDATA[{{Erreur fatale : }}]]></String>
+	<String Id="IDS_ERROR_1"><![CDATA[Erreur [1].]]></String>
+	<String Id="IDS_ERROR_2"><![CDATA[Avertissement [1].]]></String>
+	<String Id="IDS_ERROR_4"><![CDATA[Informations [1].]]></String>
+	<String Id="IDS_ERROR_5"><![CDATA[Erreur interne [1]. [2]{, [3]}{, [4]}]]></String>
+	<String Id="IDS_ERROR_7"><![CDATA[{{Disque plein : }}]]></String>
+	<String Id="IDS_ERROR_8"><![CDATA[Action [Time]: [1]. [2]]]></String>
+	<String Id="IDS_ERROR_9"><![CDATA[[ProductName]]]></String>
+	<String Id="IDS_ERROR_10"><![CDATA[{[2]}{, [3]}{, [4]}]]></String>
+	<String Id="IDS_ERROR_11"><![CDATA[Type de message : [1], Argument : [2]]]></String>
+	<String Id="IDS_ERROR_12"><![CDATA[=== Début de l'enregistrement du journal : [Date]  [Time] ===]]></String>
+	<String Id="IDS_ERROR_13"><![CDATA[=== Fin de l'enregistrement du journal : [Date]  [Time] ===]]></String>
+	<String Id="IDS_ERROR_14"><![CDATA[Début de l'action [Time]: [1].]]></String>
+	<String Id="IDS_ERROR_15"><![CDATA[Fin de l'action [Time]: [1]. Code de retour [2].]]></String>
+	<String Id="IDS_ERROR_16"><![CDATA[Temps restant : {[1] m }{[2] s}]]></String>
+	<String Id="IDS_ERROR_17"><![CDATA[Mémoire insuffisante. Quittez d'autres applications et essayez à nouveau.]]></String>
+	<String Id="IDS_ERROR_18"><![CDATA[Le programme d'installation ne répond pas.]]></String>
+	<String Id="IDS_ERROR_19"><![CDATA[Le programme d'installation a terminé.]]></String>
+	<String Id="IDS_ERROR_20"><![CDATA[Configuration de [ProductName] en cours. Veuillez patienter...]]></String>
+	<String Id="IDS_ERROR_21"><![CDATA[Recueil des informations...]]></String>
+	<String Id="IDS_ERROR_32"><![CDATA[{[ProductName] }L'installation a réussi.]]></String>
+	<String Id="IDS_ERROR_33"><![CDATA[{[ProductName] }L'installation s'est soldée par un échec.]]></String>
+	<String Id="IDS_ERROR_1101"><![CDATA[Erreur de lecture du fichier : [2]. {{ Erreur système [3].}}  Assurez-vous que le fichier existe et que vous bénéficiez des privilèges d'accès requis.]]></String>
+	<String Id="IDS_ERROR_1301"><![CDATA[Impossible de créer le fichier [3].  Un répertoire portant le même nom existe déjà.  Arrêtez l'installation et essayez d'installer le logiciel dans un autre répertoire.]]></String>
+	<String Id="IDS_ERROR_1302"><![CDATA[Veuilez introduire le disque : [2]]]></String>
+	<String Id="IDS_ERROR_1303"><![CDATA[Le logiciel ne jouit pas des privilèges suffisants pour travailler avec le répertoire : [2].  L'installation du programme doit être suspendue. Ouvrez une session en tant qu'administrateur ou contactez l'administrateur de système...]]></String>
+	<String Id="IDS_ERROR_1304"><![CDATA[Erreur d'écriture dans le fichier [2]. Assurez-vous que vous bénéficiez des privilèges d'accès au répertoire.]]></String>
+	<String Id="IDS_ERROR_1305"><![CDATA[Erreur de lecture du fichier [2]. Assurez-vous que le fichier existe et que vous bénéficiez des privilèges d'accès requis.]]></String>
+	<String Id="IDS_ERROR_1306"><![CDATA[Une autre application a le monopole de l'accès au fichier [2]. Veuillez quitter les autres applications et essayez à nouveau.]]></String>
+	<String Id="IDS_ERROR_1307"><![CDATA[Espace insuffisant sur le disque pour installer le fichier [2]. Libérez de l'espace sur le disque, essayer à nouveau en cliquant sur "Réessayer" ou interrompez l'installation en cliquant sur "Annuler".]]></String>
+	<String Id="IDS_ERROR_1308"><![CDATA[Fichier source introuvable : [2]. Assurez-vous que le fichier existe et que vous jouissez de privilèges d'accès suffisants.]]></String>
+	<String Id="IDS_ERROR_1309"><![CDATA[Erreur de lecture du fichier : [3]. {{ Erreur système [2].}} Assurez-vous que le fichier existe et que vous jouissez de privilèges d'accès suffisants.]]></String>
+	<String Id="IDS_ERROR_1310"><![CDATA[Erreur d'écriture dans le fichier : [3]. {{ Erreur système [2].}} Assurez-vous que vous bénéficiez des privilèges d'accès au répertoire.]]></String>
+	<String Id="IDS_ERROR_1311"><![CDATA[Fichier source introuvable {{(cabinet)}}: [2]. Assurez-vous que le fichier existe et que vous jouissez de privilèges d'accès suffisants.]]></String>
+	<String Id="IDS_ERROR_1312"><![CDATA[Impossible de créer le répertoire [2]. Un fichier du même nom existe déjà. Veuillez renommer ou déplacer le fichier, essayez à nouveau en cliquant sur "Réessayer" ou interrompez l'installation en cliquant sur "Annuler".]]></String>
+	<String Id="IDS_ERROR_1313"><![CDATA[Le disque [2] est inaccessible. Veuillez sélectionner un autre disque.]]></String>
+	<String Id="IDS_ERROR_1314"><![CDATA[Le chemin indiqué [2] est inaccessible.]]></String>
+	<String Id="IDS_ERROR_1315"><![CDATA[Impossible d'écrire dans le répertoire [2].]]></String>
+	<String Id="IDS_ERROR_1316"><![CDATA[Erreur dans le réseau lors de la lecture du fichier [2]]]></String>
+	<String Id="IDS_ERROR_1317"><![CDATA[Erreur dans le réseau lors de la création du répertoire [2]]]></String>
+	<String Id="IDS_ERROR_1318"><![CDATA[Erreur dans le réseau lors de la création du répertoire [2]]]></String>
+	<String Id="IDS_ERROR_1319"><![CDATA[Erreur dans le réseau lors de l'ouverture du fichier source CAB [2].]]></String>
+	<String Id="IDS_ERROR_1320"><![CDATA[Le chemin d'accès [2] indiqué est trop long.]]></String>
+	<String Id="IDS_ERROR_1321"><![CDATA[Le programme d'installation ne jouit pas des privilèges suffisants pour modifier le fichier [2].]]></String>
+	<String Id="IDS_ERROR_1322"><![CDATA[La partie du chemin d'accès [2] dépasse la longueur maximale autorisée dans le système.]]></String>
+	<String Id="IDS_ERROR_1323"><![CDATA[Le chemin d'accès [2] contient des noms non-admis.]]></String>
+	<String Id="IDS_ERROR_1324"><![CDATA[Le chemin d'accès [2] contient des caractères non-admis.]]></String>
+	<String Id="IDS_ERROR_1325"><![CDATA[[2] n'est pas une forme de nom de fichier abrégée autorisée.]]></String>
+	<String Id="IDS_ERROR_1326"><![CDATA[Erreur lors de la réception des informations relatives à la sécurité du fichier : [3] Retour de la fonction GetLastError: [2]]]></String>
+	<String Id="IDS_ERROR_1327"><![CDATA[Disque non valide : [2]]]></String>
+	<String Id="IDS_ERROR_1328"><![CDATA[Erreur lors de l'actualisation du fichier [2]. Il a peut-être déjà été actualisé par d'autres moyens et cette mise à jour ne peut pas lui être appliquée. Pour obtenir de plus amples informations, contactez la source du paquet.  {{Erreur système : [3]}}]]></String>
+	<String Id="IDS_ERROR_1329"><![CDATA[Le fichier requis ne peut pas être installé car le fichier CAB [2] ne possède pas la signature numérique. Il est peut-être corrompu.]]></String>
+	<String Id="IDS_ERROR_1330"><![CDATA[Le fichier requis ne peut pas être installé car le fichier CAB [2] ne possède pas la signature numérique. Il est peut-être corrompu.{ Erreur [3] renvoyée par WinVerifyTrust.}]]></String>
+	<String Id="IDS_ERROR_1331"><![CDATA[Impossible de copier le fichier [2] : erreur CRC.]]></String>
+	<String Id="IDS_ERROR_1332"><![CDATA[Impossible de déplacer le fichier [2] : erreur CRC.]]></String>
+	<String Id="IDS_ERROR_1333"><![CDATA[Impossible d'activer le fichier [2] : erreur CRC.]]></String>
+	<String Id="IDS_ERROR_1334"><![CDATA[Le fichier [2] ne peut être installé car il n'a pas été trouvé dans le fichier CAB [3]. Il s'agit peut-être d'une erreur de réseau ou d'une erreur de lecture depuis le cédérom ou le paquet.]]></String>
+	<String Id="IDS_ERROR_1335"><![CDATA[Le fichier CAB [2] indispensable à l'installation est corrompu ou ne peut être utilisé. Il s'agit peut-être d'une erreur de réseau ou d'une erreur de lecture depuis le cédérom ou le paquet.]]></String>
+	<String Id="IDS_ERROR_1336"><![CDATA[Erreur de création du fichier temporaire indispensable pour terminer l'installation. Répertoire : [3]. Code d'erreur système : [2]]]></String>
+	<String Id="IDS_ERROR_1401"><![CDATA[Impossible de créer la clé [2]. {{ Erreur système [3].}} Assurez-vous que vous bénéficiez des privilèges d'accès à la clé ou contactez le service d'assistance technique.]]></String>
+	<String Id="IDS_ERROR_1402"><![CDATA[Impossible d'ouvrir la clé: [2]. {{ Erreur système [3].}} Assurez-vous que vous bénéficiez des privilèges d'accès à la clé ou contactez le service d'assistance technique.]]></String>
+	<String Id="IDS_ERROR_1403"><![CDATA[Impossible de supprimer la valeur [2] de la clé [3]. {{ Erreur système [4].}} Assurez-vous que vous bénéficiez des privilèges d'accès à la clé ou contactez le service d'assistance technique.]]></String>
+	<String Id="IDS_ERROR_1404"><![CDATA[Impossible de supprimer la clé [2]. {{ Erreur système [3].}} Assurez-vous que vous bénéficiez des privilèges d'accès à la clé ou contactez le service d'assistance technique.]]></String>
+	<String Id="IDS_ERROR_1405"><![CDATA[Impossible de lire la valeur [2] de la clé [3]. {{ Erreur système [4].}} Assurez-vous que vous bénéficiez des privilèges d'accès à la clé ou contactez le service d'assistance technique.]]></String>
+	<String Id="IDS_ERROR_1406"><![CDATA[Impossible d'enregistrer la valeur [2] de la clé [3]. {{ Erreur système [4].}} Assurez-vous que vous bénéficiez des privilèges d'accès à la clé ou contactez le service d'assistance technique.]]></String>
+	<String Id="IDS_ERROR_1407"><![CDATA[Impossible d'obtenir le nom de la clé [2]. {{ Erreur système [3].}} Assurez-vous que vous bénéficiez des privilèges d'accès à la clé ou contactez le service d'assistance technique.]]></String>
+	<String Id="IDS_ERROR_1408"><![CDATA[Impossible d'obtenir le nom de la clé intégrée pour la clé [2]. {{ Erreur système [3].}} Assurez-vous que vous bénéficiez des privilèges d'accès à la clé ou contactez le service d'assistance technique.]]></String>
+	<String Id="IDS_ERROR_1409"><![CDATA[Impossible de lire les renseignements sur la sécurité de la clé [2]. {{ Erreur système [3].}} Assurez-vous que vous bénéficiez des privilèges d'accès à la clé ou contactez le service d'assistance technique.]]></String>
+	<String Id="IDS_ERROR_1410"><![CDATA[Impossible d'augmenter la taille du registre. Il faut [2] Ko d'espace disponible dans le registre pour installer cette application.]]></String>
+	<String Id="IDS_ERROR_1500"><![CDATA[Une autre installation est déjà en cours. Veuillez terminer ce processus avant de lancer une nouvelle installation.]]></String>
+	<String Id="IDS_ERROR_1501"><![CDATA[Erreur d'accès aux données protégées. Vérifiez l'exactitude de la configuration du programme d'installation et essayez à nouveau.]]></String>
+	<String Id="IDS_ERROR_1502"><![CDATA[L'utilisateur [2] a lancé antérieurement l'installation de [3]. Il devra procéder à nouveau à l'installation. Votre installation sera poursuivie.]]></String>
+	<String Id="IDS_ERROR_1503"><![CDATA[L'utilisateur [2] a lancé antérieurement l'installation de [3]. Il devra procéder à nouveau à l'installation.]]></String>
+	<String Id="IDS_ERROR_1601"><![CDATA[Espace insuffisant sur le disque -- disque : [2]; requis : [3] Ko; disponible : [4] Ko. Libérez de l'espace sur le disque et recommencez.]]></String>
+	<String Id="IDS_ERROR_1602"><![CDATA[Etes-vous certain de vouloir arrêter l'installation ?]]></String>
+	<String Id="IDS_ERROR_1603"><![CDATA[Le fichier [2][3] est déjà utilisé{ par le processus suivant : Nom : [4], Code : [5], Titre de la fenêtre : [6]}.  Veuillez fermer cette application et recommencer.]]></String>
+	<String Id="IDS_ERROR_1604"><![CDATA[Le programme [2] est déjà installé, installation impossible. Ces deux programmes ne sont pas compatibles.]]></String>
+	<String Id="IDS_ERROR_1605"><![CDATA[Espace insuffisant sur le disque -- disque : [2]; requis : [3] Ko; disponible : [4] Ko. Après la désactivation de la remise à l'état initiale, l'espace sera suffisant. Cliquez sur "Annuler" pour quitter ou sur "Réessayer" pour vérifier à nouveau l'espace disponible sur le disque ou cliquez sur "Ignorer" pour poursuivre sans remise à l'état initial.]]></String>
+	<String Id="IDS_ERROR_1606"><![CDATA[Impossible de se connecter via le réseau à [2].]]></String>
+	<String Id="IDS_ERROR_1607"><![CDATA[Afin de poursuivre l'installation, il faut quitter les applications suivantes :]]></String>
+	<String Id="IDS_ERROR_1608"><![CDATA[Impossible de trouver les produits installés compatibles pour l'installation de ce programme.]]></String>
+	<String Id="IDS_ERROR_1701"><![CDATA[Clé [2] invalide.  Vérifiez si la clé est correcte.]]></String>
+	<String Id="IDS_ERROR_1702"><![CDATA[Avant de configurer [2], il est indispensable de redémarrer l'ordinateur. Cliquez sur "Oui" pour redémarrer l'ordinateur maintenant ou sur "Non" pour redémarrer l'ordinateur plus tard manuellement.]]></String>
+	<String Id="IDS_ERROR_1703"><![CDATA[Afin de terminer l'installation/la suppression du programme [2], il est indispensable de redémarrer le système. Cliquez sur "Oui" pour redémarrer l'ordinateur maintenant ou sur "Non" pour redémarrer l'ordinateur plus tard manuellement.]]></String>	
+	<String Id="IDS_ERROR_1704"><![CDATA[L'installation du programme [2] a été suspendue.  Afin de poursuivre l'installation, il est indispensable d'annuler les modifications introduites dans cette installation. Souhaitez-vous annuler les modifications ?]]></String>
+	<String Id="IDS_ERROR_1705"><![CDATA[L'installation antérieure de ce programme est en cours. Afin de poursuivre, il est indispensable d'annuler les modifications introduites dans cette installation. Souhaitez-vous annuler les modifications ?]]></String>
+	<String Id="IDS_ERROR_1706"><![CDATA[Le paquet d'installation du programme [2] est introuvable. L'installation ne peut être poursuivie.]]></String>
+	<String Id="IDS_ERROR_1707"><![CDATA[L'installation a réussi]]></String>
+	<String Id="IDS_ERROR_1708"><![CDATA[L'installation s'est soldée par un échec.]]></String>
+	<String Id="IDS_ERROR_1709"><![CDATA[Programme : [2] -- [3]]]></String>
+	<String Id="IDS_ERROR_1710"><![CDATA[Vous pouvez soit restaurer l'état d'origine de l'ordinateur, soit poursuivre l'installation plus tard. Souhaitez-vous rétablir l'état d'origine ?]]></String>
+	<String Id="IDS_ERROR_1711"><![CDATA[Erreur lors de l'écriture des renseignements relatifs à l'installation sur le disque. Vérifiez si le disque possède l'espace suffisant et cliquez sur "Réessayer" ou sur "Annuler" si vous voulez arrêter l'installation.]]></String>
+	<String Id="IDS_ERROR_1712"><![CDATA[Les fichiers indispensables à la restauration de l'état d'origine de l'ordinateur sont introuvables. La restauration est impossible.]]></String>
+	<String Id="IDS_ERROR_1713"><![CDATA[[2] ne parvient pas à installer un des composants requis. Veuillez contacter le service d'assistance technique.  {{Erreur système : [3].}}]]></String>
+	<String Id="IDS_ERROR_1714"><![CDATA[Impossible de supprimer une version antérieure du programme [2]. Veuillez contacter le service d'assistance technique. {{Erreur système [3].}}]]></String>
+	<String Id="IDS_ERROR_1715"><![CDATA[[2] est installé.]]></String>
+	<String Id="IDS_ERROR_1716"><![CDATA[[2] est configuré.]]></String>
+	<String Id="IDS_ERROR_1717"><![CDATA[[2] a été supprimé.]]></String>
+	<String Id="IDS_ERROR_1718"><![CDATA[Le fichier [2] a été rejeté conformément à la politique de signature numérique.]]></String>
+	<String Id="IDS_ERROR_1719"><![CDATA[Le service du programme d'installation est inaccessible. Veuillez contacter le service d'assistance technique et assurez-vous que le service est enregistré et disponible.]]></String>
+	<String Id="IDS_ERROR_1720"><![CDATA[Un problème a été identifié dans le paquet d'installation. Impossible de lancer le script indispensable pour terminer l'installation. Veuillez contacter le service d'assistance technique ou l'éditeur. Action: [2] erreur de script [3], [4]: [5] ligne [6], colonne [7], [8]]]></String>
+	<String Id="IDS_ERROR_1721"><![CDATA[Un problème a été identifié dans le paquet d'installation. Impossible de lancer le programme indispensable à la fin de l'installation. Veuillez contacter le service d'assistance technique ou l'éditeur. Action : [2], emplacement : [3], commande : [4]]]></String>
+	<String Id="IDS_ERROR_1722"><![CDATA[Un problème a été identifié dans le paquet d'installation. Le programme lancé en tant que partie de l'installation n'est pas terminé. Veuillez contacter le service d'assistance technique ou l'éditeur. Action : [2], emplacement : [3], commande : [4]]]></String>
+	<String Id="IDS_ERROR_1723"><![CDATA[Un problème a été identifié dans le paquet d'installation. Impossible de lancer la bibliothèque indispensable à la fin de l'installation. Veuillez contacter le service d'assistance technique ou l'éditeur. Action : [2], fonction : [3], bibliothèque : [4]]]></String>
+	<String Id="IDS_ERROR_1724"><![CDATA[La suppression a réussi.]]></String>
+	<String Id="IDS_ERROR_1725"><![CDATA[La suppression s'est soldée par un échec.]]></String>
+	<String Id="IDS_ERROR_1726"><![CDATA[L'actualisation a réussi.]]></String>
+	<String Id="IDS_ERROR_1727"><![CDATA[L'actualisation s'est soldée par un échec.]]></String>
+	<String Id="IDS_ERROR_1728"><![CDATA[La configuration a réussi.]]></String>
+	<String Id="IDS_ERROR_1729"><![CDATA[La configuration s'est soldée par un échec.]]></String>
+	<String Id="IDS_ERROR_1730"><![CDATA[Afin de pouvoir supprimer le programme, vous devez jouir des privilèges d'administrateur sur cet ordinateur. Ouvrez une session en tant qu'administrateur ou contactez le service d'assistance technique.]]></String>
+	<String Id="IDS_ERROR_1731"><![CDATA[Impossible de synchroniser le paquet source d'installation pour le programme [2] et sa copie. Essayez de lancer le programme d'installation depuis une copie valide [3].]]></String>
+	<String Id="IDS_ERROR_1732"><![CDATA[Afin de terminer l'installation du programme [2], il est indispensable de redémarrer l'ordinateur. D'autres utilisateurs ont ouverts une session sur l'ordinateur et les données qu'ils n'ont pas enregistrées seront perdues suite au redémarrage. Etes-vous certain de vouloir redémarrer l'ordinateur maintenant ?]]></String>
+	<String Id="IDS_ERROR_1801"><![CDATA[Le chemin [2] n'est pas admis. Veuillez indiquer un chemin d'accès correct.]]></String>
+	<String Id="IDS_ERROR_1802"><![CDATA[Mémoire insuffisante. Veuillez quitter les autres applications et essayez à nouveau.]]></String>
+	<String Id="IDS_ERROR_1803"><![CDATA[Il n'y a pas de disque dans le lecteur [2]. Introduisez le cédérom et cliquez sur "Réessayer" ou sur "Annuler" pour revenir au disque sélectionné antérieurement.]]></String>
+	<String Id="IDS_ERROR_1804"><![CDATA[Il n'y a pas de disque dans le lecteur [2]. Introduisez le cédérom et cliquez sur "Réessayer" ou sur "Annuler" pour revenir à la boîte de dialogue de sélection et choisir un autre disque.]]></String>
+	<String Id="IDS_ERROR_1805"><![CDATA[Le répertoire [2] n'existe pas. Saisissez un chemin d'accès vers un répertoire existant.]]></String>
+	<String Id="IDS_ERROR_1806"><![CDATA[Vous ne jouissez pas de privilèges de lecture suffisant pour ce répertoire.]]></String>
+	<String Id="IDS_ERROR_1807"><![CDATA[Impossible de définir le répertoire d'installation.]]></String>
+	<String Id="IDS_ERROR_1901"><![CDATA[Une erreur s'est produite lors de la lecture des bases de données source d'installation de [2].]]></String>
+	<String Id="IDS_ERROR_1902"><![CDATA[Préparation du redémarrage : le fichier [2] a été renommé en [3]. Afin de terminer l'opération, il est indispensable de redémarrer l'ordinateur.]]></String>
+	<String Id="IDS_ERROR_1903"><![CDATA[Préparation du redémarrage : suppression du fichier [2]. Afin de terminer l'opération, il est indispensable de redémarrer l'ordinateur.]]></String>
+	<String Id="IDS_ERROR_1904"><![CDATA[Impossible d'enregistrer le module [2]. HRESULT [3]. Contactez le service d'assistance technique.]]></String>
+	<String Id="IDS_ERROR_1905"><![CDATA[Impossible d'annuler l'enregistrement du module [2]. HRESULT [3].Contactez le service d'assistance technique.]]></String>
+	<String Id="IDS_ERROR_1906"><![CDATA[Erreur de mise en cache du paquet [2]. Erreur : [3]. Contactez le service d'assistance technique.]]></String>
+	<String Id="IDS_ERROR_1907"><![CDATA[Impossible d'enregistrer la police de caractères [2]. Assurez-vous que vous bénéficiez des privilèges d'installation des polices de caractères et que le système prend en charge cette police.]]></String>
+	<String Id="IDS_ERROR_1908"><![CDATA[Impossible d'annuler l'enregistrement de la police de caractères [2]. Assurez-vous que vous bénéficiez des privilèges pour la suppression des polices de caractères.]]></String>
+	<String Id="IDS_ERROR_1909"><![CDATA[Impossible de créer le raccourci [2]. Assurez-vous que le catalogue cible existe et qu'il est accessible.]]></String>
+	<String Id="IDS_ERROR_1910"><![CDATA[Impossible de supprimer le raccourci  [2]. Assurez-vous que le fichier du raccourci existe et qu'il est accessible.]]></String>
+	<String Id="IDS_ERROR_1911"><![CDATA[Impossible d'enregistrer la bibliothèque des types pour le fichier [2].  Contactez le service d'assistance technique.]]></String>
+	<String Id="IDS_ERROR_1912"><![CDATA[Impossible d'annuler l'enregistrement de la bibliothèque des types pour le fichier [2].  Contactez le service d'assistance technique.]]></String>
+	<String Id="IDS_ERROR_1913"><![CDATA[Impossible d'actualiser le fichier ini[2][3]. Assurez-vous que le fichier existe et qu'il est accessible.]]></String>
+	<String Id="IDS_ERROR_1914"><![CDATA[Impossible de préparer le remplacement du fichier [2] par [3] lors du redémarrage de l'ordinateur. Assurez-vous que vous bénéficiez des privilèges d'écriture dans le fichier [3].]]></String>
+	<String Id="IDS_ERROR_1915"><![CDATA[Erreur lors de la suppression du dispatcher du pilote ODBC, erreur ODBC [2]: [3]. Contactez le service d'assistance technique.]]></String>
+	<String Id="IDS_ERROR_1916"><![CDATA[Erreur lors de l'installation du dispatcher du pilote ODBC, erreur ODBC  [2]: [3]. Contactez le service d'assistance technique.]]></String>
+	<String Id="IDS_ERROR_1917"><![CDATA[Erreur lors de la suppression du pilote ODBC: [4], erreur ODBC  [2]: [3]. Assurerz-vous que vous bénéficiez des privilèges de suppression des pilotes ODBC.]]></String>
+	<String Id="IDS_ERROR_1918"><![CDATA[Erreur lors de l'installation du pilote ODBC: [4], erreur ODBC [2]: [3]. Assurez-vous que le fichier [4] existe et qu'il est accessible.]]></String>
+	<String Id="IDS_ERROR_1919"><![CDATA[Erreur lors de la configuration de la source de données ODBC: [4],erreur ODBC  [2]: [3]. Assurez-vous que le fichier [4] existe et qu'il est accessible.]]></String>
+	<String Id="IDS_ERROR_1920"><![CDATA[Erreur lors du lancement du service [2] ([3]).  Assurez-vous que vous bénéficiez des privilèges de lancement des services système.]]></String>
+	<String Id="IDS_ERROR_1921"><![CDATA[Impossible d'arrêter le service [2] ([3]).  Assurez-vous que vous bénéficiez des privilèges d'arrêt des services système.]]></String>
+	<String Id="IDS_ERROR_1922"><![CDATA[Impossible de supprimer le service [2] ([3]).  Assurez-vous que vous bénéficiez des privilèges de suppression des services système.]]></String>
+	<String Id="IDS_ERROR_1923"><![CDATA[Impossible d'installer le service [2] ([3]).  Assurez-vous que vous bénéficiez des privilèges d'installation des services système.]]></String>
+	<String Id="IDS_ERROR_1924"><![CDATA[Impossible d'actualiser l'environnement variable [2]. Assurez-vous que vous bénéficiez des privilèges de modifications de l'environnement variable.]]></String>
+	<String Id="IDS_ERROR_1925"><![CDATA[Vous ne jouissez pas des privilèges suffisants pour l'installation pour tous les utilisateurs de cet ordinateur. Ouvrez une session en tant qu'administrateur et essayez à nouveau.]]></String>
+	<String Id="IDS_ERROR_1926"><![CDATA[Impossible d'installer les attributs de sécurité pour le fichier [3]. Erreur : [2]. Assurez-vous que vous bénéficiez des privilèges de modification des autorisations d'accès à ce fichier.]]></String>
+	<String Id="IDS_ERROR_1927"><![CDATA[Les services COM+ 1.0 ne sont pas installés sur cet ordinateur. Ils sont indispensables à la réussite de l'installtion du programme. Ces services font partie de Microsoft Windows 2000.]]></String>
+	<String Id="IDS_ERROR_1928"><![CDATA[Erreur lors de l'enregistrement de l'application COM+. Pour obtenir de plus amples informations, veuillez contacter le service d'assistance technique.]]></String>
+	<String Id="IDS_ERROR_1929"><![CDATA[Erreur lors de l'annulation de l'enregistrement de l'application COM+. Pour obtenir de plus amples informations, veuillez contacter le service d'assistance technique.]]></String>
+	<String Id="IDS_ERROR_1930"><![CDATA[La modification de la description du service [2] ([3]) n'est pas admise.]]></String>
+	<String Id="IDS_ERROR_1931"><![CDATA[Le service Windows Installer ne parvient pas à actualiser le fichier système [2] car il est protégé par Microsoft Windows. Il faudra peut-être actualiser le système d'exploitation afin que le programme fonctionne correctement. {{Version du paquet : [3], Version protégée du système d'exploitation : [4]}}]]></String>
+	<String Id="IDS_ERROR_1932"><![CDATA[Le service Windows Installer ne parvient pas à actualiser le fichier système protégé [2]. {{Version du paquet : [3], Version protégée du système d'exploitation : [4], Erreur SFP : [5]}}]]></String>
+	<String Id="IDS_ERROR_1933"><![CDATA[L'installation du programme requiert Internet Information Server version 4.0 ou suivante afin de configurer les racines virtuelles du service ISS. Assurez-vous qu'Internet Information Server version 4.0 ou suivante est installé sur votre ordinateur.]]></String>
+	<String Id="IDS_ERROR_1934"><![CDATA[Vous devez jouir des privilèges d'administrateur pour installer le programme afin de pouvoir configurer les racines virtuelles du service.]]></String>
+	<String Id="IDS_ERROR_1935"><![CDATA[Erreur lors de l'installation de l'assembleur [6]. Pour obtenir de plus amples informations, veuillez contacter le service d'assistance technique. HRESULT: [3]. {{interface de l'assembleur: [4], fonction : [5], composant : [2]}}]]></String>
+	<String Id="IDS_ERROR_1936"><![CDATA[Erreur lors de l'installation de l'assembleur [6]. L'assembleur n'a pas été spécifié ou sa signature ne répond pas aux conditions minimum de longueur de la clé. HRESULT: [3]. {{interface de l'assembleur : [4], fonction : [5], composant : [2]}}]]></String>
+	<String Id="IDS_ERROR_1937"><![CDATA[Erreur lors de l'installation de l'assembleur [6]. La signature ou le répertoire n'est pas valide. HRESULT: [3]. {{interface de l'assembleur : [4], fonction : [5], composant : [2]}}]]></String>
+	<String Id="IDS_ERROR_1938"><![CDATA[Erreur lors de l'installation de l'assembleur [6]. Impossible de trouver le module de l'assembleur. HRESULT: [3]. {{interface de l'assembleur : [4], fonction : [5], composant : [2]}} ]]></String>
+	
+	<!-- Control localization -->
+	
+	<!-- PreActionDlg -->
+	<String Id="IDS_PreActionDlg_ActionText"><![CDATA[{Préparation de l'installation du programme en cours. Veuillez patienter...]]></String>
+
+	<!-- SystemRestartDlg -->
+	<String Id="IDS_SystemRestartDlg_Text"><![CDATA[Vous devez redémarrer l'ordinateur pour poursuivre l'installation. Etes-vous certain de vouloir redémarrer l'ordinateur maintenant ?]]></String>
+	
+	<!-- WelcomeDlg -->
+	<String Id="IDS_WelcomeDlg_WelcomeTitle"><![CDATA[{\WelcomePageTitleFont}Bienvenue dans l'Assistant d'installation de [ProductName]]]></String>
+	<String Id="IDS_WelcomeDlg_WelcomeText"><![CDATA[Ce programme va installer [ProductName] ([ProductVersion]) sur votre ordinateur.
+
+Nous vous conseillons de quitter toutes les autres applications avant de poursuivre.
+
+Cliquez sur Suivant pour continuer l'installation.
+
+Cliquez sur Annuler pour quitter l'Assistant d'installation.]]></String>
+	<String Id="IDS_WelcomeDlg_CheckExpressInstall"><![CDATA[Installation rapide (installation selon les paramètres par défaut)]]></String>
+	<!-- LicenseAgreementDlg -->
+	<String Id="IDS_LicenseAgreementDlg_Title"><![CDATA[{\PageTitleFont}Contrat de licence]]></String>
+	<String Id="IDS_LicenseAgreementDlg_Description"><![CDATA[{\PageSubtitleFont}Veuillez lire attentivement le contrat de licence.]]></String>
+	<String Id="IDS_LicenseAgreementDlg_Text"><![CDATA[Veuillez lire le contrat de licence. Vous devez en accepter les termes avant de pouvoir poursuivre l'installation.]]></String>
+	<String Id="IDS_LicenseAgreementDlg_ButtonsYes"><![CDATA[J'&accepte les termes du contrat de licence]]></String>
+	<String Id="IDS_LicenseAgreementDlg_ButtonsNo"><![CDATA[Je &n'accepte pas les termes du contrat de licence]]></String>
+	<!-- SetupModeDlg -->
+	<String Id="IDS_SetupModeDlg_Title"><![CDATA[{\PageTitleFont}Type d'installation]]></String>
+	<String Id="IDS_SetupModeDlg_Description"><![CDATA[{\PageSubtitleFont}Sélectionnez le type d'installation.]]></String>
+	<String Id="IDS_SetupModeDlg_Text"><![CDATA[Sélectionnez le type d'installation qui répond le mieux à vos besoins.]]></String>
+	<String Id="IDS_SetupModeDlg_ButtonsYes"><![CDATA[Installation rapide (installation selon les paramètres par défaut)]]></String>
+	<String Id="IDS_SetupModeDlg_ButtonsNo"><![CDATA[Installation personnalisée (installation de composants individuels avec possibilité de configuration préalable)]]></String>
+	<!-- UserRegistrationDlg -->
+	<String Id="IDS_UserRegistrationDlg_Title"><![CDATA[{\PageTitleFont}Informations relatives à l'utilisateur]]></String>
+	<String Id="IDS_UserRegistrationDlg_Description"><![CDATA[{\PageSubtitleFont}Veuillez saisir vos données.]]></String>
+	<String Id="IDS_UserRegistrationDlg_Text"><![CDATA[Veuillez indiquer votre nom, la société pour laquelle vous travaillez et votre adresse électronique. Cliquez sur "Suivant" afin de poursuivre l'installation.]]></String>
+	<String Id="IDS_UserRegistrationDlg_Text1"><![CDATA[Les informations que vous avez fournies serviront uniquement à la saisie automatique des informations lors de l'envoi de commentaires à Kaspersky Lab.]]></String>
+	<String Id="IDS_UserRegistrationDlg_NameLabel"><![CDATA[&Nom de l'utilisateur :]]></String>
+	<String Id="IDS_UserRegistrationDlg_OrgLabel"><![CDATA[&Organisation :]]></String>
+	<String Id="IDS_UserRegistrationDlg_EmailLabel"><![CDATA[&Adresse électronique :]]></String>
+	<!-- InformationDlg -->
+	<String Id="IDS_InformationDlg_Title"><![CDATA[{\PageTitleFont}Informations importantes]]></String>
+	<String Id="IDS_InformationDlg_Description"><![CDATA[{\PageSubtitleFont}Veuillez lire les informations fournies ci-dessous.]]></String>
+	<String Id="IDS_InformationDlg_Text"><![CDATA[Cliquez sur "Suivant" afin de poursuivre l'installation.]]></String>
+	<!-- DestinationFolderDlg -->
+	<String Id="IDS_DestinationFolderDlg_Title"><![CDATA[{\PageTitleFont}Dossier d'installation]]></String>
+	<String Id="IDS_DestinationFolderDlg_Description"><![CDATA[{\PageSubtitleFont}Veuillez sélectionner le dossier d'installation du programme.]]></String>
+	<String Id="IDS_DestinationFolderDlg_Text"><![CDATA[Cliquez sur "Suivant" afin d'installer le programme dans le dossier sélectionné. Cliquez sur "Parcourir" si vous souhaitez installer le programme dans un autre dossier.]]></String>
+	<String Id="IDS_DestinationFolderDlg_FolderLabel"><![CDATA[&Dossier]]></String>
+	<String Id="IDS_DestinationFolderDlg_DiskCost"><![CDATA[D&isque :]]></String>
+	<!-- DiskCostDlg -->
+	<String Id="IDS_DiskCostDlg_Title"><![CDATA[[DlgTitleFont]Espace disque requis]]></String>
+	<String Id="IDS_DiskCostDlg_Description"><![CDATA[Espace disque disponible indispensable à l'installation des composants sélectionnés.]]></String>
+	<String Id="IDS_DiskCostDlg_Text"><![CDATA[Les disques qui ne possèdent pas l’espace suffisant pour l’installation des composants sélectionnés sont signalés par une icône spéciale. Vous pouvez résoudre ce problème en supprimant certains fichiers du disque, en installant moins de composants ou en réalisant l’installation sur un autre disque.]]></String>	
+	<!-- SetupTypeDlg -->
+	<String Id="IDS_SetupTypeDlg_Title"><![CDATA[{\PageTitleFont}Type d'installation]]></String>
+	<String Id="IDS_SetupTypeDlg_Description"><![CDATA[Sélectionnez le type d'installation qui répond le mieux à vos besoins.]]></String>
+	<String Id="IDS_SetupTypeDlg_CustomLabel"><![CDATA[{\PageTitleFont}Installation personnalisée]]></String>
+	<String Id="IDS_SetupTypeDlg_CustomText"><![CDATA[Installation de composants individuels de l'application avec possibilité de configuration préalable. Ce type est d'installation est recommandé pour les utilisateurs expérimentés.]]></String>
+	<String Id="IDS_SetupTypeDlg_TypicalLabel"><![CDATA[{\PageTitleFont}Installation rapide]]></String>
+	<String Id="IDS_SetupTypeDlg_TypicalText"><![CDATA[Installation complète de l'application avec les paramètres de fonctionnement par défaut.]]></String>
+	<String Id="IDS_SetupTypeDlg_CustomButton"><![CDATA[Installation personnalisée]]></String>
+	<String Id="IDS_SetupTypeDlg_TypicalButton"><![CDATA[Installation rapide]]></String>
+	<!--<String Id="IDS_SetupTypeDlg_CompleteLabel"><![CDATA[{\PageTitleFont}Complète]]></String>
+	<String Id="IDS_SetupTypeDlg_CompleteText"><![CDATA[Installation de tous les composants du programme pour garantir la protection intégrale de votre ordinateur.]]></String>
+	<String Id="IDS_SetupTypeDlg_CustomLabel"><![CDATA[{\PageTitleFont}Personnalisée]]></String>
+	<String Id="IDS_SetupTypeDlg_CustomText"><![CDATA[Installation des composants que vous avez sélectionnés. Ce type d'installation est recommandé pour les utilisateurs expérimentés.]]></String>
+	<String Id="IDS_SetupTypeDlg_TypicalLabel"><![CDATA[{\PageTitleFont}Composants de la protection antivirus]]></String>
+	<String Id="IDS_SetupTypeDlg_TypicalText"><![CDATA[Installation des composants de la protection antivirus uniquement. La protection contre le courrier indésirable, les attaques de réseau et les nouveaux types de menace ne sera pas assurée.]]></String>
+	<String Id="IDS_SetupTypeDlg_CompleteButton"><![CDATA[Installation complète]]></String>
+	<String Id="IDS_SetupTypeDlg_CustomButton"><![CDATA[Installation personnalisée]]></String>
+	<String Id="IDS_SetupTypeDlg_TypicalButton"><![CDATA[Installation des composants de la protection antivirus]]></String>-->
+	
+	<!-- CustomizeDlg -->
+	<String Id="IDS_CustomizeDlg_Title"><![CDATA[{\PageTitleFont}Installation personnalisée]]></String>
+	<String Id="IDS_CustomizeDlg_Description"><![CDATA[Sélectionnez les composants du programme que vous souhaitez installer.]]></String>
+	<String Id="IDS_CustomizeDlg_Tree"><![CDATA[Composants du programme]]></String>
+	<String Id="IDS_CustomizeDlg_ItemDescription"><![CDATA[Description des composants sélectionnés pour l'installation]]></String>
+	<String Id="IDS_CustomizeDlg_ItemSize"><![CDATA[Emplacement de l'installation des composants sélectionnés]]></String>
+	
+	<!-- CustomSetupTips -->
+	<String Id="IDS_CustomSetupTips_Title"><![CDATA[{\PageTitleFont}Conseils pour l'installation personnalisée]]></String>
+	<String Id="IDS_CustomSetupTips_Description"><![CDATA[L'installation personnalisée permet de configurer les détails de l'installation des composants du programme.]]></String>
+	<String Id="IDS_CustomSetupTips_DontInstallText"><![CDATA[Ne sera pas installé.]]></String>
+	<String Id="IDS_CustomSetupTips_FirstInstallText"><![CDATA[Sera installé lors de la première utilisation (si le composant prend en charge une telle option).]]></String>
+	<String Id="IDS_CustomSetupTips_InstallStateText"><![CDATA[Cet état signifie que le composant...]]></String>
+	<String Id="IDS_CustomSetupTips_InstallText"><![CDATA[Sera installé sur le disque dur local.]]></String>
+	<String Id="IDS_CustomSetupTips_MenuText"><![CDATA[L'icône située en regard du composant illustre l'état de son installation. Cliquez avec le bouton gauche de la souris sur l'icône afin de consulter la liste des états de l'installation pour chaque composant.]]></String>
+	<String Id="IDS_CustomSetupTips_NetworkInstallText"><![CDATA[Sera installé en vue d'une exécution via le réseau (si le composant prend en charge une telle possibilité).]]></String>
+	<String Id="IDS_CustomSetupTips_PartialText"><![CDATA[Sera installé sur le disque dur local avec certains sous-composants (si le composant a des sous-composants)]]></String>
+	
+	<!-- OutOfDiskDlg -->
+	<String Id="IDS_OutOfDiskDlg_Title"><![CDATA[[DlgTitleFont]Espace insuffisant sur le disque]]></String>
+	<String Id="IDS_OutOfDiskDlg_Description"><![CDATA[L'espace requis pour l'installation du programme est supérieur à l'espace disponible.]]></String>
+	<String Id="IDS_OutOfDiskDlg_Text"><![CDATA[Les disques sélectionnés manquent d'espace pour l'installation des composants choisis. Vous pouvez supprimer certains fichiers sur ces disques, installer moins de composants sur le disque local ou sélectionner un autre disque pour l'installation.]]></String>
+	
+	<!-- OutOfRbDiskDlg -->
+	<String Id="IDS_OutOfRbDiskDlg_Title"><![CDATA[[DlgTitleFont]Espace insuffisant sur le disque]]></String>
+	<String Id="IDS_OutOfRbDiskDlg_Description"><![CDATA[L'espace requis pour l'installation du programme est supérieur à l'espace disponible.]]></String>
+	<String Id="IDS_OutOfRbDiskDlg_Text"><![CDATA[Les disques sélectionnés manquent d'espace pour l'installation des composants choisis. Vous pouvez supprimer certains fichiers sur ces disques, installer moins de composants sur le disque local ou sélectionner un autre disque pour l'installation.]]></String>
+	<String Id="IDS_OutOfRbDiskDlg_Text2"><![CDATA[Vous pouvez également désactiver la possibilité de revenir à l'état initial. Cette option permet de ramener votre ordinateur à l'état antérieur au lancement de l'installation si celle-ci devait être interrompue pour une raison quelconque. Cliquez sur "Oui" si vous souhaitez désactiver cette fonction.]]></String>
+	
+	<!-- UnloadWFWDlg -->
+	<String Id="IDS_UnloadWFWDlg_Title"><![CDATA[{\PageTitleFont}Pare-feu Microsoft Windows]]></String>
+	<String Id="IDS_UnloadWFWDlg_Description"><![CDATA[{\PageSubtitleFont}Désactivation du pare-feu Microsoft Windows.]]></String>
+	<String Id="IDS_UnloadWFWDlg_Text"><![CDATA[Vous avez décidé d'installer Anti-Hacker avec le pare-feu de Microsoft Windows activé. Afin d'éviter les conflits, le pare-feu sera désactivé. Vous pourrez l'activer à n'importe quel moment au départ du panneau de configuration.]]></String>
+	<String Id="IDS_UnloadWFWDlg_Text1"><![CDATA[Le pare-feu de Microsoft Windows sera désactivé. Anti-Hacker offrira une protection complète lors de la connexion au réseau.]]></String>
+	<String Id="IDS_UnloadWFWDlg_Text2"><![CDATA[Le pare-feu de Microsoft Windows va continuer à protéger votre ordinateur. Afin d'éviter tout conflit, Anti-Hacker sera désactivé. Vous pourrez l'activer à nouveau à n'importer quel moment.]]></String>
+	<String Id="IDS_UnloadWFWDlg_ButtonsYes"><![CDATA[&Désactiver le pare-feu de Microsoft Windows ]]></String>
+	<String Id="IDS_UnloadWFWDlg_ButtonsNo"><![CDATA[&Utiliser le pare-feu de Microsoft Windows ]]></String>
+	
+	<!-- FoundProductsDlg -->
+	<String Id="IDS_FoundProductsDlg_Title"><![CDATA[{\PageTitleFont}Logiciels antivirus installés]]></String>
+	<String Id="IDS_FoundProductsDlg_Description"><![CDATA[{\PageSubtitleFont}Suppression des logiciels antivirus]]></String>
+	<String Id="IDS_FoundProductsDlg_Text"><![CDATA[Attention ! D'autres logiciels sont déjà installés sur votre ordinateur. Il est impossible de les utiliser conjointement à [ProductName]. Avant de poursuivre l'installation, il est indispensable de supprimer ces logiciels et de lancer à nouveau le programme d'installation.]]></String>
+	<String Id="IDS_FoundProductsDlg_Text2"><![CDATA[Si vous poursuivez en cliquant sur Suivant, les applications seront supprimées automatiquement.]]></String>
+	<String Id="IDS_FoundProductsDlg_ButtonsYes"><![CDATA[Supprimer &automatiquement les logiciels incompatibles]]></String>
+	<String Id="IDS_FoundProductsDlg_ButtonsNo"><![CDATA[Supprimer &manuellement les logiciels incompatibles]]></String>
+	
+	<!-- FoundSettingsDlg -->
+	<String Id="IDS_FoundSettingsDlg_Title"><![CDATA[{\PageTitleFont}Paramètres de l'application]]></String>
+	<String Id="IDS_FoundSettingsDlg_Description"><![CDATA[{\PageSubtitleFont}Les paramètres de l'application ont été découverts.]]></String>
+	<String Id="IDS_FoundSettingsDlg_Text"><![CDATA[Les paramètres de l'application hérités de l'installation précédentes ont été découverts. Sélectionnez les paramètres que vous voulez appliquer à l'installation en cours.]]></String>
+	<String Id="IDS_FoundSettingsDlg_CheckUseSavedSettings"><![CDATA[Paramètres de la protection]]></String>
+	<String Id="IDS_FoundSettingsDlg_CheckUseSavedAVBases"><![CDATA[Signatures des menaces]]></String>
+	<String Id="IDS_FoundSettingsDlg_CheckUseSavedASBases"><![CDATA[Base d'Anti-Spam]]></String>	
+	
+	<!-- VerifyReadyDlg -->
+	<String Id="IDS_VerifyReadyDlg_Title"><![CDATA[{\PageTitleFont}Préparation de l'installation]]></String>
+	<String Id="IDS_VerifyReadyDlg_Description"><![CDATA[{\PageSubtitleFont}Assurez-vous que vous êtes prêt à installer le programme.]]></String>
+	<String Id="IDS_VerifyReadyDlg_Text"><![CDATA[Cliquez sur "Installer" pour installer les composants sélectionnés. Si vous souhaitez consulter ou modifier les paramètres de l'installation, cliquez sur "Précédent". Cliquez sur "Annuler" pour quitter le programme d'installation.]]></String>
+	<String Id="IDS_VerifyReadyDlg_Text2"><![CDATA[Etes-vous certain de vouloir poursuivre l'installation interrompue ?]]></String>
+	<String Id="IDS_VerifyReadyDlg_Text3"><![CDATA[Après l'installation du programme, utiliser les objets conservés auparavant:]]></String>
+	<String Id="IDS_VerifyReadyDlg_Text4"><![CDATA[Donner les informations de débogage pendant le fonctionnement du programme:]]></String>
+	<String Id="IDS_VerifyReadyDlg_CheckAutomaticUpdate"><![CDATA[Activer la mise à jour automatique]]></String>
+	<String Id="IDS_VerifyReadyDlg_CheckScanComputer"><![CDATA[Rechercher la présence éventuelle de virus sur l'ordinateur]]></String>
+	<String Id="IDS_VerifyReadyDlg_CheckEnableProtection"><![CDATA[Activer la protection des &modules avant le début de l'installation]]></String>
+	<String Id="IDS_VerifyReadyDlg_CheckUseSavedSettings"><![CDATA[Paramètres de protection]]></String>
+	<String Id="IDS_VerifyReadyDlg_CheckUseSavedAVBases"><![CDATA[Bases de l'application]]></String>
+	<String Id="IDS_VerifyReadyDlg_CheckUseSavedASBases"><![CDATA[Bases d'Anti-Spam]]></String>	
+	<String Id="IDS_VerifyReadyDlg_CheckTraceToFile"><![CDATA[dans le fichier]]></String>
+	<String Id="IDS_VerifyReadyDlg_CheckTraceToDebudOutput"><![CDATA[sur la console]]></String>
+	<String Id="IDS_VerifyReadyDlg_AddMSEclusions"><![CDATA[Exclure de l'analyse antivirus les domaines recommandés par Microsoft]]></String>
+	<String Id="IDS_VerifyReadyDlg_AddEnvironment"><![CDATA[Ajouter le chemin d'accès à avp.com à la variable %PATH%]]></String>
+	
+	<!-- ActionDialog -->
+	<String Id="IDS_ActionDialog_Title"><![CDATA[{\PageTitleFont}Installation du programme]]></String>
+	<String Id="IDS_ActionDialog_Title2"><![CDATA[{\PageTitleFont}Suppression/modification du programme]]></String>
+	<String Id="IDS_ActionDialog_Description"><![CDATA[{\PageSubtitleFont}L'installation du programme est en cours. Veuillez patienter...]]></String>
+	<String Id="IDS_ActionDialog_Description2"><![CDATA[{\PageSubtitleFont}La suppression/modification du programme est en cours. Veuillez patienter...]]></String>
+	<String Id="IDS_ActionDialog_ActionText"><![CDATA[{\PageSubtitleFont}Début de l'installation...]]></String>
+	<String Id="IDS_ActionDialog_ActionProgress"><![CDATA[Fin de l'installation...]]></String>
+	<String Id="IDS_ActionDialog_StatusLabel"><![CDATA[Etat :]]></String>
+	
+	<!-- ExitDialog -->
+	<String Id="IDS_ExitDialog_Title"><![CDATA[{\WelcomePageTitleFont}Fin de l'installation]]></String>
+	<String Id="IDS_ExitDialog_Title2"><![CDATA[{\WelcomePageTitleFont}Fin de la suppression]]></String>	
+	<String Id="IDS_ExitDialog_Text"><![CDATA[L'installation du logiciel a réussi. Cliquez sur "Suivant" afin de lancer l'Assistant de configuration de l'application. ]]></String>	
+	<String Id="IDS_ExitDialog_Text2"><![CDATA[La suppression du programme a réussi.]]></String>			
+	<String Id="IDS_ExitDialog_LaunchProgram"><![CDATA[Lancer [ProductName]]]></String>	
+
+	
+	<!-- FatalError -->
+	<String Id="IDS_FatalError_HeaderText"><![CDATA[{\WelcomePageTitleFont}Fin de l'installation]]></String>
+	<String Id="IDS_FatalError_HeaderText2"><![CDATA[{\WelcomePageTitleFont}Fin de la suppression]]></String>
+	<String Id="IDS_FatalError_Text"><![CDATA[L'installation du programme a été interrompue suite à une erreur fatale.]]></String>
+	<String Id="IDS_FatalError_Text2"><![CDATA[Souhaitez-vous rétablir votre système à son état antérieur au début de l'installation et poursuivre l'installation plus tard ?]]></String>
+	<String Id="IDS_FatalError_Text3"><![CDATA[La suppression du programme a été interrompue suite à une erreur fatale.]]></String>
+	
+	<!-- UserExit -->
+	<String Id="IDS_UserExit_InstallCanceledText"><![CDATA[{\WelcomePageTitleFont}Annulation de l'installation]]></String>
+	<String Id="IDS_UserExit_InstallCanceledText2"><![CDATA[{\WelcomePageTitleFont}Annulation de l'installation]]></String>
+	<String Id="IDS_UserExit_Text"><![CDATA[L'installation de [ProductName] a été interrompue.]]></String>
+	<String Id="IDS_UserExit_Text2"><![CDATA[Souhaitez-vous rétablir votre système à son état antérieur au début de l'installation et poursuivre l'installation plus tard ?]]></String>
+	<String Id="IDS_UserExit_Text3"><![CDATA[La suppression de [ProductName] a été interrompue.]]></String>
+	
+	<!-- CancelDlg -->
+	<String Id="IDS_CancelDlg_Text"><![CDATA[Etes-vous certain de vouloir interrompre l'installation de [ProductName]?]]></String>
+	<String Id="IDS_CancelDlg_Uninstall_Text"><![CDATA[Etes-vous certain de vouloir interrompre la suppression de [ProductName]?]]></String>
+
+	<!-- AdminWelcomeDlg -->
+	<String Id="IDS_AdminWelcomeDlg_WelcomeTitle"><![CDATA[{\WelcomePageTitleFont}Bienvenue dans l'Assistant d'installation de [ProductName]]]></String>
+	<String Id="IDS_AdminWelcomeDlg_WelcomeText"><![CDATA[L'Assistant d'installation va créer une image du disque de [ProductName] sur le serveur dans le répertoire de réseau indiqué. Cliquez sur "Suivant" si vous souhaitez continuer.]]></String>
+	
+	<!-- AdminInstallPoint -->
+	<String Id="IDS_AdminInstallPoint_Title"><![CDATA[{\WelcomePageTitleFont}Répertoire de réseau]]></String>
+	<String Id="IDS_AdminInstallPoint_Description"><![CDATA[Précisez le répertoire de réseau pour la création de l'image du disque du logiciel sur le serveur.]]></String>
+	<String Id="IDS_AdminInstallPoint_EditQ"><![CDATA[Répertoire de réseau du paquet d'&installation :]]></String>
+	<String Id="IDS_AdminInstallPoint_Text"><![CDATA[Indiquez le répertoire de réseau sur le serveur pour créer un modèle de disque pour le paquet d'installation.]]></String>
+	
+	<!-- AdminInstallBrowse -->
+	<String Id="IDS_AdminInstallBrowse_ComboText"><![CDATA[&Répertoire de réseau :]]></String>	
+	
+	<!-- AdminExitDialog -->
+	<String Id="IDS_AdminExitDialog_Title"><![CDATA[{\WelcomePageTitleFont}Fin de l'installation]]></String>
+	<String Id="IDS_AdminExitDialog_Text"><![CDATA[L'installation du logiciel sur votre ordinateur a réussi. Veuillez cliquer sur "OK" pour quitter l'Assistant d'installation. ]]></String>	
+	
+	<!-- BrowseDlg -->
+	<String Id="IDS_BrowseDlg_Title"><![CDATA[Modification du dossier d'installation actuel]]></String>
+	<String Id="IDS_BrowseDlg_Up"><![CDATA[Passage au niveau supérieur|]]></String>
+	<String Id="IDS_BrowseDlg_NewFolder"><![CDATA[Création du dossier|]]></String>
+	<String Id="IDS_BrowseDlg_ComboText"><![CDATA[&Dossier :]]></String>
+	<String Id="IDS_BrowseDlg_TailText"><![CDATA[&Chemin d'accès au dossier :]]></String>		
+		
+	<!-- ErrorDialog -->
+	
+	<!-- ResumeDlg -->
+	<String Id="IDS_ResumeDlg_Title"><![CDATA[{\WelcomePageTitleFont}Bienvenue dans l'Assistant d'installation de [ProductName]]]></String>
+	<String Id="IDS_ResumeDlg_Text"><![CDATA[Ce programme va procéder à la mise à niveau de l'application [ProductName] jusque la version [ProductVersion].
+
+Il est conseillé de quitter toutes les applications avant de lancer l'installation. 
+
+Cliquez sur "Suivant" pour poursuivre l'installation. 
+
+Cliquez sur "Annuler" si vous souhaitez quitter le programme d'installation.]]></String>
+	<String  Id="IDS_ResumeDlg_CheckExpressUpgrade"><![CDATA[Mise à jour rapide (mise à jour selon les paramètres par défaut)]]></String> 
+
+	<!-- FilesInUse -->
+	<String Id="IDS_FilesInUse_Title"><![CDATA[{\PageTitleFont}Fichiers utilisés]]></String>
+	<String Id="IDS_FilesInUse_Description"><![CDATA[{\PageSubtitleFont}Certains fichiers sont utilisés par d'autres applications.]]></String>
+	<String Id="IDS_FilesInUse_Text"><![CDATA[Quittez les applications suivantes avant de poursuivre l'installation :]]></String>
+
+	<!-- MsiRMFilesInUse -->
+	<String Id="IDS_MsiRMFilesInUse_Title"><![CDATA[{\PageTitleFont}Fichiers utilisés]]></String>
+	<String Id="IDS_MsiRMFilesInUse_Description"><![CDATA[{\PageSubtitleFont}Certains fichiers sont utilisés par d'autres applications]]></String>
+	<String Id="IDS_MsiRMFilesInUse_Text"><![CDATA[Il faut quitter les applications suivantes avant de poursuivre l'installation :]]></String>
+	<String Id="IDS_MsiRMFilesInUse_UseRM"><![CDATA[&Quitter les applications et les ouvrir après l'installation.]]></String>
+	<String Id="IDS_MsiRMFilesInUse_DontUseRM"><![CDATA[&Ne pas quitter les applications (requiert le redémarrage.)]]></String>
+
+	<!-- MaintenanceWelcomeDlg -->
+	<String Id="IDS_MaintenanceWelcomeDlg_Title"><![CDATA[{\WelcomePageTitleFont}Bienvenue dans l'Assistant d'installation de [ProductName]]]></String>
+	<String Id="IDS_MaintenanceWelcomeDlg_Description"><![CDATA[Il vous aidera à modifier les paramètres d'installation de [ProductName] ou à supprimer [ProductName].
+
+Cliquez sur "Suivant" si vous souhaitez poursuivre ou sur "Annuler" si vous souhaitez quitter le programme.]]></String>
+
+	
+	<!-- MaintenanceTypeDlg -->
+	<String Id="IDS_MaintenanceTypeDlg_ChangeLabel"><![CDATA[{\PageTitleFont}Modification]]></String>
+	<String Id="IDS_MaintenanceTypeDlg_RepairLabel"><![CDATA[{\PageTitleFont}Restauration]]></String>
+	<String Id="IDS_MaintenanceTypeDlg_RemoveLabel"><![CDATA[{\PageTitleFont}Suppression]]></String>
+	<String Id="IDS_MaintenanceTypeDlg_Title"><![CDATA[{\PageTitleFont}Modification, restauration ou suppression du programme.]]></String>
+	<String Id="IDS_MaintenanceTypeDlg_Description"><![CDATA[Sélectionnez l'opération que vous souhaitez exécuter.]]></String>
+	<String Id="IDS_MaintenanceTypeDlg_Text"><![CDATA[Définissez l'opération que vous souhaitez exécuter sur le programme.]]></String>
+	<String Id="IDS_MaintenanceTypeDlg_ChangeText"><![CDATA[Modification de la composition ou de la disposition des composants du programme sur l'ordinateur.]]></String>
+	<String Id="IDS_MaintenanceTypeDlg_RemoveText"><![CDATA[Suppression de tous les fichiers de [ProductName] de l'ordinateur.]]></String>
+	<String Id="IDS_MaintenanceTypeDlg_RepairText"><![CDATA[Elimination des erreurs, restauration des fichiers, des raccourcis et des clés de registre endommagés.]]></String>
+	<String Id="IDS_MaintenanceTypeDlg_ChangeButton"><![CDATA[Modification des composants]]></String>
+	<String Id="IDS_MaintenanceTypeDlg_RepairButton"><![CDATA[Restauration des composants]]></String>
+	<String Id="IDS_MaintenanceTypeDlg_RemoveButton"><![CDATA[Suppression des composants]]></String>
+	
+	<!-- DlgPasswdU -->
+	<String Id="IDS_DlgPasswdU_Title">Mot de passe de suppression de l'application</String>
+	<String Id="IDS_DlgPasswdU_Subtitle">Saisissez le mot de passe pour supprimer [ProductName]</String>
+	<String Id="IDS_DlgPasswdU_Text">Il faut absolument saisir un mot de passe pour supprimer [ProductName].</String>
+	<String Id="IDS_DlgPasswdU_Label">Mot de passe :</String>
+	
+	<!-- DlgPasswdInvalidU -->
+	<String Id="IDS_DlgPasswdInvalidU_Text">Le mot de passe saisi est incorrect</String>
+	
+	<!-- UninstallOptionsDlg -->
+	<String Id="IDS_UninstallOptionsDlg_Title"><![CDATA[{\PageTitleFont}Enregistrement des objets]]></String>
+	<String Id="IDS_UninstallOptionsDlg_Description"><![CDATA[{\PageSubtitleFont}Indiquez les objets à enregistrer.]]></String>
+	<String Id="IDS_UninstallOptionsDlg_Text"><![CDATA[{\PageSubtitleFont}Vous pouvez supprimer complètement l'application ou conserver certaines données. Les objets sauvegardés pourront être utilisés ultérieurement par le programme d'installation.]]></String>	
+	<String Id="IDS_UninstallOptionsDlg_ButtonsYes"><![CDATA[Supprimer complètement l'application]]></String>
+	<String Id="IDS_UninstallOptionsDlg_ButtonsNo"><![CDATA[Enregistrer les objets de l'application]]></String>
+	<String Id="IDS_UninstallOptionsDlg_SaveBases"><![CDATA[Signatures des menaces]]></String>
+	<String Id="IDS_UninstallOptionsDlg_SaveAntiSpamBases"><![CDATA[Base des connaissances d'Anti-Spam]]></String>
+	<String Id="IDS_UninstallOptionsDlg_SaveLicense"><![CDATA[Informations sur l'activation]]></String>
+	<String Id="IDS_UninstallOptionsDlg_SaveSettings"><![CDATA[Paramètres de protection]]></String>
+	<String Id="IDS_UninstallOptionsDlg_SaveFidbox"><![CDATA[Données iSwift]]></String>
+	<String Id="IDS_UninstallOptionsDlg_SaveQuarantine"><![CDATA[Objets de quarantaine]]></String>
+	<String Id="IDS_UninstallOptionsDlg_SaveBackup"><![CDATA[Objets du dossier de sauvegarde]]></String>
+	<String Id="IDS_UninstallOptionsDlg_SaveReport"><![CDATA[Rapports]]></String>
+
+	<!-- WaitForCostingDlg -->
+	<String Id="IDS_WaitForCostingDlg_Text"><![CDATA[Calcul de l'espace disque nécessaire à l'installation en cours. Veuillez patienter...]]></String>
+	
+	<!-- VerifyReadyAdmin -->
+	<String Id="IDS_VerifyReadyAdmin_Title"><![CDATA[{\PageTitleFont}Préparation de l'installation]]></String>
+	<String Id="IDS_VerifyReadyAdmin_Description"><![CDATA[{\PageSubtitleFont}Veuillez vous assurer que vous êtes prêt à installer les composants sélectionnés.]]></String>
+	<String Id="IDS_VerifyReadyAdmin_Text"><![CDATA[Etes-vous certain de vouloir lancer l'installation ?]]></String>
+	
+	<!-- VerifyModifyDlg -->
+	<String Id="IDS_VerifyModifyDlg_Title"><![CDATA[{\PageTitleFont}Prépartion de l'installation]]></String>
+	<String Id="IDS_VerifyModifyDlg_Description"><![CDATA[{\PageSubtitleFont}Veuillez vous assurer que vous êtes prêt à installer les composants sélectionnés.]]></String>
+	<String Id="IDS_VerifyModifyDlg_Text"><![CDATA[Cliquez sur "Installer" pour lancer l'installation. Si vous souhaitez consulter ou modifier les paramètres de l'installation, cliquez sur "Précédent". Cliquez sur "Annuler" si vous souhaitez quitter le programme d'installation.]]></String>
+	<String Id="IDS_VerifyModifyDlg_Text2"><![CDATA[Etes-vous certain de vouloir poursuivre l'installation interrompue ?]]></String>
+	
+	<!-- VerifyRepairDlg -->
+	<String Id="IDS_VerifyRepairDlg_Title"><![CDATA[[DlgTitleFont]Restauration de [ProductName]]]></String>
+	<String Id="IDS_VerifyRepairDlg_Description"><![CDATA[Le programme vous aidera à restaurer [ProductName].]]></String>
+	<String Id="IDS_VerifyRepairDlg_Text"><![CDATA[Cliquez sur "Suivant" afin de restaurer [ProductName]. Si vous souhaitez consulter ou modifier les paramètres de l'installation, cliquez sur "Précédent". Cliquez sur "Annuler" si vous souhaitez quitter le programme d'installation.]]></String>
+	
+	<!-- VerifyRemoveDlg -->
+	<String Id="IDS_VerifyRemoveDlg_Title"><![CDATA[{\PageTitleFont}Confirmation de la suppression du programme]]></String>
+	<String Id="IDS_VerifyRemoveDlg_Description"><![CDATA[{\PageSubtitleFont}Veuillez confirmer ou annuler la suppression du programme.]]></String>
+	<String Id="IDS_VerifyRemoveDlg_Text"><![CDATA[Etes-vous certain de vouloir supprimer tous les composants du programme?]]></String>
+	
+	<String Id="ButtonText_Next"><![CDATA[S&uivant >]]></String>
+	<String Id="ButtonText_Back"><![CDATA[< &Précédent]]></String>
+	<String Id="ButtonText_Cancel"><![CDATA[Annuler]]></String>
+	<String Id="ButtonText_No"><![CDATA[&Non]]></String>
+	<String Id="ButtonText_Yes"><![CDATA[&Oui]]></String>
+	<String Id="ButtonText_Reset"><![CDATA[&Effacer]]></String>
+	<String Id="ButtonText_OK"><![CDATA[&OK]]></String>
+	<String Id="ButtonText_InstallNow"><![CDATA[&Installer]]></String>
+	<String Id="ButtonText_RemoveNow"><![CDATA[&Supprimer]]></String>
+	<String Id="ButtonText_Repair"><![CDATA[Sui&vant >]]></String>
+	<String Id="ButtonText_Browse"><![CDATA[&Parcourir...]]></String>
+	<String Id="ButtonText_Retry"><![CDATA[&Réessayer]]></String>
+	<String Id="ButtonText_Ignore"><![CDATA[I&gnorer]]></String>
+	<String Id="ButtonText_Help"><![CDATA[&Aide]]></String>
+	<String Id="ButtonText_Restore"><![CDATA[&Restaurer]]></String>
+	<String Id="ButtonText_ContinueLater"><![CDATA[&Continuer plus tard]]></String>
+	<String Id="ButtonText_Abort"><![CDATA[I&nterrompre]]></String>
+	<String Id="ButtonText_Exit"><![CDATA[&Quitter]]></String>
+	<String Id="ButtonText_Reboot"><![CDATA[&Ok]]></String>
+	<String Id="ButtonText_Remove"><![CDATA[&Supprimer...]]></String>
+	<String Id="WizardTitle"><![CDATA[Installation du programme]]></String>
+	<String Id="WizardFullTitle"><![CDATA[[ProductName]]]></String>
+	
+	<!-- Error Messages -->
+	<String Id="AppFound"><![CDATA[Le logiciel antivirus de Kaspersky Lab version 6.0 est déjà installée. Veuillez la supprimer avant d’installer [ProductName].]]></String>
+	<String Id="NewAppFound"><![CDATA[Une version plus récente du logiciel antivirus de Kaspersky Lab version 7.0 est déjà installée. Veuillez supprimer cette application avant d'installer [ProductName].]]></String>
+	<String Id="IDS_Condition_Admin"><![CDATA[Vous devez jouir des privilèges d'administrateur pour installer le programme.]]></String>
+	<String Id="IDS_Condition_NeedReboot"><![CDATA[Vous devez redémarrer l'ordinateur pour poursuivre l'installation.]]></String>
+	<String Id="IDS_Condition_NeedUnloadApp"><![CDATA[Vous devez quitter [ProductName] pour poursuivre l'installation.]]></String>
+	<String Id="IDS_Condition_NeedIE5"><![CDATA[L'installation du programme est impossible. Microsoft Internet Explorer version 5 ou suivante requis.]]></String>
+	<String Id="IDS_Condition_NeedVCRuntime"><![CDATA[Veuillez télécharger et installer les mises à jour des bibliothèques Microsoft Visual C++. Pour l'information détaillée suivez l'adresse : http://kb.kaspersky.fr/index.php?ShowID=1125.]]></String>
+	<String Id="IDS_Condition_Need2KSP4"><![CDATA[L'installation du programme requiert Microsoft Windows 2000 Service Pack 4 ou suivant.]]></String>
+	<String Id="IDS_Condition_NeedXPSP2"><![CDATA[Il est conseillé d'installer Microsoft Windows XP Service Pack 2 ou supérieur.]]></String>
+	<String Id="IDS_Condition_Need128MB"><![CDATA[La mémoire vive est insuffisante.
+
+L'installation sur un ordinateur tournant sous Microsoft Windows 2000/ Windows XP/ Windows XP x64 Edition requiert un minimum de 128 Mo de mémoire vive.]]></String>
+	<String Id="IDS_Condition_Need512MB"><![CDATA[La mémoire vive est insuffisante.
+
+L'installation sur un ordinateur tournant sous Microsoft Windows Vista/ Windows Vista x64 requiert un minimum de 512 Mo de mémoire vive.]]></String>
+
+	<String Id="IDS_Condition_WrongOS"><![CDATA[Cette application ne peut pas être installée car elle n'est pas compatible avec cette version du système d'exploitation.]]></String>
+	<String Id="IDS_Condition_RegPermissions"><![CDATA[L'installation du composant requiert des privilèges d'accès complets à la base de registres système.]]></String>
+
+	<String Id="VerifyInstallDirError"><![CDATA[Le disque ou le répertoire sélectionné n'est pas valide. L'application doit être installée sur le disque dur local. Il est déconseillé d'installer l'application dans le répertoire racine ou le répertoire système. Le nom du répertoire ne peut pas contenir de caractères spéciaux et sa taille est limitée à 200 caractères.]]></String>
+	<String Id="VerifyInstallDirError1"><![CDATA[You selected an invalid target folder or drive. It is not recommended to install the application into folder where the previous version of the product installed.]]></String>
+	<String Id="FoundProductsError"><![CDATA[Supprimez les logiciels incompatibles (il est conseillé de redémarrer ensuite l'ordinateur). Recommencez ensuite l'installation.]]></String>
+	<String Id="MsgInvalidUninstallPasswd"><![CDATA[Le mot de passe pour la suppression de l'application est invalide ou n'a pas été défini.]]></String>
+	
+	<String Id="IDS_Filter0000Name"><![CDATA[Base d'Anti-Spam]]></String>
+	<String Id="IDS_Filter0000Desc"><![CDATA[Exemples de messages non sollicités]]></String>
+	
+	<String Id="IDS_Filter0001Name"><![CDATA[Signatures des menaces]]></String>
+	<String Id="IDS_Filter0001Desc"><![CDATA[Description des virus et autres programmes malicieux]]></String>
+	
+	<String Id="IDS_Filter0002Name"><![CDATA[Signatures d'attaques pour Anti-Hacker]]></String>
+	<String Id="IDS_Filter0002Desc"><![CDATA[Description d'attaques de réseau typiques]]></String>
+	
+	<String Id="IDS_Filter0003Name"><![CDATA[Modules binaires pour la version 7.0]]></String>
+	<String Id="IDS_Filter0003Desc"><![CDATA[Modules binaires pour la version 7.0]]></String>
+	
+	<String Id="IDS_Filter0004Name"><![CDATA[Signatures pour Anti-Bannières]]></String>
+	<String Id="IDS_Filter0004Desc"><![CDATA[Liste des masques URL des bannière (Anti-Bannières)]]></String>
+	
+	<String Id="IDS_Filter0005Name"><![CDATA[Liste des adresses de sites de phishing]]></String>
+	<String Id="IDS_Filter0005Desc"><![CDATA[Adresses des sites utilisés pour les escroqueries en ligne]]></String>
+	
+	<String Id="IDS_Filter0006Name"><![CDATA[Signatures pour l'analyse du flux]]></String>
+	<String Id="IDS_Filter0006Desc"><![CDATA[Signatures pour l'analyse du flux (Antivirus Internet)]]></String>
+	
+	<String Id="IDS_Filter0007Name"><![CDATA[Liste des objets de la base de registres système]]></String>
+	<String Id="IDS_Filter0007Desc"><![CDATA[Liste des objets de la base de registres contrôlés (Protection proactive)]]></String>
+	
+	<String Id="IDS_Filter0008Name"><![CDATA[Sélection des signatures de comportement]]></String>
+	<String Id="IDS_Filter0008Desc"><![CDATA[Description des aspects de comportements dangereux ou suspects (Protection proactive))]]></String>
+	
+	<String Id="IDS_CAERROR_InstallServiceKlifSys"><![CDATA[Erreur d'installation du pilote "klif". Il est conseillé de redémarrer l'ordinateur.]]></String>
+	<String Id="IDS_CAERROR_InstallServiceKlFltDevSys"><![CDATA[Erreur d'installation du pilote "klfltdev". Il est conseillé de redémarrer l'ordinateur.]]></String>
+	<String Id="IDS_CAERROR_InstallServiceKlBgSys"><![CDATA[Erreur d'installation du pilote "klbg". Il est conseillé de redémarrer l'ordinateur.]]></String>
+	<String Id="IDS_CAERROR_InstallServiceKl1Sys"><![CDATA[Erreur d'installation du pilote "kl1". Il est conseillé de redémarrer l'ordinateur.]]></String>
+	<String Id="IDS_CAERROR_CKAHUM_Reload"><![CDATA[Erreur d'installation des modules externes du pilote "kl1". Il est conseillé de redémarrer l'ordinateur.]]></String>
+
+	<String Id="Branding"><![CDATA[© Kaspersky Lab, 1996-2007. Tous droits réservés.]]></String>
+
+
+	<String Id="ProductLicActivationLink">https://auto-activation1.kaspersky.com/fr/activate https://auto-activation2.kaspersky.com/fr/activate https://auto-activation3.kaspersky.com/fr/activate https://auto-activation4.kaspersky.com/fr/activate https://auto-activation5.kaspersky.com/fr/activate https://auto-activation6.kaspersky.com/fr/activate</String>
+
+	<!-- Product features -->	
+	<String Id="AVScannerAndCoreFeatureTitle"><![CDATA[Recherche de virus]]></String> 
+	<String Id="AVScannerAndCoreFeatureDesc"><![CDATA[La recherche de virus consiste en une analyse détaillée de l'ordinateur afin de déceler tout objet dangereux.]]></String>
+	<String Id="RtpComponentsFeatureTitle"><![CDATA[Composants de la protection]]></String> 
+	<String Id="RtpComponentsFeatureDesc"><![CDATA[Les composants de la protection assure un contrôle permanent de tous les fichiers et de tous les programmes sur votre ordinateur. Cela permet d'éviter l'infection, même lorsque le virus s'est déjà introduit dans l'ordinateur.]]></String>
+	<String Id="FileAntiVirusFeatureTitle"><![CDATA[Antivirus Fichiers]]></String> 
+	<String Id="FileAntiVirusFeatureDesc"><![CDATA[L'antivirus Fichiers analyse tous les fichiers de l'ordinateur lorsqu'une requête leur est adressée. ]]></String>
+	<String Id="MailAntiVirusFeatureTitle"><![CDATA[Antivirus Courrier]]></String> 
+	<String Id="MailAntiVirusFeatureDesc"><![CDATA[L'antivirus Courrier recherche la présence éventuelle de virus dans tout le courrier entrant et sortant.]]></String>
+	<String Id="WebAntiVirusFeatureTitle"><![CDATA[Antivirus Internet]]></String> 
+	<String Id="WebAntiVirusFeatureDesc"><![CDATA[L'antivirus Internet bloque les virus qui pourraient pénétrer dans votre ordinateur via le protocole HTTP.]]></String>
+	<String Id="ProactiveDefenseFeatureTitle"><![CDATA[Protection proactive]]></String> 
+	<String Id="ProactiveDefenseFeatureDesc"><![CDATA[La protection proactive permet de réagir face aux menaces inconnues et assure le contrôle des modifications de la base de registres système et du lancement des programmes.]]></String>
+	<String Id="AntiSpyFeatureTitle"><![CDATA[Protection Vie Privée]]></String> 
+	<String Id="AntiSpyFeatureDesc"><![CDATA[La protection Vie Privée garantit la confidentialité des informations enregistrées sur votre ordinateur.]]></String>
+	<String Id="AntiHackerFeatureTitle"><![CDATA[Pare-Feu]]></String> 
+	<String Id="AntiHackerFeatureDesc"><![CDATA[Le Pare-Feu contrôle toutes les connexions de réseau, repère les tentatives d'attaques menées contre votre ordinateur et permet de rendre celui invisible.]]></String>
+	<String Id="AntiSpamFeatureTitle"><![CDATA[Anti-Spam]]></String> 
+	<String Id="AntiSpamFeatureDesc"><![CDATA[L'Anti-Spam vous protège contre le courrier indésirable.]]></String>
+	<String Id="ParentalControlFeatureTitle"><![CDATA[Contrôle Parental]]></String>
+	<String Id="ParentalControlFeatureDesc"><![CDATA[Le Contrôle Parental permet de limiter l'accès aux sites Internet dont le contenu est inapproprié.]]></String>
+
+	<String Id="AdminKitConnectorTitle"><![CDATA[Module externe de l'agent d'administration de Kaspersky Administration Kit]]></String>
+	<String Id="AdminKitConnectorDesc"><![CDATA[Le module externe de l'agent d'administration assure la communication entre l'application et Kaspersky Administration Kit pour l'administration à distance.]]></String>
+
+</WixLocalization>
+
+

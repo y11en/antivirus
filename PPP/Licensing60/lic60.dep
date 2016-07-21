@@ -1,0 +1,96 @@
+# Microsoft Developer Studio Generated Dependency File, included by lic60.mak
+
+.\licensing.cpp : \
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\..\..\..\program files\microsoft sdk\include\winefs.h"\
+	"..\..\CommonFiles\Licensing\include\appinfo.h"\
+	"..\..\CommonFiles\Licensing\include\appinfo_struct.h"\
+	"..\..\CommonFiles\Licensing\include\blacklist.h"\
+	"..\..\CommonFiles\Licensing\include\datatree.h"\
+	"..\..\CommonFiles\Licensing\include\date_t.h"\
+	"..\..\CommonFiles\Licensing\include\err_defs.h"\
+	"..\..\CommonFiles\Licensing\include\keyfile.h"\
+	"..\..\CommonFiles\Licensing\include\lic_defs.h"\
+	"..\..\CommonFiles\Licensing\include\lic_storage_intf.h"\
+	"..\..\CommonFiles\Licensing\include\licensing_intf.h"\
+	"..\..\CommonFiles\Licensing\include\licensing_policy.h"\
+	"..\..\CommonFiles\Licensing\include\platform_compat.h"\
+	"..\..\CommonFiles\Licensing\include\secure_data.h"\
+	"..\..\CommonFiles\Licensing\include\updateconfig.h"\
+	"..\..\commonfiles\property\property.h"\
+	"..\..\prague\include\iface\e_clsid.h"\
+	"..\..\prague\include\iface\e_ktime.h"\
+	"..\..\prague\include\iface\i_heap.h"\
+	"..\..\prague\include\iface\i_iface.h"\
+	"..\..\prague\include\iface\i_ifenum.h"\
+	"..\..\prague\include\iface\i_io.h"\
+	"..\..\prague\include\iface\i_methodinfo.h"\
+	"..\..\prague\include\iface\i_plugin.h"\
+	"..\..\prague\include\iface\i_receiv.h"\
+	"..\..\prague\include\iface\i_reg.h"\
+	"..\..\prague\include\iface\i_root.h"\
+	"..\..\prague\include\iface\i_string.h"\
+	"..\..\prague\include\iface\i_tracer.h"\
+	"..\..\prague\include\iface\impexhlp.h"\
+	"..\..\prague\include\pr_compl.h"\
+	"..\..\prague\include\pr_cpp.h"\
+	"..\..\prague\include\pr_err.h"\
+	"..\..\prague\include\pr_iid.h"\
+	"..\..\prague\include\pr_int.h"\
+	"..\..\prague\include\pr_msg.h"\
+	"..\..\prague\include\pr_obj.h"\
+	"..\..\prague\include\pr_pid.h"\
+	"..\..\prague\include\pr_prop.h"\
+	"..\..\prague\include\pr_reg.h"\
+	"..\..\prague\include\pr_serdescriptor.h"\
+	"..\..\prague\include\pr_serializable.h"\
+	"..\..\prague\include\pr_sys.h"\
+	"..\..\prague\include\pr_types.h"\
+	"..\..\prague\include\pr_vid.h"\
+	"..\..\prague\include\pr_vtbl.h"\
+	"..\..\prague\include\prague.h"\
+	"..\Include\iface\i_licensing.h"\
+	"..\Include\plugin\p_licensing60.h"\
+	"..\Include\structs\s_licensing.h"\
+	".\AppInfo107r.h"\
+	".\licensing.h"\
+	"o:\commonfiles\appinfoid.h"\
+	"o:\commonfiles\avp_data.h"\
+	"o:\commonfiles\property\property.h"\
+	
+
+.\plugin_licensing60.cpp : \
+	"..\..\prague\include\iface\e_clsid.h"\
+	"..\..\prague\include\iface\e_ktime.h"\
+	"..\..\prague\include\iface\i_heap.h"\
+	"..\..\prague\include\iface\i_iface.h"\
+	"..\..\prague\include\iface\i_ifenum.h"\
+	"..\..\prague\include\iface\i_methodinfo.h"\
+	"..\..\prague\include\iface\i_plugin.h"\
+	"..\..\prague\include\iface\i_receiv.h"\
+	"..\..\prague\include\iface\i_reg.h"\
+	"..\..\prague\include\iface\i_root.h"\
+	"..\..\prague\include\iface\i_tracer.h"\
+	"..\..\prague\include\iface\impexhlp.h"\
+	"..\..\prague\include\pr_compl.h"\
+	"..\..\prague\include\pr_err.h"\
+	"..\..\prague\include\pr_iid.h"\
+	"..\..\prague\include\pr_int.h"\
+	"..\..\prague\include\pr_msg.h"\
+	"..\..\prague\include\pr_obj.h"\
+	"..\..\prague\include\pr_pid.h"\
+	"..\..\prague\include\pr_prop.h"\
+	"..\..\prague\include\pr_reg.h"\
+	"..\..\prague\include\pr_sys.h"\
+	"..\..\prague\include\pr_types.h"\
+	"..\..\prague\include\pr_vid.h"\
+	"..\..\prague\include\pr_vtbl.h"\
+	"..\..\prague\include\prague.h"\
+	"..\Include\iface\i_licensing.h"\
+	"..\Include\plugin\p_licensing60.h"\
+	

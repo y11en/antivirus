@@ -1,0 +1,14 @@
+begin
+ // Настройка AVZ
+ SetupAVZ('UseQuarantine=Y'); // Включить карантин
+ // Запуск сканирования
+ RunScan;
+ // Добавление данных о имени ПК
+ AddToLog('---------------');
+ // Сохранение протокола AVZ
+ SaveLog(GetAVZDirectory + 'VirusInfo\avz_log.txt');
+ // Создание архива с файлами из карантина
+ CreateQurantineArchive(GetAVZDirectory+'VirusInfo\quarantine.zip');
+ // Создание архива с результатами исследования системы
+ CreateSysCheckArchive(GetAVZDirectory+'VirusInfo\syscheck.zip');
+end.

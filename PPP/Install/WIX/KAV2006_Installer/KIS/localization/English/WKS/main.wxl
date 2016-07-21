@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<WixLocalization xmlns="http://schemas.microsoft.com/wix/2003/11/localization" Codepage="1252">
+
+	<String Id="ProductName_NOM">Kaspersky Anti-Virus 8.0 for Windows Workstations</String>
+  <String Id="ProductName_GEN"><![CDATA[[ProductName_NOM]]]></String>
+  <String Id="ProductName_INS"><![CDATA[[ProductName_NOM]]]></String>
+  <String Id="WholeProductFeatureDesc"><![CDATA[[ProductName_NOM] is a complete solution for protecting your computer from any threat or dangerous program (viruses, hacker attacks, spam, etc.)]]></String>
+  <String Id="AVPServiceDescription">Provides protection against computer viruses and spyware, hacker attacks, cyber-crime and spam.</String>
+  <String Id="ProductNamePrfix">Kaspersky Anti-Virus</String>
+
+  <!-- DO NOT LOCALIZE BELOW! -->
+  <String Id="LoginImage">images\lgnkav.png</String>
+</WixLocalization>

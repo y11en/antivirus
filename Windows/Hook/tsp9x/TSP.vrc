@@ -1,0 +1,9 @@
+CompanyName	=	"Kaspersky Labs" 
+FileDescription =	"ThSubProc"
+FileVersion	=	"Build 2"
+InternalName	=	"TSP"
+LegalCopyright	= 	"Copyright \251 2001-2002, Kaspersky Labs."
+OriginalFilename = 	"TSP.VXD"
+ProductName	=	"KLAVA"
+ProductVersion	= 	"Build 2"
+Translation	=	0x409, 0x4E4

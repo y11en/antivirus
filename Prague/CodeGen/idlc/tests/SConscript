@@ -1,0 +1,42 @@
+import os
+Import("*")
+
+boostfiles = [
+        'unittest/compiler_log_formatter.cpp',
+        'unittest/execution_monitor.cpp',
+        'unittest/framework.cpp',
+        'unittest/plain_report_formatter.cpp',
+        'unittest/progress_monitor.cpp',
+        'unittest/results_collector.cpp',
+        'unittest/results_reporter.cpp',
+#        'unittest/test_main.cpp',
+        'unittest/test_tools.cpp',
+        'unittest/unit_test_log.cpp',
+#        'unittest/unit_test_main.cpp',
+        'unittest/unit_test_monitor.cpp',
+        'unittest/unit_test_parameters.cpp',
+        'unittest/unit_test_suite.cpp',
+        'unittest/xml_log_formatter.cpp',
+        'unittest/xml_report_formatter.cpp'
+]
+
+libs = {}
+
+libs['windows-msvc-debug']      = ['advapi32.lib']
+libs['windows-msvc-release']    = ['advapi32.lib']
+
+libs['linux-gcc-debug']         = []
+libs['linux-gcc-release']       = []
+
+def make_path(lib) :
+    return '#' + os.path.join(profile.buildDir, lib)
+        
+lib_list = libs[env['PLATFORM']] + Split('idl boost')    
+                
+program = env.Program(
+        target = ['tests'], 
+        source = boostfiles + ['main.cpp', 'tests.cpp'],
+                LIBPATH = [make_path(i) for i in Split('idl boost')],
+                LIBS = lib_list)
+
+env.Install(dir = profile.binAbsDir, source = program + [])

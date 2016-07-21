@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="idhtssnegxl7ttqegxl8bu5">
+        <property name="$metaclass" value="Use Case Diagram"/>
+        <property name="@__options" value="option.links = Direct"/>
+        <reference df-class-name="reference3" referencedUin="design:node:::idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak">
+            <property name="$shortcutReference" value="true"/>
+            <property name="background_color" value="200,200,200"/>
+            <property name="bounds" value="310,50,300,460"/>
+            <property name="bounds_setted_by_user" value="true"/>
+            <reference referencedUin="design:node:::idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeidhv2shegxl7ttqegxor5se:idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak">
+                <property name="bounds" value="70,260,160,40"/>
+                <property name="bounds_setted_by_user" value="true"/>
+                <reference referencedUin="design:link:::idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeidhv2shegxl7ttqegxor5se.linkid5az0weia4wsy9eia58st4:idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeidhv2shegxl7ttqegxor5se:idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak">
+                    <property name="sourceAnchor" value="540,330"/>
+                    <property name="bendpoints" value="630,330"/>
+                    <property name="targetAnchor" value="720,330"/>
+                    <property name="bounds_setted_by_user" value="true"/>
+                </reference>
+            </reference>
+            <reference referencedUin="design:node:::idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeidaqliuegxl7ttqegxokyfq:idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak">
+                <property name="bounds" value="70,70,163,40"/>
+                <property name="bounds_setted_by_user" value="true"/>
+            </reference>
+            <reference referencedUin="design:node:::idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeidcupoieia4wsy9eia4xwot:idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak">
+                <property name="bounds" value="80,360,160,40"/>
+                <property name="bounds_setted_by_user" value="true"/>
+                <reference referencedUin="design:link:::idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeidcupoieia4wsy9eia4xwot.linkidhswj6eia4wsy9eia58y8f:idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeidcupoieia4wsy9eia4xwot:idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak">
+                    <property name="sourceAnchor" value="550,430"/>
+                    <property name="bendpoints" value="630,430"/>
+                    <property name="targetAnchor" value="746,367"/>
+                    <property name="bounds_setted_by_user" value="true"/>
+                </reference>
+            </reference>
+            <reference referencedUin="design:node:::idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeid909rvegxl7ttqegxou6yv:idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak">
+                <property name="bounds" value="70,160,160,40"/>
+                <property name="bounds_setted_by_user" value="true"/>
+                <reference referencedUin="design:link:::idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeid909rvegxl7ttqegxou6yv.linkid9ffkdegxl7ttqegxov9ul:idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeid909rvegxl7ttqegxou6yv:idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak">
+                    <property name="sourceAnchor" value="540,230"/>
+                    <property name="bendpoints" value="630,230"/>
+                    <property name="targetAnchor" value="746,290"/>
+                    <property name="bounds_setted_by_user" value="true"/>
+                </reference>
+            </reference>
+        </reference>
+        <reference df-class-name="reference" referencedUin="design:node:::idhtssnegxl7ttqegxl8bu5.nodeid2dkohegxl7ttqegxoo79e">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="180,250,52,77"/>
+            <reference referencedUin="design:link:::idhtssnegxl7ttqegxl8bu5.nodeid2dkohegxl7ttqegxoo79e.linkid2sya7egxl7ttqegxov6le:idhtssnegxl7ttqegxl8bu5.nodeid2dkohegxl7ttqegxoo79e">
+                <property name="sourceAnchor" value="232,260"/>
+                <property name="bendpoints" value="290,230"/>
+                <property name="targetAnchor" value="380,230"/>
+                <property name="bounds_setted_by_user" value="true"/>
+            </reference>
+            <reference referencedUin="design:link:::idhtssnegxl7ttqegxl8bu5.nodeid2dkohegxl7ttqegxoo79e.linkid25ylneia4wsy9eia58h6q:idhtssnegxl7ttqegxl8bu5.nodeid2dkohegxl7ttqegxoo79e">
+                <property name="sourceAnchor" value="206,327"/>
+                <property name="bendpoints" value="300,430"/>
+                <property name="targetAnchor" value="390,430"/>
+                <property name="bounds_setted_by_user" value="true"/>
+            </reference>
+            <reference referencedUin="design:link:::idhtssnegxl7ttqegxl8bu5.nodeid2dkohegxl7ttqegxoo79e.linkid1iuulegxl7ttqegxosjqj:idhtssnegxl7ttqegxl8bu5.nodeid2dkohegxl7ttqegxoo79e">
+                <property name="sourceAnchor" value="206,250"/>
+                <property name="bendpoints" value="290,140"/>
+                <property name="targetAnchor" value="380,140"/>
+                <property name="bounds_setted_by_user" value="true"/>
+            </reference>
+            <reference referencedUin="design:link:::idhtssnegxl7ttqegxl8bu5.nodeid2dkohegxl7ttqegxoo79e.linkidanzjfegxl7ttqegxos9h6:idhtssnegxl7ttqegxl8bu5.nodeid2dkohegxl7ttqegxoo79e">
+                <property name="sourceAnchor" value="232,317"/>
+                <property name="bendpoints" value="300,330"/>
+                <property name="targetAnchor" value="380,330"/>
+                <property name="bounds_setted_by_user" value="true"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference4" referencedUin="design:node:::idhtssnegxl7ttqegxl8bu5.nodeidei3vnegxl7ttqegxoocpk">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="720,290,52,77"/>
+        </reference>
+    </view>
+    <node uin="idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak">
+        <property name="$metaclass" value="System Boundary"/>
+        <property name="$name" value="Online Activation Library"/>
+        <node uin="idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeidaqliuegxl7ttqegxokyfq">
+            <property name="$metaclass" value="Use Case"/>
+            <property name="$name" value="Compose Request"/>
+        </node>
+        <node uin="idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeidhv2shegxl7ttqegxor5se">
+            <property name="$metaclass" value="Use Case"/>
+            <property name="$name" value="Get Response"/>
+            <link uin="idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeidhv2shegxl7ttqegxor5se.linkid5az0weia4wsy9eia58st4">
+                <property name="$metaclass" value="Association Link"/>
+                <property name="@stereotype" value="communicate"/>
+                <participant role="Supplier" referencedUin="design:node:::idhtssnegxl7ttqegxl8bu5.nodeidei3vnegxl7ttqegxoocpk"/>
+                <participant role="Client" referencedUin="design:node:::idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeidhv2shegxl7ttqegxor5se:idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak"/>
+            </link>
+        </node>
+        <node uin="idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeid909rvegxl7ttqegxou6yv">
+            <property name="$metaclass" value="Use Case"/>
+            <property name="$name" value="Submit Request"/>
+            <link uin="idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeid909rvegxl7ttqegxou6yv.linkid9ffkdegxl7ttqegxov9ul">
+                <participant role="Supplier" referencedUin="design:node:::idhtssnegxl7ttqegxl8bu5.nodeidei3vnegxl7ttqegxoocpk"/>
+                <participant role="Client" referencedUin="design:node:::idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeid909rvegxl7ttqegxou6yv:idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak"/>
+                <property name="$metaclass" value="Association Link"/>
+                <property name="@stereotype" value="communicate"/>
+            </link>
+        </node>
+        <node uin="idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeidcupoieia4wsy9eia4xwot">
+            <property name="$metaclass" value="Use Case"/>
+            <property name="$name" value="Post Reply"/>
+            <link uin="idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeidcupoieia4wsy9eia4xwot.linkidhswj6eia4wsy9eia58y8f">
+                <property name="$metaclass" value="Association Link"/>
+                <property name="@stereotype" value="communicate"/>
+                <participant role="Supplier" referencedUin="design:node:::idhtssnegxl7ttqegxl8bu5.nodeidei3vnegxl7ttqegxoocpk"/>
+                <participant role="Client" referencedUin="design:node:::idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeidcupoieia4wsy9eia4xwot:idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak"/>
+            </link>
+        </node>
+    </node>
+    <node uin="idhtssnegxl7ttqegxl8bu5.nodeid2dkohegxl7ttqegxoo79e">
+        <property name="$metaclass" value="Actor"/>
+        <property name="$name" value="Client"/>
+        <link uin="idhtssnegxl7ttqegxl8bu5.nodeid2dkohegxl7ttqegxoo79e.linkidanzjfegxl7ttqegxos9h6">
+            <participant role="Supplier" referencedUin="design:node:::idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeidhv2shegxl7ttqegxor5se:idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak"/>
+            <participant role="Client" referencedUin="design:node:::idhtssnegxl7ttqegxl8bu5.nodeid2dkohegxl7ttqegxoo79e"/>
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@stereotype" value="communicate"/>
+        </link>
+        <link uin="idhtssnegxl7ttqegxl8bu5.nodeid2dkohegxl7ttqegxoo79e.linkid1iuulegxl7ttqegxosjqj">
+            <participant role="Supplier" referencedUin="design:node:::idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeidaqliuegxl7ttqegxokyfq:idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak"/>
+            <participant role="Client" referencedUin="design:node:::idhtssnegxl7ttqegxl8bu5.nodeid2dkohegxl7ttqegxoo79e"/>
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@stereotype" value="communicate"/>
+        </link>
+        <link uin="idhtssnegxl7ttqegxl8bu5.nodeid2dkohegxl7ttqegxoo79e.linkid2sya7egxl7ttqegxov6le">
+            <participant role="Supplier" referencedUin="design:node:::idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeid909rvegxl7ttqegxou6yv:idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak"/>
+            <participant role="Client" referencedUin="design:node:::idhtssnegxl7ttqegxl8bu5.nodeid2dkohegxl7ttqegxoo79e"/>
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@stereotype" value="communicate"/>
+        </link>
+        <link uin="idhtssnegxl7ttqegxl8bu5.nodeid2dkohegxl7ttqegxoo79e.linkid25ylneia4wsy9eia58h6q">
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@stereotype" value="communicate"/>
+            <participant role="Supplier" referencedUin="design:node:::idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak.nodeidcupoieia4wsy9eia4xwot:idhtssnegxl7ttqegxl8bu5.nodeid4fhy4egxl7ttqegxokhak"/>
+            <participant role="Client" referencedUin="design:node:::idhtssnegxl7ttqegxl8bu5.nodeid2dkohegxl7ttqegxoo79e"/>
+        </link>
+    </node>
+    <node uin="idhtssnegxl7ttqegxl8bu5.nodeidei3vnegxl7ttqegxoocpk">
+        <property name="$metaclass" value="Actor"/>
+        <property name="$name" value="Server"/>
+    </node>
+</nodeSet>

@@ -1,0 +1,16 @@
+Adding signatures from file "12.sig".
+Saving the static tree to file "12.sig.st".
+Hash level: 16Hash table size: 64[Kb]
+Cleaning the tree.
+Loading a static tree from file "12.sig.st".
+Scanning file "12.sig"
+   0/8; off=0x00000358; id=12
+   1/8; off=0x0000037C; id=12
+   2/8; off=0x000003A0; id=12
+   3/8; off=0x000003C4; id=12
+   4/8; off=0x000003E8; id=12
+   5/8; off=0x0000040C; id=12
+   6/8; off=0x00000430; id=12
+   7/8; off=0x00000454; id=12
+Total :
+id=12(8)

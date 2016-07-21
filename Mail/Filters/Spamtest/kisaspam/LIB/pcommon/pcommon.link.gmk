@@ -1,0 +1,10 @@
+ifndef __pcommon_link_included__
+
+__pcommon_link_included__ = 1
+
+PCOMMON_LIB = $(ProjectRoot_Directory)/lib/pcommon$(_LIB)
+PCOMMON_DIR = $(ProjectRoot_Directory)/lib/pcommon
+LIBLIST += $(PCOMMON_LIB)
+LIBMAKE += PCOMMON
+
+endif

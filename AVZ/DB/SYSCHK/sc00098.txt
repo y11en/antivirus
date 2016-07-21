@@ -1,0 +1,9 @@
+// ***** Trojan-Downloader.Win32.Agent *****
+begin
+ AddEvAlarmByCLSID('5C7F15E1-F31A-44FD-AA1A-2EC63AAFFD3A', AScriptName,'Speedup.ocx');
+ AddEvAlarmByCLSID('A0F0D762-D1DE-43AF-B70E-D87864743EB3', AScriptName,'nslite.dll');
+ AddEvAlarmByCLSID('EB6AFDAB-E16D-430B-A5EE-0408A12289DC','TrojanDownloader.Agent.r','ActiveInstall.dll');
+ AddEvAlarmByCLSID('B4573B12-BE33-44B6-9798-A1F5A95D4392','TrojanDownloader.Agent.t','ActiveInstall2.dll');
+ AddEvAlarmByCLSID('6DA975EA-CBB4-411B-97C0-DB0A892BF2C1', AScriptName, '');
+ AddEvAlarmByCLSID('EBBD88E5-C372-469D-B4C5-1FE00352AB9B', AScriptName, 'mmview*.dll');
+end.

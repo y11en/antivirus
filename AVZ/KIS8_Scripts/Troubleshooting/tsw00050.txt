@@ -1,0 +1,22 @@
+// $AVZ1561
+//$ Таймаут завершения процессов находится за пределами допустимых значений
+// Функция поиска проблемы                                                                          
+function Check : dword;
+var
+ X : integer;
+begin
+ Result := 0;
+ // Проверка
+ if RegKeyParamExists('HKLM', 'SYSTEM\CurrentControlSet\Control', 'WaitToKillAppTimeout') then begin
+  X := StrToIntDef(RegKeyStrParamRead('HKLM', 'SYSTEM\CurrentControlSet\Control', 'WaitToKillAppTimeout'), 30000);
+  if (X < 10000) or (X > 60000) then 
+   Result := 2;
+ end;
+end;
+
+// Функция исправления проблемы                                                                          
+function Fix : dword;
+begin
+ Result := 0;
+ RegKeyStrParamWrite('HKLM', 'SYSTEM\CurrentControlSet\Control', 'WaitToKillAppTimeout', '20000');
+end;

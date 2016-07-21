@@ -1,0 +1,1 @@
+C:\WinDDK\6000\bin\x86\amd64\ml64.exe /c %1

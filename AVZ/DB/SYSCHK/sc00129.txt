@@ -1,0 +1,4 @@
+// ***** Spy.CommonName *****
+begin
+ AddEvAlarmByCLSID('6656B666-992F-4D74-8588-8CA69E97D90C',AScriptName,'cnbabe.dll');
+end.

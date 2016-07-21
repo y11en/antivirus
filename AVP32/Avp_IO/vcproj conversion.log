@@ -1,0 +1,29 @@
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Folder: "O:\avp32\Avp_IO"
+	File "O:\avp32\Avp_IO\AVP3 LLIO.dsp"
+		Converting "AVP3 LLIO.dsp"
+		Patching   "AVP3 LLIO.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+
+	File "O:\avp32\Avp_IO\Avp_io VxD.dsp"
+		Converting "Avp_io VxD.dsp"
+		Patching   "Avp_io VxD.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+
+	File "O:\avp32\Avp_IO\Avp_io32.dsp"
+		Converting "Avp_io32.dsp"
+		Patching   "Avp_io32.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+
+	File "O:\avp32\Avp_IO\Avp_iont.dsp"
+		Converting "Avp_iont.dsp"
+		Patching   "Avp_iont.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+
+Folder: "O:\avp32\Avp_IO\Debug"

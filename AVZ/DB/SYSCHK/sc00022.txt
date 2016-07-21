@@ -1,0 +1,6 @@
+// ***** AdvWare.Toolbar.Iebar *****
+begin
+ AddEvAlarmByCLSID('B1D147E7-873E-4909-8127-695D9BB78728',AScriptName,'DownloadBHO.DLL');
+ AddEvAlarmByCLSID('56A7DC70-E102-4408-A34A-AE06FEF01586',AScriptName,'HDTBar.DLL');
+ AddEvAlarmByCLSID('382338A5-16D3-4F94-92EC-745AD4E157CA',AScriptName,'HDTBar.DLL');
+end.

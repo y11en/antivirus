@@ -1,0 +1,46 @@
+// $AVZ1501
+//$ Нарушение ассоциации EXE файлов
+// Функция поиска проблемы                                                                          
+function Check : dword;
+var
+ S : string;
+begin
+ Result := 0;
+ // Тяжелая ошибка 1 - зловредом удален ключ '.exe' или 'exefile\shell\open\command'
+ if not(RegKeyExists('HKEY_CLASSES_ROOT','.exe')) or
+    not(RegKeyExists('HKEY_CLASSES_ROOT','exefile\shell\open\command')) then begin
+     Result := 3;
+     exit;
+    end;
+ // Тяжелая ошибка 2 - ключ '.exe' ведет не на тип exefile
+ if UpperCase(RegKeyStrParamRead('HKEY_CLASSES_ROOT','.exe', '')) <> 'EXEFILE' then begin
+     Result := 3;
+     exit;
+    end;
+ // Тяжелая ошибка 3 - ключ 'exefile' содержит подмененныы ключ запуска (часто меняется троянами)                                                                                       
+ S := Trim(RegKeyStrParamRead('HKEY_CLASSES_ROOT', 'exefile\shell\open\command', ''));
+ // Пераметры запуска удалены                                                                   
+ S := StringReplace(S, '  ', ' ');
+ if S = '' then begin
+  Result := 3;
+  exit;
+ end;
+ // Параметры запуска не совпадают со стандартными                                                                                                           
+ if not((S = '"%1" %*') or (S = '%1 %*')) then begin             
+  Result := 3;
+  exit;
+ end;
+end;
+
+// Функция исправления проблемы                                                                          
+function Fix : dword;
+begin
+ RegKeyCreate('HKEY_CLASSES_ROOT', '.exe');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', '.exe', '', 'exefile');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', '.exe', 'Content Type', 'application/x-msdownload');
+ RegKeyCreate('HKEY_CLASSES_ROOT', 'exefile\shell\open\command');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', 'exefile\shell\open\command', '', '"%1" %*');
+ RegKeyCreate('HKEY_CLASSES_ROOT', 'exefile\shell\runas\command');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', 'exefile\shell\runas\command', '', '"%1" %*');
+ Result := 0;
+end;

@@ -1,0 +1,5 @@
+// ***** AdvWare.AzSearch *****
+begin
+ AddEvAlarmByCLSID('0d2def3a-f4f1-42ec-ac4f-132e7ba6e292',AScriptName,'bookmark.DLL');
+ AddEvAlarmByCLSID('2FE28C1F-BF47-4643-AEFD-61C0073392BA',AScriptName,'azeloader.DLL');
+end.

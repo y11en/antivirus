@@ -1,0 +1,6 @@
+LIBRARY      "miscr3.dll"
+
+EXPORTS
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer	PRIVATE
+	hme			PRIVATE

@@ -1,0 +1,13 @@
+
+2006-10-14 Evgeny P. Smirnov  <Evgeny.Smirnov@kaspersky.com>
+           параметр min_animated_frame_duration_hsec изменен с 0 на (вписать...),
+           но не в коде libgsg2, а в контольном блоке, поставляемом с апдейтами,
+           в MP2 нужно захардкодить этот параметр в коде.
+           Также в коде file2gsg Димой Скоринко добавлено чтение по флагу -F параметров libgsg/libosr.
+
+
+2006-10-09 Evgeny P. Smirnov  <Evgeny.Smirnov@kaspersky.com>
+           В MP1 вошли изменения libgsg2, посвященные добавлению gsga (поддержка анимированных картинок)
+           и поддержка библиотеки libosr (Optical Symbols Recognition library).
+           Код бибилиотеки libosr зафиксирован на состояние KAS 3.0.255 MP1 под тагом KAS_3_0_255_MP1
+           Под этим же тагом зафиксированы изменения libgsg2

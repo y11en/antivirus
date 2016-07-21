@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8,00"
+	Name="pnglib_Static"
+	ProjectGUID="{34C0C08F-B1D3-4019-9045-8A32D50857C0}"
+	RootNamespace="pnglib_Static"
+	SccProjectName="Perforce Project"
+	SccLocalPath=".."
+	SccProvider="MSSCCI:Perforce SCM"
+	Keyword="MakeFileProj"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="..\..\..\out_$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="..\..\..\temp_$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="devenv /build &quot;ReleaseS|Win32&quot; pnglib.vcproj"
+				ReBuildCommandLine="devenv /rebuild &quot;ReleaseS|Win32&quot; pnglib.vcproj"
+				CleanCommandLine="devenv /clean &quot;ReleaseS|Win32&quot; pnglib.vcproj"
+				Output="pnglib"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="..\..\..\out_$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="..\..\..\temp_$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="devenv /build &quot;ReleaseS|x64&quot; pnglib.vcproj"
+				ReBuildCommandLine="devenv /rebuild &quot;ReleaseS|x64&quot; pnglib.vcproj"
+				CleanCommandLine="devenv /clean &quot;ReleaseS|x64&quot; pnglib.vcproj"
+				Output="pnglib"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="..\..\..\out_$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="..\..\..\temp_$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="devenv /build &quot;DebugS|Win32&quot; pnglib.vcproj"
+				ReBuildCommandLine="devenv /rebuild &quot;DebugS|Win32&quot; pnglib.vcproj"
+				CleanCommandLine="devenv /clean &quot;DebugS|Win32&quot; pnglib.vcproj"
+				Output="pnglib"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="..\..\..\out_$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="..\..\..\temp_$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="devenv /build &quot;DebugS|x64&quot; pnglib.vcproj"
+				ReBuildCommandLine="devenv /rebuild &quot;DebugS|x64&quot; pnglib.vcproj"
+				CleanCommandLine="devenv /clean &quot;DebugS|x64&quot; pnglib.vcproj"
+				Output="pnglib"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

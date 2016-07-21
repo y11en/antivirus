@@ -1,0 +1,4 @@
+// ***** Dialer.Win32.CDUpdater.d *****
+begin       
+ AddEvAlarmByCLSID('D1B80EBF-1A26-4FEC-B0B9-DCB934C6507E',AScriptName,'AccesMembre.dll');
+end.

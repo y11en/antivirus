@@ -1,0 +1,58 @@
+REM one of this drive should be non-existent, thus update is going to fail with file operation error
+
+
+[ProductInfo]
+
+Folder=w:/THIS_FOLDER_IS_CREATED_BY_UPDATER_AUTO_TESTS/CBC79F05_6A8D_4897_B7F6_6337BE094E27/out/Installation
+BaseFolder=y:/THIS_FOLDER_IS_CREATED_BY_UPDATER_AUTO_TESTS/CBC79F05_6A8D_4897_B7F6_6337BE094E27/out/Bases
+DataFolder=x:/THIS_FOLDER_IS_CREATED_BY_UPDATER_AUTO_TESTS/CBC79F05_6A8D_4897_B7F6_6337BE094E27/out/DefaultLocalPath
+
+ProdName=Workstation
+ProdVersion=5.0.0.0
+
+LocID=1
+OsName=Windows
+
+
+[Updater]
+temporary_dir=out/tmp
+reserve_dir=out/backup
+retranslation_dir=out/retranslation
+
+
+self_region=<default>
+log_level=10
+connect_tmo=20
+passive_ftp=1
+
+
+;  ** Proxy Settings **
+proxy=0
+proxy_url=proxy.avp.ru
+proxy_port=8080
+use_ie_proxy=1
+proxy_authorisation=1
+proxy_ntlm_access_token=1
+
+
+;  ** Parameters for update mode **
+update_bases=1
+apply_urgent_updates=1
+automatically_apply_available_updates=0
+
+
+;  ** Parameters for retrnaslation mode **
+updates_retranslation=0
+retranslate_bases=0
+retranslate_urgent_updates=0
+retranslate_available_updates=0
+retranslate_only_listed_apps=0
+
+
+
+;  ** Source specification **
+master_asrv_update=0
+asrv_update=0
+inet_update=0
+try_inet=0
+update_srv_url=baseSources\knownReply\version1

@@ -1,0 +1,4 @@
+// ***** Trojan.Krepper.q *****
+begin
+ AddEvAlarmByCLSID('467FAEB2-5F5B-4C81-BAE0-2A4752CA7F4E',AScriptName,'nibbgwjn95o04g7.dll');
+end.

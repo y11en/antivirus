@@ -1,0 +1,69 @@
+// OutlookAddin.idl : IDL source for OutlookAddin.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (OutlookAddin.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+	
+	
+	// IAddin
+	[
+		object,
+		uuid(F8608145-BB5A-4A5A-AE7E-244C6E028093),
+		dual,
+		helpstring("IAddin Interface"),
+		pointer_default(unique)
+	]
+	interface IAddin : IDispatch
+	{
+	};
+	
+	
+	// IPageAntivirus
+	[
+		object,
+		uuid(CE4BBEE5-B36F-446d-A29B-A9BCF070F093),
+		dual,
+		helpstring("IPageAntivirus Interface"),
+		pointer_default(unique)
+	]
+	interface IPageAntivirus : IDispatch
+	{
+	};
+
+
+[
+	uuid(08B4C065-94FB-46be-8B98-1A5939631CB5),
+	version(1.0),
+	helpstring("OutlookAsPlg 1.0 Type Library")
+]
+library OUTLOOKADDINLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	
+	// CAddin
+	[
+		uuid(AA9F1045-4A07-433f-9B79-F8303066259D),
+		helpstring("Addin Class")
+	]
+	coclass Addin
+	{
+		[default] interface IAddin;
+	};
+	
+	
+	// CPageAntivirus
+	[
+		uuid(3E42295C-1558-42d3-85D7-3F0C8695F26D),
+		helpstring("PageAntivirus Class")
+	]
+	coclass PageAntivirus
+	{
+		[default] interface IPageAntivirus;
+	};
+};

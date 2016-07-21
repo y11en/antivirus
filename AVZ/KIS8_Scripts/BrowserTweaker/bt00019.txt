@@ -1,0 +1,38 @@
+// $AVZ1551
+//$ Internet Explorer - очистить список исключений блокиратора Pop-Up окон
+// Функция поиска проблемы
+function Check : dword;
+var
+ Lines : TStrings;
+ i : integer;
+ S : string;                           
+begin
+ Result := 0;                               
+ Lines := TStringList.Create;
+ RegKeyEnumVal('HKCU', 'software\microsoft\internet explorer\new windows\allow', Lines);
+ if Lines.Count > 0 then 
+   Result := 1;
+ RegKeyEnumVal('HKLM', 'software\microsoft\internet explorer\new windows\allow', Lines);
+ if Lines.Count > 0 then 
+   Result := 1;
+ Lines.Free;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+var
+ Lines : TStrings;
+ i : integer;
+ S : string;                           
+begin
+ Result := 0;                               
+ Lines := TStringList.Create;
+ RegKeyEnumVal('HKCU', 'software\microsoft\internet explorer\new windows\allow', Lines);
+ for i:= 0 to Lines.Count-1 do
+  RegKeyParamDel('HKCU', 'software\microsoft\internet explorer\new windows\allow', Lines[i]);
+ Lines.Clear;
+ RegKeyEnumVal('HKLM', 'software\microsoft\internet explorer\new windows\allow', Lines);
+ for i:= 0 to Lines.Count-1 do
+  RegKeyParamDel('HKLM', 'software\microsoft\internet explorer\new windows\allow', Lines[i]);
+ Lines.Free;
+end;

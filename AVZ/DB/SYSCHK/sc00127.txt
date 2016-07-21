@@ -1,0 +1,4 @@
+// ***** Spy.CnsMin *****
+begin
+ AddEvAlarmByCLSID('B83FC273-3522-4CC6-92EC-75CC86678DA4',AScriptName,'CnsMin.dll');
+end.

@@ -1,0 +1,7 @@
+<Include>
+  <ComponentRef Id="klop.dat" />
+  <ComponentRef Id="klop_xp.dat" />
+  <ComponentRef Id="klop.dat_X64" />
+  <ComponentRef Id="klopx64.inf" />
+  <ComponentRef Id="klnetinf.sys" />
+</Include>

@@ -1,0 +1,75 @@
+forward interface IniFile;
+typedef IniFile* hINIFILE;
+
+
+
+[
+  mnemonic(IID_INIFILE)
+  id(58023)
+  c_type_name(hINIFILE)
+]
+interface IniFile {
+
+  // ------------------------------------
+
+    [
+      comment_ex("Interface version")
+      id(130)
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      comment_ex("Interface comment")
+      id(131)
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+    prop pgOBJECT_NAME; // Object name
+    prop pgOBJECT_FULL_NAME; // Object full name
+    prop pgOBJECT_PATH; // Object path
+    [ id(4096) ]  prop hOBJECT pgm_hIO;
+
+    [
+      comment_ex("Plugin codepage")
+      id(197)
+    ]
+    prop tCODEPAGE pgPLUGIN_CODEPAGE; // Plugin codepage
+
+
+  // ------------------------------------
+    method tERROR Deserialize( cSerializable* pSerializable );
+    method tERROR GetSectionsCount( tDWORD* pdwSectionsCount );
+    method tERROR FindSection( tSTRING sSectionName, tDWORD* pdwSectionIndex );
+    method tERROR EnumSections(
+      tDWORD dwSectionIndex,
+      tSTRING* psSectionName,
+      tDWORD* pdwValuesCount
+    );
+    method tERROR GetValuesCount( tDWORD dwSectionIndex, tDWORD* pdwValuesCount );
+    method tERROR EnumValues(
+      tDWORD dwSectionIndex,
+      tDWORD dwValueIndex,
+      tSTRING* psValueName,
+      tSTRING* psValueData
+    );
+    method tERROR GetValue(
+      tSTRING sSectionName,
+      tSTRING sValueName,
+      tSTRING* psValueData
+    );
+    method tERROR SetValue(
+      tSTRING sSectionName,
+      tSTRING sValueName,
+      tSTRING sValueData
+    );
+    method tERROR DelValue( tSTRING sSectionName, tSTRING sValueName );
+    method tERROR DelSection( tSTRING sSectionName );
+    method tERROR Commit();
+    method tERROR SetValueByIndex(
+      tDWORD dwSectionIndex,
+      tDWORD dwValueIndex,
+      tSTRING sValueData
+    );
+    method tERROR DelValueByIndex( tDWORD dwSectionIndex, tDWORD dwValueIndex );
+
+}
+

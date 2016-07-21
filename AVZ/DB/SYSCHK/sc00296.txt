@@ -1,0 +1,5 @@
+// ***** Dialer.Win32.CDUpdater *****
+begin
+ AddEvAlarmByCLSID('869518c3-fba5-4d75-8a14-7047437e9498',AScriptName+'.a','Bernadette.dll');
+ AddEvAlarmByCLSID('90d610e8-f6d0-4ad4-93ce-178a46f8c412',AScriptName+'.b','Ophelie.dll');
+end.

@@ -1,0 +1,43 @@
+// $AVZ1506
+//$ Нарушение ассоциации SCR файлов
+// Функция поиска проблемы                                                                          
+function Check : dword;
+var
+ S : string;
+begin
+ Result := 0;
+ // Тяжелая ошибка 1 - зловредом удален ключ '.scr' или 'scrfile\shell\open\command'
+ if not(RegKeyExists('HKEY_CLASSES_ROOT','.scr')) or
+    not(RegKeyExists('HKEY_CLASSES_ROOT','scrfile\shell\open\command')) then begin
+     Result := 3;
+     exit;
+    end;
+ // Тяжелая ошибка 2 - ключ '.scr' ведет не на тип scrfile
+ if UpperCase(RegKeyStrParamRead('HKEY_CLASSES_ROOT','.scr', '')) <> 'SCRFILE' then begin
+     Result := 3;
+     exit;
+    end;
+ // Тяжелая ошибка 3 - ключ 'scrfile' содержит подмененныы ключ запуска (часто меняется троянами)                                                                                       
+ S := Trim(RegKeyStrParamRead('HKEY_CLASSES_ROOT', 'scrfile\shell\open\command', ''));
+ // Пераметры запуска удалены                                                                   
+ if S = '' then begin
+  Result := 3;
+  exit;
+ end;
+ // Параметры запуска не совпадают со стандартными                                                                                                           
+ S := StringReplace(S, '  ', ' ');
+ if not((S = '"%1" /S') or (S = '%1 /S')) then begin             
+  Result := 3;
+  exit;
+ end;
+end;
+
+// Функция исправления проблемы                                                                          
+function Fix : dword;
+begin
+ RegKeyCreate('HKEY_CLASSES_ROOT', '.scr');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', '.scr', '', 'scrfile');
+ RegKeyCreate('HKEY_CLASSES_ROOT', 'scrfile\shell\open\command');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', 'scrfile\shell\open\command', '', '"%1" /S');
+ Result := 0;
+end;

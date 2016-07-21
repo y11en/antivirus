@@ -1,0 +1,49 @@
+// ***** Проверка служб *****
+var
+ SvcDetectCounter : integer;
+procedure CheckSvc(ASvc : string);
+begin
+ if GetServiceStart(ASvc) = 2 then begin 
+  AddToLog('>> $AVZ1001: $AVZ0900 '+ASvc+' ('+GetServiceName(ASvc)+')');
+  AddSyscheckMenu('$AVZ1202 '+ASvc+' ('+GetServiceName(ASvc)+')', 'SetServiceStart('''+ASvc+''', 4);', 1);
+  inc(SvcDetectCounter); 
+ end; 
+end;
+
+procedure CheckSvc2(ASvc : string);
+var
+ Res : integer;
+begin
+ Res :=  GetServiceStart(ASvc);
+ if (Res=1) or (Res=2) or (Res=3)  then begin
+  AddToLog('>> $AVZ1001: $AVZ0900 '+ASvc+' ('+GetServiceName(ASvc)+')');
+  AddSyscheckMenu('$AVZ1202 '+ASvc+' ('+GetServiceName(ASvc)+')', 'SetServiceStart('''+ASvc+''', 4);', 1); 
+  inc(SvcDetectCounter); 
+ end; 
+end;
+
+begin
+ SvcDetectCounter := 0;
+ // проверки служб
+ // Удаленный реестр
+ CheckSvc('RemoteRegistry'); 
+ // Терминальный сервер
+ CheckSvc2('TermService'); 
+ // Служба обнаружения UPNP
+ CheckSvc2('SSDPSRV'); 
+ // Telnet
+ CheckSvc2('TlntSvr'); 
+ // Служба сообщений
+ CheckSvc2('Messenger'); 
+ CheckSvc2('Alerter'); 
+ // Планировщик
+ CheckSvc2('Schedule');
+ // NetMeeting Remote Desktop Sharing 
+ CheckSvc2('mnmsrvc'); 
+ // Диспетчер сеанса справки для удаленного рабочего стола 
+ CheckSvc2('RDSessMgr'); 
+ if SvcDetectCounter > 0 then   
+  AddToLog('> $AVZ1203!');
+end.
+ 
+ 

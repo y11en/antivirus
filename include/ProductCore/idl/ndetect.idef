@@ -1,0 +1,55 @@
+forward interface NetDetect;
+typedef NetDetect* hNETDETECT;
+
+
+
+[
+  version(1)
+  mnemonic(IID_NETDETECT)
+  id(58019)
+  c_type_name(hNETDETECT)
+]
+interface NetDetect {
+
+  // ------------------------------------
+
+    [
+      comment_ex("Local system uses a modem to connect to the Internet.")
+    ]
+    const tDWORD cINTERNET_CONNECTION_MODEM = 0x01;
+
+    [
+      comment_ex("Local system uses a local area network to connect to the Internet.")
+    ]
+    const tDWORD cINTERNET_CONNECTION_LAN = 0x02;
+
+    [
+      comment_ex("Local system uses a proxy server to connect to the Internet.")
+    ]
+    const tDWORD cINTERNET_CONNECTION_PROXY = 0x04;
+
+    [
+      comment_ex("Local system has RAS installed.")
+    ]
+    const tDWORD cINTERNET_RAS_INSTALLED = 0x10;
+
+    [
+      comment_ex("Local system is in offline mode.")
+    ]
+    const tDWORD cINTERNET_CONNECTION_OFFLINE = 0x20;
+
+    [
+      comment_ex("Local system has a valid connection to the Internet, but it might or might not be currently connected.")
+    ]
+    const tDWORD cINTERNET_CONNECTION_CONFIGURED = 0x40;
+
+
+  // ------------------------------------
+    method tERROR Detect(); // Check internet connection
+    method tERROR InternetGetConnectedState( // Receives cINTERNET_xxx flags
+      tDWORD* pdwFlags
+    );
+    method tERROR GetLastIpAddrChange( tDWORD* pdwLastChangeTime );
+
+}
+

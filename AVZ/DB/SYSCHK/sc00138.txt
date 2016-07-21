@@ -1,0 +1,13 @@
+// ***** Adware.HotBar *****
+begin
+ AddEvAlarmByCLSID('69FD62B1-0216-4C31-8D55-840ED86B7C8F',AScriptName+' (Install)','hbinstie.dll');
+ AddEvAlarmByCLSID('A80347E0-F757-11D4-A466-00508B5BA2DF',AScriptName,'HbToolbar.dll');
+ AddEvAlarmByCLSID('6FE00B71-7251-4E00-9186-ED89BBB946B8',AScriptName,'HbHostOL.dll');
+ AddEvAlarmByCLSID('B195B3B3-8A05-11D3-97A4-0004ACA6948E',AScriptName+' (BHO)','HbHostIE.dll');
+ AddEvAlarmByCLSID('60F630A2-41EC-11D5-B558-00D0B77F0A6D',AScriptName,'HbCoreSrv.dll');
+ AddEvAlarmByCLSID('75D2080B-4857-4B96-9B7D-732634FBD01F',AScriptName,'hbhostie.dll');
+ AddEvAlarmByCLSID('FF6B2FD5-093C-4D4F-BB98-5641130A9DE6',AScriptName,'hbhostie.dll');
+ AddEvAlarmByCLSID('1038DD23-8AE8-451B-A134-4DB8A49AA519',AScriptName,'HbHostOL.dll');
+ AddEvAlarmByCLSID('A80347E0-F757-11D4-A466-00508B5BA2DF',AScriptName,'hbtoolbar.dll');
+ AddEvAlarmByCLSID('354382DB-DF55-4DA9-85A3-41696A0F510F',AScriptName,'hbtoolbar.dll');
+end.

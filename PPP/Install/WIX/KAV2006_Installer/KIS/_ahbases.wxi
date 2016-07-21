@@ -1,0 +1,10 @@
+<Include>
+  <ComponentRef Id="BasesAHI386" />
+  <ComponentRef Id="BasesAHX64" />
+  <ComponentRef Id="BasesAH_6MP1" />
+  <ComponentRef Id="DskmAHI386" />
+  <ComponentRef Id="DskmAHX64" />
+  <ComponentRef Id="RegAHI386" />
+  <ComponentRef Id="RegAHX64" />
+  <ComponentRef Id="fwpresets.ini" />
+</Include>

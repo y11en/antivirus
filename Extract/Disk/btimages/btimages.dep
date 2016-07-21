@@ -1,0 +1,136 @@
+# Microsoft Developer Studio Generated Dependency File, included by btimages.mak
+
+.\bti_imp.cpp : \
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\windows\hook\hook\avpgcom.h"\
+	"..\Include\IFace\e_clsid.h"\
+	"..\Include\IFace\e_ktime.h"\
+	"..\Include\IFace\e_ktrace.h"\
+	"..\Include\IFace\e_loader.h"\
+	"..\include\iface\i_btimages.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_io.h"\
+	"..\Include\IFace\i_methodinfo.h"\
+	"..\include\iface\i_mutex.h"\
+	"..\Include\IFace\i_objptr.h"\
+	"..\INCLUDE\IFACE\i_os.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_string.h"\
+	"..\Include\IFace\i_tracer.h"\
+	"..\Include\IFace\impexhlp.h"\
+	"..\Include\plugin\p_win32_nfio.h"\
+	"..\include\plugin\p_windiskio.h"\
+	"..\Include\pr_compl.h"\
+	"..\INCLUDE\PR_ERR.H"\
+	"..\INCLUDE\PR_IID.H"\
+	"..\INCLUDE\Pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\INCLUDE\Pr_obj.h"\
+	"..\Include\pr_oid.h"\
+	"..\INCLUDE\PR_PID.H"\
+	"..\INCLUDE\Pr_prop.h"\
+	"..\INCLUDE\Pr_reg.h"\
+	"..\INCLUDE\Pr_sys.h"\
+	"..\INCLUDE\Pr_types.h"\
+	"..\INCLUDE\PR_VID.H"\
+	"..\INCLUDE\Pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	"..\NFIO\win32_io.h"\
+	".\bti_imp.h"\
+	"d:\sdk\include\basetsd.h"\
+	"d:\sdk\include\guiddef.h"\
+	"d:\sdk\include\propidl.h"\
+	"d:\sdk\include\reason.h"\
+	"d:\sdk\include\stralign.h"\
+	"d:\sdk\include\tvout.h"\
+	"d:\sdk\include\winefs.h"\
+	
+
+.\btimages.cpp : \
+	"..\..\commonfiles\wincompat.h"\
+	"..\Include\IFace\e_clsid.h"\
+	"..\Include\IFace\e_ktime.h"\
+	"..\Include\IFace\e_ktrace.h"\
+	"..\Include\IFace\e_loader.h"\
+	"..\include\iface\i_btimages.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_io.h"\
+	"..\Include\IFace\i_methodinfo.h"\
+	"..\include\iface\i_mutex.h"\
+	"..\Include\IFace\i_objptr.h"\
+	"..\INCLUDE\IFACE\i_os.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_string.h"\
+	"..\Include\IFace\i_tracer.h"\
+	"..\Include\IFace\impexhlp.h"\
+	"..\include\plugin\p_btimages.h"\
+	"..\Include\plugin\p_win32_nfio.h"\
+	"..\include\plugin\p_windiskio.h"\
+	"..\Include\pr_compl.h"\
+	"..\INCLUDE\PR_ERR.H"\
+	"..\INCLUDE\PR_IID.H"\
+	"..\INCLUDE\Pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\INCLUDE\Pr_obj.h"\
+	"..\Include\pr_oid.h"\
+	"..\INCLUDE\PR_PID.H"\
+	"..\INCLUDE\Pr_prop.h"\
+	"..\INCLUDE\Pr_reg.h"\
+	"..\INCLUDE\Pr_sys.h"\
+	"..\INCLUDE\Pr_types.h"\
+	"..\INCLUDE\PR_VID.H"\
+	"..\INCLUDE\Pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	"..\NFIO\win32_io.h"\
+	".\bti_imp.h"\
+	"d:\sdk\include\basetsd.h"\
+	"d:\sdk\include\guiddef.h"\
+	"d:\sdk\include\propidl.h"\
+	"d:\sdk\include\reason.h"\
+	"d:\sdk\include\stralign.h"\
+	"d:\sdk\include\tvout.h"\
+	"d:\sdk\include\winefs.h"\
+	
+
+.\plugin_btimages.cpp : \
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\Include\IFace\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\Include\IFace\i_tracer.h"\
+	"..\Include\pr_compl.h"\
+	"..\INCLUDE\PR_ERR.H"\
+	"..\INCLUDE\PR_IID.H"\
+	"..\INCLUDE\Pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\INCLUDE\Pr_obj.h"\
+	"..\INCLUDE\PR_PID.H"\
+	"..\INCLUDE\Pr_prop.h"\
+	"..\INCLUDE\Pr_reg.h"\
+	"..\INCLUDE\Pr_sys.h"\
+	"..\INCLUDE\Pr_types.h"\
+	"..\INCLUDE\PR_VID.H"\
+	"..\INCLUDE\Pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	
+
+.\template.rc : \
+	"..\..\CommonFiles\Version\ver_itoa.h"\
+	"..\..\CommonFiles\Version\ver_kl.h"\
+	"..\..\CommonFiles\Version\ver_product.h"\
+	".\VER_MOD.H"\
+	

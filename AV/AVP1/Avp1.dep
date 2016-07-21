@@ -1,0 +1,214 @@
+# Microsoft Developer Studio Generated Dependency File, included by Avp1.mak
+
+..\..\CommonFiles\Stuff\dprintf.c : \
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	
+
+.\DupMem.cpp : \
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\..\windows\hook\hook\avpgcom.h"\
+	"..\..\windows\hook\hook\fsdrvlib.h"\
+	".\DupMem.h"\
+	
+
+.\engine.c : \
+	"..\..\AVP32\bases\Sizes.h"\
+	"..\..\AVP32\basework\Workarea.h"\
+	"..\..\avp32\scanapi\avp_msg.h"\
+	"..\..\avp32\scanapi\baseapi.h"\
+	"..\..\avp32\scanapi\defines.h"\
+	"..\..\avp32\scanapi\retflags.h"\
+	"..\..\AVP32\ScanAPI\Scanobj.h"\
+	"..\..\CommonFiles\_avpio.h"\
+	"..\..\CommonFiles\avp_data.h"\
+	"..\..\CommonFiles\AVPComID.h"\
+	"..\..\CommonFiles\AVPPort.h"\
+	"..\..\commonfiles\avpvndid.h"\
+	"..\..\commonfiles\property\property.h"\
+	"..\..\commonfiles\serialize\kldtdefs.h"\
+	"..\..\commonfiles\serialize\kldtser.h"\
+	"..\..\CommonFiles\Stuff\CalcSum.h"\
+	"..\..\commonfiles\swmanager\swm.h"\
+	"..\..\commonfiles\wincompat.h"\
+	"..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\microsoft sdk\include\propidl.h"\
+	"..\..\microsoft sdk\include\reason.h"\
+	"..\..\microsoft sdk\include\stralign.h"\
+	"..\..\microsoft sdk\include\tvout.h"\
+	"..\..\microsoft sdk\include\winefs.h"\
+	"..\AvpMgr\engine.h"\
+	"..\AvpMgr\plugin_avpmgr.h"\
+	"..\Include\IFace\e_clsid.h"\
+	"..\Include\IFace\e_ktime.h"\
+	"..\Include\IFace\e_l_llio.h"\
+	"..\Include\IFace\e_loader.h"\
+	"..\Include\IFace\i_avpg.h"\
+	"..\Include\IFace\i_engine.h"\
+	"..\include\iface\i_hashct.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_io.h"\
+	"..\Include\IFace\i_list.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\Include\IFace\i_objptr.h"\
+	"..\INCLUDE\IFACE\i_os.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\iface\i_posio.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_seqio.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_string.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\Include\IFace\impexhlp.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\Include\pr_oid.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	"..\TempFile2\plugin_temporaryio2.h"\
+	"..\WinDiskIO\plugin_windiskio.h"\
+	"..\Wrappers\DMAP\plugin_dmap.h"\
+	".\DupMem.h"\
+	".\engine.h"\
+	".\plugin_avp1.h"\
+	".\static.h"\
+	
+
+.\plugin_avp1.c : \
+	"..\Include\IFace\e_clsid.h"\
+	"..\Include\IFace\e_ktime.h"\
+	"..\Include\IFace\e_l_llio.h"\
+	"..\Include\IFace\e_loader.h"\
+	"..\Include\IFace\i_engine.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_io.h"\
+	"..\Include\IFace\i_list.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\Include\IFace\i_objptr.h"\
+	"..\INCLUDE\IFACE\i_os.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\iface\i_posio.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_seqio.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_string.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\Include\IFace\impexhlp.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	".\engine.h"\
+	".\plugin_avp1.h"\
+	".\static.h"\
+	
+
+.\redirs.cpp : \
+	"..\..\avp32\scanapi\avp_msg.h"\
+	"..\..\avp32\scanapi\baseapi.h"\
+	"..\..\avp32\scanapi\defines.h"\
+	"..\..\avp32\scanapi\retflags.h"\
+	"..\..\AVP32\ScanAPI\Scanobj.h"\
+	"..\..\CommonFiles\_avpio.h"\
+	"..\AvpMgr\engine.h"\
+	"..\AvpMgr\plugin_avpmgr.h"\
+	"..\Include\IFace\e_clsid.h"\
+	"..\Include\IFace\e_ktime.h"\
+	"..\Include\IFace\e_l_llio.h"\
+	"..\Include\IFace\e_loader.h"\
+	"..\Include\IFace\i_avpg.h"\
+	"..\Include\IFace\i_engine.h"\
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\include\iface\i_impex.h"\
+	"..\include\iface\i_io.h"\
+	"..\Include\IFace\i_list.h"\
+	"..\include\iface\i_methodinfo.h"\
+	"..\Include\IFace\i_objptr.h"\
+	"..\INCLUDE\IFACE\i_os.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\iface\i_posio.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\include\iface\i_seqio.h"\
+	"..\Include\iface\i_serializer.h"\
+	"..\include\iface\i_string.h"\
+	"..\include\iface\i_tracer.h"\
+	"..\Include\IFace\impexhlp.h"\
+	"..\include\pr_compl.h"\
+	"..\include\pr_err.h"\
+	"..\include\pr_iid.h"\
+	"..\include\pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\include\pr_obj.h"\
+	"..\Include\pr_oid.h"\
+	"..\include\pr_pid.h"\
+	"..\include\pr_prop.h"\
+	"..\include\pr_reg.h"\
+	"..\Include\pr_serdescriptor.h"\
+	"..\include\pr_sys.h"\
+	"..\include\pr_types.h"\
+	"..\include\pr_vid.h"\
+	"..\include\pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	"..\TempFile2\plugin_temporaryio2.h"\
+	"..\TempFile\tempfile.h"\
+	"..\WinDiskIO\plugin_windiskio.h"\
+	".\DupMem.h"\
+	".\engine.h"\
+	".\plugin_avp1.h"\
+	".\static.h"\
+	
+
+.\engine.rc : \
+	"..\..\CommonFiles\Version\ver_av50.h"\
+	"..\..\CommonFiles\Version\ver_itoa.h"\
+	"..\..\CommonFiles\Version\ver_kl.h"\
+	".\ver_mod.h"\
+	

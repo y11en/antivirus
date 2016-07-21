@@ -1,0 +1,31 @@
+TARGETNAME = fssync
+TARGETTYPE = DYNLINK
+TARGETEXT  = dll
+DLLENTRY   = _DllMainCRTStartup
+
+!IF "$(_BUILDARCH)" == "x86"
+CPU_TYPE_IMP=i386
+!ELSE
+CPU_TYPE_IMP=amd64
+!ENDIF
+
+TARGETPATH=..\..\..\..\out\mklif\$(CPUTYPE)\$(DDKBUILDENV)
+
+TARGETLIBS = $(SDK_LIB_PATH)\shell32.lib    \
+             $(SDK_LIB_PATH)\user32.lib     \
+             $(SDK_LIB_PATH)\kernel32.lib
+
+LINKLIBS=..\..\..\..\out\mklif\$(DDKBUILDENV)\$(CPU_TYPE_IMP)\mklapi.lib
+
+INCLUDES = ..\..\..\..\CommonFiles
+
+USE_MSVCRT=1
+
+C_DEFINES = $(C_DEFINES) -DUNICODE -D_UNICODE
+
+UMTYPE = windows
+
+SOURCES=fssync.cpp   \
+	selfprot.cpp \
+	stdafx.cpp   \
+        FSSync.rc

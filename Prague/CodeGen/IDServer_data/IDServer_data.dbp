@@ -1,0 +1,21 @@
+# Microsoft Developer Studio Project File - Database Project
+Begin DataProject = "IDServer_data"
+   MSDTVersion = "80"
+   SccProjectName = "SAK"
+   SccLocalPath = "SAK"
+   SccAuxPath = "SAK"
+   SccProvider = "SAK"
+   Begin Folder = "Change Scripts"
+   End
+   Begin Folder = "Create Scripts"
+   End
+   Begin DBRefFolder = "Database References"
+      Begin DBRefNode = "mom-db.Prague.dbo"
+         ConnectStr = "Data Source=mom-db.avp.ru;Initial Catalog=Prague;Integrated Security=True"
+         Provider = "{91510608-8809-4020-8897-FBA057E22D54}"
+         Colorizer = 6
+      End
+   End
+   Begin Folder = "Queries"
+   End
+End

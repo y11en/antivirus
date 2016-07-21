@@ -1,0 +1,46 @@
+// $AVZ1571
+//$ Очистить список Недавние документы
+// Функция поиска проблемы
+function Check : dword;
+var
+ S : string;
+ FS : TFileSearch;
+begin
+ Result := 0;
+ S := Trim(RegKeyStrParamRead('HKCU','Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders','Recent'));
+ if S <> '' then begin
+  S := NormalDir(S);
+  if DirectoryExists(S) then begin
+   FS := TFileSearch.Create(nil);
+   FS.FindFirst(S + '*.LNK');
+   if FS.Found then
+    Result := 1;
+   FS.Free;
+  end;
+ end;
+ if Result > 0 then exit;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+var
+ S : string;
+ FS : TFileSearch;
+begin
+ Result := 0;
+ S := Trim(RegKeyStrParamRead('HKCU','Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders','Recent'));
+ if S <> '' then begin
+  S := NormalDir(S);
+  if DirectoryExists(S) then begin
+   FS := TFileSearch.Create(nil);
+   FS.FindFirst(S + '*.lnk');
+   while FS.Found do begin
+    // Удаление найденных файлов *.LNK
+    if not(FS.IsDir) then
+     DeleteFile(S + FS.FileName);
+    FS.FindNext;
+   end;
+   FS.Free;
+  end;
+ end;
+end;

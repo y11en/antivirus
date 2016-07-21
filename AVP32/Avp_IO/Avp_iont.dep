@@ -1,0 +1,18 @@
+# Microsoft Developer Studio Generated Dependency File, included by Avp_iont.mak
+
+.\Avp_ioNT.c : \
+	"..\..\CommonFiles\_avpio.h"\
+	"..\Avp_iocl.h"\
+	".\avp_io32.h"\
+	".\ntllio.c"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+.\Avp_ioNT.rc : \
+	".\Avp_ioNT.rc2"\
+	{$(INCLUDE)}"Version\ver_avp.h"\
+	{$(INCLUDE)}"Version\ver_df.h"\
+	{$(INCLUDE)}"Version\ver_itoa.h"\
+	{$(INCLUDE)}"Version\ver_kl.h"\
+	{$(INCLUDE)}"Version\ver_kl.ver"\
+	

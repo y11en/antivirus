@@ -1,0 +1,8 @@
+// ***** AdvWare.ToolBar.404Search *****
+begin
+ AddEvAlarmByCLSID('4E7BD74F-2B8D-469E-C0FB-EF60B19DA02A', AScriptName,'');
+ AddEvAlarmByCLSID('4E7BD74F-2B8D-469E-C0FB-EF60B19DAB2D', AScriptName,'');
+ AddEvAlarmByCLSID('4E7BD74F-2B8D-469E-DFF7-EC6BF4D5FA7D', AScriptName, 'gsim.dll');
+ AddEvAlarmByCLSID('4E7BD74F-2B8D-469E-90F0-F66AB581A933', AScriptName,'instafink.dll');
+ AddEvAlarmByCLSID('53C330D6-A4AB-419B-B45D-FD4411C1FEF4', AScriptName,'');
+end.

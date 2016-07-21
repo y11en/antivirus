@@ -1,0 +1,5 @@
+// ***** AdvWare.ToolBar.Diybar *****
+begin       
+ AddEvAlarmByCLSID('58CDB34C-B4D7-418B-A0FB-C4C8A01C2F0E',AScriptName,'diybar.dll');
+ AddEvAlarmByCLSID('0A00D11E-B1E7-44b5-AD88-C9190876AAC4',AScriptName,'diybar.dll');
+end.

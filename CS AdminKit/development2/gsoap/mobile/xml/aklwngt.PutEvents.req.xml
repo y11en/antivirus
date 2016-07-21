@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:param="http://tempuri.org/param.xsd"
+ xmlns:aklwngt="http://tempuri.org/aklwngt.xsd">
+ <SOAP-ENV:Body>
+  <aklwngt:PutEvents>
+   <szSessionId></szSessionId>
+   <oEventsInfoArray>
+    <item>
+     <eventId></eventId>
+     <body>
+      <severity>0</severity>
+      <product-name></product-name>
+      <product-version></product-version>
+      <event-type></event-type>
+      <event-type-display-name></event-type-display-name>
+      <descr></descr>
+      <locid>0</locid>
+      <rise-time></rise-time>
+      <rise-time-ms>0</rise-time-ms>
+      <par1></par1>
+      <par2></par2>
+      <par3></par3>
+      <par4></par4>
+      <par5></par5>
+      <par6></par6>
+      <par7></par7>
+      <par8></par8>
+      <par9></par9>
+     </body>
+    </item>
+   </oEventsInfoArray>
+  </aklwngt:PutEvents>
+ </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

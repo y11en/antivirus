@@ -1,0 +1,27 @@
+# Microsoft Developer Studio Generated Dependency File, included by klogon.mak
+
+.\animation.cpp : \
+	".\animation.h"\
+	"e:\microsoft sdk\include\basetsd.h"\
+	"e:\microsoft sdk\include\guiddef.h"\
+	"e:\microsoft sdk\include\propidl.h"\
+	"e:\microsoft sdk\include\reason.h"\
+	"e:\microsoft sdk\include\stralign.h"\
+	"e:\microsoft sdk\include\tvout.h"\
+	"e:\microsoft sdk\include\winefs.h"\
+	
+
+.\klogon.cpp : \
+	".\animation.h"\
+	"e:\microsoft sdk\include\basetsd.h"\
+	"e:\microsoft sdk\include\guiddef.h"\
+	"e:\microsoft sdk\include\propidl.h"\
+	"e:\microsoft sdk\include\reason.h"\
+	"e:\microsoft sdk\include\stralign.h"\
+	"e:\microsoft sdk\include\tvout.h"\
+	"e:\microsoft sdk\include\winefs.h"\
+	
+
+.\klogon.rc : \
+	".\main_on.ico"\
+	

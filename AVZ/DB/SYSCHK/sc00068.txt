@@ -1,0 +1,4 @@
+// ***** Trojan.Win32.Agent.fc *****
+begin
+ AddEvAlarmByCLSID('FB153DCE-822E-47ec-8D00-2706E7864B37',AScriptName,'KB*.dll');
+end.

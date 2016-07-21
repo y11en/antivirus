@@ -1,0 +1,16 @@
+EXE
+TARGET file2osr
+
+CSRC file2osr.c
+
+LIB osr
+LIB sigs
+LIB gd
+LIB gsg2
+LIB_MD5
+LIB jpeg-local
+LIB ungif-local
+LIB png-local
+LIB z
+LIB m
+

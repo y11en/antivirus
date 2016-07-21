@@ -1,0 +1,26 @@
+// $AVZ1499
+//$ Очистить историю поиска (компьютеры в сети)
+// Функция поиска проблемы
+function Check : dword;
+var
+ Lines : TStrings;
+ i : integer;
+begin
+ Result := 0;
+ Lines := TStringList.Create;
+ if RegKeyExists('HKCU','Software\Microsoft\Search Assistant\ACMru\5647') then begin
+  RegKeyEnumVal('HKCU', 'Software\Microsoft\Search Assistant\ACMru\5647', Lines);
+  // Есть записи в ACMru ?
+  if Lines.Count > 0 then                  
+   Result := 1;
+ end;
+ Lines.Free;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+begin
+ Result := 0;
+ RegKeyDel('HKCU', 'Software\Microsoft\Search Assistant\ACMru\5647');
+ RegKeyCreate('HKCU', 'Software\Microsoft\Search Assistant\ACMru\5647');
+end;

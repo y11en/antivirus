@@ -1,0 +1,2392 @@
+REGEDIT4
+
+;
+; settings structure:
+;
+; settings                here are currently used settings. only this registry key can be modified, all other subkeys are read-only
+; |- 0                    settings common to all levels
+; |- 2                    settings corresponded to level 2 (hi speed)
+; |- 3                    settings corresponded to level 3 (max protection)
+; |- def                  settings independed on level
+
+
+
+; ###########################################################################
+; Product & BL
+; ###########################################################################
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8]
+@="Product"
+"enabled"=dword:00000001
+"persistent"=dword:00000001
+"admflags"=dword:0000000d
+"origin"=dword:00000001
+"pid"=dword:00000022
+"profileHandlerIID"=dword:0000002b
+"profileHandlerPID"=dword:00000022
+"IdSettings"=dword:00220100
+"IdStatistics"=dword:00220200
+"UniqueTaskId"=dword:00000001
+"type"="Protection"
+"category"="INFO;CORE;BLST;KAV8Exec;RT"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\reports]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\reports\threats]
+"0000"=dword:eb3c8145
+"0001"=dword:521d6e78
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\reports\eventlog]
+"0000"=dword:e532519d
+"0001"=dword:10f87d4c
+"0002"=dword:bfca8487
+"baseSerId"=dword:f0600
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\reports\eventcritlog]
+"0000"=dword:10f87d4c
+"0001"=dword:bfca8487
+"baseSerId"=dword:f0600
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\Data]
+"LastStart"=dword:ffffffff
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\environment]
+"EulaFile"="%Doc%\\license.txt"
+"DSKM"="%DataRoot%\\dskm"
+"BaseFolder"="%Bases%"
+"DataFolder"="%Data%"
+"BlstFolder"="%Bases%"
+"Temp"="%DataRoot%\\temp"
+"ProductFolder"="%ProductRoot%"
+"Doc"="%ProductRoot%\\Doc"
+"Skin"="%ProductRoot%\\Skin"
+"RollbackComponentFilter"="KAV8EXEC"
+"NeedRebootIfComponentUpdated"="KAV8EXEC"
+"NewsFile"="%BaseFolder%\\news.kln"
+"SafeScan"="0"
+"CrashOnInvPar"="1"
+"HideAIC"="0"
+"ShowRegGuard"="1"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\dump]
+"User"="kavdumps"
+"Password"="UxzAbKFLufVBSg8Y"
+"FTP"="kavdumps.kaspersky.com"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def]
+"EnableSounds"=dword:00000000
+"EnableNotifications"=dword:00000001
+"EnablePswrdProtect"=dword:00000000
+"AllowServiceStop"=dword:00000000
+"EnableSelfProtection"=dword:00000001
+"InfoEventsOff"=dword:00000000
+"RunAtSystemStartup"=dword:00000001
+"EnableAlerts"=dword:00000001
+"NotifyNewNetwork"=dword:00000000
+"BatterySafe"=dword:00000001
+"BatterySafeLimit"=dword:00000064
+"ReportSpan"=dword:00000001
+"ReportSpanPeriod"=dword:0000001e
+"QBSpan"=dword:00000001
+"QBSpanPeriod"=dword:0000001e
+"TechEmail"="support@kaspersky.com"
+"AutoModeMinutePeriod"=dword:00000078
+"BasesNotActualPeriod"=dword:00000007
+"BasesOutOfDatePeriod"=dword:00000001
+"QuarantineStartupScan"=dword:00000000
+"FullReport"=dword:00000001
+"KeepRecentReports"=dword:00000001
+"KeyWillBeExpiredPeriod"=dword:0000000e
+"KeyAboutExpirationPeriod"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings]
+"EventID"=dword:00000000
+"Severity"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0000]
+"EventID"=dword:00000000
+"Severity"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0000\Childs\0000]
+"EventID"=dword:00000001
+"Severity"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0000\Childs\0001]
+"EventID"=dword:00000002
+"Severity"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0000\Childs\0002]
+"EventID"=dword:00000003
+"Severity"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0000\Childs\0003]
+"EventID"=dword:00000006
+"Severity"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0000\Childs\0004]
+"EventID"=dword:0000000a
+"Severity"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0000\Childs\0005]
+"EventID"=dword:00000009
+"Severity"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0000\Childs\0006]
+"EventID"=dword:00000015
+"Severity"=dword:00000001
+"CheckTray"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0001]
+"EventID"=dword:00000000
+"Severity"=dword:00000002
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0001\Childs\0000]
+"EventID"=dword:00000006
+"Severity"=dword:00000002
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0001\Childs\0001]
+"EventID"=dword:00000008
+"Severity"=dword:00000002
+"CheckTray"=dword:00000000
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0001\Childs\0002]
+"EventID"=dword:00000007
+"Severity"=dword:00000002
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0001\Childs\0003]
+"EventID"=dword:00000009
+"Severity"=dword:00000002
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0002]
+"EventID"=dword:00000000
+"Severity"=dword:00000003
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0002\Childs\0000]
+"EventID"=dword:00000001
+"Severity"=dword:00000003
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0002\Childs\0001]
+"EventID"=dword:00000006
+"Severity"=dword:00000003
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0002\Childs\0002]
+"EventID"=dword:00000007
+"Severity"=dword:00000003
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0002\Childs\0003]
+"EventID"=dword:00000009
+"Severity"=dword:00000003
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0002\Childs\0004]
+"EventID"=dword:0000000f
+"Severity"=dword:00000003
+"CheckTray"=dword:00000000
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0002\Childs\0005]
+"EventID"=dword:00000012
+"Severity"=dword:00000003
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0002\Childs\0006]
+"EventID"=dword:00000013
+"Severity"=dword:00000003
+"CheckTray"=dword:00000000
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0002\Childs\0007]
+"EventID"=dword:00000014
+"Severity"=dword:00000003
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0002\Childs\0008]
+"EventID"=dword:00000015
+"Severity"=dword:00000003
+"CheckTray"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0003]
+"EventID"=dword:00000000
+"Severity"=dword:00000004
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0003\Childs\0000]
+"EventID"=dword:00000001
+"Severity"=dword:00000004
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0003\Childs\0001]
+"EventID"=dword:00000004
+"Severity"=dword:00000004
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0003\Childs\0002]
+"EventID"=dword:00000005
+"Severity"=dword:00000004
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0003\Childs\0003]
+"EventID"=dword:0000000b
+"Severity"=dword:00000004
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0003\Childs\0004]
+"EventID"=dword:00000008
+"Severity"=dword:00000004
+"CheckTray"=dword:00000000
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0003\Childs\0005]
+"EventID"=dword:00000007
+"Severity"=dword:00000004
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0003\Childs\0006]
+"EventID"=dword:0000000c
+"Severity"=dword:00000004
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0003\Childs\0007]
+"EventID"=dword:0000000d
+"Severity"=dword:00000004
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings\def\NSettings\Childs\0003\Childs\0008]
+"EventID"=dword:0000000e
+"Severity"=dword:00000004
+"CheckTray"=dword:00000001
+
+; ###########################################################################
+; Services
+; ###########################################################################
+
+; ###########################################################################
+; AVService
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\AVService]
+@="AntiVirus service"
+"installed"=dword:00000001
+"enabled"=dword:00000001
+"admflags"=dword:0000000f
+"iid"=dword:00000022
+"pid"=dword:0000000f
+"type"="avs"
+"ServiceId"=dword:00000001
+"origin"=dword:00000001
+"persistent"=dword:00000001
+"runInSafeMode"=dword:00000001
+"category"="KDBI386"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\AVService\settings\def]
+"MultiThreaded"=dword:00000000
+"SetName"=""
+"KlavaBase"="kavbase"
+"EmulBase"="klavemu"
+"StreamBase"="webav"
+"UseABS"=dword:00000001
+"UseActiveDisinfection"=dword:00000001
+
+; ###########################################################################
+; ProcessMonitor
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ProcMon]
+@="ProcessMonitor Service"
+"installed"=dword:00000001
+"enabled"=dword:00000001
+"admflags"=dword:0000000f
+"iid"=dword:0000BF8A
+"pid"=dword:0000BF8B
+"type"="procmon"
+"ServiceId"=dword:00000001
+"origin"=dword:00000001
+"persistent"=dword:00000001
+
+; ###########################################################################
+; NetWatch
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\NetWatch]
+@="NetWatch Service"
+"installed"=dword:00000001
+"enabled"=dword:00000001
+"admflags"=dword:0000000f
+"iid"=dword:00003AE0
+"pid"=dword:000005D1
+"type"="netwatch"
+"ServiceId"=dword:00000000
+"origin"=dword:00000001
+"persistent"=dword:00000001
+
+
+; ###########################################################################
+; StartupService
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\StartupService]
+@="Startup service"
+"installed"=dword:00000001
+"enabled"=dword:00000001
+"iid"=dword:0000d2f1
+"pid"=dword:0000d2f0
+"type"="startup"
+"ServiceId"=dword:00000007
+"origin"=dword:00000001
+"persistent"=dword:00000001
+"runInSafeMode"=dword:00000001
+
+; ###########################################################################
+; AntiPhishingService
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\AntiPhishingService]
+@="Anti-Phishing Service"
+"enabled"=dword:00000001
+"serviceId"=dword:00000001
+"iid"=dword:00000017
+"pid"=dword:0000E2C8
+"persistent"=dword:00000001
+"origin"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\AntiPhishingService\settings\def]
+"bdb"="%Bases%\\aphish.dat"
+"ufmode"=dword:00000001
+"ask"=dword:00000001
+"loadhttp"=dword:00000000
+"updcat"="AP"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\AntiPhishingService\settings\def\askdef]
+"DetectType"=dword:00000046
+"DetectDanger"=dword:00000001
+"DetectStatus"=dword:00000001
+"DefaultAction"=dword:00000020
+"ExcludeAction"=dword:00000000
+"ActionsMask"=dword:00000030
+"ActionsAll"=dword:00000030
+"ApplyToAll"=dword:00000000
+
+; ###########################################################################
+; Advanced Disinfection
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\AdvDis]
+@="Advanced Disinfection Service"
+"enabled"=dword:00000001
+"iid"=dword:00000017
+"pid"=dword:0000ee56
+"type"="AdvDis"
+"ServiceId"=dword:00000001
+"origin"=dword:00000001
+"persistent"=dword:00000001
+"level"=dword:00000000
+
+; ###########################################################################
+; TrafficMonitor
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor]
+@="Traffic Monitor"
+"enabled"=dword:00000001
+"admflags"=dword:0000000f
+"iid"=dword:00009c46
+"pid"=dword:00009c4c
+"serviceId"=dword:00000005
+"type"="mc_tm"
+"origin"=dword:00000001
+"persistent"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor\settings\def]
+@="Settings common to all levels"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor\settings\def\Ports\0000]
+"Port"=dword:00000019
+"Description"="SMTP"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor\settings\def\Ports\0001]
+"Port"=dword:000001d1
+"Description"="SMTP SSL"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor\settings\def\Ports\0002]
+"Port"=dword:0000006e
+"Description"="POP3"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor\settings\def\Ports\0003]
+"Port"=dword:000003e3
+"Description"="POP3 SSL"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor\settings\def\Ports\0004]
+"Port"=dword:00000077
+"Description"="NNTP"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor\settings\def\Ports\0005]
+"Port"=dword:00000233
+"Description"="NNTP SSL"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor\settings\def\Ports\0006]
+"Port"=dword:0000008f
+"Description"="IMAP"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor\settings\def\Ports\0007]
+"Port"=dword:000003e1
+"Description"="IMAP SSL"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor\settings\def\Ports\0008]
+"Port"=dword:000001bb
+"Description"="HTTP SSL (https://)"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor\settings\def\Ports\0009]
+"Port"=dword:00000050
+"Description"="HTTP"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor\settings\def\Ports\0010]
+"Port"=dword:00000051
+"Description"="HTTP"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor\settings\def\Ports\0011]
+"Port"=dword:00000052
+"Description"="HTTP"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor\settings\def\Ports\0012]
+"Port"=dword:00000053
+"Description"="HTTP"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor\settings\def\Ports\0013]
+"Port"=dword:000022b8
+"Description"="HTTP"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor\settings\def\Ports\0014]
+"Port"=dword:00001f40
+"Description"="HTTP"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor\settings\def\Ports\0015]
+"Port"=dword:00000438
+"Description"="HTTP"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor\settings\def\Ports\0016]
+"Port"=dword:00001edc
+"Description"="HTTP"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor\settings\def\Ports\0017]
+"Port"=dword:00001f90
+"Description"="HTTP"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor\settings\def\Ports\0018]
+"Port"=dword:00001f98
+"Description"="HTTP"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor\settings\def\Ports\0019]
+"Port"=dword:00000c38
+"Description"="HTTP"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor\settings\def\Ports\0020]
+"Port"=dword:00002d03
+"Description"="HTTP"
+
+; ###########################################################################
+; POP3
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\POP3]
+@="POP3 protocoller"
+"enabled"=dword:00000001
+"serviceId"=dword:00000001
+"iid"=dword:00000017
+"pid"=dword:00009c59
+"origin"=dword:00000001
+"persistent"=dword:00000001
+"NotReportable"=dword:00000001
+
+; ###########################################################################
+; SMTP
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\SMTP]
+@="SMTP protocoller"
+"enabled"=dword:00000001
+"serviceId"=dword:00000001
+"iid"=dword:00000017
+"pid"=dword:00009c58
+"origin"=dword:00000001
+"persistent"=dword:00000001
+"NotReportable"=dword:00000001
+
+; ###########################################################################
+; IMAP
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\IMAP]
+@="IMAP protocoller"
+"enabled"=dword:00000001
+"serviceId"=dword:00000001
+"iid"=dword:00000017
+"pid"=dword:00009c5a
+"origin"=dword:00000001
+"persistent"=dword:00000001
+"NotReportable"=dword:00000001
+
+; ###########################################################################
+; NNTP
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\NNTP]
+@="NNTP protocoller"
+"enabled"=dword:00000001
+"serviceId"=dword:00000001
+"iid"=dword:00000017
+"pid"=dword:00009c5c
+"origin"=dword:00000001
+"persistent"=dword:00000001
+"NotReportable"=dword:00000001
+
+; ###########################################################################
+; HTTP
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\HTTP]
+@="HTTP protocoller"
+"enabled"=dword:00000001
+"serviceId"=dword:00000001
+"iid"=dword:00000017
+"pid"=dword:0000985d
+"origin"=dword:00000001
+"persistent"=dword:00000001
+"NotReportable"=dword:00000001
+
+; ###########################################################################
+; MailWasher
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\MailWasher]
+@="Mail Dispatcher"
+"enabled"=dword:00000001
+"serviceId"=dword:00000001
+"iid"=dword:00000017
+"pid"=dword:00009c5b
+"origin"=dword:00000001
+"persistent"=dword:00000001
+"NotReportable"=dword:00000001
+
+; ###########################################################################
+; Spamtest
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Spamtest]
+@="Spamtest service"
+"enabled"=dword:00000001
+"serviceId"=dword:00000001
+"iid"=dword:00000017
+"pid"=dword:00009c5e
+"origin"=dword:00000001
+"persistent"=dword:00000001
+"NotReportable"=dword:00000001
+"ReleaseTimeout"=dword:00000020
+"Remote"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Spamtest\settings\def]
+"BaseFolder"="%Bases%"
+"UseGSG"=dword:00000001
+"UsePDB"=dword:00000001
+
+; ###########################################################################
+; NetDetails
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\NetDetails]
+"enabled"=dword:00000001
+"iid"=dword:00000017
+"pid"=dword:000000c8
+"origin"=dword:00000001
+"persistent"=dword:00000000
+"installed"=dword:00000001
+"type"="sniffer"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\NetDetails\reports]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\NetDetails\reports\eventlog]
+
+
+; ###########################################################################
+; Profiles
+; ###########################################################################
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles]
+
+; ###########################################################################
+; InstallKey
+; ###########################################################################
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\InstallKey]
+@="LicMgr"
+"iid"=dword:00000017
+"pid"=dword:0000ee5c
+"runInSafeMode"=dword:00000001
+"IdStatistics"=dword:ffffffff
+
+; ###########################################################################
+; On Demand Scan
+; ###########################################################################
+
+; ###########################################################################
+; ods
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\ods]
+@="OnDemand"
+"iid"=dword:00000017
+"pid"=dword:0000bf7e
+"runInSafeMode"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\ods\reports\eventcritlog]
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\ods\reports\eventlog]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\ods\settings\def]
+"ABSNumber"=dword:00000001
+"ScanAction"=dword:00000003
+"TryDisinfect"=dword:00000001
+"TryDelete"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\ods\settings\def\BLSettings]
+"unique"=dword:00228b00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\ods\settings\0]
+@="Settings common to all levels"
+"ScanFilter"=dword:00000001
+"CodeAnalyzer"=dword:00000001
+"ScanPacked"=dword:00000001
+"ScanRemovable"=dword:00000001
+"ScanFixed"=dword:00000001
+"ScanNTFSStreams"=dword:00000001
+"UseIChecker"=dword:00000001
+"UseIStreams"=dword:00000001
+"SizeLimit"=dword:00000064
+"TimeLimit"=dword:0000001e
+"UseSizeLimit"=dword:00000000
+"UseTimeLimit"=dword:00000000
+"ScanNetwork"=dword:00000001
+"ScanSFXArchived"=dword:00000001
+"ScanOLE"=dword:00000001
+"ExcludeByMask"=dword:00000000
+"ScanSectors"=dword:00000001
+"ScanMemory"=dword:00000001
+"ScanMailBases"=dword:00000000
+"ScanPlainMail"=dword:00000000
+"ScanArchived"=dword:00000001
+"ScanStartUpObjects"=dword:00000001
+"ScanMail"=dword:00000001
+"ScanUnchangedObjects"=dword:00000001
+"MandatoryScanPeriod"=dword:00000007
+"TimeoutForCancelRequest"=dword:00000008
+"AskPassword"=dword:00000000
+"EmulEnable"=dword:00000001
+"EmulValue"=dword:00000003
+"RootkitScan"=dword:00000001
+"DeepRootkitScan"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\ods\settings\0\ForUnchangedObjects]
+"ScanArchived"=dword:00000001
+"ScanSFXArchived"=dword:00000001
+"ScanOLE"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\ods\settings\3]
+@="Max protection"
+"ScanMailBases"=dword:00000001
+"ScanPlainMail"=dword:00000001
+"MandatoryScanPeriod"=dword:00000400
+"EmulEnable"=dword:00000001
+"EmulValue"=dword:00000005
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\ods\settings\3\ForUnchangedObjects]
+"ScanArchived"=dword:00000001
+"ScanSFXArchived"=dword:00000001
+"ScanOLE"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\ods\settings\2]
+@="High speed"
+"ScanFilter"=dword:00000000
+"ScanMailBases"=dword:00000000
+"ScanPlainMail"=dword:00000000
+"TimeLimit"=dword:000000B4
+"UseTimeLimit"=dword:00000001
+"ScanUnchangedObjects"=dword:00000000
+"EmulEnable"=dword:00000000
+"EmulValue"=dword:00000003
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\ods\settings\2\ForUnchangedObjects]
+"ScanArchived"=dword:00000000
+"ScanSFXArchived"=dword:00000000
+"ScanOLE"=dword:00000000
+
+; ###########################################################################
+; Scan_Objects
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Objects]
+"installed"=dword:00000001
+"enabled"=dword:00000001
+"admflags"=dword:0000000f
+"type"="ods"
+"origin"=dword:00000001
+"runInSafeMode"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Objects\settings\def\ScanObjects\0000]
+"Enabled"=dword:00000000
+"System"=dword:00000001
+"ObjectType"=dword:00000002
+"ScanObjects"="%personal%"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Objects\settings\def\ScanObjects\0001]
+"Enabled"=dword:00000000
+"System"=dword:00000001
+"ObjectType"=dword:00000006
+
+; ###########################################################################
+; Scan_My_Computer
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_My_Computer]
+"installed"=dword:00000001
+"enabled"=dword:00000001
+"admflags"=dword:00000005
+"type"="ods"
+"origin"=dword:00000001
+"runInSafeMode"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_My_Computer\settings\def]
+"ScanVulnerability"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_My_Computer\settings\def\ScanObjects\0000]
+"Enabled"=dword:00000001
+"System"=dword:00000001
+"ObjectType"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_My_Computer\settings\def\ScanObjects\0001]
+"Enabled"=dword:00000001
+"System"=dword:00000001
+"ObjectType"=dword:00000005
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_My_Computer\settings\def\ScanObjects\0002]
+"Enabled"=dword:00000001
+"System"=dword:00000001
+"ObjectType"=dword:0000000E
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_My_Computer\settings\def\ScanObjects\0003]
+"Enabled"=dword:00000001
+"System"=dword:00000001
+"ObjectType"=dword:00000006
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_My_Computer\settings\def\ScanObjects\0004]
+"Enabled"=dword:00000001
+"System"=dword:00000001
+"ObjectType"=dword:00000009
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_My_Computer\settings\def\ScanObjects\0005]
+"Enabled"=dword:00000001
+"System"=dword:00000001
+"ObjectType"=dword:00000008
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_My_Computer\settings\def\ScanObjects\0006]
+"Enabled"=dword:00000000
+"System"=dword:00000001
+"ObjectType"=dword:0000000A
+
+; ###########################################################################
+; Scan_Startup
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Startup]
+"installed"=dword:00000001
+"enabled"=dword:00000001
+"admflags"=dword:00000005
+"autoStart"=dword:00000001
+"type"="ods"
+"origin"=dword:00000001
+"startupDelay"=dword:000493E0
+"runInSafeMode"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\Software\KasperskyLab\protected\avp8\profiles\Scan_Startup\schedule\def]
+"Mode"=dword:00000001
+"Type"=dword:00000006
+"StartDelay"=dword:00000002
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Startup\settings\def]
+"Priority"=dword:00000000
+"UseMSVerify"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Startup\settings\def\ScanObjects\0000]
+"Enabled"=dword:00000001
+"System"=dword:00000001
+"ObjectType"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Startup\settings\def\ScanObjects\0001]
+"Enabled"=dword:00000001
+"System"=dword:00000001
+"ObjectType"=dword:00000005
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Startup\settings\def\ScanObjects\0002]
+"Enabled"=dword:00000001
+"System"=dword:00000001
+"ObjectType"=dword:0000000b
+
+; ###########################################################################
+; Scan_Critical_Areas
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Critical_Areas]
+"installed"=dword:00000001
+"enabled"=dword:00000001
+"admflags"=dword:00000005
+"autoStart"=dword:00000000
+"type"="ods"
+"origin"=dword:00000001
+"startupDelay"=dword:0000ea60
+"runInSafeMode"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Critical_Areas\settings\def]
+"Priority"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Critical_Areas\settings\def\ScanObjects\0000]
+"Enabled"=dword:00000001
+"System"=dword:00000001
+"ObjectType"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Critical_Areas\settings\def\ScanObjects\0001]
+"Enabled"=dword:00000001
+"System"=dword:00000001
+"ObjectType"=dword:00000005
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Critical_Areas\settings\def\ScanObjects\0002]
+"Enabled"=dword:00000001
+"System"=dword:00000001
+"ObjectType"=dword:0000000b
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Critical_Areas\settings\def\ScanObjects\0003]
+"Enabled"=dword:00000001
+"System"=dword:00000001
+"ObjectType"=dword:00000002
+"ScanObjects"="%windir%"
+"Recursive"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Critical_Areas\settings\def\ScanObjects\0004]
+"Enabled"=dword:00000001
+"System"=dword:00000001
+"ObjectType"=dword:00000002
+"ScanObjects"="%sysdir%"
+"Recursive"=dword:00000000
+
+; ###########################################################################
+; Scan_Rootkits
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Rootkits]
+"installed"=dword:00000001
+"enabled"=dword:00000001
+"admflags"=dword:00000005
+"type"="ods"
+"origin"=dword:00000001
+"runInSafeMode"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Rootkits\settings\def]
+"RootkitScan"=dword:00000001
+"DeepRootkitScan"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Rootkits\settings\def\ScanObjects\0000]
+"Enabled"=dword:00000001
+"System"=dword:00000001
+"ObjectType"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Rootkits\settings\0]
+"RootkitScan"=dword:00000001
+"DeepRootkitScan"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Rootkits\settings\2]
+"RootkitScan"=dword:00000001
+"DeepRootkitScan"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Rootkits\settings\3]
+"RootkitScan"=dword:00000001
+"DeepRootkitScan"=dword:00000001
+
+; ###########################################################################
+; Scan_Vulnerabilities
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Vulnerabilities]
+"installed"=dword:00000001
+"enabled"=dword:00000001
+"admflags"=dword:00000005
+"type"="ods"
+"origin"=dword:00000001
+"runInSafeMode"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Vulnerabilities\settings\def]
+"ScanVulnerability"=dword:00000001
+"ScanThreats"=dword:00000000
+"ScanFilter"=dword:00000002
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Vulnerabilities\settings\def\ScanObjects\0000]
+"Enabled"=dword:00000001
+"ObjectType"=dword:00000002
+"Recursive"=dword:00000001
+"ScanObjects"="%ProgramFiles%"
+
+; ###########################################################################
+; Statistics
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Statistics]
+"installed"=dword:00000001
+"enabled"=dword:00000001
+"iid"=dword:00000017
+"origin"=dword:00000001
+"persistent"=dword:00000001
+"pid"=dword:00009489
+"runInSafeMode"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Statistics\settings\def]
+"config_file"="%Data%\statcfg.xml"
+"data_folder"="%Data%\stat"
+"region"="ru"
+"user_id"="unknown"
+"max_period"=hex:00,80,21,a8,db,07,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Statistics\settings\def\components]
+"0000"="oas"
+"0001"="ods"
+
+; ###########################################################################
+; Quarantine Scan
+; ###########################################################################
+
+; ###########################################################################
+; qs
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\qs]
+@="Quarantine Scan"
+"iid"=dword:00000017
+"pid"=dword:0000bf7e
+"runInSafeMode"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\qs\reports\eventcritlog]
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\qs\reports\eventlog]
+
+; ###########################################################################
+; Scan_Quarantine
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Quarantine]
+@="Quarantine Scan"
+"installed"=dword:00000001
+"enabled"=dword:00000001
+"origin"=dword:00000001
+"type"="qs"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Quarantine\settings\def]
+"ScanAction"=dword:00000001
+"AskPassword"=dword:00000001
+"EmulEnable"=dword:00000001
+"EmulValue"=dword:0000000a
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Quarantine\settings\def\ScanObjects\0000]
+"Enabled"=dword:00000001
+"System"=dword:00000001
+"ObjectType"=dword:0000000d
+
+; ###########################################################################
+; Updater
+; ###########################################################################
+
+; ###########################################################################
+; updater
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\updater]
+@="Updater"
+"iid"=dword:00000017
+"pid"=dword:00009480
+"runInSafeMode"=dword:00000001
+"remote"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\updater\reports\eventlog]
+"0000"=dword:55cbc749
+"0001"=dword:87cc73ae
+"0002"=dword:43273c66
+"baseSerId"=dword:94800200
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\updater\reports\eventcritlog]
+"0000"=dword:87cc73ae
+"baseSerId"=dword:94800200
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\updater\settings\0\BLSettings]
+"unique"=dword:00228a00
+"UpdateExecutables"=dword:00000001
+"UpdateAH"=dword:00000001
+"RescanQuarantineAfterUpdate"=dword:00000001
+
+; ###########################################################################
+; Updater
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Updater]
+"installed"=dword:00000001
+"enabled"=dword:00000001
+"admflags"=dword:0000000d
+"origin"=dword:00000001
+"type"="updater"
+"category"="Updater"
+"remote"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\Software\KasperskyLab\protected\avp8\profiles\Updater\schedule\def]
+"Mode"=dword:00000002
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Updater\settings\def]
+"NotifyBeforeUpdate"=dword:00000001
+"UpdateBinaries"=dword:00000000
+"DontUpdateInterval"=dword:00000000
+"DontUpdateBegin"=dword:00000000
+"DontUpdateEnd"=dword:00000000
+"UseInternalSources"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\Software\KasperskyLab\protected\avp8\profiles\Updater\settings\0]
+"UseRegion"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\Software\KasperskyLab\protected\avp8\profiles\Updater\settings\0\Sources\0000]
+"Enable"=dword:00000001
+"Type"=dword:00000001
+
+; ###########################################################################
+; Rollback
+
+; ###########################################################################
+; rollback
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\rollback]
+@="Rollback"
+"iid"=dword:00000017
+"pid"=dword:00009480
+"runInSafeMode"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\rollback\reports\eventlog]
+"0000"=dword:55cbc749
+"0001"=dword:87cc73ae
+"baseSerId"=dword:94800200
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\types\rollback\reports\eventcritlog]
+"0000"=dword:87cc73ae
+"baseSerId"=dword:94800200
+
+; ###########################################################################
+; Rollback
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Rollback]
+"installed"=dword:00000001
+"enabled"=dword:00000001
+"admflags"=dword:00000005
+"origin"=dword:00000001
+"type"="rollback"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Rollback\settings\def]
+"Rollback"=dword:00000001
+
+; ###########################################################################
+; SystemWatch
+; ###########################################################################
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\SystemWatch]
+@="Anti-Virus"
+"enabled"=dword:00000001
+"persistent"=dword:00000001
+"admflags"=dword:0000000d
+"origin"=dword:00000001
+"installed"=dword:00000001
+"type"="sw"
+
+; ###########################################################################
+; SystemWatcher
+; ###########################################################################
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\SystemWatch\profiles\SysWatch]
+@="System Watcher"
+"enabled"=dword:00000001
+"iid"=dword:00000017
+"pid"=dword:0000e2f4
+"origin"=dword:00000001
+"persistent"=dword:00000001
+"type"="SysWatch"
+"installed"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\SystemWatch\profiles\SysWatch\reports\eventlog]
+
+; ###########################################################################
+; HIPS
+; ###########################################################################
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\SystemWatch\profiles\Hips]
+@="Hips"
+"enabled"=dword:00000001
+"persistent"=dword:00000001
+"admflags"=dword:0000000d
+"origin"=dword:00000001
+"type"="hips"
+"iid"=dword:00000017
+"pid"=dword:0000bf8d
+"installed"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\SystemWatch\profiles\Hips\reports\eventlog]
+
+; ###########################################################################
+; PDM
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\SystemWatch\profiles\pdm]
+@="Proactive Defence Monitor"
+"enabled"=dword:00000001
+"installed"=dword:00000001
+"iid"=dword:00000017
+"pid"=dword:0000ee55
+"type"="pdm"
+"persistent"=dword:00000001
+"admflags"=dword:0000000f
+"origin"=dword:00000001
+"level"=dword:FFFFFFFF
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\SystemWatch\profiles\pdm\reports\eventcritlog]
+"0000"=dword:10f87d4c
+"0001"=dword:bfca8487
+"baseSerId"=dword:e2be0b00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\SystemWatch\profiles\pdm\reports\eventlog]
+"0000"=dword:e532519d
+"0001"=dword:10f87d4c
+"0002"=dword:bfca8487
+"baseSerId"=dword:e2be0b00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\SystemWatch\profiles\pdm\reports\eventlog_reg]
+"0000"=dword:e532519d
+"0001"=dword:10f87d4c
+"0002"=dword:bfca8487
+"baseSerId"=dword:e2be0c00
+
+; ###########################################################################
+; Antivirus
+; ###########################################################################
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus]
+@="Anti-Virus"
+"enabled"=dword:00000001
+"persistent"=dword:00000001
+"admflags"=dword:0000000d
+"origin"=dword:00000001
+"type"="av"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\reports\threats]
+
+; ###########################################################################
+; Antivirus\File_Monitoring
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\File_Monitoring]
+@="File Monitoring"
+"enabled"=dword:00000001
+"type"="oas"
+"persistent"=dword:00000001
+"admflags"=dword:0000000d
+"origin"=dword:00000001
+"iid"=dword:00000017
+"pid"=dword:0000bf7f
+"priority"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\File_Monitoring\reports\eventlog]
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\File_Monitoring\reports\eventcritlog]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\File_Monitoring\settings\def]
+"ABSNumber"=dword:00000001
+"ScanAction"=dword:00000001
+"TryDisinfect"=dword:00000001
+"TryDelete"=dword:00000001
+"SendTemplate"="File #(ObjectName): detected #(DetectName). Please contact your system administrator."
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\File_Monitoring\settings\0]
+@="OAS settings common to all levels"
+"CodeAnalyzer"=dword:00000001
+"ScanFilter"=dword:00000000
+"ScanNetwork"=dword:00000001
+"ScanSFXArchived"=dword:00000000
+"ScanOLE"=dword:00000001
+"ScanArchived"=dword:00000000
+"ScanPacked"=dword:00000001
+"ScanMail"=dword:00000000
+"ScanMailBases"=dword:00000000
+"ScanPlainMail"=dword:00000000
+"ScanRemovable"=dword:00000001
+"ScanFixed"=dword:00000001
+"UseIChecker"=dword:00000001
+"UseIStreams"=dword:00000001
+"SizeLimit"=dword:00000008
+"TimeLimit"=dword:00000002
+"UseSizeLimit"=dword:00000001
+"UseTimeLimit"=dword:0000000
+"ExcludeByMask"=dword:00000000
+"ScanSectors"=dword:00000001
+"TimeoutForCancelRequest"=dword:00000000
+"ScanUnchangedObjects"=dword:00000000
+"MandatoryScanPeriod"=dword:00000002
+"CompoundPostponeSize"=dword:00000000
+"UseCompoundPostponeSize"=dword:00000001
+"WorkingMode"=dword:00000004
+"EmulEnable"=dword:00000000
+"EmulValue"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\File_Monitoring\settings\0\ScanObjects\0000]
+"Enabled"=dword:00000001
+"Recursive"=dword:00000001
+"System"=dword:00000001
+"ObjectType"=dword:00000008
+"SubType"=dword:00000000
+"ScanObjects"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\File_Monitoring\settings\0\ScanObjects\0001]
+"Enabled"=dword:00000001
+"Recursive"=dword:00000001
+"System"=dword:00000001
+"ObjectType"=dword:00000009
+"SubType"=dword:00000000
+"ScanObjects"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\File_Monitoring\settings\0\ScanObjects\0002]
+"Enabled"=dword:00000001
+"Recursive"=dword:00000000
+"System"=dword:00000001
+"ObjectType"=dword:0000000a
+"SubType"=dword:00000000
+"ScanObjects"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\File_Monitoring\settings\0\ForUnchangedObjects]
+"ScanArchived"=dword:00000000
+"ScanSFXArchived"=dword:00000000
+"ScanOLE"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\File_Monitoring\settings\3]
+@="Max protection"
+"ScanArchived"=dword:00000001
+"ScanSFXArchived"=dword:00000001
+"ScanFilter"=dword:00000001
+"UseSizeLimit"=dword:00000000
+"MandatoryScanPeriod"=dword:00000005
+"ScanUnchangedObjects"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\File_Monitoring\settings\3\ForUnchangedObjects]
+"ScanArchived"=dword:00000001
+"ScanSFXArchived"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\File_Monitoring\settings\2]
+@="High speed"
+"ScanFilter"=dword:00000002
+"ScanNetwork"=dword:00000000
+"ScanArchived"=dword:00000000
+"ScanSFXArchived"=dword:00000000
+"ScanOLE"=dword:00000000
+"ScanUnchangedObjects"=dword:00000000
+
+; ###########################################################################
+; Antivirus\Mail_Monitoring
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring]
+@="Mail Monitoring"
+"enabled"=dword:00000001
+"iid"=dword:00009c46
+"pid"=dword:00009c44
+"type"="mc"
+"persistent"=dword:00000001
+"admflags"=dword:0000000d
+"origin"=dword:00000001
+"IdStatistics"=dword:000f6200
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\reports\eventcritlog]
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\reports\eventlog]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def]
+"ScanAction"=dword:00000001
+"TryDisinfect"=dword:00000001
+"TryDelete"=dword:00000001
+"CheckExternalPluginMessages"=dword:00000001
+"CheckTrafficMonitorMessages"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0000]
+"Enabled"=dword:00000000
+"Name"="*.com"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0001]
+"Enabled"=dword:00000000
+"Name"="*.exe"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0002]
+"Enabled"=dword:00000000
+"Name"="*.sys"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0003]
+"Enabled"=dword:00000000
+"Name"="*.prg"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0004]
+"Enabled"=dword:00000000
+"Name"="*.bin"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0005]
+"Enabled"=dword:00000000
+"Name"="*.bat"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0006]
+"Enabled"=dword:00000000
+"Name"="*.cmd"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0007]
+"Enabled"=dword:00000000
+"Name"="*.dpl"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0008]
+"Enabled"=dword:00000000
+"Name"="*.dll"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0009]
+"Enabled"=dword:00000000
+"Name"="*.scr"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0010]
+"Enabled"=dword:00000000
+"Name"="*.cpl"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0011]
+"Enabled"=dword:00000000
+"Name"="*.ocx"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0012]
+"Enabled"=dword:00000000
+"Name"="*.tsp"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0013]
+"Enabled"=dword:00000000
+"Name"="*.drv"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0014]
+"Enabled"=dword:00000000
+"Name"="*.vxd"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0015]
+"Enabled"=dword:00000000
+"Name"="*.pif"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0016]
+"Enabled"=dword:00000000
+"Name"="*.lnk"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0017]
+"Enabled"=dword:00000000
+"Name"="*.reg"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0018]
+"Enabled"=dword:00000000
+"Name"="*.ini"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0019]
+"Enabled"=dword:00000000
+"Name"="*.cla"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0020]
+"Enabled"=dword:00000000
+"Name"="*.vbs"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0021]
+"Enabled"=dword:00000000
+"Name"="*.vbe"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0022]
+"Enabled"=dword:00000000
+"Name"="*.js"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0023]
+"Enabled"=dword:00000000
+"Name"="*.jse"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0024]
+"Enabled"=dword:00000000
+"Name"="*.htm"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0025]
+"Enabled"=dword:00000000
+"Name"="*.htt"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0026]
+"Enabled"=dword:00000000
+"Name"="*.hta"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0027]
+"Enabled"=dword:00000000
+"Name"="*.asp"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0028]
+"Enabled"=dword:00000000
+"Name"="*.chm"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0029]
+"Enabled"=dword:00000000
+"Name"="*.pht"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0030]
+"Enabled"=dword:00000000
+"Name"="*.php"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0031]
+"Enabled"=dword:00000000
+"Name"="*.wsh"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0032]
+"Enabled"=dword:00000000
+"Name"="*.wsf"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0033]
+"Enabled"=dword:00000000
+"Name"="*.the"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0034]
+"Enabled"=dword:00000000
+"Name"="*.hlp"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0035]
+"Enabled"=dword:00000000
+"Name"="*.eml"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0036]
+"Enabled"=dword:00000000
+"Name"="*.nws"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0037]
+"Enabled"=dword:00000000
+"Name"="*.msg"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0038]
+"Enabled"=dword:00000000
+"Name"="*.plg"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0039]
+"Enabled"=dword:00000000
+"Name"="*.mbx"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0040]
+"Enabled"=dword:00000000
+"Name"="*.doc"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0041]
+"Enabled"=dword:00000000
+"Name"="*.dot"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0042]
+"Enabled"=dword:00000000
+"Name"="*.fpm"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0043]
+"Enabled"=dword:00000000
+"Name"="*.rtf"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0044]
+"Enabled"=dword:00000000
+"Name"="*.shs"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0045]
+"Enabled"=dword:00000000
+"Name"="*.dwg"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0046]
+"Enabled"=dword:00000000
+"Name"="*.msi"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0047]
+"Enabled"=dword:00000000
+"Name"="*.otm"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0048]
+"Enabled"=dword:00000000
+"Name"="*.pdf"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0049]
+"Enabled"=dword:00000000
+"Name"="*.swf"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0050]
+"Enabled"=dword:00000000
+"Name"="*.jpg"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0051]
+"Enabled"=dword:00000000
+"Name"="*.jpeg"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0052]
+"Enabled"=dword:00000000
+"Name"="*.emf"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0053]
+"Enabled"=dword:00000000
+"Name"="*.ico"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0054]
+"Enabled"=dword:00000000
+"Name"="*.ov?"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0055]
+"Enabled"=dword:00000000
+"Name"="*.xl*"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0056]
+"Enabled"=dword:00000000
+"Name"="*.pp*"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0057]
+"Enabled"=dword:00000000
+"Name"="*.md*"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\def\DetectMasksList\0058]
+"Enabled"=dword:00000000
+"Name"="*.png"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\0]
+@="Settings common to all levels"
+"ScanFilter"=dword:00000001
+"CodeAnalyzer"=dword:00000001
+"ScanSFXArchived"=dword:00000001
+"ScanOLE"=dword:00000001
+"ScanArchived"=dword:00000001
+"ScanPacked"=dword:00000001
+"ScanMailBases"=dword:00000001
+"ScanPlainMail"=dword:00000001
+"UseIChecker"=dword:00000001
+"UseIStreams"=dword:00000001
+"UseSizeLimit"=dword:00000000
+"SizeLimit"=dword:00000008
+"UseTimeLimit"=dword:00000001
+"TimeLimit"=dword:000000B4
+"ExcludeByMask"=dword:00000000
+"CheckIncomingMessagesOnly"=dword:00000000
+"DetectByMaskAction"=dword:00000000
+"EmulEnable"=dword:00000001
+"EmulValue"=dword:0000000a
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\3]
+@="Max Protection"
+"UseTimeLimit"=dword:00000000
+"CheckIncomingMessagesOnly"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring\settings\2]
+@="High speed"
+"ScanArchived"=dword:00000000
+"ScanMailBases"=dword:00000000
+"CheckIncomingMessagesOnly"=dword:00000001
+"EmulValue"=dword:00000001
+
+; ###########################################################################
+; Antivirus\Web_Monitoring
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Web_Monitoring]
+@="web Monitoring"
+"enabled"=dword:00000001
+"iid"=dword:00000000
+"pid"=dword:00000000
+"persistent"=dword:00000001
+"admflags"=dword:0000000d
+"origin"=dword:00000001
+"IdStatistics"=dword:ffffffff
+"type"="wm"
+"category"="WAI386"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Web_Monitoring\reports\threats]
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Web_Monitoring\reports\eventcritlog]
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Web_Monitoring\reports\eventlog]
+
+; ###########################################################################
+; Antivirus\Web_Monitoring\SC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Web_Monitoring\profiles\sc]
+@="Script Monitoring"
+"installed"=dword:00000001
+"enabled"=dword:00000001
+"iid"=dword:00000017
+"pid"=dword:0000e2b5
+"type"="sc"
+"persistent"=dword:00000001
+"admflags"=dword:0000000d
+"origin"=dword:00000001
+"IdSettings"=dword:000f5100
+"IdStatistics"=dword:000f6200
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Web_Monitoring\profiles\sc\settings\def]
+@="Settings common to all levels"
+"CodeAnalyzer"=dword:00000001
+"ScanAction"=dword:00000002
+"ScanSFXArchived"=dword:00000000
+"ScanOLE"=dword:00000000
+"ScanArchived"=dword:00000000
+"ScanPacked"=dword:00000000
+"ScanMailBases"=dword:00000000
+"ScanPlainMail"=dword:00000000
+"UseIChecker"=dword:00000000
+"UseIStreams"=dword:00000000
+"SizeLimit"=dword:00000008
+"TimeLimit"=dword:0000001e
+"UseSizeLimit"=dword:00000000
+"UseTimeLimit"=dword:00000000
+"ExcludeByMask"=dword:00000000
+
+; ###########################################################################
+; Antivirus\Web_Monitoring\HTTPSCAN
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Web_Monitoring\profiles\httpscan]
+@="HTTPScan"
+"installed"=dword:00000001
+"enabled"=dword:00000001
+"iid"=dword:00000017
+"pid"=dword:0000bf87
+"type"="httpscan"
+"persistent"=dword:00000001
+"admflags"=dword:0000000f
+"origin"=dword:00000001
+"IdStatistics"=dword:000f6200
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Web_Monitoring\profiles\httpscan\settings\0]
+@="Settings common to all levels"
+"ScanFilter"=dword:00000001
+"CodeAnalyzer"=dword:00000001
+"ScanSFXArchived"=dword:00000001
+"ScanOLE"=dword:00000001
+"ScanArchived"=dword:00000001
+"ScanPacked"=dword:00000001
+"ScanMailBases"=dword:00000001
+"ScanPlainMail"=dword:00000001
+"UseIChecker"=dword:00000001
+"UseIStreams"=dword:00000001
+"UseSizeLimit"=dword:00000000
+"SizeLimit"=dword:00000008
+"UseTimeLimit"=dword:00000001
+"TimeLimit"=dword:000000b4
+"ExcludeByMask"=dword:00000000
+"CheckIncomingMessagesOnly"=dword:00000000
+"EmulEnable"=dword:00000001
+"EmulValue"=dword:0000000a
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Web_Monitoring\profiles\httpscan\settings\0\HTTPSettings]
+"UseTimeLimit"=dword:00000001
+"TimeLimit"=dword:00000001
+"UseStreamProcessor"=dword:00000000
+"StreamProcessorDB"="%Bases%\\webav.kfb"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Web_Monitoring\profiles\httpscan\settings\2]
+@="High speed"
+"ScanFilter"=dword:00000002
+"ScanArchived"=dword:00000000
+"ScanMailBases"=dword:00000000
+"CheckIncomingMessagesOnly"=dword:00000001
+"EmulValue"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Web_Monitoring\profiles\httpscan\settings\2\HTTPSettings]
+"UseTimeLimit"=dword:00000001
+"TimeLimit"=dword:00000001
+"UseStreamProcessor"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Web_Monitoring\profiles\httpscan\settings\3]
+@="Max Protection"
+"UseTimeLimit"=dword:00000000
+"CheckIncomingMessagesOnly"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Web_Monitoring\profiles\httpscan\settings\3\HTTPSettings]
+"UseTimeLimit"=dword:00000001
+"TimeLimit"=dword:0000003c
+"UseStreamProcessor"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Web_Monitoring\profiles\httpscan\settings\def]
+"ScanAction"=dword:00000005
+"TryDisinfect"=dword:00000000
+"TryDelete"=dword:00000001
+"AskActions"=dword:0000fffe
+
+; ###########################################################################
+; Antivirus\Web_Monitoring\WMUF
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Web_Monitoring\profiles\WMUF]
+"installed"=dword:00000001
+"enabled"=dword:00000001
+"iid"=dword:00000017
+"pid"=dword:000055f0
+"persistent"=dword:00000001
+"admflags"=dword:0000000f
+"origin"=dword:00000001
+"type"="wmuf"
+"category"="WAI386"
+"serviceId"=dword:00000001
+@="WebMonURLFilter"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Web_Monitoring\profiles\WMUF\reports\eventcritlog]
+"0000"=dword:10f87d4c
+"0001"=dword:bfca8487
+"baseSerId"=dword:000f0800
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Web_Monitoring\profiles\WMUF\reports\eventlog]
+"0000"=dword:e532519d
+"0001"=dword:10f87d4c
+"0002"=dword:bfca8487
+"baseSerId"=dword:000f0800
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Web_Monitoring\profiles\WMUF\settings\def]
+"DataBase"="%Bases%\\WMUF.DAT"
+"UpdateCategory"="WAI386"
+"FilterMsgClass"=dword:e9928d7d
+"UseHeuristic"=dword:0
+"UseProfiles"=dword:0
+"UseAskAction"=dword:1
+"LoadHTTPTrafMon"=dword:1
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Web_Monitoring\profiles\WMUF\settings\def\AskActionDef]
+"DetectType"=dword:00000003
+"DetectDanger"=dword:00000001
+"DetectStatus"=dword:00000004
+"ObjectType"=dword:00005001
+"DefaultAction"=dword:00000020
+"ExcludeAction"=dword:00000000
+"ActionsMask"=dword:00000030
+"ActionsAll"=dword:00000030
+"ApplyToAll"=dword:00000000
+
+; ###########################################################################
+; OnlineSecurity
+; ###########################################################################
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\OnlineSecurity]
+@="Online Security"
+"enabled"=dword:00000001
+"persistent"=dword:00000001
+"admflags"=dword:0000000d
+"origin"=dword:00000001
+"type"="os"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\OnlineSecurity\reports\threats]
+
+; ###########################################################################
+; OnlineSecurity\IDS
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\OnlineSecurity\profiles\ids]
+@="IDS"
+"installed"=dword:00000001
+"enabled"=dword:00000001
+"iid"=dword:00000017
+"pid"=dword:0000ee4f
+"persistent"=dword:00000001
+"admflags"=dword:0000000f
+"origin"=dword:00000001
+"type"="ids"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\OnlineSecurity\profiles\ids\reports\eventlog]
+"0000"=dword:a663facc
+"baseSerId"=dword:ee4f7000
+
+; ###########################################################################
+; OnlineSecurity\AntiDialers
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\OnlineSecurity\profiles\antidial]
+@="Anti-Dialers"
+"installed"=dword:00000001
+"enabled"=dword:00000001
+"iid"=dword:00000017
+"pid"=dword:0000E2C7
+"type"="antidial"
+"persistent"=dword:00000001
+"admflags"=dword:0000000f
+"origin"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\OnlineSecurity\profiles\antidial\reports\eventlog]
+"0000"=dword:e532519d
+"0001"=dword:10f87d4c
+"0002"=dword:bfca8487
+"baseSerId"=dword:f0800
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\OnlineSecurity\profiles\antidial\reports\eventcritlog]
+"0000"=dword:10f87d4c
+"0001"=dword:bfca8487
+"baseSerId"=dword:f0800
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\OnlineSecurity\profiles\antidial\settings\def]
+
+; ###########################################################################
+; OnlineSecurity\AntiPhishing
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\OnlineSecurity\profiles\antiphishing]
+@="Anti-Phishing"
+"installed"=dword:00000001
+"enabled"=dword:00000001
+"iid"=dword:00000017
+"pid"=dword:0000E2CA
+"type"="antiphishing"
+"persistent"=dword:00000001
+"admflags"=dword:0000000f
+"origin"=dword:00000001
+"idStatistics"=dword:e2c86000
+"idSettings"=dword:ffffffff
+"category"="AP"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\OnlineSecurity\profiles\antiphishing\reports\eventlog]
+"0000"=dword:e532519d
+"0001"=dword:10f87d4c
+"0002"=dword:bfca8487
+"baseSerId"=dword:f0800
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\OnlineSecurity\profiles\antiphishing\reports\eventcritlog]
+"0000"=dword:10f87d4c
+"0001"=dword:bfca8487
+"baseSerId"=dword:f0800
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\OnlineSecurity\profiles\antiphishing\settings\def]
+
+; ###########################################################################
+; ContentFilter
+; ###########################################################################
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter]
+@="Content Filter"
+"enabled"=dword:00000001
+"persistent"=dword:00000001
+"admflags"=dword:0000000d
+"origin"=dword:00000001
+"type"="cf"
+
+; ###########################################################################
+; ContentFilter\Anti_Spam
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam]
+@="Mail Anti Spam"
+"enabled"=dword:00000001
+"iid"=dword:00000017
+"pid"=dword:00009c55
+"type"="antispam"
+"persistent"=dword:00000001
+"admflags"=dword:0000000d
+"origin"=dword:00000001
+"category"="AS;PAS"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\reports\eventlog]
+"0000"=dword:3e006bbe
+"baseSerId"=dword:9c550500
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def]
+"CheckIncomingMessagesOnly"=dword:00000001
+"BayesTableFileName"="%Data%\\antispam.sfdb"
+"BayesTableFileName_Original"="%Data%\\antispam_original.sfdb"
+"UseAntifishing"=dword:00000001
+"CheckIncomingMessagesOnly"=dword:00000000
+"CheckTrafficMonitorMessages"=dword:00000001
+"CheckExternalPluginMessages"=dword:00000001
+"ShowMailwasher"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings]
+"unique"=dword:9c550a00
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0000]
+"Rule"="* spam *" 
+"Level"=dword:19
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0001]
+"Rule"="* $$$ *" 
+"Level"=dword:1e
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0002]
+"Rule"="* free *" 
+"Level"=dword:28
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0003]
+"Rule"="* save *" 
+"Level"=dword:13
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0004]
+"Rule"="* % guaranteed *" 
+"Level"=dword:46
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0005]
+"Rule"="* offer *" 
+"Level"=dword:46
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0006]
+"Rule"="* now! *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0007]
+"Rule"="* call now *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0008]
+"Rule"="* dear friend *" 
+"Level"=dword:28
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0009]
+"Rule"="* lowest price *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0010]
+"Rule"="* lowest rate *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0011]
+"Rule"="* sold out *" 
+"Level"=dword:1e
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0012]
+"Rule"="* find out more *" 
+"Level"=dword:1e
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0013]
+"Rule"="* no obligation *" 
+"Level"=dword:28
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0014]
+"Rule"="* loan *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0015]
+"Rule"="* extra money *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0016]
+"Rule"="* your money *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0017]
+"Rule"="* advisor *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0018]
+"Rule"="* refinance *" 
+"Level"=dword:3c
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0019]
+"Rule"="* credit *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0020]
+"Rule"="* product *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0021]
+"Rule"="* promotion *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0022]
+"Rule"="* opportunity *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0023]
+"Rule"="* benefit *" 
+"Level"=dword:27
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0024]
+"Rule"="* consumer *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0025]
+"Rule"="* customer *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0026]
+"Rule"="* sale *" 
+"Level"=dword:28
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0027]
+"Rule"="* seller *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0028]
+"Rule"="* merchant *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0029]
+"Rule"="* purchase *" 
+"Level"=dword:46
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0030]
+"Rule"="* deal *" 
+"Level"=dword:46
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0031]
+"Rule"="* credit card *" 
+"Level"=dword:64
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0032]
+"Rule"="* premium card *" 
+"Level"=dword:64
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0033]
+"Rule"="* approved *" 
+"Level"=dword:46
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0034]
+"Rule"="* cash *" 
+"Level"=dword:28
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0035]
+"Rule"="* money *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0036]
+"Rule"="* price *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0037]
+"Rule"="* overpay *" 
+"Level"=dword:1e
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0038]
+"Rule"="* advert *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0039]
+"Rule"="* discontinue *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0040]
+"Rule"="* visit the following link *" 
+"Level"=dword:3c
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0041]
+"Rule"="* service *" 
+"Level"=dword:28
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0042]
+"Rule"="* receipt *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0043]
+"Rule"="* adv: *" 
+"Level"=dword:64
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0044]
+"Rule"="* clicking here *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0045]
+"Rule"="* click here *" 
+"Level"=dword:46
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0046]
+"Rule"="* you receive this message *" 
+"Level"=dword:64
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0047]
+"Rule"="* you are receiving *" 
+"Level"=dword:64
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0048]
+"Rule"="* receiving *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0049]
+"Rule"="* receive *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0050]
+"Rule"="* remove *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0051]
+"Rule"="* removal *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0052]
+"Rule"="* unsubscribe *" 
+"Level"=dword:46
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0053]
+"Rule"="* subscribed *" 
+"Level"=dword:46
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0054]
+"Rule"="* subscriber *" 
+"Level"=dword:46
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0055]
+"Rule"="* opted?in *" 
+"Level"=dword:46
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0056]
+"Rule"="* opt-in *" 
+"Level"=dword:46
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0057]
+"Rule"="* opti-target *" 
+"Level"=dword:46
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0058]
+"Rule"="* partner site *" 
+"Level"=dword:46
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0059]
+"Rule"="* signed-up *" 
+"Level"=dword:46
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0060]
+"Rule"="* herbal sex *" 
+"Level"=dword:5a
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0061]
+"Rule"="* XXX *" 
+"Level"=dword:5a
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0062]
+"Rule"="* fucking *" 
+"Level"=dword:5a
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0063]
+"Rule"="* dialer *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0064]
+"Rule"="* hardcore *" 
+"Level"=dword:5a
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0065]
+"Rule"="* porno *" 
+"Level"=dword:5a
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0066]
+"Rule"="* pussy *" 
+"Level"=dword:5a
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0067]
+"Rule"="* adult *" 
+"Level"=dword:5a
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0068]
+"Rule"="* blowjob *" 
+"Level"=dword:5a
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0069]
+"Rule"="* cumshot *" 
+"Level"=dword:5a
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0070]
+"Rule"="* sex *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0071]
+"Rule"="* privacy *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0072]
+"Rule"="* porn *" 
+"Level"=dword:46
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0073]
+"Rule"="* cock *" 
+"Level"=dword:46
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0074]
+"Rule"="* fucks *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0075]
+"Rule"="* tits *" 
+"Level"=dword:46
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0076]
+"Rule"="* orgy *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0077]
+"Rule"="* high school *" 
+"Level"=dword:28
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0078]
+"Rule"="* shit *" 
+"Level"=dword:1e
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0079]
+"Rule"="* fucked *" 
+"Level"=dword:46
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0080]
+"Rule"="* virginity *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0081]
+"Rule"="* amateur-videos *" 
+"Level"=dword:46
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0081]
+"Rule"="* werbung *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0082]
+"Rule"="* penis *" 
+"Level"=dword:5a
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0083]
+"Rule"="* muschi *" 
+"Level"=dword:5a
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0084]
+"Rule"="* ficken *" 
+"Level"=dword:3c
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0085]
+"Rule"="* hacker *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0086]
+"Rule"="* zugangssoftware *" 
+"Level"=dword:28
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0087]
+"Rule"="* tabulos *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0088]
+"Rule"="* paparazi *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0089]
+"Rule"="* kostenlos *" 
+"Level"=dword:28
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0090]
+"Rule"="* Du wurdest ausgewählt *" 
+"Level"=dword:1e
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0091]
+"Rule"="* Webzugang *" 
+"Level"=dword:1e
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0092]
+"Rule"="* Nachicht abholen *" 
+"Level"=dword:1e
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0093]
+"Rule"="* Chateinladung *" 
+"Level"=dword:1e
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0094]
+"Rule"="* ich_bin_verliebt_in_dich *" 
+"Level"=dword:3c
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0095]
+"Rule"="* na mein süsser *" 
+"Level"=dword:46
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0096]
+"Rule"="* überraschung *" 
+"Level"=dword:1e
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0097]
+"Rule"="* per Zufallsprinzip *" 
+"Level"=dword:1e
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0098]
+"Rule"="* ausgewählt *" 
+"Level"=dword:1e
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0099]
+"Rule"="* Chateinladung erhalten *" 
+"Level"=dword:28
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0100]
+"Rule"="* Nachricht auf unserem Server *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0101]
+"Rule"="* Schickt diese Mail *" 
+"Level"=dword:28
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0102]
+"Rule"="* geile? Erotik Seite *" 
+"Level"=dword:5a
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0103]
+"Rule"="* Ficken und Bumsen *" 
+"Level"=dword:64
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0104]
+"Rule"="* dein Schwanz *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0105]
+"Rule"="* Orgasmus Garantie *" 
+"Level"=dword:5a
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0106]
+"Rule"="* geilen Hardcore *" 
+"Level"=dword:64
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0107]
+"Rule"="* Anal *" 
+"Level"=dword:50
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0108]
+"Rule"="* Live Sex *" 
+"Level"=dword:46
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0109]
+"Rule"="* Livecams *" 
+"Level"=dword:3c
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0110]
+"Rule"="* sexuellen Phantasien *" 
+"Level"=dword:28
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0111]
+"Rule"="* kennst du mich noch *" 
+"Level"=dword:1e
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0112]
+"Rule"="* Hardcore-Porno *" 
+"Level"=dword:64
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0113]
+"Rule"="* Hardcorebildern *" 
+"Level"=dword:5a
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0114]
+"Rule"="* abspritzen *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0115]
+"Rule"="* Crackdialer *" 
+"Level"=dword:5a
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0116]
+"Rule"="* Tittenfick *" 
+"Level"=dword:5a
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0117]
+"Rule"="* Analsex *" 
+"Level"=dword:5a
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0118]
+"Rule"="* 100% Spaß machen *" 
+"Level"=dword:28
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0119]
+"Rule"="* Ihrer Kreditkarte *" 
+"Level"=dword:32
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0120]
+"Rule"="* Fisting *" 
+"Level"=dword:5a
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0121]
+"Rule"="* Viel Spaß *" 
+"Level"=dword:1e
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def\users\.DEFAULT\settings\BlackWords\0122]
+"Rule"="* %?off *" 
+"Level"=dword:46
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\0]
+@="Settings common to all levels"
+"ProbableSpamLowLevel"=dword:00000032
+"ProbableSpamHighLevel"=dword:0000003b
+"UseBlackAddresses"=dword:00000001
+"UseWhiteWords"=dword:00000000
+"UseBlackWords"=dword:00000000
+"UseBayesian"=dword:00000001
+"UseWhiteAddresses"=dword:00000001
+"UseGSG"=dword:00000001
+"UsePDB"=dword:00000001
+"UsePerUserSettings"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\2]
+@="High speed"
+"ProbableSpamLowLevel"=dword:00000037
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\3]
+@="Max Protection"
+"ProbableSpamHighLevel"=dword:00000037
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\4]
+"UseBayesian"=dword:00000000
+"UseWhiteAddresses"=dword:00000000
+"UseGSG"=dword:00000000
+"UsePDB"=dword:00000000
+"UseAntifishing"=dword:00000000
+"UsePerUserSettings"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\5]
+"UseBayesian"=dword:00000000
+"UseBlackAddresses"=dword:00000000
+"UseGSG"=dword:00000000
+"UsePDB"=dword:00000000
+"UseAntifishing"=dword:00000000
+"UsePerUserSettings"=dword:00000000
+
+; ###########################################################################
+; ContentFilter\Parental Control
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\ParCtl]
+@="ParentalControl"
+"enabled"=dword:00000000
+"iid"=dword:00000017
+"pid"=dword:000055f0
+"persistent"=dword:00000001
+"admflags"=dword:0000000f
+"origin"=dword:00000001
+"type"="parctl"
+"category"="PCDB"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\ParCtl\reports\eventcritlog]
+"0000"=dword:10f87d4c
+"0001"=dword:bfca8487
+"baseSerId"=dword:55f00500
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\ParCtl\reports\eventlog]
+"0000"=dword:e532519d
+"0001"=dword:10f87d4c
+"0002"=dword:bfca8487
+"baseSerId"=dword:55f00500
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\ParCtl\data]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\ParCtl\settings\def]
+"DataBase"="%Bases%\\parctl.dat"
+"UpdateCategory"="PCDB"
+"FilterMsgClass"=dword:ea928d7d
+"LoadHTTPTrafMon"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\ParCtl\settings\def\users\.DEFAULT\settings]
+"unique"=dword:55F00300
+"ProfileId"=dword:00000003
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\ParCtl\settings\def\Filter]
+"DenyCategoriesMask"=hex:0f,00,00,00,00,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\ParCtl\settings\def\Profiles\0000]
+"Id"=dword:00000001
+"Name"="Parent"
+"Description"="For use by parents"
+"UseCommonFilter"=dword:00000000
+"Level"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\ParCtl\settings\def\Profiles\0001]
+"Id"=dword:00000002
+"Enabled"=dword:00000000
+"Name"="Teenager"
+"Description"="For use by teenagers"
+"UseCommonFilter"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\ParCtl\settings\def\Profiles\0001\Filter]
+"DenyCategoriesMask"=hex:7d,00,00,00,00,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\ParCtl\settings\def\Profiles\0002]
+"Id"=dword:00000003
+"Name"="Child"
+"Description"="For use by small children"
+"UseCommonFilter"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\ParCtl\settings\def\Profiles\0002\Filter]
+"DenyCategoriesMask"=hex:7d,00,00,00,00,00,00,00
+
+; ###########################################################################
+; ContentFilter\Anti Banner
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\AdBlocker]
+@="Anti-Banner"
+"enabled"=dword:00000001
+"installed"=dword:00000001
+"iid"=dword:00000017
+"pid"=dword:0000E2C8
+"persistent"=dword:00000001
+"admflags"=dword:0000000f
+"origin"=dword:00000001
+"type"="adblocker"
+"category"="ADB"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\AdBlocker\reports\eventlog]
+"0000"=dword:e532519d
+"0001"=dword:10f87d4c
+"0002"=dword:bfca8487
+"baseSerId"=dword:f0800
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\AdBlocker\reports\eventcritlog]
+"0000"=dword:10f87d4c
+"0001"=dword:bfca8487
+"baseSerId"=dword:f0800
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\AdBlocker\settings\def]
+"bdbt"="%Bases%\\adblock.txt"
+"ufmode"=dword:00000016
+"ufpmc"=dword:e8928d7d
+"ask"=dword:00000001
+"loadhttp"=dword:00000001
+"updcat"="ADB"
+"embscr"=dword:00000000
+"gtname"="KLAntiBannerTask"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\AdBlocker\settings\def\mutexes\0000]
+"Enabled"=dword:00000001
+"Name"="KLANTIBANNER_PR_DEF6900421"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\AdBlocker\settings\def\askdef]
+"DetectName"="Advertisement"
+"DetectType"=dword:00000004
+"DetectDanger"=dword:00000004
+"DetectStatus"=dword:00000004
+"ObjectType"=dword:00005001
+"DefaultAction"=dword:00000020
+"ExcludeAction"=dword:00000010
+"ActionsMask"=dword:00000020
+"ActionsAll"=dword:00000020
+"ApplyToAll"=dword:00000000
+
+
+
+; ###########################################################################
+; External
+; ###########################################################################
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Security Center\Monitoring\KasperskyAntiVirus]
+"DisableMonitoring"=dword:00000001
+
+; ###########################################################################
+; ###########################################################################
+
+; ###########################################################################
+; AVZKrnl
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\AVP8\profiles\AVZ_RunScript]
+@="Execute some script"
+"installed"=dword:00000001
+"enabled"=dword:00000001
+"admflags"=dword:0000000f
+"type"="avz"
+"origin"=dword:00000001
+"level"=dword:00000000
+"lastModified"=dword:4688d1eb
+"lastCompleted"=dword:46cc309e
+"category"="SSA"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\AVP8\types\avz]
+"iid"=dword:00000017
+"pid"=dword:00009c63
+"runInSafeMode"=dword:00000001
+@="AVZ"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\AVP8\types\avz\reports]
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\AVP8\types\avz\reports\eventcritlog]
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\AVP8\types\avz\reports\eventlog]
+
+; ###########################################################################
+; Statistics
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Statistics]
+"iid"=dword:00000017
+"origin"=dword:00000001
+"persistent"=dword:00000001
+"pid"=dword:00009489
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Statistics\settings\def]
+"config_file"="%Data%\statcfg.xml"
+"data_folder"="%Temp%\stat"

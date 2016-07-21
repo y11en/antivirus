@@ -1,0 +1,21 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@  @abs_top_srcdir@/AvpMgr
+
+Name = avlib
+Plugin= $(Name).@PLUGIN_EXT@
+Metafile = @srcdir@/$(Name).@METAFILE_EXT@
+Targets = $(Plugin)
+
+Sources = \
+	avlib.c \
+	isexec.c \
+	isexecbuff.c \
+	psw_heuristic.c
+
+# unix section
+
+VersionScript = @abs_top_srcdir@/unix/prague_plugin.ver
+
+include @abs_top_builddir@/@OS@/Rules

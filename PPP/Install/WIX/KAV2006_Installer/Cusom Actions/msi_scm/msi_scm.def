@@ -1,0 +1,7 @@
+LIBRARY      "msi_scm.dll"
+
+EXPORTS
+	RegisterDriver		@1
+	UnregisterDriver	@2
+	StartDriver			@3
+	SetServiceDACL		@4

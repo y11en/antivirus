@@ -1,0 +1,101 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "Avpg"=.\Prototypes\Avpg\Avpg.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/TestProjects/CHANGEDEBUGMASKEX/Prototypes/Avpg", FKZBAAAA
+    .\prototypes\avpg
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "ChangeDebugMask"=.\ChangeDebugMask.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/TestProjects/ChangeDebugMaskEx", OUNBAAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "KLPID"=.\Prototypes\KLPID\KLPID.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/TestProjects/CHANGEDEBUGMASKEX/Prototypes/KLPID", IKZBAAAA
+    .\prototypes\klpid
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "PersonalFW"=.\PROTOTYPES\PersonalFW\PersonalFW.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/TestProjects/CHANGEDEBUGMASKEX/Prototypes/PersonalFW", OKZBAAAA
+    .\prototypes\personalfw
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "TrueLib"=.\Prototypes\TrueLib\TrueLib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/TestProjects/CHANGEDEBUGMASKEX/Prototypes/TrueLib", LKZBAAAA
+    .\prototypes\truelib
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/TestProjects/ChangeDebugMaskEx", FJZBAAAA
+    .
+    end source code control
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

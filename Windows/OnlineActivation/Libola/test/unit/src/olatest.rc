@@ -1,0 +1,171 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\olatest.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\olatest.ico"
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_OLATEST_DIALOG DIALOGEX 0, 0, 800, 500
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Online Activation Test"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST_PROGRESS,582,121,205,365,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_APPID,72,19,49,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_SUPP,72,35,49,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_PASS,72,51,49,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CODE,72,67,168,14,ES_UPPERCASE
+    CONTROL         "New Customer Activation",IDC_RADIO_ACTYPE,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,128,19,95,14
+    CONTROL         "Registered Customer Activation",IDC_RADIO_REGISTERED,
+                    "Button",BS_AUTORADIOBUTTON,128,35,115,14
+    PUSHBUTTON      "Submit",IDC_BUTTON_SUBMIT,72,86,50,14
+    PUSHBUTTON      "Abort",IDC_BUTTON_ABORT,190,86,50,14
+    CONTROL         "",IDC_BROWSER,"Static",SS_WHITERECT,15,121,548,365
+    GROUPBOX        "Input",IDC_STATIC,7,7,786,100
+    LTEXT           "Application Id:",IDC_STATIC_APPID,15,19,50,14
+    LTEXT           "Activation Code:",IDC_STATIC,15,67,53,14
+    LTEXT           "Support Id:",IDC_STATIC,15,35,46,14
+    LTEXT           "Password:",IDC_STATIC,15,51,34,14
+    GROUPBOX        "Progress",IDC_STATIC,575,109,218,384
+    GROUPBOX        "Output",IDC_STATIC,7,109,563,384
+    PUSHBUTTON      "Reply",IDC_BUTTON_REPLY,131,86,50,14
+    CONTROL         "",IDC_LIST_URLS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_EDITLABELS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,249,19,227,81
+    CONTROL         "Connect Using Proxy Server",IDC_CHECK_PROXY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,488,19,105,14
+    CONTROL         "Use Internet Explorer Settings",IDC_CHECK_IE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,504,35,109,14
+    EDITTEXT        IDC_EDIT_PROXY,561,51,177,14,ES_AUTOHSCROLL
+    CONTROL         "Proxy Server Requires Authentication",IDC_CHECK_AUTH,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,504,67,137,14
+    LTEXT           "Proxy URL:",IDC_STATIC,517,51,37,14
+    EDITTEXT        IDC_EDIT_USER,562,86,59,14,ES_AUTOHSCROLL
+    LTEXT           "User Name:",IDC_STATIC,517,86,39,14
+    EDITTEXT        IDC_EDIT_PASSWORD,679,86,59,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Password:",IDC_STATIC,639,86,34,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_OLATEST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 793
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 493
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\olatest.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

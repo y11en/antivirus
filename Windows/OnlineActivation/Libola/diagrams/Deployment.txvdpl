@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="ida8jtjeicuepdpeicwc8k5">
+        <property name="$description" value=""/>
+        <property name="$metaclass" value="Deployment Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="design:node:::ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="30,30,250,260"/>
+            <property name="bounds_setted_by_user" value="true"/>
+            <reference referencedUin="design:link:::ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy.linkid3fkpgeicuepdpeicwjfuz:ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy">
+                <property name="sourceAnchor" value="280,110"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="460,110"/>
+                <reference referencedUin="linklabel:label:design:link:::ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy.linkid3fkpgeicuepdpeicwjfuz:ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy">
+                    <property name="bounds" value="314,90,110,16"/>
+                    <property name="bounds_setted_by_user" value="true"/>
+                </reference>
+            </reference>
+            <reference referencedUin="design:node:::ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy.nodeid786b2eicuepdpeicweboy:ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy">
+                <property name="bounds" value="70,70,101,60"/>
+                <reference referencedUin="design:link:::ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy.nodeid786b2eicuepdpeicweboy.linkidiwf4weicuepdpeicweu81:ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy.nodeid786b2eicuepdpeicweboy:ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy">
+                    <property name="sourceAnchor" value="150,160"/>
+                    <property name="bendpoints" value=""/>
+                    <property name="targetAnchor" value="150,195"/>
+                    <reference referencedUin="linklabel:stereotype:design:link:::ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy.nodeid786b2eicuepdpeicweboy.linkidiwf4weicuepdpeicweu81:ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy.nodeid786b2eicuepdpeicweboy:ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy">
+                        <property name="bounds" value="89,167,57,16"/>
+                        <property name="bounds_setted_by_user" value="true"/>
+                    </reference>
+                </reference>
+            </reference>
+            <reference referencedUin="design:node:::ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy.nodeidccjl8eicuepdpeicwekvo:ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy">
+                <property name="bounds" value="70,165,107,60"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference17" referencedUin="design:node:::ida8jtjeicuepdpeicwc8k5.nodeidautgveicuepdpeicwd42o">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="460,30,180,160"/>
+            <property name="bounds_setted_by_user" value="true"/>
+            <reference referencedUin="design:node:::ida8jtjeicuepdpeicwc8k5.nodeidautgveicuepdpeicwd42o.nodeid7meufeicuepdpeicwk5sk:ida8jtjeicuepdpeicwc8k5.nodeidautgveicuepdpeicwd42o">
+                <property name="bounds" value="10,60,140,60"/>
+            </reference>
+        </reference>
+    </view>
+    <node uin="ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy">
+        <property name="$metaclass" value="Node"/>
+        <property name="$name" value="Client"/>
+        <node uin="ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy.nodeid786b2eicuepdpeicweboy">
+            <property name="$metaclass" value="Component"/>
+            <property name="$name" value="kav.exe"/>
+            <property name="@instanceForm" value=""/>
+            <link uin="ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy.nodeid786b2eicuepdpeicweboy.linkidiwf4weicuepdpeicweu81">
+                <property name="$metaclass" value="Dependency Link"/>
+                <participant role="Supplier" referencedUin="design:node:::ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy.nodeidccjl8eicuepdpeicwekvo:ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy"/>
+                <participant role="Client" referencedUin="design:node:::ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy.nodeid786b2eicuepdpeicweboy:ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy"/>
+                <property name="@stereotype" value="use"/>
+            </link>
+        </node>
+        <node uin="ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy.nodeidccjl8eicuepdpeicwekvo">
+            <property name="$metaclass" value="Component"/>
+            <property name="$name" value="libola.dll"/>
+            <property name="@instanceForm" value=""/>
+        </node>
+        <link uin="ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy.linkid3fkpgeicuepdpeicwjfuz">
+            <property name="$metaclass" value="Association Link"/>
+            <participant role="Supplier" referencedUin="design:node:::ida8jtjeicuepdpeicwc8k5.nodeidautgveicuepdpeicwd42o"/>
+            <participant role="Client" referencedUin="design:node:::ida8jtjeicuepdpeicwc8k5.nodeidj2tiveicuepdpeicwcdsy"/>
+            <property name="@label" value="HTTPS connection"/>
+        </link>
+    </node>
+    <node uin="ida8jtjeicuepdpeicwc8k5.nodeidautgveicuepdpeicwd42o">
+        <property name="$metaclass" value="Node"/>
+        <property name="$name" value="Server"/>
+        <node uin="ida8jtjeicuepdpeicwc8k5.nodeidautgveicuepdpeicwd42o.nodeid7meufeicuepdpeicwk5sk">
+            <property name="$metaclass" value="Component"/>
+            <property name="$name" value="webserver.exe"/>
+            <property name="@instanceForm" value=""/>
+        </node>
+    </node>
+</nodeSet>

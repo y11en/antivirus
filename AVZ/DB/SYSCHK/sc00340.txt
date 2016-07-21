@@ -1,0 +1,6 @@
+// ***** Adware.SearchToolbar *****
+begin
+ AddEvAlarmByCLSID('2CF0B992-5EEB-4143-99C0-5297EF71F443',AScriptName,'');
+ AddEvAlarmByCLSID('2CF0B992-5EEB-4143-99C0-5297EF71F444',AScriptName,'');
+ AddEvAlarmByCLSID('2CF0B992-5EEB-4143-99C0-5297EF71F444',AScriptName,'');
+end.

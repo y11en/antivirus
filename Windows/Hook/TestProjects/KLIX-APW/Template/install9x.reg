@@ -1,0 +1,6 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VxD\$$ROOT$$]
+"Start"=dword:00000000
+"StaticVxD"="C:\\WIN98\\SYSTEM\\$$ROOT$$.VXD"
+

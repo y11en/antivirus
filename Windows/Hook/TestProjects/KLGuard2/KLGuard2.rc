@@ -1,0 +1,459 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\KLGuard2.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+1                       24      MOVEABLE PURE   "KLGuard2.exe.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_KNOWN_PROCESSES DIALOG DISCARDABLE  0, 0, 490, 240
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Known processes"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Add new",IDC_BUTTON_ADDNEW,7,219,50,14
+    PUSHBUTTON      "Remove",IDC_BUTTON_REMOVE,73,219,50,14
+    DEFPUSHBUTTON   "Close",IDOK,433,219,50,14
+    CONTROL         "List1",IDC_LIST_KNOWNLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,7,476,206
+END
+
+IDD_DIALOG_GENERIC_SETTINGS DIALOG DISCARDABLE  0, 0, 305, 129
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Generic settings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Protect self",IDC_CHECK_PROTECTSELF,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,7,51,10
+    EDITTEXT        IDC_EDIT_LOGFILENAME,58,22,217,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "..",IDC_BUTTON_BROWSE,278,22,20,14
+    CONTROL         "Protect auto&run registry keys",
+                    IDC_CHECK_PROTECT_AUTORUN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,66,105,10
+    CONTROL         "Don't control write from system processes",
+                    IDC_CHECK_DONTCONTROLWRITE_BYSYSTEM,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,7,84,145,10
+    DEFPUSHBUTTON   "&OK",IDOK,7,108,50,14
+    PUSHBUTTON      "&Apply",IDC_BUTTON_APPLY,87,108,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,248,108,50,14
+    CONTROL         "",IDC_STATIC,"Static",SS_GRAYFRAME,7,57,291,1
+    LTEXT           "Log file name:",IDC_STATIC,7,25,45,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOG_KNOWN_PROCESSES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 483
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 233
+    END
+
+    IDD_DIALOG_GENERIC_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 298
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KLGUARD2_DIALOG DIALOGEX 0, 0, 600, 412
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KLGuard v2"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_LIST_PROCESSES,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,7,20,586,364
+    CONTROL         "&Start only known processes",
+                    IDC_CHECK_START_KNOWN_PROCESSES,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,395,103,10
+    DEFPUSHBUTTON   "&Hide",IDOK,543,391,50,14
+    CONTROL         "",IDC_RECT_SANDBOX,"Static",SS_BLACKRECT | NOT 
+                    WS_VISIBLE,7,3,99,12
+    CONTROL         "",IDC_RECT_KNOWPROCESSES,"Static",SS_BLACKRECT | NOT 
+                    WS_VISIBLE,115,393,99,12
+    CONTROL         "",IDC_RECT_ABOUT,"Static",SS_BLACKRECT | NOT WS_VISIBLE,
+                    548,3,45,12
+    CONTROL         "E&ducation mode",IDC_CHECK_EDUCATIONMODE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,224,396,67,10
+    CONTROL         "",IDC_RECT_GENERIC_SETTINGS,"Static",SS_BLACKRECT | NOT 
+                    WS_VISIBLE,125,3,99,12
+END
+
+IDD_DIALOG_PROCESS_INFO DIALOG DISCARDABLE  0, 0, 444, 279
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Process info"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,387,258,50,14
+    LISTBOX         IDC_LIST_HISTORY,7,48,430,202,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+    ICON            "",IDC_STATIC_ICON,7,7,20,20
+    EDITTEXT        IDC_EDIT_INFO,49,7,388,26,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    LTEXT           "Last activity:",IDC_STATIC,7,35,40,8
+    PUSHBUTTON      "Clear",IDC_BUTTON_CLEAR,7,258,50,14,WS_DISABLED
+END
+
+IDD_DIALOG_SANDBOX_SETTINGS DIALOG DISCARDABLE  0, 0, 385, 199
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "'Sand Box' settings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT_SANDBOX_PATH,7,18,345,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "..",IDC_BUTTON_BROWSE,358,18,20,14
+    CONTROL         "Allow create other &process",
+                    IDC_CHECK_ALLOW_CREATE_PROCESS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,39,99,10
+    CONTROL         "Allow write to system folder",
+                    IDC_CHECK_ALLOWRITE_SYSTEMFOLDER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,65,100,10
+    CONTROL         "Allow write to 'Program Files'",
+                    IDC_CHECK_ALLOWWRITE_PROGRAMFILES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,79,104,10
+    CONTROL         "Allow write to &sandbox folder",
+                    IDC_CHECK_ALLOWWRITE_SANDBOXFOLDER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,93,105,10
+    CONTROL         "Allow write to &temp folder",
+                    IDC_CHECK_ALLOWWRITE_TEMPFOLDER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,107,94,10
+    CONTROL         "Allow write to registry",IDC_CHECK_DENYWRITE_REGISTRY,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,161,65,81,10
+    CONTROL         "Show &warning message",IDC_CHECK_SHOW_WARNING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,155,91,10
+    CONTROL         "Terminate &process",IDC_CHECK_TERMINATE,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,125,155,74,10
+    CONTROL         "&Log this event",IDC_CHECK_LOGEVENT,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,206,155,61,10
+    DEFPUSHBUTTON   "&OK",IDOK,7,178,50,14
+    PUSHBUTTON      "&Apply",IDC_BUTTON_APPLY,87,178,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,328,178,50,14
+    GROUPBOX        "File options",IDC_STATIC,7,52,135,72
+    GROUPBOX        "Registry",IDC_STATIC,156,52,135,57
+    CONTROL         "",IDC_STATIC,"Static",SS_GRAYFRAME,7,135,371,1
+    LTEXT           "On problem:",IDC_STATIC,12,141,39,8
+    LTEXT           "'Sand Box' path:",IDC_STATIC,7,7,52,8
+END
+
+IDD_DIALOG_SANDBOX_WARNINGS DIALOG DISCARDABLE  0, 0, 342, 78
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "'Sand Box' warning message"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&All OK",IDC_BUTTON_ALLOK,208,57,50,14
+    DEFPUSHBUTTON   "&OK",IDOK,285,57,50,14
+    EDITTEXT        IDC_EDIT_WARNING,7,7,328,45,ES_MULTILINE | ES_READONLY | 
+                    NOT WS_BORDER | WS_VSCROLL | NOT WS_TABSTOP
+    LTEXT           "Warnings remain:",IDC_STATIC,7,57,56,8
+    EDITTEXT        IDC_EDIT_WARNINGSREMAIN,72,58,49,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP
+END
+
+IDD_DIALOG_ABOUT DIALOG DISCARDABLE  0, 0, 229, 81
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About KLGuard v2"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,172,60,50,14
+    ICON            IDI_ICON_KL,IDC_STATIC,7,7,21,20
+END
+
+IDD_DIALOG_REQUEST_PROCESS_ALERT DIALOG DISCARDABLE  0, 0, 331, 94
+STYLE DS_SYSMODAL | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Alert! Unknown process!"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Allow",IDOK,7,73,50,14
+    DEFPUSHBUTTON   "Allow &once",IDC_BUTTON_ALLOWONCE,84,73,50,14
+    PUSHBUTTON      "&Deny",IDCANCEL,274,73,50,14
+    EDITTEXT        IDC_EDIT_INFO,36,7,288,60,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    CONTROL         "",IDC_STATIC_FILEICON,"Static",SS_BLACKRECT | NOT 
+                    WS_VISIBLE | WS_DISABLED,7,7,20,20
+    LTEXT           "<time elapse>",IDC_STATIC_TIME_ELAPSE,169,78,88,8
+END
+
+IDD_DIALOG_CMD_REMOTE DIALOG DISCARDABLE  0, 0, 342, 78
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Starting cmd with redirected input and output"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,285,57,50,14
+    EDITTEXT        IDC_EDIT_WARNING,7,7,328,45,ES_MULTILINE | ES_READONLY | 
+                    NOT WS_BORDER | WS_VSCROLL | NOT WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_KLGUARD2_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 593
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 405
+    END
+
+    IDD_DIALOG_PROCESS_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 437
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 272
+    END
+
+    IDD_DIALOG_SANDBOX_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 378
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_DIALOG_SANDBOX_WARNINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 335
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_DIALOG_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 74
+    END
+
+    IDD_DIALOG_REQUEST_PROCESS_ALERT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 324
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_DIALOG_CMD_REMOTE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 335
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON_KL             ICON    DISCARDABLE     "res\\KL.ico"
+IDI_ICON_ALERT          ICON    DISCARDABLE     "res\\icon_ale.ico"
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "Kaspersky Lab\0"
+            VALUE "FileDescription", "KLGuard2\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "KLGuard2\0"
+            VALUE "LegalCopyright", "Copyright (C) 2003\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "KLGuard2.EXE\0"
+            VALUE "ProductName", "KLGuard2\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_TRAY MENU DISCARDABLE 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "&Exit",                       IDM_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_BUTTON_SANDBOX      "'&Sand box' settings"
+    IDS_BUTTON_ABOUT        "&About"
+    IDS_STRING_KNOWNPROCESSES "Known processes"
+    IDS_BUTTON_GENERIC_SETTINGS "&Generic settings"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\KLGuard2.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

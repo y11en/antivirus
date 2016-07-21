@@ -1,0 +1,39 @@
+// $AVZ1570
+//$ Удалить файлы дампов памяти
+// Функция поиска проблемы
+function Check : dword;
+var
+ S : string;
+ FS : TFileSearch;
+begin
+ Result := 0;
+ S := NormalDir('%WinDir%\Minidump');
+ if DirectoryExists(S) then begin
+  FS := TFileSearch.Create(nil);
+  FS.FindFirst(S + '*.dmp');
+  if FS.Found then
+   Result := 2;
+  FS.Free;
+ end;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+var
+ S : string;
+ FS : TFileSearch;
+begin
+ Result := 0;
+ S := NormalDir('%WinDir%\Minidump');
+ if DirectoryExists(S) then begin
+  FS := TFileSearch.Create(nil);
+  FS.FindFirst(S + '*.dmp');
+  while FS.Found do begin
+   // Удаление найденных файлов *.DMP (дампы памяти)
+   if not(FS.IsDir) then
+     DeleteFile(S + FS.FileName);
+   FS.FindNext;
+  end;
+  FS.Free;
+ end;
+end;

@@ -1,0 +1,197 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_KAP_HELP            ICON    DISCARDABLE     "res\\help.ico"
+IDI_COMMON_CTRL_LOCK    ICON    DISCARDABLE     "RES\\lockdot.ico"
+IDI_COMMON_FEWER_INFO_ARROWS ICON    DISCARDABLE     "res\\fewerinfo.ico"
+IDI_COMMON_MORE_INFO_ARROWS ICON    DISCARDABLE     "res\\moreinfo.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_KAP_LINKHAND        CURSOR  DISCARDABLE     "RES\\LINKHAND.CUR"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#include ""res\\COMMON.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_COMMON_SORT_UP      BITMAP  DISCARDABLE     "RES\\sortup.bmp"
+IDB_COMMON_SORT_DOWN    BITMAP  DISCARDABLE     "RES\\sortdown.bmp"
+IDB_COMMON_LOCK_BITMAP  BITMAP  DISCARDABLE     "RES\\lock.bmp"
+IDB_COMMON_LOCK_BITMAP_MASK BITMAP  DISCARDABLE     "RES\\lock_m.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+IDR_COMMON_PNG_ERROR_SMALL PNG     DISCARDABLE     "RES\\error24x24.png"
+IDR_COMMON_PNG_ERROR_BIG PNG     DISCARDABLE     "RES\\error32x32.png"
+IDR_COMMON_PNG_WARN_SMALL PNG     DISCARDABLE     "RES\\warning24x24.png"
+IDR_COMMON_PNG_WARN_BIG PNG     DISCARDABLE     "RES\\warning32x32.png"
+IDR_COMMON_PNG_INFO_SMALL PNG     DISCARDABLE     "RES\\info24x24.png"
+IDR_COMMON_PNG_INFO_BIG PNG     DISCARDABLE     "RES\\info32x32.png"
+IDR_COMMON_PNG_OK_SMALL PNG     DISCARDABLE     "RES\\ok24x24.png"
+IDR_COMMON_PNG_OK_BIG   PNG     DISCARDABLE     "RES\\ok32x32.png"
+IDR_COMMON_PNG_PAUSE_SMALL PNG     DISCARDABLE     "res\\pause24x24.png"
+IDR_COMMON_PNG_PAUSE_BIG PNG     DISCARDABLE     "res\\pause32x32.png"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_COMMON_PRODUCT_NAME "Антивирус Касперского"
+    IDS_COM_ALL_FILE_MASK   "Все файлы (*.*)|*.*||"
+    IDS_COM_ALL_FILES       "Все файлы"
+    IDS_COM_ALL_MASKS       "*.*"
+    IDS_COM_HELP            "Помощь"
+    IDS_COM_NOMAPI          "Для отправки писем в Лабораторию Касперского необходим установленный почтовый клиент, поддерживающий SimpleMAPI. Код ошибки: %s - %d."
+    IDS_COM_MAPI_ERROR      "Ошибка сети."
+    IDS_COMMON_BUTTON_OK_STR "OK"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_COMMON_BUTTON_CANCEL_STR "Отмена"
+    IDS_COMMON_BUTTON_YES_STR "Да"
+    IDS_COMMON_BUTTON_NO_STR "Нет"
+    IDS_COM_MAPIDLL_NOT_FOUND 
+                            "Невозможно выполнить запрос. Библиотека SimpleMAPI не найдена."
+    IDS_COMMON_SOUND_EVENT_INFECTED "Обнаружение зараженного объекта"
+    IDS_COMMON_SOUND_EVENT_PASSWORD_REQUEST "Запрос ввода пароля"
+    IDS_COMMON_SOUND_EVENT_PRODUCT_START "Запуск программы"
+    IDS_COMMON_SOUND_EVENT_PRODUCT_FINISH "Выход из программы"
+    IDS_COMMON_BUTTON_CHOOSE_STR "Выбрать"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_COMMON_STATIC_FILE_TYPE_STR "Тип файла:"
+    IDS_COMMON_STATIC_FILE_NAME_STR "Имя файла:"
+    IDS_COMMON_STATIC_LOOK_IN_STR "Каталог:"
+    IDS_COMMON_TITLE_INVALID_SYMBOL "Недопустимый символ"
+    IDS_COMMON_ONLY_NUMBERS_ALLOWED "В это поле можно вводить только цифры"
+    IDS_COMMON_CANNOT_FIND_KAVSEND 
+                            "Невозможно выполнить запрос. Модуль отправки почты '%s' не найден. Проверьте правильность установки программы."
+    IDS_COMMON_CANNOT_SEND_MAIL "Ошибка отправки почты."
+    IDS_COMMON_CANNOT_FIND_ATTACH 
+                            "Ошибка отправки почты. Отправляемый файл %s не найден."
+    IDS_COMMON_KAVSEND_CORRUPTED 
+                            "Собственный модуль Антивируса Касперского '%s' поврежден или заражен. Рекомендуется проверить компьютер на присутствие вирусов и переустановить Антивирус Касперского."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_COMMON_SOUND_EVENT_ODS_TASK_STARTED_BY_USER 
+                            "Запуск пользователем задачи проверки объектов"
+    IDS_COMMON_SOUND_EVENT_ODS_TASK_STARTED_BY_SCHEDULER 
+                            "Запуск задачи проверки объектов по расписанию"
+    IDS_COMMON_SOUND_EVENT_ODS_TASK_COMPLETED 
+                            "Завершение задачи проверки объектов"
+    IDS_COMMON_SOUND_EVENT_ODS_TASK_FAILED 
+                            "Ошибка выполнения задачи проверки объектов"
+    IDS_COMMON_SOUND_EVENT_UPDATER_TASK_STARTED_BY_USER 
+                            "Запуск пользователем задачи обновления"
+    IDS_COMMON_SOUND_EVENT_UPDATER_TASK_STARTED_BY_SCHEDULER 
+                            "Запуск задачи обновления по расписанию"
+    IDS_COMMON_SOUND_EVENT_UPDATER_TASK_COMPLETED 
+                            "Завершение задачи обновления"
+    IDS_COMMON_SOUND_EVENT_UPDATER_TASK_FAILED 
+                            "Ошибка выполнения задачи обновления"
+    IDS_COMMON_SOUND_EVENT_RTP_TASK_STARTED "Запуск задачи постоянной защиты"
+    IDS_COMMON_SOUND_EVENT_RTP_TASK_COMPLETED 
+                            "Завершение задачи постоянной защиты"
+    IDS_COMMON_SOUND_EVENT_RTP_TASK_FAILED 
+                            "Ошибка выполнения задачи постоянной защиты"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_COMMON_SOUND_EVENT_ATTACK_DETECTED "Обнаружение сетевой атаки"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#include "res\COMMON.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

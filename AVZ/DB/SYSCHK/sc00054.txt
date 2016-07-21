@@ -1,0 +1,4 @@
+// ***** AdvWare.Perfnav *****
+begin
+ AddEvAlarmByCLSID('00D6A7E7-4A97-456f-848A-3B75BF7554D7',AScriptName,'BHO.DLL');
+end.

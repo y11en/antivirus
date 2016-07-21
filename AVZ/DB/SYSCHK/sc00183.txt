@@ -1,0 +1,4 @@
+// ***** AdvWare.Coreak *****
+begin
+ AddEvAlarmByCLSID('AC0CA088-B71A-4788-B1D6-3A5C42874337',AScriptName,'akcore.dll');
+end.

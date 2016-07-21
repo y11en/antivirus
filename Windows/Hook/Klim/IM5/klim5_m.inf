@@ -1,0 +1,78 @@
+; -- klim5.INF --
+;
+; This file is based on Passthru driver Miniport INF file
+; this is the INF for the miniport
+; 
+; Copyright (c) 2006 , Kaspersky Lab
+;
+
+[Version]
+signature  = "$Windows NT$"
+Class      = Net
+ClassGUID  = {4d36e972-e325-11ce-bfc1-08002be10318}
+Provider   = %Klft%
+CatalogFile= klim5.cat
+DriverVer  = 01/21/2007,6.1.17.0			;mm/dd/yy
+
+[DestinationDirs]
+DefaultDestDir=12
+; No files to copy 
+
+[Manufacturer]
+%Klft% = KLFT,NTx86,NTia64,NTamd64
+
+;For Win2K
+
+[KLFT]
+%klim5MP_Desc% = klim5MP.ndi, kl_klim5mp
+
+;For WinXP and later
+
+[KLFT.NTx86]
+%klim5MP_Desc% = klim5MP.ndi, kl_klim5mp
+
+[KLFT.NTia64]
+%klim5MP_Desc% = klim5MP.ndi, kl_klim5mp
+
+[KLFT.NTamd64]
+%klim5MP_Desc% = klim5MP.ndi, kl_klim5mp
+
+[ControlFlags]
+ExcludeFromSelect = kl_klim5MP
+
+
+[klim5MP.ndi]
+AddReg  = klim5MP.ndi.AddReg
+Characteristics = 0x29 ;NCF_NOT_USER_REMOVABLE | NCF_VIRTUAL | NCF_HIDDEN
+
+[klim5MP.ndi.AddReg]
+HKR, Ndi, Service,  0,  klim5
+
+[klim5MP.ndi.Services]
+AddService = klim5,0x2, klim5MP.AddService
+
+
+[klim5MP.AddService]
+DisplayName    = %klim5Service_Desc%
+ServiceType    = 1 ;SERVICE_KERNEL_DRIVER
+StartType      = 3 ;SERVICE_DEMAND_START
+ErrorControl   = 1 ;SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\klim5.sys
+AddReg         = klim5MP.AddService.AddReg
+
+
+[klim5MP.AddService.AddReg]
+;
+
+[Strings]
+Klft = "Kaspersky Lab"
+klim5Service_Desc = "Kaspersky Anti-Virus NDIS Filter"
+klim5MP_Desc = "Kaspersky Anti-Virus NDIS Miniport"
+
+[SourceDisksNames]
+;None 
+
+[SourceDisksFiles]
+;None
+
+

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<KeyRoot>
+	<KeyInfo>
+		<Description>Kaspersky Lab key file for Licensing-lib tests</Description>
+		<Version>6</Version>
+		<ProdDate>2005-08-16</ProdDate>
+		<SerialNumber>0001-000002-00000003</SerialNumber>
+		<LicenseType>1</LicenseType>
+		<IsTrial>1</IsTrial>
+		<LifeSpan>365</LifeSpan>
+		<ExpDate>2005-09-30</ExpDate>
+		<LicenseCount>1</LicenseCount>
+		<License>
+			<ObjectId>1</ObjectId>
+			<Count>1</Count>
+		</License>
+		<License>
+			<ObjectId>2</ObjectId>
+			<Count>2</Count>
+		</License>
+		<ProductInfo>
+			<MarketSector>1</MarketSector>
+			<SalesChannel>1</SalesChannel>
+			<Localization>1</Localization>
+			<Package>1</Package>
+		</ProductInfo>
+		<LicenseObjectInfo>
+			<Id>12</Id>
+			<Type>product</Type>
+			<Name>KIS 2007</Name>
+			<Version>65536</Version>
+			<Platform>1</Platform>
+			<Platform>2</Platform>
+			<Restriction>
+				<Id>1</Id>
+				<Name>Installations</Name>
+				<Value>10</Value>
+				<AdditiveCondition><![CDATA[%SN_BLSTED% | (%CURRENT_DATE% >= %LICENSE_EXPIRATION_DATE%)]]></AdditiveCondition>
+				<Condition>
+					<Expression><![CDATA[%CURRENT_VALUE% < %VALUE%]]></Expression>
+					<Notify>1</Notify>
+				</Condition>
+				<Condition>
+					<Expression><![CDATA[%CURRENT_VALUE% = %VALUE%]]></Expression>
+					<Notify>2</Notify>
+				</Condition>
+				<DefaultNotify>0</DefaultNotify>
+			</Restriction>
+			<Restriction>
+				<Id>2</Id>
+				<Name>Can Update</Name>
+				<Value>10</Value>
+				<AdditiveCondition><![CDATA[%TRUE%]]></AdditiveCondition>
+				<Condition>
+					<Expression><![CDATA[!%SN_BLSTED% & (%CURRENT_DATE% < %LICENSE_EXPIRATION_DATE%) & (%AV_BASES_UPDATE_DATE% < %LICENSE_EXPIRATION_DATE%)]]></Expression>
+					<Notify>1</Notify>
+				</Condition>
+				<Condition>
+					<Expression><![CDATA[%CURRENT_VALUE% < %VALUE%]]></Expression>
+					<Notify>2</Notify>
+				</Condition>
+				<Condition>
+					<Expression><![CDATA[%CURRENT_VALUE% = %VALUE%]]></Expression>
+					<Notify>3</Notify>
+				</Condition>
+				<DefaultNotify>0</DefaultNotify>
+			</Restriction>
+			<Restriction>
+				<Id>3</Id>
+				<Name>MailBox Numbers</Name>
+				<Value>10</Value>
+				<AdditiveCondition><![CDATA[!%SN_BLSTED% & (%CURRENT_DATE% < %LICENSE_EXPIRATION_DATE%) & (%AV_BASES_UPDATE_DATE% < %LICENSE_EXPIRATION_DATE%)]]></AdditiveCondition>
+				<Condition>
+					<Expression><![CDATA[%CURRENT_VALUE% < %VALUE%]]></Expression>
+					<Notify>1</Notify>
+				</Condition>
+				<Condition>
+					<Expression><![CDATA[%CURRENT_VALUE% = %VALUE%]]></Expression>
+					<Notify>2</Notify>
+				</Condition>
+				<DefaultNotify>0</DefaultNotify>
+			</Restriction>
+			<Restriction>
+				<Id>4</Id>
+				<Name>ArchiveToScan</Name>
+				<Value>10</Value>
+				<AdditiveCondition><![CDATA[%TRUE%]]></AdditiveCondition>
+				<Condition>
+					<Expression><![CDATA[%CURRENT_VALUE% < %VALUE%]]></Expression>
+					<Notify>1</Notify>
+				</Condition>
+				<Condition>
+					<Expression><![CDATA[%CURRENT_VALUE% = %VALUE%]]></Expression>
+					<Notify>2</Notify>
+				</Condition>
+				<Condition>
+					<Expression><![CDATA[%FALSE%]]></Expression>
+					<Notify>3</Notify>
+				</Condition>
+				<DefaultNotify>0</DefaultNotify>
+			</Restriction>
+			<Restriction>
+				<Id>5</Id>
+				<Name>ODSScan</Name>
+				<Value>1</Value>
+				<AdditiveCondition><![CDATA[%TRUE%]]></AdditiveCondition>
+				<Condition>
+					<Expression><![CDATA[!%INVALID_AV_BASES%]]></Expression>
+					<Notify>1</Notify>
+				</Condition>
+				<DefaultNotify>0</DefaultNotify>
+			</Restriction>
+			<Restriction>
+				<Id>6</Id>
+				<Name>Expration Analyse</Name>
+				<Value>10</Value>
+				<AdditiveCondition><![CDATA[((!%SN_BLSTED% & !%BAD_BLST%) | !%INVALID_AV_BASES%) & ((%CURRENT_DATE% != %LICENSE_EXPIRATION_DATE%) | (%AV_BASES_UPDATE_DATE% < %LICENSE_EXPIRATION_DATE%))]]></AdditiveCondition>
+				<Condition>
+					<Expression><![CDATA[(%CURRENT_VALUE% < %VALUE%) & (%CURRENT_DATE% < %LICENSE_EXPIRATION_DATE%)]]></Expression>
+					<Notify>1</Notify>
+				</Condition>
+				<DefaultNotify>01</DefaultNotify>
+			</Restriction>
+			<Restriction>
+				<Id>7</Id>
+				<Name>Math</Name>
+				<Value>2</Value>
+				<AdditiveCondition><![CDATA[(%VALUE% + %CURRENT_VALUE% - %VALUE% * %VALUE% / %CURRENT_VALUE%) > (%VALUE% / %CURRENT_VALUE%)]]></AdditiveCondition>
+				<Condition>
+					<Expression><![CDATA[%CURRENT_VALUE% <= %VALUE%]]></Expression>
+					<Notify>1</Notify>
+				</Condition>
+				<Condition>
+					<Expression><![CDATA[%CURRENT_VALUE% < %VALUE%]]></Expression>
+					<Notify>2</Notify>
+				</Condition>
+				<Condition>
+					<Expression><![CDATA[%CURRENT_VALUE% > %VALUE%]]></Expression>
+					<Notify>3</Notify>
+				</Condition>
+				<DefaultNotify>0</DefaultNotify>
+			</Restriction>
+
+		</LicenseObjectInfo>
+		<HasSupport></HasSupport>
+		<LicenseInfo><![CDATA[KeyLicenseInfo]]></LicenseInfo>
+		<SupportInfo><![CDATA[KeySupportInfo]]></SupportInfo>
+		<PLPosName>KeyPLPosName</PLPosName>
+		<PLPos>1</PLPos>
+		<ProductId>1</ProductId>
+		<ProductVersion>1</ProductVersion>
+		<MarketSector>1</MarketSector>
+		<SalesChannel>1</SalesChannel>
+		<DistributorInfo>
+			<ContactInfo>
+				<Name>Tester-distributor</Name>
+				<Country>Russia</Country>
+				<City>Moscow</City>
+				<Address>125363, Москва, ул.Героев Панфиловцев, 10</Address>
+				<Phone>7978700</Phone>
+				<Fax>7978700</Fax>
+				<Email>Egor.Chekhievsky@kaspersky.com</Email>
+				<WWW>http://www.kaspersky.ru</WWW>
+			</ContactInfo>
+			<SupportInfo>
+				<Phone>7978700</Phone>
+				<Fax>7978700</Fax>
+				<Email>Egor.Chekhievsky@kaspersky.com</Email>
+				<WWW>http://www.kaspersky.ru</WWW>
+			</SupportInfo>
+		</DistributorInfo>
+		<ResellerInfo>
+			<ContactInfo>
+				<Name>Tester-reseller</Name>
+				<Country>Russia</Country>
+				<City>Moscow</City>
+				<Address>125363, Москва, ул.Героев Панфиловцев, 10</Address>
+				<Phone>7978700</Phone>
+				<Fax>7978700</Fax>
+				<Email>Egor.Chekhievsky@kaspersky.com</Email>
+				<WWW>http://www.kaspersky.ru</WWW>
+			</ContactInfo>
+			<SupportInfo>
+				<Phone>7978700</Phone>
+				<Fax>7978700</Fax>
+				<Email>Egor.Chekhievsky@kaspersky.com</Email>
+				<WWW>http://www.kaspersky.ru</WWW>
+			</SupportInfo>
+		</ResellerInfo>
+		<LocalOfficeInfo>
+			<ContactInfo>
+				<Name>Tester-localoffice</Name>
+				<Country>Russia</Country>
+				<City>Moscow</City>
+				<Address>125363, Москва, ул.Героев Панфиловцев, 10</Address>
+				<Phone>7978700</Phone>
+				<Fax>7978700</Fax>
+				<Email>Egor.Chekhievsky@kaspersky.com</Email>
+				<WWW>http://www.kaspersky.ru</WWW>
+			</ContactInfo>
+			<SupportInfo>
+				<Phone>7978700</Phone>
+				<Fax>7978700</Fax>
+				<Email>Egor.Chekhievsky@kaspersky.com</Email>
+				<WWW>http://www.kaspersky.ru</WWW>
+			</SupportInfo>
+		</LocalOfficeInfo>
+		<HQInfo>
+			<ContactInfo>
+				<Name>Tester-HQ</Name>
+				<Country>Russia</Country>
+				<City>Moscow</City>
+				<Address>125363, Москва, ул.Героев Панфиловцев, 10</Address>
+				<Phone>7978700</Phone>
+				<Fax>7978700</Fax>
+				<Email>Egor.Chekhievsky@kaspersky.com</Email>
+				<WWW>http://www.kaspersky.ru</WWW>
+			</ContactInfo>
+			<SupportInfo>
+				<Phone>7978700</Phone>
+				<Fax>7978700</Fax>
+				<Email>Egor.Chekhievsky@kaspersky.com</Email>
+				<WWW>http://www.kaspersky.ru</WWW>
+			</SupportInfo>
+		</HQInfo>
+		<SupportCenterInfo>
+			<ContactInfo>
+				<Name>Tester-supportcenter</Name>
+				<Country>Russia</Country>
+				<City>Moscow</City>
+				<Address>125363, Москва, ул.Героев Панфиловцев, 10</Address>
+				<Phone>7978700</Phone>
+				<Fax>7978700</Fax>
+				<Email>Egor.Chekhievsky@kaspersky.com</Email>
+				<WWW>http://www.kaspersky.ru</WWW>
+			</ContactInfo>
+			<SupportInfo>
+				<Phone>7978700</Phone>
+				<Fax>7978700</Fax>
+				<Email>Egor.Chekhievsky@kaspersky.com</Email>
+				<WWW>http://www.kaspersky.ru</WWW>
+			</SupportInfo>
+		</SupportCenterInfo>
+		<ParthnerId>1</ParthnerId>
+		<ParthnerName>Name</ParthnerName>
+		<CompanyName>Name</CompanyName>
+		<Customer>
+			<CompanyName>User</CompanyName>
+			<Name>Name</Name>
+			<Country>Country</Country>
+			<City>City</City>
+			<Address>Address</Address>
+			<Phone>Phone</Phone>
+			<Fax>Fax</Fax>
+			<Email>Email</Email>
+			<WWW>WWW</WWW>
+		</Customer>
+		<RequestGuid>KeyRequestGuid</RequestGuid>
+		<ParentGuid>KeyParentGuid</ParentGuid>
+		<ParentKey>1</ParentKey>
+		<KeyCategory>1</KeyCategory>
+	</KeyInfo>
+	<ComponentLevel>
+		<ComponentId>1</ComponentId>
+		<Level>1</Level>
+	</ComponentLevel>
+	<ComponentLevel>
+		<ComponentId>2</ComponentId>
+		<Level>2</Level>
+	</ComponentLevel>
+</KeyRoot>

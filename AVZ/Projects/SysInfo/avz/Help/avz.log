@@ -1,0 +1,37 @@
+Microsoft (R) Help Compiler
+HCRTF 4.03.0002
+Copyright (c) Microsoft Corp 1990 - 1995. All rights reserved.
+avz.hpj
+    HC1012: Note: topic #4 of E:\Delphi5\Delphi6\Projects\SysInfo\avz\Help\avz.rtf : 
+	Table cell borders are not supported.
+    HC1017: Note: topic #4 of E:\Delphi5\Delphi6\Projects\SysInfo\avz\Help\avz.rtf : 
+	A nonscrolling region crosses a page break.
+    HC3048: Warning: topic #4 of E:\Delphi5\Delphi6\Projects\SysInfo\avz\Help\avz.rtf : 
+	Nonscrolling region defined after scrolling region.
+    HC3107: Warning: topic #5 of E:\Delphi5\Delphi6\Projects\SysInfo\avz\Help\avz.rtf : 
+	A browse sequence has already been defined for this topic.
+    HC3110: Warning: topic #5 of E:\Delphi5\Delphi6\Projects\SysInfo\avz\Help\avz.rtf : 
+	A title has already been defined for this topic.
+    HC3048: Warning: topic #5 of E:\Delphi5\Delphi6\Projects\SysInfo\avz\Help\avz.rtf : 
+	Nonscrolling region defined after scrolling region.
+    HC3048: Warning: topic #13 of E:\Delphi5\Delphi6\Projects\SysInfo\avz\Help\avz.rtf : 
+	Nonscrolling region defined after scrolling region.
+    HC3107: Warning: topic #13 of E:\Delphi5\Delphi6\Projects\SysInfo\avz\Help\avz.rtf : 
+	A browse sequence has already been defined for this topic.
+    HC3110: Warning: topic #13 of E:\Delphi5\Delphi6\Projects\SysInfo\avz\Help\avz.rtf : 
+	A title has already been defined for this topic.
+    HC1012: Note: topic #16 of E:\Delphi5\Delphi6\Projects\SysInfo\avz\Help\avz.rtf : 
+	Table cell borders are not supported.
+    HC3025: Warning: topic #5 of E:\Delphi5\Delphi6\Projects\SysInfo\avz\Help\avz.rtf : 
+	Jump to undefined Topic ID: "t_ha_message".
+28	Topics
+7	Jumps
+16	Keywords
+2	Bitmaps
+
+Created E:\Delphi5\Delphi6\Projects\SysInfo\avz\Help\avz.fts, 145,920 bytes
+Created E:\Delphi5\Delphi6\Projects\SysInfo\avz\Help\avz.hlp, 59,333 bytes
+Bitmaps: 11,436 bytes
+Hall+Zeck compression decreased help file by 26,856 bytes.
+Compile time: 0 minutes, 0 seconds
+3 notes, 8 warnings

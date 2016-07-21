@@ -1,0 +1,22 @@
+forward interface Converter;
+typedef Converter* hCONVERTER;
+
+
+
+[
+  version(1)
+  mnemonic(IID_CONVERTER)
+  id(58017)
+  c_type_name(hCONVERTER)
+  comment_ex("Интерфейс Converter предназначен для преобразования входного потока данных в выходной поток алгоритмом, определенным реализацией. Обычно работает с объектами типа IO. Все дополнительные свойства являются частными свойствами конкретной реализации.")
+]
+interface Converter { // Converter interface
+
+  // ------------------------------------
+    method tERROR Convert( // Преобразовывает поток данных
+      hOBJECT* result,
+      hOBJECT hInputObj // Объект, содержащий входной поток данных
+    );
+
+}
+

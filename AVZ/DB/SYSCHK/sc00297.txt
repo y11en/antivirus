@@ -1,0 +1,4 @@
+// ***** Dialer.WebDial *****
+begin
+ AddEvAlarmByCLSID('D35B74F6-E099-4CDD-91E0-9EA7C30059D1',AScriptName,'webdial.dll');
+end.

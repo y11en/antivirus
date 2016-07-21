@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<WixLocalization xmlns="http://schemas.microsoft.com/wix/2003/11/localization">
+	<String Id="ProductComments">Version: 6.0.2.553 Beta</String>
+</WixLocalization>

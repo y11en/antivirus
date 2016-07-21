@@ -1,0 +1,107 @@
+v1.9
+==============
++ full multi-thread support
++ improved performance
++ added packages for Delphi2006
++ added separate Tee package
+- fixed c++ bool type
+- fixed case sensitivity for c++ (keywords only)
+- fixed jscript error (function that returns a string)
+
+
+v1.8
+==============
++ added packages for Delphi2005
++ Length function now supports arrays
++ added TfsScript.ExtendedCharset property (use national chars in identifiers)
+- fixed error in SetLength function (for dynamic arrays)
+- fixed error with __StringHelper (access to string elements)
+
+
+v1.7
+==============
++ added VarType function
++ added TApplication class
+- fixed error with properties of Char type
+- fixed DayOfWeek error
+- fixed error with open array parameters
+- fixed error with 'uses'
+
+
+v1.6
+==============
++ added dynamic array support
++ added MessageDlg, InputBox, InputQuery functions
+- fixed error in StrToDateTime function
+- fixed wrong 'Exit' behavior
+- some fixes for Linux CRLF compatibility
+- fixed syntax error when using cross-language modules
+- fixed empty case selector bug
+- fixed bug with 'var ar, ar1: array' declaration
+
+
+v1.5
+==============
++ added TBorderStyle type
++ added TComboBox.OnChange, OnDropDown, OnCloseUp events
++ added TfsScript.AddComponent (same as AddForm method) because AddForm can't 
+  be used in the C++Builder (name conflict)
++ added TfsScript.OnGetUnit event
++ circular references between units, procedures, functions now allowed 
++ added VK_xxx and TCursor constants
+- fixed bug with negative default params
+- fixed bug with non-standard event handlers with var string parameter
+- fixed bug with index properties of type Variant
+- fixed string concatenation bug str := const + str
+- fixed OLE bug (access to index properties)
+
+
+v1.4
+==============
++ added OLE support
++ added variant array support
++ added TfsScript.Terminate method
++ added TfsScript.IsExecutableLine method
++ added TfsScript.IsRunning property
++ added VarToStr function
++ added TfsScript.AddForm method
+* languages are splitted to components TfsPascal, TfsCPP, TfsJScript, TfsBasic
+* changed OnRunLine event
+* changed TfsScript.ErrorPos type and fsPosToPoint method
+* error strings moved to fs_iconst.pas file
+- fixed bug in variable initializer
+- fixed bug in TList rtti
+- fixed bug in JS and VB grammar
+
+v1.3
+==============
++ added BasicScript and JScript language
+* changes in parser engine and language definition file
+* improved C++Script grammar
+* speed optimizations
+- fixed bug in SetILCode method
+
+v1.2
+==============
+- fixed 'eventhandler = nil' bug
+- fixed sets bug
+- fixed default and index properties bug (again :)
+- fixed 'not' operator bug
++ added TfsScript.GetILCode and TfsScript.SetILCode methods. It allows
+  you to save precompiled code and restore it later.
+* changed 'uses' behavior. Now FS returns more information about error in
+  used module. Each used module must contain begin..end section like the
+  main module. Modules cannot contain duplicate variable/method names.
+
+v1.1
+==============
+- fixed default and index properties bug
+- fixed enums bug
+- fixed 'with' bug
+- fixed 'is' bug
++ added C++ 'new' and 'delete' operators
+
+v1.0
+==============
+- initial release
+

@@ -1,0 +1,5 @@
+// ***** Spy.SideFind *****
+begin
+ AddEvAlarmByCLSID('A3FDD654-A057-4971-9844-4ED8E67DBBB8',AScriptName,'sfbho*.dll');
+ AddEvAlarmByCLSID('8CBA1B49-8144-4721-A7B1-64C578C9EED7',AScriptName,'sidefind*.dll');
+end.

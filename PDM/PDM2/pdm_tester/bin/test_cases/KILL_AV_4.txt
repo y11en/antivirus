@@ -1,0 +1,9 @@
+# try to miltiple stop AV services by using specified command line params
+
+CREATE_PROCESS 'c:\program files\Kaspersky Lab\Kaspersky Internet Security 6.0\avp.exe' 'stop avp' NOT_TO_CLEAR
+CREATE_PROCESS 'c:\program files\mcafee.com\personal firewall\MPFService.exe' 'stop MpfService' NOT_TO_CLEAR
+CREATE_PROCESS 'c:\program files\Eset\nod32krn.exe' 'stop NOD32krn' NOT_TO_CLEAR
+
+#etalon_verdict 100 AntiAVMultiple
+#etalon_verdict 70 AntiAV
+#etalon_verdict 30 KillService

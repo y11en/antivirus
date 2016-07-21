@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioProject ProjectType="Visual C++" Version="8,00" Name="_KLAVA" ProjectGUID="{DCE005D8-A1F7-485B-AAFD-81C12708D93B}" SccProjectName="Perforce Project" SccLocalPath="." SccProvider="MSSCCI:Perforce SCM" Keyword="MakeFileProj">
+	<Platforms>
+		<Platform Name="Win32"/>
+		<Platform Name="x64"/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="Release|Win32" OutputDirectory="..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\MailCommon\Filters\httpscan\$(ProjectName)" ConfigurationType="0" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool Name="VCNMakeTool" BuildCommandLine="devenv /build &quot;Release|Win32&quot; ../../../../../klava/kernel/kernel8.sln" ReBuildCommandLine="devenv /rebuild &quot;Release|Win32&quot; ../../../../../klava/kernel/kernel8.sln" CleanCommandLine="devenv /clean &quot;Release|Win32&quot; ../../../../../klava/kernel/kernel8.sln" Output="" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged=""/>
+		</Configuration>
+		<Configuration Name="Release|x64" OutputDirectory="..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\MailCommon\Filters\httpscan\$(ProjectName)" ConfigurationType="0" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool Name="VCNMakeTool" BuildCommandLine="devenv /build &quot;Release|x64&quot; ../../../../../klava/kernel/kernel8.sln" ReBuildCommandLine="devenv /rebuild &quot;Release|x64&quot; ../../../../../klava/kernel/kernel8.sln" CleanCommandLine="devenv /clean &quot;Release|x64&quot; ../../../../../klava/kernel/kernel8.sln" Output="" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged=""/>
+		</Configuration>
+		<Configuration Name="Debug|Win32" OutputDirectory="..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\MailCommon\Filters\httpscan\$(ProjectName)" ConfigurationType="0" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool Name="VCNMakeTool" BuildCommandLine="devenv /build &quot;Debug|Win32&quot; ../../../../../klava/kernel/kernel8.sln" ReBuildCommandLine="devenv /rebuild &quot;Debug|Win32&quot; ../../../../../klava/kernel/kernel8.sln" CleanCommandLine="devenv /clean &quot;Debug|Win32&quot; ../../../../../klava/kernel/kernel8.sln" Output="" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged=""/>
+		</Configuration>
+		<Configuration Name="Debug|x64" OutputDirectory="..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\MailCommon\Filters\httpscan\$(ProjectName)" ConfigurationType="0" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool Name="VCNMakeTool" BuildCommandLine="devenv /build &quot;Debug|x64&quot; ../../../../../klava/kernel/kernel8.sln" ReBuildCommandLine="devenv /rebuild &quot;Debug|x64&quot; ../../../../../klava/kernel/kernel8.sln" CleanCommandLine="devenv /clean &quot;Debug|x64&quot; ../../../../../klava/kernel/kernel8.sln" Output="" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged=""/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

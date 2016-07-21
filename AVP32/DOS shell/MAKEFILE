@@ -1,0 +1,57 @@
+AVP32TV  =c:\lang\avp\avp32.dos\shell\
+
+__WATCOMC__=1
+__MSDOS__=1
+
+_CFLAGS = -D__NOROW__ -D__RUS__ # see tscreen.cpp for the use of __NOROW__
+                                # __RUS__ changes some characters to russian
+CC      =wpp386                                         # C++ compiler
+# d1             line number debugging information
+# s              remove stack overflow checks
+# w<number>      set warning level numbe
+# ew             alternate error message formattin
+# zld            remove file dependency informatio
+# j              change char default from unsigned to signed
+# 3s             386 stack calling conventions
+# m{s,m,c,l,f}   memory model (Small,Medium,Compact,Large,Flat)
+# zq             operate quietly
+# zm             place each function in separate segment
+# o{a,c,d,e,f[+],i,l[+],m,n,o,p,r,s,t,u,x,z} control optimization
+#   a            relax aliasing constraints
+#   c            disable <call followed by return> to <jump> optimization
+#   d            disable all optimizations
+#   e[=<num>]    expand user functions inline. <num> controls max size
+#   f            generate traceable stack frames as needed
+#   f+           always generate traceable stack frames
+#   i            expand intrinsic functions inline
+#   l            enable loop optimizations
+#   l+           enable loop unrolling optimizations
+#   m            generate inline 80x87 code for math functions
+#   n            allow numerically unstable optimizations
+#   o            continue compilation if low on memory
+#   p            generate consistent floating-point results
+#   r            reorder instructions for best pipeline usage
+#   s            favor code size over execution time in optimizations
+#   t            favor execution time over code size in optimizations
+#   u            all functions must have unique addresses
+#   x            equivalent to -omilr -s
+#   z            NULL points to valid memory in the target environment
+# fo=<file_name> set object or preprocessor output file name
+# u<name>        undefine macro name
+# i=<directory>  another include directory
+#CFLAGS  =-bt=dos -d2 -w2 -5r -mf -zq -onax -s -ew -zld -j -zm -fo=wat.d32\ -ufar -Dfar= -unear -Dnear= -uhuge -Dhuge= -DMAXSTR=256 -D__MSDOS__ -D__DOS32__ -DNO_TV_STREAMS -i\idasrc\include -i\idasrc\tvision\include $(_CFLAGS) $(CCDEBUG)    # default
+#CFLAGS  =-bt=dos -d2 -w4 -3s -mf -zq -onax -s -ew -zld -j -zm -ufar -Dfar= -unear -Dnear= -uhuge -Dhuge= -DMAXSTR=256 -D__MSDOS__ -D__DOS32__ -DNO_TV_STREAMS $(_CFLAGS) $(CCDEBUG)
+CFLAGS  =-bt=dos -d2 -w4 -3s -mf -zq  -e25 -ufar -Dfar= -unear -Dnear= -uhuge -Dhuge= -DMAXSTR=256 -D__MSDOS__ -D__DOS32__ -DNO_TV_STREAMS $(_CFLAGS)
+#         -bt=dos -d2 -w4 -3s -mf -zq -e25 -od -hw -d__MSDOS__ -d__DOS32__
+                                     #-otexan
+OUTSW   =/fe=                                           # outfile name switch for one-line linker
+.cpp.obj:
+        $(CC) $(CFLAGS) $<
+
+all: avptv32.exe
+
+avptv32.exe : $(AVP32TV)avptv32.obj $(AVP32TV)tvlibwat.d32\tv.lib $(AVP32TV)tvlibwat.d32\tvasm.lib
+        wcl386 -l=dos4g /"d all op stack=8192 op m op maxe=25 op q op symf" $(_CFLAGS) $(_LDFLAGS) /fm=avptv32.map $(OUTSW)$@ $(AVP32TV)avptv32.obj $(AVP32TV)tvlibwat.d32\tv.lib $(AVP32TV)tvlibwat.d32\tvasm.lib
+#        wlink d all SYS dos4g op m op maxe=25 op q op symf @dos32tv.lk1
+
+avptv32.obj:  avptv32.cpp

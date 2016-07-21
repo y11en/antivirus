@@ -1,0 +1,25 @@
+HKCR
+{
+	AVP.PragueIServer.1 = s 'PragueIServer Class'
+	{
+		CLSID = s '{661A3E92-B16B-11D4-96B2-444553540000}'
+	}
+	AVP.PragueIServer = s 'PragueIServer Class'
+	{
+		CLSID = s '{661A3E92-B16B-11D4-96B2-444553540000}'
+		CurVer = s 'AVP.PragueIServer.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {661A3E92-B16B-11D4-96B2-444553540000} = s 'PragueIServer Class'
+		{
+			ProgID = s 'AVP.PragueIServer.1'
+			VersionIndependentProgID = s 'AVP.PragueIServer'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{E635B355-B186-11D4-96B2-444553540000}'
+		}
+	}
+}

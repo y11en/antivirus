@@ -1,0 +1,52 @@
+// CodeGen.idl : IDL source for CodeGen.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CodeGen.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+[
+	object,
+	uuid(A11E88F1-D95A-11D3-BF0D-00D0B7161FB8),
+
+	helpstring("IPragueCodeGen Interface"),
+	pointer_default(unique)
+]
+interface IPragueCodeGen : IUnknown
+{
+	[helpstring("method GetDescription")] HRESULT GetDescription( [out,string] BYTE** description_str );
+	[helpstring("method GetVendor")] HRESULT GetVendor( [out,string] BYTE** vendor_str );
+	[helpstring("method GetVersion")] HRESULT GetVersion( [out,string] BYTE** version_str );
+	[helpstring("method GetInfo")] HRESULT GetInfo( [out] DWORD* len, [out,size_is(,*len)] BYTE** info );
+	[helpstring("method GetPrototypeOptionTemplate")] HRESULT GetPrototypeOptionTemplate( [out] DWORD* len, [out,size_is(,*len)] BYTE** options );
+	[helpstring("method GetImplementationOptionTemplate")] HRESULT GetImplementationOptionTemplate( [out] DWORD* len, [out,size_is(,*len)] BYTE** options );
+	[helpstring("method GetProjectOptions")] HRESULT GetProjectOptions( [in] DWORD* len, [out,size_is(,*len)] BYTE** buffer );
+	[helpstring("method SetObjectTypes")] HRESULT SetObjectTypes( [in] DWORD len, [in,size_is(len)] BYTE* objtypes);
+	[helpstring("method StartProject")] HRESULT StartProject( [in] DWORD len, [in,size_is(len)] BYTE* buffer );
+	[helpstring("method EndProject")] HRESULT EndProject();
+	[helpstring("method PrototypeGenerate")] HRESULT PrototypeGenerate( [in] DWORD clen, [in,size_is(clen)] BYTE* contents, [in] DWORD olen, [in,size_is(olen)] BYTE* options );
+	[helpstring("method ImplementationGenerate")] HRESULT ImplementationGenerate( [in] DWORD clen, [in,size_is(clen)] BYTE* contents, [in] DWORD olen, [in,size_is(olen)] BYTE* options );
+	[helpstring("method EditNode")] HRESULT EditNode( [in] HWND dad, [in,out] DWORD* len, [in,out,size_is(,*len)] BYTE** node );
+	[helpstring("method GetErrorString")] HRESULT GetErrorString( [in] HRESULT err, [out,string] BYTE** err_str );
+};
+
+[
+	uuid(229E382D-8F29-44c9-B118-1B445F5119A1),
+	version(1.0),
+	helpstring("PragueCodeGen 1.0 Type Library")
+]
+library CODEGENLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+                uuid(AA00A422-27E8-4b2b-A0FE-2C8D7C261C9D),
+		helpstring("Prague Code Generator Class")
+	]
+	coclass PragueCodeGen
+	{
+		[default] interface IPragueCodeGen;
+	};
+};

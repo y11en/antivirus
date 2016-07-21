@@ -1,0 +1,77 @@
+;;;
+;;; 
+;;;
+;;;
+;;; 
+;;;
+
+[Version]
+Signature   = "$Windows NT$"
+Provider    = %KasperskyLab%
+
+[DestinationDirs]
+DefaultDestDir = 11
+klogon.SrcFiles = 11                        ;%windir%\system32
+
+[SourceDisksNames]
+1 = %Disk1%
+
+[SourceDisksFiles]
+klogon.dll = 1
+
+;;
+;; Default install sections
+;;
+
+[DefaultInstall]
+CopyFiles           = klogon.SrcFiles
+AddReg     = Klogon.AddRegistry
+
+;;
+;; Default uninstall sections
+;;
+
+[DefaultUninstall]
+DelFiles   = klogon.SrcFiles
+DelReg     = Klogon.DelRegistry
+
+;
+; Copy Files
+;
+
+[klogon.SrcFiles]
+klogon.dll
+
+;
+; Registry Modifications
+;
+
+[Klogon.AddRegistry]
+HKLM,%RegSubkeyName%,%RegAsynchronousValueName%,0x00010001,0
+HKLM,%RegSubkeyName%,%RegImpersonateValueName%,0x00010001,0
+HKLM,%RegSubkeyName%,%RegDllNameValueName%,0x00000000,"%%SystemRoot%%\System32\klogon.dll"
+HKLM,%RegSubkeyName%,%RegLogonValueName%,0x00000000,"WLEventStop"
+HKLM,%RegSubkeyName%,%RegStartupValueName%,0x00000000,"WLEventStart"
+HKLM,%RegSubkeyName%,%RegLockValueName%,0x00000000,"WLEventStart"
+HKLM,%RegSubkeyName%,%RegUnlockValueName%,0x00000000,WLEventStop"
+HKLM,%RegSubkeyName%,%RegLogoffValueName%,0x00000000,"WLEventStart"
+
+[Klogon.DelRegistry]
+HKLM,%RegSubkeyName%
+
+
+;;
+;; String Section
+;;
+
+[Strings]
+KasperskyLab       = "Kaspersky Lab"
+RegSubkeyName	= "SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Notify\klogon"
+RegAsynchronousValueName	=	"Asynchronous"
+RegImpersonateValueName	=	"Impersonate"
+RegDllNameValueName	=	"DllName"
+RegLogonValueName	=	"Logon"
+RegStartupValueName	=	"Startup"
+RegLockValueName	=	"Lock"
+RegUnlockValueName	=	"Unlock"
+RegLogoffValueName	=	"Logoff"

@@ -1,0 +1,77 @@
+!IF "$(OS)" == "Windows_NT"
+NULL=
+!ELSE 
+NULL=nul
+!ENDIF 
+
+CPP=cl.exe
+
+!IF "$(CFG)" == "DEBUG"
+OUTDIR=.\Debug\Winnt
+INTDIR=.\Debug\Winnt
+!ELSE
+OUTDIR=.\Release\Winnt
+INTDIR=.\Release\Winnt
+!ENDIF 
+
+
+ALL : "$(OUTDIR)\DBCleanUp.lib"
+
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+
+
+!IF "$(CFG)" == "DEBUG"
+CPP_PROJ=/nologo /G3 /Gz /MT /W3 /GX /ZI /I "." /I"$(BASEDIR)\inc" /D "_WIN32_WINNT" /D"_WINDOWS" /D "_MBCS" /D "_X86_=1" /D "_DEBUG" /D "_MBCS" /D "_LIB" /D "WIN32" /I"$(BASEDIR)\inc"   /Fp"$(INTDIR)\DBCleanUp.pch" /YX /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /FD /c 
+!ELSE
+CPP_PROJ=/nologo /G3 /Gz /MT /W3 /GX /O2 /I "." /I"$(BASEDIR)\inc" /D "_WIN32_WINNT" /D"_WINDOWS" /D "_MBCS" /D "_X86_=1" /D "NDEBUG" /D "_MBCS" /D "_LIB" /D "WIN32" /Fp"$(INTDIR)\DBCleanUp.pch" /YX /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /FD /c 
+!ENDIF 
+	
+LIB32=link.exe -lib
+LIB32_FLAGS=/nologo /out:"$(OUTDIR)\DBCleanUp.lib" 
+LIB32_OBJS= \
+	"$(INTDIR)\DBCleanUp.obj" \
+	"$(INTDIR)\DirIteratorsNT.obj"
+
+"$(OUTDIR)\DBCleanUp.lib" : "$(OUTDIR)" $(DEF_FILE) $(LIB32_OBJS)
+    $(LIB32) @<<
+  $(LIB32_FLAGS) $(DEF_FLAGS) $(LIB32_OBJS)
+<<
+
+
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ)  $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+
+
+SOURCE=.\DBCleanUp.cpp \
+	   .\DirIteratorsNT.cpp
+
+
+"$(INTDIR)\DBCleanUp.obj" : $(SOURCE) "$(INTDIR)"
+"$(INTDIR)\DirIteratorsNT.obj" : $(SOURCE) "$(INTDIR)"
+
+
+
+

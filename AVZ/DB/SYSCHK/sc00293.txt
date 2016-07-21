@@ -1,0 +1,4 @@
+// ***** Adware.GloboSearch *****
+begin
+ AddEvAlarmByCLSID('D56A1203-1452-EBA1-7294-EE3377770000', AScriptName, 'param32.dll');
+end.

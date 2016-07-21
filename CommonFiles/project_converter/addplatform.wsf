@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<job>
+  <runtime>
+    <description>This script adds platform to VC 2005 project</description>
+    <named name = "src"
+          helpstring = "a VC 2005 project file name to be modified"
+          type = "string"
+          required = "true"/>
+    <named name = "dst"
+          helpstring = "a new VC 2005 project file name"
+          type = "string"
+          required = "false"/>
+    <named name = "platform"
+          helpstring = "a platform name to be added"
+          type = "string"
+          required = "true"/>
+    <named name = "overwrite"
+          helpstring = "overwrite the file if exists"
+          type = "boolean"
+          required = "false"/>
+    <example>Example:
+addplatform.wsf /src:c:\foo.vcproj /platform:x64</example>
+  </runtime>
+
+<script language="JScript">
+<![CDATA[
+
+function cloneConfiguration ( confList ) 
+{
+	var confArray = new Array ();
+	var parent = null;
+	for ( var i = 0; i < confList.length; i++ ) {
+		if ( !parent )
+			parent = confList.item ( i ).parentNode;
+		else if ( parent != confList.item ( i ).parentNode ) {
+			confArray.splice ( 0, confArray.length );
+			parent = null;
+		}			
+		var name = confList.item ( i ).getAttribute ( "Name" );
+		name = name.substr ( 0, name.indexOf ( "|" ) );
+		name = name + "|" + platformName;
+		var isThere = false;
+		for ( var j = 0; j < confArray.length; j++ ) {
+			if ( confArray [ j ] == name ) {
+				isThere = true;
+				break;
+			}
+		}
+		if ( isThere ) {
+			continue;
+		}
+		var conf = confList.item ( i ).cloneNode ( true );
+		conf.setAttribute ( "Name", name );
+		confArray.push ( name );
+		confList.item ( i ).parentNode.appendChild ( conf );
+		var tools = conf.getElementsByTagName ( "Tool" ); 
+		for ( var k=0; k< tools.length; k++ ) {
+			var name = tools.item(k).getAttribute ( "Name" );
+			switch ( name ) {
+			case "VCCLCompilerTool":
+				switch ( platformName ){
+				case "x64": 	
+					tools.item (k).setAttribute ( "DebugInformationFormat", "3" );
+					break;
+				}
+				break;
+			case "VCLinkerTool": 
+				switch ( platformName ){
+				case "x64": 	
+					tools.item (k).setAttribute ( "TargetMachine", "17" );
+					break;
+				}
+				break;
+			case "VCMIDLTool": 
+				switch ( platformName ){
+				case "x64": 	
+					tools.item (k).setAttribute ( "TargetEnvironment", "3" );
+					break;
+				}
+				break;
+			}
+		}	
+
+	}
+}
+
+var args = WScript.Arguments;
+
+if ( !args.Named.Exists ( "src" ) || !args.Named.Exists ( "platform" )) {
+	args.ShowUsage ();
+	WScript.Quit (1);
+}
+
+var source = args.Named.Item ( "src" );
+var dest = source;
+if ( args.Named.Exists("dst") ) {
+	dest = args.Named.Item("dst");
+}
+
+var fsObj = new ActiveXObject("Scripting.FileSystemObject");
+
+if ( !fsObj.FileExists ( source ) ) {
+	WScript.Echo( "\t\t\tERROR! File \"" + source + "\" doesn't exist!" );
+	WScript.Quit ( 1 );
+}
+
+if ( fsObj.FileExists ( dest ) && !args.Named.Item ( "overwrite" ) ) {
+	WScript.Echo( "\t\t\tERROR! File \"" + dest + "\" already exists!" );
+	WScript.Quit (1);
+}
+
+
+var xml = new ActiveXObject ( "msxml2.DOMDocument.5.0" );
+xml.async = false;
+xml.resolveExternals = false;
+xml.preserveWhiteSpace = true;
+var platformName = args.Named.Item ( "platform" );
+switch(platformName){
+	case "x64":  break;
+	default:
+		WScript.Echo( "\t\t\tERROR! Unknown platform: '" + platformName + "'" );
+		WScript.Quit (1);
+}
+
+
+xml.load( source );
+
+if ( xml.parseError.errorCode != 0 ) {
+	var err = xml.parseError;
+	WScript.Echo( "\t\t\tERROR! \"" + err.reason + "\"" );
+	WScript.Quit ( 1 );
+} 
+
+
+var platforms = xml.selectSingleNode("//Platforms");
+if ( platforms == null ) {
+	WScript.Echo( "\t\t\tERROR! 'Platforms' section has been not found" );
+	WScript.Quit ( 1 );
+}
+
+var platformList = platforms.getElementsByTagName ( "Platform" );
+for ( var i = 0; i < platformList.length; i++ ) {
+	if ( platformList.item ( i ).getAttribute ( "Name" ) == platformName ) {
+		WScript.Echo( "\t\t\tERROR! Platform '" + platformName + "' already exists in the project" );
+		WScript.Quit ( 1 );
+	}
+	
+}
+
+var newNode = xml.createNode ( 1, "Platform", "" );
+var newAttr = xml.createAttribute ( "Name" );
+newAttr.text = platformName; 
+newNode.attributes.setNamedItem ( newAttr );
+platforms.appendChild ( newNode );
+
+cloneConfiguration ( xml.getElementsByTagName ( "Configuration" ) );
+
+cloneConfiguration ( xml.getElementsByTagName ( "FileConfiguration" ) );
+
+xml.save ( dest );
+
+]]>
+</script>
+</job>
+
+

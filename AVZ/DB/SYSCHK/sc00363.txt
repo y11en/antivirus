@@ -1,0 +1,4 @@
+// ***** Trojan-PSW.Win32.QQPass.rj *****
+begin
+ AddEvAlarmByCLSID('729B6C61-BDC5-4C09-A1DE-A296BA0B89EC',AScriptName,'SysInfo.wmp');
+end.

@@ -1,0 +1,104 @@
+# Microsoft Developer Studio Generated Dependency File, included by CAB.mak
+
+.\CAB.c : \
+	"..\..\Extract\Inflate\inflate_t.h"\
+	"..\..\Extract\Inflate\plugin_inflate.h"\
+	"..\..\Extract\UnLZX\plugin_lzxdecompressor.h"\
+	"..\..\Extract\UnStored\plugin_unstore.h"\
+	"..\..\Hash\MD5\plugin_hash_md5.h"\
+	"..\..\Include\IFace\e_clsid.h"\
+	"..\..\Include\IFace\e_ktime.h"\
+	"..\..\Include\IFace\e_loader.h"\
+	"..\..\include\iface\i_hash.h"\
+	"..\..\include\iface\i_heap.h"\
+	"..\..\include\iface\i_iface.h"\
+	"..\..\include\iface\i_ifenum.h"\
+	"..\..\include\iface\i_impex.h"\
+	"..\..\include\iface\i_io.h"\
+	"..\..\Include\IFace\i_list.h"\
+	"..\..\include\iface\i_methodinfo.h"\
+	"..\..\include\iface\i_minarc.h"\
+	"..\..\Include\IFace\i_objptr.h"\
+	"..\..\INCLUDE\IFACE\i_os.h"\
+	"..\..\include\iface\i_plugin.h"\
+	"..\..\include\IFace\i_receiv.h"\
+	"..\..\Include\IFace\i_reg.h"\
+	"..\..\include\iface\i_root.h"\
+	"..\..\include\iface\i_seqio.h"\
+	"..\..\Include\iface\i_serializer.h"\
+	"..\..\include\iface\i_string.h"\
+	"..\..\include\iface\i_tracer.h"\
+	"..\..\include\iface\i_transformer.h"\
+	"..\..\include\iface\i_uacall.h"\
+	"..\..\Include\IFace\impexhlp.h"\
+	"..\..\include\iface\m_dmap.h"\
+	"..\..\include\pr_compl.h"\
+	"..\..\include\pr_err.h"\
+	"..\..\include\pr_iid.h"\
+	"..\..\include\pr_int.h"\
+	"..\..\include\pr_msg.h"\
+	"..\..\include\pr_obj.h"\
+	"..\..\Include\pr_oid.h"\
+	"..\..\include\pr_pid.h"\
+	"..\..\include\pr_prop.h"\
+	"..\..\include\pr_reg.h"\
+	"..\..\Include\pr_serdescriptor.h"\
+	"..\..\include\pr_sys.h"\
+	"..\..\include\pr_types.h"\
+	"..\..\include\pr_vid.h"\
+	"..\..\include\pr_vtbl.h"\
+	"..\..\INCLUDE\PRAGUE.H"\
+	"..\..\Loader\plugin_win32loader.h"\
+	"..\..\Loader\WHeap.h"\
+	"..\..\Packers\deflate\deflate_t.h"\
+	"..\..\Packers\deflate\plugin_deflate.h"\
+	"..\..\Packers\deflate\zconf.h"\
+	"..\..\Packers\deflate\zlibt.h"\
+	"..\..\Packers\deflate\zutil.h"\
+	"..\..\Wrappers\MultiDMAP\mdmap.h"\
+	"..\..\Wrappers\MultiDMAP\plugin_mdmap.h"\
+	".\cab.h"\
+	".\FDI.H"\
+	".\i_cab.h"\
+	
+
+.\extra.c : \
+	"..\..\..\CommonFiles\AVPPort.h"\
+	"..\..\..\CommonFiles\m_utils.h"\
+	"..\..\include\iface\i_heap.h"\
+	"..\..\include\iface\i_iface.h"\
+	"..\..\include\iface\i_ifenum.h"\
+	"..\..\include\iface\i_impex.h"\
+	"..\..\include\iface\i_io.h"\
+	"..\..\include\iface\i_methodinfo.h"\
+	"..\..\include\iface\i_minarc.h"\
+	"..\..\include\iface\i_plugin.h"\
+	"..\..\include\IFace\i_receiv.h"\
+	"..\..\Include\IFace\i_reg.h"\
+	"..\..\include\iface\i_root.h"\
+	"..\..\include\iface\i_seqio.h"\
+	"..\..\Include\iface\i_serializer.h"\
+	"..\..\include\iface\i_tracer.h"\
+	"..\..\include\iface\i_uacall.h"\
+	"..\..\include\pr_compl.h"\
+	"..\..\include\pr_err.h"\
+	"..\..\include\pr_iid.h"\
+	"..\..\include\pr_int.h"\
+	"..\..\include\pr_msg.h"\
+	"..\..\include\pr_obj.h"\
+	"..\..\include\pr_pid.h"\
+	"..\..\include\pr_prop.h"\
+	"..\..\include\pr_reg.h"\
+	"..\..\Include\pr_serdescriptor.h"\
+	"..\..\include\pr_sys.h"\
+	"..\..\include\pr_types.h"\
+	"..\..\include\pr_vid.h"\
+	"..\..\include\pr_vtbl.h"\
+	"..\..\INCLUDE\PRAGUE.H"\
+	".\cab.h"\
+	".\i_cab.h"\
+	
+
+.\CAB.rc : \
+	"..\..\..\CommonFiles\version\ver_mod.rc2"\
+	

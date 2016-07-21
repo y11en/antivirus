@@ -1,0 +1,6 @@
+// ***** AdvWare.MediaTickets *****
+begin
+ AddEvAlarmByCLSID('9EB320CE-BE1D-4304-A081-4B4665414BEF',AScriptName,'MediaTicketsInstaller.ocx');
+ AddEvAlarmByCLSID('5530D356-0063-41B9-B20D-E9D799E8D907',AScriptName,'MediaTicketsInstaller.ocx');
+ AddEvAlarmByCLSID('39DA2444-065F-47CB-B27C-CCB1A39C06B7',AScriptName,'MediaTicketsInstaller.ocx');
+end.

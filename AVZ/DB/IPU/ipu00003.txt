@@ -1,0 +1,11 @@
+// ***** Административные шары *****
+var
+ X : integer;
+begin
+ X := RegKeyIntParamRead('HKEY_LOCAL_MACHINE', 'System\CurrentControlSet\Services\LanmanServer\Parameters', 'AutoShareWks');
+ if X <> 0 then begin
+  AddToLog('>> $AVZ1226');
+  AddSyscheckMenu('$AVZ1201',
+                  'RegKeyIntParamWrite(''HKEY_LOCAL_MACHINE'', ''System\CurrentControlSet\Services\LanmanServer\Parameters'',''AutoShareWks'', 0);', 1);
+ end; 
+end.

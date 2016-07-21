@@ -1,0 +1,16 @@
+PROJECTS+= \
+	klavcorelib \
+	klavsyslib \
+	klavsys \
+	treesearchlib \
+	klav_engine \
+	klaveng \
+	klavsrch \
+	klavstrm \
+	klavscr \
+	klavprlib \
+	klavcore \
+	klavlib \
+	webav \
+        ntreelib \
+	ntreelib/ntreelink

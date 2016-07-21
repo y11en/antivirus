@@ -1,0 +1,4 @@
+// ***** Trojan-Downloader.Win32.Dyfuca.dn *****
+begin
+ AddEvAlarmByCLSID('B5DD9A64-5C4B-4a48-BE56-97C1A8F85708','Trojan-Downloader.Win32.Dyfuca.dn','fastvideoplayer.dll, msdlupd.dll');
+end.

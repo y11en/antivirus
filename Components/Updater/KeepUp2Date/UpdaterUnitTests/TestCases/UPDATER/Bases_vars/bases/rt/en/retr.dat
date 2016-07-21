@@ -1,0 +1,10 @@
+-1;AVS;Malware signatures;Signatures of viruses and other malware
+-1;AH;Anti-Hacker attack signatures;Descriptions of typical network attacks
+-1;AS;Anti-Spam signatures;Spam message examples
+-1;ADB;Anti-Banner signatures;URL masks for Anti-Banner component
+-1;AP;Anti-Phishing signatures;List of phishing sites
+-1;WM;Web-Antivirus streaming scan signatures;Signatures for streaming scanning
+-1;RM;Critical system registry values;Proactive defense: critical system registry keys and values
+-1;BB;Dangerous activity signatures;Signatures of dangeous and suspicious activity for Application Activity Analyser
+-1;KAV2006EXEC;Binary modules for version 6.0;Binary modules for version 6.0
+; 0XLSznpdI71fB300e7Uwj10Ra9Nnq9s0of0EKcqatDdHmNhRD2vqUHYgVn­­

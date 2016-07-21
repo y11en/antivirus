@@ -1,0 +1,25 @@
+/*-----------------02.05.99 12:57-------------------
+ * Project Prague                                 *
+ * Subproject Kernel                              *
+ * Author Mezhuev Pavel                           *
+ * Copyright (c) Kaspersky Lab                    *
+ * Purpose Prague API                             *
+ * revision 2                                     *
+--------------------------------------------------*/
+// generic handle definition
+
+import "prague.h";
+
+[ uuid (3C418E9C-9C52-437f-879A-50D459879CAF),
+  version(1.0),
+  pointer_default(unique)
+]
+interface rpc_manager {
+
+	typedef [context_handle] void * PCONNECT_CONTEXT;
+
+	tERROR  RPC_BindServer( [in] handle_t IDL_handle, [out] PCONNECT_CONTEXT *connect_context, rpcOBJECT client_root );
+	tERROR  RPC_BindClose( [in] handle_t IDL_handle, [in,out] PCONNECT_CONTEXT *connect_context);
+
+	tERROR  RPC_ProxyInvoke([mout,size_is(size)]tCHAR* buff, tDWORD size);
+}

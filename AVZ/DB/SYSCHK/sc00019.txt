@@ -1,0 +1,4 @@
+// ***** AdvWare.ToolBar.HMT *****
+begin
+ AddEvAlarmByCLSID('F43BD772-ABDD-43b7-A96A-3E9E61946EC0',AScriptName,'hmtoolbar.dll');
+end.

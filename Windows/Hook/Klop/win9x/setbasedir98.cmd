@@ -1,0 +1,1 @@
+set BASEDIR98S=%~s1

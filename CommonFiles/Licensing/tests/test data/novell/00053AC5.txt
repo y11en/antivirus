@@ -1,0 +1,48 @@
+  [D]=<AVP_DC_KEY, AVP_APID_GLOBAL, avpt_nothing, 0> 
+    [D]=<AVP_PID_KEYINFO_ID, AVP_APID_GLOBAL, avpt_nothing, 0> 
+      [D]=<AVP_PID_KEYDESCRIPTION_ID, AVP_DC_KEY, avpt_str, 0> V=Kaspersky lab key file 
+      [D]=<AVP_PID_KEYVERSION_ID, AVP_DC_KEY, avpt_dword, 0> V=4 
+      [D]=<AVP_PID_KEYPRODDATE_ID, AVP_DC_KEY, avpt_date, 0> V=22 июл€ 2003 г. 
+      [D]=<AVP_PID_KEYSERIALNUMBER_ID, AVP_DC_KEY, avpt_dword, 1> C=3 [0]=689 [1]=10 [2]=342725 
+      [D]=<25, AVP_DC_KEY, avpt_dword, 0> V=2 
+      [D]=<AVP_PID_KEYLIFESPAN_ID, AVP_DC_KEY, avpt_dword, 0> V=30 
+      [D]=<AVP_PID_KEYEXPDATE_ID, AVP_DC_KEY, avpt_date, 0> V=1 окт€бр€ 2003 г. 
+      [D]=<AVP_PID_KEYLICENCECOUNT_ID, AVP_DC_KEY, avpt_dword, 0> V=1 
+      [D]=<26, AVP_DC_KEY, avpt_dword, 0> V=0 
+        [D]=<1, 8, avpt_dword, 0> V=1 
+      [D]=<AVP_PID_KEYLICENCEINFO_ID, AVP_DC_KEY, avpt_str, 0> V=Public beta version 
+      [D]=<AVP_PID_KEYSUPPORTINFO_ID, AVP_DC_KEY, avpt_str, 0> V=Kaspersky Labs
+
+Address:
+   10, Geroyev Panfilovtsev street, 
+   123363, Moscow, Russia,
+   Kaspersky Labs
+Phone:
+   +7(095)797-8700 - Sales Dept (30 channels)
+   +7(095)948-8350 - Sales Dept
+   +7(095)948-4331 - Sales Dept
+   +7(095)797-8707 - Technical Support (30 channels)
+   +7(095)495-0300 - Technical Support
+   +7(095)948-5650 - Marketing Dept
+Fax:
+   +7(095)948-4331
+E-mail:
+   mailto:sales@kaspersky.com    - Sales Dept
+   mailto:support@kaspersky.com  - Technical Support
+   mailto:info@kaspersky.com     - Marketing Dept
+   mailto:newvirus@kaspersky.com - Antiviral Lab
+WWW:
+   http://www.kaspersky.com
+  
+      [D]=<AVP_PID_KEYPLPOS_ID, AVP_DC_KEY, avpt_dword, 0> V=10 
+      [D]=<AVP_PID_KEYPLPOSNAME_ID, AVP_DC_KEY, avpt_str, 0> V=Kaspersky Anti-Virus Business Optimal Beta 1 month 
+      [D]=<27, AVP_DC_KEY, avpt_dword, 0> V=9 
+      [D]=<28, AVP_DC_KEY, avpt_str, 0> V=4 
+      [D]=<29, AVP_DC_KEY, avpt_dword, 0> V=2 
+      [D]=<30, AVP_DC_KEY, avpt_dword, 0> V=4 
+      [D]=<31, AVP_DC_KEY, avpt_dword, 0> V=261 
+      [D]=<32, AVP_DC_KEY, avpt_str, 0> V=Kaspersky Lab 
+      [D]=<21, AVP_DC_KEY, avpt_str, 0> V=Kaspersky Lab 
+      [D]=<23, AVP_DC_KEY, avpt_str, 0> V=203549DA-16F4-4DF0-ABE2-171F560BC14E 
+      [D]=<24, AVP_DC_KEY, avpt_str, 0> V= 
+    [D]=<AVP_APID_NOVELL, AVP_APID_GLOBAL, avpt_dword, 0> V=30 

@@ -1,0 +1,4 @@
+// ***** AdvWare.ToolBar.DotComBar *****
+begin
+ AddEvAlarmByCLSID('29DD1EA6-1FDA-44A4-B083-C9900547BC48','Spy.LocalSearchToolbar','toolbar_nieuw14.dll');
+end.

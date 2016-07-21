@@ -1,0 +1,56 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "ObjParse"=.\ObjParse.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Prague/CodeGen/ObjParse", FJECAAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "TestParse"=.\TestParse\TestParse.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Prague/CodeGen/ObjParse/TestParse", MJECAAAA
+    .\testparse
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ObjParse
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Prague/CodeGen/ObjParse", FJECAAAA
+    .
+    end source code control
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

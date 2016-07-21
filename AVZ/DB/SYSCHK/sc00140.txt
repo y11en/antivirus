@@ -1,0 +1,4 @@
+// ***** Spy.IGetNet *****
+begin
+ AddEvAlarmByCLSID('CFCDA454-78A0-404A-90E9-AD589DA7E059',AScriptName,'');
+end.

@@ -1,0 +1,44 @@
+forward interface Scheduler;
+typedef Scheduler* hSCHEDULER;
+
+
+
+[
+  version(1)
+  mnemonic(IID_SCHEDULER)
+  id(58018)
+  c_type_name(hSCHEDULER)
+]
+interface Scheduler { // Simple Scheduler
+
+  // ------------------------------------
+    [ id(4096) ]  prop tDWORD pgFREQUENCY; // Frequency to check schedules ready to run.
+
+
+  // ------------------------------------
+    method tERROR SetSchedule(
+      tDWORD dwScheduleClass,
+      tDWORD dwScheduleID,
+      const tPTR* pSchedule,
+      const tPTR* pScheduleParams
+    );
+    method tERROR GetSchedule(
+      tDWORD dwScheduleClass,
+      tDWORD dwScheduleID,
+      tPTR* pSchedule,
+      tPTR* pScheduleParams
+    );
+    method tERROR DeleteSchedule( tDWORD dwScheduleClass, tDWORD dwScheduleID );
+    method tERROR GetNextSchedule(
+      tDWORD dwScheduleClass,
+      tDWORD dwScheduleID,
+      cSerializable* pSchedule,
+      cSerializable* pScheduleParams
+    );
+
+
+  // ------------------------------------
+    [ id(1721998405) ]  message_cls pmc_SCHEDULER {}
+
+}
+

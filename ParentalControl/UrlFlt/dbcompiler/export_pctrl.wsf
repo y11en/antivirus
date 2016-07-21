@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<job>
+  <runtime>
+    <description>This script exports parental control records</description>
+    <named name = "server"
+          helpstring = "KLAVA server name"
+          type = "string"
+          required = "true"/>
+    <named name = "port"
+          helpstring = "KLAVA server port (default:16001)"
+          type = "string"
+          required = "true"/>
+    <named name = "user"
+          helpstring = "login name"
+          type = "string"
+          required = "true"/>
+    <named name = "password"
+          helpstring = "login password"
+          type = "string"
+          required = "true"/>
+    <named name = "library"
+          helpstring = "library name"
+          type = "string"
+          required = "true"/>
+    <example>Example:
+export_pctrl.wsf /server:klava.avp.ru /user:foo /password:123 /library:stream</example>
+  </runtime>
+
+<script language="JScript" src="klav_server_api.js"/>
+
+<script language="JScript">
+<![CDATA[
+
+var args = WScript.Arguments;
+if (! args.Named.Exists("server")
+ || ! args.Named.Exists("user")
+ || ! args.Named.Exists("password")
+ || ! args.Named.Exists("library")
+)
+{
+  args.ShowUsage ();
+  WScript.Quit (1);
+}
+
+var g_server_name = args.Named.Item ("server");
+var g_server_port = 16001;
+
+if (args.Named.Exists ("port"))
+{
+  var s = args.Named.Item ("port");
+  g_server_port = (new Number (s)).valueOf ();
+}
+
+var g_user_name = args.Named.Item ("user");
+var g_password  = args.Named.Item ("password");
+var g_library_name  = args.Named.Item ("library");
+
+var categories = WScript.CreateObject ("Scripting.Dictionary");
+
+function get_category_id (name)
+{
+  return categories.Item (name);
+}
+
+function export_categories ()
+{
+  var defn_rec = KlavDefnRecordFindByNameEx ("parental_control");
+  if (defn_rec != null)
+  {
+    var items = defn_rec.defn_items;
+    var i = 0;
+    for (i = 0; i < items.Count; ++i)
+    {
+      var item = items.Item (i);
+
+      var name = item.name;
+      var value = item.Property ("v_value");
+
+      categories.Add (name, value);
+    } 
+  }
+}
+
+function export_word_record (rec, elt)
+{
+  Write (rec.name);
+
+  var cats = elt.weights;
+  var cats_cnt = cats.Count;
+  var i;
+
+  for (i = 0; i < cats_cnt; ++i)
+  {
+    var cat = cats.Item (i);
+    var cat_name = cat.defnitem_name;
+    var cat_id = get_category_id (cat_name);
+    var cat_weight = cat.weight;
+    Write (" " + cat_id + " " + cat_weight);
+  }
+  
+  WriteLine ("");
+}
+
+function export_url_record (rec, elt)
+{
+  Write (rec.name);
+
+  var cats = elt.weights;
+  var cats_cnt = cats.Count;
+  var i;
+
+  for (i = 0; i < cats_cnt; ++i)
+  {
+    var cat = cats.Item (i);
+    var cat_name = cat.defnitem_name;
+    var cat_id = get_category_id (cat_name);
+    var cat_weight = cat.weight;
+    Write (" " + cat_id + " " + cat_weight);
+  }
+
+  WriteLine ("");
+}
+
+function export_records (library_id, format_id, elt_name, weighted)
+{
+  var last_record_id = "";
+  var afl = "FORMAT_ID(\"" + format_id + "\")";
+
+  while (true)
+  {
+    var rec = KlavRecordFindNext (library_id, last_record_id, afl, FIND_RECORD_BY_DEFAULT);
+    if (rec == null)
+      break;
+
+    last_record_id = rec.id;
+
+    var rdata = KlavConn().LoadRecordData (rec.src_data);
+
+    var elts = rdata.elements;
+    var elt_cnt = elts.Count;
+    var i;
+
+    for (i = 0; i < elt_cnt; ++i)
+    {
+      var elt = elts.Item (i);
+      if (elt.format_id == elt_name)
+      {
+        if (weighted)
+        {
+          export_word_record (rec, elt);
+        }
+        else
+        {
+          export_url_record (rec, elt);
+        }
+        break;
+      }
+    }
+  }
+
+  WriteLine ("");
+}
+
+try
+{
+  KlavServerConnect (g_server_name, g_server_port, g_user_name, g_password);
+
+  var library = KlavRecordLibraryGetByName (g_library_name);
+  var library_id = library.id;
+
+  export_categories ();
+  export_records (library_id, "pcurl", "pcurl_data", false);
+  export_records (library_id, "pcword", "pcword_data", true);
+
+//  WriteLine ("Total records processed: " + g_record_total);
+}
+catch (e)
+{
+  WriteLine ("ERROR: " + e.description);
+  WScript.Quit (1);
+}
+
+]]>
+</script>
+</job>
+
+

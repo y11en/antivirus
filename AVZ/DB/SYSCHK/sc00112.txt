@@ -1,0 +1,7 @@
+// ***** TrojanDownloader.VB *****
+begin
+ AddEvAlarmByCLSID('B8A04596-1C1B-48B6-9268-F2F86C9D55BC','TrojanDownloader.VB','roing.ocx');
+ AddEvAlarmByCLSID('47E42EA5-AF8C-4D78-9937-AA40354B3018','TrojanDownloader.VB.bo','roing17.ocx, mm19.ocx');
+ AddEvAlarmByCLSID('65B818E1-F4D8-4F96-A1DF-35F3D1C86194','TrojanDownloader.VB.bq','roing.ocx');
+ AddEvAlarmByCLSID('E62A47D8-74B1-4A93-963A-E5E43B7CC5C2','TrojanDownloader.VB.dc','UCSearch.ocx');
+end.

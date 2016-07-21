@@ -1,0 +1,8 @@
+// ***** Spy.BargainBuddy *****
+begin
+ AddEvAlarmByCLSID('CE31A1F7-3D90-4874-8FBE-A5D97F8BC8F1',AScriptName,'apuc.dll');
+ AddEvAlarmByCLSID('F4E04583-354E-4076-BE7D-ED6A80FD66DA',AScriptName,'msbe.dll');
+ AddEvAlarmByCLSID('CE188402-6EE7-4022-8868-AB25173A3E14',AScriptName,'');
+ AddEvAlarmByCLSID('AEECBFDA-12FA-4881-BDCE-8C3E1CE4B344',AScriptName,'');
+ AddEvAlarmByCLSID('72F81209-6C73-4DE7-A3DC-408A8BD472FB',AScriptName,'');
+end.

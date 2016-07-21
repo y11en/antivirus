@@ -1,0 +1,51 @@
+#import "sample.idl"
+
+component SamplePlugin {
+
+  	///[ id(0x1000) ]
+	implementation SampleImpl : SampleI {
+
+		//const tSTRING strConst = "kisklavavp";
+		const tDWORD strConst = 12;//"kisklavavp";
+
+   	[ access(read) shared(true) ]
+   	add prop tDWORD ImplPropInt = 0x234;
+			
+		[ access(read, write) 
+			member_ref(field0) ]
+   	prop tDATA BaseProp;
+    	
+   	[ shared(true) access(read) ]
+   	prop tSTRING IProp = "Hello!";
+ 		//prop tCHAR IProp[12];
+    	
+   	[ access(read, write) 
+			setter(setImplProp) 
+			getter(getImplProp) 
+		]
+   	add prop tSTRING ImplProp;
+
+		[ access(read) getter(getName) ]
+		prop tSTRING pgOBJECT_NAME;
+		
+		extend message_cls IMsgClass {
+			message ImplMsg;
+		}
+
+		add message_cls AddMsgClass {
+			message Msg0;
+		}
+
+    add method tERROR addMethod();
+    
+		sysmeth ObjectInit;
+  }
+  	
+  	// export method
+	method tDWORD pr_vsprintf(
+	  tCHAR* buffer,
+	  tDWORD length,
+	  const tSTRING format,
+	  tPTR arg_ptr
+	);
+}

@@ -1,0 +1,14 @@
+forward interface AutoTrace;
+typedef AutoTrace* hAUTOTRACE;
+
+
+
+[
+  version(1)
+  mnemonic(IID_AUTOTRACE)
+  id(61008)
+  c_type_name(hAUTOTRACE)
+  comment_ex("Для управления объектом данного типа используются сообщения 
+    интерфейса i_kavwin -> pmc_CONFIGURATOR")
+]
+interface AutoTrace {} // Интерфейс для управления отладочной информацией

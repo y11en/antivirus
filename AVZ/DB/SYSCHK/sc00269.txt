@@ -1,0 +1,4 @@
+// ***** Trojan-Spy.Win32.PetSpy *****
+begin
+ AddEvAlarmByCLSID('A0BEC94E-4D62-11D6-AF01-0010C6081DD0', AScriptName, '');
+end.

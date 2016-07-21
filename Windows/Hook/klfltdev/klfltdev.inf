@@ -1,0 +1,154 @@
+;;;
+;;; 
+;;;
+;;;
+;;; 
+;;;
+
+[Version]
+Signature   = "$Windows NT$"
+Class       = "ActivityMonitor"                         ;This is determined by the work this filter driver does
+ClassGuid   = {b86dff51-a31e-4bac-b3cf-e8cfe75c9fc2}
+Provider    = %KasperskyLab%
+DriverVer   = 01/01/2004,1.0.0.1
+CatalogFile = klfltdev.cat
+DriverPackageType=PnpDeviceFilter
+
+[Manufacturer]
+%KLName%=KLFLTDEVModelSection,ntamd64
+
+[KLFLTDEVModelSection]
+%KLFLTDEVName%=DefaultInstall,KLFLTDEV
+
+[KLFLTDEVModelSection.ntamd64]
+%KLFLTDEVName%=DefaultInstall,KLFLTDEV
+
+[DestinationDirs]
+DefaultDestDir = 12
+klfltdev.DriverFiles = 12                        ;%windir%\system32\drivers
+
+[SourceDisksNames]
+1 = %Disk1%
+
+[SourceDisksFiles]
+klfltdev.sys = 1
+
+;;
+;; Default install sections
+;;
+
+[DefaultInstall]
+OptionDesc          = %KlfltdevServiceDesc%
+CopyFiles           = Klfltdev.DriverFiles
+
+[DefaultInstall.ntamd64]
+OptionDesc          = %KlfltdevServiceDesc%
+CopyFiles           = Klfltdev.DriverFiles
+
+[DefaultInstall.Services]
+AddService          = %KlfltdevServiceName%,,Klfltdev.Service
+
+[DefaultInstall.ntamd64.Services]
+AddService          = %KlfltdevServiceName%,,Klfltdev.Service
+
+;;
+;; Default uninstall sections
+;;
+
+[DefaultUninstall]
+DelFiles   = Klfltdev.DriverFiles
+DelReg     = Klfltdev.DelRegistry
+
+[DefaultUninstall.ntamd64]
+DelFiles   = Klfltdev.DriverFiles
+DelReg     = Klfltdev.DelRegistry
+
+[DefaultUninstall.Services]
+DelService = Klfltdev
+
+[DefaultUninstall.ntamd64.Services]
+DelService = Klfltdev
+
+;
+; Services Section
+;
+
+[Klfltdev.Service]
+DisplayName      = %KlfltdevDisplayName%
+Description      = %KlfltdevServiceDesc%
+ServiceBinary    = %12%\klfltdev.sys                 ;%windir%\system32\drivers\klfltdev.sys
+;Dependencies     = %FltmgrServiceName%          ;FltMgr
+ServiceType      = 1                            ;SERVICE_KERNEL_DRIVER
+StartType        = 3                            ;SERVICE_DEMAND_START
+ErrorControl     = 1                            ;SERVICE_ERROR_NORMAL
+LoadOrderGroup   = "Pnp Device Filter"
+AddReg           = Klfltdev.AddRegistry
+
+;
+; Registry Modifications
+;
+
+[Klfltdev.AddRegistry]
+; Standart USB
+HKLM,System\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000},UpperFilters,0x00010008,%KlfltdevServiceName%
+HKR,Rules"\"{36fc9e60-c465-11cf-8056-444553540000},OtherTypes,0x00010001,0
+HKR,Rules"\"{36fc9e60-c465-11cf-8056-444553540000},USB\CLASS_00,0x00010001,0
+HKR,Rules"\"{36fc9e60-c465-11cf-8056-444553540000},USB\CLASS_01,0x00010001,0
+HKR,Rules"\"{36fc9e60-c465-11cf-8056-444553540000},USB\CLASS_02,0x00010001,0
+HKR,Rules"\"{36fc9e60-c465-11cf-8056-444553540000},USB\CLASS_03,0x00010001,0
+HKR,Rules"\"{36fc9e60-c465-11cf-8056-444553540000},USB\CLASS_04,0x00010001,0
+HKR,Rules"\"{36fc9e60-c465-11cf-8056-444553540000},USB\CLASS_05,0x00010001,0
+HKR,Rules"\"{36fc9e60-c465-11cf-8056-444553540000},USB\CLASS_06,0x00010001,0
+HKR,Rules"\"{36fc9e60-c465-11cf-8056-444553540000},USB\CLASS_07,0x00010001,0
+HKR,Rules"\"{36fc9e60-c465-11cf-8056-444553540000},USB\CLASS_08,0x00010001,0
+HKR,Rules"\"{36fc9e60-c465-11cf-8056-444553540000},USB\CLASS_09,0x00010001,0
+HKR,Rules"\"{36fc9e60-c465-11cf-8056-444553540000},USB\CLASS_FF,0x00010001,0
+
+; Standart Bluetooth
+HKLM,System\CurrentControlSet\Control\Class\{e0cbf06c-cd8b-4647-bb8a-263b43f0f974},UpperFilters,0x00010008,%KlfltdevServiceName%
+HKR,Rules"\"{e0cbf06c-cd8b-4647-bb8a-263b43f0f974},OtherTypes,0x00010001,0
+
+;3Com Bluetooth  - not checked
+;{B447CB2A-59EE-48bd-8F2D-9AB3390091FD} 
+
+; Bluetooth jabra (widcomm)
+HKLM,System\CurrentControlSet\Control\Class\{95C7A0A0-3094-11D7-A202-00508B9D7D5A},UpperFilters,0x00010008,%KlfltdevServiceName%
+HKR,Rules"\"{95C7A0A0-3094-11D7-A202-00508B9D7D5A},OtherTypes,0x00010001,0
+
+; Bluetooth bluesoleil 
+HKLM,System\CurrentControlSet\Control\Class\{F12D3CF8-B11D-457E-8641-BE2AF2D6D204},UpperFilters,0x00010008,%KlfltdevServiceName%
+HKR,Rules"\"{F12D3CF8-B11D-457E-8641-BE2AF2D6D204},OtherTypes,0x00010001,0
+
+[Klfltdev.DelRegistry]
+HKLM,System\CurrentControlSet\Services\%KlfltdevServiceName%
+HKLM,System\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000},UpperFilters,0x00010008,%KlfltdevServiceName%
+HKLM,System\CurrentControlSet\Control\Class\{e0cbf06c-cd8b-4647-bb8a-263b43f0f974},UpperFilters,0x00010008,%KlfltdevServiceName%
+HKLM,System\CurrentControlSet\Control\Class\{95C7A0A0-3094-11D7-A202-00508B9D7D5A},UpperFilters,0x00010008,%KlfltdevServiceName%
+HKLM,System\CurrentControlSet\Control\Class\{F12D3CF8-B11D-457E-8641-BE2AF2D6D204},UpperFilters,0x00010008,%KlfltdevServiceName%
+;
+; Copy Files
+;
+
+[Klfltdev.DriverFiles]
+klfltdev.sys
+
+;;
+;; String Section
+;;
+
+[Strings]
+KlfltdevDisplayName    = "Kaspersky Lab KLFltDev"
+KasperskyLab       = "Kaspersky Lab"
+KlfltdevServiceDesc    = "Kaspersky Lab Pnp Device Filter"
+KlfltdevServiceName    = "KLFLTDEV"
+KlfltdevDebugLevel     = "DebugLevel"
+FltmgrServiceName                   = "PnpDevFlt"
+Disk1                               = "Klfltdev Source"
+KLName             = "KL"
+KLFLTDEVName           = "KLFLTDEV"
+
+;Instances specific information.
+;DefaultInstance      = "KLFLTDEV"
+;Instance1.Name       = "KLFLTDEV"
+;Instance1.Altitude   = "320400"
+;Instance1.Flags      = 0x0

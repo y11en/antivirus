@@ -1,0 +1,25 @@
+//
+// AVPFPI.RC - resources Microsoft Visual C++ does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+#include "afxres.h"
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Add manually edited resources here...
+
+#define VER_FILETYPE              VFT_DLL
+#define VER_COMMENTS_STR         "Alexey de Mont de Rique [graf@avp.ru]"
+#define VER_FILEDESCRIPTION_STR  "AVP Engine (FPI DLL)"
+#define VER_INTERNALNAME_STR     "AVPFPI"
+#define VER_ORIGINALFILENAME_STR "AVPFPI.DLL"
+
+#include <Version\ver_avp.h>
+#include <Version\ver_kl.ver>
+
+/////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,6 @@
+// ***** Dialer.Avenue *****
+begin       
+ AddEvAlarmByCLSID('BF279130-3F58-4E26-8043-CD5688A4D4C9',AScriptName,'');
+ AddEvAlarmByCLSID('CEA206E8-8057-4A04-ACE9-FF0D69A92297',AScriptName,'');
+ AddEvAlarmByCLSID('C89BB48C-15D9-4F4F-803E-95D90F62BE62',AScriptName,'');
+end.

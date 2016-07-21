@@ -1,0 +1,21 @@
+// Вывод списка строк в протокол
+procedure PrintStringListToLog(ASL : TStringList);
+var
+ i : integer;
+begin
+ for i := 0 to ASL.Count -  1 do 
+  AddToLog(ASL[i]);
+end;
+
+
+var
+ SL : TStringList;
+begin
+ SL := TStringList.Create;
+ // Добавление строк
+ SL.Add('111111');
+ SL.Add('222222');
+ SL.Add('333333');
+ SL.Free;
+ ClearQuarantine;
+end.

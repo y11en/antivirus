@@ -1,0 +1,5 @@
+# Microsoft Developer Studio Generated Dependency File, included by base64.mak
+
+".\base64_res.rc" : \
+	".\ver_mod.h"\
+	

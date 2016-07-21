@@ -1,0 +1,854 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\CKAHUMTESTUI2.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_BANOMET DIALOG DISCARDABLE  0, 0, 316, 262
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,259,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,259,24,50,14
+    CONTROL         "List2",IDC_BANNED_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,7,7,229,248
+END
+
+IDD_HostStat DIALOG DISCARDABLE  0, 0, 561, 273
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Host Statistics"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,504,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,504,24,50,14
+    CONTROL         "List1",IDC_HostStat,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,7,7,489,259
+END
+
+IDD_ConnDialog DIALOG DISCARDABLE  0, 0, 338, 280
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Active Connections"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,285,0,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,285,20,50,14
+    CONTROL         "List1",IDC_OpenConnList,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,0,0,280,275
+END
+
+IDD_RedirectorExcludes DIALOG DISCARDABLE  0, 0, 472, 166
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Redirector Excludes"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,291,141,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,400,141,50,14
+    CONTROL         "List2",IDC_EXCLUDES_LIST,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,0,7,277,154
+    PUSHBUTTON      "Add Exclude",IDC_ADD_EXCLUDE,291,14,50,14
+    PUSHBUTTON      "Remove",IDC_REMOVE_EXCLUDE,400,14,50,14
+    EDITTEXT        IDC_EDIT_PATH,291,50,159,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_HOST,291,92,50,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PORT,400,92,50,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Application Path",IDC_STATIC,293,36,97,10
+    LTEXT           "Remote Host",IDC_STATIC,293,82,53,10
+    LTEXT           "Remote Port",IDC_STATIC,402,82,49,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_BANOMET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 255
+    END
+
+    IDD_HostStat, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 554
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 266
+    END
+
+    IDD_ConnDialog, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 331
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 273
+    END
+
+    IDD_RedirectorExcludes, DIALOG
+    BEGIN
+        RIGHTMARGIN, 463
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 161
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_NO_RULE             "No rule specified"
+    IDS_FAILEDTORESOLVEHOST "Failed to resolve host"
+    IDS_PROMPT_RESTORE_DEFAULT "Restore default rules?"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CKAHUMTESTUI2_DIALOG DIALOGEX 0, 0, 549, 425
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "CKAHUMTESTUI2"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "CKAHUM",IDC_STATIC,4,2,171,53
+    PUSHBUTTON      "Reload",IDC_RELOAD,10,14,37,14
+    EDITTEXT        IDC_RELOADPATH,50,15,119,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Enable",IDC_CKAHUMENABLE,9,33,37,14
+    PUSHBUTTON      "Disable",IDC_CKAHUMDISABLE,50,33,37,14
+    PUSHBUTTON      "Pause",IDC_CKAHUMPAUSE,91,33,37,14
+    PUSHBUTTON      "Resume",IDC_CKAHUMRESUME,132,33,37,14
+    GROUPBOX        "IDS",IDC_STATIC,4,58,171,192
+    PUSHBUTTON      "Start",IDC_START,9,72,37,14
+    PUSHBUTTON      "Stop",IDC_STOP,50,72,37,14
+    PUSHBUTTON      "Pause",IDC_PAUSE,91,72,37,14
+    PUSHBUTTON      "Resume",IDC_RESUME,132,72,37,14
+    LTEXT           "",IDC_STATIC,10,93,159,1,SS_SUNKEN
+    PUSHBUTTON      "Set param",IDC_SETPARAM,9,100,46,14
+    EDITTEXT        IDC_SetParamID,60,101,46,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SetParamNum,110,101,21,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SetParamValue,135,101,34,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Get param",IDC_GETPARAM,9,119,46,14
+    EDITTEXT        IDC_GetParamID,60,120,46,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GetParamNum,110,119,21,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GetParamValue,135,119,34,12,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    PUSHBUTTON      "Get count",IDC_GETPARAMCOUNT,9,138,46,14
+    EDITTEXT        IDC_GetParamCountID,60,139,46,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GetParamCountValue,110,139,21,12,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    PUSHBUTTON      "Notify par",IDC_SETIDSPARAM,8,157,46,14
+    EDITTEXT        IDC_SetIDSParamID,60,158,46,12,ES_AUTOHSCROLL
+    CONTROL         "Deny",IDC_SetIDSPar_Deny,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,111,159,30,8
+    CONTROL         "Notify",IDC_SetIDSPar_Notify,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,111,169,33,8
+    CONTROL         "Log",IDC_SetIDSPar_Log,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,111,179,26,8
+    CONTROL         "Ban",IDC_SetIDSPar_Ban,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,111,189,26,8
+    EDITTEXT        IDC_EDIT1,146,158,22,12,ES_AUTOHSCROLL
+    GROUPBOX        "Banomet",IDC_STATIC,9,178,98,65
+    LTEXT           "IP:",IDC_STATIC,22,192,9,9
+    CONTROL         "IPAddress1",IDC_IPADDRESS1,"SysIPAddress32",WS_TABSTOP,
+                    33,190,65,12
+    LTEXT           "Mask:",IDC_STATIC,12,210,20,8
+    CONTROL         "IPAddress1",IDC_IPADDRESS2,"SysIPAddress32",WS_TABSTOP,
+                    33,208,65,12
+    PUSHBUTTON      "Unban",IDC_Unban,65,224,34,14
+    GROUPBOX        "Firewall",IDC_STATIC,180,2,362,248
+    PUSHBUTTON      "Start",IDC_FW_START,185,16,37,14
+    PUSHBUTTON      "Stop",IDC_FW_STOP,226,16,37,14
+    PUSHBUTTON      "Pause",IDC_FW_PAUSE,267,16,37,14
+    PUSHBUTTON      "Resume",IDC_FW_RESUME,308,16,37,14
+    LTEXT           "Network list:",IDC_STATIC,359,8,40,8
+    LISTBOX         IDC_NETLIST,356,18,135,24,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Update",IDC_UpdateNetList,500,18,37,14
+    LTEXT           "",IDC_STATIC,186,41,159,1,SS_SUNKEN
+    PUSHBUTTON      "Packet rules",IDC_FW_PACKETRULES,185,50,50,14
+    PUSHBUTTON      "Appl rules",IDC_FW_APPRULES,244,50,49,14
+    LTEXT           "Open port list:",IDC_STATIC,188,71,44,8
+    LISTBOX         IDC_OpenPortList,185,81,308,95,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Update",IDC_UpdateOpenPortList,500,162,37,14
+    LTEXT           "Open connection list:",IDC_STATIC,188,179,68,8
+    LISTBOX         IDC_OpenConnectionList,185,189,307,52,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Break",IDC_BreakConnection,500,210,37,14
+    PUSHBUTTON      "Update",IDC_UpdateOpenConnectionList,500,228,37,14
+    GROUPBOX        "Stealth",IDC_STATIC,4,252,171,34
+    PUSHBUTTON      "Start",IDC_STM_START,10,264,37,14
+    PUSHBUTTON      "Stop",IDC_STM_STOP,50,264,37,14
+    PUSHBUTTON      "Pause",IDC_STM_Pause,92,264,37,14
+    PUSHBUTTON      "Resume",IDC_STM_Resume,132,264,37,14
+    GROUPBOX        "Redirector",IDC_STATIC,177,252,365,35
+    PUSHBUTTON      "Start",IDC_CR_START,186,264,37,14
+    PUSHBUTTON      "Stop",IDC_CR_STOP,226,264,37,14
+    PUSHBUTTON      "Pause",IDC_CR_Pause,266,264,37,14
+    PUSHBUTTON      "Resume",IDC_CR_Resume,306,264,37,14
+    LTEXT           "Port",IDC_STATIC,436,267,16,8
+    EDITTEXT        IDC_CR_CONSOLE_PORT,454,265,36,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Console...",IDC_CR_Console,497,264,39,14
+    LTEXT           "Events:",IDC_STATIC,7,289,25,8
+    LISTBOX         IDC_ATTACKLIST,4,299,490,48,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | LBS_NOSEL | NOT WS_BORDER | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Clear",IDC_Clear,500,333,37,14
+    LTEXT           "Trace:",IDC_STATIC,7,349,22,8
+    LISTBOX         IDC_TRACELOG,4,358,489,33,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | LBS_NOSEL | NOT WS_BORDER | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Clear",IDC_Clear2,500,377,37,14
+    LTEXT           "",IDC_STATIC,3,398,519,1,SS_SUNKEN
+    LTEXT           "Result:",IDC_STATIC,7,405,23,8
+    EDITTEXT        IDC_Result,32,403,74,12,ES_AUTOHSCROLL | WS_DISABLED
+    DEFPUSHBUTTON   "Close",IDOK,491,403,50,14
+    CONTROL         "Slider1",IDC_FWLEVEL,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    TBS_TOP | WS_TABSTOP,356,56,118,20
+    LTEXT           "Block all\tAsk\t       Allow All",IDC_STATIC,355,47,123,
+                    8
+    PUSHBUTTON      "Banned",IDC_GetBannedList,19,224,34,14
+    PUSHBUTTON      "Host Stats",IDC_HOST_STAT,299,50,50,14
+    PUSHBUTTON      "List",IDC_ConnList,500,189,37,14
+    PUSHBUTTON      "5 sec...",IDC_CR_Watchdog,346,264,37,14
+    PUSHBUTTON      "excludes",IDC_CR_Watchdog2,386,264,37,14
+    PUSHBUTTON      "STM",IDC_StmChange,500,36,37,14
+END
+
+IDD_PACKETRULES DIALOGEX 0, 0, 186, 182
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Packet Rules"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST2,5,7,123,139,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | 
+                    WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Add",IDC_AddPacketRule,137,7,42,14
+    PUSHBUTTON      "Edit",IDC_EditPacketRule,137,25,42,14
+    PUSHBUTTON      "Delete",IDC_DeletePacketRule,137,43,42,14
+    PUSHBUTTON      "Default",IDC_RestorePacketRule,137,132,42,14
+    LTEXT           "",IDC_STATIC,2,153,181,1,SS_SUNKEN
+    DEFPUSHBUTTON   "OK",IDOK,77,161,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,132,161,50,14
+END
+
+IDD_PACKETRULE DIALOGEX 0, 0, 245, 227
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Packet Rule"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,6,5,36,8
+    EDITTEXT        IDC_PacketRuleName,5,14,233,12,ES_AUTOHSCROLL
+    LTEXT           "Protocol:",IDC_STATIC,5,30,36,8
+    EDITTEXT        IDC_ProtoPacket,5,40,27,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "ICMP T/C:",IDC_STATIC,5,56,35,8
+    EDITTEXT        IDC_ProtoPacket3,5,65,19,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_ProtoPacket2,28,65,19,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Direction:",IDC_STATIC,61,30,36,8
+    CONTROL         "Incoming",IDC_DirIncomingPacket,"Button",
+                    BS_AUTORADIOBUTTON,61,40,45,10
+    CONTROL         "Outgoing",IDC_DirOutgoingPacket,"Button",
+                    BS_AUTORADIOBUTTON,61,51,45,10
+    CONTROL         "Both",IDC_DirBothPacket,"Button",BS_AUTORADIOBUTTON,61,
+                    62,31,10
+    CONTROL         "Block",IDC_BlockPacketRule,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,155,40,34,10
+    CONTROL         "Notify",IDC_NotifyPacket,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,155,51,34,10
+    CONTROL         "Log",IDC_LogPacket,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,155,62,28,10
+    CONTROL         "Enable",IDC_EnablePacket,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,193,62,38,10
+    LTEXT           "Local Addresses:",IDC_STATIC,5,82,55,8
+    LISTBOX         IDC_LocalAddressList,5,91,77,46,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | 
+                    WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Add",IDC_AddLocalAddress,87,91,29,12
+    PUSHBUTTON      "Edit",IDC_EditLocalAddress,87,107,29,12
+    PUSHBUTTON      "Delete",IDC_DeleteLocalAddress,87,123,29,12
+    LTEXT           "Remote Addresses:",IDC_STATIC,128,82,62,8
+    LISTBOX         IDC_RemoteAddressList,128,91,77,46,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | 
+                    WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Add",IDC_AddRemoteAddress,210,91,29,12
+    PUSHBUTTON      "Edit",IDC_EditRemoteAddress,210,107,29,12
+    PUSHBUTTON      "Delete",IDC_DeleteRemoteAddress,210,123,29,12
+    LTEXT           "TCP/UDP Local Ports:",IDC_STATIC,5,142,81,8
+    LISTBOX         IDC_LocalPortList,5,151,77,46,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | 
+                    WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Add",IDC_AddLocalPort,87,151,29,12
+    PUSHBUTTON      "Edit",IDC_EditLocalPort,87,167,29,12
+    PUSHBUTTON      "Delete",IDC_DeleteLocalPort,87,183,29,12
+    LTEXT           "TCP/UDP Remote Ports:",IDC_STATIC,128,142,81,8
+    LISTBOX         IDC_RemotePortList,128,151,77,46,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | 
+                    WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Add",IDC_AddRemotePort,210,151,29,12
+    PUSHBUTTON      "Edit",IDC_EditRemotePort,210,167,29,12
+    PUSHBUTTON      "Delete",IDC_DeleteRemotePort,210,183,29,12
+    LTEXT           "",IDC_STATIC,2,202,240,1,SS_SUNKEN
+    DEFPUSHBUTTON   "OK",IDOK,133,208,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,189,208,50,14
+    CONTROL         "Incoming",IDC_DirIncomingStream,"Button",
+                    BS_AUTORADIOBUTTON,108,40,45,10
+    CONTROL         "Outgoing",IDC_DirOutgoingStream,"Button",
+                    BS_AUTORADIOBUTTON,108,51,45,10
+    CONTROL         "Both",IDC_DirBothStream,"Button",BS_AUTORADIOBUTTON,108,
+                    62,31,10
+    LTEXT           "Stream:",IDC_STATIC,107,30,55,8
+    PUSHBUTTON      "&Times",IDC_Times,200,30,38,14
+END
+
+IDD_PORT DIALOG DISCARDABLE  0, 0, 122, 62
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Port"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Single",IDC_SinglePort,"Button",BS_AUTORADIOBUTTON,7,8,
+                    35,8
+    EDITTEXT        IDC_SingleValue,52,6,27,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Range",IDC_PortRange,"Button",BS_AUTORADIOBUTTON,7,24,
+                    37,8
+    EDITTEXT        IDC_RangeLoValue,52,22,27,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "-",IDC_STATIC,82,23,8,8
+    EDITTEXT        IDC_RangeHiValue,88,22,27,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "",IDC_STATIC,2,39,117,1,SS_SUNKEN
+    DEFPUSHBUTTON   "OK",IDOK,53,44,29,12
+    PUSHBUTTON      "Cancel",IDCANCEL,86,44,29,12
+END
+
+IDD_ADDRESSLIST DIALOGEX 0, 0, 135, 86
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Address List"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_AddressList,5,7,72,46,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | 
+                    WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Add",IDC_AddAddress,86,7,42,14
+    PUSHBUTTON      "Delete",IDC_DeleteAddress,86,25,42,14
+    LTEXT           "",IDC_STATIC,2,59,128,1,SS_SUNKEN
+    DEFPUSHBUTTON   "OK",IDOK,22,66,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,77,66,50,14
+END
+
+IDD_ADDRESS DIALOG DISCARDABLE  0, 0, 200, 131
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Address"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,6,3,21,8
+    EDITTEXT        IDC_Name,5,12,188,12,ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "Host",IDC_HostAddress,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,5,32,39,10
+    LISTBOX         IDC_HostIPList,49,31,65,37,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_HostIPListAdd,127,31,30,12
+    PUSHBUTTON      "Clear",IDC_HostIPListClear,127,47,30,12
+    CONTROL         "Range",IDC_AddressRange,"Button",BS_AUTORADIOBUTTON,5,
+                    74,39,10
+    CONTROL         "IPAddress1",IDC_RangeFrom,"SysIPAddress32",WS_TABSTOP,
+                    49,73,65,12
+    LTEXT           "-",IDC_STATIC,119,75,8,8,NOT WS_GROUP
+    CONTROL         "IPAddress1",IDC_RangeTo,"SysIPAddress32",WS_TABSTOP,127,
+                    73,65,12
+    CONTROL         "Subnet",IDC_AddressSubnet,"Button",BS_AUTORADIOBUTTON,5,
+                    90,39,10
+    CONTROL         "IPAddress1",IDC_SubnetIP,"SysIPAddress32",WS_TABSTOP,49,
+                    89,65,12
+    LTEXT           "/",IDC_STATIC,119,91,8,8,NOT WS_GROUP
+    CONTROL         "IPAddress1",IDC_SubnetMask,"SysIPAddress32",WS_TABSTOP,
+                    127,89,65,12
+    LTEXT           "",IDC_STATIC,2,107,194,1,SS_SUNKEN
+    DEFPUSHBUTTON   "OK",IDOK,127,113,30,12
+    PUSHBUTTON      "Cancel",IDCANCEL,162,113,30,12
+END
+
+IDD_NEWADDRESS DIALOG DISCARDABLE  0, 0, 122, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Host Address"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Host IP or Name:",IDC_STATIC,6,3,55,8
+    EDITTEXT        IDC_HostIPorName,5,13,110,12,ES_AUTOHSCROLL
+    LTEXT           "",IDC_STATIC,2,33,117,1,SS_SUNKEN
+    DEFPUSHBUTTON   "OK",IDOK,53,38,29,12
+    PUSHBUTTON      "Cancel",IDCANCEL,86,38,29,12
+END
+
+IDD_APPRULES DIALOGEX 0, 0, 186, 196
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Application Rules"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_RULELIST,5,7,123,139,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | 
+                    WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Add",IDC_AddApplicationRule,137,7,42,14
+    PUSHBUTTON      "Edit",IDC_EditApplicationRule,137,25,42,14
+    PUSHBUTTON      "Delete",IDC_DeleteApplicationRule,137,43,42,14
+    LTEXT           "",IDC_STATIC,2,168,181,1,SS_SUNKEN
+    DEFPUSHBUTTON   "OK",IDOK,77,176,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,132,176,50,14
+    PUSHBUTTON      "Default",IDC_RestoreApplicationRule,137,132,42,14
+    CONTROL         "Recalc MD5 Hash of Applications",IDC_RecalcHash,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,6,154,122,8
+END
+
+IDD_APPRULE DIALOGEX 0, 0, 238, 202
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Application Rule"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,6,20,36,8
+    EDITTEXT        IDC_AppRuleName,7,28,181,12,ES_AUTOHSCROLL
+    LTEXT           "Application Path:",IDC_STATIC,6,45,54,8
+    EDITTEXT        IDC_AppPath,7,54,162,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BrowseApp,173,54,15,12
+    CONTROL         "Block",IDC_BlockAppRule,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,197,28,34,10
+    CONTROL         "Notify",IDC_NotifyApp,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,197,42,34,10
+    CONTROL         "Log",IDC_LogApp,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    197,57,34,10
+    CONTROL         "Enable",IDC_EnableApp,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,7,38,10
+    DEFPUSHBUTTON   "OK",IDOK,126,181,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,181,181,50,14
+    LISTBOX         IDC_ELTLIST,7,97,176,79,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | 
+                    WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Add",IDC_AddElement,189,97,42,14
+    PUSHBUTTON      "Edit",IDC_EditElement,189,115,42,14
+    PUSHBUTTON      "Delete",IDC_DeleteElement,189,158,42,14
+    EDITTEXT        IDC_CmdLine,7,79,162,12,ES_AUTOHSCROLL
+    CONTROL         "Command Line:",IDC_IsCmdLine,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,68,82,10
+    PUSHBUTTON      "&Times",IDC_Times,189,7,42,14
+END
+
+IDD_CR_CONSOLE DIALOG DISCARDABLE  0, 0, 476, 311
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Console"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,421,291,50,14
+    LTEXT           "",IDC_STATIC,3,286,469,1,SS_SUNKEN
+    EDITTEXT        IDC_Console,4,9,467,272,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_WANTRETURN | WS_VSCROLL
+END
+
+IDD_APPRULEELT DIALOGEX 0, 0, 365, 142
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Application Rule Element"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Protocol:",IDC_STATIC,7,7,36,8
+    EDITTEXT        IDC_ProtoPacket,7,17,27,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Direction:",IDC_STATIC,63,7,36,8
+    CONTROL         "Incoming",IDC_DirIncomingPacket,"Button",
+                    BS_AUTORADIOBUTTON,63,17,45,10
+    CONTROL         "Outgoing",IDC_DirOutgoingPacket,"Button",
+                    BS_AUTORADIOBUTTON,63,28,45,10
+    CONTROL         "Both",IDC_DirBothPacket,"Button",BS_AUTORADIOBUTTON,63,
+                    39,31,10
+    LTEXT           "Stream:",IDC_STATIC,109,7,55,8
+    CONTROL         "Incoming",IDC_DirIncomingStream,"Button",
+                    BS_AUTORADIOBUTTON,110,17,45,10
+    CONTROL         "Outgoing",IDC_DirOutgoingStream,"Button",
+                    BS_AUTORADIOBUTTON,110,28,45,10
+    CONTROL         "Both",IDC_DirBothStream,"Button",BS_AUTORADIOBUTTON,110,
+                    39,31,10
+    CONTROL         "Enable",IDC_Enable,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,320,7,38,10
+    LTEXT           "Remote Addresses:",IDC_STATIC,7,55,62,8
+    LISTBOX         IDC_RemoteAddressList,7,65,77,44,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | 
+                    WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Add",IDC_AddRemoteAddress,89,65,29,12
+    PUSHBUTTON      "Edit",IDC_EditRemoteAddress,89,81,29,12
+    PUSHBUTTON      "Delete",IDC_DeleteRemoteAddress,89,97,29,12
+    LTEXT           "Remote Ports:",IDC_STATIC,129,57,46,8
+    LISTBOX         IDC_RemotePortList,129,65,77,44,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | 
+                    WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Add",IDC_AddRemotePort,211,65,29,12
+    PUSHBUTTON      "Edit",IDC_EditRemotePort,211,81,29,12
+    PUSHBUTTON      "Delete",IDC_DeleteRemotePort,211,97,29,12
+    LTEXT           "Local Ports:",IDC_STATIC,249,57,38,8
+    LISTBOX         IDC_LocalPortList,249,65,77,44,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | 
+                    WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Add",IDC_AddLocalPort,331,65,29,12
+    PUSHBUTTON      "Edit",IDC_EditLocalPort,331,81,29,12
+    PUSHBUTTON      "Delete",IDC_DeleteLocalPort,331,97,29,12
+    LTEXT           "",IDC_STATIC,7,116,351,1,SS_SUNKEN
+    DEFPUSHBUTTON   "OK",IDOK,253,121,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,308,121,50,14
+END
+
+IDD_TIMES DIALOG DISCARDABLE  0, 0, 186, 173
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Rule Times"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,73,152,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,152,50,14
+    LISTBOX         IDC_TimesList,7,7,124,136,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "",IDC_STATIC,2,146,181,1,SS_SUNKEN
+    PUSHBUTTON      "Add",IDC_AddTime,137,7,42,14
+    PUSHBUTTON      "Edit",IDC_EditTime,137,25,42,14
+    PUSHBUTTON      "Delete",IDC_DeleteTime,137,43,42,14
+END
+
+IDD_TIME DIALOG DISCARDABLE  0, 0, 186, 174
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Rule Time"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,73,152,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,152,50,14
+    LISTBOX         IDC_TimeList,7,7,124,136,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_AddTimeElt,137,7,42,14
+    PUSHBUTTON      "Edit",IDC_EditTimeElt,137,25,42,14
+    PUSHBUTTON      "Delete",IDC_DeleteTimeElt,137,43,42,14
+    LTEXT           "",IDC_STATIC,2,146,181,1,SS_SUNKEN
+END
+
+IDD_TIMEELT DIALOG DISCARDABLE  0, 0, 186, 119
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Time Element"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Seconds",IDC_TimeSeconds,"Button",BS_AUTORADIOBUTTON,7,
+                    7,44,10
+    CONTROL         "Seconds of the day",IDC_TimeDaySeconds,"Button",
+                    BS_AUTORADIOBUTTON,7,16,77,10
+    CONTROL         "Minutes",IDC_TimeMinutes,"Button",BS_AUTORADIOBUTTON,7,
+                    26,41,8
+    CONTROL         "Hours",IDC_TimeHours,"Button",BS_AUTORADIOBUTTON,7,35,
+                    35,10
+    CONTROL         "Days",IDC_TimeDays,"Button",BS_AUTORADIOBUTTON,7,45,32,
+                    10
+    CONTROL         "Days of the week",IDC_TimeWeekDays,"Button",
+                    BS_AUTORADIOBUTTON,7,54,71,10
+    CONTROL         "Months",IDC_TimeMonths,"Button",BS_AUTORADIOBUTTON,7,63,
+                    71,10
+    CONTROL         "Years",IDC_TimeYears,"Button",BS_AUTORADIOBUTTON,7,72,
+                    70,10
+    LTEXT           "From",IDC_STATIC,90,7,32,8
+    EDITTEXT        IDC_TimeMin,90,15,40,14,ES_AUTOHSCROLL
+    LTEXT           "To",IDC_STATIC,139,7,32,8
+    EDITTEXT        IDC_TimeMax,139,15,40,14,ES_AUTOHSCROLL
+    LTEXT           "",IDC_STATIC,2,92,181,1,SS_SUNKEN
+    DEFPUSHBUTTON   "OK",IDOK,75,98,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,98,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_CKAHUMTESTUI2_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 542
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 418
+    END
+
+    IDD_PACKETRULES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_PACKETRULE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 238
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 220
+    END
+
+    IDD_PORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 115
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_ADDRESSLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 128
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_ADDRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 124
+    END
+
+    IDD_NEWADDRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 115
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_APPRULES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_APPRULE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 231
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_CR_CONSOLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 469
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 304
+    END
+
+    IDD_APPRULEELT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 358
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 135
+    END
+
+    IDD_TIMES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_TIME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_TIMEELT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\CKAHUMTESTUI2.ico"
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "CKAHUMTESTUI2 MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "CKAHUMTESTUI2\0"
+            VALUE "LegalCopyright", "Copyright (C) 2004\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "CKAHUMTESTUI2.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "CKAHUMTESTUI2 Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+//IDR_MANIFEST            24      DISCARDABLE     "res\\ckahumtestui2.manifest"
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\CKAHUMTESTUI2.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

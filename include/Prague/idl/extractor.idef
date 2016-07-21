@@ -1,0 +1,48 @@
+forward interface Extractor;
+typedef Extractor* hEXTRACTOR;
+
+
+
+[
+  mnemonic(IID_EXTRACTOR)
+  id(63001)
+  c_type_name(hEXTRACTOR)
+  comment_ex("Интерфейс Extractor предназначен для распаковки некоего входного потока данных (объект типа hIO) в выходной поток. Содержит всего одну функцию:
+    tERROR Extractor_Extract(hi_Extractor _this, hOBJECT* result, hOBJECT hInputIO);
+    Возвращаемое значение - объект с интерфейсом hIO с распакованными данными. Входной параметр - объект с интерфейсом hIO с запакованными данными. Все дополнительные свойства являются частными свойствами конкретной реализации.")
+]
+interface Extractor { // Интерфейс распаковки
+
+  // ------------------------------------
+
+    [
+      id(130)
+      comment_ex("Interface version")
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      id(131)
+      comment_ex("Interface comment")
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+
+    [
+      id(4096)
+      comment_ex("Ожидаемый размер выходного потока. Если выставлен в 0, то распаковка будет производится до ошибки или до окончания потока. Если выставлено некое значение, то любое превышение размера распакованного потока над этим значением считается ошибкой. ")
+    ]
+    prop tDWORD ppEXTRACT_OUTPUTSIZE; // Размер распакованного потока
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Распаковывает входной поток (задан входным параметром hInputIO) в выходной поток. ")
+    ]
+    method tERROR Extract( // Распаковать поток hInputIO в result
+      hOBJECT* result,
+      hOBJECT hInputIO // объект IO с упакованными данными
+    );
+
+}
+

@@ -1,0 +1,5 @@
+// ***** AdvWare.ToolBar.GameAbyss.a *****
+begin
+ AddEvAlarmByCLSID('27794310-E494-40CA-B5A3-024AEC4F64DA',AScriptName,'digchip.dll');
+ AddEvAlarmByCLSID('AAAE1C1A-89F7-4AF6-ABD1-F8FBCFA47408',AScriptName,'digchip.dll');
+end.

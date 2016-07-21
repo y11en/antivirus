@@ -1,0 +1,17 @@
+[explicit_handle]
+interface rpc_task
+{
+
+}
+
+[explicit_handle]
+interface rpc_mctask
+{
+
+}
+
+[explicit_handle]
+interface rpc_processmonitor
+{
+
+}

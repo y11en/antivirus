@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioProject ProjectType="Visual C++" Version="8.00" Name="librules" SccProjectName="Perforce Project" SccProvider="MSSCCI:Perforce SCM">
+	<Platforms>
+		<Platform Name="Win32"/>
+		<Platform Name="x64"/></Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="Debug|Win32" OutputDirectory="..\..\..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\MailCommon\Filters\Spamtest\kisaspam\CLIENT-FILTER\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TypeLibraryName="$(OutDir)\$(TargetName).tlb"/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="../..,../../STL/stlport,../../_include,../../Filtration/API,.,../include" PreprocessorDefinitions="_DEBUG;WIN32;_LIB;KASP;WITHOUT_PCRE;_EXPAT_EMBED;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" MinimalRebuild="true" BasicRuntimeChecks="3" RuntimeLibrary="3" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="4" CompileAs="0" UsePrecompiledHeader="2"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1033"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Release|Win32" OutputDirectory="..\..\..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\MailCommon\Filters\Spamtest\kisaspam\CLIENT-FILTER\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TypeLibraryName="$(OutDir)\$(TargetName).tlb"/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" AdditionalIncludeDirectories="../..,../../STL/stlport,../../_include,../../Filtration/API,.,../include" PreprocessorDefinitions="NDEBUG;WIN32;_LIB;KASP;WITHOUT_PCRE;_EXPAT_EMBED;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T" StringPooling="true" RuntimeLibrary="2" EnableFunctionLevelLinking="true" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1033"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Debug|x64" OutputDirectory="..\..\..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\MailCommon\Filters\Spamtest\kisaspam\CLIENT-FILTER\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TypeLibraryName="$(OutDir)\$(TargetName).tlb" TargetEnvironment="3"/>
+			<Tool Name="VCCLCompilerTool" Optimization="0" AdditionalIncludeDirectories="../..,../../STL/stlport,../../_include,../../Filtration/API,.,../include" PreprocessorDefinitions="_DEBUG;WIN32;_LIB;KASP;WITHOUT_PCRE;_EXPAT_EMBED;_CRT_SECURE_NO_DEPRECATE" MinimalRebuild="true" BasicRuntimeChecks="3" RuntimeLibrary="3" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="_DEBUG" Culture="1033"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration><Configuration Name="Release|x64" OutputDirectory="..\..\..\..\..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\..\..\..\..\temp_$(PlatformName)\$(ConfigurationName)\PPP\MailCommon\Filters\Spamtest\kisaspam\CLIENT-FILTER\$(ProjectName)" ConfigurationType="4" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false" CharacterSet="2">
+			<Tool Name="VCPreBuildEventTool"/>
+			<Tool Name="VCXMLDataGeneratorTool"/>
+			<Tool Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool Name="VCMIDLTool" TypeLibraryName="$(OutDir)\$(TargetName).tlb" TargetEnvironment="3"/>
+			<Tool Name="VCCLCompilerTool" Optimization="2" InlineFunctionExpansion="1" AdditionalIncludeDirectories="../..,../../STL/stlport,../../_include,../../Filtration/API,.,../include" PreprocessorDefinitions="NDEBUG;WIN32;_LIB;KASP;WITHOUT_PCRE;_EXPAT_EMBED;_CRT_SECURE_NO_DEPRECATE" StringPooling="true" RuntimeLibrary="2" EnableFunctionLevelLinking="true" WarningLevel="3" SuppressStartupBanner="true" DebugInformationFormat="3" CompileAs="0"/>
+			<Tool Name="VCManagedResourceCompilerTool"/>
+			<Tool Name="VCResourceCompilerTool" PreprocessorDefinitions="NDEBUG" Culture="1033"/>
+			<Tool Name="VCPreLinkEventTool"/>
+			<Tool Name="VCLibrarianTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCALinkTool"/>
+			<Tool Name="VCXDCMakeTool"/>
+			<Tool Name="VCBscMakeTool" SuppressStartupBanner="true"/>
+			<Tool Name="VCFxCopTool"/>
+			<Tool Name="VCPostBuildEventTool"/>
+		</Configuration></Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter Name="Source Files" Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
+			<File RelativePath="actions.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="envelope.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="ExpatUtilsExt.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="interpreter.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="logger.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="MainInterpreter.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="parse.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="profile.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="profile_db.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="ProfileCompile.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="samples.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="XmlFilesPool.cpp">
+				<FileConfiguration Name="Debug|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+		</Filter>
+		<Filter Name="Header Files" Filter="h;hpp;hxx;hm;inl">
+			<File RelativePath="actions.h">
+			</File>
+			<File RelativePath="commhdr.h">
+			</File>
+			<File RelativePath="envelope.h">
+			</File>
+			<File RelativePath="ExpatUtilsExt.h">
+			</File>
+			<File RelativePath="interpreter.h">
+			</File>
+			<File RelativePath="MainInterpreter.h">
+			</File>
+			<File RelativePath="parse.h">
+			</File>
+			<File RelativePath="profile.h">
+			</File>
+			<File RelativePath="profile_db.h">
+			</File>
+			<File RelativePath="ProfileCompile.h">
+			</File>
+			<File RelativePath="XmlFilesPool.h">
+			</File>
+		</Filter>
+		<Filter Name="system">
+			<File RelativePath="..\..\smtp-filter\adc\adc.link.h">
+			</File>
+			<File RelativePath="C:\!Studio6\SDK\Include\BaseTsd.h">
+			</File>
+			<File RelativePath="..\..\gnu\libnet\cdefs.h">
+			</File>
+			<File RelativePath="..\..\gnu\regex\sys\cdefs.h">
+			</File>
+			<File RelativePath="..\..\gnu\db-1.85\include\cdefs.h">
+			</File>
+			<File RelativePath="..\..\ZTools\ExpatUtils\ExpatUtils.link.h">
+			</File>
+			<File RelativePath="C:\!Studio6\SDK\Include\Guiddef.h">
+			</File>
+			<File RelativePath="..\..\_include\lib.link.h">
+			</File>
+			<File RelativePath="..\..\gnu\libnet.link.h">
+			</File>
+			<File RelativePath="..\..\_include\nix_types.h">
+			</File>
+			<File RelativePath="C:\!Studio6\SDK\Include\PropIdl.h">
+			</File>
+			<File RelativePath="C:\!Studio6\SDK\Include\Reason.h">
+			</File>
+			<File RelativePath="C:\!Studio6\SDK\Include\StrAlign.h">
+			</File>
+			<File RelativePath="C:\!Studio6\SDK\Include\Tvout.h">
+			</File>
+			<File RelativePath="C:\!Studio6\SDK\Include\WinEFS.h">
+			</File>
+			<File RelativePath="..\..\_include\wintypes.h">
+			</File>
+		</Filter>
+		<Filter Name="STL">
+			<File RelativePath="..\..\STL\stlport\stl\_algobase.c">
+				<FileConfiguration Name="Debug|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="..\..\STL\stlport\stl\_algobase.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_alloc.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_auto_ptr.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_bvector.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_config.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_config_compat.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_config_compat_post.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_construct.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_ctraits_fns.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_ctype.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_cwchar.h">
+			</File>
+			<File RelativePath="..\..\gnu\_db1.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_deque.c">
+				<FileConfiguration Name="Debug|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="..\..\STL\stlport\stl\_deque.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\config\_epilog.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_epilog.h">
+			</File>
+			<File RelativePath="..\..\gnu\_expat.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_function.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_function_adaptors.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_function_base.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_hash_fun.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_iosfwd.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_iterator.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_iterator_base.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_iterator_old.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_locale.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_map.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\config\_msvc_warnings_off.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_new.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_pair.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\config\_prolog.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_prolog.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_range_errors.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_raw_storage_iter.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_relops_cont.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_site_config.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_stack.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_string.c">
+				<FileConfiguration Name="Debug|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="..\..\STL\stlport\stl\_string.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_string_fwd.c">
+				<FileConfiguration Name="Debug|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="..\..\STL\stlport\stl\_string_fwd.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_string_hash.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_string_io.c">
+				<FileConfiguration Name="Debug|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="..\..\STL\stlport\stl\_string_io.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_tempbuf.c">
+				<FileConfiguration Name="Debug|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="..\..\STL\stlport\stl\_tempbuf.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_threads.c">
+				<FileConfiguration Name="Debug|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="..\..\STL\stlport\stl\_threads.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_tree.c">
+				<FileConfiguration Name="Debug|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="..\..\STL\stlport\stl\_tree.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_uninitialized.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\_vector.c">
+				<FileConfiguration Name="Debug|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Release|Win32" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions=""/>
+				</FileConfiguration>
+				<FileConfiguration Name="Debug|x64" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration><FileConfiguration Name="Release|x64" ExcludedFromBuild="true">
+					<Tool Name="VCCLCompilerTool" AdditionalIncludeDirectories="" PreprocessorDefinitions="" DebugInformationFormat="3"/>
+				</FileConfiguration></File>
+			<File RelativePath="..\..\STL\stlport\stl\_vector.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\c_locale.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\char_traits.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\config\stl_confix.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\config\stl_msvc.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\config\stl_select_lib.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl_user_config.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\config\stlcomp.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\stl\type_traits.h">
+			</File>
+			<File RelativePath="..\..\STL\stlport\config\vc_select_lib.h">
+			</File>
+		</Filter>
+		<Filter Name="SpamFilter">
+			<File RelativePath="..\SpamTest\CFilterDll.h">
+			</File>
+			<File RelativePath="..\include\Critsect.h">
+			</File>
+			<File RelativePath="..\SpamTest\CSigDB.h">
+			</File>
+			<File RelativePath="..\PluginOLOE\idStr.h">
+			</File>
+			<File RelativePath="..\include\LogFile.h">
+			</File>
+			<File RelativePath="..\include\Progress.h">
+			</File>
+			<File RelativePath="..\include\progress.rh">
+			</File>
+			<File RelativePath="..\include\SpamFilter.h">
+			</File>
+			<File RelativePath="..\SpamTest\SpamTest.h">
+			</File>
+			<File RelativePath="..\include\SpamTestCFG.h">
+			</File>
+		</Filter>
+		<Filter Name="CFLib">
+			<File RelativePath="..\..\Filtration\API\categories.h">
+			</File>
+			<File RelativePath="..\..\Filtration\API\cfdata.h">
+			</File>
+			<File RelativePath="..\..\Filtration\patterns\clingproc.h">
+			</File>
+			<File RelativePath="..\..\_include\language.h">
+			</File>
+			<File RelativePath="..\..\Filtration\letters\letters.h">
+			</File>
+			<File RelativePath="..\..\libmorph\LexID.h">
+			</File>
+			<File RelativePath="..\..\Filtration\API\message.h">
+			</File>
+			<File RelativePath="..\..\MIMEParser\MIMEParser.hpp">
+			</File>
+			<File RelativePath="..\..\libmorph\Morph.h">
+			</File>
+			<File RelativePath="..\..\Filtration\API\relevant.h">
+			</File>
+			<File RelativePath="samples.h">
+			</File>
+			<File RelativePath="..\..\Filtration\signatures\sigdb.h">
+			</File>
+			<File RelativePath="..\..\Filtration\stopdict\stopdict.h">
+			</File>
+		</Filter>
+		<Filter Name="XML">
+			<File RelativePath="..\..\gnu\expat-1.95.2\lib\expat.h">
+			</File>
+			<File RelativePath="..\..\ZTools\ExpatUtils\ExpatUtils.h">
+			</File>
+			<File RelativePath="..\..\ZTools\ExpatUtils\XMLStruct.h">
+			</File>
+			<File RelativePath="..\..\ZTools\ExpatUtils\XMLStructDefinition.h">
+			</File>
+			<File RelativePath="..\..\ZTools\ExpatUtils\XMLTag.h">
+			</File>
+		</Filter>
+		<Filter Name="Profiles">
+			<File RelativePath="..\..\smtp-filter\adc\adc.h">
+			</File>
+			<File RelativePath="..\..\smtp-filter\common\config.h">
+			</File>
+			<File RelativePath="..\..\smtp-filter\libgsg2\gsg.h">
+			</File>
+			<File RelativePath="..\..\smtp-filter\filter-config\xmlfiles\keywords.h">
+			</File>
+			<File RelativePath="..\..\smtp-filter\libsigs\libsigs.h">
+			</File>
+			<File RelativePath="..\..\smtp-filter\paths\paths.h">
+			</File>
+			<File RelativePath="..\..\smtp-filter\contrib\libpatricia\patricia.h">
+			</File>
+			<File RelativePath="..\..\gnu\regex\regex.h">
+			</File>
+			<File RelativePath="..\..\smtp-filter\filter-config\xmlfiles\XMLFiles.h">
+			</File>
+		</Filter>
+		<Filter Name="Utils">
+			<File RelativePath="..\..\_include\CodePages.h">
+			</File>
+			<File RelativePath="..\..\_include\Cp2Uni.h">
+			</File>
+			<File RelativePath="..\..\gnu\db-1.85\include\db.h">
+			</File>
+			<File RelativePath="..\..\ZTools\ZUtils\EString.h">
+			</File>
+			<File RelativePath="..\..\gnu\md5a\md5a.h">
+			</File>
+			<File RelativePath="..\..\gnu\libnet\nameser.h">
+			</File>
+			<File RelativePath="..\..\gnu\libnet\nameser_compat.h">
+			</File>
+		</Filter>
+		<Filter Name="smtp-filter-common" Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
+			<File RelativePath="..\..\smtp-filter\common\ip_extractor.h">
+			</File>
+			<File RelativePath="..\..\smtp-filter\common\list_db.h">
+			</File>
+			<File RelativePath="..\..\smtp-filter\common\logger.h">
+			</File>
+			<File RelativePath="..\..\smtp-filter\common\merge.h">
+			</File>
+		</Filter>
+	</Files>
+</VisualStudioProject>

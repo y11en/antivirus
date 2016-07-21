@@ -1,0 +1,68 @@
+#include "avp_dos.h"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Localisation BINARY
+//
+
+//"                ЂЃ‚ѓ„…†‡€‰Љ‹ЊЌЋЏђ‘’“”•–—™љ›њќћџ ЎўЈ¤Ґ¦§Ё©Є«¬­®Їабвгдежзийклмноп"
+IDR_LOCBINARY RCDATA DISCARDABLE
+BEGIN
+    0x0400, 0x2020, 0x2020, 0x2020, 0x2020, 0x2020, 0x2020, 0x2020, 0x2020,
+    0x8180, 0x8382, 0x8584, 0x8786, 0x8988, 0x8b8a, 0x8d8c, 0x8f8e, 0x9190,
+    0x9392, 0x9594, 0x9796, 0x9998, 0x9b9a, 0x9d9c, 0x9f9e, 0xa1a0, 0xa3a2,
+    0xa5a4, 0xa7a6, 0xa9a8, 0xabaa, 0xadac, 0xafae, 0xe1e0, 0xe3e2, 0xe5e4,
+    0xe7e6, 0xe9e8, 0xebea, 0xedec, 0xefee
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_NOTHING_FILES_L     "Не заданы объекты для сканирования.\n Пожалуйста, отметьте cтроки ""Файлы"" и/или ""Сектора"" в *.prf файле."
+    IDS_NOTHING_LOCATION_L  "Не задана область сканирования.\nПожалуйста, укажите по крайней мере одну директорию\n в *.prf файле или в командной строке."
+    IDS_REPORT_BANNER_L     "   AVPDOS32 стартовал %02d-%02d-%02d %02d:%02d:%02d\r\n\r\n"
+    IDS_DISINFECT_D_L       "&Лечить"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_LAST_UPDATE_L       " Последнее обновление: %02d.%02d.%04d, %d вирусов."
+    IDS_EXPIR_ALARM_L       "Ваша лицензия на AVP закончится %d/%d/%d"
+    IDS_EXPIRIED_L          "Ваша лицензия на AVP закончилась %d/%d/%d"
+    IDS_PRESS_KEY_L         "Нажмите любую клавишу\n"
+    IDS_FOLDER_CREATE       "Директория для инфицированных (подозрительных) обьектов не существует.\nСоздать директорию?"
+    IDS_FOLDER_NOT_CREATE_L "Директория для инфицированных (подозрительных) обьектов не была создана."
+    IDS_FOLDER_COPY_L       "Копировать инфицированные (подозрительные) обьекты в текущую директорию?"
+    IDS_FOLDER_NOT_COPY_L   "Инфицированные (подозрительные) обьекты не были скопированы."
+    IDS_DISK_NOT_FOUND_L    "Диск для инфицированных (подозрительных) обьектов не существует."
+    ID_VIEW_LOG             "Файл отчета..."
+    ID_MENU_FILE            "&Файл"
+    ID_MENU_VIEWLOG         "&Файл отчета"
+    ID_MENU_SCAN            "&Пуск"
+    ID_MENU_SETTINGS        "&Настройки"
+    ID_SETTINGS_LOCATION_L  "&Область"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    ID_SETTINGS_OBJECTS_L   "О&бъекты"
+    ID_SETTINGS_ACTIONS_L   "&Действия"
+    ID_SETTINGS_OPTIONS_L   "&Параметры"
+    ID_SETTINGS_NEXT_L      "&Следующая закладка"
+    ID_SETTINGS_PREV_L      "П&редыдущая закладка"
+    ID_MENU_HELP            "?"
+    ID_EXCLIDE_FILES        "Исключить файлы"
+    ID_PROFILE_NAME         "&Имя файла настроек"
+    ID_LOC_FILE_NAME        "&Имя файла отчета"
+    ID_OPEN_FILE            "&Открыть"
+    ID_SAVE_FILE            "&Сохранить"
+    ID_ADD_DIRECTORY        "Добавить директорию в список"
+    ID_DIRECTORY_NAME       "Имя директории"
+    ID_DIRECTORY_TREE       "Дерево директорий"
+    ID_REVERT               "&Возврат"
+    ID_CANCEL               "Отменить"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_STARTSCAN           "Запуск сканера"
+END

@@ -1,0 +1,29 @@
+<UpdateFiles
+	UpdateDate="17112006 1953">
+	<FileDescription
+		ComponentID="AH"
+		UpdateType="base"
+		LocalPath="%BaseFolder%"
+		Filename="ids1.kdz"
+		FileSize="112879" />
+	<FileDescription
+		ComponentID="AH"
+		UpdateType="base"
+		LocalPath="%BaseFolder%"
+		Filename="ids2.kdz"
+		FileSize="99009" />
+	<FileDescription
+		ComponentID="AH"
+		UpdateType="base"
+		LocalPath="%BaseFolder%"
+		Filename="ids3.kdz"
+		FileSize="32125" />
+	<Registry
+		ComponentID="CORE"
+		UpdateType="REGISTRY"
+		LocalPath="%DSKM%"
+		Body="S0xyZwEHAABLTHN3AACtrQEAAAD8AwAAAQAAAAEAABRqAwABACAAlHTVnFHngd0uTEE4TnV7MIvBdLI81j85a8Zus9RXVBAgAPiT6xV8CUXEsHz3e2g8Tz5IocuXI+kGz2/2plzPyPNjIAA04Bnk/ZKo0H6JGLTuFXwE5uhqOn+zfmXmFHVXJhgtpgEAHgkHAAAAAQAACcTBFT8NCjs6MTBLN3UrczlGSi9NNGVWSkFHa1ltTHVUQW5NUldZRWxBc3FicjNwR2wrNTRtQzVQY2tsR01tWkd3SzNTc0xNUlhHSVd4MXUwK2pnUGl2Z3AwNWhobjU4RyUl"
+		Filename="ah-0607g.krg" />
+</UpdateFiles>
+;:10K6JpnOCxf653YYcF0fGezQ2MgGv3Wq9P/jGNwVpF3qDTmnh9gTf1i376QMJEGUF5j7n89RhmQnoHxh3Baae3Pc%%
+; 0XLSznpdI71fB300e7Uwj1mo+DeewXmDhMYZAHTZDC7mq+9Fs/pTOSRcLo­­

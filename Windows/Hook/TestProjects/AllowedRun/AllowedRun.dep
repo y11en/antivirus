@@ -1,0 +1,169 @@
+# Microsoft Developer Studio Generated Dependency File, included by AllowedRun.mak
+
+.\AllowedRun.cpp : \
+	"..\..\..\..\commonfiles\hook\avpgcom.h"\
+	"..\..\..\..\commonfiles\hook\fsdrvlib.h"\
+	"..\..\..\..\commonfiles\hook\funcs.h"\
+	"..\..\..\..\commonfiles\hook\hookspec.h"\
+	"..\..\..\..\commonfiles\hook\idriver.h"\
+	"..\..\..\..\commonfiles\stuff\layout.h"\
+	".\AllowedRun.h"\
+	".\AllowedRunDlg.h"\
+	".\DChanges.h"\
+	".\EvCache.h"\
+	".\FiltersArray.h"\
+	".\FiltersStorage.h"\
+	".\OwnTabCtrl.h"\
+	".\StdAfx.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\AllowedRun.rc : \
+	".\res\AllowedRun.ico"\
+	".\res\AllowedRun.rc2"\
+	
+
+.\AllowedRunDlg.cpp : \
+	"..\..\..\..\commonfiles\hook\avpgcom.h"\
+	"..\..\..\..\commonfiles\hook\fsdrvlib.h"\
+	"..\..\..\..\commonfiles\hook\funcs.h"\
+	"..\..\..\..\commonfiles\hook\hookspec.h"\
+	"..\..\..\..\commonfiles\hook\idriver.h"\
+	"..\..\..\..\commonfiles\stuff\layout.h"\
+	".\AllowedRun.h"\
+	".\AllowedRunDlg.h"\
+	".\DApplications.h"\
+	".\DFolders.h"\
+	".\EvCache.h"\
+	".\FiltersArray.h"\
+	".\FiltersStorage.h"\
+	".\OwnTabCtrl.h"\
+	".\StdAfx.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\DApplications.cpp : \
+	"..\..\..\..\commonfiles\hook\avpgcom.h"\
+	"..\..\..\..\commonfiles\hook\fsdrvlib.h"\
+	"..\..\..\..\commonfiles\hook\funcs.h"\
+	"..\..\..\..\commonfiles\hook\hookspec.h"\
+	"..\..\..\..\commonfiles\hook\idriver.h"\
+	"..\..\..\..\commonfiles\stuff\layout.h"\
+	".\AllowedRun.h"\
+	".\DApplications.h"\
+	".\EvCache.h"\
+	".\FiltersArray.h"\
+	".\FiltersStorage.h"\
+	".\StdAfx.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\DChanges.cpp : \
+	"..\..\..\..\commonfiles\hook\avpgcom.h"\
+	"..\..\..\..\commonfiles\hook\fsdrvlib.h"\
+	"..\..\..\..\commonfiles\hook\funcs.h"\
+	"..\..\..\..\commonfiles\hook\hookspec.h"\
+	"..\..\..\..\commonfiles\hook\idriver.h"\
+	"..\..\..\..\commonfiles\stuff\layout.h"\
+	".\AllowedRun.h"\
+	".\DChanges.h"\
+	".\EvCache.h"\
+	".\FiltersArray.h"\
+	".\FiltersStorage.h"\
+	".\StdAfx.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\DFolder.cpp : \
+	"..\..\..\..\commonfiles\hook\avpgcom.h"\
+	"..\..\..\..\commonfiles\hook\fsdrvlib.h"\
+	"..\..\..\..\commonfiles\hook\funcs.h"\
+	"..\..\..\..\commonfiles\hook\hookspec.h"\
+	"..\..\..\..\commonfiles\hook\idriver.h"\
+	"..\..\..\..\commonfiles\stuff\layout.h"\
+	".\AllowedRun.h"\
+	".\DFolder.h"\
+	".\EvCache.h"\
+	".\FiltersArray.h"\
+	".\FiltersStorage.h"\
+	".\StdAfx.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\DFolders.cpp : \
+	"..\..\..\..\commonfiles\hook\avpgcom.h"\
+	"..\..\..\..\commonfiles\hook\fsdrvlib.h"\
+	"..\..\..\..\commonfiles\hook\funcs.h"\
+	"..\..\..\..\commonfiles\hook\hookspec.h"\
+	"..\..\..\..\commonfiles\hook\idriver.h"\
+	"..\..\..\..\commonfiles\stuff\layout.h"\
+	".\AllowedRun.h"\
+	".\DFolder.h"\
+	".\DFolders.h"\
+	".\EvCache.h"\
+	".\FiltersArray.h"\
+	".\FiltersStorage.h"\
+	".\StdAfx.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\EvCache.cpp : \
+	".\EvCache.h"\
+	
+
+.\FiltersArray.cpp : \
+	"..\..\..\..\commonfiles\hook\avpgcom.h"\
+	"..\..\..\..\commonfiles\hook\fsdrvlib.h"\
+	"..\..\..\..\commonfiles\hook\funcs.h"\
+	"..\..\..\..\commonfiles\hook\hookspec.h"\
+	"..\..\..\..\commonfiles\hook\idriver.h"\
+	"..\..\..\..\commonfiles\stuff\layout.h"\
+	".\EvCache.h"\
+	".\FiltersArray.h"\
+	".\FiltersStorage.h"\
+	".\StdAfx.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\FiltersStorage.cpp : \
+	"..\..\..\..\commonfiles\hook\avpgcom.h"\
+	"..\..\..\..\commonfiles\hook\fsdrvlib.h"\
+	"..\..\..\..\commonfiles\hook\funcs.h"\
+	"..\..\..\..\commonfiles\hook\hookspec.h"\
+	"..\..\..\..\commonfiles\hook\idriver.h"\
+	"..\..\..\..\commonfiles\stuff\layout.h"\
+	".\EvCache.h"\
+	".\FiltersArray.h"\
+	".\FiltersStorage.h"\
+	".\StdAfx.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\OwnTabCtrl.cpp : \
+	"..\..\..\..\commonfiles\hook\avpgcom.h"\
+	"..\..\..\..\commonfiles\hook\fsdrvlib.h"\
+	"..\..\..\..\commonfiles\hook\funcs.h"\
+	"..\..\..\..\commonfiles\hook\hookspec.h"\
+	"..\..\..\..\commonfiles\hook\idriver.h"\
+	"..\..\..\..\commonfiles\stuff\layout.h"\
+	".\EvCache.h"\
+	".\FiltersArray.h"\
+	".\FiltersStorage.h"\
+	".\OwnTabCtrl.h"\
+	".\StdAfx.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\StdAfx.cpp : \
+	"..\..\..\..\commonfiles\hook\avpgcom.h"\
+	"..\..\..\..\commonfiles\hook\fsdrvlib.h"\
+	"..\..\..\..\commonfiles\hook\funcs.h"\
+	"..\..\..\..\commonfiles\hook\hookspec.h"\
+	"..\..\..\..\commonfiles\hook\idriver.h"\
+	"..\..\..\..\commonfiles\stuff\layout.h"\
+	".\EvCache.h"\
+	".\FiltersArray.h"\
+	".\FiltersStorage.h"\
+	".\StdAfx.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	

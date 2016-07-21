@@ -1,0 +1,4 @@
+// ***** Spy.Keywordsinc *****
+begin
+ AddEvAlarmByCLSID('23BC1CCF-4BE7-497F-B154-6ADA68425FBB',AScriptName,'expext.dll');
+end.

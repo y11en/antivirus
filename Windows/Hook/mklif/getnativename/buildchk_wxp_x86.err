@@ -1,0 +1,4 @@
+errors in directory c:\projects\windows\hook\mklif\getnativename
+use_msvcrt must be 1 or not defined. Change it to 1.
+errors in directory c:\projects\windows\hook\mklif\getnativename
+use_libcmt must be 1 or not defined. Change it to 1.

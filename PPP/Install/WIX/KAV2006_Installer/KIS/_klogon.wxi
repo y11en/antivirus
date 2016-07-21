@@ -1,0 +1,5 @@
+<Include>
+  <ComponentRef Id="klogon.dll" />
+  <ComponentRef Id="klogon.dll_X64" />
+  <ComponentRef Id="system64.inf" />
+</Include>

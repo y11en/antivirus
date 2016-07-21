@@ -1,0 +1,23 @@
+HKCR
+{
+	OutlookAddin.Page.1 = s 'Page Class'
+	{
+		CLSID = s '{C2FE9887-0337-4179-9141-89E773B06585}'
+	}
+	OutlookAddin.Page = s 'Page Class'
+	{
+		CLSID = s '{C2FE9887-0337-4179-9141-89E773B06585}'
+		CurVer = s 'OutlookAddin.Page.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {C2FE9887-0337-4179-9141-89E773B06585} = s 'Page Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

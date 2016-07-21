@@ -1,0 +1,13 @@
+#ifndef _AL_HEAP_WIN_H_879324698_23947023
+#define _AL_HEAP_WIN_H_879324698_23947023
+
+#include "al_heap.h"
+
+AL_DECLARE_INTERFACE(alHeapWin32) AL_INTERFACE_BASED(alHeap, heap)
+AL_DECLARE_INTERFACE_BEGIN
+AL_DECLARE_METHOD1(bool, SetLowFragmentation, bool bEnableLowFragmantation);
+AL_DECLARE_INTERFACE_END
+
+EXTERN_C alHeapWin32* AL_CALLTYPE new_alHeapWin32();
+
+#endif // _AL_HEAP_WIN_H_879324698_23947023

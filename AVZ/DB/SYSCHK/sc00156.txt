@@ -1,0 +1,6 @@
+// ***** Spy.PeopleOnThePage *****
+begin
+ AddEvAlarmByCLSID('976C4E11-B9C5-4B2B-97EF-F7D06BA4242F',AScriptName,'PopSrv*.exe');
+ AddEvAlarmByCLSID('B3BE5046-8197-48FB-B89F-7C767316D03C',AScriptName,'sysmono.exe');
+ AddEvAlarmByCLSID('606D014C-96F5-4F9B-84BA-A55BAC7928EA',AScriptName,'monpop.exe');
+end.

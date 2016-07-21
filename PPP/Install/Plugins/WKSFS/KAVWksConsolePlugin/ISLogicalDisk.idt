@@ -1,0 +1,27 @@
+DiskId	ISProductConfiguration_	ISRelease_	LastSequence	DiskPrompt	Cabinet	VolumeLabel	Source
+i2	s255	s255	i2	L64	S255	S32	S32
+ISLogicalDisk	DiskId	ISProductConfiguration_	ISRelease_
+1	Product Configuration 1	Release Russian	0				
+1	Product Configuration 1	Release English	0				
+1	Product Configuration 1	Release French	0				
+1	Product Configuration 1	Release German	0				
+1	Product Configuration 1	Release Korean	0				
+1	Product Configuration 1	Release Polish	0				
+1	Product Configuration 1	Release Spanish	0				
+1	Product Configuration 1	Release Italian	0				
+1	Product Configuration 1	Release Slovenian	0				
+1	Product Configuration 1	Release SimpChinese	0				
+1	Product Configuration 1	Release Serbian	0				
+1	Product Configuration 1	Release Portuguese	0				
+1	Product Configuration 1	Release Japanese	0				
+1	Product Configuration 1	Release Norwegian	0				
+1	Product Configuration 1	Release Hungarian	0				
+1	Product Configuration 1	Release Dutch	0				
+1	Product Configuration 1	Release Danish	0				
+1	Product Configuration 1	Release Czech	0				
+1	Product Configuration 1	Release Croatian	0				
+1	Product Configuration 1	Release Brazilian	0				
+1	Product Configuration 1	Release Bulgarian	0				
+1	Product Configuration 1	Release Thai	0				
+1	Product Configuration 1	Release TradChinese	0				
+1	Product Configuration 1	Release Turkish	0				

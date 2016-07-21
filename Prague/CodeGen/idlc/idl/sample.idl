@@ -1,0 +1,470 @@
+interface Base {
+	typedef tDWORD BaseTypedef;
+	
+    const tDWORD BASE_CONST = 0x00000001L;
+    
+    error errBASE;
+    
+    message_cls BaseMsgClass {
+    	message BaseMsg;
+    }
+    
+    prop tDATA BaseProp;
+    
+    method tERROR baseMethod();
+}
+
+interface SampleI : Base {
+	struct StructA {
+		tDWORD field;
+	};
+
+	enum EnumX {
+		enum_field0	,
+		enum_field1	,
+	};
+	
+
+	typedef tDWORD ITypedef;
+	
+    const tDWORD I_CONST = 0x00000001L;
+    
+    error errI;
+    
+    prop tSTRING IProp;
+    
+    message_cls IMsgClass {
+    	message IMsg;
+    }
+    
+    extend message_cls BaseMsgClass {
+    	message IMsg;
+    }
+    
+    method tERROR iMethod();
+}
+
+plugin SamplePlugin {
+	implementation SampleImpl : SampleI {
+		[ access(read) ]
+    	prop tSTRING BaseProp;
+    	
+    	[ shared(true) access(read) member_ref(mIProp) ]
+    	prop tSTRING IProp;
+  		//prop tCHAR IProp[12];
+    	
+    	[ access(read, write) setter(setImplProp) getter(getImplProp) ]
+    	add prop tSTRING ImplProp;
+		
+		extend message_cls IMsgClass {
+			message ImplMsg;
+		}
+
+		add message_cls AddMsgClass {
+			message Msg0;
+		}
+
+    	add method tERROR addMethod();
+    
+		sysmeth ObjectInit;
+  	}
+  	
+  	// export method
+	method tUINT pr_vsprintf(
+	  tCHAR* buffer,
+	  tDWORD length,
+	  const tSTRING format,
+	  tPTR arg_ptr
+	);
+}
+
+// 
+Каждый интерфейс генерится в свой ЗАГОЛОВОЧНЫЙ файл
+
+Генерится хидер для плагина целиком
+Генерится сырец для плагина целиком
+
+Генерится хидер для каждой имплементации
+Генерится сырец для каждой имплементации
+
+
+/// Ids:
+interface 			= 16
+plugin 				= 16
+implementation 		= 16
+error(code) 		= 12
+message class       = 32
+message				= 32
+
+// property identifier is dword with 5 fields
+//           +-----------------+---------+-------------+-------------------------------------------
+// bit count:| callback stop:1 | range:4 | heritable:1 | type:7   | id:20
+//           |        3        |   322   |      2      | 222 2222 | 1111 1111 11           
+//           |        1        |   098   |      7      | 654 3210 | 9876 5432 1098 7654 3210
+//           |        x        |   xxx   |      x      | xxx xxxx | xxxx xxxx xxxx xxxx xxxx
+//           +-----------------+---------+-------------+----------+--------------------------------
+//  value:	 |        0        |    7    |      1      |   127    | 1 048 575
+//           +-----------------+---------+-------------+----------+--------------------------------
+                      0		   pRANGE_GLOBAL	0		                prop id based on crc
+                               pRANGE_LOCAL             
+                               
+                               
+                               
+                               							pTYPE_BYTE        u
+                                                        pTYPE_WORD        u
+                                                        pTYPE_DWORD       u
+                                                        pTYPE_QWORD       u
+                                                        pTYPE_STRING      
+                                                        pTYPE_CODEPAGE    32
+                                                        pTYPE_DATETIME    64 bits
+                                                        pTYPE_BINARY      unknown
+                                                        pTYPE_INT         32
+                                                        pTYPE_PTR         
+                                                        pTYPE_OBJECT      pTYPE_PTR
+                                                        pTYPE_BOOL        32
+                                                        pTYPE_CHAR        s 8
+                                                        pTYPE_WCHAR       ???
+                                                        pTYPE_WSTRING     
+                                                        pTYPE_ERROR       32
+                                                        pTYPE_UINT        32
+                                                        pTYPE_SBYTE       8
+                                                        pTYPE_SHORT       16
+                                                        pTYPE_LONG        ???
+                                                        pTYPE_LONGLONG    64
+                                                        pTYPE_IID         32
+                                                        pTYPE_PID         32	// plugin id
+                                                        pTYPE_VERSION     32
+                                                        pTYPE_DATA        sizeof(ptr)
+                                                        pTYPE_FUNC_PTR    
+                               
+                               
+
+
+///--------------------------------- C-mapping
+
+Интерфейс:
+
+	typedef tDWORD Base_BaseTypedef;
+
+	const tDWORD Base_BASE_CONST = 0x00000001L;
+
+	const tERROR Base_errBASE = PR_MAKE_ERR(1/*severity 0=warning 1=error*/, fac_IMPLEMENTATION_DECLARED/*facility*/, 0x1234/*implementation id*/, 1/*incremental code*/);
+
+	const int Base_BaseMsgClass			= 0x1234;
+	const int Base_BaseMsgClass_BaseMsg	= /*(BaseMsgClass << 32) |*/ 0xfe23401;
+
+
+    const int Base_BaseProp = mPROPERTY_MAKE_GLOBAL(pTYPE_DWORD, 0x0000004a);
+
+
+    //-------- добавление метода в интерфейс
+    
+		struct iBufferVtbl;
+		typedef struct iBufferVtbl iBufferVtbl;
+
+		typedef struct tag_hBUFFER {
+			const iBufferVtbl* vtbl; // pointer to the "Buffer" virtual table
+			const iSYSTEMVtbl* sys;  // pointer to the "SYSTEM" virtual table
+		} *hBUFFER;
+			
+		// -----------  buffer declared methods ----------
+		typedef   tERROR (pr_call *fnpBuffer_Lock)      ( hBUFFER _this, tPTR* result );                        // -- //rus:фиксирует регион памяти и возвращает указатель на него//eng:lock memory and get access to it;
+
+		struct iBufferVtbl {
+			//... perhaps base methods
+			fnpBuffer_Lock       Lock;
+		};
+
+		#define CALL_Buffer_Lock( _this, result ) ((_this)->vtbl->Lock( (_this), result ))
+    // end -------- // добавление метода в интерфейс
+    
+
+Plugin
+	// header
+	
+	#define PID_SAMPLEPLUGIN  	((tPID)(20))
+
+	// методы, определенные в плагине (export methods)
+	
+	#ifdef IMPEX_TABLE_CONTENT
+		{ (tDATA)&PrCopy, PID_WIN32_NFIO, 0xf292d15bl },
+		...
+	#elif defined(IMPEX_EXPORT_LIB) || defined(IMPEX_IMPORT_LIB)
+	#include <iface/impexhlp.h>
+
+		IMPEX_DECL tERROR IMPEX_FUNC(PrCopy)( hOBJECT p_src, hOBJECT p_dst, tDWORD p_flags )IMPEX_INIT;
+		...
+	#endif
+
+	// source
+	
+	#include <prague.h>
+	#include <iface/i_root.h>
+	
+	extern tERROR pr_call SampleImpl_Register( hROOT root );
+
+	#define  IMPEX_EXPORT_LIB
+	#include <plugin/p_win32_nfio.h>
+
+	#define  IMPEX_TABLE_CONTENT
+	EXPORT_TABLE( export_table )
+	#include <plugin/p_win32_nfio.h>
+	EXPORT_TABLE_END
+	
+	PR_MAKE_TRACE_FUNC;
+
+	hROOT  g_root = NULL;
+
+	tBOOL __stdcall DllMain( tPTR hInstance, tDWORD dwReason, tERROR* pError ) {
+		// tDWORD count;
+
+		switch( dwReason ) {
+			case DLL_PROCESS_ATTACH:
+			case DLL_PROCESS_DETACH:
+			case DLL_THREAD_ATTACH :
+			case DLL_THREAD_DETACH :
+				break;
+
+			case PRAGUE_PLUGIN_LOAD :
+				g_root = (hROOT)hInstance;
+				*pError = errOK;
+				//resolve  my imports
+				//if ( PR_FAIL(*pError=CALL_Root_ResolveImportTable(g_root,&count,import_table_variable...,PID_WIN32_NFIO)) ) {
+				//   PR_TRACE(( g_root, prtERROR, "cannot resolve import table for ..." ));
+				//   return cFALSE;
+				//}
+
+				//register my exports
+				//CALL_Root_RegisterExportTable( g_root, &count, export_table_..., PID_WIN32_NFIO );
+
+				//register my custom property ids
+				//if ( PR_FAIL(*pError=CALL_Root_RegisterCustomPropId(g_root,&some_propid_variable,"some_property_name",pTYPE_DWORD)) ) {
+				//  PR_TRACE(( g_root, prtERROR, "cannot register custom property ..." ));
+				//  return cFALSE;
+				//}
+
+				// register my interfaces
+				if ( PR_FAIL(*pError=OS_Register(g_root)) ) {
+					PR_TRACE(( g_root, prtERROR, "cannot register \"OS\" interface"));
+					return cFALSE;
+				}
+
+				
+				if ( PR_FAIL(*pError=ObjPtr_Register(g_root)) ) {
+					PR_TRACE(( g_root, prtERROR, "cannot register \"ObjPtr\" interface"));
+					return cFALSE;
+				}
+
+				if ( PR_FAIL(*pError=IO_Register(g_root)) ) {
+					PR_TRACE(( g_root, prtERROR, "cannot register \"IO\" interface"));
+					return cFALSE;
+				}
+				break;
+
+			case PRAGUE_PLUGIN_UNLOAD :
+				// free system resources
+				// unregister my custom property ids -- you can drop it, kernel do it by itself
+				// release    my imports		         -- you can drop it, kernel do it by itself
+				// unregister my exports		         -- you can drop it, kernel do it by itself
+				// unregister my interfaces          -- you can drop it, kernel do it by itself
+				g_root = NULL;
+				break;
+		}
+		return cTRUE;
+	}
+	
+	
+		
+Implementation
+	// header
+	
+	#define PID_SAMPLEIMPL  	PID_SAMPLEPLUGIN  // legacy
+	
+	// для свойств, определенных в имплементации (add prop)
+	#define ImplProp	mPROPERTY_MAKE_LOCAL( pTYPE_STRING, 0x00002000 /*20-bit id*/)
+
+	const int SampleImpl_AddMsgClass		= 0x1234;
+	const int SampleImpl_AddMsgClass_Msg0	= 0x1234;
+	
+	const int SampleImpl_IMsgClass_ImplMsg	= 0x1234;	// from extended msg class
+
+	
+	typedef   tERROR (pr_call *fnpSampleImpl_addMethod)(); // -- ;
+
+	typedef struct tag_iSampleImplVtbl {
+		struct iSampleIVtbl prt;
+		fnpSampleImpl_addMethod  addMethod;
+	} iSampleImplVtbl;
+
+	typedef struct tag_SampleImpl {
+		const iSampleImplVtbl* vtbl; // pointer to the "SampleImpl" virtual table
+		const iSYSTEMVtbl* sys;  // pointer to the "SYSTEM" virtual table
+	} *hSampleImpl;
+
+	#define CALL_SampleImpl_addMethod( _this /*, args list*/ )                 ((_this)->vtbl->addMethod( (_this) /*, args list*/ ))
+
+	// extern декларации методов sysmeth
+	extern tERROR pr_call SampleImpl_ObjectInit( hi_Transformer _this );
+
+	// extern declaration for each getter & setter
+	extern tERROR pr_call getImplProp( hi_IO _this, tDWORD* out_size, tPROPID prop, tCHAR* buffer, tDWORD size );
+	extern tERROR pr_call setImplProp( hi_IO _this, tDWORD* out_size, tPROPID prop, tCHAR* buffer, tDWORD size );
+		
+	// virtual methods
+	extern tERROR pr_call SampleImpl_baseMethod();
+	extern tERROR pr_call SampleImpl_iMethod();
+	extern tERROR pr_call SampleImpl_addMethod();
+	
+	// source
+	
+	#include <prague.h>
+	#include <pr_vtbl.h>
+	#include <iface/i_root.h>
+	
+	#define SampleImpl_VERSION ((tVERSION)1)
+
+	
+	DATA_STRUCT_BEGIN
+		...
+	DATA_STRUCT_END
+	
+
+		
+	typedef struct tag_tSAMPLE_IMPL {
+		/// тут определены все member_ref из всех свойств (включая базовые интерфейсы)
+		tSTRING BaseProp;
+		tSTRING IProp;
+		tSTRING ImplProp;
+		
+		USER_DATA
+		
+	} tSAMPLE_IMPL;
+
+
+	typedef struct tag_hi_SampleImpl {
+		const iSampleImplVtbl* vtbl; // pointer to the "SampleImpl" virtual table
+		const iSYSTEMVTBL*      sys;  // pointer to the "SYSTEM" virtual table
+		tINFLATE_DATA*          data; // pointer to the "SampleImpl" data structure
+	} *hi_SampleImpl;
+
+	// sysmeth's table
+	static iINTERNAL i_SampleImpl_vtbl = {
+		(tIntFnRecognize)         NULL,
+		(tIntFnObjectNew)         NULL,
+		(tIntFnObjectInit)        SampleImpl_ObjectInit,
+		(tIntFnObjectInitDone)    NULL,
+		(tIntFnObjectCheck)       NULL,
+		(tIntFnObjectPreClose)    NULL,
+		(tIntFnObjectClose)       NULL,
+		(tIntFnChildNew)          NULL,
+		(tIntFnChildInitDone)     NULL,
+		(tIntFnChildClose)        NULL,
+		(tIntFnMsgReceive)        NULL,
+		(tIntFnIFaceTransfer)     NULL,
+	};
+
+	
+	
+	property table entry (6 tDATAs)
+		propid
+		union {
+			(a) address		// shared
+			(b) offset		// local
+			(c) value		// shared const: if prop shared && prop readonly && sizeof(value) <= sizeof(tDATA)
+		}
+		sizeof 
+			*(a)
+			*(_this+offset)
+			value
+		mode
+			cPROP_BUFFER_NONE        0		// value is held instead of buffer ptr (readonly)
+			cPROP_BUFFER_READ        1
+			cPROP_BUFFER_WRITE       2
+			cPROP_BUFFER_READ_WRITE  3
+			cPROP_BUFFER_SHARED      4      // no functions will be called
+			cPROP_BUFFER_SHARED_PTR  0x0C   // no functions will be called ( buffer contains pointer to data )
+			cPROP_REQUIRED           0x10   // property is required for initializing handle
+			cPROP_WRITABLE_ON_INIT   0x20   // property available for write on init only
+			cPROP_BUFFER_SHARED_VAR  0x44   // no functions will be called ( buffer contains pointer to pointer to data )
+			cPROP_BUFFER_HSTRING     0x80   // property is a buffer contained hSTRING object
+
+		getter
+		setter
+
+	
+	LOCAL
+		{ offsetOf(struct, field), sizeof(((struct*)0)->field), cPROP_BUFFER_READ_WRITE, NULL, NULL }
+		
+	SHARED
+		{ value, sizeof(value), cPROP_BUFFER_SHARED, NULL, NULL }
+			
+	
+	// property table
+	mPROPERTY_TABLE(SampleImpl_PropTable)
+		tSTRING BaseProp;
+		tSTRING IProp;
+		tSTRING ImplProp;
+		
+		mSHARED_PROPERTY( pgINTERFACE_VERSION, Transformer_VERSION )
+
+		mSHARED_PROPERTY_VAR( pgINTERFACE_COMMENT, InflateTransInterfCmt, 21 )
+		
+		mLOCAL_PROPERTY_BUF( pgTRANSFORM_SIZE, tINFLATE_DATA, ObjUSize, cPROP_BUFFER_READ_WRITE )
+		mLOCAL_PROPERTY_BUF( pgINPUT_SEQ_IO, tINFLATE_DATA, hInputIO, cPROP_BUFFER_READ_WRITE )
+		mLOCAL_PROPERTY_BUF( pgOUTPUT_SEQ_IO, tINFLATE_DATA, hOutputIO, cPROP_BUFFER_READ_WRITE )
+		mLOCAL_PROPERTY_BUF( plINFLATE_PETITE_FLAG, tINFLATE_DATA, bPetite, cPROP_BUFFER_READ_WRITE )
+		mLOCAL_PROPERTY_BUF( plINFLATE_WINDOW_SIZE, tINFLATE_DATA, WindowSize, cPROP_BUFFER_READ_WRITE )
+		mLOCAL_PROPERTY_BUF( plINFLATE_WINDOW, tINFLATE_DATA, Window, cPROP_BUFFER_READ_WRITE )
+		mLOCAL_PROPERTY_BUF( plINFLATE_WINDOW_MULTIPIER, tINFLATE_DATA, WndMul, cPROP_BUFFER_READ_WRITE )
+		mLOCAL_PROPERTY_BUF( plINFLATE_INF64_FLAG, tINFLATE_DATA, bInf64, cPROP_BUFFER_READ_WRITE )
+		mLOCAL_PROPERTY_BUF( plINFLATE_NSIS_FLAG, tINFLATE_DATA, bNsis, cPROP_BUFFER_READ_WRITE )
+		mLOCAL_PROPERTY_BUF( plINFLATE_ZLIBCHECK_FLAG, tINFLATE_DATA, bChkZLib, cPROP_BUFFER_READ_WRITE )
+	mPROPERTY_TABLE_END(SampleImpl_PropTable)
+
+
+	// methods table
+	static iSampleImplVtbl e_SampleImpl_vtbl = {
+		(fnpSampleImpl_baseMethod	) SampleImpl_baseMethod	,
+		(fnpSampleImpl_iMethod		) SampleImpl_iMethod	,
+		(fnpSampleImpl_addMethod	) SampleImpl_addMethod	,
+	};
+	
+	
+	// для каждого унаследованного интерфейса вызвать один раз
+	
+	tERROR pr_call SampleImpl_Register( hROOT root ) {
+		tERROR error;
+
+		PR_TRACE_A0( root, "Enter SampleImpl::Register method" );
+
+		error = CALL_Root_RegisterIFace(
+			root,                                   // root object
+			
+			IID_SAMPLEI,                        	// interface identifier
+			PID_SAMPLEPLUGIN,                       // plugin identifier
+			PID_SAMPLEIMPL,                         // implementation identifier
+			
+			SamplePlugin_VERSION,                   // plugin version
+			SampleImpl_VERSION,                     // implementation version
+			
+			&i_SampleImpl_vtbl,                    	// internal(kernel called) function table
+			(sizeof(i_Transformer_vtbl)/sizeof(tPTR)),// internal function table size
+			&e_SampleImpl_vtbl,                    	// external function table
+			(sizeof(e_SampleImpl_vtbl)/sizeof(tPTR)),// external function table size
+			Transformer_PropTable,                  // property table
+			mPROPERTY_TABLE_SIZE(SampleImpl_PropTable),// property table size
+			sizeof(tSAMPLE_IMPL),                  	// memory size
+			0                                       // interface flags
+		);
+
+		#ifdef _PRAGUE_TRACE_
+			if ( PR_FAIL(error) )
+				PR_TRACE( (root,prtDANGER,"Transformer(IID_TRANSFORMER) registered [%terr]",error) );
+		#endif // _PRAGUE_TRACE_
+
+		PR_TRACE_A1( root, "Leave Transformer::Register method, ret %terr", error );
+		return error;
+	}
+	
+			
+/////////////////////////////	

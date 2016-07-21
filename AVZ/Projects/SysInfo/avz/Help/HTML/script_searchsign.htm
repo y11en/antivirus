@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?script_searchsign.htm"; }
+else { parent.quicksync('a15.36.9'); }
+//-->
+</script>
+   <title>function &nbsp;SearchSign</title>
+   <meta name="keywords" content="&#1087;&#1086;&#1080;&#1089;&#1082; &#1089;&#1080;&#1075;&#1085;&#1072;&#1090;&#1091;&#1088;&#1099;,&#1089;&#1080;&#1075;&#1085;&#1072;&#1090;&#1091;&#1088;&#1072;,&#1087;&#1088;&#1072;&#1074;&#1080;&#1083;&#1072; &#1089;&#1080;&#1075;&#1085;&#1072;&#1090;&#1091;&#1088;&#1085;&#1086;&#1075;&#1086; &#1087;&#1086;&#1080;&#1089;&#1082;&#1072;,&#1057;&#1080;&#1075;&#1085;&#1072;&#1090;&#1091;&#1088;&#1072;">
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+
+
+<body bgcolor="#FFFFFF">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">function&nbsp; SearchSign</span></p>
+
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="t_about.htm">Наверх</a>&nbsp;
+     <a href="script_getbufferstr.htm">Предыдущая</a>&nbsp;
+     <a href="script_searchsignexample.htm">Последующая</a>
+     </font><B>|</B>
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=717989"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=717989;t=109;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=18 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=717989"><img
+src="http://top.list.ru/counter?js=na;id=717989;t=109"
+border=0 height=18 width=88
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+    </td>
+  </tr>
+</table>
+<br>
+
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">function</span><span style="font-size: 12pt; font-family: 'Courier New';">  SearchSign(ASign : </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">string</span><span style="font-size: 12pt; font-family: 'Courier New';">; ARel : integer; ALen : integer) : integer;</span></p>
+<p>&nbsp;</p>
+<p>Основная функция анализатора. Производит поиск сигнатуры ASign начиная со смещения ARel в зоне длинной ALen.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">ARel</span> - смещение точки, с которой начинается поиск. Смещение отсчитывается с нуля, указание отрицательного смещения рассматривается как смещение от конца файла</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">ALen</span> - длина. Указание нулевой длинны рассматривается как поиск от точки ARel до конца буфера</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">ASign</span> - сигнатура. Сигнатура задается текстовой строкой, описывающей правила сигнатурного поиска. Сигнатура состоит из элементов, разделенных пробелами. Пробелы в начале и конце сигнатуры игнорируются. </p>
+<p>&nbsp;</p>
+<p>Поддерживаются следующие типы элементов сигнатуры:</p>
+<p><span style="font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-weight: bold;">xx</span> - байт должен быть равен xx, где xx - значение байта в шеснадцатеричном виде</p>
+<p>Пример: "55 AA 45 21"</p>
+<p><span style="font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-weight: bold;">!xx</span>- байт не равен xx, где xx - значение байта в шеснадцатеричном виде</p>
+<p>Пример: "55 AA !45 21"</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">?</span> - байт может иметь любое значение (по сути это пропуск байта при анализе). Указание данного элемента в начале и конце сигнатуры не имеет смысла, хотя не является ошибкой</p>
+<p>Пример: "55 ? AA ? ? 45 21"</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">?nn</span> - пропуск при анализе nn байт (по сути условие - nn байт имеют произвольное значение), где nn - количество пропускаемых байт в <span style="text-decoration: underline;">десятичном</span> виде. Пример: 55 AA ?5 45 21 - данная сигнатура аналогична сигнатуре 55 AA ? ? ? ? ? 45 21</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">*xx</span> - пропуск нескольких байт (от нуля до достижения границы анализируемой области) до обнаружения байта, равного xx. </p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">~xx,yy</span> - производит проверку условия &lt;байт буфера&gt; AND yy = xx. Данная операция позволяет сравнивать заданные биты в байте, а не весь байт целиком. Пробелы в данной конструкции (до и после запятой) недопустимы, т.к. пробел является разделителем элементов в сигнатуре</p>
+<p>Пример: "55 ~0A,0F" - в данном случае расшифровка сигнатуры звучит как "первый байт равен 55, а младшая тетрада второго равна 0A"</p>
+<p>&nbsp;</p>
+<p>См. также: <a href="script_loadfiletobuffer.htm">LoadFileToBuffer</a>, <a href="script_freebuffer.htm">FreeBuffer</a>, <a href="script_getbuffersize.htm">GetBufferSize</a></p>
+<p>&nbsp;</p>
+
+
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=717989;js='+js+a+';rand='+Math.random()+
+'" height=1 width=1/>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=717989"
+height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+
+</body>
+</html>

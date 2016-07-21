@@ -1,0 +1,6 @@
+// ***** AdvWare.BHO.MegaSearch *****
+begin       
+ AddEvAlarmByCLSID('4E7BD74F-2B8D-469E-C0FF-FA7FB592BF30',AScriptName,'megasear.dll');
+ AddEvAlarmByCLSID('4E7BD74F-2B8D-469E-C0FF-FA7FB592BF31',AScriptName,'megasear.dll');
+ AddEvAlarmByCLSID('4E7BD74F-2B8D-469E-C0FF-FA7FB592BF32',AScriptName,'megasear.dll');
+end.

@@ -1,0 +1,172 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_PGP32               ICON    DISCARDABLE     "..\\Res\\pgp.ico"
+IDI_PGP_DECRYPT         ICON    DISCARDABLE     "..\\Res\\unlock.ico"
+IDI_PGP_SIGN            ICON    DISCARDABLE     "..\\Res\\sign.ico"
+IDI_PGP_ENCRYPT         ICON    DISCARDABLE     "..\\Res\\lock.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""EudoraPluginV3Ver.rc""\r\n"
+    "#include ""..\\..\\..\\shared\\win32\\Working.rc""\r\n"
+    "#include ""..\\..\\..\\shared\\win32\\SharedStrings.rc""\r\n"
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_READTOOLBAR         BITMAP  DISCARDABLE     "..\\Res\\readtool.bmp"
+IDB_SENDTOOLBAR         BITMAP  DISCARDABLE     "..\\Res\\sendtool.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_PGPABOUTMENU MENU DISCARDABLE 
+BEGIN
+    MENUITEM "&Launch PGPkeys...",          ID_PGPKEYS
+    MENUITEM "&Options...",                 ID_PREFERENCES
+    MENUITEM "&Help Topics...",             ID_PGPHELP
+    MENUITEM SEPARATOR
+    MENUITEM "&About PGP...",               ID_ABOUTPGP
+END
+
+IDM_PGPENCRYPTMENU MENU DISCARDABLE 
+BEGIN
+    MENUITEM "&Encrypt",                    ID_PGPENCRYPT
+    MENUITEM "&Sign",                       ID_PGPSIGN
+    MENUITEM "Encrypt &and Sign",           ID_PGPENCRYPTSIGN
+END
+
+IDM_PGPDECRYPTMENU MENU DISCARDABLE 
+BEGIN
+    MENUITEM "&Decrypt and Verify",         ID_PGPDECRYPTVERIFY
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_WARN_NORECIPIENTS   "In order to Encrypt you must choose\nat least one recipient."
+    IDS_WARN_NORECIPIENTSTITLE "No Recpients Chosen"
+    IDS_TITLE_RECIPIENTDIALOG "PGP Eudora - Encrypt Message To..."
+    IDS_TITLE_PGPERROR      "PGP Error"
+    IDS_SUCCESS_ADDKEY      "PGP successfully added the key(s) to your keyring."
+    IDS_TITLE_ADDKEY        "PGP Eudora - Extract Key"
+    IDS_TOOLTIP1            "Decrypt PGP Encrypted Email Message"
+    IDS_TOOLTIP3            "Launch PGPkeys Application"
+    IDS_TOOLTIP4            "Just Do It!"
+    IDS_TOOLTIP5            "PGP Encrypt Email Message"
+    IDS_TOOLTIP6            "PGP Sign Email Message"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TOOLTIP7            "PGP Encrypt and Sign Email Message"
+    IDS_TOOLTIP8            "Use PGP/MIME When Sending Email Message"
+    IDS_PGPPREFSTATUS       "Edit your PGP options"
+    IDS_PGPABOUTSTATUS      "Display PGP product and version information"
+    IDS_PGPKEYSSTATUS       "Launch the PGPkeys Application"
+    IDS_PGPHELPSTATUS       "Need help with PGP? You'll find it here"
+    IDS_PGPDECRYPTSTATUS    "Decrypt PGP Encrypted Email Message or Selected Text"
+    IDS_PGPENCRYPTSIGNSTATUS 
+                            "PGP Encrypt and Sign Email Message or Selected Text"
+    IDS_PGPSIGNSTATUS       "PGP Sign Email Message or Selected Text"
+    IDS_PGPENCRYPTSTATUS    "PGP Encrypt Email Message or Selected Text"
+    IDS_ENCRYPTMENU         "&Encrypt"
+    IDS_PGPKEYSMENU         "&Launch PGPkeys..."
+    IDS_DECRYPTMENU         "&Decrypt and Verify"
+    IDS_CUTMENU             "Cu&t"
+    IDS_COPYMENU            "&Copy"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HELPFILE            "PGP.HLP"
+    IDS_PGPKEYSEXE          "PGPkeys /s"
+    IDS_E_LAUNCHPGPKEYS     "Unable to locate the PGPkeys application"
+    IDS_E_EXPIRED           "The evaluation period for PGP has passed.\nThe Eudora Plugin will no longer function."
+    IDS_E_EXPIREDTITLE      "PGP Plugin Expired"
+    IDS_EXE                 "Eudora"
+    IDS_DLL                 "pgpplugin.dll"
+    IDS_E_SENDMAIL          "There was an error communicating with Eudora.\nIf you continue to send this message it will\nNOT be encrypted or signed. Do you wish to\nsend this message?"
+    IDS_E_SENDMAILTITLE     "PGP Error"
+    IDS_E_OLDVERSION        "The PGP Plugin is not compatible with this\nversion of Eudora. Please contact Eudora's\ncustomer support for further assistance."
+    IDS_Q_NOKEYRINGS        "You must specify a keyring file and generate a pair of keys before you can fully use PGP.\r\nDo you wish launch PGPkeys and do this now?"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "EudoraPluginV3Ver.rc"
+#include "..\..\..\shared\win32\Working.rc"
+#include "..\..\..\shared\win32\SharedStrings.rc"
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

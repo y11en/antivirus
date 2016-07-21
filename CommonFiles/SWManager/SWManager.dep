@@ -1,0 +1,127 @@
+# Microsoft Developer Studio Generated Dependency File, included by SWManager.mak
+
+.\Checker.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\Swm.h"\
+	".\Checker.h"\
+	".\Swmi.h"\
+	
+
+.\CheckerR.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\Swm.h"\
+	".\Checker.h"\
+	".\Swmi.h"\
+	
+
+.\CheckerW.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\Swm.h"\
+	".\Checker.h"\
+	".\Swmi.h"\
+	
+
+.\Encrypt.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\Swm.h"\
+	".\Encrypt.h"\
+	".\Swmi.h"\
+	
+
+.\EncryptR.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\Swm.h"\
+	".\Encrypt.h"\
+	".\Swmi.h"\
+	
+
+.\EncryptW.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\Swm.h"\
+	".\Encrypt.h"\
+	".\Swmi.h"\
+	
+
+.\Manager.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\Swm.h"\
+	".\Manager.h"\
+	".\Swmi.h"\
+	
+
+.\ManagerR.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\Swm.h"\
+	".\Manager.h"\
+	".\Swmi.h"\
+	
+
+.\ManagerW.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\Swm.h"\
+	".\Manager.h"\
+	".\Swmi.h"\
+	
+
+.\Packer.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\Swm.h"\
+	".\Packer.h"\
+	".\Swmi.h"\
+	
+
+.\PackerR.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\Swm.h"\
+	".\Packer.h"\
+	".\Swmi.h"\
+	
+
+.\PackerW.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\AVPPort.h"\
+	"..\CommonFiles\Swm.h"\
+	".\Packer.h"\
+	".\Swmi.h"\
+	
+
+.\RawData.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\Swm.h"\
+	".\Swmi.h"\
+	
+
+.\RawDataR.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\Swm.h"\
+	".\RawData.h"\
+	".\Swmi.h"\
+	
+
+.\RawDataW.c : \
+	"..\CommonFiles\avp_data.h"\
+	"..\CommonFiles\AVPComID.h"\
+	"..\CommonFiles\Swm.h"\
+	".\RawData.h"\
+	".\Swmi.h"\
+	

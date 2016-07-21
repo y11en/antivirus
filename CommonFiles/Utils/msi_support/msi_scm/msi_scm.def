@@ -1,0 +1,7 @@
+LIBRARY      "msi_scm.dll"
+
+EXPORTS
+	CARegisterService		@1
+	CAUnregisterService		@2
+	CAStartService			@3
+	CAStopService			@4

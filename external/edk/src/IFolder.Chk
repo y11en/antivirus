@@ -1,0 +1,295 @@
+// --ifolder.chk----------------------------------------------------------------
+// 
+//  Module containing MAPI utility functions for folders.
+// 
+// Copyright (C) Microsoft Corp. 1986-1996.  All Rights Reserved.
+// -----------------------------------------------------------------------------
+
+#ifndef DEBUG
+
+#define CHK_HrMAPIFindRootFolderW(a,b,c,d)     NOERROR
+#define CHK_HrMAPIFindRootFolderA(a,b,c,d)     NOERROR
+#define CHK_HrMAPIFindFolderW(a,b,c,d)         NOERROR
+#define CHK_HrMAPIFindFolderA(a,b,c,d)         NOERROR
+#define CHK_HrMAPIFindSubfolderExW(a,b,c,d,e)  NOERROR
+#define CHK_HrMAPIFindSubfolderExA(a,b,c,d,e)  NOERROR
+#define CHK_HrMAPIFindFolderExW(a,b,c,d,e)     NOERROR
+#define CHK_HrMAPIFindFolderExA(a,b,c,d,e)     NOERROR
+#define CHK_HrMAPIOpenFolderExW(a,b,c,d)       NOERROR
+#define CHK_HrMAPIOpenFolderExA(a,b,c,d)       NOERROR
+#define CHK_HrMAPIOpenSubfolderExW(a,b,c,d)    NOERROR
+#define CHK_HrMAPIOpenSubfolderExA(a,b,c,d)    NOERROR
+#define CHK_HrOpenExchangePublicFolders(a,b)   NOERROR
+
+#else
+
+//$--CHK_HrMAPIFindRootFolder@-------------------------------------------------
+//  Check parameters for HrMAPIFindRootFolder().
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIFindRootFolderW(
+    IN  LPMDB lpMdb,                // pointer to open message store
+    IN  LPCWSTR lpszRootFolder,     // root folder name only (no separators)
+    OUT ULONG *lpcbeid,             // size of entryid
+    OUT LPENTRYID *lppeid)          // pointer to entryid
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_IUNKNOWN_PTR( lpMdb) ||
+        !TEST_STRINGW_PTR( lpszRootFolder) ||
+        !TEST_WRITE_PTR( lpcbeid, sizeof(ULONG)) ||
+        !TEST_WRITE_PTR( lppeid, sizeof(LPENTRYID)) )
+    {
+        hr = HR_LOG( E_INVALIDARG);
+    }
+
+    return( hr);
+}
+
+__inline static HRESULT CHK_HrMAPIFindRootFolderA(
+    IN  LPMDB lpMdb,                // pointer to open message store
+    IN  LPCSTR lpszRootFolder,      // root folder name only (no separators)
+    OUT ULONG *lpcbeid,             // size of entryid
+    OUT LPENTRYID *lppeid)          // pointer to entryid
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_IUNKNOWN_PTR( lpMdb) ||
+        !TEST_STRINGA_PTR( lpszRootFolder) ||
+        !TEST_WRITE_PTR( lpcbeid, sizeof(ULONG)) ||
+        !TEST_WRITE_PTR( lppeid, sizeof(LPENTRYID)) )
+    {
+        hr = HR_LOG( E_INVALIDARG);
+    }
+
+    return( hr);
+}
+
+//$--CHK_HrMAPIFindFolder@-------------------------------------------------
+//  Find a folder by name.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIFindFolderW(
+    IN LPMAPIFOLDER lpFolder,           // pointer to folder
+    IN LPCWSTR lpszName,                // name of folder to find
+    OUT ULONG *lpcbeid,                 // pointer to count of bytes in entry ID
+    OUT LPENTRYID *lppeid)              // pointer to entry ID pointer
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_IUNKNOWN_PTR(lpFolder) ||
+        !TEST_STRINGW_PTR(lpszName) ||
+        !TEST_WRITE_PTR(lpcbeid, sizeof(ULONG)) ||
+        !TEST_WRITE_PTR(lppeid, sizeof(LPENTRYID)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+__inline static HRESULT CHK_HrMAPIFindFolderA(
+    IN LPMAPIFOLDER lpFolder,           // pointer to folder
+    IN LPCSTR lpszName,                 // name of folder to find
+    OUT ULONG *lpcbeid,                 // pointer to count of bytes in entry ID
+    OUT LPENTRYID *lppeid)              // pointer to entry ID pointer
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_IUNKNOWN_PTR(lpFolder) ||
+        !TEST_STRINGA_PTR(lpszName) ||
+        !TEST_WRITE_PTR(lpcbeid, sizeof(ULONG)) ||
+        !TEST_WRITE_PTR(lppeid, sizeof(LPENTRYID)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+//$--CHK_HrMAPIFindSubfolderEx@-----------------------------------------------------
+//  Finds an arbitrarily nested folder in the indicated folder given it's 
+//  path name.
+//------------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIFindSubfolderExW(
+    IN LPMAPIFOLDER lpRootFolder,       // open root folder
+    IN WCHAR  chSep,                    // folder path separator character
+    IN LPCWSTR lpszFolderPath,          // folder path
+    OUT ULONG *lpcbeid,                 // pointer to count of bytes in entry ID
+    OUT LPENTRYID *lppeid)              // pointer to entry ID pointer
+{
+    HRESULT hr = NOERROR;
+            
+    if( !TEST_IUNKNOWN_PTR(lpRootFolder) ||
+        !TEST_STRINGW_PTR(lpszFolderPath) ||
+        !TEST_WRITE_PTR(lpcbeid, sizeof(ULONG)) ||
+        !TEST_WRITE_PTR(lppeid, sizeof(LPENTRYID)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+__inline static HRESULT CHK_HrMAPIFindSubfolderExA(
+    IN LPMAPIFOLDER lpRootFolder,       // open root folder
+    IN CHAR  chSep,                     // folder path separator character
+    IN LPCSTR lpszFolderPath,           // folder path
+    OUT ULONG *lpcbeid,                 // pointer to count of bytes in entry ID
+    OUT LPENTRYID *lppeid)              // pointer to entry ID pointer
+{
+    HRESULT hr = NOERROR;
+            
+    if( !TEST_IUNKNOWN_PTR(lpRootFolder) ||
+        !TEST_STRINGA_PTR(lpszFolderPath) ||
+        !TEST_WRITE_PTR(lpcbeid, sizeof(ULONG)) ||
+        !TEST_WRITE_PTR(lppeid, sizeof(LPENTRYID)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+//$--CHK_HrMAPIFindFolderEx@-------------------------------------------
+//  Finds an arbitrarily nested folder in the indicated store given it's 
+//  path name.
+//------------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIFindFolderExW(
+    IN LPMDB lpMdb,                     // Open message store
+    IN WCHAR  chSep,                    // folder path separator character
+    IN LPCWSTR lpszFolderPath,          // folder path
+    OUT ULONG *lpcbeid,                 // pointer to count of bytes in entry ID
+    OUT LPENTRYID *lppeid)              // pointer to entry ID pointer
+{
+    HRESULT hr = NOERROR;
+            
+    if( !TEST_IUNKNOWN_PTR(lpMdb) ||
+        !TEST_STRINGW_PTR(lpszFolderPath) ||
+        !TEST_WRITE_PTR(lpcbeid, sizeof(ULONG)) ||
+        !TEST_WRITE_PTR(lppeid, sizeof(LPENTRYID)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+__inline static HRESULT CHK_HrMAPIFindFolderExA(
+    IN LPMDB lpMdb,                     // Open message store
+    IN CHAR  chSep,                     // folder path separator character
+    IN LPCSTR lpszFolderPath,           // folder path
+    OUT ULONG *lpcbeid,                 // pointer to count of bytes in entry ID
+    OUT LPENTRYID *lppeid)              // pointer to entry ID pointer
+{
+    HRESULT hr = NOERROR;
+            
+    if( !TEST_IUNKNOWN_PTR(lpMdb) ||
+        !TEST_STRINGA_PTR(lpszFolderPath) ||
+        !TEST_WRITE_PTR(lpcbeid, sizeof(ULONG)) ||
+        !TEST_WRITE_PTR(lppeid, sizeof(LPENTRYID)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+//$--CHK_HrMAPIOpenFolderEx@-------------------------------------------
+//  Opens an arbitrarily nested folder in the indicated store given it's 
+//  path name.
+//------------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIOpenFolderExW(
+    IN LPMDB lpMdb,                     // Open message store
+    IN WCHAR chSep,                     // folder path separator character
+    IN LPCWSTR lpszFolderPath,          // folder path
+    OUT LPMAPIFOLDER * lppFolder)       // pointer to folder opened
+{
+    HRESULT hr = NOERROR;
+            
+    if( !TEST_IUNKNOWN_PTR(lpMdb) ||
+        !TEST_STRINGW_PTR(lpszFolderPath) ||
+        !TEST_WRITE_PTR(lppFolder, sizeof(LPMAPIFOLDER)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+__inline static HRESULT CHK_HrMAPIOpenFolderExA(
+    IN LPMDB lpMdb,                     // Open message store
+    IN CHAR chSep,                      // folder path separator character
+    IN LPCSTR lpszFolderPath,           // folder path
+    OUT LPMAPIFOLDER * lppFolder)       // pointer to folder opened
+{
+    HRESULT hr = NOERROR;
+            
+    if( !TEST_IUNKNOWN_PTR(lpMdb) ||
+        !TEST_STRINGA_PTR(lpszFolderPath) ||
+        !TEST_WRITE_PTR(lppFolder, sizeof(LPMAPIFOLDER)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+//$--CHK_HrMAPIOpenSubfolderEx@-----------------------------------------------------
+//  Opens an arbitrarily nested folder in the indicated folder given it's 
+//  path name.
+//------------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIOpenSubfolderExW(
+    IN LPMAPIFOLDER lpRootFolder,       // open root folder
+    IN WCHAR chSep,                     // folder path separator character
+    IN LPCWSTR lpszFolderPath,          // folder path
+    OUT LPMAPIFOLDER * lppFolder)       // pointer to folder opened
+{
+    HRESULT hr = NOERROR;
+            
+    if( !TEST_IUNKNOWN_PTR(lpRootFolder) ||
+        !TEST_STRINGW_PTR(lpszFolderPath) ||
+        !TEST_WRITE_PTR(lppFolder, sizeof(LPMAPIFOLDER)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+__inline static HRESULT CHK_HrMAPIOpenSubfolderExA(
+    IN LPMAPIFOLDER lpRootFolder,       // open root folder
+    IN CHAR chSep,                      // folder path separator character
+    IN LPCSTR lpszFolderPath,           // folder path
+    OUT LPMAPIFOLDER * lppFolder)       // pointer to folder opened
+{
+    HRESULT hr = NOERROR;
+            
+    if( !TEST_IUNKNOWN_PTR(lpRootFolder) ||
+        !TEST_STRINGA_PTR(lpszFolderPath) ||
+        !TEST_WRITE_PTR(lppFolder, sizeof(LPMAPIFOLDER)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+//$--CHK_HrOpenExchangePublicFolders-------------------------------------------
+//  Parameter checking for HrOpenExchangePublicFolders().
+//------------------------------------------------------------------------------
+__inline static HRESULT CHK_HrOpenExchangePublicFolders(
+    IN LPMDB lpPubStore,
+    OUT LPMAPIFOLDER *lppRootFolder)
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_IUNKNOWN_PTR( lpPubStore) ||
+        !TEST_WRITE_PTR( lppRootFolder, sizeof(LPMAPIFOLDER)) )
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return( hr);
+}
+
+#endif /* DEBUG */
+

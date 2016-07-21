@@ -1,0 +1,5 @@
+// ***** Trojan.Win32.Dialer.ew *****
+begin       
+ AddEvAlarmByCLSID('18000D07-72C4-11D4-B4BD-004026422A29', AScriptName, 'Hot_net.OCX');
+ AddEvAlarmByCLSID('E49165C6-8FDF-11D4-B4BD-004026422A29', AScriptName,'Hot_net.OCX');
+end.

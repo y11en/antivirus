@@ -1,0 +1,6 @@
+// ***** AdvWare.Wintol *****
+begin
+ AddEvAlarmByCLSID('87067F04-DE4C-4688-BC3C-4FCF39D609E7',AScriptName,'WToolsA.exe');
+ AddEvAlarmByCLSID('87766247-311C-43B4-8499-3D5FEC94A183',AScriptName,'WToolsB.dll');
+ AddEvAlarmByCLSID('A8DEB4A5-D9EF-4D21-B4F6-921475004E7D',AScriptName,'WToolsB.dll');
+end.

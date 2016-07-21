@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<job>
+  <runtime>
+    <description>This script performs convertation of VC6 projects to VC 2005 projects</description>
+    <named name = "src"
+          helpstring = "a VC 6 project file name to be converted"
+          type = "string"
+          required = "true"/>
+    <named name = "dst"
+          helpstring = "a new VC 2005 project file name"
+          type = "string"
+          required = "false"/>
+    <named name = "overwrite"
+          helpstring = "overwrite the file if exists"
+          type = "boolean"
+          required = "false"/>
+    <example>Example:
+converter.wsf /src:c:\foo.dsp /dest:c:\foo.vcproj</example>
+  </runtime>
+
+<script language="JScript">
+<![CDATA[
+
+
+var args = WScript.Arguments;
+
+if ( ! args.Named.Exists ( "src" ) ) {
+	args.ShowUsage ();
+	WScript.Quit (1);
+}
+
+var source = args.Named.Item ( "src" );
+var dest = source;
+if ( args.Named.Exists("dst") ) {
+	dest = args.Named.Item("dst");
+}
+else {
+	var regExp = /.dsp$/i;
+	dest = dest.replace ( regExp, ".vcproj" ); 
+}
+
+var fsObj = new ActiveXObject("Scripting.FileSystemObject");
+
+if ( !fsObj.FileExists ( source ) ) {
+	WScript.Echo( "\t\t\tFile \"" + source + "\" doesn't exist!");
+	WScript.Quit ( 1 );
+}
+
+if ( fsObj.FileExists ( dest ) && !args.Named.Item ( "overwrite" ) ) {
+	WScript.Echo( "\t\t\tFile \"" + dest + "\" already exists!");
+	WScript.Quit (1);
+}
+
+var vcProj = new ActiveXObject ( "VisualStudio.VCProjectEngine.8.0" );
+var vcProject = vcProj.LoadProject ( source );
+
+vcProject.ProjectFile = dest;
+vcProject.Save ();
+
+]]>
+</script>
+</job>
+
+

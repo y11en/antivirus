@@ -1,0 +1,4 @@
+// ***** Trojan-Proxy.Win32.Sobit.c *****
+begin
+ AddEvAlarmByCLSID('0191ABF4-9421-435E-9FFD-CD827A2A82D8',AScriptName,'tl7000_certid*.dll');
+end.

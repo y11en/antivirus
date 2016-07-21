@@ -1,0 +1,37 @@
+forward interface AVSPM;
+typedef AVSPM* hAVSPM;
+
+
+
+
+[
+  mnemonic(IID_AVSPM)
+  id(49030)
+  c_type_name(hAVSPM)
+]
+interface AVSPM { // AVS Performance Monitoring
+
+  // ------------------------------------
+
+    [
+      comment_ex("Interface version")
+      id(130)
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      comment_ex("Interface comment")
+      id(131)
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+
+
+  // ------------------------------------
+    method tERROR ProcessBegin();
+    method tERROR ProcessEnd();
+    method tERROR ProcessYield();
+    method tERROR GetPerformance( cSerializable* stat );
+    method tERROR GetProcessorUsage( tDWORD* usage );
+
+}
+

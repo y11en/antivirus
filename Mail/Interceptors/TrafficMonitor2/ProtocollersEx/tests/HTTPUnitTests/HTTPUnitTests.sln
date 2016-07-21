@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HTTPUnitTests", "HTTPUnitTests\HTTPUnitTests.vcproj", "{439C9B84-AA3D-400B-81C5-A723CAD3DBC0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PipeliningTest", "PipeliningTest\PipeliningTest.vcproj", "{0061B253-8136-4134-9526-32A8D76A2C3D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PostTest", "PostTest\PostTest.vcproj", "{0F776639-A107-4E15-8413-38CA810BED31}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "httpprotocoller", "..\..\HTTPProtocoller\httpprotocoller.vcproj", "{2DF47D92-FD2F-4F0A-A558-A697F8AF8CB2}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 5
+		SccProjectName0 = Perforce\u0020Project
+		SccLocalPath0 = ..\\..
+		SccProvider0 = MSSCCI:Perforce\u0020SCM
+		SccProjectFilePathRelativizedFromConnection0 = test\\HTTPUnitTests\\
+		SccProjectUniqueName1 = HTTPUnitTests\\HTTPUnitTests.vcproj
+		SccLocalPath1 = ..\\..
+		SccProjectFilePathRelativizedFromConnection1 = test\\HTTPUnitTests\\HTTPUnitTests\\
+		SccProjectUniqueName2 = PipeliningTest\\PipeliningTest.vcproj
+		SccLocalPath2 = ..\\..
+		SccProjectFilePathRelativizedFromConnection2 = test\\HTTPUnitTests\\PipeliningTest\\
+		SccProjectUniqueName3 = PostTest\\PostTest.vcproj
+		SccLocalPath3 = ..\\..
+		SccProjectFilePathRelativizedFromConnection3 = test\\HTTPUnitTests\\PostTest\\
+		SccProjectUniqueName4 = ..\\..\\HTTPProtocoller\\httpprotocoller.vcproj
+		SccLocalPath4 = ..\\..\\HTTPProtocoller
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{439C9B84-AA3D-400B-81C5-A723CAD3DBC0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{439C9B84-AA3D-400B-81C5-A723CAD3DBC0}.Debug|Win32.Build.0 = Debug|Win32
+		{439C9B84-AA3D-400B-81C5-A723CAD3DBC0}.Release|Win32.ActiveCfg = Release|Win32
+		{439C9B84-AA3D-400B-81C5-A723CAD3DBC0}.Release|Win32.Build.0 = Release|Win32
+		{0061B253-8136-4134-9526-32A8D76A2C3D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0061B253-8136-4134-9526-32A8D76A2C3D}.Debug|Win32.Build.0 = Debug|Win32
+		{0061B253-8136-4134-9526-32A8D76A2C3D}.Release|Win32.ActiveCfg = Release|Win32
+		{0061B253-8136-4134-9526-32A8D76A2C3D}.Release|Win32.Build.0 = Release|Win32
+		{0F776639-A107-4E15-8413-38CA810BED31}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0F776639-A107-4E15-8413-38CA810BED31}.Debug|Win32.Build.0 = Debug|Win32
+		{0F776639-A107-4E15-8413-38CA810BED31}.Release|Win32.ActiveCfg = Release|Win32
+		{0F776639-A107-4E15-8413-38CA810BED31}.Release|Win32.Build.0 = Release|Win32
+		{2DF47D92-FD2F-4F0A-A558-A697F8AF8CB2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2DF47D92-FD2F-4F0A-A558-A697F8AF8CB2}.Debug|Win32.Build.0 = Debug|Win32
+		{2DF47D92-FD2F-4F0A-A558-A697F8AF8CB2}.Release|Win32.ActiveCfg = Release|Win32
+		{2DF47D92-FD2F-4F0A-A558-A697F8AF8CB2}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

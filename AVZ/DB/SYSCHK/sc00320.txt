@@ -1,0 +1,6 @@
+// ***** Adware.GoldenPalace *****
+begin
+ AddEvAlarmByCLSID('A16E6189-A1DD-4696-9806-0324C145D794',AScriptName,'');
+ AddEvAlarmByCLSID('DDFFA75A-E81D-4454-89FC-B9FD0631E726',AScriptName,'');
+ AddEvAlarmByCLSID('C1F444C9-D3C8-454C-9B4D-B4D18A7E70F4',AScriptName,'');
+end.

@@ -1,0 +1,175 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_LICENSE DIALOGEX 0, 0, 266, 70
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            103,IDC_ULICON,0,0,20,20
+    LTEXT           "",IDC_INTROTEXT,25,0,241,23,NOT WS_GROUP
+    CONTROL         "",IDC_EDIT1,"RichEdit20A",ES_MULTILINE | ES_READONLY | WS_BORDER | WS_VSCROLL | WS_TABSTOP,0,24,266,47
+END
+
+IDD_DIR DIALOGEX 0, 0, 266, 70
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_DIR,8,35,187,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "",IDC_BROWSE,202,34,55,14
+    ICON            103,IDC_ULICON,0,0,20,20
+    CONTROL         "",IDC_SELDIRTEXT,"Static",SS_LEFTNOWORDWRAP,0,22,265,8
+    CONTROL         "",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,187,54,78,10
+    CONTROL         "",IDC_SPACEAVAILABLE,"Static",SS_LEFTNOWORDWRAP,1,63,185,8
+    CONTROL         "",IDC_SPACEREQUIRED,"Static",SS_LEFTNOWORDWRAP,1,54,185,8
+    LTEXT           "",IDC_INTROTEXT,25,0,241,18,NOT WS_GROUP
+END
+
+IDD_SELCOM DIALOGEX 0, 0, 266, 70
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBO1,114,15,152,94,CBS_DROPDOWNLIST | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    ICON            103,IDC_ULICON,0,0,21,20
+    LTEXT           "",IDC_TEXT2,0,33,108,29,NOT WS_GROUP
+    CONTROL         "",IDC_TEXT1,"Static",SS_LEFTNOWORDWRAP,0,20,108,8
+    CONTROL         "",IDC_SPACEREQUIRED,"Static",SS_LEFTNOWORDWRAP,0,60,111,8
+    LTEXT           "",IDC_INTROTEXT,25,0,241,15,NOT WS_GROUP
+    CONTROL         "",IDC_TREE1,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | WS_BORDER | WS_TABSTOP,114,28,151,42
+END
+
+IDD_INST DIALOGEX 0, 0, 253, 75
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "",3,196,54,50,14,NOT WS_VISIBLE | WS_GROUP
+    PUSHBUTTON      "",1,196,54,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "",2,196,54,50,14
+    CONTROL         "",IDC_CHILDRECT,"Static",SS_BLACKRECT | NOT WS_VISIBLE | WS_GROUP,7,6,239,35
+    LTEXT           "",IDC_VERSTR,7,57,185,8,WS_DISABLED
+END
+
+IDD_INSTFILES DIALOGEX 0, 0, 239, 34
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_PROGRESS,"msctls_progress32",NOT WS_VISIBLE | WS_BORDER,24,10,241,11
+    CONTROL         "",IDC_INTROTEXT,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX,24,0,241,8
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_NOCOLUMNHEADER | NOT WS_VISIBLE | WS_BORDER | WS_TABSTOP,0,0,265,16
+    ICON            103,IDC_ULICON,0,0,20,20
+    PUSHBUTTON      "",IDC_SHOWDETAILS,0,0,60,14,NOT WS_VISIBLE | NOT WS_TABSTOP
+END
+
+IDD_UNINST DIALOGEX 0, 0, 266, 70
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            103,IDC_ULICON,0,1,20,20
+    LTEXT           "",IDC_UNINSTFROM,0,47,55,8,NOT WS_GROUP
+    EDITTEXT        IDC_EDIT1,56,45,209,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "",IDC_INTROTEXT,25,0,241,34,NOT WS_GROUP
+END
+
+IDD_LICENSE_FSRB DIALOGEX 0, 0, 266, 70
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            103,IDC_ULICON,0,0,20,20
+    LTEXT           "",IDC_INTROTEXT,25,0,241,23,NOT WS_GROUP
+    CONTROL         "",IDC_EDIT1,"RichEdit20A",ES_MULTILINE | ES_READONLY | WS_BORDER | WS_VSCROLL | WS_TABSTOP,0,24,266,27
+    CONTROL         "",IDC_LICENSEAGREE,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,0,50,266,9
+    CONTROL         "",IDC_LICENSEDISAGREE,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,0,60,266,9
+END
+
+IDD_LICENSE_FSCB DIALOGEX 0, 0, 266, 70
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            103,IDC_ULICON,0,0,20,20
+    LTEXT           "",IDC_INTROTEXT,25,0,241,23,NOT WS_GROUP
+    CONTROL         "",IDC_EDIT1,"RichEdit20A",ES_MULTILINE | ES_READONLY | WS_BORDER | WS_VSCROLL | WS_TABSTOP,0,24,266,37
+    CONTROL         "",IDC_LICENSEAGREE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,60,266,9
+END
+
+IDD_VERIFY DIALOGEX 0, 0, 162, 22
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CTEXT           "",IDC_STR,7,7,148,8,NOT WS_GROUP
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

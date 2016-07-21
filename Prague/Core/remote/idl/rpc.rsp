@@ -1,0 +1,11 @@
+-Oi
+-nologo 
+-char unsigned
+-oldnames 
+-cpp_cmd cl 
+-I ../../include/iface
+-I ../../include
+-I ../include
+-D pr_call=
+-D mout=ptr,in,out
+-D __RPC__=dummy_var

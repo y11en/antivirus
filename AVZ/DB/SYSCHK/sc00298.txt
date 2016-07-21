@@ -1,0 +1,4 @@
+// ***** Trojan.Win32.TalkStocks *****
+begin
+ AddEvAlarmByCLSID('AE6CEFA8-1223-4337-8D94-977268FF9AA0',AScriptName,'Download_UL.dll');
+end.

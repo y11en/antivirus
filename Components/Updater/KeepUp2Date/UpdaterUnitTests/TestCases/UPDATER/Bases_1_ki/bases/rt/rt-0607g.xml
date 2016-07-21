@@ -1,0 +1,18 @@
+<UpdateFiles
+	UpdateDate="21112006 2044">
+	<FileDescription
+		ComponentID="RT"
+		UpdateType="base"
+		ServerFolder="%Localization%"
+		LocalPath="%Data%\%Localization%"
+		Filename="retr.dat"
+		SubEnvrnmnt="Localization=[en,ru,de,fr]" />
+	<Registry
+		ComponentID="CORE"
+		UpdateType="REGISTRY"
+		LocalPath="%DSKM%"
+		Body="S0xyZwEDAABLTHN3AACtrQEAAAD8AwAAAQAAAAEAABRqBQABACAAxfAW7yk8UR6l6VPs9xriRAj2iqC20Y0zwvhV3XyzbmYgABkHzX4g0WqxtqADoz/6ABzBi1b7Tb9DSJ0efFoxqvnhIAAsp1wdC2jGzyLSDC4e9BNUKidCaM2QjN33WyGzh8hbniAAiR7W6YPNkBK7rGbpUIqg9EttmRehXLL+p9AaSssY4YEgAK8NSTQ3mxbwqyT1KiyyzmLoMJ1897Fl7ZvErRkHvcYHAQAeCQMAAAABAAAJVCd/aw0KOzoxMGFHWldjMUJhRlp0NythQ1NaQkxOcElVeFJuUFducWp2R0s2Mlo4R2kzWE5MZGJsbGpBbUlKaHoyQ3BoMGtoY3RvL1FzYnkrL0FhUzZZR0MvcFV5M3ZsJSU="
+		Filename="blst-rt-0607g.krg" />
+</UpdateFiles>
+;:1040l/0Ed4jquPkRpi/EOH5yGUVwPhej6GRXrSPdk2N0JMatfFZ4Sv2k0gRe671Qd94TlDQYFr86lZ3X57WHlXhQ%%
+; 0XLSznpdI71fB300e7Uwj1EVuCeFfo8obyujYQoE4pklqIgRLcJQcZIPMa­­

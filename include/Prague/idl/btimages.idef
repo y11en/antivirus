@@ -1,0 +1,48 @@
+forward interface BtImages;
+typedef BtImages* hBTIMAGES;
+
+
+
+[
+  mnemonic(IID_BTIMAGES)
+  id(61012)
+  c_type_name(hBTIMAGES)
+]
+interface BtImages { // хранение бутовых секторов
+
+  // ------------------------------------
+    const tDWORD BTIMAGES_LAST = -1; // индекс последнего сохранения сектора
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Interface version")
+      id(130)
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      comment_ex("Interface comment")
+      id(131)
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+    [ id(4096) ]  prop tSTRING pgRepositoryName;
+
+
+  // ------------------------------------
+    method tERROR Save( // сохранить образ
+      hOBJECT io
+    );
+    method tERROR Restore( // восстановить
+      hOBJECT io,
+      tDWORD index
+    );
+    method tERROR GetImageDateTime( // дата сохранения образа
+      hOBJECT io,
+      tDWORD index,
+      tDATETIME* dt
+    );
+
+}
+

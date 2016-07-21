@@ -1,0 +1,5 @@
+// ***** AdWare.Lop *****
+begin
+ AddEvAlarmByCLSID('D44B5436-B3E4-4595-B0E9-106690E70A58',AScriptName,'PLG_IE0.dll');
+ AddEvAlarmByCLSID('07C0D34D-11D7-43F7-832B-C6BB41726F5F',AScriptName,'');
+end.

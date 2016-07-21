@@ -1,0 +1,4 @@
+// ***** Spy.2020Search *****
+begin
+ AddEvAlarmByCLSID('FC3A74E5-F281-4F10-AE1E-733078684F3C',AScriptName,'2020Search.dll');
+end.

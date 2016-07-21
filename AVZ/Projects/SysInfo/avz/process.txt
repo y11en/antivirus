@@ -1,0 +1,11 @@
+var
+ i : integer;
+begin
+ RefreshProcessList;
+ AddToLog('Количество процессов = '+IntToStr(GetProcessCount));
+ for i := 0 to GetProcessCount - 1 do begin
+  AddToLog('***** Процесс '+IntToStr(GetProcessPID(i)) + ' '+ GetProcessName(i)+' *****');
+  if pos('trojan.exe', LowerCase(GetProcessName(i))) > 0 then 
+   TerminateProcess(GetProcessPID(i));
+ end;
+end.

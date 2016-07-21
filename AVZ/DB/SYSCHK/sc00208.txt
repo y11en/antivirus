@@ -1,0 +1,4 @@
+// ***** AdvWare.Toolbar.SearchIt *****
+begin
+ AddEvAlarmByCLSID('34A44FCF-50E3-63A5-A8DA-7835752B9571','AdvWare.Toolbar.SearchIt','ccbar.dll');
+end.

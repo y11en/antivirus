@@ -1,0 +1,4 @@
+// ***** AdvWare.Toolbar.ImiBar *****
+begin
+ AddEvAlarmByCLSID('01F44A8A-8C97-4325-A378-76E68DC4AB2E',AScriptName,'systb.dll');
+end.

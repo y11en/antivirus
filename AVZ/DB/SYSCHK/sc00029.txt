@@ -1,0 +1,4 @@
+// ***** AdvWare.Toolbar.PowerSearch.b *****
+begin
+ AddEvAlarmByCLSID('7CBBB3F1-0E68-43FA-B034-4D3EC394D085',AScriptName,'');
+end.

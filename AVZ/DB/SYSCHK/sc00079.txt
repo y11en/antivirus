@@ -1,0 +1,5 @@
+// ***** Dialer.EMSAT *****
+begin
+ AddEvAlarmByCLSID('BD092CD7-AA66-4FF6-8CE1-D4E01489ED2B',AScriptName,'EMSAT.ocx');
+ AddEvAlarmByCLSID('404B3894-5B16-443E-A6CA-3250EE1847F0',AScriptName,'emsat_russia.ocx');
+end.

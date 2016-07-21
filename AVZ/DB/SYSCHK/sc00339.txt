@@ -1,0 +1,6 @@
+// ***** Adware.Streamcast *****
+begin
+ AddEvAlarmByCLSID('7E5DA25B-1C13-4B78-837A-B938624EBA41',AScriptName,'');
+ AddEvAlarmByCLSID('EEC00EA6-1FC6-40D9-934A-94E46FBD497A',AScriptName,'');
+ AddEvAlarmByCLSID('F5264917-55DD-40BF-B07F-FBD43DFA899E',AScriptName,'');
+end.

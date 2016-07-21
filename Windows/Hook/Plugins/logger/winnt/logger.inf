@@ -1,0 +1,25 @@
+[Version] 
+Signature = "$CHICAGO$" 
+
+[DefaultInstall]
+CopyFiles = Copy.Sys
+
+[DefaultInstall.Services]
+AddService=logger,,logger.install
+
+[logger.install]
+DisplayName = %logger%
+ServiceType = 1;
+StartType   = 3;
+Errorcontrol= 1;
+ServiceBinary = %12%\logger.sys
+
+[Copy.Sys]
+logger.sys
+
+[DestinationDirs]
+Copy.sys = 12
+
+[Strings] 
+KL = "Kaspersky Lab"
+logger = "logger"

@@ -1,0 +1,4 @@
+// ***** AdvWare.BHO.Plin *****
+begin       
+ AddEvAlarmByCLSID('F236CC5A-F6E4-4011-9EED-C52FDF51CE3D',AScriptName,'SBHOPlin.DLL');
+end.

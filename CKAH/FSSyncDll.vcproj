@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioProject ProjectType="Visual C++" Version="8.00" Name="FSSyncDll" SccProjectName="&quot;$/Components/Windows/KAH&quot;, XIWJAAAA" SccLocalPath="." Keyword="MakeFileProj">
+	<Platforms>
+		<Platform Name="Win32"/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="Release|Win32" OutputDirectory="..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\temp_$(PlatformName)\$(ConfigurationName)\components\Windows\$(ProjectName)" ConfigurationType="0" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool Name="VCNMakeTool" BuildCommandLine="nmake /f _msdev_make.mak TARGET=&quot;FSSync - Win32 Release&quot; DSW=&quot;..\..\..\Windows\Hook\Hook&quot;" ReBuildCommandLine="nmake /f _msdev_make.mak TARGET=&quot;FSSync - Win32 Release&quot; DSW=&quot;..\..\..\Windows\Hook\Hook&quot; REBUILD=/REBUILD" CleanCommandLine="" Output="FSSync" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged=""/>
+		</Configuration>
+		<Configuration Name="Debug|Win32" OutputDirectory="..\..\..\out_$(PlatformName)\$(ConfigurationName)" IntermediateDirectory="..\..\..\temp_$(PlatformName)\$(ConfigurationName)\components\Windows\$(ProjectName)" ConfigurationType="0" InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops" UseOfMFC="0" ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool Name="VCNMakeTool" BuildCommandLine="nmake /f _msdev_make.mak TARGET=&quot;FSSync - Win32 Debug&quot; DSW=&quot;..\..\..\Windows\Hook\Hook&quot;" ReBuildCommandLine="nmake /f _msdev_make.mak TARGET=&quot;FSSync - Win32 Debug&quot; DSW=&quot;..\..\..\Windows\Hook\Hook&quot; REBUILD=/REBUILD" CleanCommandLine="" Output="FSSync" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged=""/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+	</Files>
+</VisualStudioProject>

@@ -1,0 +1,24 @@
+// $AVZ1565
+//$ Заблокирован интерфейс командной строки (cmd.exe)
+// Функция поиска проблемы                                                                          
+function Check : dword;
+begin
+ Result := 0;
+ // Блокировка
+ if RegKeyIntParamRead('HKCU', 'software\policies\microsoft\windows\system', 'disablecmd') > 0 then begin
+   Result := 3;
+   exit;
+  end;
+ if RegKeyIntParamRead('HKLM', 'software\policies\microsoft\windows\system', 'disablecmd') > 0 then begin
+   Result := 3;
+   exit;
+  end;
+end;
+
+// Функция исправления проблемы                                                                          
+function Fix : dword;
+begin
+ RegKeyParamDel('HKCU', 'software\policies\microsoft\windows\system', 'disablecmd');
+ RegKeyParamDel('HKLM', 'software\policies\microsoft\windows\system', 'disablecmd');
+ Result := 0;
+end;

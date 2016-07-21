@@ -1,0 +1,4 @@
+// ***** Dialer.BT *****
+begin
+ AddEvAlarmByCLSID('EC5A4E7B-02EB-451D-B310-D5F2E0A4D8C3', AScriptName, 'btwebcontrol.dll');
+end.

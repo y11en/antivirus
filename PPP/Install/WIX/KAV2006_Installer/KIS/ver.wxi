@@ -1,0 +1,13 @@
+<Include>
+	<?define ProductVersion="8.0.0.167" ?>
+	<?define ProductBuild="167" ?>
+	<?if $(var.ProductStatus) = "Beta" ?>
+		<?define UpdateRoot="index" ?>
+		<?define ProductStatusStr=" Beta" ?>
+		<?define ProductComments="Version: 8.0.0.167 Beta" ?>
+	<?elseif $(var.ProductStatus) = "Release" ?>
+		<?define UpdateRoot="index" ?>
+		<?define ProductStatusStr="" ?>
+		<?define ProductComments="Version: 8.0.0.167" ?>
+	<?endif?>
+</Include>

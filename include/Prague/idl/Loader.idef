@@ -1,0 +1,135 @@
+forward interface Loader;
+typedef Loader* hLOADER;
+
+forward interface Plugin;
+typedef Plugin* hPLUGIN;
+
+
+
+
+[
+  version(0)
+  mnemonic(IID_LOADER)
+  id(6)
+  c_type_name(hLOADER)
+  comment_ex("Supplies facility to find prague loadable plugins. Must create objects of \"Plugin\" interafce. One object to one loadable plugin")
+]
+interface Loader { // prague loadable plugin finder
+
+  // ------------------------------------
+    const tDWORD mLOADER_FORCE_MASK = 0x0000000C; // mask for check \"force\" flags
+    const tDWORD fLOADER_FORCE_ALL = 0x0000000C; // unconditionally process all plugins
+    const tDWORD fLOADER_FORCE_NATIVE = 0x00000008; // unconditionally process native format plugins
+    const tDWORD fLOADER_FORCE_PRAGUE = 0x00000004; // unconditionally process prague format plugins
+    const tDWORD mLOADER_PARAM_MASK = 0x00003f00L;
+    const tDWORD fLOADER_PARAM_IS_WSTR = 0x00000100L; // parameter is Unicode string
+    const tDWORD fLOADER_PARAM_IS_FOLDER = 0x00000000L; // parameter is a ANSI name of the folder
+    const tDWORD fLOADER_PARAM_IS_WFOLDER = fLOADER_PARAM_IS_FOLDER | fLOADER_PARAM_IS_WSTR; // parameter is a Unicode name of the folder
+    const tDWORD fLOADER_PARAM_IS_STR_POINTER_LIST = 0x00000200L; // parameter is list of the ANSI string pointers
+    const tDWORD fLOADER_PARAM_IS_WSTR_POINTER_LIST = fLOADER_PARAM_IS_STR_POINTER_LIST | fLOADER_PARAM_IS_WSTR; // parameter is list of the unicode string pointers
+    const tDWORD fLOADER_PARAM_IS_STR_LIST = 0x00000400L; // parameter is list of ANSI strings in a single buffer terminated by '\0'. Last string is terminated by double '\0\0'
+    const tDWORD fLOADER_PARAM_IS_WSTR_LIST = fLOADER_PARAM_IS_STR_LIST | fLOADER_PARAM_IS_WSTR; // parameter is list of Unicode strings in a single buffer terminated by L'\0'. Last string is terminated by double L'\0'L'\0'
+    const tDWORD fLOADER_TRANSACTION = 0x10000000; // IntegrateModules must be transacted. Method IntegrateCommit or IntagateRollback must be called after IntegateModules
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("//rus:возвращается любым методом интерфейса, если был вызван метод IntegateModules c флагом fLOADER_TRANSACTION и транзакция не завершена методом IntegarteCommit или IntegrateRollback")
+    ]
+    error errTRANSACTION_IN_PROGRESS; // rus:возвращается методами интерфейса, если выполняется транзакция
+
+    [
+      comment_ex("//rus:возвращается методами IntagrateCommit и IntagateRollback в том случае, если до этого не был вызван метод IntegrateModules с флагом fLOADER_TRANSACTION")
+    ]
+    error errTRANSACTION_NOT_STARTED; // rus:возвращается методами IntagrateCommit и IntagateRollback, если транзакция не была стартована
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Finds plugins and creates correspondent module objects.
+        Each plugin must have its own module object")
+    ]
+    method tERROR FindModules( // finds plugins and create module objects correspondent to plugins
+      const tVOID* param_pool, // input parameters (source to find plugins)
+      tDWORD param_pool_size, // sizeof input buffer
+      tDWORD flags
+    );
+    method tERROR LoadModules( // load found modules into memory
+      tDWORD format_flags // use ORed cLM_... constants
+    );
+    method tERROR UnloadModules( // unload all found modules from memory
+      tDWORD format_flags // use ORed cLM_... constants
+    );
+    method tERROR RegisterModuleInterfaces(); // register interfaces in all found modules
+    method tERROR UnregisterModuleInterfaces(); // unregister interfaces in all found modules
+    method tERROR CheckAutoLoad(); // check if plugins are autoloaded and load it if necessary
+    method tERROR IntegrateModules( // finds and autoloads modules, registers interfaces and load native or prague plugins by flags
+      const tVOID* param_pool, // input parameters (source to find plugins)
+      tDWORD param_pool_size, // sizeof input buffer
+      tDWORD load_flags // load flags (preload native or prague plugins for example)
+    );
+    method tERROR InegrateCommit();
+    method tERROR IntegrateRollback();
+
+}
+
+
+[
+  version(0)
+  mnemonic(IID_PLUGIN)
+  id(5)
+  c_type_name(hPLUGIN)
+  comment_ex("Supplies facilities :
+      -- to load/unload certain plugin
+      -- to get shared interface properties implemented by plugin")
+]
+interface Plugin { // interface of load/unload plugins
+
+  // ------------------------------------
+    [ id(4096) ]  prop tCODEPAGE pgDEFAULT_CODEPAGE;
+    [ id(4097) ]  prop tDWORD pgDEFAULT_DATE_FORMAT;
+    [ id(4098) ]  prop tBOOL pgIS_LOADED;
+    prop pgOBJECT_NAME; // module name
+    [ id(4099) ]  prop tSTRING pgMODULE_NAME; // module name
+    [ id(4105) ]  prop tDWORD pgMODULE_ID; // plugin identifier
+    [ id(4102) ]  prop tBOOL pgAUTO_START; // plugin is designatet to autostart
+    [ id(4103) ]  prop tBOOL pgIS_PRAGUE_FORMAT; // is plugin converted to prague format
+    [ id(4104) ]  prop tDWORD pgINTERFACE_COUNT; // count of interface implemented
+    [ id(4106) ]  prop tDATETIME pgTIME_STAMP; // module time stamp
+    [ id(4107) ]  prop tBOOL pgUNLOADABLE; // plugin can be unloaded
+    [ id(4108) ]  prop tDWORD pgUSAGE_COUNT; // usage count
+
+    [
+      comment_ex("Plugin count of exports")
+      id(198)
+    ]
+    prop tDWORD pgPLUGIN_EXPORT_COUNT; // Plugin count of exports
+    [ id(4109) ]  prop tDATETIME pgUNUSED_SINCE; // time when plugin became unused
+    [ id(4110) ]  prop tBOOL pgIS_INTEGRAL; // cTRUE if integral plugin
+
+
+  // ------------------------------------
+    method tERROR GetInterfaceProperty(
+      tDWORD* result,
+      tDWORD index,
+      tPROPID prop_id,
+      tPTR buffer,
+      tDWORD count
+    );
+    method tERROR Load(); // load the module
+    method tERROR Unload( // unload the module
+      tBOOL force
+    );
+    method tERROR RegisterInterfaces( // registers interfaces implemented by module and returns count of interfaces registered
+      tDWORD* result
+    );
+    method tERROR UnregisterInterfaces(); // unregister interfaces implemented by module
+    method tERROR CheckInterfaces(); // check interfaces implemented by module
+    method tERROR UnloadUnused(
+      tDWORD during // if this parameter is not ZERO unload if time elapsed since unused more then indicated
+    );
+
+}
+

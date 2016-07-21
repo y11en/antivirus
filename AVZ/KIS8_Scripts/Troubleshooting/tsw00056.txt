@@ -1,0 +1,24 @@
+// $AVZ1582
+//$ Заблокирован доступ к свойствам панели задач и меню Пуск
+// Функция поиска проблемы                                                                          
+function Check : dword;
+begin
+ Result := 0;
+ // Блокировка
+ if RegKeyIntParamRead('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'NoSetTaskbar') > 0 then begin
+   Result := 3;
+   exit;
+  end;
+ if RegKeyIntParamRead('HKLM', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'NoSetTaskbar') > 0 then begin
+   Result := 3;
+   exit;
+  end;
+end;
+
+// Функция исправления проблемы                                                                          
+function Fix : dword;
+begin
+ RegKeyParamDel('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'NoSetTaskbar');
+ RegKeyParamDel('HKLM', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'NoSetTaskbar');
+ Result := 0;
+end;

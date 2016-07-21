@@ -1,0 +1,11 @@
+// ***** Dialer.E-Group *****
+begin
+ AddEvAlarmByCLSID('2AEEAC34-FD74-4142-B891-4B05C0C03C87',AScriptName,'EGCOMSERVICE*.dll');
+ AddEvAlarmByCLSID('D7B59209-0ED9-4986-BD4A-527BE836C6B2',AScriptName,'EGCOMSERVICE*.dll');
+ AddEvAlarmByCLSID('469C7080-8EC8-43A6-AD97-45848113743C','Dialer.E-Group.d,j','nethv32.dll');
+ AddEvAlarmByCLSID('2ABE804B-4D3A-41BF-A172-304627874B45','Dialer.E-Group, Backdoor.Magicon.f','EGDHTML*.dll');
+ AddEvAlarmByCLSID('94742E3F-D9A1-4780-9A87-2FFA43655DA2',AScriptName,'EGDial.dll');
+ AddEvAlarmByCLSID('A02780C3-7F77-4E28-855B-28890F3CF37A','Dialer.E-Group, Dialer.InstatAccess','EGCOMLIB2.dll');
+ AddEvAlarmByCLSID('CF5F84EB-D3FC-4F98-BE3B-F5B56B962CED','Dialer.E-Group, Dialer.InstatAccess','EGCOMLIB_1035.dll');
+ AddEvAlarmByCLSID('31DDC1FD-CEA3-4837-A6DC-87E67015ADC9',AScriptName,'svcsysnet32.dll');
+end.

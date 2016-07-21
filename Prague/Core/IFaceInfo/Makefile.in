@@ -1,0 +1,25 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@
+
+Name = ifaceinfo
+Archive = $(Name).@ARCHIVE_EXT@
+Targets = $(Archive)
+
+Includes = @srcdir@/../
+
+Sources = \
+	baseinfo.cpp \
+	datastructinfo.cpp \
+	errinfo.cpp \
+	ifaceinfo.cpp \
+	methodinfo.cpp \
+	msg.cpp \
+	plugininfo.cpp \
+	propinfo.cpp \
+	stdafx.cpp \
+	stdtypeinfo.cpp \
+	tree.cpp
+
+include @abs_top_builddir@/@OS@/Rules

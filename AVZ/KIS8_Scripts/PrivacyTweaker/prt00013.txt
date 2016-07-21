@@ -1,0 +1,42 @@
+// $AVZ1552
+//$ Очистить список доверенных доменов IE
+// Функция поиска проблемы
+function Check : dword;
+var
+ Lines : TStrings;
+ i : integer;
+ S : string;                           
+begin
+ Result := 0;                               
+ Lines := TStringList.Create;
+ RegKeyEnumKey('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Internet Settings\zonemap\domains', Lines);
+ if Lines.Count > 0 then 
+  Result := 2;
+ if Result = 0 then begin
+  Lines.Clear;
+  RegKeyEnumKey('HKLM', 'Software\Microsoft\Windows\CurrentVersion\Internet Settings\zonemap\domains', Lines);
+  if Lines.Count > 0 then 
+   Result := 2;
+ end;
+ Lines.Free;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+var
+ Lines : TStrings;
+ i : integer;
+ S : string;                           
+begin
+ Result := 0;                               
+ Result := 0;                               
+ Lines := TStringList.Create;
+ RegKeyEnumKey('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Internet Settings\zonemap\domains', Lines);
+ for i:= 0 to Lines.Count-1 do
+  RegKeyDel('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Internet Settings\zonemap\domains\'+Lines[i]);
+ Lines.Clear;
+ RegKeyEnumKey('HKLM', 'Software\Microsoft\Windows\CurrentVersion\Internet Settings\zonemap\domains', Lines);
+ for i:= 0 to Lines.Count-1 do
+  RegKeyDel('HKLM', 'Software\Microsoft\Windows\CurrentVersion\Internet Settings\zonemap\domains\'+Lines[i]);
+ Lines.Free;
+end;

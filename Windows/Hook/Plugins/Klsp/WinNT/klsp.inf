@@ -1,0 +1,25 @@
+[Version] 
+Signature = "$CHICAGO$" 
+
+[DefaultInstall]
+CopyFiles = Copy.Sys
+
+[DefaultInstall.Services]
+AddService=klsp,,klsp.install
+
+[klsp.install]
+DisplayName = %klsp%
+ServiceType = 1;
+StartType   = 3;
+Errorcontrol= 1;
+ServiceBinary = %12%\klsp.sys
+
+[Copy.Sys]
+klsp.sys
+
+[DestinationDirs]
+Copy.sys = 12
+
+[Strings] 
+KL = "Kaspersky Lab"
+klsp = "klsp"

@@ -1,0 +1,56 @@
+# Microsoft Developer Studio Generated Dependency File, included by nt.mak
+
+.\nthook.c : \
+	"..\..\..\commonfiles\avp_data.h"\
+	"..\..\..\commonfiles\avpcomid.h"\
+	"..\..\..\commonfiles\avprptid.h"\
+	"..\..\..\commonfiles\hook\hookspec.h"\
+	"..\..\..\commonfiles\hook\klmc_api.h"\
+	"..\..\..\commonfiles\hook\klpf_api.h"\
+	"..\..\..\commonfiles\hook\minikav_api.h"\
+	"..\..\..\commonfiles\hook\pidexternalapi.h"\
+	"..\..\..\commonfiles\property.h"\
+	"..\client.c"\
+	"..\COMMON.C"\
+	"..\debug.c"\
+	"..\debug.h"\
+	"..\defs.h"\
+	"..\filter.c"\
+	"..\InvThread.c"\
+	"..\ioctl.c"\
+	"..\logging.c"\
+	"..\MemMap.c"\
+	"..\NameCache.c"\
+	"..\Ntcommon.cpp"\
+	"..\osspec.c"\
+	"..\osspec.h"\
+	"..\PPage.c"\
+	"..\r3.c"\
+	"..\Security.c"\
+	"..\structures.h"\
+	"..\syscalls.c"\
+	"..\TSPv2.c"\
+	".\diskio.c"\
+	".\fastio.c"\
+	".\fileio.c"\
+	".\firewall.c"\
+	".\LLDiskIO.c"\
+	".\registry.c"\
+	".\SysIO.c"\
+	"c:\ddk\ddknt4\inc\bugcodes.h"\
+	"c:\ddk\ddknt4\inc\exlevels.h"\
+	"c:\ddk\ddknt4\inc\ntdddisk.h"\
+	"c:\ddk\ddknt4\inc\ntddstor.h"\
+	"c:\ddk\ddknt4\inc\ntdef.h"\
+	"c:\ddk\ddknt4\inc\ntifs.h"\
+	"c:\ddk\ddknt4\inc\ntiologc.h"\
+	"c:\ddk\ddknt4\inc\ntnls.h"\
+	"c:\ddk\ddknt4\inc\ntpoapi.h"\
+	"c:\ddk\ddknt4\inc\ntstatus.h"\
+	"c:\ddk\ddknt4\inc\warning.h"\
+	{$(INCLUDE)}"hook\avpgcom.h"\
+	
+
+.\nthook.rc : \
+	{$(INCLUDE)}"hook\avpgcom.h"\
+	

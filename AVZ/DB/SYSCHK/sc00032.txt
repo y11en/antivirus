@@ -1,0 +1,6 @@
+// ***** AdvWare.Toolbar.Softomate.c *****
+begin
+ AddEvAlarmByCLSID('34F459B8-1D37-4FF2-9EFA-192D8E3ABA6F',AScriptName,'toolbar.dll');
+ AddEvAlarmByCLSID('F853975A-9C14-48c3-99B2-D82DF58592C0',AScriptName,'toolbar.dll');
+ AddEvAlarmByCLSID('34F459B8-1D37-4FF2-9EFA-192D8E3ABA6F',AScriptName,'toolbar.dll');
+end.

@@ -1,0 +1,4 @@
+// ***** AdvWare.Twotool.b *****
+begin
+ AddEvAlarmByCLSID('1F48AA48-C53A-4E21-85E7-AC7CC6B5FFB1',AScriptName,'');
+end.

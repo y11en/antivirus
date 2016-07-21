@@ -1,0 +1,4 @@
+// ***** TrojanDownloader.Win32.VB.bn *****
+begin
+ AddEvAlarmByCLSID('1FDEC088-A699-46FE-BF76-D5FD6DAE6150', AScriptName, 'UCSearch.ocx');
+end.

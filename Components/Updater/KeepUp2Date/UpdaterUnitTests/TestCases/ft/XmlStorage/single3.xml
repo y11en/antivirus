@@ -1,0 +1,24 @@
+<UpdateFiles
+	UpdateDate="27012006 1825">
+
+	<FileDescription
+	 ApplicationID="Workstation"
+	 UpdateType="patch"
+	 LocalPath="%UpdateRoot%/Patches"
+	 RelativeSrvPath="AutoPatches/windows/"  
+	 Filename="kav5.0.205patch_winwks_upd.exe"
+	 ToAppVersion="5.0.205"
+	 UpdateObligation="optional"
+	 Comment="for KasperskyAV for Windows Workstations"
+	 FileSign="0XLSznpdI71fB300e7Uwj1qetOIlJ7QHy/46WXOUgSeW8RBd6q57XqlXCQ"
+	 FileSize="724627"
+	 FileDate="20062005 1739">
+		<FromAppVersion Version="5.0.200"/>
+		<FromAppVersion Version="5.0.201"/>
+		<FromAppVersion Version="5.0.202"/>
+		<FromAppVersion Version="5.0.203"/>
+		<FromAppVersion Version="5.0.204"/>
+		<OS Name="Windows"/>
+	</FileDescription>
+        
+</UpdateFiles>

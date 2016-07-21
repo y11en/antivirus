@@ -1,0 +1,4 @@
+// ***** AdvWare.DealHelper *****
+begin
+ AddEvAlarmByCLSID('FE4BBEA8-1EFD-4B8A-BD1B-341CCDBEEAA6',AScriptName,'Dhsigned.ocx');
+end.

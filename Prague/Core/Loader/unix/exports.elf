@@ -1,0 +1,7 @@
+{
+	global:
+		PragueLoad;
+		PragueUnload;
+                DllMain;
+	local: *;
+};

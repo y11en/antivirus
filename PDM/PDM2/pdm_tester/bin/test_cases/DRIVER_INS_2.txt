@@ -1,0 +1,14 @@
+# copy drv file to system driver folder and register imagepath and type in registry
+
+
+# REGISTER_IMG_TO_SYS_FOLDER NOT_TO_CLEAR
+# CD_TO_SYS_FOLDER NOT_TO_CLEAR
+# REGISTER_TYPE_TO_SYS_FOLDER NOT_TO_CLEAR
+
+CREATE_REG_STR_VALUE @REG_SYS_SERVICE_KEY@\test_sys ImagePath @SYSTEM_FOLDER@\drivers\test_sys.sys NOT_TO_CLEAR
+EX_COPY_FILE @SELF_DIR@\test_sys.sys @SYSTEM_FOLDER@\drivers NOT_TO_CLEAR
+CREATE_REG_DWORD_VALUE @REG_SYS_SERVICE_KEY@\test_sys type 11 NOT_TO_CLEAR
+
+#etalon_verdict 80 InstallDriver
+#etalon_verdict 50 Installer
+#etalon_verdict 50 OnInstallNotSelf

@@ -1,0 +1,46 @@
+// $AVZ1495
+//$ Очистить кеш системы Prefetch
+// Функция поиска проблемы
+function Check : dword;
+var
+ S : string;
+ FS : TFileSearch;
+begin
+ Result := 0;
+ S := Trim(RegKeyStrParamRead('HKLM','SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters','RootDirPath'));
+ if S <> '' then begin
+  if pos(':',S) = 0 then
+   S := NormalDir('%WinDir%\'+S);
+  if DirectoryExists(S) then begin
+   FS := TFileSearch.Create(nil);
+   FS.FindFirst(S + '*.pf');
+   if FS.Found then
+    Result := 2;
+   FS.Free;
+  end;
+ end;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+var
+ S : string;
+ FS : TFileSearch;
+begin
+ Result := 0;
+ S := Trim(RegKeyStrParamRead('HKLM','SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters','RootDirPath'));
+ if S = '' then exit;
+  if pos(':',S) = 0 then
+   S := NormalDir('%WinDir%\'+S);
+  if DirectoryExists(S) then begin
+   FS := TFileSearch.Create(nil);
+   FS.FindFirst(S + '*.pf');
+   while FS.Found do begin
+    // Удаление найденных файлов *.PF
+    if not(FS.IsDir) then
+     DeleteFile(S + FS.FileName);
+    FS.FindNext;
+   end;
+   FS.Free;
+  end;
+end;

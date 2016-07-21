@@ -1,0 +1,25 @@
+// $AVZ1572
+//$ Очистить историю команд, выполненных через Пуск/Выполнить
+// Функция поиска проблемы
+function Check : dword;
+var
+ Lines : TStrings;
+begin
+ Result := 0;
+ if RegKeyExists('HKCU','Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU') then begin
+  Lines := TStringList.Create;
+  RegKeyEnumVal('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU', Lines);
+  if Lines.Count > 0 then 
+   Result := 1;
+  Lines.Free;
+ end;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+begin
+ RegKeyDel('HKCU','Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU');
+ RegKeyCreate('HKCU','Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU');
+ Result := 0;
+end;
+

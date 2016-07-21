@@ -1,0 +1,894 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AVI
+//
+
+IDR_AVI_SEARCH          AVI     DISCARDABLE     "AVI\\Search.avi"
+IDR_AVI_OK              AVI     DISCARDABLE     "AVI\\ok.avi"
+IDR_AVI_INFECTED        AVI     DISCARDABLE     "AVI\\infect.avi"
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\Avp32.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\KAV1.ico"
+IDI_ICON1               ICON    DISCARDABLE     "res\\1.ico"
+IDI_ICON2               ICON    DISCARDABLE     "res\\10.ico"
+IDI_ICON3               ICON    DISCARDABLE     "res\\12.ico"
+IDI_ICON4               ICON    DISCARDABLE     "res\\2.ico"
+IDI_ICON5               ICON    DISCARDABLE     "res\\3.ico"
+IDI_ICON6               ICON    DISCARDABLE     "res\\4.ico"
+IDI_ICON7               ICON    DISCARDABLE     "res\\5.ico"
+IDI_ICON8               ICON    DISCARDABLE     "res\\6.ico"
+IDI_ICON10              ICON    DISCARDABLE     "res\\8.ico"
+IDI_ICON11              ICON    DISCARDABLE     "res\\9.ico"
+IDI_ICONOVERLAY         ICON    DISCARDABLE     "res\\iconover.ico"
+IDI_ICON12              ICON    DISCARDABLE     "res\\icon12.ico"
+IDI_ICON9               ICON    DISCARDABLE     "res\\icon__9.ico"
+IDI_ICON14              ICON    DISCARDABLE     "res\\icon14.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_AVP32_DIALOG DIALOGEX 20, 20, 388, 209
+STYLE DS_LOCALEDIT | DS_3DLOOK | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | 
+    WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Kaspersky Anti-Virus"
+MENU IDD_AVP32_DIALOG
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_ML,"Static",SS_ETCHEDHORZ | WS_GROUP,0,0,388,1
+    DEFPUSHBUTTON   "Scan No&w",IDC_SCAN_NOW,300,18,84,14
+    CONTROL         "Animate1",IDC_ANIMATE_SCAN,"SysAnimate32",ACS_CENTER | 
+                    ACS_TRANSPARENT | NOT WS_VISIBLE,314,49,67,54
+    CONTROL         "",IDC_REPV,"{DD54D567-2FCA-11D3-96B0-00104B5B66AA}",
+                    WS_TABSTOP,3,141,356,47
+    LTEXT           "TBRep",IDC_TB,364,141,17,47,SS_SUNKEN | NOT WS_VISIBLE
+    CONTROL         "",IDC_STAT_LINE,"Static",SS_LEFTNOWORDWRAP | WS_BORDER | 
+                    WS_GROUP,4,194,291,13
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,
+                    300,194,84,13
+    CONTROL         "Tab1",IDC_TAB1,"SysTabControl32",WS_TABSTOP,3,6,291,132
+END
+
+IDD_TAB_PAGE1 DIALOG DISCARDABLE  0, 0, 271, 98
+STYLE DS_3DLOOK | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION " &Location "
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_LIST_DISK,"SysListView32",LVS_LIST | 
+                    LVS_NOLABELWRAP | WS_BORDER | WS_TABSTOP,3,3,162,87
+    CONTROL         "&Local Hard Drives",IDC_LOCAL,"Button",BS_AUTO3STATE | 
+                    WS_TABSTOP,171,3,93,12
+    CONTROL         "&Network Drives",IDC_NETWORK,"Button",BS_AUTO3STATE | 
+                    WS_TABSTOP,171,18,93,12
+    CONTROL         "Flopp&y Drives",IDC_FLOPPY,"Button",BS_AUTO3STATE | 
+                    WS_TABSTOP,171,33,93,12
+    PUSHBUTTON      "A&dd Folder",IDC_BUTTON_BROWSE,171,75,96,14
+END
+
+IDD_TAB_PAGE2 DIALOG DISCARDABLE  0, 0, 228, 117
+STYLE DS_3DLOOK | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION " O&bjects "
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "M&emory",IDC_MEMORY,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,12,8,90,10
+    CONTROL         "Se&ctors",IDC_SECTORS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,20,90,10
+    CONTROL         "F&iles",IDC_FILES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    12,32,90,10
+    CONTROL         "Pac&ked files",IDC_PACKED,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,44,90,10
+    CONTROL         "A&rchives",IDC_EXTRACT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,56,90,10
+    CONTROL         "Mail  databases",IDC_MAILBASES,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,68,90,10
+    CONTROL         "Plain Mail formats",IDC_MAILPLAIN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,80,90,10
+    GROUPBOX        "File &mask",IDC_MASK_FRAME,108,9,114,101,WS_GROUP
+    CONTROL         "Smart",IDC_SMART,"Button",BS_AUTORADIOBUTTON | WS_GROUP | 
+                    WS_TABSTOP,116,18,99,10
+    CONTROL         "Programs",IDC_PROGRAMS,"Button",BS_AUTORADIOBUTTON,116,
+                    30,99,10
+    CONTROL         "All files",IDC_ALLFILES,"Button",BS_AUTORADIOBUTTON,116,
+                    42,99,10
+    CONTROL         "User defined",IDC_USERDEF,"Button",BS_AUTORADIOBUTTON,
+                    116,54,99,10
+    EDITTEXT        IDC_EDIT_EXT,127,66,90,12,ES_AUTOHSCROLL | WS_GROUP
+    CONTROL         "E&xclude mask",IDC_EXCLUDE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,116,82,99,10
+    EDITTEXT        IDC_EDIT_EXCLUDE,127,93,90,12,ES_AUTOHSCROLL | WS_GROUP
+END
+
+IDD_TAB_PAGE5 DIALOG DISCARDABLE  0, 0, 296, 98
+STYLE DS_3DLOOK | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION " S&tatistics "
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Sector Objects :",IDC_STATIC_SECTORS,18,12,62,8
+    RTEXT           "Files :",IDC_STATIC_FILES,18,21,62,8
+    RTEXT           "Folders :",IDC_STATIC_FOLDERS,18,30,62,8
+    RTEXT           "Archives :",IDC_STATIC_ARCHIVES,18,39,62,8
+    RTEXT           "Packed :",IDC_STATIC_PACKED,18,48,62,8
+    GROUPBOX        "Scanned",IDC_SCANNED_FRAME,10,2,106,92
+    GROUPBOX        "Found",IDC_FOUND_FRAME,150,2,106,93
+    RTEXT           "Known viruses :",IDC_STATIC_VIRUSES,158,12,62,8
+    RTEXT           "Virus bodies :",IDC_STATIC_BODIES,158,21,62,8
+    RTEXT           "Warnings :",IDC_STATIC_WARNINGS,158,48,62,8
+    RTEXT           "Suspicious :",IDC_STATIC_SUSPIC,158,57,62,8
+    RTEXT           "Disinfected :",IDC_STATIC_DISINFECTED,158,30,62,8
+    RTEXT           "0",IDC_S_SECTORS,80,12,27,8
+    RTEXT           "0",IDC_S_FILES,80,21,27,8
+    RTEXT           "0",IDC_S_DIRECTORIES,80,30,27,8
+    RTEXT           "0",IDC_S_ARCHIVES,80,39,27,8
+    RTEXT           "0",IDC_S_PACKED,80,48,27,8
+    RTEXT           "0",IDC_S_WARNING,220,48,27,8
+    RTEXT           "0",IDC_S_SUSPIC,220,57,27,8
+    RTEXT           "0",IDC_S_VIRUS,220,12,27,8
+    RTEXT           "0",IDC_S_BODIES,220,21,27,8
+    RTEXT           "0",IDC_S_DISINFECTED,220,30,27,8
+    RTEXT           "Scan time  ",IDC_STATIC_TIME,17,66,56,8
+    RTEXT           "00:00:00",IDC_TIME,73,66,34,8
+    RTEXT           "Corrupted :",IDC_STATIC_CORRUPTED,158,66,62,8
+    RTEXT           "I/O Errors :",IDC_STATIC_IOERRORS,158,75,62,8
+    RTEXT           "0",IDC_S_CORRUPTED,220,66,27,8
+    RTEXT           "0",IDC_S_IOERRORS,220,75,27,8
+    RTEXT           "Speed  Kb/sec  ",IDC_STATIC_SPEED,17,76,56,8
+    RTEXT           "0",IDC_S_SPEED,73,76,34,8
+    RTEXT           "Deleted :",IDC_STATIC_DELETED,158,39,62,8
+    RTEXT           "0",IDC_S_DELETED,220,39,27,8
+END
+
+IDD_TAB_PAGE3 DIALOG DISCARDABLE  0, 0, 300, 98
+STYLE DS_3DLOOK | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION " &Options "
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "War&nings",IDC_WARNINGS,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,13,4,118,10
+    CONTROL         "&Code Analyser",IDC_CA,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,17,118,10
+    CONTROL         "&Redundant scan",IDC_REDUNDANT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,30,118,10
+    CONTROL         "Sh&ow clean object in the log",IDC_SHOWOK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,43,118,10
+    CONTROL         "S&how pack info in the log",IDC_SHOWPACK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,56,118,10
+    GROUPBOX        "",IDC_REPORT_FRAME,142,4,138,84
+    CONTROL         "R&eport file",IDC_REPORT,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,150,16,80,10
+    EDITTEXT        IDC_REPORTFILE,150,30,124,12,ES_AUTOHSCROLL
+    CONTROL         "Appen&d",IDC_APPEND,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,150,46,60,10
+    CONTROL         "Limit si&ze of report file, Kb:",IDC_LIMIT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,150,58,98,10
+    EDITTEXT        IDC_LIMITSIZE,164,70,34,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "C&ustomize",IDC_BUTTON_CUST,13,78,110,13
+END
+
+IDD_DISINFECT DIALOG DISCARDABLE  0, 0, 266, 137
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Infected Object"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Object",IDC_OBJECT,16,8,244,8,SS_NOPREFIX
+    LTEXT           "Infected by virus:",IDC_INFECTED_BY,16,26,64,8
+    LTEXT           "Virus",IDC_VIRUS,82,26,178,8,SS_NOPREFIX
+    GROUPBOX        "Action",IDC_ACTION_FRAME,12,44,182,68
+    CONTROL         "&Report only",IDC_DISINFECT_R,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,28,58,164,10
+    CONTROL         "&Disinfect",IDC_DISINFECT_D,"Button",BS_AUTORADIOBUTTON,
+                    28,71,164,10
+    CONTROL         "De&lete",IDC_DISINFECT_DEL,"Button",BS_AUTORADIOBUTTON,
+                    28,84,164,10
+    CONTROL         "&Copy to Infected folder",IDC_COPYINFECTED,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,28,97,164,8
+    CONTROL         "&Apply to all infected objects",IDC_ALL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,28,118,226,8
+    DEFPUSHBUTTON   "OK",IDOK,202,48,56,14
+    PUSHBUTTON      "Cancel",IDCANCEL,202,66,56,14
+    PUSHBUTTON      "&Stop",IDC_STOP,202,84,56,14
+END
+
+IDD_ABOUT_DIALOG DIALOG DISCARDABLE  0, 0, 362, 241
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Kaspersky Anti-Virus"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,300,220,56,14
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,5,214,350,1
+    CONTROL         "",IDC_AVPABOUTVIEW,
+                    "{8C397FA8-6CE7-11D3-96B0-00104B5B66AA}",WS_TABSTOP,5,5,
+                    350,205
+END
+
+IDD_TAB_PAGE6 DIALOG DISCARDABLE  0, 0, 280, 97
+STYLE DS_3DLOOK | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION " &Actions "
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Report Only",IDC_REPORTONLY,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,14,12,120,10
+    CONTROL         "&Display Disinfect dialog",IDC_DISINFECTDIALOG,"Button",
+                    BS_AUTORADIOBUTTON,14,24,120,10
+    CONTROL         "Disinf&ect automatically",IDC_DISINFECTAUTO,"Button",
+                    BS_AUTORADIOBUTTON,14,36,120,10
+    CONTROL         "Delete object automatically",IDC_DELETE,"Button",
+                    BS_AUTORADIOBUTTON,14,48,120,10
+    CONTROL         "Copy to &Infected folder",IDC_COPYINFECTED,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,14,60,120,10
+    EDITTEXT        IDC_INFECTFOLDER,26,72,108,12,ES_AUTOHSCROLL | NOT 
+                    WS_TABSTOP
+    CONTROL         "&Copy to Suspicious folder",IDC_COPYSUSPICIOUS,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,152,62,118,10
+    EDITTEXT        IDC_SUSPFOLDER,164,74,106,12,ES_AUTOHSCROLL | NOT 
+                    WS_TABSTOP
+    GROUPBOX        "Infected objects",IDC_INFECTED_OBJ,4,2,134,92
+    GROUPBOX        "Suspicious objects",IDC_SUSP_OBJ,142,2,134,92
+END
+
+IDD_SUPPORT_DIALOG DIALOG DISCARDABLE  0, 0, 247, 153
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Support"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,190,132,50,14
+    EDITTEXT        IDC_SUPPORT,7,7,233,120,ES_MULTILINE | ES_NOHIDESEL | 
+                    ES_READONLY | WS_VSCROLL
+    LTEXT           "Kaspersky Lab: http://www.avp.ru",IDC_STATIC,7,135,171,
+                    11
+END
+
+IDD_FIND DIALOG DISCARDABLE  0, 0, 248, 62
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Find"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_STRING,11,7,141,14,ES_AUTOHSCROLL
+    CONTROL         "Match &case",IDC_CASE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,27,141,10
+    CONTROL         "&Whole word",IDC_W_WORD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,39,141,10
+    DEFPUSHBUTTON   "OK",IDOK,162,7,79,14
+    PUSHBUTTON      "Cancel",IDCANCEL,162,24,79,14
+END
+
+IDD_CUSTOMIZE DIALOG DISCARDABLE  0, 0, 313, 178
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Customize AVP32"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "So&und effects",IDC_SOUND,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,7,299,10
+    CONTROL         "Select path for scan with single &click.",
+                    IDC_CUST_SINGLE_CLICK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,20,299,10
+    CONTROL         "&Pop-up Kaspersky Anti-Virus window after scan finish",
+                    IDC_CUST_POPUP_AFTER_FINISH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,33,299,10
+    CONTROL         "&Switch to stat tab after scan start",
+                    IDC_CUST_STAT_AFTER_BEGIN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,46,299,10
+    CONTROL         "S&witch to stat tab after scan finish",
+                    IDC_CUST_STAT_AFTER_FINISH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,59,299,10
+    CONTROL         "&Insert next disk prompt for removable drives",
+                    IDC_CUST_NEXT_DISK_PROMPT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,72,299,10
+    CONTROL         "&Attention message about redundant scan",
+                    IDC_CUST_REDUNDANT_MESSAGE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,85,299,10
+    CONTROL         "A&ttention message about delete all infected objects option",
+                    IDC_CUST_DELETE_ALL_MESSAGE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,98,299,10
+    CONTROL         "&Other attention messages",IDC_CUST_OTHER_MESSAGES,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,111,299,10
+    CONTROL         "&New updates check interval",IDC_CUST_UPDATE_CHECK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,124,201,10
+    EDITTEXT        IDC_CUST_UPDATE_INTERVAL,215,123,40,13,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,155,157,56,14
+    PUSHBUTTON      "Cancel",IDCANCEL,250,157,56,14
+    LTEXT           "days",IDC_CUST_UPDATE_CHECK_DAYS,259,125,47,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_AVP32_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 381
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 202
+    END
+
+    IDD_TAB_PAGE1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 264
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_TAB_PAGE2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 221
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 110
+    END
+
+    IDD_TAB_PAGE5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 289
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_TAB_PAGE3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_DISINFECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 259
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+
+    IDD_ABOUT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 352
+        TOPMARGIN, 9
+        BOTTOMMARGIN, 232
+    END
+
+    IDD_TAB_PAGE6, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 273
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_SUPPORT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 146
+    END
+
+    IDD_FIND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 241
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_CUSTOMIZE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 306
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDD_AVP32_DIALOG MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Save profile as default",    ID_FILE_SAVEPROFILEASDEFAULT
+        MENUITEM SEPARATOR
+        MENUITEM "&Load profile...",            ID_FILE_LOADPROFILE
+        MENUITEM "Save profile &As...",         ID_FILE_SAVEPROFILE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Scan"
+    BEGIN
+        MENUITEM "&Scan now",                   ID_SCAN_NOW
+        MENUITEM "Sto&p",                       ID_STOP
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "&Update now",                 ID_TOOLS_UPDATENOW
+        MENUITEM SEPARATOR
+        MENUITEM "&Customize",                  ID_CUSTOMIZE
+        MENUITEM "&Find in report",             ID_FIND
+        MENUITEM "Make &Virus List",            ID_VIRLIST
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Contents",                   ID_DEFAULT_HELP
+        MENUITEM "Kaspersky Anti-Virus on the &Web", ID_HELP_AVPONTHEWEB
+        MENUITEM SEPARATOR
+        MENUITEM "&About Kaspersky Anti-Virus", ID_HELP_ABOUTAVP32
+    END
+END
+
+IDR_POP_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Pop"
+    BEGIN
+        MENUITEM "&Mark selection",             ID_POP_MARK
+        MENUITEM "&Unmark selection",           ID_POP_UNMARK
+        MENUITEM SEPARATOR
+        MENUITEM "&Scan selection",             ID_POP_SCAN
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// BIN
+//
+
+IDR_BIN_M               BIN     DISCARDABLE     "res\\binmbr.bin"
+IDR_BIN_B               BIN     DISCARDABLE     "res\\binboot.bin"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDD_AVP32_DIALOG ACCELERATORS DISCARDABLE 
+BEGIN
+    "F",            ID_FIND,                VIRTKEY, CONTROL, NOINVERT
+    VK_F3,          ID_FINDAGAIN,           VIRTKEY, NOINVERT
+    VK_F5,          ID_ADD_DISKS,           VIRTKEY, NOINVERT
+    VK_F8,          ID_TRACK,               VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_DAVID               BITMAP  DISCARDABLE     "..\\..\\CommonFiles\\res\\avp1.bmp"
+IDB_KL                  BITMAP  DISCARDABLE     "..\\..\\CommonFiles\\RES\\kl89x21.bmp"
+IDR_TB_REP              BITMAP  DISCARDABLE     "..\\..\\commonfiles\\res\\tb_rep.bmp"
+IDB_BITMAP1             BITMAP  DISCARDABLE     "..\\..\\commonfiles\\res\\klsmall.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_AVP32_DIALOG DLGINIT
+BEGIN
+    IDC_REPV, 0x376, 48, 0
+0x0000, 0x0000, 0x0001, 0x0001, 0x3731, 0x0000, 0x07db, 0x0000, 0x00a0, 
+0x0000, 0x0000, 0x0001, 0x0001, 0x0100, 0x0000, 0x0001, 0x0000, 0x0000, 
+0x00fa, 0x0000, 0x0000, 0x0100, 0x0001, 0x0030, 
+    0
+END
+
+IDD_ABOUT_DIALOG DLGINIT
+BEGIN
+    IDC_AVPABOUTVIEW, 0x376, 32, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x3643, 0x0000, 0x226b, 0x0000, 0x00a0, 
+0x0000, 0x0000, 0x0000, 0x0101, 0x0072, 0x16c8, 0x0050, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TB_REP TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_TRACK
+    SEPARATOR
+    BUTTON      ID_FIND
+    BUTTON      ID_FINDAGAIN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_SAVEPROFILEASDEFAULT 
+                            "Save all configuraton options to profile Default.prf\nSave all configuraton options to profile Default.prf\n"
+    ID_FIND                 "Find\nFind\n"
+    ID_FINDAGAIN            "Find next\nFind next\n"
+    ID_TRACK                "Track messages\nTrack messages\n"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_LOADPROFILE     "Load configuration options from profile\nLoad configuration options from profile\n"
+    ID_FILE_SAVEPROFILE     "Save configuration options to profile\nSave configuration options to profile\n"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_EXIT             "Exit Kaspersky Anti-Virus\nExit Kaspersky Anti-Virus\n"
+    IDS_W_WORD              "&Whole word"
+    IDS_PRODUCT_NAME        "Kaspersky Anti-Virus"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_NOTHING_FILES       "Nothing to scan.\nYou should select Files and/or Sectors in page Objects."
+    IDS_NOTHING_LOCATION    "Nothing to scan.\nYou should select at least one item in page Location."
+    IDS_LIST_ONAME          "Object"
+    IDS_LIST_RESULT         "Result"
+    IDS_DISINF_OFILE        "File"
+    IDS_DISINF_OSECTOR      "Sector"
+    IDS_DISINF_OMEM         "Memory"
+    IDS_SCANPROC_SPAWN      "Scan process spawned."
+    IDS_SCANPROC_COMPLETE   "Scan process completed."
+    IDS_SCANPROC_INCOMPLETE "Scan process incompleted."
+    IDS_SCANPROC_QUESTION   "Cancel scan process?"
+    IDS_ENTRY_FORMAT        "%s  Entry #%d"
+    IDS_LOADBASE_FORMAT     "Loading %s %d%%"
+    IDS_INTERFACE_FAULT     "intrface fault."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_KERNEL_FAULT        "kernel fault."
+    IDS_OBJ_CORRUPTED       "corrupted."
+    IDS_OBJ_IOERROR         "I/O error."
+    IDS_OBJ_DISINF_FAILED   "disinfection failed: %s"
+    IDS_OBJ_ENCRYPTED       "encrypted."
+    IDS_OBJ_OK              "ok."
+    IDS_OBJ_DISINFECTED     "disinfected: %s"
+    IDS_OBJ_DELETED         "deleted: %s"
+    IDS_OBJ_INFECTED        "infected: %s"
+    IDS_OBJ_PACKED          "packed: %s"
+    IDS_OBJ_ARCHIVE         "archive: %s"
+    IDS_OBJ_WARNING         "warning: %s"
+    IDS_OBJ_SUSPICION       "suspicion: %s"
+    IDS_OBJ_UNKNOWN         "%s: unknown format."
+    IDS_ERROR_FILE_OPEN     "Can't open file: %s"
+    IDS_ERROR_SET           "Wrong set file: %s"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERROR_BASE          "Old or corrupted antiviral base: %s"
+    IDS_ERROR_KERNEL_PROC   "Base kernel proc absent: %s"
+    IDS_ERROR_LINK          "Object code not linked."
+    IDS_REPORT_CUT          "*** Limit size of the report file: cut"
+    IDS_BOOT_SECTOR         "Boot sector of drive "
+    IDS_MBR_SECTOR          "Master Boot Record of HDD%d"
+    IDS_REPORT_BANNER       "   AVP32 Scan  %x  %X"
+    IDS_NEXT_CDROM          "Insert next CDROM disk..."
+    IDS_NEXT_FLOPPY         "Insert next floppy disk..."
+    IDS_BASES_LOADED        "Antiviral databases were loaded. Known viruses: %d"
+    IDS_BASES_NOT_LOADED    "Loading of bases was not completed."
+    IDS_LOAD_PROFILE        "Load profile"
+    IDS_SAVE_PROFILE        "Save profile"
+    IDS_PROFILE_EXT         "Profile for AVP32 (*.prf)|*.prf||"
+    IDS_TAB_LOCATION        " &Location "
+    IDS_TAB_OBJECTS         " O&bjects "
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TAB_ACTIONS         " &Actions "
+    IDS_TAB_OPTIONS         " &Options "
+    IDS_TAB_STATISTICS      " S&tatistics "
+    IDS_FLOPPY_DRIVE        "floppy drive"
+    IDS_CDROM_DRIVE         "CDROM drive"
+    IDS_ADD_FOLDER          "Add folder to the scan list"
+    IDS_SCAN_NOW            "Scan No&w"
+    IDS_STOP                "Sto&p"
+    IDS_ABOUT               "About Kaspersky Anti-Virus"
+    IDS_SUPPORT             "&Support"
+    IDS_ACTION              "Action"
+    IDS_DISINFECT_DIALOG    "Infected Object"
+    IDS_INFECTED_BY         "Infected by virus:"
+    IDS_DISINFECT_R         "&Report only"
+    IDS_DISINFECT_D         "&Disinfect"
+    IDS_DISINFECT_DEL       "De&lete"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_COPYINFECTED        "&Copy to Infected folder"
+    IDS_APPLY_TOALL         "&Apply to all infected objects"
+    IDS_TAB1_LOCAL          "&Local Hard Drives"
+    IDS_TAB1_NETWORK        "&Network Drives"
+    IDS_TAB1_FLOPPY         "Flopp&y Drives"
+    IDS_TAB1_ADD_FOLDER     "A&dd Folder"
+    IDS_TAB2_MEMORY         "M&emory"
+    IDS_TAB2_SECTORS        "Se&ctors"
+    IDS_TAB2_FILES          "F&iles"
+    IDS_TAB2_PACKED         "Pac&ked files"
+    IDS_TAB2_EXTRACT        "A&rchives"
+    IDS_TAB2_MASK_FRAME     "File &mask"
+    IDS_TAB2_SMART          "Smart"
+    IDS_TAB2_PROGRAMS       "Programs"
+    IDS_TAB2_ALLFILES       "All files"
+    IDS_TAB2_USERDEF        "User defined"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TAB3_WARNINGS       "War&nings"
+    IDS_TAB3_CA             "&Code Analyser"
+    IDS_TAB3_REDUNDANT      "&Redundant scan"
+    IDS_TAB3_SHOWOK         "Sh&ow clean object in the log"
+    IDS_TAB3_SHOWPACK       "S&how pack info in the log"
+    IDS_TAB3_SOUND          "So&und effects"
+    IDS_TAB3_TRACK          "Track&ing"
+    IDS_TAB3_REPORT         "R&eport file"
+    IDS_TAB3_APPEND         "Appen&d"
+    IDS_TAB3_LIMIT          "Limit si&ze of report file, Kb:"
+    IDS_TAB5_SCANNED_FRAME  "Scanned"
+    IDS_TAB5_FOUND_FRAME    "Found"
+    IDS_TAB5_STATIC_SECTORS "Sector Objects :"
+    IDS_TAB5_STATIC_FILES   "Files :"
+    IDS_TAB5_STATIC_FOLDERS "Folders :"
+    IDS_TAB5_STATIC_ARCHIVES "Archives :"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TAB5_STATIC_PACKED  "Packed :"
+    IDS_TAB5_STATIC_TIME    "Scan time  "
+    IDS_TAB5_STATIC_VIRUSES "Known viruses :"
+    IDS_TAB5_STATIC_BODIES  "Virus bodies :"
+    IDS_TAB5_STATIC_DISINFECTED "Disinfected :"
+    IDS_TAB5_STATIC_WARNINGS "Warnings :"
+    IDS_TAB5_STATIC_SUSPIC  "Suspicious :"
+    IDS_TAB5_STATIC_CORRUPTED "Corrupted :"
+    IDS_TAB5_STATIC_IOERRORS "I/O Errors :"
+    IDS_TAB6_INFECTED_OBJ   "Infected objects"
+    IDS_TAB6_SUSP_OBJ       "Suspicious objects"
+    IDS_TAB6_REPORTONLY     "&Report Only"
+    IDS_TAB6_DISINFECTDIALOG "&Display Disinfect dialog"
+    IDS_TAB6_DISINFECTAUTO  "Disinf&ect automatically"
+    IDS_TAB6_DELETE         "Delete object automatically"
+    IDS_TAB6_COPYINFECTED   "Copy to &Infected folder"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TAB6_COPYSUSPICIOUS "&Copy to Suspicious folder"
+    IDS_NAME                "Name"
+    IDS_ORGANIZATION        "Organization"
+    IDS_REGNUMBER           "Registration number"
+    IDS_REGISTERINFO        "Registration info:"
+    IDS_SUPPORT_DLG         "Support"
+    IDS_EXPIR_ALARM         "Your Kaspersky Anti-Virus license will be expiried\nat %m/%d/%Y"
+    IDS_EXPIRIED            "Your Kaspersky Anti-Virus license was expiried\nat %m/%d/%Y"
+    IDS_SET_OUTOFDATE       "The set of Kaspersky Anti-Virus antiviral bases is out of date.\nPlease take updates."
+    IDS_SHURE_DELETEALL     "Are you shure you want to DELETE ALL infected objects?"
+    IDS_NEEDTORESTART       "You need to restart Kaspersky Anti-Virus."
+    IDS_ASK_DELETE          "Disinfection of %s \ninfected by virus %s is impossible.\n\nDelete this object permanently?"
+    IDS_ASK_DELETE_ALL      "Delete all nondisinfectable objects?"
+    IDS_ASK_DELETE_SKIP_ALL "Do not delete all  nondisinfectable objects?"
+    IDS_CURE_SECTOR         "Disinfection of sectors is dangerous procedure.\nWe recommend to make backup of whole disk contents.\n\nTry to perform disinfection rigt now?"
+    IDS_MEMORY              "Memory"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_REMOTE_LAUNCH       "This copy of Kaspersky Anti-Virus does not have license to launch from remote drives.\nKaspersky Anti-Virus will start in clipped mode."
+    IDS_KEY_PLATHFORM_NT    "This copy of Kaspersky Anti-Virus does not have license to launch under Windows NT.\nKaspersky Anti-Virus will start in clipped mode."
+    IDS_KEY_PLATHFORM_95    "This copy of Kaspersky Anti-Virus does not have license to launch under Windows 95.\nKaspersky Anti-Virus will start in clipped mode."
+    IDS_ADMIN_RIGHTS        "You launch the Kaspersky Anti-Virus under Windows NT without Admin rights.\nKaspersky Anti-Virus will not check the physical sectors."
+    IDS_KEY_ABSENT          "This copy of Kaspersky Anti-Virus does not have key file.\nKaspersky Anti-Virus will start in clipped mode."
+    IDS_MIN_CAPTION         "Scanning... (%d%%)"
+    IDS_TAB5_STATIC_DELETED "Deleted :"
+    IDS_TAB5_STATIC_SPEED   "Scan speed Kb/sec   "
+    IDS_ASK_REDUNDANT       "Redundant scan option slows down scan process \nseveral times, increases false alarm probability.\nFor details see User Guide. \n\nStart scan process?"
+    IDS_LAST_UPDATE         "Last update:   %s,    %d records."
+    IDS_FINDNEXT            "&Find Next"
+    IDS_FIND                "Find"
+    IDS_CANCEL              "Cancel"
+    IDS_CASE                "Match &case"
+    IDS_OBJ_DISKOUTOFSPACE  "disk out of space."
+    IDS_OBJ_PROTECTED       "password protected."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TAB2_MAILPLAIN      "Plain Mail formats"
+    IDS_TAB2_MAILBASES      "Mail databases"
+    IDS_AVP_URL             "http://www.avp.ru"
+    IDS_SELF_DISINFECTED    "Kaspersky Anti-Virus successfully self-disinfected from virus: %s\n\nKaspersky Anti-Virus will be restarted."
+    IDS_SELF_DISINFECTION_FAILED 
+                            "Kaspersky Anti-Virus infectd by virus: %s\n\nDISINFECTION FAILED!!!"
+    IDS_NEED_REBOOT         "Some infected files on your computer locked by other processes.\nAVP can not open them for direct disinfection.\nAfter system rebooting these files will be overwrited with disinfected ones.\n\n\nReboot system now?"
+    IDS_OBJ_LOCKED          "locked for writing by other process."
+    IDS_OBJ_NO_ACCESS       "read access denied."
+    IDS_CUST_SINGLE_CLICK   "Select path for scan with single &click"
+    IDS_CUST_NEXT_DISK_PROMPT "&Insert next disk prompt for removable drives"
+    IDS_CUST_REDUNDANT_MESSAGE "&Attention message about redundant scan"
+    IDS_CUST_DELETE_ALL_MESSAGE 
+                            "A&ttention message about delete all infected objects option"
+    IDS_CUST_STAT_AFTER_BEGIN "&Switch to statistics tab after scan start"
+    IDS_CUST_STAT_AFTER_FINISH "S&witch to statistics tab after scan finish"
+    IDS_CUST_POPUP_AFTER_FINISH 
+                            "&Pop-up Kaspersky Anti-Virus window after scan finish"
+    IDS_CUSTOMIZE_BTN       "C&ustomize"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CUSTOMIZE_DLG       "Customize Kaspersky Anti-Virus"
+    IDS_CUST_OTHER_MESSAGES "&Other attention messages"
+    IDS_REG_SECURITY_WEAK   "Attention: Security settings for zone '%s' are not safe"
+    IDS_REG_IE_OPTIONS      "Internet Explorer options"
+    IDS_REG_MACRO_PROTECTION_DISABLED 
+                            "Attention: Macro Virus Protection disabled"
+    IDS_REG_W97_OPTIONS     "MS Word 97 options"
+    IDS_REG_E97_OPTIONS     "MS Excel 97 options"
+    IDS_REG_W2000_OPTIONS   "MS Word 2000 options"
+    IDS_REG_E2000_OPTIONS   "MS Excel 2000 options"
+    IDS_REG_PP97_OPTIONS    "MS PowerPoint 97 options"
+    IDS_REG_PP2000_OPTIONS  "MS PowerPoint 2000 options"
+    IDS_AUTH_FAILED         "Authentication of  module %s failed."
+    IDS_AUTH_CONTINUE       "The cause can be:\n- out of date module\n- corrupted download\n- virus infection or other kind of hack.\nWe recommend to reinstall this file. \n\nContinue execution?"
+    IDS_FULL_NAME           "Kaspersky Anti-Virus"
+    IDS_LIST_KEYS_NUMBER    "Key number"
+    IDS_LIST_KEYS_DESCRIPTION "Info"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LIST_KEYS_FILE      "File"
+    IDS_LIST_KEYS_EXPIRATION "Expiration"
+    IDS_CUST_UPDATE_CHECK   "&New updates check        interval (days)"
+    IDS_TAB2_EXCLUDE        "E&xclude mask"
+    IDS_LIST_KEYS_PLNAME    "Licence name"
+    IDS_UPDATE_EXPIRED      "Your Kaspersky Anti-Virus license was expired.\n\nKaspersky Anti-Virus Updates will not start.\n\nWARNING!\nKaspersky Anti-Virus will not work with antiviral bases installed manually."
+    IDS_ERROR_DUP_NAME      "Duplicate names are defined in databases.\n\nIncorrect set file."
+    IDS_VERSION             "version"
+    IDS_STARTED             "started:"
+    IDS_FINISHED            "finished:"
+    IDS_OBJ_ENCRYPTED_BY    "encrypted:"
+    IDS_OK_BUTTON           "OK"
+    IDS_EXPIRED             "Expired"
+    IDS_REG_TYPELIB         "Typelib"
+    IDS_REG_PATCH_NOT_INSTALLED 
+                            "Microsoft Internet Explorer security vulnerability detected"
+    IDS_CUST_UPDATE_CHECK_DAYS "days"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_REG_PATCH_AVAILABLE "The update patch is available at the following location:"
+    IDS_REG_PATCH_LOCATION  "http://www.microsoft.com/msdownload/iebuild/scriptlet/en/scriptlet.htm"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\Avp32.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

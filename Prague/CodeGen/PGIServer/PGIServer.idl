@@ -1,0 +1,62 @@
+// PGIServer.idl : IDL source for PGIServer.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (PGIServer.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	typedef [uuid(FF078C60-B03F-11D4-96B2-444553540000),
+			helpstring("Interface type enum"), v1_enum]
+	enum {
+		[helpstring("Any")] itAny = -1,
+		[helpstring("Prototype")] itPrototype = 0,
+		[helpstring("Implementation")] itImplementation,
+		[helpstring("DataBase")] itDataBase,
+		[helpstring("ByContainer")] itByContainer,
+	} ItType;
+
+	[
+		object,
+		uuid(E635B364-B186-11D4-96B2-444553540000),
+	
+		helpstring("IPragueIServer Interface"),
+		pointer_default(unique)
+	]
+	interface IPragueIServer : IUnknown
+	{
+		[helpstring("method SetUIParent")] HRESULT SetUIParent([in] HWND hWndParent);
+		[helpstring("method Init")] HRESULT Init();
+		[helpstring("method ReInit")] HRESULT ReInit();
+		[helpstring("method Done")] HRESULT Done();
+		[helpstring("method GetErrorString")] HRESULT GetErrorString([in] HRESULT hError, [out,string] BYTE **pErrString);
+		[helpstring("method LoadContainer")] HRESULT LoadContainer([in,string] BYTE *pContainerName, [in] BOOL bLockOnLoad, [out] DWORD *pdwSize, [out,size_is(,*pdwSize)] BYTE **ppInterfaces);
+		[helpstring("method OpenContainer")] HRESULT OpenContainer([in,out,string] BYTE **ppContainerName, [in] BOOL bLockOnLoad, [in] ItType eIType, [out] DWORD *pdwSize, [out,size_is(,*pdwSize)] BYTE **ppInterfaces);
+		[helpstring("method SaveContainer")] HRESULT SaveContainer([in,out,string] BYTE **ppContainerName, [in] BOOL bSaveAs, [in] BOOL bLockOnSave, [in] DWORD dwSize, [in,size_is(dwSize)] BYTE *pInterfaces);
+		[helpstring("method LoadInterface")] HRESULT LoadInterface([in] DWORD dwUIDSize, [in,size_is(dwUIDSize)] BYTE *pUID, [in] BOOL bLockOnLoad, [in] ItType eIType, [out] DWORD *pdwSize, [out,size_is(,*pdwSize)] BYTE **ppInterface);
+		[helpstring("method EnumInterfaces")] HRESULT EnumInterfaces([in] ItType eIType, [out] DWORD *pdwSize, [out,size_is(,*pdwSize)] BYTE **ppInterfaces);
+		[helpstring("method LockContainer")] HRESULT LockContainer([in,string] BYTE *pContainerName, [in] BOOL bLock);
+		[helpstring("method SaveDescriptionDB")] HRESULT SaveDescriptionDB([in,string] BYTE *pContainerName, [in] DWORD dwSize, [in,size_is(dwSize)] BYTE *pInterfaces);
+		[helpstring("method SetStartingFolder")] HRESULT SetStartingFolder([in,string] BYTE *pStartingFolder, [in] ItType eIType);
+		[helpstring("method EnumContainers")] HRESULT EnumContainers([in] ItType eIType, [out] DWORD *pdwSize, [out,size_is(,*pdwSize)] BYTE **ppContainers);
+	};
+
+[
+	uuid(E635B355-B186-11D4-96B2-444553540000),
+	version(1.0),
+	helpstring("PGIServer 1.0 Type Library")
+]
+library PGISERVERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(661A3E92-B16B-11D4-96B2-444553540000),
+		helpstring("PragueIServer Class")
+	]
+	coclass PragueIServer
+	{
+		[default] interface IPragueIServer;
+	};
+};

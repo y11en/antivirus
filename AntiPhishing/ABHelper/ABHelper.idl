@@ -1,0 +1,39 @@
+// ABHelper.idl : IDL source for ABHelper
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ABHelper.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+
+[
+	object,
+	uuid(ED66C05E-97CA-4B4F-96BD-6446C72D29DC),
+	dual,
+	nonextensible,
+	helpstring("IABController Interface"),
+	pointer_default(unique)
+]
+interface IABController : IDispatch{
+	[id(1), helpstring("method DoCommand")] HRESULT DoCommand([in] BSTR pVal);
+};
+
+[
+	uuid(12D603CF-CF45-46CD-9851-FBD4CEE75CC6),
+	version(1.0),
+	helpstring("ABHelper 1.0 Type Library")
+]
+library ABHelperLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(310CA7B9-D56B-499A-B786-D9648270585E),
+		helpstring("ABController Class")
+	]
+	coclass ABController
+	{
+		[default] interface IABController;
+	};
+};

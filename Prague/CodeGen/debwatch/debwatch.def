@@ -1,0 +1,25 @@
+LIBRARY      debwatch
+
+DESCRIPTION 'hSTRING debug watcher'
+
+VERSION      1.0
+
+HEAPSIZE     0x10000 0x1000
+
+EXPORTS      phString     @1
+             phOBJECT     @2
+						 RecognizeFormat @3
+						 hr_format
+						 err_format
+						 iid_format
+						 pid_format
+						 cp_format
+						 prop_format
+             str_range_format
+						 phandle
+             serializableId
+             phHeap
+             dt_format
+             local_time_format
+						 gmt_time_format
+;serializable

@@ -1,0 +1,58 @@
+;------------- Updater ------------
+
+[Global]
+#errUPDATER_NO_ERROR                          = 0x05DC0000
+#errUPDATER_FailedToCreateFolder              = 0x85DC0001
+#errUPDATER_NotEnoughPermissions              = 0x85DC0002
+#errUPDATER_NoSuchFileOrDirectory             = 0x85DC0003
+#errUPDATER_NO_SOURCE_FILE                    = 0x85DC0006
+#errUPDATER_URLS_EXHAUSTED                    = 0x85DC0009
+#errUPDATER_NOTHING_TO_UPDATE                 = 0x05DC000A
+#errUPDATER_NotAllComponentsAreUpdated        = 0x05DC000B
+#errUPDATER_ComponentRejectedByProduct        = 0x05DC000C
+#errUPDATER_WRONG_KEY                         = 0x85DC000E
+#errUPDATER_ADMKIT_FAILURE                    = 0x85DC000F
+#errUPDATER_INVALID_SIGNATURE                 = 0x85DC0011
+#errUPDATER_GenericFileOperationFailure       = 0x85DC0012
+#errUPDATER_CANCELLED                         = 0x05DC0013
+#errUPDATER_CURRENT_VERSION_NEWER             = 0x05DC0014
+#errUPDATER_NO_RESERVED_UPDATE_DESCRIPTION    = 0x85DC0015
+#errUPDATER_UPDATE_DESCRIPTION_DAMAGED        = 0x85DC0016
+#errUPDATER_INTERNAL_ERROR                    = 0x85DC001B
+#errUPDATER_DOWNLOAD_ERROR                    = 0x85DC001C
+#errUPDATER_REMOTE_HOST_CLOSED_CONNECTION     = 0x85DC001D
+#errUPDATER_DOWNLOAD_TIMEOUT                  = 0x85DC001E
+#errUPDATER_FTP_AUTH_ERROR                    = 0x85DC001F
+#errUPDATER_PROXY_AUTH_ERROR                  = 0x85DC0020
+#errUPDATER_CANT_RESOLVE_NAME                 = 0x85DC0021
+#errUPDATER_CANT_CONNECT_ADM_SERVER           = 0x85DC0022
+#errUPDATER_RETRANSLATION_SUCCESSFUL          = 0x05DC0023
+#errUPDATER_NO_OPERATION_REQUESTED            = 0x85DC0024
+#errUPDATER_UpdateSuccessfulRetranslationFailed = 0x05DC0025
+#errUPDATER_CANT_CONNECT_INET_SERVER          = 0x85DC0026
+#errUPDATER_BASE_CHECK_FAILED                 = 0x85DC0027
+#errUPDATER_SERVER_AUTH_ERROR                 = 0x85DC0028
+#errUPDATER_CANT_CONNECT_TO_PROXY             = 0x85DC0029
+#errUPDATER_CANT_RESOLVE_PROXY                = 0x85DC002A
+#errUPDATER_AK_WrongReceiverId                = 0x85DC002B
+#errUPDATER_AK_ServerBusy                     = 0x85DC002C
+#errUPDATER_AK_ConnectionError                = 0x85DC002D
+#errUPDATER_AK_ConnectionNagentError          = 0x85DC002E
+#errUPDATER_AK_ConnectionServerError          = 0x85DC002F
+#errUPDATER_AK_CannotConnectToServer          = 0x85DC0030
+#errUPDATER_AK_WrongArguments                 = 0x85DC0031
+#errUPDATER_AK_ErrorInOperation               = 0x85DC0032
+#errUPDATER_AK_UnknownError                   = 0x85DC0033
+
+[s_UpdaterObjectText]
+#eUPDATER_ERROR = s_UpdaterObjNameByEvent(Error)
+#eUPDATER_ADMIN_KIT_SOURCE_SELECTED = $UpdateSourceAK
+;default = if(ObjectID, object(ObjectID) + if(ExtraInfoSub2, " (" + f_ObjSize(ExtraInfoSub2) + ")"))
+
+[s_UpdaterObjNameByEvent]
+#errUPDATER_AK_ServerBusy
+#errUPDATER_AK_CannotConnectToServer
+#errUPDATER_AK_UnknownError
+#errUPDATER_AK_ConnectionError       = $UpdateSourceAK
+#errUPDATER_AK_ConnectionNagentError = $UpdateSourceNetworkAgent
+#errUPDATER_AK_ConnectionServerError = $UpdateSourceMainAdministrationServer

@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?term_rootkit.htm"; }
+else { parent.quicksync('a12.1'); }
+//-->
+</script>
+   <title>&#1063;&#1090;&#1086; &#1090;&#1072;&#1082;&#1086;&#1077; RootKit</title>
+   <meta name="keywords" content="RootKit">
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+
+
+<body bgcolor="#FFFFFF">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      <p style="text-align: center;"><span style="font-size: 12pt; font-weight: bold;">Что такое </span><span style="font-size: 12pt; font-weight: bold;">RootKit</span></p>
+
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="t_about.htm">Наверх</a>&nbsp;
+     <a href="t_klass_riskware.htm">Предыдущая</a>&nbsp;
+     <a href="term_ha.htm">Последующая</a>
+     </font><B>|</B>
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=717989"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=717989;t=109;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=18 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=717989"><img
+src="http://top.list.ru/counter?js=na;id=717989;t=109"
+border=0 height=18 width=88
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+    </td>
+  </tr>
+</table>
+<br>
+
+<p style="margin: 0px 0px 0px 36px;">Термин RootKit исторически пришел из мира Unix, и под этим термином понимается набор утилит, которые хакер устанавливает на взломанном им компьютере после получения первоначального доступа. Этот набор, как правило, включает в себя разнообразные утилиты для заметания следов вторжения в систему, хакерский инструментарий (снифферы, сканеры) и троянские программы, замещающие основные утилиты Unix. RootKit позволяет хакеру закрепиться во взломанной системе и скрыть следы своей деятельности.</p>
+<p style="margin: 0px 0px 0px 36px;">В системе NT/W2K/XP RootKit принято считать программу, которая внедряется в систему и перехватывает системные функции (API). Перехват и модификация низкоуровневых API функций в первую очередь позволяет такой программе достаточно качественно маскировать свое присутствие в системе. Кроме того, как правило, RootKit может маскировать присутствие в системе любых описанных в его конфигурации процессов, папок и файлов на диске, ключей в реестре. Многие RootKit устанавливают в систему свои драйверы и сервисы (они естественно также являются "невидимыми"). </p>
+<p style="margin: 0px 0px 0px 36px;">Самостоятельно обнаружить запущенный RootKit крайне сложно - он не виден в стандартном диспетчере процессов, его ключи реестра не отображаются в редакторе реестра Regedit, файлы невидны в Explorer и других программах просмотра диска. </p>
+<p style="margin: 0px 0px 0px 36px;">Для обнаружения RootKit применяются специальные методики, причем наибольшую сложность обычно составляет не обнаружение RootKit, а корректное восстановление пораженных им функций в памяти без перезагрузки компьютера для проведения поиска и уничтожения RootKit. </p>
+<p style="margin: 0px 0px 0px 36px;">Если Вы не уверены в том, что&nbsp; перехват функций произведен полезной программой, то можно попробовать включить противодействие RootKit. В результате AVZ попробует восстановить исходную работу перехваченных функций, противодействие распространяется только на процесс AVZ и не должен сказываться на работе системы в целом.</p>
+<p style="margin: 0px 0px 0px 36px;">Антивирус&nbsp; AVZ может противодействовать распространенным типам RootKit. Однако стоит отметить, что процесс борьбы с запущенным RootKit в памяти может привести к зависанию программы AVZ, других программ и системы в целом. Поэтому противодействие RootKit нужно включать, закрыв другие приложения и завершив работу антивирусного монитора и Firewall (последнее обязательно, т.к. мониторы антивирусов и Firewall часто перехватывают API функции). </p>
+<p style="margin: 0px 0px 0px 36px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 36px;">Подробнее про RootKit и методики перехвата API функций можно прочитать в моей статье "RootKit - принципы и механизмы работы", опубликованной в журнале КомпьютерПресс № 5.2005 или в разделе "<span style="color: #0000ff; text-decoration: underline;"><a href="http://z-oleg.com/secur/nets.htm" target="_blank" class="weblink">Сетевая и информационная безопасность</a></span>" моего сайта.</p>
+
+
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=717989;js='+js+a+';rand='+Math.random()+
+'" height=1 width=1/>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=717989"
+height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+
+</body>
+</html>

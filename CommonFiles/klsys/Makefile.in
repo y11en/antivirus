@@ -1,0 +1,35 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=\
+@srcdir@/filemapping @srcdir@/pagememorymanager @srcdir@/memorymanager @srcdir@/direnum @srcdir@/virtualmemory @srcdir@/errors
+
+Name = klsys
+Archive = $(Name).@ARCHIVE_EXT@
+Targets = $(Archive)
+
+Sources = \
+	filemapping_unix.cpp \
+	filemapping_win32.cpp \
+	memorymanager.cpp \
+	direnum_unix.cpp \
+	direnum_win32.cpp \
+	virtualmemory_unix.cpp \
+	virtualmemory_win32.cpp \
+	errors.cpp
+
+InstallIncludes = \
+	@PACKAGE_NAME@/filemapping/filemapping.h \
+	@PACKAGE_NAME@/filemapping/wholefilemapping.h \
+	@PACKAGE_NAME@/memorymanager/memorymanager.h \
+	@PACKAGE_NAME@/memorymanager/guardedmm.h \
+	@PACKAGE_NAME@/direnum/direnum.h \
+	@PACKAGE_NAME@/guards/dummyguard.h \
+	@PACKAGE_NAME@/guards/posixguard.h \
+	@PACKAGE_NAME@/guards/winguard.h \
+	@PACKAGE_NAME@/guards/guard.h \
+	@PACKAGE_NAME@/virtualmemory/virtualmemory.h \
+	@PACKAGE_NAME@/errors/errors.h
+
+
+include @abs_top_builddir@/@OS@/Rules

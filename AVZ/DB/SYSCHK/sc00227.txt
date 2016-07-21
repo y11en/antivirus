@@ -1,0 +1,11 @@
+// ***** Trojan-Downloader.Small, Win32.SillyDl *****
+var
+ S : string;
+begin
+ S := 'Trojan-Downloader.Small, Win32.SillyDl';
+ AddEvAlarmByCLSID('11111111-1111-1111-1111-111191113457',S,'eid*.cab');
+ AddEvAlarmByCLSID('11111111-1111-1111-1111-611111193457',S,'wx.cab');
+ AddEvAlarmByCLSID('24311111-1111-1121-1111-111191113457',S,'eid*.cab');
+ AddEvAlarmByCLSID('33331111-1111-1111-1111-611111193457',S,'ex*.cab');
+ AddEvAlarmByCLSID('33331111-1111-1111-1111-611111193458',S,'ex*.cab');
+end.

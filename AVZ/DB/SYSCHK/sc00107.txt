@@ -1,0 +1,4 @@
+// ***** TrojanDownloader.Perfiler *****
+begin
+ AddEvAlarmByCLSID('88C51E90-8E9C-4C96-8A45-574D88B63FAF',AScriptName,'msa64chk.dll');
+end.

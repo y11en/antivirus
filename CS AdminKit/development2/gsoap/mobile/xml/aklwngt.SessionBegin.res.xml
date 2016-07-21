@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:param="http://tempuri.org/param.xsd"
+ xmlns:aklwngt="http://tempuri.org/aklwngt.xsd">
+ <SOAP-ENV:Body>
+  <aklwngt:SessionBeginResponse>
+   <szSessionId></szSessionId>
+   <nProtocolVersion>0</nProtocolVersion>
+   <oError>
+    <code>0</code>
+    <module></module>
+    <file></file>
+    <line>0</line>
+    <message></message>
+    <locdata>
+     <format-id>0</format-id>
+     <format></format>
+     <locmodule></locmodule>
+     <args SOAP-ENC:arrayType="xsd:wstring[1]">
+      <item></item>
+     </args>
+    </locdata>
+   </oError>
+  </aklwngt:SessionBeginResponse>
+ </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

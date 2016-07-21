@@ -1,0 +1,4 @@
+// ***** Trojan-Downloader.Win32.Agent.bc *****
+begin
+ AddEvAlarmByCLSID('6ECB8B27-737F-ABB2-9AC8-A044D49122A0',AScriptName,'ieuj32.dll');
+end.

@@ -1,0 +1,43 @@
+// ***** Internet Explorer *****
+var
+ X : integer;
+ KeyName : string;
+begin
+ KeyName := 'Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\';
+ // использование ActiveX, не помеченных как безопасные
+ X := RegKeyIntParamRead('HKCU', KeyName, '1201');
+ if X <> 3 then begin
+  AddToLog('>>> $AVZ1206');
+  AddSyscheckMenu('$AVZ1224',
+                  'RegKeyIntParamWrite(''HKCU'', '''+KeyName+''', ''1201'', 3);', 1);
+ end;
+ // загрузка подписанных элементов ActiveX без запроса
+ X := RegKeyIntParamRead('HKCU', KeyName, '1001');
+ if not((X = 3) or (X = 1)) then begin
+  AddToLog('>>> $AVZ1207');
+  AddSyscheckMenu('$AVZ1208',
+                  'RegKeyIntParamWrite(''HKCU'', '''+KeyName+''', ''1001'', 1);', 1);
+ end;
+ // загрузка неподписанных элементов ActiveX
+ X := RegKeyIntParamRead('HKCU', KeyName, '1004');
+ if (X <> 3) then begin
+  AddToLog('>>> $AVZ1225');
+  AddSyscheckMenu('$AVZ1223',
+                  'RegKeyIntParamWrite(''HKCU'', '''+KeyName+''', ''1004'', 3);', 1);
+ end;
+ // автоматические запросы элементов управления ActiveX
+ X := RegKeyIntParamRead('HKCU', KeyName, '2201');
+ if (X <> 3) then begin
+  AddToLog('>>> $AVZ1222');
+  AddSyscheckMenu('$AVZ1221',
+                  'RegKeyIntParamWrite(''HKCU'', '''+KeyName+''', ''2201'', 3);', 1);
+ end;
+
+ // запуск программ и файлов в окне IFRAME
+ X := RegKeyIntParamRead('HKCU', KeyName, '1804');
+ if not((X = 3) or (X = 1)) then begin
+  AddToLog('>>> $AVZ1220');
+  AddSyscheckMenu('$AVZ1219',
+                  'RegKeyIntParamWrite(''HKCU'', '''+KeyName+''', ''2201'', 1);', 1);
+ end; 
+end.

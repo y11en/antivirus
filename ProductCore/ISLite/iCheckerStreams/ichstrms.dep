@@ -1,0 +1,111 @@
+# Microsoft Developer Studio Generated Dependency File, included by ichstrms.mak
+
+.\ichecker.c : \
+	"..\..\..\commonfiles\wincompat.h"\
+	"..\..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\..\microsoft sdk\include\propidl.h"\
+	"..\..\..\microsoft sdk\include\reason.h"\
+	"..\..\..\microsoft sdk\include\stralign.h"\
+	"..\..\..\microsoft sdk\include\tvout.h"\
+	"..\..\..\microsoft sdk\include\winefs.h"\
+	"..\..\Hash\MD5\plugin_hash_md5.h"\
+	"..\..\Include\IFace\e_clsid.h"\
+	"..\..\Include\IFace\e_ktime.h"\
+	"..\..\Include\IFace\e_loader.h"\
+	"..\..\include\iface\i_hash.h"\
+	"..\..\include\iface\i_heap.h"\
+	"..\..\include\iface\i_ichecker2.h"\
+	"..\..\include\iface\i_iface.h"\
+	"..\..\include\iface\i_ifenum.h"\
+	"..\..\include\iface\i_impex.h"\
+	"..\..\include\iface\i_io.h"\
+	"..\..\include\iface\i_methodinfo.h"\
+	"..\..\Include\IFace\i_objptr.h"\
+	"..\..\INCLUDE\IFACE\i_os.h"\
+	"..\..\include\iface\i_plugin.h"\
+	"..\..\include\IFace\i_receiv.h"\
+	"..\..\Include\IFace\i_reg.h"\
+	"..\..\include\iface\i_root.h"\
+	"..\..\include\iface\i_seqio.h"\
+	"..\..\Include\iface\i_serializer.h"\
+	"..\..\include\iface\i_string.h"\
+	"..\..\include\iface\i_tracer.h"\
+	"..\..\Include\IFace\impexhlp.h"\
+	"..\..\Include\plugin\p_win32_nfio.h"\
+	"..\..\include\pr_compl.h"\
+	"..\..\include\pr_err.h"\
+	"..\..\include\pr_iid.h"\
+	"..\..\include\pr_int.h"\
+	"..\..\include\pr_msg.h"\
+	"..\..\include\pr_obj.h"\
+	"..\..\include\pr_pid.h"\
+	"..\..\include\pr_prop.h"\
+	"..\..\include\pr_reg.h"\
+	"..\..\Include\pr_serdescriptor.h"\
+	"..\..\include\pr_sys.h"\
+	"..\..\include\pr_types.h"\
+	"..\..\include\pr_vid.h"\
+	"..\..\include\pr_vtbl.h"\
+	"..\..\INCLUDE\PRAGUE.H"\
+	"..\..\NFIO\win32_io.h"\
+	".\ichecker.h"\
+	".\plugin_ichstrms.h"\
+	
+
+.\plugin_ichstrms.c : \
+	"..\..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\..\microsoft sdk\include\propidl.h"\
+	"..\..\..\microsoft sdk\include\reason.h"\
+	"..\..\..\microsoft sdk\include\stralign.h"\
+	"..\..\..\microsoft sdk\include\tvout.h"\
+	"..\..\..\microsoft sdk\include\winefs.h"\
+	"..\..\Include\IFace\e_clsid.h"\
+	"..\..\Include\IFace\e_ktime.h"\
+	"..\..\Include\IFace\e_loader.h"\
+	"..\..\include\iface\i_heap.h"\
+	"..\..\include\iface\i_ichecker2.h"\
+	"..\..\include\iface\i_iface.h"\
+	"..\..\include\iface\i_ifenum.h"\
+	"..\..\include\iface\i_impex.h"\
+	"..\..\include\iface\i_io.h"\
+	"..\..\include\iface\i_methodinfo.h"\
+	"..\..\include\iface\i_plugin.h"\
+	"..\..\include\IFace\i_receiv.h"\
+	"..\..\Include\IFace\i_reg.h"\
+	"..\..\include\iface\i_root.h"\
+	"..\..\Include\iface\i_serializer.h"\
+	"..\..\include\iface\i_tracer.h"\
+	"..\..\Include\IFace\impexhlp.h"\
+	"..\..\include\pr_compl.h"\
+	"..\..\include\pr_err.h"\
+	"..\..\include\pr_iid.h"\
+	"..\..\include\pr_int.h"\
+	"..\..\include\pr_msg.h"\
+	"..\..\include\pr_obj.h"\
+	"..\..\include\pr_pid.h"\
+	"..\..\include\pr_prop.h"\
+	"..\..\include\pr_reg.h"\
+	"..\..\Include\pr_serdescriptor.h"\
+	"..\..\include\pr_sys.h"\
+	"..\..\include\pr_types.h"\
+	"..\..\include\pr_vid.h"\
+	"..\..\include\pr_vtbl.h"\
+	"..\..\INCLUDE\PRAGUE.H"\
+	".\ichecker.h"\
+	".\plugin_ichstrms.h"\
+	
+
+.\sfc_api.c : \
+	"..\..\..\microsoft sdk\include\basetsd.h"\
+	"..\..\..\microsoft sdk\include\guiddef.h"\
+	"..\..\..\microsoft sdk\include\propidl.h"\
+	"..\..\..\microsoft sdk\include\reason.h"\
+	"..\..\..\microsoft sdk\include\stralign.h"\
+	"..\..\..\microsoft sdk\include\tvout.h"\
+	"..\..\..\microsoft sdk\include\winefs.h"\
+	".\sfc.h"\
+	".\sfc_api.h"\
+	".\sfc_int.h"\
+	

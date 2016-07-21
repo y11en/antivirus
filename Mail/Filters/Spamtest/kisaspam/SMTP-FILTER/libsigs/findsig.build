@@ -1,0 +1,11 @@
+EXE
+TARGET findsig
+
+CSRC findsig.c 
+
+LIB  sigs
+LIB_MD5
+LIB  sf-config
+LIB fstorage
+LIB mm_file
+LIB logger

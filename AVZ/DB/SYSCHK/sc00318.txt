@@ -1,0 +1,6 @@
+// ***** Adware.BHO.CyberHeat *****
+begin       
+ AddEvAlarmByCLSID('270B845C-712C-4773-BEE0-AE2D2001CD0F',AScriptName,'');
+ AddEvAlarmByCLSID('2B770D3B-ED8B-4952-A8C4-D5E0A46EED37',AScriptName,'');
+ AddEvAlarmByCLSID('D3F01312-8A3D-4D41-A4FA-FB61D295CB6B',AScriptName,'');
+end.

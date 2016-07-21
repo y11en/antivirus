@@ -1,0 +1,9 @@
+// ***** Проверка префикса DefaultPrefix *****
+var
+ S : string;
+begin
+ S := Trim(RegKeyStrParamRead('HKEY_LOCAL_MACHINE', 'SOFTWARE\Microsoft\Windows\CurrentVersion\URL\DefaultPrefix', ''));
+ if S = '' then exit;
+ if (S = 'http://') or (S = 'http:\\')  then exit;
+ AddToLog('$AVZ0516: "'+S+'"');
+end.

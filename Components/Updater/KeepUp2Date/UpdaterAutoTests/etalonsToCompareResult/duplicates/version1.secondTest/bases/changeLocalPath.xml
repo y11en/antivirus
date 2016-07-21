@@ -1,0 +1,66 @@
+<UpdateFiles 
+	UpdateDate="08112005 1100">
+
+    <!-- duplicate file MATCH, in DIFFERENT SOURCE folders and DIFFERENT LOCAL PATH -->
+	<FileDescription 
+		ComponentID="MATCH"
+		UpdateType="base" 
+		RelativeSrvPath="path1/"
+		LocalPath="%BaseFolder%/path1/" 
+		Filename="File7.txt" 
+		FileSize="74"
+		FileDate="08112005 1050" />
+
+	<FileDescription 
+		ComponentID="MATCH"
+		UpdateType="base" 
+		RelativeSrvPath="path1/"
+		LocalPath="%BaseFolder%/path2/" 
+		Filename="File7.txt" 
+		FileSize="74"
+		FileDate="08112005 1050" />
+
+
+    <!-- duplicate file MATCH/FILTER, in DIFFERENT SOURCE folders and DIFFERENT LOCAL PATH -->
+	<FileDescription 
+		ComponentID="MATCH"
+		UpdateType="base" 
+		RelativeSrvPath="path1/"
+		LocalPath="%BaseFolder%/path1/" 
+		Filename="File8.txt" 
+		FileSize="74"
+		FileDate="08112005 1050" />
+
+	<FileDescription 
+		ComponentID="FILTER"
+		UpdateType="base" 
+		RelativeSrvPath="path2/"
+		LocalPath="%BaseFolder%/path2/" 
+		Filename="File8.txt" 
+		FileSize="74"
+		FileDate="08112005 1050" />
+
+
+    <!-- duplicate file FILTER/FILTER, in DIFFERENT SOURCE folders and DIFFERENT LOCAL PATH -->
+	<FileDescription 
+		ComponentID="FILTER"
+		UpdateType="base" 
+		RelativeSrvPath="path1/"
+		LocalPath="%BaseFolder%/path1/" 
+		Filename="File9.txt" 
+		FileSize="74"
+		FileDate="08112005 1050" />
+
+	<FileDescription 
+		ComponentID="FILTER"
+		UpdateType="base" 
+		RelativeSrvPath="path2/"
+		LocalPath="%BaseFolder%/path2/" 
+		Filename="File9.txt" 
+		FileSize="74"
+		FileDate="08112005 1050" />
+
+
+</UpdateFiles>
+
+;:104SX2pLk0NSCiTqcerkraUCRFC6Ppf1empSbG5XAG1YgRHOXvAWUoJg4vf0+1Vr8G0d5Ld/GKlyKCd6eBP+ZSjh%%

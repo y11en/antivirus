@@ -1,0 +1,4 @@
+// ***** Dialer.UDIS *****
+begin
+ AddEvAlarmByCLSID('12E5E9D9-4366-45D9-BA41-D0BCD55AD8CF',AScriptName,'NrsgroupUD.dll');
+end.

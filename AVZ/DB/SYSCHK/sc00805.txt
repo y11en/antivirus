@@ -1,0 +1,9 @@
+// ***** Проверка местоположения файла Hosts *****
+var
+ S : string;
+begin
+ S := LowerCase(Trim(RegKeyStrParamRead('HKEY_LOCAL_MACHINE', 'SYSTEM\CurrentControlSet\Services\Tcpip\Parameters', 'DataBasePath')));
+ if S = '' then exit;
+ if S <> LowerCase('%SystemRoot%\System32\drivers\etc') then 
+  AddToLog('$AVZ0124 "'+S+'"');
+end.

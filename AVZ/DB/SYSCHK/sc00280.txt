@@ -1,0 +1,4 @@
+// ***** Trojan-Dropper.Win32.Small.tn *****
+begin
+ AddEvAlarmByCLSID('993592B5-BCB3-87FA-D067-94BD59535DE3', AScriptName, 'neteq.dll');
+end.

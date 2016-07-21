@@ -1,0 +1,32 @@
+<UpdateFiles 
+	UpdateDate="03042006 1751">
+	<UpdateSettings 
+		Name="Updater/update_date" 
+		Type="date" 
+		Value="03042006 1751" />
+	<FileDescription 
+		ComponentID="KAVPDA55" 
+		UpdateType="base" 
+		RelativeSrvPath="bases/av/klava/wince" 
+		Filename="stream.id" 
+		FileSign="0XLSznpdI71fB300e7Uwj17mxVCUmn2y7ftLMiHayGYyOkQe7yDz/RJhHM" 
+		FileSize="80" 
+		FileDate="03042006 1751" />
+	<FileDescription 
+		ComponentID="KAVPDA55" 
+		UpdateType="base" 
+		RelativeSrvPath="bases/av/klava/wince" 
+		Filename="stream.kfb" 
+		FileSign="0XLSznpdI71fB300e7Uwj1iKaHrkbhn/8gF4lPrfgw7XTZk2qiF/zr0RZ1" 
+		FileSize="90016" 
+		FileDate="03042006 1751" />
+	<FileDescription 
+		ComponentID="Updater" 
+		UpdateType="base" 
+		RelativeSrvPath="index" 
+		Filename="updcfg.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629" />
+</UpdateFiles>
+; 0XLSznpdI71fB300e7Uwj18mo+sXY1n6aF6IId67QGar416g/N1Nx0h4Kr­­

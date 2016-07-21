@@ -1,0 +1,5 @@
+; OEAntiSpam.def : Declares the module parameters.
+
+EXPORTS
+	DllRegisterServer PRIVATE
+	DllUnregisterServer PRIVATE

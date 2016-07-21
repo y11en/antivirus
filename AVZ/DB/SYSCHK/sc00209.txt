@@ -1,0 +1,4 @@
+// ***** AdvWare.Toolbar.YourSiteBar *****
+begin
+ AddEvAlarmByCLSID('86227D9C-0EFE-4F8A-AA55-30386A3F5686','AdvWare.Toolbar.YourSiteBar.b','ysb.dll');
+end.

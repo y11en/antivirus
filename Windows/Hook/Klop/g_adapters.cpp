@@ -1,0 +1,1 @@
+#include "g_adapters.h"

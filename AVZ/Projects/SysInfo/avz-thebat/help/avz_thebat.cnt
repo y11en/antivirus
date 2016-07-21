@@ -1,0 +1,9 @@
+:TITLE AVZ - плагин для TheBat
+:BASE avz_thebat.hlp
+1 Общие сведения
+2 О программе=t_about@avz_thebat.hlp
+2 Инсталляция=t_install@avz_thebat.hlp
+2 Обновление=t_update@avz_thebat.hlp
+2 Деинсталляция=t_uninstall@avz_thebat.hlp
+1 Настройка
+2 Настройка=t_setup@avz_thebat.hlp

@@ -1,0 +1,19 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@
+
+Name = hccmp
+Plugin = $(Name).@PLUGIN_EXT@
+Metafile = @srcdir@/compare.@METAFILE_EXT@
+Targets = $(Plugin)
+
+Sources = \
+	compare.c \
+	plugin_comparehashcont.c
+
+# unix section
+
+VersionScript = @abs_top_srcdir@/unix/prague_plugin.ver
+
+include @abs_top_builddir@/@OS@/Rules

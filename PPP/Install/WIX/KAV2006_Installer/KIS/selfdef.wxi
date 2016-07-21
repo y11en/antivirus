@@ -1,0 +1,12 @@
+<Include>
+	<!-- sync with selfdef.cpp and msi_misc.def -->
+	<?define SELFPROTECTION="RMLOC"?>
+	<?define InitProtectionProperty="SetSTATUSProp"?>
+	<?define RbFileProtectionDef="RbInitCAServerDef"?>
+	<?define EnableFileProtectionDef="InitCAServerDef"?>
+	<?define EnableFileProtectionImm="InitCAServerImm"?>
+	<?define EnableFullProtectionDef="RegisterRMLoc"?>
+	<?define RbFullProtectionDef="RbRegisterRMLoc"?>
+	<?define DisableProtectionDef="SetIsInstalled"?>
+	<?define DisableFidboxDef="DisableFidbox"?>
+</Include>

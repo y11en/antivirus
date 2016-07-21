@@ -1,0 +1,65 @@
+# Microsoft Developer Studio Generated Dependency File, included by timer.mak
+
+.\plugin_timer.cpp : \
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\Include\IFace\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\Include\IFace\i_tracer.h"\
+	"..\Include\pr_compl.h"\
+	"..\INCLUDE\PR_ERR.H"\
+	"..\INCLUDE\PR_IID.H"\
+	"..\INCLUDE\Pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\INCLUDE\Pr_obj.h"\
+	"..\INCLUDE\PR_PID.H"\
+	"..\INCLUDE\Pr_prop.h"\
+	"..\INCLUDE\Pr_reg.h"\
+	"..\INCLUDE\Pr_sys.h"\
+	"..\INCLUDE\Pr_types.h"\
+	"..\INCLUDE\PR_VID.H"\
+	"..\INCLUDE\Pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	
+
+.\timer.cpp : \
+	"..\include\iface\i_heap.h"\
+	"..\include\iface\i_iface.h"\
+	"..\include\iface\i_ifenum.h"\
+	"..\Include\IFace\i_methodinfo.h"\
+	"..\include\iface\i_plugin.h"\
+	"..\include\IFace\i_receiv.h"\
+	"..\Include\IFace\i_reg.h"\
+	"..\include\iface\i_root.h"\
+	"..\Include\iface\i_timer.h"\
+	"..\Include\IFace\i_tracer.h"\
+	"..\Include\plugin\p_timer.h"\
+	"..\Include\pr_compl.h"\
+	"..\INCLUDE\PR_ERR.H"\
+	"..\INCLUDE\PR_IID.H"\
+	"..\INCLUDE\Pr_int.h"\
+	"..\include\pr_msg.h"\
+	"..\INCLUDE\Pr_obj.h"\
+	"..\INCLUDE\PR_PID.H"\
+	"..\INCLUDE\Pr_prop.h"\
+	"..\INCLUDE\Pr_reg.h"\
+	"..\INCLUDE\Pr_sys.h"\
+	"..\INCLUDE\Pr_types.h"\
+	"..\INCLUDE\PR_VID.H"\
+	"..\INCLUDE\Pr_vtbl.h"\
+	"..\INCLUDE\PRAGUE.H"\
+	"e:\sdk\include\guiddef.h"\
+	"e:\sdk\include\propidl.h"\
+	"e:\sdk\include\reason.h"\
+	"e:\sdk\include\stralign.h"\
+	"e:\sdk\include\tvout.h"\
+	"e:\sdk\include\winefs.h"\
+	
+
+".\timer_res.rc" : \
+	".\ver_mod.h"\
+	

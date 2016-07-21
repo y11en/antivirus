@@ -1,0 +1,22 @@
+//
+// AVP95.RC2 - resources Microsoft Visual C++ does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Add manually edited resources here...
+
+#define VER_FILETYPE              VFT_VXD
+#define VER_COMMENTS_STR         "Alexey de Mont de Rique [graf@kaspersky.com]"
+#define VER_FILEDESCRIPTION_STR  "KLE Helper (VxD)"
+#define VER_INTERNALNAME_STR     "KLH_VXD"
+#define VER_ORIGINALFILENAME_STR "KLH_VXD.VXD"
+
+#include <Version\ver_avp.h>
+#include <Version\ver_kl.ver>
+
+/////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,4 @@
+// ***** AdvWare.Searcher *****
+begin
+ AddEvAlarmByCLSID('FD8953C6-823F-46ab-8669-3B2BBF3A1111', AScriptName, 'resource.dll');
+end.

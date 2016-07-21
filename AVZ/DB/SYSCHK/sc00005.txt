@@ -1,0 +1,4 @@
+// ***** Trojan.Win32.Delf.lh *****
+begin       
+ AddEvAlarmByCLSID('C7CF1142-0785-4B12-A280-B64681E4D45E',AScriptName,'prflbmsgp32.dll');
+end.

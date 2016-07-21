@@ -1,0 +1,7 @@
+// ***** Spy.LycosSideSearch *****
+begin
+ AddEvAlarmByCLSID('00000762-3965-4A1A-98CE-3D4BF457D4C8',AScriptName,'SIDESEARCH*.dll');
+ AddEvAlarmByCLSID('000007AB-7059-463E-BD44-101A1750D732',AScriptName,'SIDESEARCH*.dll');
+ AddEvAlarmByCLSID('01E69986-A054-4C52-ABE8-EF63DF1C5211',AScriptName,'gratwee.dll,cram*.dll');
+ AddEvAlarmByCLSID('F8AB19A2-DA96-4351-AB56-FF1F955E29AE',AScriptName,'gratwee.dll,cram*.dll');
+end.

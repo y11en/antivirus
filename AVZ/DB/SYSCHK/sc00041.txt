@@ -1,0 +1,4 @@
+// ***** AdvWare.BHO.BrowserPluginCom *****
+begin                   
+ AddEvAlarmByCLSID('1BDD55B8-3985-4E59-B906-5E0AD56D6710',AScriptName,'WEBHELPER.DLL');
+end.

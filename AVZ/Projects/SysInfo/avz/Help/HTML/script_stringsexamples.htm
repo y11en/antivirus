@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?script_stringsexamples.htm"; }
+else { parent.quicksync('a15.33.2'); }
+//-->
+</script>
+   <title>&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;&#1099;</title>
+   <meta name="keywords" content="TStringList,&#1042;&#1099;&#1074;&#1086;&#1076; &#1089;&#1087;&#1080;&#1089;&#1082;&#1072; &#1089;&#1090;&#1088;&#1086;&#1082; &#1074; &#1087;&#1088;&#1086;&#1090;&#1086;&#1082;&#1086;&#1083;,&#1044;&#1086;&#1073;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1077;,&#1044;&#1086;&#1073;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1077; &#1091;&#1076;&#1072;&#1083;&#1077;&#1085;&#1080;&#1077; &#1080; &#1087;&#1077;&#1088;&#1077;&#1084;&#1077;&#1097;&#1077;&#1085;&#1080;&#1077; &#1089;&#1090;&#1088;&#1086;&#1082;">
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+
+
+<body bgcolor="#FFFFFF">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Примеры</span></p>
+
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="t_about.htm">Наверх</a>&nbsp;
+     <a href="script_tf.htm">Предыдущая</a>&nbsp;
+     <a href="script_filesearch.htm">Последующая</a>
+     </font><B>|</B>
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=717989"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=717989;t=109;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=18 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=717989"><img
+src="http://top.list.ru/counter?js=na;id=717989;t=109"
+border=0 height=18 width=88
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+    </td>
+  </tr>
+</table>
+<br>
+
+<p><span style="font-weight: bold; text-decoration: underline;">Минимальный скрипт, использующий списки</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">var</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL : TStringList;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL := TStringList.Create;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.Free;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';">.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold; text-decoration: underline;">Вывод содержимого списка в протокол</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Вывод списка строк в протокол</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">procedure</span><span style="font-size: 12pt; font-family: 'Courier New';"> PrintStringListToLog(ASL : TStringList);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">var</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> i : integer;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">for</span><span style="font-size: 12pt; font-family: 'Courier New';"> i := </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">0</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">to</span><span style="font-size: 12pt; font-family: 'Courier New';"> ASL.Count -&nbsp; </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">1</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">do</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  AddToLog(ASL[i]);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';">;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">var</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL : TStringList;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL := TStringList.Create;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.Add(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'111111'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.Add(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'222222'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.Add(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'333333'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> PrintStringListToLog(SL);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.Free;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';">.</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-weight: bold; text-decoration: underline;">Добавление, удаление и перемещение строк</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">var</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL : TStringList;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL := TStringList.Create;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Добавление строк</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.Add(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'111111'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.Add(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'222222'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.Add(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'333333'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Удаление второй строки</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.Delete(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">1</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Перестановка строк</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.</span><span style="font-size: 12pt; font-family: 'Courier New';">Move</span><span style="font-size: 12pt; font-family: 'Courier New';">(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">0</span><span style="font-size: 12pt; font-family: 'Courier New';">,</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">1</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Вывод результатов</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> PrintStringListToLog(SL);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.Free;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';">.</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-weight: bold; text-decoration: underline;">Добавление, удаление и перемещение строк</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">var</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL : TStringList;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL := TStringList.Create;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Добавление строк</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.Add(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'111111'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.Add(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'222222'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.Add(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'333333'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Удаление второй строки</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.Delete(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">1</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Перестановка строк</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.</span><span style="font-size: 12pt; font-family: 'Courier New';">Move</span><span style="font-size: 12pt; font-family: 'Courier New';">(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">0</span><span style="font-size: 12pt; font-family: 'Courier New';">,</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">1</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Вывод результатов</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> PrintStringListToLog(SL);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.Free;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';">.</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-weight: bold; text-decoration: underline;">Поиск строк</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">var</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL : TStringList;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL := TStringList.Create;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Добавление строк</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.Add(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'111111'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.Add(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'222222'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.Add(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'333333'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Удаление второй строки</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New';">AddToLog(IntToStr(</span><span style="font-size: 12pt; font-family: 'Courier New';">SL.</span><span style="font-size: 12pt; font-family: 'Courier New';">IndexOf</span><span style="font-size: 12pt; font-family: 'Courier New';">(</span><span style="font-size: 12pt; font-family: 'Courier New';">'</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">1</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">11'</span><span style="font-size: 12pt; font-family: 'Courier New';">)</span><span style="font-size: 12pt; font-family: 'Courier New';">))</span><span style="font-size: 12pt; font-family: 'Courier New';">;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New';">AddToLog(IntToStr(</span><span style="font-size: 12pt; font-family: 'Courier New';">SL.</span><span style="font-size: 12pt; font-family: 'Courier New';">IndexOf</span><span style="font-size: 12pt; font-family: 'Courier New';">(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'111111'</span><span style="font-size: 12pt; font-family: 'Courier New';">)</span><span style="font-size: 12pt; font-family: 'Courier New';">))</span><span style="font-size: 12pt; font-family: 'Courier New';">;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New';">AddToLog(IntToStr(</span><span style="font-size: 12pt; font-family: 'Courier New';">SL.</span><span style="font-size: 12pt; font-family: 'Courier New';">IndexOf</span><span style="font-size: 12pt; font-family: 'Courier New';">(</span><span style="font-size: 12pt; font-family: 'Courier New';">'333333</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'</span><span style="font-size: 12pt; font-family: 'Courier New';">)</span><span style="font-size: 12pt; font-family: 'Courier New';">))</span><span style="font-size: 12pt; font-family: 'Courier New';">;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.Free;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';">.</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">&nbsp;</span></p>
+<p>В данном примере первая операция поиска не найдет образец, и функция вернет -1. Поиск "333333" и "111111" будет успешным и метод вернет их индексы.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold; text-decoration: underline;">Работа с текстовыми файлами</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">var</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL : TStringList;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL := TStringList.Create;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Добавление строк</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.Add(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'111111'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.Add(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'222222'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.Add(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'333333'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Сохранение в текстовый файл</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.SaveToFile(GetAVZDirectory + </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'1.txt'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// Загрузка из текстового файла</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.LoadFromFile(GetAVZDirectory + </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'1.txt'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SL.Free;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';">.</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">&nbsp;</span></p>
+
+
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=717989;js='+js+a+';rand='+Math.random()+
+'" height=1 width=1/>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=717989"
+height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+
+</body>
+</html>

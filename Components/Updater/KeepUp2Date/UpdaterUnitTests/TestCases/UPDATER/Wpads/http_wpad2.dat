@@ -1,0 +1,11 @@
+function FindProxyForURL(url, host)
+{
+var objFSO, objFile, objTextStream;
+var strFolder, strFile, str;
+
+// http transport tests
+if (url == "http://bases/" && host == "bases") return "PROXY 127.0.0.1:3127";
+if (url == "http://127.0.0.1:8001/" && host == "127.0.0.1") return "DIRECT";
+
+return "error:666";
+}

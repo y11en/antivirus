@@ -1,0 +1,7 @@
+// ***** AdvWare.Apropos *****
+begin
+ AddEvAlarmByCLSID('8023A3E7-AB95-4C23-8313-0BE9842CC70E',AScriptName,'pop*.dll');
+ AddEvAlarmByCLSID('D5580D6F-0E5F-4BDB-9CDF-F8EE68BEB008',AScriptName,'pop*.dll');
+ AddEvAlarmByCLSID('645FD3BC-C314-4F7A-9D2E-64D62A0FDD78',AScriptName,'pop*.dll');
+ AddEvAlarmByCLSID('65C8C1F5-230E-4DC9-9A0D-F3159A5E7778',AScriptName,'pop*.dll');
+end.

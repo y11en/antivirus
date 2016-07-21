@@ -1,0 +1,26 @@
+// $AVZ1580
+//$ Проводник - заблокирован доступ к свойствам папки
+// Функция поиска проблемы                                                                          
+function Check : dword;
+begin
+ Result := 0;
+ // Блокировка
+ if IsNT then begin
+  if RegKeyIntParamRead('HKLM', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'NoFolderOptions') > 0 then begin
+   Result := 3;
+   exit;
+  end;
+  if RegKeyIntParamRead('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'NoFolderOptions') > 0 then begin
+   Result := 3;
+   exit;
+  end;
+ end;
+end;
+
+// Функция исправления проблемы                                                                          
+function Fix : dword;
+begin
+ RegKeyParamDel('HKLM', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'NoFolderOptions');
+ RegKeyParamDel('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', 'NoFolderOptions');
+ Result := 0;
+end;

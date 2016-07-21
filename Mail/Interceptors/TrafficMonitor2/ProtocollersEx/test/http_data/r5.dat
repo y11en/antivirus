@@ -1,0 +1,10 @@
+GET http://www.google.ru/ HTTP/1.0
+Accept: */*
+Accept-Language: ru
+Pragma: no-cache
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; .NET CLR 1.1.4322)
+Host: www.google.ru
+Proxy-Connection: Keep-Alive
+Proxy-Authorization: NTLM TlRMTVNTUAADAAAAGAAYAFoAAAAYABgAcgAAAAIAAgBIAAAACAAIAEoAAAAIAAgAUgAAAAAAAACKAAAABgIAAgUAkwgAAAAPS0xPVkNIQVJJS09WQ0hBUklL7G2sU8jOQA4JADHgt5iW9Z/2OjOlq/SrVvQpEG4YD0GGNNYCEI/jmCLeuHvjAwpi
+Cookie: PREF=ID=1d3dd825997c4ca2:LD=ru:TM=1081751843:LM=1081751843:S=9q7hX1iXbCn7mhq2
+

@@ -1,0 +1,58 @@
+// This file will be processed by the MIDL tool to
+// produce the type library (avpgui.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+#include "basegui.idl"
+
+/////////////////////////////////////////////////////////////////////////////////////
+// IAdminGUIController
+
+[
+	object,
+	uuid(38DADDFF-BFCE-4942-ABC6-75222EB9EE77),
+	dual,
+	helpstring("IAdminGUIController Interface"),
+	pointer_default(unique),
+	oleautomation
+]
+interface IAdminGUIController : IDispatch
+{
+	[helpstring("method GetObject")] HRESULT GetObject([in] BSTR strName, [out, retval] IDispatch ** pPage);
+};
+
+/////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+
+[
+	uuid(10713811-01EA-4d50-A453-098826188CDC),
+	version(1.0),
+	helpstring("admingui 1.0 Type Library")
+]
+library AdminGUIATLLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(854ABBFD-518C-4FE3-AB60-DBF67ADF9C08),
+		helpstring("CGUIItem Class")
+	]
+	coclass CGUIItem
+	{
+		[default] interface ICGUIItem;
+	};
+
+	[
+		uuid(2B6AC467-A90A-423d-B137-6D75DA41889D),
+		helpstring("AdminGUIController")
+	]
+	coclass CAdminGUIController
+	{
+		[default] interface IAdminGUIController;
+	};
+};
+
+/////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////

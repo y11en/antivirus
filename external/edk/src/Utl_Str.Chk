@@ -1,0 +1,113 @@
+// --UTL_STR.CHK----------------------------------------------------------------
+//
+// Parameter checking for utl_str.c
+//
+// Copyright (C) Microsoft Corp. 1986-1996.  All Rights Reserved.
+//
+// -----------------------------------------------------------------------------
+#ifndef DEBUG
+#define CHK_HrStrAToStrW(a,b) NOERROR
+#define CHK_HrStrWToStrA(a,b) NOERROR
+#define CHK_HrStrAToStrA(a,b) NOERROR
+#define CHK_HrStrWToStrW(a,b) NOERROR
+#else
+//$--CHK_HrStrAToStrW-----------------------------------------------------------
+//  Check the parameters for HrStrAToStrW().
+// -----------------------------------------------------------------------------
+static _inline HRESULT CHK_HrStrAToStrW(    // RETURNS: HRESULT
+    IN  LPCSTR          lpszSource,         // source string
+    OUT LPWSTR *        lppwszDest)         // destination string
+{
+    HRESULT             hr                  = NOERROR;
+
+    if (!TEST_STRINGA_PTR(lpszSource))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if (!TEST_WRITE_PTR(lppwszDest, sizeof(*lppwszDest)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+    return(hr);
+}
+
+//$--CHK_HrStrWToStrA-----------------------------------------------------------
+//  Check the parameters for HrStrWToStrA().
+// -----------------------------------------------------------------------------
+static _inline HRESULT CHK_HrStrWToStrA(    // RETURNS: HRESULT
+    IN  LPCWSTR         lpwszSource,        // source string
+    OUT LPSTR *         lppszDest)          // destination string
+{
+    HRESULT             hr                  = NOERROR;
+
+    if (!TEST_STRINGW_PTR(lpwszSource))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if (!TEST_WRITE_PTR(lppszDest, sizeof(*lppszDest)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+    return(hr);
+}
+
+//$--CHK_HrStrAToStrA-----------------------------------------------------------
+//  Check the parameters for HrStrAToStrA().
+// -----------------------------------------------------------------------------
+static _inline HRESULT CHK_HrStrAToStrA(    // RETURNS: HRESULT
+    IN  LPCSTR          lpszSource,         // source string
+    OUT LPSTR *         lppszDest)          // destination string
+{
+    HRESULT             hr                  = NOERROR;
+
+    if (!TEST_STRINGA_PTR(lpszSource))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if (!TEST_WRITE_PTR(lppszDest, sizeof(*lppszDest)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+    return(hr);
+}
+
+//$--CHK_HrStrWToStrW-----------------------------------------------------------
+//  Check the parameters for HrStrWToStrW().
+// -----------------------------------------------------------------------------
+static _inline HRESULT CHK_HrStrWToStrW(    // RETURNS: HRESULT
+    IN  LPCWSTR         lpwszSource,        // source string
+    OUT LPWSTR *        lppwszDest)         // destination string
+{
+    HRESULT             hr                  = NOERROR;
+
+    if (!TEST_STRINGW_PTR(lpwszSource))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+    if (!TEST_WRITE_PTR(lppwszDest, sizeof(*lppwszDest)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+        goto cleanup;
+    }
+
+cleanup:
+    return(hr);
+}
+#endif

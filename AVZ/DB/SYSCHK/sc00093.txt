@@ -1,0 +1,6 @@
+// ***** Trojan-Downloader.WinShow *****
+begin
+ AddEvAlarmByCLSID('22A88341-AFCB-45F0-A856-C2BAE74F878E','TrojanDownloader.WinShow','');
+ AddEvAlarmByCLSID('6CC1C918-AE8B-4373-A5B4-28BA1851E39A','TrojanDownloader.WinShow.b','');
+ AddEvAlarmByCLSID('FD9BC004-8331-4457-B830-4759FF704C22','TrojanDownloader.WinShow.aa','msiesh.dll');
+end.

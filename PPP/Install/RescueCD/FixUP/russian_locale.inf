@@ -1,0 +1,217 @@
+;  Russian Locale, Timezone, keyboard & settings patch
+;  v3 plug-in INF file for russian locale & settings
+;  FOR PE Builder Created by Victor Baskakov
+
+[Version]
+Signature= "$Windows NT$"
+
+[PEBuilder]
+Name="Russian Locale"
+Enable=1
+
+[SourceDisksFiles]
+
+vga866.fon=2;english - russian (code page 866)
+geo.nls=2
+console.dll=2;enables console settings
+intl.cpl=2
+
+;language dependent part
+system.ini=1;dos16 russian keyboard support
+autoexec.nt=1;dos16 russian keyboard support
+kbdru.dll=2
+kbdru1.dll=2
+
+[Software.AddReg]
+; LOCALE=RU
+;
+0x4, "Microsoft\Windows NT\CurrentVersion\FontMapper", "DEFAULT", 0x000000cc; (204)
+
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Courier 10,12,15 (VGA res)", "COURER.FON"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "MS Sans Serif 8,10,12,14,18,24 (VGA res)", "SSERIFER.FON"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "MS Serif 8,10,12,14,18,24 (VGA res)", "SERIFER.FON"
+0x1, "Microsoft\Windows NT\CurrentVersion\Fonts", "Small Fonts (VGA res)", "SMALLER.FON"
+
+0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Arial Cyr,0", "Arial,204"
+0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Courier New Cyr,0", "Courier New,204"
+0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Courier,0", "Courier New,204"
+0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Fixedsys,0", "Fixedsys,204"
+0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Helv,0", "MS Sans Serif,204"
+0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "MS Sans Serif,0", "MS Sans Serif,204"
+0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "MS Serif,0", "MS Serif,204"
+0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Small Fonts,0", "Small Fonts,204"
+0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "System,0", "System,204"
+0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Times New Roman Cyr,0", "Times New Roman,204"
+0x1, "Microsoft\Windows NT\CurrentVersion\FontSubstitutes", "Tms Rmn,0", "MS Serif,204"
+0x1, "Microsoft\Windows NT\CurrentVersion\GRE_Initialize", "FIXEDFON.FON", "vgafixr.fon"
+0x1, "Microsoft\Windows NT\CurrentVersion\GRE_Initialize", "FONTS.FON", "vgasysr.fon"
+0x1, "Microsoft\Windows NT\CurrentVersion\GRE_Initialize", "OEMFONT.FON", "vga866.fon"
+
+[SetupReg.AddReg]
+
+0x0, "ControlSet001\Control\Nls\Language"
+0x1, "ControlSet001\Control\Nls\Language", "0409", "l_intl.nls"
+0x1, "ControlSet001\Control\Nls\Language", "0419", "l_intl.nls"
+0x1, "ControlSet001\Control\Nls\Language", "InstallLanguage", "0409"
+0x1, "ControlSet001\Control\Nls\Language", "Default", "0419"
+
+0x0, "ControlSet001\Hardware Profiles\0000\Software\Fonts"
+0x1, "ControlSet001\Hardware Profiles\0000\Software\Fonts", "FIXEDFON.FON", "vgafixr.fon"
+0x1, "ControlSet001\Hardware Profiles\0000\Software\Fonts", "FONTS.FON", "vgasysr.fon"
+0x1, "ControlSet001\Hardware Profiles\0000\Software\Fonts", "OEMFONT.FON", "vga866.fon"
+0x4, "ControlSet001\Hardware Profiles\0000\Software\Fonts", "LogPixels", 0x00000060
+
+;Time zone (GMT +03:00) Moscow, St. Petersburg, Volgograd
+0x0,"ControlSet001\Control\TimeZoneInformation"
+0x4,"ControlSet001\Control\TimeZoneInformation","Bias","0xffffff4c"
+0x1,"ControlSet001\Control\TimeZoneInformation","StandardName", "Russian Standard Time"
+0x4,"ControlSet001\Control\TimeZoneInformation","StandardBias", 0x00000000
+0x3,"ControlSet001\Control\TimeZoneInformation","StandardStart", \
+00,00,0a,00,05,00,03,00,00,00,00,00,00,00,00,00
+0x1,"ControlSet001\Control\TimeZoneInformation","DaylightName","Russian Daylight Time"
+0x4,"ControlSet001\Control\TimeZoneInformation","DaylightBias", 0xffffffc4
+0x3,"ControlSet001\Control\TimeZoneInformation","DaylightStart", \
+00,00,03,00,05,00,02,00,00,00,00,00,00,00,00,00
+0x4,"ControlSet001\Control\TimeZoneInformation","ActiveTimeBias", 0xffffff4c
+
+; Font code page settings
+0x0, "ControlSet001\Control\Nls\CodePage"
+0x1, "ControlSet001\Control\Nls\CodePage", "10000", "c_10000.nls"; mac-roman
+0x1, "ControlSet001\Control\Nls\CodePage", "10007", "c_10007.nls"; mac-cyrillic
+0x1, "ControlSet001\Control\Nls\CodePage", "1251", "c_1251.nls"; ansi-cyrillic
+0x1, "ControlSet001\Control\Nls\CodePage", "1252", "c_1251.nls"; ansi-latin1
+0x1, "ControlSet001\Control\Nls\CodePage", "20127", "c_20127.nls"; US ASCII
+0x1, "ControlSet001\Control\Nls\CodePage", "20866", "c_20866.nls"; Russian KOI-8
+0x1, "ControlSet001\Control\Nls\CodePage", "28591", "C_28591.NLS"; ISO 8859-1 Latin-1
+0x1, "ControlSet001\Control\Nls\CodePage", "28595", "C_28595.NLS"; ISO 8859-5 Cyrillic
+0x1, "ControlSet001\Control\Nls\CodePage", "437", "c_437.nls"; OEM USA
+0x1, "ControlSet001\Control\Nls\CodePage", "855", "c_855.nls"; OEM Cyrillic
+0x1, "ControlSet001\Control\Nls\CodePage", "866", "c_866.nls"; OEM Russian
+0x1, "ControlSet001\Control\Nls\CodePage", "ACP", "1251"; ANSI Cyrillic
+0x1, "ControlSet001\Control\Nls\CodePage", "MACCP", "10007"; MAC codepage 
+0x1, "ControlSet001\Control\Nls\CodePage", "OEMCP", "866"; OEM codepage
+0x1, "ControlSet001\Control\Nls\CodePage", "OEMHAL", "vga866.fon"
+
+0x0, "ControlSet001\Control\Nls\Language Groups"
+0x1, "ControlSet001\Control\Nls\Language Groups", "1", "1"
+0x1, "ControlSet001\Control\Nls\Language Groups", "2", "1"
+0x1, "ControlSet001\Control\Nls\Language Groups", "3", "1"
+0x1, "ControlSet001\Control\Nls\Language Groups", "4", "1"
+0x1, "ControlSet001\Control\Nls\Language Groups", "5", "1"
+0x1, "ControlSet001\Control\Nls\Language Groups", "6", "1"
+0x1, "ControlSet001\Control\Nls\Language Groups", "7", ""
+0x1, "ControlSet001\Control\Nls\Language Groups", "8", ""
+0x1, "ControlSet001\Control\Nls\Language Groups", "9", ""
+0x1, "ControlSet001\Control\Nls\Language Groups", "10", ""
+0x1, "ControlSet001\Control\Nls\Language Groups", "11", ""
+0x1, "ControlSet001\Control\Nls\Language Groups", "a", ""
+0x1, "ControlSet001\Control\Nls\Language Groups", "b", ""
+0x1, "ControlSet001\Control\Nls\Language Groups", "c", ""
+0x1, "ControlSet001\Control\Nls\Language Groups", "d", ""
+0x1, "ControlSet001\Control\Nls\Language Groups", "e", ""
+0x1, "ControlSet001\Control\Nls\Language Groups", "f", ""
+
+0x0, "ControlSet001\Control\Nls\Locale"
+0x1, "ControlSet001\Control\Nls\Locale", "(Default)", "00000409"
+
+0x1, "ControlSet001\Control\Nls\Locale", "00000409", "1"
+0x1, "ControlSet001\Control\Nls\Locale", "00000419", "5"
+
+0x0, "ControlSet001\Control\Keyboard Layout"
+0x0, "ControlSet001\Control\Keyboard Layout\DosKeybCodes"
+0x1, "ControlSet001\Control\Keyboard Layout\DosKeybCodes", "00000409", "ru";this enables dos16 russian keyboard support
+0x1, "ControlSet001\Control\Keyboard Layout\DosKeybCodes", "00000419", "ru"
+
+0x0, "ControlSet001\Control\Keyboard Layouts"
+0x0, "ControlSet001\Control\Keyboard Layouts\00000409"
+0x1, "ControlSet001\Control\Keyboard Layouts\00000409", "Layout File", "KBDUS.DLL"
+0x1, "ControlSet001\Control\Keyboard Layouts\00000409", "Layout Text", "US"
+0x1, "ControlSet001\Control\Keyboard Layouts\00000409", "Layout Display Name",\
+"@%SystemRoot%\\system32\\input.dll,-5000"
+
+0x0, "ControlSet001\Control\Keyboard Layouts\00000419"
+0x1, "ControlSet001\Control\Keyboard Layouts\00000419", "Layout Text", "Russian"
+0x1, "ControlSet001\Control\Keyboard Layouts\00000419", "Layout Display Name",\
+"@%SystemRoot%\\system32\\input.dll,-5055"
+0x1, "ControlSet001\Control\Keyboard Layouts\00000419", "Layout File", "KBDRU.DLL"
+
+; russian typewriter keyboard layout
+;0x0, "ControlSet001\Control\Keyboard Layouts\00010419"
+;0x1, "ControlSet001\Control\Keyboard Layouts\00010419", "Layout Text", "Russian (Typewriter)"
+;0x1, "ControlSet001\Control\Keyboard Layouts\00010419", "Layout Display Name",\
+; "@%SystemRoot%\\system32\\input.dll,-5056"
+;0x1, "ControlSet001\Control\Keyboard Layouts\00010419", "Layout File", "KBDRU1.DLL"
+;0x1, "ControlSet001\Control\Keyboard Layouts\00010419", "Layout Id", "0008"
+;/test
+
+[Default.AddReg]
+
+0x0, "Control Panel\International\Geo"
+0x1, "Control Panel\International\Geo", "Nation", "203"
+
+0x1, "Control Panel\Desktop", "MUILanguagePending", "00000409"
+0x1, "Control Panel\Desktop", "MultiUILanguageId", "00000409"
+
+; locale settings for measurements units 
+0x1, "Control Panel\International", "Locale", "00000419"
+0x1, "Control Panel\International", "iCountry", "7"
+0x1, "Control Panel\International", "iCurrency", "1"
+0x1, "Control Panel\International", "iDate", "1"
+0x1, "Control Panel\International", "iFirstDayOfWeek", "0"
+0x1, "Control Panel\International", "iMeasure", "0"
+0x1, "Control Panel\International", "iNegCurr", "5"
+0x1, "Control Panel\International", "iTime", "1"
+0x1, "Control Panel\International", "s1159", ""
+0x1, "Control Panel\International", "s2359", ""
+0x1, "Control Panel\International", "sCountry", "Russia"
+0x1, "Control Panel\International", "sCurrency", "à."
+0x1, "Control Panel\International", "sDate", "."
+0x1, "Control Panel\International", "sLanguage", "RUS"
+0x1, "Control Panel\International", "sList", ";"
+0x1, "Control Panel\International", "sLongDate", "d MMMM yyyy '£.'"
+0x1, "Control Panel\International", "sMonDecimalSep", ","
+0x1, "Control Panel\International", "sMonThousandSep", " "
+0x1, "Control Panel\International", "sShortDate", "dd.MM.yyyy"
+0x1, "Control Panel\International", "sThousand", " "
+0x1, "Control Panel\International", "sTimeFormat", "H:mm:ss"
+
+; russian keyboard layout toggle
+0x0, "Keyboard Layout"
+0x1, "Keyboard Layout\Preload", "1", "00000409";US keyboard
+0x1, "Keyboard Layout\Preload", "2", "00000419";RU keyboard
+0x1, "Keyboard Layout\Toggle", "Hotkey", "2"; layout toggle via ctrl+shift
+0x1, "Keyboard Layout\Toggle", "Language Hotkey", "2"
+0x1, "Keyboard Layout\Toggle", "Layout Hotkey", "1"
+
+; CMD font settings remove comment if you need Lucida Console as console font
+;0x4, "Console\%SystemRoot%_system32_cmd.exe", "ScreenColors", 0x0000000e
+;0x4, "Console\%SystemRoot%_system32_cmd.exe", "QuickEdit", 0x00000800
+;0x4, "Console\%SystemRoot%_system32_cmd.exe", "ScreenBufferSize", 0x13880050
+;0x4, "Console\%SystemRoot%_system32_cmd.exe", "WindowPosition", 0x00b50122
+;0x4, "Console\%SystemRoot%_system32_cmd.exe", "HistoryNoDup", 0x00000000
+;0x4, "Console\%SystemRoot%_system32_cmd.exe", "FontSize", 0x000e0000
+;0x4, "Console\%SystemRoot%_system32_cmd.exe", "FontFamily", 0x00000036
+;0x4, "Console\%SystemRoot%_system32_cmd.exe", "FontWeight", 0x00000190
+;0x1, "Console\%SystemRoot%_system32_cmd.exe", "FaceName", "Lucida Console"
+
+[DelLine]
+; these last sections I found after > 30 days of digging! Yeea, I did it!
+;
+; section [nls]
+"txtsetup.sif", "nls", "AnsiCodepage     = c_1252.nls,1252"
+"txtsetup.sif", "nls", "OemCodepage      = c_437.nls,437,c_850.nls,850"
+"txtsetup.sif", "nls", "MacCodepage      = c_10000.nls,10000"
+"txtsetup.sif", "nls", "UnicodeCasetable = l_intl.nls,0409"
+"txtsetup.sif", "nls", "OemHalFont       = vgaoem.fon"
+"txtsetup.sif", "nls", "DefaultLayout    = 00000409"
+
+; section [FontListE]
+"txtsetup.sif", "FontListE", " "Courier 10,12,15 (VGA res)"               = COURE.FON  "
+"txtsetup.sif", "FontListE", " "MS Sans Serif 8,10,12,14,18,24 (VGA res)" = SSERIFE.FON "
+"txtsetup.sif", "FontListE", " "MS Serif 8,10,12,14,18,24 (VGA res)"      = SERIFE.FON  "
+"txtsetup.sif", "FontListE", " "Tahoma (TrueType)"                        = TAHOMA.TTF  "
+"txtsetup.sif", "FontListE", " "Microsoft Sans Serif (TrueType)"          = MICROSS.TTF "
+
+[Append]
+txtsetup.sif, russian_locale_append.inf
+nu2menu.xml, russian_locale_nu2menu.xml

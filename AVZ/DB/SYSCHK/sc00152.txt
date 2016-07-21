@@ -1,0 +1,5 @@
+// ***** Spy.NavExcel *****
+begin
+ AddEvAlarmByCLSID('B5EF836B-7582-4D82-9246-17F6C40DDF0F',AScriptName,'NavInst2.ocx');
+ AddEvAlarmByCLSID('C1E58A84-95B3-4630-B8C2-D06B77B7A0FC',AScriptName,'NHelper.dll');
+end.

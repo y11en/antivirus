@@ -1,0 +1,5 @@
+// ***** Backdoor.Magicon *****
+begin
+ AddEvAlarmByCLSID('D7A82A12-05F5-42D8-B30D-6EF995075D2D','Backdoor.Magicon.e','');
+ AddEvAlarmByCLSID('ABB84F6B-40AA-4116-832E-CE5746A0EB5B','Backdoor.Magicon','');
+end.

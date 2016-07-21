@@ -1,0 +1,24 @@
+// $AVZ1556
+//$ Заблокирована настройка автоматического обновления
+// Функция поиска проблемы                                                                          
+function Check : dword;
+begin
+ Result := 0;
+ // Блокировка
+ if RegKeyIntParamRead('HKCU', 'software\policies\microsoft\windows\windowsupdate\au', 'auoptions') > 0 then begin
+   Result := 3;
+   exit;
+  end;
+ if RegKeyIntParamRead('HKLM', 'software\policies\microsoft\windows\windowsupdate\au', 'auoptions') > 0 then begin
+   Result := 3;
+   exit;
+  end;
+end;
+
+// Функция исправления проблемы                                                                          
+function Fix : dword;
+begin
+ RegKeyParamDel('HKCU', 'software\policies\microsoft\windows\windowsupdate\au', 'auoptions');
+ RegKeyParamDel('HKLM', 'software\policies\microsoft\windows\windowsupdate\au', 'auoptions');
+ Result := 0;
+end;

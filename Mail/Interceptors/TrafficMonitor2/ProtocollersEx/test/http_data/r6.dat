@@ -1,0 +1,10 @@
+GET http://groups.google.com/intl/ru_ALL/images/images_hp.gif HTTP/1.0
+Accept: */*
+Referer: http://groups.google.com/imghp?hl=ru&tab=gi&q=
+Accept-Language: ru
+Proxy-Connection: Keep-Alive
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; .NET CLR 1.1.4322)
+Host: groups.google.com
+Proxy-Authorization: NTLM TlRMTVNTUAADAAAAGAAYAFoAAAAYABgAcgAAAAIAAgBIAAAACAAIAEoAAAAIAAgAUgAAAAAAAACKAAAABgIAAgUAkwgAAAAPS0xPVkNIQVJJS09WQ0hBUklLMvsyI2vcD/W7q2vfxLoqEDiUN+2TyIAzU1p4acwVNJW16k6ZIF/oxHgCSff/QHG3
+Cookie: PREF=ID=6c5ad03b0daa24ad:CR=1:TM=1064840178:LM=1064840178:S=Q0Z7LkHC-6_Bzet-
+

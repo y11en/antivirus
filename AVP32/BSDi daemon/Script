@@ -1,0 +1,44 @@
+#!/bin/bash
+#  0 - No viruses were found
+#  1 - Virus scan was not complete
+#  3 - Suspicious objects were found
+#  4 - Known viruses were detected
+#  5 - All detected viruses have been deleted
+#  7 - File AvpLinux is corrupted
+
+# ./AvpDaemon [options] path[/name][...]
+# ./AvpDaemon  -o{/home} -* -- /W=/home/AvpDaemon.log
+
+#AVPPATH=/home/slava/Progects/AVP32/AvpBSDiDaemon
+
+#${AVPPATH}/AvpBSDiDaemon /home -o{/home/slava/Vir} 
+./AvpBSDiDaemon /home -o{/home/slava/Vir} 
+#./AvpBSDiDaemon /var -o{/var/spool/mail/} 
+
+exitCode=$?
+
+case $exitCode in
+ 7)
+  echo 7 - File AvpLinux is corrupted
+
+  ;;
+ 5)
+  echo 5 - All viruses deleted
+  ;;
+ 4)
+  echo 4 - Known viruses were detected
+  ;;
+ 3)
+  echo 3 - Suspicious objects were found
+  ;;
+ 1)
+  echo 1 - Virus scan was not complete
+  ;;
+ 0)
+  echo 0 - No viruses were found
+  ;;
+ *)
+  echo Error!
+esac
+
+exit 0

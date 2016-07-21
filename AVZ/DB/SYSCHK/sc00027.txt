@@ -1,0 +1,5 @@
+// ***** Adware.Toolbar.SearchIT *****
+begin
+ AddEvAlarmByCLSID('0E1230F8-EA50-42A9-983C-D22ABC2E0099',AScriptName,'searchit.dll toolbar.dll');
+ AddEvAlarmByCLSID('A6F74643-242A-A7A4-8DD5-DB40B9E25345',AScriptName,'toolbar.dll');
+end.

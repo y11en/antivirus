@@ -1,0 +1,13 @@
+forward interface SimpleObject;
+typedef SimpleObject* hSIMPLEOBJECT;
+
+
+
+[
+  version(1)
+  mnemonic(IID_SIMPLEOBJECT)
+  id(58006)
+  c_type_name(hSIMPLEOBJECT)
+  comment_ex("This is simple hOBJECT realisation for different purposes like testing, mesages receinving, etc...")
+]
+interface SimpleObject {} // Simple hOBJECT realisation

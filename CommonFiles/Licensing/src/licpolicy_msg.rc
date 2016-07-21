@@ -1,0 +1,134 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include <licpolicy_resource.h>
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include <licpolicy_resource.h>\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_KeyValid            "Ключ действителен для данного приложения"
+    IDS_KeyIsExpired        "Срок действия лицензионного ключа истек"
+    IDS_KeyIsCorrupted      "Лицензионный ключ поврежден"
+    IDS_KeyIsNotSigned      "Цифровая подпись не найдена, нарушена или не соответствует подписи Лаборатории Касперского"
+    IDS_KeyIsWrongForProduct 
+                            "Лицензионный ключ не подходит для этого продукта"
+    IDS_KeyNotFound         "Лицензионный ключ не найден"
+    IDS_KeyIsBlacklisted    "Лицензионный ключ заблокирован Лабораторией Касперского"
+    IDS_TrialIsAlreadyUsed  "Пробный ключ уже использовался на этом компьютере"
+    IDS_IllegalBaseUpdate   "Антивирусные базы обновлены вручную с нарушением лицензионного соглашения"
+    IDS_BasesCorrupted      "Антивирусные базы повреждены"
+    IDS_KeyCreationDateInvalid 
+                            "Некорректная дата создания лицензионного ключа. Проверьте системные установки даты и времени"
+    IDS_CannotInstallSecondTrial 
+                            "Нельзя одновременно использовать два пробных ключа"
+    IDS_InvalidBlacklist    "Не найден или поврежден файл ""черного списка"""
+    IDS_InvalidUpdateDescription 
+                            "Не найден или поврежден файл описания обновления антивирусных баз"
+    IDS_CantBeUsedAsReserved 
+                            "В настоящее время этот лицензионный ключ не может быть использован в качестве резервного."
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_KeyValid            "Key is valid"
+    IDS_KeyIsExpired        "Key is expired"
+    IDS_KeyIsCorrupted      "Key is corrupted"
+    IDS_KeyIsNotSigned      "Digital sign not found, corrupted or does not confirm Kaspersky  Lab digital key"
+    IDS_KeyIsWrongForProduct "License key is wrong for product."
+    IDS_KeyNotFound         "License key is not found"
+    IDS_KeyIsBlacklisted    "License key is blocked by Kaspersky Lab"
+    IDS_TrialIsAlreadyUsed  "Trial key has been already used on this computer"
+    IDS_IllegalBaseUpdate   "Antivirus bases was manually updated (licensing policy violation)"
+    IDS_BasesCorrupted      "Antivirus bases are corrupted"
+    IDS_KeyCreationDateInvalid 
+                            "Incorrect license key creation date. Check your system time and date"
+    IDS_CannotInstallSecondTrial 
+                            "Cannot register trial key while another trial key is in use"
+    IDS_InvalidBlacklist    "Blacklist is not found or corrupted"
+    IDS_InvalidUpdateDescription 
+                            "Anti-virus bases update description file not found or corrupted"
+    IDS_CantBeUsedAsReserved 
+                            "This license key can not be used as reserved one at the moment"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

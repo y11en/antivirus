@@ -1,0 +1,34 @@
+HKCR
+{
+	OutlookAddin.PageAntispam.1 = s 'PageAntispam Class'
+	{
+		CLSID = s '{BE1A7148-9F02-40F9-AB5A-5AD4E7D11E62}'
+	}
+	OutlookAddin.PageAntispam = s 'PageAntispam Class'
+	{
+		CLSID = s '{BE1A7148-9F02-40F9-AB5A-5AD4E7D11E62}'
+		CurVer = s 'OutlookAddin.PageAntispam.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {BE1A7148-9F02-40F9-AB5A-5AD4E7D11E62} = s 'PageAntispam Class'
+		{
+			ProgID = s 'OutlookAddin.PageAntispam.1'
+			VersionIndependentProgID = s 'OutlookAddin.PageAntispam'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 102'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{EDDBDEA4-5C07-453F-BE8C-81D738984381}'
+			'Version' = s '1.0'
+		}
+	}
+}

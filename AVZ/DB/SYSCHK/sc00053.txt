@@ -1,0 +1,4 @@
+// ***** AdvWare.Nomeh *****
+begin
+ AddEvAlarmByCLSID('D240DC29-C093-4388-B71F-A7103C796B0C',AScriptName,'OemjiPls.dll');
+end.

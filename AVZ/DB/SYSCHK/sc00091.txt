@@ -1,0 +1,4 @@
+// ***** TrojanDownloader.Ladder.e *****
+begin
+ AddEvAlarmByCLSID('FEC7B3F6-DCCE-464D-829F-53C342D1219D',AScriptName,'iereg.dll');
+end.

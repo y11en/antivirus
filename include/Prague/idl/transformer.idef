@@ -1,0 +1,62 @@
+forward interface Transformer;
+typedef Transformer* hTRANSFORMER;
+
+
+
+
+[
+  version(1)
+  mnemonic(IID_TRANSFORMER)
+  id(49001)
+  c_type_name(hTRANSFORMER)
+]
+interface Transformer { // Generic convertion interface
+
+  // ------------------------------------
+    typedef tFUNC_PTR fTRANSFORMER_CALLBACK; // Transformer callback
+
+
+  // ------------------------------------
+
+    [
+      id(4098)
+      comment_ex("максимальный/реальный размер распакованных данных, если не известен и не установлен должен вернуть -1")
+    ]
+    prop tQWORD pgTRANSFORM_SIZE;
+    [ id(4099) ]  prop hOBJECT pgINPUT_SEQ_IO; // IO, содержащее исходные данные
+    [ id(4100) ]  prop hOBJECT pgOUTPUT_SEQ_IO; // IO, получающее сконвертированные данные
+    [ id(4101) ]  prop tPTR pgINPUT_BUFF; // Optional read buffer
+    [ id(4102) ]  prop tDWORD pgINPUT_BUFF_SIZE; // Size of read buffer
+    [ id(4103) ]  prop tPTR pgOUTPUT_BUFF; // Optional write buffer
+    [ id(4104) ]  prop tDWORD pgOUTPUT_BUFF_SIZE; // Size of write buffer
+    [ id(4105) ]  prop tPTR pgTRANSFORM_WINDOW; // Optional transformation window
+    [ id(4106) ]  prop tDWORD pgTRANSFORM_WINDOW_SIZE; // Size of transformation window
+    [ id(4107) ]  prop fTRANSFORMER_CALLBACK pgINPUT_CALLBACK; // Read callback function
+    [ id(4108) ]  prop fTRANSFORMER_CALLBACK pgOUTPUT_CALLBACK; // Write callback function
+    [ id(4109) ]  prop tPTR pgCALLBACK_USER; // Callback functions user paramether
+    [ id(4110) ]  prop tQWORD pgTRANSFORM_INPUT_SIZE; // Maximum input size
+    [ id(4111) ]  prop tBOOL pgFORCE_WINDOW_CREATION; // force cration decompression window
+
+
+  // ------------------------------------
+    method tERROR ProcessChunck( // Преобразовывает часть данных входного потока
+      tDWORD* result,
+      tDWORD dwSize // количество байт, которое нужно вывести в выходной поток
+    );
+    method tERROR Proccess( // Преобразовывает весь входной поток
+      tQWORD* result
+    );
+    method tERROR ProcessQChunck( // Same as ProcessChunck() but for tQWORD size
+      tQWORD* result,
+      tQWORD qwSize // Max size of output data
+    );
+    method tERROR Decode( // Decode until stream eof or internal io limit
+      tQWORD* result
+    );
+    method tERROR Reset( // Reset internal transformer state
+      tVOID* result,
+      tINT Method // Reinitialization method
+    );
+
+}
+

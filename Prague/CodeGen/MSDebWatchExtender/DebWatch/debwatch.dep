@@ -1,0 +1,13 @@
+# Microsoft Developer Studio Generated Dependency File, included by debwatch.mak
+
+.\rec_format.c : \
+	"..\..\..\..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	"..\common\custview.h"\
+	"..\common\evalinfo.h"\
+	".\vassist.h"\
+	
+
+.\vassist.c : \
+	"..\..\..\..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	".\vassist.h"\
+	

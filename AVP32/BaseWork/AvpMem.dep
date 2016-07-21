@@ -1,0 +1,5 @@
+# Microsoft Developer Studio Generated Dependency File, included by AvpMem.mak
+
+.\Avpmem.cpp : \
+	"..\..\CommonFiles\ScanAPI\Avpmem.h"\
+	

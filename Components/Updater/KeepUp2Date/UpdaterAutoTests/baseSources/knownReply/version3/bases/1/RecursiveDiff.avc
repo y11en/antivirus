@@ -1,0 +1,15 @@
+<UpdateFiles UpdateDate="08112005 1050">
+  <UpdateSettings Name="Updater/update_date" Type="date" Value="08112005 1050" />
+  <UpdateSettings Name="Updater/av_records" Type="long" Value="163522" />
+
+  <FileDescription ComponentID="MATCH"
+         UpdateType="base"
+         RelativeSrvPath="bases/1"
+         LocalPath="%BaseFolder%"
+         Filename="Recursive.avc"
+         FileSign="0XLSznpdI71fB300e7Uwj1MBk66OVeZuRSDew6PHrsBzVC97XBqr6z0Yhx"
+         FileSize="7164"
+         FileDate="25052005 1307" />
+
+</UpdateFiles>
+; 0XLSznpdI71fB300e7Uwj194vGs6oFvtngGXuN1z5dJFdpBRMThJqPloXu­­

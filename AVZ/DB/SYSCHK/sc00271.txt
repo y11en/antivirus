@@ -1,0 +1,4 @@
+// ***** Trojan-Clicker.Win32.Qabar.a *****
+begin
+ AddEvAlarmByCLSID('965E6B07-6832-4738-BDBE-25F226BA2AB0', AScriptName, 'QaBar.dll');
+end.

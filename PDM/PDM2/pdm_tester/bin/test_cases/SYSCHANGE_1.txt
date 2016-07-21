@@ -1,0 +1,5 @@
+# open (device\physicalmemory) for write
+
+PHM_ACCESS NOT_TO_CLEAR
+
+#etalon_verdict 100 OnPhysicalMemoryAccess(Write)

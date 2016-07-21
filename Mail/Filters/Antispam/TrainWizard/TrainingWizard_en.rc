@@ -1,0 +1,107 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(1252)
+#endif //_WIN32
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDD_MCOE_DIALOG_TRAINING_WZ0 "Training Wizard: Kaspersky Anti-Spam"
+    IDD_MCOE_DIALOG_TRAINING_WZ1 "Training Wizard: Kaspersky Anti-Spam"
+    IDD_MCOE_DIALOG_TRAINING_WZ3 "Training Wizard: Kaspersky Anti-Spam"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_MCOE_MAINCAPTION "Training Wizard: Kaspersky Anti-Spam"
+    IDC_MCOE_STATIC_CAPTION_WZ0 "Welcome to the Training Wizard"
+    IDC_MCOE_STATIC_SUBCAPTION_WZ0 
+                            "This Wizard will train Kaspersky Anti-Spam to distinguish between good e-mail and spam in your mailbox. Based on this training all incoming e-mail will be scanned."
+    IDC_MCOE_STATIC_PRESS_NEXT "To continue, press Next"
+    IDC_MCOE_STATIC_CAPTION_WZ1 "Good e-mail"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_MCOE_STATIC_SUBCAPTION_WZ1 
+                            "Please select the folders with sample good e-mails."
+    IDC_MCOE_CHECK_INCLUDE_SUBFOLDERS "Include Subfolders"
+    IDC_MCOE_BUTTON_CLEAR   "Clear All"
+    IDC_MCOE_STATIC_CAPTION_WZ2 "Spam"
+    IDC_MCOE_STATIC_SUBCAPTION_WZ2 
+                            "Please select the folders with sample spam."
+    IDC_MCOE_STATIC_CAPTION_WZ3 "Training in progress"
+    IDC_MCOE_STATIC_SUBCAPTION_WZ3 
+                            "Please wait while the Wizard completes its training..."
+    IDC_MCOE_STATIC_NOW_PROCCESSING "Processing:"
+    IDC_MCOE_STATIC_TIME_LEFT "Estimated time remaining:"
+    IDC_MCOE_STATIC_FOLDERS "Folders:"
+    IDC_MCOE_STATIC_STATUS  "Status:"
+END
+
+#endif    // Neutral (Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""resource.h""\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+

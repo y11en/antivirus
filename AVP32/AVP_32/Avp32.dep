@@ -1,0 +1,309 @@
+# Microsoft Developer Studio Generated Dependency File, included by Avp32.mak
+
+.\aboutviewctrl.cpp : \
+	".\aboutviewctrl.h"\
+	".\StdAfx.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+.\Agentint.cpp : \
+	"..\..\commonfiles\ccclient\ccclient.h"\
+	"..\..\commonfiles\ccclient\eventid.h"\
+	"..\..\commonfiles\ccclient\ipcios.h"\
+	"..\..\CommonFiles\CCClient\LoadCCClientDLL.h"\
+	"..\..\CommonFiles\CCClient\Policy.h"\
+	"..\..\commonfiles\ccclient\storageids.h"\
+	"..\..\commonfiles\ccclient\taskstat.h"\
+	"..\..\CommonFiles\ScanAPI\RetFlags.h"\
+	"..\..\CommonFiles\ScanAPI\Scanobj.h"\
+	"..\..\CommonFiles\StuffMFC\Globals.h"\
+	"..\..\CommonFiles\StuffMFC\newtoolbar.h"\
+	".\aboutviewctrl.h"\
+	".\Agentint.h"\
+	".\Avp32.h"\
+	".\Avp32Dlg.h"\
+	".\cust.h"\
+	".\LogCtrl.h"\
+	".\Pid.h"\
+	".\reportviewctrl.h"\
+	".\StdAfx.h"\
+	".\TabPages.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+.\Avp32.cpp : \
+	"..\..\CommonFiles\ScanAPI\RetFlags.h"\
+	"..\..\CommonFiles\ScanAPI\Scanobj.h"\
+	"..\..\CommonFiles\StuffMFC\Globals.h"\
+	"..\..\CommonFiles\StuffMFC\newtoolbar.h"\
+	".\aboutviewctrl.h"\
+	".\Avp32.h"\
+	".\Avp32Dlg.h"\
+	".\cust.h"\
+	".\LogCtrl.h"\
+	".\reportviewctrl.h"\
+	".\StdAfx.h"\
+	".\TabPages.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+.\Avp32Dlg.cpp : \
+	"..\..\commonfiles\avp_data.h"\
+	"..\..\commonfiles\avpcomid.h"\
+	"..\..\commonfiles\avpkeyid.h"\
+	"..\..\CommonFiles\AVPRegID.h"\
+	"..\..\commonfiles\avprptid.h"\
+	"..\..\CommonFiles\Bases\Format\Base.h"\
+	"..\..\CommonFiles\Bases\Format\Records.h"\
+	"..\..\CommonFiles\Bases\Sizes.h"\
+	"..\..\commonfiles\ccclient\ccclient.h"\
+	"..\..\commonfiles\ccclient\eventid.h"\
+	"..\..\commonfiles\ccclient\ipcios.h"\
+	"..\..\CommonFiles\CCClient\LoadCCClientDLL.h"\
+	"..\..\CommonFiles\CCClient\Policy.h"\
+	"..\..\commonfiles\ccclient\storageids.h"\
+	"..\..\commonfiles\ccclient\taskstat.h"\
+	"..\..\CommonFiles\FileFormat\Coff.h"\
+	"..\..\CommonFiles\LoadKeys\CheckUse.h"\
+	"..\..\CommonFiles\LoadKeys\LoadKeys.h"\
+	"..\..\commonfiles\property.h"\
+	"..\..\CommonFiles\ScanAPI\Avp_dll.h"\
+	"..\..\CommonFiles\ScanAPI\Avp_msg.h"\
+	"..\..\CommonFiles\ScanAPI\Avpioctl.h"\
+	"..\..\CommonFiles\ScanAPI\RetFlags.h"\
+	"..\..\CommonFiles\ScanAPI\Scanobj.h"\
+	"..\..\commonfiles\sign\a_chfile.c"\
+	"..\..\commonfiles\sign\ct_fio.h"\
+	"..\..\commonfiles\sign\ct_sup_d.h"\
+	"..\..\commonfiles\sign\ct_supp.h"\
+	"..\..\commonfiles\sign\ct_typs.h"\
+	"..\..\commonfiles\sign\sign.h"\
+	"..\..\CommonFiles\Stuff\CalcSum.h"\
+	"..\..\CommonFiles\Stuff\Layout.h"\
+	"..\..\CommonFiles\StuffMFC\Globals.h"\
+	"..\..\CommonFiles\StuffMFC\newtoolbar.h"\
+	"..\AVE_SQL\AVE_Fld.h"\
+	"..\AVE_SQL\AVE_Sql.h"\
+	"..\Avp_aler.h"\
+	"..\BaseWork\Workarea.h"\
+	"..\fn.h"\
+	".\aboutviewctrl.h"\
+	".\Agentint.h"\
+	".\Avp32.h"\
+	".\Avp32Dlg.h"\
+	".\cust.h"\
+	".\DisDlg.h"\
+	".\DlgProxy.h"\
+	".\FindDlg.h"\
+	".\LogCtrl.h"\
+	".\reportviewctrl.h"\
+	".\Scandir.h"\
+	".\StdAfx.h"\
+	".\TabPages.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	{$(INCLUDE)}"Version\ver_avp.h"\
+	{$(INCLUDE)}"Version\ver_df.h"\
+	{$(INCLUDE)}"Version\ver_itoa.h"\
+	{$(INCLUDE)}"Version\ver_kl.h"\
+	
+
+..\..\CommonFiles\Stuff\CalcSum.c : \
+	"..\..\CommonFiles\Stuff\CalcSum.h"\
+	
+
+..\..\CommonFiles\LoadKeys\CheckUse.cpp : \
+	"..\..\commonfiles\avp_data.h"\
+	"..\..\CommonFiles\LoadKeys\CheckUse.h"\
+	"..\..\commonfiles\property.h"\
+	"..\..\commonfiles\stuff\text2bin.h"\
+	".\StdAfx.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+.\cust.cpp : \
+	"..\..\CommonFiles\StuffMFC\Globals.h"\
+	".\Avp32.h"\
+	".\cust.h"\
+	".\StdAfx.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+.\DisDlg.cpp : \
+	"..\..\CommonFiles\ScanAPI\RetFlags.h"\
+	"..\..\CommonFiles\ScanAPI\Scanobj.h"\
+	"..\..\CommonFiles\StuffMFC\Globals.h"\
+	"..\..\CommonFiles\StuffMFC\newtoolbar.h"\
+	".\aboutviewctrl.h"\
+	".\Avp32.h"\
+	".\Avp32Dlg.h"\
+	".\cust.h"\
+	".\DisDlg.h"\
+	".\LogCtrl.h"\
+	".\reportviewctrl.h"\
+	".\StdAfx.h"\
+	".\TabPages.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+.\DlgProxy.cpp : \
+	"..\..\CommonFiles\ScanAPI\RetFlags.h"\
+	"..\..\CommonFiles\ScanAPI\Scanobj.h"\
+	"..\..\CommonFiles\StuffMFC\Globals.h"\
+	"..\..\CommonFiles\StuffMFC\newtoolbar.h"\
+	".\aboutviewctrl.h"\
+	".\Avp32.h"\
+	".\Avp32Dlg.h"\
+	".\cust.h"\
+	".\DlgProxy.h"\
+	".\LogCtrl.h"\
+	".\reportviewctrl.h"\
+	".\StdAfx.h"\
+	".\TabPages.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+.\FindDlg.cpp : \
+	"..\..\CommonFiles\StuffMFC\Globals.h"\
+	".\Avp32.h"\
+	".\FindDlg.h"\
+	".\StdAfx.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+..\..\CommonFiles\StuffMFC\Globals.cpp : \
+	"..\..\CommonFiles\StuffMFC\Globals.h"\
+	".\StdAfx.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+..\..\CommonFiles\Stuff\Layout.c : \
+	"..\..\CommonFiles\Stuff\Layout.h"\
+	"..\..\CommonFiles\Stuff\Win95adg.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+..\..\CommonFiles\CCClient\LoadCCClientDLL.cpp : \
+	"..\..\CommonFiles\AVPRegID.h"\
+	"..\..\commonfiles\ccclient\ccclient.h"\
+	"..\..\commonfiles\ccclient\eventid.h"\
+	"..\..\commonfiles\ccclient\ipcios.h"\
+	"..\..\CommonFiles\CCClient\Policy.h"\
+	"..\..\commonfiles\ccclient\storageids.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+..\..\CommonFiles\LoadKeys\LoadKeys.cpp : \
+	"..\..\CommonFiles\_avpio.h"\
+	"..\..\commonfiles\avp_data.h"\
+	"..\..\commonfiles\avpcomid.h"\
+	"..\..\commonfiles\avpkeyid.h"\
+	"..\..\commonfiles\avpport.h"\
+	"..\..\commonfiles\kldtdefs.h"\
+	"..\..\CommonFiles\KLDTSer.h"\
+	"..\..\CommonFiles\LoadKeys\CheckUse.h"\
+	"..\..\CommonFiles\LoadKeys\LoadKeys.h"\
+	"..\..\commonfiles\property.h"\
+	"..\..\commonfiles\sign\sign.h"\
+	"..\..\CommonFiles\Stuff\CalcSum.h"\
+	"..\..\commonfiles\stuff\text2bin.h"\
+	"..\..\commonfiles\swm.h"\
+	".\StdAfx.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+.\LogCtrl.cpp : \
+	"..\..\CommonFiles\StuffMFC\Globals.h"\
+	".\Avp32.h"\
+	".\LogCtrl.h"\
+	".\StdAfx.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+..\..\CommonFiles\StuffMFC\NewToolbar.cpp : \
+	"..\..\CommonFiles\StuffMFC\Globals.h"\
+	"..\..\CommonFiles\StuffMFC\newtoolbar.h"\
+	".\StdAfx.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+..\..\CommonFiles\CCClient\Policy.cpp : \
+	"..\..\CommonFiles\CCClient\Policy.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+.\reportviewctrl.cpp : \
+	".\reportviewctrl.h"\
+	".\StdAfx.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+.\Scandir.cpp : \
+	"..\..\CommonFiles\ScanAPI\Avp_dll.h"\
+	"..\..\CommonFiles\ScanAPI\Avp_msg.h"\
+	"..\..\CommonFiles\ScanAPI\RetFlags.h"\
+	"..\..\CommonFiles\ScanAPI\Scanobj.h"\
+	".\Scandir.h"\
+	".\StdAfx.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+..\..\CommonFiles\Stuff\Sq_u.cpp : \
+	".\StdAfx.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+.\TabPages.cpp : \
+	"..\..\CommonFiles\ScanAPI\RetFlags.h"\
+	"..\..\CommonFiles\ScanAPI\Scanobj.h"\
+	"..\..\CommonFiles\Stuff\Layout.h"\
+	"..\..\CommonFiles\StuffMFC\Globals.h"\
+	"..\..\CommonFiles\StuffMFC\newtoolbar.h"\
+	"..\fn.h"\
+	".\aboutviewctrl.h"\
+	".\Avp32.h"\
+	".\Avp32Dlg.h"\
+	".\cust.h"\
+	".\LogCtrl.h"\
+	".\reportviewctrl.h"\
+	".\StdAfx.h"\
+	".\TabPages.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+.\Avp32.rc : \
+	"..\..\CommonFiles\Res\avp1.bmp"\
+	"..\..\CommonFiles\Res\Kl89x21.bmp"\
+	"..\..\CommonFiles\Res\klsmall.bmp"\
+	"..\..\CommonFiles\Res\tb_rep.bmp"\
+	".\Avi\Infect.avi"\
+	".\Avi\Ok.avi"\
+	".\Avi\Search.avi"\
+	".\res\1.ico"\
+	".\res\10.ico"\
+	".\res\12.ico"\
+	".\res\2.ico"\
+	".\res\3.ico"\
+	".\res\4.ico"\
+	".\res\5.ico"\
+	".\res\6.ico"\
+	".\res\8.ico"\
+	".\res\9.ico"\
+	".\res\Avp32.rc2"\
+	".\res\binboot.bin"\
+	".\res\binmbr.bin"\
+	".\res\icon12.ico"\
+	".\res\icon14.ico"\
+	".\res\icon__9.ico"\
+	".\res\iconover.ico"\
+	".\RES\KAV1.ico"\
+	{$(INCLUDE)}"Version\ver_avp.h"\
+	{$(INCLUDE)}"Version\ver_df.h"\
+	{$(INCLUDE)}"Version\ver_itoa.h"\
+	{$(INCLUDE)}"Version\ver_kl.h"\
+	{$(INCLUDE)}"Version\ver_kl.ver"\
+	

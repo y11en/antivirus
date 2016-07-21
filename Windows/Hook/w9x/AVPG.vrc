@@ -1,0 +1,23 @@
+CompanyName	=	"Kaspersky Lab" 
+FileDescription =	"spuper-ptor2"
+FileVersion	=	"6.12.10.213"
+InternalName	=	"KLIF"
+LegalCopyright	= 	"Copyright (c) 1999-2006, Kaspersky Lab."
+LegalTrademarks =       "Kaspersky™ Anti-Virus ® is registered trademark of Kaspersky Lab"
+OriginalFilename = 	"KLIF.VXD"
+ProductName	=	"Kaspersky Anti-Virus"
+ProductVersion	= 	"6.12"
+Translation	=	0x409, 0x4E4
+
+// Binary fields
+
+dwFileVersionMS   = 0x0006000c //6.12
+dwFileVersionLS   = 0x000a00d5 //10.213
+dwProductVersionMS  = 0x0006000c //6.12
+dwProductVersionLS  = 0  
+dwFileFlagsMask   = 0
+dwFileFlags     = 0
+dwFileOS      = 0
+dwFileSubtype   = 0
+dwFileDateMS    = 0
+dwFileDateLS    = 0

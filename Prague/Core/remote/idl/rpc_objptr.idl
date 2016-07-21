@@ -1,0 +1,38 @@
+// --------------------------------------------------------------------------------
+// AVP Prague stamp begin( Interface header,  )
+// -------- Monday,  07 October 2002,  13:16 --------
+// File Name   -- i_objptr.h
+// Copyright (c) Kaspersky Labs. 1996-2002.
+// -------------------------------------------
+// AVP Prague stamp end
+
+
+
+import "prague.h";
+import "i_objptr.h";
+
+typedef rpcOBJECT	rpcObjPtr;
+typedef rpcOBJECT	rpcSTRING;
+typedef rpcOBJECT	rpcIO;
+
+[ uuid (1DFFBB3A-2BD3-424e-AD43-FAA5BF1F81A4),
+  version(1.0),
+  pointer_default(unique)
+]
+interface rpc_objptr {
+
+  tERROR ObjPtr_IOCreate ( rpcObjPtr _this, [mout] rpcIO* result, rpcSTRING name, tDWORD access_mode, tDWORD open_mode ); // -- creates object current in enumeration;
+  tERROR ObjPtr_Copy     ( rpcObjPtr _this, rpcOBJECT dst_name, tBOOL overwrite );                                      // -- copies the object pointed by the ptr;
+  tERROR ObjPtr_Rename   ( rpcObjPtr _this, rpcOBJECT new_name, tBOOL overwrite );                                      // -- renames the object pointed by the ptr;
+  tERROR ObjPtr_Delete   ( rpcObjPtr _this );                                                                         // -- deletes object pointed by ptr;
+
+  tERROR ObjPtr_Reset    ( rpcObjPtr _this, tBOOL to_root );                                                          // -- Reinitializing of ObjEnum object;
+  tERROR ObjPtr_Clone    ( rpcObjPtr _this, [mout] rpcObjPtr* result );                                                 // -- Makes another ObjPtr object;
+  tERROR ObjPtr_Next     ( rpcObjPtr _this );                                                                         // -- Returns next IO object;
+  tERROR ObjPtr_StepUp   ( rpcObjPtr _this );                                                                         // -- Goes one level up;
+  tERROR ObjPtr_StepDown ( rpcObjPtr _this );                                                                         // -- Goes one level up;
+  tERROR ObjPtr_ChangeTo ( rpcObjPtr _this, rpcOBJECT name );                                                           // -- Changes folder for enumerating;
+}
+
+
+

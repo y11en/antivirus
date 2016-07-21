@@ -1,0 +1,4 @@
+// ***** Восстановление ключа запуска Explorer *****
+begin
+ RegKeyStrParamWrite('HKLM','SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon', 'shell', 'explorer.exe');
+end.

@@ -1,0 +1,37 @@
+<UpdateFiles 
+	UpdateDate="08112005 1100">
+
+    <!-- all fields are duplicate -->
+	<FileDescription 
+		ComponentID="MATCH"
+		UpdateType="base" 
+		RelativeSrvPath="path1/"
+		LocalPath="%BaseFolder%" 
+		Filename="File10.txt" 
+		FileSize="74"
+		FileDate="08112005 1050" />
+
+	<FileDescription 
+		ComponentID="MATCH"
+		UpdateType="base" 
+		RelativeSrvPath="path1/"
+		LocalPath="%BaseFolder%" 
+		Filename="File10.txt" 
+		FileSize="74"
+		FileDate="08112005 1050" />
+
+
+    <!-- consistency check is MD5, differs from original signature consistency check -->
+	<FileDescription 
+		ComponentID="MATCH"
+		UpdateType="base" 
+		RelativeSrvPath="path1/"
+		LocalPath="%BaseFolder%" 
+		Filename="File10.txt" 
+		MD5="Svy+UsJA8ZN3GDBLpkf2kw=="
+		FileSize="74" />
+
+
+</UpdateFiles>
+
+;:10KAlRwdb7kOY76CIp+M5UCtIH4T8NJKTpoi93X+QJruqzYuMeZUDdQ0uBh2zWXvHBgTEmcpKfRjrj7r/IJ7j9fj%%

@@ -1,0 +1,12 @@
+// ***** SpyWare.Aureate/Radiate *****
+var
+ S : string;
+begin
+ S := 'SpyWare.Aureate/Radiate';
+ AddEvAlarmByCLSID('ebbfe277-bdf0-11d2-bbe5-00609419f467', S, '');
+ AddEvAlarmByCLSID('ebbfe278-bdf0-11d2-bbe5-00609419f467', S, '');
+ AddEvAlarmByCLSID('ebbfe279-bdf0-11d2-bbe5-00609419f467', S, '');
+ AddEvAlarmByCLSID('ebbfe27a-bdf0-11d2-bbe5-00609419f467', S, '');
+ AddEvAlarmByCLSID('ebbfe27b-bdf0-11d2-bbe5-00609419f467', S, '');
+ AddEvAlarmByCLSID('ebbfe27c-bdf0-11d2-bbe5-00609419f467', S, '');
+end.

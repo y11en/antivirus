@@ -1,0 +1,154 @@
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Folder: "O:\components\Windows\KAH"
+	File "O:\components\Windows\KAH\FSSyncDll.dsp"
+		Converting "FSSyncDll.dsp"
+		Patching   "FSSyncDll.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+
+	File "O:\components\Windows\KAH\_KAHUSER.dsp"
+		Converting "_KAHUSER.dsp"
+		Patching   "_KAHUSER.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+
+Folder: "O:\components\Windows\KAH\Bases"
+Folder: "O:\components\Windows\KAH\Bases\idsbase"
+Folder: "O:\components\Windows\KAH\Bases2"
+Folder: "O:\components\Windows\KAH\Bases2\idsbase"
+Folder: "O:\components\Windows\KAH\ckahcomm"
+	File "O:\components\Windows\KAH\ckahcomm\CKAHComm.dsp"
+		Converting "CKAHComm.dsp"
+		Patching   "CKAHComm.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+
+Folder: "O:\components\Windows\KAH\CKAHFW"
+	File "O:\components\Windows\KAH\CKAHFW\CKAHFW.dsp"
+		Converting "CKAHFW.dsp"
+		Patching   "CKAHFW.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+
+Folder: "O:\components\Windows\KAH\ckahrules"
+	File "O:\components\Windows\KAH\ckahrules\ckahrules.dsp"
+		Converting "ckahrules.dsp"
+		Patching   "ckahrules.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+
+Folder: "O:\components\Windows\KAH\ckahum"
+	File "O:\components\Windows\KAH\ckahum\CKAHUM.dsp"
+		Converting "CKAHUM.dsp"
+		Patching   "CKAHUM.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+
+Folder: "O:\components\Windows\KAH\Debug"
+Folder: "O:\components\Windows\KAH\ids"
+	File "O:\components\Windows\KAH\ids\idsklavlib.dsp"
+		Converting "idsklavlib.dsp"
+		Patching   "idsklavlib.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+
+	File "O:\components\Windows\KAH\ids\idslib.dsp"
+		Converting "idslib.dsp"
+		Patching   "idslib.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+
+Folder: "O:\components\Windows\KAH\ids\genlog"
+	File "O:\components\Windows\KAH\ids\genlog\genlog.dsp"
+		Converting "genlog.dsp"
+		Patching   "genlog.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+
+Folder: "O:\components\Windows\KAH\ids\idssdk"
+Folder: "O:\components\Windows\KAH\ids\kt"
+Folder: "O:\components\Windows\KAH\ids\kt\ids"
+Folder: "O:\components\Windows\KAH\ids\kt_snort"
+Folder: "O:\components\Windows\KAH\ids\links"
+Folder: "O:\components\Windows\KAH\ids\procconv"
+	File "O:\components\Windows\KAH\ids\procconv\procconv.dsp"
+		Converting "procconv.dsp"
+		Patching   "procconv.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+
+Folder: "O:\components\Windows\KAH\ids\snort2kt"
+	File "O:\components\Windows\KAH\ids\snort2kt\snort2kt.dsp"
+		Converting "snort2kt.dsp"
+		Patching   "snort2kt.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+
+Folder: "O:\components\Windows\KAH\ids\snort2kt\rules"
+Folder: "O:\components\Windows\KAH\ids\SnortProcUnitTest"
+	File "O:\components\Windows\KAH\ids\SnortProcUnitTest\SnortProcUnitTest.dsp"
+		Converting "SnortProcUnitTest.dsp"
+		Patching   "SnortProcUnitTest.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+
+Folder: "O:\components\Windows\KAH\ids\vdctconv"
+	File "O:\components\Windows\KAH\ids\vdctconv\vdctconv.dsp"
+		Converting "vdctconv.dsp"
+		Patching   "vdctconv.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+
+Folder: "O:\components\Windows\KAH\include"
+Folder: "O:\components\Windows\KAH\KLCKAH"
+	File "O:\components\Windows\KAH\KLCKAH\KLCKAH.dsp"
+		Converting "KLCKAH.dsp"
+		Patching   "KLCKAH.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+
+Folder: "O:\components\Windows\KAH\Release"
+Folder: "O:\components\Windows\KAH\Test"
+Folder: "O:\components\Windows\KAH\Test\ckahgen"
+	File "O:\components\Windows\KAH\Test\ckahgen\CKAHGEN.dsp"
+		Converting "CKAHGEN.dsp"
+		Patching   "CKAHGEN.vcproj"
+			Conf - Release|Win32
+			Conf - Debug|Win32
+
+Folder: "O:\components\Windows\KAH\Test\ckahgen\res"
+Folder: "O:\components\Windows\KAH\Test\CKAHSYNC"
+	File "O:\components\Windows\KAH\Test\CKAHSYNC\CKAHSYNC.dsp"
+		Converting "CKAHSYNC.dsp"
+		Patching   "CKAHSYNC.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+
+Folder: "O:\components\Windows\KAH\Test\ckahumtestui2"
+	File "O:\components\Windows\KAH\Test\ckahumtestui2\CKAHUMTESTUI2.dsp"
+		Converting "CKAHUMTESTUI2.dsp"
+		Patching   "CKAHUMTESTUI2.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+			Conf - Release_Unicode|Win32
+			Conf - Debug_Unicode|Win32
+
+Folder: "O:\components\Windows\KAH\Test\ckahumtestui2\res"
+Folder: "O:\components\Windows\KAH\testapp"
+	File "O:\components\Windows\KAH\testapp\testapp.dsp"
+		Converting "testapp.dsp"
+		Patching   "testapp.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+
+Folder: "O:\components\Windows\KAH\uzlib"
+	File "O:\components\Windows\KAH\uzlib\uzlib.dsp"
+		Converting "uzlib.dsp"
+		Patching   "uzlib.vcproj"
+			Conf - Debug|Win32
+			Conf - Release|Win32
+
+Folder: "O:\components\Windows\KAH\uzlib\win32"
+Folder: "O:\components\Windows\KAH\uzlib\windll"

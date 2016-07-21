@@ -1,0 +1,6 @@
+// ***** Adware.BookedSpace *****
+begin
+ AddEvAlarmByCLSID('0019C3E2-DD48-4A6D-AB2D-8D32436313D9',AScriptName,'');
+ AddEvAlarmByCLSID('0019C3E2-DD48-4A6D-ABCD-8D32436313D9',AScriptName,'');
+ AddEvAlarmByCLSID('0019C3E2-DD48-4A6D-ABCD-8D32436323D9',AScriptName,'cfgmgr*.dll');
+end.

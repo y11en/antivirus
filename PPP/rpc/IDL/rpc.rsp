@@ -1,0 +1,13 @@
+-Oi
+-nologo 
+-char unsigned
+-oldnames 
+-cpp_cmd cl 
+-I ../include/iface
+-I ../include
+-I ../../Prague/include/iface
+-I ../../Prague/include
+-I ../../Prague/remote/idl
+-D pr_call=
+-D mout=ptr,in,out
+-D __RPC__=dummy_var

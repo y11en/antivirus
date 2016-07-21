@@ -1,0 +1,99 @@
+# Microsoft Developer Studio Generated Dependency File, included by ichecker2.mak
+
+.\calc_file_hash.c : \
+	"..\..\memmodscan\objptr.h"\
+	"..\..\memmodscan\os.h"\
+	"..\..\memmodscan\plugin_memmodscan.h"\
+	"..\SFDB\plugin_sfdb.h"\
+	"..\SFDB\sfdb.h"\
+	{$(INCLUDE)}"..\Include\IFace/i_os.h"\
+	{$(INCLUDE)}"..\Include\IFace/i_root.h"\
+	{$(INCLUDE)}"..\memmodscan\io.h"\
+	{$(INCLUDE)}"hook\MemManag.h"\
+	{$(INCLUDE)}"iface\i_avpg.h"\
+	{$(INCLUDE)}"IFace\i_csect.h"\
+	{$(INCLUDE)}"IFace\i_heap.h"\
+	{$(INCLUDE)}"IFace\i_iface.h"\
+	{$(INCLUDE)}"IFACE\i_ifenum.h"\
+	{$(INCLUDE)}"IFace\i_impex.h"\
+	{$(INCLUDE)}"IFACE\i_io.h"\
+	{$(INCLUDE)}"IFace\i_methodinfo.h"\
+	{$(INCLUDE)}"IFace\i_objptr.h"\
+	{$(INCLUDE)}"IFACE\i_plugin.h"\
+	{$(INCLUDE)}"IFace\i_receiv.h"\
+	{$(INCLUDE)}"IFACE\i_seqio.h"\
+	{$(INCLUDE)}"iface\i_sfdb.h"\
+	{$(INCLUDE)}"IFACE\i_string.h"\
+	{$(INCLUDE)}"IFace\i_tracer.h"\
+	{$(INCLUDE)}"pr_compl.h"\
+	{$(INCLUDE)}"PR_ERR.H"\
+	{$(INCLUDE)}"PR_IID.H"\
+	{$(INCLUDE)}"Pr_int.h"\
+	{$(INCLUDE)}"Pr_msg.h"\
+	{$(INCLUDE)}"Pr_obj.h"\
+	{$(INCLUDE)}"pr_oid.h"\
+	{$(INCLUDE)}"PR_PID.H"\
+	{$(INCLUDE)}"Pr_prop.h"\
+	{$(INCLUDE)}"Pr_reg.h"\
+	{$(INCLUDE)}"Pr_sys.h"\
+	{$(INCLUDE)}"Pr_types.h"\
+	{$(INCLUDE)}"PR_VID.H"\
+	{$(INCLUDE)}"Pr_vtbl.h"\
+	{$(INCLUDE)}"PRAGUE.H"\
+	
+
+.\ichecker2.c : \
+	".\ichecker2.h"\
+	".\plugin_ichecker.h"\
+	{$(INCLUDE)}"..\Include\IFace/i_root.h"\
+	{$(INCLUDE)}"IFace\i_heap.h"\
+	{$(INCLUDE)}"IFace\i_iface.h"\
+	{$(INCLUDE)}"IFACE\i_ifenum.h"\
+	{$(INCLUDE)}"IFace\i_impex.h"\
+	{$(INCLUDE)}"IFace\i_methodinfo.h"\
+	{$(INCLUDE)}"IFACE\i_plugin.h"\
+	{$(INCLUDE)}"IFace\i_receiv.h"\
+	{$(INCLUDE)}"IFace\i_tracer.h"\
+	{$(INCLUDE)}"pr_compl.h"\
+	{$(INCLUDE)}"PR_ERR.H"\
+	{$(INCLUDE)}"PR_IID.H"\
+	{$(INCLUDE)}"Pr_int.h"\
+	{$(INCLUDE)}"Pr_msg.h"\
+	{$(INCLUDE)}"Pr_obj.h"\
+	{$(INCLUDE)}"PR_PID.H"\
+	{$(INCLUDE)}"Pr_prop.h"\
+	{$(INCLUDE)}"Pr_reg.h"\
+	{$(INCLUDE)}"Pr_sys.h"\
+	{$(INCLUDE)}"Pr_types.h"\
+	{$(INCLUDE)}"PR_VID.H"\
+	{$(INCLUDE)}"Pr_vtbl.h"\
+	{$(INCLUDE)}"PRAGUE.H"\
+	
+
+.\plugin_ichecker.c : \
+	".\ichecker2.h"\
+	".\plugin_ichecker.h"\
+	{$(INCLUDE)}"..\Include\IFace/i_root.h"\
+	{$(INCLUDE)}"IFace\i_heap.h"\
+	{$(INCLUDE)}"IFace\i_iface.h"\
+	{$(INCLUDE)}"IFACE\i_ifenum.h"\
+	{$(INCLUDE)}"IFace\i_impex.h"\
+	{$(INCLUDE)}"IFace\i_methodinfo.h"\
+	{$(INCLUDE)}"IFACE\i_plugin.h"\
+	{$(INCLUDE)}"IFace\i_receiv.h"\
+	{$(INCLUDE)}"IFace\i_tracer.h"\
+	{$(INCLUDE)}"pr_compl.h"\
+	{$(INCLUDE)}"PR_ERR.H"\
+	{$(INCLUDE)}"PR_IID.H"\
+	{$(INCLUDE)}"Pr_int.h"\
+	{$(INCLUDE)}"Pr_msg.h"\
+	{$(INCLUDE)}"Pr_obj.h"\
+	{$(INCLUDE)}"PR_PID.H"\
+	{$(INCLUDE)}"Pr_prop.h"\
+	{$(INCLUDE)}"Pr_reg.h"\
+	{$(INCLUDE)}"Pr_sys.h"\
+	{$(INCLUDE)}"Pr_types.h"\
+	{$(INCLUDE)}"PR_VID.H"\
+	{$(INCLUDE)}"Pr_vtbl.h"\
+	{$(INCLUDE)}"PRAGUE.H"\
+	

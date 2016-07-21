@@ -1,0 +1,5 @@
+// ***** Adware.Toolbar.2020Search *****
+begin
+ AddEvAlarmByCLSID('4E1075F4-EEC4-4A86-ADD7-CD5F52858C31',AScriptName,'2020search.dll');
+ AddEvAlarmByCLSID('FC2493D6-A673-49FE-A2EE-EFE03E95C27C',AScriptName,'2020search.dll');
+end.

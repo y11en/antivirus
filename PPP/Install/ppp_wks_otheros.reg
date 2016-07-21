@@ -1,0 +1,25 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ProcMon\settings\def\aItems\0000]
+"bEnabled"=dword:00000001
+"sImagePath"="%SystemRoot%\\system32\\svchost.exe"
+"nHost"=dword:00000000
+"nPort"=dword:00000000
+"nTriggers"=dword:00000002
+"SSLOnly"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ProcMon\settings\def\aItems\0001]
+"bEnabled"=dword:00000001
+"sImagePath"="%ProgramFiles%\\Messenger\\msmsgs.exe"
+"nHost"=dword:00000000
+"nPort"=dword:00000000
+"nTriggers"=dword:00000002
+"SSLOnly"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ProcMon\settings\def\aItems\0002]
+"bEnabled"=dword:00000001
+"sImagePath"="%ProgramFiles%\\MSN Messenger\\MsnMsgr.Exe"
+"nHost"=dword:00000000
+"nPort"=dword:00000000
+"nTriggers"=dword:00000002
+"SSLOnly"=dword:00000001

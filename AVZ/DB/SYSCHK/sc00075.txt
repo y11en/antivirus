@@ -1,0 +1,5 @@
+// ***** Dialer.Tibs *****
+begin
+ AddEvAlarmByCLSID('25720328-5F2D-4B90-920C-2C244165CFF3',AScriptName,'tl*.dll');
+ AddEvAlarmByCLSID('50A28604-52F2-11d6-8F0F-5254AB11D5C2',AScriptName,'*.ldr');
+end.

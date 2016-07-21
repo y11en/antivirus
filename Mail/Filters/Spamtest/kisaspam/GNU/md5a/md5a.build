@@ -1,0 +1,4 @@
+LIB
+TARGET md5a
+
+CSRC md5a.c

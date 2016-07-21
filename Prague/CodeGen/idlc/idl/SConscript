@@ -1,0 +1,102 @@
+import os
+
+Import("*")
+
+files = [
+		'assert.cpp',
+        'lexer.ll',
+        'grammar.yy',
+        'Keywords.cpp',
+        'Context.cpp',
+        'Scaner.cpp',
+        'Parser.cpp',
+        'Lexeme.cpp',
+		'LexemeValue.cpp',
+		'ValueFactory.cpp',
+		'Builder.cpp',
+		'NodeInterface.cpp',
+		'Tuple.cpp',
+		'ErrorNode.cpp',
+		'FloatNode.cpp',
+		'IntNode.cpp',
+		'StringNode.cpp',
+		'InOutNode.cpp',
+		'NameNode.cpp',
+		'ImportEndNode.cpp',
+		'ImportStartNode.cpp',
+		'AttributeNode.cpp',
+		'OptionalValueNode.cpp',
+        'Exception.cpp',
+        'Transformer.cpp',
+#       'NameResolver.cpp',
+#       'DeclaredName.cpp',
+#		'ReferencedName.cpp',
+
+		'types.cpp',
+				
+		'BasicTypeNode.cpp',
+
+		'ErrorFactory.cpp',
+				
+		'namecontext/BasicType.cpp',
+		'namecontext/GatherDeclaredNames.cpp',
+		'namecontext/NameContext.cpp',
+		'namecontext/Type.cpp',
+		'namecontext/Typedef.cpp',
+		'namecontext/ConstValue.cpp',
+		'namecontext/Value.cpp',
+		'namecontext/Enum.cpp',
+		'namecontext/Struct.cpp',
+		'namecontext/Sequence.cpp',
+		'namecontext/SequenceType.cpp',
+		'namecontext/Interface.cpp',
+		'namecontext/NameResolver.cpp',
+		'namecontext/RootNameContext.cpp',
+		'namecontext/ConstEval.cpp',
+		'namecontext/Component.cpp',
+		'namecontext/Vendor.cpp',
+		
+		'namecontext/Method.cpp',
+		'namecontext/ExternMethod.cpp',
+		'namecontext/ExternalType.cpp',
+		'namecontext/Message.cpp',
+		'namecontext/MessageClass.cpp',
+		'namecontext/MessageClassExtend.cpp',
+		'namecontext/RefType.cpp',
+		
+		'namecontext/CheckAttrs.cpp'
+		]
+
+
+env.Depends('lexer.ll', 'flex.skl')
+env.Depends('grammar.yy', 'bison/myglr.c')
+        
+lexflags = env['LEXFLAGS'] + ' -L -Sidl/flex.skl'
+bisonflags = env['YACCFLAGS'] + ' -d ' # -S%s/idl/glr.c' % profile.absRoot[2:].replace('\\', '/')
+
+libs = {}
+
+libs['windows-msvc-debug']      = ['odbc32.lib', 'advapi32.lib']
+libs['windows-msvc-release']    = ['odbc32.lib', 'advapi32.lib']
+
+libs['linux-gcc-debug']         = ['odbc']
+libs['linux-gcc-release']       = ['odbc']
+
+env.Library(
+        target = 'idl', 
+        source = files, 
+        LEXFLAGS = lexflags,
+        YACCFLAGS = bisonflags)
+
+def make_path(lib) :
+    return '#' + os.path.join(profile.buildDir, lib)
+        
+#lib_list = libs[env['PLATFORM']] + Split('idl boost')    
+    
+#targets = env.Program(
+#        target = 'DocIndexer', 
+#        source = ['main.cpp', 'IndexerTask.cpp'],
+#                LIBPATH = [make_path(i) for i in Split('indexer icu odbc/src boost')],
+#                LIBS = lib_list)
+
+#env.Install(dir = profile.binAbsDir, source = targets)

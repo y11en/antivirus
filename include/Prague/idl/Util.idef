@@ -1,0 +1,460 @@
+forward interface Tree;
+typedef Tree* hTREE;
+
+forward interface LTree;
+typedef LTree* hLTREE;
+
+forward interface LRU;
+typedef LRU* hLRU;
+
+forward interface List;
+typedef List* hLIST;
+
+forward interface Stack;
+typedef Stack* hSTACK;
+
+forward interface LRUstg;
+typedef LRUstg* hLRUSTG;
+
+
+
+
+[
+  mnemonic(IID_TREE)
+  id(64002)
+  c_type_name(hTREE)
+]
+interface Tree { // tree sorting and searching interface
+
+  // ------------------------------------
+    typedef tDWORD tTREENODE;
+
+
+  // ------------------------------------
+    const tTREENODE cTREE_NULL = 0;
+
+
+  // ------------------------------------
+
+    [
+      id(130)
+      comment_ex("Interface version")
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      id(131)
+      comment_ex("Interface comment")
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+    [ id(4096) ]  prop tBOOL pgTREE_DUP_ALLOWED;
+    [ id(4097) ]  prop tDWORD pgTREE_GRANULARITY;
+    [ id(4098) ]  prop tDWORD pgTREE_NODE_SIZE;
+    [ id(4100) ]  prop hOBJECT pgTREE_COMPARE_OBJECT;
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Add new element into tree. If equil element alredy present in tree functiuon behaviour depends on TREE_DUP_ALLOWED property state. If property value is cTRUE element will be added iat the end of special list else function fails ( return cNODE_NULL). Property TREE_DUP_ALLOWED can be changed any time. Function behaviour will be chanded accordingly")
+    ]
+    method tERROR Add( // Add new element
+      tTREENODE* result,
+      const tPTR element,
+      tDWORD size
+    );
+
+    [
+      comment_ex("Remove node from tree. Stored datat will lost")
+    ]
+    method tERROR Remove( // Remove node from tree
+      tVOID* result,
+      tTREENODE node
+    );
+
+    [
+      comment_ex("Search element in tree, return node equil to given element")
+    ]
+    method tERROR Search( // Search node equil to element
+      tTREENODE* result,
+      const tPTR element,
+      tDWORD size
+    );
+
+    [
+      comment_ex("Search element in tree, return node equil or next greater to given element")
+    ]
+    method tERROR AtLeast( // Search node equil or next greater to given element
+      tTREENODE* result,
+      const tPTR element,
+      tDWORD size
+    );
+
+    [
+      comment_ex("Search element in tree, return node equil to given element")
+    ]
+    method tERROR AtMost( // Search node equil or less to element
+      tTREENODE* result,
+      const tPTR element,
+      tDWORD size
+    );
+    method tERROR First( // find first node in tree
+      tTREENODE* result
+    );
+    method tERROR Last( // find last node in tree
+      tTREENODE* result
+    );
+    method tERROR Next( // return next node in tree exluding dups
+      tTREENODE* result,
+      tTREENODE node
+    );
+    method tERROR Prev( // return previous node in tree excluding dups
+      tTREENODE* result,
+      tTREENODE node
+    );
+    method tERROR NextDup( // return next node equil to given one in tree
+      tTREENODE* result,
+      tTREENODE node
+    );
+    method tERROR PrevDup( // return prev node equil to given one in tree
+      tTREENODE* result,
+      tTREENODE node
+    );
+
+    [
+      comment_ex("Retrieve element data from node. If buffer too small to accept whole element only part of element will be stored and error will be set. To determine amount of bytes required for element just pass NULL as buffer. If node not valid 0 will be returned and error will set.")
+    ]
+    method tERROR NodeDataGet( // Retrieve node data ( previously stored element)
+      tDWORD* result,
+      tTREENODE node,
+      tPTR buffer,
+      tDWORD size
+    );
+
+    [
+      comment_ex("Set node data for existing node. If key part of data is affected node will moved. ")
+    ]
+    method tERROR NodeDataSet( // Set node data
+      tTREENODE* result,
+      tTREENODE node,
+      tPTR buffer,
+      tDWORD size
+    );
+    method tERROR Clear( tVOID* result );
+
+}
+
+
+[
+  mnemonic(IID_LTREE)
+  id(64010)
+  c_type_name(hLTREE)
+]
+interface LTree {
+
+  // ------------------------------------
+    typedef tDWORD tLTREENODE;
+
+
+  // ------------------------------------
+    const tLTREENODE cLTREE_NULL = 0;
+    const tDWORD cLTREE_AFTER = 0;
+    const tDWORD cLTREE_BEFORE = 1;
+    const tDWORD cLTREE_FIRST = 2;
+    const tDWORD cLTREE_LAST = 3;
+    const tDWORD cLTREE_ORDER = 4;
+
+
+  // ------------------------------------
+
+    [
+      id(130)
+      comment_ex("Interface version")
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      id(131)
+      comment_ex("Interface comment")
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+    [ id(4096) ]  prop tBOOL pgLTREE_DUP_ALLOWED;
+    [ id(4097) ]  prop tDWORD pgLTREE_GRANULARITY;
+    [ id(4098) ]  prop tDWORD pgLTREE_NODE_SIZE;
+    [ id(4100) ]  prop hOBJECT pgLTREE_COMPARE_OBJECT;
+
+
+  // ------------------------------------
+    method tERROR Add(
+      tLTREENODE* result,
+      tPTR p_data,
+      tDWORD size,
+      tLTREENODE where,
+      tDWORD mode
+    );
+    method tERROR Remove( tVOID* result, tLTREENODE node );
+    method tERROR Search(
+      tLTREENODE* result,
+      tPTR p_data,
+      tDWORD size
+    );
+    method tERROR AtLeast(
+      tLTREENODE* result,
+      tPTR p_data,
+      tDWORD size
+    );
+    method tERROR AtMost(
+      tLTREENODE* result,
+      tPTR p_data,
+      tDWORD size
+    );
+    method tERROR TreeFirst( tLTREENODE* result );
+    method tERROR TreeLast( tLTREENODE* result );
+    method tERROR TreeNext( tLTREENODE* result, tLTREENODE node );
+    method tERROR TreePrev( tLTREENODE* result, tLTREENODE node );
+    method tERROR ListFirst( tLTREENODE* result );
+    method tERROR ListLast( tLTREENODE* result );
+    method tERROR ListNext( tLTREENODE* result, tLTREENODE node );
+    method tERROR ListPrev( tLTREENODE* result, tLTREENODE node );
+    method tERROR ListMove(
+      tVOID* result,
+      tLTREENODE node,
+      tLTREENODE where,
+      tDWORD mode
+    );
+    method tERROR DataGet(
+      tDWORD* result,
+      tLTREENODE node,
+      tPTR buffer,
+      tDWORD size
+    );
+    method tERROR DataSet(
+      tLTREENODE* result,
+      tLTREENODE node,
+      tPTR buffer,
+      tDWORD size
+    );
+    method tERROR Clear( tVOID* result );
+
+}
+
+
+[
+  mnemonic(IID_LRU)
+  id(64011)
+  c_type_name(hLRU)
+]
+interface LRU {
+
+  // ------------------------------------
+    typedef tDWORD tLRU_MODE;
+
+
+  // ------------------------------------
+    const tLRU_MODE cLRU_RDONLY = 0;
+    const tLRU_MODE cLRU_RDWR_THROUGH = 1;
+    const tLRU_MODE cLRU_RDWR_BACK = 2;
+    const tLRU_MODE cLRU_RDWR_DELAY = 3;
+    const tDWORD cLRU_ERROR = 0xFFFFFFFF;
+
+
+  // ------------------------------------
+
+    [
+      id(130)
+      comment_ex("Interface version")
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      id(131)
+      comment_ex("Interface comment")
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+    [ id(4096) ]  prop tDWORD pgLRU_SIZE;
+    [ id(4097) ]  prop tLRU_MODE pgLRU_MODE;
+    [ id(4098) ]  prop tERROR pgLRU_WRITE_ERROR;
+    [ id(4099) ]  prop tDWORD pgLRU_HITS;
+    [ id(4100) ]  prop tDWORD pgLRU_MISSES;
+
+
+  // ------------------------------------
+    method tERROR Lock(
+      tDWORD* result,
+      tDWORD ext,
+      tBOOL p_write
+    );
+    method tERROR Unlock( tVOID* result, tDWORD ext );
+    method tERROR Flush( tVOID* result );
+    method tERROR Clear( tVOID* result );
+
+}
+
+
+[
+  mnemonic(IID_LIST)
+  id(64012)
+  c_type_name(hLIST)
+]
+interface List {
+
+  // ------------------------------------
+    typedef tDWORD tLISTNODE;
+
+
+  // ------------------------------------
+    const tLISTNODE cLIST_NULL = 0;
+    const tDWORD cLIST_AFTER = 0;
+    const tDWORD cLIST_BEFORE = 1;
+    const tDWORD cLIST_FIRST = 2;
+    const tDWORD cLIST_LAST = 3;
+
+
+  // ------------------------------------
+
+    [
+      id(130)
+      comment_ex("Interface version")
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      id(131)
+      comment_ex("Interface comment")
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+    [ id(4097) ]  prop tDWORD pgLIST_GRANULARITY;
+    [ id(4098) ]  prop tDWORD pgLIST_NODE_SIZE;
+
+
+  // ------------------------------------
+    method tERROR Add(
+      tLISTNODE* result,
+      tPTR p_data,
+      tDWORD count,
+      tLISTNODE where,
+      tDWORD mode
+    );
+    method tERROR Remove( tVOID* result, tLISTNODE node );
+    method tERROR Move(
+      tVOID* result,
+      tLISTNODE node,
+      tLISTNODE where,
+      tDWORD mode
+    );
+    method tERROR First( tLISTNODE* result );
+    method tERROR Last( tLISTNODE* result );
+    method tERROR Next( tLISTNODE* result, tLISTNODE node );
+    method tERROR Prev( tLISTNODE* result, tLISTNODE node );
+    method tERROR DataGet(
+      tDWORD* result,
+      tLISTNODE node,
+      tPTR buffer,
+      tDWORD size
+    );
+    method tERROR DataSet(
+      tLISTNODE* result,
+      tLISTNODE node,
+      tPTR buffer,
+      tDWORD size
+    );
+    method tERROR Clear( tVOID* result );
+
+}
+
+
+[
+  mnemonic(IID_STACK)
+  id(64013)
+  c_type_name(hSTACK)
+]
+interface Stack {
+
+  // ------------------------------------
+    error errSTACK_OVERFLOW;
+    error errSTACK_UNDERFLOW;
+
+
+  // ------------------------------------
+
+    [
+      id(130)
+      comment_ex("Interface version")
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      id(131)
+      comment_ex("Interface comment")
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+    [ id(4097) ]  prop tDWORD pgSTACK_GRANULARITY;
+    [ id(4098) ]  prop tDWORD pgSTACK_NODE_SIZE;
+    [ id(4099) ]  prop tDWORD pgSTACK_LIMIT;
+
+
+  // ------------------------------------
+    method tERROR Push(
+      tVOID* result,
+      tPTR p_data,
+      tDWORD size
+    );
+    method tERROR Pop(
+      tDWORD* result,
+      tPTR buffer,
+      tDWORD size
+    );
+    method tERROR Get(
+      tDWORD* result,
+      tDWORD index,
+      tPTR buffer,
+      tDWORD size
+    );
+    method tERROR Set(
+      tVOID* result,
+      tDWORD index,
+      tPTR buffer,
+      tDWORD size
+    );
+    method tERROR Size( tDWORD* result );
+    method tERROR Clear( tVOID* result, tDWORD index );
+
+}
+
+
+[
+  mnemonic(IID_LRUSTG)
+  id(64014)
+  c_type_name(hLRUSTG)
+]
+interface LRUstg {
+
+  // ------------------------------------
+
+    [
+      id(130)
+      comment_ex("Interface version")
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      id(131)
+      comment_ex("Interface comment")
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+
+
+  // ------------------------------------
+    method tERROR Read(
+      tVOID* result,
+      tDWORD int_block,
+      tDWORD ext_block
+    );
+    method tERROR Write(
+      tVOID* result,
+      tDWORD int_block,
+      tQWORD ext_block
+    );
+
+}
+

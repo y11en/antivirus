@@ -1,0 +1,276 @@
+forward interface IFace;
+typedef IFace* hIFACE;
+
+forward interface MethodInfo;
+typedef MethodInfo* hMETHODINFO;
+
+forward interface ParamInfo;
+typedef ParamInfo* hIFPARAM;
+
+forward interface PropertyInfo;
+typedef PropertyInfo* hPROPERTY;
+
+forward interface PluginInfo;
+typedef PluginInfo* hPLUGIN_INFO;
+
+forward interface CommentInfo;
+typedef CommentInfo* hCOMMENTINFO;
+
+
+
+
+[
+  version(0)
+  mnemonic(IID_IFACE)
+  id(57)
+  c_type_name(hIFACE)
+  comment_ex("Provides type information about selected interface prototype (implementation)
+    	- interface info (id, mnemonic id, author, revision, version, comments, etc )
+    	- number of methods, properties, error codes, types, constants defined
+    	- method info by index ()
+    	- method parameter info by index ()
+    	- property info by index ()
+    	- error code info by index ()
+    	- type info by index ()
+    	- constant info by index ()")
+]
+interface IFace { // Interface type information
+
+  // ------------------------------------
+    typedef tDWORD ifEntity; // enum type for interface entities
+    typedef tDWORD ifCommentType; // enum type for comment entities
+
+
+  // ------------------------------------
+    const ifEntity ifAny = 0; // refers to 'all of' or 'any' entity
+    const ifEntity ifType = 1; // refers to interface defined types
+    const ifEntity ifConstant = 2; // refers to interface defined constants
+    const ifEntity ifErrCode = 3; // refers to interface defined error codes
+    const ifEntity ifProperty = 4; // refers to interface defined property
+    const ifEntity ifPubMethod = 5; // refers to interface defined public method
+    const ifEntity ifIntMethod = 6; // refers to interface defined internal method (implementation only)
+    const ifEntity ifSubtype = 7; // refers to interface defined subtype (implementation only)
+    const ifEntity ifID = 8; // refers to interface ID
+    const ifEntity ifMnemonicID = 9; // refers to interface defined MnemonicID (implementation only)
+    const ifEntity ifRevision = 10; // refers to interface revision
+    const ifEntity ifCreationDate = 11; // refers to interface last modified date
+    const ifEntity ifIFaceName = 12; // refers to interface name
+    const ifEntity ifObjectName = 13; // refers to interface type name
+    const ifEntity ifDefValue = 14; // default value of the some entity
+    const ifEntity ifIFace = 15; // refers to interface
+    const ifEntity ifPlugin = 16; // refers to plugin
+    const ifEntity ifMethodParam = 17; // refers to method parameter
+    const ifEntity ifDataStruct = 18; // refers to data structure
+    const ifEntity ifDataStructMember = 19; // refers to data structure member
+    const ifEntity ifMsgClass = 20; // message class
+    const ifEntity ifMsg = 21; // message identifier
+    const ifCommentType ifcShort = 0; // refers to short comment of some entity
+    const ifCommentType ifcLarge = 1; // refers to expanded comment of some entity
+    const ifCommentType ifcBehavior = 2; // refers to behavior comment of some entity
+    const ifCommentType ifcValue = 3; // refers to value comment of some entity
+
+
+  // ------------------------------------
+    [ id(4096) ]  prop tDWORD pgIFACE_ID; // interface id to investigate (must be required for init)
+    [ id(4097) ]  prop tDWORD pgIFACE_PLUGIN_ID; // plugin id to investigate
+    [ id(4098) ]  prop tDWORD pgIFACE_VENDOR_ID; // vendor id to investigate
+    [ id(4099) ]  prop tDWORD pgIFACE_SUBTYPE; // interface subtype id to investigate
+    [ id(4100) ]  prop tSTRING pgIFACE_MNEMONIC; // iface mnemonic id
+    [ id(4101) ]  prop tDWORD pgIFACE_REVISION; // iface revision
+    [ id(4102) ]  prop tDATETIME pgIFACE_DATE; // iface last modified date
+    [ id(4103) ]  prop tSTRING pgIFACE_TYPE_NAME; // iface type name
+    [ id(4106) ]  prop tSTRING pgIFACE_AUTHOR; // iface author
+    [ id(4107) ]  prop tBINARY pgIFACE_DATA; // binary data of the interface info
+
+
+  // ------------------------------------
+    method tERROR NumberOf( // number of items of the requested entity type defined by the interface
+      tDWORD* result,
+      ifEntity entity // type of info requested
+    );
+    method tERROR NameOf( // name of the requested entity by index
+      tDWORD* result,
+      ifEntity entity, // type of info requested
+      tDWORD ind, // index of info requested
+      tSTRING buffer, // buffer to receive value
+      tDWORD size // size of the buffer
+    );
+    method tERROR TypeStrOf( // type name of the requested entity by index
+      tDWORD* result,
+      ifEntity entity, // type of info requested
+      tDWORD ind, // index of info requested
+      tSTRING buffer, // buffer to receive type name
+      tDWORD size // size of the buffer
+    );
+    method tERROR TypeIDOf( // type id of the requested entity
+      tDWORD* result,
+      ifEntity entity, // type of info requested
+      tDWORD ind // index of info requested
+    );
+    method tERROR ValOf( // value of the requested entity by index
+      tDWORD* result,
+      ifEntity entity, // type of info requested
+      tDWORD ind, // index of info requested
+      tVOID* buffer, // buffer to receive value
+      tDWORD size // size of the buffer
+    );
+    method tERROR CommentOf( // comment for the requested entity by index and comment type
+      tDWORD* result,
+      ifEntity entity, // type of info requested
+      ifCommentType p_comment, // comment type
+      tDWORD ind, // index of info requested
+      tSTRING buffer, // buffer to receive value
+      tDWORD size // size of the buffer
+    );
+    method tERROR IndOf( // index of entity by name
+      tDWORD* result,
+      ifEntity entity, // type of the entity to find
+      const tCHAR* buffer // name of the entity to find
+    );
+    method tERROR MethodName( // name of the method by index
+      tDWORD* result,
+      tDWORD ind, // index of method requested
+      tSTRING buffer, // buffer to recieve method name
+      tDWORD size // size of the buffer
+    );
+    method tERROR MethodParamNum( // number of the method parameters
+      tDWORD* result,
+      tDWORD ind // index of method requested
+    );
+    method tERROR MethodRetTypeStr( // return type name of the method by index
+      tDWORD* result,
+      tDWORD ind, // index of method requested
+      tSTRING buffer, // buffer to recieve method name
+      tDWORD size // size of the buffer
+    );
+    method tERROR MethodRetTypeID( // return type id
+      tDWORD* result,
+      tDWORD ind // index of method requested
+    );
+    method tERROR MethodRetVal( // default return value of the method by index
+      tDWORD* result,
+      tDWORD ind, // index of method requested
+      tVOID* buffer, // buffer to recieve method name
+      tDWORD size // size of the buffer
+    );
+    method tERROR MethodComment( // commant of the method by index and comment type
+      tDWORD* result,
+      tDWORD ind, // index of method requested
+      ifCommentType p_comment, // comment type
+      tSTRING buffer, // buffer to recieve method name
+      tDWORD size // size of the buffer
+    );
+    method tERROR ParamName( // name of the parameter by method and param indexes
+      tDWORD* result,
+      tDWORD mt_ind, // index of method requested
+      tDWORD par_ind, // index of parameter requested
+      tSTRING buffer, // buffer to recieve method name
+      tDWORD size // size of the buffer
+    );
+    method tERROR ParamTypeStr( // type name of the parameter by method and param indexes
+      tDWORD* result,
+      tDWORD mt_ind, // index of method requested
+      tDWORD par_ind, // index of parameter requested
+      tSTRING buffer, // buffer to recieve method name
+      tDWORD size // size of the buffer
+    );
+    method tERROR ParamTypeID( // identifier of the type of the parameter by method and param indexes
+      tDWORD* result,
+      tDWORD mt_ind, // index of method requested
+      tDWORD par_ind // index of parameter requested
+    );
+    method tERROR ParamComment( // commanr for the parameter by method and param indexes and commant type
+      tDWORD* result,
+      tDWORD mt_ind, // index of method requested
+      tDWORD par_ind, // index of parameter requested
+      ifCommentType p_comment, // comment type
+      tSTRING buffer, // buffer to recieve method name
+      tDWORD size // size of the buffer
+    );
+    method tERROR PropName( // name of the property by index
+      tDWORD* result,
+      tDWORD ind, // index of the property requested
+      tSTRING buffer, // buffer to recieve method name
+      tDWORD size // size of the buffer
+    );
+    method tERROR PropID( // identifier of the property by index
+      tDWORD* result,
+      tDWORD ind // index of the property requested
+    );
+    method tERROR PropTypeStr( // type name of the property by index
+      tDWORD* result,
+      tDWORD ind, // index of the property requested
+      tSTRING buffer, // buffer to recieve property type name
+      tDWORD size // size of the buffer
+    );
+    method tERROR PropTypeID( // type id of the property by index
+      tDWORD* result,
+      tDWORD ind // index of the property requested
+    );
+    method tERROR PropComment( // comment for the property by index and comment type
+      tDWORD* result,
+      tDWORD ind, // index of the property requested
+      ifCommentType p_comment, // comment type
+      tSTRING buffer, // buffer to recieve property type name
+      tDWORD size // size of the buffer
+    );
+    method tERROR CreateMethod( // create an interface method object to get method info
+      hMETHODINFO* result,
+      tDWORD ind // index of the method to create an object
+    );
+    method tERROR CreateType();
+
+}
+
+
+[
+  version(0)
+  mnemonic(IID_METHODINFO)
+  id(59)
+  c_type_name(hMETHODINFO)
+]
+interface MethodInfo {} // interface method type information
+
+[
+  version(0)
+  mnemonic(IID_PARAMINFO)
+  id(60)
+  c_type_name(hIFPARAM)
+]
+interface ParamInfo {} // interface method type information
+
+[
+  version(0)
+  mnemonic(IID_PROPERTYINFO)
+  id(61)
+  c_type_name(hPROPERTY)
+]
+interface PropertyInfo {} // interface property type information
+
+[
+  version(0)
+  mnemonic(IID_PLUGIN_INFO)
+  id(62)
+  c_type_name(hPLUGIN_INFO)
+]
+interface PluginInfo { // plugin type information
+
+  // ------------------------------------
+    [ id(4096) ]  prop tPID pgPID;
+
+
+  // ------------------------------------
+    method tERROR PluginID( // plugin id
+      tDWORD* result
+    );
+
+}
+
+
+[
+  version(0)
+  mnemonic(IID_COMMENTINFO)
+  id(63)
+  c_type_name(hCOMMENTINFO)
+]
+interface CommentInfo {}

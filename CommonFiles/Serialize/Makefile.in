@@ -1,0 +1,36 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@ 
+
+Name = serialize
+Archive = $(Name).@ARCHIVE_EXT@
+Targets = $(Archive)
+
+Sources = \
+	Deser.c \
+	DeserHdr.c \
+	DeserMem.c \
+	DeserR.c \
+	DeserSWM.c \
+	DesrMHdr.c \
+	DesrMR.c \
+	DesrMSWM.c \
+	SeriaCst.c \
+	SeriaHdr.c \
+	SeriaInt.c \
+	Serial.c \
+	SerialW.c \
+	SeriaMem.c \
+	SeriaSWM.c \
+	SeriMCst.c \
+	SeriMHdr.c \
+	SeriMSWM.c \
+	SeriMW.c
+
+InstallIncludes = \
+	@PACKAGE_NAME@/KLDTSer.h \
+	@PACKAGE_NAME@/KLDTDefs.h
+
+
+include @abs_top_builddir@/unix/Rules

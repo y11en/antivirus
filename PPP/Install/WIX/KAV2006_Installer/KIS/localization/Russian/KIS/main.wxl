@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="Windows-1251"?>
+<WixLocalization xmlns="http://schemas.microsoft.com/wix/2003/11/localization" Codepage="1251">
+
+  <String Id="ProductName_NOM">Kaspersky Internet Security 8.0</String>
+  <String Id="ProductName_GEN">Kaspersky Internet Security 8.0</String>
+  <String Id="ProductName_INS">Kaspersky Internet Security 8.0</String>
+  <String Id="WholeProductFeatureDesc"><![CDATA[[ProductName_NOM] - комплексная защита вашего компьютера от любых угроз и опасных программ (вирусы, хакерские атаки, спам и т.д.)]]></String>
+  <String Id="AVPServiceDescription">Обеспечивает защиту компьютера от вирусов, опасного ПО, хакерских атак, интернет-мошенничества и спама.</String>
+  <String Id="ProductNamePrfix">Kaspersky Internet Security</String>
+
+  <!-- DO NOT LOCALIZE BELOW! -->
+  <String Id="LoginImage">images\lgnkis.png</String>
+</WixLocalization>

@@ -1,0 +1,4 @@
+// ***** AdvWare.MetaDirect *****
+begin
+ AddEvAlarmByCLSID('FF65677A-8977-48CA-916A-DFF81B037DF3',AScriptName,'WildApp.dll');
+end.

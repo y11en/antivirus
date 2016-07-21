@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio.NET 7.0">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+	</head>
+	<body>
+		<P><FONT style="BACKGROUND-COLOR: #c8e0d8"><STRONG>„то добавилось</STRONG></FONT></P>
+		<P><FONT style="BACKGROUND-COLOR: #c8e0d8" size="2">- класс CRecordset, который, 
+				работа€ в св€зке с CSql::MoveNext, дает возможность более удобного 
+				использовани€ результатов выборки. ѕример использовани€:</FONT></P>
+		<P><FONT style="BACKGROUND-COLOR: #c8e0d8" color="#000099" size="2">TCHAR* strSQL = 
+				_T("select t.fld1, t.fld2 from dbo.sometable t");<BR>
+				if( oSql.DoSqlQuery(strSQL))<BR>
+				{<BR>
+				&nbsp;&nbsp;&nbsp; CRecordset oRS;<BR>
+				&nbsp;&nbsp;&nbsp; while(oSql.MoveNext(oRS))&nbsp;
+				<BR>
+				&nbsp;&nbsp;&nbsp; {<BR>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SFieldValue* pFld1 = 
+				oRS[0];&nbsp;&nbsp;<BR>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SFieldValue* pFld2 = 
+				oRS["fld2"];&nbsp;&nbsp;<BR>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...<BR>
+				&nbsp;&nbsp;&nbsp; }<BR>
+				}<BR>
+			</FONT>
+		</P>
+		<P><FONT style="BACKGROUND-COLOR: #c8e0d8" size="2">этот класс также&nbsp;дает 
+				возможность&nbsp;<BR>
+				&nbsp;&nbsp;&nbsp; получить кол-во полей в запросе;<BR>
+				&nbsp;&nbsp;&nbsp; получить указатель на поле (<FONT color="#000099">SFieldValue</FONT>) 
+				по номеру пол€, а так же по имени пол€, в случае неудачи (неверный индекс или 
+				им€) возвращаетс€ null.</FONT></P>
+		<P><FONT style="BACKGROUND-COLOR: #c8e0d8" size="2">- в класс <FONT color="#000099">SFieldValue</FONT>&nbsp;добавлены 
+				функции, позвол€ющие&nbsp;<BR>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;получать строковое представление пол€ (<FONT color="#000099">GetStringPresentation</FONT>), 
+				искючение составлют пол€ времени-даты, байнари;<BR>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; устанавливать ссылку на внешние данные (<FONT color="#000099">SetRef</FONT>,
+				<FONT color="#000099">SetRefVarBin</FONT>), эти фича требуетс€ дл€ выполнени€ 
+				параметризованных запросов (перечень функций, устанавливающих ссылки будет 
+				пополн€тьс€ по мере востребовани€).<BR>
+			</FONT>
+		</P>
+		<P><FONT size="2">&nbsp;- в классе <FONT color="#000099">CSql</FONT> добавились функции<BR>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; коннекта по имени сетевого сервера и базы данных 
+				(<FONT color="#000099">Trusted_Connect2(...)</FONT>);<BR>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; поиск индекса пол€ по имени пол€ (<FONT color="#000099">GetColumnNmb(...)</FONT>);<BR>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; переход на следующую запись (<FONT color="#000099">MoveNext(...)</FONT>);<BR>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; функци€ выполнени€ параметризованного запроса (<FONT color="#000099">DoBindQueryEx(...)</FONT>), 
+				котора€ работает на основе класса <FONT color="#000099">CRecordset</FONT>. 
+				ѕример выполнени€ запроса</FONT></P>
+		<P><FONT size="2">&nbsp;&nbsp;<FONT color="#000099">&nbsp;&nbsp; CRecordset oRS[2];<BR>
+					<BR>
+					&nbsp;&nbsp;&nbsp;&nbsp; oRS[0].SetRef(oTimeStamp);<BR>
+					&nbsp;&nbsp;&nbsp;&nbsp; oRS[1].SetRefVarBin(pMd5, 16);<BR>
+					&nbsp;&nbsp;&nbsp;&nbsp; oSql.DoBindQueryEx(_T("insert into sometable (date, 
+					md5) values(?,?)"), oRS);</FONT></FONT></P>
+		<P><FONT size="2">-&nbsp;добавилась поддержка юникода (<FONT color="#000099">TCHAR</FONT>);&nbsp;</FONT></P>
+		<P><FONT size="2">- добавилась поддержка автоматического линковани€ без необходимости 
+				отдельного указани€ линковщику имени библиотеки.</FONT></P>
+		<P><FONT style="BACKGROUND-COLOR: #c8e0d8" color="#000000"><STRONG>„то изменилось</STRONG></FONT></P>
+		<P><FONT style="BACKGROUND-COLOR: #c8e0d8" size="2">- изменен прототип</FONT></P>
+		<P><FONT color="#000099"><FONT size="2">typedef void (*BINDPROC)&nbsp; (void* 
+					/*UserValue*/, SWORD /*ParamID*/, SWORD* /*pLocalType*/, SWORD* 
+					/*pSqlType*/,SDWORD* /*pValueSize*/);<BR>
+				</FONT><FONT size="2">typedef void (*PUTDATA)&nbsp; (void* /*UserValue*/, SWORD 
+					/*ParamID*/, PVOID* /*Buffer*/, SDWORD* /*pBufferSize*/); </FONT></FONT>
+		</P>
+		<P><FONT color="#000000" size="2">заменен первый параметр с DWORD на void*, а так же 
+				заменены все соответсвующие параметры, например в CSql::DoBindQuery.</FONT></P>
+		<P><FONT color="#000000" size="2">- при вызове деструктора <FONT color="#000099">~CSql</FONT>
+				вызываетс€ <FONT color="#000099">DropConnection()</FONT>.</FONT></P>
+	</body>
+</html>

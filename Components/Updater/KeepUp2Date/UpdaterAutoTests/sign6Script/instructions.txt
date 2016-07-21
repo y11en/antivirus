@@ -1,0 +1,27 @@
+set binPath=C:\Sources\Dev\Components\Updater\KeepUp2Date\UpdaterAutoTests\sign6Script\bin
+
+
+================================
+; sign base(s)
+; WARNING: DO NOT FORGET TO RENAME AND LOWERCASE FILES !!!
+
+set inputmask=-inputmask *.avc -inputmask *.lst
+
+;-filter compid=AH,type=BASE
+set signerParams=-signset developer -filter compid=AVS,type=BASE -kl kl-0607g.pbv -oper oper.pbv -log sign6Script.log
+
+
+%binPath%\signer.exe sign_reg %signerParams% -new %inputmask% -registry binaryRegistry.krg
+
+
+================================
+; get binary from registry
+%binPath%\MasterXml.exe importRegistryFromBinary.ini
+
+
+
+================================
+; sign inside
+
+;set /p indexFileName="Enter file name: "
+%binPath%\signer.exe sign_inside %signerParams% -file %indexFileName%

@@ -1,0 +1,8 @@
+// ***** AdWare.MyWebSearch *****
+begin
+ AddEvAlarmByCLSID('0494D0D1-F8E0-41ad-92A3-14154ECE70AC',AScriptName,'MYBAR.dll');
+ AddEvAlarmByCLSID('014DA6C9-189F-421a-88CD-07CFE51CFF10',AScriptName,'MYSRCHAS.dll');
+ AddEvAlarmByCLSID('04079851-5845-4dea-848C-3ECD647AA554',AScriptName,'MYSRCHAS.dll');
+ AddEvAlarmByCLSID('4D1C4E89-A32A-416b-BCDB-33B3EF3617D3',AScriptName,'Nd2fnBar.dll');
+ AddEvAlarmByCLSID('630D6140-04C5-4db0-B27A-020D766FF09B',AScriptName,'Nd2fnBar.dll');
+end.

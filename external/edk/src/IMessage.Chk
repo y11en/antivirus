@@ -1,0 +1,121 @@
+// --imessage.c-----------------------------------------------------------------
+// 
+//  Module containing MAPI utility functions.
+// 
+// Copyright (C) Microsoft Corp. 1986-1996.  All Rights Reserved.
+// -----------------------------------------------------------------------------
+
+#ifndef DEBUG
+#define CHK_HrEDKSearchTableByProp(a,b,c)    NOERROR
+#define CHK_HrMAPIFindMsgByProp(a,b,c)        NOERROR
+#define CHK_HrMAPIMoveMessage(a,b,c,d)     NOERROR
+#define CHK_HrMAPICopyMessage(a,b,c,d)     NOERROR
+#define CHK_HrMAPIDeleteMessage(a,b,c)     NOERROR
+
+#else
+
+//$--CHK_HrEDKSearchTableByProp-------------------------------------------------
+//  Find the entry IDs matching the restriction.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrEDKSearchTableByProp(// RETURNS: return code
+    IN LPMAPITABLE lpTable,             // pointer to table
+    IN LPSPropValue lpSPropValue,       // property value
+    OUT LPENTRYLIST *lppMsgList)        // list of matching entry IDs
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_IUNKNOWN_PTR(lpTable) ||
+        !TEST_READ_PTR(lpSPropValue, sizeof(SPropValue)) ||
+        !TEST_WRITE_PTR(lppMsgList, sizeof(LPENTRYLIST)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+//$--CHK_HrMAPIFindMsgByProp-----------------------------------------------------
+//  Find the entry ID of a message given a property.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIFindMsgByProp(// RETURNS: return code
+    IN LPMAPIFOLDER lpFolder,       // pointer to folder
+    IN LPSPropValue lpSPropValue,   // property value
+    OUT LPENTRYLIST *lppMsgList)    // list of matching messages
+{
+    HRESULT hr = NOERROR;
+
+    if( !TEST_IUNKNOWN_PTR(lpFolder) ||
+        !TEST_READ_PTR(lpSPropValue, sizeof(SPropValue)) ||
+        !TEST_WRITE_PTR(lppMsgList, sizeof(LPENTRYLIST)))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+//$--CHK_HrMAPIMoveMessage----------------------------------------------------
+//  Move one message from one folder to another.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIMoveMessage(// RETURNS: return code
+    IN LPMAPIFOLDER lpSrcFolder,        // pointer to source folder
+    IN LPMAPIFOLDER lpDstFolder,        // pointer to destination folder
+    IN ULONG cbeid,                     // count of bytes in entry ID
+    IN LPENTRYID lpeid)                 // pointer to entry ID
+{
+    HRESULT hr = NOERROR;
+
+    if( cbeid == 0 ||
+        !TEST_IUNKNOWN_PTR(lpSrcFolder) ||
+        !TEST_IUNKNOWN_PTR(lpDstFolder) ||
+        !TEST_READ_PTR(lpeid, cbeid))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+//$--CHK_HrMAPICopyMessage----------------------------------------------------
+//  Copy one message from one folder to another.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPICopyMessage(// RETURNS: return code
+    IN LPMAPIFOLDER lpSrcFolder,        // pointer to source folder
+    IN LPMAPIFOLDER lpDstFolder,        // pointer to destination folder
+    IN ULONG cbeid,                     // count of bytes in entry ID
+    IN LPENTRYID lpeid)                 // pointer to entry ID
+{
+    HRESULT hr = NOERROR;
+
+    if( cbeid == 0 ||
+        !TEST_IUNKNOWN_PTR(lpSrcFolder) ||
+        !TEST_IUNKNOWN_PTR(lpDstFolder) ||
+        !TEST_READ_PTR(lpeid, cbeid))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+//$--CHK_HrMAPIDeleteMessage--------------------------------------------------
+//  Delete one message from one folder to another.
+// -----------------------------------------------------------------------------
+__inline static HRESULT CHK_HrMAPIDeleteMessage(// RETURNS: return code
+    IN LPMAPIFOLDER lpFolder,           // pointer to folder
+    IN ULONG cbeid,                     // count of bytes in entry ID
+    IN LPENTRYID lpeid)                 // pointer to entry ID
+{
+    HRESULT hr = NOERROR;
+
+    if( cbeid == 0 ||
+        !TEST_IUNKNOWN_PTR(lpFolder) ||
+        !TEST_READ_PTR(lpeid, cbeid))
+    {
+        hr = HR_LOG(E_INVALIDARG);
+    }
+
+    return(hr);
+}
+
+#endif /* DEBUG */

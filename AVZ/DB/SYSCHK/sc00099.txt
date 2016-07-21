@@ -1,0 +1,5 @@
+// ***** Trojan-Downloader.Agent.mt *****
+begin
+ AddEvAlarmByCLSID('F3ED645F-2426-4001-8756-596B4F1EBF1A', AScriptName,'ShakeGTW.ocx');
+ AddEvAlarmByCLSID('FA2B3C59-BCA0-4D2C-8508-53FDC6C9D857', AScriptName,'ShakeGTW.ocx');
+end.

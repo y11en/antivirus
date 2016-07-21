@@ -1,0 +1,4 @@
+// ***** Trojan.ActiveX.SerialThief *****
+begin
+ AddEvAlarmByCLSID('61775600-D290-11D2-AAB7-0050040FF6A5','Trojan.ActiveX.SerialThief','aacputhief.DLL');
+end.

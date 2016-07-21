@@ -1,0 +1,263 @@
+#import "compare.idef"
+
+forward interface DBREC;
+typedef DBREC* hDBREC;
+
+forward interface DBCOLLECTION;
+typedef DBCOLLECTION* hDBCOLLECTION;
+
+
+
+
+[
+  version(1)
+  mnemonic(IID_DBREC)
+  id(64020)
+  c_type_name(hDBREC)
+]
+interface DBREC {
+
+  // ------------------------------------
+    typedef tWORD tDB_FIELD;
+    typedef tWORD tDB_COLLECTION;
+
+
+  // ------------------------------------
+    const tDB_FIELD cDB_FIELD_RESERVED = 0xFFF0;
+    const tDB_COLLECTION cDB_COLLECTION_RESERVED = 0xFFF0;
+
+
+  // ------------------------------------
+    method tERROR ParentCollectionOpen(
+      hDBCOLLECTION* result,
+      tDWORD access_mode,
+      tDWORD open_mode
+    );
+    method tERROR ActiveColumnGet( DBCOLLECTION.tDB_COLUMN* result );
+    method tERROR ActiveColumnSet( DBCOLLECTION.tDB_COLUMN column );
+    method tERROR ColumnInfoGet( DBCOLLECTION.tDB_COLUMN_INFO* result, DBCOLLECTION.tDB_COLUMN column );
+    method tERROR SchemaGet(
+      DBCOLLECTION.tDB_COLUMN* result,
+      DBCOLLECTION.tDB_COLUMN* columns,
+      DBCOLLECTION.tDB_COLUMN size
+    );
+    method tERROR ColumnCount( DBCOLLECTION.tDB_COLUMN* result );
+    method tERROR First( hDBREC* result );
+    method tERROR Last( hDBREC* result );
+    method tERROR Next( hDBREC* result );
+    method tERROR Prev( hDBREC* result );
+    method tERROR Remove();
+    method tERROR Delete();
+    method tERROR RefCmp( hDBREC record );
+    method tERROR FieldSeekRead(
+      tDWORD* result,
+      tDB_FIELD field,
+      tDWORD offset,
+      tPTR buffer,
+      tDWORD count
+    );
+    method tERROR FieldSeekWrite(
+      tDWORD* result,
+      tDB_FIELD field,
+      tDWORD offset,
+      const tPTR buffer,
+      tDWORD count
+    );
+    method tERROR FieldSize( tDWORD* result );
+    method tERROR FieldResize( tDWORD new_size );
+    method tERROR FieldOpen(
+      hIO* result,
+      tDB_FIELD field,
+      tDWORD access_mode,
+      tDWORD open_mode
+    );
+    method tERROR FieldGet(
+      tDWORD* result,
+      tDB_FIELD field,
+      tPTR buffer,
+      tDWORD count
+    );
+    method tERROR FieldSet(
+      tDWORD* result,
+      tDB_FIELD field,
+      const tPTR buffer,
+      tDWORD count
+    );
+    method tERROR FieldAdd( tDB_FIELD field );
+    method tERROR FieldRemove( tDB_FIELD field );
+    method tERROR FieldCompareStd(
+      tINT* result,
+      tDB_FIELD field,
+      const tPTR buffer,
+      tDWORD count,
+      DBCOLLECTION.tDB_COMPARE compare
+    );
+    method tERROR FieldCompareObj(
+      tINT* result,
+      tDB_FIELD field,
+      const tPTR buffer,
+      tDWORD count,
+      hCOMPARE compare
+    );
+    method tERROR FieldCount( tDB_FIELD* result );
+    method tERROR FieldArray(
+      tDB_FIELD* result,
+      tDB_FIELD* array,
+      tDB_FIELD size
+    );
+    method tERROR CollectionOpen(
+      hDBCOLLECTION* result,
+      tDB_COLLECTION collection,
+      tDWORD access_mode,
+      tDWORD open_mode
+    );
+    method tERROR CollectionOpenOriginal(
+      hDBCOLLECTION* result,
+      tDB_COLLECTION collection,
+      tDWORD access_mode,
+      tDWORD open_mode
+    );
+    method tERROR CollectionOpenConnected(
+      hDBCOLLECTION* result,
+      tDB_COLLECTION collection,
+      tDWORD access_mode,
+      tDWORD open_mode
+    );
+    method tERROR CollectionSet( tDB_COLLECTION collection_id, hDBCOLLECTION collection );
+    method tERROR CollectionCount( tDB_COLLECTION* result );
+    method tERROR CollectionArray(
+      tDB_COLLECTION* result,
+      tDB_COLLECTION* array,
+      tDB_COLLECTION size
+    );
+    method tERROR CollectionConnect( tDB_COLLECTION collection_id, hDBCOLLECTION collection );
+    method tERROR CollectionDisconnect( tDB_COLLECTION collection );
+
+}
+
+
+[
+  version(1)
+  mnemonic(IID_DBCOLLECTION)
+  id(64021)
+  c_type_name(hDBCOLLECTION)
+]
+interface DBCOLLECTION {
+
+  // ------------------------------------
+    typedef tDWORD tDB_COLUMN;
+    typedef tDWORD tDB_COLUMN_INFO;
+    typedef tDWORD tDB_FILTER;
+    typedef tDWORD tDB_COMPARE;
+
+
+  // ------------------------------------
+    const tDB_COLUMN_INFO cDB_COLUMN_INDEX = 0;
+    const tDB_COLUMN_INFO cDB_COLUMN_LIST = 0;
+    const tDB_COLUMN_INFO cDB_COLUMN_ROW_ACCESS = 0;
+    const tDB_COLUMN_INFO cDB_ADD_BEFORE = 0;
+    const tDB_COLUMN_INFO cDB_ADD_AFTER = 0;
+    const tDB_COLUMN_INFO cDB_ADD_DUPLICATE = 0;
+    const tDB_COLUMN_INFO mDB_FIELD_MASK = 0xFFFF;
+    const tDWORD cDB_FILTER_L = 0;
+    const tDWORD cDB_FILTER_LE = 0;
+    const tDWORD cDB_FILTER_EQ = 0;
+    const tDWORD cDB_FILTER_GE = 0;
+    const tDWORD cDB_FILTER_G = 0;
+    const tDWORD cDB_FILTER_INSIDE_I = 0;
+    const tDWORD cDB_FILTER_INSIDE_E = 0;
+    const tDWORD cDB_FILTER_OUTSIDE_I = 0;
+    const tDWORD cDB_FILTER_OUTSIDE_E = 0;
+    const tDB_COMPARE cDB_COMPARE_RAW = 0x00;
+    const tDB_COMPARE cDB_COMPARE_NUMERIC = 0x01;
+    const tDB_COMPARE cDB_COMPARE_STRINGZ = 0x02;
+    const tDB_COMPARE cDB_COMPARE_STRINGP = 0x03;
+    const tDB_COMPARE fDB_COMPARE_SIZE_FIRST = 0x08;
+    const tDB_COMPARE cDB_COMPARE_NUM1 = 0;
+    const tDB_COMPARE cDB_COMPARE_NUM2 = 0x10;
+    const tDB_COMPARE cDB_COMPARE_NUM4 = 0x20;
+    const tDB_COMPARE fDB_COMPARE_NUM_LSF = 0;
+    const tDB_COMPARE fDB_COMPARE_NUM_MSF = 0x40;
+    const tDB_COMPARE fDB_COMPARE_NUM_SIGN = 0x80;
+    const tDB_COMPARE cDB_COMPARE_STR1 = 0;
+    const tDB_COMPARE cDB_COMPARE_STR2 = 0x100;
+    const tDB_COMPARE cDB_COMPARE_STR4 = 0x200;
+    const tDB_COMPARE fDB_COMPARE_STR_LSF = 0;
+    const tDB_COMPARE fDB_COMPARE_STR_MSF = 0x400;
+    const tDB_COMPARE fDB_COMPARE_STR_SIGN = 0x800;
+
+
+  // ------------------------------------
+    method tERROR ColumnInfoGet(
+      tDB_COLUMN* result,
+      tDB_COLUMN column_id,
+      tDB_COLUMN_INFO* column_info,
+      tPID* pid,
+      tDWORD* subtype
+    );
+    method tERROR ColumnInfoSet(
+      tDB_COLUMN* result,
+      tDB_COLUMN column_id,
+      tDB_COLUMN_INFO column_info,
+      tPID pid,
+      tDWORD subtype
+    );
+    method tERROR SchemaSet(
+      const tDB_COLUMN_INFO* column,
+      const tPID* pid,
+      const tDWORD* subtype,
+      tDB_COLUMN count
+    );
+    method tERROR SchemaGet(
+      tDB_COLUMN* result,
+      tDB_COLUMN_INFO* column,
+      tPID* pid,
+      tDWORD* subtype,
+      tDB_COLUMN count
+    );
+    method tERROR ColumnCount( tDB_COLUMN* result );
+    method tERROR FilterSetStd(
+      tDB_COLUMN column,
+      tDB_FILTER filter,
+      const tPTR data1,
+      tDWORD count1,
+      const tPTR data2,
+      tDWORD count2
+    );
+    method tERROR FilterSetObj( tDB_COLUMN column, tDWORD filter );
+    method tERROR FilterClear( tDB_COLUMN column );
+    method tERROR RecordCreate( hDBREC* result, tBOOL autoinsert );
+    method tERROR RecordInsert( hDBREC* result, hDBREC record );
+    method tERROR RecordInsertObject(
+      hDBREC* result,
+      hDBREC record,
+      tDB_COLUMN column,
+      tDB_COLUMN_INFO column_info,
+      hDBREC disposition
+    );
+    method tERROR RecordInsertRow(
+      hDBREC* result,
+      hDBREC record,
+      tDB_COLUMN column,
+      tDB_COLUMN_INFO column_info,
+      tDWORD disposition
+    );
+    method tERROR RecordFind(
+      hDBREC* result,
+      tDB_COLUMN column,
+      const tPTR buffer,
+      tDWORD count
+    );
+    method tERROR RecordFirst( hDBREC* result, tDB_COLUMN column );
+    method tERROR RecordLast( hDBREC* result, tDB_COLUMN column );
+    method tERROR RecordRow(
+      hDBREC* result,
+      tDB_COLUMN column,
+      tDWORD row
+    );
+    method tERROR RecordCount( tDWORD* result );
+    method tERROR ParentRecordOpen( hDBREC* result );
+    method tERROR ParentCollection( DBREC.tDB_COLLECTION* result );
+
+}
+

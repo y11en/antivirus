@@ -1,0 +1,4 @@
+2006-10-09 Evgeny P. Smirnov  <Evgeny.Smirnov@kaspersky.com>
+           Первый релиз libosr (Optical Symbols Recognition library).
+           KAS 3.0.255 MP1 (таг KAS_3_0_255_MP1)
+           Под этим же тагом зафиксированы изменения libgsg2 (в libgsg2 встроена поддержка libosr).

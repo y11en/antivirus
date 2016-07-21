@@ -1,0 +1,26 @@
+..\..\out_win32\debug\Database1.mdb
+..\..\out_win32\debug\TestHipsGui.exe.config
+..\..\out_win32\debug\TestHipsGui.exe
+..\..\out_win32\debug\TestHipsGui.pdb
+obj\Debug (without drv)\ResolveAssemblyReference.cache
+obj\Debug (without drv)\TestHipsGui.Form1.resources
+obj\Debug (without drv)\TestHipsGui.Properties.Resources.resources
+obj\Debug (without drv)\TestHipsGui.csproj.GenerateResource.Cache
+obj\Debug (without drv)\TestHipsGui.exe
+obj\Debug (without drv)\TestHipsGui.pdb
+..\..\out_win32\Release\Database1.mdb
+..\..\out_win32\Release\TestHipsGui.exe.config
+..\..\out_win32\Release\TestHipsGui.exe
+..\..\out_win32\Release\TestHipsGui.pdb
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\TestHipsGui.Form1.resources
+obj\Release\TestHipsGui.Properties.Resources.resources
+obj\Release\TestHipsGui.csproj.GenerateResource.Cache
+obj\Release\TestHipsGui.exe
+obj\Release\TestHipsGui.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\TestHipsGui.Form1.resources
+obj\Debug\TestHipsGui.Properties.Resources.resources
+obj\Debug\TestHipsGui.csproj.GenerateResource.Cache
+obj\Debug\TestHipsGui.exe
+obj\Debug\TestHipsGui.pdb

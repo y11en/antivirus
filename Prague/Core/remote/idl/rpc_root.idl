@@ -1,0 +1,50 @@
+import "prague.h";
+#include <pr_prop.h>
+
+typedef tDWORD tFUP_ACTION; // //rus:тип операции при вызове метода FreeUnusedPlugins
+
+typedef rpcOBJECT	rpcROOT;
+typedef rpcOBJECT	rpcTRACER;
+typedef rpcOBJECT	rpcPLUGIN;
+
+
+[ uuid (945DEB37-7086-42a5-A0C2-62168F8E7C3A),
+  version(1.0),
+  pointer_default(unique)
+]
+interface rpc_root {
+	// ----------- Interface management ----------
+	[local] tERROR Root_RegisterIFace            ( rpcROOT _this, tIID iid, tPID pid, tDWORD subtype, tVERSION version, tVID vid, [in, size_is(internal_table_size)] const tPTR* internal_table, tDWORD internal_table_size, [in, size_is(external_table_size)] const tPTR* external_table, tDWORD external_table_size, [in, size_is(prop_table_size*mPROPERTY_TABLE_RECORD_LEN)] const tDATA* prop_table, tDWORD prop_table_size, tDWORD memsize, tDWORD flags ); // -- Registers an interface;
+	[local]	tERROR Root_UnregisterIFace          ( rpcROOT _this, tIID iid, tPID pid, tDWORD subtype, tVID vid ); // -- Unregisters an interface;
+	[local]	tERROR Root_RegisterIFaceEx          ( rpcROOT _this, tIID iid, tPID pid, tDWORD subtype, tVERSION version, tVID vid, [in, size_is(internal_table_size)] const tPTR* internal_table, tDWORD internal_table_size, [in, size_is(external_table_size)] const tPTR* external_table, tDWORD external_table_size, [in, size_is(prop_table_size*mPROPERTY_TABLE_RECORD_LEN)] const tDATA* prop_table, tDWORD prop_table_size, tDWORD memsize, tDWORD flags, tIID iid_compat, rpcPLUGIN implemented_module, tDWORD implemented_index ); // -- Registers an interface;
+
+	// ----------- Plugin management ----------
+			tERROR Root_FindPlugins              ( rpcROOT _this, tPID mfinder_pid, const tPTR param_pool, tDWORD param_pool_size, tDWORD loadflags ); // -- forces specific loader to find and autoload modules, register interfaces and load native or prague plugins by flags;
+	[local]	tERROR Root_PluginUnloadNotification ( rpcROOT _this, rpcPLUGIN plugin_unloaded ); // -- outsiders notify root about plugin unloading;
+	[local]	tERROR Root_PluginLoadNotification   ( rpcROOT _this, rpcPLUGIN plugin_loaded ); // -- outsiders notify root about plugin loading;
+			tERROR Root_FreeUnusedPlugins        ( rpcROOT _this, [in, size_is(pid_array_count)] tPID* pid_array, tDWORD pid_array_count, tFUP_ACTION action, tDWORD during ); // -- forces unload unsued plugins;
+			tERROR Root_GetPluginInstance        ( rpcROOT _this, [mout] rpcPLUGIN* result, [in, mout] tDWORD* cookie, tPID pid ); // -- returns module matched the criteria;
+
+	// ----------- Custom property methods ----------
+			tERROR Root_RegisterCustomPropId     ( rpcROOT _this, [mout] tDWORD* result, tSTRING name, tDWORD type ); // -- allocates unique property id;
+			tERROR Root_UnregisterCustomPropId   ( rpcROOT _this, tSTRING name ); // -- deallocates unique property id;
+			tERROR Root_GetCustomPropId          ( rpcROOT _this, [mout] tDWORD* result, tSTRING name, tDWORD type ); // -- returns id of the named property identifier;
+			tERROR Root_SyncCustomPropValue      ( rpcROOT _this, tPROPID prop_id ); // -- synchronize custom property values;
+
+	// ----------- Tracing methods ----------
+			tERROR Root_TraceLevelSet            ( rpcROOT _this, tDWORD op, tIID iid, tPID pid, tDWORD subtype, tDWORD vid, tDWORD level, tDWORD min_level ); // -- set trace level by interface or/and by pid;
+			tERROR Root_GetTracer                ( rpcROOT _this, [mout] rpcTRACER* result );           // -- returns current tracer;
+
+	// ----------- import/export management ----------
+	[local]	tERROR Root_RegisterExportTable      ( rpcROOT _this, tDWORD* result, const tEXPORT* ex_tbl, tPID exporter_pid ); // -- register export function table;
+	[local]	tERROR Root_RegisterExportFunc       ( rpcROOT _this, const tFUNC_PTR func_ptr, tDWORD func_cls, tDWORD func_id, tPID exporter_pid ); // -- register single function pointer;
+	[local]	tERROR Root_RegisterExportFuncByName ( rpcROOT _this, const tFUNC_PTR func_ptr, tDWORD func_cls, tSTRING func_name, tPID exporter_pid ); // -- register single function pointer;
+	[local]	tERROR Root_ResolveImportTable       ( rpcROOT _this, tDWORD* result, const tIMPORT* imp_tbl, tPID importer_pid ); // -- resolve import table;
+	[local]	tERROR Root_ResolveImportFunc        ( rpcROOT _this, tFUNC_PTR* result, tDWORD func_cls, tDWORD func_id, tPID importer_pid ); // -- resolve single func pointer;
+	[local]	tERROR Root_ResolveImportFuncByName  ( rpcROOT _this, tFUNC_PTR* result, tDWORD func_cls, const tSTRING func_name, tPID importer_pid ); // -- resolve single func pointer;
+	[local]	tERROR Root_ReleaseImportTable       ( rpcROOT _this, tDWORD* result, const tIMPORT* imp_tbl, tPID importer_pid ); // -- releases import reference;
+	[local]	tERROR Root_ReleaseImportFunc        ( rpcROOT _this, tDWORD func_cls, tDWORD func_id, tPID importer_pid ); // -- releases single func pointer;
+	[local]	tERROR Root_ReleaseImportFuncByName  ( rpcROOT _this, tDWORD func_cls, const tSTRING func_name, tPID importer_pid ); // -- releases single func pointer;
+}
+
+

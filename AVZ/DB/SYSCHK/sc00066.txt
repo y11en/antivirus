@@ -1,0 +1,4 @@
+// ***** Monitor.Win32.Perflogger *****
+begin
+ AddEvAlarmByCLSID('1E1B2879-88FF-11D3-8D96-D7ACAC95951A',AScriptName,'bpkwb.dll');
+end.

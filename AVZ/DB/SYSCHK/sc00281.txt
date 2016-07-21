@@ -1,0 +1,4 @@
+// ***** Trojan-Downloader.Win32.BHO.b *****
+begin
+ AddEvAlarmByCLSID('7DBFDA8E-D33B-11D4-9269-00600868E56E', AScriptName, 'WebInstall.dll');
+end.

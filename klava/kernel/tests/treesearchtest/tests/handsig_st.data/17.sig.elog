@@ -1,0 +1,17 @@
+Adding signatures from file "17.sig".
+Saving the static tree to file "17.sig.st".
+Hash level: 16Hash table size: 64[Kb]
+Cleaning the tree.
+Loading a static tree from file "17.sig.st".
+Scanning file "17.sig"
+   0/9; off=0x0000035F; id=17
+   1/9; off=0x00000383; id=17
+   2/9; off=0x000003A7; id=17
+   3/9; off=0x000003CB; id=17
+   4/9; off=0x000003EF; id=17
+   5/9; off=0x00000413; id=17
+   6/9; off=0x00000437; id=17
+   7/9; off=0x0000045B; id=17
+   8/9; off=0x0000047F; id=17
+Total :
+id=17(9)

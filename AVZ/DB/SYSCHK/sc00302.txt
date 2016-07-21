@@ -1,0 +1,4 @@
+// ***** Trojan-Clicker.Win32.Adpower.i *****
+begin       
+ AddEvAlarmByCLSID('D1222EBB-F86E-4D6C-826A-B342A3D36D99', AScriptName, 'austria_ver3.ocx');
+end.

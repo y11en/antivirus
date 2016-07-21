@@ -1,0 +1,19 @@
+// $AVZ1533
+//$ Internet Explorer - отключить кеширование данных, полученных по защищенному каналу
+// Функция поиска проблемы
+function Check : dword;
+var
+ X : integer;
+begin
+ Result := 0;
+ X := RegKeyIntParamRead('HKCU', 'Software\Microsoft\Windows\Current Version\Internet Settings', 'DisableCachingOfSSLPages');
+ if X <> 1 then
+  Result := 2;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+begin
+ RegKeyIntParamWrite('HKCU','Software\Microsoft\Windows\Current Version\Internet Settings', 'DisableCachingOfSSLPages', 1);
+ Result := 0;
+end;

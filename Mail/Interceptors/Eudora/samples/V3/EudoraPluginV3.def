@@ -1,0 +1,19 @@
+;_____________________________________________________________________________
+;	Copyright (C) 2002 PGP Corporation
+;	All rights reserved.
+;
+;	$Id: EudoraPluginV3.def 9679 2002-08-06 20:11:24Z dallen $
+;_____________________________________________________________________________
+
+LIBRARY      "EudoraPluginV3"
+DESCRIPTION  'EudoraPluginV3 Windows Dynamic Link Library'
+
+EXPORTS
+	ems_plugin_version
+	ems_plugin_init
+	ems_translator_info
+	ems_can_translate
+	ems_translate_file
+	ems_plugin_config
+	ems_plugin_finish
+	ems_free

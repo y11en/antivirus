@@ -1,0 +1,221 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: nmake-vc6dspe-vc6 - Win32 Debug--------------------
+</h3>
+
+
+Microsoft (R) Program Maintenance Utility   Version 6.00.8168.0
+Copyright (C) Microsoft Corp 1988-1998. All rights reserved.
+
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\dll_main.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\dll_main.cpp
+dll_main.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\fstream.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\fstream.cpp
+fstream.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\strstream.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\strstream.cpp
+strstream.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\sstream.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\sstream.cpp
+sstream.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\ios.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\ios.cpp
+ios.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\stdio_streambuf.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\stdio_streambuf.cpp
+stdio_streambuf.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\istream.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\istream.cpp
+istream.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\ostream.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\ostream.cpp
+ostream.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\iostream.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\iostream.cpp
+iostream.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\codecvt.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\codecvt.cpp
+codecvt.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\collate.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\collate.cpp
+collate.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\ctype.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\ctype.cpp
+ctype.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\monetary.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\monetary.cpp
+monetary.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\num_get.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\num_get.cpp
+num_get.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\num_put.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\num_put.cpp
+num_put.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\num_get_float.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\num_get_float.cpp
+num_get_float.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\num_put_float.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\num_put_float.cpp
+num_put_float.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\numpunct.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\numpunct.cpp
+numpunct.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\time_facets.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\time_facets.cpp
+time_facets.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\messages.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\messages.cpp
+messages.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\locale_impl.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\locale_impl.cpp
+locale_impl.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\locale.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\locale.cpp
+locale.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\locale_catalog.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\locale_catalog.cpp
+locale_catalog.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\facets_byname.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\facets_byname.cpp
+facets_byname.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\c_locale_stub.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\c_locale_stub.cpp
+c_locale_stub.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\complex.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\complex.cpp
+complex.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\complex_exp.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\complex_exp.cpp
+complex_exp.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\complex_io.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\complex_io.cpp
+complex_io.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\complex_trig.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\complex_trig.cpp
+complex_trig.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\complex_io_w.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\complex_io_w.cpp
+complex_io_w.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\string_w.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\string_w.cpp
+string_w.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /O2 /MD  /D "WIN32" /D "_WINDOWS" /DNDEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared\c_locale.o /Fd"obj\vc6\shared/klcsrt.pdb" ..\c_locale.c
+c_locale.c
+ rc.exe /d COMP=vc6 /fo obj\vc6\shared\stlport.res ..\stlport.rc
+ link.exe /nologo /incremental:no /pdb:"obj\vc6\shared/klcsrt.pdb"  /DLL  /LIBPATH:../../stlport\lib /LIBPATH:"c:\Program Files\Microsoft Visual Studio\VC98\Lib" /VERSION:5.0 /OUT:obj\vc6\shared\klcsrt.dll obj\vc6\shared\dll_main.o obj\vc6\shared\fstream.o obj\vc6\shared\strstream.o obj\vc6\shared\sstream.o obj\vc6\shared\ios.o obj\vc6\shared\stdio_streambuf.o obj\vc6\shared\istream.o obj\vc6\shared\ostream.o obj\vc6\shared\iostream.o obj\vc6\shared\codecvt.o obj\vc6\shared\collate.o obj\vc6\shared\ctype.o obj\vc6\shared\monetary.o obj\vc6\shared\num_get.o obj\vc6\shared\num_put.o obj\vc6\shared\num_get_float.o obj\vc6\shared\num_put_float.o obj\vc6\shared\numpunct.o obj\vc6\shared\time_facets.o obj\vc6\shared\messages.o obj\vc6\shared\locale_impl.o obj\vc6\shared\locale.o obj\vc6\shared\locale_catalog.o obj\vc6\shared\facets_byname.o obj\vc6\shared\c_locale_stub.o obj\vc6\shared\complex.o obj\vc6\shared\complex_exp.o obj\vc6\shared\complex_io.o obj\vc6\shared\complex_trig.o obj\vc6\shared\complex_io_w.o obj\vc6\shared\string_w.o obj\vc6\shared\c_locale.o obj\vc6\shared\stlport.res 
+   Creating library obj\vc6\shared\klcsrt.lib and object obj\vc6\shared\klcsrt.exp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\dll_main.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\dll_main.cpp
+dll_main.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\fstream.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\fstream.cpp
+fstream.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\strstream.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\strstream.cpp
+strstream.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\sstream.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\sstream.cpp
+sstream.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\ios.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\ios.cpp
+ios.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\stdio_streambuf.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\stdio_streambuf.cpp
+stdio_streambuf.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\istream.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\istream.cpp
+istream.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\ostream.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\ostream.cpp
+ostream.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\iostream.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\iostream.cpp
+iostream.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\codecvt.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\codecvt.cpp
+codecvt.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\collate.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\collate.cpp
+collate.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\ctype.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\ctype.cpp
+ctype.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\monetary.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\monetary.cpp
+monetary.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\num_get.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\num_get.cpp
+num_get.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\num_put.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\num_put.cpp
+num_put.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\num_get_float.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\num_get_float.cpp
+num_get_float.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\num_put_float.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\num_put_float.cpp
+num_put_float.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\numpunct.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\numpunct.cpp
+numpunct.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\time_facets.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\time_facets.cpp
+time_facets.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\messages.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\messages.cpp
+messages.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\locale_impl.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\locale_impl.cpp
+locale_impl.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\locale.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\locale.cpp
+locale.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\locale_catalog.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\locale_catalog.cpp
+locale_catalog.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\facets_byname.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\facets_byname.cpp
+facets_byname.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\c_locale_stub.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\c_locale_stub.cpp
+c_locale_stub.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\complex.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\complex.cpp
+complex.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\complex_exp.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\complex_exp.cpp
+complex_exp.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\complex_io.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\complex_io.cpp
+complex_io.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\complex_trig.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\complex_trig.cpp
+complex_trig.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\complex_io_w.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\complex_io_w.cpp
+complex_io_w.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\string_w.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\string_w.cpp
+string_w.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-g\c_locale.o /Fd"obj\vc6\shared-g/klcsrt.pdb" ..\c_locale.c
+c_locale.c
+ rc.exe /d COMP=vc6 /d BUILD=_DEBUG /fo obj\vc6\shared-g\stlport.res ..\stlport.rc
+ link.exe /nologo /incremental:no /debug /pdb:"obj\vc6\shared-g/klcsrt.pdb"  /DLL  /LIBPATH:../../stlport\lib /LIBPATH:"c:\Program Files\Microsoft Visual Studio\VC98\Lib" /VERSION:5.0 /OUT:obj\vc6\shared-g\klcsrt.dll obj\vc6\shared-g\dll_main.o obj\vc6\shared-g\fstream.o obj\vc6\shared-g\strstream.o obj\vc6\shared-g\sstream.o obj\vc6\shared-g\ios.o obj\vc6\shared-g\stdio_streambuf.o obj\vc6\shared-g\istream.o obj\vc6\shared-g\ostream.o obj\vc6\shared-g\iostream.o obj\vc6\shared-g\codecvt.o obj\vc6\shared-g\collate.o obj\vc6\shared-g\ctype.o obj\vc6\shared-g\monetary.o obj\vc6\shared-g\num_get.o obj\vc6\shared-g\num_put.o obj\vc6\shared-g\num_get_float.o obj\vc6\shared-g\num_put_float.o obj\vc6\shared-g\numpunct.o obj\vc6\shared-g\time_facets.o obj\vc6\shared-g\messages.o obj\vc6\shared-g\locale_impl.o obj\vc6\shared-g\locale.o obj\vc6\shared-g\locale_catalog.o obj\vc6\shared-g\facets_byname.o obj\vc6\shared-g\c_locale_stub.o obj\vc6\shared-g\complex.o obj\vc6\shared-g\complex_exp.o obj\vc6\shared-g\complex_io.o obj\vc6\shared-g\complex_trig.o obj\vc6\shared-g\complex_io_w.o obj\vc6\shared-g\string_w.o obj\vc6\shared-g\c_locale.o obj\vc6\shared-g\stlport.res 
+   Creating library obj\vc6\shared-g\klcsrt.lib and object obj\vc6\shared-g\klcsrt.exp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\dll_main.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\dll_main.cpp
+dll_main.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\fstream.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\fstream.cpp
+fstream.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\strstream.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\strstream.cpp
+strstream.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\sstream.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\sstream.cpp
+sstream.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\ios.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\ios.cpp
+ios.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\stdio_streambuf.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\stdio_streambuf.cpp
+stdio_streambuf.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\istream.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\istream.cpp
+istream.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\ostream.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\ostream.cpp
+ostream.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\iostream.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\iostream.cpp
+iostream.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\codecvt.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\codecvt.cpp
+codecvt.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\collate.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\collate.cpp
+collate.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\ctype.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\ctype.cpp
+ctype.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\monetary.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\monetary.cpp
+monetary.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\num_get.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\num_get.cpp
+num_get.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\num_put.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\num_put.cpp
+num_put.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\num_get_float.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\num_get_float.cpp
+num_get_float.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\num_put_float.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\num_put_float.cpp
+num_put_float.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\numpunct.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\numpunct.cpp
+numpunct.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\time_facets.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\time_facets.cpp
+time_facets.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\messages.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\messages.cpp
+messages.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\locale_impl.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\locale_impl.cpp
+locale_impl.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\locale.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\locale.cpp
+locale.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\locale_catalog.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\locale_catalog.cpp
+locale_catalog.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\facets_byname.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\facets_byname.cpp
+facets_byname.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\c_locale_stub.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\c_locale_stub.cpp
+c_locale_stub.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\complex.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\complex.cpp
+complex.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\complex_exp.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\complex_exp.cpp
+complex_exp.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\complex_io.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\complex_io.cpp
+complex_io.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\complex_trig.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\complex_trig.cpp
+complex_trig.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\complex_io_w.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\complex_io_w.cpp
+complex_io_w.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi /Zm800 /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG /D "_STLP_DEBUG"  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\string_w.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\string_w.cpp
+string_w.cpp
+ cl.exe /nologo /W3 /GR /GX /Zi  /Zi /MDd  /D "WIN32" /D "_WINDOWS" /D_DEBUG  /I "../../stlport" /FI "vc_warning_disable.h"  /c /Foobj\vc6\shared-stlg\c_locale.o /Fd"obj\vc6\shared-stlg/klcsrt.pdb" ..\c_locale.c
+c_locale.c
+ rc.exe /d COMP=vc6 /d BUILD=_STLDEBUG /fo obj\vc6\shared-stlg\stlport.res ..\stlport.rc
+ link.exe /nologo /incremental:no /debug /pdb:"obj\vc6\shared-stlg/klcsrt.pdb"  /DLL  /LIBPATH:../../stlport\lib /LIBPATH:"c:\Program Files\Microsoft Visual Studio\VC98\Lib" /VERSION:5.0 /OUT:obj\vc6\shared-stlg\klcsrt.dll obj\vc6\shared-stlg\dll_main.o obj\vc6\shared-stlg\fstream.o obj\vc6\shared-stlg\strstream.o obj\vc6\shared-stlg\sstream.o obj\vc6\shared-stlg\ios.o obj\vc6\shared-stlg\stdio_streambuf.o obj\vc6\shared-stlg\istream.o obj\vc6\shared-stlg\ostream.o obj\vc6\shared-stlg\iostream.o obj\vc6\shared-stlg\codecvt.o obj\vc6\shared-stlg\collate.o obj\vc6\shared-stlg\ctype.o obj\vc6\shared-stlg\monetary.o obj\vc6\shared-stlg\num_get.o obj\vc6\shared-stlg\num_put.o obj\vc6\shared-stlg\num_get_float.o obj\vc6\shared-stlg\num_put_float.o obj\vc6\shared-stlg\numpunct.o obj\vc6\shared-stlg\time_facets.o obj\vc6\shared-stlg\messages.o obj\vc6\shared-stlg\locale_impl.o obj\vc6\shared-stlg\locale.o obj\vc6\shared-stlg\locale_catalog.o obj\vc6\shared-stlg\facets_byname.o obj\vc6\shared-stlg\c_locale_stub.o obj\vc6\shared-stlg\complex.o obj\vc6\shared-stlg\complex_exp.o obj\vc6\shared-stlg\complex_io.o obj\vc6\shared-stlg\complex_trig.o obj\vc6\shared-stlg\complex_io_w.o obj\vc6\shared-stlg\string_w.o obj\vc6\shared-stlg\c_locale.o obj\vc6\shared-stlg\stlport.res 
+   Creating library obj\vc6\shared-stlg\klcsrt.lib and object obj\vc6\shared-stlg\klcsrt.exp
+
+
+
+<h3>Results</h3>
+nmake-vc6dsp.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

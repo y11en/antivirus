@@ -1,0 +1,1 @@
+avz.exe Priority=-1 nw=Y nq=Y HiddenMode=0 Script=CollectFiles.avz

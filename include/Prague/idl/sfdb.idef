@@ -1,0 +1,72 @@
+forward interface SecureFileDatabase;
+typedef SecureFileDatabase* hSECUREFILEDB;
+
+
+
+
+[
+  version(1)
+  mnemonic(IID_SECUREFILEDB)
+  id(58001)
+  c_type_name(hSECUREFILEDB)
+  comment_ex("Интерфейс предоставляет сервис по хранению данных в базе, ее быстрому поиску, обновлению и удалению. Каждая запись в база данных идентифицируется по уникальному идентификатору и имеет постоянный набор данных. Размеры  идентификатора и данных записи определяются при создании БД.")
+]
+interface SecureFileDatabase { // Secure Files Database
+
+  // ------------------------------------
+
+    [
+      comment_ex("Метод подготавливает новую базу к работе.")
+    ]
+    method tERROR InitNew( // Создает новую базу данных
+      tDWORD dwRecordIDAlg, // Алгоритм, используемый для определения идентификатора записи
+      tDWORD dwRecordIDSize, // Размер идентификатора записи
+      tDWORD dwRecordDataSize, // Размер данных записи
+      tDWORD dwDBInitialSize // Начальный размер базы данных.
+    );
+    method tERROR Load( // Загружает базу данных из файла
+      tCHAR* szFileName // Имя файла
+    );
+    method tERROR Save( // Сохраняет базу данных в файл
+      tCHAR* szFileName // Имя файла
+    );
+
+    [
+      comment_ex("Метод находит в базе данных запись по указанному идентификатору и возвращает данные, хранимые в ней. Размер данных можно получить через GetDBInfo.")
+    ]
+    method tERROR GetRecord( // Получает данные из записи
+      tVOID* pRecordID, // Идентификатор записи
+      tVOID* pRecordData
+    );
+    method tERROR UpdateRecord( // Обновляет данные записи
+      tVOID* pRecordID, // Идентификатор записи
+      tVOID* pRecordData // Указатель на данные записи
+    );
+
+    [
+      comment_ex("Удаляет указанную запись вместе с ее данными")
+    ]
+    method tERROR DeleteRecord(
+      tVOID* pRecordID // Идентификатор записи
+    );
+    method tERROR GetDBInfo( // Получает информацию о конфигурации базы данных
+      tDWORD* pRecordIDAlg, // Алгоритм определения идентификатора записи
+      tDWORD* pRecordIDSize, // Размер идентификатора записи
+      tDWORD* pRecordDataSize // Размер данных записи
+    );
+    method tERROR CleanDB(); // Очищает базу
+    method tERROR EnumRecords(
+      tDWORD nRecordNum,
+      tVOID* pRecordID,
+      tVOID* pRecordData
+    );
+
+
+  // ------------------------------------
+    [ id(3130320335) ]
+    message_cls pmcSFDB {
+      [ id(1608212444) ]  message pmUPDATE_CLUSTER_FULL;
+    }
+
+}
+

@@ -1,0 +1,4 @@
+// ***** AdWare.ToolBar.BHO *****
+begin
+ AddEvAlarmByCLSID('3643ABC2-21BF-46B9-B230-F247DB0C6FD6', AScriptName, 'IeBHOs.dll');
+end.

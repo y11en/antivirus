@@ -1,0 +1,34 @@
+// ***** Настройки проводника *****
+procedure AddBackUpData(ARoot, AName : string;Lines : TStrings);
+begin
+ Lines.Add('[-'+ ARoot + '\' + AName + ']');
+ ExpRegKeyEx(ARoot, AName, Lines);
+ Lines.Add('');
+end;
+
+var
+ Lines : TStrings;
+ RootName, KeyName : string; 
+begin
+ Lines := TStringList.Create;
+ Lines.Add('REGEDIT4');
+ Lines.Add('');
+ AddBackUpData('HKEY_LOCAL_MACHINE', 'Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', Lines);
+ RootName := 'HKEY_CURRENT_USER';
+ KeyName  := 'Software\Microsoft\Windows\CurrentVersion\Explorer\';
+ AddBackUpData(RootName, KeyName + 'Advanced', Lines);
+ AddBackUpData(RootName, KeyName + 'AutoplayHandlers', Lines);
+ AddBackUpData(RootName, KeyName + 'CLSID', Lines);
+ AddBackUpData(RootName, KeyName + 'FileExts', Lines);
+ AddBackUpData(RootName, KeyName + 'HideDesktopIcons', Lines);
+ AddBackUpData(RootName, KeyName + 'HideMyComputerIcons', Lines);
+ AddBackUpData(RootName, KeyName + 'User Shell Folders', Lines);
+ AddBackUpData(RootName, KeyName + 'Wallpaper', Lines);
+ AddBackUpData(RootName, KeyName + 'WebView', Lines);
+
+ AddBackUpData('HKEY_LOCAL_MACHINE', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', Lines); 
+ AddBackUpData('HKEY_CURRENT_USER', 'Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', Lines); 
+ if SaveBackupDataSt(Lines, 'User_Explorer.reg') then
+  AddToLog('$AVZ1236 $AVZ1228'); 
+ Lines.Free;
+end.

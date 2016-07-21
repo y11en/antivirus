@@ -1,0 +1,4 @@
+// ***** AdvWare.DigitalNames *****
+begin
+ AddEvAlarmByCLSID('183D5161-0C62-4295-896C-44E7442CD6F2', AScriptName, '');
+end.

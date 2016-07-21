@@ -1,0 +1,63 @@
+forward interface Insider;
+typedef Insider* hINSIDER;
+
+
+
+[
+  version(1)
+  mnemonic(IID_INSIDER)
+  id(59000)
+  c_type_name(hINSIDER)
+]
+interface Insider {
+
+  // ------------------------------------
+    error errTASK_NOT_STARTED; // /rus:Возвращается из StartTask, если задача не стартовала
+    error errTASK_NOT_RESTARTED; // /rus:Возвращается из RestartTask, если задача не рестартовала
+
+
+  // ------------------------------------
+    method tERROR StartTask( // /rus:Начать выполнение задачи
+      const tBYTE* lpTaskData, // /rus:Данные для выполнения задачи.
+      tDWORD dwTaskDataSize // /rus:Размер блока данных lpTaskData
+    );
+    method tERROR StopTask(); // /rus:Остановить выполнение задачи
+    method tERROR PauseTask(); // /rus:Приостановить выполнение текущей задачи
+    method tERROR ContinueTask(); // /rus:Продолжить выполнение задачи
+    method tERROR RestartTask( // /rus:Продолжить выполнение с новыми настройками
+      const tBYTE* lpTaskData, // /rus:Данные для выполнения задачи.
+      tDWORD dwTaskDataSize // /rus:Размер блока данных lpTaskData
+    );
+
+
+  // ------------------------------------
+    [ id(1425294002) ]
+    message_cls pmc_INSIDER_MESSAGES { // /rus:Класс сообщений от hINSIDER
+      [ id(1031944990) ]  message pm_INSIDER_EVENT;
+      [ id(3348097796) ]  message pm_INSIDER_STATISTIC;
+      [ id(3905948416) ]  message pm_INSIDER_REQUEST_MESSAGE;
+      [ id(49600721) ]  message pm_INSIDER_REQUEST_DISINFECT;
+      [ id(2312113631) ]  message pm_INSIDER_REQUEST_DELETE;
+      [ id(1878091240) ]  message pm_INSIDER_REQUEST_DELETE_FAILED;
+      [ id(1655063595) ]  message pm_INSIDER_REQUEST_CURE_LOCKED_COPY_FAILED;
+      [ id(3460851595) ]  message pm_INSIDER_REQUEST_PASSWORD;
+      [ id(1634729792) ]  message pm_INSIDER_REQUEST_QUARANTINE;
+      [ id(2352128244) ]  message pm_INSIDER_REQUEST_BACKUP;
+
+      [
+        id(3099934882)
+        comment_ex("/rus:Указатель на сериализованный экземпляр класса CInsertNextDiskDialogInfo")
+      ]
+      message pm_INSIDER_REQUEST_SECTOR_OVERWRITE;
+      [ id(4057270767) ]  message pm_INSIDER_REQUEST_INSERTNEXTDISK;
+
+      [
+        id(1236499980)
+        comment_ex("/rus:Указатель на сериализованный экземпляр класса CDelayAskRequestInfo")
+      ]
+      message pm_INSIDER_REQUEST_DELAYASK;
+      [ id(852231372) ]  message pm_INSIDER_REQUEST_WARNDISINFECT;
+    }
+
+}
+

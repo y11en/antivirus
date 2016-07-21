@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?scr_demo8.htm"; }
+else { parent.quicksync('a15.42.10'); }
+//-->
+</script>
+   <title>&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; &#1091;&#1076;&#1072;&#1083;&#1077;&#1085;&#1080;&#1103; &#1090;&#1088;&#1086;&#1103;&#1085;&#1089;&#1082;&#1086;&#1081; &#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1099; &#1089; &#1080;&#1079;&#1074;&#1077;&#1089;&#1090;&#1085;&#1099;&#1084; &#1080;&#1084;&#1077;&#1085;&#1077;&#1084;</title>
+   <meta name="keywords" content="&#1079;&#1072;&#1097;&#1080;&#1097;&#1072;&#1077;&#1090;&#1089;&#1103; &#1086;&#1090; &#1091;&#1076;&#1072;&#1083;&#1077;&#1085;&#1080;&#1103;,&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;,&#1091;&#1076;&#1072;&#1083;&#1077;&#1085;&#1080;&#1077;,&#1090;&#1088;&#1086;&#1103;&#1085;&#1089;&#1082;&#1086;&#1081; &#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1099;">
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+
+
+<body bgcolor="#FFFFFF">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Пример удаления троянской программы с известным именем</span></p>
+
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="t_about.htm">Наверх</a>&nbsp;
+     <a href="scr_demo9.htm">Предыдущая</a>&nbsp;
+     <a href="scr_demo10.htm">Последующая</a>
+     </font><B>|</B>
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=717989"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=717989;t=109;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=18 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=717989"><img
+src="http://top.list.ru/counter?js=na;id=717989;t=109"
+border=0 height=18 width=88
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+    </td>
+  </tr>
+</table>
+<br>
+
+<p><span style="font-weight: bold; text-decoration: underline;">Постановка задачи:</span></p>
+<p>Администратору известно, что на компьютере пользователя имеется троянская программа и ее исполняемый файл с именем c:\windows\system32\trojan.dll, причем данная программа агрессивно защищается от удаления.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold; text-decoration: underline;">Решение задачи:</span></p>
+<p><span style="font-weight: bold; text-decoration: underline;">&nbsp;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// **** Шаг 1. Активируем AVZGuard</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">if</span><span style="font-size: 12pt; font-family: 'Courier New';"> SetAVZGuardStatus(True) </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">then</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  AddToLog(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'AVZGuard успешно активирован'</span><span style="font-size: 12pt; font-family: 'Courier New';">)</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">else</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  AddToLog(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'AVZGuard - ошибка активации'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// **** Шаг 2. Удаляем файл</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> DeleteFile(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'c:\windows\system32\trojan.dll'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// *** Шаг 3. Чистка ссылок на удаленный файл</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> ExecuteSysClean;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// *** Шаг 4. Сохранение протокола</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SaveLog(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'del_trojan.log'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// *** Шаг 5. Перезагрузка системы</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> RebootWindows(true);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';">.</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">&nbsp;</span></p>
+<p>Приведенный выше скрипт может быть усовершенствован - можно задействовать систему <a href="avzbc_about.htm">Boot Cleaner</a>, что существенно повысит вероятность удаления файла:</p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// **** Шаг 1. Активируем AVZGuard</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">if</span><span style="font-size: 12pt; font-family: 'Courier New';"> SetAVZGuardStatus(True) </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">then</span><span style="font-size: 12pt; font-family: 'Courier New';"> </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  AddToLog(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'AVZGuard успешно активирован'</span><span style="font-size: 12pt; font-family: 'Courier New';">)</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">else</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">  AddToLog(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'AVZGuard - ошибка активации'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// **** Шаг 2. Удаляем файл</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> DeleteFile(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'c:\windows\system32\trojan.dll'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// **** Шаг 3. Импорт списка удаленных файлов в настройки Boot Cleaner</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> BC_ImportDeletedList;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// **** Шаг 4. Чистка ссылок на удаленный файл</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> ExecuteSysClean;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// **** Шаг 5. Сохранение протокола</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> SaveLog(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'del_trojan.log'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// **** Шаг 6. Активация драйвера Boot Cleaner</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> BC_LogFile(GetAVZDirectory + </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'boot_clr.log'</span><span style="font-size: 12pt; font-family: 'Courier New';">);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> BC_Activate;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> </span><span style="font-size: 12pt; font-family: 'Courier New'; font-style: italic; color: #000080;">// **** Шаг 7. Перезагрузка системы</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> RebootWindows(true);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';">.</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">&nbsp;</span></p>
+<p>В описанных примерах работа скрипт завершается командой <a href="script_rebootwindows.htm">RebootWindows</a>, что приводит к автоматической перезагрузке компьютера с активной системой <a href="systemguard_main.htm">AVZ Guard</a>. </p>
+
+
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=717989;js='+js+a+';rand='+Math.random()+
+'" height=1 width=1/>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=717989"
+height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+
+</body>
+</html>

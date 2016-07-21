@@ -1,0 +1,136 @@
+forward interface StartupEnum;
+typedef StartupEnum* hSTARTUPENUM;
+
+
+
+
+[
+  mnemonic(IID_STARTUPENUM)
+  id(50005)
+  c_type_name(hSTARTUPENUM)
+  comment_ex(" Defines behavior of an object container/enumerator
+      Supplies object enumerate functionality on one level of hierarchy only.
+      For example: on logical drive object of this interface must enumerate objects in one folder.
+    
+      Also must support creating new IO object in the container. There are two ways to do it. First is three steps protocol:
+         -- ObjectCreate system method with folder object as parent
+         -- dictate all necessary properties for the new object
+         -- ObjectCreateDone
+       Second is CreateNew folder's method which is wrapper of above protocol.
+       Advise: when caller invokes ObjectCreateDone method folder object receives ChildDone notification and can do all necessary job to process it.")
+]
+interface StartupEnum { // Object Enumerator (Pointer to Object)
+
+  // ------------------------------------
+    typedef tDWORD tObjPtrState; // status of the object pointer
+
+
+  // ------------------------------------
+    const tDWORD fOPTR_AVAIL_MASK = 0x00000001L; // implementation supports navigation methods with mask
+    const tObjPtrState cObjPtrState_UNDEFINED = 0; // pointer is undefined
+    const tObjPtrState cObjPtrState_BEFORE = 1; // pointer in \"BEFORE_FIRST\" state
+    const tObjPtrState cObjPtrState_PTR = 2; // pointer in \"POINTER_TO_OBJ\" state
+    const tObjPtrState cObjPtrState_AFTER = 3; // pointer in \"AFTER_LAST\" state
+    const tDWORD fATTRIBUTE_READONLY = 0x00000001;
+    const tDWORD fATTRIBUTE_HIDDEN = 0x00000002;
+    const tDWORD fATTRIBUTE_SYSTEM = 0x00000004;
+    const tDWORD fATTRIBUTE_DIRECTORY = 0x00000010;
+    const tDWORD fATTRIBUTE_ARCHIVE = 0x00000020;
+    const tDWORD fATTRIBUTE_ENCRYPTED = 0x00000040;
+    const tDWORD fATTRIBUTE_NORMAL = 0x00000080;
+    const tDWORD fATTRIBUTE_TEMPORARY = 0x00000100;
+    const tDWORD fATTRIBUTE_SPARSE_FILE = 0x00000200;
+    const tDWORD fATTRIBUTE_REPARSE_POINT = 0x00000400;
+    const tDWORD fATTRIBUTE_COMPRESSED = 0x00000800;
+    const tDWORD fATTRIBUTE_OFFLINE = 0x00001000;
+    const tDWORD fATTRIBUTE_NOT_CONTENT_INDEXED = 0x00002000;
+
+
+  // ------------------------------------
+
+    [
+      id(130)
+      comment_ex("Interface version")
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      id(131)
+      comment_ex("Interface comment")
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+    prop pgOBJECT_ORIGIN; // Object origin
+    prop pgOBJECT_NAME;
+    prop pgOBJECT_PATH;
+    prop pgOBJECT_FULL_NAME; // object's full name in the parent OS
+    prop pgOBJECT_AVAILABILITY; // Returns set of features availabe for the implementation. Must return set of ORed availability flags
+    prop pgOBJECT_BASED_ON; // base for this object
+    [ id(4096) ]  prop tBOOL pgIS_FOLDER;
+    [ id(4097) ]  prop tSTRING pgMASK;
+    [ id(4098) ]  prop tObjPtrState pgOBJECT_PTR_STATE; // state of the object
+    prop pgOBJECT_SIZE; // Object size
+    prop pgOBJECT_SIZE_Q; // Object size Q
+    prop pgOBJECT_ATTRIBUTES; // attributes of the object. Depends on OS
+    prop pgOBJECT_HASH; // Object hash
+    prop pgOBJECT_REOPEN_DATA; // Object reopen data
+    [ id(4101) ]  prop tDATETIME pgOBJECT_CREATION_TIME;
+    [ id(4102) ]  prop tDATETIME pgOBJECT_LAST_WRITE_TIME;
+    [ id(4103) ]  prop tDATETIME pgOBJECT_LAST_ACCESS_TIME;
+    [ id(4104) ]  prop tINT pgSTARTUPENUM_PROCESSED_STATE;
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Creates hIO or hObjEnum object current in enumeration.")
+    ]
+    method tERROR IOCreate( // creates object current in enumeration
+      hIO* result,
+      hSTRING name, // object to create in current folder
+      tDWORD access_mode, // open mode
+      tDWORD open_mode // attributes of the new object
+    );
+    method tERROR Copy( // copies the object pointed by the ptr
+      hOBJECT dst_name, // destination object
+      tBOOL overwrite // allow overwrite existing object
+    );
+    method tERROR Rename( // renames the object pointed by the ptr
+      hOBJECT new_name, // new name of the object
+      tBOOL overwrite // allow overwrite existing object
+    );
+
+    [
+      comment_ex("pointer must be advanced to the next object")
+    ]
+    method tERROR Delete(); // deletes object pointed by ptr
+
+    [
+      comment_ex("First call of Next method after Reset must return *FIRST* object in enumeration")
+    ]
+    method tERROR Reset( // Reinitializing of ObjEnum object
+      tBOOL to_root // goes to the root folder
+    );
+
+    [
+      comment_ex("Makes another ObjPtr object. New object must be as identical to source one as possible. Position must be the same")
+    ]
+    method tERROR Clone( // Makes another ObjPtr object
+      hObjPtr* result
+    );
+    method tERROR Next(); // Returns next IO object
+    method tERROR StepUp(); // Goes one level up
+    method tERROR StepDown(); // Goes one level up
+    method tERROR ChangeTo( // Changes folder for enumerating
+      hOBJECT name
+    );
+    method tERROR DoOperationBegin( tINT* pnOperation, tDWORD* pdwResultCount );
+    method tERROR DoOperationEnd();
+    method tERROR GetOpResult( tDWORD dwResIndex, tINT* pnOperation );
+    method tERROR GetOpResultString(
+      tDWORD dwResIndex,
+      tDWORD dwStrIndex,
+      hSTRING* pResultString
+    );
+
+}
+

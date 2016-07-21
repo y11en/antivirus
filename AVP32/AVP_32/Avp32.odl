@@ -1,0 +1,45 @@
+// Avp32.odl : type library source for Avp32.exe
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (Avp32.tlb).
+
+[ uuid(13C51EC6-AE3D-11D3-A4CD-0000E8E1E96D), version(1.0) ]
+library Avp32
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+	//  Primary dispatch interface for CAvp32Doc
+	
+	[ uuid(13C51EC7-AE3D-11D3-A4CD-0000E8E1E96D) ]
+	dispinterface IAvp32
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CAvp32DlgAutoProxy)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CAvp32DlgAutoProxy)
+			[id(1)] boolean ProcessObject(long Type, long MFlags, BSTR Name, long* RFlags, BSTR* VirusName);
+			[id(2)] boolean ReloadBase();
+			[id(3)] boolean CancelProcessObject(long Code);
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CAvp32Doc
+	
+	[ uuid(13C51EC5-AE3D-11D3-A4CD-0000E8E1E96D) ]
+	coclass Avp32
+	{
+		[default] dispinterface IAvp32;
+	};
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

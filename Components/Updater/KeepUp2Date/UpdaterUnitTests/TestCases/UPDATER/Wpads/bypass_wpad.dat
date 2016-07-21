@@ -1,0 +1,12 @@
+function FindProxyForURL(url, host)
+{
+var objFSO, objFile, objTextStream;
+var strFolder, strFile, str;
+
+// http transport tests
+if (url == "http://kiryukhin-xp:8081/" && host == "kiryukhin-xp:8081") return "PROXY 127.0.0.1:3129";
+if (url == "http://kiryukhin-xp:8082/" && host == "kiryukhin-xp:8082") return "DIRECT";
+if (url == "http://kaspersky.ru/" && host == "kaspersky.ru") return "PROXY 127.0.0.1:3130";
+
+return "error:666";
+}

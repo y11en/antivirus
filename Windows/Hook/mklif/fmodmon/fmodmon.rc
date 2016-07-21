@@ -1,0 +1,11 @@
+#include <windows.h>
+#include <ntverp.h>
+
+#define VER_FILETYPE                VFT_APP
+#define VER_FILESUBTYPE             VFT2_UNKNOWN
+#define VER_FILEDESCRIPTION_STR     "Simple mklif client sample"
+#define VER_INTERNALNAME_STR        "fmodmon.exe"
+#define VER_ORIGINALFILENAME_STR    "fmodmon.exe"
+
+#include "common.ver"
+

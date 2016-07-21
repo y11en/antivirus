@@ -1,0 +1,4 @@
+// ***** Очистка файла Hosts *****
+begin
+ ClearHostsFile;
+end.

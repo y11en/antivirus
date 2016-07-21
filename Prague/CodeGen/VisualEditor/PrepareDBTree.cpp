@@ -1,0 +1,12 @@
+////////////////////////////////////////////////////////////////////
+//
+//  PrepareDBTree.cpp
+//  Prepare given tree for generating description DB
+//  Prague visual editor
+//  Victor Matiouchenkov [victor@avp.ru], Kaspersky Labs. 2000
+//  Copyright (c) Kaspersky Labs
+//
+////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+

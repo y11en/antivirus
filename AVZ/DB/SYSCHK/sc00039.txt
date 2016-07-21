@@ -1,0 +1,5 @@
+// ***** AdvWare.ToolBar.AdvancedSearchBar *****
+begin
+ AddEvAlarmByCLSID('8881D22F-083F-11D6-99DE-D172E92EBC2A',AScriptName,'Advancedbar.dll');
+ AddEvAlarmByCLSID('77712A64-F30B-47C8-A363-CDA1CEC7DC1B',AScriptName,'Advancedbar.dll');
+end.

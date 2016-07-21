@@ -1,0 +1,27 @@
+ISRelease	ISProductConfiguration_	BuildLocation	PackageName	Type	SupportedLanguagesUI	MsiSourceType	ReleaseType	Platforms	SupportedLanguagesData	DefaultLanguage	SupportedOSs	DiskSize	DiskSizeUnit	DiskClusterSize	ReleaseFlags	DiskSpanning	SynchMsi	MediaLocation	URLLocation	DigitalURL	DigitalPVK	DigitalSPC	Password	VersionCopyright	Attributes	CDBrowser	DotNetBuildConfiguration	MsiCommandLine
+s72	s72	s255	s255	i4	s255	i4	i4	s72	S255	s6	i4	s50	i4	i4	S255	i4	S255	s255	S255	S255	S255	S255	S255	S255	i4	S255	S255	S255
+ISRelease	ISRelease	ISProductConfiguration_
+Release Brazilian	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	1046	2	1	Intel	1046	1046	0	0	1	0		0		MediaLocation		http://					143373			LOCALIZATION=br REINSTALLMODE=voums REINSTALL=ALL
+Release Bulgarian	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	1026	2	1	Intel	1026	1026	0	0	1	0		0		MediaLocation		http://					143373			LOCALIZATION=bg REINSTALLMODE=voums REINSTALL=ALL
+Release Croatian	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	1050	2	1	Intel	1050	1050	0	0	1	0		0		MediaLocation		http://					143373			LOCALIZATION=hr REINSTALLMODE=voums REINSTALL=ALL
+Release Czech	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	1029	2	1	Intel	1029	1029	0	0	1	0		0		MediaLocation		http://					143373			LOCALIZATION=cz REINSTALLMODE=voums REINSTALL=ALL
+Release Danish	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	1030	2	1	Intel	1030	1030	0	0	1	0		0		MediaLocation		http://					143373			LOCALIZATION=da REINSTALLMODE=voums REINSTALL=ALL
+Release Dutch	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	1043	2	1	Intel	1043	1043	0	0	1	0		0		MediaLocation		http://					143373			LOCALIZATION=nl REINSTALLMODE=voums REINSTALL=ALL
+Release English	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	1033	2	1	Intel	1033	1033	0	0	1	0		0		C:\WORK\My Setups\Sample_prci\_Data\Disk1\English		http://					143373			LOCALIZATION=en REINSTALLMODE=voums REINSTALL=ALL
+Release French	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	1036	2	1	Intel	1036	1036	0	0	1	0		0		MediaLocation		http://					143373			LOCALIZATION=fr REINSTALLMODE=voums REINSTALL=ALL
+Release German	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	1031	2	1	Intel	1031	1031	0	0	1	0		0		MediaLocation		http://					143372			LOCALIZATION=de REINSTALLMODE=voums REINSTALL=ALL
+Release Hungarian	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	1038	2	1	Intel	1038	1038	0	0	1	0		0		MediaLocation		http://					143373			LOCALIZATION=hu REINSTALLMODE=voums REINSTALL=ALL
+Release Italian	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	1040	2	1	Intel	1040	1040	0	0	1	0		0		MediaLocation		http://					143373			LOCALIZATION=it REINSTALLMODE=voums REINSTALL=ALL
+Release Japanese	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	1041	2	1	Intel	1041	1041	0	0	1	0		0		MediaLocation		http://					143373			LOCALIZATION=jp REINSTALLMODE=voums REINSTALL=ALL
+Release Korean	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	1042	2	1	Intel	1042	1042	0	0	1	0		0		MediaLocation		http://					143373			LOCALIZATION=kor REINSTALLMODE=voums REINSTALL=ALL
+Release Norwegian	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	1044	2	1	Intel	1044	1044	0	0	1	0		0		MediaLocation		http://					143373			LOCALIZATION=nor REINSTALLMODE=voums REINSTALL=ALL
+Release Polish	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	1045	2	1	Intel	1045	1045	0	0	1	0		0		MediaLocation		http://					143373			LOCALIZATION=pl REINSTALLMODE=voums REINSTALL=ALL
+Release Portuguese	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	2070	2	1	Intel	2070	2070	0	0	1	0		0		MediaLocation		http://					143373			LOCALIZATION=pt REINSTALLMODE=voums REINSTALL=ALL
+Release Russian	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	1049	2	1	Intel	1049	1049	0	0	1	0		0		C:\WORK\My Setups\Sample_prci\_Data\Disk1\Russian		http://					143373			LOCALIZATION=ru  REINSTALLMODE=voums REINSTALL=ALL
+Release Serbian	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	3098	2	1	Intel	3098	3098	0	0	1	0		0		MediaLocation		http://					143373			LOCALIZATION=sr REINSTALLMODE=voums REINSTALL=ALL
+Release SimpChinese	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	2052	2	1	Intel	2052	2052	0	0	1	0		0		MediaLocation		http://					143373			LOCALIZATION=sch REINSTALLMODE=voums REINSTALL=ALL
+Release Slovenian	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	1060	2	1	Intel	1060	1060	0	0	1	0		0		MediaLocation		http://					143373			LOCALIZATION=sl REINSTALLMODE=voums REINSTALL=ALL
+Release Spanish	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	1034	2	1	Intel	1034	1034	0	0	1	0		0		MediaLocation		http://					143373			LOCALIZATION=esp REINSTALLMODE=voums REINSTALL=ALL
+Release Thai	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	1054	2	1	Intel	1054	1054	0	0	1	0		0		MediaLocation		http://					143373			LOCALIZATION=th REINSTALLMODE=voums REINSTALL=ALL
+Release TradChinese	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	1028	2	1	Intel	1028	1028	0	0	1	0		0		MediaLocation		http://					143373			LOCALIZATION=tch REINSTALLMODE=voums REINSTALL=ALL
+Release Turkish	Product Configuration 1	<ISProjectDataFolder>	PackageName	1	1055	2	1	Intel	1055	1055	0	0	1	0		0		MediaLocation		http://					143373			LOCALIZATION=tur REINSTALLMODE=voums REINSTALL=ALL

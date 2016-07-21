@@ -1,0 +1,4 @@
+// ***** Spy.ShopNav *****
+begin
+ AddEvAlarmByCLSID('14B3D246-6274-40B5-8D50-6C2ADE2AB29B',AScriptName,'SNHelper.dll');
+end.

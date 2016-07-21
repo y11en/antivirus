@@ -1,0 +1,5 @@
+# CREATE_REG_VALUE_IN_IFEO NOT_TO_CLEAR
+
+CREATE_REG_STR_VALUE @IFEO_KEY@ 1 1 NOT_TO_CLEAR
+
+#etalon_verdict 100 RegAvpImageFileExecOptions

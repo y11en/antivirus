@@ -1,0 +1,68 @@
+subdirs = @subdirs@
+srcdir = @srcdir@
+prefix = @prefix@
+includedir = @includedir@
+INSTALL = @INSTALL@
+# Uncomment the line below if you want to do parallel build.
+# PARALLELMFLAGS = -j 4
+
+InstallIncludes = \
+	ScanAPI/BaseAPI.h \
+	ScanAPI/Scanobj.h \
+	ScanAPI/defines.h \
+	ScanAPI/Types.h \
+	ScanAPI/RetFlags.h \
+	ScanAPI/Avp_msg.h \
+	ScanAPI/AVPMEM.h \
+	Bases/Method.h \
+	Bases/SIZES.h \
+	Bases/FAKENAME.h \
+	Bases/Format/Typedef.h \
+	Bases/Format/Records.h \
+	Bases/Format/Base.h \
+	Bases/Dlink3.h \
+	Bases/Types.h \
+	Bases/RETCODE.h \
+	Bases/Pack3.h \
+	Bases/Retcode3.h \
+	BaseWork/Workarea.h 
+
+
+.PHONY: all install install_includes clean distclean
+.DEFAULT: all
+
+all: install_includes 
+	for dir in $(subdirs); do \
+	if test -f $$dir/Makefile; then \
+	$(MAKE) PARALLELMFLAGS="$(PARALLELMFLAGS)" -C $$dir $@ || exit 1; \
+	fi \
+	done
+ 
+install: all
+	for dir in $(subdirs); do \
+	if test -f $$dir/Makefile; then \
+	$(MAKE) PARALLELMFLAGS="$(PARALLELMFLAGS)" -C $$dir $@ || exit 1; \
+	fi \
+	done
+
+clean:
+	for dir in $(subdirs); do \
+	if test -f $$dir/Makefile; then \
+	$(MAKE) PARALLELMFLAGS="$(PARALLELMFLAGS)" -C $$dir $@ || exit 1; \
+	fi \
+	done
+
+distclean:
+	for dir in $(subdirs); do \
+	if test -f $$dir/Makefile; then \
+	$(MAKE) PARALLELMFLAGS="$(PARALLELMFLAGS)" -C $$dir $@ || exit 1; \
+	fi \
+	done
+
+install_includes: $(addprefix $(includedir)/, $(InstallIncludes))
+	@echo "***** Installing includes"; 
+	$(INSTALL) -d $(includedir)
+
+$(addprefix $(includedir)/, %): $(addprefix $(srcdir)/, %)
+	$(INSTALL) -d $(dir $@)
+	$(INSTALL) -m 0644 $< $@

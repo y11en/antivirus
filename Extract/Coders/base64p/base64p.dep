@@ -1,0 +1,8 @@
+# Microsoft Developer Studio Generated Dependency File, included by base64p.mak
+
+".\base64p_res.rc" : \
+	"..\..\commonfiles\version\ver_itoa.h"\
+	"..\..\commonfiles\version\ver_kl.h"\
+	"..\..\commonfiles\version\ver_product.h"\
+	".\ver_mod.h"\
+	

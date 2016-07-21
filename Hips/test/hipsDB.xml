@@ -1,0 +1,2193 @@
+<propertiesmap>
+    <key name="vResList">
+        <key name="0000">
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">2</tDWORD>
+            <tDWORD name="ResGrID">2</tDWORD>
+            <tDWORD name="ResType">6</tDWORD>
+            <tWSTRING name="ResDescr"></tWSTRING>
+        </key>
+        <key name="0001">
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">3</tDWORD>
+            <tDWORD name="ResGrID">2</tDWORD>
+            <tDWORD name="ResType">6</tDWORD>
+            <tWSTRING name="ResDescr"></tWSTRING>
+        </key>
+        <key name="0002">
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">4</tDWORD>
+            <tDWORD name="ResGrID">2</tDWORD>
+            <tDWORD name="ResType">6</tDWORD>
+            <tWSTRING name="ResDescr"></tWSTRING>
+        </key>
+        <key name="0003">
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">5</tDWORD>
+            <tDWORD name="ResGrID">2</tDWORD>
+            <tDWORD name="ResType">6</tDWORD>
+            <tWSTRING name="ResDescr"></tWSTRING>
+        </key>
+        <key name="0004">
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">6</tDWORD>
+            <tDWORD name="ResGrID">2</tDWORD>
+            <tDWORD name="ResType">6</tDWORD>
+            <tWSTRING name="ResDescr"></tWSTRING>
+        </key>
+        <key name="0005">
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">7</tDWORD>
+            <tDWORD name="ResGrID">2</tDWORD>
+            <tDWORD name="ResType">6</tDWORD>
+            <tWSTRING name="ResDescr"></tWSTRING>
+        </key>
+        <key name="0006">
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">8</tDWORD>
+            <tDWORD name="ResGrID">2</tDWORD>
+            <tDWORD name="ResType">6</tDWORD>
+            <tWSTRING name="ResDescr"></tWSTRING>
+        </key>
+        <key name="0007">
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">9</tDWORD>
+            <tDWORD name="ResGrID">2</tDWORD>
+            <tDWORD name="ResType">6</tDWORD>
+            <tWSTRING name="ResDescr"></tWSTRING>
+        </key>
+        <key name="0008">
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">10</tDWORD>
+            <tDWORD name="ResGrID">2</tDWORD>
+            <tDWORD name="ResType">6</tDWORD>
+            <tWSTRING name="ResDescr"></tWSTRING>
+        </key>
+        <key name="0009">
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">11</tDWORD>
+            <tDWORD name="ResGrID">2</tDWORD>
+            <tDWORD name="ResType">6</tDWORD>
+            <tWSTRING name="ResDescr"></tWSTRING>
+        </key>
+        <key name="0010">
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">12</tDWORD>
+            <tDWORD name="ResGrID">2</tDWORD>
+            <tDWORD name="ResType">6</tDWORD>
+            <tWSTRING name="ResDescr"></tWSTRING>
+        </key>
+        <key name="0011">
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">13</tDWORD>
+            <tDWORD name="ResGrID">2</tDWORD>
+            <tDWORD name="ResType">6</tDWORD>
+            <tWSTRING name="ResDescr"></tWSTRING>
+        </key>
+        <key name="0012">
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">14</tDWORD>
+            <tDWORD name="ResGrID">2</tDWORD>
+            <tDWORD name="ResType">6</tDWORD>
+            <tWSTRING name="ResDescr"></tWSTRING>
+        </key>
+        <key name="0013">
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">15</tDWORD>
+            <tDWORD name="ResGrID">2</tDWORD>
+            <tDWORD name="ResType">6</tDWORD>
+            <tWSTRING name="ResDescr"></tWSTRING>
+        </key>
+        <key name="0014">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B00450059005F0043004C00410053005300450053005F0052004F004F0054005C002A00660069006C0065005C007300680065006C006C005C006F00700065006E005C0063006F006D006D0061006E006400</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">16</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">61006E007900660069006C0065005F006F00700065006E00</tWSTRING>
+        </key>
+        <key name="0015">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B00450059005F0043004C00410053005300450053005F0052004F004F0054005C002A00660069006C0065005C007300680065006C006C005C00720075006E00610073005C0063006F006D006D0061006E006400</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">17</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">61006E007900660069006C0065005F00720075006E0061007300</tWSTRING>
+        </key>
+        <key name="0016">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">44006500620075006700670065007200</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C004100450044006500620075006700</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">18</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4100450044006500620075006700</tWSTRING>
+        </key>
+        <key name="0017">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">5300680065006C006C00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C00570069006E006C006F0067006F006E00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">19</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">570069006E006C006F0067006F006E005F005300680065006C006C00</tWSTRING>
+        </key>
+        <key name="0018">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">550073006500720049006E0069007400</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C00570069006E006C006F0067006F006E00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">20</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">570069006E006C006F0067006F006E005F005300680065006C006C00</tWSTRING>
+        </key>
+        <key name="0019">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">530079007300740065006D00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C00570069006E006C006F0067006F006E00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">21</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">570069006E006C006F0067006F006E005F005300680065006C006C00</tWSTRING>
+        </key>
+        <key name="0020">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">5500490048006F0073007400</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C00570069006E006C006F0067006F006E00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">22</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">570069006E006C006F0067006F006E005F005300680065006C006C00</tWSTRING>
+        </key>
+        <key name="0021">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">56006D004100700070006C0065007400</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C00570069006E006C006F0067006F006E00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">23</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">570069006E006C006F0067006F006E005F005300680065006C006C00</tWSTRING>
+        </key>
+        <key name="0022">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">41007000700053006500740075007000</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C00570069006E006C006F0067006F006E00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">24</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">570069006E006C006F0067006F006E005F005300680065006C006C00</tWSTRING>
+        </key>
+        <key name="0023">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">44006C006C004E0061006D006500</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C00570069006E006C006F0067006F006E005C004E006F0074006900660079005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">25</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">570069006E006C006F0067006F006E005F004E006F007400690066007900</tWSTRING>
+        </key>
+        <key name="0024">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073002A005C00430075007200720065006E007400560065007200730069006F006E005C00520075006E002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">26</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4D00610069006E005F00520075006E00</tWSTRING>
+        </key>
+        <key name="0025">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B00430055005C0053006F006600740077006100720065005C004D00690072006100620069006C00690073005C004900430051005C004100670065006E0074005C004100700070007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">27</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4900430051005F004100670065006E007400</tWSTRING>
+        </key>
+        <key name="0026">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">5000610074006800</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C004100700070002000500061007400680073005C004900430051002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">28</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4900430051005F005000610074006800</tWSTRING>
+        </key>
+        <key name="0027">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">53007400750062005000610074006800</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C004100630074006900760065002000530065007400750070005C0049006E007300740061006C006C0065006400200043006F006D0070006F006E0065006E00740073005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">29</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">41006300740069007600650053006500740075007000</tWSTRING>
+        </key>
+        <key name="0028">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C0057004F0057005C0042004F004F005400</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">30</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">57004F0057005F0042004F004F005400</tWSTRING>
+        </key>
+        <key name="0029">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C0057004F0057005C004E006F006E00570069006E0064006F0077007300410070007000</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">31</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">57004F0057005F004E006F006E00570069006E0064006F0077007300410070007000</tWSTRING>
+        </key>
+        <key name="0030">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C0057004F0057005C005300740061006E006400610072006400</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">32</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">57004F0057005F005300740061006E006400610072006400</tWSTRING>
+        </key>
+        <key name="0031">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C004400720069007600650072007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">33</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">430075007200720065006E007400560065007200730069006F006E005F004400720069007600650072007300</tWSTRING>
+        </key>
+        <key name="0032">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C00440072006900760065007200730033003200</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">34</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">430075007200720065006E007400560065007200730069006F006E005F00440072006900760065007200730033003200</tWSTRING>
+        </key>
+        <key name="0033">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">41007000700049006E00690074005F0044004C004C007300</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C00570069006E0064006F0077007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">35</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">41007000700049006E00690074005F0044004C004C007300</tWSTRING>
+        </key>
+        <key name="0034">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C005300680065006C006C0053006500720076006900630065004F0062006A00650063007400440065006C00610079004C006F0061006400</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">36</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">5300680065006C006C0053006500720076006900630065004F0062006A00650063007400440065006C00610079004C006F0061006400</tWSTRING>
+        </key>
+        <key name="0035">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">42006F006F0074004500780065006300750074006500</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C00730079007300740065006D005C00630075007200720065006E00740063006F006E00740072006F006C007300650074005C0063006F006E00740072006F006C005C00530065007300730069006F006E0020004D0061006E006100670065007200</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">37</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">42006F006F0074004500780065006300750074006500</tWSTRING>
+        </key>
+        <key name="0036">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">43004C00530049004400</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C005600420041005C004D006F006E00690074006F00720073005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">38</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">5600420041005F004D006F006E00690074006F0072007300</tWSTRING>
+        </key>
+        <key name="0037">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">5300430052004E0053004100560045002E00450058004500</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0043006F006E00740072006F006C002000500061006E0065006C005C004400650073006B0074006F007000</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">39</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">5300430052004E005300410056004500</tWSTRING>
+        </key>
+        <key name="0038">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C004500780070006C006F007200650072005C005300680061007200650064005400610073006B005300630068006500640075006C0065007200</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">40</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">5300680061007200650064005400610073006B005300630068006500640075006C0065007200</tWSTRING>
+        </key>
+        <key name="0039">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C004500780070006C006F007200650072005C005300680065006C006C00450078006500630075007400650048006F006F006B007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">41</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">5300680065006C006C00450078006500630075007400650048006F006F006B007300</tWSTRING>
+        </key>
+        <key name="0040">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053006F006600740077006100720065005C0050006F006C00690063006900650073005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00530079007300740065006D005C0053006300720069007000740073005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">42</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">530079007300740065006D005F005300630072006900700074007300</tWSTRING>
+        </key>
+        <key name="0041">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C0070006F006C00690063006900650073005C004500780070006C006F007200650072005C00520075006E00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">43</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4500780070006C006F007200650072005F00520075006E00</tWSTRING>
+        </key>
+        <key name="0042">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C00530059005300540045004D005C00430075007200720065006E00740043006F006E00740072006F006C005300650074005C00530065007200760069006300650073005C00570069006E0053006F0063006B0032005C0050006100720061006D00650074006500720073005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">44</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">570069006E0053006F0063006B0032005F0050006100720061006D0065007400650072007300</tWSTRING>
+        </key>
+        <key name="0043">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">5400610073006B006D0061006E00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C00570069006E006C006F0067006F006E00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">45</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">5400610073006B006D0061006E00</tWSTRING>
+        </key>
+        <key name="0044">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">5300680065006C006C00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C0050006F006C00690063006900650073005C00530079007300740065006D00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">46</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">50006F006C00690063006900650073005F005300680065006C006C00</tWSTRING>
+        </key>
+        <key name="0045">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C005300680065006C006C00200045007800740065006E00730069006F006E0073005C0041007000700072006F00760065006400</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">47</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">5300680065006C006C00200045007800740065006E00730069006F006E007300</tWSTRING>
+        </key>
+        <key name="0046">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">4100750074006F00520075006E00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C0043006F006D006D0061006E0064002000500072006F0063006500730073006F007200</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">48</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">43006F006D006D0061006E0064005F00500072006F0063006500730073006F0072005F004100750074006F00520075006E00</tWSTRING>
+        </key>
+        <key name="0047">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B00430055005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C004500780070006C006F007200650072005C00460069006C00650045007800740073005C002E00650078006500</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">49</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4500780070006C006F007200650072005F00460069006C0065004500780074007300</tWSTRING>
+        </key>
+        <key name="0048">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">44004C004C004E0061006D006500</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C00530079007300740065006D005C00430075007200720065006E00740043006F006E00740072006F006C005300650074005C0043006F006E00740072006F006C005C004D0050005200530065007200760069006300650073005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">50</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4D005000520053006500720076006900630065007300</tWSTRING>
+        </key>
+        <key name="0049">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">43006F006D006D006F006E0020005300740061007200740075007000</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C004500780070006C006F007200650072005C002A005300680065006C006C00200046006F006C006400650072007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">51</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">43006F006D006D006F006E0020005300740061007200740075007000</tWSTRING>
+        </key>
+        <key name="0050">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">5300740061007200740075007000</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C004500780070006C006F007200650072005C002A005300680065006C006C00200046006F006C006400650072007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">52</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">43006F006D006D006F006E0020005300740061007200740075007000</tWSTRING>
+        </key>
+        <key name="0051">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">5300740061007200740020004D0065006E007500</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C004500780070006C006F007200650072005C002A005300680065006C006C00200046006F006C006400650072007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">53</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">43006F006D006D006F006E0020005300740061007200740075007000</tWSTRING>
+        </key>
+        <key name="0052">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">43006F006D006D006F006E0020005300740061007200740020004D0065006E007500</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C004500780070006C006F007200650072005C002A005300680065006C006C00200046006F006C006400650072007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">54</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">43006F006D006D006F006E0020005300740061007200740075007000</tWSTRING>
+        </key>
+        <key name="0053">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C00570069006E006C006F0067006F006E005C004700500045007800740065006E00730069006F006E007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">55</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4700500045007800740065006E00730069006F006E007300</tWSTRING>
+        </key>
+        <key name="0054">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">43006F006D005300700065006300</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C00530059005300540045004D005C0043006F006E00740072006F006C005300650074003F003F003F005C0043006F006E00740072006F006C005C00530065007300730069006F006E0020004D0061006E0061006700650072005C0045006E007600690072006F006E006D0065006E007400</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">56</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">45006E007600690072006F006E006D0065006E0074005F0043006F006D005300700065006300</tWSTRING>
+        </key>
+        <key name="0055">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">470069006E00610044004C004C00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C00570069006E006C006F0067006F006E00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">57</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">470069006E00610044004C004C00</tWSTRING>
+        </key>
+        <key name="0056">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">49006D006100670065005000610074006800</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C00530059005300540045004D005C0043006F006E00740072006F006C005300650074003F003F003F005C0043006F006E00740072006F006C005C0042006F006F00740056006500720069006600690063006100740069006F006E00500072006F006700720061006D00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">58</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">42006F006F00740056006500720069006600690063006100740069006F006E00500072006F006700720061006D00</tWSTRING>
+        </key>
+        <key name="0057">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">560044004400</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C00530059005300540045004D005C0043006F006E00740072006F006C005300650074003F003F003F005C0043006F006E00740072006F006C005C005600690072007400750061006C004400650076006900630065004400720069007600650072007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">59</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">5600690072007400750061006C004400650076006900630065004400720069007600650072007300</tWSTRING>
+        </key>
+        <key name="0058">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">41006C007400650072006E006100740065005300680065006C006C00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C00530059005300540045004D005C0043006F006E00740072006F006C005300650074003F003F003F005C0043006F006E00740072006F006C005C00530061006600650042006F006F007400</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">60</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">530061006600650042006F006F0074005F0041006C007400650072006E006100740065005300680065006C006C00</tWSTRING>
+        </key>
+        <key name="0059">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">49006D006100670065005000610074006800</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C00530059005300540045004D005C0043006F006E00740072006F006C005300650074003F003F003F005C0043006F006E00740072006F006C005C00530061006600650042006F006F0074005C004D0069006E0069006D0061006C005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">61</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">530061006600650042006F006F0074005F004D0069006E0069006D0061006C00</tWSTRING>
+        </key>
+        <key name="0060">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">49006D006100670065005000610074006800</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C00530059005300540045004D005C0043006F006E00740072006F006C005300650074003F003F003F005C0043006F006E00740072006F006C005C00530061006600650042006F006F0074005C004E006500740077006F0072006B005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">62</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">530061006600650042006F006F0074005F004E006500740077006F0072006B00</tWSTRING>
+        </key>
+        <key name="0061">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">530065007200760069006300650044006C006C00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C00530059005300540045004D005C0043006F006E00740072006F006C005300650074003F003F003F005C0043006F006E00740072006F006C005C00530061006600650042006F006F0074005C004D0069006E0069006D0061006C005C002A005C0050006100720061006D0065007400650072007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">63</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">530061006600650042006F006F0074005F004D0069006E0069006D0061006C005F0050006100720061006D0065007400650072007300</tWSTRING>
+        </key>
+        <key name="0062">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">6C006F0061006400</tWSTRING>
+                <tWSTRING name="KeyPath">48004B00430055005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C00570069006E0064006F0077007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">64</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4D00610069006E005F00520075006E005F0043005500730065007200</tWSTRING>
+        </key>
+        <key name="0063">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">720075006E00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B00430055005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C00570069006E0064006F0077007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">65</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4D00610069006E005F00520075006E005F0043005500730065007200</tWSTRING>
+        </key>
+        <key name="0064">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">530065007200760069006300650044006C006C00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C00530059005300540045004D005C0043006F006E00740072006F006C005300650074003F003F003F005C0043006F006E00740072006F006C005C00530061006600650042006F006F0074005C004E006500740077006F0072006B005C002A005C0050006100720061006D0065007400650072007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">66</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">530061006600650042006F006F0074005F004E006500740077006F0072006B005F0050006100720061006D0065007400650072007300</tWSTRING>
+        </key>
+        <key name="0065">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">44006500620075006700670065007200</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C0049006D006100670065002000460069006C006500200045007800650063007500740069006F006E0020004F007000740069006F006E0073005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">67</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">49006D00610067006500460069006C00650045007800650063007500740069006F006E004F007000740069006F006E007300</tWSTRING>
+        </key>
+        <key name="0066">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B00450059005F0043004C00410053005300450053005F0052004F004F0054005C006600740070005C007300680065006C006C005C006F00700065006E005C0063006F006D006D0061006E006400</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">68</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">6600740070005F006F00700065006E00</tWSTRING>
+        </key>
+        <key name="0067">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C0043006C00610073007300650073005C006D00610069006C0074006F005C007300680065006C006C005C006F00700065006E005C0063006F006D006D0061006E006400</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">69</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">6D00610069006C0074006F005F006F00700065006E00</tWSTRING>
+        </key>
+        <key name="0068">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">770069006E0064006F0077007300</tWSTRING>
+                <tWSTRING name="KeyPath">530059005300540045004D005C0043004F004E00540052004F004C005300450054003F003F003F005C0043004F004E00540052004F004C005C00530045005300530049004F004E0020004D0041004E0041004700450052005C00530055004200530059005300540045004D005300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">70</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">730075006200730079007300740065006D007300</tWSTRING>
+        </key>
+        <key name="0069">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">530065007400750070004500780065006300750074006500</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C00730079007300740065006D005C00630075007200720065006E00740063006F006E00740072006F006C007300650074005C0063006F006E00740072006F006C005C00530065007300730069006F006E0020004D0061006E006100670065007200</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">71</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">730065007300730069006F006E005F006500780065006300750074006500</tWSTRING>
+        </key>
+        <key name="0070">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">4500780065006300750074006500</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C00730079007300740065006D005C00630075007200720065006E00740063006F006E00740072006F006C007300650074005C0063006F006E00740072006F006C005C00530065007300730069006F006E0020004D0061006E006100670065007200</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">72</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">730065007300730069006F006E005F006500780065006300750074006500</tWSTRING>
+        </key>
+        <key name="0071">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D004900430052004F0053004F00460054005C0049004E005400450052004E004500540020004500580050004C004F005200450052005C004400450053004B0054004F0050005C0043004F004D0050004F004E0045004E0054005300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">73</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">490045005F0063006F006D0070006F006E0065006E0074007300</tWSTRING>
+        </key>
+        <key name="0072">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D004900430052004F0053004F00460054005C0049004E005400450052004E004500540020004500580050004C004F005200450052005C0045005800540045004E00530049004F004E005300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">74</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">490045005F0065007800740065006E00730069006F006E007300</tWSTRING>
+        </key>
+        <key name="0073">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">6C006F0063006100740069006F006E00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D004900430052004F0053004F00460054005C0049004E005400450052004E004500540020004500580050004C004F005200450052005C0050004C005500470049004E0053005C0045005800540045004E00530049004F004E00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">75</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">490045005F00700069005F0065007800740065006E00730069006F006E007300</tWSTRING>
+        </key>
+        <key name="0074">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">7300740061007200740075007000700072006F006700720061006D007300</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C00530059005300540045004D005C0043004F004E00540052004F004C005300450054003F003F003F005C0043004F004E00540052004F004C005C005400450052004D0049004E0041004C0020005300450052005600450052005C005700440053005C0052004400500057004400</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">76</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">52004400500057004400</tWSTRING>
+        </key>
+        <key name="0075">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D004900430052004F0053004F00460054005C00570049004E0044004F005700530020004E0054005C00430055005200520045004E005400560045005200530049004F004E005C005400450052004D0049004E0041004C0020005300450052005600450052005C0049004E005300540041004C004C00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">77</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">7400650072006D0069006E0061006C005F0073006500720076005F0069006E0073007400</tWSTRING>
+        </key>
+        <key name="0076">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C0043006F00640065002000530074006F00720065002000440061007400610062006100730065005C0044006900730074007200690062007500740069006F006E00200055006E00690074007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">78</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">64006900730074007200690062005F0075006E00690074007300</tWSTRING>
+        </key>
+        <key name="0077">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D004900430052004F0053004F00460054005C0049004E005400450052004E004500540020004500580050004C004F005200450052005C004400450053004B0054004F0050005C0043004F004D0050004F004E0045004E00540053005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">79</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">490045005F0063006F006D0070006F006E0065006E0074007300</tWSTRING>
+        </key>
+        <key name="0078">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D004900430052004F0053004F00460054005C0049004E005400450052004E004500540020004500580050004C004F005200450052005C0045005800540045004E00530049004F004E0053005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">80</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">490045005F0065007800740065006E00730069006F006E007300</tWSTRING>
+        </key>
+        <key name="0079">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">6C006F0063006100740069006F006E00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D004900430052004F0053004F00460054005C0049004E005400450052004E004500540020004500580050004C004F005200450052005C0050004C005500470049004E0053005C0045005800540045004E00530049004F004E005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">81</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">490045005F00700069005F0065007800740065006E00730069006F006E007300</tWSTRING>
+        </key>
+        <key name="0080">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D004900430052004F0053004F00460054005C00570049004E0044004F005700530020004E0054005C00430055005200520045004E005400560045005200530049004F004E005C005400450052004D0049004E0041004C0020005300450052005600450052005C0049004E005300540041004C004C005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">82</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">7400650072006D0069006E0061006C005F0073006500720076005F0069006E0073007400</tWSTRING>
+        </key>
+        <key name="0081">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C0043006F00640065002000530074006F00720065002000440061007400610062006100730065005C0044006900730074007200690062007500740069006F006E00200055006E006900740073005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">83</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">64006900730074007200690062005F0075006E00690074007300</tWSTRING>
+        </key>
+        <key name="0082">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C0045007800740065006E00730069006F006E007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">84</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">65007800740065006E00730069006F006E007300</tWSTRING>
+        </key>
+        <key name="0083">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">6C006F0061006400</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C0049006E006900460069006C0065004D0061007000700069006E0067005C00770069006E002E0069006E006900</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">85</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">770069006E005F0069006E006900</tWSTRING>
+        </key>
+        <key name="0084">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">720075006E00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C0049006E006900460069006C0065004D0061007000700069006E0067005C00770069006E002E0069006E006900</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">86</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">770069006E005F0069006E006900</tWSTRING>
+        </key>
+        <key name="0085">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">770069006E006C006F0067006F006E00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C0049006E006900460069006C0065004D0061007000700069006E0067005C00770069006E002E0069006E006900</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">87</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">770069006E005F0069006E006900</tWSTRING>
+        </key>
+        <key name="0086">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">7300680065006C006C00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C0049006E006900460069006C0065004D0061007000700069006E0067005C00730079007300740065006D002E0069006E0069005C0062006F006F007400</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">88</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">730079007300740065006D005F0069006E006900</tWSTRING>
+        </key>
+        <key name="0087">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053004F004600540057004100520045005C0043006C00610073007300650073005C00500052004F0054004F0043004F004C0053005C00460069006C00740065007200</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">89</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">700072006F0074006F0063006F006C005F00660069006C00740065007200</tWSTRING>
+        </key>
+        <key name="0088">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053004F004600540057004100520045005C0043006C00610073007300650073005C00500052004F0054004F0043004F004C0053005C00460069006C007400650072005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">90</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">700072006F0074006F0063006F006C005F00660069006C00740065007200</tWSTRING>
+        </key>
+        <key name="0089">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B00430052005C00500052004F0054004F0043004F004C0053005C00460069006C00740065007200</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">91</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">700072006F0074006F0063006F006C005F00660069006C007400650072003200</tWSTRING>
+        </key>
+        <key name="0090">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B00430052005C00500052004F0054004F0043004F004C0053005C00460069006C007400650072005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">92</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">700072006F0074006F0063006F006C005F00660069006C007400650072003200</tWSTRING>
+        </key>
+        <key name="0091">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053004F004600540057004100520045005C0043006C00610073007300650073005C00500052004F0054004F0043004F004C0053005C00480061006E0064006C0065007200</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">93</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">700072006F0074006F0063006F006C005F00680061006E0064006C0065007200</tWSTRING>
+        </key>
+        <key name="0092">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053004F004600540057004100520045005C0043006C00610073007300650073005C00500052004F0054004F0043004F004C0053005C00480061006E0064006C00650072005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">94</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">700072006F0074006F0063006F006C005F00680061006E0064006C0065007200</tWSTRING>
+        </key>
+        <key name="0093">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B00430052005C00500052004F0054004F0043004F004C0053005C00480061006E0064006C0065007200</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">95</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">700072006F0074006F0063006F006C005F00680061006E0064006C00650072003200</tWSTRING>
+        </key>
+        <key name="0094">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B00430052005C00500052004F0054004F0043004F004C0053005C00480061006E0064006C00650072005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">96</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">700072006F0074006F0063006F006C005F00680061006E0064006C00650072003200</tWSTRING>
+        </key>
+        <key name="0095">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053004F004600540057004100520045005C0043006C00610073007300650073005C0046006F006C006400650072005C007300680065006C006C00650078005C0043006F006C0075006D006E00480061006E0064006C00650072007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">97</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">43006F006C0075006D006E00480061006E0064006C00650072007300</tWSTRING>
+        </key>
+        <key name="0096">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053004F004600540057004100520045005C0043006C00610073007300650073005C0046006F006C006400650072005C007300680065006C006C00650078005C0043006F006C0075006D006E00480061006E0064006C006500720073005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">98</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">43006F006C0075006D006E00480061006E0064006C00650072007300</tWSTRING>
+        </key>
+        <key name="0097">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C004300740066005C004C0061006E00670042006100720041006400640069006E00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">99</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4C0061006E00670042006100720041006400640069006E00</tWSTRING>
+        </key>
+        <key name="0098">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C004300740066005C004C0061006E00670042006100720041006400640069006E005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">100</tDWORD>
+            <tDWORD name="ResGrID">6</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4C0061006E00670042006100720041006400640069006E00</tWSTRING>
+        </key>
+        <key name="0099">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C0049006E007400650072006E00650074002000530065007400740069006E00670073005C00540065006D0070006C0061007400650050006F006C00690063006900650073005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">101</tDWORD>
+            <tDWORD name="ResGrID">7</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">540065006D0070006C0061007400650050006F006C0069006300690065007300</tWSTRING>
+        </key>
+        <key name="0100">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C0049006E007400650072006E00650074002000530065007400740069006E00670073005C005A006F006E0065004D00610070005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">102</tDWORD>
+            <tDWORD name="ResGrID">7</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">5A006F006E0065004D0061007000</tWSTRING>
+        </key>
+        <key name="0101">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C0049006E007400650072006E00650074002000530065007400740069006E00670073005C005A006F006E00650073005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">103</tDWORD>
+            <tDWORD name="ResGrID">7</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">5A006F006E0065007300</tWSTRING>
+        </key>
+        <key name="0102">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053006F006600740077006100720065005C0050006F006C00690063006900650073005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C0049006E007400650072006E00650074002000530065007400740069006E00670073005C00540065006D0070006C0061007400650050006F006C00690063006900650073005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">104</tDWORD>
+            <tDWORD name="ResGrID">7</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">50006F006C00690063006900650073005F00540065006D0070006C0061007400650050006F006C0069006300690065007300</tWSTRING>
+        </key>
+        <key name="0103">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053006F006600740077006100720065005C0050006F006C00690063006900650073005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C0049006E007400650072006E00650074002000530065007400740069006E00670073005C005A006F006E0065004D00610070005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">105</tDWORD>
+            <tDWORD name="ResGrID">7</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">50006F006C00690063006900650073005F005A006F006E0065004D0061007000</tWSTRING>
+        </key>
+        <key name="0104">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053006F006600740077006100720065005C0050006F006C00690063006900650073005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C0049006E007400650072006E00650074002000530065007400740069006E00670073005C005A006F006E00650073005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">106</tDWORD>
+            <tDWORD name="ResGrID">7</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">50006F006C00690063006900650073005F005A006F006E0065007300</tWSTRING>
+        </key>
+        <key name="0105">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400760065007200730069006F006E005C0050006F006C00690063006900650073005C004500780070006C006F00720065007200</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">107</tDWORD>
+            <tDWORD name="ResGrID">10</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">50006F006C00690063006900650073005F004500780070006C006F00720065007200</tWSTRING>
+        </key>
+        <key name="0106">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C0050006F006C00690063006900650073005C00530079007300740065006D00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">108</tDWORD>
+            <tDWORD name="ResGrID">10</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">50006F006C00690063006900650073005F00530079007300740065006D00</tWSTRING>
+        </key>
+        <key name="0107">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">45006E0066006F0072006300650057007200690074006500500072006F00740065006300740069006F006E00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C00530059005300540045004D005C0043006F006E00740072006F006C005300650074003F003F003F005C0043006F006E00740072006F006C005C00530065007300730069006F006E0020004D0061006E0061006700650072005C004D0065006D006F007200790020004D0061006E006100670065006D0065006E007400</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">109</tDWORD>
+            <tDWORD name="ResGrID">10</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4D0065006D006F007200790020004D0061006E006100670065006D0065006E007400</tWSTRING>
+        </key>
+        <key name="0108">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">530046004300440069007300610062006C006500</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F007700730020004E0054005C00430075007200720065006E007400560065007200730069006F006E005C00570069006E006C006F0067006F006E00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">110</tDWORD>
+            <tDWORD name="ResGrID">10</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">570069006E006C006F0067006F006E00</tWSTRING>
+        </key>
+        <key name="0109">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">50006F006C00690063007900</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C0044007200690076006500720020005300690067006E0069006E006700</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">111</tDWORD>
+            <tDWORD name="ResGrID">10</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">44007200690076006500720020005300690067006E0069006E006700</tWSTRING>
+        </key>
+        <key name="0110">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C00530059005300540045004D005C0043006F006E00740072006F006C005300650074003F003F003F005C00530065007200760069006300650073005C005300680061007200650064004100630063006500730073005C0050006100720061006D00650074006500720073005C004600690072006500770061006C006C0050006F006C006900630079005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">112</tDWORD>
+            <tDWORD name="ResGrID">10</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4600690072006500770061006C006C00200050006F006C00690063007900</tWSTRING>
+        </key>
+        <key name="0111">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C004500780070006C006F007200650072005C0041006400760061006E00630065006400</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">113</tDWORD>
+            <tDWORD name="ResGrID">10</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">50006F006C00690063006900650073005F004500780070006C006F007200650072003200</tWSTRING>
+        </key>
+        <key name="0112">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C004500780070006C006F007200650072005C0041006400760061006E006300650064005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">114</tDWORD>
+            <tDWORD name="ResGrID">10</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">50006F006C00690063006900650073005F004500780070006C006F007200650072003300</tWSTRING>
+        </key>
+        <key name="0113">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">49006D006100670065005000610074006800</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C00530079007300740065006D005C0043006F006E00740072006F006C005300650074003F003F003F005C00530065007200760069006300650073005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">115</tDWORD>
+            <tDWORD name="ResGrID">11</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">530065007200760069006300650073005F0049006D006100670065005000610074006800</tWSTRING>
+        </key>
+        <key name="0114">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">530065007200760069006300650044006C006C00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C00530079007300740065006D005C0043006F006E00740072006F006C005300650074003F003F003F005C00530065007200760069006300650073005C002A005C0050006100720061006D0065007400650072007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">116</tDWORD>
+            <tDWORD name="ResGrID">11</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">530065007200760069006300650073005F0050006100720061006D0065007400650072007300</tWSTRING>
+        </key>
+        <key name="0115">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">530074006100740069006300560078004400</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C00530079007300740065006D005C0043006F006E00740072006F006C005300650074003F003F003F005C00530065007200760069006300650073005C005600580044005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">117</tDWORD>
+            <tDWORD name="ResGrID">11</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">530065007200760069006300650073005F00560058004400</tWSTRING>
+        </key>
+        <key name="0116">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C00550052004C005C00440065006600610075006C007400500072006500660069007800</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">118</tDWORD>
+            <tDWORD name="ResGrID">13</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">440065006600610075006C007400500072006500660069007800</tWSTRING>
+        </key>
+        <key name="0117">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C00550052004C005C0050007200650066006900780065007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">119</tDWORD>
+            <tDWORD name="ResGrID">13</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">50007200650066006900780065007300</tWSTRING>
+        </key>
+        <key name="0118">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C0049006E007400650072006E006500740020004500780070006C006F007200650072005C00410062006F0075007400550052004C007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">120</tDWORD>
+            <tDWORD name="ResGrID">13</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">410062006F0075007400550052004C007300</tWSTRING>
+        </key>
+        <key name="0119">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">53006500610072006300680041007300730069007300740061006E007400</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C0049006E007400650072006E006500740020004500780070006C006F007200650072005C00530065006100720063006800</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">121</tDWORD>
+            <tDWORD name="ResGrID">13</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">530065006100720063006800</tWSTRING>
+        </key>
+        <key name="0120">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">43007500730074006F006D0069007A006500530065006100720063006800</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C0049006E007400650072006E006500740020004500780070006C006F007200650072005C00530065006100720063006800</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">122</tDWORD>
+            <tDWORD name="ResGrID">13</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">530065006100720063006800</tWSTRING>
+        </key>
+        <key name="0121">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">440065006600610075006C0074005F0050006100670065005F00550052004C00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C0049006E007400650072006E006500740020004500780070006C006F007200650072005C004D00610069006E00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">123</tDWORD>
+            <tDWORD name="ResGrID">13</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4D00610069006E00</tWSTRING>
+        </key>
+        <key name="0122">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">440065006600610075006C0074005F005300650061007200630068005F00550052004C00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C0049006E007400650072006E006500740020004500780070006C006F007200650072005C004D00610069006E00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">124</tDWORD>
+            <tDWORD name="ResGrID">13</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4D00610069006E00</tWSTRING>
+        </key>
+        <key name="0123">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">53006500610072006300680020005000610067006500</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C0049006E007400650072006E006500740020004500780070006C006F007200650072005C004D00610069006E00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">125</tDWORD>
+            <tDWORD name="ResGrID">13</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4D00610069006E00</tWSTRING>
+        </key>
+        <key name="0124">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">5300740061007200740020005000610067006500</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C0049006E007400650072006E006500740020004500780070006C006F007200650072005C004D00610069006E00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">126</tDWORD>
+            <tDWORD name="ResGrID">13</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4D00610069006E00</tWSTRING>
+        </key>
+        <key name="0125">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">5300650061007200630068002000420061007200</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C0049006E007400650072006E006500740020004500780070006C006F007200650072005C004D00610069006E00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">127</tDWORD>
+            <tDWORD name="ResGrID">13</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4D00610069006E00</tWSTRING>
+        </key>
+        <key name="0126">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">5300650063006F006E006400610072007900200053007400610072007400200050006100670065007300</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C0049006E007400650072006E006500740020004500780070006C006F007200650072005C004D00610069006E00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">128</tDWORD>
+            <tDWORD name="ResGrID">13</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4D00610069006E00</tWSTRING>
+        </key>
+        <key name="0127">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">570069006E0064006F00770020005400690074006C006500</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C0049006E007400650072006E006500740020004500780070006C006F007200650072005C004D00610069006E00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">129</tDWORD>
+            <tDWORD name="ResGrID">13</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4D00610069006E00</tWSTRING>
+        </key>
+        <key name="0128">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">4C006F00630061006C0020005000610067006500</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C0049006E007400650072006E006500740020004500780070006C006F007200650072005C004D00610069006E00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">130</tDWORD>
+            <tDWORD name="ResGrID">13</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4D00610069006E00</tWSTRING>
+        </key>
+        <key name="0129">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C0049006E007400650072006E006500740020004500780070006C006F007200650072005C00550052004C0053006500610072006300680048006F006F006B007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">131</tDWORD>
+            <tDWORD name="ResGrID">13</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">550052004C0053006500610072006300680048006F006F006B007300</tWSTRING>
+        </key>
+        <key name="0130">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B00430055005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C0049006E007400650072006E006500740020004500780070006C006F007200650072005C00530065006100720063006800550052004C00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">132</tDWORD>
+            <tDWORD name="ResGrID">13</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">530065006100720063006800550052004C00</tWSTRING>
+        </key>
+        <key name="0131">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C0049006E007400650072006E006500740020004500780070006C006F007200650072005C004D00610069006E005C00460065006100740075007200650043006F006E00740072006F006C005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">133</tDWORD>
+            <tDWORD name="ResGrID">13</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">460065006100740075007200650043006F006E00740072006F006C00</tWSTRING>
+        </key>
+        <key name="0132">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B004C004D005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C0049006E007400650072006E00650074002000530065007400740069006E00670073005C00530061006600650053006900740065007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">134</tDWORD>
+            <tDWORD name="ResGrID">13</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">530061006600650053006900740065007300</tWSTRING>
+        </key>
+        <key name="0133">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">55007300650020004D00790020005300740079006C00650073006800650065007400</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C0049006E007400650072006E006500740020004500780070006C006F007200650072005C005300740079006C0065007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">135</tDWORD>
+            <tDWORD name="ResGrID">13</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">5300740079006C0065007300</tWSTRING>
+        </key>
+        <key name="0134">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">550073006500720020005300740079006C00650073006800650065007400</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C0049006E007400650072006E006500740020004500780070006C006F007200650072005C005300740079006C0065007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">136</tDWORD>
+            <tDWORD name="ResGrID">13</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">5300740079006C0065007300</tWSTRING>
+        </key>
+        <key name="0135">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053006F006600740077006100720065005C0050006F006C00690063006900650073005C004D006900630072006F0073006F00660074005C0049006E007400650072006E006500740020004500780070006C006F007200650072005C0043006F006E00740072006F006C002000500061006E0065006C00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">137</tDWORD>
+            <tDWORD name="ResGrID">13</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">43006F006E00740072006F006C00500061006E0065006C00</tWSTRING>
+        </key>
+        <key name="0136">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C0049006E007400650072006E006500740020004500780070006C006F007200650072005C0044006F0077006E006C006F0061006400</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">138</tDWORD>
+            <tDWORD name="ResGrID">13</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">490045005F0044006F0077006E006C006F0061006400</tWSTRING>
+        </key>
+        <key name="0137">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B00430055005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C0050006F006C00690063006900650073005C004100740074006100630068006D0065006E0074007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">139</tDWORD>
+            <tDWORD name="ResGrID">13</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">490045005F004100740074006100630068006D0065006E0074007300</tWSTRING>
+        </key>
+        <key name="0138">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">48004B00430055005C0053006F006600740077006100720065005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C0050006F006C00690063006900650073005C004100730073006F00630069006100740069006F006E007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">140</tDWORD>
+            <tDWORD name="ResGrID">13</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">490045005F004100730073006F00630069006100740069006F006E007300</tWSTRING>
+        </key>
+        <key name="0139">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C00570069006E0064006F00770073005C00430075007200720065006E007400560065007200730069006F006E005C004500780070006C006F007200650072005C00420072006F0077007300650072002000480065006C0070006500720020004F0062006A0065006300740073005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">141</tDWORD>
+            <tDWORD name="ResGrID">14</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">420048004F00</tWSTRING>
+        </key>
+        <key name="0140">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C0049006E007400650072006E006500740020004500780070006C006F007200650072005C0054006F006F006C006200610072005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">142</tDWORD>
+            <tDWORD name="ResGrID">14</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4900450054006F006F006C00620061007200</tWSTRING>
+        </key>
+        <key name="0141">
+            <key name="data">
+                <tTYPE_ID name="unique">3213689088</tTYPE_ID>
+                <tWSTRING name="KeyValue">2A00</tWSTRING>
+                <tWSTRING name="KeyPath">2A005C0053004F004600540057004100520045005C004D006900630072006F0073006F00660074005C0049006E007400650072006E006500740020004500780070006C006F007200650072005C004D0065006E0075004500780074005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">143</tDWORD>
+            <tDWORD name="ResGrID">14</tDWORD>
+            <tDWORD name="ResType">3</tDWORD>
+            <tWSTRING name="ResDescr">4D0065006E007500450078007400</tWSTRING>
+        </key>
+        <key name="0142">
+            <key name="data">
+                <tTYPE_ID name="unique">3213688832</tTYPE_ID>
+                <tWSTRING name="Path">63003A005C0062006F006F0074002E0069006E006900</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">144</tDWORD>
+            <tDWORD name="ResGrID">9</tDWORD>
+            <tDWORD name="ResType">2</tDWORD>
+            <tWSTRING name="ResDescr">62006F006F0074002E0069006E006900</tWSTRING>
+        </key>
+        <key name="0143">
+            <key name="data">
+                <tTYPE_ID name="unique">3213688832</tTYPE_ID>
+                <tWSTRING name="Path">2500770069006E0064006900720025005C00770069006E002E0069006E006900</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">145</tDWORD>
+            <tDWORD name="ResGrID">9</tDWORD>
+            <tDWORD name="ResType">2</tDWORD>
+            <tWSTRING name="ResDescr">770069006E002E0069006E006900</tWSTRING>
+        </key>
+        <key name="0144">
+            <key name="data">
+                <tTYPE_ID name="unique">3213688832</tTYPE_ID>
+                <tWSTRING name="Path">2500770069006E0064006900720025005C00730079007300740065006D002E0069006E006900</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">146</tDWORD>
+            <tDWORD name="ResGrID">9</tDWORD>
+            <tDWORD name="ResType">2</tDWORD>
+            <tWSTRING name="ResDescr">730079007300740065006D002E0069006E006900</tWSTRING>
+        </key>
+        <key name="0145">
+            <key name="data">
+                <tTYPE_ID name="unique">3213688832</tTYPE_ID>
+                <tWSTRING name="Path">63003A005C006100750074006F0065007800650063002E00620061007400</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">147</tDWORD>
+            <tDWORD name="ResGrID">9</tDWORD>
+            <tDWORD name="ResType">2</tDWORD>
+            <tWSTRING name="ResDescr">6100750074006F0065007800650063002E00620061007400</tWSTRING>
+        </key>
+        <key name="0146">
+            <key name="data">
+                <tTYPE_ID name="unique">3213688832</tTYPE_ID>
+                <tWSTRING name="Path">63003A005C0063006F006E006600690067002E00730079007300</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">148</tDWORD>
+            <tDWORD name="ResGrID">9</tDWORD>
+            <tDWORD name="ResType">2</tDWORD>
+            <tWSTRING name="ResDescr">63006F006E006600690067002E00730079007300</tWSTRING>
+        </key>
+        <key name="0147">
+            <key name="data">
+                <tTYPE_ID name="unique">3213688832</tTYPE_ID>
+                <tWSTRING name="Path">250070006500720073006F006E0061006C0025005C002A00</tWSTRING>
+                <tBOOL name="Recursive">0</tBOOL>
+            </key>
+            <tDWORD name="Flags">1</tDWORD>
+            <tDWORD name="ResID">149</tDWORD>
+            <tDWORD name="ResGrID">8</tDWORD>
+            <tDWORD name="ResType">2</tDWORD>
+            <tWSTRING name="ResDescr">4D007900200064006F00630075006D0065006E0074007300</tWSTRING>
+        </key>
+    </key>
+    <key name="ResGroups">
+        <key name="vChildResGroupList">
+            <key name="0000">
+                <key name="vChildResGroupList">
+                    <key name="0000">
+                        <key name="vChildResGroupList">
+                        </key>
+                        <tDWORD name="ResGroupID">6</tDWORD>
+                        <tWSTRING name="ResGroupName">4B004C0053007400610072007400750070005200650067004B00650079007300</tWSTRING>
+                    </key>
+                    <key name="0001">
+                        <key name="vChildResGroupList">
+                        </key>
+                        <tDWORD name="ResGroupID">7</tDWORD>
+                        <tWSTRING name="ResGroupName">4B004C0049006E007400650072006E00650074005300650063005200650067004B00650079007300</tWSTRING>
+                    </key>
+                    <key name="0002">
+                        <key name="vChildResGroupList">
+                        </key>
+                        <tDWORD name="ResGroupID">9</tDWORD>
+                        <tWSTRING name="ResGroupName">4B004C00530079007300740065006D00460069006C0065007300</tWSTRING>
+                    </key>
+                    <key name="0003">
+                        <key name="vChildResGroupList">
+                        </key>
+                        <tDWORD name="ResGroupID">10</tDWORD>
+                        <tWSTRING name="ResGroupName">4B004C00530079007300740065006D005300650063005200650067004B00650079007300</tWSTRING>
+                    </key>
+                    <key name="0004">
+                        <key name="vChildResGroupList">
+                        </key>
+                        <tDWORD name="ResGroupID">11</tDWORD>
+                        <tWSTRING name="ResGroupName">4B004C00530079007300740065006D00530065007200760069006300650073005200650067004B00650079007300</tWSTRING>
+                    </key>
+                    <key name="0005">
+                        <key name="vChildResGroupList">
+                        </key>
+                        <tDWORD name="ResGroupID">12</tDWORD>
+                        <tWSTRING name="ResGroupName">4B004C00530074006100720074005500700046006F006C006400650072007300</tWSTRING>
+                    </key>
+                </key>
+                <tDWORD name="ResGroupID">3</tDWORD>
+                <tWSTRING name="ResGroupName">4B004C00530079007300740065006D004400610074006100</tWSTRING>
+            </key>
+            <key name="0001">
+                <key name="vChildResGroupList">
+                    <key name="0000">
+                        <key name="vChildResGroupList">
+                        </key>
+                        <tDWORD name="ResGroupID">8</tDWORD>
+                        <tWSTRING name="ResGroupName">4B004C0050007200690076006100740065005500730065007200460069006C0065007300</tWSTRING>
+                    </key>
+                    <key name="0001">
+                        <key name="vChildResGroupList">
+                        </key>
+                        <tDWORD name="ResGroupID">13</tDWORD>
+                        <tWSTRING name="ResGroupName">4B004C0049004500530065007400740069006E00670073005200650067004B00650079007300</tWSTRING>
+                    </key>
+                    <key name="0002">
+                        <key name="vChildResGroupList">
+                        </key>
+                        <tDWORD name="ResGroupID">14</tDWORD>
+                        <tWSTRING name="ResGroupName">4B004C004900450050006C007500670049006E0073005200650067004B00650079007300</tWSTRING>
+                    </key>
+                </key>
+                <tDWORD name="ResGroupID">4</tDWORD>
+                <tWSTRING name="ResGroupName">4B004C0050007200690076006100740065004400610074006100</tWSTRING>
+            </key>
+            <key name="0002">
+                <key name="vChildResGroupList">
+                </key>
+                <tDWORD name="ResGroupID">5</tDWORD>
+                <tWSTRING name="ResGroupName">4B004C005000750062006C00690063004400610074006100</tWSTRING>
+            </key>
+        </key>
+        <tDWORD name="ResGroupID">2</tDWORD>
+        <tWSTRING name="ResGroupName">4B004C0052006F006F007400</tWSTRING>
+    </key>
+    <key name="AppGroups">
+        <key name="Childs">
+            <key name="0000">
+                <key name="Childs">
+                    <key name="0000">
+                        <key name="Childs">
+                        </key>
+                        <tDWORD name="AppGrpID">8</tDWORD>
+                        <tWSTRING name="GroupName">47006F006F0067006C006500</tWSTRING>
+                        <tDWORD name="ServStrType">1</tDWORD>
+                        <tWSTRING name="ServStr">47006F006F0067006C006500200049006E006300</tWSTRING>
+                    </key>
+                    <key name="0001">
+                        <key name="Childs">
+                        </key>
+                        <tDWORD name="AppGrpID">9</tDWORD>
+                        <tWSTRING name="GroupName">410064006F0062006500</tWSTRING>
+                        <tDWORD name="ServStrType">1</tDWORD>
+                        <tWSTRING name="ServStr">410064006F00620065002000530079007300740065006D007300200049006E0063006F00720070006F0072006100740065006400</tWSTRING>
+                    </key>
+                    <key name="0002">
+                        <key name="Childs">
+                        </key>
+                        <tDWORD name="AppGrpID">10</tDWORD>
+                        <tWSTRING name="GroupName">560061006C0076006500</tWSTRING>
+                        <tDWORD name="ServStrType">1</tDWORD>
+                        <tWSTRING name="ServStr">560061006C0076006500</tWSTRING>
+                    </key>
+                    <key name="0003">
+                        <key name="Childs">
+                        </key>
+                        <tDWORD name="AppGrpID">11</tDWORD>
+                        <tWSTRING name="GroupName">53006F006E0069006300</tWSTRING>
+                        <tDWORD name="ServStrType">1</tDWORD>
+                        <tWSTRING name="ServStr">53006F006E0069006300200053006F006C007500740069006F006E007300</tWSTRING>
+                    </key>
+                    <key name="0004">
+                        <key name="Childs">
+                        </key>
+                        <tDWORD name="AppGrpID">12</tDWORD>
+                        <tWSTRING name="GroupName">4100620073006F006C00750074006500</tWSTRING>
+                        <tDWORD name="ServStrType">1</tDWORD>
+                        <tWSTRING name="ServStr">4100620073006F006C00750074006500200053006F00660074007700610072006500200043006F00720070002E00</tWSTRING>
+                    </key>
+                    <key name="0005">
+                        <key name="Childs">
+                        </key>
+                        <tDWORD name="AppGrpID">13</tDWORD>
+                        <tWSTRING name="GroupName">4C006F00670069007400650063006800</tWSTRING>
+                        <tDWORD name="ServStrType">1</tDWORD>
+                        <tWSTRING name="ServStr">4C006F00670069007400650063006800</tWSTRING>
+                    </key>
+                    <key name="0006">
+                        <key name="Childs">
+                        </key>
+                        <tDWORD name="AppGrpID">14</tDWORD>
+                        <tWSTRING name="GroupName">430079006200650072004C0069006E006B00</tWSTRING>
+                        <tDWORD name="ServStrType">1</tDWORD>
+                        <tWSTRING name="ServStr">430079006200650072004C0069006E006B00</tWSTRING>
+                    </key>
+                    <key name="0007">
+                        <key name="Childs">
+                        </key>
+                        <tDWORD name="AppGrpID">15</tDWORD>
+                        <tWSTRING name="GroupName">43007200650061007400690076006500</tWSTRING>
+                        <tDWORD name="ServStrType">1</tDWORD>
+                        <tWSTRING name="ServStr">43007200650061007400690076006500200054006500630068006E006F006C006F006700790020004C0074006400</tWSTRING>
+                    </key>
+                    <key name="0008">
+                        <key name="Childs">
+                        </key>
+                        <tDWORD name="AppGrpID">16</tDWORD>
+                        <tWSTRING name="GroupName">4D006900630072006F0073006F0066007400200043006F00720070006F0072006100740069006F006E00</tWSTRING>
+                        <tDWORD name="ServStrType">1</tDWORD>
+                        <tWSTRING name="ServStr">4D006900630072006F0073006F0066007400200043006F00720070006F0072006100740069006F006E00</tWSTRING>
+                    </key>
+                    <key name="0009">
+                        <key name="Childs">
+                        </key>
+                        <tDWORD name="AppGrpID">17</tDWORD>
+                        <tWSTRING name="GroupName">49006E0074006500720076006900640065006F00</tWSTRING>
+                        <tDWORD name="ServStrType">1</tDWORD>
+                        <tWSTRING name="ServStr">49006E0074006500720076006900640065006F002C00200049006E0063002E00</tWSTRING>
+                    </key>
+                    <key name="0010">
+                        <key name="Childs">
+                        </key>
+                        <tDWORD name="AppGrpID">18</tDWORD>
+                        <tWSTRING name="GroupName">4D00610069006C002E0072007500</tWSTRING>
+                        <tDWORD name="ServStrType">1</tDWORD>
+                        <tWSTRING name="ServStr">4F004F004F00200050006F00720074002E0072007500</tWSTRING>
+                    </key>
+                    <key name="0011">
+                        <key name="Childs">
+                        </key>
+                        <tDWORD name="AppGrpID">19</tDWORD>
+                        <tWSTRING name="GroupName">540065006E00630065006E007400</tWSTRING>
+                        <tDWORD name="ServStrType">1</tDWORD>
+                        <tWSTRING name="ServStr">540065006E00630065006E007400200054006500630068006E006F006C006F006700790028005300680065006E007A00680065006E002900200043006F006D00700061006E00790020004C0069006D006900740065006400</tWSTRING>
+                    </key>
+                </key>
+                <tDWORD name="AppGrpID">3</tDWORD>
+                <tWSTRING name="GroupName">4B004C004100700070005400720075007300740065006400</tWSTRING>
+                <tDWORD name="ServStrType">0</tDWORD>
+                <tWSTRING name="ServStr"></tWSTRING>
+            </key>
+            <key name="0001">
+                <key name="Childs">
+                </key>
+                <tDWORD name="AppGrpID">4</tDWORD>
+                <tWSTRING name="GroupName">4B004C0041007000700053006500630075007200690074007900</tWSTRING>
+                <tDWORD name="ServStrType">0</tDWORD>
+                <tWSTRING name="ServStr"></tWSTRING>
+            </key>
+            <key name="0002">
+                <key name="Childs">
+                </key>
+                <tDWORD name="AppGrpID">5</tDWORD>
+                <tWSTRING name="GroupName">4B004C0041007000700052006500730074007200690063007400650064004C006F007700</tWSTRING>
+                <tDWORD name="ServStrType">0</tDWORD>
+                <tWSTRING name="ServStr"></tWSTRING>
+            </key>
+            <key name="0003">
+                <key name="Childs">
+                </key>
+                <tDWORD name="AppGrpID">6</tDWORD>
+                <tWSTRING name="GroupName">4B004C00410070007000520065007300740072006900630074006500640048006900</tWSTRING>
+                <tDWORD name="ServStrType">0</tDWORD>
+                <tWSTRING name="ServStr"></tWSTRING>
+            </key>
+            <key name="0004">
+                <key name="Childs">
+                </key>
+                <tDWORD name="AppGrpID">7</tDWORD>
+                <tWSTRING name="GroupName">4B004C0041007000700055006E007400720075007300740065006400</tWSTRING>
+                <tDWORD name="ServStrType">0</tDWORD>
+                <tWSTRING name="ServStr"></tWSTRING>
+            </key>
+        </key>
+        <tDWORD name="AppGrpID">2</tDWORD>
+        <tWSTRING name="GroupName">4B004C0041007000700052006F006F007400</tWSTRING>
+        <tDWORD name="ServStrType">0</tDWORD>
+        <tWSTRING name="ServStr"></tWSTRING>
+    </key>
+    <key name="vAppList">
+        <key name="0000">
+            <tDWORD name="AppId">10</tDWORD>
+            <tDWORD name="AppGrId">5</tDWORD>
+            <tWSTRING name="AppName">63003A005C00770069006E0064006F00770073005C00730079007300740065006D00330032005C006E006F00740065007000610064002E00650078006500</tWSTRING>
+            <tBINARY name="AppHash">00000000000000000000000000000000</tBINARY>
+            <tBINARY name="AppFlags">00000000000000000000000000000000</tBINARY>
+        </key>
+    </key>
+    <key name="vRuleList">
+        <key name="0000">
+            <tDWORD name="RuleId">11</tDWORD>
+            <tDWORD name="RuleState">1</tDWORD>
+            <tDWORD name="RuleTypeId">3</tDWORD>
+            <tDWORD name="AppIdEx">2147483651</tDWORD>
+            <tDWORD name="ResIdEx">2147483651</tDWORD>
+            <tDWORD name="AccessFlag">0</tDWORD>
+        </key>
+        <key name="0001">
+            <tDWORD name="RuleId">12</tDWORD>
+            <tDWORD name="RuleState">1</tDWORD>
+            <tDWORD name="RuleTypeId">3</tDWORD>
+            <tDWORD name="AppIdEx">2147483651</tDWORD>
+            <tDWORD name="ResIdEx">2147483652</tDWORD>
+            <tDWORD name="AccessFlag">3807</tDWORD>
+        </key>
+        <key name="0002">
+            <tDWORD name="RuleId">13</tDWORD>
+            <tDWORD name="RuleState">1</tDWORD>
+            <tDWORD name="RuleTypeId">3</tDWORD>
+            <tDWORD name="AppIdEx">2147483651</tDWORD>
+            <tDWORD name="ResIdEx">2147483653</tDWORD>
+            <tDWORD name="AccessFlag">0</tDWORD>
+        </key>
+        <key name="0003">
+            <tDWORD name="RuleId">14</tDWORD>
+            <tDWORD name="RuleState">1</tDWORD>
+            <tDWORD name="RuleTypeId">3</tDWORD>
+            <tDWORD name="AppIdEx">2147483652</tDWORD>
+            <tDWORD name="ResIdEx">2147483651</tDWORD>
+            <tDWORD name="AccessFlag">0</tDWORD>
+        </key>
+        <key name="0004">
+            <tDWORD name="RuleId">15</tDWORD>
+            <tDWORD name="RuleState">1</tDWORD>
+            <tDWORD name="RuleTypeId">3</tDWORD>
+            <tDWORD name="AppIdEx">2147483652</tDWORD>
+            <tDWORD name="ResIdEx">2147483652</tDWORD>
+            <tDWORD name="AccessFlag">0</tDWORD>
+        </key>
+        <key name="0005">
+            <tDWORD name="RuleId">16</tDWORD>
+            <tDWORD name="RuleState">1</tDWORD>
+            <tDWORD name="RuleTypeId">3</tDWORD>
+            <tDWORD name="AppIdEx">2147483652</tDWORD>
+            <tDWORD name="ResIdEx">2147483653</tDWORD>
+            <tDWORD name="AccessFlag">0</tDWORD>
+        </key>
+        <key name="0006">
+            <tDWORD name="RuleId">19</tDWORD>
+            <tDWORD name="RuleState">1</tDWORD>
+            <tDWORD name="RuleTypeId">3</tDWORD>
+            <tDWORD name="AppIdEx">2147483653</tDWORD>
+            <tDWORD name="ResIdEx">2147483651</tDWORD>
+            <tDWORD name="AccessFlag">2565</tDWORD>
+        </key>
+        <key name="0007">
+            <tDWORD name="RuleId">20</tDWORD>
+            <tDWORD name="RuleState">1</tDWORD>
+            <tDWORD name="RuleTypeId">3</tDWORD>
+            <tDWORD name="AppIdEx">2147483653</tDWORD>
+            <tDWORD name="ResIdEx">2147483652</tDWORD>
+            <tDWORD name="AccessFlag">3807</tDWORD>
+        </key>
+        <key name="0008">
+            <tDWORD name="RuleId">21</tDWORD>
+            <tDWORD name="RuleState">1</tDWORD>
+            <tDWORD name="RuleTypeId">3</tDWORD>
+            <tDWORD name="AppIdEx">2147483653</tDWORD>
+            <tDWORD name="ResIdEx">2147483653</tDWORD>
+            <tDWORD name="AccessFlag">3591</tDWORD>
+        </key>
+        <key name="0009">
+            <tDWORD name="RuleId">22</tDWORD>
+            <tDWORD name="RuleState">1</tDWORD>
+            <tDWORD name="RuleTypeId">3</tDWORD>
+            <tDWORD name="AppIdEx">2147483654</tDWORD>
+            <tDWORD name="ResIdEx">2147483651</tDWORD>
+            <tDWORD name="AccessFlag">3807</tDWORD>
+        </key>
+        <key name="0010">
+            <tDWORD name="RuleId">23</tDWORD>
+            <tDWORD name="RuleState">1</tDWORD>
+            <tDWORD name="RuleTypeId">3</tDWORD>
+            <tDWORD name="AppIdEx">2147483654</tDWORD>
+            <tDWORD name="ResIdEx">2147483652</tDWORD>
+            <tDWORD name="AccessFlag">3807</tDWORD>
+        </key>
+        <key name="0011">
+            <tDWORD name="RuleId">24</tDWORD>
+            <tDWORD name="RuleState">1</tDWORD>
+            <tDWORD name="RuleTypeId">3</tDWORD>
+            <tDWORD name="AppIdEx">2147483654</tDWORD>
+            <tDWORD name="ResIdEx">2147483653</tDWORD>
+            <tDWORD name="AccessFlag">3807</tDWORD>
+        </key>
+        <key name="0012">
+            <tDWORD name="RuleId">25</tDWORD>
+            <tDWORD name="RuleState">1</tDWORD>
+            <tDWORD name="RuleTypeId">3</tDWORD>
+            <tDWORD name="AppIdEx">2147483655</tDWORD>
+            <tDWORD name="ResIdEx">2147483651</tDWORD>
+            <tDWORD name="AccessFlag">1755</tDWORD>
+        </key>
+        <key name="0013">
+            <tDWORD name="RuleId">26</tDWORD>
+            <tDWORD name="RuleState">1</tDWORD>
+            <tDWORD name="RuleTypeId">3</tDWORD>
+            <tDWORD name="AppIdEx">2147483655</tDWORD>
+            <tDWORD name="ResIdEx">2147483652</tDWORD>
+            <tDWORD name="AccessFlag">1755</tDWORD>
+        </key>
+        <key name="0014">
+            <tDWORD name="RuleId">27</tDWORD>
+            <tDWORD name="RuleState">1</tDWORD>
+            <tDWORD name="RuleTypeId">3</tDWORD>
+            <tDWORD name="AppIdEx">2147483655</tDWORD>
+            <tDWORD name="ResIdEx">2147483653</tDWORD>
+            <tDWORD name="AccessFlag">1755</tDWORD>
+        </key>
+    </key>
+    <key name="PacketRules">
+    </key>
+</propertiesmap>

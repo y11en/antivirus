@@ -1,0 +1,28 @@
+// AVP Prague stamp begin( Interface comment,  )
+// Insider interface implementation
+
+
+
+import "prague.h";
+import "i_insider.h";
+
+typedef rpcOBJECT	rpcINSIDER;
+
+// AVP Prague stamp begin( Interface function forward declarations,  )
+[ uuid (209D2C5A-07E5-4797-AAAC-59151C77D106),
+  version(1.0),
+  pointer_default(unique)
+]
+interface rpc_insider {
+
+
+	tERROR Insider_StartTask        ( rpcINSIDER _this, [in,size_is(dwTaskDataSize)] const tBYTE* lpTaskData, tDWORD dwTaskDataSize );   // -- /rus:Начать выполнение задачи;
+	tERROR Insider_StopTask			( rpcINSIDER _this ); // -- /rus:Остановить выполнение задачи;
+	tERROR Insider_PauseTask		( rpcINSIDER _this ); // -- /rus:Приостановить выполнение текущей задачи;
+	tERROR Insider_ContinueTask		( rpcINSIDER _this ); // -- /rus:Продолжить выполнение задачи;
+	tERROR Insider_RestartTask		( rpcINSIDER _this, [in,size_is(dwTaskDataSize)] const tBYTE* lpTaskData, tDWORD dwTaskDataSize ); // -- /rus:Продолжить выполнение с новыми настройками;
+
+}
+
+// AVP Prague stamp end
+

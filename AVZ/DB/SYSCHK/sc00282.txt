@@ -1,0 +1,4 @@
+// ***** Trojan.Win32.P2E.bg *****
+begin
+ AddEvAlarmByCLSID('0E4796D6-A990-4372-9069-72FBDB4AE868', AScriptName, 'o2oService_2.dll');
+end.

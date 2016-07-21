@@ -1,0 +1,19 @@
+// $AVZ1515
+//$ Internet Explorer - разрешена загрузка неподписанных элементов ActiveX
+// Функция поиска проблемы
+function Check : dword;
+var
+ X : integer;
+begin
+ Result := 0;
+ X := RegKeyIntParamRead('HKCU', 'Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\', '1004');
+ if (X <> 3) then
+  Result := 3;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+begin
+ RegKeyIntParamWrite('HKCU','Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\', '1004', 3);
+ Result := 0;
+end;

@@ -1,0 +1,243 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\keylogger.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\keylogger.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DBGOUTPUT_DIALOG DIALOGEX 0, 0, 497, 318
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Keylogger debug output"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_ED_DBGOUTPUT,18,15,458,282,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DBGOUTPUT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 490
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 311
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KEYLOGGER_DIALOG DIALOGEX 0, 0, 264, 169
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Keylogger test application"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "KD1 start",IDC_BTN_KD1_START,22,17,72,15
+    PUSHBUTTON      "KD1 stop",IDC_BTN_KD1_STOP,102,17,72,15,WS_DISABLED
+    PUSHBUTTON      "KD2 start",IDC_BTN_KD2_START,22,37,72,15
+    PUSHBUTTON      "KD2 stop",IDC_BTN_KD2_STOP,102,37,71,15,WS_DISABLED
+    PUSHBUTTON      "KD3 start",IDC_BTN_KD3_START,22,56,72,15
+    PUSHBUTTON      "KD3 stop",IDC_BTN_KD3_STOP,102,56,72,15,WS_DISABLED
+    PUSHBUTTON      "KD4 start",IDC_BTN_KD4_START,22,73,72,15
+    PUSHBUTTON      "KD4 stop",IDC_BTN_KD4_STOP,102,73,72,15,WS_DISABLED
+    PUSHBUTTON      "KDWIN32K start",IDC_BTN_KDWIN32K_START,22,92,72,15
+    PUSHBUTTON      "KDWIN32K stop",IDC_BTN_KDWIN32K_STOP,102,92,72,15,
+                    WS_DISABLED
+    PUSHBUTTON      "KDDISPATCH start",IDC_BTN_KDDISPATCH_START,22,113,72,15
+    PUSHBUTTON      "KDDISPATCH stop",IDC_BTN_KDDISPATCH_STOP,102,113,71,15,
+                    WS_DISABLED
+    PUSHBUTTON      "About...",IDC_BTN_KD1_ABOUT,181,17,47,15
+    PUSHBUTTON      "About...",IDC_BTN_KD2_ABOUT,181,37,47,15
+    PUSHBUTTON      "About...",IDC_BTN_KD3_ABOUT,181,56,47,15
+    PUSHBUTTON      "About...",IDC_BTN_KD4_ABOUT,181,73,47,15
+    PUSHBUTTON      "About...",IDC_BTN_KDWIN32K_ABOUT,181,92,47,15
+    PUSHBUTTON      "About...",IDC_BTN_KDDISPATCH_ABOUT,181,113,47,15
+    PUSHBUTTON      "KDSPLICE start",IDC_BTN_KDSPLICE_START,21,132,72,15
+    PUSHBUTTON      "KDSPLICE stop",IDC_BTN_KDSPLICE_STOP,101,132,71,15,
+                    WS_DISABLED
+    PUSHBUTTON      "About...",IDC_BTN_KDSPLICE_ABOUT,181,132,47,15
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "keylogger MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "keylogger\0"
+            VALUE "LegalCopyright", "Copyright (C) 2006\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "keylogger.EXE\0"
+            VALUE "ProductName", "keylogger Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_KEYLOGGER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 252
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\keylogger.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

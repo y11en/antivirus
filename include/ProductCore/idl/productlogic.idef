@@ -1,0 +1,148 @@
+#import "threadpool.idef"
+#import "tm.idef"
+#import "task.idef"
+
+forward interface ProductLogic;
+typedef ProductLogic* hPRODUCTLOGIC;
+
+
+
+[
+  mnemonic(IID_PRODUCTLOGIC)
+  id(43)
+  c_type_name(hPRODUCTLOGIC)
+]
+interface ProductLogic {
+
+  // ------------------------------------
+    typedef tDWORD tCustomizeSettingsDirection; // direction of a settings customization
+
+
+  // ------------------------------------
+    const tCustomizeSettingsDirection csdFROM_DATA_TO_TASK = 1; // customization from settings storage to task
+    const tCustomizeSettingsDirection csdFROM_DATA_TO_GUI = 2;
+    const tCustomizeSettingsDirection csdFROM_GUI_TO_DATA = 3; // customization from user interface to settings storage
+    const tCustomizeSettingsDirection csdDATA_INIT = 4;
+    const tCustomizeSettingsDirection csdFROM_TASK_TO_DATA = 5;
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Interface version")
+      id(130)
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      comment_ex("Interface comment")
+      id(131)
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+    [ id(4096) ]  prop hOBJECT pgPROFILE_CONFIG;
+    [ id(4097) ]  prop hOBJECT pgTM_OBJECT;
+    [ id(4100) ]  prop tSTRING pgBL_PRODUCT_NAME;
+    [ id(4101) ]  prop tSTRING pgBL_PRODUCT_VERSION;
+    [ id(4102) ]  prop tSTRING pgBL_PRODUCT_PATH;
+    [ id(4103) ]  prop tSTRING pgBL_PRODUCT_DATA_PATH; // product data folder
+    [ id(4104) ]  prop tSTRING pgBL_COMPANY_NAME;
+    [ id(4105) ]  prop hOBJECT pgBL_PRODUCT_DATA_STORAGE; // registry for store persistent data
+
+
+  // ------------------------------------
+    method tERROR SetSettings( const cSerializable* settings );
+    method tERROR CustomizeSettings( // setarates settings for the embedded profile
+      const tCHAR* profile,
+      cSerializable* settings,
+      tDWORD level, // reference level of the stettings
+      tCustomizeSettingsDirection direction,
+      tBOOL* make_persistent // make customized settings persistent
+    );
+    method tERROR SelectSettings( // setarates settings for the embedded profile
+      const tCHAR* profile,
+      const cSerializable* settings,
+      const tCHAR* sub_profile,
+      cSerializable* sub_settings
+    );
+    method tERROR GetStatistics( const tCHAR* profile, cSerializable* statistics );
+    method tERROR CalcStatistics( // returns combined task profile, task settings or task schedule settings
+      const tCHAR* profile_name,
+      const cSerializable* preliminary_data,
+      cSerializable* statistics // copies return value to this pointer
+    );
+    method tERROR GetService( // returns extension interface implemented by task
+      ThreadPool.tTaskId task_id, // task identifier
+      hOBJECT client,
+      TaskManager.tServiceId service_id,
+      hOBJECT* service // return value
+    );
+    method tERROR ReleaseService(
+      ThreadPool.tTaskId task_id, // task identifier
+      hOBJECT service
+    );
+    method tERROR AskAction(
+      const cSerializable* task_info,
+      Task.tActionId action_id,
+      cSerializable* action_info
+    );
+    method tERROR TestUpdaterConnection( const cSerializable* Settings );
+    method tERROR FilterTaskMessage( // if returns errOK - TM will save it into report
+      const cSerializable* task_info,
+      const cSerializable* report_info,
+      tDWORD msg_cls,
+      tDWORD msg_id,
+      cSerializable* params
+    );
+    method tERROR GetSettings( cSerializable* settings );
+
+
+  // ------------------------------------
+    [ id(4096) ]
+    message_cls pmc_PRODUCT {
+      [ id(3252023205) ]  message pm_PRODUCT_STATE_CHANGED;
+      [ id(3575580059) ]  message pm_PRODUCT_STATISTICS_CHANGED;
+      [ id(3575580060) ]  message pm_PRODUCT_KLOP_LIMETED;
+      [ id(1168798438) ]  message pm_FULLSCAN_COMPLETED;
+    }
+    [ id(4097) ]
+    message_cls pmc_REBOOT {
+      [ id(4096) ]  message pm_REBOOT_APPLICATION;
+      [ id(4097) ]  message pm_REBOOT_OS;
+    }
+    [ id(4099) ]
+    message_cls pmc_PRODUCT_UPDATE {
+      [ id(74732268) ]  message pm_UPDATE_EXECUTABLES;
+    }
+    [ id(4100) ]
+    message_cls pmc_PRODUCT_STARTUP_CHANGE { // request for changing product startup state
+      [ id(4096) ]  message pm_PRODUCT_STARTUP_CHANGE;
+    }
+    [ id(4101) ]  message_cls pmc_PRODUCT_NOTIFICATION {}
+    [ id(4103) ]
+    message_cls pmc_FSSYNC {
+      [ id(4096) ]  message pm_FSSYNC_RegisterInvisibleThread;
+      [ id(4097) ]  message pm_FSSYNC_UnregisterInvisibleThread;
+    }
+    [ id(363875984) ]
+    message_cls pmc_SETTINGS {
+      [ id(3771967020) ]  message pm_SAVE_SETTINGS;
+      [ id(4070227115) ]  message pm_LOAD_SETTINGS;
+      [ id(4070227116) ]  message pm_SETTINGS_UPGRADE; // Upgrades settings from previous releases
+    }
+    [ id(4059378386) ]
+    message_cls pmc_PRODUCT_OPERATION {
+      [ id(4244357984) ]  message pm_PRODUCT_CHECK_STATUS;
+      [ id(1591632134) ]  message pm_FW_UPDATE_NETWORKS;
+      [ id(2384276095) ]  message pm_SRVMGR_REQUEST;
+      [ id(4244357985) ]  message pm_FW_ADD_NETWORK;
+      [ id(4244357986) ]  message pm_FW_DELETE_NETWORK;
+      [ id(4244357987) ]  message pm_FW_CHANGE_NETWORK;
+    }
+    [ id(1421995094) ]
+    message_cls pmc_LOCALIZE_INFO {
+      [ id(2124943134) ]  message pm_LOCALIZE_NOTIFICATION;
+      [ id(3906381634) ]  message pm_LOCALIZE_PROFILE_NAME;
+    }
+
+}
+

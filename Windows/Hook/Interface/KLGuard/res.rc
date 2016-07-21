@@ -1,0 +1,258 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,12,10,12
+ PRODUCTVERSION 2,12,10,12
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x9L
+#else
+ FILEFLAGS 0x8L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Kaspersky Lab\0"
+            VALUE "FileDescription", "KL Guard\0"
+            VALUE "FileVersion", "2, 12, 10, 12\0"
+            VALUE "InternalName", "KLG\0"
+            VALUE "LegalCopyright", "\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "KLGuard.exe\0"
+            VALUE "PrivateBuild", "1\0"
+            VALUE "ProductName", "KLG\0"
+            VALUE "ProductVersion", "2, 12, 10, 12\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x419, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON    DISCARDABLE     "Res\\icon1.ico"
+IDI_ICON2               ICON    DISCARDABLE     "Res\\icon2.ico"
+IDI_ICON3               ICON    DISCARDABLE     "Res\\icon3.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_APP_NAME            "KL Guard"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_MAIN DIALOG DISCARDABLE  0, 0, 224, 58
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_MINIMIZEBOX | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Main window"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,167,7,50,14
+END
+
+IDD_REQUEST_DLG DIALOG DISCARDABLE  0, 0, 231, 239
+STYLE DS_SYSMODAL | DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | 
+    WS_VISIBLE | WS_CAPTION
+CAPTION "Warning!"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Yes",IDC_PASS,9,129,50,14
+    DEFPUSHBUTTON   "&No",IDC_DISCARD,63,129,50,14
+    PUSHBUTTON      "&Kill Process",IDC_KILL,117,129,50,14
+    CONTROL         "Advanced",IDC_APPLY_FOR,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,172,129,50,14
+    CONTROL         "&This time only",IDC_APPL_THISTIME,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,18,170,86,13
+    CONTROL         "&Always",IDC_APPL_ALWAYS,"Button",BS_AUTORADIOBUTTON,18,
+                    183,85,13
+    CONTROL         "&For",IDC_APPL_TIMED,"Button",BS_AUTORADIOBUTTON,18,199,
+                    30,13
+    EDITTEXT        IDC_APPL_TIME,47,199,29,12,ES_AUTOHSCROLL
+    CONTROL         "For this process only",IDC_APPL_PRC_THIS,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,126,167,96,12
+    CONTROL         "For all processes",IDC_APPL_PRC_ALL,"Button",
+                    BS_AUTORADIOBUTTON,126,178,96,12
+    CONTROL         "For this object only",IDC_APPL_OBJ_THIS,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,126,191,96,12
+    CONTROL         "For all objects",IDC_APPL_OBJ_ALL,"Button",
+                    BS_AUTORADIOBUTTON,126,202,96,12
+    CONTROL         "&Write to log",IDC_APPL_LOG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,91,239,49,12
+    CTEXT           "Allow this action?",IDC_STATIC,9,115,213,8,
+                    SS_CENTERIMAGE
+    LTEXT           "- proc msg-",IDC_PROCESS_MSG,9,9,213,9
+    CTEXT           "0:00",IDC_TIMEOUT,9,107,213,8
+    LTEXT           "minutes",IDC_STATIC,80,199,26,13,SS_CENTERIMAGE
+    LTEXT           "-func msg-",IDC_FUNC_MSG,9,20,213,9
+    GROUPBOX        "Apply answer",IDC_STATIC_POS,9,160,213,79
+    LTEXT           "Cache expiration timeout: ",IDC_STATIC_CACHE_TIMEOUT,18,
+                    225,82,8
+    EDITTEXT        IDC_EDIT_REQ_TIMEOUT,110,222,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_OBJ_MSG,9,36,214,65,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+IDD_DIALOG_EXIT DIALOG DISCARDABLE  0, 0, 186, 94
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "KL Guard request"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,73,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,73,50,14
+    LTEXT           "Would you like to leave filters activated?",IDC_STATIC,
+                    29,19,128,8
+    CONTROL         "Don't show this message again",IDC_CHECK_DONTSHOW,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,47,113,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_MAIN MENU DISCARDABLE 
+BEGIN
+    POPUP "TRAY"
+    BEGIN
+        MENUITEM "&Show",                       TRAY_SHOW
+        MENUITEM SEPARATOR
+        MENUITEM "Reset cache",                 TRAY_RESET_CACHE
+        MENUITEM SEPARATOR
+        MENUITEM "&Exit",                       TRAY_EXIT
+    END
+END
+
+IDR_MENU_REQUEST_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "Verdict break",               IDMI_DBG_BREAK
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOG_EXIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

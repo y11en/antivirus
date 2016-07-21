@@ -1,0 +1,18 @@
+# Microsoft Developer Studio Generated Dependency File, included by Avp_io32.mak
+
+.\Avp_io32.c : \
+	"..\..\CommonFiles\_avpio.h"\
+	"..\..\commonfiles\stuff\loadvxd.c"\
+	"..\Avp_iocl.h"\
+	".\avp_io32.h"\
+	"d:\mvs\vc98\include\basetsd.h"\
+	
+
+.\Avp_io32.rc : \
+	".\Avp_io32.rc2"\
+	{$(INCLUDE)}"Version\ver_avp.h"\
+	{$(INCLUDE)}"Version\ver_df.h"\
+	{$(INCLUDE)}"Version\ver_itoa.h"\
+	{$(INCLUDE)}"Version\ver_kl.h"\
+	{$(INCLUDE)}"Version\ver_kl.ver"\
+	

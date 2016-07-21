@@ -1,0 +1,9 @@
+; ABHelper.def : Declares the module parameters.
+
+LIBRARY      "ABHelper.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE

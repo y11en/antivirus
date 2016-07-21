@@ -1,0 +1,72 @@
+#include "avp_dos.h"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Localisation BINARY
+//
+
+//
+IDR_LOCBINARY RCDATA DISCARDABLE
+BEGIN
+    0x0000
+END
+// In russian variant in this section string to translate from windows codepage
+// to dos codepage(I'am not know - this need for polush or not). As sample:
+//"                ÄÅÇÉÑÖÜáàâäãåçéèêëíìîïñóòôöõúùûü†°¢£§•¶ß®©™´¨≠ÆØ‡·‚„‰ÂÊÁËÈÍÎÏÌÓÔ"
+//IDR_LOCBINARY RCDATA DISCARDABLE
+//BEGIN
+//    0x0400, 0x2020, 0x2020, 0x2020, 0x2020, 0x2020, 0x2020, 0x2020, 0x2020,
+//    0x8180, 0x8382, 0x8584, 0x8786, 0x8988, 0x8b8a, 0x8d8c, 0x8f8e, 0x9190,
+//    0x9392, 0x9594, 0x9796, 0x9998, 0x9b9a, 0x9d9c, 0x9f9e, 0xa1a0, 0xa3a2,
+//    0xa5a4, 0xa7a6, 0xa9a8, 0xabaa, 0xadac, 0xafae, 0xe1e0, 0xe3e2, 0xe5e4,
+//    0xe7e6, 0xe9e8, 0xebea, 0xedec, 0xefee
+//END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_NOTHING_FILES_L     "Brak objektÛw do skanowania.\nZaznacz pliki i/lub sektory w pliku *.prf."
+    IDS_NOTHING_LOCATION_L  "Brak objektÛw do skanowania.\nZaznacz przynajmniej jeden katalog do testu."
+    IDS_REPORT_BANNER_L     "   AVPDOS32 Start  %02d-%02d-%02d %02d:%02d:%02d\r\n\r\n\r\n"
+    IDS_DISINFECT_D_L       "wylecz"
+END
+// not more 16 objects in section
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_LAST_UPDATE_L       "Ostatnie uaktualnienie: %02d.%02d.%04d, %d rekordÛw."
+    IDS_EXPIR_ALARM_L       "Twoja licencja AVPÆ up≥ynie\nat %d/%d/%d"
+    IDS_EXPIRIED_L          "Twoja licencja AVPÆ up≥ynÍ≥a\nat %d/%d/%d"
+    IDS_PRESS_KEY_L         "Naciúnij dowolny klawisz\n"
+    IDS_FOLDER_CREATE       "Folder dla zainfekowanych (podejrzanych) plikÛw nie istnieje.\nUtworzyÊ folder?"
+    IDS_FOLDER_NOT_CREATE_L "Folder dla zainfekowanych (podejrzanych) plikÛw nie zosta≥ utworzony."
+    IDS_FOLDER_COPY_L       "Kopiuj zainfekowanene (podejrzane) pliki do bierzπcego katalogu?"
+    IDS_FOLDER_NOT_COPY_L   "Zainfekowane (podejrzane) pliki nie bÍdπ kopiowane"
+    IDS_DISK_NOT_FOUND_L    "Dysk dla zainfekowanych (podejrzanych) plikÛw nie istnieje."
+    ID_VIEW_LOG             "Plik raportu..."
+    ID_MENU_FILE            "Plik"
+    ID_MENU_VIEWLOG         "Przeglπdanie raportu"
+    ID_MENU_SCAN            "Test"
+    ID_MENU_SETTINGS        "Ustawienia"
+    ID_SETTINGS_LOCATION_L  "Obszar testu"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    ID_SETTINGS_OBJECTS_L   "Objekty"
+    ID_SETTINGS_ACTIONS_L   "Reakcje"
+    ID_SETTINGS_OPTIONS_L   "Opcje"
+    ID_SETTINGS_NEXT_L      "NastÍpna strona"
+    ID_SETTINGS_PREV_L      "Poprzednia strona"
+    ID_MENU_HELP            "Pomoc"
+    ID_EXCLIDE_FILES        "Wy≥πczone pliki"
+    ID_PROFILE_NAME         "Nazwa profilu"
+    ID_LOC_FILE_NAME        "Nazwa pliku raportu"
+    ID_OPEN_FILE            "OtwÛrz"
+    ID_SAVE_FILE            "Zapisz"
+    ID_ADD_DIRECTORY        "Dodaj folder"
+    ID_DIRECTORY_NAME       "Nazwa katalogu"
+    ID_DIRECTORY_TREE       "Drzewo katalogÛw"
+    ID_REVERT               "Cofnij"
+    ID_CANCEL               "Anuluj"
+END
+

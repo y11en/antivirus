@@ -1,0 +1,900 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "ver_mod.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+1                       RT_MANIFEST             "KavLog.exe.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_LOG_PARAMETERS DIALOGEX 0, 0, 240, 249
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "KIS / KAV trace setup utility"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Product Information",IDC_STATIC,7,7,226,39
+    LTEXT           "Location:",IDC_STATIC,15,18,30,8
+    EDITTEXT        IDC_EDIT_PRODUCT_LOCATION,60,18,165,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    LTEXT           "Version:",IDC_STATIC,15,31,26,8
+    EDITTEXT        IDC_EDIT_PRODUCT_VERSION,60,31,165,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    GROUPBOX        "Trace",IDC_STATIC,7,50,226,72
+    LTEXT           "State:",IDC_STATIC,15,61,20,8
+    EDITTEXT        IDC_EDIT_TRACE_STATE,60,61,165,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    LTEXT           "Level:",IDC_STATIC,15,78,20,8
+    COMBOBOX        IDC_COMBO_TRACE_LEVEL,60,76,120,102,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Turn trace on",IDC_BUTTON_SWITCH_TRACE,60,95,120,20
+    GROUPBOX        "Collected Traces",IDC_STATIC,7,126,226,53
+    LTEXT           "There are no any traces that have been collected. Nothing to send.",IDC_STATIC_TRACES_STATE,15,137,210,8
+    PUSHBUTTON      "Send to KL (via ftp)",IDC_BUTTON_SEND_2KL,60,152,120,20
+    DEFPUSHBUTTON   "Close",IDOK,180,228,53,14
+    PUSHBUTTON      "Comp.",IDC_COMPONENTS,187,75,38,14
+    GROUPBOX        "Dumps",IDC_STATIC,7,183,226,40
+    PUSHBUTTON      "Create dump",IDC_BUTTON_CREATE_DUMP,60,195,120,20
+END
+
+IDD_DIALOG_REQUET_SRF DIALOG  0, 0, 186, 63
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Request number prompt"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Please, enter request number:",IDC_STATIC,7,7,95,8
+    EDITTEXT        IDC_EDIT_SRF,7,22,172,12,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "OK",IDOK,73,42,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,42,50,14
+END
+
+IDD_DIALOG_WAIT DIALOG  0, 0, 186, 46
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Archiving traces"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Traces are being archived now. Please, wait.",IDC_STATIC,7,7,143,8
+    PUSHBUTTON      "Cancel",IDCANCEL,68,25,50,14
+END
+
+IDD_DIALOG_COMP_CUST DIALOGEX 0, 0, 235, 141
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Components"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_COMPONENTS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,165,127
+    LTEXT           "&Level:",IDC_STATIC,178,7,20,8
+    EDITTEXT        IDC_LEVEL,178,18,50,14,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "OK",IDOK,178,120,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_LOG_PARAMETERS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        VERTGUIDE, 15
+        VERTGUIDE, 60
+        VERTGUIDE, 180
+        VERTGUIDE, 225
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 242
+        HORZGUIDE, 18
+        HORZGUIDE, 31
+        HORZGUIDE, 61
+        HORZGUIDE, 82
+        HORZGUIDE, 137
+    END
+
+    IDD_DIALOG_REQUET_SRF, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_DIALOG_WAIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+
+    IDD_DIALOG_COMP_CUST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        VERTGUIDE, 178
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 134
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON_KAV            ICON                    "kav.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOG_LOG_PARAMETERS DLGINIT
+BEGIN
+    IDC_COMBO_TRACE_LEVEL, 0x403, 1, 0
+"\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_TL100               "Fatal (100)"
+    IDS_TL200               "Danger (200)"
+    IDS_TL300               "Error (300)"
+    IDS_TL400               "Important (400)"
+    IDS_TL500               "Notify (500)"
+    IDS_TL600               "Not important (600)"
+    IDS_TL700               "Spam (700)"
+    IDS_TOOL_CAPTION        "KIS / KAV trace setup utility"
+    IDS_PRODUCT_NOT_FOUND   "Can not find the product."
+    IDS_SEND_STATUS_CAPTION "Send traces status"
+    IDS_SEND_STATUS_OK      "Traces have been sent successfully"
+    IDS_SEND_STATUS_FAILED  "Upload operation failed. (It is possible if an invalid request number has been entered) Whould you like to save traces?"
+    IDS_SEND_STATUS_CANCELED 
+                            "Upload operation canceled. Whould you like to save traces?"
+    IDS_SAVE_CONFR_CAPTION  "Save traces confirmation"
+    IDS_TRACES_STATE_ON     "Trace is now on"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TRACES_STATE_OFF    "Trace is now off"
+    IDS_TRACES_TURN_ON      "Turn trace on"
+    IDS_TRACES_TURN_OFF     "Turn trace off"
+    IDS_TRACES_EXISTS       "There are some traces that have been collected."
+    IDS_TRACES_ABSENT       "There are no any traces that have been collected. Nothing to send."
+    IDS_COMPONENT           "Component"
+    IDS_LEVEL               "Level"
+    IDS_DEFAULT             "Default"
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian (unknown sub-lang: 0x0) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, 0x0
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_LOG_PARAMETERS DIALOGEX 0, 0, 240, 249
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "KIS / KAV утилита трассировки"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Информация о продукте",IDC_STATIC,7,7,226,39
+    LTEXT           "Путь:",IDC_STATIC,15,18,19,8
+    EDITTEXT        IDC_EDIT_PRODUCT_LOCATION,60,18,165,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    LTEXT           "Версия:",IDC_STATIC,15,31,28,8
+    EDITTEXT        IDC_EDIT_PRODUCT_VERSION,60,31,165,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    GROUPBOX        "Трассировка",IDC_STATIC,7,50,226,72
+    LTEXT           "Статус:",IDC_STATIC,15,61,26,8
+    EDITTEXT        IDC_EDIT_TRACE_STATE,60,61,165,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    LTEXT           "Уровень:",IDC_STATIC,15,78,32,8
+    COMBOBOX        IDC_COMBO_TRACE_LEVEL,60,76,120,102,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Включить трассировку",IDC_BUTTON_SWITCH_TRACE,60,95,120,20
+    GROUPBOX        "Имеющиеся трассировки",IDC_STATIC,7,126,226,53
+    LTEXT           "Трассировки не найдены. Нечего отправлять.",IDC_STATIC_TRACES_STATE,15,137,210,8
+    PUSHBUTTON      "Закачать на ftp сервер",IDC_BUTTON_SEND_2KL,60,152,120,20
+    DEFPUSHBUTTON   "Закрыть",IDOK,180,228,53,14
+    PUSHBUTTON      "Комп.",IDC_COMPONENTS,187,75,38,14
+    GROUPBOX        "Dumps",IDC_STATIC,7,183,226,40
+    PUSHBUTTON      "Create dump",IDC_BUTTON_CREATE_DUMP,60,195,120,20
+END
+
+IDD_DIALOG_REQUET_SRF DIALOG  0, 0, 186, 63
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Ввод номера запроса"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Пожалуйста, введите номер Вашего запроса:",IDC_STATIC,7,7,156,8
+    EDITTEXT        IDC_EDIT_SRF,7,22,172,12,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "OK",IDOK,73,42,50,14
+    PUSHBUTTON      "Отмена",IDCANCEL,129,42,50,14
+END
+
+IDD_DIALOG_WAIT DIALOG  0, 0, 203, 46
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Сжатие трассировок"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Трассировки упаковываются. Пожалуйста, подождите.",IDC_STATIC,7,7,189,8
+    PUSHBUTTON      "Отмена",IDCANCEL,76,25,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_LOG_PARAMETERS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        VERTGUIDE, 15
+        VERTGUIDE, 60
+        VERTGUIDE, 180
+        VERTGUIDE, 225
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 242
+        HORZGUIDE, 18
+        HORZGUIDE, 31
+        HORZGUIDE, 61
+        HORZGUIDE, 82
+        HORZGUIDE, 137
+    END
+
+    IDD_DIALOG_REQUET_SRF, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_DIALOG_WAIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 196
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""ver_mod.h""\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_TL100               "Фатальный (100)"
+    IDS_TL200               "Опасный (200)"
+    IDS_TL300               "Ошибка (300)"
+    IDS_TL400               "Важный (400)"
+    IDS_TL500               "Уведомление (500)"
+    IDS_TL600               "Неважный  (600)"
+    IDS_TL700               "СПАМ (700)"
+    IDS_TOOL_CAPTION        "KIS / KAV утилита трассировки"
+    IDS_PRODUCT_NOT_FOUND   "Продукт не найден."
+    IDS_SEND_STATUS_CAPTION "Статус отправки трассировки"
+    IDS_SEND_STATUS_OK      "Трассировки были успешно загружены"
+    IDS_SEND_STATUS_FAILED  "Загрузка невозможна. (Возможно введен неправильный номер запроса). Сохранить файлы локально?"
+    IDS_SEND_STATUS_CANCELED "Загрузка отменена. Сохранить файлы локально?"
+    IDS_SAVE_CONFR_CAPTION  "Подтверждение сохранения трассировки"
+    IDS_TRACES_STATE_ON     "Трассировка включена"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TRACES_STATE_OFF    "Трассировка выключена"
+    IDS_TRACES_TURN_ON      "Включить трассировку"
+    IDS_TRACES_TURN_OFF     "Выключить трассировку"
+    IDS_TRACES_EXISTS       "Найдены трассировки."
+    IDS_TRACES_ABSENT       "Трассировки не найдены. Нечего отправлять."
+    IDS_COMPONENT           "Компонента"
+    IDS_LEVEL               "Уровень"
+    IDS_DEFAULT             "По умолчанию"
+END
+
+#endif    // Russian (unknown sub-lang: 0x0) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_COMP_CUST DIALOGEX 0, 0, 235, 141
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Компоненты"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_COMPONENTS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,165,127
+    LTEXT           "&Уровень:",IDC_STATIC,178,7,32,8
+    EDITTEXT        IDC_LEVEL,178,18,50,14,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "OK",IDOK,178,120,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_COMP_CUST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        VERTGUIDE, 178
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 134
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Neutral) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_LOG_PARAMETERS DIALOG  0, 0, 240, 249
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "KIS / KAV Trace Setup Tool"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Produkt-Information",IDC_STATIC,7,7,226,39
+    LTEXT           "Pfad:",IDC_STATIC,15,18,18,8
+    EDITTEXT        IDC_EDIT_PRODUCT_LOCATION,60,18,165,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    LTEXT           "Version:",IDC_STATIC,15,31,26,8
+    EDITTEXT        IDC_EDIT_PRODUCT_VERSION,60,31,165,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    GROUPBOX        "Trace",IDC_STATIC,7,50,226,72
+    LTEXT           "Zustand:",IDC_STATIC,15,61,29,8
+    EDITTEXT        IDC_EDIT_TRACE_STATE,60,61,165,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    LTEXT           "Stuffe:",IDC_STATIC,15,78,22,8
+    COMBOBOX        IDC_COMBO_TRACE_LEVEL,60,76,120,102,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Schalte Trace an",IDC_BUTTON_SWITCH_TRACE,60,95,120,20
+    GROUPBOX        "Eingezogene Traces",IDC_STATIC,7,126,226,53
+    LTEXT           "Es wurde keine Log-Dateien versemmelt. Nichts zu versenden.",IDC_STATIC_TRACES_STATE,15,137,210,8
+    PUSHBUTTON      "An KL versenden (via ftp)",IDC_BUTTON_SEND_2KL,60,152,120,20
+    DEFPUSHBUTTON   "Schliessen",IDOK,180,228,53,14
+    GROUPBOX        "Dumps",IDC_STATIC,7,183,226,40
+    PUSHBUTTON      "Create dump",IDC_BUTTON_CREATE_DUMP,60,195,120,20
+END
+
+IDD_DIALOG_REQUET_SRF DIALOG  0, 0, 186, 63
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Anfragenummer Hilfe"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Bitte, zeigen Ihre Anfragenummer:",IDC_STATIC,7,7,107,8
+    EDITTEXT        IDC_EDIT_SRF,7,22,172,12,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "OK",IDOK,73,42,50,14
+    PUSHBUTTON      "Abgebrochen",IDCANCEL,129,42,50,14
+END
+
+IDD_DIALOG_WAIT DIALOG  0, 0, 186, 46
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Packen der Log-Dateien"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Log-Dateien werden jetzt gepackt. Bitte um Geduld.",IDC_STATIC,7,7,164,8
+    PUSHBUTTON      "Abgebrochen",IDCANCEL,68,25,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_LOG_PARAMETERS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        VERTGUIDE, 15
+        VERTGUIDE, 60
+        VERTGUIDE, 180
+        VERTGUIDE, 225
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 242
+        HORZGUIDE, 18
+        HORZGUIDE, 31
+        HORZGUIDE, 61
+        HORZGUIDE, 78
+        HORZGUIDE, 137
+    END
+
+    IDD_DIALOG_REQUET_SRF, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_DIALOG_WAIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOG_LOG_PARAMETERS DLGINIT
+BEGIN
+    IDC_COMBO_TRACE_LEVEL, 0x403, 1, 0
+"\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_TL100               "Schwerwiegend (100)"
+    IDS_TL200               "Gefahr (200)"
+    IDS_TL300               "Fehler (300)"
+    IDS_TL400               "Wichtig (400)"
+    IDS_TL500               "Benachrichtigung (500)"
+    IDS_TL600               "Unerheblich (600)"
+    IDS_TL700               "Spam (700)"
+    IDS_TOOL_CAPTION        "KIS / KAV Trace Setup Tool"
+    IDS_PRODUCT_NOT_FOUND   "Tool kann das Programm nicht finden."
+    IDS_SEND_STATUS_CAPTION "Versenden der Log-Dateien (Status)"
+    IDS_SEND_STATUS_OK      "Log-Dateien wurde erfolgreich versendet"
+    IDS_SEND_STATUS_FAILED  "Der Upload wurde erfolglos beendet. (Das passiert, wenn eine falsche Anfragenummer gezeigt wurde)\nWollen Sie Log-Dateien speichern?"
+    IDS_SEND_STATUS_CANCELED 
+                            "Der Upload wurde abgebrochen. Mochten Sie die Log-Dateien speichern?"
+    IDS_SAVE_CONFR_CAPTION  "Speichern von Log-Dateien (Bestaetigung)"
+    IDS_TRACES_STATE_ON     "Trace ist angeschaltet"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TRACES_STATE_OFF    "Trace ist abgeschaltet"
+    IDS_TRACES_TURN_ON      "Schalte Trace an"
+    IDS_TRACES_TURN_OFF     "Schalte Trace ab"
+    IDS_TRACES_EXISTS       "Es sind schon einige Log-Dateien vorhanden."
+    IDS_TRACES_ABSENT       "Es wurde keine Log-Dateien versemmelt. Nichts zu versenden."
+END
+
+#endif    // German (Neutral) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Neutral) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESP)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_LOG_PARAMETERS DIALOG  0, 0, 240, 249
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "KIS / KAV programa de servicio para configurar rastros"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Informacion del producto",IDC_STATIC,7,7,226,39
+    LTEXT           "Ubicacion:",IDC_STATIC,15,18,35,8
+    EDITTEXT        IDC_EDIT_PRODUCT_LOCATION,60,18,165,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    LTEXT           "Version:",IDC_STATIC,15,31,26,8
+    EDITTEXT        IDC_EDIT_PRODUCT_VERSION,60,31,165,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    GROUPBOX        "Rastro",IDC_STATIC,7,50,226,72
+    LTEXT           "Status:",IDC_STATIC,15,61,23,8
+    EDITTEXT        IDC_EDIT_TRACE_STATE,60,61,165,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    LTEXT           "Nivel:",IDC_STATIC,15,78,19,8
+    COMBOBOX        IDC_COMBO_TRACE_LEVEL,60,76,120,102,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Activar el rastro",IDC_BUTTON_SWITCH_TRACE,60,95,120,20
+    GROUPBOX        "Rastros disponibles",IDC_STATIC,7,126,226,53
+    LTEXT           "No han sido encontrados rastros. Nada para enviar.",IDC_STATIC_TRACES_STATE,15,137,210,8
+    PUSHBUTTON      "Cargar en ftp servidor",IDC_BUTTON_SEND_2KL,60,152,120,20
+    DEFPUSHBUTTON   "Cerrar",IDOK,180,228,53,14
+    GROUPBOX        "Dumps",IDC_STATIC,7,183,226,40
+    PUSHBUTTON      "Create dump",IDC_BUTTON_CREATE_DUMP,60,195,120,20
+END
+
+IDD_DIALOG_REQUET_SRF DIALOG  0, 0, 212, 62
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "La linea para indicar el numero de peticion"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Indique el numero de peticion por favor:",IDC_STATIC,7,7,126,8
+    EDITTEXT        IDC_EDIT_SRF,7,22,198,12,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "OK",IDOK,95,41,50,14
+    PUSHBUTTON      "Cancelar",IDCANCEL,155,41,50,14
+END
+
+IDD_DIALOG_WAIT DIALOG  0, 0, 186, 46
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Archivacion de los rastros"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Rastros estan archivadose. Espere por favor.",IDC_STATIC,7,7,143,8
+    PUSHBUTTON      "Cancelar",IDCANCEL,68,25,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_LOG_PARAMETERS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        VERTGUIDE, 15
+        VERTGUIDE, 60
+        VERTGUIDE, 180
+        VERTGUIDE, 225
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 242
+        HORZGUIDE, 18
+        HORZGUIDE, 31
+        HORZGUIDE, 61
+        HORZGUIDE, 78
+        HORZGUIDE, 137
+    END
+
+    IDD_DIALOG_REQUET_SRF, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_DIALOG_WAIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOG_LOG_PARAMETERS DLGINIT
+BEGIN
+    IDC_COMBO_TRACE_LEVEL, 0x403, 1, 0
+"\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_TL100               "Fatal (100)"
+    IDS_TL200               "Peligroso (200)"
+    IDS_TL300               "Error (300)"
+    IDS_TL400               "Importante (400)"
+    IDS_TL500               "Notificacion (500)"
+    IDS_TL600               "No importante (600)"
+    IDS_TL700               "Spam (700)"
+    IDS_TOOL_CAPTION        "KIS / KAV programa de servicio de los rastros"
+    IDS_PRODUCT_NOT_FOUND   "No conseguido encontrar el producto."
+    IDS_SEND_STATUS_CAPTION "Status de expedicion de los rastros"
+    IDS_SEND_STATUS_OK      "Rastros han sido cargados con exito"
+    IDS_SEND_STATUS_FAILED  "Descarga ES IMPOSIBLE (posiblemente ha indicado el numero de peticion incorrecto). Desee guardar los ficheros?"
+    IDS_SEND_STATUS_CANCELED 
+                            "Descarga ha sido cancelada. Desee guardar los ficheros?"
+    IDS_SAVE_CONFR_CAPTION  "Confirmacion de rastros guardados"
+    IDS_TRACES_STATE_ON     "Rastro esta ejecutado"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TRACES_STATE_OFF    "Rastro esta desejecutado"
+    IDS_TRACES_TURN_ON      "Activar el rastro"
+    IDS_TRACES_TURN_OFF     "Desactivar el rastro"
+    IDS_TRACES_EXISTS       "Rastros encontrados."
+    IDS_TRACES_ABSENT       "No han sido encontrados rastros. Nada para enviar."
+END
+
+#endif    // Spanish (Neutral) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// French (Neutral) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_LOG_PARAMETERS DIALOG  0, 0, 240, 249
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "KIS / KAV l`outil pour generer les traces"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "L`information sur le produit",IDC_STATIC,7,7,226,39
+    LTEXT           "Lieu:",IDC_STATIC,15,18,64,8
+    EDITTEXT        IDC_EDIT_PRODUCT_LOCATION,60,18,165,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    LTEXT           "Version:",IDC_STATIC,15,31,26,8
+    EDITTEXT        IDC_EDIT_PRODUCT_VERSION,60,31,165,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    GROUPBOX        "Trace",IDC_STATIC,7,50,226,72
+    LTEXT           "Etat:",IDC_STATIC,15,61,16,8
+    EDITTEXT        IDC_EDIT_TRACE_STATE,60,61,165,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    LTEXT           "Niveau:",IDC_STATIC,15,78,26,8
+    COMBOBOX        IDC_COMBO_TRACE_LEVEL,60,76,120,102,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Activer la generation des traces",IDC_BUTTON_SWITCH_TRACE,60,95,120,20
+    GROUPBOX        "Les traces collectees",IDC_STATIC,7,126,226,53
+    LTEXT           "Il n`y a pas de traces collectees. Il n`y a rien a envoyer.",IDC_STATIC_TRACES_STATE,15,137,210,8
+    PUSHBUTTON      "Envoyer a KL (via ftp)",IDC_BUTTON_SEND_2KL,60,152,120,20
+    DEFPUSHBUTTON   "Fermer",IDOK,180,228,53,14
+    GROUPBOX        "Dumps",IDC_STATIC,7,183,226,40
+    PUSHBUTTON      "Create dump",IDC_BUTTON_CREATE_DUMP,60,195,120,20
+END
+
+IDD_DIALOG_REQUET_SRF DIALOG  0, 0, 186, 63
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Le numero de la demande"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Merci de marquer le numero de votre demande:",IDC_STATIC,7,7,150,8
+    EDITTEXT        IDC_EDIT_SRF,7,22,172,12,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "OK",IDOK,73,42,50,14
+    PUSHBUTTON      "Annulation",IDCANCEL,129,42,50,14
+END
+
+IDD_DIALOG_WAIT DIALOG  0, 0, 234, 46
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Archivage des traces"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "L`archivage des traces est en cours de realisation. Veuilleuz patienter.",IDC_STATIC,7,7,220,8
+    PUSHBUTTON      "Annulation",IDCANCEL,91,25,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_LOG_PARAMETERS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        VERTGUIDE, 15
+        VERTGUIDE, 60
+        VERTGUIDE, 180
+        VERTGUIDE, 225
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 242
+        HORZGUIDE, 18
+        HORZGUIDE, 31
+        HORZGUIDE, 61
+        HORZGUIDE, 78
+        HORZGUIDE, 137
+    END
+
+    IDD_DIALOG_REQUET_SRF, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_DIALOG_WAIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 227
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOG_LOG_PARAMETERS DLGINIT
+BEGIN
+    IDC_COMBO_TRACE_LEVEL, 0x403, 1, 0
+"\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_TL100               "Critique (100)"
+    IDS_TL200               "Dangereux (200)"
+    IDS_TL300               "Erreur (300)"
+    IDS_TL400               "Important (400)"
+    IDS_TL500               "Notification (500)"
+    IDS_TL600               "Sans importance (600)"
+    IDS_TL700               "Spam (700)"
+    IDS_TOOL_CAPTION        "KIS / KAV l`outil pour generer les traces"
+    IDS_PRODUCT_NOT_FOUND   "Il est impossible de trouver le produit."
+    IDS_SEND_STATUS_CAPTION "L`etat de l`envoi des traces"
+    IDS_SEND_STATUS_OK      "Les traces ont ete envoyees avec succes."
+    IDS_SEND_STATUS_FAILED  "Le telechargement plante. (il est possible que vous avez marque une code erronee)\nVoulez-vous sauvegarder les traces?"
+    IDS_SEND_STATUS_CANCELED 
+                            "Le telechargement est refuse. Voulez-vous sauvegarder les traces?"
+    IDS_SAVE_CONFR_CAPTION  "La confirmation de la savegarde des traces"
+    IDS_TRACES_STATE_ON     "La generation des traces est activee"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TRACES_STATE_OFF    "La generation des traces est desactivee"
+    IDS_TRACES_TURN_ON      "Activer la generation des traces"
+    IDS_TRACES_TURN_OFF     "Desactiver la generation des traces"
+    IDS_TRACES_EXISTS       "Certaines traces ont ete collectees."
+    IDS_TRACES_ABSENT       "Il n`y a pas de traces collectees. Il n`y a rien a envoyer."
+END
+
+#endif    // French (Neutral) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

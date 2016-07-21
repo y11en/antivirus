@@ -1,0 +1,7 @@
+// ***** Adware.WurldMedia *****
+begin
+ AddEvAlarmByCLSID('1ED69C38-E8AC-4DB7-90FF-18264791335A',AScriptName,'');
+ AddEvAlarmByCLSID('ECF44999-53B9-4CFF-8D00-74113C26232D',AScriptName,'');
+ AddEvAlarmByCLSID('B63C64DF-46EB-466D-97E5-E44F986B030B',AScriptName,'');
+ AddEvAlarmByCLSID('AF0119F0-C058-49F0-980D-AC66CABB2B85',AScriptName,'');
+end.

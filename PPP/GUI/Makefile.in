@@ -1,0 +1,45 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@ @top_srcdir@/Upgrade
+
+Name = avpgui
+Plugin= $(Name).@PLUGIN_EXT@
+Metafile = @srcdir@/$(Name).@METAFILE_EXT@
+Targets = $(Plugin) 
+
+Sources = \
+	AlertDialog.cpp \
+	avpgui.cpp \
+	FWRules.cpp \
+	ListsView.cpp \
+	MainWindow.cpp \
+	plugin_gui.cpp \
+	ProfilesView.cpp \
+	ReportWindow.cpp \
+	RootSink.cpp \
+	ScanObjects.cpp \
+	ServiceSettings.cpp \
+	ServicesView.cpp \
+	SettingsDlgs.cpp \
+	SettingsWindow.cpp \
+	StatusWindow.cpp \
+	TaskProfile.cpp \
+	TaskProfileProduct.cpp \
+	TaskView.cpp \
+	Test.cpp \
+	TestUpdater.cpp \
+	ThreatsView.cpp \
+	tmclient.cpp \
+	TrayIcon.cpp \
+	Wizards.cpp \
+	ss.cpp
+
+Defines = XTREE_MEM_PRAGUE
+
+Libraries = \
+	compatutils
+
+VersionScript = @abs_top_srcdir@/unix/prague_plugin.ver
+
+include @abs_top_builddir@/unix/Rules

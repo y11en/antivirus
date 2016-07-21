@@ -1,0 +1,1842 @@
+<?xml version="1.0" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<Fragment Id="ComponentsFragmentId">
+		
+		<?include "ver.wxi" ?>
+    <?include "guids.wxi" ?>
+    <?include "products.wxi" ?>
+    <?include "$(env.localization_path)\ui_loc.wxi" ?>
+    <?include "$(env.localization_product_path)\verloc.wxi" ?>
+		
+		<?define DATA_ROOT="[INSTALLDIR]" ?>
+
+    <?define HKLM_RUNONCE="SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce" ?>
+    <?define HKLM_RUNONCE_VALUE="avp6_post_uninstall" ?>
+    <?define HKLM_R3H="$(var.HKLM_KASPERSKY)\protected\R3H" ?>
+    <?define HKLM_SETUP_FOLDERS="$(var.HKLM_KASPERSKY)\SetupFolders" ?>
+    <?define HKLM_COMPONENTS="$(var.HKLM_KASPERSKY)\Components" ?>
+		<?define HKLM_LICSTORAGE="$(var.HKLM_KASPERSKY)\LicStorage" ?>
+    <?define HKLM_DATA="$(var.HKLM_PRODUCT)\Data" ?>
+    <?define HKLM_ENVIRONMENT="$(var.HKLM_PRODUCT)\environment" ?>
+		<?define HKLM_SETTINGS="$(var.HKLM_PRODUCT)\settings" ?>
+    <?define HKLM_PROFILES="$(var.HKLM_PRODUCT)\profiles" ?>
+
+    <?define HKLM_PROFILE_ANTIVIRUS="$(var.HKLM_PROFILES)\Antivirus" ?>
+
+    <?define HKLM_PROFILE_SYSTEMWATCH="$(var.HKLM_PROFILES)\SystemWatch" ?>
+    <?define HKLM_PROFILE_HIPS="$(var.HKLM_PROFILE_SYSTEMWATCH)\profiles\Hips" ?>
+    <?define HKLM_PROFILE_PDM="$(var.HKLM_PROFILE_SYSTEMWATCH)\profiles\pdm" ?>
+    
+    <?define HKLM_PROFILE_ONLINE="$(var.HKLM_PROFILES)\OnlineSecurity" ?>
+    <?define HKLM_PROFILE_IDS="$(var.HKLM_PROFILES)\OnlineSecurity\profiles\ids" ?>
+
+    <?define HKLM_PROFILE_CONTENTFLT="$(var.HKLM_PROFILES)\ContentFilter" ?>
+    <?define HKLM_PROFILE_PARCTL="$(var.HKLM_PROFILES)\ContentFilter\profiles\ParCtl" ?>
+    <?define HKLM_PROFILE_ANTISPAM="$(var.HKLM_PROFILES)\ContentFilter\profiles\Anti_Spam" ?>
+
+
+    <?define HKLM_PROFILE_MAILWASHER="$(var.HKLM_PROFILES)\MailWasher" ?>
+    <?define HKLM_PROFILE_SPAMTEST="$(var.HKLM_PROFILES)\Spamtest" ?>
+    <?define HKLM_PROFILE_ADVDIS="$(var.HKLM_PROFILES)\AdvDis" ?>
+    <?define HKLM_PROFILE_TMON="$(var.HKLM_PROFILES)\TrafficMonitor" ?>
+    <?define HKLM_PROFILE_UPDATER="$(var.HKLM_PROFILES)\Updater" ?>
+    <?define HKLM_PROFILE_RETRANSLATIONCFG="$(var.HKLM_PROFILES)\RetranslationCfg" ?>
+    <?define HKLM_RETRFILTER="$(var.HKLM_PROFILE_RETRANSLATIONCFG)\settings\RetrFilter" ?>
+
+    <?define HKLM_KLOGON="SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Notify\klogon" ?>
+    <?define HKLM_UNINSTALL="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall" ?>
+    <?define HKLM_KL1="SYSTEM\CurrentControlSet\Services\KL1" ?>
+    <?define HKLM_KLIF="SYSTEM\CurrentControlSet\Services\KLIF" ?>
+
+    <!--Legacy registry keys--> 
+		<?define HKLM_AVP6_PRODUCT="$(var.HKLM_KASPERSKY)\AVP6" ?>
+		<?define HKLM_AVP6_ENVIRONMENT="$(var.HKLM_AVP6_PRODUCT)\environment" ?>
+		<?define HKLM_AVP6_SETTINGS="$(var.HKLM_AVP6_PRODUCT)\settings" ?>
+    <?define HKLM_AVP7_PRODUCT="$(var.HKLM_KASPERSKY)\AVP7" ?>
+    <?define HKLM_AVP7_ENVIRONMENT="$(var.HKLM_AVP7_PRODUCT)\environment" ?>
+    <?define HKLM_AVP7_SETTINGS="$(var.HKLM_AVP7_PRODUCT)\settings" ?>
+
+    <Property Id="LICSTORAGEFOUND" Secure="yes">
+			<RegistrySearch Id="LicStorage" Root="HKLM" Key="$(var.HKLM_LICSTORAGE)" Name="$(var.ProductType)"
+				Type="raw" />
+		</Property>
+
+		<Property Id="SELFPROTECTIONSTATUS" Secure="yes">
+			<RegistrySearch Id="EnableSelfProtection" Root="HKLM" Key="$(var.HKLM_SETTINGS)" Name="EnableSelfProtection"
+				Type="raw" />
+		</Property>
+
+		<!--Check if app installed through AK-->
+		<Property Id="AKINSTALLED" Secure="yes">
+			<RegistrySearch Id="AKInstalled" Root="HKLM" Key="$(var.HKLM_ENVIRONMENT)" Name="AKInstalled"
+			Type="raw" />
+		</Property>
+
+		<Property Id="ALLOWSERVICESTOP" Secure="yes">
+			<RegistrySearch Id="AllowServiceStop" Root="HKLM" Key="$(var.HKLM_SETTINGS)" Name="AllowServiceStop"
+				Type="raw" />
+			<RegistrySearch Id="AllowServiceStop6" Root="HKLM" Key="$(var.HKLM_AVP6_SETTINGS)" Name="AllowServiceStop"
+				Type="raw" />
+		</Property>
+
+		<!--Check Version 6 INSTALLDIR-->
+		<Property Id="AVP6INSTALLDIR" Secure="yes">
+			<RegistrySearch Id="ProductPathAVP6" Root="HKLM" Key="$(var.HKLM_AVP6_SETTINGS)" Name="Ins_ProductPath"
+				Type="raw" />
+		</Property>
+
+		<Media Id="1" DiskPrompt="[ProductName]" Cabinet="$(var.ProductInternalName).cab" CompressionLevel="high" EmbedCab="yes" VolumeLabel="$(var.ProductInternalName)" />
+		<Media Id="2" DiskPrompt="[ProductName]" Cabinet="mklifx86.cab" CompressionLevel="high" EmbedCab="yes" VolumeLabel="$(var.ProductInternalName)" />
+		<Media Id="3" DiskPrompt="[ProductName]" Cabinet="mklifx64.cab" CompressionLevel="high" EmbedCab="yes" VolumeLabel="$(var.ProductInternalName)" />
+		<Media Id="4" DiskPrompt="[ProductName]" Cabinet="mklifw2k.cab" CompressionLevel="high" EmbedCab="yes" VolumeLabel="$(var.ProductInternalName)" />
+
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="CommonAppDataFolder" Name=".">
+				<Directory Id="CommonAppDataKLDir" Name="$(var.KasperskyLabShortFolderName)" LongName="$(var.KasperskyLabFolderName)">
+					<Directory Id="CommonAppDataAVPDir" Name="AVP8">
+						<Component Id="AppDataAVPDirComponent" Guid="$(var.AppDataAVPDirComponent_Guid)" Location="local">
+							<CreateFolder>
+								<Permission GenericAll="yes" User="Administrators"></Permission>
+								<Permission GenericAll="yes" User="Everyone"></Permission>
+							</CreateFolder>
+						</Component>
+						<Directory Id="CommonAppDataBasesDir" Name="Bases">
+
+							<Component Id="BasesCORE" Guid="$(var.BasesCORE_Guid)" Location="local" DiskId="1">
+								<File Id="blst.xml" Name="blst.xml" LongName="blst-0607g.xml" src="$(env.dataloc_path)/CommonAppData/Bases/blst-0607g.xml" KeyPath="yes" />
+								<File Id="black.lst" Name="black.lst" src="$(env.dataloc_path)/CommonAppData/Bases/black.lst" />
+								<File Id="upd.xml" Name="upd.xml" LongName="upd-0607g.xml" src="$(env.dataloc_path)/CommonAppData/Bases/upd-0607g.xml" />
+								<File Id="rt.xml" Name="rt.xml" LongName="rt-0607g.xml" src="$(env.dataloc_path)/CommonAppData/Bases/rt-0607g.xml" />
+								<File Id="kav6.xml" Name="kav6.xml" LongName="kav6-0607g.xml" src="$(env.dataloc_path)/CommonAppData/Bases/kav6-0607g.xml" />
+								<File Id="news.kln" Name="news.kln" LongName="news.kln" src="$(env.dataloc_path)/CommonAppData/Bases/news.kln" />
+								<File Id="info.xml" Name="info.xml" LongName="info-0607g.xml" src="$(env.dataloc_path)/CommonAppData/Bases/info-0607g.xml" />
+							</Component>
+							
+							<Component Id="BasesAVS" Guid="$(var.BasesAVS_Guid)" Location="local" DiskId="1">
+								<?if ($(env.IncludeAVBases) = Bases) ?>
+								<?include "$(env.temp_path)/avs_bases_files.wxi" ?>
+								<?endif ?>
+							</Component>
+
+							<Component Id="BasesAVZ" Guid="$(var.BasesAVZ_Guid)" Location="local" DiskId="1">
+								<?if ($(env.IncludeAVBases) = Bases) ?>
+								<?include "$(env.temp_path)/avz_bases_files.wxi" ?>
+								<?endif ?>
+							</Component>
+
+              <?ifdef ADVANCED_FEATURES ?>
+              <Component Id="OnlineSecurity" Guid="$(var.OnlineSecurity_Guid)" Location="local" DiskId="1">
+                <Registry Root="HKLM" Key="$(var.HKLM_PROFILE_ONLINE)" Name="installed" Type="integer" Value="1" />
+              </Component>
+              <?endif?>
+
+              <?ifdef ADVANCED_FEATURES ?>
+              <Component Id="ContentFilter" Guid="$(var.ContentFilter_Guid)" Location="local" DiskId="1">
+                <Registry Root="HKLM" Key="$(var.HKLM_PROFILE_CONTENTFLT)" Name="installed" Type="integer" Value="1" />
+              </Component>
+              <?endif?>
+
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="Antivirus" Guid="$(var.Antivirus_Guid)" Location="local" DiskId="1">
+                <Registry Root="HKLM" Key="$(var.HKLM_PROFILE_ANTIVIRUS)" Name="installed" Type="integer" Value="1" />
+              </Component>
+              <?endif?>
+
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="SystemWatch" Guid="$(var.SystemWatch_Guid)" Location="local" DiskId="1">
+                <Registry Root="HKLM" Key="$(var.HKLM_PROFILE_SYSTEMWATCH)" Name="installed" Type="integer" Value="1" />
+                <Registry Root="HKLM" Key="$(var.HKLM_PROFILE_HIPS)" Name="installed" Type="integer" Value="1" />
+                <Registry Root="HKLM" Key="$(var.HKLM_PROFILE_PDM)" Name="installed" Type="integer" Value="1" />
+              </Component>
+              <?endif?>
+              
+              <?ifdef  BASE_FEATURES ?>
+              <Component Id="BasesWAI386" Guid="$(var.BasesWAI386_Guid)" Location="local" DiskId="1">
+								<?if ($(env.IncludeAVBases) = Bases) ?>
+								<File Id="wa.xml" Name="wa.xml" LongName="wa-i386-0607g.xml" src="$(env.dataloc_path)/CommonAppData/Bases/wa-i386-0607g.xml" KeyPath="yes" />
+								<File Id="webav.kdl" Name="webav.kdl" src="$(env.dataloc_path)/CommonAppData/Bases/webav.kdl" />
+								<File Id="webav.kfb" Name="webav.kfb" src="$(env.dataloc_path)/CommonAppData/Bases/webav.kfb" />
+								<File Id="wmuf.dat" Name="wmuf.dat" src="$(env.dataloc_path)/CommonAppData/Bases/wmuf.dat" />
+								<?endif ?>
+							</Component>
+							<?endif?>
+
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="BasesAHI386" Guid="$(var.BasesAHI386_Guid)" Location="local" Transitive="yes" DiskId="1">
+								<Condition>NOT VersionNT64</Condition>
+								<?include "$(env.temp_path)/ahi386_bases_files.wxi" ?>
+							</Component>
+							<?endif?>
+
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="BasesAHX64" Guid="$(var.BasesAHX64_Guid)" Location="local" Transitive="yes" DiskId="1">
+								<Condition>VersionNT64</Condition>
+								<?include "$(env.temp_path)/ahx64_bases_files.wxi" ?>
+							</Component>
+							<?endif?>
+
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="BasesAH_6MP1" Guid="$(var.BasesAH_6MP1_Guid)" Location="local" Transitive="yes" DiskId="1">
+								<CreateFolder/>
+							</Component>
+							<?endif?>
+
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="fwpresets.ini" Guid="$(var.fwpresets.ini_Guid)" Location="local" DiskId="1">
+								<File Id="fwpresets.ini" Name="fwpreset.ini" LongName="fwpresets.ini" src="$(env.dataloc_path)/CommonAppData/Bases/fwpresets.ini" />
+							</Component>
+							<?endif?>
+
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="BasesPDM" Guid="$(var.BasesPDM_Guid)" Location="local" DiskId="1">
+								<File Id="pdm.xml" Name="pdm.xml" LongName="pdm-0607g.xml" src="$(env.dataloc_path)/CommonAppData/Bases/pdm-0607g.xml" KeyPath="yes" />
+                <File Id="pdmkl.dat" Name="pdmkl.dat" src="$(env.dataloc_path)/CommonAppData/Bases/pdmkl.dat" />
+              </Component>
+              <?endif ?>
+
+              <?ifdef BASE_FEATURES ?>
+		<Component Id="BasesHIPS" Guid="$(var.BasesHIPS_Guid)" Location="local" DiskId="1">
+                  <File Id="hipsdb.xml" Name="hipsdb.xml" Vital="yes" KeyPath="yes" src="$(env.dataloc_path)\CommonAppData\Bases\hipsdb.xml" />
+		</Component>
+              <?endif ?>
+
+              <?ifdef ADVANCED_FEATURES ?>
+              <Component Id="BasesASPY" Guid="$(var.BasesASPY_Guid)" Location="local" DiskId="1">
+								<File Id="aspy.xml" Name="aspy.xml" LongName="aspy-0607g.xml" src="$(env.dataloc_path)/CommonAppData/Bases/aspy-0607g.xml" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+
+              <?ifdef ADVANCED_FEATURES ?>
+              <Component Id="BasesAP" Guid="$(var.BasesAP_Guid)" Location="local" DiskId="1">
+								<File Id="aphish.dat" Name="aphish.dat" src="$(env.dataloc_path)/CommonAppData/Bases/aphish.dat" />
+							</Component>
+							<?endif?>
+
+              <?ifdef ADVANCED_FEATURES ?>
+              <Component Id="BasesADB" Guid="$(var.BasesADB_Guid)" Location="local" DiskId="1">
+								<File Id="adblock.txt" Name="adblock.txt" src="$(env.dataloc_path)/CommonAppData/Bases/adblock.txt" />
+							</Component>
+							<?endif ?>
+
+              <?ifdef ADVANCED_FEATURES ?>
+                <Component Id="BasesAS" Guid="$(var.BasesAS_Guid)" Location="local" DiskId="1">
+                  <?if ($(env.IncludeAVBases) = Bases) ?>
+                    <?include "$(env.temp_path)/as_bases_files.wxi" ?>
+                  <?endif ?>
+                </Component>
+              <?endif ?>
+
+							<?ifdef PERSONAL_ADVANCED_FEATURES ?>
+							<Component Id="BasesPCDB" Guid="$(var.BasesPCDB_Guid)" Location="local" DiskId="1">
+								<File Id="pcdb.xml" Name="pcdb.xml" LongName="pcdb-0607g.xml" src="$(env.dataloc_path)/CommonAppData/Bases/pcdb-0607g.xml" />
+								<File Id="parctl.dat" Name="parctl.dat" src="$(env.dataloc_path)/CommonAppData/Bases/parctl.dat" />
+								<Registry Root="HKLM" Key="$(var.HKLM_PROFILE_PARCTL)" Name="installed" Type="integer" Value="1" />
+							</Component>
+							<?endif?>
+						</Directory>
+						
+						<!-- folders for application data (later may be moved to user application data folder) -->
+						<Directory Id="CommonAppDataReportDir" Name="Report">
+							<Component Id="AppReportDirComponent" Guid="$(var.AppReportDirComponent_Guid)" Location="local">
+								<CreateFolder />
+							</Component>
+						</Directory>
+						<Directory Id="CommonAppDataDataDir" Name="Data">
+						
+							<Component Id="DataCORE" Guid="$(var.DataCORE_Guid)" Location="local" DiskId="1">
+								<File Id="u0607g.xml" Name="u0607g.xml" src="$(env.dataloc_path)\CommonAppData\Data\u0607g.xml" />
+								<File Id="updcfg.xml" Name="updcfg.xml" src="$(env.dataloc_path)\CommonAppData\Data\updcfg.xml" />
+								<File Id="statcfg.xml" Name="statcfg.xml" src="$(env.dataloc_path)\CommonAppData\Data\statcfg.xml" />
+							</Component>
+
+							<?include "$(env.temp_path)/retr_dat_loc.wxi" ?>
+
+              <?ifdef ADVANCED_FEATURES ?>
+              <Component Id="antispam.sfdb" Guid="$(var.antispam.sfdb_Guid)" Location="local" DiskId="1">
+								<File Id="antispam.sfdb" Name="antispam.sfd" LongName="antispam.sfdb" src="$(env.dataloc_path)\CommonAppData\Data\antispam.sfdb" />
+							</Component>
+							<?endif?>
+
+
+							<Directory Id="CommonAppDataDataStatDir" Name="stat">
+							</Directory>
+
+						</Directory>
+
+						<Directory Id="CommonAppDataDskmDir" Name="Dskm">
+							
+							<Component Id="DskmCORE" Guid="$(var.DskmCORE_Guid)" Location="local" DiskId="1">
+								<?include "$(env.temp_path)/dskm_files.wxi" ?>
+							</Component>
+
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="DskmAHI386" Guid="$(var.DskmAHI386_Guid)" Location="local" Transitive="yes" DiskId="1">
+								<Condition>NOT VersionNT64</Condition>
+								<?include "$(env.temp_path)/ahi386_dskm_files.wxi" ?>
+							</Component>
+							<?endif?>
+
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="DskmAHX64" Guid="$(var.DskmAHX64_Guid)" Location="local" Transitive="yes" DiskId="1">
+								<Condition>VersionNT64</Condition>
+								<?include "$(env.temp_path)/ahx64_dskm_files.wxi" ?>
+							</Component>
+							<?endif?>
+						</Directory>
+
+						<Directory Id="CommonAppDataQuarantineDir" Name="Quarntn" LongName="Quarantine">
+							<Component Id="AppQuarantineDirComponent" Guid="$(var.AppQuarantineDirComponent_Guid)" Location="local">
+								<CreateFolder />
+							</Component>
+						</Directory>
+						<Directory Id="CommonAppDataBackupDir" Name="Backup">
+							<Component Id="AppBackupDirComponent" Guid="$(var.AppBackupDirComponent_Guid)" Location="local">
+								<CreateFolder />
+							</Component>
+						</Directory>
+						<Directory Id="CommonAppDataPdmHistDir" Name="PdmHist">
+							<Component Id="AppPdmHistDirComponent" Guid="$(var.AppPdmHistDirComponent_Guid)" Location="local"
+								DiskId="1">
+								<CreateFolder />
+							</Component>
+						</Directory>
+						<Directory Id="CommonAppDataUpdateDistributionDir" Name="UpdDstr" LongName="Update distribution">
+							<Component Id="AppDataUpdateDistributionDirComponent" Guid="$(var.AppDataUpdateDistributionDirComponent_Guid)" Location="local" DiskId="1">
+								<CreateFolder />
+								<Registry Id="RegRetranslationSettings" Root="HKLM" Key="$(var.HKLM_PROFILE_UPDATER)\settings\def" Name="RetrPath"
+								Type="string" Value="[CommonAppDataUpdateDistributionDir]" KeyPath="yes"/>
+							</Component>
+						</Directory>
+					</Directory>
+				</Directory>
+			</Directory>
+
+			<Directory Id="DesktopFolder" Name="." />
+
+			<Directory Id="ProgramFilesFolder" Name=".">
+				<Directory Id="KasperskyLabFolder" Name="$(var.KasperskyLabShortFolderName)" LongName="$(var.KasperskyLabFolderName)">
+					<Directory Id="INSTALLDIR" Name="$(var.ProductShortFolderName)" LongName="$(var.ProductFolderName)">
+						<Component Id="MainRootComponent" Guid="$(var.MainRootComponent_Guid)" Location="local">
+							<CreateFolder /> 
+							<Registry Id="RegInstallDir" Root="HKLM" Key="$(var.HKLM_SETUP_FOLDERS)" Name="$(var.ProductInternalName)"
+								Action="write" Type="string" Value="[INSTALLDIR]" />
+							
+							<?include "$(env.temp_path)/ppp_reg_extract.wxi" ?>
+
+							<?include "$(env.temp_path)/ppp_$(env.short_name)_reg_extract.wxi" ?>
+							
+							<Registry Id="RegProductUninstall" Root="HKLM" Key="$(var.HKLM_UNINSTALL)\InstallWIX_[ProductCode]">
+								<Registry Name="DisplayIcon" Type="string" Value="[WindowsFolder]Installer\[ProductCode]\[ARPPRODUCTICON]" />
+								<Registry Name="DisplayName" Type="string" Value="[ProductName]" />
+								<Registry Name="DisplayVersion" Type="string" Value="[ProductVersion]" />
+								<Registry Name="HelpLink" Type="string" Value="[ARPHELPLINK]" />
+								<Registry Name="Publisher" Type="string" Value="[Manufacturer]" />
+								<Registry Name="UninstallString" Type="string" Value="MsiExec.exe /I[ProductCode]" />
+								<Registry Name="URLUpdateInfo" Type="string" Value="[ARPURLUPDATEINFO]" />
+							</Registry>
+
+							<Registry Id="RegProductUninstall1" Root="HKLM" Key="$(var.HKLM_UNINSTALL)\[ProductCode]"
+								Name="UninstallString" Type="string" Value="MsiExec.exe /I[ProductCode]" />
+							
+							<Registry Id="RegRemoveProductKey" Action="removeKeyOnUninstall" Root="HKLM" Key="$(var.HKLM_PRODUCT)" />
+
+							<Registry Id="RegProductEnvironment" Root="HKLM" Key="$(var.HKLM_ENVIRONMENT)">
+								<Registry Name="Backup" Type="string" Value="%DataRoot%\Backup" />
+								<Registry Name="Bases" Type="string" Value="%DataRoot%\Bases" />
+								<Registry Name="CompanyName" Type="string" Value="$(loc.ProductManufacturer)" />
+								<Registry Name="Data" Type="string" Value="%DataRoot%\Data" />
+								<Registry Name="DataRoot" Type="string" Value="[CommonAppDataKLDir]AVP8" />
+								<Registry Name="TraceRoot" Type="string" Value="[CommonAppDataKLDir]" />
+								<Registry Name="DSKM" Type="string" Value="%DataRoot%\Dskm" />
+								<Registry Name="HelpFile" Type="string" Value="%Doc%\context.chm" />
+								<Registry Name="Localization" Type="string" Value="$(var.Localization)" />
+								<Registry Name="LocalizationId" Type="string" Value="[KAVUnPasswdInit]" />
+								<Registry Name="ProductName" Type="string" Value="[ProductName]" />
+								<Registry Name="ProductRoot" Type="string" Value="[INSTALLDIR]" />
+								<Registry Name="ProductStatus" Type="string" Value="$(var.ProductStatus)" /> 
+								<Registry Name="ProductType" Type="string" Value="$(var.ProductType)" />
+								<Registry Name="ProductVersion" Type="string" Value="[ProductVersion]" />
+								<Registry Name="ProductCode" Type="string" Value="[ProductCode]" />
+								<Registry Name="Quarantine" Type="string" Value="%DataRoot%\Quarantine" />
+								<Registry Name="Report" Type="string" Value="%DataRoot%\Report" />
+								<Registry Name="Components" Type="string" Value="[INSTALLEDFEATURES]" />
+								<Registry Name="UpdateRoot" Type="string" Value="index/u0607g.xml" />
+								<Registry Name="RetrRoot" Type="string" Value="index/u0607g.xml" />
+								<Registry Name="UpdateConfig" Type="string" Value="updcfg.xml" />
+								<Registry Name="Build" Type="string" Value="$(var.ProductBuild)" />
+								<Registry Name="OS" Type="string" Value="[OSFORUPDATER]" />
+								<Registry Name="AKInstalled" Type="string" Value="[AKINSTALL]" />
+							</Registry>
+
+							<Registry Id="RegProductSettings" Root="HKLM" Key="$(var.HKLM_SETTINGS)">								
+								<Registry Name="Ins_ProductType" Type="string" Value="$(var.ProductType)" />
+								<Registry Name="LoginImage" Type="string" Value="[SkinDir]$(loc.LoginImage)" />
+								<Registry Name="Ins_Install" Type="integer" Value="1" />
+								<Registry Name="Ins_InitMode" Type="integer" Value="1" />
+								<Registry Name="Ins_Update" Type="integer" Value="1" />
+								<Registry Name="Ins_FullScan" Type="integer" Value="0" />
+								<Registry Name="Ins_DefaultKey" Type="string" /> <!-- {code:KeyGetFullName|nothing} -->
+								<Registry Name="Ins_CompanyName" Type="string" Value="$(loc.ProductManufacturer)" />
+								<Registry Name="Ins_ProductVersion" Type="string" Value="[ProductVersion]" />
+								<Registry Name="Ins_DisplayName" Type="string" Value="[ProductName]" />
+								<Registry Name="Ins_ProductPath" Type="string" Value="[INSTALLDIR]" />
+								<Registry Name="LicBuyLink" Type="string" Value="$(loc.ProductLicBuyLink)" />
+								<Registry Name="LicRenewLink" Type="string" Value="$(loc.ProductLicRenewLink)" />
+								<Registry Name="Ins_Localization" Type="string" Value="$(var.Localization)" />
+								<Registry Name="SettingsVersion" Type="string" Value="[SETTINGSVERSION]" />
+								<Registry Name="LicActivationLink" Type="string" Value="$(loc.ProductLicActivationLink)" />
+							</Registry>
+
+							<Registry Id="RegUseKL1" Root="HKLM" Key="$(var.HKLM_PRODUCT)\CKAHUM">
+								<Registry Name="UseKL1" Type="string" Value="1" />
+							</Registry>
+
+							<Registry Id="RegProductTrace" Root="HKLM" Key="$(var.HKLM_PRODUCT)\Trace"> <!-- Tasks: trace -->
+								<Registry Name="Settings" Type="string" Value="Default" />
+								<Registry Key="Default">
+									<Registry Name="TraceFileEnable" Type="integer" Value="0" />
+									<Registry Name="TraceFileMaxLevel" Type="integer" Value="400" />
+									<Registry Name="TraceDebugEnable" Type="integer" Value="0" />
+									<Registry Name="TraceDebugMaxLevel" Type="integer" Value="400" />
+								</Registry>
+							</Registry>
+
+							<Registry Id="RegPdmSettings" Root="HKLM" Key="$(var.HKLM_PROFILE_PDM)\settings\def"
+								Name="sHistoryFolder" Type="string" Value="[CommonAppDataAVPDir]PdmHist" />
+
+							<Registry Id="RegUpdaterRegion" Root="HKLM" Key="$(var.HKLM_PROFILE_UPDATER)\settings\def" Name="Region"
+								Type="string" Value="$(var.UpdaterRegion)" />												
+									
+							<Registry Id="RegRetranslationCfgSettings" Root="HKLM" Key="$(var.HKLM_RETRFILTER)">
+								<Registry Name="Flags" Type="integer" Value="0" />
+								<Registry Name="CategoryName" Type="string" />
+								<Registry Name="CategoryId" Type="string" />
+								<Registry Name="CategoryDescription" Type="string" />
+							</Registry>
+							
+							<Registry Id="RegRetranslationCfgSettingsFilter0" Root="HKLM" Key="$(var.HKLM_RETRFILTER)\Childs\0000">
+								<Registry Name="Flags" Type="integer" Value="0" />
+								<Registry Name="CategoryName" Type="string" Value="$(loc.IDS_Filter0000Name)" />
+								<Registry Name="CategoryId" Type="string" Value="PAS" />
+								<Registry Name="CategoryDescription" Type="string" Value="$(loc.IDS_Filter0000Desc)" />
+							</Registry>
+							
+							<Registry Id="RegRetranslationCfgSettingsFilter1" Root="HKLM" Key="$(var.HKLM_RETRFILTER)\Childs\0001">
+								<Registry Name="Flags" Type="integer" Value="0" />
+								<Registry Name="CategoryName" Type="string" Value="$(loc.IDS_Filter0001Name)" />
+								<Registry Name="CategoryId" Type="string" Value="KDBI386" />
+								<Registry Name="CategoryDescription" Type="string" Value="$(loc.IDS_Filter0001Desc)" />
+							</Registry>
+							
+							<Registry Id="RegRetranslationCfgSettingsFilter2" Root="HKLM" Key="$(var.HKLM_RETRFILTER)\Childs\0002">
+								<Registry Name="Flags" Type="integer" Value="0" />
+								<Registry Name="CategoryName" Type="string" Value="$(loc.IDS_Filter0002Name)" />
+								<Registry Name="CategoryId" Type="string" Value="AH" />
+								<Registry Name="CategoryDescription" Type="string" Value="$(loc.IDS_Filter0002Desc)" />
+							</Registry>
+							
+							<Registry Id="RegRetranslationCfgSettingsFilter3" Root="HKLM" Key="$(var.HKLM_RETRFILTER)\Childs\0003">
+								<Registry Name="Flags" Type="integer" Value="0" />
+								<Registry Name="CategoryName" Type="string" Value="$(loc.IDS_Filter0003Name)" />
+								<Registry Name="CategoryId" Type="string" Value="KAV8EXEC" />
+								<Registry Name="CategoryDescription" Type="string" Value="$(loc.IDS_Filter0003Desc)" />
+							</Registry>     
+							
+							<Registry Id="RegRetranslationCfgSettingsFilter4" Root="HKLM" Key="$(var.HKLM_RETRFILTER)\Childs\0004">
+								<Registry Name="Flags" Type="integer" Value="0" />
+								<Registry Name="CategoryName" Type="string" Value="$(loc.IDS_Filter0004Name)" />
+								<Registry Name="CategoryId" Type="string" Value="ADB" />
+								<Registry Name="CategoryDescription" Type="string" Value="$(loc.IDS_Filter0004Desc)" />
+							</Registry>
+							
+							<Registry Id="RegRetranslationCfgSettingsFilter5" Root="HKLM" Key="$(var.HKLM_RETRFILTER)\Childs\0005">
+								<Registry Name="Flags" Type="integer" Value="0" />
+								<Registry Name="CategoryName" Type="string" Value="$(loc.IDS_Filter0005Name)" />
+								<Registry Name="CategoryId" Type="string" Value="AP" />
+								<Registry Name="CategoryDescription" Type="string" Value="$(loc.IDS_Filter0005Desc)" />
+							</Registry>
+							
+							<Registry Id="RegRetranslationCfgSettingsFilter6" Root="HKLM" Key="$(var.HKLM_RETRFILTER)\Childs\0006">
+								<Registry Name="Flags" Type="integer" Value="0" />
+								<Registry Name="CategoryName" Type="string" Value="$(loc.IDS_Filter0006Name)" />
+								<Registry Name="CategoryId" Type="string" Value="WM" />
+								<Registry Name="CategoryDescription" Type="string" Value="$(loc.IDS_Filter0006Desc)" />
+							</Registry>
+							
+							<Registry Id="RegRetranslationCfgSettingsFilter7" Root="HKLM" Key="$(var.HKLM_RETRFILTER)\Childs\0007">
+								<Registry Name="Flags" Type="integer" Value="0" />
+								<Registry Name="CategoryName" Type="string" Value="$(loc.IDS_Filter0007Name)" />
+								<Registry Name="CategoryId" Type="string" Value="RM" />
+								<Registry Name="CategoryDescription" Type="string" Value="$(loc.IDS_Filter0007Desc)" />
+							</Registry>     
+							
+							<Registry Id="RegRetranslationCfgSettingsFilter8" Root="HKLM" Key="$(var.HKLM_RETRFILTER)\Childs\0008">
+								<Registry Name="Flags" Type="integer" Value="0" />
+								<Registry Name="CategoryName" Type="string" Value="$(loc.IDS_Filter0008Name)" />
+								<Registry Name="CategoryId" Type="string" Value="BB" />
+								<Registry Name="CategoryDescription" Type="string" Value="$(loc.IDS_Filter0008Desc)" />
+							</Registry>
+
+              <?ifdef CORPORATE_FEATURES ?>
+              <Registry Id="RegUninstallString" Root="HKLM" Key="$(var.HKLM_COMPONENTS)\34\KAV$(env.product_type)8\8.0.0.0\Installer">
+								<Registry Name="UninstallString" Type="string" Value="msiexec.exe /x[ProductCode] /qn" />
+								<Registry Name="UninstallString3" Type="string" Value="msiexec.exe /x[ProductCode] /qn KLUNINSTPWDHEX=&quot;%p&quot; KLSETUPDIR=&quot;%d&quot; AKINSTALL=1"/>
+								<Registry Name="UninstallString3KPD" Type="string" Value="[INSTALLDIR]uninstll.kpd"/>
+								<Registry Name="ProductCode" Type="string" Value="[ProductCode]"/>
+							</Registry>
+							<?endif ?>
+              
+							<RemoveFile Id="TemporaryFiles0" Name="*.dat" On="uninstall" />
+							<RemoveFile Id="TemporaryFiles1" Name="*.log" On="uninstall" />
+							<RemoveFile Id="TemporaryFiles2" Name="*.dmp" On="uninstall" />
+							<RemoveFile Id="TemporaryFiles3" Name="*.fl" On="uninstall" />
+							<RemoveFile Id="TemporaryFiles4" Name="*.tmp" On="uninstall" />
+							<RemoveFile Id="HotfixIndexFiles" Name="soft*.*" On="uninstall" /> 
+							<RemoveFile Id="CfgFiles" Name="*.cfg" On="uninstall" />
+							<RemoveFile Id="LicenseFiles" Name="*.key" On="uninstall" />
+							<RemoveFile Id="OemLicenseFiles" Name="*.eyk" On="uninstall" />
+							<RemoveFolder Id="InstallDirFolder" On="uninstall"></RemoveFolder>
+
+							<Registry Id="CleanNSettingsRegistry" Action="removeKeyOnInstall" Root="HKLM" Key="$(var.HKLM_SETTINGS)\NSettings" />
+							<Registry Id="CleanDefNSettingsRegistry" Action="removeKeyOnInstall" Root="HKLM" Key="$(var.HKLM_SETTINGS)\Def\NSettings" />
+							<Registry Id="CleanDataProductHotfixRegistry" Action="remove" Root="HKLM" Key="$(var.HKLM_DATA)" Name="ProductHotfix" />
+							<Registry Id="CleanDataProductHotfixNewRegistry" Action="remove" Root="HKLM" Key="$(var.HKLM_DATA)" Name="ProductHotfixNew" />
+						</Component>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="MainRootOtherOS" Guid="$(var.MainRootOtherOS_Guid)" Location="local">
+							<Condition><![CDATA[VersionNT < 600 AND NOT VersionNT64]]></Condition>
+							<?include "$(env.temp_path)/ppp_$(env.short_name)_otheros_reg_extract.wxi" ?>
+						</Component>						
+						<Component Id="MainRootXPX64" Guid="$(var.MainRootXPX64_Guid)" Location="local">
+							<Condition><![CDATA[VersionNT64 < 600]]></Condition>
+							<?include "$(env.temp_path)/ppp_$(env.short_name)_xpx64_reg_extract.wxi" ?>
+						</Component>
+						<Component Id="MainRootVista" Guid="$(var.MainRootVista_Guid)" Location="local">
+							<Condition><![CDATA[VersionNT >= 600 AND NOT VersionNT64]]></Condition>
+							<?include "$(env.temp_path)/ppp_$(env.short_name)_vista_reg_extract.wxi" ?>
+						</Component>
+						<Component Id="MainRootVistaX64" Guid="$(var.MainRootVistaX64_Guid)" Location="local">
+							<Condition><![CDATA[VersionNT64 >= 600]]></Condition>
+							<?include "$(env.temp_path)/ppp_$(env.short_name)_vistax64_reg_extract.wxi" ?>
+						</Component>						
+						<Component Id="RegAHI386" Guid="$(var.RegAHI386_Guid)" Transitive="yes" DiskId="1">
+							<Condition>NOT VersionNT64</Condition>
+							<?include "$(env.temp_path)/ppp_AHI386_reg_extract.wxi" ?>
+						</Component>
+						<Component Id="RegAHX64" Guid="$(var.RegAHX64_Guid)" Transitive="yes" DiskId="1">
+							<Condition>VersionNT64</Condition>
+							<?include "$(env.temp_path)/ppp_AHX64_reg_extract.wxi" ?>
+						</Component>
+						<?endif?>
+						<?if ($(env.product_type) = FS) ?>
+						<Component Id="MSExclusions" Guid="$(var.MSExclusions_Guid)" Transitive="yes" DiskId="1">
+							<Condition>MSEXCLUSIONS</Condition>
+							<?include "$(env.temp_path)/msexcl_reg_extract.wxi" ?>
+						</Component>
+						<?endif ?>
+						<Component Id="PathEnvVar" Guid="$(var.PathEnvVar_Guid)" Transitive="yes" DiskId="1">
+							<Condition>ADDENVIRONMENT</Condition>
+							<CreateFolder />
+							<Environment Id="PathEnv" Name="Path" Action="set" Part="last" System="yes" Value="[INSTALLDIR]"></Environment>
+						</Component>
+						<?if not ($(env.product_type) = SOS) ?>
+						<Component Id="Ins_RtpDrvInstalled" Guid="$(var.RtpCommonComponent_Guid)" Location="local" DiskId="1">
+							<Registry Id="RegRtpCommon" Root="HKLM" Key="$(var.HKLM_PRODUCT)"
+								Name="Ins_RtpDrvInstalled" Type="string" />
+						</Component>
+						<?endif?>
+
+            <?ifdef ADVANCED_FEATURES ?>
+            <Component Id="adialhk.dll" Guid="$(var.adialhk.dll_Guid)" Location="local" DiskId="1">
+							<Condition>VersionNT >= 500</Condition>
+							<File Id="adialhk.dll" Name="adialhk.dll" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\adialhk.dll" />
+						</Component>
+						<?endif ?>
+            <?ifdef ADVANCED_FEATURES ?>
+            <Component Id="adialtsk.ppl" Guid="$(var.adialtsk.ppl_Guid)" Location="local" DiskId="1">
+							<Condition>VersionNT >= 500</Condition>
+							<File Id="adialtsk.ppl" Name="adialtsk.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\adialtsk.ppl" />
+						</Component>
+						<?endif ?>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="advdis.ppl" Guid="$(var.advdis.ppl_Guid)" Transitive="yes" Location="local" DiskId="1">
+							<Condition><![CDATA[VersionNT >= 600 OR VersionNT64]]></Condition>
+							<File Id="advdis.ppl" Name="advdis.ppl" Vital="yes" src="$(env.data_path)\Program Files\advdis.ppl" />
+							<Registry Root="HKLM" Key="$(var.HKLM_PROFILE_ADVDIS)" Name="installed" Type="integer" Value="1" />
+						</Component>
+						<?endif ?>
+            <?ifdef ADVANCED_FEATURES ?>
+            <Component Id="ahids.ppl" Guid="$(var.ahids.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="ahids.ppl" Name="ahids.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\ahids.ppl" />
+							<Registry Root="HKLM" Key="$(var.HKLM_PROFILE_IDS)" Name="installed" Type="integer" Value="1" />
+						</Component>
+						<?endif ?>
+            <?ifdef ADVANCED_FEATURES ?>
+            <Component Id="antispam.ppl" Guid="$(var.antispam.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="antispam.ppl" Name="antispam.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\antispam.ppl" />
+							<Registry Root="HKLM" Key="$(var.HKLM_PROFILE_ANTISPAM)" Name="installed" Type="integer" Value="1" />
+							<Registry Root="HKLM" Key="$(var.HKLM_PROFILE_MAILWASHER)" Name="installed" Type="integer" Value="1" />
+							<Registry Root="HKLM" Key="$(var.HKLM_PROFILE_SPAMTEST)" Name="installed" Type="integer" Value="1" />
+						</Component>
+						<?endif ?>
+            <?ifdef ADVANCED_FEATURES ?>
+              <Component Id="cfdata3.dll" Guid="$(var.cfdata3.dll_Guid)" Location="local" DiskId="1">
+                <File Id="cfdata3.dll" Name="cfdata3.dll" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\cfdata3.dll" />
+              </Component>
+            <?endif ?>
+            <?ifdef ADVANCED_FEATURES ?>
+              <Component Id="cfilter3.dll" Guid="$(var.cfilter3.dll_Guid)" Location="local" DiskId="1">
+                <File Id="cfilter3.dll" Name="cfilter3.dll" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\cfilter3.dll" />
+              </Component>
+            <?endif ?>
+            <?ifdef ADVANCED_FEATURES ?>
+            <Component Id="aphish.ppl" Guid="$(var.aphish.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="aphish.ppl" Name="aphish.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\aphish.ppl" />
+						</Component>
+						<?endif ?>
+            <?ifdef ADVANCED_FEATURES ?>
+            <Component Id="aphisht.ppl" Guid="$(var.aphisht.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="aphisht.ppl" Name="aphisht.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\aphisht.ppl" />
+							<Registry Root="HKLM" Key="$(var.HKLM_PROFILES)\AntiPhishingService" Name="installed" Type="integer" Value="1" />
+						</Component>
+						<?endif ?>
+						<Component Id="Arj.ppl" Guid="$(var.Arj.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="Arj.ppl" Name="Arj.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\Arj.ppl" />
+						</Component>
+						<Component Id="avp.com" Guid="$(var.avp.com_Guid)" Location="local" DiskId="1">
+							<File Id="avp.com" Name="avp.com" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\avp.com" />
+						</Component>
+						<Component Id="avp.exe" Guid="$(var.avp.exe_Guid)" Location="local" DiskId="1">
+							<File Id="avp.exe" Name="avp.exe" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\avp.exe"/>
+							<Registry Id="RegRunProduct" Root="HKLM" Key="SOFTWARE\Microsoft\Windows\CurrentVersion\Run"
+								Name="AVP" Type="string" Value="&quot;[INSTALLDIR]avp.exe&quot;" />
+							<RemoveFile Id="RptFile" On="uninstall" Name="*.rpt" />
+							<ServiceInstall Id="AVP" Name="AVP" DisplayName="$(var.ServiceName)" Description="$(loc.AVPServiceDescription)"
+								ErrorControl="normal" Start="auto" Type="ownProcess" Arguments="-r"></ServiceInstall>
+							<ServiceControl Id="AVP" Name="AVP" Stop="both" Remove="uninstall"></ServiceControl>
+						</Component>
+						<Component Id="ArjPack.ppl" Guid="$(var.ArjPack.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="ArjPack.ppl" Name="ArjPack.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\ArjPack.ppl" />
+						</Component>
+						<Component Id="avlib.ppl" Guid="$(var.avlib.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="avlib.ppl" Name="avlib.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\avlib.ppl" />
+						</Component>
+						<Component Id="avp3info.ppl" Guid="$(var.avp3info.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="avp3info.ppl" Name="avp3info.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\avp3info.ppl" />
+						</Component>
+						<Component Id="avpgs.ppl" Guid="$(var.avpgs.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="avpgs.ppl" Name="avpgs.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\avpgs.ppl" />
+						</Component>
+						<Component Id="avpgui.ppl" Guid="$(var.avpgui.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="avpgui.ppl" Name="avpgui.ppl" src="$(env.data_path)\Program Files\avpgui.ppl" Vital="yes" KeyPath="yes" />
+						</Component>
+						<Component Id="avpgui.tlb" Guid="$(var.avpgui.tlb_Guid)" Location="local" DiskId="1">
+							<File Id="avpgui.tlb" Name="avpgui.tlb" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\avpgui.tlb" />
+						</Component>
+						<Component Id="avs.ppl" Guid="$(var.avs.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="avs.ppl" Name="avs.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\avs.ppl" />
+						</Component>
+						<Component Id="avspm.ppl" Guid="$(var.avspm.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="avspm.ppl" Name="avspm.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\avspm.ppl" />
+						</Component>
+						<Component Id="base64.ppl" Guid="$(var.base64.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="base64.ppl" Name="base64.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\base64.ppl" />
+						</Component>
+						<Component Id="base64p.ppl" Guid="$(var.base64p.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="base64p.ppl" Name="base64p.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\base64p.ppl" />
+						</Component>
+						<Component Id="basegui.ppl" Guid="$(var.basegui.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="basegui.ppl" Name="basegui.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\basegui.ppl" />
+						</Component>
+						<Component Id="bl.ppl" Guid="$(var.bl.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="bl.ppl" Name="bl.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\bl.ppl" />
+						</Component>
+						<Component Id="btdisk.ppl" Guid="$(var.btdisk.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="btdisk.ppl" Name="btdisk.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\btdisk.ppl" />
+						</Component>
+						<Component Id="btimages.ppl" Guid="$(var.btimages.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="btimages.ppl" Name="btimages.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\btimages.ppl" />
+						</Component>
+						<Component Id="buffer.ppl" Guid="$(var.buffer.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="buffer.ppl" Name="buffer.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\buffer.ppl" />
+						</Component>
+						<Component Id="CAB.ppl" Guid="$(var.CAB.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="CAB.ppl" Name="CAB.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\CAB.ppl" />
+						</Component>
+						<Component Id="clldr.dll" Guid="$(var.clldr.dll_Guid)" Location="local" DiskId="1">
+							<File Id="clldr.dll" Name="clldr.dll" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\clldr.dll" />
+						</Component>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="ckahcomm.dll" Guid="$(var.ckahcomm.dll_Guid)" Location="local" DiskId="1">
+							<File Id="ckahcomm.dll" Name="ckahcomm.dll" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\ckahcomm.dll" />
+						</Component>
+						<?endif?>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="ckahrule.dll" Guid="$(var.ckahrule.dll_Guid)" Location="local" DiskId="1">
+							<File Id="ckahrule.dll" Name="ckahrule.dll" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\ckahrule.dll" />
+						</Component>
+						<?endif?>
+            <?ifdef ADVANCED_FEATURES ?>
+            <Component Id="ckahstat.dll" Guid="$(var.ckahstat.dll_Guid)" Location="local" DiskId="1">
+							<File Id="ckahstat.dll" Name="ckahstat.dll" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\ckahstat.dll" />
+						</Component>
+						<?endif?>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="ckahum.dll" Guid="$(var.ckahum.dll_Guid)" Location="local" DiskId="1">
+							<File Id="ckahum.dll" Name="ckahum.dll" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\ckahum.dll" />
+						</Component>
+						<?endif?>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="ComStmIO.ppl" Guid="$(var.ComStmIO.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="ComStmIO.ppl" Name="ComStmIO.ppl" Vital="yes"
+								KeyPath="yes" src="$(env.data_path)\Program Files\ComStmIO.ppl" />
+						</Component>
+						<?endif ?>
+	<?ifdef BASE_FEATURES ?>
+		<Component Id="ushata.dll" Guid="$(var.ushata.dll_Guid)" Location="local" DiskId="1">
+			<File Id="ushata.dll" Name="ushata.dll" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\ushata.dll" />
+		</Component>
+	<?endif?>
+            <?ifdef CORPORATE_FEATURES ?>
+            <Component Id="AVPCon.dll" Guid="$(var.AVPCon.dll_Guid)" Location="local" DiskId="1">
+							<File Id="AVPCon.dll" Name="AVPCon.dll" Vital="yes" KeyPath="yes"
+								src="$(env.data_path)\Program Files\AVPCon.dll" />
+							<Registry Id="RegconnectorSettings" Root="HKLM" Key="$(var.HKLM_COMPONENTS)\34\Connectors\KAV$(env.product_type)7\8.0.0.0">
+								<Registry Name="ProdVersion" Type="string" Value="[ProductVersion]" />
+								<Registry Name="ProdDisplayName" Type="string" Value="[ProductName]$(var.ProductStatusStr)" />
+								<Registry Name="ConnectorVersion" Type="string" Value="[ProductVersion]" />
+								<Registry Name="ConnectorDll" Type="string" Value="[#AVPCon.dll]" />
+								<Registry Name="ConnectorFlags" Type="integer" Value="485" />
+								<Registry Name="NagentMinVer" Type="integer" Value="393216" />
+							</Registry>
+							<Registry Id="CleanConnectorRegistry" Action="remove" Root="HKLM" Key="$(var.HKLM_COMPONENTS)\34\Connectors\KAV$(env.product_type)7\8.0.0.0" />
+						</Component>
+						<?endif ?>
+						<Component Id="updater.dll" Guid="$(var.updater.dll_Guid)" Location="local" DiskId="1">
+							<File Id="updater.dll" Name="updater.dll" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\updater.dll" />
+						</Component>
+						<Component Id="crpthlpr.ppl" Guid="$(var.crpthlpr.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="crpthlpr.ppl" Name="crpthlpr.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\crpthlpr.ppl" />
+						</Component>
+						<Component Id="dbghelp.dll" Guid="$(var.dbghelp.dll_Guid)" Location="local" DiskId="1">
+							<File Id="dbghelp.dll" Name="dbghelp.dll" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\MS\dbghelp.dll" />
+						</Component>
+						<Component Id="deflate.ppl" Guid="$(var.deflate.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="deflate.ppl" Name="deflate.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\deflate.ppl" />
+						</Component>
+						<Component Id="diffs.dll" Guid="$(var.diffs.dll_Guid)" Location="local" DiskId="1">
+							<File Id="diffs.dll" Name="diffs.dll" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\diffs.dll" />
+						</Component>
+						<Component Id="DMAP.ppl" Guid="$(var.DMAP.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="DMAP.ppl" Name="DMAP.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\DMAP.ppl" />
+						</Component>
+						<Component Id="dtreg.ppl" Guid="$(var.dtreg.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="dtreg.ppl" Name="dtreg.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\dtreg.ppl" />
+						</Component>
+						<Component Id="Explode.ppl" Guid="$(var.Explode.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="Explode.ppl" Name="Explode.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\Explode.ppl" />
+						</Component>
+						<Component Id="filemap.ppl" Guid="$(var.filemap.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="filemap.ppl" Name="filemap.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\filemap.ppl" />
+						</Component>
+						<Component Id="FsDrvPlg.ppl" Guid="$(var.FsDrvPlg.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="FsDrvPlg.ppl" Name="FsDrvPlg.ppl" Vital="yes" KeyPath="yes"
+								src="$(env.data_path)\Program Files\FsDrvPlg.ppl" />
+						</Component>
+						<Component Id="fssync.dll" Guid="$(var.fssync.dll_Guid)" Transitive="yes" Location="local" DiskId="1">
+							<File Id="fssync.dll" Name="fssync.dll" src="$(env.data_path)\Program Files\KLIFX86\fssync.dll" Vital="yes"
+								KeyPath="yes" />
+							<!-- Flags: uninsrestartdelete restartreplace; Components: core; -->
+						</Component>
+						<Component Id="GetSI.dll" Guid="$(var.GetSI.dll_Guid)" Location="local" DiskId="1">
+							<File Id="GetSI.dll" Name="GetSI.dll" Vital="yes"
+								KeyPath="yes" src="$(env.data_path)\Program Files\GetSI.dll" />
+						</Component>
+						<Component Id="HASHMD5.ppl" Guid="$(var.HASHMD5.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="HASHMD5.ppl" Name="HASHMD5.PPL" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\HASHMD5.PPL" />
+						</Component>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="httpanlz.ppl" Guid="$(var.httpanlz.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="httpanlz.ppl" Name="httpanlz.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\httpanlz.ppl" />
+							<Registry Root="HKLM" Key="$(var.HKLM_PROFILES)\HTTP" Name="installed" Type="integer" Value="1" />
+							<Registry Id="RegHttpPorts" Root="HKLM" Key="$(var.HKLM_PROFILE_TMON)\settings\def\Ports">
+								<Registry Key="0000" Name="enabled" Type="integer" Value="1" />
+								<Registry Key="0001" Name="enabled" Type="integer" Value="1" />
+								<Registry Key="0002" Name="enabled" Type="integer" Value="1" />
+								<Registry Key="0003" Name="enabled" Type="integer" Value="1" />
+								<Registry Key="0004" Name="enabled" Type="integer" Value="1" />
+								<Registry Key="0005" Name="enabled" Type="integer" Value="1" />
+								<Registry Key="0006" Name="enabled" Type="integer" Value="1" />
+								<Registry Key="0007" Name="enabled" Type="integer" Value="1" />
+								<Registry Key="0008" Name="enabled" Type="integer" Value="1" />
+								<Registry Key="0009" Name="enabled" Type="integer" Value="1" />
+								<Registry Key="0016" Name="enabled" Type="integer" Value="1" />
+								<Registry Key="0017" Name="enabled" Type="integer" Value="1" />
+							</Registry>
+						</Component>
+						<?endif ?>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="httpscan.ppl" Guid="$(var.httpscan.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="httpscan.ppl" Name="httpscan.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\httpscan.ppl" />
+						</Component>
+						<?endif ?>
+						<Component Id="iChkSA.ppl" Guid="$(var.iChkSA.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="iChkSA.ppl" Name="iChkSA.ppl" Vital="yes" KeyPath="yes"
+								src="$(env.data_path)\Program Files\iChkSA.ppl" />
+						</Component>
+						<Component Id="ichk2.ppl" Guid="$(var.ichk2.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="ichk2.ppl" Name="ichk2.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\ichk2.ppl" />
+						</Component>
+<!--
+		<?ifdef ADVANCED_FEATURES ?>
+			<Component Id="iebannerdeny.htm" Guid="$(var.ie_banner_deny.htm_Guid)" Location="local" DiskId="1">
+				<File Id="iebannerdeny.htm" Name="ie_ban_1.htm" LongName="ie_banner_deny.htm" Vital="yes"
+					KeyPath="yes" src="$(env.data_path)\Program Files\ie_banner_deny.htm" />
+			</Component>
+		<?endif ?>
+-->
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="IMAPprtc.ppl" Guid="$(var.IMAPprtc.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="IMAPprtc.ppl" Name="IMAPprtc.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\IMAPprtc.ppl" />
+							<Registry Root="HKLM" Key="$(var.HKLM_PROFILES)\IMAP" Name="installed" Type="integer" Value="1" />
+						</Component>
+						<?endif ?>
+						<Component Id="Inflate.ppl" Guid="$(var.Inflate.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="Inflate.ppl" Name="Inflate.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\Inflate.ppl" />
+						</Component>
+						<Component Id="inifile.ppl" Guid="$(var.inifile.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="inifile.ppl" Name="inifile.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\inifile.ppl" />
+						</Component>
+						<Component Id="iwgen.ppl" Guid="$(var.iwgen.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="iwgen.ppl" Name="iwgen.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\iwgen.ppl" />
+						</Component>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="kav.bav" Guid="$(var.kav.bav_Guid)" Location="local" DiskId="1">
+							<File Id="kav.bav" Name="kav.bav" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\kav.bav" />
+						</Component>
+						<?endif ?>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="kav.tbp" Guid="$(var.kav.tbp_Guid)" Location="local" DiskId="1">
+							<File Id="kav.tbp" Name="kav.tbp" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\kav.tbp" />
+						</Component>
+						<?endif ?>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="klscav.dll" Guid="$(var.klscav.dll_Guid)" Location="local" DiskId="1">
+							<File Id="klscav.dll" Name="klscav.dll" src="$(env.data_path)\Program Files\klscav.dll" Vital="yes" KeyPath="yes" />
+							<Registry Root="HKLM" Key="$(var.HKLM_COMPONENTS)" Action="createKey"/>
+							<!--<Registry Id="CleanScriptCheckerRegistry" Action="removeKeyOnUninstall" Root="HKLM" Key="$(var.HKLM_SC)" />-->
+						</Component>
+            <?endif ?>
+ 
+            <!-- AVZ components -->
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="avzkrnl.dll" Guid="$(var.avzkrnl.dll_Guid)" Location="local" DiskId="1">
+              <File Id="avzkrnl.dll" Name="avzkrnl.dll" src="$(env.data_path)\Program Files\avzkrnl.dll" Vital="yes" KeyPath="yes" />
+            </Component>
+            <Component Id="avzscan.ppl" Guid="$(var.avzscan.ppl_Guid)" Location="local" DiskId="1">
+              <File Id="avzscan.ppl" Name="avzscan.ppl" src="$(env.data_path)\Program Files\avzscan.ppl" Vital="yes" KeyPath="yes" />
+            </Component>
+            <?endif ?>
+
+            <Component Id="kl.url" Guid="$(var.kl.url_Guid)" Location="local" DiskId="1">
+							<File Id="kl.url" Name="kl.url" src="$(env.localization_product_path)\kl.url"/>
+						</Component>
+            <?if ($(env.localization_short_name) = jp)?>
+            <?ifndef CORPORATE_FEATURES ?>
+            <Component Id="userreg.url" Guid="$(var.userreg.url_Guid)" Location="local" DiskId="1">
+							<File Id="userreg.url" Name="userreg.url" src="$(env.localization_product_path)\userreg.url"/>
+						</Component>
+						<?endif ?>
+            <?endif ?>
+            <Component Id="lha.ppl" Guid="$(var.lha.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="lha.ppl" Name="lha.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\lha.ppl" />
+						</Component>
+						<Component Id="libola.dll" Guid="$(var.libola.dll_Guid)" Location="local" DiskId="1">
+							<File Id="libola.dll" Name="libola.dll" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\libola.dll" />
+						</Component>
+						<Component Id="lic.ppl" Guid="$(var.lic.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="lic.ppl" Name="lic.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\lic.ppl" />
+						</Component>
+            <?ifdef CORPORATE_FEATURES ?>
+            <Component Id="licmgr.ppl" Guid="$(var.licmgr.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="licmgr.ppl" Name="licmgr.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\licmgr.ppl" />
+						</Component>
+						<?endif ?>
+						<Component Id="Load46St.dll" Guid="$(var.Load46St.dll_Guid)" Location="local" DiskId="1">
+							<File Id="Load46St.dll" Name="Load46St.dll" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\Load46St.dll" />
+						</Component>
+						<Component Id="MailMsg.ppl" Guid="$(var.MailMsg.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="MailMsg.ppl" Name="MailMsg.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\MailMsg.ppl" />
+						</Component>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="maildisp.ppl" Guid="$(var.maildisp.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="maildisp.ppl" Name="maildisp.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\maildisp.ppl" />
+						</Component>
+						<?endif ?>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="msdll.txt" Guid="$(var.msdll.txt_Guid)" Location="local" DiskId="1">
+							<File Id="msdll.txt" Name="msdll.txt" src="$(env.data_path)\Program Files\msdll.txt" Vital="yes"
+								KeyPath="yes" />
+						</Component>
+						<?endif ?>
+						<Component Id="MAPIEDK.dll" Guid="$(var.MAPIEDK.dll_Guid)" Location="local" DiskId="1">
+							<File Id="MAPIEDK.dll" Name="MAPIEDK.dll" src="$(env.data_path)\Program Files\MAPIEDK.dll" Vital="yes"
+								KeyPath="yes" />
+						</Component>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="mc.ppl" Guid="$(var.mc.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="mc.ppl" Name="mc.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\mc.ppl" />
+							<Registry Root="HKLM" Key="$(var.HKLM_PROFILES)\Antivirus\profiles\Mail_Monitoring" Name="installed" Type="integer" Value="1" />
+						</Component>
+						<?endif ?>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="mcou.dll" Guid="$(var.mcou.dll_Guid)" Location="local" DiskId="1">
+							<File Id="mcou.dll" Name="mcou.dll" src="$(env.data_path)\Program Files\mcou.dll" Vital="yes" KeyPath="yes" />
+						</Component>
+						<?endif ?>
+            <?ifdef ADVANCED_FEATURES ?>
+            <Component Id="mcouas.dll" Guid="$(var.mcouas.dll_Guid)" Location="local" DiskId="1">
+							<File Id="mcouas.dll" Name="mcouas.dll" src="$(env.data_path)\Program Files\mcouas.dll" Vital="yes" KeyPath="yes" />
+						</Component>
+						<?endif ?>
+						<Component Id="mdb.ppl" Guid="$(var.mdb.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="mdb.ppl" Name="mdb.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\mdb.ppl" />
+						</Component>
+						<Component Id="MDMAP.ppl" Guid="$(var.MDMAP.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="MDMAP.ppl" Name="MDMAP.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\MDMAP.ppl" />
+						</Component>
+						<Component Id="MemModSc.ppl" Guid="$(var.MemModSc.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="MemModSc.ppl" Name="MemModSc.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\MemModSc.ppl" />
+						</Component>
+						<Component Id="MemScan.ppl" Guid="$(var.MemScan.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="MemScan.ppl" Name="MemScan.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\MemScan.ppl" />
+						</Component>
+						<Component Id="minizip.ppl" Guid="$(var.minizip.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="minizip.ppl" Name="minizip.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\minizip.ppl" />
+						</Component>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="miscr3.dll" Guid="$(var.miscr3.dll_Guid)" Location="local" Transitive="yes" DiskId="1">
+							<Condition><![CDATA[VersionNT >= 500 AND VersionNT < 600 AND NOT VersionNT64]]></Condition>
+							<!--<RemoveFile Id="miscr3.dll" Name="miscr3.dll" On="install"/>-->
+							<File Id="miscr3.dll" Name="miscr3.dll" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\miscr3.dll" />
+						</Component>
+						<?endif?>
+						<Component Id="mkavio.ppl" Guid="$(var.mkavio.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="mkavio.ppl" Name="mkavio.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\mkavio.ppl" />
+						</Component>
+						<Component Id="msoe.ppl" Guid="$(var.msoe.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="msoe.ppl" Name="msoe.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\msoe.ppl" />
+						</Component>
+						<Component Id="Microsoft.VC80.CRT.manifest" Guid="$(var.Microsoft.VC80.CRT.manifest_Guid)" Location="local" DiskId="1">
+							<File Id="Microsoft.VC80.CRT.manifest" Name="VC80.man" LongName="Microsoft.VC80.CRT.manifest" src="$(env.data_path)\Program Files\MS\Microsoft.VC80.CRT.manifest" Vital="yes"
+								KeyPath="yes" />
+						</Component>
+						<Component Id="msvcm80.dll" Guid="$(var.msvcm80.dll_Guid)" Location="local" DiskId="1">
+							<File Id="msvcm80.dll" Name="msvcm80.dll" src="$(env.data_path)\Program Files\MS\msvcm80.dll" Vital="yes"
+								KeyPath="yes" />
+						</Component>
+						<Component Id="msvcp80.dll" Guid="$(var.msvcp80.dll_Guid)" Location="local" DiskId="1">
+							<File Id="msvcp80.dll" Name="msvcp80.dll" src="$(env.data_path)\Program Files\MS\msvcp80.dll" Vital="yes"
+								KeyPath="yes" />
+						</Component>
+						<Component Id="msvcr80.dll" Guid="$(var.msvcr80.dll_Guid)" Location="local" DiskId="1" Transitive="yes">
+							<File Id="msvcr80.dll" Name="msvcr80.dll" src="$(env.data_path)\Program Files\MS\msvcr80.dll" Vital="yes"
+								KeyPath="yes" />
+						</Component>
+						<Component Id="ndetect.ppl" Guid="$(var.ndetect.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="ndetect.ppl" Name="ndetect.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\ndetect.ppl" />
+						</Component>
+						<Component Id="nfio.ppl" Guid="$(var.nfio.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="nfio.ppl" Name="nfio.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\nfio.ppl" />
+						</Component>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="NNTPprtc.ppl" Guid="$(var.NNTPprtc.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="NNTPprtc.ppl" Name="NNTPprtc.ppl" Vital="yes"	KeyPath="yes" src="$(env.data_path)\Program Files\NNTPprtc.ppl" />
+							<Registry Root="HKLM" Key="$(var.HKLM_PROFILES)\NNTP" Name="installed" Type="integer" Value="1" />
+						</Component>
+						<?endif ?>
+						<Component Id="NTFSstrm.ppl" Guid="$(var.NTFSstrm.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="NTFSstrm.ppl" Name="NTFSstrm.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\NTFSstrm.ppl" />
+						</Component>
+						<?if not ($(env.product_type) = SOS) ?>
+						<Component Id="oas.ppl" Guid="$(var.oas.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="oas.ppl" Name="oas.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\oas.ppl" />
+							<Registry Root="HKLM" Key="$(var.HKLM_PROFILES)\Antivirus\profiles\File_Monitoring" Name="installed" Type="integer" Value="1" />
+						</Component>
+						<?endif?>
+						<Component Id="ods.ppl" Guid="$(var.ods.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="ods.ppl" Name="ods.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\ods.ppl" />
+						</Component>
+            <?ifdef ADVANCED_FEATURES ?>
+            <Component Id="oeas.dll" Guid="$(var.oeas.dll_Guid)" Location="local" Transitive="yes" DiskId="1">
+							<Condition><![CDATA[NOT VersionNT64]]></Condition>
+							<File Id="oeas.dll" Name="oeas.dll" src="$(env.data_path)\Program Files\oeas.dll" Vital="yes" KeyPath="yes" />
+						</Component>
+						<?endif ?>
+<!--
+		<?ifdef ADVANCED_FEATURES ?>
+			<Component Id="operabannerdeny.vbs" Guid="$(var.opera_banner_deny.vbs_Guid)" Location="local" DiskId="1">
+				<File Id="opera_banner_deny.vbs" Name="opera_1.vbs" LongName="opera_banner_deny.vbs" Vital="yes"
+					KeyPath="yes" src="$(env.data_path)\Program Files\opera_banner_deny.vbs" />
+			</Component>
+		<?endif ?>
+-->
+						<Component Id="params.ppl" Guid="$(var.params.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="params.ppl" Name="params.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\params.ppl" />
+						</Component>
+						<Component Id="passdmap.ppl" Guid="$(var.passdmap.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="passdmap.ppl" Name="passdmap.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\passdmap.ppl" />
+						</Component>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="pdm2rt.ppl" Guid="$(var.pdm2rt.ppl_Guid)" Transitive="yes" Location="local" DiskId="1">
+							<File Id="pdm2rt.ppl" Name="pdm2rt.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\pdm2rt.ppl" />
+						</Component>
+						<?endif ?>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="POP3prtc.ppl" Guid="$(var.POP3prtc.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="POP3prtc.ppl" Name="POP3prtc.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\POP3prtc.ppl" />
+							<Registry Root="HKLM" Key="$(var.HKLM_PROFILES)\POP3" Name="installed" Type="integer" Value="1" />
+						</Component>
+						<?endif ?>
+						<Component Id="PrKernel.ppl" Guid="$(var.PrKernel.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="PrKernel.ppl" Name="PrKernel.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\PrKernel.ppl" />
+						</Component>
+						<Component Id="procmon.ppl" Guid="$(var.procmon.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="procmon.ppl" Name="procmon.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\procmon.ppl" />
+						</Component>
+						<Component Id="prremote.dll" Guid="$(var.prremote.dll_Guid)" Location="local" DiskId="1">
+							<File Id="prremote.dll" Name="prremote.dll" src="$(env.data_path)\Program Files\prremote.dll"
+								Vital="yes" KeyPath="yes" />
+						</Component>
+						<Component Id="prloader.dll" Guid="$(var.prloader.dll_Guid)" Location="local" DiskId="1">
+							<File Id="prloader.dll" Name="prloader.dll" src="$(env.data_path)\Program Files\prloader.dll" Vital="yes"
+								KeyPath="yes" />
+						</Component>
+						<?ifdef PERSONAL_ADVANCED_FEATURES ?>
+						<Component Id="ProxyDet.ppl" Guid="$(var.ProxyDet.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="ProxyDet.ppl" Name="ProxyDet.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\ProxyDet.ppl" />
+						</Component>
+						<?endif?>
+						<Component Id="prseqio.ppl" Guid="$(var.prseqio.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="prseqio.ppl" Name="prseqio.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\prseqio.ppl" />
+						</Component>
+            <?ifdef PERSONAL_ADVANCED_FEATURES ?>
+            <Component Id="PrTransp.ppl" Guid="$(var.PrTransp.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="PrTransp.ppl" Name="PrTransp.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\PrTransp.ppl" />
+						</Component>
+						<?endif?>
+						<Component Id="PrUpdate.ppl" Guid="$(var.PrUpdate.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="PrUpdate.ppl" Name="PrUpdate.ppl" Vital="yes"
+								KeyPath="yes" src="$(env.data_path)\Program Files\PrUpdate.ppl" />
+						</Component>
+						<Component Id="PrUtil.ppl" Guid="$(var.PrUtil.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="PrUtil.ppl" Name="PrUtil.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\PrUtil.ppl" />
+						</Component>
+						<Component Id="pxstub.ppl" Guid="$(var.pxstub.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="pxstub.ppl" Name="pxstub.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\pxstub.ppl" />
+						</Component>
+						<Component Id="qb.ppl" Guid="$(var.qb.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="qb.ppl" Name="qb.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\qb.ppl" />
+						</Component>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="r3hook.dll" Guid="$(var.r3hook.dll_Guid)" Location="local" Transitive="yes" DiskId="1">
+							<Condition><![CDATA[VersionNT >= 600 OR VersionNT64]]></Condition>
+							<File Id="r3hook.dll" Name="r3hook.dll" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\r3hook.dll" />
+							<Registry Root="HKLM" Key="$(var.HKLM_R3H)" Action="createKeyAndRemoveKeyOnUninstall"/>
+						</Component>
+						<?endif?>
+						<Component Id="rar.ppl" Guid="$(var.rar.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="rar.ppl" Name="rar.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\rar.ppl" />
+						</Component>
+						<Component Id="regmap.ppl" Guid="$(var.regmap.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="regmap.ppl" Name="regmap.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\regmap.ppl" />
+						</Component>
+						<Component Id="report.ppl" Guid="$(var.report.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="report.ppl" Name="report.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\report.ppl" />
+						</Component>
+						<Component Id="reportdb.ppl" Guid="$(var.reportdb.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="reportdb.ppl" Name="reportdb.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\reportdb.ppl" />
+						</Component>
+						<Component Id="hips.ppl" Guid="$(var.hips.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="hips.ppl" Name="hips.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\hips.ppl" />
+						</Component>
+						<Component Id="syswatch.ppl" Guid="$(var.syswatch.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="syswatch.ppl" Name="syswatch.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\syswatch.ppl" />
+						</Component>
+						<Component Id="netwatch.ppl" Guid="$(var.netwatch.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="netwatch.ppl" Name="netwatch.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\netwatch.ppl" />
+						</Component>
+						<Component Id="propmap.ppl" Guid="$(var.propmap.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="propmap.ppl" Name="propmap.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\propmap.ppl" />
+						</Component>
+						<Component Id="resip.ppl" Guid="$(var.resip.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="resip.ppl" Name="resip.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\resip.ppl" />
+						</Component>
+						<?if not ($(env.product_type) = SOS) ?>
+						<Component Id="rescuecd.zip" Guid="$(var.rescuecd.zip_Guid)" Location="local" DiskId="1">
+							<File Id="rescuecd.zip" Name="rescuecd.zip" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\rescuecd.zip" />
+						</Component>
+						<?endif?>
+            <?if not ($(env.product_type) = SOS) ?>
+            <Component Id="rescue32.exe" Guid="$(var.rescue32.exe_Guid)" Location="local" DiskId="1">
+							<File Id="rescue32.exe" Name="rescue32.exe" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\rescue32.exe" />
+						</Component>
+						<?endif?>
+						<Component Id="schedule.ppl" Guid="$(var.schedule.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="schedule.ppl" Name="schedule.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\schedule.ppl" />
+						</Component>
+						<Component Id="SFDB.ppl" Guid="$(var.SFDB.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="SFDB.ppl" Name="SFDB.PPL" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\SFDB.PPL" />
+						</Component>
+						<Component Id="shellex.dll" Guid="$(var.shellex.dll_Guid)" Location="local" DiskId="1">
+							<File Id="shellex.dll" Name="shellex.dll" src="$(env.data_path)\Program Files\shellex.dll" Vital="yes" KeyPath="yes" />
+						</Component>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="SMTPprtc.ppl" Guid="$(var.SMTPprtc.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="SMTPprtc.ppl" Name="SMTPprtc.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\SMTPprtc.ppl" />
+							<Registry Root="HKLM" Key="$(var.HKLM_PROFILES)\SMTP" Name="installed" Type="integer" Value="1" />
+						</Component>
+						<?endif ?>
+						<Component Id="StEnum2.ppl" Guid="$(var.StEnum2.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="StEnum2.ppl" Name="StEnum2.ppl" Vital="yes"
+								KeyPath="yes" src="$(env.data_path)\Program Files\StEnum2.ppl" />
+						</Component>
+						<Component Id="StdComp.ppl" Guid="$(var.StdComp.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="StdComp.ppl" Name="StdComp.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\StdComp.ppl" />
+						</Component>
+						<Component Id="stored.ppl" Guid="$(var.stored.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="stored.ppl" Name="stored.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\stored.ppl" />
+						</Component>
+						<Component Id="SuperIO.ppl" Guid="$(var.SuperIO.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="SuperIO.ppl" Name="SuperIO.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\SuperIO.ppl" />
+						</Component>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="SCIEPlgn.dll" Guid="$(var.SCIEPlgn.dll_Guid)" Location="local" DiskId="1">
+							<File Id="SCIEPlgn.dll" Name="SCIEPlgn.dll" src="$(env.data_path)\Program Files\SCIEPlgn.dll" Vital="yes" KeyPath="yes" />
+						</Component>
+						<?endif ?>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="scrchpg.dll" Guid="$(var.scrchpg.dll_Guid)" Location="local" DiskId="1">
+							<File Id="scrchpg.dll" Name="scrchpg.dll" src="$(env.data_path)\Program Files\scrchpg.dll" Vital="yes" KeyPath="yes" />
+						</Component>
+						<?endif ?>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="sc.ppl" Guid="$(var.sc.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="sc.ppl" Name="sc.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\sc.ppl" />
+							<Registry Root="HKLM" Key="$(var.HKLM_PROFILES)\Antivirus\profiles\Web_Monitoring" Name="installed" Type="integer" Value="1" />
+						</Component>
+						<?endif ?>
+            <?ifdef ADVANCED_FEATURES ?>
+            <Component Id="spamtst.ppl" Guid="$(var.spamtst.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="spamtst.ppl" Name="spamtst.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\spamtst.ppl" />
+						</Component>
+						<?endif ?>
+						<Component Id="stat.ppl" Guid="$(var.stat.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="stat.ppl" Name="stat.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\stat.ppl" />
+							<CreateFolder Directory="CommonAppDataDataStatDir" />
+						</Component>
+						<Component Id="TempFile.ppl" Guid="$(var.TempFile.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="TempFile.ppl" Name="TempFile.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\TempFile.ppl" />
+						</Component>
+						<Component Id="thpimpl.ppl" Guid="$(var.thpimpl.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="thpimpl.ppl" Name="thpimpl.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\thpimpl.ppl" />
+						</Component>
+						<Component Id="timer.ppl" Guid="$(var.timer.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="timer.ppl" Name="timer.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\timer.ppl" />
+						</Component>
+						<Component Id="tm.ppl" Guid="$(var.tm.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="tm.ppl" Name="tm.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\tm.ppl" />
+						</Component>
+            <?ifdef BASE_FEATURES ?>
+            <Component Id="TrafMon2.ppl" Guid="$(var.TrafMon2.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="TrafMon2.ppl" Name="TrafMon2.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\TrafMon2.ppl" />
+							<Registry Root="HKLM" Key="$(var.HKLM_PROFILES)\TrafficMonitor" Name="installed" Type="integer" Value="1" />
+						</Component>
+						<?endif ?>
+            <?ifdef ADVANCED_FEATURES ?>
+            <Component Id="TrainSup.ppl" Guid="$(var.TrainSup.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="TrainSup.ppl" Name="TrainSup.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\TrainSup.ppl" />
+						</Component>
+						<?endif ?>
+						<Component Id="UnArj.ppl" Guid="$(var.UnArj.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="UnArj.ppl" Name="UnArj.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\UnArj.ppl" />
+						</Component>
+						<Component Id="UniArc.ppl" Guid="$(var.UniArc.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="UniArc.ppl" Name="UniArc.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\UniArc.ppl" />
+						</Component>
+						<Component Id="UnLZX.ppl" Guid="$(var.UnLZX.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="UnLZX.ppl" Name="UnLZX.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\UnLZX.ppl" />
+						</Component>
+						<Component Id="Unreduce.ppl" Guid="$(var.Unreduce.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="Unreduce.ppl" Name="Unreduce.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\Unreduce.ppl" />
+						</Component>
+						<Component Id="UNSHRINK.ppl" Guid="$(var.UNSHRINK.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="UNSHRINK.ppl" Name="UNSHRINK.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\UNSHRINK.ppl" />
+						</Component>
+						<Component Id="UnStored.ppl" Guid="$(var.UnStored.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="UnStored.ppl" Name="UnStored.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\UnStored.ppl" />
+						</Component>
+            <?ifdef PERSONAL_ADVANCED_FEATURES ?>
+            <Component Id="urlflt.ppl" Guid="$(var.urlflt.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="urlflt.ppl" Name="urlflt.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\urlflt.ppl" />
+						</Component>
+						<?endif ?>
+						<Component Id="vkbd.dll" Guid="$(var.vkbd.dll_Guid)" Location="local" DiskId="1">
+							<File Id="vkbd.dll" Name="vkbd.dll" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\vkbd.dll" />
+						</Component>
+						<Component Id="vmarea.ppl" Guid="$(var.vmarea.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="vmarea.ppl" Name="vmarea.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\vmarea.ppl" />
+						</Component>
+						<Component Id="WDiskIO.ppl" Guid="$(var.WDiskIO.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="WDiskIO.ppl" Name="WDiskIO.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\WDiskIO.ppl" />
+						</Component>
+						<Component Id="WinReg.ppl" Guid="$(var.WinReg.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="WinReg.ppl" Name="WinReg.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\WinReg.ppl" />
+						</Component>
+						<?if not ($(env.product_type) = SOS) ?>
+						<Component Id="wmiav.exe" Guid="$(var.wmiav.exe_Guid)" Location="local" DiskId="1" >
+							<Condition>VersionNT >= 600</Condition>
+							<File Id="wmiav.exe" Name="wmiav.exe" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\wmiav.exe" />
+						</Component>
+						<?endif?>
+
+	<?ifdef BASE_FEATURES ?>
+	  <Component Id="netdtls.ppl" Guid="$(var.netdtls.ppl_Guid)" Location="local" Transitive="yes" DiskId="1">
+	    <File Id="netdtls.ppl" Name="netdtls.ppl" src="$(env.data_path)\Program Files\netdtls.ppl" Vital="yes" KeyPath="yes" />
+	  </Component>
+	<?endif?>
+
+            <?if not ($(env.product_type) = SOS) ?>
+            <Component Id="wmias.exe" Guid="$(var.wmias.exe_Guid)" Location="local" DiskId="1" >
+							<Condition>VersionNT >= 600</Condition>
+							<File Id="wmias.exe" Name="wmias.exe" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\wmias.exe" />
+						</Component>
+						<?endif?>
+            <?ifdef ADVANCED_FEATURES ?>
+            <Component Id="wmifw.exe" Guid="$(var.wmifw.exe_Guid)" Location="local" DiskId="1" >
+							<Condition>VersionNT >= 600</Condition>
+							<File Id="wmifw.exe" Name="wmifw.exe" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\wmifw.exe" />
+						</Component>
+						<?endif?>
+            <?if not ($(env.product_type) = SOS) ?>
+            <Component Id="wmihlpr.ppl" Guid="$(var.wmihlpr.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="wmihlpr.ppl" Name="wmihlpr.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\wmihlpr.ppl" />
+						</Component>
+						<?endif?>
+						<Component Id="xorio.ppl" Guid="$(var.xorio.ppl_Guid)" Location="local" DiskId="1">
+							<File Id="xorio.ppl" Name="xorio.ppl" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\xorio.ppl" />
+						</Component>
+            <?ifdef CORPOTATE_FEATURES ?>
+            <Component Id="uninstall.kpd" Guid="$(var.uninstall.kpd_Guid)" Location="local" DiskId="1">
+							<File Id="uninstall.kpd" Name="uninstll.kpd" Vital="yes" KeyPath="yes" src="$(env.temp_path)\uninstall.kpd" />
+						</Component>
+						<?endif ?>
+		          
+						<!-- DocDir -->
+						<Directory Id="DocDir" Name="Doc">
+<!--
+							<Component Id="context.chm" Guid="$(var.context.chm_Guid)" Location="local" DiskId="1">
+								<File Id="context.chm" Name="context.chm" Vital="yes" KeyPath="yes" src="$(env.dataloc_path)\Program Files\Doc\$(env.product_type)\context.chm"/>
+							</Component>
+-->
+							<Component Id="license.txt" Guid="$(var.license.txt_Guid)" Location="local" DiskId="1">
+								<File Id="license.txt" Name="license.txt" Vital="yes" KeyPath="yes" src="$(env.localization_product_path)\license_$(var.ProductStatus).txt"/>
+							</Component>
+						</Directory>
+
+		<!-- KLIFX64DIR -->
+				<Directory Id="KLIFX64DIR" Name="KLIFX64">
+		              <?if not ($(env.product_type) = SOS) ?>
+              <Component Id="mklif.cat_X64" Guid="$(var.mklif.cat_X64_Guid)" Location="local" DiskId="3" Transitive="yes">
+								<Condition>VersionNT64</Condition>
+								<File Id="mklif.cat_X64" Name="klif.cat" src="$(env.data_path)\Program Files\KLIFX64\klif.cat" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif?>
+              <?if not ($(env.product_type) = SOS) ?>
+              <Component Id="mklif.inf_X64" Guid="$(var.mklif.inf_X64_Guid)" Location="local" DiskId="3" Transitive="yes">
+								<Condition>VersionNT64</Condition>
+								<File Id="mklif.inf_X64" Name="klif.inf" src="$(env.data_path)\Program Files\KLIFX64\klif.inf" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif?>
+              <?if not ($(env.product_type) = SOS) ?>
+              <Component Id="mklif.sys_X64" Guid="$(var.mklif.sys_X64_Guid)" Location="local" DiskId="3" Transitive="yes">
+								<Condition>VersionNT64</Condition>
+								<File Id="mklif.sys_X64" Name="klif.sys" src="$(env.data_path)\Program Files\KLIFX64\klif.sys" Vital="yes" KeyPath="yes" />
+								<Registry Id="Reg_mklif.sys_X64_ProcHash" Root="HKLM" Key="$(var.HKLM_KLIF)\Parameters"	Name="ProcHash"	Type="integer" Value="1" />
+								<Registry Id="Reg_mklif.sys_X64_SysPatch" Root="HKLM" Key="$(var.HKLM_KLIF)\Parameters" Name="SysPatch"	Type="integer" Value="1" />
+							</Component>
+							<?endif?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klfltdev.cat_X64" Guid="$(var.klfltdev.cat_X64_Guid)" Location="local" DiskId="1" Transitive="yes">
+                <Condition>VersionNT64</Condition>
+                <File Id="klfltdev.cat_X64" Name="klfltdev.cat" src="$(env.data_path)\Program Files\KLFLDX64\klfltdev.cat" Vital="yes" KeyPath="yes" />
+              </Component>
+              <?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klfltdev.inf_X64" Guid="$(var.klfltdev.inf_X64_Guid)" Location="local" DiskId="1" Transitive="yes">
+                <Condition>VersionNT64</Condition>
+                <File Id="klfltdev.inf_X64" Name="klfltdev.inf" src="$(env.data_path)\Program Files\KLFLDX64\klfltdev.inf" Vital="yes" KeyPath="yes" />
+              </Component>
+              <?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klfltdev.sys_X64" Guid="$(var.klfltdev.sys_X64_Guid)" Location="local" DiskId="1" Transitive="yes">
+                <Condition>VersionNT64</Condition>
+                <File Id="klfltdev.sys_X64" Name="klfltdev.sys" src="$(env.data_path)\Program Files\KLFLDX64\klfltdev.sys" Vital="yes" KeyPath="yes" />
+              </Component>
+              <?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klbg.cat_X64" Guid="$(var.klbg.cat_X64_Guid)" Location="local" DiskId="1" Transitive="yes">
+                <Condition>VersionNT64</Condition>
+                <File Id="klbg.cat_X64" Name="klbg.cat" src="$(env.data_path)\Program Files\KLBG64\klbg.cat" Vital="yes" KeyPath="yes" />
+              </Component>
+              <?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klbg.inf_X64" Guid="$(var.klbg.inf_X64_Guid)" Location="local" DiskId="1" Transitive="yes">
+                <Condition>VersionNT64</Condition>
+                <File Id="klbg.inf_X64" Name="klbg.inf" src="$(env.data_path)\Program Files\KLBG64\klbg.inf" Vital="yes" KeyPath="yes" />
+              </Component>
+              <?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klbg.sys_X64" Guid="$(var.klbg.sys_X64_Guid)" Location="local" DiskId="1" Transitive="yes">
+                <Condition>VersionNT64</Condition>
+                <File Id="klbg.sys_X64" Name="klbg.sys" src="$(env.data_path)\Program Files\KLBG64\klbg.sys" Vital="yes" KeyPath="yes" />
+              </Component>
+              <?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="kl1.cat_X64" Guid="$(var.kl1.cat_X64_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition>VersionNT64</Condition>
+								<File Id="kl1.cat_X64" Name="kl1.cat" src="$(env.data_path)\Program Files\KL1X64\kl1.cat" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="kl1.inf_X64" Guid="$(var.kl1.inf_X64_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition>VersionNT64</Condition>
+								<File Id="kl1.inf_X64" Name="kl1.inf" src="$(env.data_path)\Program Files\KL1X64\kl1.inf" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="kl1.sys_X64" Guid="$(var.kl1.sys_X64_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition>VersionNT64</Condition>
+								<File Id="kl1.sys_X64" Name="kl1.sys" src="$(env.data_path)\Program Files\KL1X64\kl1.sys" Vital="yes" KeyPath="yes" />
+								<Registry Root="HKLM" Key="$(var.HKLM_KL1)" Name="EthFilter" Type="binary" Value="0008DD86" />
+							</Component>
+							<?endif ?>
+              <?if not ($(env.product_type) = SOS) ?>
+              <Component Id="drvins64.exe" Guid="$(var.drvins64.exe_Guid)" Location="local" DiskId="3" Transitive="yes">
+								<Condition>VersionNT64</Condition>
+								<File Id="drvins64.exe" Name="drvins64.exe" src="$(env.data_path)\Program Files\KLIFX64\drvins64.exe" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+              <?if not ($(env.product_type) = SOS) ?>
+              <Component Id="klogon.dll_X64" Guid="$(var.klogon.dll_X64_Guid)" Location="local" Transitive="yes" DiskId="1">
+								<Condition>VersionNT64</Condition>
+								<File Id="klogon.dll_X64" Name="klogon.dll" src="$(env.data_path)\Program Files\KLIFX64\klogon.dll" />
+							</Component>
+							<?endif ?>
+              <?if not ($(env.product_type) = SOS) ?>
+              <Component Id="system64.inf" Guid="$(var.system64.inf_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition>VersionNT64</Condition>
+								<File Id="system64.inf" Name="system64.inf" src="$(env.data_path)\Program Files\KLIFX64\system64.inf" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klop.dat_X64" Guid="$(var.klop.dat_X64_Guid)" Location="local" Transitive="yes" DiskId="1">
+								<Condition>VersionNT64</Condition>
+								<File Id="klop.dat_X64" Name="klop.dat" src="$(env.data_path)\Program Files\KLIFX64\klop.dat" Vital="yes" KeyPath="yes"/>
+							</Component>
+              <?ifdef BASE_FEATURES ?>
+              <?endif?>
+							<Component Id="klopx64.inf" Guid="$(var.klopx64.inf_Guid)" Location="local" Transitive="yes" DiskId="1">
+								<Condition>VersionNT64</Condition>
+								<File Id="klopx64.inf" Name="klopx64.inf" src="$(env.data_path)\Program Files\KLIFX64\klopx64.inf" Vital="yes" KeyPath="yes"/>
+							</Component>
+							<?endif?>
+            </Directory>
+
+              <!-- KLIFW2KDIR --> 
+              <Directory Id="KLIFW2KDIR" Name="KLIFW2K">
+                <?if not ($(env.product_type) = SOS) ?>
+
+                  <Component Id="mklif.cat_W2K" Guid="$(var.mklif.cat_W2K_Guid)" Location="local" DiskId="4" Transitive="yes">
+                    <Condition><![CDATA[VersionNT < 501 AND NOT VersionNT64]]></Condition>
+                    <File Id="mklif.cat_W2K" Name="klif.cat" src="$(env.data_path)\Program Files\klifW2K\klif.cat" Vital="yes" KeyPath="yes" />
+                  </Component>
+
+                  <Component Id="mklif.inf_W2K" Guid="$(var.mklif.inf_W2K_Guid)" Location="local" DiskId="4" Transitive="yes">
+                    <Condition><![CDATA[VersionNT < 501 AND NOT VersionNT64]]></Condition>
+                    <File Id="mklif.inf_W2K" Name="klif.inf" src="$(env.data_path)\Program Files\klifW2K\klif.inf" Vital="yes" KeyPath="yes" />
+                  </Component>
+
+                  <Component Id="mklif.sys_W2K" Guid="$(var.mklif.sys_W2K_Guid)" Location="local" DiskId="4" Transitive="yes">
+                    <Condition><![CDATA[VersionNT < 501 AND NOT VersionNT64]]></Condition>
+                    <File Id="mklif.sys_W2K" Name="klif.sys" src="$(env.data_path)\Program Files\klifW2K\klif.sys" Vital="yes" KeyPath="yes" />
+                    <Registry Id="Reg_mklif.sys_W2K_ProcHash" Root="HKLM" Key="$(var.HKLM_KLIF)\Parameters" Name="ProcHash" Type="integer" Value="1" />
+                    <Registry Id="Reg_mklif.sys_W2K_SysPatch" Root="HKLM" Key="$(var.HKLM_KLIF)\Parameters" Name="SysPatch" Type="integer" Value="1" />
+                  </Component>
+
+                  <Component Id="drvins32.exe_W2K" Guid="$(var.drvins32.exe_W2K_Guid)" Location="local" DiskId="4" Transitive="yes">
+                    <Condition><![CDATA[VersionNT < 501 AND NOT VersionNT64]]></Condition>
+                    <File Id="drvins32.exe_W2K" Name="drvins32.exe" src="$(env.data_path)\Program Files\klifx86\drvins32.exe" Vital="yes" KeyPath="yes" />
+                  </Component>
+
+                  <?ifdef BASE_FEATURES ?>
+                  <Component Id="klfltdev.cat_W2K" Guid="$(var.klfltdev.cat_W2K_Guid)" Location="local" DiskId="1" Transitive="yes">
+                    <Condition><![CDATA[VersionNT < 501 AND NOT VersionNT64]]></Condition>
+                    <File Id="klfltdev.cat_W2K" Name="klfltdev.cat" src="$(env.data_path)\Program Files\KLFLDW2K\klfltdev.cat" Vital="yes" KeyPath="yes" />
+                  </Component>
+                  <Component Id="klfltdev.inf_W2K" Guid="$(var.klfltdev.inf_W2K_Guid)" Location="local" DiskId="1" Transitive="yes">
+                    <Condition><![CDATA[VersionNT < 501 AND NOT VersionNT64]]></Condition>
+                    <File Id="klfltdev.inf_W2K" Name="klfltdev.inf" src="$(env.data_path)\Program Files\KLFLDW2K\klfltdev.inf" Vital="yes" KeyPath="yes" />
+                  </Component>
+                  <Component Id="klfltdev.sys_W2K" Guid="$(var.klfltdev.sys_W2K_Guid)" Location="local" DiskId="1" Transitive="yes">
+                    <Condition><![CDATA[VersionNT < 501 AND NOT VersionNT64]]></Condition>
+                    <File Id="klfltdev.sys_W2K" Name="klfltdev.sys" src="$(env.data_path)\Program Files\KLFLDW2K\klfltdev.sys" Vital="yes" KeyPath="yes" />
+                  </Component>
+                  <?endif?>
+
+                <?endif?>
+              </Directory>
+
+              <!-- KLIFX86DIR --> 
+              <Directory Id="KLIFX86DIR" Name="KLIFX86">
+                <?if not ($(env.product_type) = SOS) ?>
+
+                  <Component Id="mklif.cat_X86" Guid="$(var.mklif.cat_X86_Guid)" Location="local" DiskId="2" Transitive="yes">
+                    <Condition><![CDATA[VersionNT >= 501 AND NOT VersionNT64]]></Condition>
+                    <File Id="mklif.cat_X86" Name="klif.cat" src="$(env.data_path)\Program Files\klifX86\klif.cat" Vital="yes" KeyPath="yes" />
+                  </Component>
+
+                  <Component Id="mklif.inf_X86" Guid="$(var.mklif.inf_X86_Guid)" Location="local" DiskId="2" Transitive="yes">
+                    <Condition><![CDATA[VersionNT >= 501 AND NOT VersionNT64]]></Condition>
+                    <File Id="mklif.inf_X86" Name="klif.inf" src="$(env.data_path)\Program Files\klifX86\klif.inf" Vital="yes" KeyPath="yes" />
+                  </Component>
+
+                  <Component Id="mklif.sys_X86" Guid="$(var.mklif.sys_X86_Guid)" Location="local" DiskId="2" Transitive="yes">
+                    <Condition><![CDATA[VersionNT >= 501 AND NOT VersionNT64]]></Condition>
+                    <File Id="mklif.sys_X86" Name="klif.sys" src="$(env.data_path)\Program Files\klifX86\klif.sys" Vital="yes" KeyPath="yes" />
+                    <Registry Id="Reg_mklif.sys_X86_ProcHash" Root="HKLM" Key="$(var.HKLM_KLIF)\Parameters" Name="ProcHash" Type="integer" Value="1" />
+                    <Registry Id="Reg_mklif.sys_X86_SysPatch" Root="HKLM" Key="$(var.HKLM_KLIF)\Parameters" Name="SysPatch" Type="integer" Value="1" />
+                  </Component>
+
+                <?endif?>
+
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klfltdev.cat_X86" Guid="$(var.klfltdev.cat_X86_Guid)" Location="local" DiskId="1" Transitive="yes">
+                <Condition><![CDATA[VersionNT >= 501 AND NOT VersionNT64]]></Condition>
+                <File Id="klfltdev.cat_X86" Name="klfltdev.cat" src="$(env.data_path)\Program Files\KLFLDX86\klfltdev.cat" Vital="yes"
+									KeyPath="yes" />
+              </Component>
+              <?endif?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klfltdev.inf_X86" Guid="$(var.klfltdev.inf_X86_Guid)" Location="local" DiskId="1" Transitive="yes">
+                <Condition><![CDATA[VersionNT >= 501 AND NOT VersionNT64]]></Condition>
+                <File Id="klfltdev.inf_X86" Name="klfltdev.inf" src="$(env.data_path)\Program Files\KLFLDX86\klfltdev.inf" Vital="yes"
+									KeyPath="yes" />
+              </Component>
+              <?endif?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klfltdev.sys_X86" Guid="$(var.klfltdev.sys_X86_Guid)" Location="local" DiskId="1" Transitive="yes">
+                <Condition><![CDATA[VersionNT >= 501 AND NOT VersionNT64]]></Condition>
+                <File Id="klfltdev.sys_X86" Name="klfltdev.sys" src="$(env.data_path)\Program Files\KLFLDX86\klfltdev.sys" Vital="yes" KeyPath="yes" />
+              </Component>
+              <?endif?>
+
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klbg.cat_X86" Guid="$(var.klbg.cat_X86_Guid)" Location="local" DiskId="1" Transitive="yes">
+                <Condition><![CDATA[NOT VersionNT64]]></Condition>
+                <File Id="klbg.cat_X86" Name="klbg.cat" src="$(env.data_path)\Program Files\KLBG86\klbg.cat" Vital="yes" KeyPath="yes" />
+              </Component>
+              <?endif?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klbg.inf_X86" Guid="$(var.klbg.inf_X86_Guid)" Location="local" DiskId="1" Transitive="yes">
+                <Condition><![CDATA[NOT VersionNT64]]></Condition>
+                <File Id="klbg.inf_X86" Name="klbg.inf" src="$(env.data_path)\Program Files\KLBG86\klbg.inf" Vital="yes" KeyPath="yes" />
+              </Component>
+              <?endif?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klbg.sys_X86" Guid="$(var.klbg.sys_X86_Guid)" Location="local" DiskId="1" Transitive="yes">
+                <Condition><![CDATA[NOT VersionNT64]]></Condition>
+                <File Id="klbg.sys_X86" Name="klbg.sys" src="$(env.data_path)\Program Files\KLBG86\klbg.sys" Vital="yes" KeyPath="yes" />
+              </Component>
+              <?endif?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="kl1.cat_X86" Guid="$(var.kl1.cat_X86_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition><![CDATA[VersionNT >= 600 AND NOT VersionNT64]]></Condition>
+								<File Id="kl1.cat_X86" Name="kl1.cat" src="$(env.data_path)\Program Files\kl1x86\kl1.cat" Vital="yes"
+									KeyPath="yes" />
+							</Component>
+							<?endif?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="kl1.inf_X86" Guid="$(var.kl1.inf_X86_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition><![CDATA[VersionNT >= 600 AND NOT VersionNT64]]></Condition>
+								<File Id="kl1.inf_X86" Name="kl1.inf" src="$(env.data_path)\Program Files\kl1x86\kl1.inf" Vital="yes"
+									KeyPath="yes" />
+							</Component>
+							<?endif?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="kl1.sys_X86" Guid="$(var.kl1.sys_X86_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition><![CDATA[VersionNT >= 600 AND NOT VersionNT64]]></Condition>
+								<File Id="kl1.sys_X86" Name="kl1.sys" src="$(env.data_path)\Program Files\kl1x86\kl1.sys" Vital="yes" KeyPath="yes" />
+								<Registry Root="HKLM" Key="$(var.HKLM_KL1)" Name="EthFilter" Type="binary" Value="0008DD86" />
+							</Component>
+							<?endif?>
+              <?if not ($(env.product_type) = SOS) ?>
+              <Component Id="drvins32.exe_X86" Guid="$(var.drvins32.exe_X86_Guid)" Location="local" DiskId="2" Transitive="yes">
+								<Condition><![CDATA[NOT VersionNT64]]></Condition>
+								<File Id="drvins32.exe_X86" Name="drvins32.exe" src="$(env.data_path)\Program Files\klifx86\drvins32.exe" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+
+						</Directory> 
+
+						<!--KLIMX64DIR-->
+						<Directory Id="KLIMX64DIR" Name="KLIMX64">
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klim5.cat_X64" Guid="$(var.klim5.cat_X64_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition><![CDATA[VersionNT64 AND VersionNT < 600]]></Condition>
+								<File Id="klim5.cat_X64" Name="klim5.cat" src="$(env.data_path)\Program Files\Klimx64\klim5.cat" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klim5.inf_X64" Guid="$(var.klim5.inf_X64_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition><![CDATA[VersionNT64 AND VersionNT < 600]]></Condition>
+								<File Id="klim5.inf_X64" Name="klim5.inf" src="$(env.data_path)\Program Files\Klimx64\klim5.inf" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klim5_m.inf_X64" Guid="$(var.klim5_m.inf_X64_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition><![CDATA[VersionNT64 AND VersionNT < 600]]></Condition>
+								<File Id="klim5_m.inf_X64" Name="klim5_m.inf" src="$(env.data_path)\Program Files\Klimx64\klim5_m.inf" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klim5.sys_X64" Guid="$(var.klim5.sys_X64_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition><![CDATA[VersionNT64 AND VersionNT < 600]]></Condition>
+								<File Id="klim5.sys_X64" Name="klim5.sys" src="$(env.data_path)\Program Files\Klimx64\klim5.sys" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klim6.cat_X64" Guid="$(var.klim6.cat_X64_Guid)" Location="local" DiskId="1" Transitive="yes" >
+								<Condition><![CDATA[VersionNT64 AND VersionNT >= 600]]></Condition>
+								<File Id="klim6.cat_X64" Name="klim6.cat" src="$(env.data_path)\Program Files\Klimx64\klim6.cat" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klim6.inf_X64" Guid="$(var.klim6.inf_X64_Guid)" Location="local" DiskId="1" Transitive="yes" >
+								<Condition><![CDATA[VersionNT64 AND VersionNT >= 600]]></Condition>
+								<File Id="klim6.inf_X64" Name="klim6.inf" src="$(env.data_path)\Program Files\Klimx64\klim6.inf" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klim6.sys_X64" Guid="$(var.klim6.sys_X64_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition><![CDATA[VersionNT64 AND VersionNT >= 600]]></Condition>
+								<File Id="klim6.sys_X64" Name="klim6.sys" src="$(env.data_path)\Program Files\klimx64\klim6.sys" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="netcfg.exe" Guid="$(var.netcfg.exe_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition>VersionNT64</Condition>
+								<File Id="netcfg.exe" Name="netcfg.exe" src="$(env.data_path)\Program Files\klimx64\netcfg.exe" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="netcfg.dll" Guid="$(var.netcfg.dll_Guid)" Location="local" DiskId="1" Transitive="yes" >
+								<Condition>VersionNT64</Condition>
+								<File Id="netcfg.dll" Name="netcfg.dll" src="$(env.data_path)\Program Files\klimx64\netcfg.dll" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+						</Directory>
+
+						<!-- KLIMX86DIR -->
+						<Directory Id="KLIMX86DIR" Name="KLIMX86">
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klim5.cat_X86" Guid="$(var.klim5.cat_X86_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition><![CDATA[NOT NOKLIM5 AND VersionNT < 600 AND NOT VersionNT64]]></Condition>
+								<File Id="klim5.cat_X86" Name="klim5.cat" src="$(env.data_path)\Program Files\Klimx86\klim5.cat" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klim5.inf_X86" Guid="$(var.klim5.inf_X86_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition><![CDATA[NOT NOKLIM5 AND VersionNT < 600 AND NOT VersionNT64]]></Condition>
+								<File Id="klim5.inf_X86" Name="klim5.inf" src="$(env.data_path)\Program Files\Klimx86\klim5.inf" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klim5_m.inf_X86" Guid="$(var.klim5_m.inf_X86_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition><![CDATA[NOT NOKLIM5 AND VersionNT < 600 AND NOT VersionNT64]]></Condition>
+								<File Id="klim5_m.inf_X86" Name="klim5_m.inf" src="$(env.data_path)\Program Files\Klimx86\klim5_m.inf" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klim5.sys_X86" Guid="$(var.klim5.sys_X86_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition><![CDATA[NOT NOKLIM5 AND VersionNT < 600 AND NOT VersionNT64]]></Condition>
+								<File Id="klim5.sys_X86" Name="klim5.sys" src="$(env.data_path)\Program Files\Klimx86\klim5.sys" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klim6.cat" Guid="$(var.klim6.cat_X86_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition><![CDATA[VersionNT >= 600 AND NOT VersionNT64]]></Condition>
+								<File Id="klim6.cat" Name="klim6.cat" src="$(env.data_path)\Program Files\Klimx86\klim6.cat" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klim6.inf" Guid="$(var.klim6.inf_X86_Guid)" Location="local" DiskId="1" Transitive="yes" >
+								<Condition><![CDATA[VersionNT >= 600 AND NOT VersionNT64]]></Condition>
+								<File Id="klim6.inf" Name="klim6.inf" src="$(env.data_path)\Program Files\Klimx86\klim6.inf" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klim6.sys" Guid="$(var.klim6.sys_X86_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition><![CDATA[VersionNT >= 600 AND NOT VersionNT64]]></Condition>
+								<File Id="klim6.sys" Name="klim6.sys" src="$(env.data_path)\Program Files\Klimx86\klim6.sys" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="netcfg.exe_X86" Guid="$(var.netcfg.exe_X86_Guid)" Location="local" DiskId="1" Transitive="yes" >
+								<Condition><![CDATA[VersionNT >= 500 AND NOT VersionNT64]]></Condition>
+								<File Id="netcfg.exe_X86" Name="netcfg.exe" src="$(env.data_path)\Program Files\Klimx86\netcfg.exe" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="netcfg.dll_X86" Guid="$(var.netcfg.dll_X86_Guid)" Location="local" DiskId="1" Transitive="yes" >
+								<Condition><![CDATA[VersionNT >= 500 AND NOT VersionNT64]]></Condition>
+								<File Id="netcfg.dll_X86" Name="netcfg.dll" src="$(env.data_path)\Program Files\Klimx86\netcfg.dll" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+						</Directory>
+
+						<!-- GUI skins -->
+						<Directory Id="SkinDir" Name="Skin">
+							<?include "$(env.temp_path)/gui_skins.wxi" ?>
+							<?include "$(env.temp_path)/gui_skins_loc.wxi" ?>
+						</Directory>
+
+						<!-- X64DIR -->
+						<Directory Id="X64DIR" Name="x64">
+							<Component Id="Microsoft.VC80.CRT.manifest_X64" Guid="$(var.Microsoft.VC80.CRT.manifest_X64_Guid)" Location="local" DiskId="1" Transitive="yes" >
+								<Condition>VersionNT64</Condition>
+								<File Id="Microsoft.VC80.CRT.manifest_X64" Name="VC80.man" LongName="Microsoft.VC80.CRT.manifest" src="$(env.data_path)\Program Files\x64\MS\Microsoft.VC80.CRT.manifest" Vital="yes" KeyPath="yes" />
+							</Component>
+							<Component Id="msvcm80.dll_X64" Guid="$(var.msvcm80.dll_X64_Guid)" Location="local" DiskId="1" Transitive="yes" >
+								<Condition>VersionNT64</Condition>
+								<File Id="msvcm80.dll_X64" Name="msvcm80.dll" src="$(env.data_path)\Program Files\x64\MS\msvcm80.dll" Vital="yes" KeyPath="yes" />
+							</Component>
+							<Component Id="msvcp80.dll_X64" Guid="$(var.msvcp80.dll_X64_Guid)" Location="local" DiskId="1" Transitive="yes" >
+								<Condition>VersionNT64</Condition>
+								<File Id="msvcp80.dll_X64" Name="msvcp80.dll" src="$(env.data_path)\Program Files\x64\MS\msvcp80.dll" Vital="yes" KeyPath="yes" />
+							</Component>
+							<Component Id="msvcr80.dll_X64" Guid="$(var.msvcr80.dll_X64_Guid)" Location="local" DiskId="1" Transitive="yes" >
+								<Condition>VersionNT64</Condition>
+								<File Id="msvcr80.dll_X64" Name="msvcr80.dll" src="$(env.data_path)\Program Files\x64\MS\msvcr80.dll" Vital="yes" KeyPath="yes" />
+							</Component>
+              <?ifdef ADVANCED_FEATURES ?>
+              <Component Id="adialhk.dll_X64" Guid="$(var.adialhk.dll_X64_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition>VersionNT64</Condition>
+								<File Id="adialhk.dll_X64" Name="adialhk.dll" src="$(env.data_path)\Program Files\x64\adialhk.dll" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+							<Component Id="basegui.ppl_X64" Guid="$(var.basegui.ppl_X64_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition>VersionNT64</Condition>
+								<File Id="basegui.ppl_X64" Name="basegui.ppl" src="$(env.data_path)\Program Files\x64\basegui.ppl" Vital="yes" KeyPath="yes" />
+							</Component>
+              <?ifdef ADVANCED_FEATURES ?>
+              <Component Id="ComStmIO.ppl_X64" Guid="$(var.ComStmIO.ppl_X64_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition>VersionNT64</Condition>
+								<File Id="ComStmIO.ppl_X64" Name="ComStmIO.ppl" src="$(env.data_path)\Program Files\x64\ComStmIO.ppl" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="fssync.dll_X64" Guid="$(var.fssync.dll_X64_Guid)" Location="local" DiskId="1" Transitive="yes" >
+								<Condition>VersionNT64</Condition>
+								<File Id="fssync.dll_X64" Name="fssync.dll" src="$(env.data_path)\Program Files\x64\fssync.dll" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="klscav.dll_X64" Guid="$(var.klscav.dll_X64_Guid)" Location="local" DiskId="1" Transitive="yes" >
+								<Condition>VersionNT64</Condition>
+								<File Id="klscav.dll_X64" Name="klscav.dll" src="$(env.data_path)\Program Files\x64\klscav.dll" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif?>
+							<Component Id="nfio.ppl_X64" Guid="$(var.nfio.ppl_X64_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition>VersionNT64</Condition>
+								<File Id="nfio.ppl_X64" Name="nfio.ppl" src="$(env.data_path)\Program Files\x64\nfio.ppl" Vital="yes" KeyPath="yes" />
+							</Component>
+              <?ifdef ADVANCED_FEATURES ?>
+              <Component Id="oeas.dll_X64" Guid="$(var.oeas.dll_X64_Guid)" Location="local" DiskId="1" Transitive="yes">
+								<Condition>VersionNT64</Condition>
+								<File Id="oeas.dll_X64" Name="oeas.dll" src="$(env.data_path)\Program Files\x64\oeas.dll" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif?>
+							<Component Id="params.ppl_X64" Guid="$(var.params.ppl_X64_Guid)" Location="local" DiskId="1" Transitive="yes" >
+								<Condition>VersionNT64</Condition>
+								<File Id="params.ppl_X64" Name="params.ppl" src="$(env.data_path)\Program Files\x64\params.ppl" Vital="yes" KeyPath="yes" />
+							</Component>
+							<Component Id="prKernel.ppl_X64" Guid="$(var.PrKernel.ppl_X64_Guid)" Location="local" DiskId="1" Transitive="yes" >
+								<Condition>VersionNT64</Condition>
+								<File Id="prKernel.ppl_X64" Name="prKernel.ppl" src="$(env.data_path)\Program Files\x64\prKernel.ppl" Vital="yes" KeyPath="yes" />
+							</Component>
+							<Component Id="prLoader.dll_X64" Guid="$(var.prloader.dll_X64_Guid)" Location="local" DiskId="1" Transitive="yes" >
+								<Condition>VersionNT64</Condition>
+								<File Id="prLoader.dll_X64" Name="prLoader.dll" src="$(env.data_path)\Program Files\x64\prLoader.dll" Vital="yes" KeyPath="yes" />
+							</Component>
+							<Component Id="prremote.dll_X64" Guid="$(var.prremote.dll_X64_Guid)" Location="local" DiskId="1" Transitive="yes" >
+								<Condition>VersionNT64</Condition>
+								<File Id="prremote.dll_X64" Name="prremote.dll" src="$(env.data_path)\Program Files\x64\prremote.dll" Vital="yes" KeyPath="yes" />
+							</Component>
+							<Component Id="pxstub.ppl_X64" Guid="$(var.pxstub.ppl_X64_Guid)" Location="local" DiskId="1" Transitive="yes" >
+								<Condition>VersionNT64</Condition>
+								<File Id="pxstub.ppl_X64" Name="pxstub.ppl" src="$(env.data_path)\Program Files\x64\pxstub.ppl" Vital="yes" KeyPath="yes" />
+							</Component>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="r3hook.dll_X64" Guid="$(var.r3hook.dll_X64_Guid)" Location="local" Transitive="yes" DiskId="1">
+								<Condition>VersionNT64</Condition>
+								<File Id="r3hook.dll_X64" Name="r3hook.dll" src="$(env.data_path)\Program Files\x64\r3hook.dll" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="SCIEPlgn.dll_X64" Guid="$(var.SCIEPlgn.dll_X64_Guid)" Location="local" Transitive="yes" DiskId="1">
+								<Condition>VersionNT64</Condition>
+								<File Id="SCIEPlgn.dll_X64" Name="SCIEPlgn.dll" src="$(env.data_path)\Program Files\x64\SCIEPlgn.dll" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif ?>
+              <?ifdef BASE_FEATURES ?>
+              <Component Id="Scrchpg.dll_X64" Guid="$(var.Scrchpg.dll_X64_Guid)" Location="local" DiskId="1" Transitive="yes" >
+								<Condition>VersionNT64</Condition>
+								<File Id="Scrchpg.dll_X64" Name="scrchpg.dll" src="$(env.data_path)\Program Files\x64\scrchpg.dll" Vital="yes" KeyPath="yes" />
+							</Component>
+							<?endif?>
+							<Component Id="ShellEx.dll_X64" Guid="$(var.shellex.dll_X64_Guid)" Location="local" DiskId="1" Transitive="yes" >
+								<Condition>VersionNT64</Condition>
+								<File Id="ShellEx.dll_X64" Name="ShellEx.dll" src="$(env.data_path)\Program Files\x64\ShellEx.dll" Vital="yes" KeyPath="yes" />
+							</Component>
+							<Component Id="Tempfile.ppl_X64" Guid="$(var.Tempfile.ppl_X64_Guid)" Location="local" DiskId="1" Transitive="yes" >
+								<Condition>VersionNT64</Condition>
+								<File Id="Tempfile.ppl_X64" Name="tempfile.ppl" src="$(env.data_path)\Program Files\x64\tempfile.ppl" Vital="yes" KeyPath="yes" />
+							</Component>
+							<Component Id="vkbd.dll_X64" Guid="$(var.vkbd.dll_X64_Guid)" Location="local" DiskId="1">
+								<Condition>VersionNT64</Condition>
+								<File Id="vkbd64.dll" Name="vkbd64.dll" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\x64\vkbd64.dll" />
+							</Component>
+							<Component Id="WinReg.ppl_X64" Guid="$(var.WinReg.ppl_X64_Guid)" Location="local" DiskId="1" Transitive="yes" >
+								<Condition>VersionNT64</Condition>
+								<File Id="WinReg.ppl_X64" Name="WinReg.ppl" src="$(env.data_path)\Program Files\x64\WinReg.ppl" Vital="yes" KeyPath="yes" />
+							</Component>
+
+
+              <?if not ($(env.product_type) = SOS) ?>
+              <Component Id="wmi64.exe_X64" Guid="$(var.wmi64.exe_X64_Guid)" Location="local" DiskId="1" Transitive="yes" >
+								<Condition>VersionNT64</Condition>
+								<File Id="wmi64.exe_X64" Name="wmi64.exe" Vital="yes" KeyPath="yes" src="$(env.data_path)\Program Files\x64\wmi64.exe" />
+							</Component>
+							<?endif?>
+						</Directory> 
+
+					</Directory> <!-- INSTALLDIR -->
+				</Directory> <!-- KasperskyLabFolder -->				
+			</Directory> <!-- ProgramFilesFolder -->
+
+
+			<Directory Id="ProgramMenuFolder" Name=".">
+				<Directory Id="ProductMenuFolder" Name="$(var.ProductShortFolderName)" LongName="$(loc.ProductName_NOM)">
+					<Component Id="ProductMenuFolderComponent" Guid="$(var.ProductMenuFolderComponent_Guid)" Location="local">
+						<CreateFolder />
+						<Registry Id="RegProductMenuFolderFiles"  Root="HKCU" Key="$(var.HKLM_PRODUCT)" 
+							Name="ProductMenuFolder" Type="integer" Value="1" KeyPath="yes" />
+						<Shortcut Id="ProductShortcutMenu" Directory="ProductMenuFolder" Name="$(var.ProductShortFolderName)"
+							LongName="$(loc.ProductName_NOM)" Target ="[INSTALLDIR]avp.exe" WorkingDirectory="INSTALLDIR" />
+						<Shortcut Id="InternetShortcutMenu" Directory="ProductMenuFolder" Icon="url.ico" Name="$(loc.InternetShortcutShortName)"
+							LongName="$(loc.InternetShortcutLongName)" Target="[INSTALLDIR]kl.url" WorkingDirectory="INSTALLDIR" />
+						<Shortcut Id="LicenseShortcutMenu" Directory="ProductMenuFolder" Name="$(loc.LicenseShortcutShortName)"
+							LongName="$(loc.LicenseShortcutLongName)" Target="[DocDir]license.txt" WorkingDirectory="INSTALLDIR"/>
+						<Shortcut Id="HelpShortcutMenu" Directory="ProductMenuFolder" Name="$(loc.HelpShortcutShortName)"
+							LongName="$(loc.HelpShortcutLongName)" Target="[DocDir]context.chm" WorkingDirectory="INSTALLDIR"/>
+						<?if ($(env.localization_short_name) = jp) And ($(env.product_type) = KAV Or $(env.product_type) = KIS) ?>
+						<Shortcut Id="UserRegShortcutMenu" Directory="ProductMenuFolder" Icon="url.ico" Name="$(loc.UserRegShortcutShortName)"
+							LongName="$(loc.UserRegShortcutLongName)" Target="[INSTALLDIR]userreg.url" WorkingDirectory="INSTALLDIR"/>
+						<?endif?>
+						<?ifndef CORPORATE_FEATURES ?>
+						<RemoveFile Id="ProductVer6MenuFolderFiles" Name="*.*" Directory="ProductVer6MenuFolder" On="both"/>
+						<RemoveFolder Id="ProductVer6MenuFolder" Directory="ProductVer6MenuFolder" On="both"/>
+            <RemoveFile Id="ProductVer7MenuFolderFiles" Name="*.*" Directory="ProductVer7MenuFolder" On="both"/>
+            <RemoveFolder Id="ProductVer7MenuFolder" Directory="ProductVer7MenuFolder" On="both"/>
+            <?endif?>
+					</Component>
+					<!-- Uninstall Shortcut in Start menu folder -->
+					<Component Id="UninstallShortcut" Guid="$(var.UninstallShortcut_Guid)" Location="local" DiskId="1">
+						<CreateFolder />
+						<Registry Id="RegProductMenuFolderUninstallShortcut"  Root="HKCU" Key="$(var.HKLM_PRODUCT)" 
+							Name="UninstallShortcut" Type="integer" Value="1" KeyPath="yes"/>
+						<Shortcut Id="UnintstallShortcut" Directory="ProductMenuFolder" Name="$(loc.UninstallShortcutShortName)" LongName="$(loc.UninstallShortcutLongName)"
+							Target="[SystemFolder]msiexec.exe" Arguments="/i[ProductCode]" WorkingDirectory="SystemFolder"></Shortcut>
+					</Component>
+
+				</Directory>
+        <?ifndef CORPORATE_FEATURES ?>
+        <Directory Id="ProductVer6MenuFolder" Name="$(env.product_type)6.0" LongName="$(loc.ProductNamePrfix) 6.0"></Directory>
+        <Directory Id="ProductVer7MenuFolder" Name="$(env.product_type)7.0" LongName="$(loc.ProductNamePrfix) 7.0"></Directory>
+        <?endif?>
+      </Directory> <!-- ProgramMenuFolder -->
+
+			<Directory Id="SystemFolder" Name="System">
+				<Directory Id="SystemDriversDir" Name="drivers">
+					<!-- drivers for Windows NT platform -->
+					<?ifdef BASE_FEATURES ?>
+            <Component Id="kl1.sys" Guid="$(var.kl1.sys_Guid)" Location="local" Transitive="yes" DiskId="1">
+						<!-- MinVersion: 0,4; Flags: restartreplace; -->
+						<Condition><![CDATA[VersionNT >= 400 AND VersionNT < 600 AND NOT VersionNT64]]></Condition>
+						<File Id="kl1.sys" Name="kl1.sys" src="$(env.data_path)/System32/drivers/kl1.sys" />
+						<Registry Root="HKLM" Key="$(var.HKLM_KL1)" Name="EthFilter" Type="binary" Value="0008DD86" />
+					</Component>
+					<?endif ?>
+
+          <?ifdef BASE_FEATURES ?>
+          <Component Id="klop_xp.dat" Guid="$(var.klop_xp.dat_Guid)" Location="local" Transitive="yes" DiskId="1">
+						<Condition><![CDATA[NOKLIM5 AND VersionNT < 600 AND NOT VersionNT64]]></Condition>
+						<File Id="klop_xp.dat" Name="klop.dat" src="$(env.data_path)/System32/Drivers/xp/klop.dat" />
+						<Registry Id="RegKlopXP_KL1Parameter" Root="HKLM" Key="$(var.HKLM_KL1)\Parameters"
+							Name="klop" Type="string" Value="[SystemDriversDir]klop.dat" />
+					</Component>
+					<?endif?>
+          <?ifdef BASE_FEATURES ?>
+          <Component Id="klop.dat" Guid="$(var.klop.dat_Guid)" Location="local" Transitive="yes" DiskId="1">
+						<Condition><![CDATA[(NOT NOKLIM5 OR VersionNT >= 600) AND NOT VersionNT64]]></Condition>
+						<File Id="klop.dat" Name="klopp.dat" src="$(env.data_path)/System32/Drivers/klopp.dat" />
+						<Registry Id="RegKlop_KL1Parameter" Root="HKLM" Key="$(var.HKLM_KL1)\Parameters" 
+							Name="klopp" Type="string" Value="[SystemDriversDir]klopp.dat" />
+						<RemoveFile Id="klop.dat" Name="klop.dat" On="install"/>
+						<Registry Id="CleanKlopRegistry" Action="remove" Root="HKLM" Key="$(var.HKLM_KL1)\Parameters" Name="Klop" />					</Component>
+					<?endif?>
+          <?ifdef BASE_FEATURES ?>
+          <Component Id="klnetinf.sys" Guid="$(var.klnetinf.sys_Guid)" Location="local" Transitive="yes" DiskId="1">
+            <Condition><![CDATA[NOT VersionNT64]]></Condition>
+            <File Id="klnetinf.sys" Name="klnetinf.sys" src="$(env.data_path)/System32/Drivers/klnetinf.sys" />
+          </Component>
+          <?endif?>
+        </Directory>
+
+				<!-- additional dlls in the System folder -->
+        <?if not ($(env.product_type) = SOS) ?>
+        <Component Id="klogon.dll" Guid="$(var.klogon.dll_Guid)" Location="local" SharedDllRefCount="no" Transitive="yes" DiskId="1">
+					<!-- Flags: uninsrestartdelete restartreplace; -->
+					<Condition>VersionNT AND Not VersionNT64</Condition>
+					<File Id="klogon.dll" Name="klogon.dll" src="$(env.data_path)\System32\klogon.dll" />
+					<!-- settings -->
+					<Registry Id="KLogon_Settings" Root="HKLM" Key="$(var.HKLM_KLOGON)">
+						<Registry Name="Asynchronous" Type="integer" Value="0" />
+						<Registry Name="Impersonate" Type="integer" Value="0" />
+						<Registry Name="DllName" Type="string" Value="[SystemFolder]klogon.dll" />
+						<Registry Name="Logon" Type="string" Value="WLEventStop" />
+						<Registry Name="Startup" Type="string" Value="WLEventStart" />
+						<Registry Name="Lock" Type="string" Value="WLEventStart" />
+						<Registry Name="Unlock" Type="string" Value="WLEventStop" />
+						<Registry Name="Logoff" Type="string" Value="WLEventStart" />
+					</Registry>
+				</Component>
+				<?endif?>
+			</Directory>  <!--"SystemFolder"-->
+
+			<Directory Id="System64Folder" Name="." SourceName="System64"></Directory>
+							
+		</Directory>  <!-- TARGETDIR -->
+	</Fragment>
+</Wix>

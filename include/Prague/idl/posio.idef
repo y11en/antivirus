@@ -1,0 +1,48 @@
+#import "os.idef"
+
+forward interface PosIO;
+typedef PosIO* hPOSIO;
+
+
+
+[
+  version(1)
+  mnemonic(IID_POSIO)
+  id(58008)
+  c_type_name(hPOSIO)
+  comment_ex("Полностью совместим с интерфейсом IO. Представляет упрощенный вариант интерфейса SeqIO. Имеет текущую позицию в IO и может читать/писать от этой позиции.")
+]
+interface PosIO : IO { // IO with Position
+
+  // ------------------------------------
+
+    [
+      comment_ex("Указывает совместимость с интерфейсом")
+      id(135)
+    ]
+    prop tIID pgINTERFACE_COMPATIBILITY; // Interface compatibility
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Текущая позиция сдвигается в зависимости от параметра origin, задающего точку отсчета,  и на величину параметра offset.")
+    ]
+    method tERROR Seek( // Переставляет текущую позицию в IO
+      tQWORD* result,
+      tLONGLONG offset, // Указывает величину смещения для текущей позиции
+      tDWORD origin // Точка отсчета смещения текущей позиции
+    );
+    method tERROR Read( // Читает указанное кол-во байт с текущей позиции
+      tDWORD* result,
+      tPTR buffer, // Принимающий буфер
+      tDWORD count // Кол-во байт, которые требуется прочитать
+    );
+    method tERROR Write( // Записывает указанное кол-во байт с текущей позиции
+      tDWORD* result,
+      tPTR buffer, // Буфер, содержащий данные для записи
+      tDWORD count // Кол-во байт, которые требуется записать
+    );
+
+}
+

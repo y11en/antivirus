@@ -1,0 +1,4 @@
+// ***** AdvWare.AdultIt.a *****
+begin
+ AddEvAlarmByCLSID('C172BB81-B169-37D3-6772-ED188B14FD52', AScriptName, '');
+end.

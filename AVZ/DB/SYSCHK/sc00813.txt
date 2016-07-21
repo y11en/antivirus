@@ -1,0 +1,20 @@
+// ***** Отладчик системного процесса *****
+procedure ScanDebug(ST : string);
+var
+ S : string;
+begin
+ S := Trim(RegKeyStrParamRead('HKEY_LOCAL_MACHINE', 'SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\'+ST, 'Debugger'));
+ if S = '' then exit;
+ AddToLog('$AVZ0573 "'+ST+'" = "'+S+'"');
+end;
+begin
+ ScanDebug('explorer.exe');
+ ScanDebug('notepad.exe');
+ ScanDebug('regedit.exe');
+ ScanDebug('hh.exe');
+ ScanDebug('iexplore.exe');
+ ScanDebug('taskman.exe');
+ ScanDebug('taskmgr.exe');
+ ScanDebug('winhelp.exe');
+ ScanDebug('winhlp32.exe');
+end.

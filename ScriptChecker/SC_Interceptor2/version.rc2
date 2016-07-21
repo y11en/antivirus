@@ -1,0 +1,183 @@
+
+/////////////////////////////////////////////////////////////////////////////
+//
+//  VERSION.RC2
+//  Kaspersky Labs Version resource template
+//  General purpose
+//  Alexey de Mont de Rique [graf@kaspersky.com], Kaspersky Labs Inc. 1999
+//  Mike Pavlyushchik [mike@kaspersky.com], Kaspersky Labs Inc. 2001
+//  Copyright (c) Kaspersky Labs Inc.
+//
+/////////////////////////////////////////////////////////////////////////////
+//
+//  Usage: 
+//    1. Modify VER_PROD.H and VER_FILE.H files according your requirements
+//    2. Make include of this file into your resource (RC or RC2) file
+//
+/////////////////////////////////////////////////////////////////////////////
+
+#ifndef __VERSION_RC2
+#define __VERSION_RC2
+
+#ifndef APSTUDIO_INVOKED // This prevent VS_VERSION_INFO structure overwriting by Visual Studio Resource Editor
+
+#include "WINVER.H"     // Common version defines
+#include "VER_FILE.H"   // File version info
+
+#ifndef VER_ITOA2
+// Works only with digit numbers. Any calculations in parameter is not allowed.
+#define VER_ITOA2(x) #x
+#endif //VER_ITOA2
+#ifndef VER_ITOA
+#define VER_ITOA(x)  VER_ITOA2(x)
+#endif //VER_ITOA
+
+#ifndef VER_COMPANYNAME_STR
+#define VER_COMPANYNAME_STR                "Kaspersky Labs."
+#endif
+
+#ifndef VER_LEGALCOPYRIGHT_STR
+#define VER_LEGALCOPYRIGHT_STR             "Copyright (c) Kaspersky Labs. 1996-2001."
+#endif
+
+#if !defined(VER_FILEVERSION_HIGH) && !defined(VER_PRODUCTVERSION_HIGH)
+#error Either file or product version must be defined
+#endif
+
+#ifndef VER_FILEVERSION_HIGH
+#define VER_FILEVERSION_HIGH               VER_PRODUCTVERSION_HIGH
+#endif
+#ifndef VER_FILEVERSION_LOW
+#define VER_FILEVERSION_LOW                VER_PRODUCTVERSION_LOW
+#endif
+#ifndef VER_FILEVERSION_BUILD
+#define VER_FILEVERSION_BUILD              VER_PRODUCTVERSION_BUILD
+#endif
+#ifndef VER_FILEVERSION_COMPILATION
+#define VER_FILEVERSION_COMPILATION        VER_PRODUCTVERSION_COMPILATION
+#endif
+
+#ifndef VER_PRODUCTVERSION_HIGH
+#define VER_PRODUCTVERSION_HIGH            VER_FILEVERSION_HIGH
+#endif
+#ifndef VER_PRODUCTVERSION_LOW
+#define VER_PRODUCTVERSION_LOW             VER_FILEVERSION_LOW
+#endif
+#ifndef VER_PRODUCTVERSION_BUILD
+#define VER_PRODUCTVERSION_BUILD           VER_FILEVERSION_BUILD
+#endif
+#ifndef VER_PRODUCTVERSION_COMPILATION
+#define VER_PRODUCTVERSION_COMPILATION     VER_FILEVERSION_COMPILATION
+#endif
+
+#define VER_PRODUCTVERSION_HIGH_STR        VER_ITOA( VER_PRODUCTVERSION_HIGH)
+#define VER_PRODUCTVERSION_LOW_STR         VER_ITOA( VER_PRODUCTVERSION_LOW)
+#define VER_PRODUCTVERSION_BUILD_STR       VER_ITOA( VER_PRODUCTVERSION_BUILD)
+#define VER_PRODUCTVERSION_COMPILATION_STR VER_ITOA( VER_PRODUCTVERSION_COMPILATION)
+
+#define VER_FILEVERSION_HIGH_STR           VER_ITOA( VER_FILEVERSION_HIGH)
+#define VER_FILEVERSION_LOW_STR            VER_ITOA( VER_FILEVERSION_LOW)
+#define VER_FILEVERSION_BUILD_STR          VER_ITOA( VER_FILEVERSION_BUILD)
+#define VER_FILEVERSION_COMPILATION_STR    VER_ITOA( VER_FILEVERSION_COMPILATION)
+
+#define VER_PRODUCTVERSION       VER_PRODUCTVERSION_HIGH,VER_PRODUCTVERSION_LOW,VER_PRODUCTVERSION_BUILD,VER_PRODUCTVERSION_COMPILATION
+#define VER_PRODUCTVERSION_STR   VER_PRODUCTVERSION_HIGH_STR "." VER_PRODUCTVERSION_LOW_STR "." VER_PRODUCTVERSION_BUILD_STR "." VER_PRODUCTVERSION_COMPILATION_STR
+
+#define VER_FILEVERSION          VER_FILEVERSION_HIGH,VER_FILEVERSION_LOW,VER_FILEVERSION_BUILD,VER_FILEVERSION_COMPILATION
+#define VER_FILEVERSION_STR      VER_FILEVERSION_HIGH_STR "." VER_FILEVERSION_LOW_STR "." VER_FILEVERSION_BUILD_STR "." VER_FILEVERSION_COMPILATION_STR
+
+#ifndef VER_FILEFLAGS
+#if defined(_DEBUG) || defined(DEBUG) || defined(DBG)
+#define VER_FILEFLAGS 0x1L
+#else
+#define VER_FILEFLAGS 0x0L
+#endif
+#endif
+
+#ifndef VER_FILEOS
+#if defined(_WIN32)
+#define VER_FILEOS        VOS__WINDOWS32
+//#elif defined()
+// other OS
+#else
+#pragma error VER_FILEOS undefined
+#endif
+#endif
+
+#ifndef VER_FILETYPE
+#if defined(_WINDLL) || defined(_USRDLL) || defined(_AFXDLL)
+#define VER_FILETYPE    VFT_DLL
+//#elif defined()
+// Other types:
+// #define VER_FILETYPE VFT_UNKNOWN
+// #define VER_FILETYPE VFT_DRV                 
+// #define VER_FILETYPE VFT_FONT                
+// #define VER_FILETYPE VFT_VXD
+// #define VER_FILETYPE VFT_STATIC_LIB          
+#else
+#define VER_FILETYPE    VFT_UNKNOWN
+#endif
+#endif // VER_FILETYPE
+
+
+#ifndef VER_FILESUBTYPE
+#if VER_FILETYPE==VFT_DRV
+#define VER_FILESUBTYPE   VFT2_DRV_SYSTEM
+#else
+#define VER_FILESUBTYPE   VFT2_UNKNOWN
+#endif
+#endif//VER_FILESUBTYPE
+
+#ifndef VER_FILEFLAGSMASK
+#define VER_FILEFLAGSMASK     VS_FFI_FILEFLAGSMASK
+#endif
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION                        VER_FILEVERSION
+ PRODUCTVERSION                     VER_PRODUCTVERSION
+ FILEFLAGS                          VER_FILEFLAGS
+ FILEFLAGSMASK                      VER_FILEFLAGSMASK
+
+ FILEOS                              VER_FILEOS          
+ FILETYPE                            VER_FILETYPE        
+ FILESUBTYPE                         VER_FILESUBTYPE     
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+#ifdef USE_ANSI_CP
+       BLOCK "040904E4"   /* LANG_ENGLISH/SUBLANG_ENGLISH_US, Ansi CP */
+#else
+       BLOCK "040904B0"   /* LANG_ENGLISH/SUBLANG_ENGLISH_US, Unicode CP */
+#endif
+        BEGIN
+            VALUE "CompanyName",     VER_COMPANYNAME_STR "\0"
+            VALUE "LegalCopyright",  VER_LEGALCOPYRIGHT_STR "\0"
+#ifdef VER_LEGALTRADEMARKS_STR
+            VALUE "LegalTrademarks", VER_LEGALTRADEMARKS_STR "\0"
+#endif
+            VALUE "ProductName",     VER_PRODUCTNAME_STR "\0"
+            VALUE "ProductVersion",  VER_PRODUCTVERSION_STR "\0"
+            VALUE "FileVersion",     VER_FILEVERSION_STR "\0"
+#ifdef VER_COMMENTS_STR
+            VALUE "Comments", VER_COMMENTS_STR "\0"
+#endif
+            VALUE "FileDescription", VER_FILEDESCRIPTION_STR "\0"
+            VALUE "InternalName",    VER_INTERNALNAME_STR "\0"
+            VALUE "OriginalFilename",VER_ORIGINALFILENAME_STR "\0"
+#ifdef VER_SPECIALBUILD_STR
+            VALUE "SpecialBuild", VER_SPECIALBUILD_STR "\0"
+#endif
+#ifdef VER_PRIVATEBUILD_STR
+            VALUE "PrivateBuild", VER_PRIVATEBUILD_STR "\0"
+#endif
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif // APSTUDIO_INVOKED
+
+#endif //__VERSION_RC2

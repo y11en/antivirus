@@ -1,0 +1,4 @@
+// ***** AdvWare.Puper.c *****
+begin
+ AddEvAlarmByCLSID('A9AEE0DD-89E1-40EE-8749-A18650CC2175', AScriptName, 'winsx.dll');
+end.

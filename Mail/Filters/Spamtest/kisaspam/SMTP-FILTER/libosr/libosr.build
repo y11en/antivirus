@@ -1,0 +1,11 @@
+LIB
+TARGET osr
+
+CXXSRC osr_c.cpp
+CXXSRC osr_error.cpp
+CXXSRC osr_expert.cpp
+CXXSRC osr_image.cpp
+CXXSRC osr_image_analyzer.cpp
+CXXSRC osr_text_analyzer.cpp
+CXXSRC dump_c.cpp
+CXXSRC osr_dump.cpp

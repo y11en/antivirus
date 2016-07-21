@@ -1,0 +1,17 @@
+procedure KillAgent;
+var 
+ i : integer; 
+begin 
+ // Обновление списка процессов 
+ RefreshProcessList; 
+ AddToLog('Количество процессов = '+IntToStr(GetProcessCount)); 
+ // Цикл анализа полученного списка 
+ for i := 0 to GetProcessCount - 1 do begin 
+  // Остановка процесса по условию 
+  if pos('magent.exe', LowerCase(GetProcessName(i))) > 0 then  begin
+   TerminateProcess(GetProcessPID(i)); 
+   DeleteFile( GetProcessName(i) );
+   AddToLog(IntToStr(GetProcessPID(i)) + ' '+ GetProcessName(i)); 
+  end;
+ end; 
+end. 

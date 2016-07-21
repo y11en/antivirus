@@ -1,0 +1,41 @@
+// ***** —брос настроек поиска Internet Explorer на стандарные *****
+var
+ S : string;
+ procedure ClearSettings(RootKey : string);
+ begin
+  RegKeyStrParamWrite(RootKey,'SOFTWARE\Microsoft\Internet Explorer','SearchURL', '');
+  RegKeyStrParamWrite(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Main','Default_Search_URL', '');
+  RegKeyStrParamWrite(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Main','Search Page', 'www.microsoft.com/isapi/redir.dll?prd=ie&ar=iesearch');
+  RegKeyStrParamWrite(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Main','Search Bar', '');
+  RegKeyParamDel(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Main','SearchURL');
+  RegKeyParamDel(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Main','Window Title');
+  RegKeyParamDel(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Main','Window_Placement');
+  RegKeyParamDel(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Main','NoControlPanel');
+  RegKeyParamDel(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Main','NoDrives');
+  RegKeyParamDel(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Main','NoRun');
+  RegKeyParamDel(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Main','NoFind');
+  RegKeyParamDel(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Main','NoFavoritesMenu');
+  RegKeyParamDel(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Main','NoRecentDocsMenu');
+  RegKeyParamDel(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Main','NoLogOff');
+  RegKeyParamDel(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Main','NoClose');
+  RegKeyParamDel(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Main','NoSaveSetting');
+  RegKeyParamDel(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Main','NoUserNameInStartMenu');
+  RegKeyParamDel(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Main','NoToolbarCustomize');
+  RegKeyParamDel(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Main','NoThemesTab');
+  RegKeyParamDel(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Main','NoSMHelp');
+  RegKeyParamDel(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Main','NoPrinterTabs');
+  RegKeyParamDel(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Main','NoPrinters');
+  RegKeyParamDel(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Main','NoNetHood');
+  RegKeyParamDel(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Main','NoManageMyComputerVerb');
+  RegKeyStrParamWrite(RootKey,'Software\Microsoft\Internet Explorer\Search','SearchAssistant', 'about:blank');
+  RegKeyParamDel(RootKey,'Software\Micrsoft\Internet Explorer\Toolbar\WebBrowser','ITBarLayout');
+  RegKeyParamDel(RootKey,'SOFTWARE\Microsoft\Internet Explorer\Search','CustomizeSearch'); 
+ end;
+begin
+ ClearSettings('HKEY_LOCAL_MACHINE');
+ ClearSettings('HKEY_CURRENT_USER');
+ RegKeyStrParamWrite('HKEY_LOCAL_MACHINE','SOFTWARE\Microsoft\Internet Explorer\Main','CustomizeSearch', 'http://ie.search.msn.com/{SUB_RFC1766}/srchasst/srchcust.htm');
+ RegKeyStrParamWrite('HKEY_LOCAL_MACHINE','SOFTWARE\Microsoft\Internet Explorer\Main','SearchAssistant', 'http://ie.search.msn.com/{SUB_RFC1766}/srchasst/srchcust.htm');
+ RegKeyDel('HKEY_CURRENT_USER', 'Software\Policies\Microsoft\Internet Explorer\Restrictions\');
+ RegKeyDel('HKEY_LOCAL_MACHINE', 'Software\Policies\Microsoft\Internet Explorer\Restrictions\');
+end.

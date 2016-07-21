@@ -1,0 +1,113 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "PrIDs"=..\AddIns\PrIDs\PrIDs.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Prague/CodeGen/MSDebWatchExtender/AddIns/PrIDs", XRIFAAAA
+    ..\AddIns\PrIDs
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "debwatch"=.\debwatch.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Prague/CodeGen/debwatch", ZBICAAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name hresult
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PrIDs
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name winmsg
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name winstyle
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "hresult"=..\AddIns\hresult\hresult.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Prague/CodeGen/MSDebWatchExtender/AddIns/hresult", WRIFAAAA
+    ..\AddIns\hresult
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "winmsg"=..\AddIns\winmsg\winmsg.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Prague/CodeGen/MSDebWatchExtender/AddIns/winmsg", YRIFAAAA
+    ..\AddIns\winmsg
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "winstyle"=..\AddIns\winstyle\winstyle.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Prague/CodeGen/MSDebWatchExtender/AddIns/winstyle", ZRIFAAAA
+    ..\AddIns\winstyle
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Prague/CodeGen/MSDebWatchExtender/debwatch", BSIFAAAA
+    .
+    end source code control
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

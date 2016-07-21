@@ -1,0 +1,325 @@
+forward interface TaskManager;
+typedef TaskManager* hTASKMANAGER;
+
+forward interface TmHost;
+typedef TmHost* hTMHOST;
+
+
+
+
+[
+  mnemonic(IID_TASKMANAGER)
+  id(39)
+  c_type_name(hTASKMANAGER)
+]
+interface TaskManager { // product task supervisor
+
+  // ------------------------------------
+    typedef tDWORD tTaskId; // unique running task identifier
+    typedef tDWORD tServiceId;
+    typedef tDWORD tTaskRequestState; // rquest for changing task state
+    typedef tDWORD tTaskState; // current task state
+    typedef tDWORD cProfile;
+    typedef tDWORD cProfileEx;
+    typedef tDWORD cProfileList;
+    typedef tDWORD tGetProfileInfoSource;
+
+
+  // ------------------------------------
+    const tDWORD OPEN_TASK_MODE_CREATE = 0x80000000L;
+    const tDWORD OPEN_TASK_MODE_OPEN = 0x40000000L;
+    const tDWORD OPEN_TASK_MODE_OPEN_ALWAYS = 0xc0000000L;
+    const tDWORD OPEN_TASK_MODE_MASK = 0xc0000000L;
+    const tDWORD OPEN_TASK_MODE_CLOSE_TASK_IF_OWNER_DIED = 0x20000000L;
+    const tDWORD fPROFILE_TEMPORARY = 0x00000001L;
+    const tDWORD cCLEAN_REPORTS = 1;
+    const tDWORD cCLEAN_BACKUP_ITEMS = 2;
+    const tDWORD cCLEAN_QUARANTINE_ITEMS = 4;
+    const tDWORD cCLEAN_QB_ITEMS = cCLEAN_BACKUP_ITEMS|cCLEAN_QUARANTINE_ITEMS;
+    const tDWORD cREQUEST_SYNCHRONOUS = 0xffffffff;
+    const tDWORD cREQUEST_DELAY_UP_TO_INTERNET_CONNECTION = 0x80000000;
+    const tDWORD cREQUEST_DELAY_MAKE_PERSISTENT = 0x40000000;
+    const tDWORD cREQUEST_RESTART_PREVIOUS_TASK = 0x20000000;
+    const tDWORD cREQUEST_DONOT_FORCE_RUN = 0x10000000;
+    const tDWORD cREQUEST_SYNCSTORE_DATA = 0x01000000;
+    const tDWORD cTM_INIT_FLAG_DEFAULT = 1;
+    const tDWORD cTM_INIT_FLAG_PROFILES = 4;
+    const tDWORD cTM_INIT_FLAG_STARTGUI = 8;
+    const tDWORD cREPORT_FILTER_NONE = 1;
+    const tDWORD cREPORT_FILTER_RECENT = 2;
+    const tDWORD cREPORT_RECORD_NEXT = 4;
+    const tDWORD cREPORT_RECORD_PREV = 8;
+    const tDWORD cREPORT_DELETE_FORCE = 16;
+    const tDWORD cREPORT_DELETE_PREV = 32;
+    const tDWORD cREPORT_DELETE_FILES_ONLY = 64;
+
+
+  // ------------------------------------
+    error errDO_IT_YOURSELF;
+    [ warning(true) ]  error warnTASK_STATE_CHANGED;
+    [ warning(true) ]  error warnTASK_ALREADY_IN_STATE;
+    [ warning(true) ]  error warnTASK_NEED_SAVE_SETTINGS; // settings must be saved
+    error errTASK_CANNOT_GO_TO_STATE;
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Interface version")
+      id(130)
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      comment_ex("Interface comment")
+      id(131)
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+    [ id(4096) ]  prop hOBJECT pgTM_PRODUCT_CONFIG; // product setting storage
+    [ id(4100) ]  prop tSTRING pgBL_PRODUCT_NAME;
+    [ id(4101) ]  prop tSTRING pgBL_PRODUCT_VERSION;
+    [ id(4102) ]  prop tSTRING pgBL_PRODUCT_PATH;
+    [ id(4103) ]  prop tSTRING pgBL_PRODUCT_DATA_PATH; // product data folder
+    [ id(4104) ]  prop tSTRING pgBL_COMPANY_NAME;
+    [ id(4105) ]  prop tBOOL pgTM_IS_GUI_CONNECTED;
+
+
+  // ------------------------------------
+    method tERROR Init( tDWORD flags );
+    method tERROR Exit( // close TM session
+      tDWORD cause
+    );
+    method tERROR GetProfileInfo( // returns combined task profile, task settings or task schedule settings
+      const tCHAR* profile_name,
+      cSerializable* info // copies return value to this pointer
+    );
+    method tERROR SetProfileInfo( // replace combined task profile, task settings or task schedule settings for the profile
+      const tCHAR* profile_name,
+      const cSerializable* info,
+      hOBJECT client, // client which requests profile changing
+      tDWORD delay
+    );
+    method tERROR EnableProfile(
+      const tCHAR* profile_name,
+      tBOOL enabled,
+      tBOOL recursive,
+      hOBJECT client // client which requests profile changing
+    );
+    method tERROR IsProfileEnabled( const tCHAR* profile_name, tBOOL* enabled );
+    method tERROR DeleteProfile(
+      const tCHAR* profile_name,
+      hOBJECT client // client which requests profile changing
+    );
+    method tERROR SetProfileState(
+      const tCHAR* profile_name,
+      tTaskRequestState state,
+      hOBJECT client, // client which requests profile changing
+      tDWORD delay, // delay in milliseconds
+      tDWORD* task_id
+    );
+    method tERROR GetProfileReport(
+      const tCHAR* profile_name,
+      const tCHAR* report_id,
+      hOBJECT client,
+      tDWORD p_access,
+      hREPORT* report
+    );
+    method tERROR CloneProfile( // clones profile
+      const tCHAR* profile_name,
+      cProfile* profile,
+      tDWORD flags,
+      hOBJECT client // client which requests profile changing
+    );
+    method tERROR GetSettingsByLevel( // get settings by task type and settings level
+      const tCHAR* profile_name,
+      tDWORD settings_level,
+      tBOOL cumulative, // returns cumulative settings (combined with custom level)
+      cSerializable* settings // return value
+    );
+    method tERROR GetProfilePersistentStorage(
+      const tCHAR* profile_name,
+      hOBJECT dad,
+      hREGISTRY* storage,
+      tBOOL rw // open in READ/WRITE mode
+    );
+    method tERROR OpenTask(
+      tTaskId* task_id, // return value
+      const tCHAR* profile_name,
+      tDWORD open_flags,
+      hOBJECT client
+    );
+    method tERROR ReleaseTask(
+      tTaskId task_id // task identifier
+    );
+    method tERROR GetTaskState( // returns current task state
+      tTaskId task_id, // task identifier
+      tTaskState* task_state // return value
+    );
+    method tERROR SetTaskState( // requests task for state changing
+      tTaskId task_id, // task identifier
+      tTaskRequestState requested_state,
+      hOBJECT client, // client which requests task changing
+      tDWORD delay // delay in milliseconds
+    );
+    method tERROR GetTaskInfo( // returns asked info by task_id
+      tTaskId task_id, // task identifier
+      cSerializable* info // copies return value to this pointer
+    );
+    method tERROR SetTaskInfo( // returns asked info by task_id
+      tTaskId task_id, // task identifier
+      const cSerializable* info // copies return value to this pointer
+    );
+    method tERROR GetTaskReport(
+      tTaskId task_id, // task identifier
+      const tCHAR* report_id,
+      hOBJECT client,
+      tDWORD p_access,
+      hREPORT* report
+    );
+    method tERROR GetTaskPersistentStorage(
+      tTaskId task_id, // task identifier
+      hOBJECT dad,
+      hREGISTRY* storage,
+      tBOOL rw // open in READ/WRITE mode
+    );
+    method tERROR AskAction( // invokes extension method implemented by task
+      tTaskId task_id, // task identifier
+      tDWORD action_id,
+      cSerializable* params
+    );
+    method tERROR AskTaskAction( // invokes extension method implemented by task
+      tTaskId task_id, // task identifier
+      tDWORD action_id,
+      cSerializable* params
+    );
+    method tERROR GetService( // returns extension interface implemented by task
+      tTaskId task_id, // task identifier
+      hOBJECT client,
+      const tCHAR* service_id, // string service identifier (profile name)
+      hOBJECT* service, // return value
+      tDWORD start_delay // Delay for service starting (if cREQUEST_SYNCHRONOUS then wait for start)
+    );
+    method tERROR ReleaseService(
+      tTaskId task_id, // task identifier
+      hOBJECT service
+    );
+    method tERROR LockTaskSettings(
+      hOBJECT task,
+      cSerializable* settings,
+      tBOOL for_read_only
+    );
+    method tERROR UnlockTaskSettings(
+      hOBJECT task,
+      cSerializable* settings,
+      tBOOL modified
+    );
+    method tERROR RegisterRemoteTask(
+      hOBJECT tmhost,
+      hOBJECT task,
+      cSerializable* info,
+      hOBJECT* host
+    );
+    method tERROR RegisterClient( hOBJECT client );
+    method tERROR UnregisterClient( hOBJECT client );
+    method tERROR CleanupItems( // clean old reports, quarantine and backup items by time point
+      tDWORD item_type, // type of the item: 0-report, 1-backup, 1-quarantine, 3-quarantine & backup at the same time
+      const tDATETIME* time_stamp, // delete items older than this date
+      hOBJECT client
+    );
+    method tERROR AddLicKey( // add license key
+      hSTRING key_name
+    );
+    method tERROR AddRecordToTaskReport(
+      tTaskId task_id, // task identifier
+      tDWORD msg_cls, // message class identified the record
+      const cSerializable* record // record content
+    );
+    method tERROR GetTaskReportInfo(
+      tDWORD flags,
+      tDWORD index,
+      const cSerializable* info
+    );
+    method tERROR DeleteTaskReports(
+      tTaskId task_id, // task identifier
+      tDWORD flags // force delete reports for running task
+    );
+
+
+  // ------------------------------------
+    [ id(4096) ]
+    message_cls pmcPROFILE {
+      [ id(4096) ]  message pmPROFILE_STATE_CHANDED;
+      [ id(4098) ]  message pmPROFILE_CREATE;
+      [ id(4099) ]  message pmPROFILE_DELETE;
+      [ id(4100) ]  message pmPROFILE_MODIFIED;
+      [ id(4101) ]  message pmPROFILE_SETTINGS_MODIFIED;
+      [ id(4102) ]  message pmPROFILE_TASK_DISABLED_ON_RUN;
+      [ id(4103) ]  message pmPROFILE_LICENCE_CHECK_ERR;
+      [ id(4104) ]  message pmPROFILE_TASK_DISABLED_IN_SAFE_MODE; // task cannot be started in safe mode
+    }
+
+    [
+      id(4097)
+      comment_ex("parameters:
+        \"ctx\"         -- NULL
+        \"msg_id\"   -- correspondent action identifier
+        \"pbuff\"      -- pointer to cAskTaskAction (or descendant) structure
+        \"pblen\"     -- must be SER_SENDMSG_PSIZE constant
+        
+        Field \"m_nTaskId\" of the cAskTaskAction structure must identify task.
+        Constant \"TASKID_TM_ITSELF\" identifies TaskManager")
+    ]
+    message_cls pmcASK_ACTION {}
+    [ id(4098) ]  message_cls pmcTM_STARTUP_SCHEDULE {}
+    [ id(545970321) ]
+    message_cls pmcTM_EVENTS { // TM events
+      [ id(944667932) ]  message pmTM_EVENT_START; // TM just started
+      [ id(4294912585) ]  message pmTM_EVENT_STARTUP_TASKS_GOING_TO_START; // TM is going to start startup tasks
+      [ id(4180137686) ]  message pmTM_EVENT_STARTUP_TASKS_STARTED; // TM just started startup tasks
+      [ id(545970321) ]  message pmTM_EVENT_OS_SAFE_MODE; // sent when product starts in safe mode
+      [ id(1349401317) ]  message pmTM_EVENT_GUI_CONNECTED; // sent when some GUI is connected
+      [ id(947800837) ]  message pmTM_EVENT_GUI_DISCONNECTED;
+      [ id(4131886170) ]  message pmTM_EVENT_INET_CONNECTED;
+      [ id(2219506565) ]  message pmTM_EVENT_INET_DISCONNECTED;
+      [ id(1512800753) ]  message pmTM_EVENT_TASK_SETTINGS_CHANGED;
+      [ id(3455336935) ]  message pmTM_EVENT_GOING_TO_STOP;
+      [ id(4294912586) ]  message pmTM_EVENT_INSTALL;
+      [ id(4294912587) ]  message pmTM_EVENT_IDLE;
+      [ id(4294912588) ]  message pmTM_EVENT_CHECK_STOP_ALLOWED;
+    }
+
+}
+
+
+[
+  mnemonic(IID_TMHOST)
+  id(49035)
+  c_type_name(hTMHOST)
+]
+interface TmHost {
+
+  // ------------------------------------
+
+    [
+      comment_ex("Interface version")
+      id(130)
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      comment_ex("Interface comment")
+      id(131)
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+
+
+  // ------------------------------------
+    method tERROR CreateTask(
+      hOBJECT host,
+      cSerializable* info,
+      hOBJECT* task
+    );
+    method tERROR DestroyTask( hOBJECT task );
+
+}
+

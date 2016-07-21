@@ -1,0 +1,22 @@
+CompanyName	=	"Kaspersky Labs" 
+FileDescription =	"KL Sample Plugin"
+FileVersion	=	"Version 1.00" 
+InternalName	=	"$$ROOT$$"
+LegalCopyright	= 	"Copyright \251 2001, KL"
+OriginalFilename = 	"$$root$$.vxd"
+ProductName	=	"$$ROOT$$"
+ProductVersion	= 	"Version 1.00"
+Translation	=	0x409, 0x4E4
+
+// Binary fields
+
+dwFileVersionMS   = 0x00020000 //2.00
+dwFileVersionLS   = 0x00000005  //00.05
+dwProductVersionMS  = 0x00020000 //2.00
+dwProductVersionLS  = 0  
+dwFileFlagsMask   = 0
+dwFileFlags     = 0
+dwFileOS      = 0
+dwFileSubtype   = 0
+dwFileDateMS    = 0
+dwFileDateLS    = 0

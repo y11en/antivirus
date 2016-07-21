@@ -1,0 +1,4 @@
+// ***** Spy.FunWebProducts *****
+begin
+ AddEvAlarmByCLSID('1D4DB7D2-6EC9-47A3-BD87-1E41684E07BB',AScriptName,'F3EZSETP.dll');
+end.

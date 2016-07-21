@@ -1,0 +1,55 @@
+# Microsoft Developer Studio Generated Dependency File, included by avp3info.mak
+
+.\avp3info.cpp : \
+	".\avp3info.h"\
+	{$(INCLUDE)}"iface\i_heap.h"\
+	{$(INCLUDE)}"iface\i_iface.h"\
+	{$(INCLUDE)}"iface\i_ifenum.h"\
+	{$(INCLUDE)}"iface\i_methodinfo.h"\
+	{$(INCLUDE)}"iface\i_plugin.h"\
+	{$(INCLUDE)}"IFace\i_receiv.h"\
+	{$(INCLUDE)}"IFace\i_reg.h"\
+	{$(INCLUDE)}"iface\i_root.h"\
+	{$(INCLUDE)}"iface\i_tracer.h"\
+	{$(INCLUDE)}"plugin\p_avp3info.h"\
+	{$(INCLUDE)}"pr_compl.h"\
+	{$(INCLUDE)}"pr_err.h"\
+	{$(INCLUDE)}"pr_iid.h"\
+	{$(INCLUDE)}"pr_int.h"\
+	{$(INCLUDE)}"pr_msg.h"\
+	{$(INCLUDE)}"pr_obj.h"\
+	{$(INCLUDE)}"pr_pid.h"\
+	{$(INCLUDE)}"pr_prop.h"\
+	{$(INCLUDE)}"pr_reg.h"\
+	{$(INCLUDE)}"pr_sys.h"\
+	{$(INCLUDE)}"pr_types.h"\
+	{$(INCLUDE)}"pr_vid.h"\
+	{$(INCLUDE)}"pr_vtbl.h"\
+	{$(INCLUDE)}"PRAGUE.H"\
+	
+
+.\plugin_avp3info.cpp : \
+	{$(INCLUDE)}"iface\i_heap.h"\
+	{$(INCLUDE)}"iface\i_iface.h"\
+	{$(INCLUDE)}"iface\i_ifenum.h"\
+	{$(INCLUDE)}"iface\i_methodinfo.h"\
+	{$(INCLUDE)}"iface\i_plugin.h"\
+	{$(INCLUDE)}"IFace\i_receiv.h"\
+	{$(INCLUDE)}"IFace\i_reg.h"\
+	{$(INCLUDE)}"iface\i_root.h"\
+	{$(INCLUDE)}"iface\i_tracer.h"\
+	{$(INCLUDE)}"pr_compl.h"\
+	{$(INCLUDE)}"pr_err.h"\
+	{$(INCLUDE)}"pr_iid.h"\
+	{$(INCLUDE)}"pr_int.h"\
+	{$(INCLUDE)}"pr_msg.h"\
+	{$(INCLUDE)}"pr_obj.h"\
+	{$(INCLUDE)}"pr_pid.h"\
+	{$(INCLUDE)}"pr_prop.h"\
+	{$(INCLUDE)}"pr_reg.h"\
+	{$(INCLUDE)}"pr_sys.h"\
+	{$(INCLUDE)}"pr_types.h"\
+	{$(INCLUDE)}"pr_vid.h"\
+	{$(INCLUDE)}"pr_vtbl.h"\
+	{$(INCLUDE)}"PRAGUE.H"\
+	

@@ -1,0 +1,4 @@
+// ***** TrojanDownloader.Holica.c *****
+begin
+ AddEvAlarmByCLSID('0B682CC1-FB40-4006-A5DD-99EDD3C9095D',AScriptName,'vbiewer.ocx');
+end.

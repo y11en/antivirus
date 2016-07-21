@@ -1,0 +1,5 @@
+// ***** Spy.TwainTecth, AdvWare.BiSpy *****
+begin
+ AddEvAlarmByCLSID('000020DD-C72E-4113-AF77-DD56626C6C42',AScriptName,'TWAINTEC.dll');
+ AddEvAlarmByCLSID('00000000-F09C-02B4-6EC2-AD0300000000',AScriptName,'BTGrab.dll');
+end.

@@ -1,0 +1,26 @@
+HKCR
+{
+	InventorySCUM.Stat.1 = s 'Stat Class'
+	{
+		CLSID = s '{35ECE3AB-C67F-4574-9924-2F4D48FDBF64}'
+	}
+	InventorySCUM.Stat = s 'Stat Class'
+	{
+		CLSID = s '{35ECE3AB-C67F-4574-9924-2F4D48FDBF64}'
+		CurVer = s 'InventorySCUM.Stat.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {35ECE3AB-C67F-4574-9924-2F4D48FDBF64} = s 'Stat Class'
+		{
+			ProgID = s 'InventorySCUM.Stat.1'
+			VersionIndependentProgID = s 'InventorySCUM.Stat'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{155F559E-3588-46D8-9F9B-AC25E20C6619}'
+		}
+	}
+}

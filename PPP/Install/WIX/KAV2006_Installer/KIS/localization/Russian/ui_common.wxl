@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="Windows-1251" ?>
+<WixLocalization xmlns="http://schemas.microsoft.com/wix/2003/11/localization">
+
+  <String Id="ProductManufacturer">Лаборатория Касперского</String>
+  <String Id="ProductKeywords">Installer,MSI,Database</String>
+  <String Id="ProductHelpLink">http://www.kaspersky.ru/support.asp</String>
+  <String Id="ProductUpdateLink">http://www.kaspersky.ru/productupdates</String>
+  <String Id="DiskPrompt">Пожалуйста, вставьте диск, отмеченный &quot;Simple&quot;</String>
+  <String Id="ProductLicBuyLink"><![CDATA[http://www.kaspersky.ru/advert/buy?THRU&referer1=main&referer2=trial]]></String>
+  <String Id="ProductLicRenewLink"><![CDATA[http://www.kaspersky.ru/advert/renew?THRU&referer1=main&referer2=renew]]></String>
+
+  <String Id="UninstallShortcutShortName">Удалить</String>
+  <String Id="UninstallShortcutLongName">Изменение, восстановление или удаление</String>
+  <String Id="InternetShortcutShortName">ЛК</String>
+  <String Id="InternetShortcutLongName">Лаборатория Касперского в интернете</String>
+  <String Id="HelpShortcutShortName">Справка</String>
+  <String Id="HelpShortcutLongName"><![CDATA[Справка [ProductName_GEN]]]></String>
+  <String Id="LicenseShortcutShortName">Лицензия</String>
+  <String Id="LicenseShortcutLongName">Лицензионное соглашение</String>
+  <String Id="NotesShortcutShortName">Readme</String>
+  <String Id="NotesShortcutLongName">Release Notes</String>
+
+  <!-- Drivers names and descriptions -->
+  <String Id="KlifDriverDesc">Klif</String>
+  <String Id="KlifDriverDisplayName">Klif</String>
+  <String Id="KlinDriverDesc">Klin</String>
+  <String Id="KlinDriverDisplayName">Klin</String>
+  <String Id="KlickDriverDesc">Klick</String>
+  <String Id="KlickDriverDisplayName">Klick</String>
+  <String Id="Kl1DriverDesc">Kl1</String>
+  <String Id="Kl1DriverDisplayName">Kl1</String>
+  <String Id="KlFltDevDriverDesc">KlFltDev</String>
+  <String Id="KlFltDevDriverDisplayName">KlFltDev</String>
+  <String Id="KlBgDriverDesc">KlBg</String>
+  <String Id="KlBgDriverDisplayName">KlBg</String>
+  <String Id="KlopDriverDesc">Klop</String>
+  <String Id="KlopDriverDisplayName">Klop</String>
+
+  <!-- Common UIText table localization -->
+	<String Id="bytes"> байт</String>
+	<String Id="GB"> ГБ</String>
+	<String Id="KB"> КБ</String>
+	<String Id="MB"> МБ</String>
+	<String Id="MenuAbsent">Компонент будет недоступен.</String>
+	<String Id="MenuAdvertise">Компонент можно установить по первому требованию.</String>
+	<String Id="MenuAllCD">Компонент и его подкомпоненты будут установлены для запуска с компакт-диска.</String>
+	<String Id="MenuAllLocal">Компонент и его подкомпоненты будут установлены полностью.</String>
+	<String Id="MenuAllNetwork">Компонент и его подкомпоненты будут установлены для запуска по сети.</String>
+	<String Id="MenuCD">Компонент будет установлен для запуска с компакт-диска.</String>
+	<String Id="MenuLocal">Компонент будет установлен на локальный жесткий диск.</String>
+	<String Id="MenuNetwork">Компонент будет установлен для запуска по сети.</String>
+	<String Id="ScriptInProgress">Сбор запрашиваемой информации...</String>
+	<String Id="SelAbsentAbsent">Компонент не будет удален.</String>
+	<String Id="SelAbsentAdvertise">Компонент можно установить по первому требованию.</String>
+	<String Id="SelAbsentCD">Компонент будет установлен для запуска с компакт-диска.</String>
+	<String Id="SelAbsentLocal">Компонент будет установлен на локальный жесткий диск.</String>
+	<String Id="SelAbsentNetwork">Компонент будет установлен для запуска по сети.</String>
+	<String Id="SelAdvertiseAbsent">Компонент будет недоступен.</String>
+	<String Id="SelAdvertiseAdvertise">Компонент можно установить по первому требованию.</String>
+	<String Id="SelAdvertiseCD">Компонент будет доступен для запуска с компакт-диска.</String>
+	<String Id="SelAdvertiseLocal">Компонент будет установлен на локальный жесткий диск.</String>
+	<String Id="SelAdvertiseNetwork">Компонент будет доступен для запуска по сети.</String>
+	<String Id="SelCDAbsent">Компонент будет удален полностью, вы не сможете запускать его с компакт-диска.</String>
+	<String Id="SelCDAdvertise">Запуск компонента с компакт-диска будет заменен на его установку по требованию.</String>
+	<String Id="SelCDCD">Для компонента сохранится возможность запуска с компакт-диска.</String>
+	<String Id="SelCDLocal">Запуск компонента с компакт-диска будет заменен на его установку на локальный жесткий диск.</String>
+	<String Id="SelChildCostNeg">Компонент высвобождает [1] на жестком диске.</String>
+	<String Id="SelChildCostPos">Для установки компонента требуется [1] на жестком диске.</String>
+	<String Id="SelCostPending">Вычисление места на диске для компонента...</String>
+	<String Id="SelLocalAbsent">Компонент будет полностью удален с вашего компьютера.</String>
+	<String Id="SelLocalAdvertise">Компонент будет удален с локального жесткого диска, но вы сможете установить его, когда это потребуется.</String>
+	<String Id="SelLocalCD">Компонент будет удален с локального жесткого диска, но вы по-прежнему сможете запускать его с компакт-диска.</String>
+	<String Id="SelLocalLocal">Компонент будет сохранен на локальном жестком диске.</String>
+	<String Id="SelLocalNetwork">Компонент будет удален с локального жесткого диска, но вы по-прежнему сможете запускать его по сети.</String>
+	<String Id="SelNetworkAbsent">Компонент будет удален полностью, вы не сможете запускать его по сети.</String>
+	<String Id="SelNetworkAdvertise">Запуск компонента по сети будет заменен на его установку по требованию.</String>
+	<String Id="SelNetworkLocal">Запуск компонента по сети будет заменен на его установку на локальный жесткий диск.</String>
+	<String Id="SelNetworkNetwork">Для компонента сохранится возможность запуска по сети.</String>
+	<String Id="SelParentCostNegNeg">Приложение высвобождает [1] на жестком диске. Выбрано [2] из [3] компонентов. Они высвобождают [4] на жестком диске.</String>
+	<String Id="SelParentCostNegPos">Приложение высвобождает [1] на жестком диске. Выбрано[2] из [3] компонентов. Для их установки требуется [4] на жестком диске.</String>
+	<String Id="SelParentCostPosNeg">Для установки компонента требуется [1] на жестком диске. Выбрано [2] из [3] подкомпонентов. Они высвобождают [4] на жестком диске.</String>
+	<String Id="SelParentCostPosPos">Для установки компонента требуется [1] на жестком диске. Выбрано [2] из [3] подкомпонентов. Для их установки требуется [4] на жестком диске.</String>
+	<String Id="TimeRemaining">Оставшееся время: {[1] мин.}{[2] сек.}</String>
+	<String Id="VolumeCostAvailable">Доступно</String>
+	<String Id="VolumeCostDifference">Разница</String>
+	<String Id="VolumeCostRequired">Требуется</String>
+	<String Id="VolumeCostSize">Размер диска</String>
+	<String Id="VolumeCostVolume">Диск</String>
+	
+	<!-- ActionText Table localization -->
+	<String Id="IDS_ACTIONTEXT_Advertising"><![CDATA[Реклама приложения...]]></String>
+	<String Id="IDS_ACTIONTEXT_ComputingSpace"><![CDATA[Вычисление свободного места на диске...]]></String>
+	<String Id="IDS_ACTIONTEXT_ContentTypeExtension2"><![CDATA[Тип содержимого MIME: [1], Расширение: [2]]]></String>
+	<String Id="IDS_ACTIONTEXT_UnregisteringProgramIds"><![CDATA[Отмена регистрации идентификаторов приложения...]]></String>
+	<String Id="IDS_ACTIONTEXT_ProgID"><![CDATA[Код приложения: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_UnregTypeLibs"><![CDATA[Отмена регистрации типов библиотек...]]></String>
+	<String Id="IDS_ACTIONTEXT_Libid2"><![CDATA[Код библиотеки: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_EnvironmentStrings"><![CDATA[Обновление переменных окружения...]]></String>
+	<String Id="IDS_ACTIONTEXT_NameValueAction"><![CDATA[Имя: [1], Значение: [2], Действие: [3]]]></String>
+	<String Id="IDS_ACTIONTEXT_WritingINI"><![CDATA[Запись значений INI-файлов...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileSectionKeyValue2"><![CDATA[Файл: [1],  Секция: [2],  Ключ: [3], Значение: [4]]]></String>
+	<String Id="IDS_ACTIONTEXT_WritingRegistry"><![CDATA[Запись значений системного реестра...]]></String>
+	<String Id="IDS_ACTIONTEXT_CreatingFolders"><![CDATA[Создание папок...]]></String>
+	<String Id="IDS_ACTIONTEXT_KeyNameValue"><![CDATA[Ключ: [1], Имя: [2], Значение: [3]]]></String>
+	<String Id="IDS_ACTIONTEXT_RegisteringComPlus"><![CDATA[Регистрация приложений и компонентов COM+...]]></String>
+	<String Id="IDS_ACTIONTEXT_AppIdAppTypeRSN"><![CDATA[Код приложения: [1]{{, Тип: [2], Пользователи: [3], RSN: [4]}}]]></String>
+	<String Id="IDS_ACTIONTEXT_UnregisteringComPlus"><![CDATA[Отмена регистрации приложений и компонентов COM+...]]></String>
+	<String Id="IDS_ACTIONTEXT_AppId"><![CDATA[Код приложения: [1]{{, Тип: [2]}}]]></String>
+	<String Id="IDS_ACTIONTEXT_SearchForRelated"><![CDATA[Поиск связанных приложений...]]></String>
+	<String Id="IDS_ACTIONTEXT_FoundApp"><![CDATA[Приложение: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_MigratingFeatureStates"><![CDATA[Перенос свойств из связанных приложений...]]></String>
+	<String Id="IDS_ACTIONTEXT_Application"><![CDATA[Приложение: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RemoveApps"><![CDATA[Удаление приложений...]]></String>
+	<String Id="IDS_ACTIONTEXT_Folder"><![CDATA[Папка: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_AppCommandLine"><![CDATA[Приложение: [1], Командная строка: [2]]]></String>
+	<String Id="IDS_ACTIONTEXT_InstallingSystemCatalog"><![CDATA[Установка системной папки...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileDependencies"><![CDATA[Файл: [1],  Зависимости: [2]]]></String>
+	<String Id="IDS_ACTIONTEXT_CreatingIISRoots"><![CDATA[Создание виртуальных корней IIS...]]></String>
+	<String Id="IDS_ACTIONTEXT_RemovingIISRoots"><![CDATA[Удаление виртуальных корней IIS...]]></String>
+	<String Id="IDS_ACTIONTEXT_CreatingShortcuts"><![CDATA[Создание ярлыков...]]></String>
+	<String Id="IDS_ACTIONTEXT_Shortcut"><![CDATA[Ярлык: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_DeletingServices"><![CDATA[Удаление сервисов...]]></String>
+	<String Id="IDS_ACTIONTEXT_Service"><![CDATA[Сервис: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_CreatingDuplicate"><![CDATA[Создание дубликатов файлов...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileDirectorySize"><![CDATA[Файл: [1],  Папка: [9],  Размер: [6]]]></String>
+	<String Id="IDS_ACTIONTEXT_ComputingSpace2"><![CDATA[Вычисление свободного места на диске...]]></String>
+	<String Id="IDS_ACTIONTEXT_AllocatingRegistry"><![CDATA[Выделение памяти для реестра...]]></String>
+	<String Id="IDS_ACTIONTEXT_GeneratingScript"><![CDATA[Создание операций сценария для действия...]]></String>
+	<String Id="IDS_ACTIONTEXT_1"><![CDATA[[1]]]></String>
+	<String Id="IDS_ACTIONTEXT_CopyingNetworkFiles"><![CDATA[Копирование файлов в сеть...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileDirSize"><![CDATA[Файл: [1], Папка: [9], Размер: [6]]]></String>
+	<String Id="IDS_ACTIONTEXT_CopyingNewFiles"><![CDATA[Копирование новых файлов...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileDirSize2"><![CDATA[Файл: [1],  Папка: [9],  Размер: [6]]]></String>
+	<String Id="IDS_ACTIONTEXT_InstallODBC"><![CDATA[Установка компонентов ODBC...]]></String>
+	<String Id="IDS_ACTIONTEXT_InstallServices"><![CDATA[Установка новых служб...]]></String>
+	<String Id="IDS_ACTIONTEXT_Service2"><![CDATA[Служба: [2]]]></String>
+	<String Id="IDS_ACTIONTEXT_Validating"><![CDATA[Проверка корректности установки...]]></String>
+	<String Id="IDS_ACTIONTEXT_FreeSpace"><![CDATA[Свободное место: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_EvaluateLaunchConditions"><![CDATA[Оценка условий запуска...]]></String>
+	<String Id="IDS_ACTIONTEXT_MovingFiles"><![CDATA[Перемещение файлов...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileDirSize3"><![CDATA[Файл: [1],  Папка: [9],  Размер: [6]]]></String>
+	<String Id="IDS_ACTIONTEXT_PatchingFiles"><![CDATA[Обновление файлов...]]></String>	
+	<String Id="IDS_ACTIONTEXT_FileDirSize4"><![CDATA[Файл: [1],  Папка: [2],  Размер: [3]]]></String>
+	<String Id="IDS_ACTIONTEXT_UpdateComponentRegistration"><![CDATA[Обновление регистрации компонентов...]]></String>
+	<String Id="IDS_ACTIONTEXT_PublishingQualifiedComponents"><![CDATA[Публикация подходящих компонентов...]]></String>
+	<String Id="IDS_ACTIONTEXT_ComponentIDQualifier"><![CDATA[Код компонента: [1], Описатель: [2]]]></String>
+	<String Id="IDS_ACTIONTEXT_PublishProductFeatures"><![CDATA[Публикация компонентов приложения...]]></String>
+	<String Id="IDS_ACTIONTEXT_FeatureColon"><![CDATA[Компонент: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_SearchInstalled"><![CDATA[Поиск установленных приложений...]]></String>
+	<String Id="IDS_ACTIONTEXT_PublishProductInfo"><![CDATA[Публикация информации о приложении...]]></String>
+	<String Id="IDS_ACTIONTEXT_RegisterClassServer"><![CDATA[Регистрация серверов классов...]]></String>
+	<String Id="IDS_ACTIONTEXT_ClassId"><![CDATA[Код класса: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RegisterExtensionServers"><![CDATA[Регистрация серверов расширений...]]></String>
+	<String Id="IDS_ACTIONTEXT_Extension2"><![CDATA[Расширение: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RegisterFonts"><![CDATA[Регистрация шрифтов...]]></String>
+	<String Id="IDS_ACTIONTEXT_Font"><![CDATA[Шрифт: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RegisterMimeInfo"><![CDATA[Регистрация MIME-информации...]]></String>
+	<String Id="IDS_ACTIONTEXT_ContentTypeExtension"><![CDATA[Тип содержимого MIME: [1], Расширение: [2]]]></String>
+	<String Id="IDS_ACTIONTEXT_RegisteringProduct"><![CDATA[Регистрация приложения...]]></String>
+	<String Id="IDS_ACTIONTEXT_PropertySignature"><![CDATA[Свойство: [1], Подпись: [2]]]></String>
+	<String Id="IDS_ACTIONTEXT_1b"><![CDATA[[1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RegisteringProgIdentifiers"><![CDATA[Регистрация идентификаторов приложения...]]></String>
+	<String Id="IDS_ACTIONTEXT_ProgID2"><![CDATA[Код приложения: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RegisterTypeLibs"><![CDATA[Регистрация типов библиотек...]]></String>
+	<String Id="IDS_ACTIONTEXT_LibId"><![CDATA[Код библиотеки: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RegUser"><![CDATA[Регистрация пользователей...]]></String>
+	<String Id="IDS_ACTIONTEXT_1c"><![CDATA[[1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RemovingDuplicates"><![CDATA[Удаление дублирующих файлов...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileDir"><![CDATA[Файл: [1], Папка: [9]]]></String>
+	<String Id="IDS_ACTIONTEXT_UpdateEnvironmentStrings"><![CDATA[Обновление переменных окружения...]]></String>
+	<String Id="IDS_ACTIONTEXT_BindingExes"><![CDATA[Привязка исполняемых модулей...]]></String>
+	<String Id="IDS_ACTIONTEXT_NameValueAction2"><![CDATA[Имя: [1], Значение: [2], Действие: [3]]]></String>
+	<String Id="IDS_ACTIONTEXT_RemovingFiles"><![CDATA[Удаление файлов...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileDir2"><![CDATA[Файл: [1], Папка: [9]]]></String>
+	<String Id="IDS_ACTIONTEXT_RemovingFolders"><![CDATA[Удаление папок...]]></String>
+	<String Id="IDS_ACTIONTEXT_Folder1"><![CDATA[Папка: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RemovingIni"><![CDATA[Удаление записей в INI-файлах...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileSectionKeyValue"><![CDATA[Файл: [1],  Секция: [2],  Ключ: [3], Значение: [4]]]></String>
+	<String Id="IDS_ACTIONTEXT_RemovingODBC"><![CDATA[Удаление компонентов ODBC...]]></String>
+	<String Id="IDS_ACTIONTEXT_RemovingRegistry"><![CDATA[Удаление значений системного реестра...]]></String>
+	<String Id="IDS_ACTIONTEXT_KeyName"><![CDATA[Ключ: [1], Имя: [2]]]></String>
+	<String Id="IDS_ACTIONTEXT_File"><![CDATA[Файл: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RemovingShortcuts"><![CDATA[Удаление ярлыков...]]></String>
+	<String Id="IDS_ACTIONTEXT_Shortcut1"><![CDATA[Ярлык: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_SearchingQualifyingProducts"><![CDATA[Поиск подходящих продуктов...]]></String>
+	<String Id="IDS_ACTIONTEXT_RollingBack"><![CDATA[Откат действия:]]></String>
+	<String Id="IDS_ACTIONTEXT_1d"><![CDATA[[1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RemovingBackup"><![CDATA[Удаление резервных копий файлов...]]></String>
+	<String Id="IDS_ACTIONTEXT_File2"><![CDATA[Файл: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RegisteringModules"><![CDATA[Регистрация модулей...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileFolder"><![CDATA[Файл: [1], Папка: [2]]]></String>
+	<String Id="IDS_ACTIONTEXT_UnregisterModules"><![CDATA[Отмена регистрации модулей...]]></String>
+	<String Id="IDS_ACTIONTEXT_SearchingQualifyingProducts2"><![CDATA[Поиск подходящих продуктов...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileFolder2"><![CDATA[Файл: [1], Папка: [2]]]></String>
+	<String Id="IDS_ACTIONTEXT_InitializeODBCDirs"><![CDATA[Инициализация каталогов ODBC...]]></String>
+	<String Id="IDS_ACTIONTEXT_StartingServices"><![CDATA[Запуск служб...]]></String>
+	<String Id="IDS_ACTIONTEXT_Service3"><![CDATA[Служба: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_StoppingServices"><![CDATA[Остановка служб...]]></String>
+	<String Id="IDS_ACTIONTEXT_Service4"><![CDATA[Служба: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_RemovingMoved"><![CDATA[Удаление перемещенных файлов...]]></String>
+	<String Id="IDS_ACTIONTEXT_FileDir3"><![CDATA[Файл: [1], Папка: [9]]]></String>
+	<String Id="IDS_ACTIONTEXT_UnpublishQualified"><![CDATA[Отмена публикации подходящих компонентов...]]></String>
+	<String Id="IDS_ACTIONTEXT_ComponentIdQualifier2"><![CDATA[Код компонента: [1], Описатель: [2]]]></String>
+	<String Id="IDS_ACTIONTEXT_ComputingSpace3"><![CDATA[Вычисление свободного места на диске...]]></String>
+	<String Id="IDS_ACTIONTEXT_UnpublishProductFeatures"><![CDATA[Отмена публикации компонентов приложения...]]></String>
+	<String Id="IDS_ACTIONTEXT_Feature"><![CDATA[Компонент: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_UnpublishingProductInfo"><![CDATA[Отмена публикации информации о приложении...]]></String>
+	<String Id="IDS_ACTIONTEXT_UnregisterClassServers"><![CDATA[Отмена регистрации серверов классов...]]></String>
+	<String Id="IDS_ACTIONTEXT_ClsID"><![CDATA[Код класса: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_UnregisterExtensionServers"><![CDATA[Отмена регистрации серверов расширений...]]></String>
+	<String Id="IDS_ACTIONTEXT_Extension"><![CDATA[Расширение: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_UnregisteringFonts"><![CDATA[Отмена регистрации шрифтов...]]></String>
+	<String Id="IDS_ACTIONTEXT_Font2"><![CDATA[Шрифт: [1]]]></String>
+	<String Id="IDS_ACTIONTEXT_UnregisteringMimeInfo"><![CDATA[Отмена регистрации MIME-информации...]]></String>
+	<String Id="IDS_ACTIONTEXT_UninstallCompetitorsSoftware"><![CDATA[Удаление несовместимых приложений. Пожалуйста, подождите...]]></String>
+	
+	<String Id="IDS_ACTIONTEXT_UnregisteringDrivers"><![CDATA[Отмена регистрации драйверов...]]></String>
+	<String Id="IDS_ACTIONTEXT_DisablingWFW"><![CDATA[Отключение сетевого экрана Microsoft Windows...]]></String>
+	<String Id="IDS_ACTIONTEXT_RemovingProtection"><![CDATA[Удаление защиты...]]></String>
+	<String Id="IDS_ACTIONTEXT_ProductDeinitialize"><![CDATA[Отмена регистрации приложения...]]></String>
+	<String Id="IDS_ACTIONTEXT_UnregisterPlugins"><![CDATA[Отмена регистрации плагинов...]]></String>
+	<String Id="IDS_ACTIONTEXT_SavingObjects"><![CDATA[Сохранение объектов...]]></String>
+	<String Id="IDS_ACTIONTEXT_RegisteringDrivers"><![CDATA[Регистрация драйверов...]]></String>
+	<String Id="IDS_ACTIONTEXT_EnablingOptions"><![CDATA[Включение параметров...]]></String>
+	<String Id="IDS_ACTIONTEXT_ConfiguringServices"><![CDATA[Настройка служб...]]></String>
+	<String Id="IDS_ACTIONTEXT_InstallingProtection"><![CDATA[Установка защиты...]]></String>
+	<String Id="IDS_ACTIONTEXT_SchedulingRebootOperation"><![CDATA[Планирование операции перезагрузки...]]></String>
+	<String Id="IDS_ACTIONTEXT_ImportingRegistryValues"><![CDATA[Импорт значений системного реестра...]]></String>
+	
+	<String Id="IDS_ACTIONTEXT_InstallInitialize"><![CDATA[Подготовка к установке...]]></String>
+	
+	<!-- Error Table localization-->
+	<String Id="IDS_ERROR_0"><![CDATA[{{Неустранимая ошибка: }}]]></String>
+	<String Id="IDS_ERROR_1"><![CDATA[Ошибка [1].]]></String>
+	<String Id="IDS_ERROR_2"><![CDATA[Предупреждение [1].]]></String>
+	<String Id="IDS_ERROR_4"><![CDATA[Информация [1].]]></String>
+	<String Id="IDS_ERROR_5"><![CDATA[Внутренняя ошибка [1]. [2]{, [3]}{, [4]}]]></String>
+	<String Id="IDS_ERROR_7"><![CDATA[{{Диск переполнен: }}]]></String>
+	<String Id="IDS_ERROR_8"><![CDATA[Действие [Time]: [1]. [2]]]></String>
+	<String Id="IDS_ERROR_9"><![CDATA[[ProductName_NOM]]]></String>
+	<String Id="IDS_ERROR_10"><![CDATA[{[2]}{, [3]}{, [4]}]]></String>
+	<String Id="IDS_ERROR_11"><![CDATA[Тип сообщения: [1], Аргумент: [2]]]></String>
+	<String Id="IDS_ERROR_12"><![CDATA[=== Начало записи журнала: [Date]  [Time] ===]]></String>
+	<String Id="IDS_ERROR_13"><![CDATA[=== Завершение записи журнала: [Date]  [Time] ===]]></String>
+	<String Id="IDS_ERROR_14"><![CDATA[Начало действия [Time]: [1].]]></String>
+	<String Id="IDS_ERROR_15"><![CDATA[Завершение действия [Time]: [1]. Код возврата [2].]]></String>
+	<String Id="IDS_ERROR_16"><![CDATA[Оставшееся время: {[1] мин. }{[2] сек.}]]></String>
+	<String Id="IDS_ERROR_17"><![CDATA[Недостаточно памяти. Закройте другие приложения и повторите попытку.]]></String>
+	<String Id="IDS_ERROR_18"><![CDATA[Мастер установки не отвечает.]]></String>
+	<String Id="IDS_ERROR_19"><![CDATA[Работа мастера установки завершена.]]></String>
+	<String Id="IDS_ERROR_20"><![CDATA[Выполняется настройка [ProductName_GEN], пожалуйста, подождите...]]></String>
+	<String Id="IDS_ERROR_21"><![CDATA[Сбор сведений...]]></String>
+	<String Id="IDS_ERROR_32"><![CDATA[{[ProductName_NOM] }Установка успешно завершена.]]></String>
+	<String Id="IDS_ERROR_33"><![CDATA[{[ProductName_NOM] }Установка завершена с ошибкой.]]></String>
+	<String Id="IDS_ERROR_1101"><![CDATA[Ошибка чтения из файла: [2]. {{ Системная ошибка [3].}}  Убедитесь, что файл существует и вы обладаете правами доступа к нему.]]></String>
+	<String Id="IDS_ERROR_1301"><![CDATA[Невозможно создать файл [3].  Папка с таким именем уже существует.  Прервите работу мастера установки и попытайтесь установить приложение в другую папку.]]></String>
+	<String Id="IDS_ERROR_1302"><![CDATA[Пожалуйста, вставьте диск: [2]]]></String>
+	<String Id="IDS_ERROR_1303"><![CDATA[У вас недостаточно прав для работы с папкой: [2].  Установка приложения не может быть продолжена. Зарегистрируйтесь в системе в качестве администратора или обратитесь к системному администратору.]]></String>
+	<String Id="IDS_ERROR_1304"><![CDATA[Ошибка записи в файл [2]. Убедитесь, что вы обладаете правами доступа к папке.]]></String>
+	<String Id="IDS_ERROR_1305"><![CDATA[Ошибка чтения из файла [2]. Убедитесь, что файл существует и вы обладаете правами доступа к нему.]]></String>
+	<String Id="IDS_ERROR_1306"><![CDATA[Другое приложение имеет монопольный доступ к файлу [2]. Пожалуйста, закройте другие приложения и повторите попытку.]]></String>
+	<String Id="IDS_ERROR_1307"><![CDATA[Недостаточно места на диске для установки файла [2]. Освободите место на диске, повторите попытку установки, нажав на кнопку "Повторить", или прервите работу мастера установки, нажав на кнопку "Отмена".]]></String>
+	<String Id="IDS_ERROR_1308"><![CDATA[Исходный файл не найден: [2]. Убедитесь, что файл существует и вы обладаете правами доступа к нему.]]></String>
+	<String Id="IDS_ERROR_1309"><![CDATA[Ошибка чтения из файла: [3]. {{ Системная ошибка [2].}} Убедитесь, что файл существует и вы обладаете правами доступа к нему.]]></String>
+	<String Id="IDS_ERROR_1310"><![CDATA[Ошибка записи в файл: [3]. {{ Системная ошибка [2].}} Убедитесь, что вы обладаете правами доступа к папке.]]></String>
+	<String Id="IDS_ERROR_1311"><![CDATA[Исходный файл не найден {{(cabinet)}}: [2]. Убедитесь, что файл существует и вы обладаете правами доступа к нему.]]></String>
+	<String Id="IDS_ERROR_1312"><![CDATA[Невозможно создать папку [2]. Файл с таким именем уже существует. Пожалуйста, переименуйте или переместите файл, повторите попытку установки, нажав на кнопку "Повторить", или прервите работу мастера установки, нажав на кнопку "Отмена".]]></String>
+	<String Id="IDS_ERROR_1313"><![CDATA[Диск [2] недоступен. Пожалуйста, выберите другой диск.]]></String>
+	<String Id="IDS_ERROR_1314"><![CDATA[Указанный путь [2] недоступен.]]></String>
+	<String Id="IDS_ERROR_1315"><![CDATA[Запись в папку [2] невозможна.]]></String>
+	<String Id="IDS_ERROR_1316"><![CDATA[Ошибка в сети при чтении из файла [2]]]></String>
+	<String Id="IDS_ERROR_1317"><![CDATA[Ошибка в сети при создании папки [2]]]></String>
+	<String Id="IDS_ERROR_1318"><![CDATA[Ошибка в сети при создании папки [2]]]></String>
+	<String Id="IDS_ERROR_1319"><![CDATA[Ошибка в сети при открытии исходного CAB-файла [2].]]></String>
+	<String Id="IDS_ERROR_1320"><![CDATA[Указан слишком длинный путь [2].]]></String>
+	<String Id="IDS_ERROR_1321"><![CDATA[У вас недостаточно прав для изменения файла [2].]]></String>
+	<String Id="IDS_ERROR_1322"><![CDATA[Часть пути [2] превышает ограничение на максимально допустимую длину в системе.]]></String>
+	<String Id="IDS_ERROR_1323"><![CDATA[Путь [2] содержит недопустимые имена.]]></String>
+	<String Id="IDS_ERROR_1324"><![CDATA[Путь [2] содержит недопустимые символы.]]></String>
+	<String Id="IDS_ERROR_1325"><![CDATA[[2] не является допустимым коротким именем файла.]]></String>
+	<String Id="IDS_ERROR_1326"><![CDATA[Ошибка при получении сведений о безопасности файла: [3] Возвращена функцией GetLastError: [2]]]></String>
+	<String Id="IDS_ERROR_1327"><![CDATA[Неверный диск: [2]]]></String>
+	<String Id="IDS_ERROR_1328"><![CDATA[Ошибка при обновлении файла [2]. Возможно он уже был обновлен другими средствами, и к нему не может быть применен данный пакет обновлений. За дополнительными сведениями обратитесь к поставщику пакета.  {{Системная ошибка: [3]}}]]></String>
+	<String Id="IDS_ERROR_1329"><![CDATA[Требуемый файл не может быть установлен, поскольку CAB-файл [2] не имеет цифровой подписи. Возможно он поврежден.]]></String>
+	<String Id="IDS_ERROR_1330"><![CDATA[Требуемый файл не может быть установлен, поскольку CAB-файл [2] имеет неверную цифровую подпись. Возможно файл поврежден.{ Ошибка [3] возвращена WinVerifyTrust.}]]></String>
+	<String Id="IDS_ERROR_1331"><![CDATA[Невозможно скопировать [2] файл: ошибка CRC.]]></String>
+	<String Id="IDS_ERROR_1332"><![CDATA[Невозможно переместить [2] файл: ошибка CRC.]]></String>
+	<String Id="IDS_ERROR_1333"><![CDATA[Невозможно обновить [2] файл: ошибка CRC.]]></String>
+	<String Id="IDS_ERROR_1334"><![CDATA[Файл [2] не может быть установлен, поскольку он не найден в CAB-файле [3]. Возможно это ошибка сети, ошибка чтения с компакт-диска или пакета.]]></String>
+	<String Id="IDS_ERROR_1335"><![CDATA[CAB-файл [2], необходимый для установки, поврежден и не может быть использован. Возможно это ошибка сети, ошибка чтения с компакт-диска или пакета.]]></String>
+	<String Id="IDS_ERROR_1336"><![CDATA[Ошибка создания временного файла, необходимого для завершения установки. Папка: [3]. Код системной ошибки: [2]]]></String>
+	<String Id="IDS_ERROR_1401"><![CDATA[Невозможно создать ключ [2]. {{ Системная ошибка [3].}} Убедитесь, что у вас достаточно прав для доступа к этому ключу, или обратитесь в Службу технической поддержки.]]></String>
+	<String Id="IDS_ERROR_1402"><![CDATA[Невозможно открыть ключ: [2]. {{ Системная ошибка [3].}} Убедитесь, что у вас достаточно прав для доступа к этому ключу, или обратитесь в Службу технической поддержки.]]></String>
+	<String Id="IDS_ERROR_1403"><![CDATA[Невозможно удалить значение [2] ключа [3]. {{ Системная ошибка [4].}} Убедитесь, что у вас достаточно прав для доступа к этому ключу, или обратитесь в Службу технической поддержки.]]></String>
+	<String Id="IDS_ERROR_1404"><![CDATA[Невозможно удалить ключ [2]. {{ Системная ошибка [3].}} Убедитесь, что у вас достаточно прав для доступа к этому ключу, или обратитесь в Службу технической поддержки.]]></String>
+	<String Id="IDS_ERROR_1405"><![CDATA[Невозможно прочесть значение [2] ключа [3]. {{ Системная ошибка [4].}} Убедитесь, что у вас достаточно прав для доступа к этому ключу, или обратитесь в Службу технической поддержки.]]></String>
+	<String Id="IDS_ERROR_1406"><![CDATA[Невозможно записать значение [2] ключа [3]. {{ Системная ошибка [4].}} Убедитесь, что у вас достаточно прав для доступа к этому ключу, или обратитесь в Службу технической поддержки.]]></String>
+	<String Id="IDS_ERROR_1407"><![CDATA[Невозможно получить имя ключа [2]. {{ Системная ошибка [3].}} Убедитесь, что у вас достаточно прав для доступа к этому ключу, или обратитесь в Службу технической поддержки.]]></String>
+	<String Id="IDS_ERROR_1408"><![CDATA[Невозможно получить имя вложенного ключа для ключа [2]. {{ Системная ошибка [3].}} Убедитесь, что у вас достаточно прав для доступа к этому ключу, или обратитесь в Службу технической поддержки.]]></String>
+	<String Id="IDS_ERROR_1409"><![CDATA[Невозможно прочесть сведения о безопасности ключа [2]. {{ Системная ошибка [3].}} Убедитесь, что у вас достаточно прав для доступа к этому ключу, или обратитесь в Службу технической поддержки.]]></String>
+	<String Id="IDS_ERROR_1410"><![CDATA[Невозможно увеличить размер реестра. Для установки этого приложения необходимо [2] КБ свободного места в реестре.]]></String>
+	<String Id="IDS_ERROR_1500"><![CDATA[Другой процесс установки уже выполняется. Завершите этот процесс перед новой установкой.]]></String>
+	<String Id="IDS_ERROR_1501"><![CDATA[Ошибка доступа к защищенным данным. Проверьте правильность настройки мастера установки и повторите попытку.]]></String>
+	<String Id="IDS_ERROR_1502"><![CDATA[Пользователь [2] ранее начал установку приложения [3]. Этому пользователю придется выполнить установку заново. Ваша текущая установка будет продолжена.]]></String>
+	<String Id="IDS_ERROR_1503"><![CDATA[Пользователь [2] ранее начал установку приложения [3]. Этому пользователю придется выполнить установку заново.]]></String>
+	<String Id="IDS_ERROR_1601"><![CDATA[Недостаточно места на диске -- диск: [2]; требуется: [3] KБ; доступно: [4] KБ. Освободите место на диске и повторите попытку.]]></String>
+	<String Id="IDS_ERROR_1602"><![CDATA[Вы действительно хотите отменить установку?]]></String>
+	<String Id="IDS_ERROR_1603"><![CDATA[Файл [2][3] уже используется{ следующим процессом: Имя: [4], Код: [5], Заголовок окна: [6]}.  Закройте это приложение и повторите попытку.]]></String>
+	<String Id="IDS_ERROR_1604"><![CDATA[Приложение [2] уже установлено, установка невозможна.  Эти приложения несовместимы.]]></String>
+	<String Id="IDS_ERROR_1605"><![CDATA[Недостаточно места на диске -- диск: [2]; требуется: [3] KБ; доступно: [4] KБ. При отключении отката места будет достаточно. Нажмите на кнопку "Отмена" для выхода, "Повторить" для повторной проверки доступного места на диске или "Пропустить" для продолжения без отката.]]></String>
+	<String Id="IDS_ERROR_1606"><![CDATA[Не удается подключиться по сети к [2].]]></String>
+	<String Id="IDS_ERROR_1607"><![CDATA[Для продолжения установки следует закрыть следующие приложения:]]></String>
+	<String Id="IDS_ERROR_1608"><![CDATA[Не удается найти установленные совместимые продукты для установки данного приложения.]]></String>
+	<String Id="IDS_ERROR_1701"><![CDATA[Неверный ключ [2].  Проверьте правильность ключа.]]></String>
+	<String Id="IDS_ERROR_1702"><![CDATA[Перед настройкой приложения [2] необходимо перезагрузить компьютер. Нажмите на кнопку "Да", чтобы перезагрузить компьютер сейчас, либо на кнопку "Нет", чтобы выполнить перезагрузку позже вручную.]]></String>
+	<String Id="IDS_ERROR_1703"><![CDATA[Для завершения установки/удаления приложения [2] требуется перезагрузка операционной системы. Нажмите на кнопку "Да", чтобы перезагрузить компьютер сейчас, либо на кнопку "Нет", чтобы выполнить перезагрузку позже вручную.]]></String>	
+	<String Id="IDS_ERROR_1704"><![CDATA[Установка приложения [2] приостановлена.  Для продолжения необходимо отменить изменения, совершенные в процессе этой установки.  Отменить изменения?]]></String>
+	<String Id="IDS_ERROR_1705"><![CDATA[Выполняется предыдущая установка этого приложения. Для продолжения необходимо отменить изменения, совершенные в процессе этой установки. Вы хотите отменить изменения?]]></String>
+	<String Id="IDS_ERROR_1706"><![CDATA[Не удается найти пакет установки для приложения [2]. Установка не может быть продолжена.]]></String>
+	<String Id="IDS_ERROR_1707"><![CDATA[Установка успешно завершена.]]></String>
+	<String Id="IDS_ERROR_1708"><![CDATA[Установка завершена с ошибкой.]]></String>
+	<String Id="IDS_ERROR_1709"><![CDATA[Приложение: [2] -- [3]]]></String>
+	<String Id="IDS_ERROR_1710"><![CDATA[Вы можете либо восстановить исходное состояние компьютера, либо продолжить установку позже. Вы хотите восстановить исходное состояние?]]></String>
+	<String Id="IDS_ERROR_1711"><![CDATA[Ошибка при записи сведений об установке на диск. Проверьте наличие свободного места на диске и нажмите на кнопку "Повторить" либо на кнопку "Отмена", чтобы прервать установку.]]></String>
+	<String Id="IDS_ERROR_1712"><![CDATA[Не удается найти файлы, необходимые для восстановления исходного состояния компьютера. Восстановление невозможно.]]></String>
+	<String Id="IDS_ERROR_1713"><![CDATA[[2] не удается установить один из обязательных компонентов. Обратитесь в Службу технической поддержки.  {{Системная ошибка: [3].}}]]></String>
+	<String Id="IDS_ERROR_1714"><![CDATA[Не удается удалить более раннюю версию приложения [2]. Обратитесь в Службу технической поддержки. {{Системная ошибка [3].}}]]></String>
+	<String Id="IDS_ERROR_1715"><![CDATA[Установленный [2].]]></String>
+	<String Id="IDS_ERROR_1716"><![CDATA[Настроенный [2].]]></String>
+	<String Id="IDS_ERROR_1717"><![CDATA[Удаленный [2].]]></String>
+	<String Id="IDS_ERROR_1718"><![CDATA[Файл [2] отклонен в соответствии с политикой цифровой подписи.]]></String>
+	<String Id="IDS_ERROR_1719"><![CDATA[Сервис мастера установки недоступен. Обратитесь в Службу технической поддержки и убедитесь, что он зарегистрирован и доступен.]]></String>
+	<String Id="IDS_ERROR_1720"><![CDATA[Обнаружена проблема в пакете мастера установки. Не удается запустить скрипт, необходимый для завершения установки. Обратитесь в Службу технической поддержки или к производителю. Действие: [2] ошибка скрипта [3], [4]: [5] строка [6], колонка [7], [8]]]></String>
+	<String Id="IDS_ERROR_1721"><![CDATA[Обнаружена проблема в пакете мастера установки. Не удается запустить программу, необходимую для завершения установки. Обратитесь в Службу технической поддержки или к производителю. Действие: [2], расположение: [3], команда: [4]]]></String>
+	<String Id="IDS_ERROR_1722"><![CDATA[Обнаружена проблема в пакете мастера установки. Программа, запущенная как часть установки, не завершена. Обратитесь в Службу технической поддержки или к производителю. Действие: [2], расположение: [3], команда: [4]]]></String>
+	<String Id="IDS_ERROR_1723"><![CDATA[Обнаружена проблема в пакете мастере установки. Не удается запустить библиотеку, необходимую для завершения установки. Обратитесь в Службу технической поддержки или к производителю. Действие: [2], функция: [3], библиотека: [4]]]></String>
+	<String Id="IDS_ERROR_1724"><![CDATA[Удаление успешно завершено.]]></String>
+	<String Id="IDS_ERROR_1725"><![CDATA[Удаление завершено с ошибкой.]]></String>
+	<String Id="IDS_ERROR_1726"><![CDATA[Объявление успешно завершено.]]></String>
+	<String Id="IDS_ERROR_1727"><![CDATA[Объявление завершено с ошибкой.]]></String>
+	<String Id="IDS_ERROR_1728"><![CDATA[Настройка успешно завершена.]]></String>
+	<String Id="IDS_ERROR_1729"><![CDATA[Настройка завершена с ошибкой.]]></String>
+	<String Id="IDS_ERROR_1730"><![CDATA[Для удаления приложения требуются права администратора данного компьютера. Зарегистрируйтесь в системе как администратор или обратитесь в Службу технической поддержки.]]></String>
+	<String Id="IDS_ERROR_1731"><![CDATA[Не удается синхронизовать исходный пакет установки для приложения [2] и его копию. Попробуйте запустить мастер установки из действительной копии [3].]]></String>
+	<String Id="IDS_ERROR_1732"><![CDATA[Для завершения установки приложения [2] необходимо перезагрузить компьютер.  На вашем компьютере зарегистрированы другие пользователи и при перезагрузке их несохраненные данные могут быть потеряны. Вы действительно хотите перезагрузить компьютер сейчас?]]></String>
+	<String Id="IDS_ERROR_1801"><![CDATA[Недопустимый путь [2]. Укажите правильный путь.]]></String>
+	<String Id="IDS_ERROR_1802"><![CDATA[Недостаточно памяти. Закройте другие приложения и повторите попытку.]]></String>
+	<String Id="IDS_ERROR_1803"><![CDATA[В дисководе [2] нет диска. Вставьте диск и нажмите на кнопку "Повторить" либо на кнопку "Отмена" для возврата к ранее выбранному диску.]]></String>
+	<String Id="IDS_ERROR_1804"><![CDATA[В дисководе [2] нет диска. Вставьте диск и нажмите на кнопку "Повторить" или на кнопку "Отмена", чтобы вернуться в окно обзора и выбрать другой диск.]]></String>
+	<String Id="IDS_ERROR_1805"><![CDATA[Папка [2] не существует.  Укажите путь к существующей папке.]]></String>
+	<String Id="IDS_ERROR_1806"><![CDATA[У вас недостаточно прав для чтения этой папки.]]></String>
+	<String Id="IDS_ERROR_1807"><![CDATA[Не удается определить папку для установки.]]></String>
+	<String Id="IDS_ERROR_1901"><![CDATA[Ошибка при чтении исходной базы данных установки [2].]]></String>
+	<String Id="IDS_ERROR_1902"><![CDATA[Планирование операции перезагрузки: переименование файла [2] в [3]. Для завершения операции необходимо перезагрузить компьютер.]]></String>
+	<String Id="IDS_ERROR_1903"><![CDATA[Планирование операции перезагрузки: удаление файла [2]. Для завершения операции необходимо перезагрузить компьютер.]]></String>
+	<String Id="IDS_ERROR_1904"><![CDATA[Не удается зарегистрировать модуль [2]. HRESULT [3]. Обратитесь в Службу технической поддержки.]]></String>
+	<String Id="IDS_ERROR_1905"><![CDATA[Не удается отменить регистрацию модуля [2]. HRESULT [3]. Обратитесь в Службу технической поддержки.]]></String>
+	<String Id="IDS_ERROR_1906"><![CDATA[Ошибка кеширования пакета [2]. Ошибка: [3]. Обратитесь в Службу технической поддержки.]]></String>
+	<String Id="IDS_ERROR_1907"><![CDATA[Не удается зарегистрировать шрифт [2]. Убедитесь, что у вас есть права на установку шрифтов, и что система поддерживает этот шрифт.]]></String>
+	<String Id="IDS_ERROR_1908"><![CDATA[Не удается отменить регистрацию шрифта [2]. Убедитесь, что у вас есть права на удаление шрифтов.]]></String>
+	<String Id="IDS_ERROR_1909"><![CDATA[Не удается создать ярлык [2]. Убедитесь, что папка назначения существует и доступна.]]></String>
+	<String Id="IDS_ERROR_1910"><![CDATA[Не удается удалить ярлык  [2]. Убедитесь, что файл ярлыка существует и доступен.]]></String>
+	<String Id="IDS_ERROR_1911"><![CDATA[Не удается зарегистрировать библиотеку типов для файла [2].  Обратитесь в Службу технической поддержки.]]></String>
+	<String Id="IDS_ERROR_1912"><![CDATA[Не удается отменить регистрацию библиотеки типов для файла [2].  Обратитесь в Службу технической поддержки.]]></String>
+	<String Id="IDS_ERROR_1913"><![CDATA[Не удается обновить ini-файл [2][3]. Убедитесь, что файл существует и доступен.]]></String>
+	<String Id="IDS_ERROR_1914"><![CDATA[Не удается спланировать замену файла [2] на [3] при перезагрузке компьютера.  Убедитесь, что у вас есть права на запись к файлу [3].]]></String>
+	<String Id="IDS_ERROR_1915"><![CDATA[Ошибка при удалении диспетчера драйвера ODBC, ошибка ODBC [2]: [3]. Обратитесь в Службу технической поддержки.]]></String>
+	<String Id="IDS_ERROR_1916"><![CDATA[Ошибка при установке диспетчера драйвера ODBC, ошибка ODBC  [2]: [3]. Обратитесь в Службу технической поддержки.]]></String>
+	<String Id="IDS_ERROR_1917"><![CDATA[Ошибка при удалении драйвера ODBC: [4], ошибка ODBC  [2]: [3]. Убедитесь, что у вас есть права на удаление драйверов ODBC.]]></String>
+	<String Id="IDS_ERROR_1918"><![CDATA[Ошибка при установке драйвера ODBC: [4], ошибка ODBC [2]: [3]. Убедитесь, что файл [4] существует и доступен.]]></String>
+	<String Id="IDS_ERROR_1919"><![CDATA[Ошибка при настройке источника данных ODBC: [4],ошибка ODBC  [2]: [3]. Убедитесь, что файл [4] существует и доступен.]]></String>
+	<String Id="IDS_ERROR_1920"><![CDATA[Ошибка при запуске службы [2] ([3]).  Убедитесь, что у вас есть права на запуск системных служб.]]></String>
+	<String Id="IDS_ERROR_1921"><![CDATA[Не удается остановить службу [2] ([3]). Убедитесь, что у вас есть права на остановку системных служб.]]></String>
+	<String Id="IDS_ERROR_1922"><![CDATA[Не удается удалить службу [2] ([3]). Убедитесь, что у вас есть права на удаление системных служб.]]></String>
+	<String Id="IDS_ERROR_1923"><![CDATA[Не удается установить службу [2] ([3]). Убедитесь, что у вас есть права на установку системных служб.]]></String>
+	<String Id="IDS_ERROR_1924"><![CDATA[Не удается обновить переменную среды [2]. Убедитесь, что у вас есть права на изменение переменных среды.]]></String>
+	<String Id="IDS_ERROR_1925"><![CDATA[У вас недостаточно прав для выполнения этой установки для всех пользователей данного компьютера.  Зарегистрируйтесь в системе в качестве администратора и повторно запустите мастер установки.]]></String>
+	<String Id="IDS_ERROR_1926"><![CDATA[Не удается установить атрибуты безопасности для файла [3]. Ошибка: [2]. Убедитесь, что у вас достаточно прав для изменения разрешений на доступ к этому файлу.]]></String>
+	<String Id="IDS_ERROR_1927"><![CDATA[Службы COM+ 1.0 не установлены на данном компьютере. Они необходимы для успешной установки приложения. Эти службы входят в состав Microsoft Windows 2000.]]></String>
+	<String Id="IDS_ERROR_1928"><![CDATA[Ошибка при регистрации приложения COM+. За дополнительными сведениями обратитесь в Службу технической поддержки.]]></String>
+	<String Id="IDS_ERROR_1929"><![CDATA[Ошибка при отмене регистрации приложения COM+. За дополнительными сведениями обратитесь в Службу технической поддержки.]]></String>
+	<String Id="IDS_ERROR_1930"><![CDATA[Изменение описания службы [2] ([3]) не допускается.]]></String>
+	<String Id="IDS_ERROR_1931"><![CDATA[Службе Windows Installer не удается обновить системный файл [2], поскольку он защищен средствами Microsoft Windows.  Возможно, для правильной работы приложения потребуется обновление операционной системы. {{Версия пакета: [3], Защищенная версия ОС: [4]}}]]></String>
+	<String Id="IDS_ERROR_1932"><![CDATA[Службе Windows Installer не удается обновить защищенный системный файл [2]. {{Версия пакета: [3], Защищенная версия ОС: [4], Ошибка SFP: [5]}}]]></String>
+	<String Id="IDS_ERROR_1933"><![CDATA[Для установки приложения необходимо наличие Internet Information Server версии 4.0 или выше, чтобы выполнить настройку виртуальных корней службы IIS. Убедитесь, что на вашем компьютере установлен Internet Information Server версии 4.0 или выше.]]></String>
+	<String Id="IDS_ERROR_1934"><![CDATA[Для установки приложения необходимо обладать правами администратора, чтобы выполнить настройку виртуальных корней службы IIS.]]></String>
+	<String Id="IDS_ERROR_1935"><![CDATA[Ошибка при установке ассемблера [6]. За дополнительными сведениями обратитесь в Службу технической поддержки. HRESULT: [3]. {{интерфейс ассемблера: [4], функция: [5], компонент: [2]}}]]></String>
+	<String Id="IDS_ERROR_1936"><![CDATA[Ошибка при установке ассемблера [6]. Ассемблер не назван или его подпись не соответсвует минимальным требованиям длины ключа. HRESULT: [3]. {{интерфейс ассемблера: [4], функция: [5], компонент: [2]}}]]></String>
+	<String Id="IDS_ERROR_1937"><![CDATA[Ошибка при установке ассемблера [6]. Подпись или каталог недействительны. HRESULT: [3]. {{интерфейс ассемблера: [4], функция: [5], компонент: [2]}}]]></String>
+	<String Id="IDS_ERROR_1938"><![CDATA[Ошибка при установке ассемблера [6]. Не удается найти модули ассемблера. HRESULT: [3]. {{интерфейс ассемблера: [4], функция: [5], компонент: [2]}} ]]></String>
+	
+	<!-- Control localization -->
+	
+	<!-- PreActionDlg -->
+	<String Id="IDS_PreActionDlg_ActionText"><![CDATA[{Выполняется подготовка к установке приложения, пожалуйста, подождите...]]></String>
+
+	<!-- SystemRestartDlg -->
+	<String Id="IDS_SystemRestartDlg_Text"><![CDATA[Для продолжения установки необходимо перезагрузить компьютер. Выполнить перезагрузку сейчас?]]></String>
+	
+	<!-- WelcomeDlg -->
+	<String Id="IDS_WelcomeDlg_WelcomeTitle"><![CDATA[{\WelcomePageTitleFont}Вас приветствует мастер установки [ProductName_GEN]]]></String>
+	<String Id="IDS_WelcomeDlg_WelcomeText"><![CDATA[Мастер выполнит установку [ProductName_GEN] ([ProductVersion]) на ваш компьютер.
+
+Перед началом установки рекомендуется закрыть все приложения. 
+
+Для продолжения установки нажмите на кнопку "Далее". 
+
+Для выхода из мастера установки нажмите на кнопку "Отмена".]]></String>
+	<String Id="IDS_WelcomeDlg_CheckExpressInstall"><![CDATA[Быстрая установка (установка с параметрами работы по умолчанию)]]></String>
+	<!-- LicenseAgreementDlg -->
+	<String Id="IDS_LicenseAgreementDlg_Title"><![CDATA[{\PageTitleFont}Лицензионное соглашение]]></String>
+	<String Id="IDS_LicenseAgreementDlg_Description"><![CDATA[{\PageSubtitleFont}Внимательно ознакомьтесь с условиями лицензионного соглашения.]]></String>
+	<String Id="IDS_LicenseAgreementDlg_Text"><![CDATA[Пожалуйста, прочтите лицензионное соглашение. Для продолжения установки необходимо принять его условия.]]></String>
+	<String Id="IDS_LicenseAgreementDlg_ButtonsYes"><![CDATA[Я &принимаю условия лицензионного соглашения]]></String>
+	<String Id="IDS_LicenseAgreementDlg_ButtonsNo"><![CDATA[Я н&е принимаю условия лицензионного соглашения]]></String>
+	<!-- SetupModeDlg -->
+	<String Id="IDS_SetupModeDlg_Title"><![CDATA[{\PageTitleFont}Тип установки]]></String>
+	<String Id="IDS_SetupModeDlg_Description"><![CDATA[{\PageSubtitleFont}Выбор типа установки.]]></String>
+	<String Id="IDS_SetupModeDlg_Text"><![CDATA[Выберите наиболее подходящий вам тип установки приложения.]]></String>
+	<String Id="IDS_SetupModeDlg_ButtonsYes"><![CDATA[Быстрая установка (установка с параметрами работы по умолчанию)]]></String>
+	<String Id="IDS_SetupModeDlg_ButtonsNo"><![CDATA[Выборочная установка (установка отдельных компонентов с возможностью предварительной настройки)]]></String>
+	<!-- UserRegistrationDlg -->
+	<String Id="IDS_UserRegistrationDlg_Title"><![CDATA[{\PageTitleFont}Информация о пользователе]]></String>
+	<String Id="IDS_UserRegistrationDlg_Description"><![CDATA[{\PageSubtitleFont}Пожалуйста, введите информацию о себе.]]></String>
+	<String Id="IDS_UserRegistrationDlg_Text"><![CDATA[Укажите ваше имя, название компании, в которой вы работаете, и адрес вашей электронной почты. Для продолжения установки нажмите на кнопку "Далее".]]></String>
+	<String Id="IDS_UserRegistrationDlg_Text1"><![CDATA[Приведенная информация будет использоваться только для автоматического заполнения полей при отправке отзыва в "Лабораторию Касперского".]]></String>
+	<String Id="IDS_UserRegistrationDlg_NameLabel"><![CDATA[&Имя пользователя:]]></String>
+	<String Id="IDS_UserRegistrationDlg_OrgLabel"><![CDATA[&Название компании:]]></String>
+	<String Id="IDS_UserRegistrationDlg_EmailLabel"><![CDATA[&Электронный адрес:]]></String>
+	<!-- InformationDlg -->
+	<String Id="IDS_InformationDlg_Title"><![CDATA[{\PageTitleFont}Важная информация]]></String>
+	<String Id="IDS_InformationDlg_Description"><![CDATA[{\PageSubtitleFont}Пожалуйста, прочтите приведенную ниже информацию.]]></String>
+	<String Id="IDS_InformationDlg_Text"><![CDATA[Для продолжения установки нажмите на кнопку "Далее".]]></String>
+	<!-- DestinationFolderDlg -->
+	<String Id="IDS_DestinationFolderDlg_Title"><![CDATA[{\PageTitleFont}Папка назначения]]></String>
+	<String Id="IDS_DestinationFolderDlg_Description"><![CDATA[{\PageSubtitleFont}Выберите папку установки приложения.]]></String>
+	<String Id="IDS_DestinationFolderDlg_Text"><![CDATA[Для установки приложения в указанную папку нажмите на кнопку "Далее". Чтобы установить приложение в другую папку, выберите ее с помощью кнопки "Обзор".]]></String>
+	<String Id="IDS_DestinationFolderDlg_FolderLabel"><![CDATA[&Папка]]></String>
+	<String Id="IDS_DestinationFolderDlg_DiskCost"><![CDATA[&Диск]]></String>
+	<!-- DiskCostDlg -->
+	<String Id="IDS_DiskCostDlg_Title"><![CDATA[[DlgTitleFont]Доступное дисковое пространство]]></String>
+	<String Id="IDS_DiskCostDlg_Description"><![CDATA[Информация о свободном месте на жестких дисках вашего компьютера.]]></String>
+	<String Id="IDS_DiskCostDlg_Text"><![CDATA[Диски, на которых недостаточно свободного места для установки выбранных компонентов приложения, отмечены специальным значком. Вы можете удалить некоторые файлы с таких дисков, установить меньше компонентов приложения или выбрать другой диск для установки.]]></String>	
+	<!-- SetupTypeDlg -->
+	<String Id="IDS_SetupTypeDlg_Title"><![CDATA[{\PageTitleFont}Тип установки]]></String>
+	<String Id="IDS_SetupTypeDlg_Description"><![CDATA[Выберите наиболее подходящий вам тип установки приложения.]]></String>
+	<String Id="IDS_SetupTypeDlg_CustomLabel"><![CDATA[{\PageTitleFont}Выборочная установка]]></String>
+	<String Id="IDS_SetupTypeDlg_CustomText"><![CDATA[Установка отдельных компонентов приложения с возможностью предварительной настройки. Такой тип установки рекомендуется использовать опытным пользователям.]]></String>
+	<String Id="IDS_SetupTypeDlg_TypicalLabel"><![CDATA[{\PageTitleFont}Быстрая установка]]></String>
+	<String Id="IDS_SetupTypeDlg_TypicalText"><![CDATA[Полная установка приложения с параметрами работы по умолчанию.]]></String>
+	<String Id="IDS_SetupTypeDlg_CustomButton"><![CDATA[Выборочная установка]]></String>
+	<String Id="IDS_SetupTypeDlg_TypicalButton"><![CDATA[Быстрая установка]]></String>
+	<!--<String Id="IDS_SetupTypeDlg_CompleteLabel"><![CDATA[{\PageTitleFont}Полная установка]]></String>
+	<String Id="IDS_SetupTypeDlg_CompleteText"><![CDATA[Установка всех компонентов приложения, обеспечивающих комплексную защиту вашего компьютера.]]></String>
+	<String Id="IDS_SetupTypeDlg_CustomLabel"><![CDATA[{\PageTitleFont}Выборочная установка]]></String>
+	<String Id="IDS_SetupTypeDlg_CustomText"><![CDATA[Установка отдельных компонентов приложения. Такой тип установки рекомендуется использовать опытным пользователям.]]></String>
+	<String Id="IDS_SetupTypeDlg_TypicalLabel"><![CDATA[{\PageTitleFont}Компоненты антивирусной защиты]]></String>
+	<String Id="IDS_SetupTypeDlg_TypicalText"><![CDATA[Установка только компонентов антивирусной защиты. Защита от спама, сетевых атак, новых видов угроз обеспечиваться не будет.]]></String>
+	<String Id="IDS_SetupTypeDlg_CompleteButton"><![CDATA[Полная установка]]></String>
+	<String Id="IDS_SetupTypeDlg_CustomButton"><![CDATA[Выборочная установка]]></String>
+	<String Id="IDS_SetupTypeDlg_TypicalButton"><![CDATA[Установка компонентов антивирусной защиты]]></String>-->
+	
+	<!-- CustomizeDlg -->
+	<String Id="IDS_CustomizeDlg_Title"><![CDATA[{\PageTitleFont}Выборочная установка]]></String>
+	<String Id="IDS_CustomizeDlg_Description"><![CDATA[Выберите компоненты приложения, которые вы хотите установить.]]></String>
+	<String Id="IDS_CustomizeDlg_Tree"><![CDATA[Компоненты приложения]]></String>
+	<String Id="IDS_CustomizeDlg_ItemDescription"><![CDATA[Описание выбранных для установки компонентов]]></String>
+	<String Id="IDS_CustomizeDlg_ItemSize"><![CDATA[Место для установки выбранных компонентов]]></String>
+	
+	<!-- CustomSetupTips -->
+	<String Id="IDS_CustomSetupTips_Title"><![CDATA[{\PageTitleFont}Советы по выборочной установке]]></String>
+	<String Id="IDS_CustomSetupTips_Description"><![CDATA[Выборочная установка позволяет настроить детали установки компонентов приложения.]]></String>
+	<String Id="IDS_CustomSetupTips_DontInstallText"><![CDATA[Не будет установлен.]]></String>
+	<String Id="IDS_CustomSetupTips_FirstInstallText"><![CDATA[Будет установлен по первому требованию (если компонент поддерживает такую возможность).]]></String>
+	<String Id="IDS_CustomSetupTips_InstallStateText"><![CDATA[Этот статус оздачает, что компонент...]]></String>
+	<String Id="IDS_CustomSetupTips_InstallText"><![CDATA[Будет установлен на локальный жесткий диск.]]></String>
+	<String Id="IDS_CustomSetupTips_MenuText"><![CDATA[Значок рядом с компонентом отражает статус его установки. Щелкните левой клавишей мыши по значку, чтобы просмотреть список статусов установки для каждого компонента.]]></String>
+	<String Id="IDS_CustomSetupTips_NetworkInstallText"><![CDATA[Будет установлен для запуска по сети (если компонент поддерживает такую возможность).]]></String>
+	<String Id="IDS_CustomSetupTips_PartialText"><![CDATA[Будет установлен на локальный жесткий диск вместе с некоторыми подкомпонентами (если у компонента есть подкомпоненты).]]></String>
+	
+	<!-- OutOfDiskDlg -->
+	<String Id="IDS_OutOfDiskDlg_Title"><![CDATA[[DlgTitleFont]Недостаточно места на диске.]]></String>
+	<String Id="IDS_OutOfDiskDlg_Description"><![CDATA[Место на диске, требуемое для установки приложения, превышает доступное.]]></String>
+	<String Id="IDS_OutOfDiskDlg_Text"><![CDATA[На отмеченных дисках недостаточно места для установки выбранных компонентов. Вы можете удалить некоторые файлы с отмеченных дисков, установить меньше компонентов приложения на локальный диск или выбрать другой диск для установки.]]></String>
+	
+	<!-- OutOfRbDiskDlg -->
+	<String Id="IDS_OutOfRbDiskDlg_Title"><![CDATA[[DlgTitleFont]Недостаточно места на диске]]></String>
+	<String Id="IDS_OutOfRbDiskDlg_Description"><![CDATA[Место на диске, требуемое для установки приложения, превышает доступное.]]></String>
+	<String Id="IDS_OutOfRbDiskDlg_Text"><![CDATA[На отмеченных дисках  недостаточно места для установки выбранных компонентов. Вы можете удалить некоторые файлы с отмеченных дисков, установить меньше компонентов приложения на локальный диск или выбрать другой диск для установки.]]></String>
+	<String Id="IDS_OutOfRbDiskDlg_Text2"><![CDATA[Вы также можете отключить возможность отката установки. Откат позволяет восстановить состояние вашего компьютера до запуска мастера установки, если его работа по каким-либо причинам будет прервана. Нажмите на кнопку "Да", если вы хотите отключить функцию отката.]]></String>
+	
+	<!-- UnloadWFWDlg -->
+	<String Id="IDS_UnloadWFWDlg_Title"><![CDATA[{\PageTitleFont}Сетевой экран Microsoft Windows]]></String>
+	<String Id="IDS_UnloadWFWDlg_Description"><![CDATA[{\PageSubtitleFont}Отключение сетевого экрана Microsoft Windows.]]></String>
+	<String Id="IDS_UnloadWFWDlg_Text"><![CDATA[Вы выбрали для установки компонент Сетевой экран при включенном сетевом экране Microsoft Windows. Во избежание конфликтов сетевой экран Microsoft Windows будет отключен. Вы в любой момент можете включить его в Панели управления.]]></String>
+	<String Id="IDS_UnloadWFWDlg_Text1"><![CDATA[Сетевой экран Microsoft Windows будет отключен. Сетевой экран [ProductName_GEN] обеспечит полную защиту при работе в сети.]]></String>
+	<String Id="IDS_UnloadWFWDlg_Text2"><![CDATA[Сетевой экран Microsoft Windows продолжает защищать ваш компьютер. Во избежание конфликтов Сетевой экран [ProductName_GEN] будет отключен. Вы сможете в любой момент включить его.]]></String>
+	<String Id="IDS_UnloadWFWDlg_ButtonsYes"><![CDATA[&Отключить сетевой экран Microsoft Windows ]]></String>
+	<String Id="IDS_UnloadWFWDlg_ButtonsNo"><![CDATA[&Использовать сетевой экран Microsoft Windows ]]></String>
+	
+	<!-- FoundProductsDlg -->
+	<String Id="IDS_FoundProductsDlg_Title"><![CDATA[{\PageTitleFont}Несовместимое программное обеспечение]]></String>
+	<String Id="IDS_FoundProductsDlg_Description"><![CDATA[{\PageSubtitleFont}Удаление несовместимого программного обеспечения]]></String>
+	<String Id="IDS_FoundProductsDlg_Text"><![CDATA[Внимание! На вашем компьютере установлены приложения, совместное использование которых с [ProductName_INS] невозможно. Прежде чем продолжить установку, необходимо удалить эти приложения.]]></String>
+	<String Id="IDS_FoundProductsDlg_Text2"><![CDATA[При нажатии на кнопку "Далее" приложения будут автоматически удалены.]]></String>
+	<String Id="IDS_FoundProductsDlg_ButtonsYes"><![CDATA[&Автоматически удалить несовместимое программное обеспечение]]></String>
+	<String Id="IDS_FoundProductsDlg_ButtonsNo"><![CDATA[&Вручную удалить несовместимое программное обеспечение]]></String>
+	
+	<!-- FoundSettingsDlg -->
+	<String Id="IDS_FoundSettingsDlg_Title"><![CDATA[{\PageTitleFont}Данные предыдущей версии приложения]]></String>
+	<String Id="IDS_FoundSettingsDlg_Description"><![CDATA[{\PageSubtitleFont}Обнаружены параметры работы и другие данные приложения.]]></String>
+	<String Id="IDS_FoundSettingsDlg_Text"><![CDATA[Обнаружены параметры работы и другие данные приложения, сохраненные с предыдущей установки. Выберите те из них, которые следует использовать к текущей установке.]]></String>
+	<String Id="IDS_FoundSettingsDlg_CheckUseSavedSettings"><![CDATA[Параметры работы приложения]]></String>
+	<String Id="IDS_FoundSettingsDlg_CheckUseSavedAVBases"><![CDATA[Базы Файлового Антивируса, Почтового Антивируса и Веб-Антивируса]]></String>
+	<String Id="IDS_FoundSettingsDlg_CheckUseSavedASBases"><![CDATA[Базы Анти-Спама]]></String>	
+	
+	<!-- VerifyReadyDlg -->
+	<String Id="IDS_VerifyReadyDlg_Title"><![CDATA[{\PageTitleFont}Подготовка к установке]]></String>
+	<String Id="IDS_VerifyReadyDlg_Description"><![CDATA[{\PageSubtitleFont}Все готово для установки приложения.]]></String>
+	<String Id="IDS_VerifyReadyDlg_Text"><![CDATA[Нажмите на кнопку "Установить" для установки приложения. Для просмотра или изменения параметров установки нажмите на кнопку "Назад". Для завершения работы мастера установки нажмите на кнопку "Отмена".]]></String>
+	<String Id="IDS_VerifyReadyDlg_Text2"><![CDATA[Вы действительно хотите продолжить прерванную установку?]]></String>
+	<String Id="IDS_VerifyReadyDlg_Text3"><![CDATA[Рекомендуемые действия после установки:]]></String>
+	<String Id="IDS_VerifyReadyDlg_Text4"><![CDATA[В процессе работы приложения выводить отладочную информацию:]]></String>
+	<String Id="IDS_VerifyReadyDlg_CheckAutomaticUpdate"><![CDATA[Включить автоматическое обновление]]></String>
+	<String Id="IDS_VerifyReadyDlg_CheckScanComputer"><![CDATA[Проверить компьютер на вирусы]]></String>
+	<String Id="IDS_VerifyReadyDlg_CheckEnableProtection"><![CDATA[&Включить защиту модулей до начала установки]]></String>
+	<String Id="IDS_VerifyReadyDlg_CheckUseSavedSettings"><![CDATA[Параметры работы приложения]]></String>
+	<String Id="IDS_VerifyReadyDlg_CheckUseSavedAVBases"><![CDATA[Базы Файлового Антивируса, Почтового Антивируса и Веб-Антивируса]]></String>
+	<String Id="IDS_VerifyReadyDlg_CheckUseSavedASBases"><![CDATA[Базы Анти-Спама]]></String>	
+	<String Id="IDS_VerifyReadyDlg_CheckTraceToFile"><![CDATA[в файл]]></String>
+	<String Id="IDS_VerifyReadyDlg_CheckTraceToDebudOutput"><![CDATA[на консоль]]></String>
+	<String Id="IDS_VerifyReadyDlg_AddMSEclusions"><![CDATA[Исключить из антивирусной проверки области, рекомендованные компанией Microsoft]]></String>
+	<String Id="IDS_VerifyReadyDlg_AddEnvironment"><![CDATA[Добавить путь к файлу avp.com к системной переменной %PATH%]]></String>
+	
+	<!-- ActionDialog -->
+	<String Id="IDS_ActionDialog_Title"><![CDATA[{\PageTitleFont}Установка приложения]]></String>
+	<String Id="IDS_ActionDialog_Title2"><![CDATA[{\PageTitleFont}Удаление/изменение приложения]]></String>
+	<String Id="IDS_ActionDialog_Description"><![CDATA[{\PageSubtitleFont}Выполняется установка приложения, пожалуйста, подождите...]]></String>
+	<String Id="IDS_ActionDialog_Description2"><![CDATA[{\PageSubtitleFont}Выполняется удаление/изменение файлов приложения, пожалуйста, подождите...]]></String>
+	<String Id="IDS_ActionDialog_ActionText"><![CDATA[{\PageSubtitleFont}Начало процесса установки...]]></String>
+	<String Id="IDS_ActionDialog_ActionProgress"><![CDATA[Завершение процесса установки...]]></String>
+	<String Id="IDS_ActionDialog_StatusLabel"><![CDATA[Состояние:]]></String>
+	
+	<!-- ExitDialog -->
+	<String Id="IDS_ExitDialog_Title"><![CDATA[{\WelcomePageTitleFont}Завершение работы мастера установки]]></String>
+	<String Id="IDS_ExitDialog_Title2"><![CDATA[{\WelcomePageTitleFont}Завершение работы мастера установки]]></String>	
+	<String Id="IDS_ExitDialog_Text"><![CDATA[Работа мастера установки успешно завершена. Нажмите на кнопку "Далее", чтобы запустить мастер первоначальной настройки приложения. ]]></String>	
+	<String Id="IDS_ExitDialog_Text2"><![CDATA[Работа мастера установки успешно завершена.]]></String>			
+	<String Id="IDS_ExitDialog_LaunchProgram"><![CDATA[Запустить [ProductName_NOM]]]></String>	
+
+	
+	<!-- FatalError -->
+	<String Id="IDS_FatalError_HeaderText"><![CDATA[{\WelcomePageTitleFont}Завершение работы мастера установки]]></String>
+	<String Id="IDS_FatalError_HeaderText2"><![CDATA[{\WelcomePageTitleFont}Завершение работы мастера установки]]></String>
+	<String Id="IDS_FatalError_Text"><![CDATA[Работа мастера установки прервана из-за возникновения неустранимой ошибки.]]></String>
+	<String Id="IDS_FatalError_Text2"><![CDATA[Вы хотите восстановить состояние вашей системы до момента запуска мастера установки или продолжить установку позже?]]></String>
+	<String Id="IDS_FatalError_Text3"><![CDATA[Работа мастера установки прервана из-за возникновения неустранимой ошибки.]]></String>
+	
+	<!-- UserExit -->
+	<String Id="IDS_UserExit_InstallCanceledText"><![CDATA[{\WelcomePageTitleFont}Работа мастера установки прервана]]></String>
+	<String Id="IDS_UserExit_InstallCanceledText2"><![CDATA[{\WelcomePageTitleFont}Работа мастера установки прервана]]></String>
+	<String Id="IDS_UserExit_Text"><![CDATA[Работа мастера установки [ProductName_GEN] была прервана.]]></String>
+	<String Id="IDS_UserExit_Text2"><![CDATA[Вы хотите восстановить состояние вашей системы до момента запуска мастера установки или продолжить установку позже?]]></String>
+	<String Id="IDS_UserExit_Text3"><![CDATA[Работа мастера установки [ProductName_GEN] была прервана.]]></String>
+	
+	<!-- CancelDlg -->
+	<String Id="IDS_CancelDlg_Text"><![CDATA[Вы действительно хотите прервать работу мастера установки [ProductName_GEN]?]]></String>
+	<String Id="IDS_CancelDlg_Uninstall_Text"><![CDATA[Вы действительно хотите прервать работу мастера удаления [ProductName_GEN]?]]></String>
+
+	<!-- AdminWelcomeDlg -->
+	<String Id="IDS_AdminWelcomeDlg_WelcomeTitle"><![CDATA[{\WelcomePageTitleFont}Вас приветствует мастер установки [ProductName_GEN]]]></String>
+	<String Id="IDS_AdminWelcomeDlg_WelcomeText"><![CDATA[Мастер установки создаст образ диска [ProductName_GEN] на сервере в указанной сетевой папке. Для продолжения нажмите на кнопку "Далее".]]></String>
+	
+	<!-- AdminInstallPoint -->
+	<String Id="IDS_AdminInstallPoint_Title"><![CDATA[{\WelcomePageTitleFont}Сетевая папка]]></String>
+	<String Id="IDS_AdminInstallPoint_Description"><![CDATA[Укажите сетевую папку для создания образа диска приложения на сервере.]]></String>
+	<String Id="IDS_AdminInstallPoint_EditQ"><![CDATA[Сетевая папка пакета &установки:]]></String>
+	<String Id="IDS_AdminInstallPoint_Text"><![CDATA[Укажите сетевую папку на сервере для создания образа диска для пакета установки.]]></String>
+	
+	<!-- AdminInstallBrowse -->
+	<String Id="IDS_AdminInstallBrowse_ComboText"><![CDATA[&Сетевая папка:]]></String>	
+	
+	<!-- AdminExitDialog -->
+	<String Id="IDS_AdminExitDialog_Title"><![CDATA[{\WelcomePageTitleFont}Завершение установки]]></String>
+	<String Id="IDS_AdminExitDialog_Text"><![CDATA[Установка приложения на ваш компьютер успешно завершена. Нажмите на кнопку "ОK", чтобы завершить работу мастера установки. ]]></String>	
+	
+	<!-- BrowseDlg -->
+	<String Id="IDS_BrowseDlg_Title"><![CDATA[Изменение текущей папки назначения]]></String>
+	<String Id="IDS_BrowseDlg_Up"><![CDATA[Переход на один уровень вверх|]]></String>
+	<String Id="IDS_BrowseDlg_NewFolder"><![CDATA[Создание папки|]]></String>
+	<String Id="IDS_BrowseDlg_ComboText"><![CDATA[Пап&ка:]]></String>
+	<String Id="IDS_BrowseDlg_TailText"><![CDATA[&Путь к папке:]]></String>		
+		
+	<!-- ErrorDialog -->
+	
+	<!-- ResumeDlg -->
+	<String Id="IDS_ResumeDlg_Title"><![CDATA[{\WelcomePageTitleFont}Вас приветствует мастер установки [ProductName_GEN]]]></String>
+	<String Id="IDS_ResumeDlg_Text"><![CDATA[Мастер установки произведет обновление [ProductName_GEN] на вашем компьютере до версии [ProductVersion].
+
+Перед началом установки рекомендуется закрыть все приложения. 
+
+Для продолжения установки нажмите на кнопку "Далее". 
+
+Для выхода из мастера установки нажмите на кнопку "Отмена".]]></String>
+	<String  Id="IDS_ResumeDlg_CheckExpressUpgrade"><![CDATA[Быстрое обновление (Обновление с параметрами по умолчанию)]]></String> 
+
+	<!-- FilesInUse -->
+	<String Id="IDS_FilesInUse_Title"><![CDATA[{\PageTitleFont}Используемые файлы]]></String>
+	<String Id="IDS_FilesInUse_Description"><![CDATA[{\PageSubtitleFont}Некоторые файлы используются в данный момент другими приложениями.]]></String>
+	<String Id="IDS_FilesInUse_Text"><![CDATA[Пожалуйста, закройте следующие приложения, прежде чем продолжить установку:]]></String>
+
+	<!-- MsiRMFilesInUse -->
+	<String Id="IDS_MsiRMFilesInUse_Title"><![CDATA[{\PageTitleFont}Используемые файлы]]></String>
+	<String Id="IDS_MsiRMFilesInUse_Description"><![CDATA[{\PageSubtitleFont}Некоторые файлы используются в данный момент другими приложениями.]]></String>
+	<String Id="IDS_MsiRMFilesInUse_Text"><![CDATA[Пожалуйста, закройте следующие приложения, прежде чем продолжить установку:]]></String>
+	<String Id="IDS_MsiRMFilesInUse_UseRM"><![CDATA[&Закрыть приложения и запустить их после установки.]]></String>
+	<String Id="IDS_MsiRMFilesInUse_DontUseRM"><![CDATA[&Не закрывать приложения (потребуется перезагрузка.)]]></String>
+
+	<!-- MaintenanceWelcomeDlg -->
+	<String Id="IDS_MaintenanceWelcomeDlg_Title"><![CDATA[{\WelcomePageTitleFont}Добро пожаловать в мастер установки [ProductName_GEN]]]></String>
+	<String Id="IDS_MaintenanceWelcomeDlg_Description"><![CDATA[Мастер поможет вам изменить параметры установки [ProductName_GEN] или удалить его. 
+
+Нажмите на кнопку "Далее" для продолжения или на кнопку "Отмена" для выхода из мастера установки.]]></String>
+
+	
+	<!-- MaintenanceTypeDlg -->
+	<String Id="IDS_MaintenanceTypeDlg_ChangeLabel"><![CDATA[{\PageTitleFont}Изменение]]></String>
+	<String Id="IDS_MaintenanceTypeDlg_RepairLabel"><![CDATA[{\PageTitleFont}Восстановление]]></String>
+	<String Id="IDS_MaintenanceTypeDlg_RemoveLabel"><![CDATA[{\PageTitleFont}Удаление]]></String>
+	<String Id="IDS_MaintenanceTypeDlg_Title"><![CDATA[{\PageTitleFont}Изменение, восстановление или удаление приложения]]></String>
+	<String Id="IDS_MaintenanceTypeDlg_Description"><![CDATA[Выберите операцию, которую вы хотите выполнить.]]></String>
+	<String Id="IDS_MaintenanceTypeDlg_Text"><![CDATA[Определите, какую операцию вы хотите выполнить над приложением.]]></String>
+	<String Id="IDS_MaintenanceTypeDlg_ChangeText"><![CDATA[Изменение состава или расположения компонентов приложения на вашем компьютере.]]></String>
+	<String Id="IDS_MaintenanceTypeDlg_RemoveText"><![CDATA[Удаление всех файлов [ProductName_GEN] с вашего компьютера.]]></String>
+	<String Id="IDS_MaintenanceTypeDlg_RepairText"><![CDATA[Устранение ошибок, восстановление поврежденных файлов, ярлыков, ключей реестра.]]></String>
+	<String Id="IDS_MaintenanceTypeDlg_ChangeButton"><![CDATA[Изменение компонентов]]></String>
+	<String Id="IDS_MaintenanceTypeDlg_RepairButton"><![CDATA[Восстановление компонентов]]></String>
+	<String Id="IDS_MaintenanceTypeDlg_RemoveButton"><![CDATA[Удаление компонентов]]></String>
+	
+	<!-- DlgPasswdU -->
+	<String Id="IDS_DlgPasswdU_Title">Пароль для удаления приложения</String>
+	<String Id="IDS_DlgPasswdU_Subtitle">Введите пароль для удаления [ProductName_GEN]</String>
+	<String Id="IDS_DlgPasswdU_Text">Чтобы удалить [ProductName_NOM], необходимо ввести пароль.</String>
+	<String Id="IDS_DlgPasswdU_Label">Пароль:</String>
+	
+	<!-- DlgPasswdInvalidU -->
+	<String Id="IDS_DlgPasswdInvalidU_Text">Введенный пароль неверен.</String>
+	
+	<!-- UninstallOptionsDlg -->
+	<String Id="IDS_UninstallOptionsDlg_Title"><![CDATA[{\PageTitleFont}Сохранение объектов]]></String>
+	<String Id="IDS_UninstallOptionsDlg_Description"><![CDATA[{\PageSubtitleFont}Укажите объекты, которые требуется сохранить.]]></String>
+	<String Id="IDS_UninstallOptionsDlg_Text"><![CDATA[{\PageSubtitleFont}Вы можете удалить приложение полностью или сохранить некоторые данные. Сохраненные объекты могут быть использованы позднее мастером установки.]]></String>	
+	<String Id="IDS_UninstallOptionsDlg_ButtonsYes"><![CDATA[Удалить приложение полностью]]></String>
+	<String Id="IDS_UninstallOptionsDlg_ButtonsNo"><![CDATA[Сохранить объекты приложения]]></String>
+	<String Id="IDS_UninstallOptionsDlg_SaveBases"><![CDATA[Базы приложения]]></String>
+	<String Id="IDS_UninstallOptionsDlg_SaveAntiSpamBases"><![CDATA[Базы Анти-Спама]]></String>
+	<String Id="IDS_UninstallOptionsDlg_SaveLicense"><![CDATA[Информация об активации]]></String>
+	<String Id="IDS_UninstallOptionsDlg_SaveSettings"><![CDATA[Параметры защиты]]></String>
+	<String Id="IDS_UninstallOptionsDlg_SaveFidbox"><![CDATA[Данные iSwift]]></String>
+	<String Id="IDS_UninstallOptionsDlg_SaveQuarantine"><![CDATA[Объекты карантина]]></String>
+	<String Id="IDS_UninstallOptionsDlg_SaveBackup"><![CDATA[Объекты резервного хранилища]]></String>
+	<String Id="IDS_UninstallOptionsDlg_SaveReport"><![CDATA[Файлы отчетов]]></String>
+
+	<!-- WaitForCostingDlg -->
+	<String Id="IDS_WaitForCostingDlg_Text"><![CDATA[Выполняется определение требуемого дискового пространства для установки, пожалуйста, подождите...]]></String>
+	
+	<!-- VerifyReadyAdmin -->
+	<String Id="IDS_VerifyReadyAdmin_Title"><![CDATA[{\PageTitleFont}Подготовка к установке]]></String>
+	<String Id="IDS_VerifyReadyAdmin_Description"><![CDATA[{\PageSubtitleFont}Все готово для установки выбранных компонентов приложения.]]></String>
+	<String Id="IDS_VerifyReadyAdmin_Text"><![CDATA[Вы действительно хотите запустить установку?]]></String>
+	
+	<!-- VerifyModifyDlg -->
+	<String Id="IDS_VerifyModifyDlg_Title"><![CDATA[{\PageTitleFont}Подготовка к установке]]></String>
+	<String Id="IDS_VerifyModifyDlg_Description"><![CDATA[{\PageSubtitleFont}Все готово для установки выбранных компонентов приложения.]]></String>
+	<String Id="IDS_VerifyModifyDlg_Text"><![CDATA[Нажмите на кнопку "Установить" для запуска установки. Если вы хотите просмотреть или изменить параметры установки, нажмите на кнопку "Назад" или на кнопку "Отмена" для выхода из мастера установки.]]></String>
+	<String Id="IDS_VerifyModifyDlg_Text2"><![CDATA[Вы действительно хотите продолжить прерванную установку?]]></String>
+	
+	<!-- VerifyRepairDlg -->
+	<String Id="IDS_VerifyRepairDlg_Title"><![CDATA[{\PageTitleFont}Восстановление [ProductName_GEN]]]></String>
+	<String Id="IDS_VerifyRepairDlg_Description"><![CDATA[{\PageSubtitleFont}Мастер поможет вам восстановить [ProductName_NOM].]]></String>
+	<String Id="IDS_VerifyRepairDlg_Text"><![CDATA[Нажмите на кнопку "Далее" для восстановления [ProductName_GEN]. Если вы хотите просмотреть или изменить параметры установки, нажмите на кнопку "Назад" или на кнопку "Отмена" для выхода из мастера установки.]]></String>
+	
+	<!-- VerifyRemoveDlg -->
+	<String Id="IDS_VerifyRemoveDlg_Title"><![CDATA[{\PageTitleFont}Подтверждение удаления приложения]]></String>
+	<String Id="IDS_VerifyRemoveDlg_Description"><![CDATA[{\PageSubtitleFont}Пожалуйста, подтвердите или отмените удаление приложения.]]></String>
+	<String Id="IDS_VerifyRemoveDlg_Text"><![CDATA[Вы действительно хотите удалить все компоненты приложения с вашего компьютера?]]></String>
+	
+	<String Id="ButtonText_Next"><![CDATA[Д&алее >]]></String>
+	<String Id="ButtonText_Back"><![CDATA[< &Назад]]></String>
+	<String Id="ButtonText_Cancel"><![CDATA[О&тмена]]></String>
+	<String Id="ButtonText_No"><![CDATA[&Нет]]></String>
+	<String Id="ButtonText_Yes"><![CDATA[&Да]]></String>
+	<String Id="ButtonText_Reset"><![CDATA[С&брос]]></String>
+	<String Id="ButtonText_OK"><![CDATA[&ОK]]></String>
+	<String Id="ButtonText_InstallNow"><![CDATA[&Установить]]></String>
+	<String Id="ButtonText_RemoveNow"><![CDATA[&Удалить]]></String>
+	<String Id="ButtonText_Repair"><![CDATA[Д&алее >]]></String>
+	<String Id="ButtonText_Browse"><![CDATA[&Обзор...]]></String>
+	<String Id="ButtonText_Retry"><![CDATA[&Повторить]]></String>
+	<String Id="ButtonText_Ignore"><![CDATA[&Пропустить]]></String>
+	<String Id="ButtonText_Help"><![CDATA[&Справка]]></String>
+	<String Id="ButtonText_Restore"><![CDATA[&Восстановить]]></String>
+	<String Id="ButtonText_ContinueLater"><![CDATA[&Продолжить позже]]></String>
+	<String Id="ButtonText_Abort"><![CDATA[&Прервать]]></String>
+	<String Id="ButtonText_Exit"><![CDATA[&Выход]]></String>
+	<String Id="ButtonText_Reboot"><![CDATA[&Перезагрузить]]></String>
+	<String Id="ButtonText_Remove"><![CDATA[&Удалить...]]></String>
+	<String Id="WizardTitle"><![CDATA[Установка приложения]]></String>
+	<String Id="WizardFullTitle"><![CDATA[[ProductName_NOM]]]></String>
+	
+	<!-- Error Messages -->
+	<String Id="AppFound"><![CDATA[На вашем компьютере уже установлено антивирусное приложение "Лаборатории Касперского". Пожалуйста, удалите его, прежде чем устанавливать [ProductName_NOM].]]></String>
+	<String Id="NewAppFound"><![CDATA[На вашем компьютере уже установлена более новая версия антивирусного приложения "Лаборатории Касперского" версии 8.0. Пожалуйста, удалите его, прежде чем устанавливать [ProductName_NOM].]]></String>
+	<String Id="IDS_Condition_Admin"><![CDATA[Для установки компонента необходимо обладать правами администратора.]]></String>
+	<String Id="IDS_Condition_NeedReboot"><![CDATA[Для продолжения установки необходимо перезагрузить компьютер.]]></String>
+	<String Id="IDS_Condition_NeedUnloadApp"><![CDATA[Для продолжения установки необходимо выгрузить [ProductName_NOM].]]></String>
+	<String Id="IDS_Condition_NeedIE5"><![CDATA[Невозможно установить приложение. Требуется наличие Microsoft Internet Explorer версии 5 или выше.]]></String>
+	<String Id="IDS_Condition_NeedVCRuntime"><![CDATA[Пожалуйста, обновите библиотеки Microsoft Visual C++. За подробной информацией обратитесь по адресу http://www.kaspersky.ru/support/kolt?eid=179818077]]></String>
+	<String Id="IDS_Condition_Need2KSP4"><![CDATA[Для установки приложения требуется Microsoft Windows 2000 Service Pack 4 или выше.]]></String>
+	<String Id="IDS_Condition_NeedXPSP2"><![CDATA[Рекомендуется установить Microsoft Windows XP Service Pack 2 или выше.]]></String>
+	<String Id="IDS_Condition_Need128MB"><![CDATA[Размер оперативной памяти слишком мал. 
+
+        Для установки приложения на компьютер под управлением Microsoft Windows 2000/ Windows XP/ Windows XP x64 Edition требуется не менее 128 МБ оперативной памяти.]]></String>
+	<String Id="IDS_Condition_Need512MB"><![CDATA[Размер оперативной памяти слишком мал. 
+        
+        Для установки приложения на компьютер под управлением Microsoft Windows Vista/ Windows Vista x64 требуется не менее 512 МБ оперативной памяти.]]></String>
+
+	<String Id="IDS_Condition_WrongOS"><![CDATA[Данное приложение не может быть установлено. Не поддерживается текущая версия операционной системы.]]></String>
+	<String Id="IDS_Condition_RegPermissions"><![CDATA[Для установки компонента необходимо обладать полными правами на работу с системным реестром.]]></String>
+
+	<String Id="VerifyInstallDirError"><![CDATA[Вы выбрали неверную папку или диск. Приложение должно быть установлено на локальный жесткий диск. Не рекомендуется устанавливать приложение в корневую или системную папку. Имя папки установки приложения не должно превышать ограничения в 200 символов и содержать специальные символы.]]></String>
+	<String Id="VerifyInstallDirError1"><![CDATA[Вы выбрали неверную папку или диск. Не рекомендуется устанавливать приложение в папку, куда была установлена предыдущая версия приложения.]]></String>
+	<String Id="FoundProductsError"><![CDATA[Удалите несовместимые программные продукты (после удаления рекомендуется перезагрузить компьютер). Затем повторите установку.]]></String>
+	<String Id="MsgInvalidUninstallPasswd"><![CDATA[Пароль для удаления приложения не задан либо неверен.]]></String>
+	
+	<String Id="IDS_Filter0000Name"><![CDATA[Базы Анти-Спама]]></String>
+	<String Id="IDS_Filter0000Desc"><![CDATA[Образцы спам-сообщений и полезной почты]]></String>
+	
+	<String Id="IDS_Filter0001Name"><![CDATA[Базы Антивирусов]]></String>
+	<String Id="IDS_Filter0001Desc"><![CDATA[Описание вирусов и прочих вредоносных программ]]></String>
+	
+	<String Id="IDS_Filter0002Name"><![CDATA[Базы Сетевого экрана]]></String>
+	<String Id="IDS_Filter0002Desc"><![CDATA[Описание типичных сетевых атак]]></String>
+	
+	<String Id="IDS_Filter0003Name"><![CDATA[Бинарные модули для версии 8.0]]></String>
+	<String Id="IDS_Filter0003Desc"><![CDATA[Бинарные модули для версии 8.0]]></String>
+	
+	<String Id="IDS_Filter0004Name"><![CDATA[Базы Анти-Баннера]]></String>
+	<String Id="IDS_Filter0004Desc"><![CDATA[Список URL-масок баннеров]]></String>
+	
+	<String Id="IDS_Filter0005Name"><![CDATA[Список адресов фишинг-сайтов]]></String>
+	<String Id="IDS_Filter0005Desc"><![CDATA[Адреса сайтов, используемых для интернет-мошенничества]]></String>
+	
+	<String Id="IDS_Filter0006Name"><![CDATA[Базы для потоковой проверки]]></String>
+	<String Id="IDS_Filter0006Desc"><![CDATA[Описание вирусов и прочих вредоносных программ, используемое для потоковой проверки HTTP-трафика]]></String>
+	
+	<String Id="IDS_Filter0007Name"><![CDATA[Список объектов системного реестра]]></String>
+	<String Id="IDS_Filter0007Desc"><![CDATA[Список контролируемых объектов реестра]]></String>
+	
+	<String Id="IDS_Filter0008Name"><![CDATA[Набор поведенческих сигнатур]]></String>
+	<String Id="IDS_Filter0008Desc"><![CDATA[Описания аспектов опасного и подозрительного поведения]]></String>
+	
+	<String Id="IDS_CAERROR_InstallServiceKlifSys"><![CDATA[Ошибка установки драйвера "klif": %s. Рекомендуется перезагрузить компьютер.]]></String>
+	<String Id="IDS_CAERROR_InstallServiceKlFltDevSys"><![CDATA[Ошибка установки драйвера "klfltdev": %s. Рекомендуется перезагрузить компьютер.]]></String>
+	<String Id="IDS_CAERROR_InstallServiceKlBgSys"><![CDATA[Ошибка установки драйвера "klbg": %s. Рекомендуется перезагрузить компьютер.]]></String>
+	<String Id="IDS_CAERROR_InstallServiceKl1Sys"><![CDATA[Ошибка установки драйвера "kl1": %s. Рекомендуется перезагрузить компьютер.]]></String>
+	<String Id="IDS_CAERROR_CKAHUM_Reload"><![CDATA[Ошибка установки плагинов к драйверу "kl1". Рекомендуется перезагрузить компьютер.]]></String>
+
+	<String Id="Branding"><![CDATA[©ЗАО "Лаборатория Касперского", 1996-2007. Все права защищены.]]></String>
+
+
+	<String Id="ProductLicActivationLink">https://auto-activation1.kaspersky.com/ru/activate https://auto-activation2.kaspersky.com/ru/activate https://auto-activation3.kaspersky.com/ru/activate https://auto-activation4.kaspersky.com/ru/activate https://auto-activation5.kaspersky.com/ru/activate https://auto-activation6.kaspersky.com/ru/activate</String>
+
+	<!-- Product features -->	
+	<String Id="AVScannerAndCoreFeatureTitle"><![CDATA[Ядро программы и задачи поиска]]></String> 
+	<String Id="AVScannerAndCoreFeatureDesc"><![CDATA[Задачи поиска позволяют проводить детальную проверку компьютера на присутствие опасных объектов по запросу пользователя.]]></String>
+	<String Id="FileAntiVirusFeatureTitle"><![CDATA[Файловый Антивирус]]></String> 
+	<String Id="FileAntiVirusFeatureDesc"><![CDATA[Файловый Антивирус проверяет все файлы на компьютере в момент обращения к ним. ]]></String>
+	<String Id="MailAntiVirusFeatureTitle"><![CDATA[Почтовый Антивирус]]></String> 
+	<String Id="MailAntiVirusFeatureDesc"><![CDATA[Почтовый Антивирус проверяет на присутствие вирусов все входящие и исходящие почтовые сообщения.]]></String>
+	<String Id="WebAntiVirusFeatureTitle"><![CDATA[Веб-Антивирус]]></String> 
+	<String Id="WebAntiVirusFeatureDesc"><![CDATA[Веб-Антивирус препятствует проникновению вирусов на ваш компьютер через HTTP-протокол.]]></String>
+	<String Id="ProactiveDefenseFeatureTitle"><![CDATA[Проактивная защита]]></String> 
+	<String Id="ProactiveDefenseFeatureDesc"><![CDATA[Проактивная защита позволяет противостоять неизвестным угрозам, контролировать изменения системного реестра и запуск программ.]]></String>
+	<String Id="FirewallFeatureTitle"><![CDATA[Сетевой экран]]></String> 
+	<String Id="FirewallFeatureDesc"><![CDATA[Сетевой экран контролирует все сетевые соединения, обнаруживает попытки атаковать ваш компьютер и позволяет сделать его невидимым в сети.]]></String>
+	<String Id="AntiSpamFeatureTitle"><![CDATA[Анти-Спам]]></String> 
+	<String Id="AntiSpamFeatureDesc"><![CDATA[Анти-Спам обеспечивает защиту от нежелательной корреспонденции.]]></String>
+	<String Id="ParentalControlFeatureTitle"><![CDATA[Родительский контроль]]></String>
+	<String Id="ParentalControlFeatureDesc"><![CDATA[Родительский контроль обеспечивает ограничение доступа к интернет-ресурсам с нежелательным содержанием.]]></String>
+  <String Id="IntrusionShieldFeatureTitle"><![CDATA[Intrusion Shield]]></String>
+  <String Id="IntrusionShieldFeatureDesc"><![CDATA[IntrusionShieldFeatureDesc. !TBD!]]></String>
+  <String Id="AntiBannerFeatureTitle"><![CDATA[Anti-Banner]]></String>
+  <String Id="AntiBannerFeatureDesc"><![CDATA[AntiBannerFeatureDesc.]]></String>
+  <String Id="AntiPhishingFeatureTitle"><![CDATA[Anti-Phishing]]></String>
+  <String Id="AntiPhishingFeatureDesc"><![CDATA[AntiPhishingFeatureDesc. !TBD!]]></String>
+  <String Id="AntiDialerFeatureTitle"><![CDATA[Anti-Dialer]]></String>
+  <String Id="AntiDialerFeatureDesc"><![CDATA[AntiDialerFeatureDesc. !TBD!]]></String>
+
+  <String Id="MalwareProtectionFeatureTitle"><![CDATA[Malware Protection]]></String>
+  <String Id="MalwareProtectionFeatureDesc"><![CDATA[Malware Protection provides !TBD!]]></String>
+  <String Id="SystemWatchFeatureTitle"><![CDATA[System Watch]]></String>
+  <String Id="SystemWatchFeatureDesc"><![CDATA[System Watch provides !TBD!]]></String>
+  <String Id="OnlineSecurityFeatureTitle"><![CDATA[Online Security]]></String>
+  <String Id="OnlineSecurityFeatureDesc"><![CDATA[Online Security provides !TBD!]]></String>
+  <String Id="ContentFilteringFeatureTitle"><![CDATA[Content Filtering]]></String>
+  <String Id="ContentFilteringFeatureDesc"><![CDATA[Content Filtering provides !TBD!]]></String>
+
+  <String Id="AdminKitConnectorTitle"><![CDATA[Коннектор к Агенту администрирования Kaspersky Administration Kit]]></String>
+	<String Id="AdminKitConnectorDesc"><![CDATA[Коннектор обеспечивает связь приложения с Агентом администрирования, который предоставляет возможность удаленного управления Антивирусом Касперского через Kaspersky Administration Kit.]]></String>
+
+</WixLocalization>

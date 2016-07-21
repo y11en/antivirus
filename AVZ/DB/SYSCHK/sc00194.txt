@@ -1,0 +1,4 @@
+// ***** AdvWare.OTX *****
+begin
+ AddEvAlarmByCLSID('4C226336-4032-489F-9674-67E74225979B','AdvWare.OTX.a','OTXMedia.dll');
+end.

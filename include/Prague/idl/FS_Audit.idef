@@ -1,0 +1,24 @@
+#import "it_solve.idef"
+#import "kavwin.idef"
+
+forward interface FS_Audit;
+typedef FS_Audit* hFS_AUDIT;
+
+
+
+[
+  version(1)
+  mnemonic(IID_FS_AUDIT)
+  id(61003)
+  c_type_name(hFS_AUDIT)
+]
+interface FS_Audit {
+
+  // ------------------------------------
+    [ id(4096) ]  prop ifIT_Solver.tIT_OBJECT_MODE pgObjectMode;
+    [ id(4097) ]  prop tSTRING pgObjectName;
+    [ id(4098) ]  prop tDWORD pgAppID;
+    [ id(4099) ]  prop tDWORD pgMaxEventsQueueLength;
+
+}
+

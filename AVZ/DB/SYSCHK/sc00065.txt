@@ -1,0 +1,4 @@
+// ***** AdvWare.Banex.a *****
+begin
+ AddEvAlarmByCLSID('36A59337-6EEF-40AE-94B1-ED443A0C4740',AScriptName,'');
+end.

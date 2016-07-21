@@ -1,0 +1,26 @@
+// $AVZ1498
+//$ Очистить историю поиска (изображения и музыка)
+// Функция поиска проблемы
+function Check : dword;
+var
+ Lines : TStrings;
+ i : integer;
+begin
+ Result := 0;
+ Lines := TStringList.Create;
+ if RegKeyExists('HKCU','Software\Microsoft\Search Assistant\ACMru\5604') then begin
+  RegKeyEnumVal('HKCU', 'Software\Microsoft\Search Assistant\ACMru\5604', Lines);
+  // Есть записи в ACMru ?
+  if Lines.Count > 0 then                  
+   Result := 1;
+ end;
+ Lines.Free;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+begin
+ Result := 0;
+ RegKeyDel('HKCU', 'Software\Microsoft\Search Assistant\ACMru\5604');
+ RegKeyCreate('HKCU', 'Software\Microsoft\Search Assistant\ACMru\5604');
+end;

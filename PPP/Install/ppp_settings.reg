@@ -1,0 +1,198 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\Trace\Default]
+"TraceConsoleEnable"=dword:00000001
+"TraceDebugEnable"=dword:00000001
+"TraceFileEnable"=dword:00000001
+"TraceConsoleMaxLevel"=dword:0000012c
+"TraceDebugMaxLevel"=dword:00000190
+"TraceFileMaxLevel"=dword:000001f4
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\environment]
+"ProductType"     = "kis"
+"ProductStatus"   = "beta"
+"ProductStatus1"   = "release"
+"ProductRoot"     = "c:\\avp2005"
+"DataRoot"        = "c:\\avp2005"
+"Bases"           = "%DataRoot%\\Bases"
+"Data"            = "%DataRoot%\\Data"
+"Report"          = "%Data%\\Report"
+"Quarantine"      = "%Data%\\Quarantine"
+"Backup"          = "%Data%\\Backup"
+"Localization"    = "ru"
+"ShowRegGuard"    = "1"
+"Doc"             = "%ProductRoot%\\Doc\\%Localization%"
+"HelpFile"        = "%Doc%\\context.chm"
+"TipTest"         = "1"
+"GuiController"   = "1"
+"WithoutSysShell" = "0"
+"Components"      = "CORE;AVS;AH;Updater"
+"UpdateRoot"      = "index/u0607g.xml"
+"RetrRoot"        = "index/u0607g.xml"
+"UpdateConfig"    = "updcfg.xml"
+"admingui"        = "0"
+"Build"           = "255"
+"ProductVersion"  = "6.9.9.999"
+"OsVerVirtual"    = "0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8]
+"enabled"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\settings]
+"DataFolder"="c:\\avp2005\\Data"
+"BaseFolder"="c:\\avp2005\\Bases"
+"LicBuyLink"="www.kaspersky.com/advert/aftertrial"
+"LicRenewLink"="www.kaspersky.com/renew"
+"RunAtSystemStartup"=dword:00000000
+"EnableSelfProtection"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\KasperskyLab\protected\avp8\settings]
+"EnableSkinPath"=dword:00000001
+"SkinPath"="o:\\ppp\\gui60\\skin\\"
+
+;--------------------------------------------------------
+; IDS
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\OnlineSecurity\profiles\ids\settings\def]
+"ManifestFN"="c:\\avp2005\\Bases\\ckah.set"
+
+;--------------------------------------------------------
+; Anti_Spam
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam\settings\def]
+"BayesTableFileName"="c:\\avp2005\\Data\\antispam.sfdb"
+"WhiteListFileName"="c:\\avp2005\\Data\\antispam_whitelist.sfdb"
+
+;--------------------------------------------------------
+; AdBlocker
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\AdBlocker\settings\ublist\0000]
+"Enabled"=dword:00000001
+"Name"="test.banner-sm.com"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\AdBlocker\settings\ublist\0001]
+"Enabled"=dword:00000001
+"Name"="test.banner-source.com"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\AdBlocker\settings\ublist\0002]
+"Enabled"=dword:00000001
+"Name"="test.banner.com"
+
+;--------------------------------------------------------
+; Scan_Startup
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Startup]
+"autoStart"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Startup\schedule]
+"Mode"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Scan_Startup\settings\BLSettings]
+"RescanAfterUpdate"=dword:00000000
+
+; ------------------------------------------------------------
+; Updater
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\KasperskyLab\protected\avp8\types\Updater]
+"remote"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\Software\KasperskyLab\protected\avp8\profiles\Updater]
+"remote"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\Software\KasperskyLab\protected\avp8\profiles\Updater\schedule]
+"Mode"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Rollback]
+"installed"=dword:00000001
+
+; ------------------------------------------------------------
+; Statistics
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Statistics]
+"enabled"=dword:00000001
+"installed"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Statistics\settings\def]
+"region"="ru"
+"user_id"="unknown"
+"max_period"=hex:00,80,21,a8,db,07,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Statistics\settings\def\components]
+"0000"="oas"
+"0001"="ods"
+
+; ------------------------------------------------------------
+; Profiles Visibility
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\SystemWatch]
+"enabled"=dword:00000000
+"installed"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\SystemWatch\profiles\Hips]
+"enabled"=dword:00000000
+"installed"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\SystemWatch\profiles\pdm]
+"enabled"=dword:00000000
+"installed"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\SystemWatch\profiles\SysWatch]
+"enabled"=dword:00000000
+"installed"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus]
+"enabled"=dword:00000000
+"installed"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\File_Monitoring]
+"enabled"=dword:00000000
+"installed"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Mail_Monitoring]
+"enabled"=dword:00000000
+"installed"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Antivirus\profiles\Web_Monitoring]
+"enabled"=dword:00000000
+"installed"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\OnlineSecurity]
+"enabled"=dword:00000000
+"installed"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\OnlineSecurity\profiles\ids]
+"enabled"=dword:00000000
+"installed"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\OnlineSecurity\profiles\antidial]
+"enabled"=dword:00000000
+"installed"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\OnlineSecurity\profiles\antiphishing]
+"enabled"=dword:00000000
+"installed"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter]
+"enabled"=dword:00000000
+"installed"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\Anti_Spam]
+"enabled"=dword:00000000
+"installed"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\ParCtl]
+"enabled"=dword:00000000
+"installed"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\ContentFilter\profiles\AdBlocker]
+"enabled"=dword:00000000
+"installed"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\AntiPhishingService]
+"installed"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\AdvDis]
+"installed"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\MailWasher]
+"installed"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\Spamtest]
+"installed"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\TrafficMonitor]
+"installed"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\HTTP]
+"installed"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\IMAP]
+"installed"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\NNTP]
+"installed"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\POP3]
+"installed"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab\protected\avp8\profiles\SMTP]
+"installed"=dword:00000001

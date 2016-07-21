@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job>
+<runtime>
+  <description>This script renames configuration name of VC 2005 project to correspond to RuntimeLibrary option</description>
+  <named name = "src"
+        helpstring = "a VC 2005 project file to be patched"
+        type = "string"
+        required = "true"/>
+  <named name = "dst"
+        helpstring = "a new VC 2005 project file name"
+        type = "string"
+        required = "false"/>
+  <named name = "overwrite"
+        helpstring = "overwrite the file if exists"
+        type = "boolean"
+        required = "false"/>
+  <example>Example:
+patcher.wsf /src:c:\foo.vsproj /dest:c:\foo_new.vcproj
+patcher.wsf /src:c:\foo.vsproj /overwrite
+  </example>
+</runtime>
+
+<script language="JScript">
+<![CDATA[
+
+var g_dynamic_runtime = true;
+
+function getRTLName( opt ) {
+  switch( opt ) {
+    case 0 : return "Release multithreaded static";
+    case 1 : return "Debug multithreaded static";
+    case 2 : return "Release multithreaded dll";
+    case 3 : return "Debug multithreaded dll";
+    default  : return "unknown";
+  }
+}
+
+
+function setConfigurationName( file, conf, compilerTool ) {
+  var isExecutable = conf.getAttribute ( "ConfigurationType" ) == "1";
+  if ( compilerTool == null || isExecutable ) {
+    return false;
+  }
+  var name = conf.getAttribute ( "Name" );
+  var regExpDll = /DebugDll|ReleaseDll/ig;
+  var regExpS = /Debug|Release/ig;
+  var isStatic = false;
+  if ( name.match ( regExpDll ) )
+    isStatic = false;
+  else if ( name.match ( regExpS ) )
+    isStatic = g_dynamic_runtime ? false : true;
+  else {
+    WScript.Echo ( "    WARNING! File " + file + " has a suspicious configuration '" + name + "'" );
+    return false;
+  }
+  var runTime = compilerTool.getAttribute ( "RuntimeLibrary" ); 
+	
+  if ( ( !isStatic && ( ( runTime == 0 ) || ( runTime == 1 ) ) ) ||
+    ( isStatic && ( ( runTime == 2 ) || ( runTime == 3 ) ) ) ) {
+    WScript.Echo ( "    WARNING! File " + source + " has a configuration '" + name + "' with wrong runtime lirary option" );
+  }
+  name = name.substr ( 0, name.indexOf ( "|" ) );
+
+  var confName = "";
+  var rtl = -1;
+	
+  switch ( name.toLowerCase () ) {
+  case "debug":  
+    if ( isStatic ) { 
+      rtl = 1
+      confName = "DebugS"; 
+    } 
+    else { 
+      rtl = 3;
+      confName = "Debug"; 
+    }
+    break;
+  case "release": 
+    if ( isStatic ) { 
+      rtl = 0;
+      confName = "ReleaseS"; 
+    } 
+    else { 
+      rtl = 2;
+      confName = "Release"; 
+    }
+    break;
+  case "debugdll":
+    rtl = 3;
+    confName = "Debug";
+    break;
+  case "releasedll": 
+    rtl = 2;
+    confName = "Release"; 
+    break;
+  case "unicode debug": 
+    if ( isStatic ) { 
+      rtl = 1;
+      confName = "DebugUS"; 
+    } 
+    else { 
+      rtl = 3;
+      confName = "DebugU"; 
+    }
+    break;
+  case "unicode release": 
+    if ( isStatic ) { 
+      rtl = 0;
+      confName = "ReleaseUS"; 
+    } 
+    else { 
+      rtl = 2;
+      confName = "ReleaseU"; 
+    }
+    break;
+  case "unicode debugdll": 
+    rtl = 3;
+    confName = "DebugU"; 
+    break;
+  case "unicode releasedll": 
+    rtl = 2;
+    confName = "ReleaseU";
+    break;
+  default:
+    WScript.Echo ( "    WARNING! File " + source + " has a suspicious configuration '" + name + "'" );
+    return false;	
+  }
+	
+  var changed = false;
+  if ( runTime != rtl ) {
+    changed = true;
+    compilerTool.setAttribute ( "RuntimeLibrary", rtl ); 
+    WScript.Echo ( "    INFO! RuntimeLibrary option is changed from '" + getRTLName(rtl_now) + "' to '" + getRTLName(rtl) + "' for '" + confName + "'" );
+  }
+  if ( confName != name ) {
+    changed = true;
+    var name = conf.getAttribute ( "Name" );
+    confName = confName + name.substr( name.indexOf("|") );
+    conf.setAttribute ( "Name", confName );
+    WScript.Echo ( "    INFO! Renamed to '" + confName + "'" );
+  }
+  return changed;
+}
+
+var args = WScript.Arguments;
+
+if ( !args.Named.Exists("src") ) { //|| !args.Named.Exists ( "outdir" )) {
+  args.ShowUsage ();
+  WScript.Quit (1);
+}
+
+var source = args.Named.Item ( "src" );
+var dest = source;
+if ( args.Named.Exists("dst") )
+  dest = args.Named.Item( "dst" );
+
+var fsObj = new ActiveXObject( "Scripting.FileSystemObject" );
+                                                            
+if ( !fsObj.FileExists(source) ) {
+  WScript.Echo ( "ERROR! File " + source + " doesn't exist!\n");
+  WScript.Quit ( 1 );
+}
+
+if ( fsObj.FileExists(dest) && !args.Named.Item("overwrite") ) {
+  WScript.Echo ( "ERROR! File " + dest + " already exists!\n");
+  WScript.Quit (1);
+}
+
+var xml = new ActiveXObject ( "msxml2.DOMDocument.5.0" );
+xml.async = false;
+xml.resolveExternals = false;
+xml.load ( source );
+
+if ( xml.parseError.errorCode != 0 ) {
+  var err = xml.parseError;
+  WScript.Echo ( "ERROR! Can't parse the XML file: " + err.reason );
+  WScript.Quit ( 1 );
+}
+
+var save_it = false;
+var conf_arr = xml.getElementsByTagName( "Configuration" );
+
+for ( var i = 0;  i < conf_arr.length; i++ ) {
+	var conf_name = conf_arr.item( i ).getAttribute ( "Name" );
+	var regExp = /^DebugDll|^ReleaseDll/ig;
+	if ( conf_name.match( regExp ) ) {
+		g_dynamic_runtime = false;
+		break;
+	}
+}
+
+for ( var i=0; i<conf_arr.length; i++ ) {
+  
+  var conf = conf_arr.item(i);
+  var cname = conf.getAttribute( "Name" );
+  
+  WScript.Echo( cname );
+  var tool_arr = conf.getElementsByTagName ( "Tool" ); 
+  for( var j = 0; j<tool_arr.length; j++ ) {
+    var tool = tool_arr.item(j);
+    var tname = tool.getAttribute( "Name" );
+    if ( "VCCLCompilerTool" == tname ) {
+      var changed = setConfigurationName( source, conf, tool );
+      if ( changed == true )
+        save_it = true;
+    }
+  }
+}
+if ( save_it == true ) {
+  xml.save ( dest );
+  WScript.Echo( "Saved" );
+}
+else
+  WScript.Echo( "Don't want to save" );
+]]>
+</script>
+	
+</job>

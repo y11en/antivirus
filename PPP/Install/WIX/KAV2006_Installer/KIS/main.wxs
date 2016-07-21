@@ -1,0 +1,1381 @@
+<?xml version="1.0"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+
+
+	<?include "ver.wxi" ?>
+  <?include "guids.wxi" ?>
+  <?include "products.wxi" ?>
+	<?include "selfdef.wxi"?>
+  <?include "$(env.localization_path)\ui_loc.wxi" ?>
+
+  <!--Installation Action -->
+	<?define Installation="(NOT Installed)"?>
+	<?define Upgrade="(Installed AND (RESUME OR Preselected))"?>
+	<?define Maintenance="(Installed AND NOT RESUME AND NOT Preselected)"?>
+
+	<!-- PIW and/or reboot settings  -->
+	<?define IsSilent="UILevel < 5"?>
+	<?define IsUninstall=IsUninstall?>
+
+	<?define RunPIW="(NOT $(var.IsUninstall))"?>
+
+	<?define RebootAllowed="(NOT $(var.IsSilent) OR ALLOWREBOOT)"?>
+	<?define RebootPIWAllowed="($(var.RunPIW) AND NOT $(var.IsSilent))"?>
+
+	<Product Name="$(loc.ProductName_NOM)$(var.ProductStatusStr)" 
+		Id="$(var.ProductGuid)"
+    Language="$(var.Language)"
+    Codepage="$(var.Codepage)"
+ 		Version="$(var.ProductVersion)" 
+		UpgradeCode="$(var.ProductUpgradeCodeGuid)"
+		Manufacturer="$(loc.ProductManufacturer)">
+
+		<Package Id="????????-????-????-????-????????????"
+			Description="$(loc.ProductName_NOM)" 
+			Manufacturer="$(loc.ProductManufacturer)" 
+			InstallerVersion="200" 
+			Languages="$(var.Language)" 
+			ShortNames="no" 
+			Keywords="$(loc.ProductKeywords)"
+			Comments="$(var.ProductComments)" 
+			Compressed="yes"
+			Platforms="Intel"
+			SummaryCodepage="$(var.Codepage)" />
+
+		<Condition Message="$(loc.IDS_Condition_ADMIN)">
+			Privileged
+		</Condition>
+
+		<Condition Message="$(loc.IDS_Condition_RegPermissions)">
+			NOT <![CDATA[REGNOPERMISSIONS]]>
+		</Condition>
+
+		<Condition Message="$(loc.IDS_Condition_NeedReboot)">
+			NOT <![CDATA[REBOOTPENDING]]>
+		</Condition>
+
+		<!--<Condition Message="$(loc.IDS_Condition_NeedUnloadApp)">
+			NOT <![CDATA[AppRunning]]>
+		</Condition>-->
+
+		<?define Need512="(VersionNT>=600 AND PhysicalMemory<257)"?>
+		<?define Need128="(VersionNT>=500 AND VersionNT<600 AND PhysicalMemory<118)"?>
+
+		<Condition Message="$(loc.IDS_Condition_Need512MB)">NOT $(var.Need512)</Condition>
+
+		<Condition Message="$(loc.IDS_Condition_Need128MB)">NOT $(var.Need128)</Condition>
+
+    <!-- Allow setup on server OS for Beta (TODO: disable) -->
+	<?if NOT ($(var.ProductStatus) = "Beta") ?>
+		<?if not ($(env.product_type) = FS) ?>
+		<Condition Message="$(loc.IDS_Condition_WrongOS)">
+			<![CDATA[MsiNTProductType=1]]>
+		</Condition>
+		<?endif ?>
+	<?endif?>
+
+		<?if ($(env.product_type) = FS) ?>
+		<Condition Message="$(loc.IDS_Condition_WrongOS)">
+			<![CDATA[MsiNTProductType=2]]> OR <![CDATA[MsiNTProductType=3]]>
+		</Condition>
+		<?endif ?>
+
+		<Condition Message="$(loc.IDS_Condition_WrongOS)">
+			<![CDATA[VersionNT >= 500]]>
+		</Condition>
+
+		<!--<?if $(env.product_type) = KIS ?>
+		<Condition Message="$(loc.IDS_Condition_WrongOS)">
+			NOT <![CDATA[Msix64]]>
+		</Condition>
+		<?endif ?>-->
+
+		<Condition Message="$(loc.IDS_Condition_Need2KSP4)">
+			NOT (<![CDATA[VersionNT=500]]> AND <![CDATA[ServicePackLevel<4]]>)
+		</Condition>
+
+		<Condition Message="$(loc.IDS_Condition_NeedXPSP2)">
+			NOT (<![CDATA[VersionNT=501]]> AND <![CDATA[ServicePackLevel<2]]>)
+		</Condition>
+
+		<Condition Message="$(loc.IDS_Condition_NeedIE5)">
+			<![CDATA[IE5INSTALLED]]>
+		</Condition>
+
+		<!--<Condition Message="$(loc.IDS_Condition_NeedVCRuntime)">
+			<![CDATA[VCRUNTIMEINSTALLED]]>	
+		</Condition>-->
+
+		<Property Id="IE5INSTALLED" Secure="yes">
+			<DirectorySearch Id="Shdocvw.dll" Path="[SystemFolder]" Depth="1">
+				<FileSearch Id="Shdocvw.dll" Name="Shdocvw.dll" MinVersion="5.00.0518.5" />
+			</DirectorySearch>
+		</Property>
+
+		<!--<Property Id="VCRUNTIMEINSTALLED">
+			<DirectorySearch Id="msvcp60.dll" Path="[SystemFolder]" Depth="1">
+				<FileSearch Id="msvcp60.dll" Name="msvcp60.dll" MinVersion="6.0.0000.0" />
+			</DirectorySearch>
+		</Property>-->
+
+		<Property Id="IMPORTREGFILE" Secure="yes">
+			<DirectorySearch Id="setup.reg" Path="[KLSETUPDIR]" Depth="1">
+				<FileSearch Id="setup.reg" Name="setup.reg" />
+			</DirectorySearch>
+		</Property>
+
+		<!-- Detect installed AS-bases in Data folder-->
+		<Property Id="ASBASESINSTALLED" Secure="yes">
+			<DirectorySearch Id="antispam.sfdb" Path="[CommonAppDataFolder]Kaspersky Lab\avp8\Data\" Depth="1">
+				<FileSearch Id="antispam.sfdb" LongName="antispam.sfdb" />
+			</DirectorySearch>
+		</Property>
+
+		<!-- Detect pre-saved AS-bases in Temp folder-->
+		<Property Id="SAVEDASBASESINSTALLED" Secure="yes">
+			<DirectorySearch Id="antispam.sfdb" Path="[CommonAppDataFolder]Kaspersky Lab\avp8\Temp\Data\" Depth="1">
+				<FileSearch Id="antispam.sav" LongName="antispam.sfdb" />
+			</DirectorySearch>
+		</Property>
+
+		<!-- Detect pre-saved AS-bases version 6 in Temp folder-->
+		<Property Id="SAVEDASBASESVER6INSTALLED" Secure="yes">
+			<DirectorySearch Id="antispam.sfdb_avp6" Path="[CommonAppDataFolder]Kaspersky Lab\Avp6\Temp\Data\" Depth="1">
+				<FileSearch Id="antispam.sav_avp6" LongName="antispam.sfdb" />
+			</DirectorySearch>
+		</Property>
+
+		<!-- Detect installed AS-bases in Data folder-->
+		<!--<Property Id="AVBASESINSTALLED" Secure="yes">
+			<DirectorySearch Id="daily.avc" Path="[CommonAppDataFolder]Kaspersky Lab\avp8\Bases\" Depth="1">
+				<FileSearch Id="daily.avc" Name="daily.avc" />
+			</DirectorySearch>
+		</Property>-->
+
+		<!-- Detect pre-saved AV-bases in Temp folder-->
+		<!--<Property Id="SAVEDAVBASESINSTALLED" Secure="yes">
+			<DirectorySearch Id="daily.avc" Path="[CommonAppDataFolder]Kaspersky Lab\avp8\Temp\Bases\" Depth="1">
+				<FileSearch Id="daily.sav" Name="daily.avc" />
+			</DirectorySearch>
+		</Property>-->
+
+		<!-- Detect pre-saved IDS-bases in Temp folder-->
+		<!--<Property Id="SAVEDIDSBASESINSTALLED" Secure="yes">
+			<DirectorySearch Id="ckah.set" Path="[CommonAppDataFolder]Kaspersky Lab\avp8\Temp\Bases\" Depth="1">
+				<FileSearch Id="ckah.sav" Name="ckah.set" />
+			</DirectorySearch>
+		</Property>-->
+
+		<!-- Detect pre-saved Settings in Temp folder-->
+		<Property Id="SETTINGSINSTALLED" Secure="yes">
+			<DirectorySearch Id="avp.cfg" Path="[CommonAppDataFolder]Kaspersky Lab\avp8\Temp\Data\" Depth="1">
+				<FileSearch Id="avp.cfg" Name="avp.cfg" />
+			</DirectorySearch>
+			<DirectorySearch Id="kav6.cfg" Path="[CommonAppDataFolder]Kaspersky Lab\Avp6\Data\" Depth="1">
+				<FileSearch Id="kav6.cfg_old" Name="kav6.cfg" />
+			</DirectorySearch>
+			<DirectorySearch Id="kav6.cfg" Path="[CommonAppDataFolder]Kaspersky Lab\Avp6\Temp\Data\" Depth="1">
+				<FileSearch Id="kav6.cfg" Name="kav6.cfg" />
+			</DirectorySearch>
+		</Property>
+
+		<Property Id="ALLUSERS" Value="1" />
+		<Property Id="ARPHELPLINK" Value="$(loc.ProductHelpLink)"/>
+		<Property Id="ARPPRODUCTICON" Value="setup2.ico" />
+		<Property Id="ARPSYSTEMCOMPONENT" Value="1" />
+		<Property Id="ARPURLUPDATEINFO" Value="$(loc.ProductUpdateLink)"/>
+		<Property Id="DiskPrompt" Value="$(loc.DiskPrompt)"/>
+		<Property Id="DiskSerial" Value="4FE17"/>
+		<Property Id="IAgree" Value="No"/>
+		<Property Id="INSTALLEDFEATURES" Value="core;updater;kav8exec;avs" />
+		<Property Id="INSTALLLEVEL" Value="5"/>
+		<Property Id="MSIENFORCEUPGRADECOMPONENTRULES" Value="1" />
+		<Property Id="PIDKEY" Value="679-1111111"/>
+		<Property Id="PIDTemplate" Value="12345&lt;###-%%%%%%%&gt;@@@@@"/>
+		<Property Id="ProductStatus" Value="$(var.ProductStatus)" />
+		<Property Id="ProgressType1" Value="Installing" />
+		<Property Id="ReinstallFileOlderVersion" Value="o"/>
+		<Property Id="ReinstallRepair" Value="r"/>
+		<Property Id="RUNDLLID" Value="rundll32.exe" />
+		<Property Id="UIReinstallMode" Value="ro"/>
+		<Property Id="RemoveApp" Value="Yes"/>
+		<Property Id="ShutdownOption" Value="DontUseRM" />
+		<Property Id="MSIRESTARTMANAGERCONTROL" Value="Disable" />
+		<Property Id="MsiLogging" Value="voicewarmup" />
+
+		<!--Secured Properties-->
+		<!--{"Custom","Typical","Change","Repair","Remove"}.Changed in UI used in EXECUTE sequence!-->
+		<Property Id="INSTALLMODE" Value="Typical" Secure="yes"/>
+		<Property Id="KLUNINSTPASSWD" Secure="yes" />
+		<Property Id="KLUNINSTPWDHEX" Secure="yes" />
+		<!--{"Yes","No"}.Changed in UI used in EXECUTE sequence!-->
+		<Property Id="REMOVEALLDATA" Value="Yes" Secure="yes"/>
+		<!--{"","1"}.Changed in UI used in EXECUTE sequence!-->
+		<Property Id="SAVESETTINGS" Value="1" Secure="yes"/>
+		<!--{"","1"}.Changed in UI used in EXECUTE sequence!-->
+		<Property Id="SELFPROTECTION" Value="1" Secure="yes"/>
+		<!--{"Yes","No"}.Changed in UI used in EXECUTE sequence!-->
+		<Property Id="WFWOFF" Value="Yes" Secure="yes"/>
+		<!--{"","1"}.Changed in UI used in EXECUTE sequence!-->
+		<Property Id="USESAVEDSETTINGS" Value="1" Secure="yes" />
+		<!--{"","1"}.Changed in UI used in EXECUTE sequence!-->
+		<!--<Property Id="USESAVEDAVBASES" Secure="yes" />-->
+		<!--{"","1"}.Changed in UI used in EXECUTE sequence!-->
+		<Property Id="USESAVEDASBASES" Value="1" Secure="yes" />
+
+		<FragmentRef Id="UITextCommonFragmentId" />
+		<FragmentRef Id="ProgressTextCommonFragmentId" />
+		<FragmentRef Id="ErrorTextCommonFragmentId" />
+
+		<FragmentRef Id="ComponentsFragmentId" />
+		<FragmentRef Id="FeaturesFragmentId" />
+		<FragmentRef Id="UIFragmentId" />
+
+    <?define UPGRADECODE_KIS6="{9F5EEF3C-C71E-461e-B1AF-776D9ADB870B}" ?>
+    <?define UPGRADECODE_KAV6="{88006988-3A38-4140-8368-DCAB4F58973A}" ?>
+		<?define UPGRADECODE_WKS6="{0C73B606-17D8-4EFC-A8FB-9C37F35402BE}" ?>
+		<?define UPGRADECODE_FS6="{30100296-AE0A-455D-874F-F4B417F578C3}" ?>
+		<?define UPGRADECODE_SOS6="{E1712E93-464B-4199-BF1B-72F8E407A312}" ?>
+
+    <?define UPGRADECODE_KIS7="{900F6FA6-4D72-4346-948C-FE8A9B5061BE}" ?>
+    <?define UPGRADECODE_KAV7="{ADED87E7-D8BB-451E-8B79-DFD11F75D249}" ?>
+		<?define UPGRADECODE_WKS7="{AD6C7C25-D5BD-4EFC-97D9-E34B9C8DFF06}" ?>
+		<?define UPGRADECODE_FS7="{C7F2E5F6-3758-4E5A-A130-3E22368130F9}" ?>
+		<?define UPGRADECODE_SOS7="{42B71236-F2F9-4796-BD27-7D102C902C7D}" ?>
+
+    <?define UPGRADECODE_KIS8="{E0D9E8A5-76E2-4e16-A5CB-40351454B0D4}" ?>
+    <?define UPGRADECODE_KAV8="{A52A771A-D8EF-472c-AB2A-B5A412AC28FD}" ?>
+    <?define UPGRADECODE_WKS8="{EE20F7FD-816F-4334-BE6F-AED52ECE6CF5}" ?>
+    <?define UPGRADECODE_FS8="{CABFC94A-F4FF-4e32-AA72-6FE02066BABF}" ?>
+    <?define UPGRADECODE_SOS8="{477F2778-612C-41c2-85D0-6ED46ED38D07}" ?>
+
+    <?if $(env.product_type) = KIS ?>
+		<!-- Find previous 6 version -->
+		<Upgrade Id="$(var.UPGRADECODE_KIS6)">
+			<UpgradeVersion Property="AVP6FOUND" 
+				IncludeMinimum="yes"  Minimum="6.0.0" />
+		</Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_KIS7)">
+      <UpgradeVersion Property="AVP6FOUND" 
+				IncludeMinimum="yes"  Minimum="7.0.0" />
+    </Upgrade>
+    <!--Preventing an Old Package from Installing Over a Newer Version-->
+		<Upgrade Id="$(var.UPGRADECODE_KIS8)">
+			<UpgradeVersion OnlyDetect="yes" Property="NEWPRODUCTFOUND" 
+				IncludeMinimum="no"  Minimum="$(var.ProductVersion)" />
+		</Upgrade>
+		<!--Preventing a package from installing over another editiion of KAV-->
+		<Upgrade Id="$(var.UPGRADECODE_KAV8)">
+			<UpgradeVersion OnlyDetect="yes" Property="KAVFOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_WKS8)">
+			<UpgradeVersion OnlyDetect="yes" Property="WKSFOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_FS8)">
+			<UpgradeVersion OnlyDetect="yes" Property="FSFOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_SOS8)">
+			<UpgradeVersion OnlyDetect="yes" Property="SOSFOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<!--Preventing a package from installing over another editiion of KAV6-->
+		<Upgrade Id="$(var.UPGRADECODE_KAV6)">
+			<UpgradeVersion OnlyDetect="yes" Property="KAV6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_WKS6)">
+			<UpgradeVersion OnlyDetect="yes" Property="WKS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_FS6)">
+			<UpgradeVersion OnlyDetect="yes" Property="FS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_SOS6)">
+			<UpgradeVersion OnlyDetect="yes" Property="SOS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_KAV7)">
+      <UpgradeVersion OnlyDetect="yes" Property="KAV6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+    </Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_WKS7)">
+      <UpgradeVersion OnlyDetect="yes" Property="WKS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+    </Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_FS7)">
+      <UpgradeVersion OnlyDetect="yes" Property="FS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+    </Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_SOS7)">
+      <UpgradeVersion OnlyDetect="yes" Property="SOS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+    </Upgrade>
+    <?elseif $(env.product_type) = KAV ?>
+		<!-- Find previous 6 version -->
+		<Upgrade Id="$(var.UPGRADECODE_KAV6)">
+			<UpgradeVersion Property="AVP6FOUND" 
+				IncludeMinimum="yes"  Minimum="6.0.0" />
+		</Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_KAV7)">
+      <UpgradeVersion Property="AVP6FOUND" 
+				IncludeMinimum="yes"  Minimum="7.0.0" />
+    </Upgrade>
+    <!--Preventing an Old Package from Installing Over a Newer Version-->
+		<Upgrade Id="$(var.UPGRADECODE_KAV8)">
+			<UpgradeVersion OnlyDetect="yes" Property="NEWPRODUCTFOUND" 
+				IncludeMinimum="no"  Minimum="$(var.ProductVersion)" />
+		</Upgrade>
+		<!--Preventing a package from installing over another editiion of KAV-->
+		<Upgrade Id="$(var.UPGRADECODE_KIS8)">
+			<UpgradeVersion OnlyDetect="yes" Property="KISFOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_WKS8)">
+			<UpgradeVersion OnlyDetect="yes" Property="WKSFOUND" 
+			IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_FS8)">
+			<UpgradeVersion OnlyDetect="yes" Property="FSFOUND" 
+			IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_SOS8)">
+			<UpgradeVersion OnlyDetect="yes" Property="SOSFOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<!--Preventing a package from installing over another editiion of KAV6-->
+		<Upgrade Id="$(var.UPGRADECODE_KIS6)">
+			<UpgradeVersion OnlyDetect="yes" Property="KIS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_WKS6)">
+			<UpgradeVersion OnlyDetect="yes" Property="WKS6FOUND" 
+			IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_FS6)">
+			<UpgradeVersion OnlyDetect="yes" Property="FS6FOUND" 
+			IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_SOS6)">
+			<UpgradeVersion OnlyDetect="yes" Property="SOS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_KIS7)">
+      <UpgradeVersion OnlyDetect="yes" Property="KIS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+    </Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_WKS7)">
+      <UpgradeVersion OnlyDetect="yes" Property="WKS6FOUND" 
+			IncludeMinimum="yes" Minimum="1.0.0" />
+    </Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_FS7)">
+      <UpgradeVersion OnlyDetect="yes" Property="FS6FOUND" 
+			IncludeMinimum="yes" Minimum="1.0.0" />
+    </Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_SOS7)">
+      <UpgradeVersion OnlyDetect="yes" Property="SOS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+    </Upgrade>
+    <?elseif $(env.product_type) = WKS ?>
+		<!-- Find previous 6 version -->
+		<Upgrade Id="$(var.UPGRADECODE_WKS6)">
+			<UpgradeVersion Property="AVP6FOUND" 
+				IncludeMinimum="yes"  Minimum="6.0.0" />
+		</Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_WKS7)">
+      <UpgradeVersion Property="AVP6FOUND" 
+				IncludeMinimum="yes"  Minimum="7.0.0" />
+    </Upgrade>
+    <!--Preventing an Old Package from Installing Over a Newer Version-->
+		<Upgrade Id="$(var.UPGRADECODE_WKS8)">
+			<UpgradeVersion OnlyDetect="yes" Property="NEWPRODUCTFOUND" 
+				IncludeMinimum="no"  Minimum="$(var.ProductVersion)" />
+		</Upgrade>
+		<!--Preventing a package from installing over another editiion of KAV-->
+		<Upgrade Id="$(var.UPGRADECODE_KAV8)">
+			<UpgradeVersion OnlyDetect="yes" Property="KAVFOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_KIS8)">
+			<UpgradeVersion OnlyDetect="yes" Property="KISFOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_FS8)">
+			<UpgradeVersion OnlyDetect="yes" Property="FSFOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_SOS8)">
+			<UpgradeVersion OnlyDetect="yes" Property="SOSFOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<!--Preventing a package from installing over another editiion of KAV6-->
+		<Upgrade Id="$(var.UPGRADECODE_KAV6)">
+			<UpgradeVersion OnlyDetect="yes" Property="KAV6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_KIS6)">
+			<UpgradeVersion OnlyDetect="yes" Property="KIS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_FS6)">
+			<UpgradeVersion OnlyDetect="yes" Property="FS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_SOS6)">
+			<UpgradeVersion OnlyDetect="yes" Property="SOS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_KAV7)">
+      <UpgradeVersion OnlyDetect="yes" Property="KAV6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+    </Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_KIS7)">
+      <UpgradeVersion OnlyDetect="yes" Property="KIS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+    </Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_FS7)">
+      <UpgradeVersion OnlyDetect="yes" Property="FS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+    </Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_SOS7)">
+      <UpgradeVersion OnlyDetect="yes" Property="SOS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+    </Upgrade>
+    <?elseif $(env.product_type) = FS ?>
+		<!-- Find previous 6 version -->
+		<Upgrade Id="$(var.UPGRADECODE_FS6)">
+			<UpgradeVersion Property="AVP6FOUND" 
+				IncludeMinimum="yes"  Minimum="6.0.0" />
+		</Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_FS7)">
+      <UpgradeVersion Property="AVP6FOUND" 
+				IncludeMinimum="yes"  Minimum="7.0.0" />
+    </Upgrade>
+    <!--Preventing an Old Package from Installing Over a Newer Version-->
+		<Upgrade Id="$(var.UPGRADECODE_FS8)">
+			<UpgradeVersion OnlyDetect="yes" Property="NEWPRODUCTFOUND" 
+				IncludeMinimum="no"  Minimum="$(var.ProductVersion)" />
+		</Upgrade>
+		<!--Preventing a package from installing over another editiion of KAV-->
+		<Upgrade Id="$(var.UPGRADECODE_KAV8)">
+			<UpgradeVersion OnlyDetect="yes" Property="KAVFOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_KIS8)">
+			<UpgradeVersion OnlyDetect="yes" Property="KISFOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_WKS8)">
+			<UpgradeVersion OnlyDetect="yes" Property="WKSFOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_SOS8)">
+			<UpgradeVersion OnlyDetect="yes" Property="SOSFOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<!--Preventing a package from installing over another editiion of KAV6-->
+		<Upgrade Id="$(var.UPGRADECODE_KAV6)">
+			<UpgradeVersion OnlyDetect="yes" Property="KAV6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_KIS6)">
+			<UpgradeVersion OnlyDetect="yes" Property="KIS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_WKS6)">
+			<UpgradeVersion OnlyDetect="yes" Property="WKS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_SOS6)">
+			<UpgradeVersion OnlyDetect="yes" Property="SOS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_KAV7)">
+      <UpgradeVersion OnlyDetect="yes" Property="KAV6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+    </Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_KIS7)">
+      <UpgradeVersion OnlyDetect="yes" Property="KIS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+    </Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_WKS7)">
+      <UpgradeVersion OnlyDetect="yes" Property="WKS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+    </Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_SOS7)">
+      <UpgradeVersion OnlyDetect="yes" Property="SOS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+    </Upgrade>
+    <?elseif $(env.product_type) = SOS ?>
+		<!-- Find previous 6 version -->
+		<Upgrade Id="$(var.UPGRADECODE_SOS6)">
+			<UpgradeVersion Property="AVP6FOUND" 
+				IncludeMinimum="yes"  Minimum="6.0.0" />
+		</Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_SOS7)">
+      <UpgradeVersion Property="AVP6FOUND" 
+				IncludeMinimum="yes"  Minimum="7.0.0" />
+    </Upgrade>
+    <!--Preventing an Old Package from Installing Over a Newer Version-->
+		<Upgrade Id="$(var.UPGRADECODE_SOS8)">
+			<UpgradeVersion OnlyDetect="yes" Property="NEWPRODUCTFOUND" 
+				IncludeMinimum="no"  Minimum="$(var.ProductVersion)" />
+		</Upgrade>
+		<!--Preventing a package from installing over another editiion of KAV-->
+		<Upgrade Id="$(var.UPGRADECODE_KAV8)">
+			<UpgradeVersion OnlyDetect="yes" Property="KAVFOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_KIS8)">
+			<UpgradeVersion OnlyDetect="yes" Property="KISFOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_WKS8)">
+			<UpgradeVersion OnlyDetect="yes" Property="WKSFOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_FS8)">
+			<UpgradeVersion OnlyDetect="yes" Property="FSFOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<!--Preventing a package from installing over another editiion of KAV6-->
+		<Upgrade Id="$(var.UPGRADECODE_KAV6)">
+			<UpgradeVersion OnlyDetect="yes" Property="KAV6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_KIS6)">
+			<UpgradeVersion OnlyDetect="yes" Property="KIS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_WKS6)">
+			<UpgradeVersion OnlyDetect="yes" Property="WKS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+		<Upgrade Id="$(var.UPGRADECODE_FS6)">
+			<UpgradeVersion OnlyDetect="yes" Property="FS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+		</Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_KAV7)">
+      <UpgradeVersion OnlyDetect="yes" Property="KAV6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+    </Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_KIS7)">
+      <UpgradeVersion OnlyDetect="yes" Property="KIS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+    </Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_WKS7)">
+      <UpgradeVersion OnlyDetect="yes" Property="WKS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+    </Upgrade>
+    <Upgrade Id="$(var.UPGRADECODE_FS7)">
+      <UpgradeVersion OnlyDetect="yes" Property="FS6FOUND" 
+				IncludeMinimum="yes" Minimum="1.0.0" />
+    </Upgrade>
+    <?endif ?>
+
+		<InstallExecuteSequence>
+			<!-- first action in Exec Sequence -->
+
+			<!-- need this action here to define KLSetupDir to write error report files -->
+			<Custom Action="SetKLSETUPDIR" Sequence="25"></Custom>
+			<Custom Action="SetKLSETUPLOG" After="SetKLSETUPDIR">AKINSTALL=1</Custom>
+			<Custom Action="SetAVPSETUPREP" After="SetKLSETUPLOG">AKINSTALL=1</Custom>
+
+			<AppSearch Sequence="50"></AppSearch>
+			<Custom Action="FindApp" After="AppSearch"></Custom>
+
+			<!-- this actions perform checking of system requirements and write error report in case of failure -->
+			<Custom Action="ErrorAdminUserSet" After="FindApp">Not Privileged AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorAdminUserWrite" After="ErrorAdminUserSet">Not Privileged AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorAdminUserShow" After="ErrorAdminUserWrite">Not Privileged</Custom>
+
+			<Custom Action="CheckRegistryPermissions" After="ErrorAdminUserShow"><![CDATA[VersionNT < 600]]></Custom>
+			<Custom Action="ErrorRegPermissionsSet" After="CheckRegistryPermissions">REGNOPERMISSIONS AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorRegPermissionsWrite" After="ErrorRegPermissionsSet">REGNOPERMISSIONS AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorRegPermissionsShow" After="ErrorRegPermissionsWrite">REGNOPERMISSIONS</Custom>
+
+			<Custom Action="CheckRebootPending" After="ErrorRegPermissionsShow"><![CDATA[UILevel < 5 AND REMOVE<>"ALL"]]></Custom>
+			<Custom Action="ErrorRebootPendingSet" After="CheckRebootPending">REBOOTPENDING AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorRebootPendingWrite" After="ErrorRebootPendingSet">REBOOTPENDING AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorRebootPendingShow" After="ErrorRebootPendingWrite"><![CDATA[UILevel < 5 AND REMOVE<>"ALL" AND REBOOTPENDING]]></Custom>
+
+			<Custom Action="SetIsKAVUnPasswd" After="ErrorRebootPendingShow">REMOVE</Custom>
+			<Custom Action="CheckKAVUnPasswd" After="SetIsKAVUnPasswd">REMOVE AND IsKAVUnPasswd</Custom>
+			<Custom Action="ErrorInvalidUninstallPasswdSet"   After="CheckKAVUnPasswd">IsKAVUnPasswd AND NOT IsKAVUnPasswdChecked AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorInvalidUninstallPasswdWrite" After="ErrorInvalidUninstallPasswdSet">IsKAVUnPasswd AND NOT IsKAVUnPasswdChecked AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorInvalidUninstallPasswdShow"  After="ErrorInvalidUninstallPasswdWrite">IsKAVUnPasswd AND NOT IsKAVUnPasswdChecked</Custom>
+
+			<?if not ($(env.product_type) = FS) ?>
+
+			<Custom Action="ErrorInsuffitentMemory512Set"   After="ErrorInvalidUninstallPasswdShow">$(var.Need512) AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorInsuffitentMemory512Write" After="ErrorInsuffitentMemory512Set">$(var.Need512) AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorInsuffitentMemory512Show"  After="ErrorInsuffitentMemory512Write">$(var.Need512)</Custom>
+
+			<Custom Action="ErrorInsuffitentMemory128Set"   After="ErrorInsuffitentMemory512Show">$(var.Need128) AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorInsuffitentMemory128Write" After="ErrorInsuffitentMemory128Set">$(var.Need128) AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorInsuffitentMemory128Show"  After="ErrorInsuffitentMemory128Write">$(var.Need128)</Custom>
+
+	<!-- allow Beta installation on server OS -->
+	<?if ($(var.ProductStatus) = "Beta") ?>
+			<Custom Action="ErrorIncompatibleOSSet"   After="ErrorInsuffitentMemory128Show"><![CDATA[(NOT (MsiNTProductType > 0 AND VersionNT >= 500)) AND AKINSTALL=1]]></Custom>
+			<Custom Action="ErrorIncompatibleOSWrite" After="ErrorIncompatibleOSSet"><![CDATA[(NOT (MsiNTProductType > 0 AND VersionNT >= 500)) AND AKINSTALL=1]]></Custom>
+			<Custom Action="ErrorIncompatibleOSShow"  After="ErrorIncompatibleOSWrite"><![CDATA[NOT (MsiNTProductType > 0 AND VersionNT >= 500)]]></Custom>
+	<?else ?>
+			<Custom Action="ErrorIncompatibleOSSet"   After="ErrorInsuffitentMemory128Show"><![CDATA[(NOT (MsiNTProductType = 1 AND VersionNT >= 500)) AND AKINSTALL=1]]></Custom>
+			<Custom Action="ErrorIncompatibleOSWrite" After="ErrorIncompatibleOSSet"><![CDATA[(NOT (MsiNTProductType = 1 AND VersionNT >= 500)) AND AKINSTALL=1]]></Custom>
+			<Custom Action="ErrorIncompatibleOSShow"  After="ErrorIncompatibleOSWrite"><![CDATA[NOT (MsiNTProductType = 1 AND VersionNT >= 500)]]></Custom>
+	<?endif ?>
+
+			<?endif?>
+
+			<?if ($(env.product_type) = FS) ?>
+			<Custom Action="ErrorIncompatibleOSSet"   After="ErrorInvalidUninstallPasswdShow"><![CDATA[(NOT (MsiNTProductType > 1 AND VersionNT >= 500)) AND AKINSTALL=1]]></Custom>
+			<Custom Action="ErrorIncompatibleOSWrite" After="ErrorIncompatibleOSSet"><![CDATA[(NOT (MsiNTProductType > 1 AND VersionNT >= 500)) AND AKINSTALL=1]]></Custom>
+			<Custom Action="ErrorIncompatibleOSShow"  After="ErrorIncompatibleOSWrite"><![CDATA[NOT (MsiNTProductType > 1 AND VersionNT >= 500)]]></Custom>
+			<?endif?>
+
+			<Custom Action="Error2KSP4RequiredSet"   After="ErrorIncompatibleOSShow"><![CDATA[VersionNT=500 AND ServicePackLevel<4 AND AKINSTALL=1]]></Custom>
+			<Custom Action="Error2KSP4RequiredWrite" After="Error2KSP4RequiredSet"><![CDATA[VersionNT=500 AND ServicePackLevel<4 AND AKINSTALL=1]]></Custom>
+			<Custom Action="Error2KSP4RequiredShow"  After="Error2KSP4RequiredWrite"><![CDATA[VersionNT=500 AND ServicePackLevel<4]]></Custom>
+
+			<Custom Action="ErrorIE5RequiredSet"   After="Error2KSP4RequiredShow">NOT IE5INSTALLED AND AKINSTALL=1 AND NOT Installed</Custom>
+			<Custom Action="ErrorIE5RequiredWrite" After="ErrorIE5RequiredSet">NOT IE5INSTALLED AND AKINSTALL=1 AND NOT Installed</Custom>
+			<Custom Action="ErrorIE5RequiredShow"  After="ErrorIE5RequiredWrite">NOT IE5INSTALLED AND NOT Installed</Custom>
+
+			<!--<Custom Action="ErrorVCRuntimeRequiredSet"   After="ErrorIE5RequiredShow">NOT VCRUNTIMEINSTALLED AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorVCRuntimeRequiredWrite" After="ErrorVCRuntimeRequiredSet">NOT VCRUNTIMEINSTALLED AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorVCRuntimeRequiredShow"  After="ErrorVCRuntimeRequiredWrite">NOT VCRUNTIMEINSTALLED AND AKINSTALL=1</Custom>-->
+
+			<?if $(env.product_type) = KIS Or $(env.product_type) = KAV ?>
+			<Custom Action="ErrorAppRunningShow" After="ErrorIE5RequiredShow"><![CDATA[UILevel < 5 AND NOT IsKAVUnPasswd AND AppRunning]]></Custom>
+			<?endif?>
+
+			<LaunchConditions Sequence="100">$(var.Installation)</LaunchConditions>
+			<Custom Action="GetSettingsVersion"  After="LaunchConditions">$(var.Installation) OR $(var.Upgrade)</Custom>
+
+			<!--<FindRelatedProducts  Sequence="200"></FindRelatedProducts>-->
+
+			<?if $(env.product_type) = KIS ?>
+			<Custom Action="ErrorKAVAppFoundSet" After="FindRelatedProducts">KAVFOUND OR WKSFOUND OR FSFOUND OR SOSFOUND OR KAV6FOUND OR WKS6FOUND OR FS6FOUND OR SOS6FOUND AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorKAVAppFoundWrite" After="ErrorKAVAppFoundSet">KAVFOUND OR WKSFOUND OR FSFOUND OR SOSFOUND OR KAV6FOUND OR WKS6FOUND OR FS6FOUND OR SOS6FOUND AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorKAVAppFoundShow" After="ErrorKAVAppFoundWrite">KAVFOUND OR WKSFOUND OR FSFOUND OR SOSFOUND OR KAV6FOUND OR WKS6FOUND OR FS6FOUND OR SOS6FOUND</Custom>
+			<?elseif $(env.product_type) = KAV ?>
+			<Custom Action="ErrorKAVAppFoundSet" After="FindRelatedProducts">KISFOUND OR WKSFOUND OR FSFOUND OR SOSFOUND OR KIS6FOUND OR WKS6FOUND OR FS6FOUND OR SOS6FOUND AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorKAVAppFoundWrite" After="ErrorKAVAppFoundSet">KISFOUND OR WKSFOUND OR FSFOUND OR SOSFOUND OR KIS6FOUND OR WKS6FOUND OR FS6FOUND OR SOS6FOUND AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorKAVAppFoundShow" After="ErrorKAVAppFoundWrite">KISFOUND OR WKSFOUND OR FSFOUND OR SOSFOUND OR KIS6FOUND OR WKS6FOUND OR FS6FOUND OR SOS6FOUND</Custom>
+			<?elseif $(env.product_type) = WKS ?>
+			<Custom Action="ErrorKAVAppFoundSet" After="FindRelatedProducts">KAVFOUND OR KISFOUND OR FSFOUND OR SOSFOUND OR KAV6FOUND OR KIS6FOUND OR FS6FOUND OR SOS6FOUND AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorKAVAppFoundWrite" After="ErrorKAVAppFoundSet">KISFOUND OR WKSFOUND OR FSFOUND OR SOSFOUND OR KAV6FOUND OR KIS6FOUND OR FS6FOUND OR SOS6FOUND AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorKAVAppFoundShow" After="ErrorKAVAppFoundWrite">KISFOUND OR WKSFOUND OR FSFOUND OR SOSFOUND OR KAV6FOUND OR KIS6FOUND OR FS6FOUND OR SOS6FOUND</Custom>
+			<?elseif $(env.product_type) = FS ?>
+			<Custom Action="ErrorKAVAppFoundSet" After="FindRelatedProducts">KAVFOUND OR KISFOUND OR WKSFOUND OR SOSFOUND OR KAV6FOUND OR KIS6FOUND OR WKS6FOUND OR SOS6FOUND AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorKAVAppFoundWrite" After="ErrorKAVAppFoundSet">KAVFOUND OR KISFOUND OR WKSFOUND OR SOSFOUND OR KAV6FOUND OR KIS6FOUND OR WKS6FOUND OR SOS6FOUND AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorKAVAppFoundShow" After="ErrorKAVAppFoundWrite">KAVFOUND OR KISFOUND OR WKSFOUND OR SOSFOUND OR KAV6FOUND OR KIS6FOUND OR WKS6FOUND OR SOS6FOUND</Custom>
+			<?elseif $(env.product_type) = SOS ?>
+			<Custom Action="ErrorKAVAppFoundSet" After="FindRelatedProducts">KAVFOUND OR KISFOUND OR WKSFOUND OR FSFOUND OR KAV6FOUND OR KIS6FOUND OR WKS6FOUND OR FS6FOUND AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorKAVAppFoundWrite" After="ErrorKAVAppFoundSet">KAVFOUND OR KISFOUND OR WKSFOUND OR FSFOUND OR KAV6FOUND OR KIS6FOUND OR WKS6FOUND OR FS6FOUND AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorKAVAppFoundShow" After="ErrorKAVAppFoundWrite">KAVFOUND OR KISFOUND OR WKSFOUND OR FSFOUND OR KAV6FOUND OR KIS6FOUND OR WKS6FOUND OR FS6FOUND</Custom>
+			<?endif ?>
+
+			<Custom Action="ErrorNewKAVAppFoundSet" After="ErrorKAVAppFoundShow">NEWPRODUCTFOUND AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorNewKAVAppFoundWrite" After="ErrorNewKAVAppFoundSet">NEWPRODUCTFOUND AND AKINSTALL=1</Custom>
+			<Custom Action="ErrorNewKAVAppFoundShow" After="ErrorNewKAVAppFoundWrite">NEWPRODUCTFOUND</Custom>
+
+      <?if not ($(env.product_type) = SOS) ?>
+      <Custom Action="SetUninstallIncompatibleDriversProp"  After="ErrorNewKAVAppFoundShow">$(var.Installation) AND <![CDATA[VersionNT < 600 AND NOT AVP6FOUND]]></Custom>
+			<Custom Action="UninstallIncompatibleDrivers"  After="SetUninstallIncompatibleDriversProp">$(var.Installation) AND <![CDATA[VersionNT < 600 AND NOT AVP6FOUND]]></Custom>
+			<?endif?>
+
+			<!--<Custom Action="GetDocumentsFolder" After="ValidateProductID"></Custom>-->
+
+			<!--<CostInitialize Sequence="800"></CostInitialize>-->
+			<!--<ResolveSource After="CostInitialize">$(var.Installation) AND <![CDATA[UILevel < 5]]></ResolveSource>-->
+			<Custom Action="SetINSTALLDIR" After="CostInitialize">($(var.Installation) OR $(var.Upgrade)) AND $(var.IsSilent)</Custom>
+			<!--<Custom Action="SetADDLOCAL" After="SetINSTALLDIR"><![CDATA[ Installed AND (RESUME OR Preselected) AND UILevel = 5 AND (INSTALLMODE = "Complete" OR INSTALLMODE = "Typical")]]></Custom>
+			<Custom Action="SetREMOVE" After="SetADDLOCAL"><![CDATA[ Installed AND (RESUME OR Preselected) AND UILevel = 5 AND (INSTALLMODE = "Complete" OR INSTALLMODE = "Typical")]]></Custom>-->
+			<Custom Action="SetREINSTALL" After="SetINSTALLDIR"><![CDATA[ Installed AND (RESUME OR Preselected) AND UILevel = 5 AND REINSTALLPROP]]></Custom>
+
+			<!--<FileCost Sequence="900"></FileCost> -->
+			<Custom Action="Fix_REINSTALL" Before="CostFinalize">$(var.Installation)</Custom>
+			<!--<CostFinalize Sequence="1000"></CostFinalize> -->
+			<Custom Action="SetProductMenuFolderSetProp" After="CostFinalize"></Custom>
+			<Custom Action="SetProductMenuFolder" After="SetProductMenuFolderSetProp"></Custom>
+			<Custom Action="SetFeaturesState" After="SetProductMenuFolder"><![CDATA[(Not Installed OR (Installed AND (RESUME OR Preselected))) AND UILevel < 5]]></Custom>
+			<Custom Action="SetFeaturesStateUI" After="SetFeaturesState"><![CDATA[(Installed AND (RESUME OR Preselected)) AND UILevel = 5]]></Custom>
+			<Custom Action="VerifyInstallDir" After="SetFeaturesStateUI"><![CDATA[(Not Installed OR (Installed AND (RESUME OR Preselected))) AND UILevel < 5]]></Custom>
+			<Custom Action="ErrorInstallDirSet" After="VerifyInstallDir"><![CDATA[(Not Installed OR (Installed AND (RESUME OR Preselected))) AND UILevel < 5 AND Not ValidFolder AND AKINSTALL=1]]></Custom>
+			<Custom Action="ErrorInstallDirWrite" After="ErrorInstallDirSet"><![CDATA[(Not Installed OR (Installed AND (RESUME OR Preselected))) AND UILevel < 5 AND Not ValidFolder AND AKINSTALL=1]]></Custom>
+			<Custom Action="ErrorInstallDirShow" After="ErrorInstallDirWrite"><![CDATA[(Not Installed OR (Installed AND (RESUME OR Preselected))) AND UILevel < 5 AND Not ValidFolder]]></Custom>
+
+      <?if not ($(env.product_type) = SOS) ?>
+      <Custom Action="SetListCompetitorsSoftwareProp" After="ErrorInstallDirShow"><![CDATA[Not Installed AND UILevel < 5 AND SKIPPRODUCTCHECK <> 1]]></Custom>
+			<Custom Action="ListCompetitorsSoftware" After="SetListCompetitorsSoftwareProp"><![CDATA[Not Installed AND UILevel < 5 AND SKIPPRODUCTCHECK <> 1]]></Custom>
+
+			<Custom Action="ErrorIncompatibleAppFoundSet" After="ListCompetitorsSoftware">$(var.Installation) AND <![CDATA[UILevel < 5]]> AND AVFOUND</Custom>
+			<Custom Action="ErrorIncompatibleAppFoundWrite" After="ErrorIncompatibleAppFoundSet">$(var.Installation) AND <![CDATA[UILevel < 5]]> AND AVFOUND</Custom>
+			<Custom Action="ErrorIncompatibleAppFoundShow" After="ErrorIncompatibleAppFoundWrite">$(var.Installation) AND <![CDATA[UILevel < 5]]> AND AVFOUND</Custom>
+
+			<Custom Action="SetListKLSoftwarePropSilent" After="ErrorIncompatibleAppFoundShow"><![CDATA[Not Installed AND UILevel < 5 AND SKIPPRODUCTCHECK <> 1]]></Custom>
+			<Custom Action="ListKLSoftware" After="SetListKLSoftwarePropSilent"><![CDATA[Not Installed AND UILevel < 5 AND SKIPPRODUCTCHECK <> 1]]></Custom>
+			<Custom Action="CheckUpgrade" After="ListKLSoftware">$(var.Installation) AND <![CDATA[UILevel < 5]]> AND KLAVFOUND</Custom>
+			<Custom Action="UninstallCompetitorsSoftware" After="CheckUpgrade">$(var.Installation) AND <![CDATA[UILevel < 5]]> AND KLAVFOUND</Custom>
+			<?endif?>
+
+			<!--<MigrateFeatureStates  Sequence="1200"></MigrateFeatureStates>-->
+
+			<!--<InstallValidate Sequence="1400"></FileCost> -->
+			<Custom Action="SetARPNOREMOVE" After="InstallValidate">$(var.Installation) AND VersionNT >= 500</Custom>
+			<Custom Action="SetARPINSTALLLOCATION" After="SetARPNOREMOVE">$(var.Installation)</Custom>
+			<Custom Action="SetSUPPORTDIRProp" After="SetARPINSTALLLOCATION"></Custom>
+			<Custom Action="$(var.InitProtectionProperty)" After="SetSUPPORTDIRProp"></Custom>
+
+			<Custom Action="SetInstalledFeaturesProp"  After="$(var.InitProtectionProperty)"></Custom>
+
+      <?if not ($(env.product_type) = SOS) ?>
+			<Custom Action="PrepareMKlifSysX86" After="SetInstalledFeaturesProp" ><![CDATA[Not Installed AND $mklif.sys_X86 > 2]]></Custom>
+			<Custom Action="PrepareMKlifSysW2K" After="PrepareMKlifSysX86" ><![CDATA[Not Installed AND $mklif.sys_W2K > 2]]></Custom>
+			<Custom Action="PrepareMKlifSysX64" After="PrepareMKlifSysW2K" ><![CDATA[Not Installed AND $mklif.sys_X64 > 2]]></Custom>
+			<Custom Action="PrepareMKlifSys" After="PrepareMKlifSysX64"><![CDATA[Not Installed AND ($mklif.sys_X86 > 2 OR $mklif.sys_W2K > 2 OR $mklif.sys_X64 > 2)]]></Custom>
+			<?endif?>
+
+			<!-- <InstallInitialize Sequence="1500"></InstallInitialize> -->
+
+      <?if not ($(env.product_type) = SOS) ?>
+      <Custom Action="$(var.DisableProtectionDef)" After="InstallInitialize">(Installed AND ADDLOCAL) OR REMOVE OR REINSTALL OR AVP6FOUND</Custom>
+
+			<Custom Action="DeleteTempSetProp" After="$(var.DisableProtectionDef)"><![CDATA[REMOVE="ALL"]]></Custom>
+			<?else?>
+			<Custom Action="DeleteTempSetProp" After="InstallInitialize"><![CDATA[REMOVE="ALL"]]></Custom>
+			<?endif?>
+			<Custom Action="DeleteTemp" After="DeleteTempSetProp"><![CDATA[REMOVE="ALL"]]></Custom>
+
+			<Custom Action="ExportSettings" After="DeleteTemp">REMOVE="ALL" AND (SAVESETTINGS AND <![CDATA[REMOVEALLDATA <> "Yes"]]>)</Custom>
+			<Custom Action="SaveSettingsSetProp" After="ExportSettings">REMOVE="ALL" AND (SAVESETTINGS AND <![CDATA[REMOVEALLDATA <> "Yes"]]>)</Custom>
+			<Custom Action="SaveSettings" After="SaveSettingsSetProp">REMOVE="ALL" AND (SAVESETTINGS AND <![CDATA[REMOVEALLDATA <> "Yes"]]>)</Custom>
+
+			<Custom Action="RbSetAllowServiceStop" After="SaveSettings">AppRunning AND ALLOWSERVICESTOP="#0"</Custom>
+			<Custom Action="SetAllowServiceStop" After="RbSetAllowServiceStop">AppRunning AND ALLOWSERVICESTOP="#0"</Custom>
+			<Custom Action="SetAllowServiceStopAVP6" After="SetAllowServiceStop">AVP6FOUND AND ALLOWSERVICESTOP="#0"</Custom>
+			<Custom Action="UnloadAppSetProp" After="SetAllowServiceStopAVP6">AppRunning</Custom>
+			<Custom Action="UnloadAppAVP6SetProp" After="UnloadAppSetProp">AVP6FOUND</Custom>
+			<Custom Action="UnloadApp" After="UnloadAppAVP6SetProp">AppRunning OR AVP6FOUND</Custom>
+
+      <?ifdef BASE_FEATURES ?>
+      <Custom Action="SelfUnreg6_r3hook.dll"			After="UnloadApp"><![CDATA[AVP6FOUND AND VersionNT >= 600 OR VersionNT64]]></Custom>
+			<Custom Action="SelfUnreg6_r3hook.dll_X64"		After="UnloadApp"><![CDATA[AVP6FOUND AND VersionNT64]]></Custom>
+			<?endif?>
+
+			<Custom Action="ProductDeinitializeSetProp" After="UnloadApp">REMOVE="ALL"</Custom>
+			<Custom Action="ProductDeinitialize"  After="ProductDeinitializeSetProp">REMOVE="ALL"</Custom>
+
+			<Custom Action="RbSetDeinstall" After="ProductDeinitialize">REMOVE="ALL"</Custom>
+			<Custom Action="SetDeinstall" After="RbSetDeinstall">REMOVE="ALL"</Custom>
+
+			<Custom Action="InitKAVUnPasswd" After="SetDeinstall">$(var.Installation) OR REINSTALL</Custom>
+
+			<!-- set reboot flag-->
+			<Custom Action="RbEnableRebootPending" After="InitKAVUnPasswd">$(var.Installation) AND VersionNT</Custom>
+
+
+      <?if not ($(env.product_type) = SOS) ?>
+      <!-- rollback protection files klif.sys -->
+			<Custom Action="RbRemoveProtectionFilesSetProp" After="RbEnableRebootPending">$(var.Installation) AND VersionNT</Custom>
+			<Custom Action="RbRemoveProtectionFiles" After="RbRemoveProtectionFilesSetProp">$(var.Installation) AND VersionNT</Custom>
+
+			<!-- rollback driver mklif -->
+			<Custom Action="RollbackDriverMKlifX86TempSetProp" After="RbRemoveProtectionFiles" ><![CDATA[Not Installed AND $mklif.sys_X86 > 2]]></Custom>
+			<Custom Action="RollbackDriverMKlifX86Temp"		   After="RollbackDriverMKlifX86TempSetProp"><![CDATA[Not Installed AND $mklif.sys_X86 > 2]]></Custom>
+
+			<Custom Action="RollbackDriverMKlifW2KTempSetProp" After="RollbackDriverMKlifX86Temp" ><![CDATA[Not Installed AND $mklif.sys_W2K > 2]]></Custom>
+			<Custom Action="RollbackDriverMKlifW2KTemp"		   After="RollbackDriverMKlifW2KTempSetProp"><![CDATA[Not Installed AND $mklif.sys_W2K > 2]]></Custom>
+
+			<Custom Action="RollbackDriverMKlifX64TempSetProp" After="RollbackDriverMKlifW2KTemp" ><![CDATA[Not Installed AND $mklif.sys_X64 > 2]]></Custom>
+			<Custom Action="RollbackDriverMKlifX64Temp"		   After="RollbackDriverMKlifX64TempSetProp"><![CDATA[Not Installed AND $mklif.sys_X64 > 2]]></Custom>
+
+			<!-- registering driver mklif-->
+			<Custom Action="InstallDriverMKlifX86TempSetProp" After="RollbackDriverMKlifX86Temp"      ><![CDATA[Not Installed AND $mklif.sys_X86 > 2]]></Custom>
+			<Custom Action="InstallDriverMKlifX86Temp"		  After="InstallDriverMKlifX86TempSetProp"><![CDATA[Not Installed AND $mklif.sys_X86 > 2]]></Custom>
+
+			<Custom Action="InstallDriverMKlifW2KTempSetProp" After="InstallDriverMKlifX86Temp"      ><![CDATA[Not Installed AND $mklif.sys_W2K > 2]]></Custom>
+			<Custom Action="InstallDriverMKlifW2KTemp"		  After="InstallDriverMKlifW2KTempSetProp"><![CDATA[Not Installed AND $mklif.sys_W2K > 2]]></Custom>
+
+			<Custom Action="InstallDriverMKlifX64TempSetProp" After="InstallDriverMKlifW2KTemp"      ><![CDATA[Not Installed AND $mklif.sys_X64 > 2]]></Custom>
+			<Custom Action="InstallDriverMKlifX64Temp"		  After="InstallDriverMKlifX64TempSetProp"><![CDATA[Not Installed AND $mklif.sys_X64 > 2]]></Custom>
+
+			<!-- starting klif.sys -->
+			<Custom Action="StartServiceKlifSysSetProp" After="InstallDriverMKlifX64Temp" ><![CDATA[$mklif.sys_X86 > 2 OR $mklif.sys_W2K > 2 OR $mklif.sys_X64 > 2]]></Custom>
+			<Custom Action="StartServiceKlifSys"        After="StartServiceKlifSysSetProp"><![CDATA[$mklif.sys_X86 > 2 OR $mklif.sys_W2K > 2 OR $mklif.sys_X64 > 2]]></Custom>
+
+			<?endif?>
+
+			<InstallServices Sequence="1700"> $(var.Installation) AND VersionNT</InstallServices>
+			<Custom Action="SetServiceRestartSetProp" After="InstallServices" >VersionNT</Custom>
+			<Custom Action="SetServiceRestart" After="SetServiceRestartSetProp" >VersionNT</Custom>
+			<Custom Action="SetServiceDACLSetProp" After="SetServiceRestart" >VersionNT</Custom>
+			<Custom Action="SetServiceDACL" After="SetServiceDACLSetProp" >VersionNT</Custom>
+
+      <?if not ($(env.product_type) = SOS) ?>
+      <Custom Action="$(var.DisableFidboxDef)" After="SetServiceDACL">REMOVE="ALL" AND NOT UPGRADINGPRODUCTCODE AND (NOT SAVEFIDBOX OR REMOVEALLDATA = "Yes")</Custom>
+
+      <?ifdef ADVANCED_FEATURES ?>
+      <Custom Action="Unregister_BatPluginSetProp" After="DisableFidbox"><![CDATA[$kav.bav = 2]]></Custom>
+			<Custom Action="Unregister_BatPlugin" After="Unregister_BatPluginSetProp"><![CDATA[$kav.bav = 2]]></Custom>
+			<Custom Action="Unregister_BatASSetProp" After="Unregister_BatPlugin"><![CDATA[$kav.tbp = 2]]></Custom>
+			<Custom Action="Unegister_BatAS" After="Unregister_BatASSetProp"><![CDATA[$kav.tbp = 2]]></Custom>
+			<Custom Action="RestoreDNSCacheSetProp" After="Unegister_BatAS">REMOVE="ALL" AND NOT UPGRADINGPRODUCTCODE</Custom>
+			<?else ?>
+			<Custom Action="RestoreDNSCacheSetProp" After="DisableFidbox">REMOVE="ALL" AND NOT UPGRADINGPRODUCTCODE</Custom>
+			<?endif ?>
+
+			<Custom Action="RestoreDNSCache" After="RestoreDNSCacheSetProp">REMOVE="ALL" AND NOT UPGRADINGPRODUCTCODE</Custom>
+			<?endif?>
+
+    <?if not ($(env.product_type) = SOS) ?>
+    <!-- unregistering drivers -->
+      <?ifdef BASE_FEATURES ?>
+        <Custom Action="UninstallServiceKl1SysSetProp" After="RestoreDNSCache"><![CDATA[$kl1.sys = 2]]></Custom>
+        <Custom Action="UninstallServiceKl1Sys" After="UninstallServiceKl1SysSetProp"><![CDATA[$kl1.sys = 2]]></Custom>
+
+        <Custom Action="UninstallServiceKlFltDevSysSetProp" After="UninstallServiceKl1Sys"><![CDATA[$klfltdev.sys = 2]]></Custom>
+        <Custom Action="UninstallServiceKlFltDevSys" After="UninstallServiceKlFltDevSysSetProp"><![CDATA[$klfltdev.sys = 2]]></Custom>
+
+        <Custom Action="UninstallServiceKlBgSysSetProp" After="UninstallServiceKlFltDevSys"><![CDATA[$klbg.sys = 2]]></Custom>
+        <Custom Action="UninstallServiceKlBgSys" After="UninstallServiceKlBgSysSetProp"><![CDATA[$klbg.sys = 2]]></Custom>
+        <Custom Action="UninstallServiceKlifSysSetProp" After="UninstallServiceKlBgSys"><![CDATA[$klif.sys = 2]]></Custom>
+      <?else?>
+        <Custom Action="UninstallServiceKlifSysSetProp" After="RestoreDNSCache"><![CDATA[$klif.sys = 2]]></Custom>
+      <?endif ?>
+      <Custom Action="UninstallServiceKlifSys" After="UninstallServiceKlifSysSetProp"><![CDATA[$klif.sys = 2]]></Custom>
+    <?endif?>
+
+			<!-- After SelfUnregModules Sequence 2200 -->
+      <?ifdef ADVANCED_FEATURES ?>
+      <Custom Action="UnSelfReg_adialhk.dll" After="SelfUnregModules"><![CDATA[$adialhk.dll=2]]></Custom>
+			<Custom Action="UnSelfReg_adialhk.dll_X64" After="SelfUnregModules"><![CDATA[$adialhk.dll_X64=2]]></Custom>
+			<Custom Action="UnSelfReg_mcouas.dll" After="SelfUnregModules"><![CDATA[$mcouas.dll=2]]></Custom>
+			<Custom Action="UnSelfReg_oeas.dll" After="SelfUnregModules"><![CDATA[$oeas.dll=2]]></Custom>
+			<Custom Action="UnSelfReg_oeas.dll_X64" After="SelfUnregModules"><![CDATA[$oeas.dll_X64=2]]></Custom>
+			<?endif?>
+      <?ifdef BASE_FEATURES ?>
+			<Custom Action="UnSelfReg_klscav.dll" After="SelfUnregModules"><![CDATA[$klscav.dll=2]]></Custom>
+			<Custom Action="UnSelfReg_mcou.dll" After="SelfUnregModules"><![CDATA[$mcou.dll=2]]></Custom>
+			<Custom Action="UnSelfReg_miscr3.dll" After="SelfUnregModules"><![CDATA[$miscr3.dll=2]]></Custom>
+			<Custom Action="UnSelfReg_r3hook.dll" After="SelfUnregModules"><![CDATA[$r3hook.dll=2]]></Custom>
+			<Custom Action="UnSelfReg_SCIEPlgn.dll" After="SelfUnregModules"><![CDATA[$SCIEPlgn.dll=2]]></Custom>
+			<Custom Action="UnSelfReg_scrchpg.dll" After="SelfUnregModules"><![CDATA[$scrchpg.dll=2]]></Custom>
+			<Custom Action="UnSelfReg_klscav.dll_X64" After="SelfUnregModules"><![CDATA[$klscav.dll_X64=2]]></Custom>
+			<Custom Action="UnSelfReg_r3hook.dll_X64" After="SelfUnregModules"><![CDATA[$r3hook.dll_X64=2]]></Custom>
+			<Custom Action="UnSelfReg_SCIEPlgn.dll_X64" After="SelfUnregModules"><![CDATA[$SCIEPlgn.dll_X64=2]]></Custom>
+			<Custom Action="UnSelfReg_Scrchpg.dll_X64" After="SelfUnregModules"><![CDATA[$Scrchpg.dll_X64=2]]></Custom>
+			<?endif?>
+			<Custom Action="UnSelfReg_avpgui.ppl" After="SelfUnregModules"><![CDATA[$avpgui.ppl=2]]></Custom>
+			<Custom Action="UnSelfReg_shellex.dll" After="SelfUnregModules"><![CDATA[$shellex.dll=2]]></Custom>
+			<Custom Action="UnSelfReg_ShellEx.dll_X64" After="SelfUnregModules"><![CDATA[$ShellEx.dll_X64=2]]></Custom>
+
+			<Custom Action="RemoveUpdaterList" After="UnSelfReg_avpgui.ppl">REMOVE="ALL" AND NOT UPGRADINGPRODUCTCODE</Custom>
+
+      <?ifdef BASE_FEATURES ?>
+      <Custom Action="CKAHUM_UninstallSetProp" After="RemoveUpdaterList"><![CDATA[($BasesAHI386 = 2 OR $BasesAHX64 = 2)]]></Custom>
+			<Custom Action="CKAHUM_Uninstall" After="CKAHUM_UninstallSetProp"><![CDATA[($BasesAHI386 = 2 OR $BasesAHX64 = 2)]]></Custom>
+			<?endif?>
+
+      <?ifdef ADVANCED_FEATURES ?>
+      <Custom Action="RbEnableWFW" After="CKAHUM_Uninstall" ><![CDATA[&FirewallFeature = 2 AND !FirewallFeature = 3]]></Custom>
+			<Custom Action="EnableWFW" After="RbEnableWFW" ><![CDATA[&FirewallFeature = 2 AND !FirewallFeature = 3]]></Custom>
+			<?endif?>
+
+			<!-- After RemoveRegistryValues Sequence 2600 -->
+			<Custom Action="RemAUKLAVPSetProp"	After="RemoveRegistryValues">$MainRootComponent = 2</Custom>
+			<Custom Action="RemAUKLAVP"			After="RemAUKLAVPSetProp"	>$MainRootComponent = 2</Custom>
+			<Custom Action="RemAUKLSetProp"		After="RemAUKLAVP"			>$MainRootComponent = 2</Custom>
+			<Custom Action="RemAUKL"			After="RemAUKLSetProp"		>$MainRootComponent = 2</Custom>
+
+			<Custom Action="DeleteLicenseInfoSetProp" After="RemAUKL">REMOVE="ALL" AND NOT UPGRADINGPRODUCTCODE AND (<![CDATA[SAVELICENSE<>"1" OR REMOVEALLDATA = "Yes"]]>)</Custom>
+			<Custom Action="DeleteLicenseInfo" After="DeleteLicenseInfoSetProp">REMOVE="ALL" AND NOT UPGRADINGPRODUCTCODE AND (<![CDATA[SAVELICENSE<>"1" OR REMOVEALLDATA = "Yes"]]>)</Custom>
+      <?ifdef CORPOTATE_FEATURES ?>
+      <Custom Action="UnloadConnector" After="DeleteLicenseInfo"><![CDATA[?AVPCon.dll > 2]]></Custom>
+			<?endif?>
+
+			<!-- After RemoveShortcuts Sequence 2600 -->
+			<!--<Custom Action="SaveAVBasesSetProp" After="RemoveShortcuts">(SAVEAVBASES AND <![CDATA[REMOVEALLDATA <> "Yes"]]>)</Custom>
+			<Custom Action="SaveAVBases" After="SaveAVBasesSetProp">(SAVEAVBASES AND <![CDATA[REMOVEALLDATA <> "Yes"]]>)</Custom>
+			<Custom Action="SaveDSKMBasesSetProp" After="SaveAVBases">(SAVEAVBASES AND <![CDATA[REMOVEALLDATA <> "Yes"]]>)</Custom>
+			<Custom Action="SaveDSKMBases" After="SaveDSKMBasesSetProp">(SAVEAVBASES AND <![CDATA[REMOVEALLDATA <> "Yes"]]>)</Custom>-->
+			<Custom Action="SaveASBasesSetProp" After="RemoveShortcuts">(SAVEASBASES AND <![CDATA[REMOVEALLDATA <> "Yes"]]>)</Custom>
+			<Custom Action="SaveASBases" After="SaveASBasesSetProp">(SAVEASBASES AND <![CDATA[REMOVEALLDATA <> "Yes"]]>)</Custom>
+
+			<!-- After RemoveEnvironmentStrings Sequence 3300 -->
+      <?if not ($(env.product_type) = SOS) ?>
+      <Custom Action="UninstallSystem64Files" After="RemoveEnvironmentStrings"><![CDATA[$system64.inf = 2]]></Custom>
+
+    <?ifdef BASE_FEATURES ?>
+      <Custom Action="UninstallKlopX64" After="UninstallSystem64Files"><![CDATA[$klop.dat_X64 = 2]]></Custom>
+      <Custom Action="UninstallDriverKl1X64" After="UninstallKlopX64"><![CDATA[$kl1.sys_X64 = 2]]></Custom>
+      <Custom Action="UninstallDriverKl1X86" After="UninstallDriverKl1X64"><![CDATA[$kl1.sys_X86 = 2]]></Custom>
+
+      <Custom Action="UninstallDriverKlFltDevX64" After="UninstallDriverKl1X86"><![CDATA[$klfltdev.sys_X64 = 2]]></Custom>
+      <Custom Action="UninstallDriverKlFltDevX86" After="UninstallDriverKlFltDevX64"><![CDATA[$klfltdev.sys_X86 = 2]]></Custom>
+      <Custom Action="UninstallDriverKlFltDevW2K" After="UninstallDriverKlFltDevX86"><![CDATA[$klfltdev.sys_W2K = 2]]></Custom>
+
+      <Custom Action="UninstallDriverKlBgX64" After="UninstallDriverKlFltDevW2K"><![CDATA[$klbg.sys_X64 = 2]]></Custom>
+      <Custom Action="UninstallDriverKlBgX86" After="UninstallDriverKlBgX64"><![CDATA[$klbg.sys_X86 = 2]]></Custom>
+      <Custom Action="UninstallDriverMKlifX64" After="UninstallDriverKlBgX86"><![CDATA[$mklif.sys_X64 = 2]]></Custom>
+    <?else ?>
+      <Custom Action="UninstallDriverMKlifX64" After="UninstallSystem64Files"><![CDATA[$mklif.sys_X64 = 2]]></Custom>
+    <?endif ?>
+
+    <Custom Action="UninstallDriverMKlifX86" After="UninstallDriverMKlifX64"><![CDATA[$mklif.sys_X86 = 2]]></Custom>
+    <Custom Action="UninstallDriverMKlifW2K" After="UninstallDriverMKlifX86"><![CDATA[$mklif.sys_W2K = 2]]></Custom>
+
+    <?ifdef BASE_FEATURES ?>
+      <Custom Action="UninstallDriverKlim5X86" After="UninstallDriverMKlifW2K"><![CDATA[?klim5.sys_X86 = 3 AND $klim5.sys_X86 >= 2]]></Custom>
+			<Custom Action="UninstallDriverKlim5_mX86" After="UninstallDriverKlim5X86"><![CDATA[?klim5.sys_X86 = 3 AND $klim5.sys_X86 >= 2]]></Custom>
+			<Custom Action="UninstallServiceKlim5X86" After="UninstallDriverKlim5_mX86"><![CDATA[?klim5.sys_X86 = 3 AND $klim5.sys_X86 = 2]]></Custom>
+
+			<Custom Action="UninstallDriverKlim5X64" After="UninstallDriverMKlifW2K"><![CDATA[?klim5.sys_X64 = 3 AND $klim5.sys_X64 >= 2]]></Custom>
+			<Custom Action="UninstallDriverKlim5_mX64" After="UninstallDriverKlim5X64"><![CDATA[?klim5.sys_X64 = 3 AND $klim5.sys_X64 >= 2]]></Custom>
+			<Custom Action="UninstallServiceKlim5X64" After="UninstallDriverKlim5_mX64"><![CDATA[?klim5.sys_X64 = 3 AND $klim5.sys_X64 = 2]]></Custom>
+
+			<Custom Action="UninstallDriverKlim6X86" After="UninstallServiceKlim5X64"><![CDATA[?klim6.sys = 3 AND $klim6.sys >= 2]]></Custom>
+			<Custom Action="UninstallDriverKlim6X64" After="UninstallDriverKlim6X86"><![CDATA[?klim6.sys = 3 AND $klim6.sys_X64 >= 2]]></Custom>
+			<?endif ?>
+
+			<?endif?>
+
+			<!-- After RemoveFiles Sequence 3500 -->
+			<Custom Action="RemovePrDatSetProp" After="RemoveFiles">$MainRootComponent = 2 AND VersionNT >= 600</Custom>
+			<Custom Action="RemovePrDat" After="RemovePrDatSetProp">$MainRootComponent = 2 AND VersionNT >= 600</Custom>
+			<Custom Action="RemoveFilesX64SetProp" After="RemovePrDat">REMOVE="ALL" AND VersionNT64</Custom>
+			<Custom Action="RemoveFilesX64" After="RemoveFilesX64SetProp">REMOVE="ALL" AND VersionNT64</Custom>
+			<Custom Action="DeleteBackupSetProp" After="RemoveFilesX64">REMOVE="ALL" AND (NOT SAVEBACKUP OR <![CDATA[REMOVEALLDATA = "Yes"]]>)</Custom>
+			<Custom Action="DeleteBackup" After="DeleteBackupSetProp">REMOVE="ALL" AND (NOT SAVEBACKUP OR <![CDATA[REMOVEALLDATA = "Yes"]]>)</Custom>
+			<Custom Action="DeleteAVBasesSetProp" After="DeleteBackup"><![CDATA[REMOVE="ALL" OR (Installed AND INSTALLMODE <> "Repair" AND INSTALLMODE <> "Change")]]></Custom>
+			<Custom Action="DeleteAVBases" After="DeleteAVBasesSetProp"><![CDATA[REMOVE="ALL" OR (Installed AND INSTALLMODE <> "Repair" AND INSTALLMODE <> "Change")]]></Custom>
+			<Custom Action="DeletePemsSetProp" After="DeleteAVBases">Installed AND <![CDATA[INSTALLMODE <> "Repair" AND INSTALLMODE <> "Change"]]></Custom>
+			<Custom Action="DeletePems" After="DeletePemsSetProp">Installed AND <![CDATA[INSTALLMODE <> "Repair" AND INSTALLMODE <> "Change"]]></Custom>
+			<Custom Action="DeleteDataSetProp" After="DeletePems">REMOVE="ALL"</Custom>
+			<Custom Action="DeleteData" After="DeleteDataSetProp">REMOVE="ALL"</Custom>
+			<Custom Action="DeleteDSKMBasesSetProp" After="DeleteData"><![CDATA[REMOVE="ALL" OR (Installed AND INSTALLMODE <> "Repair" AND INSTALLMODE <> "Change")]]></Custom>
+			<Custom Action="DeleteDSKMBases" After="DeleteDSKMBasesSetProp"><![CDATA[REMOVE="ALL" OR (Installed AND INSTALLMODE <> "Repair" AND INSTALLMODE <> "Change")]]></Custom>
+			<Custom Action="DeletePdmHistSetProp" After="DeleteDSKMBases">REMOVE="ALL"</Custom>
+			<Custom Action="DeletePdmHist" After="DeletePdmHistSetProp">REMOVE="ALL"</Custom>
+			<Custom Action="DeleteQuarantineSetProp" After="DeletePdmHist">REMOVE="ALL" AND (NOT SAVEQUARANTINE OR <![CDATA[REMOVEALLDATA = "Yes"]]>)</Custom>
+			<Custom Action="DeleteQuarantine" After="DeleteQuarantineSetProp">REMOVE="ALL" AND (NOT SAVEQUARANTINE OR <![CDATA[REMOVEALLDATA = "Yes"]]>)</Custom>
+			<Custom Action="DeleteReportsSetProp" After="DeleteQuarantine">Installed AND <![CDATA[INSTALLMODE <> "Repair" AND INSTALLMODE <> "Change"]]></Custom>
+			<Custom Action="DeleteReports" After="DeleteReportsSetProp">Installed AND <![CDATA[INSTALLMODE <> "Repair" AND INSTALLMODE <> "Change"]]></Custom>
+			<Custom Action="DeleteReportSetProp" After="DeleteReports">REMOVE="ALL"</Custom>
+			<Custom Action="DeleteReport" After="DeleteReportSetProp">REMOVE="ALL"</Custom>
+			<Custom Action="DeleteSetupFiles1SetProp" After="DeleteReport">REMOVE="ALL"</Custom>
+			<Custom Action="DeleteSetupFiles1" After="DeleteSetupFiles1SetProp">REMOVE="ALL"</Custom>
+			<Custom Action="DeleteSetupFiles2SetProp" After="DeleteSetupFiles1">REMOVE="ALL"</Custom>
+			<Custom Action="DeleteSetupFiles2" After="DeleteSetupFiles2SetProp">REMOVE="ALL"</Custom>
+			<Custom Action="DeleteSetupFiles3SetProp" After="DeleteSetupFiles2">REMOVE="ALL"</Custom>
+			<Custom Action="DeleteSetupFiles3" After="DeleteSetupFiles3SetProp">REMOVE="ALL"</Custom>
+			<Custom Action="DeleteKLDirSetProp" After="DeleteSetupFiles3">REMOVE="ALL" AND <![CDATA[REMOVEALLDATA = "Yes"]]></Custom>
+			<Custom Action="DeleteKLDir" After="DeleteKLDirSetProp">REMOVE="ALL" AND <![CDATA[REMOVEALLDATA = "Yes"]]></Custom>
+
+			<!-- BREAK REMOVE/INSTALL !!!! -->
+
+			<!-- After CreateFolders Sequence 3700 -->
+			<Custom Action="RbCreateFoldersSetProp" After="CreateFolders">NOT Installed</Custom>
+			<Custom Action="RbCreateFolders" After="RbCreateFoldersSetProp">NOT Installed</Custom>
+
+			<?if ($(env.product_type) = KAV Or $(env.product_type) = KIS Or $(env.product_type) = WKS Or $(env.product_type) = FS) ?>
+			<!-- enable self-protection (file only) -->
+			<Custom Action="$(var.RbFileProtectionDef)" After="RbCreateFolders"><![CDATA[REMOVE <> "ALL"]]> AND NOT Installed AND $(var.SELFPROTECTION) AND NOT KLAVFOUND AND NOT DRIVERSFOUND</Custom>
+			<Custom Action="$(var.EnableFileProtectionDef)SetProp" After="$(var.RbFileProtectionDef)"/>
+			<Custom Action="$(var.EnableFileProtectionDef)" After="$(var.EnableFileProtectionDef)SetProp"><![CDATA[REMOVE <> "ALL"]]> AND NOT Installed AND $(var.SELFPROTECTION) AND NOT KLAVFOUND AND NOT DRIVERSFOUND</Custom>
+			<Custom Action="$(var.EnableFileProtectionImm)" After="$(var.EnableFileProtectionDef)"><![CDATA[REMOVE <> "ALL"]]> AND NOT Installed AND $(var.SELFPROTECTION) AND NOT KLAVFOUND AND NOT DRIVERSFOUND</Custom>
+			<?endif?>
+
+			<Custom Action="RbPrDatSetProp" Before="RbPrDat" />
+			<Custom Action="RbPrDat" Before="InstallFiles" />
+
+			<!-- After InstallFiles Sequence 4000 -->
+			<Custom Action="CopyLicenseFromSourceSetProp" After="InstallFiles">$(var.Installation) OR REINSTALL</Custom>
+			<Custom Action="CopyLicenseFromSource" After="CopyLicenseFromSourceSetProp">$(var.Installation) OR REINSTALL</Custom>
+			<Custom Action="AddLicenseSetProp" After="CopyLicenseFromSource">$(var.Installation) OR REINSTALL</Custom>
+			<Custom Action="AddLicense" After="AddLicenseSetProp">$(var.Installation) OR REINSTALL</Custom>
+			<Custom Action="CopyInstallCfgFromSourceSetProp" After="AddLicense">$(var.Installation)</Custom>
+			<Custom Action="CopyInstallCfgFromSource" After="CopyInstallCfgFromSourceSetProp">$(var.Installation)</Custom>
+			<Custom Action="AddInstallCfgSetProp" After="CopyInstallCfgFromSource">$(var.Installation)</Custom>
+			<Custom Action="AddInstallCfg" After="AddInstallCfgSetProp">$(var.Installation)</Custom>
+			<Custom Action="CopySetupRegFromSourceSetProp" After="AddInstallCfg">IMPORTREGFILE</Custom>
+			<Custom Action="CopySetupRegFromSource" After="CopySetupRegFromSourceSetProp">IMPORTREGFILE</Custom>
+
+      <?if not ($(env.product_type) = SOS) ?>
+
+      <?ifdef BASE_FEATURES ?>
+      <!-- rollback driver kl1.sys -->
+			<Custom Action="RbUninstallServiceKl1SysSetProp" After="CopySetupRegFromSource">$(var.Installation) AND VersionNT AND Not VersionNT64</Custom>
+			<Custom Action="RbUninstallServiceKl1Sys" After="RbUninstallServiceKl1SysSetProp">$(var.Installation) AND VersionNT AND Not VersionNT64</Custom>
+
+			<!-- registering driver kl1.sys -->
+			<Custom Action="PrepareKl1SysInstallStringNT" After="RbUninstallServiceKl1Sys"><![CDATA[$kl1.sys > 2 AND VersionNT < 500]]></Custom>
+			<Custom Action="PrepareKl1SysInstallString2k" After="PrepareKl1SysInstallStringNT"><![CDATA[$kl1.sys > 2 AND VersionNT >= 500]]></Custom>
+			<Custom Action="InstallServiceKl1SysSetProp" After="PrepareKl1SysInstallString2k"><![CDATA[$kl1.sys > 2 AND INSTALLMODE <> "Repair"]]></Custom>
+			<Custom Action="InstallServiceKl1Sys" After="InstallServiceKl1SysSetProp"><![CDATA[$kl1.sys > 2 AND INSTALLMODE <> "Repair"]]></Custom>
+
+			<!--repairing driver kl1.sys-->
+			<Custom Action="RepairServiceKl1SysSetProp" After="InstallServiceKl1Sys"><![CDATA[$kl1.sys > 2 AND INSTALLMODE = "Repair"]]></Custom>
+			<Custom Action="RepairServiceKl1Sys" After="RepairServiceKl1SysSetProp"><![CDATA[$kl1.sys > 2 AND INSTALLMODE = "Repair"]]></Custom>
+
+			<!-- kl1 for x64/Vista -->
+			<Custom Action="RollbackDriverKl1X64" After="RepairServiceKl1Sys"><![CDATA[$kl1.sys_X64 > 2]]></Custom>
+			<Custom Action="InstallDriverKl1X64" After="RollbackDriverKl1X64"><![CDATA[$kl1.sys_X64 > 2]]></Custom>
+			<Custom Action="RollbackDriverKl1X86" After="InstallDriverKl1X64"><![CDATA[$kl1.sys_X86 > 2]]></Custom>
+			<Custom Action="InstallDriverKl1X86" After="RollbackDriverKl1X86"><![CDATA[$kl1.sys_X86 > 2]]></Custom>
+
+      <!-- KlFltDev -->
+			<!-- rollback driver klfltdev.sys -->
+
+			<Custom Action="RbUninstallServiceKlFltDevSysSetProp" After="InstallDriverKl1X86">$(var.Installation) AND VersionNT AND Not VersionNT64</Custom>
+			<Custom Action="RbUninstallServiceKlFltDevSys" After="RbUninstallServiceKlFltDevSysSetProp">$(var.Installation) AND VersionNT AND Not VersionNT64</Custom>
+
+
+			<!-- registering driver klfltdev.sys -->
+
+			<Custom Action="PrepareKlFltDevSysInstallString2kXp" After="RbUninstallServiceKlFltDevSys"><![CDATA[$klfltdev.sys > 2 AND VersionNT >= 500]]></Custom>
+			<Custom Action="InstallServiceKlFltDevSysSetProp" After="PrepareKlFltDevSysInstallString2kXp"><![CDATA[$klfltdev.sys > 2 AND INSTALLMODE <> "Repair"]]></Custom>
+			<Custom Action="InstallServiceKlFltDevSys" After="InstallServiceKlFltDevSysSetProp"><![CDATA[$klfltdev.sys > 2 AND INSTALLMODE <> "Repair"]]></Custom>
+
+
+			<!--repairing driver klfltdev.sys-->
+
+			<Custom Action="RepairServiceKlFltDevSysSetProp" After="InstallServiceKlFltDevSys"><![CDATA[$klfltdev.sys > 2 AND INSTALLMODE = "Repair"]]></Custom>
+			<Custom Action="RepairServiceKlFltDevSys" After="RepairServiceKlFltDevSysSetProp"><![CDATA[$klfltdev.sys > 2 AND INSTALLMODE = "Repair"]]></Custom>
+
+
+			<!-- klfltdev for x64/Vista -->
+
+			<Custom Action="RollbackDriverKlFltDevX64" After="RepairServiceKlFltDevSys"><![CDATA[$klfltdev.sys_X64 > 2]]></Custom>
+			<Custom Action="InstallDriverKlFltDevX64" After="RollbackDriverKlFltDevX64"><![CDATA[$klfltdev.sys_X64 > 2]]></Custom>
+			<Custom Action="RollbackDriverKlFltDevX86" After="InstallDriverKlFltDevX64"><![CDATA[$klfltdev.sys_X86 > 2]]></Custom>
+			<Custom Action="InstallDriverKlFltDevX86" After="RollbackDriverKlFltDevX86"><![CDATA[$klfltdev.sys_X86 > 2]]></Custom>
+			<Custom Action="RollbackDriverKlFltDevW2K" After="InstallDriverKlFltDevX86"><![CDATA[$klfltdev.sys_W2K > 2]]></Custom>
+			<Custom Action="InstallDriverKlFltDevW2K" After="RollbackDriverKlFltDevW2K"><![CDATA[$klfltdev.sys_W2K > 2]]></Custom>
+
+      <!-- KlBg -->
+			<!-- rollback driver klbg.sys -->
+			<Custom Action="RbUninstallServiceKlBgSysSetProp" After="InstallDriverKlFltDevW2K">$(var.Installation) AND VersionNT AND Not VersionNT64</Custom>
+			<Custom Action="RbUninstallServiceKlBgSys" After="RbUninstallServiceKlBgSysSetProp">$(var.Installation) AND VersionNT AND Not VersionNT64</Custom>
+
+			<!-- registering driver klbg.sys -->
+			<Custom Action="PrepareKlBgSysInstallString2kXp" After="RbUninstallServiceKlBgSys"><![CDATA[$klbg.sys > 2 AND VersionNT >= 500]]></Custom>
+			<Custom Action="InstallServiceKlBgSysSetProp" After="PrepareKlBgSysInstallString2kXp"><![CDATA[$klbg.sys > 2 AND INSTALLMODE <> "Repair"]]></Custom>
+			<Custom Action="InstallServiceKlBgSys" After="InstallServiceKlBgSysSetProp"><![CDATA[$klbg.sys > 2 AND INSTALLMODE <> "Repair"]]></Custom>
+
+			<!--repairing driver klbg.sys-->
+			<Custom Action="RepairServiceKlBgSysSetProp" After="InstallServiceKlBgSys"><![CDATA[$klbg.sys > 2 AND INSTALLMODE = "Repair"]]></Custom>
+			<Custom Action="RepairServiceKlBgSys" After="RepairServiceKlBgSysSetProp"><![CDATA[$klbg.sys > 2 AND INSTALLMODE = "Repair"]]></Custom>
+
+			<!-- klbg for x64/Vista -->
+			<Custom Action="RollbackDriverKlBgX64" After="RepairServiceKlBgSys"><![CDATA[$klbg.sys_X64 > 2]]></Custom>
+			<Custom Action="InstallDriverKlBgX64" After="RollbackDriverKlBgX64"><![CDATA[$klbg.sys_X64 > 2]]></Custom>
+			<Custom Action="RollbackDriverKlBgX86" After="InstallDriverKlBgX64"><![CDATA[$klbg.sys_X86 > 2]]></Custom>
+			<Custom Action="InstallDriverKlBgX86" After="RollbackDriverKlBgX86"><![CDATA[$klbg.sys_X86 > 2]]></Custom>
+
+      <!-- MKlif -->
+			<Custom Action="RollbackDriverMKlifX64" After="InstallDriverKlBgX86"><![CDATA[Installed AND $mklif.sys_X64 > 2]]></Custom>
+			<?else?>
+			<Custom Action="RollbackDriverMKlifX64" After="CopySetupRegFromSource"><![CDATA[Installed AND $mklif.sys_X64 > 2]]></Custom>
+			<?endif ?>
+			<Custom Action="InstallDriverMKlifX64" After="RollbackDriverMKlifX64"><![CDATA[Installed AND $mklif.sys_X64 > 2]]></Custom>
+			<Custom Action="RollbackDriverMKlifX86" After="InstallDriverMKlifX64"><![CDATA[Installed AND $mklif.sys_X86 > 2]]></Custom>
+			<Custom Action="InstallDriverMKlifX86" After="RollbackDriverMKlifX86"><![CDATA[Installed AND $mklif.sys_X86 > 2]]></Custom>
+			<Custom Action="RollbackDriverMKlifW2K" After="InstallDriverMKlifX86"><![CDATA[Installed AND $mklif.sys_W2K > 2]]></Custom>
+			<Custom Action="InstallDriverMKlifW2K" After="RollbackDriverMKlifW2K"><![CDATA[Installed AND $mklif.sys_W2K > 2]]></Custom>
+
+			<!-- Klim -->
+      <?ifdef BASE_FEATURES ?>
+
+      <Custom Action="UninstallDriverKlim5X86_MajUpgr" After="InstallDriverMKlifW2K"><![CDATA[AVP6FOUND AND $klim5.sys_X86 >= 2]]></Custom>
+			<Custom Action="UninstallDriverKlim5_mX86_MajUpgr" After="UninstallDriverKlim5X86_MajUpgr"><![CDATA[AVP6FOUND AND $klim5.sys_X86 >= 2]]></Custom>
+			<Custom Action="RollbackDriverKlim5_mX86" After="UninstallDriverKlim5_mX64_MajUpgr"><![CDATA[$klim5.sys_X86 > 2]]></Custom>
+			<Custom Action="RollbackDriverKlim5X86" After="RollbackDriverKlim5_mX86"><![CDATA[$klim5.sys_X86 > 2]]></Custom>
+			<Custom Action="InstallDriverKlim5X86" After="RollbackDriverKlim5X86"><![CDATA[$klim5.sys_X86 > 2]]></Custom>
+			<Custom Action="InstallDriverKlim5_mX86" After="InstallDriverKlim5X86"><![CDATA[$klim5.sys_X86 > 2]]></Custom>
+
+			<Custom Action="UninstallDriverKlim5X64_MajUpgr" After="InstallDriverMKlifW2K"><![CDATA[AVP6FOUND AND $klim5.sys_X64 >= 2]]></Custom>
+			<Custom Action="UninstallDriverKlim5_mX64_MajUpgr" After="UninstallDriverKlim5X64_MajUpgr"><![CDATA[AVP6FOUND AND $klim5.sys_X64 >= 2]]></Custom>
+			<Custom Action="RollbackDriverKlim5_mX64" After="UninstallDriverKlim5_mX64_MajUpgr"><![CDATA[$klim5.sys_X64 > 2]]></Custom>
+			<Custom Action="RollbackDriverKlim5X64" After="RollbackDriverKlim5_mX64"><![CDATA[$klim5.sys_X64 > 2]]></Custom>
+			<Custom Action="InstallDriverKlim5X64" After="RollbackDriverKlim5X64"><![CDATA[$klim5.sys_X64 > 2]]></Custom>
+			<Custom Action="InstallDriverKlim5_mX64" After="InstallDriverKlim5X64"><![CDATA[$klim5.sys_X64 > 2]]></Custom>
+
+			<Custom Action="UninstallDriverKlim6X86_MajUpgr" After="InstallDriverKlim5_mX64"><![CDATA[AVP6FOUND AND $klim6.sys >= 2]]></Custom>
+			<Custom Action="RollbackDriverKlim6X86" After="UninstallDriverKlim6X86_MajUpgr"><![CDATA[$klim6.sys > 2]]></Custom>
+			<Custom Action="InstallDriverKlim6X86" After="RollbackDriverKlim6X86"><![CDATA[$klim6.sys > 2]]></Custom>
+
+			<Custom Action="UninstallDriverKlim6X64_MajUpgr" After="InstallDriverKlim6X86"><![CDATA[AVP6FOUND AND $klim6.sys_X64 >= 2]]></Custom>
+			<Custom Action="RollbackDriverKlim6X64" After="UninstallDriverKlim6X64_MajUpgr"><![CDATA[$klim6.sys_X64 > 2]]></Custom>
+			<Custom Action="InstallDriverKlim6X64" After="RollbackDriverKlim6X64"><![CDATA[$klim6.sys_X64 > 2]]></Custom>
+
+			<Custom Action="RollbackKlopX64" After="InstallDriverKlim6X64"><![CDATA[$klop.dat_X64 > 2]]></Custom>
+			<Custom Action="InstallKlopX64" After="RollbackKlopX64"><![CDATA[$klop.dat_X64 > 2]]></Custom>
+
+			<!-- klogon on x64 -->
+			<Custom Action="RollbackSystem64Files" After="RollbackKlopX64"><![CDATA[$system64.inf > 2]]></Custom>
+			<?else ?>
+			<Custom Action="RollbackSystem64Files" After="InstallDriverMKlifW2K"><![CDATA[$system64.inf > 2]]></Custom>
+			<?endif ?>
+			<Custom Action="InstallSystem64Files" After="RollbackSystem64Files"><![CDATA[$system64.inf > 2]]></Custom>
+			<Custom Action="RestoreASBasesVer6SetProp" After="InstallSystem64Files">NOT Installed AND SAVEDASBASESVER6INSTALLED AND NOT SAVEDASBASESINSTALLED AND USESAVEDASBASES</Custom>
+			<?else?>
+			<Custom Action="RestoreASBasesVer6SetProp" After="CopySetupRegFromSource">NOT Installed AND SAVEDASBASESVER6INSTALLED AND NOT SAVEDASBASESINSTALLED AND USESAVEDASBASES</Custom>
+			<?endif?>
+			<Custom Action="RestoreASBasesVer6" After="RestoreASBasesVer6SetProp"      >NOT Installed AND SAVEDASBASESVER6INSTALLED AND NOT SAVEDASBASESINSTALLED AND USESAVEDASBASES</Custom>
+			<Custom Action="RestoreASBasesSetProp" After="RestoreASBasesVer6">NOT Installed AND SAVEDASBASESINSTALLED AND USESAVEDASBASES</Custom>
+			<Custom Action="RestoreASBases" After="RestoreASBasesSetProp"      >NOT Installed AND SAVEDASBASESINSTALLED    AND USESAVEDASBASES</Custom>
+			<Custom Action="RestoreSettingsSetProp" After="RestoreASBases"     >NOT Installed AND SETTINGSINSTALLED        AND USESAVEDSETTINGS</Custom>
+			<Custom Action="RestoreSettings" After="RestoreSettingsSetProp"    >NOT Installed AND SETTINGSINSTALLED        AND USESAVEDSETTINGS</Custom>
+
+			<!--<Custom Action="RestoreAVBasesSetProp" After="InstallSystem64Files">NOT Installed AND SAVEDVALIDBASESINSTALLED AND USESAVEDAVBASES</Custom>
+			<Custom Action="RestoreAVBasesSetProp" After="AddInstallCfg"       >NOT Installed AND SAVEDVALIDBASESINSTALLED AND USESAVEDAVBASES</Custom>
+			<Custom Action="RestoreAVBases" After="RestoreAVBasesSetProp"      >NOT Installed AND SAVEDVALIDBASESINSTALLED AND USESAVEDAVBASES</Custom>
+			<Custom Action="RestoreDSKMBasesSetProp" After="RestoreAVBases"    >NOT Installed AND SAVEDVALIDBASESINSTALLED AND USESAVEDAVBASES</Custom>
+			<Custom Action="RestoreDSKMBases" After="RestoreDSKMBasesSetProp"  >NOT Installed AND SAVEDVALIDBASESINSTALLED AND USESAVEDAVBASES</Custom>-->
+
+
+			<Custom Action="AVP6UpgradeQSetProp" After="RestoreSettings">$(var.Installation)</Custom>
+			<Custom Action="AVP6UpgradeQ" After="AVP6UpgradeQSetProp">$(var.Installation)</Custom>
+			<Custom Action="AVP6UpgradeBSetProp" After="AVP6UpgradeQ">$(var.Installation)</Custom>
+			<Custom Action="AVP6UpgradeB" After="AVP6UpgradeBSetProp">$(var.Installation)</Custom>
+			<Custom Action="AVP6UpgradeASSetProp" After="AVP6UpgradeB">$(var.Installation) AND AVP6FOUND</Custom>
+			<Custom Action="AVP6UpgradeAS" After="AVP6UpgradeASSetProp">$(var.Installation) AND AVP6FOUND</Custom>
+
+			<!-- After CreateShortcuts Sequence 4500 -->
+			<Custom Action="SetOSFORUPDATER" After="CreateShortcuts"></Custom>
+
+			<!-- After WriteRegistryValues Sequence 4700 -->
+			<Custom Action="WriteRegistryValuesCA" After="WriteRegistryValues">Not Installed</Custom>
+			<Custom Action="AVP6UpgradeSettings" After="WriteRegistryValuesCA">AVP6FOUND</Custom>
+			<Custom Action="SetNotAllowServiceStop" After="AVP6UpgradeSettings">(AppRunning OR AVP6FOUND) AND ALLOWSERVICESTOP="#0"</Custom>
+			<?if ($(env.product_type) = FS) ?>
+			<Custom Action="SetNumberofProcessors" After="SetNotAllowServiceStop">$(var.Installation)</Custom>
+			<?endif ?>
+			<Custom Action="EnableFullScanCA" After="SetNotAllowServiceStop">$(var.Installation) AND SCANONSTART="1"</Custom>
+			<Custom Action="EnableTraceToFileCA" After="EnableFullScanCA">$(var.Installation) AND TRACETOFILE="1"</Custom>
+			<Custom Action="EnableTraceToDebugOutputCA" After="EnableTraceToFileCA">$(var.Installation) AND TRACETODEBUGOUTPUT="1"</Custom>
+
+      <?ifdef ADVANCED_FEATURES ?>
+      <Custom Action="DisableAntiHacker" After="EnableTraceToDebugOutputCA" ><![CDATA[&FirewallFeature = 3]]> AND WFWENABLED AND WFWOFF="No"</Custom>
+			<?endif?>
+
+			<Custom Action="SetAppTasksSetProp" After="EnableTraceToDebugOutputCA">($(var.Installation) OR REINSTALL) AND COMPONENTSFIELD</Custom>
+			<Custom Action="SetAppTasks" After="SetAppTasksSetProp">($(var.Installation) OR REINSTALL) AND COMPONENTSFIELD</Custom>
+			<Custom Action="ImportSetupRegSetProp" After="SetAppTasks">IMPORTREGFILE</Custom>
+			<Custom Action="ImportSetupReg" After="ImportSetupRegSetProp">IMPORTREGFILE</Custom>
+			<Custom Action="WriteRegInstalledFeaturesSetProp" After="ImportSetupReg"/>
+			<Custom Action="WriteRegInstalledFeatures" After="WriteRegInstalledFeaturesSetProp"/>
+
+      <?ifdef ADVANCED_FEATURES ?>
+      <Custom Action="DetectWFW" After="WriteRegInstalledFeatures"><![CDATA[&FirewallFeature = 3]]> AND WFWOFF="Yes"</Custom>
+			<Custom Action="RbDisableWFW" After="DetectWFW" ><![CDATA[&FirewallFeature = 3]]> AND WFWENABLED AND WFWOFF="Yes"</Custom>
+			<Custom Action="DisableWFW" After="RbDisableWFW" ><![CDATA[&FirewallFeature = 3]]> AND WFWENABLED AND WFWOFF="Yes"</Custom>
+			<Custom Action="SetCurrentTime" After="DisableWFW">$(var.Installation)</Custom>
+			<?else?>
+			<Custom Action="SetCurrentTime" After="WriteRegInstalledFeatures">$(var.Installation)</Custom>
+			<?endif?>
+
+      <?ifdef BASE_FEATURES ?>
+      <Custom Action="RbCKAHUM_ReloadSetProp" After="SetCurrentTime">$(var.Installation) AND <![CDATA[($BasesAHI386 > 2 OR $BasesAHX64 > 2)]]></Custom>
+			<Custom Action="RbCKAHUM_Reload" After="RbCKAHUM_ReloadSetProp">$(var.Installation) AND <![CDATA[($BasesAHI386 > 2 OR $BasesAHX64 > 2)]]></Custom>
+
+			<Custom Action="CKAHUM_ReloadSetProp" After="RbCKAHUM_Reload"><![CDATA[($BasesAHI386 > 2 OR $BasesAHX64 > 2)]]></Custom>
+			<Custom Action="CKAHUM_Reload" After="CKAHUM_ReloadSetProp"><![CDATA[($BasesAHI386 > 2 OR $BasesAHX64 > 2)]]></Custom>
+			<?endif?>
+
+      <?ifdef CORPOTATE_FEATURES ?>
+      <Custom Action="ForceReloadConnector" After="SetCurrentTime"><![CDATA[$AVPCon.dll > 2]]></Custom>
+			<?endif?>
+
+			<WriteEnvironmentStrings Sequence="5200"><![CDATA[ADDENVIRONMENT = 1]]></WriteEnvironmentStrings>
+
+			<!--This action trigger ReplacedInUseFiles property-->
+			<!--<InstallExecute After="WriteEnvironmentStrings"></InstallExecute>-->
+
+			<SelfRegModules Sequence="5600"/>
+
+      <?ifdef ADVANCED_FEATURES ?>
+      <Custom Action="CleanRegFlag_BatPluginSetProp" After="SelfRegModules"><![CDATA[$kav.bav > 2 AND INSTALLMODE="Repair"]]></Custom>
+			<Custom Action="CleanRegFlag_BatPlugin" After="CleanRegFlag_BatPluginSetProp"><![CDATA[$kav.bav > 2 AND INSTALLMODE="Repair"]]></Custom>
+			<Custom Action="CleanRegFlag_BatASSetProp" After="CleanRegFlag_BatPlugin"><![CDATA[$kav.tbp > 2 AND INSTALLMODE="Repair"]]></Custom>
+			<Custom Action="CleanRegFlag_BatAS" After="CleanRegFlag_BatASSetProp"><![CDATA[$kav.tbp > 2 AND INSTALLMODE="Repair"]]></Custom>
+			<Custom Action="RbUnregister_BatPluginSetProp" After="CleanRegFlag_BatAS"></Custom>
+			<Custom Action="RbUnregister_BatPlugin" After="RbUnregister_BatPluginSetProp"></Custom>
+			<Custom Action="RbUnregister_BatASSetProp" After="RbUnregister_BatPlugin"></Custom>
+			<Custom Action="RbUnregister_BatAS" After="RbUnregister_BatASSetProp"></Custom>
+			<Custom Action="Register_BatPluginSetProp" After="RbUnregister_BatAS"><![CDATA[$kav.bav > 2]]></Custom>
+			<Custom Action="Register_BatPlugin" After="Register_BatPluginSetProp"><![CDATA[$kav.bav > 2]]></Custom>
+			<Custom Action="Register_BatASSetProp" After="Register_BatPlugin"><![CDATA[$kav.tbp > 2]]></Custom>
+			<Custom Action="Register_BatAS" After="Register_BatASSetProp"><![CDATA[$kav.tbp > 2]]></Custom>
+			<?endif?>
+
+			<!--After <RegisterProduct Sequence="6100"></SelfRegModules>-->
+
+			<!--After <PublishProduct Sequence="6400"></SelfRegModules>-->
+			<Custom Action="SetIsUninstall" After="PublishProduct">REMOVE="ALL"</Custom>
+
+			<Custom Action="SetRebootNeeded" After="SetIsUninstall">
+        <?ifdef BASE_FEATURES ?>
+        <![CDATA[ReplacedInUseFiles OR 
+						$kl1.sys = 3 OR $kl1.sys_X64 = 3 OR $kl1.sys_X86 = 3 OR 
+						$klfltdev.sys_X64 = 3 OR $klfltdev.sys_X86 = 3 OR $klfltdev.sys_W2K = 3 OR
+						$klbg.sys_X64 = 3 OR $klbg.sys_X86 = 3 OR 
+						REMOVE="ALL" OR
+						(Installed AND ADDLOCAL) OR 
+						(Installed AND REMOVE <> "ALL") OR
+						INSTALLMODE = "Repair"  OR
+						KLAVFOUND OR 
+						DRIVERSFOUND]]>
+				<?elseif $(env.product_type) = FS Or $(env.product_type) = SOS ?>
+				<![CDATA[ReplacedInUseFiles OR 
+						REMOVE="ALL" OR
+						(Installed AND ADDLOCAL) OR 
+						(Installed AND REMOVE <> "ALL") OR
+						INSTALLMODE = "Repair"  OR
+						KLAVFOUND OR 
+						DRIVERSFOUND]]>
+				<?endif?>
+			</Custom>
+
+			<?define UseSavedSettings="(NOT Installed AND SETTINGSINSTALLED AND USESAVEDSETTINGS)"?>
+
+			<Custom Action="SetPIWInitModeInit"				After="SetRebootNeeded">$(var.RunPIW)</Custom>
+			<Custom Action="SetPIWInitModeSilent"			After="SetRebootNeeded">$(var.IsSilent)</Custom>
+			<Custom Action="SetPIWInitModeLoadSettings"		After="SetRebootNeeded">$(var.UseSavedSettings)</Custom>
+			<Custom Action="SetPIWInitModeNoReboot"			After="SetRebootNeeded">$(var.IsSilent)</Custom>
+			<Custom Action="SetPIWInitModeExpressInstall"	After="SetRebootNeeded">INSTALLMODE="Typical"</Custom>
+			<Custom Action="SetPIWInitModeUpgrade"			After="SetRebootNeeded">((INSTALLMODE="Typical" OR INSTALLMODE="Custom") AND ($(var.Upgrade) OR AVP6FOUND)) OR INSTALLMODE="Change"</Custom>
+			<Custom Action="SetPIWInitModeUseRegLic"		After="SetRebootNeeded">NOT AVP6FOUND</Custom>
+
+			<Custom Action="SetPIWInitModeSetProp" After="SetPIWInitModeInit">$(var.RunPIW)</Custom>
+			<Custom Action="SetPIWInitMode"	After="SetPIWInitModeSetProp">$(var.RunPIW)</Custom>
+			<Custom Action="SetUpdateState"  After="SetPIWInitMode">$(var.RunPIW) AND RebootNeeded</Custom>
+
+			<Custom Action="EnableRebootPending"  After="SetUpdateState">RebootNeeded</Custom>
+
+			<Custom Action="SetRebootSuppress" After="EnableRebootPending">
+				NOT $(var.RebootAllowed) OR $(var.RebootPIWAllowed)
+			</Custom>
+			<ScheduleReboot After="SetRebootSuppress">
+				RebootNeeded AND $(var.RebootAllowed) AND NOT $(var.RebootPIWAllowed)
+			</ScheduleReboot>
+
+			<InstallExecute Sequence="6500"></InstallExecute>
+			<RemoveExistingProducts After="InstallExecute"></RemoveExistingProducts>
+      <?ifdef ADVANCED_FEATURES ?>
+      <Custom Action="RbSelfReg_adialhk.dll" After="RemoveExistingProducts"><![CDATA[$adialhk.dll>2]]></Custom>
+			<Custom Action="RbSelfReg_adialhk.dll_X64" After="RemoveExistingProducts"><![CDATA[$adialhk.dll_X64>2]]></Custom>
+			<Custom Action="RbSelfReg_mcouas.dll" After="RemoveExistingProducts"><![CDATA[$mcouas.dll>2]]></Custom>
+			<Custom Action="RbSelfReg_oeas.dll" After="RemoveExistingProducts"><![CDATA[$oeas.dll>2]]></Custom>
+			<Custom Action="RbSelfReg_oeas.dll_X64" After="RemoveExistingProducts"><![CDATA[$oeas.dll_X64>2]]></Custom>
+			<?endif?>
+      <?ifdef BASE_FEATURES ?>
+			<Custom Action="RbSelfReg_klscav.dll" After="RemoveExistingProducts"><![CDATA[$klscav.dll>2]]></Custom>
+			<Custom Action="RbSelfReg_mcou.dll" After="RemoveExistingProducts"><![CDATA[$mcou.dll>2]]></Custom>
+			<Custom Action="RbSelfReg_miscr3.dll" After="RemoveExistingProducts"><![CDATA[$miscr3.dll>2]]></Custom>
+			<Custom Action="RbSelfReg_r3hook.dll" After="RemoveExistingProducts"><![CDATA[$r3hook.dll>2]]></Custom>
+			<Custom Action="RbSelfReg_SCIEPlgn.dll" After="RemoveExistingProducts"><![CDATA[$SCIEPlgn.dll>2]]></Custom>
+			<Custom Action="RbSelfReg_scrchpg.dll" After="RemoveExistingProducts"><![CDATA[$scrchpg.dll>2]]></Custom>
+			<Custom Action="RbSelfReg_klscav.dll_X64" After="RemoveExistingProducts"><![CDATA[$klscav.dll_X64>2]]></Custom>
+			<Custom Action="RbSelfReg_r3hook.dll_X64" After="RemoveExistingProducts"><![CDATA[$r3hook.dll_X64>2]]></Custom>
+			<Custom Action="RbSelfReg_SCIEPlgn.dll_X64" After="RemoveExistingProducts"><![CDATA[$SCIEPlgn.dll_X64>2]]></Custom>
+			<Custom Action="RbSelfReg_Scrchpg.dll_X64" After="RemoveExistingProducts"><![CDATA[$Scrchpg.dll_X64>2]]></Custom>
+			<?endif?>
+			<Custom Action="RbSelfReg_avpgui.ppl" After="RemoveExistingProducts"><![CDATA[$avpgui.ppl>2]]></Custom>
+			<Custom Action="RbSelfReg_shellex.dll" After="RemoveExistingProducts"><![CDATA[$shellex.dll>2]]></Custom>
+			<Custom Action="RbSelfReg_ShellEx.dll_X64" After="RemoveExistingProducts"><![CDATA[$ShellEx.dll_X64>2]]></Custom>
+
+      <?ifdef ADVANCED_FEATURES ?>
+      <Custom Action="InSelfReg_adialhk.dll" After="RbSelfReg_avpgui.ppl"><![CDATA[$adialhk.dll>2]]></Custom>
+			<Custom Action="InSelfReg_adialhk.dll_X64" After="RbSelfReg_avpgui.ppl"><![CDATA[$adialhk.dll_X64>2]]></Custom>
+			<Custom Action="InSelfReg_mcouas.dll" After="RbSelfReg_avpgui.ppl"><![CDATA[$mcouas.dll>2]]></Custom>
+			<Custom Action="InSelfReg_oeas.dll" After="RbSelfReg_avpgui.ppl"><![CDATA[$oeas.dll>2]]></Custom>
+			<Custom Action="InSelfReg_oeas.dll_X64" After="RbSelfReg_avpgui.ppl"><![CDATA[$oeas.dll_X64>2]]></Custom>
+			<?endif?>
+      <?ifdef BASE_FEATURES ?>
+			<Custom Action="InSelfReg_klscav.dll" After="RbSelfReg_avpgui.ppl"><![CDATA[$klscav.dll>2]]></Custom>
+			<Custom Action="InSelfReg_mcou.dll" After="RbSelfReg_avpgui.ppl"><![CDATA[$mcou.dll>2]]></Custom>
+			<Custom Action="InSelfReg_miscr3.dll" After="RbSelfReg_avpgui.ppl"><![CDATA[$miscr3.dll>2]]></Custom>
+			<Custom Action="InSelfReg_r3hook.dll" After="RbSelfReg_avpgui.ppl"><![CDATA[$r3hook.dll>2]]></Custom>
+			<Custom Action="InSelfReg_SCIEPlgn.dll" After="RbSelfReg_avpgui.ppl"><![CDATA[$SCIEPlgn.dll>2]]></Custom>
+			<Custom Action="InSelfReg_scrchpg.dll" After="RbSelfReg_avpgui.ppl"><![CDATA[$scrchpg.dll>2]]></Custom>
+			<Custom Action="InSelfReg_klscav.dll_X64" After="RbSelfReg_avpgui.ppl"><![CDATA[$klscav.dll_X64>2]]></Custom>
+			<Custom Action="InSelfReg_r3hook.dll_X64" After="RbSelfReg_avpgui.ppl"><![CDATA[$r3hook.dll_X64>2]]></Custom>
+			<Custom Action="InSelfReg_SCIEPlgn.dll_X64" After="RbSelfReg_avpgui.ppl"><![CDATA[$SCIEPlgn.dll_X64>2]]></Custom>
+			<Custom Action="InSelfReg_Scrchpg.dll_X64" After="RbSelfReg_avpgui.ppl"><![CDATA[$Scrchpg.dll_X64>2]]></Custom>
+			<?endif?>
+			<Custom Action="InSelfReg_avpgui.ppl" After="RbSelfReg_avpgui.ppl"><![CDATA[$avpgui.ppl>2]]></Custom>
+			<Custom Action="InSelfReg_shellex.dll" After="RbSelfReg_avpgui.ppl"><![CDATA[$shellex.dll>2]]></Custom>
+			<Custom Action="InSelfReg_ShellEx.dll_X64" After="RbSelfReg_avpgui.ppl"><![CDATA[$ShellEx.dll_X64>2]]></Custom>
+
+      <?if not ($(env.product_type) = SOS) ?>
+      <!-- enable self-protection (file and registry) -->
+			<Custom Action="$(var.RbFullProtectionDef)" After="InSelfReg_avpgui.ppl"><![CDATA[REMOVE <> "ALL"]]> AND $(var.SELFPROTECTION) AND NOT KLAVFOUND AND NOT DRIVERSFOUND</Custom>
+
+			<Custom Action="$(var.EnableFullProtectionDef)SetProp" After="$(var.RbFullProtectionDef)"/>
+			<Custom Action="$(var.EnableFullProtectionDef)" After="$(var.EnableFullProtectionDef)SetProp"><![CDATA[REMOVE <> "ALL"]]> AND $(var.SELFPROTECTION) AND NOT KLAVFOUND AND NOT DRIVERSFOUND</Custom>
+			<?endif?>
+
+			<!-- Actions after InstallFinalize  -->
+			<!--Remove previous version-->
+			<!--<RemoveExistingProducts After="InstallFinalize"></RemoveExistingProducts>-->
+
+			<!-- Clean SUPPORTDIR folder -->
+			<Custom Action="SetupFilesCleanup" After="InstallFinalize"></Custom>
+
+			<Custom Action="RunPIWAndWaitSetProp" After="SetupFilesCleanup">
+				$(var.IsSilent) AND $(var.RunPIW)
+			</Custom>
+			<Custom Action="RunPIWAndWait" After="RunPIWAndWaitSetProp">
+				$(var.IsSilent) AND $(var.RunPIW)
+			</Custom>
+      <?ifdef CORPOTATE_FEATURES ?>
+      <Custom Action="WriteZombie"  After="RunPIWAndWait">
+				<?if ($(env.product_type) = WKS) ?>
+				$(var.IsSilent) AND AKINSTALL = 1 AND
+				<![CDATA[(ReplacedInUseFiles OR 
+						$kl1.sys = 3 OR $kl1.sys_X64 = 3 OR $kl1.sys_X86 = 3 OR 
+						$klfltdev.sys_X64 = 3 OR $klfltdev.sys_X86 = 3 OR $klfltdev.sys_W2K = 3 OR
+						$klbg.sys_X64 = 3 OR $klbg.sys_X86 = 3 OR 
+						REMOVE="ALL" OR
+						(Installed AND ADDLOCAL) OR 
+						(Installed AND REMOVE <> "ALL") OR 
+						INSTALLMODE = "Repair"  OR
+						KLAVFOUND OR 
+						DRIVERSFOUND)]]>
+				<?elseif ($(env.product_type) = FS Or $(env.product_type) = SOS) ?>
+				$(var.IsSilent) AND AKINSTALL = 1 AND
+				<![CDATA[(ReplacedInUseFiles OR 
+						REMOVE="ALL" OR
+						(Installed AND ADDLOCAL) OR 
+						(Installed AND REMOVE <> "ALL") OR 
+						INSTALLMODE = "Repair"  OR
+						KLAVFOUND OR 
+						DRIVERSFOUND)]]>
+				<?endif?>
+			</Custom>
+			<Custom Action="SetSetupResultSuccess" After="WriteZombie">
+				$(var.IsSilent) AND AKINSTALL = 1
+			</Custom>
+			<Custom Action="PrepareNagentResetSetProp" After="SetSetupResultSuccess"    ><![CDATA[Installed AND REMOVE<>"ALL"]]></Custom>
+			<Custom Action="PrepareNagentReset"        After="PrepareNagentResetSetProp"><![CDATA[Installed AND REMOVE<>"ALL"]]></Custom>
+			<Custom Action="StartNagentResetSetProp"   After="PrepareNagentReset"       ><![CDATA[Installed AND REMOVE<>"ALL"]]></Custom>
+			<Custom Action="StartNagentReset"          After="StartNagentResetSetProp"  ><![CDATA[Installed AND REMOVE<>"ALL"]]></Custom>
+			<?endif?>
+
+
+		</InstallExecuteSequence>
+
+		<AdminExecuteSequence>
+			<FileCost Sequence="900"></FileCost>
+		</AdminExecuteSequence>
+
+	</Product>
+
+</Wix>

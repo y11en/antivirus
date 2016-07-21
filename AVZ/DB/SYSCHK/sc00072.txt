@@ -1,0 +1,4 @@
+// ***** Trojan.p2e *****
+begin
+ AddEvAlarmByCLSID('CEFB7B49-9652-464F-8AFD-A577C0500F39',AScriptName,'P2ECOM.dll');
+end.

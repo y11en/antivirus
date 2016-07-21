@@ -1,0 +1,6 @@
+// ***** Adware.BHO.SearchFu *****
+begin
+ AddEvAlarmByCLSID('727D45C4-2BD1-41D2-B54E-97DEAF06AD9A',AScriptName,'');
+ AddEvAlarmByCLSID('A096A159-4E58-45A9-8EE6-B11466851181',AScriptName,'');
+ AddEvAlarmByCLSID('C090DCD2-0339-4C3F-8441-302449B3ED74',AScriptName,'');
+end.

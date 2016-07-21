@@ -1,0 +1,5 @@
+// ***** AdvWare.IWon *****
+begin
+ AddEvAlarmByCLSID('CA0B9B71-C2AF-11D3-B376-0800460222F0', AScriptName, '');
+ AddEvAlarmByCLSID('70522FA0-4656-11d5-B0E9-0050DAC24E8F', AScriptName, '');
+end.

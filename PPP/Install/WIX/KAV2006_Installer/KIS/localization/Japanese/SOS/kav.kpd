@@ -1,0 +1,101 @@
+[Product]								
+Name=KAVSOS7
+LocalizedName=Kaspersky Anti-Virus 7.0 SOS
+RegKey=KAVSOS7
+AdaptedProduct = 1
+									
+[Setup]
+UseWrapper=1
+ExecutableRelPath=EXEC
+Params=/s /v"/qn AKINSTALL=1"
+Executable=SETUP.EXE
+RebootDelegated = 1
+RebootAllowed=1
+ConfigFile=installer.ini
+
+[SetupProcessResult]
+Wait=1
+DescriptionFile=avpsetup.rep
+ 
+[SetupProcessResult_SuccessCodes]
+0=Installation completed successfully.
+3010=A reboot is required to complete the installation.
+  
+[SetupProcessResult_ErrorCodes]
+13=The data is invalid. 
+87=One of the parameters was invalid. 
+120=This function is not available for this platform. It is only available on Windows 2000 and Windows XP with Windows Installer version 2.0. 
+1259=This error code only occurs when using Windows Installer version 2.0 and Windows XP or later. If Windows Installer determines a product may be incompatible with the current operating system, it displays a dialog informing the user and asking whether to try to install anyway. This error code is returned if the user chooses not to try the installation. 
+1601=The Windows Installer service could not be accessed. Contact your support personnel to verify that the Windows Installer service is properly registered.
+1602=Installation cancelled by the user.
+1603=Fatal error during installation. 
+1604=Installation suspended, incomplete.
+1605=This action is only valid for products that are currently installed.
+1606=Feature ID not registered. 
+1607=Component ID not registered. 
+1608=Unknown property.
+1609=Handle is in an invalid state.
+1610=The configuration data for this product is corrupt. Contact your support personnel.
+1611=Component qualifier not present. 
+1612=The installation source for this product is not available. Verify that the source exists and that you can access it. 
+1613=This installation package cannot be installed by the Windows Installer service. You must install a Windows service pack that contains a newer version of the Windows Installer service.
+1614=Product is uninstalled.
+1615=SQL query syntax invalid or unsupported. 
+1616=Record field does not exist. 
+1618=Another installation is already in progress. Complete that installation before proceeding with the new one. 
+1619=This installation package could not be opened. Verify that the package exists and that you can access it, or contact the application vendor to verify that this is a valid Windows Installer package.
+1620=This installation package could not be opened. Contact the application vendor to verify that this is a valid Windows Installer package. 
+1621=There was an error starting the Windows Installer service user interface. Contact your support personnel.
+1622=Error opening installation log file. Verify that the specified log file location exists and is writable. 
+1623=This language of this installation package is not supported by your system.
+1624=Error applying transforms. Verify that the specified transform paths are valid. 
+1625=This installation is forbidden by system policy. Contact your system administrator.
+1626=Function could not be executed. 
+1627=Function failed during execution. 
+1628=Invalid or unknown table specified. 
+1629=Data supplied is of wrong type.
+1630=Data of this type is not supported. 
+1631=The Windows Installer service failed to start. Contact your support personnel. 
+1632=The temp folder is either full or inaccessible. Verify that the temp folder exists and that you can write to it.
+1633=This installation package is not supported on this platform. Contact your application vendor. 
+1634=Component not used on this machine 
+1635=This patch package could not be opened. Verify that the patch package exists and that you can access it, or contact the application vendor to verify that this is a valid Windows Installer patch package.
+1636=This patch package could not be opened. Contact the application vendor to verify that this is a valid Windows Installer patch package.
+1637=This patch package cannot be processed by the Windows Installer service. You must install a Windows service pack that contains a newer version of the Windows Installer service. 
+1638=Another version of this product is already installed. Installation of this version cannot continue. To configure or remove the existing version of this product, use Add/Remove Programs on the Control Panel. 
+1639=Invalid command line argument. Consult the Windows Installer SDK for detailed command line help.
+1640=Installation from a Terminal Server client session not permitted for current user. 
+1641=The installer has started a reboot. This error code not available on Windows Installer version 1.0.  
+1642=The installer cannot install the upgrade patch because the program being upgraded may be missing or the upgrade patch updates a different version of the program. Verify that the program to be upgraded exists on your computer and that you have the correct upgrade patch. This error code is not available on Windows Installer version 1.0.
+1643=The patch package is not permitted by system policy. This error code is available with Windows Installer versions 2.0 or later. 
+1644=One or more customizations are not permitted by system policy. This error code is available with Windows Installer versions 2.0 or later. 
+1645=The Windows Installer does not permit installation from a Remote Desktop Web Connection. For more information, see Remote Desktop Web Connection. in the Terminal Services section of the Platform SDK.
+
+[SetupProcessResult_WarningCodes]
+ 
+[SetupMainResult]
+File=setup.log
+Section=ResponseResult
+Value=ResultCode
+DescriptionFile=avpsetup.rep
+ 
+[SetupMainResult_SuccessCodes]
+0=Installation completed successfully.
+ 
+[SetupMainResult_ErrorCodes]
+100=Fatal error during installation.
+
+[SetupMainResult_WarningCodes]
+50=Warning during installation.
+  
+[SetupRestart]
+File=setup.log
+Section=ResponseResult
+Value=RebootZombieFile
+
+[Version]								
+VerMajor=6								
+VerMinor=0								
+VerBuild=0								
+VerPatch=0								
+

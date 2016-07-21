@@ -1,0 +1,224 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "Spamtest"=.\Spamtest.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/PPP/MailCommon/Filters/Spamtest", EVPXBAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libgsg2
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libjpeg
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libmimeparser
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name librules
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libsigs
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name md5a
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name pcommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name regex
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ungif
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "_Spamtst"=.\_Spamtst\_Spamtst.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/PPP/MailCommon/Filters/Spamtest/_Spamtst", CEQACAAA
+    .\_spamtst
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "libgsg2"=".\kisaspam\smtp-filter\libgsg2\libgsg2_kis.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/PPP/MailCommon/Filters/Spamtest", EVPXBAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "libjpeg"=.\kisaspam\gnu\jpeg\libjpeg_kis.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/PPP/MailCommon/Filters/Spamtest", EVPXBAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "libmimeparser"=.\kisaspam\MIMEParser\libmimeparser_kis.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/PPP/MailCommon/Filters/Spamtest", EVPXBAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "librules"=".\kisaspam\Client-filter\librules\librules_kis.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/PPP/MailCommon/Filters/Spamtest", EVPXBAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "libsigs"=".\kisaspam\smtp-filter\libsigs\libsigs_kis.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/PPP/MailCommon/Filters/Spamtest", EVPXBAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "md5a"=.\kisaspam\gnu\md5a\md5a_kis.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/PPP/MailCommon/Filters/Spamtest", EVPXBAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "pcommon"=.\kisaspam\LIB\pcommon\pcommon_kis.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/PPP/MailCommon/Filters/Spamtest", EVPXBAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "regex"=.\kisaspam\gnu\regex\regex_kis.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/PPP/MailCommon/Filters/Spamtest", EVPXBAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "ungif"=".\kisaspam\smtp-filter\ungif\ungif_kis.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/PPP/MailCommon/Filters/Spamtest", EVPXBAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+    begin source code control
+    "$/PPP/MailCommon/Filters/Spamtest", EVPXBAAA
+    .
+    end source code control
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

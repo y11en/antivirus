@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<job>
+  <runtime>
+    <description>This script performs patching of GenerateManifest option of VC 2005 projects</description>
+    <named name = "src"
+      helpstring = "a VC 2005 project file to be patched"
+      type = "string"
+      required = "true"/>
+    <example>Example:
+path_manifest.wsf /src:c:\foo.vsproj</example>
+  </runtime>
+
+<script language="JScript">
+<![CDATA[
+
+function to_bool( val ) {
+	if ( (val == null) || (val == "false") || (val == "0") )
+		return false;
+	if ( (val == "true") || (val == "1") )
+		return true;
+	return true;
+}
+
+function patchConfiguration( conf, verboose ) {
+	var tools = conf.getElementsByTagName( "Tool" ); 
+	for ( var i=0; i< tools.length; i++ ) {
+	  var tool = tools.item(i);
+		var name = tool.getAttribute ( "Name" );
+		if ( name == "VCLinkerTool" ) {
+			var ignore = to_bool( tool.getAttribute("IgnoreAllDefaultLibraries") );
+			var manifest = to_bool( tool.getAttribute("GenerateManifest") );
+			var msg;
+			if ( verboose )
+				msg = "\t\tConf \"" + conf.getAttribute("Name") + "\" ignore=" + ignore + ", manifest=" + manifest;
+			var saved = false;
+			if ( !ignore != manifest ) {
+				manifest = !manifest;
+				tool.setAttribute( "GenerateManifest", manifest );
+				if ( verboose )
+					msg += ", set to " + manifest;
+				saved = true;
+			}
+			else if ( verboose )
+				msg += ", correct";
+			if ( verboose )
+				WScript.Echo( msg );
+			return saved;
+		}
+	}
+	return false;
+}
+
+var args = WScript.Arguments;
+if ( !args.Named.Exists("src") ) { //|| !args.Named.Exists ( "outdir" )) {
+	args.ShowUsage ();
+	WScript.Quit (1);
+}
+
+var source = args.Named.Item( "src" );
+var fsObj = new ActiveXObject( "Scripting.FileSystemObject" );
+if ( !fsObj.FileExists ( source ) ) {
+	WScript.Echo ( "ERROR! File " + source + " doesn't exist!\n");
+	WScript.Quit ( 1 );
+}
+
+var verboose = false;
+if ( args.Named.Exists("verboose") )
+	verboose = args.Named.Item( "verboose" );
+
+var xml = new ActiveXObject ( "msxml2.DOMDocument.5.0" );
+xml.async = false;
+xml.resolveExternals = false;
+xml.load( source );
+
+if ( xml.parseError.errorCode != 0 ) {
+	var err = xml.parseError;
+	WScript.Echo( "ERROR! Can't parse the XML file: " + err.reason );
+	WScript.Quit( 1 );
+} 
+
+var confs = xml.getElementsByTagName ( "Configuration" );
+var save_it = false;
+for ( var i = 0;  i < confs.length; i++ ) {
+	var save_this = patchConfiguration( confs.item(i), verboose );
+	if ( save_this == true )
+	  save_it = true;
+}
+
+var prefix;
+if ( verboose )
+	prefix = "\t\t\t";
+else
+	prefix = "\t\t";
+
+if ( save_it == true ) {
+  xml.save( source );
+	WScript.Echo( prefix + "saved" );
+}
+else
+	WScript.Echo( prefix + "correct" );
+
+]]>
+</script>
+</job>
+
+

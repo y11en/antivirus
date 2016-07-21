@@ -1,0 +1,4 @@
+// ***** TrojanDownloader.Easto.b *****
+begin
+ AddEvAlarmByCLSID('6C31790D-1EDF-4B05-83DC-925B3A8E2318',AScriptName,'winhlp32.exe');
+end.

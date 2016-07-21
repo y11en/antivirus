@@ -1,0 +1,51 @@
+<Include>
+  <?if $(env.product_type) = KIS ?>
+    <?define ProductType="kis" ?>
+    <?define ProductName="Kaspersky Internet Security 8.0" ?>
+    <?define ServiceName="Kaspersky Internet Security" ?>
+    <?define ProductInternalName="KIS8" ?>
+    <?define BASE_FEATURES ?>
+    <?define ADVANCED_FEATURES ?>
+    <?define PERSONAL_ADVANCED_FEATURES ?>
+
+  <?elseif $(env.product_type) = KAV ?>
+    <?define ProductType="kav" ?>
+    <?define ProductName="Kaspersky Anti-Virus 8.0" ?>
+    <?define ServiceName="Kaspersky Anti-Virus" ?>
+    <?define ProductInternalName="KAV8" ?>
+    <?define BASE_FEATURES ?>
+
+  <?elseif $(env.product_type) = WKS ?>
+    <?define ProductType="wks" ?>
+    <?define ProductName="Kaspersky Anti-Virus 8.0 for Windows Workstations" ?>
+    <?define ServiceName="Kaspersky Anti-Virus" ?>
+    <?define ProductInternalName="KAVWKS8" ?>
+    <?define BASE_FEATURES ?>
+    <?define ADVANCED_FEATURES ?>
+    <?define CORPORATE_FEATURES ?>
+
+  <?elseif $(env.product_type) = FS ?>
+    <?define ProductType="fs" ?>
+    <?define ProductName="Kaspersky Anti-Virus 8.0 for Windows Servers" ?>
+    <?define ServiceName="Kaspersky Anti-Virus" ?>
+    <?define ProductInternalName="KAVFS8" ?>
+    <?define CORPORATE_FEATURES ?>
+
+  <?elseif $(env.product_type) = SOS ?>
+    <?define ProductType="sos" ?>
+    <?define ProductName="Kaspersky Anti-Virus 8.0 SOS" ?>
+    <?define ServiceName="Kaspersky Anti-Virus" ?>
+    <?define ProductInternalName="KAVSOS8" ?>
+    <?define CORPORATE_FEATURES ?>
+
+  <?endif ?>
+
+  <?define ProductFolderName="$(var.ProductName)" ?>
+  <?define ProductShortFolderName="$(var.ProductInternalName)" ?>
+  <?define SetupFilesProductFolderName="$(var.ProductName) build $(var.ProductBuild)"?>
+  <?define SetupFilesFolderName="Kaspersky Lab Setup Files"?>
+  <?define KasperskyLabFolderName="Kaspersky Lab" ?>
+  <?define KasperskyLabShortFolderName="KL" ?>
+  <?define HKLM_KASPERSKY="SOFTWARE\KasperskyLab" ?>
+  <?define HKLM_PRODUCT="$(var.HKLM_KASPERSKY)\protected\AVP8" ?>
+</Include>

@@ -1,0 +1,4 @@
+// ***** AdvWare.BlackStone *****
+begin
+ AddEvAlarmByCLSID('00000000-5eb9-11d5-9d45-009027c14662', AScriptName, 'IEHelper.DLL');
+end.

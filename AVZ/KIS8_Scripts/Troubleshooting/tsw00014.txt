@@ -1,0 +1,23 @@
+// $AVZ1514
+//$ Модифицирован ключ запуска проводника
+// Функция поиска проблемы                                                                          
+function Check : dword;
+var
+ S : string;
+begin
+ Result := 0;
+ if not(IsNT) then exit;
+ // Тяжелая ошибка  - ключ 'shell' вызывет не проводник, а постороннюю программу
+ S := Trim(RegKeyStrParamRead('HKLM', 'SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon', 'shell'));
+ if UpperCase(S) <> 'EXPLORER.EXE' then begin
+   Result := 3;
+   exit;
+  end;
+end;
+
+// Функция исправления проблемы                                                                          
+function Fix : dword;
+begin
+ RegKeyStrParamWrite('HKLM','SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon', 'shell', 'explorer.exe');
+ Result := 0;
+end;

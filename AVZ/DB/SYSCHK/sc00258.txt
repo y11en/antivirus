@@ -1,0 +1,4 @@
+// ***** AdvWare.Flt *****
+begin
+ AddEvAlarmByCLSID('63CF97E8-4133-438a-A831-CC9C6D47D673', AScriptName, 'Flt.DLL');
+end.

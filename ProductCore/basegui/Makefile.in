@@ -1,0 +1,44 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH= @srcdir@ @srcdir@/unigui @top_srcdir@/../prague/IniLib @top_srcdir@/../AVP32/pagememorymanager
+
+Name = basegui
+Plugin= $(Name).@PLUGIN_EXT@
+Metafile = @srcdir@/$(Name).@METAFILE_EXT@
+Targets = $(Plugin) 
+
+Sources = \
+	basegui.cpp \
+	binding.cpp \
+	Ctrls.cpp \
+	Formats.cpp \
+	Graphics.cpp \
+	ItemBase.cpp \
+	ItemProps.cpp \
+	ItemRoot.cpp \
+	VListCtrl.cpp \
+	UniCtrls.cpp \
+	UniFormats.cpp \
+	UniGraphics.cpp \
+	UniRoot.cpp \
+	SysSink.cpp \
+	IniRead.cpp \
+	pagememorymanager.cpp
+
+Includes =  @top_srcdir@/../prague /usr/include/qt4/Qt/  /usr/include/qt4/QtGui  /usr/include/qt4/QtCore  /usr/include/qt4/  @builddir@
+
+UnixLibraries = -L/usr/lib/qt4
+Libraries = compatutils QtCore QtGui
+
+VersionScript = @abs_top_srcdir@/unix/prague_plugin.ver
+
+CleanFiles = moc_ctrls.cpp
+
+include @abs_top_builddir@/unix/Rules
+
+prebuild: moc_ctrls.cpp
+
+moc_ctrls.cpp: UniCtrls.h
+	@echo "***** Generating $@"
+	moc $< -o $@

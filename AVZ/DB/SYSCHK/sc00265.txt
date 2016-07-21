@@ -1,0 +1,9 @@
+// ***** AdvWare.Toolbar.EliteBar *****
+begin
+ AddEvAlarmByCLSID('28CAEFF3-0F18-4036-B504-51D73BD81ABC', AScriptName, 'elite*.dll');
+ AddEvAlarmByCLSID('02C20140-76F8-4763-83D5-B660107BABCD', AScriptName, 'v3*.dll');
+ AddEvAlarmByCLSID('A74CD7DD-EA6F-11D4-ABF3-000102378429', AScriptName, 'v3*.dll');
+ AddEvAlarmByCLSID('BE8D0059-D24D-4919-B76F-99F4A2203647', AScriptName, 'v3*.dll');
+ AddEvAlarmByCLSID('ED103D9F-3070-4580-AB1E-E5C179C1AE41', AScriptName, '');
+ AddEvAlarmByCLSID('825CF5BD-8862-4430-B771-0C15C5CA8DEF', AScriptName, '');
+end.

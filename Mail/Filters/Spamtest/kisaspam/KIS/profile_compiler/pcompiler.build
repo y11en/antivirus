@@ -1,0 +1,17 @@
+EXE
+TARGET kis-compiler
+
+CXXSRC logger.cpp
+CXXSRC parse.cpp
+CXXSRC profile.cpp
+CXXSRC profile_compiler.cpp
+CXXSRC profile_db.cpp
+
+LIB xmlfiles
+LIB expatutils
+LIB zutils 
+LIB pcommon
+
+LIB expat
+LIB z 
+LIB m

@@ -1,0 +1,52 @@
+import os
+
+# comment
+
+env = Environment(ENV = os.environ)
+
+env['YACCHXXFILESUFFIX'] = '.hh'
+
+execfile('platforms.py')
+execfile('sconsuser.py')
+
+platform_id = env['PLATFORM']
+platform = platforms[platform_id]
+
+class Profile :
+    def __init__(self, env) :
+        platform_id = env['PLATFORM']
+        self.platform = platforms[platform_id]
+        self.buildDir = self.platform.builddir()
+        self.absRoot = os.getcwd()
+        self.binAbsDir = os.path.join(self.absRoot, self.buildDir, 'bin')
+
+profile = Profile(env)
+Export("env profile")
+
+[env.PrependENVPath('INCLUDE', dir) for dir in platform.incpaths]
+[env.PrependENVPath('LIB', dir)     for dir in platform.libpaths]
+
+env['CCFLAGS']      += platform.ccflags() + ' -wd4512 -D_SCL_SECURE_NO_DEPRECATE -DU_STATIC_IMPLEMENTATION -DBOOST_ALL_NO_LIB -DBOOST_WINDOWS '
+env['CXXFLAGS']     += platform.cxxflags()
+env['LINKFLAGS']    += platform.linkflags()
+
+platform.custom(env)
+
+#env.PrependENVPath('INCLUDE', 'boost')
+#env.PrependENVPath('INCLUDE', 'indexer')
+#env.PrependENVPath('INCLUDE', 'odbc/include')
+#env.PrependENVPath('INCLUDE', 'icu/common')
+#env.PrependENVPath('INCLUDE', 'icu/i18n')
+#env.PrependENVPath('INCLUDE', '.')
+
+env['CPPPATH'] = Split('#%s #boost #idl' % profile.buildDir)
+
+def build_module(module) :
+    moduleDir = os.path.join(profile.buildDir, module)
+    env.BuildDir(moduleDir, module)
+    env.SConscript(os.path.join(moduleDir, 'SConscript'))
+    
+build_module('boost')
+build_module('idl')
+build_module('mapping')
+build_module('tests')

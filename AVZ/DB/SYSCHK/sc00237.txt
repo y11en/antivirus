@@ -1,0 +1,4 @@
+// ***** AdvWare.BHO.RedHotNet.a *****
+begin
+ AddEvAlarmByCLSID('FB85A25D-A82E-44BC-9A6B-5A487163C805', 'AdvWare.BHO.RedHotNet.a', 'videox.dll');
+end.

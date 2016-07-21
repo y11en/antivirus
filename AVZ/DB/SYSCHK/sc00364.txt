@@ -1,0 +1,4 @@
+// ***** Trojan-Downloader.Win32.Small.ddx *****
+begin
+ AddEvAlarmByCLSID('8D5849C4-93F3-429D-FF34-260A2068897C',AScriptName,'ap*.dll');
+end.

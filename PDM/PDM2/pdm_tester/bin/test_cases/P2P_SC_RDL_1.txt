@@ -1,0 +1,6 @@
+# register self path in P2Pkey
+# REGISTER_IN_P2P_KEY_CF NOT_TO_CLEAR
+
+CREATE_REG_STR_VALUE @P2P_KEY@ temp @SELF_DIR@ NOT_TO_CLEAR
+
+#etalon_verdict 100 SelfCopyToPeerToPeerFolder

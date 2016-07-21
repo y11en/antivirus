@@ -1,0 +1,67 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "IDSTest"=.\IDSTest.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name _KAHUSER
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "_CommonFiles_NoUnicode"=..\..\..\..\..\CommonFiles\_CommonFiles_NoUnicode.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles", ZXAAAAAA
+    ..\..\..\..\..\commonfiles
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "_KAHUSER"=..\..\..\..\..\Components\Windows\KAH\_KAHUSER.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Release/Kaspersky Anti-Virus Personal 5.0/Components/Windows/KAH", BQHLAAAA
+    ..\..\..\..\..\components\windows\kah
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name _CommonFiles_NoUnicode
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

@@ -1,0 +1,28 @@
+PROJECTS+= \
+	Arc/Pack/deflate \
+	Arc/Pack/UnArj \
+	Arc/Pack/UnLZX \
+	Arc/Pack/ArjPack \
+	Arc/Pack/Inflate \
+	Arc/Pack/Quantum \
+	Arc/Pack/UnStored \
+	Arc/Pack/stored \
+	Arc/Pack/Explode \
+	Arc/Pack/Unreduce \
+	Arc/Pack/Unshrink \
+	Arc/UniArc \
+	Arc/UniArc/StdCompare \
+	Arc/MiniArchiver/CAB \
+	Arc/MiniArchiver/Arj \
+	Arc/MiniArchiver/LHA \
+	Arc/MiniArchiver/Rar \
+	Arc/MiniArchiver/Zip \
+	Coders/xorio \
+	Coders/base64 \
+	Coders/base64p \
+	Wrappers/Dmap \
+	Wrappers/MultiDMAP \
+	Wrappers/passdmap \
+	Wrappers/SubstIO \
+	Wrappers/SuperIO \
+	Disk/unixdiskio

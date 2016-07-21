@@ -1,0 +1,247 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "WASCRes.rh"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "WASCRes.rh\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_WAS_REPORTVIEWLIST ACCELERATORS DISCARDABLE 
+BEGIN
+    "F",            IDS_WAS_FINDITEM,       VIRTKEY, CONTROL, NOINVERT
+    VK_F3,          IDS_WAS_FINDNEXTITEM,   VIRTKEY, NOINVERT
+END
+
+IDR_WAS_STATISTICVIEWLIST ACCELERATORS DISCARDABLE 
+BEGIN
+    "F",            IDS_WAS_FINDITEM,       VIRTKEY, CONTROL, NOINVERT
+    VK_F3,          IDS_WAS_FINDNEXTITEM,   VIRTKEY, NOINVERT
+END
+
+IDR_WAS_ABOUTVIEWLIST ACCELERATORS DISCARDABLE 
+BEGIN
+    "F",            IDS_WAS_FINDITEM,       VIRTKEY, CONTROL, NOINVERT
+    VK_F3,          IDS_WAS_FINDNEXTITEM,   VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_WAS_CTRLTREEIMAGE				BITMAP  DISCARDABLE     "Ctrlimag.bmp"
+IDB_WAS_NAMETREEIMAGE				BITMAP  DISCARDABLE     "Nmspimag.bmp"
+IDB_WAS_NAMELISTIMAGE				BITMAP  DISCARDABLE     "Nmlsimag.bmp"
+IDB_WAS_REPORTLISTIMAGE			BITMAP  DISCARDABLE     "Rplsimag.bmp"
+IDB_WAS_STATISTICLISTIMAGE	BITMAP  DISCARDABLE     "Stlsimag.bmp"
+IDR_WAS_TOOLBAR							BITMAP  DISCARDABLE     "WToolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_WAS_TOOLBAR TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      IDS_WAS_EXPANDNODE
+    BUTTON      IDS_WAS_COLLAPSENODE
+    BUTTON      IDS_WAS_CHECKNODE
+    BUTTON      IDS_WAS_UNCHECKNODE
+    BUTTON      IDS_WAS_REMOVEVALUE
+    BUTTON      IDS_WAS_EDITVALUE
+    BUTTON      IDS_WAS_SCROLLUP
+    BUTTON      IDS_WAS_SCROLLDOWN
+    BUTTON      IDS_WAS_VIEWLARGEICONS
+    BUTTON      IDS_WAS_VIEWSMALLICONS
+    BUTTON      IDS_WAS_VIEWLIST
+    BUTTON      IDS_WAS_VIEWDETAILS
+    BUTTON      IDS_WAS_SETSTRICT
+    BUTTON      IDS_WAS_REMOVESTRICT
+    BUTTON      IDS_WAS_FINDITEM
+    BUTTON      IDS_WAS_FINDNEXTITEM
+    BUTTON      IDS_WAS_CHECKCHILDRENNODES
+    BUTTON      IDS_WAS_UNCHECKCHILDRENNODES
+    BUTTON      IDS_WAS_CHECKALLNODES
+    BUTTON      IDS_WAS_UNCHECKALLNODES
+    BUTTON      IDS_WAS_APPLYPARENTS
+    BUTTON      IDS_WAS_CLEARNODE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_WAS_EXPANDNODE      "&Expand"
+    IDS_WAS_COLLAPSENODE    "C&ollapse"
+    IDS_WAS_CHECKNODE       "C&heck"
+    IDS_WAS_UNCHECKNODE     "U&ncheck"
+    IDS_WAS_EDITVALUE       "&Modify"
+    IDS_WAS_NEWVALUE        "&New Value"
+    IDS_WAS_SCROLLUP        "&Up"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_WAS_UNCHECKCHILDRENNODES "Uncheck Chil&dren"
+    IDS_WAS_ARRANGEICONS    "Arrange &Icons"
+    IDS_WAS_ARRANGEICONSBYNAME "by &Name"
+    IDS_WAS_ARRANGEICONSBYTYPE "by &Type"
+    IDS_WAS_ARRANGEICONSBYSIZE "by Si&ze"
+    IDS_WAS_ARRANGEICONSBYDATE "by &Date"
+    IDS_WAS_CHECKALLNODES   "Check &All"
+    IDS_WAS_UNCHECKALLNODES "Uncheck A&ll"
+		IDS_WAS_ERR_EMPTYSTRING "An empty value is not allowed here."
+    IDS_WAS_ERR_INCORRECTBASE "Invalid numeric value"
+    IDS_WAS_SELECTED_FOR_PROCESSING "Enable processing"
+    IDS_WAS_YES             "Yes"
+    IDS_WAS_NO              "No"
+    IDS_WAS_APPLYPARENTS    "Apply parent's options"
+    IDS_WAS_CLEARNODE       "C&lear"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_WAS_SCROLLDOWN      "Do&wn"
+    IDS_WAS_REMOVEVALUE     "&Delete"
+    IDS_WAS_SETSTRICT       "Set &Strict"
+    IDS_WAS_REMOVESTRICT    "Remove S&trict"
+    IDS_WAS_VIEW            "&View"
+    IDS_WAS_VIEWLARGEICONS  "Lar&ge Icons"
+    IDS_WAS_VIEWSMALLICONS  "S&mall Icons"
+    IDS_WAS_VIEWLIST        "&List"
+    IDS_WAS_VIEWDETAILS     "&Details"
+    IDS_WAS_PP_NEWVALUE     "New Value"
+    IDS_WAS_FINDITEM        "&Find\tCtrl+F"
+    IDS_WAS_FINDNEXTITEM    "Find &Next\tF3"
+    IDS_ABT_REGISTRATION_TITLE "This product is licensed to:"
+    IDS_ABT_SUPPORT_BTN     "&Support..."
+		IDS_ABT_MODULES_BTN			"&Modules..."
+		IDS_ABT_MODULES_MODULE	"Module name"
+		IDS_ABT_MODULES_VERSION	"Module version"
+		IDS_ABT_MODULES_DATE   	"Module date"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABT_KEY_NUMBER      "Key Number"
+    IDS_ABT_KEY_LICENCE_NAME "Licence"
+    IDS_ABT_KEY_INFO        "Description"
+    IDS_ABT_KEY_EXPIRATION  "Expiration Date"
+    IDS_ABT_KEY_FILE        "Key File"
+    IDS_ABT_KEY_EXPIRED     "Key Expired"
+    IDS_WAS_CLOSE_BTN       "&Close"
+    IDS_ABT_VERSION_TITLE   "Version "
+    IDS_CBR_RENAMESHORTCUT  "Rename Shortcut"
+    IDS_CBR_REMOVESHORTCUT  "Remove Shortcut"
+    IDS_WAS_ERR_OUTOFRANGE  "Value ""%s"" is out of range ""%s - %s"""
+    IDS_ABT_LAST_UPDATE_TITLE "Last update: "
+    IDS_ABT_LAST_VIRUSES_TITLE "Known viruses: "
+    IDS_DD_FOLDERNOTVALID   "Specified folder is invalid."
+    IDS_DD_DRIVENOTVALID    "Specified drive is invalid."
+    IDS_DD_CREATEFOLDER     "This folder does not exist. Do you want to create it?"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+		IDS_DD_CREATEFOLDERCD   "Cannot create folder. CDROM is read-only."
+		IDS_DD_CREATEFOLDERWP   "Cannot create folder. The disk may be write-protected."
+		IDS_DD_CREATEFOLDERPERMNET   "You do not have permission to create the folder on the network drive."
+		IDS_DD_CREATEFOLDERPERM   "You do not have permission to create the folder."
+    IDS_DD_NOTFOLDER        "This is a file, not folder."
+    IDS_DD_FILTER_FOLDERS   "Folders Only|.|"
+    IDS_DD_FILTER_FILES     "All Files (*.*)|*.*||"
+    IDS_DD_TITLE            "Select Folder"
+    IDS_DD_TEXTFOLDER       "Folder:"
+    IDS_DD_TEXTOPEN         "Open"
+    IDS_FD_TITLE            "Select File"
+    IDS_ERRTITLE            "Value editing error"
+    IDS_WAS_ERR_OUTOFRANGE_D "Value ""%d"" is out of range ""%d - %d"""
+    IDS_IPE_MISSINGVALUE    "Missing value in IP address"
+    IDS_LST_NOITEMSINVIEW   "There are no items to show in this view."
+    IDS_WAS_CHECKCHILDRENNODES "Check Ch&ildren"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_WAS_DTYPE_SMIN      "Min"
+    IDS_WAS_DTYPE_SMAX      "Max"
+    IDS_WAS_DTYPE_SDATE     "%#x"
+    IDS_WAS_DTYPE_STIME     "%X"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_WAS_DATEOUTPUTFOREDIT "dddd, MMMM dd, yyyy"
+    IDS_WAS_DATEOUTPUT      "%#x"
+    IDS_WAS_TIMEOUTPUTFOREDIT "HH:mm:ss"
+    IDS_WAS_TIMEOUTPUT      "%X"
+    IDS_WAS_DATETIMEOUTPUTFOREDIT "dddd, MMMM dd, yyyy  HH:mm:ss"
+    IDS_WAS_DATETIMEOUTPUT  "%#x  %X"
+END
+
+#endif    // Neutral (Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

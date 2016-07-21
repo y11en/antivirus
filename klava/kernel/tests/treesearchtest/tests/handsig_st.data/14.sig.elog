@@ -1,0 +1,12 @@
+Adding signatures from file "14.sig".
+Saving the static tree to file "14.sig.st".
+Hash level: 16Hash table size: 64[Kb]
+Cleaning the tree.
+Loading a static tree from file "14.sig.st".
+Scanning file "14.sig"
+   0/4; off=0x000000D8; id=14
+   1/4; off=0x000001C0; id=14
+   2/4; off=0x000001E2; id=14
+   3/4; off=0x00000204; id=14
+Total :
+id=14(4)

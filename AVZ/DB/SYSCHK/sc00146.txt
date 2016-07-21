@@ -1,0 +1,4 @@
+// ***** Spy.MasterBar *****
+begin
+ AddEvAlarmByCLSID('A3E02B37-8608-4F57-AD58-AB91F32BA4F4',AScriptName,'masterbar.dll');
+end.

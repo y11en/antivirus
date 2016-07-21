@@ -1,0 +1,4 @@
+// ***** AdvWare.BHO.2Search.a *****
+begin
+ AddEvAlarmByCLSID('4508E20C-ACAD-11D2-9FC0-00550076E06F',AScriptName,'plugin.dll');
+end.

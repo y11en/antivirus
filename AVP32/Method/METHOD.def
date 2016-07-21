@@ -1,0 +1,5 @@
+LIBRARY   METHOD
+
+EXPORTS
+   DLL_GetMethodCount
+   DLL_GetMethodText

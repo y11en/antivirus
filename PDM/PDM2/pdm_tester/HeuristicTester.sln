@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pdm_test", "pdm_test\pdm_test.vcproj", "{05AF2B5B-FB2C-4B25-9536-4FBB93E4DD97}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B72FE21B-0239-4D6A-A9EA-CAC9E4D34E29} = {B72FE21B-0239-4D6A-A9EA-CAC9E4D34E29}
+		{0CB805D4-C546-4460-A4E4-C9480873D41C} = {0CB805D4-C546-4460-A4E4-C9480873D41C}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_dll", "test_dll\test_dll.vcproj", "{B72FE21B-0239-4D6A-A9EA-CAC9E4D34E29}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "set_hooker", "set_hooker\set_hooker.vcproj", "{0CB805D4-C546-4460-A4E4-C9480873D41C}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 4
+		SccProjectUniqueName0 = pdm_test\\pdm_test.vcproj
+		SccLocalPath0 = .
+		SccProjectFilePathRelativizedFromConnection0 = pdm_test\\
+		SccProjectUniqueName1 = set_hooker\\set_hooker.vcproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = set_hooker\\
+		SccProjectUniqueName2 = test_dll\\test_dll.vcproj
+		SccLocalPath2 = test_dll
+		SccLocalPath3 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05AF2B5B-FB2C-4B25-9536-4FBB93E4DD97}.Debug|Win32.ActiveCfg = Debug|Win32
+		{05AF2B5B-FB2C-4B25-9536-4FBB93E4DD97}.Debug|Win32.Build.0 = Debug|Win32
+		{05AF2B5B-FB2C-4B25-9536-4FBB93E4DD97}.Release|Win32.ActiveCfg = Release|Win32
+		{05AF2B5B-FB2C-4B25-9536-4FBB93E4DD97}.Release|Win32.Build.0 = Release|Win32
+		{B72FE21B-0239-4D6A-A9EA-CAC9E4D34E29}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B72FE21B-0239-4D6A-A9EA-CAC9E4D34E29}.Debug|Win32.Build.0 = Debug|Win32
+		{B72FE21B-0239-4D6A-A9EA-CAC9E4D34E29}.Release|Win32.ActiveCfg = Release|Win32
+		{B72FE21B-0239-4D6A-A9EA-CAC9E4D34E29}.Release|Win32.Build.0 = Release|Win32
+		{0CB805D4-C546-4460-A4E4-C9480873D41C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0CB805D4-C546-4460-A4E4-C9480873D41C}.Debug|Win32.Build.0 = Debug|Win32
+		{0CB805D4-C546-4460-A4E4-C9480873D41C}.Release|Win32.ActiveCfg = Release|Win32
+		{0CB805D4-C546-4460-A4E4-C9480873D41C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

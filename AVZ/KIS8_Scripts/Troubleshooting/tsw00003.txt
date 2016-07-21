@@ -1,0 +1,43 @@
+// $AVZ1503
+//$ Нарушение ассоциации PIF файлов
+// Функция поиска проблемы                                                                          
+function Check : dword;
+var
+ S : string;
+begin
+ Result := 0;
+ // Тяжелая ошибка 1 - зловредом удален ключ '.pif' или 'piffile\shell\open\command'
+ if not(RegKeyExists('HKEY_CLASSES_ROOT','.pif')) or
+    not(RegKeyExists('HKEY_CLASSES_ROOT','piffile\shell\open\command')) then begin
+     Result := 3;
+     exit;
+    end;
+ // Тяжелая ошибка 2 - ключ '.pif' ведет не на тип piffile
+ if UpperCase(RegKeyStrParamRead('HKEY_CLASSES_ROOT','.pif', '')) <> 'PIFFILE' then begin
+     Result := 3;
+     exit;
+    end;
+ // Тяжелая ошибка 3 - ключ 'piffile' содержит подмененныы ключ запуска (часто меняется троянами)                                                                                       
+ S := Trim(RegKeyStrParamRead('HKEY_CLASSES_ROOT', 'piffile\shell\open\command', ''));
+ // Пераметры запуска удалены                                                                   
+ S := StringReplace(S, '  ', ' ');
+ if S = '' then begin
+  Result := 3;
+  exit;
+ end;
+ // Параметры запуска не совпадают со стандартными                                                                                                           
+ if not((S = '"%1" %*') or (S = '%1 %*')) then begin             
+  Result := 3;
+  exit;
+ end;
+end;
+
+// Функция исправления проблемы                                                                          
+function Fix : dword;
+begin
+ RegKeyCreate('HKEY_CLASSES_ROOT', '.pif');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', '.pif', '', 'piffile');
+ RegKeyCreate('HKEY_CLASSES_ROOT', 'piffile\shell\open\command');
+ RegKeyStrParamWrite('HKEY_CLASSES_ROOT', 'piffile\shell\open\command', '', '"%1" %*');
+ Result := 0;
+end;

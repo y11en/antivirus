@@ -1,0 +1,68 @@
+<UpdateFiles UpdateDate="08112005 1050">
+  <UpdateSettings Name="Updater/update_date" Type="date" Value="08112005 1050" />
+  <UpdateSettings Name="Updater/av_records" Type="long" Value="163522" />
+
+  <FileDescription ComponentID="MATCH"
+         UpdateType="base"
+         ServerFolder="1"
+         LocalPath="%BaseFolder%"
+         Filename="Change.avc"
+         FileDate="25052005 1307" />
+
+  <FileDescription ComponentID="MATCH"
+         UpdateType="base"
+         RelativeSrvPath="bases/1"
+         LocalPath="%BaseFolder%"
+         Filename="ChangeWithSQZECompression.sqz"
+         FileDate="25052005 1307" />
+
+  <FileDescription ComponentID="MATCH"
+         UpdateType="base"
+         RelativeSrvPath="bases/1"
+         LocalPath="%BaseFolder%"
+         Filename="Remove.avc"
+         FileDate="25052005 1307" />
+
+  <FileDescription ComponentID="MATCH"
+         UpdateType="base"
+         RelativeSrvPath="bases/1"
+         LocalPath="%BaseFolder%"
+         Filename="Non_Change.avc" />
+
+  <FileDescription ComponentID="FILTER"
+         UpdateType="base"
+         RelativeSrvPath="bases/1"
+         LocalPath="%BaseFolder%"
+         Filename="Filter.avc"
+         FileDate="25052005 1307" />
+
+  <!-- comma separated component filter test with *match* criteria -->
+  <FileDescription ComponentID="MATCH,FILTER"
+         UpdateType="base"
+         RelativeSrvPath="bases/1"
+         LocalPath="%BaseFolder%"
+         Filename="MatchFilter.avc"
+         FileDate="25052005 1307" />
+  <!-- comma separated component filter test with *filter* criteria -->
+  <FileDescription ComponentID="FILTER,FILTER1"
+         UpdateType="base"
+         RelativeSrvPath="bases/1"
+         LocalPath="%BaseFolder%"
+         Filename="Filter.avc"
+         FileDate="25052005 1307" />
+
+
+  <!-- MD5 test case -->
+  <FileDescription
+         UpdateType="base"
+         RelativeSrvPath="bases/1"
+         LocalPath="%BaseFolder%"
+         Filename="md5.avc"
+         MD5="Nz02VYiXZQpQ13FOobKDEw=="
+         FileDate="25052005 1307" />
+
+
+</UpdateFiles>
+
+
+;:10qFoxryasjjra0xtY3AtxDPtqLbzQMuErO2LTM9hA6jeMahxAUrcfm/KqSo3u30qtDQIk6US+twMiznylJ+on18%%

@@ -1,0 +1,32 @@
+// ***** LEVEL_NEURO1 *****
+var
+ i : integer;
+begin
+ // Отключение служб
+ SetAVZGuardStatus(false);
+ SetAVZPMStatus(false);
+ BC_Deactivate;
+ // Удаление служб
+ DeleteService('AVZRK', true);
+ DeleteService('AVZSG', true);
+ DeleteService('AVZ', true);
+ for i := 1 to 4 do
+  DeleteService(GetAVZSvcName(i), true);
+ 
+ // Удаление ключей реестра
+ RegKeyDel('HKEY_LOCAL_MACHINE', 'SYSTEM\CurrentControlSet\Enum\Root\LEGACY_AVZ');
+ RegKeyDel('HKEY_LOCAL_MACHINE', 'SYSTEM\CurrentControlSet\Enum\Root\LEGACY_AVZSG');
+ RegKeyDel('HKEY_LOCAL_MACHINE', 'SYSTEM\CurrentControlSet\Enum\Root\LEGACY_AVZRK');
+
+ RegKeyDel('HKEY_LOCAL_MACHINE', 'SYSTEM\ControlSet001\Services\AVZRK');
+ RegKeyDel('HKEY_LOCAL_MACHINE', 'SYSTEM\ControlSet001\Services\AVZSG');
+ RegKeyDel('HKEY_LOCAL_MACHINE', 'SYSTEM\ControlSet001\Services\AVZ');
+ 
+ RegKeyDel('HKEY_LOCAL_MACHINE', 'SYSTEM\ControlSet001\Enum\Root\LEGACY_AVZ');
+ RegKeyDel('HKEY_LOCAL_MACHINE', 'SYSTEM\ControlSet001\Enum\Root\LEGACY_AVZSG');
+ RegKeyDel('HKEY_LOCAL_MACHINE', 'SYSTEM\ControlSet001\Enum\Root\LEGACY_AVZRK');
+
+ RegKeyDel('HKEY_LOCAL_MACHINE', 'SYSTEM\ControlSet002\Enum\Root\LEGACY_AVZ');
+ RegKeyDel('HKEY_LOCAL_MACHINE', 'SYSTEM\ControlSet002\Enum\Root\LEGACY_AVZSG');
+ RegKeyDel('HKEY_LOCAL_MACHINE', 'SYSTEM\ControlSet002\Enum\Root\LEGACY_AVZRK'); 
+end.

@@ -1,0 +1,10 @@
+; sc_plugin.def : Declares the module parameters.
+
+LIBRARY      "klsclog.dll"
+
+EXPORTS
+	DllRegisterServer   @3   PRIVATE
+	DllUnregisterServer @4   PRIVATE
+	IsEnabled           @100 PRIVATE 
+	ProcessScript       @101 PRIVATE 
+

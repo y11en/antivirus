@@ -1,0 +1,17 @@
+# Microsoft Developer Studio Generated Dependency File, included by tmpfile2.mak
+
+.\plugin_temporaryio2.c : \
+	".\plugin_temporaryio2.h"\
+	".\posio.h"\
+	
+
+.\posio.c : \
+	"..\TempFile\tempfile.h"\
+	".\cache.c"\
+	".\plugin_temporaryio2.h"\
+	".\posio.h"\
+	
+
+".\tmpfile2_res.rc" : \
+	".\ver_mod.h"\
+	

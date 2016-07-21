@@ -1,0 +1,76 @@
+;;;
+;;; klif
+;;;
+;;;
+;;; Copyright (c) 2004 Kaspersky Lab
+;;;
+
+[Version]
+signature  	= "$Windows NT$"
+Class		= "ANTIVIRUS"
+ClassGuid 	= {B1D1A169-C54F-4379-81DB-BEE7D88D7454}
+Provider 	= %Kalab%
+DriverVer 	= 01/30/2006,6.12.10.196
+CatalogFile     = klif.cat
+DriverPackageType=FileSystemFilter
+
+[DestinationDirs]
+DefaultDestDir	         = 12
+klif.DriverFiles      = 12 			;%windir%\system32\drivers
+
+[SourceDisksNames]
+1 = %Disk1%
+
+[SourceDisksFiles]
+klif.sys = 1
+
+;;
+;; Default install sections
+;;
+
+[DefaultInstall]
+OptionDesc          = %klifServiceDesc%
+CopyFiles           = klif.DriverFiles
+
+[DefaultInstall.Services]
+AddService          = %klifServiceName%,,klif.Service
+
+;;
+;; Default uninstall sections
+;;
+
+[DefaultUninstall]
+DelFiles   = klif.DriverFiles
+
+[DefaultUninstall.Services]
+DelService = klif,0x4
+
+;
+; Services Section
+;
+
+[klif.Service]
+DisplayName      = %klifServiceName%
+Description      = %klifServiceDesc%
+ServiceBinary    = %12%\klif.sys		;%windir%\system32\drivers\klif.sys
+ServiceType      = 1					;SERVICE_KERNEL_DRIVER
+StartType        = 1					;SERVICE_SYSTEM_START
+ErrorControl     = 1					;SERVICE_ERROR_NORMAL
+
+;
+; Copy Files
+;
+
+[klif.DriverFiles]
+klif.sys
+
+;;
+;; String Section
+;;
+
+[Strings]
+Kalab	            = "Kaspersky Lab"
+klifServiceDesc   = "spuper-ptor"
+klifServiceName   = "klif"
+Disk1               = "Kaspersky Lab install disk"
+

@@ -1,0 +1,15 @@
+			// Длинное имя процесса
+			if (FullProcessNameOffset != 0 &&
+				AEPROCESS != NULL &&
+				(DWORD)AEPROCESS != 0xFFFFFFFF && 
+				MmIsAddressValid(AEPROCESS) &&
+				MmIsAddressValid((PVOID)((DWORD)AEPROCESS + FullProcessNameOffset))
+				) {
+					zDbgPrint("Image File Exists - XP+");
+				if (((PUNICODE_STRING)((DWORD)AEPROCESS + FullProcessNameOffset))->MaximumLength > 0) 
+				{
+					AllocateUnicodeString(&PROCESS_LIST[i].FULL_NAME, ((PUNICODE_STRING)((DWORD)AEPROCESS + FullProcessNameOffset))->MaximumLength);
+					RtlCopyUnicodeString(&PROCESS_LIST[i].FULL_NAME, ((PUNICODE_STRING)((DWORD)AEPROCESS + FullProcessNameOffset)));
+					zDbgPrint("Image Name = %S", PROCESS_LIST[i].FULL_NAME.Buffer);
+				}
+				}

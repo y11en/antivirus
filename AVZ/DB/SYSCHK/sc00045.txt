@@ -1,0 +1,4 @@
+// ***** AdvWare.123Mania *****
+begin
+ AddEvAlarmByCLSID('582788CA-7014-4904-A4EE-6FB6108AFE8E',AScriptName,'');
+end.

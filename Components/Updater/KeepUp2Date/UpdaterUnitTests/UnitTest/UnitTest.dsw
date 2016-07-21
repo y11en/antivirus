@@ -1,0 +1,133 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "IUpdater"="..\..\Client\IUpdater\IUpdater.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    IUpdater
+    ..\..\client\iupdater
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "TrafficMeter"=".\TrafficMeter\TrafficMeter.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    TrafficMeter
+    .\trafficmeter
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "UnitTest"=".\UnitTest\UnitTest.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    UnitTest
+    ..\..
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "UnitTestNew"=".\UnitTestNew\UnitTestNew.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    UnitTestNew
+    ..\..
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "core"="..\..\Client\core\core.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    core
+    ..\..\client\core
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "dskm"="..\..\..\..\CommonFiles\Dskm\dskm.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CommonFiles/dskm", PFNPBAAA
+    ..\..\..\..\commonfiles\dskm
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "slib_core"="..\..\Client\core\slib_core.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    slib_core
+    ..\..\client\core
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+    begin source code control
+    Perforce Project
+    .
+    end source code control
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

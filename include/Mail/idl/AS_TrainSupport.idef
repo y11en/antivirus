@@ -1,0 +1,53 @@
+forward interface AS_TrainSupport;
+typedef AS_TrainSupport* hAS_TRAINSUPPORT;
+
+
+forward struct FolderInfo_t;
+forward struct FolderInfoList_t;
+forward struct EntryID_t;
+
+
+[
+  mnemonic(IID_AS_TRAINSUPPORT)
+  id(40012)
+  c_type_name(hAS_TRAINSUPPORT)
+]
+interface AS_TrainSupport {
+
+  // ------------------------------------
+
+    [
+      comment_ex("Interface version")
+      id(130)
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      comment_ex("Interface comment")
+      id(131)
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+
+
+  // ------------------------------------
+    method tERROR GetFolderInfoList( // Return one level of folder hierarchy
+      FolderInfo_t* pFolderInfo, // [IN] Pointer to root folder
+      FolderInfoList_t* pFolderInfoList // [OUT] List of folders under root folder
+    );
+    method tERROR Train( // Does antispam trainig in the folder
+      cSerializable* pFolderInfoList // List of folders for training
+    );
+    method tERROR GetMAPIEntryID(
+      FolderInfo_t* pFolderInfo, // [IN] Pointer to folder
+      EntryID_t* pEntryID
+    );
+    method tERROR CreateSubFolder(
+      FolderInfo_t* pFolderInfo, // [IN] Pointer to the current folder
+      FolderInfo_t* pNewFolderInfo // [IN OUT] Pointer to the new subfolder
+    );
+    method tERROR TrainAsync(
+      cSerializable* pFolderInfoList // List of folders for training
+    );
+
+}
+

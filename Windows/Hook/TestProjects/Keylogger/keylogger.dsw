@@ -1,0 +1,129 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "kd1dll"=.\kd1dll\kd1dll.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    kd1dll
+    .\kd1dll
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "kd3dll"=.\kd3dll\kd3dll.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    kd3dll
+    .\kd3dll
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "kd4"=.\kd4\kd4.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    kd4
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "kddispatch"=.\kddispatch\kddispatch.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    kddispatch
+    .\kddispatch
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "kdsplice"=.\kdsplice\kdsplice.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    kdsplice
+    .\kdsplice
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "kdwin32k"=.\kdwin32k\kdwin32k.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    kdwin32k
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "keylogger"=.\keylogger.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    keylogger
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

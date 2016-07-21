@@ -1,0 +1,15 @@
+#ifndef  _PROGRESS_RH
+#define  _PROGRESS_RH 1
+
+#define IDD_PROGRESS 240
+
+#define IDC_STATIC_	240
+#define IDC_STATIC_1    241
+#define IDC_STATIC_2    242
+#define IDC_STATIC_3    243
+#define IDC_METER       250
+#define IDC_MOVIE       251
+
+
+#endif // _PROGRESS_RH
+

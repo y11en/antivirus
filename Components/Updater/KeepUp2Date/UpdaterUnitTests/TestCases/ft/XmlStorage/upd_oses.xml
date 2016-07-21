@@ -1,0 +1,101 @@
+<UpdateFiles 
+	UpdateDate="03042006 1751">
+	<UpdateSettings 
+		Name="Updater/update_date" 
+		Type="date" 
+		Value="03042006 1751" />
+	<FileDescription 
+		UpdateType="base" 
+		RelativeSrvPath="index" 
+		Filename="updcfg.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<OS Name="Windows">
+				<Version value="5.0" value="5.1" />
+			</OS>
+	</FileDescription>		
+	<FileDescription 
+		UpdateType="base" 
+		RelativeSrvPath="index" 
+		Filename="updcfg.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<OS Name="Windows">
+				<Version value="5.0" />
+			</OS>
+	</FileDescription>		
+	
+	<FileDescription 
+		UpdateType="base" 
+		RelativeSrvPath="index" 
+		Filename="updcfg3.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<OS Name="Windows">
+				<Version value="5.1" />
+			</OS>
+	</FileDescription>		
+	<FileDescription 
+		UpdateType="base" 
+		RelativeSrvPath="index" 
+		Filename="updcfg4.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<OS Name="Windows" />
+	</FileDescription>		
+	<FileDescription 
+		UpdateType="base" 
+		RelativeSrvPath="index" 
+		Filename="updcfg5.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<OS Name="TR-DOS">
+				<Version value="5.0" value="5.1" />
+			</OS>
+	</FileDescription>		
+	<FileDescription 
+		UpdateType="base" 
+		RelativeSrvPath="index" 
+		Filename="updcfg6.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<OS Name="TR-DOS">
+				<Version value="5.0" />
+			</OS>
+	</FileDescription>		
+	
+	<FileDescription 
+		UpdateType="base" 
+		RelativeSrvPath="index" 
+		Filename="updcfg7.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<OS Name="TR-DOS">
+				<Version value="5.1" />
+			</OS>
+	</FileDescription>		
+	<FileDescription 
+		UpdateType="base" 
+		RelativeSrvPath="index" 
+		Filename="updcfg8.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629">
+			<OS Name="TR-DOS" />
+	</FileDescription>		
+	<FileDescription 
+		UpdateType="base" 
+		RelativeSrvPath="index" 
+		Filename="updcfg9.xml" 
+		FileSign="0XLSznpdI71fB300e7Uwj1NpFafWhvt5vcBIpNl/vu+nnNvXG4hJYL25hR" 
+		FileSize="10185" 
+		FileDate="24032006 1629" />
+</UpdateFiles>
+; 0XLSznpdI71fB300e7Uwj1QjGlaYHdbE0zOzTD/O416V0UCjU1pErHhNb7нн

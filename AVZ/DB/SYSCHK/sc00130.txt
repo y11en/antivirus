@@ -1,0 +1,4 @@
+// ***** Spy.EasyBar *****
+begin
+ AddEvAlarmByCLSID('E3802230-F0E2-4A75-9947-EAB78DD8153F',AScriptName,'EasyWebInstaller.ocx');
+end.

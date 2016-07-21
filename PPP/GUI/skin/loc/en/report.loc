@@ -1,0 +1,378 @@
+﻿[s_ObjectType]
+0x01 = "File"
+0x02 = "Directory"
+0x03 = "Registry Key"
+0x04 = "Registry Value"
+0x05 = "Process"
+0x06 = "Thread"
+0x07 = "Module"
+0x08 = "Logical sector"
+0x09 = "Physical sector"
+0x0A = "Memory"
+0x0B = "Mail message"
+0x0C = "Mail attachment"
+0x0D = "URL"
+0x0E = "VB or Java script"
+0x0F = "Network port"
+0x10 = "Network connection"
+0x11 = "Network packet"
+0x12 = "Dialing string"
+0x13 = "Detection name"
+0x15 = "Device"
+default = if(@, "unk: " + @)
+
+[s_RepDetectType]
+#eVirware           = "Virus"
+#eTrojware          = "Trojan program"
+#eMalware           = "Malware"
+#eAdware            = "Adware"
+#ePornware          = "Pornware"
+#eRiskware          = "Riskware"
+#eXFiles
+#eSoftware          = "Known safe software"
+#eVulnerability     = "Vulnerability"
+#ePhishing          = "Phishing address"
+#eDialing           = "Dialup attempt"
+#eAttack            = "Network attack"
+#eBanner            = "Banner"
+#eUnwantedWebContent = "Unwanted web contents"
+#eSpam               = "Spam message"
+#eProbableSpam       = "Probable spam"
+#eHam                = "Not spam"
+#eFileAccess         = "File access"
+#eRegistryAccess     = "Registry access"
+#eNetworkAccess	     = "Network access"
+#eHardwareAccess     = "Hardware access"
+#eSecurityAccess     = "Security access"
+#eSuspicionActivity  = "Suspicious action"
+default              = ""
+
+[s_Verdict]
+#eCLEAN    				= "ok"
+#eDETECTED    			= "detected"
+#eARCHIVED    			= "archive"
+#ePACKED    			= "packed"
+#eENCRYPTED    			= "encrypted"
+#eCORRUPTED    			= "corrupted"
+#eDISINFECTED    		= "disinfected"
+#eNOT_DISINFECTED   	= "not disinfected"
+#eDELETED   			= "deleted"
+#eNOT_DELETED   		= "cannot be deleted"
+#eBACKUPED   			= "backed up"
+#eBACKUP_FAILED   		= "backup failed"
+#eQUARANTINED   		= "quarantined"
+#eNOT_QUARANTINED   	= "cannot be quarantined"
+#eNOT_PROCESSED   		= "not processed"
+#ePROCESSING_ERROR      = "processing error"
+#ePASSWORD_PROTECTED    = "password protected"
+#eCANTCHANGEATTR   		= "cannot change attributes"
+#eDISINFECTED           = "disinfected"
+#eDELETED_ON_REBOOT     = "will be deleted on system restart"
+#eDISINFECTED_ON_REBOOT 	= "will be disinfected on system restart"
+#eDELETE_ON_REBOOT_FAILED   	= "delete on system restart failed"
+#eDISINFECT_ON_REBOOT_FAILED   	= "disinfection on system restart failed"
+#eOVERWRITED	        	= "overwritten with a copy disinfected earlier"
+#eCURED   			= "disinfection complete"
+#eQUARANTINED_ON_REBOOT   	= "will be quarantined on system restart"
+#eRESTORED              	= "restored from quarantine"
+#eDENIED   			= "access denied"
+#eALLOWED   			= "access allowed"
+#eRENAMED   			= "renamed"
+#eNOT_RENAMED   		= "not renamed"
+#eDISABLED 			= "disabled"
+#eUPDATER_ERROR                             = $IsRepItem ? s_UpdaterError(Error) : "Message"
+#eUPDATER_SOURCE_SELECTED
+#eUPDATER_ADMIN_KIT_SOURCE_SELECTED         = "Update source is selected"
+#eUPDATER_PROXY_SERVER_SELECTED             = "Proxy server is selected"
+#eUPDATER_DOWNLOAD_FILE_STARTED             = "File download started"
+#eUPDATER_FILE_DOWNLOADED                   = "File downloaded"
+#eUPDATER_NEW_FILE_INSTALLED                = "File installed"
+#eUPDATER_FILE_UPDATED                      = "File updated"
+#eUPDATER_FILE_ROLLED_BACK                  = "File rolled back"
+#eUPDATER_StartInstallFilesForUpdate		= "Files update started"
+#eUPDATER_StartInstallFilesForRetranslation = "Update copying started"
+#eUPDATER_StartCopyFilesForRollback         = "Files rollback started"
+#eUPDATER_DNS_NAME_RESOLVED                 = "DNS-name transformed"
+#eUPDATER_ComponentIsNotUpdated             = "Error updating component"
+#eUPDATER_GeneratingFileListToDownload      = "Creating the list of files to download"
+#ePARCTL_SWITCHPROFILE    = "Change profile"
+#ePARCTL_HEURISTICSTATUS  = "Heuristic analysis of this website cannot be performed"
+#ePROTECTION + #ProdStateKeyTrial
+#ePROTECTION + #ProdStateProductNotActivated     
+#ePROTECTION + #ProdStateProductNotAutoRun       
+#ePROTECTION + #ProdStateProductNotProtected     
+#ePROTECTION + #ProdStateKeyAboutExpiration      
+#ePROTECTION + #ProdStateKeyExpired              
+#ePROTECTION + #ProdStateKeyWillBeExpired        
+#ePROTECTION + #ProdStateKeyWillBeBlocked        
+#ePROTECTION + #ProdStateKeyTrialExpired         
+#ePROTECTION + #ProdStateKeyBlocked              
+#ePROTECTION + #ProdStateNoKeys                  
+#ePROTECTION + #ProdStateKeyInvalid              
+#ePROTECTION + #ProdStateKeyLimited              
+#ePROTECTION + #ProdStateTasksNotRunning         
+#ePROTECTION + #ProdStateTasksMalfunction        
+#ePROTECTION + #ProdStateTasksDisabled           
+#ePROTECTION + #ProdStateProtectionSafeMode      
+#ePROTECTION + #ProdStateProtectionNotInstalled  
+#ePROTECTION + #ProdStateBasesNotValid           
+#ePROTECTION + #ProdStateBasesOutOfDate          
+#ePROTECTION + #ProdStateBasesNotActual          
+#ePROTECTION + #ProdStateUpdateNeedReboot        
+#ePROTECTION + #ProdStateBasesCorrupted          
+#ePROTECTION + #ProdStateUpdateNotAuto           
+#ePROTECTION + #ProdStateMyComputerNotScanned    
+#ePROTECTION + #ProdStateProtectionNotRunning    
+#ePROTECTION + #ProdStateProtectionDisabled      
+#ePROTECTION + #ProdStateThreatsUntreated        
+#ePROTECTION + #ProdStateThreatsNeedReboot = s_ProdState(@ - #ePROTECTION)
+#eTASK_STARTED          = "Task started"
+#eTASK_STOPPED          = "Task completed"
+#eTASK_FAILED           = "Task cannot be started"
+default = if(@, "unk: " + @)
+
+[s_DecisionReason]
+#eUSER                = "Skipped by user"
+#eREPORTONLY          = "Report only"
+#ePOSTPONED           = "Postponed"
+#eTASKSTOPPED         = "Processing stopped"
+#eERROR               = $IsRepItem ? ($IsTaskStateEvent ? s_ProfileError(s_TaskId2TaskType(TaskID), ExtraInfoSub2) : s_DecisionReasonErrorByTaskID(TaskID, ExtraInfoSub2)) : "Error"
+#eDATABASE            = "By database"
+#eWHITE_LIST          = "White list"
+#eUSER_BLACK_LIST     = "User black list"
+#eUSER_WHITE_LIST     = "User white list"
+#eEMULATOR            = "Emulator"
+#eBB                  = "Behavior analysis"
+#eHEURISTIC           = "Heuristic"
+#eBAYES               = "Content analysis (iBayes)"
+#eGSG                 = "GSG technology (images recognition)"
+#ePDB                 = "PDB technology (headers recognition)"
+#eSFDB                = "Object was not changed (iChecker)"
+#eISWIFT              = "Object was not changed (iSwift)"
+#eALLOWED_SENDER      = "Allowed sender"
+#eBLOCKED_SENDER      = "Blocked sender"
+#eALLOWED_PHRASE      = "Allowed phrase"
+#eBLOCKED_PHRASE      = "Blocked phrase"
+#eDETECT_BYHASH       = "By hash"
+#eDETECT_INFORMATION  = "Information"
+#eSIZE                = "By size"
+#eTYPE                = "By type"
+#eEXCLUDE             = "By exclusions"
+#eTIME                = "Time limit"
+#eNORIGHTS            = "Access denied"
+#eNOTFOUND            = "Object not found"
+#eLOCKED              = "Object is locked"
+#eNONCURABLE          = "Non curable"
+#eWRITEPROTECT        = "Write protected"
+#eNONOVERWRITABLE     = "Non overwritable"
+#eCOPYFAILED          = "Copy failed"
+#eWRITEERROR          = "Write error"
+#eOUTOFSPACE          = "Lack of free disk space"
+#eREADERROR           = "Read error"
+#eDEVICENOTREADY      = "Object not found"
+#eWRITENOTSUPPORTED   = "Write not supported"
+#eCANNOTBACKUP        = "Cannot be backed up"
+#eANTISPAM_AddedToWhiteRecipient  = "Address has been added to the white list"
+#eANTISPAM_HasBeenTrained         = "Message is already in the Anti-Spam database"
+#eANTISPAM_Training               = "Training"
+#eANTISPAM_NeedTraining           = "Need training"
+#eANTISPAM_WhiteAddress           = "Allowed sender"
+#eANTISPAM_BlackAddress           = "Blocked sender"
+#eANTISPAM_WhiteString            = "Phrase from white list"
+#eANTISPAM_BlackString            = "Phrase from black list"
+#eANTISPAM_AntiFishing            = "Phishing email"
+#eANTISPAM_WhiteAddress_NOTFOUND  = "Sender is not allowed"
+#eANTISPAM_BlackAddress_NOTFOUND  = "Sender is not blocked"
+#eANTISPAM_WhiteString_NOTFOUND   = "Phrases not found in the white list"
+#eANTISPAM_BlackString_NOTFOUND   = "Phrases not found in the black list"
+#eANTISPAM_AntiFishing_NOTFOUND   = "Phishing-free email"
+#eANTISPAM_MailDispatcher         = "Email message deleted from the server"
+#eANTISPAM_Eicar                  = "Test message"
+#eANTISPAM_Banner                 = "Junk mail"
+#eANTISPAM_Banner_NOTFOUND        = "Spam-free email"
+#eANTISPAM_InvalidHTML            = "Incorrect HTML"
+#eANTISPAM_InvalidHTML_NOTFOUND   = "Correct HTML"
+#eANTISPAM_ExternalObj            = "Link to external image"
+#eANTISPAM_ExternalObj_NOTFOUND   = "No links to external images"
+#eANTISPAM_InternalObj            = "Internal object without text"
+#eANTISPAM_InternalObj_NOTFOUND   = "No incorrect internal objects"
+#eANTISPAM_EmptyMessage           = "Empty"
+#eANTISPAM_EmptyMessage_NOTFOUND  = "Not empty"
+#eANTISPAM_NotForMe               = "Not addressed to me"
+#eANTISPAM_NotForMe_NOTFOUND      = "Addressed to me"
+#eANTISPAM_NotEnglish             = "Contains non-ANSI characters"
+#eANTISPAM_NotEnglish_NOTFOUND    = "Contains ANSI characters only"
+#eANTISPAM_RecipLimit             = "Too many recipients"
+#eANTISPAM_RecipLimit_NOTFOUND    = "One recipient"
+#eANTISPAM_InvalidHTML_UnknownDefsCount 	 = "Incorrect HTML: incorrect HTML tags"
+#eANTISPAM_InvalidHTML_SeemsColors		 = "Incorrect HTML: background colour text"
+#eANTISPAM_InvalidHTML_SmallText		 = "Incorrect HTML: very small fonts"
+#eANTISPAM_InvalidHTML_InvisibleCharCount	 = "Incorrect HTML: invisible characters"
+#eANTISPAM_InvalidHTML_Scripts			 = "Incorrect HTML: scripts"
+#eANTISPAM_InvalidHTML_HiddenElements		 = "Incorrect HTML: hidden elements"
+#eANTISPAM_CannotBeSpam				 = "Internal Microsoft Exchange Server mail"
+#eANTISPAM_SPAMTEST               		 = "Spamtest"
+#eANTISPAM_RecentTerms		  		 = "Recent terms"
+default = if(@, "unk: " + @)
+
+[s_DecisionReasonErrorByTaskID]
+#eTASK_PC         = s_UpdaterError(@1)
+def               = s_SystemError(@1)
+
+[s_Action]
+#evtOpen                   = "Open"
+#evtCreate                 = "Create"
+#evtRead                   = "Read"
+#evtWrite                  = "Modify"
+#evtDelete                 = "Delete"
+#evtRename                 = "Rename"
+#evtProcessStart           = "Process start"
+#evtProcessStop            = "Process exit"
+#evtImageLoad              = "Image load"
+#evtImageUnload            = "Image unload"
+#evtSend                   = "Network data send"
+#evtReceive                = "Network data receive"
+#evtTerminate              = "Terminate"
+#evtProcStart              = "Process start"
+#evtProcStop               = "Process exit"
+#evtSetHook                = "Code intrusion"
+#evtCodeInject             = "Code intrusion"
+#evtWindowsShutDown        = "Windows shutdown"
+#evtHiddenRegistry         = "Create hidden reg key"
+#evtKeyLogger              = "Keylogger activity"
+#evtSetHardLink            = "Create hard link"
+#evtSuspend                = "Suspend another process"
+#evtSchedulerStart         = "Scheduler start"
+#evtWMSend                 = "Send windows messages to another process"
+#evtDrvStart               = "Start driver"
+#evtServiceStart           = "Start service"
+#evtScreenShots            = "Take screenshot"
+#evtDiskFormat             = "Disk format"
+#evtLLDiskAccess           = "Low level disk access"
+#evtLLFSAccess             = "Low level file system access"
+#evtClipBoardAcceess       = "Access to clipboard"
+#evtSysEnterChange         = "Change system enter"
+#evtADSAccess              = "Access to file streams"
+#evtDirectMemAccess        = "Access to global memory"
+#evtReadProcMem            = "Access to another process memory"
+#evtSetDbgPrivilege        = "Set debug privileges"
+#evtChangeObjPrivilege     = "Change object privileges"
+#evtUseBrowserCL           = "Use command line of browser"
+#evtUseBrowserAPI          = "Use browsers API"
+#evtUseSystemAPI           = "Use system API"
+#evtAddAppToGr             = "placed in group"
+default = if(@, "unk: " + @)
+
+[s_ActionV]
+#evtOpen                   = "open"
+#evtCreate                 = "create"
+#evtRead                   = "read"
+#evtWrite                  = "write"
+#evtDelete                 = "delete"
+#evtRename                 = "rename"
+#evtProcessStart           = "start"
+#evtProcessStop            = "stop"
+#evtImageLoad              = "load"
+#evtImageUnload            = "unload"
+#evtSend                   = "send"
+#evtReceive                = "receive"
+#evtTerminate              = "stop"
+#evtProcStart              = "start"
+#evtProcStop               = "stop"
+#evtSetHook                = "install hook"
+#evtCodeInject             = "inject code to"
+#evtWindowsShutDown        = "stop operating system"
+#evtHiddenRegistry         = "create hidden key"
+#evtKeyLogger              = "intercept keybord"
+#evtSetHardLink            = "set hard link to file"
+#evtSuspend                = "suspend process"
+#evtSchedulerStart         = "start scheduler"
+#evtWMSend                 = "send windows message"
+#evtDrvStart               = "start driver"
+#evtServiceStart           = "start service"
+#evtScreenShots            = "take screenshot"
+#evtDiskFormat             = "format disk"
+#evtLLDiskAccess           = "low level disc access"
+#evtLLFSAccess             = "low level file system access"
+#evtClipBoardAcceess       = "clipboars access"
+#evtSysEnterChange         = "change system enter"
+#evtADSAccess              = "access to file stream"
+#evtDirectMemAccess        = "direct memory access"
+#evtReadProcMem            = "read memory of"
+#evtSetDbgPrivilege        = "set debug privilege"
+#evtChangeObjPrivilege     = "change object privileges"
+#evtUseBrowserCL           = "use command line of borwser"
+#evtUseBrowserAPI          = "use hidden functions of browsers"
+#evtUseSystemAPI           = "use hidden functions of system"
+#evtAddAppToGr             = "placed in group"
+default = if(@, "unk: " + @)
+
+[s_Exact]
+#eExact		      	= "Exact"
+#ePartial         	= "Partial"
+#eProbably	      	= "Probably"
+#eHeuristic       	= "Heuristic"
+default = if(@, "unk: " + @)
+
+[s_DetectDanger]
+#eDDHigh		= "High"
+#eDDMedium		= "Medium"
+#eDDLow			= "Low"
+#eDDInformational	= "Informational"
+default = if(@, "unk: " + @)
+
+[s_ProductActionEvent]
+#eNotifyThreats               = s_ProductActionEvent_Threat(Severity)
+#eNotifySuspicious            = "Detection of possibly infected object"
+#eNotifyLicensing             = s_ProductActionEvent_Licence(Severity)
+#eNotifyProduct               = s_ProductActionEvent_Prot(Severity)
+#eNotifyUpdater               = s_ProductActionEvent_Updater(Severity)
+#eNotifyBases                 = s_ProductActionEvent_Bases(Severity)
+#eNotifyPopups                = "Popup windows blocking"
+#eNotifyProtocoller           = "Protocol messages"
+#eNotifySSL					  = "Encrypted connection checking"
+#eNotifySelfProtection        = "Self-Defense messages"
+#eNotifyPswdArchive           = "Password-protected archive detected"
+#eNotifyThreatNotCured        = "Disinfection impossible"
+#eNotifyThreatDeleted         = "Removal of infected objects"
+#eNotifyThreatQuarantined     = "Object quarantined"
+#eNotifyRuleTriggered         = "Firewall rule triggering"
+#eNotifyAttackBlocked         = "Hacker attack detection"
+#eNotifyBan                   = "Notifications about blocking access from computer"
+#eNotifyThreatsUntreated      = "Not processed malicious objects"
+#eNotifyMyComputerNotScaned   = "Scan of My Computer has not been performed"
+#eNotifyUpdateNeedReboot      = "Reboot is required"
+#eNotifyParCtl                = $ParCtl
+
+[s_ProductActionEvent_Threat]
+#eNotifySeverityCritical="Detection of viruses, worms, Trojans, hack tools"
+#eNotifySeverityImportant="Detection of adware, spyware, etc."
+#eNotifySeverityNotImportant="Disinfection of infected objects"
+
+[s_ProductActionEvent_Licence]
+#eNotifySeverityCritical="License key validity period has expired"
+#eNotifySeverityError="Key is missing, corrupted or blacklisted"
+#eNotifySeverityImportant="License key expires soon"
+
+[s_ProductActionEvent_Prot]
+#eNotifySeverityError="Task can not execute"
+#eNotifySeverityImportant="Other important events"
+#eNotifySeverityNotImportant="Enabling/disabling protection components"
+
+[s_ProductActionEvent_Bases]
+#eNotifySeverityCritical="Database is obsolete"
+#eNotifySeverityError="Database is missing or corrupted"
+#eNotifySeverityImportant="Database is out of date"
+
+[s_ProductActionEvent_Updater]
+#eNotifySeverityError="Update error"
+#eNotifySeverityNotImportant="Update completion"
+
+[s_TaskTextProtection]
+#eNotifyLicensing             = "Licensing"
+#eNotifyMyComputerNotScaned   = $Scan_My_Computer
+#eNotifyBases
+#eNotifyUpdater
+#eNotifyUpdateNeedReboot      = $Updater
+def                           = $Protection
+

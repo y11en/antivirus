@@ -1,0 +1,29 @@
+<UpdateFiles
+	UpdateDate="11042007 1614">
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		LocalPath="%BaseFolder%"
+		Filename="base101.avc"
+		FileSize="49110" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		LocalPath="%BaseFolder%"
+		Filename="base102.avc"
+		FileSize="47855" />
+	<FileDescription
+		ComponentID="AVS"
+		UpdateType="base"
+		LocalPath="%BaseFolder%"
+		Filename="base103.avc"
+		FileSize="49307" />
+	<Registry
+		ComponentID="CORE"
+		UpdateType="REGISTRY"
+		LocalPath="%DSKM%"
+		Body="S0xyZwEIAABLTHN3AACtrQEAAAD8AwAAAQAAAAEAABRqAwABACAAUJFKXfOijEWYepw8cuhXz+FkbJWOxFuQAQMgY3QEsHEgAEw/2r8z505vDeGbqaD+C7UHBQIzZ+ekwgOF89VrVP2pIAB1btVeAOpHn1QfJ2u7UvoJVxajvaP9U3wSckBCI5NSuwEAHgkIAAAAAQAACYCjpPwNCjs6MTA0MjBUeExEYmdGdkJoallYb1V5djdVK3huMG8zSkc3c09XZmp3RnRpYVFTUjFkangyM3VPd2F1S1JYRXEwS3QxamtQNjg0MVJHT2hQUlVaT0NjSHZadCUl"
+		Filename="av-i386-0607g.krg" />
+</UpdateFiles>
+;:10qDKVZgLA4GhvLoL/A6eXd/uZNBQ79bLnkNH/zhmJyXtQZ0kqa9e1W4iyYbL7Y85zD7dcOs0dkKpfTU/vgkmKO0%%
+; 0XLSznpdI71fB300e7Uwj1BMjvb3zIgTLIhgwUzc8Qdja9DGkIoHbUlZIp­­

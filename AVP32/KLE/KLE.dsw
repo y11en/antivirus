@@ -1,0 +1,173 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "BaseWork"=..\BaseWork\BaseWork.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/BaseWork", RDDAAAAA
+    ..\basework
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "KLE Engine"=".\KLE Engine.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/KLE", FQMBAAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name KLE_APP
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "KLE_APP"=..\Kle_app\KLE_APP.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/KLE", FQMBAAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name KLH_SYS
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name KLH_VXD
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "KLE_SYS"=..\Kle_sys\KLE_SYS.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/KLE_SYS", GQMBAAAA
+    ..\kle_sys
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name BaseWork
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "KLE_VXD"=..\KLE_VXD\KLE_VXD.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/KLE_VXD", QYDAAAAA
+    ..\kle_vxd
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name BaseWork
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name MemHlp
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "KLH_SYS"=..\Kle_app\KLH_SYS.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/KLe", FQMBAAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name KLE_SYS
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "KLH_VXD"=..\Kle_app\KLH_VXD.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/KLE_APP", WWMBAAAA
+    ..\kle_app
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name KLE_VXD
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "MemHlp"=..\MemHlp\MemHlp.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/MemHlp", WLEAAAAA
+    ..\memhlp
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+    begin source code control
+    "$/AVP32/KLE", FQMBAAAA
+    .
+    end source code control
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

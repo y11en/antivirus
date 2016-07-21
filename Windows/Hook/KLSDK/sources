@@ -1,0 +1,70 @@
+!IF 0
+
+Copyright (c) 1989  Microsoft Corporation
+
+Module Name:
+
+    sources.
+
+Abstract:
+
+    This file specifies the target component being built and the list of
+    sources files needed to build that component.  Also specifies optional
+    compiler switches and libraries that are unique for the component being
+    built.
+
+
+Author:
+
+
+NOTE:   Commented description of this file is in \nt\bak\bin\sources.tpl
+
+!ENDIF
+
+
+TARGETNAME=klib
+TARGETPATH=obj
+TARGETTYPE=DRIVER_LIBRARY
+
+TARGETLIBS=$(DDK_LIB_PATH)\ndis.lib
+C_DEFINES=$(C_DEFINES) -DNDIS40 -DNDIS_MINIPORT_DRIVER -DNDIS40_MINIPORT -D__CPP -DBINARY_COMPATIBLE=0 -DNDIS_WDM=1 -DKL_IM_DRV
+
+INCLUDES=
+
+SOURCES= kl_object.cpp \
+	 md5_.cpp \
+	 g_callback.cpp \
+	 g_plugin.cpp \
+	 g_registry.cpp \
+	 g_thread.cpp	\
+	 kl_alloc.cpp	\
+	 kl_buffer.cpp	\
+	 kl_debug.cpp	\
+	 kl_file.cpp \
+	 kl_filter.cpp \
+	 kl_hook.cpp \
+	 kl_list.cpp \
+	 kl_lock.cpp \
+	 kl_log.cpp \
+	 kl_map.cpp \
+# kl_memory.cpp \
+	 kl_mm.cpp \
+	 kl_plugmod.cpp \
+#	 kl_ptr.cpp \
+	 kl_stackdata.cpp \
+	 kl_states.cpp \
+	 klickplugin.cpp \
+	 klinplugin.cpp  \
+ 	 datapacket.cpp \
+	 g_basedrv.cpp \
+	 kl_registry.cpp \
+	 kl_ioctl.cpp
+
+MSC_WARNING_LEVEL=/W3 /WX
+
+# PRECOMPILED_INCLUDE=precomp.h
+# PRECOMPILED_PCH=precomp.pch
+# PRECOMPILED_OBJ=precomp.obj
+
+                           
+

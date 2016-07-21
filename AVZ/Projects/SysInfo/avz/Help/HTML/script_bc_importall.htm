@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?script_bc_importall.htm"; }
+else { parent.quicksync('a15.19.16'); }
+//-->
+</script>
+   <title>function &nbsp;BC_ImportALL</title>
+   <meta name="keywords" content="BC_ImportALL">
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+
+
+<body bgcolor="#FFFFFF">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">function &nbsp;BC_ImportALL</span></p>
+
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="t_about.htm">Наверх</a>&nbsp;
+     <a href="script_bc_importquarantine.htm">Предыдущая</a>&nbsp;
+     <a href="script_bcsamples.htm">Последующая</a>
+     </font><B>|</B>
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=717989"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=717989;t=109;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=18 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=717989"><img
+src="http://top.list.ru/counter?js=na;id=717989;t=109"
+border=0 height=18 width=88
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+    </td>
+  </tr>
+</table>
+<br>
+
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #000000;">function</span><span class="f_CodeExample" style="color: #000000;">&nbsp;&nbsp;BC_ImportALL&nbsp;:&nbsp;boolean;</span></p>
+<p>&nbsp;</p>
+<p>Импортирует в настройки Boot Cleaner всю информацию об операциях, выполненных до этого в скрипте при помощи&nbsp; <a href="script_deletefile.htm">DeleteFile</a> и <a href="script_quarantinefile.htm">QuarantineFile</a>. Применяется для упрощения интеграции Boot Cleaner с типовыми скриптами.</p>
+<p>&nbsp;</p>
+<p>Пример:</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold; text-decoration: underline;">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #000000;">begin</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #000080;">//&nbsp;Карантин&nbsp;файлов&nbsp;файлов</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;QuarantineFile(</span><span class="f_CodeExample" style="color: #000080;">'%WinDir%\Trojan1.exe'</span><span class="f_CodeExample" style="color: #000000;">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">''</span><span class="f_CodeExample" style="color: #000000;">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;QuarantineFile(</span><span class="f_CodeExample" style="color: #000080;">'%WinDir%\Trojan2.exe'</span><span class="f_CodeExample" style="color: #000000;">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">''</span><span class="f_CodeExample" style="color: #000000;">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #000080;">//&nbsp;Удаление&nbsp;файлов</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;DeleteFile(</span><span class="f_CodeExample" style="color: #000080;">'%WinDir%\Trojan3.exe'</span><span class="f_CodeExample" style="color: #000000;">,&nbsp;</span><span class="f_CodeExample" style="color: #000080;">''</span><span class="f_CodeExample" style="color: #000000;">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #000080;">//&nbsp;Импорт&nbsp;списка&nbsp;карантина&nbsp;и&nbsp;удаленных&nbsp;файлов&nbsp;в&nbsp;настройки&nbsp;Boot&nbsp;Cleaner</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;BC_ImportALL;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #000080;">//&nbsp;Активация&nbsp;драйвера&nbsp;Boot&nbsp;Cleaner</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;BC_LogFile(GetAVZDirectory&nbsp;+&nbsp;</span><span class="f_CodeExample" style="color: #000080;">'boot_clr.log'</span><span class="f_CodeExample" style="color: #000000;">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;BC_Activate;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;</span><span class="f_CodeExample" style="font-style: italic; color: #000080;">//&nbsp;Перезагрузка</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #000000;">&nbsp;RebootWindows(true);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-weight: bold; color: #000000;">end</span><span class="f_CodeExample" style="color: #000000;">.</span></p>
+
+
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=717989;js='+js+a+';rand='+Math.random()+
+'" height=1 width=1/>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=717989"
+height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+
+</body>
+</html>

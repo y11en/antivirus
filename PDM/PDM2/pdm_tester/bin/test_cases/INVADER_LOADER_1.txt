@@ -1,0 +1,6 @@
+# set window hook to all process
+
+SH_TO_ALL NOT_TO_CLEAR
+
+#etalon_verdict 80 DllInvader
+

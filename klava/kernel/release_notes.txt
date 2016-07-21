@@ -1,0 +1,9 @@
+
+
+Plans:
+------
+
+1. Define "context virtual interface",
+   consisting of first N context methods (trace, notimpl, callback, etc)
+   define get_property / set_property methods in place of reserved procs 3,4
+

@@ -1,0 +1,33 @@
+<UpdateFiles
+	UpdateDate="18112006 1717">
+	<FileDescription
+		ComponentID="CORE"
+		UpdateType="blst"
+		SolvePeriod="9999"
+		FileDate="28082007 1408"
+		LocalPath="%BaseFolder%"
+		Filename="black.lst"
+		FileSize="120840" />
+	<FileDescription
+		ComponentID="BLST"
+		UpdateType="blst"
+		SolvePeriod="9999"
+		FileDate="28082007 1408"
+		LocalPath="%BlstFolder%"
+		Filename="black.lst"
+		FileSize="120840" />
+	<Registry
+		ComponentID="CORE"
+		UpdateType="KLKEY"
+		LocalPath="%DSKM%"
+		Body="S0xyZwH6/39LTHN3AACtrQEAAAD8AwAAAwAAFgEBAAAJAXlOHipAAAIaH8zuuE8EvFmj4/E2yIK4Q6J0tpKFVIVT3Oy4Nlu+WOtn1IfRh3CI88QFOm2YsIQblsw2hUZ2z2zulbNk17oBAB4JEQAAAAIAAigEAEJMU1QDAAIoBABCQVNFAQAACQSQfZANCjs6MTBLRU1za2EzWFZ0T0xEdDZjMnFMMHkrQm96YTZOWm1GWlUrNEhaNk1nSGxWUzF3NHZZRDg5WG1nb1pjQ3RMdGhoMk1TTzU4TnNEU1VVYXVLVThYaThkSiUl"
+		Filename="blst-0607g.pbv" />
+	<Registry
+		ComponentID="CORE"
+		UpdateType="REGISTRY"
+		LocalPath="%DSKM%"
+		Body="S0xyZwERAABLTHN3AACtrQEAAAD8AwAAAQAAAAEAABRqAQABACAAxfAW7yk8UR6l6VPs9xriRAj2iqC20Y0zwvhV3XyzbmYBAB4JEQAAAAEAAAlH2jMADQo7OjEwNDZkdjcrUHBxRm9sV0lZR3Z3Y3JUYlZVTlBHV0dxTGtOZVJDYkRHdkNnS25hbGpNeW95RzB0a1ZXVE12eGVmQUtNK0ZVbmR3MHVxN0l1blhxNWlIMUklJQ=="
+		Filename="blst-0607g.krg" />
+</UpdateFiles>
+;:10a7hCRtpNmRl0icOuv10u4/VeBfytU00fn51LplLQcsj3tGJI2hgpEGt8NyKo4H31sa/0Ngw6jNpmZS21IUMNbI%%
+; 0XLSznpdI71fB300e7Uwj1FQdz4260APLnmgTielNU1+HDaRo2VGsjqg3b­­

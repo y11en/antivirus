@@ -1,0 +1,4 @@
+# get path to IE from registry, start IE process and set text to IE window
+
+CP_IE NOT_TO_CLEAR
+SET_TEXT_TO_IE NOT_TO_CLEAR

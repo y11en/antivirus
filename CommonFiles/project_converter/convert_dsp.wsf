@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<job>
+	<runtime>
+		<description>This script performs convertation of VC6 project to VC 2005 project</description>
+		<named 
+			name="src" 
+			helpstring="a VC6 project file to be converted" 
+			type="string" 
+			required="true" />
+		<named 
+			name="dst" 
+			helpstring="a new VC 2005 project file name" 
+			type="string" 
+			required="false" />
+		<named 
+			name="outdir" 
+			helpstring="an absolute path to a directory with out_* and temp_* directories"
+			type="string" 
+			required="false" />
+		<named 
+			name="overwrite" helpstring="overwrite the file if exists" 
+			type="boolean"
+			required="false" />
+		<named 
+			name="correct" 
+			helpstring="correct a project name according to directory name"
+			type="boolean" 
+			required="false" />
+		<named 
+			name="x64" 
+			helpstring="add x64 configuration" 
+			type="boolean" 
+			required="false" />
+		<named 
+			name="nopatch" 
+			helpstring="don't try patch configuration attributes"
+			type="boolean" 
+			required="false" />
+		<named 
+			name="fconfig" 
+			helpstring="remove unnecessarily file configurations"
+			type="boolean" 
+			required="false" />
+		<example>Example:
+convert_dsp.wsf /src:c:\foo.dsp /outdir:c:\</example>
+	</runtime>
+
+	<script language="JScript">
+<![CDATA[
+
+var g_wsh = null;
+var fsObj = new ActiveXObject ( "Scripting.FileSystemObject" );
+
+function InitShell() {
+  if (g_wsh == null) {
+    g_wsh = new ActiveXObject( "WScript.Shell" );
+  }
+  return g_wsh;
+}
+
+function exec( prompt, src, script, cmd ) {
+	WScript.Echo( "\t\t" + prompt + " \"" + fsObj.GetFileName(src) + "\"" );
+	var lcmd = "cscript /nologo \"" + fsObj.GetParentFolderName(WScript.ScriptFullName) + "\\" + script + ".wsf\" " + cmd;
+  var oExec = InitShell().Exec(lcmd);
+  while ( oExec.Status == 0 ) {
+    if ( !oExec.StdOut.AtEndOfStream ) {
+	    var out = oExec.StdOut.ReadAll();
+			if ( out.length > 2 ) {
+				var pChar = out.charCodeAt(out.length-2);
+				var lChar = out.charCodeAt(out.length-1);
+				if ( (pChar == 13) && (lChar == 10) )
+					out = out.substr(0,out.length-2);
+			}
+	    WScript.Echo( out );
+   }
+  WScript.Sleep(100);
+  }
+  if ( !oExec.StdErr.AtEndOfStream ) {
+	  var err = oExec.StdErr.ReadAll();
+	  WScript.Echo( "\t\t\tERROR! " + err );
+	}
+  if ( !oExec.StdOut.AtEndOfStream ) {
+	  var out = oExec.StdOut.ReadAll();
+	  WScript.Echo( out );
+  }
+
+	if ( oExec.ExitCode != 0 )
+		WScript.Quit( 1 );
+}
+
+var args = WScript.Arguments;
+
+if ( !args.Named.Exists( "src" ) ) { //|| !args.Named.Exists ( "outdir" ) ) {
+	args.ShowUsage();
+	WScript.Quit (1);
+}
+var source = args.Named.Item ( "src" );
+
+var outdir = fsObj.GetDriveName ( source ) + "\\";
+if ( args.Named.Exists ( "outdir" ) ) {
+	outdir = args.Named.Item ( "outdir" );
+}
+
+//var fsObj = new ActiveXObject ( "Scripting.FileSystemObject" );
+                                                            
+if ( !fsObj.FileExists ( source ) ) {
+	WScript.Echo( "\t\tERROR! File \"" + source + "\" doesn't exist!");
+	WScript.Quit( 1 );
+}
+
+var regExp = /.dsp$/i;
+dest = source.replace ( regExp, ".vcproj" );	
+if ( args.Named.Exists ( "dst" ) ) {
+	dest = args.Named.Item ( "dst" );
+}
+else if ( args.Named.Exists("correct") && args.Named.Item("correct") ) {
+	dest = fsObj.GetAbsolutePathName ( source );
+	dest = fsObj.GetParentFolderName ( dest );
+	dest = dest + "\\" + fsObj.GetBaseName ( dest  ) + ".vcproj";
+	dest = dest.toLocaleLowerCase ();
+}
+
+
+if ( fsObj.FileExists ( dest ) && !args.Named.Item ( "overwrite" ) ) {
+	WScript.Echo( "\t\tERROR! File \"" + dest + "\" already exists!");
+	WScript.Quit (1);
+}
+
+var g_overwrite = "";
+if ( args.Named.Exists("overwrite") )
+	g_overwrite = " /overwrite:" + args.Named.Item( "overwrite" );
+
+var g_correct = "";
+if ( args.Named.Exists("correct") )
+	g_correct = " /correct:" + args.Named.Item ( "correct" );
+	
+exec( "Converting", source, "converter",   "/src:\"" + source + "\" /dst:\"" + dest + "\"" + g_overwrite );
+exec( "Patching  ", dest,   "patcher",     "/src:\"" + dest   + "\" /outdir:\"" + outdir + "\" /overwrite:+" + g_correct );
+
+var add_x64 = true;
+if ( args.Named.Exists("x64") )
+	add_x64 = args.Named.Item( "x64" );
+
+if ( add_x64 )
+	exec( "Add x64 to", dest,   "addplatform", "/src:\"" + dest   + "\" /platform:x64 /overwrite:+" );
+
+]]>
+</script>
+</job>
+
+

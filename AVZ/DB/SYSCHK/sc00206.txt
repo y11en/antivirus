@@ -1,0 +1,4 @@
+// ***** AdvWare.Toolbar.NocsBar *****
+begin
+ AddEvAlarmByCLSID('8E1E80F3-A3F0-41D4-BAA7-470442CFC906',AScriptName,'Nocs.dll');
+end.

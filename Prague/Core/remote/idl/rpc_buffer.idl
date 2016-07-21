@@ -1,0 +1,37 @@
+// --------------------------------------------------------------------------------
+// AVP Prague stamp begin( Interface header,  )
+// -------- Monday,  07 October 2002,  13:16 --------
+// File Name   -- i_io.h
+// Copyright (c) Kaspersky Labs. 1996-2002.
+// -------------------------------------------
+// AVP Prague stamp end
+
+
+import "prague.h";
+import "i_buffer.h";
+
+typedef rpcOBJECT	rpcBUFFER;
+
+// --------------------------------------------------------------------------------
+// AVP Prague stamp begin( Interface comment,  )
+// AVP Prague stamp end
+
+
+
+// --------------------------------------------------------------------------------
+// AVP Prague stamp begin( Interface function forward declarations,  )
+[ uuid (6DEC2539-5026-495b-A11C-FB0C9F95BB9C),
+  version(1.0),
+  pointer_default(unique)
+]
+interface rpc_buffer {
+  // -----------  IO declared methods ----------
+	tERROR Buffer_SeekRead  ( rpcBUFFER _this, [mout] tDWORD* result, tQWORD offset, [mout,size_is(size)] tCHAR* buffer, tDWORD size ); // -- reads content of the object to the buffer;
+	tERROR Buffer_SeekWrite ( rpcBUFFER _this, [mout] tDWORD* result, tQWORD offset, [in,size_is(size)]  tCHAR* buffer, tDWORD size ); // -- writes buffer to the object;
+	tERROR Buffer_GetSize   ( rpcBUFFER _this, [mout] tQWORD* result, IO_SIZE_TYPE type );                       // -- returns size of the requested type of the object;
+	tERROR Buffer_SetSize   ( rpcBUFFER _this, tQWORD new_size );                                                // -- resizes the object;
+	tERROR Buffer_Flush     ( rpcBUFFER _this );                                                                 // -- flush internal buffers;
+
+  // -----------  buffer declared methods ----------
+}
+// AVP Prague stamp end

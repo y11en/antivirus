@@ -1,0 +1,4 @@
+// ***** Spy.SpeedBlaser *****
+begin
+ AddEvAlarmByCLSID('828A9ED2-C5BB-4CAA-BCB7-A4CC024AAFD6',AScriptName,'TinyInstaller.dll');
+end.

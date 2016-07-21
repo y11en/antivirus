@@ -1,0 +1,1480 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\AvpEdit.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\AvpEdit.ico"
+IDR_AVPEDTYPE           ICON    DISCARDABLE     "res\\AvpEditDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DATA DIALOG DISCARDABLE  0, 0, 208, 82
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "AVP Editor"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Enter password:",IDC_PROMPT,7,44,78,12
+    EDITTEXT        IDC_PASSWORD,88,42,113,14,ES_PASSWORD | ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    EDITTEXT        IDC_DATA,88,42,113,14,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    DEFPUSHBUTTON   "OK",IDOK2,48,61,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL2,109,61,50,14
+    LTEXT           "Password protected Private Key:\n\n%s\n",IDC_HEADER,7,7,
+                    194,30
+END
+
+IDD_INSERT DIALOG DISCARDABLE  0, 0, 175, 146
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Insert"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Record Type",IDC_STATIC,6,6,102,132,WS_GROUP
+    CONTROL         "&Kernel",IDC_INSERT_R1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,15,18,75,10
+    CONTROL         "&Jump",IDC_INSERT_R2,"Button",BS_AUTORADIOBUTTON,15,31,
+                    75,10
+    CONTROL         "&Memory",IDC_INSERT_R3,"Button",BS_AUTORADIOBUTTON,15,
+                    44,75,10
+    CONTROL         "&Sector",IDC_INSERT_R4,"Button",BS_AUTORADIOBUTTON,15,
+                    57,75,10
+    CONTROL         "&File",IDC_INSERT_R5,"Button",BS_AUTORADIOBUTTON,15,70,
+                    75,10
+    CONTROL         "&Code Analyzer",IDC_INSERT_R6,"Button",
+                    BS_AUTORADIOBUTTON,15,83,75,10
+    CONTROL         "&Unpack",IDC_INSERT_R7,"Button",BS_AUTORADIOBUTTON,15,
+                    96,75,10
+    CONTROL         "&Extract",IDC_INSERT_R8,"Button",BS_AUTORADIOBUTTON,15,
+                    109,75,10
+    CONTROL         "Se&parator",IDC_INSERT_R9,"Button",BS_AUTORADIOBUTTON,
+                    15,122,75,10
+    DEFPUSHBUTTON   "OK",IDOK,117,9,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,117,26,50,14
+END
+
+IDD_R_KERNEL DIALOG DISCARDABLE  0, 0, 301, 130
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Kernel record"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Name",IDC_STATIC,12,6,20,8
+    EDITTEXT        IDC_NAME,9,15,224,12,ES_AUTOHSCROLL
+    LTEXT           "&Comment",IDC_STATIC,12,33,30,8
+    EDITTEXT        IDC_COMMENT,9,42,224,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Link",IDC_BUTTON_LINK,243,63,51,14
+    PUSHBUTTON      "&Unlink",IDC_BUTTON_UNLINK,243,81,51,14
+    PUSHBUTTON      "&Relink",IDC_BUTTON_RELINK,243,99,51,14
+    DEFPUSHBUTTON   "OK",IDOK,244,6,51,14
+    PUSHBUTTON      "Cancel",IDCANCEL,244,23,51,14
+    RTEXT           "Link16:",IDC_STATIC,10,61,24,8
+    LTEXT           "None",IDC_LINK16,40,61,194,29
+    RTEXT           "Link32:",IDC_STATIC,10,92,24,8
+    LTEXT           "None",IDC_LINK32,40,92,194,29
+END
+
+IDD_R_JUMP DIALOGEX 0, 0, 302, 263
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Jump record"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "&Name",IDC_STATIC,15,6,20,8
+    EDITTEXT        IDC_NAME,9,15,226,12,ES_AUTOHSCROLL
+    LTEXT           "&Comment",IDC_STATIC,12,33,30,8
+    EDITTEXT        IDC_COMMENT,9,42,226,12,ES_AUTOHSCROLL
+    GROUPBOX        "Bit Field",IDC_STATIC,6,60,187,166
+    CONTROL         "&00",IDC_BIT0,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | 
+                    WS_GROUP | WS_TABSTOP,15,75,21,8
+    CONTROL         "01",IDC_BIT1,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,15,
+                    84,21,8
+    CONTROL         "02",IDC_BIT2,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,15,
+                    93,21,8
+    CONTROL         "03",IDC_BIT3,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,15,
+                    102,21,8
+    CONTROL         "04",IDC_BIT4,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,15,
+                    111,21,8
+    CONTROL         "05",IDC_BIT5,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,15,
+                    120,21,8
+    CONTROL         "06",IDC_BIT6,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,15,
+                    129,21,8
+    CONTROL         "07",IDC_BIT7,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,15,
+                    138,21,8
+    CONTROL         "08",IDC_BIT8,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,15,
+                    147,21,8
+    CONTROL         "09",IDC_BIT9,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,15,
+                    156,21,8
+    CONTROL         "0A",IDC_BIT10,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,15,
+                    165,21,8
+    CONTROL         "0B",IDC_BIT11,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,15,
+                    174,21,8
+    CONTROL         "0C",IDC_BIT12,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,15,
+                    183,21,8
+    CONTROL         "0D",IDC_BIT13,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,15,
+                    192,21,8
+    CONTROL         "0E",IDC_BIT14,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,15,
+                    201,21,8
+    CONTROL         "0F",IDC_BIT15,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,15,
+                    210,21,8
+    CONTROL         "&10",IDC_BIT16,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | 
+                    WS_GROUP | WS_TABSTOP,39,75,21,8
+    CONTROL         "11",IDC_BIT17,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,39,
+                    84,21,8
+    CONTROL         "12",IDC_BIT18,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,39,
+                    93,21,8
+    CONTROL         "13",IDC_BIT19,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,39,
+                    102,21,8
+    CONTROL         "14",IDC_BIT20,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,39,
+                    111,21,8
+    CONTROL         "15",IDC_BIT21,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,39,
+                    120,21,8
+    CONTROL         "16",IDC_BIT22,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,39,
+                    129,21,8
+    CONTROL         "17",IDC_BIT23,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,39,
+                    138,21,8
+    CONTROL         "18",IDC_BIT24,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,39,
+                    147,21,8
+    CONTROL         "19",IDC_BIT25,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,39,
+                    156,21,8
+    CONTROL         "1A",IDC_BIT26,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,39,
+                    165,21,8
+    CONTROL         "1B",IDC_BIT27,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,39,
+                    174,21,8
+    CONTROL         "1C",IDC_BIT28,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,39,
+                    183,21,8
+    CONTROL         "1D",IDC_BIT29,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,39,
+                    192,21,8
+    CONTROL         "1E",IDC_BIT30,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,39,
+                    201,21,8
+    CONTROL         "1F",IDC_BIT31,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,39,
+                    210,21,8
+    CONTROL         "&20",IDC_BIT32,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | 
+                    WS_GROUP | WS_TABSTOP,63,75,21,8
+    CONTROL         "21",IDC_BIT33,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,63,
+                    84,21,8
+    CONTROL         "22",IDC_BIT34,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,63,
+                    93,21,8
+    CONTROL         "23",IDC_BIT35,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,63,
+                    102,21,8
+    CONTROL         "24",IDC_BIT36,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,63,
+                    111,21,8
+    CONTROL         "25",IDC_BIT37,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,63,
+                    120,21,8
+    CONTROL         "26",IDC_BIT38,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,63,
+                    129,21,8
+    CONTROL         "27",IDC_BIT39,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,63,
+                    138,21,8
+    CONTROL         "28",IDC_BIT40,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,63,
+                    147,21,8
+    CONTROL         "29",IDC_BIT41,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,63,
+                    156,21,8
+    CONTROL         "2A",IDC_BIT42,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,63,
+                    165,21,8
+    CONTROL         "2B",IDC_BIT43,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,63,
+                    174,21,8
+    CONTROL         "2C",IDC_BIT44,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,63,
+                    183,21,8
+    CONTROL         "2D",IDC_BIT45,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,63,
+                    192,21,8
+    CONTROL         "2E",IDC_BIT46,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,63,
+                    201,21,8
+    CONTROL         "2F",IDC_BIT47,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,63,
+                    210,21,8
+    CONTROL         "&30",IDC_BIT48,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | 
+                    WS_GROUP | WS_TABSTOP,87,75,21,8
+    CONTROL         "31",IDC_BIT49,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,87,
+                    84,21,8
+    CONTROL         "32",IDC_BIT50,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,87,
+                    93,21,8
+    CONTROL         "33",IDC_BIT51,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,87,
+                    102,21,8
+    CONTROL         "34",IDC_BIT52,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,87,
+                    111,21,8
+    CONTROL         "35",IDC_BIT53,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,87,
+                    120,21,8
+    CONTROL         "36",IDC_BIT54,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,87,
+                    129,21,8
+    CONTROL         "37",IDC_BIT55,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,87,
+                    138,21,8
+    CONTROL         "38",IDC_BIT56,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,87,
+                    147,21,8
+    CONTROL         "39",IDC_BIT57,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,87,
+                    156,21,8
+    CONTROL         "3A",IDC_BIT58,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,87,
+                    165,21,8
+    CONTROL         "3B",IDC_BIT59,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,87,
+                    174,21,8
+    CONTROL         "3C",IDC_BIT60,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,87,
+                    183,21,8
+    CONTROL         "3D",IDC_BIT61,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,87,
+                    192,21,8
+    CONTROL         "3E",IDC_BIT62,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,87,
+                    201,21,8
+    CONTROL         "3F",IDC_BIT63,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT,87,
+                    210,21,8
+    GROUPBOX        "Jump &Method",IDC_STATIC,205,143,89,83
+    COMBOBOX        IDC_METHOD,215,157,69,99,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Data 1",IDC_LABEL_DATA1,211,179,30,8
+    EDITTEXT        IDC_DATA1,245,176,40,12,ES_AUTOHSCROLL
+    RTEXT           "Data 2",IDC_LABEL_DATA2,211,194,30,8
+    EDITTEXT        IDC_DATA2,245,191,40,12,ES_AUTOHSCROLL
+    RTEXT           "Data 3",IDC_LABEL_DATA3,211,209,30,8
+    EDITTEXT        IDC_DATA3,245,206,40,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Sum",IDC_BUTTON_SUM,244,66,51,14,WS_GROUP
+    PUSHBUTTON      "&Link",IDC_BUTTON_LINK,244,83,51,14
+    PUSHBUTTON      "&Unlink",IDC_BUTTON_UNLINK,244,101,51,14
+    PUSHBUTTON      "&Relink",IDC_BUTTON_RELINK,244,119,51,14
+    DEFPUSHBUTTON   "OK",IDOK,244,6,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,244,24,50,14
+    LTEXT           "&/ Sum",IDC_STATIC,116,78,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_SUM,144,75,42,12,ES_AUTOHSCROLL
+    LTEXT           "Word",IDC_STATIC,116,93,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_2BYTES,144,90,42,12,ES_AUTOHSCROLL
+    RTEXT           "Link16:",IDC_STATIC,8,233,24,8
+    LTEXT           "None",IDC_LINK16,38,233,257,8
+    RTEXT           "Link32:",IDC_STATIC,8,246,24,8
+    LTEXT           "None",IDC_LINK32,38,246,257,8
+END
+
+IDD_R_SECTOR DIALOGEX 0, 0, 357, 279
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Sector record"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "&Name",IDC_STATIC,12,6,20,8
+    EDITTEXT        IDC_NAME,9,15,275,12,ES_AUTOHSCROLL
+    LTEXT           "&Comment",IDC_STATIC,12,33,30,8
+    EDITTEXT        IDC_COMMENT,9,42,275,12,ES_AUTOHSCROLL
+    GROUPBOX        "Check Sum &1",IDC_STATIC,6,60,166,79
+    LTEXT           "Area",IDC_STATIC,15,75,24,8,0,WS_EX_RIGHT
+    COMBOBOX        IDC_PAGE1,43,72,42,75,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Len",IDC_STATIC,15,93,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_LEN1,43,90,42,12,ES_AUTOHSCROLL
+    LTEXT           "Offset",IDC_STATIC,15,108,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_OFF1,43,105,42,12,ES_AUTOHSCROLL
+    GROUPBOX        "Check Sum &2",IDC_STATIC,181,60,90,79,WS_GROUP
+    LTEXT           "Area",IDC_STATIC,193,75,24,8,0,WS_EX_RIGHT
+    COMBOBOX        IDC_PAGE2,221,72,42,75,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Len",IDC_STATIC,193,93,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_LEN2,221,90,42,12,ES_AUTOHSCROLL
+    LTEXT           "Offset",IDC_STATIC,193,108,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_OFF2,221,105,42,12,ES_AUTOHSCROLL
+    GROUPBOX        "Cure &Method",IDC_STATIC,5,147,346,97
+    GROUPBOX        "Object 1",IDC_STATIC,11,156,164,81,BS_CENTER
+    COMBOBOX        IDC_METHOD1,17,166,70,66,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "MBR",IDC_MBR1,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,21,183,51,10
+    CONTROL         "Active boot",IDC_ABOOT1,"Button",BS_AUTOCHECKBOX,21,195,
+                    51,10
+    CONTROL         "HD boot",IDC_HDBOOT1,"Button",BS_AUTOCHECKBOX,21,207,51,
+                    10
+    CONTROL         "FD boot",IDC_FDBOOT1,"Button",BS_AUTOCHECKBOX,21,219,51,
+                    10
+    RTEXT           "&Area",IDC_STATIC,95,168,24,8
+    COMBOBOX        IDC_PAGE_C1,123,166,45,66,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Addr 1",IDC_LABEL_DATA11,83,186,37,8
+    EDITTEXT        IDC_ADDRESS11,123,183,45,12,ES_AUTOHSCROLL
+    RTEXT           "Addr 2",IDC_LABEL_DATA12,83,201,37,8
+    EDITTEXT        IDC_ADDRESS12,123,198,45,12,ES_AUTOHSCROLL
+    RTEXT           "Data",IDC_LABEL_DATA1,83,216,37,8
+    EDITTEXT        IDC_DATA1,123,214,45,12,ES_AUTOHSCROLL
+    GROUPBOX        "Object 2",IDC_STATIC,181,156,163,81,BS_CENTER
+    COMBOBOX        IDC_METHOD2,187,166,69,66,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "MBR",IDC_MBR2,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,190,183,51,10
+    CONTROL         "Active boot",IDC_ABOOT2,"Button",BS_AUTOCHECKBOX,190,
+                    195,51,10
+    CONTROL         "HD boot",IDC_HDBOOT2,"Button",BS_AUTOCHECKBOX,190,207,
+                    51,10
+    CONTROL         "FD boot",IDC_FDBOOT2,"Button",BS_AUTOCHECKBOX,190,219,
+                    51,10
+    RTEXT           "&Area",IDC_STATIC,259,168,30,8
+    COMBOBOX        IDC_PAGE_C2,291,166,45,66,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Addr 1",IDC_LABEL_DATA21,251,186,38,8
+    EDITTEXT        IDC_ADDRESS21,291,183,45,12,ES_AUTOHSCROLL
+    RTEXT           "Addr 2",IDC_LABEL_DATA22,251,201,38,8
+    EDITTEXT        IDC_ADDRESS22,291,198,45,12,ES_AUTOHSCROLL
+    RTEXT           "Data",IDC_LABEL_DATA2,251,216,38,8
+    EDITTEXT        IDC_DATA2,291,214,45,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Sum (Area)",IDC_BUTTON_SUM,299,60,51,14,WS_GROUP
+    PUSHBUTTON      "Sum (&File)",IDC_BUTTON_SUM_FILE,299,78,51,14,WS_GROUP
+    PUSHBUTTON      "&Link",IDC_BUTTON_LINK,299,96,51,14
+    PUSHBUTTON      "&Unlink",IDC_BUTTON_UNLINK,299,114,51,14
+    PUSHBUTTON      "&Relink",IDC_BUTTON_RELINK,299,132,51,14
+    DEFPUSHBUTTON   "OK",IDOK,299,7,51,14
+    PUSHBUTTON      "Cancel",IDCANCEL,299,25,51,14
+    LTEXT           "&/ Sum",IDC_STATIC,15,123,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_SUM,43,120,42,12,ES_AUTOHSCROLL
+    LTEXT           "Word",IDC_STATIC,93,123,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_2BYTES,121,120,42,12,ES_AUTOHSCROLL
+    LTEXT           "Sum",IDC_STATIC,193,123,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_SUM2,221,120,42,12,ES_AUTOHSCROLL
+    RTEXT           "Link16:",IDC_STATIC,7,253,24,8
+    LTEXT           "None",IDC_LINK16,37,253,313,8
+    RTEXT           "Link32:",IDC_STATIC,7,265,24,8
+    LTEXT           "None",IDC_LINK32,37,265,313,8
+END
+
+IDD_R_FILE DIALOGEX 0, 0, 302, 252
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "File record"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Name",IDC_STATIC,12,6,20,8
+    EDITTEXT        IDC_NAME,9,15,226,12,ES_AUTOHSCROLL
+    LTEXT           "&Comment",IDC_STATIC,12,33,30,8
+    EDITTEXT        IDC_COMMENT,9,42,226,12,ES_AUTOHSCROLL
+    GROUPBOX        "&Type",IDC_STATIC,6,60,51,93
+    CONTROL         "COM",IDC_COM,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,15,73,34,10
+    CONTROL         "EXE",IDC_EXE,"Button",BS_AUTOCHECKBOX,15,84,34,10
+    CONTROL         "SYS",IDC_SYS,"Button",BS_AUTOCHECKBOX,15,95,34,10
+    CONTROL         "NE",IDC_NE,"Button",BS_AUTOCHECKBOX,15,106,34,10
+    CONTROL         "OLE2",IDC_OLE2,"Button",BS_AUTOCHECKBOX,15,117,34,10
+    CONTROL         "Script",IDC_SCRIPT,"Button",BS_AUTOCHECKBOX,15,128,34,
+                    10
+    CONTROL         "HLP",IDC_HLP,"Button",BS_AUTOCHECKBOX,15,139,30,10
+    GROUPBOX        "Check Sum &1",IDC_STATIC,63,60,84,93,WS_GROUP
+    LTEXT           "Area",IDC_STATIC,69,75,24,8,0,WS_EX_RIGHT
+    COMBOBOX        IDC_PAGE1,96,72,42,75,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Len",IDC_STATIC,69,93,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_LEN1,96,90,42,12,ES_AUTOHSCROLL
+    LTEXT           "Offset",IDC_STATIC,69,108,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_OFF1,96,105,42,12,ES_AUTOHSCROLL
+    GROUPBOX        "Check Sum &2",IDC_STATIC,153,60,84,93,WS_GROUP
+    LTEXT           "Area",IDC_STATIC,159,75,24,8,0,WS_EX_RIGHT
+    COMBOBOX        IDC_PAGE2,186,72,42,75,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Len",IDC_STATIC,159,93,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_LEN2,186,90,42,12,ES_AUTOHSCROLL
+    LTEXT           "Offset",IDC_STATIC,159,108,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_OFF2,186,105,42,12,ES_AUTOHSCROLL
+    GROUPBOX        "Cure &Method",IDC_STATIC,6,159,289,61
+    COMBOBOX        IDC_METHOD,15,178,76,72,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Area",IDC_STATIC,15,201,24,8,0,WS_EX_RIGHT
+    COMBOBOX        IDC_PAGE_C,43,198,48,54,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Data 1",IDC_LABEL_DATA1,95,172,50,8
+    EDITTEXT        IDC_DATA1,149,170,40,12,ES_AUTOHSCROLL
+    RTEXT           "Data 2",IDC_LABEL_DATA2,95,186,50,8
+    EDITTEXT        IDC_DATA2,149,185,40,12,ES_AUTOHSCROLL
+    RTEXT           "Data 3",IDC_LABEL_DATA3,95,202,50,8
+    EDITTEXT        IDC_DATA3,149,200,40,12,ES_AUTOHSCROLL
+    RTEXT           "Data 4",IDC_LABEL_DATA4,195,173,44,8
+    EDITTEXT        IDC_DATA4,242,170,40,12,ES_AUTOHSCROLL
+    RTEXT           "Data 5",IDC_LABEL_DATA5,195,188,44,8
+    EDITTEXT        IDC_DATA5,242,185,40,12,ES_AUTOHSCROLL
+    CONTROL         "&Autodetect",IDC_AUTO,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,245,51,50,10
+    PUSHBUTTON      "&Sum (Area)",IDC_BUTTON_SUM,244,65,51,14,WS_GROUP
+    PUSHBUTTON      "Sum (&File)",IDC_BUTTON_SUM_FILE,244,83,51,14,WS_GROUP
+    PUSHBUTTON      "&Link",IDC_BUTTON_LINK,244,101,51,14
+    PUSHBUTTON      "&Unlink",IDC_BUTTON_UNLINK,244,119,51,14
+    PUSHBUTTON      "&Relink",IDC_BUTTON_RELINK,244,137,51,14
+    DEFPUSHBUTTON   "OK",IDOK,243,6,51,14
+    PUSHBUTTON      "Cancel",IDCANCEL,243,24,51,14
+    LTEXT           "&/ Sum",IDC_STATIC,69,123,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_SUM,96,120,42,12,ES_AUTOHSCROLL
+    LTEXT           "Word",IDC_STATIC,69,138,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_2BYTES,96,135,42,12,ES_AUTOHSCROLL
+    LTEXT           "Sum",IDC_STATIC,159,123,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_SUM2,186,120,42,12,ES_AUTOHSCROLL
+    RTEXT           "Link16:",IDC_STATIC,7,226,24,8
+    LTEXT           "None",IDC_LINK16,37,226,258,8
+    RTEXT           "Link32:",IDC_STATIC,7,238,24,8
+    LTEXT           "None",IDC_LINK32,37,238,258,8
+END
+
+IDD_R_SEPARATOR DIALOG DISCARDABLE  0, 0, 302, 50
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Separator"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Comment",IDC_STATIC,7,13,30,8
+    EDITTEXT        IDC_COMMENT,7,24,220,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,245,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,245,24,50,14
+END
+
+IDD_R_MEMORY DIALOGEX 0, 0, 302, 225
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Memory record"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "&Name",IDC_STATIC,15,6,20,8
+    EDITTEXT        IDC_NAME,9,15,224,12,ES_AUTOHSCROLL
+    LTEXT           "&Comment",IDC_STATIC,12,33,30,8
+    EDITTEXT        IDC_COMMENT,9,42,224,12,ES_AUTOHSCROLL
+    GROUPBOX        "Find &Method",IDC_STATIC,6,60,188,78
+    COMBOBOX        IDC_METHOD,17,73,71,84,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Offset",IDC_STATIC,93,76,42,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_OFFSET,138,73,42,12,ES_AUTOHSCROLL
+    LTEXT           "Segment",IDC_STATIC,93,91,42,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_SEGMENT,138,88,42,12,ES_AUTOHSCROLL
+    LTEXT           "Len",IDC_STATIC,93,106,42,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_LEN,138,103,42,12,ES_AUTOHSCROLL
+    LTEXT           "Byte",IDC_STATIC,36,121,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_BYTE,64,118,23,12,ES_AUTOHSCROLL
+    LTEXT           "&/ Sum",IDC_STATIC,93,121,42,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_SUM,138,118,42,12,ES_AUTOHSCROLL
+    GROUPBOX        "Cure &Data",IDC_STATIC,6,144,229,46
+    RTEXT           "Offset",IDC_STATIC,13,159,30,8
+    EDITTEXT        IDC_OFF2,45,156,40,12,ES_AUTOHSCROLL
+    RTEXT           "Length",IDC_STATIC,12,174,30,8
+    EDITTEXT        IDC_LEN2,45,171,40,12,ES_AUTOHSCROLL
+    RTEXT           "Bytes",IDC_STATIC,89,159,32,8
+    EDITTEXT        IDC_REPLACE,124,157,99,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Sum",IDC_BUTTON_SUM,244,65,51,14,WS_GROUP
+    PUSHBUTTON      "&Link",IDC_BUTTON_LINK,244,83,51,14
+    PUSHBUTTON      "&Unlink",IDC_BUTTON_UNLINK,244,101,51,14
+    PUSHBUTTON      "&Relink",IDC_BUTTON_RELINK,244,119,51,14
+    DEFPUSHBUTTON   "OK",IDOK,243,6,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,243,24,50,14
+    RTEXT           "Link16:",IDC_STATIC,8,197,24,8
+    LTEXT           "None",IDC_LINK16,38,197,258,8
+    RTEXT           "Link32:",IDC_STATIC,8,210,24,8
+    LTEXT           "None",IDC_LINK32,38,210,258,8
+END
+
+IDD_R_CA DIALOGEX 0, 0, 302, 191
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Code Analyzer record"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Name",IDC_STATIC,12,6,20,8
+    EDITTEXT        IDC_NAME,9,15,226,12,ES_AUTOHSCROLL
+    LTEXT           "&Comment",IDC_STATIC,12,33,30,8
+    EDITTEXT        IDC_COMMENT,9,42,226,12,ES_AUTOHSCROLL
+    GROUPBOX        "&Type",IDC_STATIC,7,60,50,93
+    CONTROL         "COM",IDC_COM,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,15,73,34,10
+    CONTROL         "EXE",IDC_EXE,"Button",BS_AUTOCHECKBOX,15,84,34,10
+    CONTROL         "SYS",IDC_SYS,"Button",BS_AUTOCHECKBOX,15,95,34,10
+    CONTROL         "NE",IDC_NE,"Button",BS_AUTOCHECKBOX,15,106,34,10
+    CONTROL         "OLE2",IDC_OLE2,"Button",BS_AUTOCHECKBOX,15,117,34,10
+    CONTROL         "Script",IDC_SCRIPT,"Button",BS_AUTOCHECKBOX,15,128,34,
+                    10
+    CONTROL         "HLP",IDC_HLP,"Button",BS_AUTOCHECKBOX,15,139,30,10
+    CONTROL         "False &Alarm",IDC_FALSEALARM,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,9,153,51,10
+    GROUPBOX        "Check Sum &1",IDC_STATIC,63,60,84,96,WS_GROUP
+    LTEXT           "Area",IDC_STATIC,69,75,24,8,0,WS_EX_RIGHT
+    COMBOBOX        IDC_PAGE1,96,72,42,75,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Len",IDC_STATIC,69,93,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_LEN1,96,90,42,12,ES_AUTOHSCROLL
+    LTEXT           "Offset",IDC_STATIC,69,108,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_OFF1,96,105,42,12,ES_AUTOHSCROLL
+    GROUPBOX        "Check Sum &2",IDC_SECOND,153,60,84,96,WS_GROUP
+    LTEXT           "Area",IDC_STATIC,159,75,24,8,0,WS_EX_RIGHT
+    COMBOBOX        IDC_PAGE2,186,72,42,75,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Len",IDC_STATIC,159,93,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_LEN2,186,90,42,12,ES_AUTOHSCROLL
+    LTEXT           "Offset",IDC_STATIC,159,108,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_OFF2,186,105,42,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Sum (Area)",IDC_BUTTON_SUM,244,65,51,14,WS_GROUP
+    PUSHBUTTON      "Sum (&File)",IDC_BUTTON_SUM_FILE,244,83,51,14,WS_GROUP
+    PUSHBUTTON      "&Link",IDC_BUTTON_LINK,244,101,51,14
+    PUSHBUTTON      "&Unlink",IDC_BUTTON_UNLINK,244,119,51,14
+    PUSHBUTTON      "&Relink",IDC_BUTTON_RELINK,244,137,51,14
+    DEFPUSHBUTTON   "OK",IDOK,244,6,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,244,24,50,14
+    LTEXT           "&/ Sum",IDC_STATIC,69,123,24,8,NOT WS_GROUP,WS_EX_RIGHT
+    EDITTEXT        IDC_SUM,96,120,42,12,ES_AUTOHSCROLL
+    LTEXT           "Word",IDC_STATIC,69,138,24,8,NOT WS_GROUP,WS_EX_RIGHT
+    EDITTEXT        IDC_2BYTES,96,135,42,12,ES_AUTOHSCROLL
+    LTEXT           "Sum",IDC_STATIC,159,123,24,8,NOT WS_GROUP,WS_EX_RIGHT
+    EDITTEXT        IDC_SUM2,186,120,42,12,ES_AUTOHSCROLL
+    RTEXT           "Link16:",IDC_STATIC,7,164,24,8
+    LTEXT           "None",IDC_LINK16,37,164,253,8
+    RTEXT           "Link32:",IDC_STATIC,7,177,24,8
+    LTEXT           "None",IDC_LINK32,37,177,253,8
+END
+
+IDD_R_UNPACK DIALOGEX 0, 0, 301, 191
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Unpack record"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Name",IDC_STATIC,12,6,20,8
+    EDITTEXT        IDC_NAME,9,15,225,12,ES_AUTOHSCROLL
+    LTEXT           "&Comment",IDC_STATIC,12,33,30,8
+    EDITTEXT        IDC_COMMENT,9,42,225,12,ES_AUTOHSCROLL
+    GROUPBOX        "&Type",IDC_STATIC,6,60,51,96
+    CONTROL         "COM",IDC_COM,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,15,73,34,10
+    CONTROL         "EXE",IDC_EXE,"Button",BS_AUTOCHECKBOX,15,84,34,10
+    CONTROL         "SYS",IDC_SYS,"Button",BS_AUTOCHECKBOX,15,95,34,10
+    CONTROL         "NE",IDC_NE,"Button",BS_AUTOCHECKBOX,15,106,34,10
+    CONTROL         "OLE2",IDC_OLE2,"Button",BS_AUTOCHECKBOX,15,117,34,10
+    CONTROL         "Script",IDC_SCRIPT,"Button",BS_AUTOCHECKBOX,15,128,34,
+                    10
+    CONTROL         "HLP",IDC_HLP,"Button",BS_AUTOCHECKBOX,15,139,30,10
+    GROUPBOX        "Check Sum &1",IDC_STATIC,63,60,84,96,WS_GROUP
+    LTEXT           "Area",IDC_STATIC,69,75,24,8,0,WS_EX_RIGHT
+    COMBOBOX        IDC_PAGE1,96,72,42,75,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Len",IDC_STATIC,69,93,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_LEN1,96,90,42,12,ES_AUTOHSCROLL
+    LTEXT           "Offset",IDC_STATIC,69,108,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_OFF1,96,105,42,12,ES_AUTOHSCROLL
+    GROUPBOX        "Check Sum &2",IDC_STATIC,153,60,84,96,WS_GROUP
+    LTEXT           "Area",IDC_STATIC,159,75,24,8,0,WS_EX_RIGHT
+    COMBOBOX        IDC_PAGE2,186,72,42,75,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Len",IDC_STATIC,159,93,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_LEN2,186,90,42,12,ES_AUTOHSCROLL
+    LTEXT           "Offset",IDC_STATIC,159,108,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_OFF2,186,105,42,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Sum (Area)",IDC_BUTTON_SUM,244,65,51,14,WS_GROUP
+    PUSHBUTTON      "Sum (&File)",IDC_BUTTON_SUM_FILE,244,83,51,14,WS_GROUP
+    PUSHBUTTON      "&Link",IDC_BUTTON_LINK,244,101,51,14
+    PUSHBUTTON      "&Unlink",IDC_BUTTON_UNLINK,244,119,51,14
+    PUSHBUTTON      "&Relink",IDC_BUTTON_RELINK,244,137,51,14
+    DEFPUSHBUTTON   "OK",IDOK,243,6,51,14
+    PUSHBUTTON      "Cancel",IDCANCEL,243,24,51,14
+    LTEXT           "&/ Sum",IDC_STATIC,69,123,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_SUM,96,120,42,12,ES_AUTOHSCROLL
+    LTEXT           "Word",IDC_STATIC,69,138,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_2BYTES,96,135,42,12,ES_AUTOHSCROLL
+    LTEXT           "Sum",IDC_STATIC,159,123,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_SUM2,186,120,42,12,ES_AUTOHSCROLL
+    RTEXT           "Link16:",IDC_STATIC,8,165,24,8
+    LTEXT           "None",IDC_LINK16,38,165,258,8
+    RTEXT           "Link32:",IDC_STATIC,8,177,24,8
+    LTEXT           "None",IDC_LINK32,38,177,258,8
+END
+
+IDD_R_EXTRACT DIALOGEX 0, 0, 302, 191
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Extract record"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Name",IDC_STATIC,12,6,20,8
+    EDITTEXT        IDC_NAME,9,15,226,12,ES_AUTOHSCROLL
+    LTEXT           "&Comment",IDC_STATIC,12,33,30,8
+    EDITTEXT        IDC_COMMENT,9,42,226,12,ES_AUTOHSCROLL
+    GROUPBOX        "&Type",IDC_STATIC,6,60,51,96
+    CONTROL         "COM",IDC_COM,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,15,73,34,10
+    CONTROL         "EXE",IDC_EXE,"Button",BS_AUTOCHECKBOX,15,84,34,10
+    CONTROL         "SYS",IDC_SYS,"Button",BS_AUTOCHECKBOX,15,95,34,10
+    CONTROL         "NE",IDC_NE,"Button",BS_AUTOCHECKBOX,15,106,34,10
+    CONTROL         "OLE2",IDC_OLE2,"Button",BS_AUTOCHECKBOX,15,117,34,10
+    CONTROL         "Script",IDC_SCRIPT,"Button",BS_AUTOCHECKBOX,15,128,34,
+                    10
+    CONTROL         "HLP",IDC_HLP,"Button",BS_AUTOCHECKBOX,15,139,30,10
+    GROUPBOX        "Check Sum &1",IDC_STATIC,63,60,84,96,WS_GROUP
+    LTEXT           "Area",IDC_STATIC,69,75,24,8,0,WS_EX_RIGHT
+    COMBOBOX        IDC_PAGE1,96,72,42,75,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Len",IDC_STATIC,69,93,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_LEN1,96,90,42,12,ES_AUTOHSCROLL
+    LTEXT           "Offset",IDC_STATIC,69,108,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_OFF1,96,105,42,12,ES_AUTOHSCROLL
+    GROUPBOX        "Check Sum &2",IDC_STATIC,153,60,84,96,WS_GROUP
+    LTEXT           "Area",IDC_STATIC,159,75,24,8,0,WS_EX_RIGHT
+    COMBOBOX        IDC_PAGE2,186,72,42,75,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Len",IDC_STATIC,159,93,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_LEN2,186,90,42,12,ES_AUTOHSCROLL
+    LTEXT           "Offset",IDC_STATIC,159,108,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_OFF2,186,105,42,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Sum (Area)",IDC_BUTTON_SUM,244,65,51,14,WS_GROUP
+    PUSHBUTTON      "Sum (&File)",IDC_BUTTON_SUM_FILE,244,83,51,14,WS_GROUP
+    PUSHBUTTON      "&Link",IDC_BUTTON_LINK,244,101,51,14
+    PUSHBUTTON      "&Unlink",IDC_BUTTON_UNLINK,244,119,51,14
+    PUSHBUTTON      "&Relink",IDC_BUTTON_RELINK,244,137,51,14
+    DEFPUSHBUTTON   "OK",IDOK,244,6,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,244,24,50,14
+    LTEXT           "&/ Sum",IDC_STATIC,69,123,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_SUM,96,120,42,12,ES_AUTOHSCROLL
+    LTEXT           "Word",IDC_STATIC,69,138,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_2BYTES,96,135,42,12,ES_AUTOHSCROLL
+    LTEXT           "Sum",IDC_STATIC,159,123,24,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_SUM2,186,120,42,12,ES_AUTOHSCROLL
+    RTEXT           "Link16:",IDC_STATIC,8,165,24,8
+    LTEXT           "None",IDC_LINK16,38,165,258,8
+    RTEXT           "Link32:",IDC_STATIC,8,177,24,8
+    LTEXT           "None",IDC_LINK32,38,177,258,8
+END
+
+IDD_SUM DIALOG DISCARDABLE  0, 0, 286, 65
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Sum calculation"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Area &1:",IDC_STATIC,9,12,24,8
+    EDITTEXT        IDC_AREA1,36,9,168,12,ES_AUTOHSCROLL | WS_DISABLED
+    RTEXT           "Area &2:",IDC_STATIC,9,30,24,8
+    EDITTEXT        IDC_AREA2,36,27,168,12,ES_AUTOHSCROLL | WS_DISABLED
+    DEFPUSHBUTTON   "O&K && Calculate",IDOK,216,6,63,14
+    PUSHBUTTON      "Cancel",IDCANCEL,216,24,63,14
+    PUSHBUTTON      "&Auto Fill",IDC_AUTOFILL,216,42,63,14
+END
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 229, 114
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Avp Editor"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "AVP Editor",IDC_PRODUCTNAME,7,7,215,10,SS_NOPREFIX
+    LTEXT           "Copyright",IDC_COPYRIGHT,7,72,215,19
+    DEFPUSHBUTTON   "OK",IDOK,170,93,52,14,WS_GROUP
+    CTEXT           "version 1.09",IDC_VERSION,7,20,215,10,SS_NOPREFIX
+    LTEXT           "Support: Alexey de Mont de Rique  [mailto:graf@avp.ru]",
+                    IDC_STATIC,7,56,215,12
+    CONTROL         153,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,7,
+                    94,71,14
+END
+
+IDD_SCANDIALOG DIALOGEX 100, 50, 482, 268
+STYLE DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_THICKFRAME
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Scan"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    RTEXT           "Pa&th:",IDC_STATIC,7,7,20,9
+    EDITTEXT        IDC_PATH,29,5,236,12,ES_AUTOHSCROLL
+    CONTROL         "&Report only",IDC_DISINFECT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,28,23,60,10
+    CONTROL         "&Disinfect",IDC_DISINFECT2,"Button",BS_AUTORADIOBUTTON,
+                    28,36,60,10
+    CONTROL         "De&lete",IDC_DISINFECT3,"Button",BS_AUTORADIOBUTTON,28,
+                    49,60,10
+    CONTROL         "All &Warnings",IDC_ALL_WARNINGS,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,93,23,60,10
+    CONTROL         "All &Entry",IDC_ALL_ENTRY,"Button",BS_AUTOCHECKBOX,93,
+                    36,60,10
+    CONTROL         "Rec&urse dirs",IDC_RECURSE,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,159,23,60,10
+    CONTROL         "&Code Analyzer",IDC_CA,"Button",BS_AUTOCHECKBOX,159,36,
+                    60,10
+    CONTROL         "Redunda&nt",IDC_REDUNDANT,"Button",BS_AUTOCHECKBOX,159,
+                    49,60,10
+    CONTROL         "Pac&ked",IDC_PACKED,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,226,23,47,10
+    CONTROL         "Arc&hived",IDC_ARCHIVED,"Button",BS_AUTOCHECKBOX,226,36,
+                    47,10
+    CONTROL         "&Mail",IDC_MAIL,"Button",BS_AUTOCHECKBOX,226,49,47,10
+    GROUPBOX        "Sa&ve",IDC_STATIC,282,3,129,59
+    CONTROL         "&Pages",IDC_SAVEPAGES,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,292,17,50,10
+    CONTROL         "P&acked",IDC_SAVE_PACKED,"Button",BS_AUTOCHECKBOX,292,
+                    31,46,10
+    CONTROL         "Arch&ived",IDC_SAVE_ARCHIVED,"Button",BS_AUTOCHECKBOX,
+                    292,44,46,10
+    LTEXT           "T&o:",IDC_STATIC,343,18,18,10
+    EDITTEXT        IDC_PATH_SAVE,342,31,60,12,ES_AUTOHSCROLL | WS_GROUP
+    DEFPUSHBUTTON   "&Scan",IDC_SCAN,425,3,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,425,22,50,14
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,7,68,468,193
+END
+
+IDD_FIND DIALOG DISCARDABLE  0, 0, 186, 50
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Find"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_STRING,11,7,107,14,ES_AUTOHSCROLL
+    CONTROL         "Match &case",IDC_CASE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,27,104,10
+    DEFPUSHBUTTON   "&Find Next",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+END
+
+IDD_OPTIONS DIALOG DISCARDABLE  0, 0, 301, 215
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Set file",IDC_STATIC,34,9,22,8
+    EDITTEXT        IDC_SETFILE,57,7,195,12,ES_AUTOHSCROLL
+    CONTROL         "Save &Backup files",IDC_SAVEBACKUP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,57,34,135,10
+    CONTROL         "&ESC as Save record confirmation",IDC_SAVEREC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,57,48,135,10
+    CONTROL         "&Link change confirmation",IDC_LINKCONF,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,57,62,135,10
+    CONTROL         "&Show source filename in link",IDC_SHOWSOURCE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,57,76,135,10
+    LTEXT           "Separator line",IDC_STATIC,10,180,44,8
+    EDITTEXT        IDC_SEPLINE,57,178,125,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,244,176,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,244,194,50,14
+    CONTROL         "&Always skip PAG and TMP files",IDC_SKIP_PAG,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,57,90,135,10
+    RTEXT           "Font",IDC_STATIC,15,151,40,8
+    EDITTEXT        IDC_FONT_NAME,57,150,138,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FONT_SIZE,205,150,40,12,ES_AUTOHSCROLL
+    CONTROL         "Add &record name",IDC_MAKE_FULL_NAME,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,57,104,135,10
+END
+
+IDD_OFFSET DIALOG DISCARDABLE  0, 0, 186, 73
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Control Sum"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT1,21,38,59,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,129,36,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,53,50,14
+    LTEXT           "AVPEdit can't make PAGE_C in edit mode.\nSpecify File offset for specific code:",
+                    IDC_STATIC,9,4,167,23
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_INSERT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 168
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 139
+    END
+
+    IDD_R_KERNEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 294
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_R_JUMP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 295
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 256
+    END
+
+    IDD_R_SECTOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 350
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 272
+    END
+
+    IDD_R_FILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 295
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 245
+    END
+
+    IDD_R_SEPARATOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 295
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 43
+    END
+
+    IDD_R_MEMORY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 295
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 218
+    END
+
+    IDD_R_CA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 295
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+    END
+
+    IDD_R_UNPACK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 294
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+    END
+
+    IDD_R_EXTRACT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 295
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+    END
+
+    IDD_SUM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 279
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_SCANDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 475
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 261
+    END
+
+    IDD_FIND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 43
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 294
+        VERTGUIDE, 57
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 208
+    END
+
+    IDD_OFFSET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 66
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_R_FILE DLGINIT
+BEGIN
+    IDC_PAGE1, 0x403, 7, 0
+0x6548, 0x6461, 0x7265, "\000" 
+    IDC_PAGE1, 0x403, 7, 0
+0x6150, 0x6567, 0x4120, "\000" 
+    IDC_PAGE1, 0x403, 7, 0
+0x6150, 0x6567, 0x4220, "\000" 
+    IDC_PAGE1, 0x403, 7, 0
+0x6150, 0x6567, 0x4320, "\000" 
+    IDC_PAGE1, 0x403, 4, 0
+0x4f45, 0x0046, 
+    IDC_PAGE2, 0x403, 7, 0
+0x6548, 0x6461, 0x7265, "\000" 
+    IDC_PAGE2, 0x403, 7, 0
+0x6150, 0x6567, 0x4120, "\000" 
+    IDC_PAGE2, 0x403, 7, 0
+0x6150, 0x6567, 0x4220, "\000" 
+    IDC_PAGE2, 0x403, 7, 0
+0x6150, 0x6567, 0x4320, "\000" 
+    IDC_PAGE2, 0x403, 4, 0
+0x4f45, 0x0046, 
+    IDC_PAGE_C, 0x403, 7, 0
+0x6548, 0x6461, 0x7265, "\000" 
+    IDC_PAGE_C, 0x403, 7, 0
+0x6150, 0x6567, 0x4120, "\000" 
+    IDC_PAGE_C, 0x403, 7, 0
+0x6150, 0x6567, 0x4220, "\000" 
+    IDC_PAGE_C, 0x403, 7, 0
+0x6150, 0x6567, 0x4320, "\000" 
+    IDC_PAGE_C, 0x403, 4, 0
+0x4f45, 0x0046, 
+    IDC_PAGE_C, 0x403, 3, 0
+0x5045, "\000" 
+    0
+END
+
+IDD_R_SECTOR DLGINIT
+BEGIN
+    IDC_PAGE1, 0x403, 7, 0
+0x6548, 0x6461, 0x7265, "\000" 
+    IDC_PAGE1, 0x403, 7, 0
+0x6150, 0x6567, 0x4120, "\000" 
+    IDC_PAGE1, 0x403, 7, 0
+0x6150, 0x6567, 0x4220, "\000" 
+    IDC_PAGE1, 0x403, 7, 0
+0x6150, 0x6567, 0x4320, "\000" 
+    IDC_PAGE2, 0x403, 7, 0
+0x6548, 0x6461, 0x7265, "\000" 
+    IDC_PAGE2, 0x403, 7, 0
+0x6150, 0x6567, 0x4120, "\000" 
+    IDC_PAGE2, 0x403, 7, 0
+0x6150, 0x6567, 0x4220, "\000" 
+    IDC_PAGE2, 0x403, 7, 0
+0x6150, 0x6567, 0x4320, "\000" 
+    IDC_PAGE_C1, 0x403, 7, 0
+0x6548, 0x6461, 0x7265, "\000" 
+    IDC_PAGE_C1, 0x403, 7, 0
+0x6150, 0x6567, 0x4120, "\000" 
+    IDC_PAGE_C1, 0x403, 7, 0
+0x6150, 0x6567, 0x4220, "\000" 
+    IDC_PAGE_C1, 0x403, 7, 0
+0x6150, 0x6567, 0x4320, "\000" 
+    IDC_PAGE_C2, 0x403, 7, 0
+0x6548, 0x6461, 0x7265, "\000" 
+    IDC_PAGE_C2, 0x403, 7, 0
+0x6150, 0x6567, 0x4120, "\000" 
+    IDC_PAGE_C2, 0x403, 7, 0
+0x6150, 0x6567, 0x4220, "\000" 
+    IDC_PAGE_C2, 0x403, 7, 0
+0x6150, 0x6567, 0x4320, "\000" 
+    0
+END
+
+IDD_R_CA DLGINIT
+BEGIN
+    IDC_PAGE1, 0x403, 7, 0
+0x6548, 0x6461, 0x7265, "\000" 
+    IDC_PAGE1, 0x403, 7, 0
+0x6150, 0x6567, 0x4120, "\000" 
+    IDC_PAGE1, 0x403, 7, 0
+0x6150, 0x6567, 0x4220, "\000" 
+    IDC_PAGE1, 0x403, 7, 0
+0x6150, 0x6567, 0x4320, "\000" 
+    IDC_PAGE1, 0x403, 4, 0
+0x4f45, 0x0046, 
+    IDC_PAGE2, 0x403, 7, 0
+0x6548, 0x6461, 0x7265, "\000" 
+    IDC_PAGE2, 0x403, 7, 0
+0x6150, 0x6567, 0x4120, "\000" 
+    IDC_PAGE2, 0x403, 7, 0
+0x6150, 0x6567, 0x4220, "\000" 
+    IDC_PAGE2, 0x403, 7, 0
+0x6150, 0x6567, 0x4320, "\000" 
+    IDC_PAGE2, 0x403, 4, 0
+0x4f45, 0x0046, 
+    0
+END
+
+IDD_R_UNPACK DLGINIT
+BEGIN
+    IDC_PAGE1, 0x403, 7, 0
+0x6548, 0x6461, 0x7265, "\000" 
+    IDC_PAGE1, 0x403, 7, 0
+0x6150, 0x6567, 0x4120, "\000" 
+    IDC_PAGE1, 0x403, 7, 0
+0x6150, 0x6567, 0x4220, "\000" 
+    IDC_PAGE1, 0x403, 7, 0
+0x6150, 0x6567, 0x4320, "\000" 
+    IDC_PAGE1, 0x403, 4, 0
+0x4f45, 0x0046, 
+    IDC_PAGE2, 0x403, 7, 0
+0x6548, 0x6461, 0x7265, "\000" 
+    IDC_PAGE2, 0x403, 7, 0
+0x6150, 0x6567, 0x4120, "\000" 
+    IDC_PAGE2, 0x403, 7, 0
+0x6150, 0x6567, 0x4220, "\000" 
+    IDC_PAGE2, 0x403, 7, 0
+0x6150, 0x6567, 0x4320, "\000" 
+    IDC_PAGE2, 0x403, 4, 0
+0x4f45, 0x0046, 
+    0
+END
+
+IDD_R_EXTRACT DLGINIT
+BEGIN
+    IDC_PAGE1, 0x403, 7, 0
+0x6548, 0x6461, 0x7265, "\000" 
+    IDC_PAGE1, 0x403, 7, 0
+0x6150, 0x6567, 0x4120, "\000" 
+    IDC_PAGE1, 0x403, 7, 0
+0x6150, 0x6567, 0x4220, "\000" 
+    IDC_PAGE1, 0x403, 7, 0
+0x6150, 0x6567, 0x4320, "\000" 
+    IDC_PAGE1, 0x403, 4, 0
+0x4f45, 0x0046, 
+    IDC_PAGE2, 0x403, 7, 0
+0x6548, 0x6461, 0x7265, "\000" 
+    IDC_PAGE2, 0x403, 7, 0
+0x6150, 0x6567, 0x4120, "\000" 
+    IDC_PAGE2, 0x403, 7, 0
+0x6150, 0x6567, 0x4220, "\000" 
+    IDC_PAGE2, 0x403, 7, 0
+0x6150, 0x6567, 0x4320, "\000" 
+    IDC_PAGE2, 0x403, 4, 0
+0x4f45, 0x0046, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_KL                  BITMAP  DISCARDABLE     "..\\..\\CommonFiles\\Res\\kl89x21.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Avp Editor"
+    IDR_AVPEDTYPE           "\nAvpEdit\nAvpEdit\nAVP Editable Base (*.ave)\n.ave\nAvpEdit.EBase\nAVP Antiviral Database"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "AvpEdit"
+    AFX_IDS_IDLEMESSAGE     "For Help, press F1"
+    AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP_INDEX           "Opens Help\nHelp Topics"
+    ID_HELP_FINDER          "List Help topics\nHelp Topics"
+    ID_HELP_USING           "Display instructions about how to use help\nHelp"
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows\nHelp"
+    ID_HELP                 "Display help for current task or command\nHelp"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+    BUTTON      ID_CONTEXT_HELP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "&Reload Bases\tCtrl+F12",     ID_FILE_RELOADBASES
+        MENUITEM "Scan &directory\tF9",         ID_FILE_SCANDIRECTORY
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Options",                    ID_VIEW_OPTIONS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About AvpEdit...",           ID_APP_ABOUT
+    END
+END
+
+IDR_AVPEDTYPE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close\tCtrl+F4",             ID_FILE_CLOSE
+        MENUITEM "&Save\tF2",                   ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM "Save && &Reload Bases\tF12",  ID_FILE_SAVERELOAD
+        MENUITEM SEPARATOR
+        MENUITEM "Pack!\tCtrl+F2",              ID_FILE_PACK
+        MENUITEM SEPARATOR
+        MENUITEM "Scan &directory\tF9",         ID_FILE_SCANDIRECTORY
+        MENUITEM "&Reload Bases\tCtrl+F12",     ID_FILE_RELOADBASES
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Insert record\tIns",         ID_EDIT_INSERTRECORD
+        MENUITEM "&Delete record\tDel",         ID_EDIT_DELETERECORD
+        MENUITEM "&Edit record\tEnter",         ID_EDIT_EDITRECORD
+        MENUITEM SEPARATOR
+        MENUITEM "&Find\tCtrl+F",               ID_EDIT_FIND
+        MENUITEM "Find &Again\tF3",             ID_EDIT_FINDAGAIN
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Options",                    ID_VIEW_OPTIONS
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade\tCtrl+F6",           ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+        MENUITEM SEPARATOR
+        MENUITEM "&Next\tF6",                   ID_WINDOW_NEXT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About AvpEdit...",           ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    VK_F12,         ID_FILE_SAVERELOAD,     VIRTKEY, NOINVERT
+    VK_F12,         ID_FILE_RELOADBASES,    VIRTKEY, CONTROL, NOINVERT
+    VK_F2,          ID_FILE_SAVE,           VIRTKEY, NOINVERT
+    VK_F2,          ID_FILE_PACK,           VIRTKEY, CONTROL, NOINVERT
+    VK_F3,          ID_EDIT_FINDAGAIN,      VIRTKEY, NOINVERT
+    VK_F6,          ID_WINDOW_NEXT,         VIRTKEY, NOINVERT
+    VK_F6,          ID_WINDOW_CASCADE,      VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_WINDOW_PREVIOUS,     VIRTKEY, SHIFT, NOINVERT
+    VK_F9,          ID_FILE_SCANDIRECTORY,  VIRTKEY, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create new Antiviral Base"
+    ID_FILE_OPEN            "Open existing Antiviral Base"
+    ID_FILE_CLOSE           "Close Antiviral Base opened for edit"
+    ID_FILE_SAVE            "Save Antiviral Base"
+    ID_FILE_SAVE_AS         "Save Antiviral Base with different name"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_SAVERELOAD      "Save Antiviral Base and reload bases in scan Engine"
+    ID_EDIT_FINDAGAIN       "Repeat last find command"
+    ID_VIEW_OPTIONS         "Open the Options dialog"
+    IDS_ENTER_PASSWORD      "Enter password:"
+    IDS_REENTER_PASSWORD    "Reenter password:"
+    IDS_ERR_INCORRECT_PASSWORD "Error: Incorrect password."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_INSERTRECORD    "Open insert record dialog"
+    ID_EDIT_DELETERECORD    "Deletes selected records"
+    ID_EDIT_EDITRECORD      "Open focused record for edit"
+    ID_FILE_RELOADBASES     "Reload active Antiviral Base set into scan Engine"
+    ID_FILE_SCANDIRECTORY   "Open Scan directory dialog"
+    ID_FILE_PACK            "Make the packed base for release"
+    ID_WINDOW_NEXT          "Activate next window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_EXIT             "Exit from AvpEdit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_COPY            "Copy selected records to clipboard"
+    ID_EDIT_CUT             "Cut selected records to clipboard"
+    ID_EDIT_FIND            "Open Find dialog"
+    ID_EDIT_PASTE           "Paste records from clipboard"
+    ID_EDIT_UNDO            "Undo last command"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\AvpEdit.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

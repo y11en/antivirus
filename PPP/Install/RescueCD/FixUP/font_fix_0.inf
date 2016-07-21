@@ -1,0 +1,15 @@
+;  font_fix_0.inf
+;  v3 plug-in INF file for Font trouble FIX
+;  FOR PE Builder Created by Victor Baskakov
+
+[Version]
+Signature= "$Windows NT$"
+
+[PEBuilder]
+Name="Font trouble FIX part 1"
+Enable=1
+
+[Software.DelReg];HKLM\SOFTWARE
+"Microsoft\Windows NT\CurrentVersion\Fonts"
+"Microsoft\Windows NT\CurrentVersion\FontMapper"
+"Microsoft\Windows NT\CurrentVersion\FontSubstitutes"

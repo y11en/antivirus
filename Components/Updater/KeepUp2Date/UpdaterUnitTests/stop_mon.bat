@@ -1,0 +1,1 @@
+"H:\Microsoft Visual Studio 8\Team Tools\Performance Tools\vsperfcmd.exe" /shutdown

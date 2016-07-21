@@ -1,0 +1,5 @@
+// ***** AdWare.I2ISolutions.a *****
+begin
+ AddEvAlarmByCLSID('F59AB0C4-3443-4551-A78F-C101F9DE0215', AScriptName, 'launcher.ocx');
+ AddEvAlarmByCLSID('D79B6F43-F214-4e7a-9ECB-CCC8771F2416', AScriptName, 'launcher.ocx');
+end.

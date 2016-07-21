@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?script_executefile.htm"; }
+else { parent.quicksync('a15.35.1'); }
+//-->
+</script>
+   <title>function &nbsp;ExecuteFile</title>
+   <meta name="keywords" content="&#1074;&#1099;&#1087;&#1086;&#1083;&#1085;&#1077;&#1085;&#1080;&#1077; &#1091;&#1082;&#1072;&#1079;&#1072;&#1085;&#1085;&#1086;&#1075;&#1086; &#1092;&#1072;&#1081;&#1083;&#1072;,&#1080;&#1084;&#1103; &#1092;&#1072;&#1081;&#1083;&#1072;,&#1087;&#1072;&#1088;&#1072;&#1084;&#1077;&#1090;&#1088;&#1099;,ExecuteFile">
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+
+
+<body bgcolor="#FFFFFF">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">function&nbsp; ExecuteFile</span></p>
+
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="t_about.htm">Наверх</a>&nbsp;
+     <a href="script_fs_example.htm">Предыдущая</a>&nbsp;
+     <a href="script_refreshprocesslist.htm">Последующая</a>
+     </font><B>|</B>
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=717989"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=717989;t=109;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=18 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=717989"><img
+src="http://top.list.ru/counter?js=na;id=717989;t=109"
+border=0 height=18 width=88
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+    </td>
+  </tr>
+</table>
+<br>
+
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">function</span><span style="font-size: 12pt; font-family: 'Courier New';">  ExecuteFile(FileName, Params : </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">string</span><span style="font-size: 12pt; font-family: 'Courier New';">; </span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mode : integer; WaitTime : integer; Terminate : boolean) : boolean;</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';">&nbsp;</span></p>
+<p>Производит выполнение указанного файла.&nbsp; </p>
+<p>&nbsp;</p>
+<p>FileName - имя файла. В имени файла допустимы макросы, подробнее см. в разделе "<a href="script_filenamemacros.htm">макросы, допустимые в именах файлов</a>". </p>
+<p>&nbsp;</p>
+<p>Params - параметры. При отсутствии параметров передается пустая строка. Параметры так-же допустимо передавать после имени запускаемого файла, отделяя их запятой </p>
+<p>&nbsp;</p>
+<p>Mode - код режима отображения запускаемой программы. Поддерживаются коды:</p>
+<p>0 - запуск приложения с флагом SW_HIDE - при этом окно приложения невидимо для пользователя</p>
+<p>1 - стандартное отображение окна запускаемого приложения</p>
+<p>2 - окно запускаемого приложения минимизировано</p>
+<p>3 - окно запускаемого приложения развернуто на весь экран</p>
+<p>&nbsp;</p>
+<p>WaitTime - время в миллисекундах, в течении которого производится ожидание завершения запущенной программы. Указание нулевого времени приводит к тому, что скрипт продолжает свое выполнение без ожидания&nbsp; завершения запущенной программы. Минимальная задержка - 100 мс, указание меньшей задержки приводит к тому, что она будет установлена на 100 мс. Ожидание завершается по достижению одного из двух событий - исчечению указанного ремени или завершению запущенной программы.</p>
+<p>&nbsp;</p>
+<p>Terminate - принудительное завершение запущенной программы после истечения заданного в WaitTime периода. При WaitTime=0 данный параметр не имеет смысла и игнорируется. Логика работы: если прошло время WaitTime, Terminate=true и приложение еще работает, то оно принудительно завершается.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold; text-decoration: underline;">На заметку:</span></p>
+<p>Если на моент запуска процесса работает AVZGuard, то процесс будет запущен как доверенный процесс и действие AVZGuard на него не будет распространяться.</p>
+<p>&nbsp;</p>
+<p>Примеры:</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">begin</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New';"> ExecuteFile(</span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">'notepad.exe'</span><span style="font-size: 12pt; font-family: 'Courier New';">, </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">''</span><span style="font-size: 12pt; font-family: 'Courier New';">, </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">1</span><span style="font-size: 12pt; font-family: 'Courier New';">, </span><span style="font-size: 12pt; font-family: 'Courier New'; color: #000080;">10000</span><span style="font-size: 12pt; font-family: 'Courier New';">, true);</span></p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">end</span><span style="font-size: 12pt; font-family: 'Courier New';">. </span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=717989;js='+js+a+';rand='+Math.random()+
+'" height=1 width=1/>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=717989"
+height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+
+</body>
+</html>

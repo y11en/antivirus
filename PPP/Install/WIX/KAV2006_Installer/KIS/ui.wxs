@@ -1,0 +1,2779 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<?include "ver.wxi" ?>
+  <?include "$(env.localization_path)\ui_loc.wxi" ?>
+
+  <?define Installation="(NOT Installed)"?>
+	<?define Upgrade="(Installed AND (RESUME OR Preselected))"?>
+	<?define Maintenance="(Installed AND NOT RESUME AND NOT Preselected)"?>
+
+	<?define SettingsFound="(SETTINGSINSTALLED OR SAVEDASBASESINSTALLED OR SAVEDASBASESVER6INSTALLED)"?>
+	<?define NoSettingsFound="(NOT (SETTINGSINSTALLED OR SAVEDASBASESINSTALLED OR SAVEDASBASESVER6INSTALLED))"?>
+
+	<?if $(env.product_type) = KAV ?>
+	<?define NetFeaturesSelected="(&MailAntiVirusFeature = 3 OR &WebAntiVirusFeature = 3)" ?>
+	<?define NoNetFeaturesSelected="(&MailAntiVirusFeature <> 3 AND &WebAntiVirusFeature <> 3)" ?>
+	<?endif?>
+	<?if $(env.product_type) = KIS ?> 
+	<?define NetFeaturesSelected="(&MailAntiVirusFeature = 3 OR  &WebAntiVirusFeature = 3 OR &AntiPhishingFeature = 3 OR &AntiBannerFeature = 3 OR &IntrusionShieldFeature = 3 OR  &FirewallFeature = 3 OR  &AntiSpamFeature = 3 OR &ParentalControlFeature = 3)" ?>
+	<?define NoNetFeaturesSelected="(&MailAntiVirusFeature <> 3 AND &WebAntiVirusFeature <> 3 AND &AntiPhishingFeature <> 3 AND &AntiBannerFeature <> 3 AND &IntrusionShieldFeature <> 3 AND &FirewallFeature <> 3 AND &AntiSpamFeature <> 3 AND &ParentalControlFeature <> 3)" ?>
+	<?endif?>
+	<?if $(env.product_type) = WKS ?>
+	<?define NetFeaturesSelected="(&MailAntiVirusFeature = 3 OR  &WebAntiVirusFeature = 3 OR	  &AntiPhishingFeature = 3 OR &AntiBannerFeature = 3 OR &IntrusionShieldFeature = 3 OR  &FirewallFeature = 3 OR  &AntiSpamFeature = 3)" ?>
+	<?define NoNetFeaturesSelected="(&MailAntiVirusFeature <> 3 AND &WebAntiVirusFeature <> 3 AND &AntiPhishingFeature <> 3 AND &AntiBannerFeature <> 3 AND &IntrusionShieldFeature <> 3 AND &FirewallFeature <> 3 AND &AntiSpamFeature <> 3)" ?>
+  <?endif?>
+
+  <Fragment Id="UIFragmentId">
+
+    <?define MainDlgWidth            	= "370" ?>
+    <?define MainDlgHeight           	= "270" ?>
+
+    <?define MainDlgBannerLineY        	= "44" ?>
+    <?define MainDlgBannerLineWidth    	= "370" ?>
+    <?define MainDlgBottomLineY        	= "236" ?>
+    <?define MainDlgBottomLineWidth    	= "370" ?>
+
+    <?define MainDlgWizardButtonWidth 	= "56" ?>
+    <?define MainDlgWizardButtonHeight 	= "17" ?>
+    <?define MainDlgWizardButtonY 		= "243" ?>
+
+    <?define MainDlgBackButtonX			= "180"?>
+    <?define MainDlgNextButtonX			= "236"?>
+    <?define MainDlgCancelButtonX		= "304"?>
+
+    <?define MainDlgTitleX				= "15" ?>
+    <?define MainDlgTitleY				= "7" ?>
+    <?define MainDlgTitleWidth			= "300" ?>
+    <?define MainDlgTitleHeight			= "15" ?>
+    <?define MainDlgSubtitleX			= "25" ?>
+    <?define MainDlgSubtitleY			= "22" ?>
+    <?define MainDlgSubtitleWidth		= "290" ?>
+    <?define MainDlgSubtitleHeight		= "20" ?>
+
+    <?define MainDlgBannerBitmapX       = "327" ?>
+    <?define MainDlgBannerBitmapY       = "2" ?>
+    <?define MainDlgBannerBitmapW       = "41" ?>
+    <?define MainDlgBannerBitmapH       = "41" ?>
+
+    <?define WizardFullTitle = "$(loc.WizardFullTitle)" ?>
+
+    <UI>
+      <Property Id="ProductName_NOM" Value="$(loc.ProductName_NOM)"/>
+      <Property Id="ProductName_GEN" Value="$(loc.ProductName_GEN)"/>
+      <Property Id="ProductName_INS" Value="$(loc.ProductName_INS)"/>
+
+      <Property Id="ErrorDialog" Value="ErrorDialog" />
+      <Property Id="DefaultUIFont" Value="MainDialogFont" />
+      <TextStyle Id="MainDialogFont" FaceName="Tahoma" Size="8" />
+      <TextStyle Id="PageTitleFont" FaceName="Tahoma" Size="8" Bold="yes" />
+      <TextStyle Id="PageSubtitleFont" FaceName="Tahoma" Size="8" />
+      <TextStyle Id="WelcomePageTitleFont" FaceName="Verdana" Size="10" Bold="yes" />
+      <TextStyle Id="MSSWhiteSerif8" FaceName="Tahoma" Size="8" Blue="255" Green="255" Red="255"/>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="VerifyWindowsXPSP" Width="270" Height="130" Title="Installer Information">
+        <Control Id="ErrorText" Type="Text" X="50" Y="15" Width="200" Height="70" TabSkip="no">
+          <Text>$(loc.IDS_Condition_NeedXPSP2)</Text>
+        </Control>
+        <Control Id="ErrorIcon" Type="Icon" X="15" Y="15" Width="24" Height="24" ToolTip="Exclamation icon"
+					FixedSize="yes" IconSize="32" Text="exclamic" />
+        <Control Id="O" Type="PushButton" X="192" Y="100" Width="66" Height="$(var.MainDlgWizardButtonHeight)"
+					TabSkip="yes" Default="yes">
+          <Text>$(loc.ButtonText_OK)</Text>
+          <Publish Event="EndDialog" Value="Return">1</Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="SystemRestartDlg" Width="260" Height="85" Title="$(var.WizardFullTitle)" NoMinimize="yes">
+        <Control Id="Text" Type="Text" X="48" Y="15" Width="194" Height="30">
+          <Text>$(loc.IDS_SystemRestartDlg_Text)</Text>
+        </Control>
+        <Control Id="A" Type="PushButton" X="132" Y="57" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)">
+          <Text>$(loc.ButtonText_Cancel)</Text>
+          <!--<Publish Event="DoAction"  Value="EnableStartAfterReboot">1</Publish>-->
+          <Publish Event="EndDialog" Value="Exit">1</Publish>
+        </Control>
+        <Control Id="R" Type="PushButton" X="72" Y="57" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)">
+          <Text>$(loc.ButtonText_OK)</Text>
+          <!--<Publish Event="DoAction"  Value="EnableStartAfterReboot">1</Publish>-->
+          <Publish Event="DoAction" Value="SystemRestart"><![CDATA[SystemRestart = 1]]></Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="WelcomeDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)">
+        <Control Id="WelcomeBitmap" Type="Bitmap" X="0" Y="0" Width="123" Height="236" Text="Welcome" />
+        <Control Id="BackgroundBitmap1" Type="Bitmap" X="123" Y="0" Width="247" Height="236" Text="BannerBackground" />
+        <!--<Control Id="BackgroundBitmap2" Type="Bitmap" X="123" Y="190" Width="10" Height="10" Text="BannerBackground" />
+				<Control Id="BackgroundBitmap3" Type="Bitmap" X="143" Y="190" Width="227" Height="10" Text="BannerBackground" />
+				<Control Id="BackgroundBitmap4" Type="Bitmap" X="123" Y="200" Width="247" Height="36" Text="BannerBackground" />-->
+
+        <Control Id="WelcomeTitle" Type="Text" X="133" Y="10" Width="229" Height="50" Transparent="yes">
+          <Text>$(loc.IDS_WelcomeDlg_WelcomeTitle)</Text>
+        </Control>
+        <Control Id="WelcomeText" Type="Text" X="133" Y="60" Width="229" Height="120" Transparent="yes">
+          <Text>$(loc.IDS_WelcomeDlg_WelcomeText)</Text>
+        </Control>
+        <!--<Control Id="WelcomeExpressInstallText" Type="Text" X="148" Y="190" Width="214" Height="20" Transparent="yes">
+					<Text>$(loc.IDS_WelcomeDlg_CheckExpressInstall)</Text>
+				</Control>
+				<Control Id="ExpressInstall" Type="CheckBox" X="133" Y="190" Width="10" Height="10"
+					Property="EXPRESSINSTALL"  Disabled="no" TabSkip="no" CheckBoxValue="1">
+					<Property Id="EXPRESSINSTALL" Secure="yes"/>
+				</Control>-->
+        <!-- bottom line with wizard buttons -->
+        <Control Id="BottomLine" Type="Line" X="0" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Next" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes"
+					Text="$(loc.ButtonText_Next)">
+          <Publish Event="NewDialog" Value="LicenseAgreementDlg">1</Publish>
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes"
+					Text="$(loc.ButtonText_Cancel)">
+          <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="LicenseAgreementDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)">
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_LicenseAgreementDlg_Title)</Text>
+        </Control>
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_LicenseAgreementDlg_Description)</Text>
+        </Control>
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+        <Control Id="Text" Type="Text" X="20" Y="50" Width="330" Height="20">
+          <Text>$(loc.IDS_LicenseAgreementDlg_Text)</Text>
+        </Control>
+        <Control Id="AgreementText" Type="ScrollableText" X="20" Y="80" Width="330" Height="110"
+					Sunken="yes" TabSkip="no">
+          <Text src="$(env.localization_product_path)/license_$(var.ProductStatus).rtf" />
+        </Control>
+        <Control Id="Buttons" Type="RadioButtonGroup" X="20" Y="195" Width="330" Height="40" Property="IAgree">
+          <RadioButtonGroup Property="IAgree">
+            <RadioButton Value="Yes" X="0" Y="0" Width="250" Height="15" Text="$(loc.IDS_LicenseAgreementDlg_ButtonsYes)" />
+            <RadioButton Value="No" X="0" Y="18" Width="250" Height="15" Text="$(loc.IDS_LicenseAgreementDlg_ButtonsNo)" />
+          </RadioButtonGroup>
+        </Control>
+        <!-- bottom line with wizard buttons -->
+        <Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes">
+          <Text>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Back" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Text="$(loc.ButtonText_Back)">
+          <Publish Event="NewDialog" Value="WelcomeDlg">$(var.Installation)</Publish>
+          <Publish Event="NewDialog" Value="ResumeDlg">$(var.Upgrade)</Publish>
+        </Control>
+        <Control Id="Next" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes"
+					Text="$(loc.ButtonText_Next)">
+          <Publish Event="NewDialog" Value="SetupTypeDlg"><![CDATA[1]]></Publish>
+          <Condition Action="disable"><![CDATA[IAgree <> "Yes"]]></Condition>
+          <Condition Action="enable"><![CDATA[IAgree = "Yes"]]></Condition>
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes"
+					Text="$(loc.ButtonText_Cancel)">
+          <Publish Event="SpawnDialog" Value="CancelDlg"><![CDATA[1]]></Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="SetupTypeDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)" NoMinimize="yes">
+        <!-- top banner -->
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_SetupTypeDlg_Title)</Text>
+        </Control>
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_SetupTypeDlg_Description)</Text>
+        </Control>
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+
+        <!--Typical Button-->
+        <Control Id="TypicalLabel" Type="Text" X="105" Y="65" Width="200" Height="10" TabSkip="no">
+          <Text>$(loc.IDS_SetupTypeDlg_TypicalLabel)</Text>
+        </Control>
+        <Control Id="TypicalButton" Type="PushButton" X="50" Y="65" Width="38" Height="38" ToolTip="$(loc.IDS_SetupTypeDlg_TypicalButton)"
+					Icon="yes" FixedSize="yes" IconSize="32" Text="completi">
+          <Publish Property="INSTALLMODE" Value="Typical"><![CDATA[1]]></Publish>
+          <Publish Property="ADDLOCALPROP" Value="ALL"><![CDATA[1]]></Publish>
+          <Publish Property="REMOVEPROP" Value="{}"><![CDATA[1]]></Publish>
+          <Publish Event="DoAction" Value="SetREINSTALLProp"><![CDATA[1]]></Publish>
+          <Publish Event="SetInstallLevel" Value="1000">$(var.Installation)</Publish>
+          <Publish Event="SpawnDialog" Value="OutOfDiskDlg">OutOfDiskSpace = 1</Publish>
+          <Publish Event="[WFWENABLED]" Value="0">1</Publish>
+          <Publish Event="[AVFOUND]" Value="0">1</Publish>
+          <?if not ($(env.product_type) = SOS) ?>
+          <Publish Event="[RTPSELECTED]" Value="1"><![CDATA[&RtpComponentsFeature = 3]]></Publish>
+          <Publish Event="[RTPSELECTED]" Value="0"><![CDATA[&RtpComponentsFeature <> 3]]></Publish>
+          <?endif?>
+          <?ifdef BASE_FEATURES ?>
+          <Publish Event="[NETSELECTED]" Value="1">$(var.NetFeaturesSelected)</Publish>
+          <Publish Event="[NETSELECTED]" Value="0">$(var.NoNetFeaturesSelected)</Publish>
+          <?endif?>
+          <?ifdef ADVANCED_FEATURES ?>
+          <Publish Event="[AHSELECTED]" Value="1"><![CDATA[&FirewallFeature = 3]]></Publish>
+          <Publish Event="[AHSELECTED]" Value="0"><![CDATA[&FirewallFeature <> 3]]></Publish>
+          <Publish Event="[ASSELECTED]" Value="1"><![CDATA[&AntiSpamFeature = 3]]></Publish>
+          <Publish Event="[ASSELECTED]" Value="0"><![CDATA[&AntiSpamFeature <> 3]]></Publish>
+
+          <Publish Event="DoAction" Value="DetectWFW"><![CDATA[&FirewallFeature = 3]]></Publish>
+          <Publish Event="[WFWENABLED]" Value="[WFWENABLED]">1</Publish>
+          <!--<Publish Event="NewDialog" Value="UnloadWFWDlg"><![CDATA[(WFWENABLED = 1)]]> AND <![CDATA[&FirewallFeature = 3]]></Publish>-->
+          <?endif?>
+
+          <!--Find products we can only detect-->
+          <?ifdef ADVANCED_FEATURES ?>
+          <Publish Event="DoAction" Value="SetListCompetitorsSoftwareProp" ><![CDATA[SKIPPRODUCTCHECK <> 1]]></Publish>
+          <Publish Event="DoAction" Value="ListCompetitorsSoftware"><![CDATA[(&FirewallFeature = 3 OR &RtpComponentsFeature = 3 OR &AntiSpamFeature = 3) AND SKIPPRODUCTCHECK <> 1]]> </Publish>
+          <Publish Event="[AVFOUND]" Value="[AVFOUND]">1</Publish>
+          <Publish Event="NewDialog" Value="FoundProductsDlg"><![CDATA[(AVFOUND = 1) AND (&FirewallFeature = 3 OR &RtpComponentsFeature = 3 OR &AntiSpamFeature = 3)]]></Publish>
+          <?elseif ($(env.product_type) = KAV Or $(env.product_type) = FS)?>
+          <Publish Event="DoAction" Value="SetListCompetitorsSoftwareProp" ><![CDATA[SKIPPRODUCTCHECK <> 1]]></Publish>
+          <Publish Event="DoAction" Value="ListCompetitorsSoftware"><![CDATA[&RtpComponentsFeature = 3 AND SKIPPRODUCTCHECK <> 1]]> </Publish>
+          <Publish Event="[AVFOUND]" Value="[AVFOUND]">1</Publish>
+          <Publish Event="NewDialog" Value="FoundProductsDlg"><![CDATA[(AVFOUND = 1) AND (&RtpComponentsFeature = 3)]]></Publish>
+          <?endif?>
+
+          <!--Find products we can remove-->
+          <?if not ($(env.product_type) = SOS) ?>
+          <Publish Event="DoAction" Value="SetListKLSoftwarePropNormal" ><![CDATA[(AVFOUND <> 1) AND SKIPPRODUCTCHECK <> 1 ]]></Publish>
+          <Publish Event="DoAction" Value="ListKLSoftware"><![CDATA[(AVFOUND <> 1) AND SKIPPRODUCTCHECK <> 1]]></Publish>
+          <Publish Event="[KLAVFOUND]" Value="[KLAVFOUND]"><![CDATA[(KLAVFOUND = 1) AND (AVFOUND <> 1)]]></Publish>
+          <Publish Event="NewDialog" Value="FoundKLProductsDlg"><![CDATA[(KLAVFOUND = 1) AND (AVFOUND <> 1)]]></Publish>
+          <?endif?>
+
+          <!--No products found goto last dialog-->
+          <Publish Event="NewDialog" Value="VerifyReadyDlg"><![CDATA[(OutOfDiskSpace <> 1) AND (AVFOUND <> 1) AND (KLAVFOUND <> 1)]]></Publish>
+        </Control>
+        <Control Id="TypicalText" Type="Text" X="105" Y="78" Width="230" Height="30">
+          <Text>$(loc.IDS_SetupTypeDlg_TypicalText)</Text>
+        </Control>
+
+        <!--Custom Button-->
+        <Control Id="CustomLabel" Type="Text" X="105" Y="118" Width="200" Height="10" TabSkip="no">
+          <Text>$(loc.IDS_SetupTypeDlg_CustomLabel)</Text>
+        </Control>
+        <Control Id="CustomButton" Type="PushButton" X="50" Y="118" Width="38" Height="38" ToolTip="$(loc.IDS_SetupTypeDlg_CustomButton)"
+					Icon="yes" FixedSize="yes" IconSize="32" Text="custicon">
+          <Publish Property="INSTALLMODE" Value="Custom"><![CDATA[1]]></Publish>
+          <Publish Event="NewDialog" Value="DestinationFolderDlg">$(var.Installation)</Publish>
+          <Publish Event="NewDialog" Value="CustomizeDlg">$(var.Upgrade)</Publish>
+        </Control>
+        <Control Id="CustomText" Type="Text" X="105" Y="131" Width="230" Height="40">
+          <Text>$(loc.IDS_SetupTypeDlg_CustomText)</Text>
+        </Control>
+
+        <Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes">
+          <Text>$(loc.Branding)</Text>
+        </Control>
+
+        <Control Id="Back" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Text="$(loc.ButtonText_Back)">
+          <Publish Event="NewDialog" Value="LicenseAgreementDlg"><![CDATA[1]]></Publish>
+        </Control>
+        <Control Id="Next" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Disabled="yes"	Text="$(loc.ButtonText_Next)" />
+        <Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes"	Text="$(loc.ButtonText_Cancel)">
+          <Publish Event="SpawnDialog" Value="CancelDlg"><![CDATA[1]]></Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="DestinationFolderDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)" TrackDiskSpace="yes">
+        <!-- top banner -->
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_DestinationFolderDlg_Title)</Text>
+        </Control>
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_DestinationFolderDlg_Description)</Text>
+        </Control>
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+        <!-- main dialog controls -->
+        <Control Id="FolderIcon" Type="Icon" X="20" Y="70" Width="24" Height="24" FixedSize="yes"
+					IconSize="32" Text="desticon" />
+        <Control Id="Text" Type="Text" X="50" Y="70" Width="290" Height="30">
+          <Text>$(loc.IDS_DestinationFolderDlg_Text)</Text>
+        </Control>
+        <Control Id="Box" Type="GroupBox" X="20" Y="177" Width="335" Height="40" Text="$(loc.IDS_DestinationFolderDlg_FolderLabel)" />
+        <!--<Control Id="FolderLabel" Type="Text" X="20" Y="114" Width="348" Height="12" Text="$(loc.IDS_DestinationFolderDlg_FolderLabel)" />-->
+        <!--<Control Id="FolderEdit" Type="Text"  X="25" Y="195" Width="250" Height="10" Property="_BrowseProperty" Text="[INSTALLDIR]" />-->
+        <Control Id="FolderEdit" Type="PathEdit" X="25" Y="191" Width="250" Height="20" Property="INSTALLDIR" />
+
+        <Control Id="Browse" Type="PushButton" X="285" Y="194" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)"  Text="$(loc.ButtonText_Browse)"  Default="no">
+          <Publish Property="_BrowseProperty" Value="INSTALLDIR">1</Publish>
+          <Publish Event="SpawnDialog" Value="BrowseDlg">1</Publish>
+        </Control>
+
+        <!-- bottom line with wizard buttons -->
+        <Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes">
+          <Text>$(loc.Branding)</Text>
+        </Control>
+
+        <!--<Control Id="Reset" Type="PushButton" X="42" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Text="$(loc.ButtonText_Reset)">
+					<Publish Event="Reset" Value="0"><![CDATA[1]]></Publish>
+				</Control>-->
+        <Control Id="DiskCost" Type="PushButton" X="111" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="no">
+          <Text>$(loc.IDS_DestinationFolderDlg_DiskCost)</Text>
+          <Publish Event="SpawnDialog" Value="DiskCostDlg"><![CDATA[1]]></Publish>
+          <Subscribe Event="SelectionNoItems" Attribute="Enabled" />
+        </Control>
+        <Control Id="Back" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Text="$(loc.ButtonText_Back)">
+          <Publish Event="NewDialog" Value="SetupTypeDlg">1</Publish>
+        </Control>
+        <Control Id="Next" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)"  Default="yes"
+					Text="$(loc.ButtonText_Next)">
+          <Publish Event="SetTargetPath" Value="INSTALLDIR">1</Publish>
+          <Publish Event="DoAction" Value="VerifyInstallDir">1</Publish>
+          <Publish Event="[ValidFolder]" Value="[ValidFolder]">1</Publish>
+          <Publish Event="SpawnDialog" Value="VerifyInstallDirErrorDlg">Not ValidFolder</Publish>
+          <Publish Event="NewDialog" Value="CustomizeDlg">ValidFolder</Publish>
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes"
+					Text="$(loc.ButtonText_Cancel)">
+          <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="DiskCostDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)" NoMinimize="yes">
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>{\PageTitleFont}$(loc.IDS_DiskCostDlg_Title)</Text>
+        </Control>
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>{\PageSubtitleFont}$(loc.IDS_DiskCostDlg_Description)</Text>
+        </Control>
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+
+        <Control Id="Text" Type="Text" X="20" Y="53" Width="330" Height="40">
+          <Text>$(loc.IDS_DiskCostDlg_Text)</Text>
+        </Control>
+
+        <Control Id="VolumeList" Type="VolumeCostList" X="20" Y="100" Width="330" Height="120" Sunken="yes"
+					Fixed="yes" Remote="yes">
+          <Text><![CDATA[{120}{70}{70}{70}{70}]]></Text>
+        </Control>
+
+        <Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes">
+          <Text>$(loc.Branding)</Text>
+        </Control>
+
+        <Control Id="OK" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes" Cancel="yes" Text="$(loc.ButtonText_OK)">
+          <Publish Event="EndDialog" Value="Return"><![CDATA[1]]></Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="CustomizeDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)" NoMinimize="yes" TrackDiskSpace="yes">
+        <!-- top banner -->
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_CustomizeDlg_Title)</Text>
+        </Control>
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_CustomizeDlg_Description)</Text>
+        </Control>
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+
+        <Control Id="Tree" Type="SelectionTree" X="12" Y="55" Width="346" Height="100" Property="_BrowseProperty"
+					Sunken="yes" TabSkip="no" Text="$(loc.IDS_CustomizeDlg_Tree)" />
+
+        <Control Id="Box" Type="GroupBox" X="12" Y="158" Width="346" Height="70" />
+        <Control Id="ItemDescription" Type="Text" X="17" Y="165" Width="340" Height="30">
+          <Text>$(loc.IDS_CustomizeDlg_ItemDescription)</Text>
+          <Subscribe Event="SelectionDescription" Attribute="Text" />
+        </Control>
+        <Control Id="ItemSize" Type="Text" X="15" Y="195" Width="270" Height="30">
+          <Text>$(loc.IDS_CustomizeDlg_ItemSize)</Text>
+          <Subscribe Event="SelectionSize" Attribute="Text" />
+        </Control>
+
+        <Control Id="DiskCost" Type="PushButton" X="295" Y="198" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="no">
+          <Text>$(loc.IDS_DestinationFolderDlg_DiskCost)</Text>
+          <Publish Event="SpawnDialog" Value="DiskCostDlg"><![CDATA[1]]></Publish>
+          <Subscribe Event="SelectionNoItems" Attribute="Enabled" />
+        </Control>
+
+        <Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes">
+          <Text>$(loc.Branding)</Text>
+        </Control>
+
+        <Control Id="Help" Type="PushButton" X="12" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Text="$(loc.ButtonText_Help)">
+          <Publish Event="SpawnDialog" Value="CustomSetupTips"><![CDATA[1]]></Publish>
+        </Control>
+        <Control Id="Reset" Type="PushButton" X="90" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Text="$(loc.ButtonText_Reset)">
+          <Publish Event="Reset" Value="0"><![CDATA[1]]></Publish>
+          <Subscribe Event="SelectionNoItems" Attribute="Enabled" />
+        </Control>
+
+        <Control Id="Back" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Text="$(loc.ButtonText_Back)">
+          <Publish Event="SetInstallLevel" Value="1000">$(var.Installation)</Publish>
+          <Publish Event="NewDialog" Value="DestinationFolderDlg">$(var.Installation)</Publish>
+          <Publish Event="NewDialog" Value="SetupTypeDlg">$(var.Upgrade)</Publish>
+          <Publish Event="NewDialog" Value="MaintenanceTypeDlg">$(var.Maintenance)</Publish>
+        </Control>
+        <Control Id="Next" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes"
+					Text="$(loc.ButtonText_Next)">
+          <Publish Event="SpawnDialog" Value="OutOfDiskDlg">OutOfDiskSpace = 1</Publish>
+          <!--<Publish Event="DoAction" Value="SetREINSTALLProp"><![CDATA[1]]></Publish>-->
+          <Publish Event="DoAction" Value="SetFeaturesStateUISetProp"><![CDATA[1]]></Publish>
+          <Publish Event="[WFWENABLED]" Value="0">1</Publish>
+          <Publish Event="[AVFOUND]" Value="0">1</Publish>
+          <?if not ($(env.product_type) = SOS) ?>
+          <Publish Event="[RTPSELECTED]" Value="1"><![CDATA[&RtpComponentsFeature = 3]]></Publish>
+          <Publish Event="[RTPSELECTED]" Value="0"><![CDATA[&RtpComponentsFeature <> 3]]></Publish>
+          <?endif?>
+          <?ifdef BASE_FEATURES ?>
+          <Publish Event="[NETSELECTED]" Value="1">$(var.NetFeaturesSelected)</Publish>
+          <Publish Event="[NETSELECTED]" Value="0">$(var.NoNetFeaturesSelected)</Publish>
+          <?endif?>
+          <?ifdef ADVANCED_FEATURES ?>
+          <Publish Event="[AHSELECTED]" Value="1"><![CDATA[&FirewallFeature = 3]]></Publish>
+          <Publish Event="[AHSELECTED]" Value="0"><![CDATA[&FirewallFeature <> 3]]></Publish>
+          <Publish Event="[ASSELECTED]" Value="1"><![CDATA[&AntiSpamFeature = 3]]></Publish>
+          <Publish Event="[ASSELECTED]" Value="0"><![CDATA[&AntiSpamFeature <> 3]]></Publish>
+          <?endif?>
+          <!--Find products we can only detect-->
+          <?ifdef ADVANCED_FEATURES ?>
+          <Publish Event="DoAction" Value="SetListCompetitorsSoftwareProp" >$(var.Installation) AND <![CDATA[SKIPPRODUCTCHECK <> 1]]></Publish>
+          <Publish Event="DoAction" Value="ListCompetitorsSoftware">$(var.Installation) AND <![CDATA[(&FirewallFeature = 3 OR &RtpComponentsFeature = 3 OR &AntiSpamFeature = 3) AND SKIPPRODUCTCHECK <> 1]]></Publish>
+          <Publish Event="[AVFOUND]" Value="[AVFOUND]">1</Publish>
+          <Publish Event="NewDialog" Value="FoundProductsDlg">$(var.Installation) AND <![CDATA[(AVFOUND = 1) AND (&FirewallFeature = 3 OR &RtpComponentsFeature = 3 OR &AntiSpamFeature = 3)]]></Publish>
+          <?elseif ($(env.product_type) = KAV Or $(env.product_type) = FS) ?>
+          <Publish Event="DoAction" Value="SetListCompetitorsSoftwareProp" >$(var.Installation) AND <![CDATA[SKIPPRODUCTCHECK <> 1]]></Publish>
+          <Publish Event="DoAction" Value="ListCompetitorsSoftware">$(var.Installation) AND <![CDATA[&RtpComponentsFeature = 3 AND SKIPPRODUCTCHECK <> 1]]> </Publish>
+          <Publish Event="[AVFOUND]" Value="[AVFOUND]">1</Publish>
+          <Publish Event="NewDialog" Value="FoundProductsDlg">$(var.Installation) AND <![CDATA[AVFOUND = 1 AND &RtpComponentsFeature = 3]]></Publish>
+          <?endif ?>
+
+          <!--Found previous product settings-->
+          <!--<Publish Event="DoAction" Value="CkeckIDSBaseCompatibility">$(var.Installation) AND (SAVEDAVBASESINSTALLED OR SAVEDIDSBASESINSTALLED)</Publish>-->
+          <Publish Event="NewDialog" Value="FoundSettingsDlg">$(var.Installation) AND $(var.SettingsFound)</Publish>
+
+          <!--Check if Windows Firewall enabled-->
+          <?ifdef ADVANCED_FEATURES ?>
+          <Publish Event="DoAction" Value="DetectWFW"><![CDATA[&FirewallFeature = 3]]></Publish>
+          <Publish Event="[WFWENABLED]" Value="[WFWENABLED]">1</Publish>
+          <Publish Event="NewDialog" Value="UnloadWFWDlg"><![CDATA[(WFWENABLED = 1)]]> AND <![CDATA[&FirewallFeature = 3]]></Publish>
+          <?endif?>
+
+          <!--Find products we can remove-->
+          <?if not ($(env.product_type) = SOS) ?>
+          <Publish Event="DoAction" Value="SetListKLSoftwarePropNormal" ><![CDATA[SKIPPRODUCTCHECK <> 1]]></Publish>
+          <Publish Event="DoAction" Value="ListKLSoftware"><![CDATA[SKIPPRODUCTCHECK <> 1]]></Publish>
+          <Publish Event="[KLAVFOUND]" Value="[KLAVFOUND]"><![CDATA[(KLAVFOUND = 1)]]></Publish>
+          <Publish Event="NewDialog" Value="FoundKLProductsDlg"><![CDATA[(KLAVFOUND = 1)]]></Publish>
+          <?endif?>
+
+          <!--No products found goto last dialog-->
+          <Publish Event="NewDialog" Value="VerifyReadyDlg"><![CDATA[(OutOfDiskSpace <> 1)]]> AND <![CDATA[(AVFOUND <> 1)]]>  AND <![CDATA[(KLAVFOUND <> 1)]]> AND <![CDATA[(WFWENABLED <> 1)]]> AND $(var.NoSettingsFound) AND ($(var.Installation) OR $(var.Upgrade))</Publish>
+          <Publish Event="NewDialog" Value="VerifyReadyDlg"><![CDATA[(OutOfDiskSpace <> 1)]]> AND <![CDATA[(AVFOUND <> 1)]]>  AND <![CDATA[(KLAVFOUND <> 1)]]> AND <![CDATA[(WFWENABLED <> 1)]]> AND $(var.Upgrade)</Publish>
+          <Publish Event="NewDialog" Value="VerifyModifyDlg"><![CDATA[(OutOfDiskSpace <> 1)]]> AND <![CDATA[(AVFOUND <> 1)]]>  AND <![CDATA[(KLAVFOUND <> 1)]]> AND <![CDATA[(WFWENABLED <> 1)]]> AND $(var.Maintenance)</Publish>
+
+          <!--Subscription-->
+          <Subscribe Event="SelectionNoItems" Attribute="Enabled"></Subscribe>
+
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes"
+					Text="$(loc.ButtonText_Cancel)">
+          <Publish Event="SpawnDialog" Value="CancelDlg"><![CDATA[1]]></Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="CustomSetupTips" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)" NoMinimize="yes">
+        <!-- top banner -->
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_CustomizeDlg_Title)</Text>
+        </Control>
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_CustomizeDlg_Description)</Text>
+        </Control>
+        <!--<Control Id="Banner" Type="Bitmap" X="0" Y="0" Width="374" Height="44" Text="NewBinary1" />-->
+        <Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes">
+          <Text>$(loc.Branding)</Text>
+        </Control>
+
+        <Control Id="DontInstall" Type="Icon" X="21" Y="155" Width="24" Height="24" FixedSize="yes"
+					IconSize="32" Text="NewBinary14" />
+        <Control Id="DontInstallText" Type="Text" X="60" Y="155" Width="300" Height="20">
+          <Text>$(loc.IDS_CustomSetupTips_DontInstallText)</Text>
+        </Control>
+        <Control Id="Install" Type="Icon" X="21" Y="105" Width="24" Height="24" FixedSize="yes" IconSize="32"
+					Text="NewBinary15" />
+        <Control Id="InstallStateMenu" Type="Icon" X="21" Y="52" Width="24" Height="24" FixedSize="yes"
+					IconSize="32" Text="NewBinary18" />
+        <Control Id="InstallStateText" Type="Text" X="21" Y="91" Width="300" Height="10">
+          <Text>$(loc.IDS_CustomSetupTips_InstallStateText)</Text>
+        </Control>
+        <Control Id="InstallText" Type="Text" X="60" Y="105" Width="300" Height="20">
+          <Text>$(loc.IDS_CustomSetupTips_InstallText)</Text>
+        </Control>
+        <Control Id="MenuText" Type="Text" X="50" Y="52" Width="300" Height="36">
+          <Text>$(loc.IDS_CustomSetupTips_MenuText)</Text>
+        </Control>
+        <!--<Control Id="InstallFirstUse" Type="Icon" X="21" Y="180" Width="24" Height="24" FixedSize="yes"
+					IconSize="32" Text="NewBinary16" />					
+				<Control Id="FirstInstallText" Type="Text" X="60" Y="180" Width="300" Height="20">
+					<Text>$(loc.IDS_CustomSetupTips_FirstInstallText)</Text>
+				</Control>
+				<Control Id="NetworkInstall" Type="Icon" X="21" Y="205" Width="24" Height="24" FixedSize="yes"
+					IconSize="32" Text="NewBinary13" />
+				<Control Id="NetworkInstallText" Type="Text" X="60" Y="205" Width="300" Height="20">
+					<Text>$(loc.IDS_CustomSetupTips_NetworkInstallText)</Text>
+				</Control>-->
+        <Control Id="InstallPartial" Type="Icon" X="21" Y="130" Width="24" Height="24" FixedSize="yes"
+					IconSize="32" Text="NewBinary17" />
+        <Control Id="PartialText" Type="Text" X="60" Y="130" Width="300" Height="20">
+          <Text>$(loc.IDS_CustomSetupTips_PartialText)</Text>
+        </Control>
+
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+
+        <Control Id="OK" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes" Cancel="yes"
+					Text="$(loc.ButtonText_OK)">
+          <Publish Event="EndDialog" Value="Return"><![CDATA[1]]></Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="OutOfDiskDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)" NoMinimize="yes">
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>{\PageTitleFont}$(loc.IDS_OutOfDiskDlg_Title)</Text>
+        </Control>
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>{\PageSubtitleFont}$(loc.IDS_OutOfDiskDlg_Description)</Text>
+        </Control>
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+
+        <Control Id="Text" Type="Text" X="20" Y="53" Width="330" Height="40">
+          <Text>$(loc.IDS_OutOfDiskDlg_Text)</Text>
+        </Control>
+
+        <Control Id="VolumeList" Type="VolumeCostList" X="20" Y="100" Width="330" Height="120" Sunken="yes"
+					Fixed="yes" Remote="yes">
+          <Text><![CDATA[{120}{70}{70}{70}{70}]]></Text>
+        </Control>
+
+        <Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes">
+          <Text>$(loc.Branding)</Text>
+        </Control>
+
+        <Control Id="OK" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes" Cancel="yes"
+					Text="$(loc.ButtonText_OK)">
+          <Publish Event="EndDialog" Value="Return"><![CDATA[1]]></Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="OutOfRbDiskDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)" NoMinimize="yes">
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>{\PageTitleFont}$(loc.IDS_OutOfRbDiskDlg_Title)</Text>
+        </Control>
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>{\PageSubtitleFont}$(loc.IDS_OutOfRbDiskDlg_Description)</Text>
+        </Control>
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+
+        <Control Id="Text" Type="Text" X="20" Y="53" Width="330" Height="40">
+          <Text>$(loc.IDS_OutOfRbDiskDlg_Text)</Text>
+        </Control>
+
+        <Control Id="VolumeList" Type="VolumeCostList" X="20" Y="140" Width="330" Height="80" Sunken="yes"
+					Fixed="yes" Remote="yes" ShowRollbackCost="yes">
+          <Text><![CDATA[{120}{70}{70}{70}{70}]]></Text>
+        </Control>
+        <Control Id="Text2" Type="Text" X="20" Y="94" Width="330" Height="40">
+          <Text>$(loc.IDS_OutOfRbDiskDlg_Text2)</Text>
+        </Control>
+
+        <Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes">
+          <Text>$(loc.Branding)</Text>
+        </Control>
+
+        <Control Id="No" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes" Cancel="yes"
+					Text="$(loc.ButtonText_No)">
+          <Publish Event="EndDialog" Value="Return"><![CDATA[1]]></Publish>
+        </Control>
+        <Control Id="Yes" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Text="$(loc.ButtonText_Yes)">
+          <Publish Event="EnableRollback" Value="False"><![CDATA[1]]></Publish>
+          <Publish Event="EndDialog" Value="Return"><![CDATA[1]]></Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="FoundProductsDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)" KeepModeless="yes">
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_FoundProductsDlg_Title)</Text>
+        </Control>
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_FoundProductsDlg_Description)</Text>
+        </Control>
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+
+        <!--<Control Id="Buttons" Type="RadioButtonGroup" X="22" Y="185" Width="230" Height="40" Property="RemoveApp">
+					<RadioButtonGroup Property="RemoveApp">
+						<RadioButton Value="Yes" X="5" Y="0" Width="230" Height="20" Text="$(loc.IDS_FoundProductsDlg_ButtonsYes)" />
+						<RadioButton Value="No" X="5" Y="20" Width="230" Height="20" Text="$(loc.IDS_FoundProductsDlg_ButtonsNo)" />
+					</RadioButtonGroup>
+				</Control>-->
+        <Control Id="Text" Type="Text" X="19" Y="49" Width="333" Height="40" TabSkip="no">
+          <Text>$(loc.IDS_FoundProductsDlg_Text)</Text>
+        </Control>
+        <Control Id="List" Type="ListBox" X="19" Y="94" Width="333" Height="80" Property="PRODUCTLIST">
+        </Control>
+
+        <Control Id="ARP" Type="PushButton" X="297" Y="205"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)"
+					Text="$(loc.ButtonText_Remove)">
+          <Publish Event="NewDialog" Value="FoundProductErrorDlg"><![CDATA[1]]></Publish>
+          <!--<<Publish Event="EndDialog" Value="Exit"><![CDATA[1]]></Publish>
+					<Condition Action="disable"><![CDATA[RemoveApp = "Yes"]]></Condition>
+					<Condition Action="enable"><![CDATA[RemoveApp <> "Yes"]]></Condition>-->
+        </Control>
+
+        <Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes">
+          <Text>$(loc.Branding)</Text>
+        </Control>
+
+        <Control Id="Back" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Text="$(loc.ButtonText_Back)">
+          <Publish Event="DoAction" Value="ClearListCompetitorsSoftware">1</Publish>
+          <!--Full Install Mode-->
+          <Publish Event="NewDialog" Value="CustomizeDlg"><![CDATA[WFWENABLED <> 1 AND INSTALLMODE = "Custom"]]></Publish>
+          <!--Express Install Mode-->
+          <Publish Event="NewDialog" Value="SetupTypeDlg"><![CDATA[INSTALLMODE = "Typical"]]></Publish>
+        </Control>
+        <Control Id="Next" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes"
+					Text="$(loc.ButtonText_Next)" Disabled="yes">
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes"
+					Text="$(loc.ButtonText_Cancel)">
+          <Publish Event="SpawnDialog" Value="CancelDlg"><![CDATA[1]]></Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="FoundKLProductsDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)"	Title="$(var.WizardFullTitle)" KeepModeless="yes">
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_FoundProductsDlg_Title)</Text>
+        </Control>
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_FoundProductsDlg_Description)</Text>
+        </Control>
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+
+        <!--<Control Id="Buttons" Type="RadioButtonGroup" X="22" Y="185" Width="230" Height="40" Property="RemoveApp">
+					<RadioButtonGroup Property="RemoveApp">
+						<RadioButton Value="Yes" X="5" Y="0" Width="230" Height="20" Text="$(loc.IDS_FoundProductsDlg_ButtonsYes)" />
+						<RadioButton Value="No" X="5" Y="20" Width="230" Height="20" Text="$(loc.IDS_FoundProductsDlg_ButtonsNo)" />
+					</RadioButtonGroup>
+				</Control>-->
+
+        <Control Id="Text" Type="Text" X="19" Y="49" Width="333" Height="40" TabSkip="no">
+          <Text>$(loc.IDS_FoundProductsDlg_Text)</Text>
+        </Control>
+        <Control Id="Text2" Type="Text" X="19" Y="180" Width="333" Height="10" TabSkip="no">
+          <Text>$(loc.IDS_FoundProductsDlg_Text2)</Text>
+        </Control>
+        <Control Id="List" Type="ListBox" X="19" Y="94" Width="333" Height="80" Property="PRODUCTLIST">
+        </Control>
+
+        <Control Id="ARP" Type="PushButton" X="297" Y="205"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)"
+					Text="$(loc.ButtonText_Remove)">
+          <Publish Event="DoAction" Value="RunARPWizard"><![CDATA[1]]></Publish>
+          <!--<Condition Action="disable"><![CDATA[RemoveApp = "Yes"]]></Condition>
+					<Condition Action="enable"><![CDATA[RemoveApp <> "Yes"]]></Condition>-->
+        </Control>
+
+        <Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes">
+          <Text>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Back" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Text="$(loc.ButtonText_Back)">
+          <!--<Publish Event="DoAction" Value="ClearListCompetitorsSoftware">1</Publish>-->
+          <!--Full Install Mode-->
+          <Publish Event="NewDialog" Value="CustomizeDlg"><![CDATA[INSTALLMODE = "Custom"]]></Publish>
+          <!--Express Install Mode-->
+          <Publish Event="NewDialog" Value="SetupTypeDlg"><![CDATA[INSTALLMODE = "Typical"]]></Publish>
+
+        </Control>
+        <Control Id="Next" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes"
+					Text="$(loc.ButtonText_Next)">
+          <Publish Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+          <!--Found previous product settings-->
+          <!--<Publish Event="DoAction" Value="CkeckIDSBaseCompatibility">(SAVEDAVBASESINSTALLED OR SAVEDIDSBASESINSTALLED)</Publish>-->
+          <Publish Event="NewDialog" Value="FoundSettingsDlg">$(var.SettingsFound)</Publish>
+          <Publish Event="NewDialog" Value="UnloadWFWDlg"><![CDATA[(WFWENABLED = 1)]]></Publish>
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes"
+					Text="$(loc.ButtonText_Cancel)">
+          <Publish Event="SpawnDialog" Value="CancelDlg"><![CDATA[1]]></Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="UnloadWFWDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)" KeepModeless="yes">
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_UnloadWFWDlg_Title)</Text>
+        </Control>
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_UnloadWFWDlg_Description)</Text>
+        </Control>
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+
+        <Control Id="Text" Type="Text" X="19" Y="49" Width="330" Height="40" TabSkip="no">
+          <Text>$(loc.IDS_UnloadWFWDlg_Text)</Text>
+        </Control>
+        <Control Id="Buttons" Type="RadioButtonGroup" X="50" Y="100" Width="300" Height="80" Property="WFWOFF">
+          <RadioButtonGroup Property="WFWOFF">
+            <RadioButton Value="Yes" X="5" Y="0" Width="250" Height="15" Text="$(loc.IDS_UnloadWFWDlg_ButtonsYes)" />
+            <RadioButton Value="No" X="5" Y="60" Width="250" Height="15" Text="$(loc.IDS_UnloadWFWDlg_ButtonsNo)" />
+          </RadioButtonGroup>
+        </Control>
+        <Control Id="Icon1" Type="Icon" X="19" Y="100" Width="24" Height="24" ToolTip="Information icon"
+					FixedSize="yes" IconSize="32" Text="firewalloff" />
+        <Control Id="Icon2" Type="Icon" X="19" Y="160" Width="24" Height="24" ToolTip="Information icon"
+					FixedSize="yes" IconSize="32" Text="firewallonn" />
+        <Control Id="Text1" Type="Text" X="70" Y="115" Width="290" Height="40" TabSkip="no">
+          <Text>$(loc.IDS_UnloadWFWDlg_Text1)</Text>
+        </Control>
+        <Control Id="Text2" Type="Text" X="70" Y="175" Width="290" Height="40" TabSkip="no">
+          <Text>$(loc.IDS_UnloadWFWDlg_Text2)</Text>
+        </Control>
+
+        <Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes">
+          <Text>$(loc.Branding)</Text>
+        </Control>
+
+        <Control Id="Back" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Text="$(loc.ButtonText_Back)">
+          <Publish Event="NewDialog" Value="CustomizeDlg"><![CDATA[1]]></Publish>
+          <Publish Event="NewDialog" Value="FoundKLProductsDlg"><![CDATA[KLAVFOUND = 1]]></Publish>
+        </Control>
+        <Control Id="Next" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes"
+					Text="$(loc.ButtonText_Next)">
+
+          <!--No previous product settings found goto last dialog-->
+          <Publish Event="NewDialog" Value="VerifyReadyDlg">$(var.Upgrade)</Publish>
+          <Publish Event="NewDialog" Value="VerifyReadyDlg">$(var.Installation) AND $(var.NoSettingsFound)</Publish>
+          <Publish Event="NewDialog" Value="VerifyModifyDlg">$(var.Maintenance)</Publish>
+
+          <!--Found previous product settings-->
+          <!--<Publish Event="DoAction" Value="CkeckIDSBaseCompatibility">$(var.Installation) AND (SAVEDAVBASESINSTALLED OR SAVEDIDSBASESINSTALLED)</Publish>-->
+          <Publish Event="NewDialog" Value="FoundSettingsDlg">$(var.Installation) AND $(var.SettingsFound)</Publish>
+
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes"
+					Text="$(loc.ButtonText_Cancel)">
+          <Publish Event="SpawnDialog" Value="CancelDlg"><![CDATA[1]]></Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="FoundSettingsDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)" TrackDiskSpace="yes">
+        <!-- top banner -->
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_FoundSettingsDlg_Title)</Text>
+        </Control>
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_FoundSettingsDlg_Description)</Text>
+        </Control>
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+
+        <!-- main dialog content -->
+        <Control Id="Text" Type="Text" X="25" Y="55" Width="320" Height="40">
+          <Text>$(loc.IDS_FoundSettingsDlg_Text)</Text>
+          <Condition Action="hide">RESUME</Condition>
+          <Condition Action="show">NOT RESUME</Condition>
+        </Control>
+
+        <!--<Control Id="Text3" Type="Text" X="25" Y="100" Width="320" Height="20" Hidden="yes">
+					<Text>$(loc.IDS_VerifyReadyDlg_Text3)</Text>
+					<Condition Action="show">NOT Installed AND (SAVEDVALIDBASESINSTALLED OR SETTINGSINSTALLED OR SAVEDASBASESINSTALLED)</Condition>
+				</Control>-->
+
+        <Control Id="UseSaveSettings" Type="CheckBox" X="25" Y="130" Width="300" Height="10"
+					Property="USESAVEDSETTINGS"  Disabled="yes" TabSkip="no" CheckBoxValue="1">
+          <Text>$(loc.IDS_FoundSettingsDlg_CheckUseSavedSettings)</Text>
+          <Condition Action="enable">$(var.Installation) AND SETTINGSINSTALLED</Condition>
+        </Control>
+        <!--<Control Id="CheckUseSavedAVBases" Type="CheckBox" X="25" Y="145" Width="300" Height="10"
+					Property="USESAVEDAVBASES" Disabled="yes" TabSkip="no" CheckBoxValue="1">
+					<Text>$(loc.IDS_FoundSettingsDlg_CheckUseSavedAVBases)</Text>
+					<Condition Action="enable">$(var.Installation) AND SAVEDVALIDBASESINSTALLED</Condition>
+				</Control>-->
+        <?ifdef ADVANCED_FEATURES ?>
+        <Control Id="CheckUseSavedASBases" Type="CheckBox" X="25" Y="145" Width="300" Height="10"
+					Property="USESAVEDASBASES" Disabled="yes" TabSkip="no" CheckBoxValue="1">
+          <Text>$(loc.IDS_FoundSettingsDlg_CheckUseSavedASBases)</Text>
+          <Condition Action="enable">$(var.Installation) AND (SAVEDASBASESINSTALLED OR SAVEDASBASESVER6INSTALLED)</Condition>
+        </Control>
+        <?endif ?>
+
+        <!--<Control Id="Text4" Type="Text" X="25" Y="170" Width="320" Height="10">
+					<Text>$(loc.IDS_VerifyReadyDlg_Text4)</Text>
+				</Control>-->
+
+        <!-- bottom line with wizard buttons -->
+        <Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes">
+          <Text>$(loc.Branding)</Text>
+        </Control>
+
+        <Control Id="Back" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)">
+          <Text>$(loc.ButtonText_Back)</Text>
+          <Publish Event="NewDialog" Value="CustomizeDlg"><![CDATA[(WFWENABLED <> 1) AND (KLAVFOUND <> 1) AND (AVFOUND <> 1)]]></Publish>
+          <Publish Event="NewDialog" Value="FoundKLProductsDlg"><![CDATA[(KLAVFOUND = 1)]]></Publish>
+          <Publish Event="NewDialog" Value="UnloadWFWDlg"><![CDATA[(WFWENABLED = 1)]]></Publish>
+        </Control>
+        <Control Id="Next" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes">
+          <Text>$(loc.ButtonText_next)</Text>
+          <Publish Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes">
+          <Text>$(loc.ButtonText_Cancel)</Text>
+          <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="VerifyReadyDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)" TrackDiskSpace="yes">
+        <!-- top banner -->
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_VerifyReadyDlg_Title)</Text>
+        </Control>
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_VerifyReadyDlg_Description)</Text>
+        </Control>
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+        <!-- main dialog content -->
+        <Control Id="Text" Type="Text" X="25" Y="55" Width="320" Height="40">
+          <Text>$(loc.IDS_VerifyReadyDlg_Text)</Text>
+          <Condition Action="hide">RESUME</Condition>
+          <Condition Action="show">NOT RESUME</Condition>
+        </Control>
+        <Control Id="Text2" Type="Text" X="14" Y="55" Width="360" Height="40">
+          <Text>$(loc.IDS_VerifyReadyDlg_Text2)</Text>
+          <Condition Action="hide">NOT RESUME</Condition>
+          <Condition Action="show">RESUME</Condition>
+        </Control>
+
+        <?if not ($(env.product_type) = SOS) ?>
+        <Control Id="UseSelfProtection" Type="CheckBox" X="25" Y="115" Width="300" Height="10"
+					Property="SELFPROTECTION" Hidden="yes" TabSkip="no" CheckBoxValue="1">
+          <Text>$(loc.IDS_VerifyReadyDlg_CheckEnableProtection)</Text>
+          <Condition Action="show">$(var.Installation) AND <![CDATA[VersionNT AND INSTALLMODE="Custom"]]></Condition>
+        </Control>
+        <?endif?>
+        <?if ($(env.product_type) = FS) ?>
+        <Control Id="Text3" Type="Text" X="25" Y="160" Width="320" Height="20" Hidden="yes">
+          <Text>$(loc.IDS_VerifyReadyDlg_Text3)</Text>
+          <Condition Action="show">$(var.Installation)</Condition>
+        </Control>
+        <Control Id="AddMSEclusions" Type="CheckBox" X="25" Y="180" Width="300" Height="20" Property="MSEXCLUSIONS" 
+					Hidden="no" TabSkip="no" CheckBoxValue="1">
+          <Text>$(loc.IDS_VerifyReadyDlg_AddMSEclusions)</Text>
+          <Property Id="MSEXCLUSIONS" Secure="yes"/>
+          <Condition Action="show">$(var.Installation)</Condition>
+        </Control>
+        <Control Id="AddEnvironment" Type="CheckBox" X="25" Y="200" Width="300" Height="20"
+					Property="ADDENVIRONMENT" Hidden="no" TabSkip="no" CheckBoxValue="1">
+          <Text>$(loc.IDS_VerifyReadyDlg_AddEnvironment)</Text>
+          <Property Id="ADDENVIRONMENT" Secure="yes"/>
+          <Condition Action="show">$(var.Installation)</Condition>
+        </Control>
+        <?endif ?>
+
+        <!--<Control Id="Text4" Type="Text" X="25" Y="170" Width="320" Height="10">
+					<Text>$(loc.IDS_VerifyReadyDlg_Text4)</Text>
+				</Control>-->
+
+        <!--<Control Id="Text4" Type="Text" X="25" Y="170" Width="320" Height="10">
+					<Text>$(loc.IDS_VerifyReadyDlg_Text4)</Text>
+				</Control>-->
+
+        <!-- bottom line with wizard buttons -->
+        <Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes">
+          <Text>$(loc.Branding)</Text>
+        </Control>
+
+        <Control Id="Back" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)">
+          <Text>$(loc.ButtonText_Back)</Text>
+          <!--Custom Install Mode-->
+          <Publish Event="NewDialog" Value="CustomizeDlg"><![CDATA[KLAVFOUND <> 1 AND AVFOUND <> 1 AND WFWENABLED <> 1 AND INSTALLMODE = "Custom"]]> AND ($(var.NoSettingsFound) OR $(var.Upgrade))</Publish>
+          <Publish Event="NewDialog" Value="FoundKLProductsDlg"><![CDATA[KLAVFOUND = 1]]> AND ($(var.NoSettingsFound) OR $(var.Upgrade))</Publish>
+          <Publish Event="NewDialog" Value="UnloadWFWDlg"><![CDATA[WFWENABLED = 1 AND INSTALLMODE = "Custom"]]> AND ($(var.NoSettingsFound) OR $(var.Upgrade))</Publish>
+          <Publish Event="NewDialog" Value="FoundSettingsDlg">$(var.SettingsFound) AND $(var.Installation) AND <![CDATA[INSTALLMODE = "Custom"]]></Publish>
+          <!--Tupical Install Mode-->
+          <Publish Event="NewDialog" Value="SetupTypeDlg"><![CDATA[KLAVFOUND <> 1 AND AVFOUND <> 1 AND INSTALLMODE = "Typical"]]></Publish>
+        </Control>
+        <Control Id="InstallNow" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes">
+          <Text>$(loc.ButtonText_InstallNow)</Text>
+          <Publish Event="SpawnDialog" Value="OutOfDiskDlg">OutOfDiskSpace = 1</Publish>
+          <Publish Event="EndDialog" Value="Return"><![CDATA[OutOfDiskSpace <> 1]]></Publish>
+          <Publish Event="[ProgressType1]" Value="Installing">1</Publish>
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes">
+          <Text>$(loc.ButtonText_Cancel)</Text>
+          <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="ProgressDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)" Modeless="yes" >
+        <!-- top banner -->
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes" Hidden="yes">
+          <Text>$(loc.IDS_ActionDialog_Title)</Text>
+          <Condition Action="show"><![CDATA[ProgressType1="Installing"]]></Condition>
+        </Control>
+        <Control Id="Title2" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes" Hidden="yes">
+          <Text>$(loc.IDS_ActionDialog_Title2)</Text>
+          <Condition Action="show"><![CDATA[ProgressType1="Uninstalling"]]></Condition>
+        </Control>
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes" Hidden="yes">
+          <Text>$(loc.IDS_ActionDialog_Description)</Text>
+          <Condition Action="show"><![CDATA[ProgressType1="Installing"]]></Condition>
+        </Control>
+        <Control Id="Description2" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes" Hidden="yes">
+          <Text>$(loc.IDS_ActionDialog_Description2)</Text>
+          <Condition Action="show"><![CDATA[ProgressType1="Uninstalling"]]></Condition>
+        </Control>
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+        <!-- main dialog content -->
+        <!--<Control Id="StatusLabel" Type="Text" X="14" Y="85" Width="1000" Height="12">
+					<Text>$(loc.IDS_ActionDialog_StatusLabel)</Text>
+				</Control>-->
+        <Control Id="ActionText" Type="Text" X="14" Y="96" Width="340" Height="12">
+          <Text>$(loc.IDS_ActionDialog_ActionText)</Text>
+          <Subscribe Event="ActionText" Attribute="Text" />
+        </Control>
+        <!--<Control Id="ActionData" Type="Text" X="14" Y="77" Width="340" Height="15">
+					<Subscribe Event="ActionData" Attribute="Text" />
+				</Control>-->
+        <Control Id="ActionProgress" Type="ProgressBar" X="14" Y="113" Width="340" Height="12" ProgressBlocks="yes"
+					Text="$(loc.IDS_ActionDialog_ActionProgress)">
+          <Subscribe Event="SetProgress" Attribute="Progress" />
+          <!--<Subscribe Event="CAProgressImd" Attribute="Progress" />
+					<Subscribe Event="CAProgressDfd" Attribute="Progress" />-->
+          <Subscribe Event="InstallFiles" Attribute="Progress" />
+          <Subscribe Event="InstallAdminPackage" Attribute="Progress" />
+          <Subscribe Event="DeleteServices" Attribute="Progress" />
+          <Subscribe Event="MoveFiles" Attribute="Progress" />
+          <Subscribe Event="RemoveFiles" Attribute="Progress" />
+          <Subscribe Event="RemoveRegistryValues" Attribute="Progress" />
+          <Subscribe Event="StartServices" Attribute="Progress" />
+          <Subscribe Event="StopServices" Attribute="Progress" />
+          <Subscribe Event="UnmoveFiles" Attribute="Progress" />
+          <Subscribe Event="WriteIniValues" Attribute="Progress" />
+          <Subscribe Event="WriteRegistryValues" Attribute="Progress" />
+        </Control>
+        <!-- bottom line with wizard buttons -->
+        <Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes">
+          <Text>$(loc.Branding)</Text>
+        </Control>
+
+        <Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes"
+					Text="$(loc.ButtonText_Cancel)">
+          <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+          <!--<Condition Action="hide">KLAVFOUND = 1</Condition>-->
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="ProgressDlgNoCancel" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)" Modeless="yes" >
+        <!-- top banner -->
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes" Hidden="yes">
+          <Text>$(loc.IDS_ActionDialog_Title)</Text>
+          <Condition Action="show"><![CDATA[ProgressType1="Installing"]]></Condition>
+        </Control>
+        <Control Id="Title2" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes" Hidden="yes">
+          <Text>$(loc.IDS_ActionDialog_Title2)</Text>
+          <Condition Action="show"><![CDATA[ProgressType1="Uninstalling"]]></Condition>
+        </Control>
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes" Hidden="yes">
+          <Text>$(loc.IDS_ActionDialog_Description)</Text>
+          <Condition Action="show"><![CDATA[ProgressType1="Installing"]]></Condition>
+        </Control>
+        <Control Id="Description2" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes" Hidden="yes">
+          <Text>$(loc.IDS_ActionDialog_Description2)</Text>
+          <Condition Action="show"><![CDATA[ProgressType1="Uninstalling"]]></Condition>
+        </Control>
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+        <!-- main dialog content -->
+        <!--<Control Id="StatusLabel" Type="Text" X="14" Y="85" Width="1000" Height="12">
+					<Text>$(loc.IDS_ActionDialog_StatusLabel)</Text>
+				</Control>-->
+        <Control Id="ActionText" Type="Text" X="14" Y="96" Width="340" Height="12">
+          <Text>$(loc.IDS_ActionDialog_ActionText)</Text>
+          <Subscribe Event="ActionText" Attribute="Text" />
+        </Control>
+        <!--<Control Id="ActionData" Type="Text" X="14" Y="77" Width="340" Height="15">
+					<Subscribe Event="ActionData" Attribute="Text" />
+				</Control>-->
+        <Control Id="ActionProgress" Type="ProgressBar" X="14" Y="113" Width="340" Height="12" ProgressBlocks="yes"
+					Text="$(loc.IDS_ActionDialog_ActionProgress)">
+          <Subscribe Event="SetProgress" Attribute="Progress" />
+          <!--<Subscribe Event="CAProgressImd" Attribute="Progress" />
+					<Subscribe Event="CAProgressDfd" Attribute="Progress" />-->
+          <Subscribe Event="InstallFiles" Attribute="Progress" />
+          <Subscribe Event="InstallAdminPackage" Attribute="Progress" />
+          <Subscribe Event="DeleteServices" Attribute="Progress" />
+          <Subscribe Event="MoveFiles" Attribute="Progress" />
+          <Subscribe Event="RemoveFiles" Attribute="Progress" />
+          <Subscribe Event="RemoveRegistryValues" Attribute="Progress" />
+          <Subscribe Event="StartServices" Attribute="Progress" />
+          <Subscribe Event="StopServices" Attribute="Progress" />
+          <Subscribe Event="UnmoveFiles" Attribute="Progress" />
+          <Subscribe Event="WriteIniValues" Attribute="Progress" />
+          <Subscribe Event="WriteRegistryValues" Attribute="Progress" />
+        </Control>
+        <!-- bottom line with wizard buttons -->
+        <Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes">
+          <Text>$(loc.Branding)</Text>
+        </Control>
+
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="ExitDialog" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)">
+        <Control Id="WelcomeBitmap" Type="Bitmap" X="0" Y="0" Width="123" Height="236" Text="Welcome" />
+        <Control Id="Title" Type="Text" X="135" Y="10" Width="226" Height="15" Transparent="yes" Hidden="yes">
+          <Text>$(loc.IDS_ExitDialog_Title)</Text>
+          <Condition Action="show"><![CDATA[ProgressType1="Installing"]]></Condition>
+        </Control>
+        <Control Id="Title2" Type="Text" X="135" Y="10" Width="226" Height="15" Transparent="yes" Hidden="yes">
+          <Text>$(loc.IDS_ExitDialog_Title2)</Text>
+          <Condition Action="show"><![CDATA[ProgressType1="Uninstalling"]]></Condition>
+        </Control>
+        <Control Id="Text" Type="Text" X="135" Y="40" Width="226" Height="50" Transparent="yes" Hidden="yes">
+          <Text>$(loc.IDS_ExitDialog_Text)</Text>
+          <Condition Action="show"><![CDATA[ProgressType1="Installing"]]></Condition>
+        </Control>
+        <Control Id="Text2" Type="Text" X="135" Y="40" Width="226" Height="50" Transparent="yes" Hidden="yes">
+          <Text>$(loc.IDS_ExitDialog_Text2)</Text>
+          <Condition Action="show"><![CDATA[ProgressType1="Uninstalling"]]></Condition>
+        </Control>
+
+        <Control Id="BottomLine" Type="Line" X="0" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="OK" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Hidden="yes">
+          <Text>$(loc.ButtonText_OK)</Text>
+          <Condition Action="show">
+            <![CDATA[ProgressType1="Uninstalling"]]>
+          </Condition>
+          <Publish Event="EndDialog" Value="Exit">1</Publish>
+        </Control>
+        <Control Id="Next" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes"
+					Text="$(loc.ButtonText_Next)" Hidden="yes">
+          <Condition Action="show">
+            <![CDATA[(ProgressType1="Installing" OR INSTALLMODE="Change" OR INSTALLMODE="Repair")]]>
+          </Condition>
+          <Publish Event="EndDialog" Value="Exit">1</Publish>
+          <Publish Event="DoAction" Value="RunAppSetProp">1</Publish>
+          <Publish Event="DoAction" Value="RunApp">1</Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="FatalError" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)"	Title="$(var.WizardFullTitle)">
+        <Control Id="WelcomeBitmap" Type="Bitmap" X="0" Y="0" Width="123" Height="236" Text="Welcome" />
+        <Control Id="BackgroundBitmap" Type="Bitmap" X="124" Y="0" Width="246" Height="236" Text="BannerBackground" />
+        <Control Id="HeaderText" Type="Text" X="134" Y="10" Width="226" Height="15" Hidden="yes" Transparent="yes">
+          <Text>$(loc.IDS_FatalError_HeaderText)</Text>
+          <Condition Action="hide">Installed</Condition>
+          <Condition Action="show">$(var.Installation)</Condition>
+        </Control>
+        <Control Id="HeaderText2" Type="Text" X="134" Y="10" Width="226" Height="15" Hidden="yes" Transparent="yes">
+          <Text>$(loc.IDS_FatalError_HeaderText2)</Text>
+          <Condition Action="hide">$(var.Installation)</Condition>
+          <Condition Action="show">Installed</Condition>
+        </Control>
+        <Control Id="Text" Type="Text" X="134" Y="40" Width="226" Height="20" Hidden="yes" Transparent="yes">
+          <Text>$(loc.IDS_FatalError_Text)</Text>
+          <Condition Action="hide">Installed OR UpdateStarted</Condition>
+          <Condition Action="show">$(var.Installation) AND Not UpdateStarted</Condition>
+        </Control>
+        <Control Id="Text2" Type="Text" X="134" Y="60" Width="226" Height="50" Hidden="yes" Transparent="yes">
+          <Text>$(loc.IDS_FatalError_Text2)</Text>
+          <Condition Action="hide">NOT UpdateStarted</Condition>
+          <Condition Action="show">UpdateStarted</Condition>
+        </Control>
+        <Control Id="Text3" Type="Text" X="134" Y="60" Width="226" Height="50" Hidden="yes" Transparent="yes">
+          <Text>$(loc.IDS_FatalError_Text3)</Text>
+          <Condition Action="hide">$(var.Installation) OR UpdateStarted</Condition>
+          <Condition Action="show">Installed AND Not UpdateStarted</Condition>
+        </Control>
+        <Control Id="BottomLine" Type="Line" X="0" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <!--<Control Id="Restore" Type="PushButton" X="100" Y="180" Width="80" Height="$(var.MainDlgWizardButtonHeight)"
+					Default="yes" Cancel="yes">
+					<Text>$(loc.ButtonText_Restore)</Text>
+					<Publish Property="Suspend" Value="{}">1</Publish>
+					<Publish Event="EndDialog" Value="Return">1</Publish>
+					<Condition Action="hide">NOT UpdateStarted</Condition>
+					<Condition Action="show">UpdateStarted</Condition>
+					<Condition Action="default">UpdateStarted</Condition>
+				</Control>
+				<Control Id="Continue" Type="PushButton" X="300" Y="180" Width="80" Height="$(var.MainDlgWizardButtonHeight)">
+					<Text>$(loc.ButtonText_ContinueLater)</Text>
+					<Publish Property="Suspend" Value="'1'">1</Publish>
+					<Publish Event="EndDialog" Value="Return">1</Publish>
+					<Condition Action="hide">NOT UpdateStarted</Condition>
+					<Condition Action="show">UpdateStarted</Condition>
+				</Control>-->
+        <Control Id="OK" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)">
+          <Text>$(loc.ButtonText_OK)</Text>
+          <Publish Event="EndDialog" Value="Exit">1</Publish>
+          <!--<Condition Action="hide">UpdateStarted</Condition>
+					<Condition Action="show">NOT UpdateStarted</Condition>
+					<Condition Action="default">NOT UpdateStarted</Condition>-->
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="UserExit" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)">
+        <Control Id="WelcomeBitmap" Type="Bitmap" X="0" Y="0" Width="123" Height="236" Text="Welcome" />
+        <Control Id="BackgroundBitmap" Type="Bitmap" X="124" Y="0" Width="246" Height="236" Text="BannerBackground" />
+        <Control Id="InstallCanceledText" Type="Text" X="134" Y="10" Width="226" Height="15" Hidden="yes" Transparent="yes">
+          <Text>$(loc.IDS_UserExit_InstallCanceledText)</Text>
+          <Condition Action="show"><![CDATA[INSTALLMODE <> "Remove"]]></Condition>
+          <Condition Action="hide"><![CDATA[INSTALLMODE = "Remove"]]></Condition>
+        </Control>
+        <Control Id="InstallCanceledText2" Type="Text" X="134" Y="10" Width="226" Height="15" Hidden="yes" Transparent="yes">
+          <Text>$(loc.IDS_UserExit_InstallCanceledText2)</Text>
+          <Condition Action="show"><![CDATA[INSTALLMODE = "Remove"]]></Condition>
+          <Condition Action="hide"><![CDATA[INSTALLMODE <> "Remove"]]></Condition>
+        </Control>
+        <Control Id="Text" Type="Text" X="134" Y="40" Width="226" Height="50" Hidden="yes" Transparent="yes">
+          <Text>$(loc.IDS_UserExit_Text)</Text>
+          <Condition Action="show"><![CDATA[INSTALLMODE <> "Remove"]]></Condition>
+          <Condition Action="hide"><![CDATA[INSTALLMODE = "Remove"]]></Condition>
+        </Control>
+        <!--<Control Id="Text2" Type="Text" X="100" Y="100" Width="370" Height="50" Hidden="yes" Transparent="yes">
+					<Text>$(loc.IDS_UserExit_Text2)</Text>
+					<Condition Action="hide">$(var.Installation) OR UpdateStarted</Condition>
+					<Condition Action="show">Installed AND Not UpdateStarted</Condition>
+				</Control>-->
+        <Control Id="Text3" Type="Text" X="134" Y="40" Width="226" Height="50" Hidden="yes" Transparent="yes">
+          <Text>$(loc.IDS_UserExit_Text3)</Text>
+          <Condition Action="show"><![CDATA[INSTALLMODE = "Remove"]]></Condition>
+          <Condition Action="hide"><![CDATA[INSTALLMODE <> "Remove"]]></Condition>
+        </Control>
+        <Control Id="BottomLine" Type="Line" X="0" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <!--<Control Id="Restore" Type="PushButton" X="100" Y="180" Width="80" Height="$(var.MainDlgWizardButtonHeight)"
+					Default="yes" Cancel="yes">
+					<Text>$(loc.ButtonText_Restore)</Text>
+					<Publish Property="Suspend" Value="{}">1</Publish>
+					<Publish Event="EndDialog" Value="Exit">1</Publish>
+					<Condition Action="hide">NOT UpdateStarted</Condition>
+					<Condition Action="show">UpdateStarted</Condition>
+					<Condition Action="default">UpdateStarted</Condition>
+				</Control>
+				<Control Id="Continue" Type="PushButton" X="300" Y="180" Width="80" Height="$(var.MainDlgWizardButtonHeight)">
+					<Text>$(loc.ButtonText_ContinueLater)</Text>
+					<Publish Property="Suspend" Value="'1'">1</Publish>
+					<Publish Event="EndDialog" Value="Exit">1</Publish>
+					<Condition Action="hide">NOT UpdateStarted</Condition>
+					<Condition Action="show">UpdateStarted</Condition>
+				</Control>-->
+        <Control Id="OK" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)">
+          <Text>$(loc.ButtonText_OK)</Text>
+          <Publish Event="EndDialog" Value="Exit">1</Publish>
+          <!--<Condition Action="hide">UpdateStarted</Condition>
+					<Condition Action="show">NOT UpdateStarted</Condition>
+					<Condition Action="default">NOT UpdateStarted</Condition>-->
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="CancelDlg" Width="260" Height="85" Title="$(var.WizardFullTitle)" NoMinimize="yes">
+        <Control Id="Icon" Type="Icon" X="15" Y="15" Width="24" Height="24" ToolTip="Information icon"
+					FixedSize="yes" IconSize="32" Text="exclamic" />
+        <Control Id="TextInstall" Type="Text" X="48" Y="15" Width="194" Height="30">
+          <Text>$(loc.IDS_CancelDlg_Text)</Text>
+          <Condition Action="show"><![CDATA[INSTALLMODE <> "Remove"]]></Condition>
+          <Condition Action="hide"><![CDATA[INSTALLMODE = "Remove"]]></Condition>
+        </Control>
+        <Control Id="TextUninstall" Type="Text" X="48" Y="15" Width="194" Height="30">
+          <Text>$(loc.IDS_CancelDlg_Uninstall_Text)</Text>
+          <Condition Action="show"><![CDATA[INSTALLMODE = "Remove"]]></Condition>
+          <Condition Action="hide"><![CDATA[INSTALLMODE <> "Remove"]]></Condition>
+        </Control>
+        <Control Id="No" Type="PushButton" X="132" Y="57" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes" Cancel="yes"
+					Text="$(loc.ButtonText_No)">
+          <Publish Event="EndDialog" Value="Return"><![CDATA[1]]></Publish>
+        </Control>
+        <Control Id="Yes" Type="PushButton" X="72" Y="57" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Text="$(loc.ButtonText_Yes)">
+          <Publish Event="EndDialog" Value="Exit"><![CDATA[1]]></Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="AdminWelcomeDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)">
+        <Control Id="WelcomeBitmap" Type="Bitmap" X="0" Y="0" Width="123" Height="236" Text="Welcome" />
+        <Control Id="BackgroundBitmap" Type="Bitmap" X="123" Y="0" Width="247" Height="236" Text="BannerBackground" />
+        <Control Id="WelcomeTitle" Type="Text" X="133" Y="10" Width="229" Height="50" Transparent="yes">
+          <Text>$(loc.IDS_AdminWelcomeDlg_WelcomeTitle)</Text>
+        </Control>
+        <Control Id="WelcomeText" Type="Text" X="133" Y="60" Width="229" Height="120" Transparent="yes">
+          <Text>$(loc.IDS_AdminWelcomeDlg_WelcomeText)</Text>
+        </Control>
+        <!-- bottom line with wizard buttons -->
+        <Control Id="BottomLine" Type="Line" X="0" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Next" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes"
+					Text="$(loc.ButtonText_Next)">
+          <Publish Event="NewDialog" Value="AdminInstallPoint">1</Publish>
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes"
+					Text="$(loc.ButtonText_Cancel)">
+          <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="AdminInstallPoint" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)">
+        <!-- top banner -->
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_AdminInstallPoint_Title)</Text>
+        </Control>
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_AdminInstallPoint_Description)</Text>
+        </Control>
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+        <Control Id="Text" Type="Text" X="21" Y="55" Width="330" Height="30">
+          <Text>$(loc.IDS_AdminInstallPoint_Text)</Text>
+        </Control>
+        <Control Id="FolderIcon" Type="Icon" X="20" Y="90" Width="24" Height="24" FixedSize="yes"
+					IconSize="32" Text="desticon" />
+        <Control Id="EditQ" Type="Text" X="46" Y="100" Width="270" Height="10"
+					TabSkip="no">
+          <Text>$(loc.IDS_AdminInstallPoint_EditQ)</Text>
+        </Control>
+        <Control Id="Edit" Type="PathEdit" X="21" Y="115" Width="330" Height="17" Property="TARGETDIR" />
+        <!-- bottom line with wizard buttons -->
+        <Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes">
+          <Text>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Browse" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="137" Width="$(var.MainDlgWizardButtonWidth)"
+					Height="$(var.MainDlgWizardButtonHeight)">
+          <Text>$(loc.ButtonText_Browse)</Text>
+          <Publish Event="SpawnDialog" Value="AdminInstallBrowse">1</Publish>
+        </Control>
+        <Control Id="Back" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Text="$(loc.ButtonText_Back)">
+          <Text>$(loc.ButtonText_Back)</Text>
+          <Publish Event="NewDialog" Value="AdminWelcomeDlg">1</Publish>
+        </Control>
+        <Control Id="InstallNow" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes">
+          <Text>$(loc.ButtonText_InstallNow)</Text>
+          <Publish Event="EndDialog" Value="Return">1</Publish>
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes">
+          <Text>$(loc.ButtonText_Cancel)</Text>
+          <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="AdminInstallBrowse" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(loc.IDS_BrowseDlg_Title)">
+        <Control Id="ComboText" Type="Text" X="10" Y="10" Width="60" Height="20" TabSkip="no">
+          <Text>$(loc.IDS_BrowseDlg_ComboText)</Text>
+        </Control>
+        <Control Id="Combo" Type="DirectoryCombo" X="80" Y="10" Width="230" Height="80" Property="TARGETDIR"
+					Removable="yes" Fixed="yes" Remote="yes">
+          <Subscribe Event="IgnoreChange" Attribute="IgnoreChange" />
+        </Control>
+        <Control Id="Up" Type="PushButton" X="315" Y="10" Width="20" Height="20" Help="go to parent folder|"
+					Icon="yes" FixedSize="yes" IconSize="16" Text="folder_up.ico">
+          <Publish Event="DirectoryListUp" Value="0">1</Publish>
+        </Control>
+        <Control Id="NewFolder" Type="PushButton" X="340" Y="10" Width="20" Height="20" Help="create new folder|"
+					Icon="yes" FixedSize="yes" IconSize="16" Text="folder_new.ico">
+          <Publish Event="DirectoryListNew" Value="0">1</Publish>
+        </Control>
+        <Control Id="List" Type="DirectoryList" X="10" Y="40" Width="350" Height="155" Property="TARGETDIR" />
+        <Control Id="TailText" Type="Text" X="10" Y="210" Width="100" Height="15" TabSkip="no">
+          <Text>$(loc.IDS_BrowseDlg_TailText)</Text>
+        </Control>
+        <Control Id="Tail" Type="PathEdit" X="10" Y="225" Width="280" Height="20" Property="TARGETDIR" />
+
+        <Control Id="OK" Type="PushButton" X="300" Y="205" Width="60" Height="18" Default="yes">
+          <Text>$(loc.ButtonText_OK)</Text>
+          <Publish Event="SetTargetPath" Value="TARGETDIR">1</Publish>
+          <Publish Event="EndDialog" Value="Return">1</Publish>
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="300" Y="227" Width="60" Height="18" Cancel="yes">
+          <Text>$(loc.ButtonText_Cancel)</Text>
+          <Publish Event="Reset" Value="0">1</Publish>
+          <Publish Event="EndDialog" Value="Return">1</Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="AdminExitDialog" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)">
+        <Control Id="WelcomeBitmap" Type="Bitmap" X="0" Y="0" Width="123" Height="236" Text="Welcome" />
+        <Control Id="Title" Type="Text" X="135" Y="10" Width="226" Height="15" Transparent="yes">
+          <Text>$(loc.IDS_AdminExitDialog_Title)</Text>
+        </Control>
+        <Control Id="Text" Type="Text" X="135" Y="40" Width="226" Height="50" Transparent="yes">
+          <Text>$(loc.IDS_AdminExitDialog_Text)</Text>
+        </Control>
+        <Control Id="BottomLine" Type="Line" X="0" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="OK" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)">
+          <Text>$(loc.ButtonText_OK)</Text>
+          <Publish Event="EndDialog" Value="Exit">1</Publish>
+        </Control>
+
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="BrowseDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(loc.IDS_BrowseDlg_Title)">
+        <Control Id="ComboText" Type="Text" X="10" Y="10" Width="60" Height="20" TabSkip="no">
+          <Text>$(loc.IDS_BrowseDlg_ComboText)</Text>
+        </Control>
+        <Control Id="Combo" Type="DirectoryCombo" X="80" Y="10" Width="230" Height="80" Property="_BrowseProperty"
+					Indirect="yes" Removable="no" Fixed="yes" Remote="no" CDROM="no">
+          <Subscribe Event="IgnoreChange" Attribute="IgnoreChange" />
+        </Control>
+        <Control Id="Up" Type="PushButton" X="315" Y="10" Width="20" Height="20" Help="$(loc.IDS_BrowseDlg_Up)"
+					Icon="yes" FixedSize="yes" IconSize="16" Text="folder_up.ico">
+          <Publish Event="DirectoryListUp" Value="0">1</Publish>
+        </Control>
+        <Control Id="NewFolder" Type="PushButton" X="340" Y="10" Width="20" Height="20" Help="$(loc.IDS_BrowseDlg_NewFolder)"
+					Icon="yes" FixedSize="yes" IconSize="16" Text="folder_new.ico">
+          <Publish Event="DirectoryListNew" Value="0">1</Publish>
+        </Control>
+        <Control Id="List" Type="DirectoryList" X="10" Y="40" Width="350" Height="155" Property="_BrowseProperty"
+					Indirect="yes" Text="List of directories"  />
+        <Control Id="TailText" Type="Text" X="10" Y="210" Width="100" Height="15" TabSkip="no">
+          <Text>$(loc.IDS_BrowseDlg_TailText)</Text>
+        </Control>
+        <Control Id="Tail" Type="PathEdit" X="10" Y="225" Width="280" Height="20" Property="_BrowseProperty"
+					Indirect="yes" />
+        <Control Id="OK" Type="PushButton" X="300" Y="205" Width="60" Height="18" Default="yes">
+          <Text>$(loc.ButtonText_OK)</Text>
+          <Publish Event="SetTargetPath" Value="[_BrowseProperty]">1</Publish>
+          <Publish Event="DoAction" Value="VerifyInstallDir">1</Publish>
+          <Publish Event="[ValidFolder]" Value="[ValidFolder]">1</Publish>
+          <Publish Event="SpawnDialog" Value="VerifyInstallDirErrorDlg">Not ValidFolder</Publish>
+          <Publish Event="EndDialog" Value="Return">ValidFolder</Publish>
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="300" Y="227" Width="60" Height="18" Cancel="yes">
+          <Text>$(loc.ButtonText_Cancel)</Text>
+          <Publish Event="Reset" Value="0">1</Publish>
+          <Publish Event="SpawnDialog" Value="CancelDlg">MainBrowse</Publish>
+          <Publish Event="EndDialog" Value="Return">NOT MainBrowse</Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="VerifyInstallDirErrorDlg" Width="270" Height="130" Title="$(var.WizardFullTitle)">
+        <Control Id="ErrorText" Type="Text" X="50" Y="15" Width="200" Height="70" TabSkip="no">
+          <Text>$(loc.VerifyInstallDirError)</Text>
+          <Condition Action="show">Not NotValidFolderAVP6INSTALLDIR</Condition>
+          <Condition Action="hide">NotValidFolderAVP6INSTALLDIR</Condition>
+        </Control>
+        <Control Id="ErrorText1" Type="Text" X="50" Y="15" Width="200" Height="70" TabSkip="no">
+          <Text>$(loc.VerifyInstallDirError1)</Text>
+          <Condition Action="show">NotValidFolderAVP6INSTALLDIR</Condition>
+          <Condition Action="hide">Not NotValidFolderAVP6INSTALLDIR</Condition>
+        </Control>
+        <Control Id="ErrorIcon" Type="Icon" X="15" Y="15" Width="24" Height="24" ToolTip="Exclamation icon"
+					FixedSize="yes" IconSize="32" Text="exclamic" />
+        <Control Id="O" Type="PushButton" X="192" Y="100" Width="66" Height="$(var.MainDlgWizardButtonHeight)"
+					TabSkip="yes" Default="yes">
+          <Text>$(loc.ButtonText_OK)</Text>
+          <Publish Event="EndDialog" Value="Return">1</Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="FoundProductErrorDlg" Width="270" Height="130" Title="$(var.WizardFullTitle)">
+        <Control Id="ErrorText" Type="Text" X="50" Y="15" Width="200" Height="70" TabSkip="no">
+          <Text>$(loc.FoundProductsError)</Text>
+        </Control>
+        <Control Id="ErrorIcon" Type="Icon" X="15" Y="15" Width="24" Height="24" ToolTip="Exclamation icon"
+					FixedSize="yes" IconSize="32" Text="exclamic" />
+        <Control Id="O" Type="PushButton" X="192" Y="100" Width="66" Height="$(var.MainDlgWizardButtonHeight)"
+					TabSkip="yes" Default="yes">
+          <Text>$(loc.ButtonText_OK)</Text>
+          <Publish Event="DoAction" Value="RunARPWizard"><![CDATA[1]]></Publish>
+          <Publish Event="EndDialog" Value="Exit">1</Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="ErrorDialog" Width="270" Height="160" Title="$(var.WizardFullTitle)" ErrorDialog="yes">
+        <Control Id="ErrorText" Type="Text" X="50" Y="15" Width="200" Height="100" TabSkip="no"></Control>
+        <Control Id="ErrorIcon" Type="Icon" X="15" Y="15" Width="24" Height="24" ToolTip="Exclamation icon"
+					FixedSize="yes" IconSize="32" Text="exclamic" />
+        <Control Id="Y" Type="PushButton" X="192" Y="120" Width="66" Height="$(var.MainDlgWizardButtonHeight)"
+					TabSkip="yes">
+          <Text>$(loc.ButtonText_Yes)</Text>
+          <Publish Event="EndDialog" Value="ErrorYes">1</Publish>
+        </Control>
+        <Control Id="A" Type="PushButton" X="192" Y="120" Width="66" Height="$(var.MainDlgWizardButtonHeight)"
+					TabSkip="yes">
+          <Text>$(loc.ButtonText_Abort)</Text>
+          <Publish Event="EndDialog" Value="ErrorAbort">1</Publish>
+        </Control>
+        <Control Id="C" Type="PushButton" X="192" Y="120" Width="66" Height="$(var.MainDlgWizardButtonHeight)"
+					TabSkip="yes" Cancel="yes">
+          <Text>$(loc.ButtonText_Cancel)</Text>
+          <Publish Event="EndDialog" Value="ErrorCancel">1</Publish>
+        </Control>
+        <Control Id="I" Type="PushButton" X="192" Y="120" Width="66" Height="$(var.MainDlgWizardButtonHeight)"
+					TabSkip="yes">
+          <Text>$(loc.ButtonText_Ignore)</Text>
+          <Publish Event="EndDialog" Value="ErrorIgnore">1</Publish>
+        </Control>
+        <Control Id="N" Type="PushButton" X="192" Y="120" Width="66" Height="$(var.MainDlgWizardButtonHeight)"
+					TabSkip="yes">
+          <Text>$(loc.ButtonText_No)</Text>
+          <Publish Event="EndDialog" Value="ErrorNo">1</Publish>
+        </Control>
+        <Control Id="O" Type="PushButton" X="192" Y="120" Width="66" Height="$(var.MainDlgWizardButtonHeight)"
+					TabSkip="yes" Default="yes">
+          <Text>$(loc.ButtonText_OK)</Text>
+          <Publish Event="EndDialog" Value="ErrorOk">1</Publish>
+        </Control>
+        <Control Id="R" Type="PushButton" X="192" Y="120" Width="66" Height="$(var.MainDlgWizardButtonHeight)"
+					TabSkip="yes">
+          <Text>$(loc.ButtonText_Retry)</Text>
+          <Publish Event="EndDialog" Value="ErrorRetry">1</Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="ResumeDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)">
+        <Control Id="WelcomeBitmap" Type="Bitmap" X="0" Y="0" Width="123" Height="236" Text="Welcome" />
+        <Control Id="BackgroundBitmap1" Type="Bitmap" X="123" Y="0" Width="247" Height="236" Text="BannerBackground" />
+        <!--<Control Id="BackgroundBitmap2" Type="Bitmap" X="123" Y="190" Width="10" Height="10" Text="BannerBackground" />
+				<Control Id="BackgroundBitmap3" Type="Bitmap" X="143" Y="190" Width="227" Height="10" Text="BannerBackground" />
+				<Control Id="BackgroundBitmap4" Type="Bitmap" X="123" Y="200" Width="247" Height="36" Text="BannerBackground" />-->
+
+        <Control Id="Title" Type="Text" X="133" Y="10" Width="229" Height="50" Transparent="yes">
+          <Text>$(loc.IDS_ResumeDlg_Title)</Text>
+        </Control>
+        <Control Id="Text" Type="Text" X="133" Y="60" Width="229" Height="120" Transparent="yes">
+          <Text>$(loc.IDS_ResumeDlg_Text)</Text>
+        </Control>
+        <!--<Control Id="ResumeExpressInstallText" Type="Text" X="148" Y="190" Width="214" Height="20" Transparent="yes">
+					<Text>$(loc.IDS_ResumeDlg_CheckExpressUpgrade)</Text>
+				</Control>
+				<Control Id="ExpressUpgrade" Type="CheckBox" X="133" Y="190" Width="10" Height="10"
+					Property="EXPRESSUPGRADE"  Disabled="no" TabSkip="no" CheckBoxValue="1">
+					<Property Id="EXPRESSUPGRADE" Secure="yes"/>
+				</Control>-->
+
+        <Control Id="BottomLine" Type="Line" X="0" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <!--<Control Id="InstallNow" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes">
+					<Text>$(loc.ButtonText_InstallNow)</Text>
+					<Publish Event="SpawnDialog" Value="OutOfDiskDlg">OutOfDiskSpace = 1</Publish>
+					<Publish Event="EndDialog" Value="Return"><![CDATA[OutOfDiskSpace <> 1]]></Publish>
+				</Control>-->
+        <Control Id="Next" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes"
+					Text="$(loc.ButtonText_Next)">
+          <Publish Event="NewDialog" Value="LicenseAgreementDlg">1</Publish>
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes"
+					Text="$(loc.ButtonText_Cancel)">
+          <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+        </Control>
+      </Dialog>
+
+      <!--///////////////////////////FilesInUse/////////////////////////////////////-->
+      <Dialog Id="FilesInUse" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)" Hidden="yes" Modeless="yes" NoMinimize="yes">
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_FilesInUse_Title)</Text>
+        </Control>
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_FilesInUse_Description)</Text>
+        </Control>
+        <Control Id="Text" Type="Text" X="20" Y="50" Width="330" Height="20">
+          <Text>$(loc.IDS_FilesInUse_Text)</Text>
+        </Control>
+        <Control Id="List" Type="ListBox" X="21" Y="87" Width="331" Height="135" Property="FileInUseProcess"></Control>
+        <Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes" Text="$(loc.Branding)"></Control>
+        <Control Id="Retry" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes">
+          <Text>$(loc.ButtonText_Retry)</Text>
+          <Publish Event="EndDialog" Value="Retry">1</Publish>
+        </Control>
+        <Control Id="Ignore" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)">
+          <Text>$(loc.ButtonText_Ignore)</Text>
+          <Publish Event="EndDialog" Value="Ignore">1</Publish>
+        </Control>
+        <Control Id="Exit" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes">
+          <Text>$(loc.ButtonText_Exit)</Text>
+          <Publish Event="EndDialog" Value="Exit">1</Publish>
+        </Control>
+      </Dialog>
+
+      <!--///////////////////////////MsiRMFilesInUse/////////////////////////////////////-->
+      <Dialog Id="MsiRMFilesInUse" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(loc.WizardFullTitle)" Hidden="yes" Modeless="yes" NoMinimize="yes">
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes" Text="$(loc.IDS_MsiRMFilesInUse_Title)" />
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes" Text="$(loc.IDS_MsiRMFilesInUse_Description)" />
+        <Control Id="Text" Type="Text" X="20" Y="50" Width="330" Height="20" Text="$(loc.IDS_MsiRMFilesInUse_Text)" />
+        <Control Id="List" Type="ListBox" X="20" Y="100" Width="330" Height="100" Property="FileInUseProcess" Sunken="yes" TabSkip="yes" />
+        <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes" Text="$(loc.Branding)"></Control>
+
+        <Control Id="ShutdownOption" Type="RadioButtonGroup" X="26" Y="190" Width="305" Height="45" Property="ShutdownOption">
+          <RadioButtonGroup Property="ShutdownOption">
+            <RadioButton Value="UseRM" X="0" Y="0" Width="295" Height="16" Text="$(loc.IDS_MsiRMFilesInUse_UseRM)" />
+            <RadioButton Value="DontUseRM" X="0" Y="20" Width="295" Height="16" Text="$(loc.IDS_MsiRMFilesInUse_DontUseRM)" />
+          </RadioButtonGroup>
+        </Control>
+
+        <Control Id="OK" Type="PushButton" X="240" Y="243" Width="56" Height="17" Default="yes" Text="$(loc.ButtonText_Ok)">
+          <Publish Event="EndDialog" Value="Return">1</Publish>
+          <Publish Event="RMShutdownAndRestart" Value="0"><![CDATA[ShutdownOption = "UseRM"]]></Publish>
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Cancel="yes" Text="$(loc.ButtonText_Cancel)">
+          <Publish Event="EndDialog" Value="Exit">1</Publish>
+        </Control>
+
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="MaintenanceTypeDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)" NoMinimize="yes">
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)" Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture" FixedSize="yes" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_MaintenanceTypeDlg_Title)</Text>
+        </Control>
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_MaintenanceTypeDlg_Description)</Text>
+        </Control>
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+        <Control Id="ChangeLabel" Type="Text" X="105" Y="65" Width="100" Height="10" TabSkip="no">
+          <Text>$(loc.IDS_MaintenanceTypeDlg_ChangeLabel)</Text>
+        </Control>
+        <Control Id="ChangeButton" Type="PushButton" X="50" Y="65" Width="38" Height="38" ToolTip="$(loc.IDS_MaintenanceTypeDlg_ChangeButton)"
+					Default="yes" Icon="yes" FixedSize="yes" IconSize="32" Text="custicon" Disabled="yes">
+          <Publish Property="INSTALLMODE" Value="Change"><![CDATA[1]]></Publish>
+          <Publish Property="Progress1" Value="Changing"><![CDATA[1]]></Publish>
+          <Publish Property="Progress2" Value="changes"><![CDATA[1]]></Publish>
+          <Publish Event="NewDialog" Value="CustomizeDlg"><![CDATA[1]]></Publish>
+          <Condition Action="disable"><![CDATA[REBOOTPENDING = 1 OR AKINSTALLED = 1]]></Condition>
+          <Condition Action="enable"><![CDATA[REBOOTPENDING <> 1 AND AKINSTALLED <> 1]]></Condition>
+        </Control>
+        <Control Id="RepairLabel" Type="Text" X="105" Y="114" Width="100" Height="10" TabSkip="no">
+          <Text>$(loc.IDS_MaintenanceTypeDlg_RepairLabel)</Text>
+        </Control>
+        <Control Id="RepairButton" Type="PushButton" X="50" Y="114" Width="38" Height="38" ToolTip="$(loc.IDS_MaintenanceTypeDlg_RepairButton)"
+					Icon="yes" FixedSize="yes" IconSize="32" Text="repairic">
+          <Publish Property="INSTALLMODE" Value="Repair"><![CDATA[1]]></Publish>
+          <Publish Property="Progress1" Value="Repairing"><![CDATA[1]]></Publish>
+          <Publish Property="Progress2" Value="repaires"><![CDATA[1]]></Publish>
+          <Publish Event="NewDialog" Value="VerifyRepairDlg"><![CDATA[1]]></Publish>
+          <Condition Action="disable"><![CDATA[REBOOTPENDING = 1 OR AKINSTALLED = 1]]></Condition>
+          <Condition Action="enable"><![CDATA[REBOOTPENDING <> 1 AND AKINSTALLED <> 1]]></Condition>
+        </Control>
+        <Control Id="RemoveLabel" Type="Text" X="105" Y="163" Width="100" Height="10" TabSkip="no">
+          <Text>$(loc.IDS_MaintenanceTypeDlg_RemoveLabel)</Text>
+        </Control>
+        <Control Id="RemoveButton" Type="PushButton" X="50" Y="163" Width="38" Height="38" ToolTip="$(loc.IDS_MaintenanceTypeDlg_RemoveButton)"
+					Icon="yes" FixedSize="yes" IconSize="32" Text="removico">
+          <Publish Property="INSTALLMODE" Value="Remove"><![CDATA[1]]></Publish>
+          <Publish Property="Progress1" Value="Removing"><![CDATA[1]]></Publish>
+          <Publish Property="Progress2" Value="removes"><![CDATA[1]]></Publish>
+          <Publish Event="DoAction" Value="SetIsKAVUnPasswd">1</Publish>
+          <Publish Event="NewDialog" Value="DlgPasswdU">IsKAVUnPasswd</Publish>
+          <Publish Event="DoAction" Value="CheckObjectsToSave">NOT IsKAVUnPasswd</Publish>
+          <Publish Event="NewDialog" Value="UninstallOptionsDlg">NOT IsKAVUnPasswd</Publish>
+        </Control>
+        <Control Id="ChangeText" Type="Text" X="105" Y="78" Width="230" Height="20">
+          <Text>$(loc.IDS_MaintenanceTypeDlg_ChangeText)</Text>
+        </Control>
+        <Control Id="RemoveText" Type="Text" X="105" Y="176" Width="230" Height="20">
+          <Text>$(loc.IDS_MaintenanceTypeDlg_RemoveText)</Text>
+        </Control>
+        <Control Id="RepairText" Type="Text" X="105" Y="127" Width="230" Height="30">
+          <Text>$(loc.IDS_MaintenanceTypeDlg_RepairText)</Text>
+        </Control>
+
+        <Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes">
+          <Text>$(loc.Branding)</Text>
+        </Control>
+
+        <!--<Control Id="Back" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Text="$(loc.ButtonText_Back)" Disabled="yes">
+					<Publish Event="NewDialog" Value="MaintenanceWelcomeDlg"><![CDATA[1]]></Publish>
+				</Control>
+				<Control Id="Next" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Disabled="yes"
+					Text="$(loc.ButtonText_Next)" />-->
+        <Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes"
+					Text="$(loc.ButtonText_Cancel)">
+          <Publish Event="SpawnDialog" Value="CancelDlg"><![CDATA[1]]></Publish>
+        </Control>
+        <!--<Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="374" Height="44" TabSkip="no" Text="[BannerBitmap]" />-->
+
+      </Dialog>
+
+      <Dialog Id="DlgPasswdU" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)">
+        <!-- top banner -->
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>{\PageTitleFont}$(loc.IDS_DlgPasswdU_Title)</Text>
+        </Control>
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>{\PageSubtitleFont}$(loc.IDS_DlgPasswdU_Subtitle)</Text>
+        </Control>
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+        <!-- main dialog content -->
+        <Control Id="Text" Type="Text" X="14" Y="60" Width="330" Height="20">
+          <Text>$(loc.IDS_DlgPasswdU_Text)</Text>
+        </Control>
+        <Control Id="Label" Type="Text" X="20" Y="90" Width="70" Height="10">
+          <Text>$(loc.IDS_DlgPasswdU_Label)</Text>
+        </Control>
+        <Control Id="Passwd" Type="Edit" X="90" Y="90" Width="120" Height="18" Property="KLUNINSTPASSWD" Password="yes" Sunken="yes"/>
+
+        <!-- bottom line with wizard buttons -->
+        <Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes">
+          <Text>$(loc.Branding)</Text>
+        </Control>
+
+        <Control Id="Previous" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)">
+          <Text>$(loc.ButtonText_Back)</Text>
+          <Publish Event="NewDialog" Value="MaintenanceTypeDlg">1</Publish>
+        </Control>
+        <Control Id="Next" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes" Text="$(loc.ButtonText_Next)">
+          <Publish Event="DoAction" Value="CheckKAVUnPasswd">1</Publish>
+          <Publish Event="SpawnDialog" Value="DlgPasswdInvalidU">NOT IsKAVUnPasswdChecked</Publish>
+          <Publish Event="NewDialog" Value="UninstallOptionsDlg">IsKAVUnPasswdChecked</Publish>
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes">
+          <Text>$(loc.ButtonText_Cancel)</Text>
+          <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+        </Control>
+      </Dialog>
+
+      <Dialog Id="DlgPasswdInvalidU" Width="270" Height="85" Title="$(var.WizardFullTitle)" NoMinimize="yes">
+        <Control Id="OK" Type="PushButton" X="132" Y="57" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Text="$(loc.ButtonText_OK)">
+          <Publish Event="EndDialog" Value="Return">1</Publish>
+        </Control>
+        <Control Id="Icon" Type="Icon" X="15" Y="15" Width="24" Height="24" ToolTip="Exclamation icon" FixedSize="yes" IconSize="32" Text="exclamic"/>
+        <Control Id="Text" Type="Text" X="48" Y="15" Width="254" Height="40">
+          <Text>$(loc.IDS_DlgPasswdInvalidU_Text)</Text>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="UninstallOptionsDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)" TrackDiskSpace="yes">
+        <!-- top banner -->
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_UninstallOptionsDlg_Title)</Text>
+        </Control>
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_UninstallOptionsDlg_Description)</Text>
+        </Control>
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+        <!-- main dialog content -->
+        <Control Id="Text" Type="Text" X="25" Y="60" Width="320" Height="20">
+          <Text>$(loc.IDS_UninstallOptionsDlg_Text)</Text>
+        </Control>
+        <!--<Control Id="Text2" Type="Text" X="14" Y="60" Width="360" Height="16">
+					<Text>$(loc.IDS_UninstallOptionsDlg_Text2)</Text>
+				</Control>-->
+        <Control Id="Buttons" Type="RadioButtonGroup" X="25" Y="85" Width="330" Height="40" Property="REMOVEALLDATA">
+          <RadioButtonGroup Property="REMOVEALLDATA">
+            <RadioButton Value="Yes" X="0" Y="0" Width="250" Height="15" Text="$(loc.IDS_UninstallOptionsDlg_ButtonsYes)" />
+            <RadioButton Value="No" X="0" Y="18" Width="250" Height="15" Text="$(loc.IDS_UninstallOptionsDlg_ButtonsNo)" />
+          </RadioButtonGroup>
+        </Control>
+
+        <?ifdef ADVANCED_FEATURES ?>
+        <Control Id="SaveLicense" Type="CheckBox" X="35" Y="120" Width="300" Height="10"
+					Property="SAVELICENSE"
+					Hidden="no" TabSkip="no" CheckBoxValue="1" Disabled="yes">
+          <Text>$(loc.IDS_UninstallOptionsDlg_SaveLicense)</Text>
+          <Property Id="SAVELICENSE" Secure="yes"></Property>
+          <Condition Action="enable">LICSTORAGEFOUND And <![CDATA[REMOVEALLDATA <> "Yes"]]></Condition>
+          <Condition Action="disable"><![CDATA[REMOVEALLDATA = "Yes"]]></Condition>
+        </Control>
+        <!--<Control Id="SaveBases" Type="CheckBox" X="35" Y="135" Width="300" Height="10"
+					Property="SAVEAVBASES"
+					Hidden="no" TabSkip="no" CheckBoxValue="1" Disabled="yes">
+					<Text>$(loc.IDS_UninstallOptionsDlg_SaveBases)</Text>
+					<Property Id="SAVEAVBASES" Secure="yes"></Property>
+					<Condition Action="enable">AVBASESINSTALLED And <![CDATA[REMOVEALLDATA <> "Yes"]]></Condition>
+					<Condition Action="disable"><![CDATA[REMOVEALLDATA = "Yes"]]></Condition>
+				</Control>-->
+        <Control Id="SaveASBases" Type="CheckBox" X="35" Y="135" Width="300" Height="10"
+					Property="SAVEASBASES"
+					Hidden="no" TabSkip="no" CheckBoxValue="1" Disabled="yes">
+          <Text>$(loc.IDS_UninstallOptionsDlg_SaveAntiSpamBases)</Text>
+          <Property Id="SAVEASBASES" Secure="yes"></Property>
+          <Condition Action="enable">ASBASESINSTALLED And <![CDATA[REMOVEALLDATA <> "Yes"]]></Condition>
+          <Condition Action="disable"><![CDATA[REMOVEALLDATA = "Yes"]]></Condition>
+        </Control>
+        <Control Id="SaveBackup" Type="CheckBox" X="35" Y="150" Width="300" Height="10"
+					Property="SAVEBACKUP"
+					Hidden="no" TabSkip="no" CheckBoxValue="1" Disabled="yes">
+          <Text>$(loc.IDS_UninstallOptionsDlg_SaveBackup)</Text>
+          <Property Id="SAVEBACKUP" Secure="yes"></Property>
+          <Condition Action="enable">BACKUPINSTALLED And <![CDATA[REMOVEALLDATA <> "Yes"]]></Condition>
+          <Condition Action="disable"><![CDATA[REMOVEALLDATA = "Yes"]]></Condition>
+        </Control>
+        <Control Id="SaveQuarantine" Type="CheckBox" X="35" Y="165" Width="300" Height="10"
+					Property="SAVEQUARANTINE"
+					Hidden="no" TabSkip="no" CheckBoxValue="1" Disabled="yes">
+          <Text>$(loc.IDS_UninstallOptionsDlg_SaveQuarantine)</Text>
+          <Property Id="SAVEQUARANTINE" Secure="yes"></Property>
+          <Condition Action="enable">QUARANTINEINSTALLED AND <![CDATA[REMOVEALLDATA <> "Yes"]]></Condition>
+          <Condition Action="disable"><![CDATA[REMOVEALLDATA = "Yes"]]></Condition>
+        </Control>
+        <Control Id="SaveSettings" Type="CheckBox" X="35" Y="180" Width="300" Height="10"
+					Property="SAVESETTINGS"
+					Hidden="no" TabSkip="no" CheckBoxValue="1" Disabled="yes">
+          <Text>$(loc.IDS_UninstallOptionsDlg_SaveSettings)</Text>
+          <Property Id="SAVESETTINGS" Secure="yes"></Property>
+          <Condition Action="enable"><![CDATA[REMOVEALLDATA <> "Yes"]]></Condition>
+          <Condition Action="disable"><![CDATA[REMOVEALLDATA = "Yes"]]></Condition>
+        </Control>
+        <Control Id="SaveFidbox" Type="CheckBox" X="35" Y="195" Width="300" Height="10"
+					Property="SAVEFIDBOX"
+					Hidden="no" TabSkip="no" CheckBoxValue="1" Disabled="yes">
+          <Text>$(loc.IDS_UninstallOptionsDlg_SaveFidbox)</Text>
+          <Property Id="SAVEFIDBOX" Secure="yes"></Property>
+          <Condition Action="enable">VersionNT AND <![CDATA[REMOVEALLDATA <> "Yes"]]></Condition>
+          <Condition Action="disable">Not VersionNT OR <![CDATA[REMOVEALLDATA = "Yes"]]></Condition>
+        </Control>
+        <?endif ?>
+
+        <?ifndef ADVANCED_FEATURES ?>
+        <Control Id="SaveLicense" Type="CheckBox" X="35" Y="120" Width="300" Height="10"
+					Property="SAVELICENSE"
+					Hidden="no" TabSkip="no" CheckBoxValue="1" Disabled="yes">
+          <Text>$(loc.IDS_UninstallOptionsDlg_SaveLicense)</Text>
+          <Property Id="SAVELICENSE" Secure="yes"></Property>
+          <Condition Action="enable">LICSTORAGEFOUND And <![CDATA[REMOVEALLDATA <> "Yes"]]></Condition>
+          <Condition Action="disable"><![CDATA[REMOVEALLDATA = "Yes"]]></Condition>
+        </Control>
+        <!--<Control Id="SaveBases" Type="CheckBox" X="35" Y="135" Width="300" Height="10"
+					Property="SAVEAVBASES"
+					Hidden="no" TabSkip="no" CheckBoxValue="1" Disabled="yes">
+					<Text>$(loc.IDS_UninstallOptionsDlg_SaveBases)</Text>
+					<Property Id="SAVEAVBASES" Secure="yes"></Property>
+					<Condition Action="enable">AVBASESINSTALLED And <![CDATA[REMOVEALLDATA <> "Yes"]]></Condition>
+					<Condition Action="disable"><![CDATA[REMOVEALLDATA = "Yes"]]></Condition>
+				</Control>-->
+        <Control Id="SaveBackup" Type="CheckBox" X="35" Y="135" Width="300" Height="10"
+					Property="SAVEBACKUP"
+					Hidden="no" TabSkip="no" CheckBoxValue="1" Disabled="yes">
+          <Text>$(loc.IDS_UninstallOptionsDlg_SaveBackup)</Text>
+          <Property Id="SAVEBACKUP" Secure="yes"></Property>
+          <Condition Action="enable">BACKUPINSTALLED And <![CDATA[REMOVEALLDATA <> "Yes"]]></Condition>
+          <Condition Action="disable"><![CDATA[REMOVEALLDATA = "Yes"]]></Condition>
+        </Control>
+        <Control Id="SaveQuarantine" Type="CheckBox" X="35" Y="150" Width="300" Height="10"
+					Property="SAVEQUARANTINE"
+					Hidden="no" TabSkip="no" CheckBoxValue="1" Disabled="yes">
+          <Text>$(loc.IDS_UninstallOptionsDlg_SaveQuarantine)</Text>
+          <Property Id="SAVEQUARANTINE" Secure="yes"></Property>
+          <Condition Action="enable">QUARANTINEINSTALLED AND <![CDATA[REMOVEALLDATA <> "Yes"]]></Condition>
+          <Condition Action="disable"><![CDATA[REMOVEALLDATA = "Yes"]]></Condition>
+        </Control>
+        <Control Id="SaveSettings" Type="CheckBox" X="35" Y="165" Width="300" Height="10"
+					Property="SAVESETTINGS"
+					Hidden="no" TabSkip="no" CheckBoxValue="1" Disabled="yes">
+          <Text>$(loc.IDS_UninstallOptionsDlg_SaveSettings)</Text>
+          <Property Id="SAVESETTINGS" Secure="yes"></Property>
+          <Condition Action="enable"><![CDATA[REMOVEALLDATA <> "Yes"]]></Condition>
+          <Condition Action="disable"><![CDATA[REMOVEALLDATA = "Yes"]]></Condition>
+        </Control>
+        <?if ($(env.product_type) = KAV Or $(env.product_type) = FS) ?>
+        <Control Id="SaveFidbox" Type="CheckBox" X="35" Y="180" Width="300" Height="10"
+					Property="SAVEFIDBOX"
+					TabSkip="no" CheckBoxValue="1" Disabled="yes">
+          <Text>$(loc.IDS_UninstallOptionsDlg_SaveFidbox)</Text>
+          <Property Id="SAVEFIDBOX" Secure="yes"></Property>
+          <Condition Action="enable">VersionNT AND <![CDATA[REMOVEALLDATA <> "Yes"]]></Condition>
+          <Condition Action="disable"><![CDATA[REMOVEALLDATA = "Yes"]]></Condition>
+        </Control>
+        <?endif ?>
+        <?endif ?>
+
+        <!-- bottom line with wizard buttons -->
+        <Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes">
+          <Text>$(loc.Branding)</Text>
+        </Control>
+
+        <Control Id="Back" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)">
+          <Text>$(loc.ButtonText_Back)</Text>
+          <Publish Event="NewDialog" Value="DlgPasswdU">IsKAVUnPasswd</Publish>
+          <Publish Event="NewDialog" Value="MaintenanceTypeDlg">Not IsKAVUnPasswd</Publish>
+        </Control>
+        <Control Id="Next" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes">
+          <Text>$(loc.ButtonText_Next)</Text>
+          <Publish Event="NewDialog" Value="VerifyRemoveDlg"><![CDATA[1]]></Publish>
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes">
+          <Text>$(loc.ButtonText_Cancel)</Text>
+          <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="WaitForCostingDlg" Width="260" Height="85" Title="$(var.WizardFullTitle)" NoMinimize="yes">
+        <Control Id="Icon" Type="Icon" X="15" Y="15" Width="24" Height="24" ToolTip="Exclamation icon"
+					FixedSize="yes" IconSize="32" Text="exclamic" />
+        <Control Id="Text" Type="Text" X="48" Y="15" Width="194" Height="30">
+          <Text>$(loc.IDS_WaitForCostingDlg_Text)</Text>
+        </Control>
+        <Control Id="Return" Type="PushButton" X="102" Y="57" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes"
+					Cancel="yes" Text="[ButtonText_Return]">
+          <Publish Event="EndDialog" Value="Exit"><![CDATA[1]]></Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <!--<Dialog Id="VerifyReadyAdmin" Width="410" Height="300" Title="$(var.WizardFullTitle)">
+				<Control Id="InstallNow" Type="PushButton" X="306" Y="270" Width="$(var.MainDlgWizardButtonWidth)"
+					Height="$(var.MainDlgWizardButtonHeight)" Default="yes">
+					<Text>$(loc.ButtonText_InstallNow)</Text>
+					<Publish Event="EndDialog" Value="Return">1</Publish>
+				</Control>
+				<Control Id="Cancel" Type="PushButton" X="102" Y="270" Width="$(var.MainDlgWizardButtonWidth)"
+					Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes">
+					<Text>$(loc.ButtonText_Cancel)</Text>
+					<Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+				</Control>
+				<Control Id="Back" Type="PushButton" X="204" Y="270" Width="$(var.MainDlgWizardButtonWidth)"
+					Height="$(var.MainDlgWizardButtonHeight)">
+					<Text>$(loc.ButtonText_Back)</Text>
+					<Publish Event="NewDialog" Value="AdminInstallPoint">1</Publish>
+				</Control>
+				<Control Id="Text" Type="Text" X="130" Y="10" Width="270" Height="60">
+					<Text>$(loc.IDS_VerifyReadyAdmin_Text)</Text>
+				</Control>
+			</Dialog>-->
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="VerifyModifyDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)" TrackDiskSpace="yes">
+        <!-- top banner -->
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_VerifyModifyDlg_Title)</Text>
+        </Control>
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_VerifyModifyDlg_Description)</Text>
+        </Control>
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+        <!-- main dialog content -->
+        <Control Id="Text" Type="Text" X="25" Y="60" Width="320" Height="40">
+          <Text>$(loc.IDS_VerifyModifyDlg_Text)</Text>
+          <Condition Action="hide">RESUME</Condition>
+          <Condition Action="show">NOT RESUME</Condition>
+        </Control>
+        <Control Id="Text2" Type="Text" X="14" Y="60" Width="360" Height="40">
+          <Text>$(loc.IDS_VerifyModifyDlg_Text2)</Text>
+          <Condition Action="hide">NOT RESUME</Condition>
+          <Condition Action="show">RESUME</Condition>
+        </Control>
+        <!--<Control Id="UseSelfProtection" Type="CheckBox" X="25" Y="115" Width="300" Height="10"
+					Property="SELFPROTECTION" Hidden="yes" TabSkip="no" CheckBoxValue="1" >
+					<Text>$(loc.IDS_VerifyReadyDlg_CheckEnableProtection)</Text>
+					<Condition Action="show"><![CDATA[INSTALLMODE<>"Remove"]]></Condition>
+				</Control>-->
+        <!-- bottom line with wizard buttons -->
+        <Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes">
+          <Text>$(loc.Branding)</Text>
+        </Control>
+
+        <Control Id="Previous" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)">
+          <Text>$(loc.ButtonText_Back)</Text>
+          <Publish Event="NewDialog" Value="UnloadWFWDlg">$(var.Maintenance) AND <![CDATA[WFWENABLED = 1]]></Publish>
+          <Publish Event="NewDialog" Value="FoundKLProductsDlg">$(var.Maintenance) AND <![CDATA[KLAVFOUND = 1]]></Publish>
+          <Publish Event="NewDialog" Value="FoundProductsDlg">$(var.Maintenance) AND <![CDATA[AVFOUND = 1]]></Publish>
+          <Publish Event="NewDialog" Value="CustomizeDlg">$(var.Maintenance) AND <![CDATA[KLAVFOUND <> 1]]> AND <![CDATA[AVFOUND <> 1]]> AND <![CDATA[WFWENABLED <> 1]]> AND <![CDATA[INSTALLMODE = "Change"]]></Publish>
+        </Control>
+        <Control Id="InstallNow" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes">
+          <Text>$(loc.ButtonText_InstallNow)</Text>
+          <Publish Event="SpawnDialog" Value="OutOfDiskDlg">OutOfDiskSpace = 1</Publish>
+          <Publish Event="EndDialog" Value="Return"><![CDATA[OutOfDiskSpace <> 1]]></Publish>
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes">
+          <Text>$(loc.ButtonText_Cancel)</Text>
+          <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="VerifyRepairDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)" NoMinimize="yes" TrackDiskSpace="yes">
+        <!-- top banner -->
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_VerifyRepairDlg_Title)</Text>
+        </Control>
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_VerifyRepairDlg_Description)</Text>
+        </Control>
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+
+        <Control Id="Text" Type="Text" X="25" Y="70" Width="320" Height="40">
+          <Text>$(loc.IDS_VerifyRepairDlg_Text)</Text>
+        </Control>
+
+        <Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes">
+          <Text>$(loc.Branding)</Text>
+        </Control>
+
+        <Control Id="Back" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Text="$(loc.ButtonText_Back)">
+          <Publish Event="NewDialog" Value="MaintenanceTypeDlg"><![CDATA[1]]></Publish>
+        </Control>
+        <Control Id="Repair" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes"
+					Text="$(loc.ButtonText_Repair)">
+          <Publish Event="ReinstallMode" Value="ecmus"><![CDATA[OutOfDiskSpace <> 1]]></Publish>
+          <Publish Event="Reinstall" Value="All"><![CDATA[OutOfDiskSpace <> 1]]></Publish>
+          <Publish Event="EndDialog" Value="Return"><![CDATA[OutOfDiskSpace <> 1]]></Publish>
+          <Publish Event="SpawnDialog" Value="OutOfRbDiskDlg"><![CDATA[OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND (PROMPTROLLBACKCOST="P" OR NOT PROMPTROLLBACKCOST)]]></Publish>
+          <Publish Event="EndDialog" Value="Return"><![CDATA[OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND PROMPTROLLBACKCOST="D"]]></Publish>
+          <Publish Event="EnableRollback" Value="False"><![CDATA[OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND PROMPTROLLBACKCOST="D"]]></Publish>
+          <Publish Event="SpawnDialog" Value="OutOfDiskDlg"><![CDATA[(OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 1) OR (OutOfDiskSpace = 1 AND PROMPTROLLBACKCOST="F")]]></Publish>
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes"
+					Text="$(loc.ButtonText_Cancel)">
+          <Publish Event="SpawnDialog" Value="CancelDlg"><![CDATA[1]]></Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <Dialog Id="VerifyRemoveDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)">
+        <!-- top banner -->
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+        <Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+        <Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_VerifyRemoveDlg_Title)</Text>
+        </Control>
+        <Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+          <Text>$(loc.IDS_VerifyRemoveDlg_Description)</Text>
+        </Control>
+        <Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+        <!-- main dialog content -->
+        <Control Id="Text" Type="Text" X="14" Y="60" Width="400" Height="40">
+          <Text>$(loc.IDS_VerifyRemoveDlg_Text)</Text>
+        </Control>
+        <!-- bottom line with wizard buttons -->
+        <Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+        <Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+          <Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+        </Control>
+        <Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes">
+          <Text>$(loc.Branding)</Text>
+        </Control>
+
+        <Control Id="RemoveNow" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes">
+          <Text>$(loc.ButtonText_RemoveNow)</Text>
+          <Publish Event="Remove" Value="ALL">1</Publish>
+          <Publish Event="SpawnDialog" Value="OutOfDiskDlg">OutOfDiskSpace = 1</Publish>
+          <Publish Event="EndDialog" Value="Return"><![CDATA[OutOfDiskSpace <> 1]]></Publish>
+          <Publish Event="[ProgressType1]" Value="Uninstalling">1</Publish>
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes">
+          <Text>$(loc.ButtonText_Cancel)</Text>
+          <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+        </Control>
+        <Control Id="Back" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)">
+          <Text>$(loc.ButtonText_Back)</Text>
+          <Publish Event="NewDialog" Value="UninstallOptionsDlg"><![CDATA[1]]></Publish>
+        </Control>
+      </Dialog>
+
+      <!--////////////////////////////////////////////////////////////////-->
+      <InstallUISequence>
+        <!-- must stand first-->
+        <Show Dialog="FatalError" OnExit="error"></Show>
+        <Show Dialog="UserExit" OnExit="cancel"></Show>
+        <Show Dialog="ExitDialog" OnExit="success"></Show>
+
+        <!-- need this action here to define KLSetupDir to write error report files -->
+        <Custom Action="SetKLSETUPDIR" Sequence="25"></Custom>
+
+        <AppSearch Sequence="50"></AppSearch>
+
+        <!-- Additional check action before LaunchConditions! -->
+        <Custom Action="CheckRegistryPermissions" After="SetKLSETUPDIR"><![CDATA[VersionNT < 600]]></Custom>
+        <Custom Action="CheckRebootPending" After="CheckRegistryPermissions"></Custom>
+        <Custom Action="ErrorRebootPendingShow" After="CheckRebootPending">$(var.Upgrade) AND REBOOTPENDING</Custom>
+        <LaunchConditions Sequence="100">$(var.Installation)</LaunchConditions>
+
+        <!--<Show Dialog="PreActionDlg" After="LaunchConditions"/>-->
+        <!--<Custom Action="UnloadAppSetProp" After="CostFinalize">Installed</Custom>
+				<Custom Action="UnloadApp" After="UnloadAppSetProp">Installed</Custom>-->
+        <!--<Custom Action="FindApp" After="CostFinalize"></Custom>
+				<Show Dialog="UnloadAppDlg" After="FindApp">AppRunning</Show>-->
+        <?if $(env.product_type) = KIS ?>
+        <Custom Action="ErrorKAVAppFoundShow" After="FindRelatedProducts">KAVFOUND OR WKSFOUND OR FSFOUND OR SOSFOUND</Custom>
+        <?elseif $(env.product_type) = KAV ?>
+        <Custom Action="ErrorKAVAppFoundShow" After="FindRelatedProducts">KISFOUND OR WKSFOUND OR FSFOUND OR SOSFOUND</Custom>
+        <?elseif $(env.product_type) = WKS ?>
+        <Custom Action="ErrorKAVAppFoundShow" After="FindRelatedProducts">KAVFOUND OR KISFOUND OR FSFOUND OR SOSFOUND</Custom>
+        <?elseif $(env.product_type) = FS ?>
+        <Custom Action="ErrorKAVAppFoundShow" After="FindRelatedProducts">KAVFOUND OR KISFOUND OR WKSFOUND OR SOSFOUND</Custom>
+        <?elseif $(env.product_type) = SOS ?>
+        <Custom Action="ErrorKAVAppFoundShow" After="FindRelatedProducts">KAVFOUND OR KISFOUND OR WKSFOUND OR FSFOUND</Custom>
+        <?endif ?>
+        <Custom Action="Fix_REINSTALL" Before="CostFinalize">$(var.Installation)</Custom>
+        <!--CostFinalize-->
+        <Custom Action="SetProductMenuFolderSetProp" After="CostFinalize"></Custom>
+        <Custom Action="SetProductMenuFolder" After="SetProductMenuFolderSetProp"></Custom>
+        <!--<Custom Action="SetSAVEAVBASES" After="SetProductMenuFolder">AVBASESINSTALLED</Custom>-->
+        <Custom Action="SetSAVELICENSE" After="SetProductMenuFolder">LICSTORAGEFOUND</Custom>
+        <Custom Action="Fix_USESAVEDASBASES" After="SetSAVELICENSE">NOT ($(var.Installation) AND (SAVEDASBASESINSTALLED OR SAVEDASBASESVER6INSTALLED))</Custom>
+        <Custom Action="Fix_USESAVEDSETTINGS" After="Fix_USESAVEDASBASES">NOT ($(var.Installation) AND SETTINGSINSTALLED)</Custom>
+        <Show Dialog="VerifyWindowsXPSP" After="Fix_USESAVEDSETTINGS">$(var.Installation) AND (<![CDATA[VersionNT=501]]> AND <![CDATA[ServicePackLevel<2]]>)</Show>
+        <Show Dialog="WelcomeDlg" After="VerifyWindowsXPSP">$(var.Installation) AND NOT (AFTERREBOOT = 1)</Show>
+        <Show Dialog="ResumeDlg" After="WelcomeDlg">$(var.Upgrade)</Show>
+        <Show Dialog="MaintenanceTypeDlg" After="ResumeDlg">$(var.Maintenance)</Show>
+        <Show Dialog="ProgressDlg" After="MaintenanceTypeDlg">Not KLAVFOUND</Show>
+        <Show Dialog="ProgressDlgNoCancel" After="ProgressDlg">KLAVFOUND = 1</Show>
+        <Custom Action="CheckUpgrade" After="ProgressDlgNoCancel">$(var.Installation)</Custom>
+
+        <?if not ($(env.product_type) = SOS) ?>
+        <Custom Action="SetListKLSoftwarePropNormal" After="CheckUpgrade"><![CDATA[KLAVFOUND = 1 AND SKIPPRODUCTCHECK <> 1]]></Custom>
+        <Custom Action="RunCleaner" After="SetListKLSoftwarePropNormal"><![CDATA[KLAVFOUND = 1 AND SKIPPRODUCTCHECK <> 1]]></Custom>
+        <!--<Custom Action="UninstallCompetitorsSoftware" After="SetListKLSoftwarePropNormal"><![CDATA[KLAVFOUND = 1 AND SKIPPRODUCTCHECK <> 1]]></Custom>-->
+        <Show Dialog="SystemRestartDlg" After="RunCleaner">KLAVFOUND = 1</Show>
+        <!--<Custom Action="EnableRebootPending"  After="UninstallCompetitorsSoftware">KLAVFOUND = 1</Custom>-->
+        <?else?>
+        <!--<Custom Action="EnableRebootPending"  After="CheckUpgrade">KLAVFOUND = 1</Custom>-->
+        <Show Dialog="SystemRestartDlg" After="CheckUpgrade">KLAVFOUND = 1</Show>
+        <?endif?>
+        <!--<Custom Action="ProductInitialize" After="ExecuteAction">$(var.Installation)</Custom>-->
+
+      </InstallUISequence>
+      <AdminUISequence>
+        <Show Dialog="FatalError" OnExit="error"></Show>
+        <Show Dialog="UserExit" OnExit="cancel"></Show>
+        <Show Dialog="AdminExitDialog" OnExit="success"></Show>
+        <Show Dialog="AdminWelcomeDlg" After="CostFinalize"></Show>
+        <Show Dialog="ProgressDlg" After="AdminWelcomeDlg" />
+      </AdminUISequence>
+    </UI>
+
+    <!--////////////////////////////////////////////////////////////////-->
+
+    <Binary Id="Welcome" src="$(env.localization_product_path)\res\inst_leftbanner.bmp" />
+
+    <Binary Id="BannerBackground" src="$(env.res_path)\banner_background.bmp" />
+
+    <Binary Id="BannerPicture" src="$(env.localization_product_path)\res\box.bmp" />
+
+    <Binary Id="folder_up.ico" src="$(env.res_path)\folder_up.ico" />
+    <Binary Id="folder_new.ico" src="$(env.res_path)\folder_new.ico" />
+    <Icon Id="setup2.ico" src="$(env.res_path)\setup2.ico" />
+    <Icon Id="url.ico" src="$(env.res_path)\url.ico" />
+
+    <Binary Id="completi" src="$(env.res_path)\completi.ibd" />
+    <Binary Id="custicon" src="$(env.res_path)\custicon.ibd" />
+    <Binary Id="insticon" src="$(env.res_path)\insticon.ibd" />
+
+    <Binary Id="removico" src="$(env.res_path)\removico.ibd" />
+    <Binary Id="repairic" src="$(env.res_path)\repairic.ibd" />
+
+    <Binary Id="NewBinary13" src="$(env.res_path)\NewBinary13.ibd" />
+    <Binary Id="NewBinary14" src="$(env.res_path)\NewBinary14.ibd" />
+    <Binary Id="NewBinary15" src="$(env.res_path)\NewBinary15.ibd" />
+    <Binary Id="NewBinary16" src="$(env.res_path)\NewBinary16.ibd" />
+    <Binary Id="NewBinary17" src="$(env.res_path)\NewBinary17.ibd" />
+    <Binary Id="NewBinary18" src="$(env.res_path)\NewBinary18.ibd" />
+
+    <Binary Id="firewall1" src="$(env.res_path)\firewall32.ico" />
+    <Binary Id="firewalloff" src="$(env.res_path)\firewalloff_32.ico" />
+    <Binary Id="firewallonn" src="$(env.res_path)\firewallon_32.ico" />
+
+    <Binary Id="exclamic" src="$(env.res_path)\exclamic.ibd" />
+
+    <Binary Id="desticon" src="$(env.res_path)\DestIcon.ibd" />
+  </Fragment>
+</Wix>
+
+<!--////////////////////////////////////////////////////////////////-->
+<!--<Dialog Id="CCPDialog" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="Product Compliance Check">
+				<Control Id="Drive" Type="VolumeSelectCombo" X="12" Y="136" Width="200" Height="100" Property="CCP_DRIVE"
+					CDROM="yes" Floppy="yes" />
+				<Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes">
+					<Text>$(loc.ButtonText_Cancel)</Text>
+					<Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+				</Control>
+				<Control Id="OK" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes">
+					<Text>$(loc.ButtonText_Next)</Text>
+					<Publish Event="EndDialog" Value="Return">1</Publish>
+				</Control>
+				<Control Id="DriveText" Type="Text" X="12" Y="110" Width="100" Height="$(var.MainDlgWizardButtonHeight)"
+					TabSkip="no" Text="Drive:" />
+				<Control Id="Text" Type="Text" X="12" Y="24" Width="400" Height="80">
+					<Text>Setup failed to locate a qualifying product on your hard drive(s). Please select the drive that contains the qualifying product.</Text>
+				</Control>
+				<Control Id="Previous" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Disabled="yes"
+					TabSkip="yes">
+					<Text>$(loc.ButtonText_Back)</Text>
+				</Control>
+			</Dialog>-->
+<!--////////////////////////////////////////////////////////////////-->
+<!--Dialog Id="CCPFail" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="Product Compliance Check">
+				<Control Id="OK" Type="PushButton" X="200" Y="180" Width="80" Height="$(var.MainDlgWizardButtonHeight)"
+					Default="yes" Cancel="yes" Text="Exit">
+					<Publish Event="EndDialog" Value="Exit">1</Publish>
+				</Control>
+				<Control Id="Text" Type="Text" X="12" Y="12" Width="400" Height="80">
+					<Text>Setup has failed to locate a qualifying product. If you feel cheated, please contact Microsoft.</Text>
+				</Control>
+			</Dialog>-->
+<!--////////////////////////////////////////////////////////////////-->
+<!--<Dialog Id="FirstRun" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)">
+				<Control Id="NameQ" Type="Text" X="12" Y="12" Width="80" Height="$(var.MainDlgWizardButtonHeight)"
+					TabSkip="no">
+					<Text><![CDATA[{\TimesItalicBlue10}N&ame:]]></Text>
+				</Control>
+				<Control Id="NameE" Type="Edit" X="100" Y="12" Width="300" Height="20" Property="USERNAME"
+					Text="{47}" />
+				<Control Id="OrgQ" Type="Text" X="12" Y="40" Width="80" Height="$(var.MainDlgWizardButtonHeight)"
+					TabSkip="no">
+					<Text><![CDATA[{\TimesItalicBlue10}&Organization:]]></Text>
+				</Control>
+				<Control Id="OrgE" Type="Edit" X="100" Y="40" Width="300" Height="20" Property="COMPANYNAME"
+					Text="{53}" />
+				<Control Id="PIDQ" Type="Text" X="12" Y="70" Width="450" Height="20" TabSkip="no">
+					<Text><![CDATA[{\TimesItalicBlue10}Please, enter the product &ID found on your CD box.]]></Text>
+					<Condition Action="hide">ProductID</Condition>
+				</Control>
+				<Control Id="PIDE" Type="MaskedEdit" X="12" Y="90" Width="450" Height="15" Property="PIDKEY"
+					Text="[PIDTemplate]">
+					<Condition Action="hide">ProductID</Condition>
+				</Control>
+				<Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes">
+					<Text>$(loc.ButtonText_Cancel)</Text>
+					<Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+				</Control>
+				<Control Id="Previous" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Disabled="yes">
+					<Text>$(loc.ButtonText_Back)</Text>
+				</Control>
+				<Control Id="Next" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes">
+					<Text>$(loc.ButtonText_Next)</Text>
+					<Publish Event="ValidateProductID" Value="0">1</Publish>
+					<Publish Event="NewDialog" Value="FirstRun2">ProductID</Publish>
+				</Control>
+			</Dialog>-->
+<!--////////////////////////////////////////////////////////////////-->
+<!--<Dialog Id="FirstRun2" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)">
+				<Control Id="Next" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes">
+					<Text><![CDATA[&OK]]></Text>
+					<Publish Event="EndDialog" Value="Return">1</Publish>
+				</Control>
+				<Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes">
+					<Text>$(loc.ButtonText_Cancel)</Text>
+					<Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+				</Control>
+				<Control Id="Previous" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)">
+					<Text>$(loc.ButtonText_Back)</Text>
+					<Publish Event="NewDialog" Value="FirstRun">1</Publish>
+				</Control>
+				<Control Id="PIDNumber" Type="Text" X="20" Y="80" Width="440" Height="25">
+					<Text>{\TimesRed16}[ProductID]</Text>
+				</Control>
+				<Control Id="PIDText" Type="Text" X="20" Y="20" Width="440" Height="40">
+					<Text>This is your product ID number:</Text>
+				</Control>
+			</Dialog>-->
+<!--////////////////////////////////////////////////////////////////-->
+<!--<Dialog Id="Reinstall" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)">
+				<Control Id="Normal" Type="PushButton" X="20" Y="60" Width="80" Height="$(var.MainDlgWizardButtonHeight)"
+					Default="yes">
+					<Text><![CDATA[&Normal]]></Text>
+					<Publish Event="ReinstallMode" Value="reum">1</Publish>
+					<Publish Event="Reinstall" Value="ALL">1</Publish>
+					<Publish Event="EndDialog" Value="Return">1</Publish>
+				</Control>
+				<Control Id="Complete" Type="PushButton" X="20" Y="100" Width="80" Height="$(var.MainDlgWizardButtonHeight)">
+					<Text><![CDATA[C&omplete]]></Text>
+					<Publish Event="ReinstallMode" Value="rfums">1</Publish>
+					<Publish Event="Reinstall" Value="ALL">1</Publish>
+					<Publish Event="EndDialog" Value="Return">1</Publish>
+				</Control>
+				<Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes">
+					<Text>$(loc.ButtonText_Cancel)</Text>
+					<Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+				</Control>
+				<Control Id="Previous" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)">
+					<Text>$(loc.ButtonText_Back)</Text>
+					<Publish Event="NewDialog" Value="MaintenanceWelcomeDlg">1</Publish>
+				</Control>
+				<Control Id="Minimal" Type="PushButton" X="20" Y="20" Width="80" Height="$(var.MainDlgWizardButtonHeight)">
+					<Text><![CDATA[&Minimal]]></Text>
+					<Publish Event="ReinstallMode" Value="rpm">1</Publish>
+					<Publish Event="Reinstall" Value="ALL">1</Publish>
+					<Publish Event="EndDialog" Value="Return">1</Publish>
+				</Control>
+				<Control Id="CompleteText" Type="Text" X="125" Y="100" Width="260" Height="25">
+					<Text>{\Times9}Replace all files, rewrite all registry entries, fix up all shortcuts</Text>
+				</Control>
+				<Control Id="MinimalText" Type="Text" X="125" Y="20" Width="260" Height="25">
+					<Text>{\Times9}Replace only missing files, rewrite machine registry entries</Text>
+				</Control>
+				<Control Id="NormalText" Type="Text" X="125" Y="60" Width="260" Height="25">
+					<Text><![CDATA[{\Times9}Replace all files whose versions don't match exactly, rewrite all registry entries]]></Text>
+				</Control>
+			</Dialog>-->
+<!--////////////////////////////////////////////////////////////////-->
+<!--<Dialog Id="ReinstallMode" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)"
+				Title="$(var.WizardFullTitle)">
+				<Control Id="OK" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes">
+					<Text><![CDATA[&OK]]></Text>
+					<Publish Property="UIReinstallMode" Value="[ReinstallRepair][ReinstallFilePresent][ReinstallFileOlderVersion][ReinstallFileDifferingVersion][ReinstallFileChecksum][ReinstallFileForceAll][ReinstallUserData][ReinstallMachineData][ReinstallShortcut]">1</Publish>
+					<Publish Event="EndDialog" Value="Return">1</Publish>
+				</Control>
+				<Control Id="ReinstallRepair" Type="CheckBox" X="20" Y="10" Width="400" Height="$(var.MainDlgWizardButtonHeight)"
+					Property="ReinstallRepair">
+					<Text><![CDATA[&Repair all detected reinstall problems]]></Text>
+				</Control>
+				<Control Id="ReinstallFilePresent" Type="CheckBox" X="20" Y="30" Width="400" Height="$(var.MainDlgWizardButtonHeight)"
+					Property="ReinstallFilePresent">
+					<Text>Reinstall only if file is missing</Text>
+				</Control>
+				<Control Id="ReinstallFileOlderVersion" Type="CheckBox" X="20" Y="50" Width="400" Height="$(var.MainDlgWizardButtonHeight)"
+					Property="ReinstallFileOlderVersion">
+					<Text>Reinstall if file is missing, or an older version exists</Text>
+				</Control>
+				<Control Id="ReinstallFileEqualVersion" Type="CheckBox" X="20" Y="70" Width="400" Height="$(var.MainDlgWizardButtonHeight)"
+					Property="ReinstallFileEqualVersion">
+					<Text>Reinstall if file is missing, or an older or equal version exists</Text>
+				</Control>
+				<Control Id="ReinstallFileExact" Type="CheckBox" X="20" Y="90" Width="400" Height="$(var.MainDlgWizardButtonHeight)"
+					Property="ReinstallFileDifferingVersion">
+					<Text>Reinstall if existing file has a different version</Text>
+				</Control>
+				<Control Id="ReinstallFileChecksum" Type="CheckBox" X="20" Y="110" Width="400" Height="$(var.MainDlgWizardButtonHeight)"
+					Property="ReinstallFileChecksum">
+					<Text>Reinstall if exe or dll has an invalid checksum</Text>
+				</Control>
+				<Control Id="ReinstallFileForce" Type="CheckBox" X="20" Y="130" Width="400" Height="$(var.MainDlgWizardButtonHeight)"
+					Property="ReinstallFileForceAll">
+					<Text><![CDATA[&Force all files to be reinstalled, regardless of checksum or version]]></Text>
+				</Control>
+				<Control Id="ReinstallUserData" Type="CheckBox" X="20" Y="150" Width="400" Height="$(var.MainDlgWizardButtonHeight)"
+					Property="ReinstallUserData">
+					<Text><![CDATA[Verify that required &user registry entries are present]]></Text>
+				</Control>
+				<Control Id="ReinstallMachineData" Type="CheckBox" X="20" Y="170" Width="400" Height="$(var.MainDlgWizardButtonHeight)"
+					Property="ReinstallMachineData">
+					<Text><![CDATA[Verify that required local &machine registry entries are present]]></Text>
+				</Control>
+				<Control Id="ReinstallShortcut" Type="CheckBox" X="20" Y="190" Width="400" Height="$(var.MainDlgWizardButtonHeight)"
+					Property="ReinstallShortcut" Text="Validate shortcuts" />
+				<Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes">
+					<Text>$(loc.ButtonText_Cancel)</Text>
+					<Publish Event="Reset" Value="0">1</Publish>
+					<Publish Event="EndDialog" Value="Return">1</Publish>
+				</Control>
+			</Dialog>-->
+<!--////////////////////////////////////////////////////////////////-->
+<!--<Dialog Id="OutOfDisk" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)"
+				Title="$(var.WizardFullTitle)">
+				<Control Id="OK" Type="PushButton" X="200" Y="180" Width="80" Height="$(var.MainDlgWizardButtonHeight)"
+					Default="yes" Cancel="yes" Text="OK">
+					<Publish Event="EndDialog" Value="Return">1</Publish>
+				</Control>
+				<Control Id="Text" Type="Text" X="12" Y="12" Width="400" Height="40">
+					<Text>Out of disk space. The highlighted volumes do not have enough disk space available for the currently selected features.</Text>
+				</Control>
+				<Control Id="List" Type="VolumeCostList" X="12" Y="70" Width="450" Height="100" Text="List of volumes" />
+			</Dialog>-->
+<!--////////////////////////////////////////////////////////////////-->
+<!--<Dialog Id="UserRegistrationDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)"	Title="$(var.WizardFullTitle)">
+				<Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+									Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+				<Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+				Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+							<Text>$(loc.IDS_UserRegistrationDlg_Title)</Text>
+				</Control>
+				<Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+					<Text>$(loc.IDS_UserRegistrationDlg_Description)</Text>
+				</Control>
+				<Control Id="Text" Type="Text" X="20" Y="50" Width="330" Height="20">
+					<Text>$(loc.IDS_UserRegistrationDlg_Text)</Text>
+				</Control>
+				<Control Id="NameLabel" Type="Text" X="22" Y="80" Width="80" Height="12" TabSkip="no">
+					<Text>$(loc.IDS_UserRegistrationDlg_NameLabel)</Text>
+				</Control>
+				<Control Id="NameEdit" Type="Edit" X="20" Y="92" Width="330" Height="18" Property="USERNAME"
+					Text="{47}" Sunken="no" />
+				<Control Id="OrgLabel" Type="Text" X="22" Y="117" Width="80" Height="12" TabSkip="no">
+					<Text>$(loc.IDS_UserRegistrationDlg_OrgLabel)</Text>
+				</Control>
+				<Control Id="OrgEdit" Type="Edit" X="20" Y="129" Width="330" Height="18" Property="COMPANYNAME"
+					Text="{53}" Sunken="no" />
+				<Control Id="EmailLabel" Type="Text" X="22" Y="154" Width="80" Height="12" TabSkip="no">
+					<Text>$(loc.IDS_UserRegistrationDlg_EmailLabel)</Text>
+				</Control>
+				<Control Id="EmailEdit" Type="Edit" X="20" Y="166" Width="330" Height="18" Property="UserEmail"
+					Text="{53}" Sunken="no" />
+				<Control Id="Text1" Type="Text" X="20" Y="200" Width="330" Height="20">
+					<Text>$(loc.IDS_UserRegistrationDlg_Text1)</Text>
+				</Control>
+
+				<Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+				<Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13"><Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text></Control>
+				<Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes"><Text>$(loc.Branding)</Text></Control> 		
+				<Control Id="Back" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Text="$(loc.ButtonText_Back)">
+					<Publish Event="NewDialog" Value="LicenseAgreementDlg">1</Publish>
+				</Control>
+				<Control Id="Next" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes"
+					Text="$(loc.ButtonText_Next)">
+					<Publish Event="ValidateProductID" Value="0">1</Publish>
+					<Publish Event="NewDialog" Value="InformationDlg">NOT Preselected</Publish>
+					<Publish Event="NewDialog" Value="VerifyReadyDlg">Preselected</Publish>
+				</Control>
+				<Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes"
+					Text="$(loc.ButtonText_Cancel)">
+					<Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+				</Control>
+			</Dialog>-->
+<!--////////////////////////////////////////////////////////////////-->
+<!--<Dialog Id="InformationDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)">
+				<Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+					Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+				<Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+					FixedSize="yes" />
+				<Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+				<Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+					<Text>$(loc.IDS_InformationDlg_Title)</Text>
+				</Control>
+				<Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+					<Text>$(loc.IDS_InformationDlg_Description)</Text>
+				</Control>
+				<Control Id="Text" Type="Text" X="20" Y="50" Width="330" Height="20">
+					<Text>$(loc.IDS_InformationDlg_Text)</Text>
+				</Control>
+				<Control Id="ReadmeText" Type="ScrollableText" X="20" Y="70" Width="330" Height="150" Sunken="yes"
+					TabSkip="no">
+					<Text src="$(env.localization_product_path)/releasenotes.rtf" />	
+				</Control>
+				<Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+				<Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13"><Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text></Control>
+				<Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes"><Text>$(loc.Branding)</Text></Control> 	
+					
+				<Control Id="Back" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Text="$(loc.ButtonText_Back)">
+					<Publish Event="NewDialog" Value="LicenseAgreementDlg">1</Publish>
+				</Control>
+				<Control Id="Next" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes"
+					Text="$(loc.ButtonText_Next)">
+					<Publish Event="NewDialog" Value="DestinationFolderDlg">1</Publish>
+				</Control>
+				<Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+					Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes"
+					Text="$(loc.ButtonText_Cancel)">
+					<Publish Event="SpawnDialog" Value="CancelDlg"><![CDATA[1]]></Publish>
+				</Control>
+			</Dialog>-->
+<!--////////////////////////////////////////////////////////////////-->
+<!--<Dialog Id="PreActionDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)"
+				Modeless="yes">
+				<Control Id="Cancel" Type="PushButton" X="378" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)"
+					Height="$(var.MainDlgWizardButtonHeight)" Default="yes" Cancel="yes">
+					<Text>$(loc.ButtonText_Cancel)</Text>
+					<Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+				</Control>
+				<Control Id="ActionData" Type="Text" X="12" Y="50" Width="456" Height="12">
+					<Subscribe Event="ActionData" Attribute="Text" />
+				</Control>
+				<Control Id="ActionText" Type="Text" X="12" Y="30" Width="456" Height="30">
+					<Text>$(loc.IDS_PreActionDlg_ActionText)</Text>
+					<Subscribe Event="ActionText" Attribute="Text" />
+				</Control>
+			</Dialog>-->
+<!--////////////////////////////////////////////////////////////////-->
+<!--<Dialog Id="UnloadAppDlg" Width="260" Height="85" Title="$(var.WizardFullTitle)"
+				NoMinimize="yes">
+				<Control Id="Text" Type="Text" X="48" Y="15" Width="194" Height="30">
+					<Text>$(loc.IDS_Condition_NeedUnloadApp)</Text>
+				</Control>
+				<Control Id="A" Type="PushButton" X="132" Y="57" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)">
+					<Text>$(loc.ButtonText_Cancel)</Text>
+					<Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+				</Control>
+				<Control Id="R" Type="PushButton" X="72" Y="57" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)">
+					<Text>$(loc.ButtonText_Retry)</Text>
+					<Publish Event="DoAction" Value="FindApp">1</Publish>
+					<Publish Event="[AppRunning]" Value="[AppRunning]">1</Publish>
+					<Publish Event="EndDialog" Value="Return">Not AppRunning</Publish>
+				</Control>
+			</Dialog>-->
+<!--////////////////////////////////////////////////////////////////-->
+<!--<Dialog Id="SetupModeDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)">
+	<Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="$(var.MainDlgBannerLineWidth)"
+		Height="$(var.MainDlgBannerLineY)" TabSkip="no" Text="BannerBackground" />
+	<Control Id="RightPictureBitmap" Type="Bitmap" X="$(var.MainDlgBannerBitmapX)" Y="$(var.MainDlgBannerBitmapY)" Width="$(var.MainDlgBannerBitmapW)" Height="$(var.MainDlgBannerBitmapH)" Text="BannerPicture"
+		FixedSize="yes" />
+	<Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+		<Text>$(loc.IDS_SetupModeDlg_Title)</Text>
+	</Control>
+	<Control Id="Description" Type="Text" X="$(var.MainDlgSubtitleX)" Y="$(var.MainDlgSubtitleY)" Width="$(var.MainDlgSubtitleWidth)" Height="$(var.MainDlgSubtitleHeight)" Transparent="yes" NoPrefix="yes">
+		<Text>$(loc.IDS_SetupModeDlg_Description)</Text>
+	</Control>
+	<Control Id="BannerLine" Type="Line" X="0" Y="$(var.MainDlgBannerLineY)" Width="$(var.MainDlgBannerLineWidth)" Height="1" />
+	<Control Id="Text" Type="Text" X="20" Y="50" Width="330" Height="20">
+		<Text>$(loc.IDS_SetupModeDlg_Text)</Text>
+	</Control>
+	<Control Id="Buttons" Type="RadioButtonGroup"  X="50" Y="100" Width="300" Height="80" Property="EXPRESSINSTALL">
+		<RadioButtonGroup Property="EXPRESSINSTALL">
+			<RadioButton Value="Yes" X="5" Y="0" Width="250" Height="20" Text="$(loc.IDS_SetupModeDlg_ButtonsYes)" />
+			<RadioButton Value="No" X="5" Y="60" Width="250" Height="20" Text="$(loc.IDS_SetupModeDlg_ButtonsNo)" />
+		</RadioButtonGroup>
+	</Control>
+	<Control Id="BottomLine" Type="Line" X="50" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+	<Control Id="Branding1" Type="Text" X="4" Y="230" Width="$(var.MainDlgBrandingWidth)" Height="13">
+		<Text><![CDATA[{&MSSWhiteSerif8}]]>$(loc.Branding)</Text>
+	</Control>
+	<Control Id="Branding2" Type="Text" X="3" Y="229" Width="$(var.MainDlgBrandingWidth)" Height="13" Disabled="yes" Transparent="yes">
+		<Text>$(loc.Branding)</Text>
+	</Control>
+	<Control Id="Back" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)"
+		Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Text="$(loc.ButtonText_Back)">
+		<Publish Event="NewDialog" Value="LicenseAgreementDlg">1</Publish>
+	</Control>
+	<Control Id="Next" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)"
+		Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes"
+		Text="$(loc.ButtonText_Next)">
+
+		<Publish Property="INSTALLMODE" Value="Complete"><![CDATA[1]]></Publish>
+		<Publish Property="ADDLOCALPROP" Value="ALL"><![CDATA[1]]></Publish>
+		<Publish Property="REMOVEPROP" Value="{}"><![CDATA[1]]></Publish>
+		<Publish Event="DoAction" Value="SetREINSTALLProp"><![CDATA[1]]></Publish>
+		<Publish Event="SetInstallLevel" Value="1000">$(var.Installation)</Publish>
+		<Publish Event="SpawnDialog" Value="OutOfDiskDlg">OutOfDiskSpace = 1</Publish>
+		<Publish Event="[WFWENABLED]" Value="0">1</Publish>
+		<Publish Event="[AVFOUND]" Value="0">1</Publish>
+		<Publish Event="[RTPSELECTED]" Value="1"><![CDATA[&RtpComponentsFeature = 3]]></Publish>
+		<Publish Event="[RTPSELECTED]" Value="0"><![CDATA[&RtpComponentsFeature <> 3]]></Publish>
+		<?if ($(env.product_type) = KAV) ?>
+		<Publish Event="[NETSELECTED]" Value="1">
+			<![CDATA[&MailAntiVirusFeature = 3 OR &WebAntiVirusFeature = 3]]>
+		</Publish>
+		<Publish Event="[NETSELECTED]" Value="0">
+			<![CDATA[&MailAntiVirusFeature <> 3 AND &WebAntiVirusFeature <> 3]]>
+		</Publish>
+		<?elseif ($(env.product_type) = KIS Or $(env.product_type) = WKS) ?>
+		<Publish Event="[NETSELECTED]" Value="1">
+			<![CDATA[&MailAntiVirusFeature = 3 OR 
+								 &WebAntiVirusFeature = 3 OR
+								 &AntiPhishingFeature = 3 OR
+                 &AntiBannerFeature = 3 OR
+                 &IntrusionShieldFeature = 3 OR  
+								 &FirewallFeature = 3 OR
+								 &AntiSpamFeature = 3 OR
+								 &ParentalControlFeature = 3]]>
+		</Publish>
+		<Publish Event="[NETSELECTED]" Value="0">
+			<![CDATA[&MailAntiVirusFeature <> 3 AND 
+								 &WebAntiVirusFeature <> 3 AND
+								 &AntiPhishingFeature <> 3 AND
+                 &AntiBannerFeature <> 3 
+                 &IntrusionShieldFeature <> 3 AND
+								 &FirewallFeature <> 3 AND
+								 &AntiSpamFeature <> 3 AND
+								 &ParentalControlFeature <> 3]]>
+		</Publish>
+		<Publish Event="[AHSELECTED]" Value="1"><![CDATA[&FirewallFeature = 3]]></Publish>
+		<Publish Event="[AHSELECTED]" Value="0"><![CDATA[&FirewallFeature <> 3]]></Publish>
+		<Publish Event="[ASSELECTED]" Value="1"><![CDATA[&AntiSpamFeature = 3]]></Publish>
+		<Publish Event="[ASSELECTED]" Value="0"><![CDATA[&AntiSpamFeature <> 3]]></Publish>
+		<Publish Event="DoAction" Value="DetectWFW"><![CDATA[&FirewallFeature = 3]]></Publish>
+		<Publish Event="[WFWENABLED]" Value="[WFWENABLED]">1</Publish>
+		<?endif?>
+
+		<Publish Event="NewDialog" Value="DestinationFolderDlg"><![CDATA[IAgree = "Yes" AND $(var.Installation) AND (EXPRESSINSTALL="No" OR EXPRESSUPGRADE)]]></Publish>
+		<Publish Event="NewDialog" Value="SetupTypeDlg"><![CDATA[IAgree = "Yes" AND Installed AND ( RESUME OR Preselected) AND (EXPRESSINSTALL="No" OR EXPRESSUPGRADE)]]></Publish>
+
+    <?ifdef ADVANCED_FEATURES ?>
+    <Publish Event="DoAction" Value="SetListCompetitorsSoftwareProp"><![CDATA[( EXPRESSINSTALL="Yes"  OR EXPRESSUPGRADE) AND SKIPPRODUCTCHECK <> 1]]></Publish>
+		<Publish Event="DoAction" Value="ListCompetitorsSoftware"><![CDATA[(&FirewallFeature = 3 OR &RtpComponentsFeature = 3 OR &AntiSpamFeature = 3) AND ( EXPRESSINSTALL="Yes"  OR EXPRESSUPGRADE) AND SKIPPRODUCTCHECK <> 1]]></Publish>
+		<Publish Event="[AVFOUND]" Value="[AVFOUND]">1</Publish>
+		<Publish Event="NewDialog" Value="FoundProductsDlg"><![CDATA[(AVFOUND = 1) AND (&FirewallFeature = 3 OR &RtpComponentsFeature = 3 OR &AntiSpamFeature = 3) AND ( EXPRESSINSTALL="Yes"  OR EXPRESSUPGRADE)]]></Publish>
+		<?elseif ($(env.product_type) = KAV Or $(env.product_type) = FS)?>
+		<Publish Event="DoAction" Value="SetListCompetitorsSoftwareProp"><![CDATA[( EXPRESSINSTALL="Yes"  OR EXPRESSUPGRADE) AND SKIPPRODUCTCHECK <> 1]]></Publish>
+		<Publish Event="DoAction" Value="ListCompetitorsSoftware"><![CDATA[&RtpComponentsFeature = 3 AND (EXPRESSINSTALL OR EXPRESSUPGRADE) AND SKIPPRODUCTCHECK <> 1]]></Publish>
+		<Publish Event="[AVFOUND]" Value="[AVFOUND]">1</Publish>
+		<Publish Event="NewDialog" Value="FoundProductsDlg"><![CDATA[AVFOUND = 1 AND &RtpComponentsFeature = 3 AND ( EXPRESSINSTALL="Yes"  OR EXPRESSUPGRADE)]]></Publish>
+		<?endif?>
+
+		<?if not ($(env.product_type) = SOS) ?>
+		<Publish Event="DoAction" Value="SetListKLSoftwarePropNormal" ><![CDATA[(AVFOUND <> 1) AND ( EXPRESSINSTALL="Yes"  OR EXPRESSUPGRADE) AND SKIPPRODUCTCHECK <> 1]]></Publish>
+		<Publish Event="DoAction" Value="ListKLSoftware"><![CDATA[(AVFOUND <> 1) AND ( EXPRESSINSTALL="Yes"  OR EXPRESSUPGRADE) AND SKIPPRODUCTCHECK <> 1]]></Publish>
+		<Publish Event="[KLAVFOUND]" Value="[KLAVFOUND]"><![CDATA[(KLAVFOUND = 1) AND (AVFOUND <> 1) AND ( EXPRESSINSTALL="Yes"  OR EXPRESSUPGRADE)]]></Publish>
+		<Publish Event="NewDialog" Value="FoundKLProductsDlg"><![CDATA[(KLAVFOUND = 1) AND (AVFOUND <> 1) AND ( EXPRESSINSTALL="Yes"  OR EXPRESSUPGRADE)]]></Publish>
+		<?endif?>
+
+		<Publish Event="NewDialog" Value="VerifyReadyDlg"><![CDATA[IAgree = "Yes" AND (KLAVFOUND <> 1)  AND (AVFOUND <> 1) AND (EXPRESSINSTALL="Yes" OR EXPRESSUPGRADE)]]></Publish>
+
+	</Control>
+	<Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)"
+		Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes"
+		Text="$(loc.ButtonText_Cancel)">
+		<Publish Event="SpawnDialog" Value="CancelDlg"><![CDATA[1]]></Publish>
+	</Control>
+</Dialog>-->
+<!--////////////////////////////////////////////////////////////////-->
+<!--<Dialog Id="MaintenanceWelcomeDlg" Width="$(var.MainDlgWidth)" Height="$(var.MainDlgHeight)" Title="$(var.WizardFullTitle)"
+				NoMinimize="yes">
+				<Control Id="WelcomeBitmap" Type="Bitmap" X="0" Y="0" Width="123" Height="236" Text="Welcome" />
+				<Control Id="BackgroundBitmap" Type="Bitmap" X="124" Y="0" Width="246" Height="236" Text="BannerBackground" />
+				<Control Id="Next" Type="PushButton" X="$(var.MainDlgNextButtonX)" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Default="yes"
+					Text="$(loc.ButtonText_Next)">
+					<Publish Event="NewDialog" Value="MaintenanceTypeDlg">1</Publish>
+				</Control>
+				<Control Id="Cancel" Type="PushButton" X="$(var.MainDlgCancelButtonX)" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Cancel="yes"
+					Text="$(loc.ButtonText_Cancel)">
+					<Publish Event="SpawnDialog" Value="CancelDlg"><![CDATA[1]]></Publish>
+				</Control>
+				<Control Id="Back" Type="PushButton" X="$(var.MainDlgBackButtonX)" Y="$(var.MainDlgWizardButtonY)" Width="$(var.MainDlgWizardButtonWidth)" Height="$(var.MainDlgWizardButtonHeight)" Disabled="yes"
+					Text="$(loc.ButtonText_Back)" />
+				<Control Id="Description" Type="Text" X="135" Y="70" Width="220" Height="120" Transparent="yes"
+					NoPrefix="yes">
+					<Text>$(loc.IDS_MaintenanceWelcomeDlg_Description)</Text>
+				</Control>
+				<Control Id="Title" Type="Text" X="$(var.MainDlgTitleX)" Y="$(var.MainDlgTitleY)" Width="$(var.MainDlgTitleWidth)" Height="$(var.MainDlgTitleHeight)" Transparent="yes" NoPrefix="yes">
+					<Text>$(loc.IDS_MaintenanceWelcomeDlg_Title)</Text>
+				</Control>
+				<Control Id="BottomLine" Type="Line" X="0" Y="$(var.MainDlgBottomLineY)" Width="$(var.MainDlgBottomLineWidth)" Height="1" />
+			</Dialog>-->

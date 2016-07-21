@@ -1,0 +1,1 @@
+#error Original file moved into Windows\Hook\Hook directory. Change own project!

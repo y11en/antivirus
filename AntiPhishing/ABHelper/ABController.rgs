@@ -1,0 +1,27 @@
+HKCR
+{
+	ABHelper.ABController.1 = s 'ABController Class'
+	{
+		CLSID = s '{310CA7B9-D56B-499A-B786-D9648270585E}'
+	}
+	ABHelper.ABController = s 'ABController Class'
+	{
+		CLSID = s '{310CA7B9-D56B-499A-B786-D9648270585E}'
+		CurVer = s 'ABHelper.ABController.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {310CA7B9-D56B-499A-B786-D9648270585E} = s 'ABController Class'
+		{
+			ProgID = s 'ABHelper.ABController.1'
+			VersionIndependentProgID = s 'ABHelper.ABController'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{}'
+		}
+	}
+}

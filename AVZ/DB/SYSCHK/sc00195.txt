@@ -1,0 +1,4 @@
+// ***** AdvWare.Quick *****
+begin
+ AddEvAlarmByCLSID('899D71E2-FDDE-4209-BCC5-5A4BEAEEB729','AdvWare.Quick.a (QuickSearchBar)','QuickSearchBar*.dll');
+end.

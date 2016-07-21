@@ -1,0 +1,62 @@
+#import "tm.idef"
+
+forward interface AntispamFilter;
+typedef AntispamFilter* hANTISPAMFILTER;
+
+
+
+
+[
+  mnemonic(IID_ANTISPAMFILTER)
+  id(40011)
+  c_type_name(hANTISPAMFILTER)
+]
+interface AntispamFilter {
+
+  // ------------------------------------
+    [ warning(true) ]  error errNeedMoreData; // Мало данных в базе антиспама. Работать можно только в режиме обучения.
+
+
+  // ------------------------------------
+
+    [
+      comment_ex("Interface version")
+      id(130)
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      comment_ex("Interface comment")
+      id(131)
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+
+
+  // ------------------------------------
+    method tERROR Process(
+      tDWORD* result,
+      cSerializable* p_pProcessParams,
+      hOBJECT p_hObjectToCheck,
+      tDWORD p_dwTimeOut,
+      cSerializable* p_pStatistics
+    );
+    method tERROR Train(
+      cSerializable* p_pTrainParams,
+      hOBJECT p_hObjectForCheck,
+      tDWORD p_dwTimeOut,
+      cSerializable* p_pStatistics
+    );
+    method tERROR SetState( TaskManager.tTaskState p_state );
+    method tERROR GetStatistics( cSerializable* p_statistics );
+    method tERROR SetSettings( const cSerializable* p_pSettings );
+    method tERROR GetSettings( cSerializable* p_pSettings );
+    method tERROR Init( const cSerializable* p_pSettings );
+
+
+  // ------------------------------------
+    [ id(4096) ]  message_cls pmc_ANTISPAM_TRAIN {}
+    [ id(4097) ]  message_cls pmc_ANTISPAM_PROCESS {}
+    [ id(4098) ]  message_cls pmc_ANTISPAM_REPORT {}
+
+}
+

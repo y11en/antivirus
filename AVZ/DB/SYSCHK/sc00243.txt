@@ -1,0 +1,4 @@
+// ***** AdWare.Toolbar.NewsGator *****
+begin
+ AddEvAlarmByCLSID('6F3D49A9-8DC8-4566-BF95-9A7776C56F8B', AScriptName, 'PlanetNews2.dll');
+end.

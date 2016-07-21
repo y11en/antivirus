@@ -1,0 +1,5 @@
+// ***** AdvWare.Toolbar.Perez *****
+begin
+ AddEvAlarmByCLSID('EB381422-F797-4A98-A266-9DC490821907','AdvWare.Toolbar.Perez.a','IESEARCHTOOLBAR.dll');
+ AddEvAlarmByCLSID('2C5175A2-ADF3-4F57-AB70-BA90FD60A383','AdvWare.Toolbar.Perez.a','IESEARCHTOOLBAR.dll');
+end.

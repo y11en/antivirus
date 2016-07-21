@@ -1,0 +1,9 @@
+[explicit_handle]
+interface rpc_licensing
+{
+}
+
+[explicit_handle]
+interface rpc_cryptohelper
+{
+}

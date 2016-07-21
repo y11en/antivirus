@@ -1,0 +1,4 @@
+// ***** TrojanDownloader.Holica *****
+begin
+ AddEvAlarmByCLSID('037B3D58-D14A-4C41-BDFD-BD779B0B97BA',AScriptName,'');
+end.

@@ -1,0 +1,25 @@
+[Version] 
+Signature = "$CHICAGO$" 
+
+[DefaultInstall]
+CopyFiles = Copy.Sys
+
+[DefaultInstall.Services]
+AddService=$$root$$,,$$root$$.install
+
+[$$root$$.install]
+DisplayName = %$$root$$%
+ServiceType = 1;
+StartType   = 3;
+Errorcontrol= 1;
+ServiceBinary = %12%\$$root$$.sys
+
+[Copy.Sys]
+$$root$$.sys
+
+[DestinationDirs]
+Copy.sys = 12
+
+[Strings] 
+KL = "Kaspersky Lab"
+$$root$$ = "$$root$$"

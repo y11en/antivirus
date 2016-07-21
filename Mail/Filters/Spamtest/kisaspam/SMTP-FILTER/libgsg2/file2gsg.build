@@ -1,0 +1,20 @@
+EXE
+TARGET file2gsg
+
+CSRC file2gsg.c
+LIB  sigs
+LIB  gsg2
+LIB  osr
+LIB  gd
+LIB_MD5
+LIB jpeg-local
+#ifdef WITH_DCC
+LIB dccwrapper
+LIB dcc
+#endif
+LIB ungif-local
+LIB png-local
+LIB z
+LIB m
+LIB fstorage
+LIB mm_file

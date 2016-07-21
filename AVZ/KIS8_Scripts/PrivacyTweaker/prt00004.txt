@@ -1,0 +1,43 @@
+// $AVZ1496
+//$ Очистить MUICache
+// Функция поиска проблемы
+function Check : dword;
+var
+ Lines : TStrings;
+ i : integer;
+begin
+ Result := 0;
+ Lines := TStringList.Create;
+ if RegKeyExists('HKCU','Software\Microsoft\Windows\ShellNoRoam\MUICache') then begin
+  RegKeyEnumVal('HKCU', 'Software\Microsoft\Windows\ShellNoRoam\MUICache', Lines);
+  // Есть записи в MUICache ??
+  for i := 0 to Lines.Count-1 do
+   if pos('@', Lines[i]) <> 1 then
+    if (pos('\', Lines[i]) > 0) or (pos(':', Lines[i]) > 0) then begin
+     Result := 1;
+     Break;
+    end;
+ end;
+ Lines.Free;
+end;
+
+// Функция исправления проблемы
+function Fix : dword;
+var
+ Lines : TStrings;
+ i : integer;
+begin
+ Result := 0;
+ Lines := TStringList.Create;
+ if RegKeyExists('HKCU','Software\Microsoft\Windows\ShellNoRoam\MUICache') then begin
+  RegKeyEnumVal('HKCU', 'Software\Microsoft\Windows\ShellNoRoam\MUICache', Lines);
+  // Есть записи в MUICache ??
+  for i := 0 to Lines.Count-1 do
+   if pos('@', Lines[i]) <> 1 then
+    if (pos('\', Lines[i]) > 0) or (pos(':', Lines[i]) > 0) then begin
+     // Удаление параметра из ключа реестра
+     RegKeyParamDel('HKCU','Software\Microsoft\Windows\ShellNoRoam\MUICache', Lines[i]);
+    end;
+ end;
+ Lines.Free;
+end;

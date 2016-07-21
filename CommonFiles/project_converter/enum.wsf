@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<job>
+  <runtime>
+		<description>This script enums all files by mask and performs script with parameters on each file</description>
+		<named 
+			name="dir" 
+			helpstring="start folder name ('.' if not pointed)"
+			type="string" 
+			required="false" />
+		<named 
+			name="script" 
+			helpstring="name of script to perform"
+			type="string" 
+			required="true" />
+		<named 
+			name="src" 
+			helpstring="name of script parameter for file name"
+			type="string" 
+			required="false" />
+		<example>Example:
+enum.wsf /mask:*.vcproj /script:patcher /nopatch:+ /overwrite:+
+		</example>
+	</runtime>
+
+<script language="JScript">
+<![CDATA[
+
+var g_wsh = null;
+var g_script = "";
+var g_path = ".";
+var g_src_name = "src";
+var g_params = "";
+var args = WScript.Arguments;
+var fsObj = new ActiveXObject ( "Scripting.FileSystemObject" );
+
+function InitShell() {
+  if ( g_wsh == null ) {
+    //g_wsh = new ActiveXObject( "WScript.Shell" );
+    g_wsh = WScript.CreateObject( "WScript.Shell" );
+  }
+  return g_wsh;
+}
+
+function is_param( par, name ) {
+	var ind = par.indexOf( "/"+name+":" );
+	if ( ind == 0 )
+		return true;
+	return false;
+}
+
+
+function exec( name ) {
+	WScript.Echo( "\tFile " + name );
+	var err;
+	var out;
+	var cmd = "cscript /nologo \"" + g_script + "\" /" + g_src_name + ":\"" + name + "\" " + g_params;
+  var oExec = InitShell().Exec( cmd );
+  while( oExec.Status == 0 ) {
+		err = oExec.StdErr.ReadAll();
+		if ( (err != null) && (err != "") )
+			WScript.Echo( "\tERROR! " + err );
+		out = oExec.StdOut.ReadAll();
+		if ( (out != null) && (out != "") )
+			WScript.Echo( out );
+		WScript.Sleep(100);
+  }
+  if ( !oExec.StdErr.AtEndOfStream ) {
+		err = oExec.StdErr.ReadAll();
+		WScript.Echo( "\tERROR! " + err );
+  }
+  if ( !oExec.StdOut.AtEndOfStream ) {
+		out = oExec.StdOut.ReadAll();
+		WScript.Echo( out );
+  }
+  return oExec.ExitCode;
+}
+
+
+
+function enum_all( folder ) {
+	WScript.Echo( "Folder: \"" + folder.Path + "\"" );
+	var files = new Enumerator( folder.files );
+	for (; !files.atEnd(); files.moveNext() ) {
+		var file = files.item();
+		var fext = fsObj.GetExtensionName(file.Name).toLowerCase();
+		if ( fext != "vcproj" )
+			continue;
+		exec( file.Path );
+	}
+	
+	var folders = new Enumerator ( folder.SubFolders );
+	for (; !folders.atEnd(); folders.moveNext() )
+		enum_all( folders.item() );
+}
+
+if ( !args.Named.Exists("script") ) {
+	args.ShowUsage();
+	WScript.Quit(1);
+}
+
+g_script = args.Named.Item("script");
+if ( !fsObj.FileExists(g_script) ) {
+	var path  = fsObj.GetParentFolderName( g_script );
+	var fname = fsObj.GetFileName( g_script );
+	var ext   = fsObj.GetExtensionName( g_script );
+	if ( ext == null || ext == "" )
+		ext = "wsf";
+	else if ( -1 != fname.indexOf(ext) )
+		ext = "";
+	if ( path == null || path == "" )
+		path = fsObj.GetParentFolderName(WScript.ScriptFullName);
+	g_script = path + "\\" + fname;
+	if ( ext != "" )
+		g_script += "." + ext;
+	if ( !fsObj.FileExists(g_script) ) {
+		WScript.Echo( "can't find script \"" + g_script + "\"" );
+		WScript.Quit(1);
+	}
+}
+	
+if ( args.Named.Exists("dir") )
+	g_path = args.Named.Item( "dir" );
+
+if ( !fsObj.FolderExists(g_path) ) {
+	WScript.Echo( "\tERROR! Directory " + g_path + " doesn't exist" );
+	WScript.Quit(1);	
+}
+
+if ( args.Named.Exists("src") )
+	g_src_name = args.Named.Item( "src" );
+
+for( var i=0; i < args.length; ++i ) {
+	var arg = args(i);
+	if ( !is_param(arg,"dir") && !is_param(arg,"mask") && !is_param(arg,"script") && !is_param(arg,"src") )
+		g_params += " " + args(i);
+}
+
+folder = fsObj.GetFolder( g_path );
+enum_all( folder );
+
+]]>
+</script>
+</job>
+
+

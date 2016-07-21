@@ -1,0 +1,6 @@
+#define IDS_CELC_UNCHECK                3301
+#define IDS_CELC_CHECK                  3302
+#define IDS_CELC_EDITVALUE              3303
+#define IDS_CELC_REMOVEVALUE            3304
+#define IDB_BITMAP_CTRL                 3310
+#define IDR_CELC_TOOLBAR                3311

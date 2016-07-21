@@ -1,0 +1,4 @@
+// ***** TrojanDownloader.Win32.Wren.e *****
+begin
+ AddEvAlarmByCLSID('C398F337-51D5-40C3-AA3B-684E833D8888', AScriptName, 'tetra.dll');
+end.

@@ -1,0 +1,12 @@
+// ***** Trojan.Dialer *****
+begin
+ AddEvAlarmByCLSID('EFB22865-F3BC-4309-ADFA-C8E078A7F762','Trojan.Dialer.fy','SysWebTelecomInt.dll');
+ AddEvAlarmByCLSID('9D0A9D98-5221-430A-A02D-76F0827C82D1','Trojan.Dialer.z','AutoDialer.dll');
+ AddEvAlarmByCLSID('00000000-7777-0704-0B53-2C8830E9FAEC','Trojan.Dialer.ep','AXLOAD.dll');
+ AddEvAlarmByCLSID('2DBEFB64-B6C4-4A2C-BE6A-16FF065B99C6','Trojan.Dialer.cw','cuadruple.dll');
+ AddEvAlarmByCLSID('E2BBA7AC-2347-4761-AF7A-0DCA61355D53','Trojan.Dialer.cz','FAIRTALE.exe');
+ AddEvAlarmByCLSID('C68AE9C0-0909-4DDC-B661-C1AFB9F5AE50','Trojan.Dialer.eh','Free_Sex_Download.exe');
+ AddEvAlarmByCLSID('1EB17D1C-141D-4D9D-91CB-24D99215851D','Trojan.Dialer.dp, Trojan.Trilon.b','netia32.dll');
+ AddEvAlarmByCLSID('D9CA5D65-52BE-4790-BEA3-F3E2F5A76B02','Trojan.Dialer.fk','PWebRecomendada.dll');
+ AddEvAlarmByCLSID('7B55BB05-0B4D-44FD-81A6-B136188F5DEB','Trojan.Dialer.bi','questmod.dll');
+end.

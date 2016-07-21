@@ -1,0 +1,15 @@
+$$// confirm.inf = the text emitted to the confirmation dialog for
+$$//    this configuration
+
+Creating KLIX plugin.
+
+Plugin description - $$PluginDescription$$.
+
+Base driver - 
+$$IF(KLICK)
+	KLICK
+$$ENDIF
+$$IF(KLIN)
+	KLIN
+$$ENDIF
+

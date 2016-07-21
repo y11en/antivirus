@@ -1,0 +1,10 @@
+TARGETNAME = kdwin32k
+TARGETPATH = obj
+TARGETTYPE = DRIVER
+DRIVERTYPE = FS
+
+MSC_WARNING_LEVEL = /W3 /WX
+
+TARGETLIBS = 	..\kdprint\kernel\obj$(BUILD_ALT_DIR)\i386\kdprkrnl.lib
+
+SOURCES = kdwin32k.c

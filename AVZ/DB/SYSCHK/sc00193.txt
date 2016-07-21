@@ -1,0 +1,4 @@
+// ***** AdvWare.Minibug *****
+begin
+ AddEvAlarmByCLSID('2B96D5CC-C5B5-49A5-A69D-CC0A30F9028C','AdvWare.Minibug','MiniBugTransporter.dll');
+end.

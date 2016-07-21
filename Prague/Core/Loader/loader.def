@@ -1,0 +1,11 @@
+LIBRARY     PrLoader
+
+DESCRIPTION 'Prague loader interfaces'
+
+VERSION     1.0
+
+HEAPSIZE    0x10000 0x1000
+
+EXPORTS		
+	PragueLoad		@1
+	PragueUnload    @2

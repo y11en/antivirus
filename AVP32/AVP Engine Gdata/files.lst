@@ -1,0 +1,21 @@
+\avp32\avp engine\engine.rtf
+\avp32\release\release.txt
+
+\avp32\scanapi\avp_dll.h
+\avp32\scanapi\avp_msg.h
+\avp32\scanapi\avpioctl.h
+\avp32\scanapi\avpmem.h
+\avp32\scanapi\baseapi.h
+\avp32\scanapi\retflags.h
+\avp32\scanapi\scanobj.h
+\avp32\scanapi\types.h
+\avp32\scanapi\defines.h
+\commonfiles\sign\sign.h
+
+\out\release\avp_io.vxd
+\out\release\avp_io32.dll
+\out\release\avp_iont.dll
+\out\release\avpbase.dll
+\out\release\avpbase.lib
+\out\release\avpbase.map
+\out\release\avpbase.pdb

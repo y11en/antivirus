@@ -1,0 +1,19 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@
+
+Name = inflate
+Plugin = $(Name).@PLUGIN_EXT@
+Metafile = @srcdir@/$(Name)_trans.@METAFILE_EXT@
+Targets = $(Plugin)
+
+Sources = \
+	inflate_t.c \
+	plugin_inflate.c
+
+# unix section
+
+VersionScript = @abs_top_srcdir@/unix/prague_plugin.ver
+
+include @abs_top_builddir@/@OS@/Rules

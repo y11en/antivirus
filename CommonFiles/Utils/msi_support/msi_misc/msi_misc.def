@@ -1,0 +1,6 @@
+LIBRARY      "msi_misc.dll"
+
+EXPORTS
+	ReturnUserExit		@1
+	ReturnError			@2
+	RemoveFileOnReboot	@3

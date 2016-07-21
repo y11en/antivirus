@@ -1,0 +1,26 @@
+Adding signatures from file "04.sig".
+Saving the static tree to file "04.sig.st".
+Hash level: 16Hash table size: 64[Kb]
+Cleaning the tree.
+Loading a static tree from file "04.sig.st".
+Scanning file "04.sig"
+   0/18; off=0x00000024; id=4
+   1/18; off=0x000000DF; id=4
+   2/18; off=0x0000019A; id=4
+   3/18; off=0x000001BE; id=4
+   4/18; off=0x000001E2; id=4
+   5/18; off=0x00000206; id=4
+   6/18; off=0x0000022A; id=4
+   7/18; off=0x0000024E; id=4
+   8/18; off=0x00000272; id=4
+   9/18; off=0x00000296; id=4
+  10/18; off=0x000002BA; id=4
+  11/18; off=0x000002DE; id=4
+  12/18; off=0x00000302; id=4
+  13/18; off=0x00000326; id=4
+  14/18; off=0x0000034A; id=4
+  15/18; off=0x0000036E; id=4
+  16/18; off=0x00000392; id=4
+  17/18; off=0x000003B6; id=4
+Total :
+id=4(18)

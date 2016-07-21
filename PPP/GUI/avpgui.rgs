@@ -1,0 +1,29 @@
+HKCR
+{
+	AVPGUI.Controller.1 = s 'AVPGUI'
+	{
+		CLSID = s '{5C22A002-0259-4488-8E90-91DFF4E2E436}'
+	}
+	AVPGUI.Controller = s 'AVPGUI'
+	{
+		CLSID = s '{5C22A002-0259-4488-8E90-91DFF4E2E436}'
+		CurVer = s 'AVPGUI.Controller.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {5C22A002-0259-4488-8E90-91DFF4E2E436} = s 'AVPGUI'
+		{
+			ProgID = s 'AVPGUI.Controller.1'
+			VersionIndependentProgID = s 'AVPGUI.Controller'
+			ForceRemove 'Programmable'
+			LocalServer32 = s 'Ph33rrrr Sephiroth'
+
+			'Implemented Categories'
+			{
+				{7DD95801-9882-11CF-9FA9-00AA006C42C4}
+			}
+			
+			'TypeLib' = s '{77AD65E0-49D1-4172-9846-2AD244E84622}'
+		}
+	}
+}

@@ -1,0 +1,26 @@
+Adding signatures from file "08.sig".
+Saving the static tree to file "08.sig.st".
+Hash level: 16Hash table size: 64[Kb]
+Cleaning the tree.
+Loading a static tree from file "08.sig.st".
+Scanning file "08.sig"
+   0/18; off=0x0000000C; id=8
+   1/18; off=0x0000008B; id=8
+   2/18; off=0x00000116; id=8
+   3/18; off=0x0000013A; id=8
+   4/18; off=0x0000015E; id=8
+   5/18; off=0x00000182; id=8
+   6/18; off=0x000001A6; id=8
+   7/18; off=0x000001CA; id=8
+   8/18; off=0x000001EE; id=8
+   9/18; off=0x00000212; id=8
+  10/18; off=0x00000236; id=8
+  11/18; off=0x0000025A; id=8
+  12/18; off=0x0000027E; id=8
+  13/18; off=0x000002A2; id=8
+  14/18; off=0x000002C6; id=8
+  15/18; off=0x000002EA; id=8
+  16/18; off=0x0000030E; id=8
+  17/18; off=0x00000332; id=8
+Total :
+id=8(18)

@@ -1,0 +1,139 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "Klop_nt"=.\winnt\klop_nt.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/Klop/winnt", OIZMCAAA
+    .\winnt
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "klop_9x"=.\win9x\klop_9x.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/Klop/win9x", PIZMCAAA
+    .\win9x
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "klopapp"=.\klopapp\klopapp.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/Klop/klopapp", WKBNCAAA
+    .\klopapp
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name kloplib
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name skalop
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "klopik"=.\klopik\klopik.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/Klop/klopik", WBBNCAAA
+    .\klopik
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "kloplib"=.\kloplib\kloplib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/Klop/kloplib", QJBNCAAA
+    .\kloplib
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "klsumfix"=..\KL1\klsumfix\klsumfix.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/KL1/klsumfix", PAXRCAAA
+    ..\kl1\klsumfix
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "skalop"=.\skalop\skalop.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/Klop/skalop", ZBKOCAAA
+    .\skalop
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Windows/Hook/Klop", NIZMCAAA
+    .
+    end source code control
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

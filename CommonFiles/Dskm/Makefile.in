@@ -1,0 +1,71 @@
+top_builddir=@top_builddir@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+VPATH=@srcdir@ @srcdir@/../Stuff
+
+Name = dskm
+Archive = $(Name).@ARCHIVE_EXT@
+Targets = $(Archive)
+
+Sources = \
+	cl_check.c \
+	cl_gkey.c \
+	cl_hash.c \
+	cl_hass.c \
+	cl_init.c \
+	cl_mkey.c \
+	cl_sign.c \
+	cl_util.c \
+	ds_assch.c \
+	ds_assoc.c \
+	ds_check.c \
+	ds_chkbf.c \
+	ds_chkfd.c \
+	ds_chkfl.c \
+	ds_compo.c \
+	ds_cregs.c \
+	ds_deser.c \
+	ds_dump.c \
+	ds_erro.c \
+	ds_excpt.c \
+	ds_fkey.c \
+	ds_gkey.c \
+	ds_hash.c \
+	ds_init.c \
+	ds_inite.c \
+	ds_io.c \
+	ds_list.c \
+	ds_objsb.c \
+	ds_objse.c \
+	ds_objsn.c \
+	ds_objsp.c \
+	ds_pars.c \
+	ds_parso.c \
+	ds_preg.c \
+	ds_serial.c \
+	ds_utils.c \
+	TEXT2BIN.c
+
+#ds_chkas.c \
+#ds_ff.c \
+
+InstallIncludes = \
+	@PACKAGE_NAME@/dskmdefs.h \
+	@PACKAGE_NAME@/dskm.h \
+	@PACKAGE_NAME@/dskmi.h \
+	@PACKAGE_NAME@/cpp_wrap/allocators.h \
+	@PACKAGE_NAME@/cpp_wrap/key.h \
+	@PACKAGE_NAME@/cpp_wrap/data_buffer.h \
+	@PACKAGE_NAME@/cpp_wrap/par_list.h \
+	@PACKAGE_NAME@/cpp_wrap/dskmwrap.h \
+	@PACKAGE_NAME@/cpp_wrap/hash.h \
+	@PACKAGE_NAME@/cpp_wrap/types.h \
+	@PACKAGE_NAME@/cpp_wrap/exceptions.h \
+	@PACKAGE_NAME@/cpp_wrap/utility.h \
+	@PACKAGE_NAME@/cpp_wrap/dskmwrap.inl \
+	@PACKAGE_NAME@/cpp_wrap/par_list.inl
+
+Includes = @srcdir@/..
+
+include @abs_top_builddir@/unix/Rules
+

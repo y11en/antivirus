@@ -1,0 +1,5 @@
+// ***** Spy.SmartTextLink *****
+begin
+ AddEvAlarmByCLSID('3B854248-33AA-4120-9710-C91CB0BB4EDD',AScriptName,'IEToolbar.dll');
+ AddEvAlarmByCLSID('BF4B360B-1717-4BEA-8C5B-6936DE82E8F6',AScriptName,'PLUGINST.dll');
+end.

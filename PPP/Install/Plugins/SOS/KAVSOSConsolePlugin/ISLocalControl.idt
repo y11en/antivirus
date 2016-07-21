@@ -1,0 +1,4 @@
+Dialog_	Control_	ISLanguage_	Attributes	X	Y	Width	Height	Binary_	ISBuildSourcePath
+s72	s50	s50	I4	I2	I2	I2	I2	S50	S255
+ISLocalControl	Dialog_	Control_	ISLanguage_
+LicenseAgreement	Memo	1049	7	8	55	358	130		<ISProductFolder>\redist\0409\Eula.rtf

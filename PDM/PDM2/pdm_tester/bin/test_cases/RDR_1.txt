@@ -1,0 +1,4 @@
+# luanch process with redirected IO
+
+COPY_HOOKER_TO_DF NOT_TO_CLEAR
+CP_RDR_FROM_DF NOT_TO_CLEAR

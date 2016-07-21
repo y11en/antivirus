@@ -1,0 +1,68 @@
+forward interface Heap;
+typedef Heap* hHEAP;
+
+
+
+[
+  mnemonic(IID_HEAP)
+  id(64003)
+  c_type_name(hHEAP)
+  comment_ex("Интерфейс предоставляет услуги по распределению, перераспределению и освобождению регионов памяти.")
+]
+interface Heap { // распределение, освобождение памяти
+
+  // ------------------------------------
+
+    [
+      id(130)
+      comment_ex("Interface version")
+    ]
+    prop tVERSION pgINTERFACE_VERSION; // Interface version
+
+    [
+      id(131)
+      comment_ex("Interface comment")
+    ]
+    prop tSTRING pgINTERFACE_COMMENT; // Interface comment
+
+    [
+      id(4096)
+      comment_ex("размер региона памяти физически выделяемый интерфейсом всегда будет кратен размеру гранулярности, определяемым значением этого свойства. 
+        В реализациях это свойство, как правило будет ReadOnly и возможно статическим.")
+    ]
+    prop tDWORD pgHEAP_GRANULARITY; // гранулярность памяти
+
+    [
+      id(4097)
+      comment_ex("если значение этого свойства cTRUE, метод Realloc может переместить регион, так что изменится значение указателя измеится после вызова этого метода. Если значение cFALSE, то метод Realloc может вернуть ошибку распределения памяти, если невозможно распределить регион нужного размера без изменения указателя на регион")
+    ]
+    prop tBOOL pgHEAP_MOVE_ALLOWED; // метод Realloc может переместить указатель на регион
+
+
+  // ------------------------------------
+    method tERROR Alloc( // rus:распределяет регион памяти размером \"size\" байт.//eng:Allocate \"size\" bytes from heap
+      tPTR* result,
+      tDWORD size // требуемый размер региона
+    );
+
+    [
+      comment_ex("//rus:При перераспределении памяти метод пытается сохранить указатель неизменным. Если это не возможно, поведение зависит от значения свойства HEAP_MOVE_ALLOWED. Если это cTRUE распределяется новый регион, и содержимое старого копируется. Если cFALSE - метод завершается с ошибкой, возвращает NULL в качестве указателя и errNOT_ENOUGH_MEMORY.
+        
+        //eng:Method tries to preserve pointer to block. If it is not possible behaviour depends on HEAP_MOVE_ALLOWED property. If property is cTRUE method returns new pointer. All data in memory block will copied into new one, If move is disabled method fails and returns NULL as pointer and errNOT_ENOUGH_MEMORY as error code.")
+    ]
+    method tERROR Realloc( // rus:Изменяет размер ранее распределенного региона пямяти//eng:Changes size of previously allocated block
+      tPTR* result,
+      tPTR mem, // регион памяти, который необходимо перераспределить
+      tDWORD size // требуемый размер региона
+    );
+    method tERROR Free( // rus:освобождает ранее распределенный регион.//eng:frees previously allocated block. 
+      tPTR mem // указатель на региод для освобождения
+    );
+    method tERROR Size( // rus:возвращает размер распределенного региона//eng:returns size of previously allocated block
+      tDWORD* result,
+      tPTR mem // регион, размер которого требуется выяснить
+    );
+    method tERROR Clear(); // rus:освободить все регионы, выделенные этим объектом//eng:Free all alocations made from this heap
+
+}
+
